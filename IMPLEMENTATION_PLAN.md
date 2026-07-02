@@ -121,12 +121,15 @@ and SLO + cadence decided in
   the Zenodo DOI**; `/api/v1/sense/{id}` cite payloads carry it.
 - CITATION.cff, API docs page, announcement (csl-newsletter + INDOLOGY);
   positioning docs updated from aspiration to shipped-state.
-- **Optional (post-v1.0): Salt-compatible facade** — implement the
-  csl-standards [SALT_API_PROFILE](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.md)
-  (`/dicts/{id}/restful/entries|ids` + GraphQL) over `kosha.db`, making kosha
-  a drop-in C-SALT provider and a second implementation of the org standard;
-  offer kosha's working sense IDs upstream for Salt's TODO `sense` face. See
-  ARCHITECTURE §"Relation to the C-SALT / Salt API".
+- **Salt GraphQL face (required here):** completes the Salt facade whose REST
+  faces shipped in P1/D4 — `POST /dicts/{id}/graphql` per the csl-standards
+  [SALT_API_PROFILE](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.md)
+  (port reference: `csl-apidev/api1/salt_graphql*.php`). With it, kosha is a
+  complete drop-in C-SALT provider and the second independent implementation
+  of the org standard; kosha's working sense IDs are offered upstream for
+  Salt's TODO `sense` face. See ARCHITECTURE §"Relation to the C-SALT / Salt
+  API" for the interchange rules (Salt entry object inside /api/v1, csl-sqlite
+  as data source, L-number addressing).
 - **Exit:** a sense citation with DOI + version resolves in a fresh browser;
   the release is independently downloadable and rebuildable.
 

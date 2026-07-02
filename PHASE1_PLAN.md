@@ -35,7 +35,13 @@ exists and its check passes — that is the lesson of the 02-07-2026 audit.
 
 ## D2 — entry load + per-dict `<pc>` parser (NEW, small)
 
-- Parse per-dict records into `entries(dict, L, slp1_key, pc_raw, body)`.
+- **Primary source (max Salt reuse, 02-07-2026): the
+  [csl-sqlite releases](https://github.com/sanskrit-lexicon/csl-sqlite/releases)**
+  (`{dict}.zip` — e.g. `mw.sqlite`, 286,560 records; the same data layer
+  csl-apidev's Salt implementation reads). Import into
+  `entries(dict, L, slp1_key, pc_raw, body)`; parse csl-orig text directly
+  only if a target dict has no csl-sqlite release. Record the release tag +
+  underlying csl-orig commit in `sources`.
 - **NEW:** per-dict `<pc>` dispatcher — MW `page,column` (single volume);
   PWG `vol-page` (hyphen, 7 vols); AP90 `page-col-letter`. No comma-split
   shortcut; measure actual `<pc>` coverage per dict instead of assuming 100 %.
@@ -61,7 +67,15 @@ exists and its check passes — that is the lesson of the 02-07-2026 audit.
   (SLP1 keys are SLP1 — `banD`, not `bandh`; MW responses carry page+column,
   never "volume").
 - Transliteration via sanskrit-util; `encoding=` query param.
-- **Check:** pytest suite over the four endpoints, green locally.
+- **Salt interchange (required, per ARCHITECTURE §C-SALT):** per-dict entry
+  objects inside `/api/v1` responses use the Salt-profile shape (`csl.{…}`
+  block + `lemma-…-L{lnum}` ids) extended with namespaced `kosha.*` fields;
+  plus the **Salt facade REST faces** `GET /dicts/{id}/restful/entries` and
+  `/restful/ids` served from `kosha.db`.
+- **Check:** pytest suite over the four kosha endpoints + the two Salt faces,
+  green locally; Salt-face envelopes parity-checked against csl-apidev's
+  run-verified outputs for `agni`, `indra`, `ka` (incl. `-L{lnum}` homonym
+  ids).
 
 ## D5 — measure, then decide the open items
 

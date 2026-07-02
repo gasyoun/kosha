@@ -120,20 +120,34 @@ kosha's differentiators — cross-dict merged lemma view, form→lemma, fuzzy
 input, **versioned sense-level IDs**, evidence layer, cite payloads — have no
 Salt equivalent, so v1 is its own contract.
 
-Alignment rules so the two stay interoperable:
+**Maximum-reuse rules (upgraded 02-07-2026 from "optional" to required — M.G.):**
 
-1. **Same addressing.** Everything is keyed on Cologne L-numbers; kosha's
-   `mw.142512.3` nests under Salt's entry IDs (`lemma-…-L142512`). Never mint
-   an entry identity Salt cannot express.
-2. **Same field names** where semantics match (`lnum`, `page`, `column`,
-   `scanUrl`) — no gratuitous renaming.
-3. **Salt facade (optional, post-v1.0):** expose
-   `/dicts/{id}/restful/entries|ids` + GraphQL on kosha's server implementing
-   the csl-standards profile from `kosha.db` — making kosha a second,
-   independent implementation of the org standard (a drop-in provider for
-   C-SALT consumers like VedaWeb) and feeding kosha's working sense IDs back
-   into Salt's unfinished `sense` face. Tracked as the optional item in
-   IMPLEMENTATION_PLAN P7.
+1. **Salt entry object = kosha's interchange object.** Inside `/api/v1`
+   responses, each per-dictionary entry is serialized as a **Salt-profile
+   entry** (id in `lemma-…`/`-L{lnum}` form, headword fields, and the
+   `csl.{lnum,page,column,scanUrl,references,accentedKey}` block verbatim per
+   [SALT_API_PROFILE.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.md)),
+   extended with namespaced kosha-only fields (`kosha.sense_ids`,
+   `kosha.rendered_html`, `kosha.evidence`, `kosha.cite`). One shape, two
+   APIs — no translation layer between kosha's merged view and Salt clients.
+2. **Same addressing.** Cologne L-numbers everywhere; kosha's `mw.142512.3`
+   nests under Salt entry IDs. Never mint an identity Salt cannot express.
+3. **Same data source.** Entry data is imported from the
+   [csl-sqlite releases](https://github.com/sanskrit-lexicon/csl-sqlite/releases)
+   (`{dict}.zip`, e.g. `mw.sqlite`, 286,560 records — the exact data layer
+   csl-apidev's run-verified Salt implementation reads via `Dal`), falling
+   back to parsing csl-orig text only for dicts absent from csl-sqlite.
+   `sources` records both the csl-sqlite release tag and the underlying
+   csl-orig commit.
+4. **Salt facade REST faces ship in Phase 1 (D4):**
+   `GET /dicts/{id}/restful/entries` + `/restful/ids` served from `kosha.db`
+   per the profile — parity-tested against csl-apidev's run-verified
+   envelopes for `agni`, `indra`, `ka` (incl. the `-L{lnum}` homonym
+   disambiguation rule). The **GraphQL face ships by P7** (port reference:
+   `csl-apidev/api1/salt_graphql*.php`). kosha thereby becomes the second
+   independent implementation of the org standard and a drop-in provider for
+   C-SALT consumers; its working sense IDs are offered upstream for Salt's
+   TODO `sense` face.
 
 ## Dev/deploy boundary (A3)
 
