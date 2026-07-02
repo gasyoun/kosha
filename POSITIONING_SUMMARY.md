@@ -9,10 +9,12 @@ carries the evidence and the caveats.
 
 ## The identity in one line
 
-**"Logeion for Sanskrit" — and that slot is empty.** All major dictionaries
-behind one fast search box, corpus-frequency-aware, student-usable. Sanskrit
-has the silos (CDSL, ~40 dicts served one at a time) but nobody has built the
-collapse.
+**"Logeion for Sanskrit."** Corrected after the 02-07-2026 live survey
+([COMPARISON.md](https://github.com/gasyoun/kosha/blob/main/COMPARISON.md)):
+the *read-only* collapse exists — michaelmeyer.fr serves 41 dictionaries on
+one page with per-sense scan links, closed-source, single-maintainer. The
+empty slot is the full composite: collapse + morphology + corpus evidence +
+trilingual glosses + open API + versioned citability.
 
 ## Three tracks, one program
 

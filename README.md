@@ -22,18 +22,23 @@ The project was scoped against two existing Sanskrit dictionary sites,
 analysed feature-by-feature in
 [KOSHA_REFERENCE_ANALYSIS.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_REFERENCE_ANALYSIS.md):
 
-- **[michaelmeyer.fr/sanskrit](https://michaelmeyer.fr/sanskrit)** — the
-  **speed benchmark**: static precomputed pages, near-instant lookup, per-entry
-  scan links (Apte 1957–59 edition).
+- **[michaelmeyer.fr/sanskrit](https://michaelmeyer.fr/sanskrit)** — far more
+  than a speed benchmark (02-07-2026 live survey): **41 dictionaries on one
+  page per headword, per-sense scan links for 19 of them**, phoneme-wildcard +
+  fuzzy search, no-framework server speed. The closest existing "Logeion for
+  Sanskrit" — read-only, closed-source, single-maintainer.
 - **[sanskritdictionary.com](https://www.sanskritdictionary.com/)** — the
-  **feature benchmark**: encoding toggle (IAST ⇄ Devanagari), inflected-form
-  lookup, multiple dictionaries on one screen.
+  **feature benchmark**: input auto-detection across 5 schemes, `sandhi:` /
+  `root:` search operators, per-sense permalinks (currently Cloudflare-walled
+  to programmatic use).
 
-The founding formula: **meyer's speed + sanskritdictionary's features +
-scan-anchored provenance and corpus evidence, which neither has.** (Caveat
-from the 02-07-2026 audit: the analysis doc's latency "measurements" and
-author attributions were unsupported — treat its numbers as impressions, not
-data.)
+Full twelve-platform survey with feature matrix:
+[COMPARISON.md](https://github.com/gasyoun/kosha/blob/main/COMPARISON.md).
+The revised formula: **meyer's collapse + Heritage's morphology + DCS's
+evidence + Logeion's sidebar + Cologne's corrections loop + the trilingual
+DE/EN/RU layer — open, API-first, versioned, citable.** (Caveat from the
+02-07-2026 audit stands: the pre-triage analysis doc's latency numbers and
+author attributions were unsupported; the live survey supersedes them.)
 
 **Status: pre-code.** This repo was created 02-07-2026 after the planning
 corpus was audited and four meta-decisions locked

@@ -37,8 +37,13 @@ layer above them.
 
 ## 1. The comparative landscape
 
-The honest one-line placement: **kosha is "Logeion for Sanskrit" — and nobody
-has built that yet.**
+The honest one-line placement: **kosha is "Logeion for Sanskrit."** The
+02-07-2026 live survey ([COMPARISON.md](https://github.com/gasyoun/kosha/blob/main/COMPARISON.md))
+forced a correction to the first draft of this claim: the *read-only* collapse
+already exists — michaelmeyer.fr aggregates 41 dictionaries with per-sense
+scan links. What nobody has built is the full composite: collapse **+
+morphology + corpus evidence + trilingual glosses + open API + versioned
+citability**.
 
 [Logeion](https://logeion.uchicago.edu/) (U. Chicago) is the DH benchmark for
 what kosha wants to be: *all* the major Greek/Latin dictionaries behind one
@@ -57,7 +62,7 @@ The field around kosha:
 | **Sanskrit Heritage** (G. Huet) | Segmentation + morphology since the 1990s, lexicon-limited | Sandhi/compound segmentation at query time — the one Heritage capability kosha's student story needs (via vidyut or Heritage, whichever measures better) |
 | **DCS** (O. Hellwig) | The lemmatized corpus, ~5.6 M tokens | The **evidence layer**: attestation counts, first-attestation era, per-genre bands. Already banded in-house (`dcs_freq` 1–5, hapax/core-80 flags) |
 | **VedaWeb** (Cologne) | Per-word RV morphology + accent, CC BY | Model of corpus-anchored lexicography; validation set for the accent axis |
-| **michaelmeyer.fr/sanskrit** | One of the **two original reference sites** ([KOSHA_REFERENCE_ANALYSIS.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_REFERENCE_ANALYSIS.md)) — the speed benchmark: static precomputed pages, near-instant lookup, AP59 scan links | Proof that precomputation beats server rendering for dictionary lookup; the static-cache tier is this insight, generalized. kosha adds what it lacks: multi-dict view, morphology, corpus evidence, provenance |
+| **michaelmeyer.fr/sanskrit** | One of the **two original reference sites** — and, per the 02-07-2026 live survey ([COMPARISON.md](https://github.com/gasyoun/kosha/blob/main/COMPARISON.md)), far more than a "speed benchmark": **41 dictionaries on one page per headword, per-sense scan links (page + column) for 19 of them**, phoneme wildcards + fuzzy search, no-framework server-rendered speed. Author: Michaël Meyer (ERC-DHARMA, CNRS, per his own profile) | The closest existing thing to "Logeion for Sanskrit" — the read-only collapse, already built. What it deliberately lacks defines this project's room: no Devanagari, no inflected-form lookup, no morphology, no corpus/frequency, no API, closed source, single maintainer, last updated 12-2024 |
 | **sanskritdictionary.com** (+ Wisdom Library, learnsanskrit.org) | The other **original reference site** — the feature benchmark: encoding toggle, inflected-form lookup, multi-dict view; the rest are aggregators, fast but provenance-thin | The founding formula was "meyer's speed + sanskritdictionary's features"; kosha's differentiator against all of them is **print-truth**: every entry linked to the scanned page, every datum carrying its source + version |
 | **ELEXIS / Lexonomy / OntoLex-Lemon / TEI-Lex0** | The European retro-digitization infrastructure | Where dictionary *publishing* went: standardized models, APIs, citable versioned releases. kosha's "persistent IDs + provenance, DOI-ready" decision is aligned but not yet concrete — the MDF/third-export-schema discussion ([csl-standards#1](https://github.com/sanskrit-lexicon/csl-standards/issues/1)) is the natural anchor |
 | **TLFi / OED online / TLL digital** | Big-language digital lexicography | The provenance-and-citation standard to imitate; also proof that sense-level persistent IDs are what makes a dictionary *citable in scholarship* |
