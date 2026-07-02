@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+*.db
+*.sqlite
+data/raw/
+docs/js/data/lemmas.json
+.pytest_cache/
