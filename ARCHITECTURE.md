@@ -108,6 +108,33 @@ Prefix `/api/v1/`. JSON only. Every response carries the envelope:
 **Encoding policy:** SLP1 is the internal key everywhere; IAST is the default
 display; conversion at the boundary only, via sanskrit-util.
 
+### Relation to the C-SALT / Salt API (asked 02-07-2026)
+
+kosha API v1 is **not** the Salt/Kosh contract, deliberately. Salt
+([SALT_API_PROFILE.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.md),
+implemented in [csl-apidev/api1/](https://github.com/sanskrit-lexicon/csl-apidev),
+run-verified vs real MW) is **per-dictionary, entry-level**:
+`GET /dicts/{id}/restful/entries|ids` + GraphQL, with a
+`csl.{lnum,page,column,scanUrl}` block; its `sense` face is TODO upstream.
+kosha's differentiators — cross-dict merged lemma view, form→lemma, fuzzy
+input, **versioned sense-level IDs**, evidence layer, cite payloads — have no
+Salt equivalent, so v1 is its own contract.
+
+Alignment rules so the two stay interoperable:
+
+1. **Same addressing.** Everything is keyed on Cologne L-numbers; kosha's
+   `mw.142512.3` nests under Salt's entry IDs (`lemma-…-L142512`). Never mint
+   an entry identity Salt cannot express.
+2. **Same field names** where semantics match (`lnum`, `page`, `column`,
+   `scanUrl`) — no gratuitous renaming.
+3. **Salt facade (optional, post-v1.0):** expose
+   `/dicts/{id}/restful/entries|ids` + GraphQL on kosha's server implementing
+   the csl-standards profile from `kosha.db` — making kosha a second,
+   independent implementation of the org standard (a drop-in provider for
+   C-SALT consumers like VedaWeb) and feeding kosha's working sense IDs back
+   into Salt's unfinished `sense` face. Tracked as the optional item in
+   IMPLEMENTATION_PLAN P7.
+
 ## Dev/deploy boundary (A3)
 
 - **Local:** `pip install -r requirements.txt`; build DB with
