@@ -98,7 +98,11 @@ update cadence (leaning nightly), latency SLO, etymology depth (links-first).
 **Full project plan:**
 [IMPLEMENTATION_PLAN.md](https://github.com/gasyoun/kosha/blob/main/IMPLEMENTATION_PLAN.md)
 (P1 data+API → P2 public alpha → P3 evidence layer → P4 forms+grammar → P5
-advanced UI → P6 trilingual RU → P7 citable v1.0).
+advanced UI → P6 trilingual RU → P7 citable v1.0) ·
+[USE_CASES.md](https://github.com/gasyoun/kosha/blob/main/USE_CASES.md)
+(13 scenarios mapped to phases) ·
+[CHANGELOG.md](https://github.com/gasyoun/kosha/blob/main/CHANGELOG.md)
+(SemVer; repo `vX.Y.Z` tags vs `data_version` are separate tracks).
 
 ## Strategy docs
 
