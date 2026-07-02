@@ -85,9 +85,20 @@ hyphen, 7 volumes · AP90 `0001-a` = page-column-letter.
 - Deployment reference (systemd/nginx/cron, defects already fixed):
   [KOSHA_DEPLOYMENT.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_DEPLOYMENT.md).
 
+**Licenses (locked 02-07-2026):** code **CC BY-NC 4.0**
+([LICENSE.md](https://github.com/gasyoun/kosha/blob/main/LICENSE.md)) — attribution
+required, non-commercial; data releases **CC BY-SA 4.0**
+([LICENSE-DATA.md](https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)) —
+inherited from Cologne's ShareAlike, which does not permit adding a
+non-commercial restriction to the data.
+
 **Open decisions** (settle with real measurements at the end of Phase 1):
-update cadence (leaning nightly), latency SLO, etymology depth (links-first),
-code license (data outputs are headed for CC BY 4.0; code license TBD).
+update cadence (leaning nightly), latency SLO, etymology depth (links-first).
+
+**Full project plan:**
+[IMPLEMENTATION_PLAN.md](https://github.com/gasyoun/kosha/blob/main/IMPLEMENTATION_PLAN.md)
+(P1 data+API → P2 public alpha → P3 evidence layer → P4 forms+grammar → P5
+advanced UI → P6 trilingual RU → P7 citable v1.0).
 
 ## Strategy docs
 

@@ -125,7 +125,7 @@ display; conversion at the boundary only, via sanskrit-util.
 |---|---|
 | Latency SLO + rebuild cadence | D5, with measurements |
 | Static-cache N (top lemmas) | D5, measured |
-| Code license | M.G., before first external contributor or release publicity |
+| ~~Code license~~ | ✅ Resolved 02-07-2026: code CC BY-NC 4.0 ([LICENSE.md](https://github.com/gasyoun/kosha/blob/main/LICENSE.md)); data releases CC BY-SA 4.0 inherited from Cologne ([LICENSE-DATA.md](https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)) |
 | Sense-segmentation rule details per dict | D2 (per-dict, golden-tested; fallback = single sense) |
 | Etymology depth (links-first) | Phase 3 |
 
