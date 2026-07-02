@@ -150,6 +150,14 @@ def main():
     if args.stage == "forms":
         from build_forms import build_forms  # noqa: E402
         build_forms(con)
+    # data_version (A2): NOT a citable release yet — Phase 1 D1-D4 local dev
+    # build. First real data_version bump happens at the first GitHub release
+    # per ARCHITECTURE.md (P2, D5-gated). "0.1.0-dev" marks this explicitly.
+    con.execute(
+        "INSERT INTO meta (key, value) VALUES ('data_version','0.1.0-dev') "
+        "ON CONFLICT(key) DO UPDATE SET value=excluded.value"
+    )
+    con.commit()
     con.close()
 
 
