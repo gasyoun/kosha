@@ -16,6 +16,25 @@ then scholars — with **its own advanced UI** at samskrtam.ru (decision
 recorded in POSITIONING.md §2: API-first, the UI is a client of the same
 public API).
 
+## Reference sites — the original bar
+
+The project was scoped against two existing Sanskrit dictionary sites,
+analysed feature-by-feature in
+[KOSHA_REFERENCE_ANALYSIS.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_REFERENCE_ANALYSIS.md):
+
+- **[michaelmeyer.fr/sanskrit](https://michaelmeyer.fr/sanskrit)** — the
+  **speed benchmark**: static precomputed pages, near-instant lookup, per-entry
+  scan links (Apte 1957–59 edition).
+- **[sanskritdictionary.com](https://www.sanskritdictionary.com/)** — the
+  **feature benchmark**: encoding toggle (IAST ⇄ Devanagari), inflected-form
+  lookup, multiple dictionaries on one screen.
+
+The founding formula: **meyer's speed + sanskritdictionary's features +
+scan-anchored provenance and corpus evidence, which neither has.** (Caveat
+from the 02-07-2026 audit: the analysis doc's latency "measurements" and
+author attributions were unsupported — treat its numbers as impressions, not
+data.)
+
 **Status: pre-code.** This repo was created 02-07-2026 after the planning
 corpus was audited and four meta-decisions locked
 ([SanskritLexicography v0.0.34](https://github.com/gasyoun/SanskritLexicography/releases/tag/v0.0.34)).

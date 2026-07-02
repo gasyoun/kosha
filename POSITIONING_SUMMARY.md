@@ -26,10 +26,14 @@ collapse.
 ## The defensible intersection
 
 No existing project occupies: **multi-dictionary × scan-anchored print-truth
-× corpus-graded × trilingual (DE/EN/RU)**. Ambuda/vidyut is the strongest
-modern neighbor — consume vidyut, never re-implement it. Aggregators
-(sanskritdictionary.com, Wisdom Library) lose on provenance; CDSL itself is
-the substrate, not a competitor.
+× corpus-graded × trilingual (DE/EN/RU)**. The two original reference sites
+set the bar — **michaelmeyer.fr/sanskrit** (speed: static precomputed pages)
+and **sanskritdictionary.com** (features: encoding toggle, form lookup,
+multi-dict view) — and the founding formula is *meyer's speed +
+sanskritdictionary's features + the provenance and corpus evidence neither
+has*. Ambuda/vidyut is the strongest modern neighbor — consume vidyut, never
+re-implement it. Aggregators lose on provenance; CDSL itself is the
+substrate, not a competitor.
 
 ## Six improvements, ranked by leverage
 
