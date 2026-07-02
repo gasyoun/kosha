@@ -14,6 +14,17 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+
+- Phase 1 D1–D4 execution (branch `feat/phase1-d1-d4`): lemma spine +
+  frequency join (D1), per-dict `<pc>` entry loader for mw/pwg/ap90 (D2),
+  forms layer + scan-URL resolver (D3), full kosha API v1 + Salt facade
+  REST faces + 20-test pytest suite (D4). See
+  [`data/SOURCES.md`](https://github.com/gasyoun/kosha/blob/main/data/SOURCES.md)
+  for every measured number and deviation from PHASE1_PLAN.md, and
+  `.ai_state.md` for what's explicitly deferred (full `render()` port, R1
+  citability commitments, per-dict sense segmentation).
+
 ## [0.2.1] - 2026-07-02
 
 README rewritten for a layered dual audience (MG request; authored by Fable 5
