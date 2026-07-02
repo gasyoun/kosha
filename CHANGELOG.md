@@ -14,6 +14,42 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-07-02
+
+The judgment layer completed — the three plans queued in
+[.ai_state.md](https://github.com/gasyoun/kosha/blob/main/.ai_state.md) §Next Steps 1,
+authored by Fable 5 (`claude-fable-5`). With these, the P1 execution session (Sonnet 5
+`claude-sonnet-5` / Opus 4.8 `claude-opus-4-8`) is fully gated: EVAL_PLAN's gates bind.
+
+### Added
+- **[EVAL_PLAN.md](https://github.com/gasyoun/kosha/blob/main/EVAL_PLAN.md)** — quality
+  gates designed so an executor can't game them: 8 anti-gaming ground rules (freeze
+  before first scored run, selection by committed procedure, thresholds live in the doc,
+  fail closed, snapshot discipline, scorer ≠ system, no ✅ without artifact); G-SEG
+  200-form stratified segmentation gold (9 classes incl. out-of-DCS contamination
+  holdout + calibration rule); G-RENDER adversarial golden selection (accented PWG
+  key2, `-L{lnum}` homonyms, densest MW `<ls>` cards, the ळ→x + IAST traps from
+  [FINDINGS §36/§39](https://github.com/gasyoun/SanskritLexicography/blob/master/FINDINGS.md));
+  G-SALT parity tolerances vs csl-apidev's `agni`/`indra`/`ka` envelopes (unlisted =
+  exact); G-SCAN page-truth beyond HTTP 200; every
+  [USE_CASES.md](https://github.com/gasyoun/kosha/blob/main/USE_CASES.md) *Accept:* line
+  as a named test (T-UC1…T-UC13, Gītā 1.1 locked as the UC6 verse).
+- **[RELATIONS.md](https://github.com/gasyoun/kosha/blob/main/RELATIONS.md)** — ecosystem
+  diplomacy: the Meyer permission ask drafted (his 7 self-digitized indices off-limits
+  without written yes; send at P2 exit); Cologne-maintainer framing paragraph ("kosha
+  serves your Salt standard", one csl-standards issue, no noise); Ambuda/vidyut
+  give-back (G-SEG report upstream, name-collision rule: public name = Gasuns Sanskrit
+  Dictionary); C-SALT/CCeH sense-face contribution; binding upstream-vs-track-3
+  decision table; 7-row contact registry (all sends = MG).
+- **[RISKS.md](https://github.com/gasyoun/kosha/blob/main/RISKS.md)** — pre-mortem
+  register R1–R12: `@data_version` is airtight only under 4 new commitments (in-browser
+  version resolution forced by T-UC10, `sense_crosswalk.tsv` per release, **Zenodo
+  mirroring moved up from P7 to the first citable release**, never-delete policy);
+  scan-link page-truth (a wrong link is worse than none); csl-sqlite lag measured +
+  surfaced as "data as of"; single-maintainer rot mirror-test + archive-banner policy;
+  samskrtam.ru bus factor (citations never point at the server); license geometry
+  (DCS dump license ask before P3 public; gramdict CC BY-NC must not enter BY-SA data).
+
 ## [0.1.0] - 2026-07-02
 
 Founding release — the complete planning/contract layer, authored in one day by
