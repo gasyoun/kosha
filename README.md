@@ -2,10 +2,19 @@
 
 _Created: 02-07-2026 · Last updated: 02-07-2026_
 
+**Product name: Gasuns Sanskrit Dictionary** (M.G., 02-07-2026); *kosha* is
+the working codename and deployment path (`samskrtam.ru/kosha`). The public
+brand also sidesteps the `vidyut-kosha` name collision. Positioning review:
+[POSITIONING.md](https://github.com/gasyoun/kosha/blob/main/POSITIONING.md) ·
+distillation:
+[POSITIONING_SUMMARY.md](https://github.com/gasyoun/kosha/blob/main/POSITIONING_SUMMARY.md).
+
 Fast lookup over the Cologne Digital Sanskrit Dictionaries (MW + PWG + AP90
 first), with inflected-form search, multi-dictionary view, and per-entry links
 to the scanned print pages. Primary audience: **translators**, then learners,
-then scholars.
+then scholars — with **its own advanced UI** at samskrtam.ru (decision
+recorded in POSITIONING.md §2: API-first, the UI is a client of the same
+public API).
 
 **Status: pre-code.** This repo was created 02-07-2026 after the planning
 corpus was audited and four meta-decisions locked

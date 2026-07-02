@@ -1,13 +1,37 @@
-# kosha — comparative positioning review (Fable 5)
+# Gasuns Sanskrit Dictionary — comparative positioning review
 
 _Created: 02-07-2026 · Last updated: 02-07-2026_
 
-A judgment-tier review requested by M.G. on 02-07-2026: how kosha compares to
-other digital-humanities dictionary projects, where it can be drastically
-improved, how it sits in the digital-Sanskrit-lexicography lineage, and what
-would make it genuinely best for Sanskrit students. Authored on Fable 5
-(`claude-fable-5`); external-project states are as of the model's January 2026
-knowledge cutoff — re-verify any competitor claim before citing it in print.
+A judgment-tier review requested by M.G. on 02-07-2026: how the Gasuns Sanskrit
+Dictionary (working codename **kosha**, deployment target `samskrtam.ru/kosha`)
+compares to other digital-humanities dictionary projects, where it can be
+drastically improved, how it sits in the digital-Sanskrit-lexicography lineage,
+and what would make it genuinely best for Sanskrit students. Authored on
+Fable 5 (`claude-fable-5`); external-project states are as of the model's
+January 2026 knowledge cutoff — re-verify any competitor claim before citing it
+in print. Executive distillation:
+[POSITIONING_SUMMARY.md](https://github.com/gasyoun/kosha/blob/main/POSITIONING_SUMMARY.md).
+
+## 0. The three tracks — what "Gasuns" means here
+
+This project is the third track of a single sustained program, and the review
+below is about track 3 only:
+
+1. **Improving the source.** Corrections to the Cologne dictionaries
+   themselves, through the canonical csl-orig change-file workflow — the
+   scholarly ground truth this dictionary stands on.
+2. **Improving the Cologne UI.** Contributions to the existing access layer —
+   csl-websanlexicon, csl-apidev (Salt/Kosh API), csl-app — upstream, for
+   everyone.
+3. **The advanced integration layer at `samskrtam.ru/kosha`** — Gasuns' own
+   server, his own way of mixing the data (multi-dict × corpus evidence ×
+   morphology × scans × trilingual glosses) **and his own advanced UI**. Track
+   3 is deliberately *not* upstreamed: it is where design opinions that don't
+   belong in Cologne's conservative frontend get to exist.
+
+Tracks 1–2 earn the right to track 3: the same person correcting the source
+and maintaining the shared UI is the one best placed to build the opinionated
+layer above them.
 
 ---
 
@@ -81,10 +105,23 @@ Ranked by leverage, what would change kosha's league:
    one screen. Unique worldwide; especially decisive for the Russian-speaking
    student audience nobody else serves.
 
-And one anti-improvement to enforce: **do not build a reader.** Ambuda owns
-that ground with more engineering capacity. kosha should be the best possible
-*API + lookup surface* that a reader (Ambuda's, SamudraManthanam, anyone's)
-can call.
+On the reader/UI question there was a disagreement, resolved by M.G. on
+02-07-2026 and recorded here. Fable's recommendation was "don't build a
+reader — Ambuda owns that ground; be the best API a reader can call."
+**M.G. overrode it: the Gasuns Sanskrit Dictionary will have its own advanced
+UI, its own way**, at `samskrtam.ru/kosha`. The reconciled position, which
+both sides of the argument support:
+
+- **API-first architecture stays.** The own UI is built as *a client of the
+  same public API* — so the investment in the UI never forecloses other
+  consumers (Ambuda, SamudraManthanam, anyone), and the API remains the
+  citable scholarly surface.
+- **The UI competes on the identity, not on Ambuda's features.** Its ground
+  is the intersection Ambuda doesn't occupy: multi-dictionary comparison,
+  scan-anchored print-truth, evidence badges, the trilingual DE/EN/RU layer,
+  the Zaliznyak grammar token. A text-reading surface can grow out of that
+  lookup-first identity (corpus sentences → passage view) rather than by
+  cloning a reader.
 
 ## 3. Fit in the digital Sanskrit lexicography line
 
