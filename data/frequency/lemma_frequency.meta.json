@@ -1,0 +1,27 @@
+{
+  "generator": "build_frequency_layer.py",
+  "source": "VisualDCS/src/DCS-data-2026/archive.sqlite (M9)",
+  "sources_used": {
+    "count_all/grammar_all": "period_freq period='ALL-corpus' (Leonchenko/Прил3)",
+    "periods/periods_sum": "period_freq source='QL/FRQ_P'",
+    "coverage_pct/core_rank": "core_vocab source='Leonchenko/Сборное'"
+  },
+  "join_key": "lemma_slp1 (SLP1, sanskrit-util normalised)",
+  "period_order": [
+    "9 Vedic",
+    "1 -800",
+    "2 -300",
+    "3200",
+    "4700",
+    "5 1200",
+    "6 1700",
+    "7 1900",
+    "11 Epic",
+    "12 Classic"
+  ],
+  "rows": 83277,
+  "rows_with_count_all": 59282,
+  "rows_with_period_vector": 83237,
+  "rows_with_coverage_pct": 7120,
+  "note": "coverage_pct is the Leonchenko/Сборное per-lemma corpus-coverage weight (NOT a running cumulative); count_all is the canonical frequency; rows lacking count_all are ranked by periods_sum after all counted lemmas."
+}
