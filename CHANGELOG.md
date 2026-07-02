@@ -14,6 +14,20 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-07-02
+
+README rewritten for a layered dual audience (MG request; authored by Fable 5
+`claude-fable-5`): public-facing top, engineering spine below.
+
+### Changed
+- **[README.md](https://github.com/gasyoun/kosha/blob/main/README.md)** — drastic
+  rewrite: brand-led H1 (**Gasuns Sanskrit Dictionary**, kosha = codename); prominent
+  pre-alpha "nothing runs yet" banner; public pitch + feature list + P1–P7 roadmap
+  snapshot; new **FAQ** (18 questions across using-it / vs-existing-sites /
+  status-timeline / licensing-reuse); planning spine preserved under "For contributors
+  & agents" (reuse-first table, A1–A4, ground rules, full document map incl. the
+  SanskritLexicography planning corpus). No decisions changed — presentation only.
+
 ## [0.2.0] - 2026-07-02
 
 The judgment layer completed — the three plans queued in
