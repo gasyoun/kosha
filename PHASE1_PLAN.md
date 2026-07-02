@@ -8,6 +8,17 @@ now banner-flagged): with the union index, glossary, and scan resolver
 consumed instead of rebuilt, Phase 1 is **day-scale glue**. Genuinely new code
 is marked **NEW**; everything else is import/port.
 
+> **Engineering contract:
+> [ARCHITECTURE.md](https://github.com/gasyoun/kosha/blob/main/ARCHITECTURE.md)**
+> (02-07-2026) — locked decisions A1–A4: raw-markup storage + ported
+> csl-websanlexicon transforms; `dict.L.senseN@version` sense IDs; local-first
+> (M.G. deploys manually, agents never SSH); execution queued to a Sonnet 5 /
+> Opus 4.8 session. It carries the SQLite schema, the API v1 contract, and the
+> golden-test requirements — implement against it, record deviations there
+> first. D2 additionally delivers the per-dict sense-segmentation rule and the
+> `render()` port with golden tests; D4 implements API v1 as specified
+> (including `/api/v1/sense/{id}` with the versioned cite payload).
+
 Nothing below is started. No ✅ appears in this file until the referenced code
 exists and its check passes — that is the lesson of the 02-07-2026 audit.
 

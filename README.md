@@ -40,10 +40,14 @@ DE/EN/RU layer — open, API-first, versioned, citable.** (Caveat from the
 02-07-2026 audit stands: the pre-triage analysis doc's latency numbers and
 author attributions were unsupported; the live survey supersedes them.)
 
-**Status: pre-code.** This repo was created 02-07-2026 after the planning
-corpus was audited and four meta-decisions locked
-([SanskritLexicography v0.0.34](https://github.com/gasyoun/SanskritLexicography/releases/tag/v0.0.34)).
-Nothing is built yet; [PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md)
+**Status: architecture locked, coding unblocked.** Repo created 02-07-2026
+after the planning-corpus audit
+([SanskritLexicography v0.0.34](https://github.com/gasyoun/SanskritLexicography/releases/tag/v0.0.34));
+same-day, the engineering contract was locked in
+[ARCHITECTURE.md](https://github.com/gasyoun/kosha/blob/main/ARCHITECTURE.md)
+(A1–A4: raw-markup storage + ported transforms · `dict.L.senseN@version`
+sense IDs · local-first, M.G. deploys · execution by Sonnet/Opus session).
+[PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md)
 is the work order. No file in this repo claims to be "ready" unless it runs.
 
 ## Why this repo
