@@ -76,10 +76,25 @@ CREATE TABLE IF NOT EXISTS senses (
     PRIMARY KEY (entry_id, sense_n)
 );
 
+-- H111: `source` carries a trust ordering, highest first --
+--   dcs      corpus-attested (DCS) -- highest trust
+--   vidyut   rule-generated, DCS-miss fallback
+--   heritage rule-generated full paradigm (Heritage/INRIA SL_morph.xml) --
+--            lowest trust: the declension engine over-generates
+--            grammatically-possible but unattested forms (hypergeneration),
+--            and H105's hand-adjudication found occasional stem mis-assignment.
+--            A heritage-only form/lemma must never be surfaced as authoritative
+--            by kosha lookup or a downstream oracle without dcs/vidyut
+--            corroboration (join on form_slp1 and check `source`).
+-- `category` is NULL for dcs/vidyut; heritage rows carry the coarse Heritage
+-- grammatical category (nominal/finite-verb/participle/...) so consumers can
+-- filter out the over-generation-prone categories (iic/iiv/iip compounds are
+-- the largest hypergeneration source) without re-deriving it from the XML.
 CREATE TABLE IF NOT EXISTS forms (
     form_slp1 TEXT NOT NULL,
     lemma_slp1 TEXT NOT NULL,
     source TEXT NOT NULL,
+    category TEXT,
     PRIMARY KEY (form_slp1, lemma_slp1, source)
 );
 CREATE INDEX IF NOT EXISTS forms_lemma ON forms(lemma_slp1);
@@ -90,6 +105,12 @@ def connect():
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     con = sqlite3.connect(DB_PATH)
     con.executescript(SCHEMA)
+    # H111 migration: CREATE TABLE IF NOT EXISTS above is a no-op against a
+    # pre-existing kosha.db from before the `category` column was added.
+    cols = {row[1] for row in con.execute("PRAGMA table_info(forms)")}
+    if "category" not in cols:
+        con.execute("ALTER TABLE forms ADD COLUMN category TEXT")
+        con.commit()
     return con
 
 

@@ -112,6 +112,36 @@ met trivially by flat-file serving.
 
 ---
 
+## H111 — Heritage/INRIA forms as a third `forms` witness (decided)
+
+**Decision (MG, 03-07-2026).** "Ingest Heritage's 928k surplus forms into
+kosha as a third witness — yes. But with a note that Heritage can contain
+errors because of hypergeneration. We do not trust Heritage forms fully."
+
+**Implementation.** `forms.source='heritage'` rows (951,991, after PK
+collisions on duplicate `(form_slp1, lemma_slp1)` category variants — see
+[CHANGELOG.md](https://github.com/gasyoun/kosha/blob/main/CHANGELOG.md))
+added purely additively: `dcs` (397,843) and `vidyut` (28,567) rows are
+untouched, and by construction of the
+[H111 ingest feed](https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/heritage_forms_oracle.py)
+(forms Heritage has that kosha's `dcs`+`vidyut` do **not**), no `form_slp1`
+ever carries both a `heritage` row and a `dcs`/`vidyut` row — the "shared
+form gains an extra heritage witness" case
+([H111](https://github.com/gasyoun/Uprava/blob/main/handoffs/H111_kosha_ingest_heritage_forms.md)
+step 6) is structurally impossible with this feed and was not pursued;
+Heritage/kosha *agreement* on shared forms is a separate, already-computed
+artifact
+([heritage_forms_oracle.tsv.gz](https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/heritage_forms_oracle.tsv.gz),
+94,264 intersecting forms, 78.3% agree) that H111 explicitly does not fold
+into this ingest. Trust ordering `dcs > vidyut > heritage` and the nullable
+`category` down-weighting lever are documented in
+[ARCHITECTURE.md](https://github.com/gasyoun/kosha/blob/main/ARCHITECTURE.md)
+and `scripts/build_forms.py`. The 6,966 nominal-only disagreements (higher-
+value DCS-correction candidates) are explicitly **out of scope** here — flagged
+for a future handoff, not folded in.
+
+---
+
 ## Status
 
 All three D5-parked items **resolved** and reflected in

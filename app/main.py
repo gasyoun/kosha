@@ -122,6 +122,11 @@ def get_lemma(key: str, in_: str = Query("auto", alias="in"), out: str = "iast",
 @app.get("/api/v1/form/{form}")
 def get_form(form: str, in_: str = Query("auto", alias="in"),
              con: sqlite3.Connection = Depends(get_db)):
+    # H111 trust ordering (highest to lowest): dcs > vidyut > heritage.
+    # `source='heritage'` is Heritage/INRIA's rule-generated full paradigm —
+    # it over-generates unattested forms, so a heritage-only result here is
+    # corroborating evidence, not attested usage. Callers that need "attested"
+    # rather than "grammatically possible" should filter source != 'heritage'.
     slp1_form = to_slp1_auto(form, in_)
     lemma_rows = con.execute(
         "SELECT DISTINCT lemma_slp1, source FROM forms WHERE form_slp1=?", (slp1_form,)
