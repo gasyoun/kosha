@@ -14,6 +14,21 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H111: Heritage/INRIA forms as a third, low-trust `forms` witness.**
+  `forms` gains a nullable `category` column (migrated in `scripts/build_db.py`
+  for pre-existing `kosha.db`s) and `scripts/build_forms.py` now loads
+  [`heritage_only_forms.tsv`](https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/heritage_only_forms.tsv)
+  as `source='heritage'`, purely additive and loaded last: **+951,991** rows
+  (`dcs` 397,843 and `vidyut` 28,567 unchanged). Trust ordering
+  `dcs > vidyut > heritage` — Heritage's declension engine over-generates
+  grammatically-possible but unattested forms — documented in
+  [ARCHITECTURE.md](https://github.com/gasyoun/kosha/blob/main/ARCHITECTURE.md),
+  `build_forms.py`, and
+  [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md).
+  `/api/v1/form` already returned `source` per result, so heritage-only hits
+  are distinguishable client-side without an API change.
+
 ## [0.5.0] - 2026-07-03
 
 Phase 2 (public alpha) first agent-doable slice: the **static-cache generator**
