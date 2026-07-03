@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-07-03
+
 ### Added
 - **H111: Heritage/INRIA forms as a third, low-trust `forms` witness.**
   `forms` gains a nullable `category` column (migrated in `scripts/build_db.py`
