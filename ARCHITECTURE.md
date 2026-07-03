@@ -62,9 +62,19 @@ CREATE TABLE senses  (entry_id INTEGER NOT NULL REFERENCES entries(id),
                       span_start INTEGER NOT NULL, span_end INTEGER NOT NULL,
                       PRIMARY KEY (entry_id, sense_n));
 
--- Form -> lemma layer, imported from RussianTranslation/glossary (D3)
+-- Form -> lemma layer, imported from RussianTranslation/glossary (D3) +
+-- Heritage/INRIA third witness (H111). `source` trust ordering, highest
+-- first: 'dcs' (corpus-attested) > 'vidyut' (generated, DCS-miss fallback)
+-- > 'heritage' (rule-generated FULL paradigm -- over-generates unattested
+-- forms; H105 also found occasional stem mis-assignment). A heritage-only
+-- form/lemma is corroborating evidence only, never surfaced as authoritative
+-- without a dcs/vidyut row for the same form_slp1. `category` is NULL for
+-- dcs/vidyut; heritage rows carry the coarse Heritage grammatical category
+-- (nominal/finite-verb/participle/iic-compound/...) so consumers can filter
+-- the compound-initial categories, the largest hypergeneration source.
 CREATE TABLE forms   (form_slp1 TEXT NOT NULL, lemma_slp1 TEXT NOT NULL,
-                      source TEXT NOT NULL,           -- 'dcs' | 'vidyut' | ...
+                      source TEXT NOT NULL,           -- 'dcs' | 'vidyut' | 'heritage'
+                      category TEXT,                  -- heritage only; NULL for dcs/vidyut
                       PRIMARY KEY (form_slp1, lemma_slp1, source));
 CREATE INDEX forms_lemma ON forms(lemma_slp1);
 ```
@@ -99,7 +109,7 @@ Prefix `/api/v1/`. JSON only. Every response carries the envelope:
 | Endpoint | Behavior |
 |---|---|
 | `GET /api/v1/lemma/{key}?in=auto&out=iast&dicts=mw,pwg,ap90` | Entries across requested dicts for one lemma. `in`: `auto` (default; detect SLP1/IAST/HK/Devanagari — the sanskritdictionary.com lesson) or explicit. `out`: `iast` (default), `deva`, `slp1`, `hk`. Each entry: `sense_id`s, rendered HTML, raw body on `?raw=1`, scan URL + label |
-| `GET /api/v1/form/{form}?in=auto` | Form→lemma(s) via `forms`, then as lemma lookup. Misses return `lemmas: []` plus fuzzy suggestions |
+| `GET /api/v1/form/{form}?in=auto` | Form→lemma(s) via `forms`, then as lemma lookup. Misses return `lemmas: []` plus fuzzy suggestions. `source` trust ordering: `dcs` > `vidyut` > `heritage` (H111) — a `heritage`-only result is corroborating evidence, not attested usage |
 | `GET /api/v1/search?q=&mode=prefix&limit=50&offset=0` | Headword search over `lemmas`; `mode`: `exact`/`prefix`/`fuzzy`. Paginated: `limit` ≤ 200, `offset`, `total` in envelope |
 | `GET /api/v1/sense/{dict}.{L}.{n}` | The citable unit: sense text (raw + rendered), parent entry, scan link, and a `cite` object (formatted string + BibTeX + CSL-JSON) pinned to `data_version` — the Gandhāri Cite button, versioned |
 | `GET /api/v1/meta` | `data_version`, per-dict `sources` rows, counts |
