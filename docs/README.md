@@ -5,8 +5,8 @@ _Created: 03-07-2026 · Last updated: 03-07-2026_
 This directory is the **static tier** served by GitHub Pages (Phase 2 public
 alpha). Everything under it is **generated from `kosha.db`** by
 [`scripts/build_static_cache.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_static_cache.py)
-and is **gitignored** — it is a deploy artifact, not committed source (A3: MG
-deploys; agents never publish). The generator never calls a live service
+and — per MG's 03-07-2026 decision — is **committed to `main`** (Pages serves the legacy `main`//` builder; a root `.nojekyll` + `index.html` redirect were added). Regenerate + commit to redeploy (A3: MG
+deploys or explicitly orders the deploy). The generator never calls a live service
 (RISKS.md R12) — it renders from the local DB only, so the static tier is a
 byte-for-byte snapshot of the `/api/v1/lemma` responses.
 
@@ -17,9 +17,9 @@ Sized per the D5-3 decision
 
 | Path | What | Size | Committed? |
 |---|---|---|---|
-| `cards/<token>.json` | one card per attested lemma (~50,355 lemmas that have **both** a dict entry **and** a corpus attestation), frequency-ranked | ~155 MB, ~3 KB/file | no (Pages deploy) |
-| `js/data/lemmas.json` | headword **autocomplete index** — all 323,425 lemmas, `{slp1, iast, dicts}` each, columnar | ~13 MB | no (Pages deploy) |
-| `js/data/attested_keys.json` | sorted list of card tokens that exist, so the UI picks static-card vs dynamic-API without a 404 probe | ~0.5 MB | no (Pages deploy) |
+| `cards/<token>.json` | one card per attested lemma (~50,355 lemmas that have **both** a dict entry **and** a corpus attestation), frequency-ranked | ~155 MB, ~3 KB/file | yes (main, since 03-07-2026) |
+| `js/data/lemmas.json` | headword **autocomplete index** — all 323,425 lemmas, `{slp1, iast, dicts}` each, columnar | ~13 MB | yes (main, since 03-07-2026) |
+| `js/data/attested_keys.json` | sorted list of card tokens that exist, so the UI picks static-card vs dynamic-API without a 404 probe | ~0.5 MB | yes (main, since 03-07-2026) |
 
 The **full 222,179-lemma card set** (every entry-bearing lemma, ~682 MB) is not
 part of the Pages tier — it ships as a **release-asset tarball** (`--full-tarball`)
