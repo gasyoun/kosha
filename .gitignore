@@ -4,5 +4,7 @@ __pycache__/
 *.db
 *.sqlite
 data/raw/
+data/raw_sqlite/
+data/releases/
 docs/js/data/lemmas.json
 .pytest_cache/
