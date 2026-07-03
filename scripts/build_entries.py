@@ -31,12 +31,51 @@ RE_PC = re.compile(r"<pc>([^<]*)</pc>")
 RE_KEY2 = re.compile(r"<key2>(.*?)</key2>", re.S)
 RE_L = re.compile(r"<L>([^<]*)</L>")
 
-# csl-orig commit is not embedded in the csl-sqlite release; recorded as
-# "csl-sqlite release tag" per ARCHITECTURE §Maximum-reuse-rules point 3
-# (sources records BOTH the csl-sqlite release tag and the underlying
-# csl-orig commit — the latter is not exposed by this release format and
-# is left for a future D2 refinement to resolve via the csl-orig repo's
-# own commit log for the matching data snapshot).
+# csl-orig commit is not embedded in the csl-sqlite release. It is resolved
+# (D5) by CROSS-DATING: the latest csl-orig commit touching this dict's source
+# file at or before the csl-sqlite release timestamp, read from a local csl-orig
+# sibling checkout via `git log` (offline — RISKS.md R12: no live services).
+# This is an UPPER BOUND (commit <= release cut time), not a build-exact mapping
+# — csl-sqlite may have been built from a slightly earlier snapshot — and is
+# labelled as such in the stored value. Falls back to the release tag alone when
+# no csl-orig checkout is present. See D5_MEASUREMENTS.md and data/SOURCES.md.
+CSL_ORIG_SIBLING = ROOT.parent / "csl-orig"
+CSL_ORIG_TXT = {"mw": "v02/mw/mw.txt", "pwg": "v02/pwg/pwg.txt", "ap90": "v02/ap90/ap90.txt"}
+
+
+def _release_tag_to_datetime(tag):
+    """csl-sqlite tags are 'YYYY-MM-DD-HH-MM-SS'. -> 'YYYY-MM-DD HH:MM:SS' for git,
+    or None if the tag isn't in that shape."""
+    m = re.match(r"^(\d{4})-(\d{2})-(\d{2})-(\d{2})-(\d{2})-(\d{2})$", tag or "")
+    if not m:
+        return None
+    y, mo, d, h, mi, s = m.groups()
+    return f"{y}-{mo}-{d} {h}:{mi}:{s}"
+
+
+def cross_date_csl_orig_commit(dict_code, release_tag, csl_orig=CSL_ORIG_SIBLING):
+    """Resolve sources.csl_orig_commit by cross-dating against a local csl-orig
+    checkout. Returns a labelled provenance string. Offline; graceful fallback."""
+    base = f"csl-sqlite release {release_tag}"
+    when = _release_tag_to_datetime(release_tag)
+    relpath = CSL_ORIG_TXT.get(dict_code)
+    if when is None or relpath is None or not (csl_orig / ".git").exists():
+        return f"{base} (csl-orig commit not resolved: no local csl-orig checkout)"
+    try:
+        out = subprocess.run(
+            ["git", "-C", str(csl_orig), "log", "-1", "--format=%H %cs",
+             "--before", when, "--", relpath],
+            capture_output=True, text=True, encoding="utf-8", check=True,
+        ).stdout.strip()
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return f"{base} (csl-orig commit not resolved: git unavailable)"
+    if not out:
+        return f"{base} (no csl-orig commit for {dict_code} before release)"
+    commit, cdate = out.split(" ", 1)
+    return (f"{base}; csl-orig<={commit} ({cdate}, cross-dated upper bound, "
+            f"latest commit to {relpath} at/before release)")
+
+
 DICT_META = {
     "mw": {"title": "Monier-Williams Sanskrit-English Dictionary", "pc_format": "page,col"},
     "pwg": {"title": "Petersburger Wörterbuch (large)", "pc_format": "vol-page"},
@@ -159,7 +198,7 @@ def build_entries(con, dict_codes, release_tag="latest"):
             "INSERT INTO sources (dict, title, edition, csl_orig_commit, source_path, "
             "pc_format, pc_coverage, entry_count) VALUES (?,?,?,?,?,?,?,?)",
             (dict_code, meta["title"], None,
-             f"csl-sqlite release {resolved_tag} (csl-orig commit not exposed by this release format)",
+             cross_date_csl_orig_commit(dict_code, resolved_tag),
              f"csl-sqlite/{dict_code}.zip", meta["pc_format"], coverage, n_total),
         )
         con.commit()

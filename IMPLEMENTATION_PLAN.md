@@ -40,7 +40,7 @@ Exactly [PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.
 D1–D5 against the ARCHITECTURE contract. **Exit:** pytest green incl. golden
 renders; `<pc>` coverage measured per dict in `sources`; D5 numbers recorded
 and SLO + cadence decided in
-[KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_DECISIONS_NEEDED.md).
+[KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md).
 
 ## P2 — Public alpha (the first URL)
 
