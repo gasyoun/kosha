@@ -1,13 +1,16 @@
 # Gasuns Sanskrit Dictionary
 
-_Created: 02-07-2026 · Last updated: 02-07-2026_
+_Created: 02-07-2026 · Last updated: 03-07-2026_
 
-> **Status: pre-alpha — nothing runs yet.** This repository currently contains
-> a locked, gated engineering plan (released as
-> [v0.2.0](https://github.com/gasyoun/kosha/releases/tag/v0.2.0)) and an honest
-> FastAPI stub. No lookup works today. Coding starts with
-> [PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md);
-> no file in this repo claims to be "ready" unless its check actually runs.
+> **Status: pre-alpha — API runs locally, nothing is deployed yet.** Phase 1
+> (data + API against real MW/PWG/AP90 data, 115/115 tests green) is complete;
+> the P2 static-cache generator for the public GitHub Pages tier is built
+> (released as [v0.5.0](https://github.com/gasyoun/kosha/releases/tag/v0.5.0)).
+> What remains for a first public URL is MG's deploy step — see
+> [PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md)
+> and [.ai_state.md](https://github.com/gasyoun/kosha/blob/main/.ai_state.md)
+> for the exact resume point; no file in this repo claims to be "ready" unless
+> its check actually runs.
 
 **A translator-first Sanskrit dictionary: every major dictionary on one page,
 every sense anchored to the scanned print, every word findable as it actually
@@ -62,8 +65,8 @@ scenarios it must serve:
 
 | Phase | Deliverable | State |
 |---|---|---|
-| **P1** Data + API | `kosha.db` (MW+PWG+AP90) + API v1 running locally, tests green | **next — specced in [PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md)** |
-| **P2** Public alpha | first live URLs: static lookup on GitHub Pages + API on samskrtam.ru | gated on P1 |
+| **P1** Data + API | `kosha.db` (MW+PWG+AP90) + API v1 running locally, tests green | **done** — 115/115 tests green (see [D5_MEASUREMENTS.md](https://github.com/gasyoun/kosha/blob/main/D5_MEASUREMENTS.md)) |
+| **P2** Public alpha | first live URLs: static lookup on GitHub Pages + API on samskrtam.ru | **generator built** ([v0.5.0](https://github.com/gasyoun/kosha/releases/tag/v0.5.0)) — **next: MG deploy** |
 | **P3** Evidence layer | DCS frequency badges, corpus example per sense | gated on P1 |
 | **P4** Forms & grammar | paste-anything segmentation, paradigm tables, grammar token | gated on P1 |
 | **P5** Advanced UI | the project's own UI at samskrtam.ru/kosha | gated on P2–P4 |
@@ -163,8 +166,9 @@ already owns the *kosha* name in that ecosystem.
 ### Status & timeline
 
 **Can I use it today?**
-No. The repo is planning documents plus a stub. The first usable URL arrives
-at P2 (public alpha).
+Not at a public URL yet. The API runs locally against real MW/PWG/AP90 data
+(Phase 1 complete, 115/115 tests green) and the P2 static-cache generator is
+built; the first public URL arrives once MG runs the deploy step.
 
 **Why is the repo all Markdown?**
 Deliberately. An audit of this project's earlier planning corpus found
@@ -179,9 +183,10 @@ finished and released as
 first real line of application code.
 
 **When will something be usable?**
-P1 (data + API, local) is roughly five agent-days of work; the first public
-URLs come with P2 immediately after. The optimistic path to a citable v1.0 is
-4–6 weeks, and the long poles are human gates, not code.
+P1 (data + API, local) is done. The P2 static-cache generator is built; the
+first public URLs come as soon as MG runs the deploy step. The optimistic path
+to a citable v1.0 is 4–6 weeks from there, and the long poles are human gates,
+not code.
 
 ### Licensing & reuse
 
