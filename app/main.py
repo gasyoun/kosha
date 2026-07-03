@@ -25,6 +25,7 @@ from scan_resolver import scan_url  # noqa: E402
 from transliterate import to_slp1_auto, from_slp1_out  # noqa: E402
 from versions import parse_sense_id, has_archive, resolve_sense  # noqa: E402
 from cite import cite_object  # noqa: E402
+from evidence import build_evidence  # noqa: E402
 
 load_dotenv()
 
@@ -96,6 +97,15 @@ def _entry_payload(con, row, out: str, raw: bool):
     ).fetchall()
     dv = data_version(con)
     payload["sense_ids"] = [f"{row['dict']}.{row['L']}.{s['sense_n']}@{dv}" for s in senses]
+    # P3 evidence layer (IMPLEMENTATION_PLAN.md P3 / EVAL_PLAN.md T-UC4):
+    # band + attestation count + first era + one corpus example, each badge
+    # carrying its own provenance source. Keyed off the entry's own
+    # slp1_key, not the input query key, so homonym-suffixed entries under
+    # the same headword still resolve the right lemma row.
+    lemma_row = con.execute(
+        "SELECT * FROM lemmas WHERE slp1=?", (row["slp1_key"],)
+    ).fetchone()
+    payload["evidence"] = build_evidence(lemma_row)
     return payload
 
 
@@ -138,6 +148,39 @@ def get_form(form: str, in_: str = Query("auto", alias="in"),
     return envelope(con, {"form": form, "in": in_}, [{"lemmas": lemmas}])
 
 
+@app.get("/api/v1/forms/{form}/analyze")
+def analyze_form(form: str, in_: str = Query("auto", alias="in"),
+                  con: sqlite3.Connection = Depends(get_db)):
+    """P4 Wave K1 (ROADMAP_INFLECT_2026_2027.md D3): grammatical analysis of
+    an inflected form -- case/number/gender for nominals -- sourced verbatim
+    from the Cologne csl-inflect tool's own generated tables (MWinflect
+    nominals/pysanskritv2/tables/calc_tables.txt, ingested by
+    scripts/build_inflections.py into the `inflections` sidecar). Not the
+    kosha `forms` table (D3 lemma-only sidecar, DCS/vidyut/heritage sourced) --
+    this is the Cologne engine specifically, and returns the full analysis,
+    not just the lemma. A form is often genuinely ambiguous in Sanskrit
+    (e.g. dharmakSetre is loc-sg of both the m_a and n_a stems, and also
+    nom/acc/voc-du of the n_a stem) -- every parse is returned, not just one.
+    Verb conjugations are out of scope for K1 (see build_inflections.py
+    module docstring for the upstream MWinflect verbs/ pipeline blocker) --
+    a verb form here returns an empty `analyses` list, same shape as a miss.
+    """
+    slp1_form = to_slp1_auto(form, in_)
+    rows = con.execute(
+        "SELECT lemma_slp1, model, gender, gcase, number, refs, source "
+        "FROM inflections WHERE form_slp1=? ORDER BY lemma_slp1, model, gcase, number",
+        (slp1_form,),
+    ).fetchall()
+    analyses = [{
+        "lemma_slp1": r["lemma_slp1"], "lemma_iast": from_slp1_out(r["lemma_slp1"], "iast"),
+        "model": r["model"], "gender": r["gender"], "case": r["gcase"], "number": r["number"],
+        "refs": r["refs"], "source": r["source"],
+    } for r in rows]
+    if not analyses:
+        return envelope(con, {"form": form, "in": in_}, [{"analyses": [], "suggestions": []}])
+    return envelope(con, {"form": form, "in": in_}, [{"analyses": analyses}])
+
+
 @app.get("/api/v1/search")
 def search(q: str, mode: str = "prefix", limit: int = 50, offset: int = 0,
            con: sqlite3.Connection = Depends(get_db)):
@@ -153,11 +196,24 @@ def search(q: str, mode: str = "prefix", limit: int = 50, offset: int = 0,
     else:
         error("bad_request", f"unknown mode '{mode}'", 400)
     total = con.execute(f"SELECT COUNT(*) FROM lemmas WHERE {where}", params).fetchone()[0]
+    # P3 frequency-weighted ranking (IMPLEMENTATION_PLAN.md P3): an exact
+    # key match (slp1 = the query key) always sorts first regardless of
+    # mode -- a student typing the exact headword should never see a more
+    # frequent prefix-sibling above it. Within that, `rank_all ASC` (1 =
+    # most frequent), nulls (no DCS attestation, band 5) sorted after every
+    # ranked lemma, then `slp1 ASC` as the final deterministic tiebreak.
+    # Documented, not tunable per-request -- no client-supplied sort param.
+    order = (
+        "ORDER BY (slp1 = ?) DESC, "
+        "(rank_all IS NULL), rank_all ASC, slp1 ASC"
+    )
     rows = con.execute(
-        f"SELECT slp1, iast, n_dicts, dicts FROM lemmas WHERE {where} "
-        f"ORDER BY slp1 LIMIT ? OFFSET ?", (*params, limit, offset)
+        f"SELECT slp1, iast, n_dicts, dicts, rank_all FROM lemmas WHERE {where} "
+        f"{order} LIMIT ? OFFSET ?",
+        (*params, slp1_q, limit, offset)
     ).fetchall()
-    results = [{"slp1": r["slp1"], "iast": r["iast"], "n_dicts": r["n_dicts"], "dicts": r["dicts"]} for r in rows]
+    results = [{"slp1": r["slp1"], "iast": r["iast"], "n_dicts": r["n_dicts"], "dicts": r["dicts"],
+                "rank_all": r["rank_all"]} for r in rows]
     return {"data_version": data_version(con),
             "query": {"q": q, "mode": mode, "limit": limit, "offset": offset, "total": total},
             "results": results}

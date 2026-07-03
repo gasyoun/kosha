@@ -14,6 +14,73 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **P4 Wave K1** (data ingest + JSON API, Sonnet 5 `claude-sonnet-5`) — new
+  `inflections` sidecar table (
+  [`scripts/build_db.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_db.py)
+  SCHEMA + `--stage inflections`) loaded by
+  [`scripts/build_inflections.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_inflections.py)
+  from the sibling MWinflect checkout's Cologne csl-inflect nominal
+  declension tables (`nominals/pysanskritv2/tables/calc_tables.txt`, engine =
+  Cologne verbatim per
+  [ROADMAP_INFLECT_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_INFLECT_2026_2027.md)
+  D3). 6,849,382 (form, lemma, model, gender, case, number) rows from
+  288,844 stems, 3,267,305 distinct forms. New read-only
+  `GET /api/v1/forms/{form}/analyze` endpoint
+  ([`app/main.py`](https://github.com/gasyoun/kosha/blob/main/app/main.py))
+  returns every grammatical parse for a form. Verb conjugations are **not**
+  included — MWinflect's `verbs/` pipeline is blocked by a Python-2-only
+  syntax bug in `verbs/pysanskritv2/inputs/clean.py` (upstream issue, not
+  fixed here; see `.ai_state.md` for the exact trace). 6 new tests in
+  [`tests/test_inflections.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_inflections.py)
+  hand-verify the roadmap's exit-test forms (`bhagavAn`, `rAmeRa`,
+  `dharmakSetre`) against `calc_tables.txt`.
+
+## [0.7.0] - 2026-07-03
+
+Phase 3 (evidence layer, branch `p3-evidence-layer`, Sonnet 5 `claude-sonnet-5`).
+Builds on P1's frequency LEFT-JOIN rather than duplicating it in a new table
+(the P3 plan's original spec is now redundant with what's already on `lemmas`).
+Full suite green, including the 26 new tests in `tests/test_evidence.py`.
+
+### Added
+- **P3 evidence layer** —
+  [`scripts/build_evidence.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_evidence.py)
+  (new `--stage evidence`, wired into the default full build) adds two things
+  additively to `lemmas` via `ALTER TABLE`: a **frequency band** (1–5, over
+  `rank_all`; thresholds chosen from the D5-measured fact that the top 10,000
+  ranked lemmas already cover 95.4% of corpus token mass — full reasoning in
+  the module docstring) and **one corpus example per lemma** (Sanskrit
+  citation + aligned Russian, joined from the sibling
+  [`SanskritLexicography/RussianTranslation/src/corpus_lexicon.jsonl`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/corpus_lexicon.jsonl)
+  (1,091,528 rows) via the existing `forms.form_slp1 -> lemma_slp1` join —
+  examples ship **per lemma, not per sense**: the corpus feed has no
+  sense-level tagging, stated explicitly rather than silently downgraded.
+  Band distribution on the live spine: 1=493, 2=1,441, 3=7,484, 4=51,922,
+  5=262,085 (no DCS signal); 38,595 lemmas got a corpus example.
+- **[`app/evidence.py`](https://github.com/gasyoun/kosha/blob/main/app/evidence.py)** —
+  shapes the DB columns into the API's evidence block; `/api/v1/lemma`
+  entries now carry `evidence: {band, band_label, rank_all, count_all,
+  first_era, genre, example, badges}`, every `badges[]` item carrying its own
+  `source` string (fail-closed per EVAL_PLAN.md rule 4: a lemma with no DCS
+  signal gets `count_all: null` / `example: null`, never a fabricated `0` or
+  invented citation; `genre` is honestly `null` — not derivable from the
+  current DCS extraction, which stores only a chronological period vector).
+  Mirrored into
+  [`scripts/build_static_cache.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_static_cache.py)'s
+  `entry_payload()` (same lockstep-mirror pattern as `sense_ids`) so the P2
+  static tier stays byte-identical to the live API.
+- **`/api/v1/search` frequency-weighted ranking** — results now order by
+  exact-key-match-first, then `rank_all ASC` (nulls last), then `slp1 ASC`,
+  replacing plain alphabetical.
+- **[`tests/test_evidence.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_evidence.py)**
+  (26 tests) — `dharma` band/count/example (T-UC4 positive), a fail-closed
+  negative case (band-5 lemma: no fabricated 0, no invented example),
+  provenance-label-on-every-badge, a frozen 20-headword sample spanning all 5
+  bands checking both band assignment and that search ranking measurably
+  differs from alphabetical order (>=50% of multi-result queries in the
+  sample reorder; sortedness verified directly).
+
 ## [0.6.0] - 2026-07-03
 
 ### Added
