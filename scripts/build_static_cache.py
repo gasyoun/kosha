@@ -57,6 +57,7 @@ sys.path.insert(0, str(ROOT / "app"))
 from render import render            # noqa: E402
 from scan_resolver import scan_url   # noqa: E402
 from transliterate import from_slp1_out  # noqa: E402
+from evidence import build_evidence  # noqa: E402
 
 DEFAULT_DB = ROOT / "data" / "db" / "kosha.db"
 ALL_DICTS = ("mw", "pwg", "ap90")
@@ -115,6 +116,11 @@ def entry_payload(con, row, dv, out="iast", raw=False):
         "SELECT sense_n FROM senses WHERE entry_id=? ORDER BY sense_n", (row["id"],)
     ).fetchall()
     payload["sense_ids"] = [f"{row['dict']}.{row['L']}.{s['sense_n']}@{dv}" for s in senses]
+    # P3 evidence layer -- mirror app/main.py::_entry_payload's lemma_row join.
+    lemma_row = con.execute(
+        "SELECT * FROM lemmas WHERE slp1=?", (row["slp1_key"],)
+    ).fetchone()
+    payload["evidence"] = build_evidence(lemma_row)
     return payload
 
 
