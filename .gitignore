@@ -6,7 +6,11 @@ __pycache__/
 data/raw/
 data/raw_sqlite/
 data/releases/
+# P2 static-cache generator output (scripts/build_static_cache.py) — regenerable
+# from kosha.db; deployed to Pages by MG (A3), never committed in-repo.
 docs/js/data/lemmas.json
+docs/js/data/attested_keys.json
+docs/cards/
 .pytest_cache/
 # D5 measurement run outputs (machine-specific, regenerable via scripts/measure_d5.py)
 data/d5_run*.log

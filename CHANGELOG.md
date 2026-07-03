@@ -14,6 +14,51 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-07-03
+
+Phase 2 (public alpha) first agent-doable slice: the **static-cache generator**
+that emits the GitHub Pages tier from `kosha.db` (branch `feat/p2-static-cache`,
+Opus 4.8 `claude-opus-4-8`), built to the fixed D5-3 targets. 107 → **115** tests
+green. Enabling Pages / deploying stays MG's (A3).
+
+### Added
+- **P2 static-cache generator** —
+  [`scripts/build_static_cache.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_static_cache.py)
+  emits three deliverables from the local DB (never a live service, R12), each
+  matching [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md)
+  D5-3:
+  1. **Sharded per-lemma cards** — one JSON per lemma (never one bundle; a single
+     `lemmas.json` crosses the 100 MB/file cap at ~33k), for the **50,355**
+     lemmas with both a dict entry and a corpus attestation, **frequency-ranked**
+     so a partial/interrupted run front-loads value (top-10k = 95.4% of corpus
+     token mass) and resumes idempotently (existing shards skipped). Each card is
+     **byte-identical** to `GET /api/v1/lemma/<slp1>?in=slp1` (reuses `app/`
+     render/scan/transliterate — no reimplementation). ~155 MB, ~3 KB/file.
+  2. **Headword autocomplete index** — one ~13 MB columnar file, all 323,425
+     lemmas (`slp1`+`iast`+`dicts`); this is what the gitignored
+     `docs/js/data/lemmas.json` path holds (D5-3a: the INDEX, not the cards),
+     plus a tiny `attested_keys.json` sidecar so the UI picks static-vs-dynamic
+     without a 404 probe.
+  3. **Full 222,179-lemma card set** as an opt-in `--full-tarball` release asset
+     (R1c/R4 rebuildability), deterministic (`mtime=0`), not committed.
+- **Card filename encoding** (`card_token`) — keeps `[a-z0-9]` verbatim, escapes
+  every other UTF-8 byte (incl. uppercase — SLP1 is case-significant and would
+  collide on a case-insensitive FS) as `_<hexbyte>`; lossless, URL/FS-safe, with
+  a documented JS twin for the frontend.
+- **[docs/README.md](https://github.com/gasyoun/kosha/blob/main/docs/README.md)** —
+  the Pages static-tier layout, token scheme + JS twin, and regeneration/deploy
+  commands.
+- **[tests/test_static_cache.py](https://github.com/gasyoun/kosha/blob/main/tests/test_static_cache.py)**
+  (8 tests) — locks card↔live-API byte parity, `card_token` case-safety and
+  lossless round-trip, ranked-shard generation, and index/attested counts
+  (323,425 / 50,355).
+
+### Changed
+- `.gitignore` — the generated Pages tier (`docs/cards/`,
+  `docs/js/data/attested_keys.json`, alongside the already-ignored
+  `docs/js/data/lemmas.json`) is regenerable and MG-deployed, so it is not
+  committed.
+
 ## [0.4.0] - 2026-07-03
 
 Phase 1 **D5 — measure, then decide** (branch `feat/phase1-d5-measure`, Opus 4.8
