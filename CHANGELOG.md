@@ -14,10 +14,24 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-07-03
+
+Phase 3 (evidence layer) + Phase 4 Wave K1 (inflection data ingest), landed
+together via [PR #9](https://github.com/gasyoun/kosha/pull/9) (branch
+`feat/p3-evidence-p4-k1-inflect`, Sonnet 5 `claude-sonnet-5`) — both tracks
+ran as parallel sessions against the same checkout and ended up
+file-interleaved in `app/main.py`/`scripts/build_db.py`, so they ship as one
+release. P3 builds on P1's frequency LEFT-JOIN rather than duplicating it in
+a new table (the P3 plan's original spec is now redundant with what's
+already on `lemmas`). Full suite green: 149 passed (26 new in
+`tests/test_evidence.py`, 6 new in `tests/test_inflections.py`), 1
+pre-existing unrelated failure (`test_docs_site.py::test_committed_output_is_current`,
+docs-site staleness from the parallel Wave-3 docs-site work already in
+flight, not caused by this release).
+
 ### Added
-- **P4 Wave K1** (data ingest + JSON API, Sonnet 5 `claude-sonnet-5`) — new
-  `inflections` sidecar table (
-  [`scripts/build_db.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_db.py)
+- **P4 Wave K1** (data ingest + JSON API) — new `inflections` sidecar table
+  ([`scripts/build_db.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_db.py)
   SCHEMA + `--stage inflections`) loaded by
   [`scripts/build_inflections.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_inflections.py)
   from the sibling MWinflect checkout's Cologne csl-inflect nominal
@@ -35,15 +49,6 @@ sense citations pin to `data_version`, not to repo tags.
   [`tests/test_inflections.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_inflections.py)
   hand-verify the roadmap's exit-test forms (`bhagavAn`, `rAmeRa`,
   `dharmakSetre`) against `calc_tables.txt`.
-
-## [0.7.0] - 2026-07-03
-
-Phase 3 (evidence layer, branch `p3-evidence-layer`, Sonnet 5 `claude-sonnet-5`).
-Builds on P1's frequency LEFT-JOIN rather than duplicating it in a new table
-(the P3 plan's original spec is now redundant with what's already on `lemmas`).
-Full suite green, including the 26 new tests in `tests/test_evidence.py`.
-
-### Added
 - **P3 evidence layer** —
   [`scripts/build_evidence.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_evidence.py)
   (new `--stage evidence`, wired into the default full build) adds two things
