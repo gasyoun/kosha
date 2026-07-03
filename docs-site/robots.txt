@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /kosha/docs-site/
+Sitemap: https://gasyoun.github.io/kosha/docs-site/sitemap.xml
