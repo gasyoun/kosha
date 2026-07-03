@@ -23,8 +23,15 @@ from render import render  # noqa: E402
 from salt import entries_for_key, salt_entry, mint_salt_id  # noqa: E402
 from scan_resolver import scan_url  # noqa: E402
 from transliterate import to_slp1_auto, from_slp1_out  # noqa: E402
+from versions import parse_sense_id, has_archive, resolve_sense  # noqa: E402
+from cite import cite_object  # noqa: E402
 
 load_dotenv()
+
+# Public base for browser-resolvable citation URLs (RISKS.md R1 Commitment 1).
+# NOT the samskrtam.ru server (R5: citations never depend on the server host);
+# defaults to the local dev API. In production this is the durable API mirror.
+PUBLIC_BASE = os.getenv("KOSHA_PUBLIC_BASE", "http://localhost:8000")
 
 app = FastAPI(
     title=os.getenv("API_TITLE", "kosha"),
@@ -152,14 +159,43 @@ def search(q: str, mode: str = "prefix", limit: int = 50, offset: int = 0,
 
 
 @app.get("/api/v1/sense/{sense_id}")
-def get_sense(sense_id: str, con: sqlite3.Connection = Depends(get_db)):
-    try:
-        dict_code, L, rest = sense_id.split(".", 2)
-        sense_n_str = rest.split("@")[0]
-        sense_n = int(sense_n_str)
-    except (ValueError, IndexError):
-        error("bad_request", f"malformed sense id '{sense_id}' (expected dict.L.n)", 400)
+def get_sense(sense_id: str, v: str = Query(None),
+              con: sqlite3.Connection = Depends(get_db)):
+    parsed = parse_sense_id(sense_id)
+    if parsed is None:
+        error("bad_request", f"malformed sense id '{sense_id}' (expected dict.L.n[@version])", 400)
+    dict_code, L, sense_n, id_version = parsed
+    dv = data_version(con)
+    # The pinned version comes from the id's @suffix, or an explicit ?v= override
+    # (RISKS.md R1: an old citation resolves against the release it names).
+    want_version = v or id_version or dv
 
+    # Archived (old) version: resolve against its frozen dump (app/versions.py),
+    # not the live DB — this is the version-resolution path T-UC10 forces.
+    if want_version != dv:
+        if not has_archive(want_version):
+            error("version_not_archived",
+                  f"data version '{want_version}' is not archived on this instance",
+                  404,
+                  suggestions=[
+                      "citations resolve against GitHub release assets: "
+                      f"{cite_object(dict_code, L, sense_n, want_version, PUBLIC_BASE)['release_asset']}",
+                  ])
+        arch = resolve_sense(want_version, sense_id)
+        if arch is None:
+            error("sense_not_found",
+                  f"no sense {dict_code}.{L}.{sense_n} in archived version '{want_version}'", 404)
+        result = {
+            "sense_id": f"{dict_code}.{L}.{sense_n}@{want_version}",
+            "dict": dict_code, "L": L, "sense_n": sense_n, "resolved_from": "archive",
+            "text_raw": arch["text_raw"], "text_rendered": render(dict_code, arch["text_raw"]),
+            "entry": {"dict": dict_code, "L": L, "headword": arch["headword"]},
+            "scan_url": None,
+            "cite": cite_object(dict_code, L, sense_n, want_version, PUBLIC_BASE, arch["headword"]),
+        }
+        return {"data_version": want_version, "query": {"sense_id": sense_id, "v": v}, "results": [result]}
+
+    # Live (current) version: resolve against the DB.
     row = con.execute("SELECT * FROM entries WHERE dict=? AND L=?", (dict_code, L)).fetchone()
     if row is None:
         error("sense_not_found", f"no entry {dict_code}.{L}", 404)
@@ -169,17 +205,17 @@ def get_sense(sense_id: str, con: sqlite3.Connection = Depends(get_db)):
     if sense is None:
         error("sense_not_found", f"no sense {sense_n} on {dict_code}.{L}", 404)
 
-    dv = data_version(con)
+    headword = from_slp1_out(row["slp1_key"], "iast")
     body_span = row["body"][sense["span_start"]:sense["span_end"]]
-    cite_text = f"{dict_code}.{L}.{sense_n}@{dv}"
     result = {
-        "sense_id": sense_id, "dict": dict_code, "L": L, "sense_n": sense_n,
+        "sense_id": f"{dict_code}.{L}.{sense_n}@{dv}", "dict": dict_code, "L": L,
+        "sense_n": sense_n, "resolved_from": "live",
         "text_raw": body_span, "text_rendered": render(dict_code, body_span),
-        "entry": {"dict": dict_code, "L": L, "headword": from_slp1_out(row["slp1_key"], "iast")},
+        "entry": {"dict": dict_code, "L": L, "headword": headword},
         "scan_url": scan_url(dict_code, row["page"]),
-        "cite": {"text": cite_text, "bibtex": None, "csl_json": None},
+        "cite": cite_object(dict_code, L, sense_n, dv, PUBLIC_BASE, headword),
     }
-    return envelope(con, {"sense_id": sense_id}, [result])
+    return envelope(con, {"sense_id": sense_id, "v": v}, [result])
 
 
 @app.get("/api/v1/meta")

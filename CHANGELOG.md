@@ -14,16 +14,57 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
-### Added
+## [0.3.0] - 2026-07-03
 
-- Phase 1 D1–D4 execution (branch `feat/phase1-d1-d4`): lemma spine +
-  frequency join (D1), per-dict `<pc>` entry loader for mw/pwg/ap90 (D2),
-  forms layer + scan-URL resolver (D3), full kosha API v1 + Salt facade
-  REST faces + 20-test pytest suite (D4). See
-  [`data/SOURCES.md`](https://github.com/gasyoun/kosha/blob/main/data/SOURCES.md)
-  for every measured number and deviation from PHASE1_PLAN.md, and
-  `.ai_state.md` for what's explicitly deferred (full `render()` port, R1
-  citability commitments, per-dict sense segmentation).
+Phase 1 D1–D4 **plus** the three D4-contract pieces PR
+[#2](https://github.com/gasyoun/kosha/pull/2) deferred, closed here (branch
+`feat/phase1-d4-followon`, Opus 4.8 `claude-opus-4-8`). 20 → **107** tests
+green. Every measured number + deviation stays in
+[`data/SOURCES.md`](https://github.com/gasyoun/kosha/blob/main/data/SOURCES.md).
+
+### Added
+- **Phase 1 D1–D4** (originally PR #2): lemma spine + frequency join (D1),
+  per-dict `<pc>` entry loader for mw/pwg/ap90 (D2), forms layer + scan-URL
+  resolver (D3), kosha API v1 + Salt facade REST faces + pytest suite (D4).
+- **Full `render()` port** (ARCHITECTURE.md A1) —
+  [`app/render.py`](https://github.com/gasyoun/kosha/blob/main/app/render.py) is
+  now a code-level faithful port of the mw/pwg/ap90 path of csl-websanlexicon's
+  canonical `basicdisplay.php` (SAX display engine) + the relevant
+  `basicadjust.php` passes, replacing the earlier partial subset. Two documented
+  deviations: server-side `<s>` SLP1→IAST via sanskrit-util (not client-JS
+  `<SA>`), and no DB-backed abbreviation tooltips / external `<ls>` hrefs (the
+  ls_resolver.py D3 follow-on). **38 frozen, checksummed golden HTML snapshots**
+  (mw 14 incl. the banD/akṣa fixtures, pwg 12, ap90 12 — ≥10/dict merge bar) in
+  [`tests/golden/`](https://github.com/gasyoun/kosha/tree/main/tests/golden),
+  seeded-selected per EVAL_PLAN.md §0 anti-gaming, tested by
+  [`tests/test_render_golden.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_render_golden.py).
+- **Per-dict sense segmentation** (D2) —
+  [`app/segment.py`](https://github.com/gasyoun/kosha/blob/main/app/segment.py)
+  splits each body at its `<div>` division markers (MW `to`/`vp`, PWG numbered
+  `1〉`/`a〉`, AP90 bold-numbered) into byte-anchored `senseN` spans (A2),
+  replacing the single-sense fallback (kept only for markerless entries). Live
+  counts: MW 303,022 · PWG 223,446 · AP90 165,935 senses.
+- **R1 citability** (RISKS.md R1 Commitments 1–2) — the `cite` object now
+  carries a browser-resolvable `resolution_url` + durable `release_asset`
+  permalink + BibTeX/CSL-JSON
+  ([`app/cite.py`](https://github.com/gasyoun/kosha/blob/main/app/cite.py));
+  `/api/v1/sense/{id}@version` resolves an **old** citation against its archived
+  release dump
+  ([`app/versions.py`](https://github.com/gasyoun/kosha/blob/main/app/versions.py),
+  [`scripts/archive_senses.py`](https://github.com/gasyoun/kosha/blob/main/scripts/archive_senses.py)),
+  the path **T-UC10** forces; every rebuild can emit `sense_crosswalk.tsv`
+  (old→new senseN via span-text similarity, SPLIT/MERGED/GONE/MOVED, zero-cost
+  when unchanged —
+  [`scripts/build_crosswalk.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_crosswalk.py)).
+  Verified on real PWG data + unit-tested in
+  [`tests/test_citability.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_citability.py).
+
+### Still deferred (flagged, not silent)
+- `sources.csl_orig_commit` still records the csl-sqlite release tag only (the
+  underlying csl-orig commit is not exposed by the release format).
+- PWG multi-volume scan disambiguation: `servepdf.php` returns 200 for `page=`,
+  `page=&vol=`, and `page=&volume=` alike (tolerant of unknown params); whether
+  `vol` is honored is not determinable from status alone. Still open.
 
 ## [0.2.1] - 2026-07-02
 
