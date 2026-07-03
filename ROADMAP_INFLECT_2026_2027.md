@@ -73,11 +73,18 @@ Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://
 
 ### kosha track (executes in the existing P4 slot, after P3)
 
-- **Wave K1 — data ingest + JSON API.** Ingest the Cologne inflection tables
-  (csl-inflect/MWinflect SQLite, `lgtab*`/`vlgtab*`) into the kosha DB as a
-  forms sidecar (same pattern as the frequency sidecar). Expose a
-  machine-readable forms/analysis endpoint in the kosha API (D2: JSON API).
-  Engine = Cologne tables verbatim (D3).
+- **Wave K1 — data ingest + JSON API. ✅ done 03-07-2026 (Sonnet 5
+  `claude-sonnet-5`), nominals only.** Ingested the Cologne inflection
+  tables (MWinflect `nominals/pysanskritv2/tables/calc_tables.txt`, the same
+  file `csl-inflect/sqlite/lgtab1`+`lgtab2` are built from) into a new
+  `inflections` sidecar table
+  ([`scripts/build_inflections.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_inflections.py)),
+  6,849,382 rows / 3,267,305 distinct forms. New
+  `GET /api/v1/forms/{form}/analyze` endpoint (D2: JSON API). Engine =
+  Cologne tables verbatim (D3). **Verb conjugations (`vlgtab*`) NOT
+  included** — MWinflect's `verbs/` pipeline is blocked by an upstream
+  Python-2-only syntax bug (`verbs/pysanskritv2/inputs/clean.py`); tracked as
+  follow-up before/alongside K2. See `.ai_state.md` for the full build trace.
 - **Wave K2 — modern lookup UX + reverse lookup.** Devanagari/IAST input
   with live transliteration, autocomplete against headwords, mobile layout,
   clean paradigm tables with Devanagari default. Query pipeline per the
