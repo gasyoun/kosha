@@ -6,7 +6,10 @@ _Created: 02-07-2026 · Last updated: 03-07-2026_
 > (data + API against real MW/PWG/AP90 data, 115/115 tests green) is complete;
 > the P2 static-cache generator for the public GitHub Pages tier is built
 > (released as [v0.5.0](https://github.com/gasyoun/kosha/releases/tag/v0.5.0)).
-> What remains for a first public URL is MG's deploy step — see
+> P3 (evidence layer) and P4 Wave K1 (Cologne inflection-table ingest) are
+> also done, released together as
+> [v0.7.0](https://github.com/gasyoun/kosha/releases/tag/v0.7.0). What
+> remains for a first public URL is MG's deploy step — see
 > [PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md)
 > and [.ai_state.md](https://github.com/gasyoun/kosha/blob/main/.ai_state.md)
 > for the exact resume point; no file in this repo claims to be "ready" unless
@@ -67,9 +70,9 @@ scenarios it must serve:
 |---|---|---|
 | **P1** Data + API | `kosha.db` (MW+PWG+AP90) + API v1 running locally, tests green | **done** — 115/115 tests green (see [D5_MEASUREMENTS.md](https://github.com/gasyoun/kosha/blob/main/D5_MEASUREMENTS.md)) |
 | **P2** Public alpha | first live URLs: static lookup on GitHub Pages + API on samskrtam.ru | **generator built** ([v0.5.0](https://github.com/gasyoun/kosha/releases/tag/v0.5.0)) — **next: MG deploy** |
-| **P3** Evidence layer | DCS frequency badges, corpus example per sense | gated on P1 |
-| **P4** Forms & grammar | paste-anything segmentation, paradigm tables, grammar token | gated on P1 |
-| **P5** Advanced UI | the project's own UI at samskrtam.ru/kosha | gated on P2–P4 |
+| **P3** Evidence layer | DCS frequency badges, corpus example per lemma | **done** ([v0.7.0](https://github.com/gasyoun/kosha/releases/tag/v0.7.0)) |
+| **P4** Forms & grammar | paste-anything segmentation, paradigm tables, grammar token | **Wave K1 done** (nominal inflection ingest + analysis API, [v0.7.0](https://github.com/gasyoun/kosha/releases/tag/v0.7.0)) — K2/K3 + verb conjugations still open, see [ROADMAP_INFLECT_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_INFLECT_2026_2027.md) |
+| **P5** Advanced UI | the project's own UI at samskrtam.ru/kosha | gated on P2 deploy (K2/K3 in progress) |
 | **P6** Trilingual RU | Russian gloss layer beside DE/EN | gated on human review + rights |
 | **P7** v1.0 citable | DOI'd data release, dumps, "Cite" everywhere | gated on P2+P3 |
 
