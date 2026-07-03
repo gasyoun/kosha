@@ -1,6 +1,6 @@
 # Implementation plan — Gasuns Sanskrit Dictionary
 
-_Created: 02-07-2026 · Last updated: 02-07-2026_
+_Created: 02-07-2026 · Last updated: 03-07-2026_
 
 Full-project plan from first line of code to the citable v1.0. Supersedes the
 banner-flagged pre-triage plan in SanskritLexicography. Ground rules inherited
@@ -72,6 +72,12 @@ and SLO + cadence decided in
   measurably changes for a 20-query sample; provenance label on every badge.
 
 ## P4 — Forms & grammar (the student unlock)
+
+> Fully specified 03-07-2026 in
+> [ROADMAP_INFLECT_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_INFLECT_2026_2027.md)
+> (MG rulings D1–D6: hybrid venue, full scope, Cologne tables first with a
+> vidyut evolution path, probe-first upstream cadence). The bullets below
+> stay authoritative for the exit checks.
 
 - **Paste-anything:** query pipeline = forms table → (miss) → segmentation.
   Evaluate vidyut-cheda vs Heritage (UoHyd mirror — Inria host is bot-walled,
