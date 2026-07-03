@@ -61,7 +61,13 @@ CREATE TABLE IF NOT EXISTS entries (
     body TEXT NOT NULL,
     UNIQUE(dict, L)
 );
-CREATE INDEX IF NOT EXISTS entries_key ON entries(slp1_key);
+-- Lemma lookups filter (dict, slp1_key) and ORDER BY L. A covering
+-- (dict, slp1_key, L) index serves BOTH the equality seek and the ordering, so
+-- the planner never falls back to scanning the whole dict via the UNIQUE(dict,L)
+-- autoindex (measured D5: that scan cost ~240 ms/lookup; this index: ~0.3 ms —
+-- a plain slp1_key-only index was NOT chosen because ORDER BY L made the planner
+-- prefer the ordered autoindex-scan). See D5_MEASUREMENTS.md §3.
+CREATE INDEX IF NOT EXISTS entries_dict_key ON entries(dict, slp1_key, L);
 
 CREATE TABLE IF NOT EXISTS senses (
     entry_id INTEGER NOT NULL REFERENCES entries(id),
@@ -157,6 +163,11 @@ def main():
         "INSERT INTO meta (key, value) VALUES ('data_version','0.1.0-dev') "
         "ON CONFLICT(key) DO UPDATE SET value=excluded.value"
     )
+    con.commit()
+    # Refresh planner statistics so index selectivity is known (cheap ~5 s;
+    # the entries_dict_key covering index is chosen even without stats, but
+    # ANALYZE keeps the search/forms plans optimal too). D5.
+    con.execute("ANALYZE")
     con.commit()
     con.close()
 

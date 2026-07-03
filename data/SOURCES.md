@@ -38,10 +38,17 @@ weekly csl-sqlite releases). AP90's `<pc>` shape is `page-col`
 (e.g. `0001-a`), not the plan's "page-col-letter" — there is no separate
 letter component beyond the column value itself; `col` already carries the
 letter (or, in 246 records, a bare digit). `csl_orig_commit` is **not**
-resolvable from the csl-sqlite release format (only a `key, lnum, data`
-sqlite ships) — recorded as the release tag with that limitation noted
-inline in `sources.csl_orig_commit`; resolving the exact underlying
-csl-orig commit per release is flagged as a D2 follow-on, not blocking.
+embedded in the csl-sqlite release format (only a `key, lnum, data` sqlite
+ships) — **resolved 03-07-2026 (D5) by cross-dating**: `sources.csl_orig_commit`
+now carries the latest csl-orig commit touching each dict's source at or before
+the csl-sqlite release timestamp `2026-06-28-08-27-31`, read offline from a
+local csl-orig checkout (`cross_date_csl_orig_commit` in
+[`scripts/build_entries.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_entries.py),
+graceful fallback when no checkout is present). Values: mw `392ed6b` (2026-06-27),
+pwg `8822922` (2026-06-27), ap90 `51232f2` (2026-06-24). This is an **upper
+bound** (commit ≤ release cut time), not a build-exact mapping, and is labelled
+as such in the stored string. Feeds R3's "data as of {date}" footer. See
+[D5_MEASUREMENTS.md](https://github.com/gasyoun/kosha/blob/main/D5_MEASUREMENTS.md) §7.
 
 **Spot-verify (10 records, PHASE1_PLAN.md D2 check):** MW L142512 = `banD` @
 `720,1` ✅; MW L523 = `akza` @ `3,2` ✅; plus 8 more across mw/pwg/ap90 at
