@@ -4,3 +4,6 @@ pydantic>=2.10
 python-dotenv>=1.0
 pytest>=8.0
 httpx>=0.27
+
+# Docs site (ZettelkastenWiki Wave-3 pilot, built by scripts/build_docs_site.py)
+zettelkastenwiki @ git+https://github.com/gasyoun/ZettelkastenWiki@6b3eb831ce252ac8585ba507940b8c8271a4983f
