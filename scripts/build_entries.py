@@ -24,6 +24,9 @@ sys.stderr.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parent.parent
 DL_DIR = ROOT / "data" / "raw_sqlite"
 
+sys.path.insert(0, str(ROOT / "app"))
+from segment import segment  # noqa: E402
+
 RE_PC = re.compile(r"<pc>([^<]*)</pc>")
 RE_KEY2 = re.compile(r"<key2>(.*?)</key2>", re.S)
 RE_L = re.compile(r"<L>([^<]*)</L>")
@@ -132,16 +135,22 @@ def build_entries(con, dict_codes, release_tag="latest"):
             "VALUES (?,?,?,?,?,?,?,?,?)",
             insert_rows,
         )
-        # D2 fallback sense rule: single sense spanning the whole body (ARCHITECTURE.md
-        # senses table doc — "always mintable" fallback). Per-dict sense-marker
-        # segmentation is flagged as follow-on refinement, not blocking D2/D4.
-        entry_ids = con.execute(
-            "SELECT id, LENGTH(body) FROM entries WHERE dict=?", (dict_code,)
-        ).fetchall()
+        # D2 per-dict sense segmentation (app/segment.py): split each body at
+        # its <div> division markers — the same boundaries basicdisplay.php
+        # renders — into byte-anchored senseN spans (A2). Entries with no <div>
+        # keep the single-sense fallback ("always mintable", ARCHITECTURE.md).
         con.execute("DELETE FROM senses WHERE entry_id IN (SELECT id FROM entries WHERE dict=?)", (dict_code,))
+        sense_rows = []
+        n_multi = 0
+        for eid, body in con.execute("SELECT id, body FROM entries WHERE dict=?", (dict_code,)):
+            spans = segment(dict_code, body)
+            if len(spans) > 1:
+                n_multi += 1
+            for sense_n, (s0, s1) in enumerate(spans, start=1):
+                sense_rows.append((eid, sense_n, s0, s1))
         con.executemany(
-            "INSERT INTO senses (entry_id, sense_n, span_start, span_end) VALUES (?,1,0,?)",
-            entry_ids,
+            "INSERT INTO senses (entry_id, sense_n, span_start, span_end) VALUES (?,?,?,?)",
+            sense_rows,
         )
 
         coverage = round(n_pc / n_total * 100, 2) if n_total else 0.0
@@ -154,7 +163,10 @@ def build_entries(con, dict_codes, release_tag="latest"):
              f"csl-sqlite/{dict_code}.zip", meta["pc_format"], coverage, n_total),
         )
         con.commit()
-        print(f"[D2] {dict_code}: {n_total} entries, pc coverage {coverage}% ({meta['pc_format']})")
+        n_senses = len(sense_rows)
+        print(f"[D2] {dict_code}: {n_total} entries, pc coverage {coverage}% "
+              f"({meta['pc_format']}); {n_senses} senses "
+              f"({n_multi} multi-sense entries)")
 
 
 def main():

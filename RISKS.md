@@ -1,6 +1,6 @@
 # Risk register — the pre-mortem
 
-_Created: 02-07-2026 · Last updated: 02-07-2026_
+_Created: 02-07-2026 · Last updated: 03-07-2026_
 
 Judgment-tier pre-mortem for the Gasuns Sanskrit Dictionary (kosha), authored
 on Fable 5 (`claude-fable-5`, 02-07-2026). Framing: **it is mid-2027 and
@@ -73,6 +73,20 @@ paper review — four holes, four commitments:
 
 With 1–4 in place the answer becomes yes. Without (a), the whole citability
 claim (UC10, the P7 flagship) is marketing.
+
+> **Status 03-07-2026 (Opus 4.8 `claude-opus-4-8`, branch
+> `feat/phase1-d4-followon`): Commitments 1 and 2 implemented.** (1) the `cite`
+> object carries a browser-resolvable `resolution_url` + durable `release_asset`
+> permalink ([`app/cite.py`](https://github.com/gasyoun/kosha/blob/main/app/cite.py)),
+> and `/api/v1/sense/{id}@version` resolves an old citation against its archived
+> release dump ([`app/versions.py`](https://github.com/gasyoun/kosha/blob/main/app/versions.py)),
+> the path **T-UC10** forces (unarchived → 404 with the release pointer).
+> (2) rebuilds emit `sense_crosswalk.tsv` (old→new senseN by span-text
+> similarity; SPLIT/MERGED/GONE/MOVED; zero-cost when unchanged —
+> [`scripts/build_crosswalk.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_crosswalk.py)),
+> proven on real PWG data + unit-tested. Commitments 3 (Zenodo mirroring) and 4
+> (never-delete policy) remain P7/release-ops scoped, not yet triggered (this is
+> still a `0.x-dev` build with no citable release).
 
 ## R2 — Silent `<pc>` gaps → false scan links
 
