@@ -14,6 +14,67 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-07-03
+
+Phase 1 **D5 — measure, then decide** (branch `feat/phase1-d5-measure`, Opus 4.8
+`claude-opus-4-8`). The last Phase-1 step: real numbers behind the parked SLO
+items, the decisions they force, a fixed latency bug the measuring surfaced, and
+the R3 fallback turned from a comment into a tested path. 107/107 tests still
+green. Phase 1 is complete; P2 (public alpha) can start against fixed targets.
+
+### Added
+- **D5 measurement report** —
+  [D5_MEASUREMENTS.md](https://github.com/gasyoun/kosha/blob/main/D5_MEASUREMENTS.md):
+  DB size (276.4 MiB, 2.9× over the GitHub 100 MB/file cap → release-asset only,
+  R11), cold/warm latency across all four read endpoints incl. the fat MW `ka`
+  homonym group, per-dict `render()` cost + the full body-size distribution
+  (97.3% of entries <1k chars; only 9 bodies >100k, all PWG), and a top-N
+  static-cache projection. Reproducible from the committed harness
+  [`scripts/measure_d5.py`](https://github.com/gasyoun/kosha/blob/main/scripts/measure_d5.py).
+- **D5 decisions record** —
+  [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md):
+  latency SLO (p50<20ms / p95<100ms / p99<250ms server-side), rebuild cadence
+  (change-triggered ~monthly, **not** nightly — nightly would mint needless
+  citable `data_version`s, R1 tension), static-cache N (~50,355 attested-with-
+  entry lemmas, sharded per-lemma ~155 MB, frequency-ranked). Relocated from the
+  referenced SanskritLexicography path to this repo (canonical home); doc links
+  repointed.
+- **R3 csl-orig fallback exercised** (RISKS.md R3, now a tested path) —
+  [`scripts/fallback_csl_orig.py`](https://github.com/gasyoun/kosha/blob/main/scripts/fallback_csl_orig.py)
+  parses csl-orig `ap90.txt` directly and recovers **100%** of the entry
+  inventory (34,882 records; every `<L>`, `<k1>` key, `<pc>` token matches the
+  csl-sqlite-built DB). Honest boundary documented: bodies are the upstream
+  display-markup stage, so a render()-able fallback also needs the csl-orig→XML
+  `make_xml` step.
+
+### Fixed
+- **Lemma-lookup table scan (240 ms → ~0.3 ms).** `GET /api/v1/lemma` filtered
+  `(dict, slp1_key)` but the planner seeked only on `dict` (via the
+  `UNIQUE(dict,L)` autoindex, which also served `ORDER BY L`) and scanned all
+  ~286k MW rows. A covering index `entries(dict, slp1_key, L)` (replacing
+  `entries_key`, plus `ANALYZE` at build) serves both the seek and the ordering.
+  Warm handler latency: lemma `kamala` 172→10.9 ms, `ka` 169→19.6 ms; e2e over
+  HTTP 338→31 ms. Schema change in
+  [`scripts/build_db.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_db.py);
+  the SLO (D5-1) assumes this index.
+
+### Changed
+- **`sources.csl_orig_commit` provenance resolved** (was flagged open) by
+  cross-dating the csl-sqlite release timestamp against the local csl-orig commit
+  log (offline, R12-safe): mw `392ed6b`, pwg `8822922`, ap90 `51232f2` — an
+  upper bound, labelled as such. Wired into
+  [`scripts/build_entries.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_entries.py)
+  (`cross_date_csl_orig_commit`) and applied to the DB so `/api/v1/meta` surfaces
+  it. Feeds R3's "data as of {date}" footer.
+- ARCHITECTURE.md parked table: latency-SLO/cadence and static-cache-N rows
+  resolved; DDL updated to the covering index. PHASE1_PLAN.md D5 marked done.
+
+### Still open (not blocking)
+- PWG multi-volume `servepdf.php` disambiguation needs a **live content diff**
+  against Cologne (not a build-time or offline check, R12) — left flagged in
+  [`.ai_state.md`](https://github.com/gasyoun/kosha/blob/main/.ai_state.md);
+  belongs to scan-link hardening (G-SCAN/R2), not D5.
+
 ## [0.3.0] - 2026-07-03
 
 Phase 1 D1–D4 **plus** the three D4-contract pieces PR

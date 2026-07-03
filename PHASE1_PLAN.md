@@ -83,9 +83,16 @@ exists and its check passes — that is the lesson of the 02-07-2026 audit.
   100 MB file limit.
 - With real numbers, settle: latency SLO, update cadence (leaning nightly),
   static-cache N. Record in
-  [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_DECISIONS_NEEDED.md).
+  [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md).
 - **Check:** numbers + decisions committed; Phase 2 (UI + Pages tier) can start
   against fixed targets.
+- ✅ **Done 03-07-2026** (Opus 4.8 `claude-opus-4-8`): numbers in
+  [D5_MEASUREMENTS.md](https://github.com/gasyoun/kosha/blob/main/D5_MEASUREMENTS.md),
+  decisions in
+  [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md)
+  (SLO / cadence / cache-N). D5 additionally: fixed a 240 ms→0.3 ms lemma-lookup
+  index bug, exercised the R3 csl-orig fallback (100 % ap90 inventory parity),
+  and resolved `sources.csl_orig_commit` provenance by cross-dating.
 
 ## Model-tier note
 

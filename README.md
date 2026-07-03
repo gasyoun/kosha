@@ -257,7 +257,9 @@ volume-page, hyphen, 7 volumes · AP90 `0001-a` = page-column-letter.
   [.ai_state.md](https://github.com/gasyoun/kosha/blob/main/.ai_state.md);
   open decisions (update cadence, latency SLO, etymology depth) get settled
   with real measurements at the end of Phase 1, recorded in
-  [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_DECISIONS_NEEDED.md).
+  [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md)
+  (D5 settled the first three — see
+  [D5_MEASUREMENTS.md](https://github.com/gasyoun/kosha/blob/main/D5_MEASUREMENTS.md)).
 
 ### Document map
 
@@ -272,12 +274,12 @@ volume-page, hyphen, 7 volumes · AP90 `0001-a` = page-column-letter.
 | [RELATIONS.md](https://github.com/gasyoun/kosha/blob/main/RELATIONS.md) | ecosystem diplomacy — Meyer, Cologne, Ambuda, C-SALT |
 | [POSITIONING.md](https://github.com/gasyoun/kosha/blob/main/POSITIONING.md) · [POSITIONING_SUMMARY.md](https://github.com/gasyoun/kosha/blob/main/POSITIONING_SUMMARY.md) | identity, audience, the UI decision |
 | [COMPARISON.md](https://github.com/gasyoun/kosha/blob/main/COMPARISON.md) | 12-platform live survey (02-07-2026) with feature matrix |
+| [D5_MEASUREMENTS.md](https://github.com/gasyoun/kosha/blob/main/D5_MEASUREMENTS.md) · [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md) | D5 measurement report + the SLO/cadence/cache-N decisions it settled |
 | [CHANGELOG.md](https://github.com/gasyoun/kosha/blob/main/CHANGELOG.md) | SemVer history |
 
 | In [SanskritLexicography](https://github.com/gasyoun/SanskritLexicography) | What it holds |
 |---|---|
 | [KOSHA_FOLDER_SETUP.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_FOLDER_SETUP.md) | post-audit truth doc, meta-decisions M1–M4 |
-| [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_DECISIONS_NEEDED.md) | open-decision register |
 | [KOSHA_REFERENCE_ANALYSIS.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_REFERENCE_ANALYSIS.md) | feature-by-feature reference-site analysis |
 | [KOSHA_DEPLOYMENT.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_DEPLOYMENT.md) | samskrtam.ru deployment reference (systemd/nginx/cron) |
 
