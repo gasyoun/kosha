@@ -1,6 +1,6 @@
 # Architecture contract — Gasuns Sanskrit Dictionary (kosha)
 
-_Created: 02-07-2026 · Last updated: 02-07-2026_
+_Created: 02-07-2026 · Last updated: 03-07-2026_
 
 The engineering contract for Phase 1, locking the four decisions M.G. took on
 02-07-2026 (A1–A4 below) on top of the product meta-decisions M1–M4
@@ -167,7 +167,8 @@ Salt equivalent, so v1 is its own contract.
 | Latency SLO + rebuild cadence | D5, with measurements |
 | Static-cache N (top lemmas) | D5, measured |
 | ~~Code license~~ | ✅ Resolved 02-07-2026: code CC BY-NC 4.0 ([LICENSE.md](https://github.com/gasyoun/kosha/blob/main/LICENSE.md)); data releases CC BY-SA 4.0 inherited from Cologne ([LICENSE-DATA.md](https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)) |
-| Sense-segmentation rule details per dict | D2 (per-dict, golden-tested; fallback = single sense) |
+| ~~Sense-segmentation rule details per dict~~ | ✅ Resolved 03-07-2026: `<div>`-division rule in [`app/segment.py`](https://github.com/gasyoun/kosha/blob/main/app/segment.py) (fallback = single sense); see [`data/SOURCES.md`](https://github.com/gasyoun/kosha/blob/main/data/SOURCES.md) §D2 |
+| ~~`render()` port + golden tests~~ | ✅ Resolved 03-07-2026: faithful basicdisplay port ([`app/render.py`](https://github.com/gasyoun/kosha/blob/main/app/render.py)) + 38 frozen golden snapshots ([`tests/golden/`](https://github.com/gasyoun/kosha/tree/main/tests/golden)) |
 | Etymology depth (links-first) | Phase 3 |
 
 ---

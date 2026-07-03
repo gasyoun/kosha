@@ -1,0 +1,234 @@
+{
+  "seed": 20260702,
+  "n_per_dict": 12,
+  "entries": [
+    {
+      "dict": "mw",
+      "L": "142512",
+      "file": "mw/142512.html",
+      "sha256": "90aa7c42143486abae3d3a90ebf09309de3f4a4b374dc4a205361ad8079f2255"
+    },
+    {
+      "dict": "mw",
+      "L": "523",
+      "file": "mw/523.html",
+      "sha256": "cb72993c2a4f9ff4d068bbadde2ae12f0a64c3d01e0959b9bbea2271a0b131d8"
+    },
+    {
+      "dict": "mw",
+      "L": "107600",
+      "file": "mw/107600.html",
+      "sha256": "e7c836b017b7529130a07e01c077a5b5aa2962ed7e4c7b122142b44d0244262e"
+    },
+    {
+      "dict": "mw",
+      "L": "128466",
+      "file": "mw/128466.html",
+      "sha256": "2c519f0a6da69d6b19a0e5d5970b471aa6d70cb20a165daaf3c83ede8ac4b5a5"
+    },
+    {
+      "dict": "mw",
+      "L": "170071",
+      "file": "mw/170071.html",
+      "sha256": "78807908c73d87f6a5eb4b158999c0242c73c29ba9c490cdbbfaba3167ef9cd4"
+    },
+    {
+      "dict": "mw",
+      "L": "233881",
+      "file": "mw/233881.html",
+      "sha256": "ae491d89cec5e3e267de1d6df808fe02406594ed7deaa0ddd92c408b298c0ce7"
+    },
+    {
+      "dict": "mw",
+      "L": "235373",
+      "file": "mw/235373.html",
+      "sha256": "cca867b30aa5cc95a1ed606866a471bdf364d4ed3e562d9b1de99cc278681600"
+    },
+    {
+      "dict": "mw",
+      "L": "32228",
+      "file": "mw/32228.html",
+      "sha256": "47f37c1cf2250e12c3cd8b3709dc311658f4e079e928fc77c6839a83947f6b99"
+    },
+    {
+      "dict": "mw",
+      "L": "36979",
+      "file": "mw/36979.html",
+      "sha256": "8dfc7c8b3fb15966cba91829ddfe7e8282d9e800fb1432888469381696d6e653"
+    },
+    {
+      "dict": "mw",
+      "L": "41417",
+      "file": "mw/41417.html",
+      "sha256": "c5fc35630f610ef8baadbe362840da74fff0d0f47e85f31fa83a86bbf216e12b"
+    },
+    {
+      "dict": "mw",
+      "L": "6821.1",
+      "file": "mw/6821.1.html",
+      "sha256": "e8b382bc4042e79f7ee2d021bebb8fda4fc8430279a203e1de3d303bed675ab0"
+    },
+    {
+      "dict": "mw",
+      "L": "68419",
+      "file": "mw/68419.html",
+      "sha256": "f37dcc414bf3b75f913e660060f31fb855bccdbe614221bdd16d713e88227ab1"
+    },
+    {
+      "dict": "mw",
+      "L": "88435",
+      "file": "mw/88435.html",
+      "sha256": "1bea1ef0d745baa6d8d773bc072b0ab52f8330871bf3d39cd479ab4e78e9596a"
+    },
+    {
+      "dict": "mw",
+      "L": "98189",
+      "file": "mw/98189.html",
+      "sha256": "dc1f3becdd8b31144aecb92bc6c86573302511fa098fdd3e9c43fba5547c1473"
+    },
+    {
+      "dict": "pwg",
+      "L": "107562",
+      "file": "pwg/107562.html",
+      "sha256": "273e375492d225f5301b0327ec42920d59fdfe6abaf1c0d2eece5d8188818b60"
+    },
+    {
+      "dict": "pwg",
+      "L": "116833",
+      "file": "pwg/116833.html",
+      "sha256": "ce23c8687c77a1a3869147dd88fe16424a4640ff8de3524fbd9a95eba4fec770"
+    },
+    {
+      "dict": "pwg",
+      "L": "14060",
+      "file": "pwg/14060.html",
+      "sha256": "62610aea88de35d9b0ceea8b3eb680f42069a2b144fb3eaa929f626263252132"
+    },
+    {
+      "dict": "pwg",
+      "L": "16232",
+      "file": "pwg/16232.html",
+      "sha256": "a168b05f14ba629172e9740e1edd907ca92c66498fdb8a846c61974a90139f88"
+    },
+    {
+      "dict": "pwg",
+      "L": "22924",
+      "file": "pwg/22924.html",
+      "sha256": "f06a38f3e1b16d9a3ca9baa92cd9d2f008c7d9740f4f6e4e02f9f2c3ecc789e6"
+    },
+    {
+      "dict": "pwg",
+      "L": "30194",
+      "file": "pwg/30194.html",
+      "sha256": "c68eaa9b01037ff84f2e1bc92e2b755bf0e8e94a539ce9ea7123f4fcc3e5a0d7"
+    },
+    {
+      "dict": "pwg",
+      "L": "30982",
+      "file": "pwg/30982.html",
+      "sha256": "121aea893ca3315aa50d17d8312fe3dd33c91f9ae0df46f3a5c8ea1a4fcc5cdd"
+    },
+    {
+      "dict": "pwg",
+      "L": "33482",
+      "file": "pwg/33482.html",
+      "sha256": "53a61c408745961bc0e41d86cf6f5eb5f3c61948dbc3c825e70265891b7114a0"
+    },
+    {
+      "dict": "pwg",
+      "L": "34797",
+      "file": "pwg/34797.html",
+      "sha256": "ca5510efb09b6da20e38cf3361121744d3597b0ee1e0654cff1a8b9f7b8c0876"
+    },
+    {
+      "dict": "pwg",
+      "L": "57803",
+      "file": "pwg/57803.html",
+      "sha256": "f7e3fbc332efc10cd49097686d418daf85d6558789fbaedb78c4cc7b77c78c92"
+    },
+    {
+      "dict": "pwg",
+      "L": "66323",
+      "file": "pwg/66323.html",
+      "sha256": "79eaa5e727304d39a924f8a926e5cb36ae8b9fa551d020579983cad79d7675b4"
+    },
+    {
+      "dict": "pwg",
+      "L": "70671",
+      "file": "pwg/70671.html",
+      "sha256": "a2d2d3ec0482736c4d8b1db4aca1cf32ab006f56668604c0591ddc4f42fea6ff"
+    },
+    {
+      "dict": "ap90",
+      "L": "21309",
+      "file": "ap90/21309.html",
+      "sha256": "3653b5c245455413b6f00a4df6c0f008c713b199604c31e9d28e3dac94f2e7b8"
+    },
+    {
+      "dict": "ap90",
+      "L": "24877",
+      "file": "ap90/24877.html",
+      "sha256": "54f9126aa4af9fc071e13df57e058ebbbac30ac6576b025205b173c7f100d018"
+    },
+    {
+      "dict": "ap90",
+      "L": "2633.1",
+      "file": "ap90/2633.1.html",
+      "sha256": "7d90a0263eb1dfffb33cf246d0778b65d5e9e0237f96bcf46d69e84c10984c9d"
+    },
+    {
+      "dict": "ap90",
+      "L": "28200",
+      "file": "ap90/28200.html",
+      "sha256": "2740b1c6d192660fa3ec9905f790dd39f67b048db93fcc24203ded6f3b2ea263"
+    },
+    {
+      "dict": "ap90",
+      "L": "28995",
+      "file": "ap90/28995.html",
+      "sha256": "0f2fdc434e22c3b489f3dc1bc3eb1a864a92663021196cdfe87e78e7b2b77b26"
+    },
+    {
+      "dict": "ap90",
+      "L": "30558.1",
+      "file": "ap90/30558.1.html",
+      "sha256": "695ebcd531d39ad85b557300fadca52fb5206bd3f45866a5016fb41753fc9ed0"
+    },
+    {
+      "dict": "ap90",
+      "L": "4503",
+      "file": "ap90/4503.html",
+      "sha256": "874ba7d365a2f13a6693a377aa0640d0102c6d9bfa76019af4d1ca2c33f21f32"
+    },
+    {
+      "dict": "ap90",
+      "L": "4684",
+      "file": "ap90/4684.html",
+      "sha256": "521815ef0deba1193aa5eac00036ec5fface5d757a83fc69babdbf4b2ec1c33f"
+    },
+    {
+      "dict": "ap90",
+      "L": "7607",
+      "file": "ap90/7607.html",
+      "sha256": "63244fa5f7814127d2625c5c7f403fb7222c241b7ab075ecb0bd92f1caef6d71"
+    },
+    {
+      "dict": "ap90",
+      "L": "7970",
+      "file": "ap90/7970.html",
+      "sha256": "5e0088c2e5d09e0fd4da318048386144bcc8ff3445ea6cba592991ff08f760f6"
+    },
+    {
+      "dict": "ap90",
+      "L": "8628",
+      "file": "ap90/8628.html",
+      "sha256": "63fb992a9b0d597b4462c602ac0b85247514e96e41aaac92f727ebb5b44a1d32"
+    },
+    {
+      "dict": "ap90",
+      "L": "9256",
+      "file": "ap90/9256.html",
+      "sha256": "c42dc34b249f7dc1be8954a4348cf433e53786c66e9b30362270d73da273adc4"
+    }
+  ]
+}

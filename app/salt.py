@@ -18,9 +18,14 @@ kosha extends the Salt entry with namespaced kosha.* fields (kosha.sense_ids,
 kosha.rendered_html, kosha.evidence, kosha.cite) per ARCHITECTURE §Maximum-
 reuse-rules point 1 — same object, no translation layer.
 """
+import os
 import re
 
+from cite import cite_object
+from render import render
 from scan_resolver import scan_url
+
+_PUBLIC_BASE = os.getenv("KOSHA_PUBLIC_BASE", "http://localhost:8000")
 
 _RE_KEY2 = re.compile(r"<key2>(.*?)</key2>", re.S)
 _RE_REFS = re.compile(r"<ls>(.*?)</ls>", re.S)
@@ -79,12 +84,9 @@ def salt_entry(con, row, hom_count: int, data_version_str: str) -> dict:
         },
         "kosha": {
             "sense_ids": sense_ids,
-            "rendered_html": None,  # render.py partial port — see data/SOURCES.md D4 note
+            "rendered_html": render(row["dict"], body),
             "evidence": [],
-            "cite": {
-                "text": f"{row['dict']}.{row['L']}.1@{data_version_str}",
-                "bibtex": None,
-                "csl_json": None,
-            },
+            "cite": cite_object(row["dict"], row["L"], 1, data_version_str,
+                                _PUBLIC_BASE, row["slp1_key"]),
         },
     }
