@@ -60,6 +60,19 @@ and SLO + cadence decided in
 
 ## P3 — Evidence layer (the flagship differentiator)
 
+**Status: ✅ done 03-07-2026 (Sonnet 5 `claude-sonnet-5`).** See
+[`.ai_state.md`](https://github.com/gasyoun/kosha/blob/main/.ai_state.md)
+Completed and [`CHANGELOG.md`](https://github.com/gasyoun/kosha/blob/main/CHANGELOG.md).
+Deviation from the bullets below, recorded honestly: no new `evidence`
+table was created (P1's frequency LEFT-JOIN already put `count_all`,
+`rank_all`, `periods`, `coverage_pct`, `core_rank` on `lemmas` before P3
+started, so band/example columns were added there instead — see
+[`scripts/build_evidence.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_evidence.py)
+module docstring); examples are per-**lemma**, not per-sense (`corpus_lexicon.jsonl`
+has no sense-level tagging — same file, "Scope note"); genre sketch is
+honestly reported as not derivable from the current DCS extraction (only a
+chronological period vector is stored) rather than fabricated.
+
 - Import DCS-derived bands already computed in-house (`dcs_freq` 1–5, hapax,
   core-80, genre/era profile — from the pwg_ru pipeline) keyed by lemma;
   schema: new `evidence` table, additive.

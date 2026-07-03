@@ -42,6 +42,10 @@ CREATE TABLE IF NOT EXISTS sources (
     entry_count INTEGER
 );
 
+-- P3 evidence-layer columns (band, first_era, example_*) are added by an
+-- ALTER TABLE migration in scripts/build_evidence.py ensure_columns(), not
+-- listed here, so a fresh CREATE and a migrated pre-P3 DB converge on the
+-- same shape without a second code path.
 CREATE TABLE IF NOT EXISTS lemmas (
     slp1 TEXT PRIMARY KEY,
     iast TEXT NOT NULL,
@@ -98,12 +102,38 @@ CREATE TABLE IF NOT EXISTS forms (
     PRIMARY KEY (form_slp1, lemma_slp1, source)
 );
 CREATE INDEX IF NOT EXISTS forms_lemma ON forms(lemma_slp1);
+
+-- P4 Wave K1 (ROADMAP_INFLECT_2026_2027.md D3: Cologne tables verbatim, not
+-- vidyut -- that substitution is Wave E1's job later). Sourced from
+-- MWinflect's nominals/pysanskritv2/tables/calc_tables.txt (the same
+-- calc_tables.txt csl-inflect's own sqlite/lgtab1+lgtab2 builders consume --
+-- see scripts/build_inflections.py for the exact ingest + case/number decode
+-- derived from nominals/pydecl/decline.py's fixed 24-slot `sup` order).
+-- Only nominal declensions are populated in K1; verb conjugations
+-- (vlgtab1/vlgtab2) are blocked upstream in MWinflect's own verbs pipeline
+-- (Python-2-only syntax in verbs/pysanskritv2/inputs/clean.py) -- see
+-- scripts/build_inflections.py module docstring and .ai_state.md for the
+-- exact failure. `gcase`/`number` are NULL for indeclinables (model='ind').
+CREATE TABLE IF NOT EXISTS inflections (
+    form_slp1 TEXT NOT NULL,
+    lemma_slp1 TEXT NOT NULL,
+    model TEXT NOT NULL,
+    gender TEXT,
+    gcase TEXT,
+    number TEXT,
+    refs TEXT,
+    source TEXT NOT NULL DEFAULT 'cologne_mwinflect',
+    PRIMARY KEY (form_slp1, lemma_slp1, model, gcase, number)
+);
+CREATE INDEX IF NOT EXISTS inflections_form ON inflections(form_slp1);
+CREATE INDEX IF NOT EXISTS inflections_lemma ON inflections(lemma_slp1);
 """
 
 
 def connect():
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     con = sqlite3.connect(DB_PATH)
+    con.row_factory = sqlite3.Row
     con.executescript(SCHEMA)
     # H111 migration: CREATE TABLE IF NOT EXISTS above is a no-op against a
     # pre-existing kosha.db from before the `category` column was added.
@@ -111,6 +141,12 @@ def connect():
     if "category" not in cols:
         con.execute("ALTER TABLE forms ADD COLUMN category TEXT")
         con.commit()
+    # P3 migration: evidence-layer columns on lemmas (band, first_era,
+    # example_*) -- see scripts/build_evidence.py ensure_columns(), called
+    # again at --stage evidence time; done here too so a pre-existing DB
+    # queried before that stage runs doesn't error on missing columns.
+    from build_evidence import ensure_columns  # noqa: E402
+    ensure_columns(con)
     return con
 
 
@@ -164,7 +200,7 @@ STAGES = {"lemmas": build_lemmas}
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--stage", choices=list(STAGES) + ["entries", "forms"], default=None)
+    ap.add_argument("--stage", choices=list(STAGES) + ["entries", "forms", "evidence", "inflections"], default=None)
     ap.add_argument("--dicts", default="mw,pwg,ap90")
     args = ap.parse_args()
 
@@ -177,6 +213,20 @@ def main():
     if args.stage == "forms":
         from build_forms import build_forms  # noqa: E402
         build_forms(con)
+    if args.stage == "inflections":
+        # P4 Wave K1: opt-in like `forms` (requires the sibling MWinflect
+        # checkout's generated calc_tables.txt, not present on every dev
+        # machine) -- not part of the default no-flag build.
+        from build_inflections import build_inflections  # noqa: E402
+        build_inflections(con)
+    if args.stage in (None, "evidence"):
+        # P3 evidence layer: runs after lemmas + forms are populated (band
+        # needs lemmas.rank_all; examples need the forms.form_slp1->lemma_slp1
+        # join). When args.stage is None (full build), forms must already be
+        # built for examples to resolve -- run `--stage forms` at least once
+        # before the first full build on a fresh DB.
+        from build_evidence import build_evidence  # noqa: E402
+        build_evidence(con)
     # data_version (A2): NOT a citable release yet — Phase 1 D1-D4 local dev
     # build. First real data_version bump happens at the first GitHub release
     # per ARCHITECTURE.md (P2, D5-gated). "0.1.0-dev" marks this explicitly.
