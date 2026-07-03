@@ -8,3 +8,7 @@ data/raw_sqlite/
 data/releases/
 docs/js/data/lemmas.json
 .pytest_cache/
+# D5 measurement run outputs (machine-specific, regenerable via scripts/measure_d5.py)
+data/d5_run*.log
+data/d5_profile.log
+data/d5_measurements.json

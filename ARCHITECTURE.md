@@ -46,7 +46,11 @@ CREATE TABLE entries (id INTEGER PRIMARY KEY,
                       vol INTEGER, page INTEGER, col TEXT,  -- parsed per pc_format
                       body TEXT NOT NULL,
                       UNIQUE(dict, L));
-CREATE INDEX entries_key ON entries(slp1_key);
+-- Covering index for the lemma lookup (WHERE dict=? AND slp1_key=? ORDER BY L):
+-- serves the equality seek AND the ordering, so the planner never scans the
+-- whole dict via the UNIQUE(dict,L) autoindex. D5 measured that scan at ~240 ms
+-- vs ~0.3 ms with this index (D5_MEASUREMENTS.md §3).
+CREATE INDEX entries_dict_key ON entries(dict, slp1_key, L);
 
 -- Sense map for ID minting (A2): senseN -> byte span in body.
 -- Segmentation rule is PER-DICT, defined and golden-tested in D2
@@ -164,8 +168,8 @@ Salt equivalent, so v1 is its own contract.
 
 | Item | Owner / when |
 |---|---|
-| Latency SLO + rebuild cadence | D5, with measurements |
-| Static-cache N (top lemmas) | D5, measured |
+| ~~Latency SLO + rebuild cadence~~ | ✅ Resolved 03-07-2026 (D5): SLO p50<20ms / p95<100ms / p99<250ms server-side; cadence change-triggered (~monthly), not nightly — [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md) D5-1/D5-2, measured in [D5_MEASUREMENTS.md](https://github.com/gasyoun/kosha/blob/main/D5_MEASUREMENTS.md) |
+| ~~Static-cache N (top lemmas)~~ | ✅ Resolved 03-07-2026 (D5): ~50,355 attested-with-entry lemmas, sharded per-lemma (~155 MB), frequency-ranked — [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md) D5-3 |
 | ~~Code license~~ | ✅ Resolved 02-07-2026: code CC BY-NC 4.0 ([LICENSE.md](https://github.com/gasyoun/kosha/blob/main/LICENSE.md)); data releases CC BY-SA 4.0 inherited from Cologne ([LICENSE-DATA.md](https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)) |
 | ~~Sense-segmentation rule details per dict~~ | ✅ Resolved 03-07-2026: `<div>`-division rule in [`app/segment.py`](https://github.com/gasyoun/kosha/blob/main/app/segment.py) (fallback = single sense); see [`data/SOURCES.md`](https://github.com/gasyoun/kosha/blob/main/data/SOURCES.md) §D2 |
 | ~~`render()` port + golden tests~~ | ✅ Resolved 03-07-2026: faithful basicdisplay port ([`app/render.py`](https://github.com/gasyoun/kosha/blob/main/app/render.py)) + 38 frozen golden snapshots ([`tests/golden/`](https://github.com/gasyoun/kosha/tree/main/tests/golden)) |

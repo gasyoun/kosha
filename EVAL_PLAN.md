@@ -211,7 +211,7 @@ fixes the method so the numbers are comparable and not selectable:
 - Size: `kosha.db` bytes; top-N cache size for N ∈ {1k, 5k, 20k, 50k} vs the
   GitHub 100 MB per-file limit.
 - All numbers + the decisions go to
-  [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_DECISIONS_NEEDED.md);
+  [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md);
   the SLO itself is set at judgment tier, not by the session that produced
   the numbers.
 
