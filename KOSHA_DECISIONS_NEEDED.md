@@ -127,7 +127,7 @@ untouched, and by construction of the
 (forms Heritage has that kosha's `dcs`+`vidyut` do **not**), no `form_slp1`
 ever carries both a `heritage` row and a `dcs`/`vidyut` row — the "shared
 form gains an extra heritage witness" case
-([H111](https://github.com/gasyoun/Uprava/blob/main/handoffs/H111_kosha_ingest_heritage_forms.md)
+([H111](https://github.com/gasyoun/Uprava/blob/main/handoffs/H111-Sonnet_kosha_ingest_heritage_forms_03.07.26.md)
 step 6) is structurally impossible with this feed and was not pursued;
 Heritage/kosha *agreement* on shared forms is a separate, already-computed
 artifact
