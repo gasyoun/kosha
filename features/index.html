@@ -100,7 +100,10 @@
   .card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
   .card-badges{display:flex;align-items:center;gap:6px;flex:none}
   .idbadge{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.06em;
-    color:var(--ink-3);background:var(--leaf);border:1px solid var(--leaf-3);border-radius:3px;padding:2px 6px;white-space:nowrap}
+    color:var(--ink-3);background:var(--leaf);border:1px solid var(--leaf-3);border-radius:3px;padding:2px 6px;white-space:nowrap;text-decoration:none}
+  a.idbadge.link{color:var(--lapis);cursor:pointer}
+  a.idbadge.link:hover{border-color:var(--lapis);background:var(--lapis-soft);text-decoration:none}
+  .idbadge .idarrow{margin-left:3px;font-size:8.5px;opacity:.65;vertical-align:1px}
   .card h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:0;line-height:1.15;flex:1;min-width:0}
   .card h3 .code{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--lapis);
     background:var(--lapis-soft);padding:1px 6px;border-radius:3px;margin-right:7px;letter-spacing:.02em}
@@ -163,6 +166,9 @@
   .lg-SP{background:#efe9de;color:#6E5F4B}
 
   footer{margin-top:44px;border-top:1px solid var(--leaf-3);padding:24px 0 40px;color:var(--ink-3);font-size:12.5px}
+  footer .contribute{margin-top:16px;background:var(--lapis-soft);border:1px solid #d3ddef;border-radius:4px;
+    padding:11px 14px;color:var(--ink-2);font-size:13px}
+  footer .contribute a{font-weight:600}
   footer .byline{text-align:right;margin-top:18px;padding-top:14px;border-top:1px solid var(--leaf-3);
     font-family:var(--serif);font-size:13.5px;color:var(--ink-2)}
   footer .byline time{font-variant-numeric:tabular-nums}
@@ -233,19 +239,26 @@
     <span class="status live" style="display:inline-block">Live</span> deployed &amp; reachable ·
     <span class="status beta" style="display:inline-block">Beta / local</span> in development or local-only ·
     <span class="status lib" style="display:inline-block">Source / library</span> a package or spine with no UI of its own.</p>
-  <p>Datasets (severity) —
-    <span class="status live" style="display:inline-block">canonical</span> authoritative &amp; reproducible, widely consumed ·
-    <span class="status beta" style="display:inline-block">derived</span> secondary / analysis output ·
-    <span class="status lib" style="display:inline-block">raw</span> gitignored, binary, or external mirror.
-    Each asset carries a stable ID — a <strong>running number within its category</strong> (1–N, it does <em>not</em> restart at each sub-section)
-    prefixed by a <strong>section letter</strong> (<code>A</code>–<code>F</code> data · <code>G</code>–<code>K</code> interfaces · <code>L</code>–<code>M</code> tools; dictionaries use their code) — searchable in the box above.
+  <p>Datasets (size) — the coloured pill shows each dataset's measured on-disk size, in three tiers:
+    <span class="status live" style="display:inline-block">&gt;10 MB</span> large ·
+    <span class="status beta" style="display:inline-block">1–10 MB</span> medium ·
+    <span class="status lib" style="display:inline-block">&lt;1 MB</span> small — so magnitudes are comparable (rows/entries alone are not). Filter by size in the Data section.</p>
+  <p>Each asset carries a stable ID — a <strong>running number within its category</strong> (1–N, it does <em>not</em> restart at each sub-section)
+    prefixed by a <strong>section letter</strong> (<code>A</code>–<code>F</code> data · <code>G</code>–<code>K</code> interfaces · <code>L</code>–<code>M</code> tools; dictionaries use their code).
+    The <strong>ID (top-right) links to the asset's source</strong> <code>↗</code>; it's searchable in the box above.
     The bottom-right date is <code>◷ MM/YY</code> when the asset was <strong>first introduced</strong> (from git history);
-    for external stacks it is instead <code>↻ MM/YY</code> the <strong>last update</strong>, and the badge links to that stack's documented source of truth
+    for external stacks it is instead <code>↻ MM/YY</code> the <strong>last update</strong>, and that badge links to the stack's documented source of truth
     (vidyut → GitHub release · Heritage → mirror commit · Samsaadhanii → site footer · DharmaMitra → news feed · VedaWeb → Zenodo data DOI).</p>
   <p>Each card carries clickable tags — <code>#topic</code> (subject cluster, e.g. <code>#verbs</code>, <code>#Heritage</code>)
     and <code>@surname</code> (primary author / maintainer, e.g. <code>@kulkarni</code>, <code>@huet</code>, <code>@gasuns</code>).
     Click any tag to pivot the whole index to everything sharing it. Author attributions are best-effort — the builder of the
     derived asset, or the external stack's lead.</p>
+  <p class="contribute"><strong>Add your dataset, tool or interface.</strong>
+    Open an issue with its <em>name · category (data / interface / tool) · one-line description · size (rows + MB) ·
+    one real example row · repo or source URL · tags (<code>#topic</code>, <code>@yoursurname</code>) · first-introduced MM/YY</em>,
+    and it gets added to this index and to
+    <a href="https://github.com/gasyoun/SanskritLexicography/blob/master/FEATURES_INDEX.md">FEATURES_INDEX.md</a>. →
+    <a href="https://github.com/gasyoun/SanskritLexicography/issues/new?title=Add+asset+to+Features+Index&amp;labels=features-index">Open a new issue ↗</a></p>
   <p class="byline">Last updated <time datetime="2026-07-04">04-07-2026</time> · compiled by <strong>Dr.&nbsp;Mārcis&nbsp;Gasūns</strong></p>
 </footer>
 
@@ -737,6 +750,25 @@ const SEV={
 };
 const SEVMETA={canonical:["live","canonical"],derived:["beta","derived"],raw:["lib","raw"]};
 
+/* ---- dataset size in bytes (measured on disk); the coloured pill shows this as 3 tiers ---- */
+const SIZE_BYTES={
+  "corpus_lexicon":290001558,"SanskritRussian glossary (3-layer)":64322693,"mw_en_tm.json":11690769,"lemma / root glossary (DCS)":21300778,
+  "mw_roots.tsv":77094,"mw_etymology.tsv / pwg_etymology.tsv":3008888,"etymology_stats (root_oracle, agreement, affix)":3042272,
+  "etymology-oracle.json":23135,"root_crosswalk.csv + class_concordance.csv":54780,"Whitney_DCS_audit.json":424842,
+  "corpus_class_verdicts.json":526203,"dcs_ppp_verified.tsv":150149,"union_headwords.tsv":12397253,"mw_heritage_crosswalk.tsv":3263954,
+  "DCS↔CDSL crosswalk":633294,"union coverage_additions.tsv":728520,"csl-atlas alignment-confidence.json":45115268,
+  "csl-atlas low-confidence review set":32869273,"heritage_forms_oracle.tsv.gz":538102,"heritage_dico_gloss.tsv":4513126,
+  "heritage_forms_oracle_disagreements.tsv":1378585,"heritage_only_forms.tsv":30333563,"heritage_mirror/DATA/ frequency tables":21992842,
+  "sanhw1.xlsx (Sanskrit-Hybrid Word)":41221158,"VisualDCS DCS ingest + lemma summary":3519041,"kosha frequency layer":4910744,
+  "dcs_form2lemma.tsv":9808973,"dcs_lemma2root.tsv":250175,"vidyut_form2lemma.tsv":762175,"surface_dcs_misses.tsv":6854409,
+  "Zaliznyak grammar index":6124345,"correction_events_release.csv":61511036,"Indische Sprüche":7185142,"ortho-drift reform maps":744975,
+  "do-not-file corpus":25218,"csl-santam Tamil SQLite":31318016,
+};
+const MB=1048576;
+function fmtSize(b){ if(b==null) return "—"; if(b>=MB) return (b/MB).toFixed(1)+" MB"; if(b>=1024) return Math.round(b/1024)+" KB"; return b+" B"; }
+function sizeTier(b){ if(b==null) return "na"; return b>=10*MB?"large": b>=MB?"medium":"small"; }
+const SIZE_SC={large:"live",medium:"beta",small:"lib",na:"lib"};
+
 /* ---- stable per-asset IDs: a running number within each category (does NOT restart per
        sub-section); the letter marks the sub-section (A–F data · G–K interfaces · L–M tools,
        in document order; dictionaries use their code) ---- */
@@ -820,13 +852,22 @@ function statusLabel(s){
 }
 
 function card(o, cat, statusKey){
-  const [sc,sl]=statusLabel(statusKey);
+  let sc, sl;
+  if(cat==="data"){ const b=SIZE_BYTES[o.n]; sc=SIZE_SC[sizeTier(b)]; sl=fmtSize(b); }
+  else { [sc,sl]=statusLabel(statusKey); }
   const c=el("article","card s-"+sc);
   const top=el("div","card-top");
   const h=el("h3"); h.innerHTML=(o.code?`<span class="code">${o.code}</span>`:"")+o.n; top.appendChild(h);
   const badges=el("div","card-badges");
   const st=el("span","status "+sc); st.textContent=sl; badges.appendChild(st);
-  if(o._id){const idb=el("span","idbadge"); idb.textContent=o._id; badges.appendChild(idb);}
+  if(o._id){
+    const srcUrl=o.url||repoUrl(o.repo);
+    const idb=el(srcUrl?"a":"span","idbadge"+(srcUrl?" link":""));
+    idb.appendChild(document.createTextNode(o._id));
+    if(srcUrl){idb.href=srcUrl; idb.target="_blank"; idb.rel="noopener"; idb.title="open source ↗";
+      const ar=el("span","idarrow"); ar.textContent="↗"; idb.appendChild(ar);}
+    badges.appendChild(idb);
+  }
   top.appendChild(badges);
   c.appendChild(top);
   const b=el("p","blurb"); b.innerHTML=o.b; c.appendChild(b);
@@ -846,8 +887,6 @@ function card(o, cat, statusKey){
     if(ru){const a=el("a","m repo"); a.href=ru; a.target="_blank"; a.rel="noopener"; a.textContent=o.repo; meta.appendChild(a);}
     else {const m=el("span","m repo"); m.textContent=o.repo; meta.appendChild(m);}
   }
-  if(o.url){const a=el("a","m"); a.href=o.url; a.target="_blank"; a.rel="noopener";
-    a.textContent = o.url.includes("github.com")?"source ↗":"open ↗"; meta.appendChild(a);}
   const dt=DATE[o._id]||DATE[o.n]; const src=EXT_SRC[o.n];
   if(dt){
     const d=el(src?"a":"span","m date"+(src?" ext":""));
@@ -935,7 +974,7 @@ function buildSections(){
       tbl.appendChild(tb); tw.appendChild(tbl); sec.appendChild(tw);
     } else {
       let list,statusFn;
-      if(cat.id==="data"){list=DATA; statusFn=o=>SEV[o.n]||"raw";}
+      if(cat.id==="data"){list=DATA; statusFn=o=>sizeTier(SIZE_BYTES[o.n]);}
       else if(cat.id==="iface"){list=IFACES; statusFn=o=>o.s;}
       else {list=TOOLS; statusFn=o=>o.s;}
       if(cat.id==="iface"){
@@ -951,12 +990,12 @@ function buildSections(){
         sec.appendChild(sf);
       }
       if(cat.id==="data"){
-        const sf=el("div","subfilters"); sf.id="sevfilters";
-        const opts=[["all","All"],["canonical","canonical"],["derived","derived"],["raw","raw"]];
+        const sf=el("div","subfilters"); sf.id="sizefilters";
+        const opts=[["all","All"],["large","large · &gt;10 MB"],["medium","medium · 1–10 MB"],["small","small · &lt;1 MB"]];
         opts.forEach(([k,lab])=>{
-          const btn=el("button","chip"); btn.dataset.sev=k;
+          const btn=el("button","chip"); btn.dataset.size=k;
           btn.setAttribute("aria-pressed",k==="all");
-          const cnt=k==="all"?DATA.length:DATA.filter(d=>(SEV[d.n]||"raw")===k).length;
+          const cnt=k==="all"?DATA.length:DATA.filter(d=>sizeTier(SIZE_BYTES[d.n])===k).length;
           btn.innerHTML=`${lab} · ${cnt}`;
           sf.appendChild(btn);
         });
@@ -1035,13 +1074,13 @@ function wireStatus(){
 /* clicked-tag filter (curated cross-cutting tags) */
 let activeTag="all";
 
-/* dataset severity filter */
-let activeSev="all";
-function wireSev(){
-  const sf=$("#sevfilters"); if(!sf) return;
+/* dataset size filter */
+let activeSize="all";
+function wireSize(){
+  const sf=$("#sizefilters"); if(!sf) return;
   sf.addEventListener("click",e=>{const b=e.target.closest(".chip"); if(!b)return;
-    activeSev=b.dataset.sev; activeTag="all";
-    [...sf.children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.sev===activeSev));
+    activeSize=b.dataset.size; activeTag="all";
+    [...sf.children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.size===activeSize));
     apply();
   });
 }
@@ -1057,7 +1096,7 @@ function apply(){
     if(vis && q && !it.hay.includes(q)) vis=false;
     if(vis && it.type==="row" && activeLang!=="all" && it.lang!==activeLang) vis=false;
     if(vis && it.cat==="iface" && activeStatus!=="all" && it.status!==activeStatus) vis=false;
-    if(vis && it.cat==="data" && activeSev!=="all" && it.status!==activeSev) vis=false;
+    if(vis && it.cat==="data" && activeSize!=="all" && it.status!==activeSize) vis=false;
     if(vis && activeTag!=="all" && !(it.tags||[]).includes(activeTag)) vis=false;
     it.node.classList.toggle("hide",!vis);
     if(vis) shown++;
@@ -1084,18 +1123,18 @@ function apply(){
 }
 
 /* init */
-buildTallies(); buildTabs(); buildSections(); renderChangelog(); wireLang(); wireStatus(); wireSev();
+buildTallies(); buildTabs(); buildSections(); renderChangelog(); wireLang(); wireStatus(); wireSize();
 $("#q").addEventListener("input",()=>{ if($("#q").value) activeTag="all"; apply(); });
 
 /* tag chip → pivot the whole index to everything sharing that cluster */
 $("#main").addEventListener("click",e=>{
   const t=e.target.closest(".tagchip"); if(!t) return;
-  activeCat="all"; activeLang="all"; activeStatus="all"; activeSev="all";
+  activeCat="all"; activeLang="all"; activeStatus="all"; activeSize="all";
   activeTag = (activeTag===t.dataset.tag) ? "all" : t.dataset.tag;  // toggle off if same
   [...$("#tabs").children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.cat==="all"));
   const lf=$("#langfilters"); if(lf)[...lf.children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.lang==="all"));
   const stf=$("#statusfilters"); if(stf)[...stf.children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.status==="all"));
-  const svf=$("#sevfilters"); if(svf)[...svf.children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.sev==="all"));
+  const svf=$("#sizefilters"); if(svf)[...svf.children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.size==="all"));
   $("#q").value=""; apply();
   window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"});
 });
