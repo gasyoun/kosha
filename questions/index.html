@@ -1,0 +1,298 @@
+<title>Which question → which repo</title>
+<style>
+  :root{
+    --paper:#F3F2EE; --surface:#FFFFFF; --ink:#211E29; --muted:#6C6960;
+    --line:#E2DFD7; --line-strong:#CFCBBF;
+    --indigo:#33568C; --rubric:#9E3B2C; --moss:#4B6B4A;
+    --indigo-tint:#EAEEF5; --rubric-tint:#F6EAE7; --moss-tint:#EAF0EA;
+    --serif:"Charter","Iowan Old Style","Palatino Linotype","Georgia",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"SFMono-Regular",ui-monospace,"Cascadia Mono","Consolas",monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+    line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:clamp(20px,4vw,56px) clamp(16px,4vw,40px) 80px}
+  a{color:var(--indigo);text-underline-offset:2px;text-decoration-thickness:.5px}
+  a:hover{text-decoration-thickness:1.5px}
+  a:focus-visible{outline:2px solid var(--indigo);outline-offset:2px;border-radius:2px}
+
+  /* ---- masthead ---- */
+  header{border-bottom:2px solid var(--ink);padding-bottom:22px;margin-bottom:8px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 12px}
+  h1{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;text-wrap:balance;
+    font-size:clamp(30px,5vw,48px);line-height:1.04;margin:0 0 14px}
+  h1 em{font-style:italic;color:var(--indigo)}
+  .lede{max-width:64ch;font-size:clamp(15px,1.6vw,17px);color:#3c3944;margin:0}
+  .lede code{font-family:var(--mono);font-size:.86em;background:#eceae3;padding:1px 5px;border-radius:3px}
+
+  /* ---- controls ---- */
+  .controls{position:sticky;top:0;z-index:5;background:var(--paper);
+    padding:16px 0 14px;margin-bottom:10px;border-bottom:1px solid var(--line)}
+  .searchrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  #q{flex:1 1 260px;min-width:0;font:inherit;font-size:15px;padding:11px 14px;
+    border:1px solid var(--line-strong);border-radius:8px;background:var(--surface);color:var(--ink)}
+  #q::placeholder{color:#9a978d}
+  #q:focus{outline:2px solid var(--indigo);outline-offset:0;border-color:transparent}
+  .chips{display:flex;gap:7px;flex-wrap:wrap}
+  .chip{font:inherit;font-size:13px;cursor:pointer;padding:8px 13px;border-radius:20px;
+    border:1px solid var(--line-strong);background:var(--surface);color:#4a4750;
+    display:inline-flex;align-items:center;gap:7px;transition:.14s}
+  .chip:hover{border-color:var(--muted)}
+  .chip .dot{width:8px;height:8px;border-radius:50%;background:currentColor;flex:none}
+  .chip[data-cat="ask"] .dot{color:var(--moss)}
+  .chip[data-cat="build"] .dot{color:var(--indigo)}
+  .chip[data-cat="hub"] .dot{color:var(--rubric)}
+  .chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+  .chip.on .dot{color:#fff}
+  .count{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto;
+    white-space:nowrap;font-variant-numeric:tabular-nums}
+
+  /* ---- sections ---- */
+  section{margin-top:38px;scroll-margin-top:120px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin:0 0 4px}
+  .sec-head h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:0;letter-spacing:-.01em}
+  .sec-head .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+  .sec-note{color:var(--muted);font-size:14px;margin:0 0 18px;max-width:66ch}
+  section[data-cat="ask"] .kicker{color:var(--moss)}
+  section[data-cat="build"] .kicker{color:var(--indigo)}
+  section[data-cat="hub"] .kicker{color:var(--rubric)}
+
+  /* ---- rows ---- */
+  .rows{display:grid;gap:10px}
+  .row{display:grid;grid-template-columns:1.15fr 1fr;gap:8px 24px;
+    background:var(--surface);border:1px solid var(--line);border-radius:10px;
+    padding:16px 18px 15px;position:relative;overflow:hidden}
+  .row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px}
+  .row[data-cat="ask"]::before{background:var(--moss)}
+  .row[data-cat="build"]::before{background:var(--indigo)}
+  .row[data-cat="hub"]::before{background:var(--rubric)}
+  .q{font-family:var(--serif);font-size:17px;line-height:1.3;font-weight:500;margin:0}
+  .why{grid-column:1;color:var(--muted);font-size:13.5px;margin:2px 0 0;max-width:52ch}
+  .why code{font-family:var(--mono);font-size:.86em;background:#f0efe9;padding:1px 4px;border-radius:3px}
+  .targets{grid-column:2;grid-row:1 / span 2;display:flex;flex-direction:column;gap:6px;align-self:start}
+  .repo{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;
+    padding:6px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line-strong);
+    background:#fbfaf7;color:var(--ink);width:fit-content;max-width:100%}
+  .repo:hover{border-color:var(--indigo);background:var(--indigo-tint)}
+  .repo .arrow{color:var(--muted);flex:none}
+  .repo b{font-weight:600}
+  .repo .role{font-family:var(--sans);font-size:11.5px;color:var(--muted);font-weight:400}
+
+  /* ---- directory ---- */
+  .dir-group{margin-top:22px}
+  .dir-group h3{font-family:var(--sans);font-size:13px;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--muted);margin:0 0 10px;padding-bottom:7px;border-bottom:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:baseline}
+  .dir-group h3 span{font-family:var(--mono);font-size:11px;text-transform:none;letter-spacing:0}
+  .taglist{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-family:var(--mono);font-size:12.5px;padding:5px 9px;border-radius:6px;text-decoration:none;
+    background:var(--surface);border:1px solid var(--line);color:#39363f}
+  .tag:hover{border-color:var(--line-strong);background:#fbfaf7}
+  .tag .o{color:#b3afa4;font-size:10.5px}
+
+  .empty{display:none;padding:40px 8px;text-align:center;color:var(--muted);font-size:15px}
+  .empty.show{display:block}
+
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+    color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between}
+  .legend{display:flex;gap:16px;flex-wrap:wrap}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .legend i{width:9px;height:9px;border-radius:2px;display:inline-block}
+
+  @media(max-width:620px){
+    .row{grid-template-columns:1fr}
+    .targets{grid-column:1;grid-row:auto;margin-top:4px}
+    .why{grid-column:1}
+    .controls{position:static}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Sanskrit Lexicon · ~85 repos under <code style="font-family:var(--mono)">GitHub/</code></p>
+    <h1>Which question is solved <em>with which repo</em></h1>
+    <p class="lede">A routing index across the whole org. Three kinds of question — a scholar's <b>lookup</b>, a developer's <b>where-do-I-work</b>, and the cross-repo <b>hub routing</b> that keeps sessions from reinventing solved work. Type to filter; click a repo to open it on GitHub.</p>
+  </header>
+
+  <div class="controls">
+    <div class="searchrow">
+      <input id="q" type="search" placeholder="Filter questions and repos — e.g. etymology, transcoder, frequency, findings…" aria-label="Filter">
+      <div class="chips" role="group" aria-label="Category filter">
+        <button class="chip on" data-cat="all">All</button>
+        <button class="chip" data-cat="ask"><span class="dot"></span>Ask &amp; look up</button>
+        <button class="chip" data-cat="build"><span class="dot"></span>Build &amp; fix</button>
+        <button class="chip" data-cat="hub"><span class="dot"></span>Hub routing</button>
+      </div>
+      <span class="count" id="count"></span>
+    </div>
+  </div>
+
+  <!-- ===================== ASK ===================== -->
+  <section data-cat="ask">
+    <div class="sec-head"><span class="kicker">Scholar</span><h2>Ask &amp; look up</h2></div>
+    <p class="sec-note">"What does the dictionary say / how frequent / how rendered?" — the repo (or derived dataset) that answers a research question.</p>
+    <div class="rows" id="rows-ask"></div>
+  </section>
+
+  <!-- ===================== BUILD ===================== -->
+  <section data-cat="build">
+    <div class="sec-head"><span class="kicker">Developer</span><h2>Build &amp; fix</h2></div>
+    <p class="sec-note">"Where do I make this change / where does this concern live?" — the repo you actually work in.</p>
+    <div class="rows" id="rows-build"></div>
+  </section>
+
+  <!-- ===================== HUB ===================== -->
+  <section data-cat="hub">
+    <div class="sec-head"><span class="kicker">Coordination</span><h2>Hub routing</h2></div>
+    <p class="sec-note">The "check before you build / append after you find" questions — answered by the cross-repo hub docs, not by any one dictionary.</p>
+    <div class="rows" id="rows-hub"></div>
+  </section>
+
+  <p class="empty" id="empty">No question or repo matches that filter.</p>
+
+  <!-- ===================== DIRECTORY ===================== -->
+  <section id="directory">
+    <div class="sec-head"><span class="kicker">Reference</span><h2>Repo directory</h2></div>
+    <p class="sec-note">Every repo under the root, grouped by family. <span class="tag" style="padding:2px 6px"><span class="o">sl</span></span>&nbsp;= <code style="font-family:var(--mono)">sanskrit-lexicon</code> org &nbsp;·&nbsp; <span class="tag" style="padding:2px 6px"><span class="o">g</span></span>&nbsp;= <code style="font-family:var(--mono)">gasyoun</code> &nbsp;·&nbsp; <span class="tag" style="padding:2px 6px"><span class="o">d</span></span>&nbsp;= <code style="font-family:var(--mono)">drdhaval2785</code>.</p>
+    <div id="dir"></div>
+  </section>
+
+  <footer>
+    <div class="legend">
+      <span><i style="background:var(--moss)"></i>Ask &amp; look up</span>
+      <span><i style="background:var(--indigo)"></i>Build &amp; fix</span>
+      <span><i style="background:var(--rubric)"></i>Hub routing</span>
+    </div>
+    <div>Sourced from <code style="font-family:var(--mono)">CLAUDE.md</code>, <code style="font-family:var(--mono)">SHARED_CODE.md</code> &amp; <code style="font-family:var(--mono)">PROJECT_INTERLINKS.md</code>.</div>
+  </footer>
+</div>
+
+<script>
+const O={sl:"sanskrit-lexicon",g:"gasyoun",d:"drdhaval2785"};
+const url=(o,r)=>`https://github.com/${O[o]}/${r}`;
+
+// question → repo mappings
+const ASK=[
+ {q:"What does Monier-Williams say about a headword?",why:"MWS working repo over the <code>mw</code> source in csl-orig.",t:[["sl","MWS","MW dictionary"],["sl","csl-orig","source text"]]},
+ {q:"What's the etymology / Pāṇinian derivation of a word?",why:"Per-dict <code>*_etymology.tsv</code> in csl-orig; cross-dict agreement in the atlas oracle.",t:[["sl","csl-orig","etymology TSVs"],["sl","csl-atlas","derivation oracle"]]},
+ {q:"Which MW records actually are verbal roots?",why:"The count-locked inventory — never re-scan <code>mw.txt</code> (three repos got three counts).",t:[["sl","csl-orig","mw_roots.tsv"]]},
+ {q:"How is a Sanskrit word or root rendered into Russian?",why:"Ranked Sa→Ru glossary at surface / lemma / root; verse-level published RU in the corpus tool.",t:[["g","SanskritRussian","ranked glossary"],["g","SamudraManthanam","verse parallels"]]},
+ {q:"How frequent is a lemma in the corpus?",why:"DCS master — consume the lemma-frequency table, don't re-parse CoNLL-U.",t:[["g","VisualDCS","DCS frequency"]]},
+ {q:"What's the German (Böhtlingk–Roth) entry?",why:"The Petersburg dictionaries, large and abridged.",t:[["sl","PWG","großes PW"],["sl","PWK","kürzere Fassung"]]},
+ {q:"What's Apte's Sanskrit–English entry?",why:"Apte 1890 and the practical dictionary.",t:[["sl","AP90","Apte 1890"],["sl","AP","Apte practical"]]},
+ {q:"What's Grassmann's Rigveda word?",why:"Wörterbuch zum Rig-Veda.",t:[["sl","GRA","Grassmann RV"]]},
+ {q:"What's the Whitney root — its class, grade, accent?",why:"The 935-root hub, crosswalked to MW / DCS with paradigm display.",t:[["g","WhitneyRoots","root hub"]]},
+ {q:"Which dictionaries attest a given headword?",why:"Cross-dictionary atlas; union headword index with provenance.",t:[["sl","csl-atlas","headword atlas"],["g","SanskritLexicography","union index"]]},
+ {q:"Is this spelling a real typo or deliberately non-standard?",why:"Body-grounded headword/typo triage over the csl-orig texts.",t:[["d","SanskritSpellCheck","typo triage"]]},
+ {q:"How did 19th-century spelling drift (Thier→Tier, pre-1918 RU)?",why:"Reform maps for DE / RU / FR / EN gloss text — a search-normalization asset.",t:[["d","SanskritSpellCheck","ortho-drift maps"]]},
+ {q:"What's in the Tamil lexicon (OTL) or Capeller?",why:"Combined SQLite Tamil corpus (MW + Capeller + Cologne Online Tamil Lexicon).",t:[["sl","csl-santam","Tamil corpus"]]},
+ {q:"What's the Buddhist Hybrid Sanskrit (Edgerton) form?",why:"BHS dictionary working repo.",t:[["sl","BHS","Edgerton BHS"]]},
+ {q:"Vedic accent / per-word Rigveda morphology?",why:"VedaWeb 2.0 accented feed, staged into the RU-translation research tree.",t:[["g","SanskritLexicography","VedaWeb feed"]]},
+];
+
+const BUILD=[
+ {q:"Where do I correct dictionary source text?",why:"Never edit directly — express changes as change-files, apply, XML-validate, batch-PR ~monthly.",t:[["sl","csl-orig","canonical text"],["sl","CORRECTIONS","change files"]]},
+ {q:"Where's the correction & XML-generation pipeline?",why:"Vendored everywhere — don't fork <code>updateByLine.py</code> / <code>generate_dict.sh</code> per repo.",t:[["sl","csl-pywork","makotemplates"]]},
+ {q:"Where's the transcoder — SLP1 ⇄ IAST ⇄ Devanāgarī, norm/form_key?",why:"One tested Python+JS package; the SLP1 table is not to be re-typed.",t:[["sl","sanskrit-util","translit toolkit"]]},
+ {q:"Where's the PHP web frontend (getword / servepdf / serveimg)?",why:"Fix the makotemplates source, then regenerate — ~37 copies drift downstream.",t:[["sl","csl-websanlexicon","web template"]]},
+ {q:"Where's the search API (C-SALT / Kosh)?",why:"Search API dev repo; the interface standard is held separately.",t:[["sl","csl-apidev","search API"],["sl","csl-standards","C-SALT/Kosh std"]]},
+ {q:"Where do I build <ls> scan links & preverb morphology?",why:"15 forks, no shared module yet — lift the core from these before writing #16.",t:[["sl","MWS","link_candidates.py"],["sl","PWG","verbs01/"]]},
+ {q:"Where's DCS corpus / morphology ingest?",why:"The canonical CoNLL-U → SQLite build and lemma summary.",t:[["g","VisualDCS","import_dcs_conllu"]]},
+ {q:"Where are the RU translation kits (mw_ru / pwg_ru)?",why:"One parameterized kit — don't clone a third.",t:[["g","SanskritLexicography","RussianTranslation/"]]},
+ {q:"Where's the Python renderer for a Cologne entry?",why:"Faithful port of the PHP SAX display engine for mw/pwg/ap90.",t:[["g","kosha","render.py"]]},
+ {q:"Where's the static-site generator for FAQ / wiki collections?",why:"The one canonical note-site generator — csl-guides stays Docusaurus, everything else consumes this.",t:[["g","ZettelkastenWiki","site generator"]]},
+ {q:"Where's org CI — dependabot, CodeQL, CoC, branch protection?",why:"Deployed org-wide by the cologne-* skills; run the skill, don't hand-write.",t:[["sl","cologne-skills","runbook skills"]]},
+ {q:"Where's the org metrics dashboard & decisions master?",why:"Tracks/audits all repos; holds CROSS_REPO_DECISIONS + the OBS-T paper.",t:[["sl","csl-observatory","org metrics"]]},
+ {q:"Where's the inflection / paradigm engine?",why:"Inflection generation and the MW-inflection work.",t:[["sl","csl-inflect","inflection"],["sl","MWinflect","MW paradigms"]]},
+ {q:"Where's the mobile/Flutter app & Devanāgarī rendering?",why:"Dart app; Devanāgarī shaping lib.",t:[["sl","csl-app","Flutter app"],["sl","csl-devanagari","Devanāgarī"]]},
+ {q:"Where are the CDSL user docs?",why:"Docusaurus documentation site for the dictionaries.",t:[["sl","csl-guides","docs site"]]},
+];
+
+const HUB=[
+ {q:"Before writing a string helper / normalizer / correction applier?",why:"The canonical-source census — reuse the one owner, don't write copy #63.",t:[["g","github-spine","SHARED_CODE.md"]]},
+ {q:"Before deriving a data asset (alignment, frequency, crosswalk)?",why:"Someone already built it — consume the feed. The data-flow map plus the code census.",t:[["g","Uprava","PROJECT_INTERLINKS.md"]]},
+ {q:"I hit or measured a non-obvious gotcha — where does it go?",why:"Route by topic: Sanskrit-data findings vs infra/process findings.",t:[["g","SanskritLexicography","FINDINGS · data"],["g","Uprava","FINDINGS · infra"]]},
+ {q:"An external site is down / blocked while scraping — is it known?",why:"Live status board of stalled fetches, separate from permanent-gotcha findings.",t:[["g","Uprava","SERVER_OUTAGES.md"]]},
+ {q:"What's next / who decides this / what's blocked?",why:"Cross-repo human DO / DECIDE / WAITING rollup — the source of truth for 'what to do'.",t:[["g","Uprava","GTD_NEXT_ACTIONS.md"]]},
+ {q:"Which paper am I working on — status, venue, blocker?",why:"Publication-pipeline inventory with stable IDs and readiness scores.",t:[["g","Uprava","ARTICLES.md"]]},
+ {q:"How do I resume a specific paused piece of work?",why:"Self-contained executable session briefs, one per task; the README indexes them.",t:[["g","Uprava","handoffs/"]]},
+ {q:"Which cross-repo process (release, handoff, findings) do I run?",why:"Global workflow skills encode each ritual — reach for the skill, don't improvise.",t:[["g","Uprava","CLAUDE.md · skills"]]},
+];
+
+// full directory
+const DIR=[
+ {name:"CDSL dictionaries",note:"per-dictionary working repos",o:"sl",
+  repos:["PWG","PW","PWK","MWS","GRA","AP","AP90","BUR","SCH","VCP","SKD","KRM","MD","PUI","BOP","BOR","CAE","ACC","AMAR","INM","KNA","KOW","LRV","MCI","SHS","STC","VEI","Wil-YAT","BHS","CCS","FRI"]},
+ {name:"CDSL infrastructure",note:"the source-of-truth spine & read side",o:"sl",
+  repos:["csl-orig","csl-pywork","csl-corrections","CORRECTIONS","csl-websanlexicon","csl-apidev","csl-standards","csl-atlas","csl-observatory","csl-guides","csl-devanagari","csl-inflect","MWinflect","csl-app","csl-doc","csl-newsletter","csl-santam","sanskrit-util","sanskrit-lexicon.github.io"]},
+ {name:"Corpus & morphology",note:"DCS + parallel Sa↔Ru feeds",o:"mix",
+  repos:[["g","VisualDCS"],["sl","DCS"],["g","SamudraManthanam"],["g","SanskritRussian"]]},
+ {name:"Datasets, kits & tools",note:"derived assets and generators",o:"g",
+  repos:["SanskritLexicography","WhitneyRoots","kosha","ZettelkastenWiki","ORS-FAQ"]},
+ {name:"Management hub",note:"cross-repo coordination",o:"g",
+  repos:["Uprava"]},
+ {name:"DH & media projects",note:"toolkit-linked, not on the dictionary spine",o:"g",
+  repos:["BookIndex","IndologyScholars","CommentaryStrategies","Sundara-commentaries","SanskritKaraoke","RussianRamayana","AfanasiyNikitin","RuWritingStyles","RWS-plugin","SanskritGrammar","buhler-sanskrit-book","Systema-Sanscriticum"]},
+ {name:"Triage & spell-check",note:"maintained by Dhaval",o:"d",
+  repos:["SanskritSpellCheck"]},
+ {name:"Templates & skills",note:"org hygiene / CI sources",o:"mix",
+  repos:[["sl","cologne-skills"],["sl","COLOGNE"],["g","github-spine"]]},
+];
+
+/* ---------- render ---------- */
+const arrow='<span class="arrow">→</span>';
+function repoChip(o,r,role){
+  return `<a class="repo" href="${url(o,r)}" target="_blank" rel="noopener">${arrow}<b>${r}</b>${role?`<span class="role">${role}</span>`:""}</a>`;
+}
+function rowHTML(cat,d){
+  const t=d.t.map(x=>repoChip(x[0],x[1],x[2])).join("");
+  const kws=(d.q+" "+d.why+" "+d.t.map(x=>x[1]+" "+(x[2]||"")).join(" ")).toLowerCase();
+  return `<article class="row" data-cat="${cat}" data-kw="${kws.replace(/"/g,'&quot;')}">
+    <p class="q">${d.q}</p><p class="why">${d.why}</p><div class="targets">${t}</div></article>`;
+}
+document.getElementById("rows-ask").innerHTML=ASK.map(d=>rowHTML("ask",d)).join("");
+document.getElementById("rows-build").innerHTML=BUILD.map(d=>rowHTML("build",d)).join("");
+document.getElementById("rows-hub").innerHTML=HUB.map(d=>rowHTML("hub",d)).join("");
+
+const dir=document.getElementById("dir");
+dir.innerHTML=DIR.map(g=>{
+  const items=g.repos.map(r=>{
+    const o=Array.isArray(r)?r[0]:g.o, name=Array.isArray(r)?r[1]:r;
+    return `<a class="tag" href="${url(o,name)}" target="_blank" rel="noopener"><span class="o">${o==="sl"?"sl":o}</span> ${name}</a>`;
+  }).join("");
+  return `<div class="dir-group"><h3>${g.name}<span>${g.note}</span></h3><div class="taglist">${items}</div></div>`;
+}).join("");
+
+/* ---------- filter ---------- */
+const q=document.getElementById("q"), count=document.getElementById("count"),
+      empty=document.getElementById("empty"), chips=[...document.querySelectorAll(".chip")];
+let cat="all";
+function apply(){
+  const term=q.value.trim().toLowerCase();
+  let shown=0;
+  document.querySelectorAll(".row").forEach(row=>{
+    const okCat=cat==="all"||row.dataset.cat===cat;
+    const okTerm=!term||row.dataset.kw.includes(term);
+    const vis=okCat&&okTerm;
+    row.style.display=vis?"":"none";
+    if(vis)shown++;
+  });
+  document.querySelectorAll("section[data-cat]").forEach(s=>{
+    const any=[...s.querySelectorAll(".row")].some(r=>r.style.display!=="none");
+    s.style.display=any?"":"none";
+  });
+  // directory only when no active filter
+  const dirSec=document.getElementById("directory");
+  dirSec.style.display=(cat==="all"&&!term)?"":"none";
+  empty.classList.toggle("show",shown===0);
+  count.textContent=shown+" / "+document.querySelectorAll(".row").length+" questions";
+}
+q.addEventListener("input",apply);
+chips.forEach(c=>c.addEventListener("click",()=>{
+  chips.forEach(x=>x.classList.remove("on"));c.classList.add("on");cat=c.dataset.cat;apply();
+}));
+apply();
+</script>
