@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>Kośa — Features Index of the Sanskrit Lexicon Project</title>
+<style>
+  :root{
+    --leaf:#F4EEE1;        /* palm-leaf ground, faint ochre bias */
+    --leaf-2:#EDE5D3;      /* card / panel */
+    --leaf-3:#E4D9C1;      /* rule / border */
+    --ink:#241B12;         /* deep sepia-black */
+    --ink-2:#4A3D2E;       /* secondary text */
+    --ink-3:#6E5F4B;       /* muted */
+    --lapis:#2B4A8B;       /* manuscript indigo — the accent */
+    --lapis-soft:#e7ecf6;
+    --haldi:#B0761B;       /* turmeric ochre — structural rail */
+    --live:#3F7D4E;        /* semantic: live */
+    --beta:#B0761B;        /* semantic: beta/local */
+    --lib:#5A6B82;         /* semantic: library/source */
+    --live-bg:#e6efe7; --beta-bg:#f4ecda; --lib-bg:#e9edf1;
+    --serif:"Palatino Linotype","Book Antiqua",Palatino,"Iowan Old Style",Georgia,"Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:"SFMono-Regular","Cascadia Code","Cascadia Mono",Consolas,"Liberation Mono",monospace;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--leaf);color:var(--ink);
+    font-family:var(--sans);font-size:15px;line-height:1.55;
+    background-image:radial-gradient(circle at 12% -8%,#faf6ec 0,transparent 46%),radial-gradient(circle at 100% 0,#efe7d5 0,transparent 40%);
+  }
+  a{color:var(--lapis);text-decoration:none}
+  a:hover{text-decoration:underline;text-underline-offset:2px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+  /* ---------- masthead ---------- */
+  header.top{position:relative;overflow:hidden;border-bottom:1px solid var(--leaf-3)}
+  header.top .deva{position:absolute;right:-2vw;top:50%;transform:translateY(-50%);
+    font-family:var(--serif);font-size:clamp(120px,20vw,280px);color:#000;opacity:.045;
+    line-height:.8;user-select:none;pointer-events:none;white-space:nowrap}
+  .masthead{padding:46px 0 30px;position:relative;z-index:1}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--haldi);font-weight:700}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,5.2vw,52px);line-height:1.03;
+    margin:.28em 0 .12em;letter-spacing:-.01em;text-wrap:balance;max-width:16ch}
+  h1 .en{color:var(--ink)}
+  .lede{font-size:17px;color:var(--ink-2);max-width:60ch;margin:.5em 0 0}
+  .tallies{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:22px}
+  .tally{display:flex;align-items:baseline;gap:7px;background:var(--leaf-2);border:1px solid var(--leaf-3);
+    border-radius:2px;padding:8px 13px}
+  .tally b{font-family:var(--serif);font-size:21px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--lapis)}
+  .tally span{font-size:12.5px;color:var(--ink-3);letter-spacing:.02em}
+
+  /* ---------- sticky controls ---------- */
+  .controls{position:sticky;top:0;z-index:30;background:rgba(244,238,225,.93);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--leaf-3)}
+  .controls-in{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:11px 0}
+  .search{flex:1 1 260px;display:flex;align-items:center;gap:8px;background:#fff;
+    border:1px solid var(--leaf-3);border-radius:3px;padding:8px 12px;min-width:200px}
+  .search:focus-within{border-color:var(--lapis);box-shadow:0 0 0 3px var(--lapis-soft)}
+  .search input{border:0;outline:0;font:inherit;width:100%;background:transparent;color:var(--ink)}
+  .search svg{flex:none;color:var(--ink-3)}
+  .tabs{display:flex;flex-wrap:wrap;gap:6px}
+  .tab{font:inherit;font-size:13.5px;cursor:pointer;background:transparent;border:1px solid var(--leaf-3);
+    color:var(--ink-2);border-radius:3px;padding:7px 13px;display:flex;align-items:center;gap:7px;transition:.12s}
+  .tab:hover{border-color:var(--lapis);color:var(--lapis)}
+  .tab[aria-pressed=true]{background:var(--ink);color:var(--leaf);border-color:var(--ink)}
+  .tab .n{font-variant-numeric:tabular-nums;font-size:11.5px;opacity:.7}
+  .tab[aria-pressed=true] .n{opacity:.85}
+  .count-line{color:var(--ink-3);font-size:12.5px;padding:0 0 9px}
+  .count-line b{color:var(--ink);font-variant-numeric:tabular-nums}
+
+  /* ---------- sections ---------- */
+  section.cat{padding:38px 0 8px;scroll-margin-top:64px}
+  section.cat.hide{display:none}
+  .cat-head{display:flex;align-items:flex-end;gap:14px;border-bottom:2px solid var(--ink);
+    padding-bottom:9px;margin-bottom:20px}
+  .cat-head .idx{font-family:var(--serif);font-size:13px;color:var(--haldi);font-weight:700;letter-spacing:.05em}
+  .cat-head h2{font-family:var(--serif);font-weight:600;font-size:25px;margin:0;letter-spacing:-.01em}
+  .cat-head p{margin:0 0 2px;color:var(--ink-3);font-size:13.5px;flex:1 1 200px}
+  .subfilters{display:flex;flex-wrap:wrap;gap:6px;margin:-6px 0 18px}
+  .chip{font:inherit;font-size:12px;cursor:pointer;background:var(--leaf-2);border:1px solid var(--leaf-3);
+    color:var(--ink-2);border-radius:20px;padding:4px 11px;transition:.12s}
+  .chip:hover{border-color:var(--lapis)}
+  .chip[aria-pressed=true]{background:var(--lapis);color:#fff;border-color:var(--lapis)}
+
+  /* ---------- card grid ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+  .card{background:var(--leaf-2);border:1px solid var(--leaf-3);border-radius:4px;padding:15px 16px 14px;
+    position:relative;display:flex;flex-direction:column;gap:7px}
+  .card.hide{display:none}
+  .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:4px 0 0 4px;background:var(--haldi)}
+  .card.s-live::before{background:var(--live)} .card.s-beta::before{background:var(--beta)} .card.s-lib::before{background:var(--lib)}
+  .card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+  .card-badges{display:flex;align-items:center;gap:6px;flex:none}
+  .idbadge{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.06em;
+    color:var(--ink-3);background:var(--leaf);border:1px solid var(--leaf-3);border-radius:3px;padding:2px 6px;white-space:nowrap}
+  .card h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:0;line-height:1.15;flex:1;min-width:0}
+  .card h3 .code{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--lapis);
+    background:var(--lapis-soft);padding:1px 6px;border-radius:3px;margin-right:7px;letter-spacing:.02em}
+  .status{flex:none;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:3px 8px;border-radius:20px;white-space:nowrap}
+  .status.live{color:var(--live);background:var(--live-bg)}
+  .status.beta{color:var(--beta);background:var(--beta-bg)}
+  .status.lib{color:var(--lib);background:var(--lib-bg)}
+  .blurb{font-size:13.5px;color:var(--ink-2);margin:0}
+  .reuse{font-size:12.5px;color:var(--ink-3);border-left:2px solid var(--leaf-3);padding-left:9px}
+  .reuse b{color:var(--haldi);font-weight:600}
+  .meta{display:flex;flex-wrap:wrap;gap:5px 6px;margin-top:auto;padding-top:4px}
+  .meta .m{font-size:11px;color:var(--ink-3);background:var(--leaf);border:1px solid var(--leaf-3);
+    border-radius:3px;padding:2px 7px;font-variant-numeric:tabular-nums}
+  .meta .m.repo{font-family:var(--mono);font-size:10.5px}
+  .meta a.m:hover{border-color:var(--lapis);color:var(--lapis)}
+  .meta .m.date{margin-left:auto;border-style:dashed;color:var(--ink-3);font-variant-numeric:tabular-nums}
+  .meta .m.date::before{content:"◷ ";opacity:.6}
+  .meta a.m.date.ext{color:var(--lapis);cursor:pointer}
+  .meta a.m.date.ext::before{content:"↻ ";opacity:.7}
+  .meta a.m.date.ext:hover{border-color:var(--lapis);background:var(--lapis-soft)}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:1px;justify-content:flex-end}
+  .tagchip{font:inherit;font-size:10.5px;cursor:pointer;border:1px solid var(--leaf-3);
+    background:var(--leaf);color:var(--ink-3);border-radius:20px;padding:1px 8px 1px 6px;
+    letter-spacing:.02em;transition:.12s;line-height:1.5}
+  .tagchip::before{content:"#";opacity:.5;margin-right:1px}
+  .tagchip:hover{border-color:var(--lapis);color:var(--lapis);background:var(--lapis-soft)}
+  .tagchip.on{background:var(--lapis);color:#fff;border-color:var(--lapis)}
+  .tagchip.on::before{color:#fff;opacity:.7}
+  .example{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);background:var(--leaf);
+    border:1px solid var(--leaf-3);border-radius:3px;padding:6px 9px;white-space:pre-wrap;
+    word-break:break-word;overflow-wrap:anywhere;line-height:1.5;min-height:calc(3em + 14px)}
+  .example .lab{font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--lib);margin-right:7px}
+  .example.schema{border-style:dashed}
+  td.ex a{font-family:var(--mono);font-size:12px}
+  td.ex .hw{color:var(--ink)}
+
+  /* ---------- dictionaries table ---------- */
+  .tablewrap{overflow-x:auto;border:1px solid var(--leaf-3);border-radius:4px;background:var(--leaf-2)}
+  table.dicts{border-collapse:collapse;width:100%;font-size:13.5px;min-width:860px}
+  table.dicts thead th{position:sticky;top:56px;background:var(--ink);color:var(--leaf);text-align:left;
+    font-weight:600;font-size:12px;letter-spacing:.03em;padding:9px 12px;white-space:nowrap;z-index:5}
+  table.dicts th.num,table.dicts td.num{text-align:right;font-variant-numeric:tabular-nums}
+  table.dicts tbody td{padding:8px 12px;border-top:1px solid var(--leaf-3);vertical-align:top}
+  table.dicts tbody tr:hover{background:#fbf7ee}
+  table.dicts tr.hide{display:none}
+  td.code{font-family:var(--mono);font-weight:700;color:var(--lapis);white-space:nowrap}
+  td.title{font-family:var(--serif);font-size:14.5px}
+  .lang{display:inline-block;font-size:11px;font-weight:600;padding:1px 7px;border-radius:3px;white-space:nowrap}
+  .norepo{color:var(--ink-3);font-style:italic}
+  .lg-SE{background:#e7ecf6;color:#2B4A8B}.lg-ES{background:#eae6f3;color:#5A439A}
+  .lg-SG{background:#f4ecda;color:#8a5b12}.lg-SF{background:#e6efe7;color:#3F7D4E}
+  .lg-SL{background:#f3e5e0;color:#9A4B32}.lg-SS{background:#e9edf1;color:#41546b}
+  .lg-SP{background:#efe9de;color:#6E5F4B}
+
+  footer{margin-top:44px;border-top:1px solid var(--leaf-3);padding:24px 0 40px;color:var(--ink-3);font-size:12.5px}
+  footer .src{max-width:70ch}
+  footer code{font-family:var(--mono);font-size:11.5px;background:var(--leaf-2);padding:1px 5px;border-radius:3px}
+  .noresult{display:none;padding:40px 4px;color:var(--ink-3);font-style:italic}
+  .noresult.show{display:block}
+  .changelog{margin-top:40px;border-top:2px solid var(--ink);padding-top:18px}
+  .changelog h2{font-family:var(--serif);font-weight:600;font-size:20px;margin:0 0 4px}
+  .changelog .sub{color:var(--ink-3);font-size:13px;margin:0 0 16px}
+  .cl-row{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:11px 0;border-top:1px solid var(--leaf-3)}
+  .cl-row:first-of-type{border-top:0}
+  .cl-date{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--lapis);font-variant-numeric:tabular-nums;padding-top:1px}
+  .cl-body{font-size:13.5px;color:var(--ink-2)}
+  .cl-body b{color:var(--ink);font-weight:600;font-family:var(--serif)}
+  .cl-body .added{font-family:var(--mono);font-size:11.5px;color:var(--ink-3)}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  @media (max-width:560px){
+    .grid{grid-template-columns:1fr}
+    table.dicts thead th{top:0}
+    .masthead{padding:34px 0 24px}
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="deva" aria-hidden="true">कोश</div>
+  <div class="wrap masthead">
+    <div class="eyebrow">Sanskrit Lexicon project · capability catalogue</div>
+    <h1><span class="en">What we have — data, dictionaries, interfaces &amp; tools</span></h1>
+    <p class="lede">A clickable, filterable map of the working assets across the ~85 repositories: the
+      dictionaries digitised, the sites and APIs that serve them, the derived datasets already computed,
+      and the toolkit you import rather than re-type. Companion to the
+      <a href="https://github.com/gasyoun/Uprava/blob/main/REUSE_INDEX.md">Reuse Index</a> — that one says
+      <em>don't rebuild</em>; this one says <em>here's what exists</em>.</p>
+    <div class="tallies" id="tallies"></div>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="wrap">
+    <div class="controls-in">
+      <label class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="q" type="search" placeholder="Search 100+ assets — try “root”, “frequency”, “PWG”, “API”, “Russian”…" autocomplete="off" spellcheck="false" aria-label="Search assets">
+      </label>
+      <div class="tabs" id="tabs" role="group" aria-label="Filter by category"></div>
+    </div>
+    <div class="count-line" id="countline"></div>
+  </div>
+</div>
+
+<main class="wrap" id="main"></main>
+<p class="wrap noresult" id="noresult">No asset matches that search. Clear the box or pick a different category.</p>
+
+<section class="wrap changelog" id="changelog"></section>
+
+<footer class="wrap">
+  <p class="src"><strong>Sources.</strong> Dictionary roster from <code>csl-guides/src/data/dictionaries.json</code>
+  (verified against <code>csl-orig/v02/</code>). Interfaces, data assets and tools compiled from
+  <a href="https://github.com/gasyoun/github-spine/blob/main/SHARED_CODE.md">SHARED_CODE.md</a>,
+  <a href="https://github.com/gasyoun/Uprava/blob/main/PROJECT_INTERLINKS.md">PROJECT_INTERLINKS.md</a>,
+  <a href="https://github.com/gasyoun/Uprava/blob/main/REUSE_INDEX.md">REUSE_INDEX.md</a> and a three-agent
+  repository sweep (03-07-2026). Sizes and counts are approximate; re-verify against a source repo before a large change.
+  Some linked repos are private.</p>
+  <p>Interfaces & tools —
+    <span class="status live" style="display:inline-block">Live</span> deployed &amp; reachable ·
+    <span class="status beta" style="display:inline-block">Beta / local</span> in development or local-only ·
+    <span class="status lib" style="display:inline-block">Source / library</span> a package or spine with no UI of its own.</p>
+  <p>Datasets (severity) —
+    <span class="status live" style="display:inline-block">canonical</span> authoritative &amp; reproducible, widely consumed ·
+    <span class="status beta" style="display:inline-block">derived</span> secondary / analysis output ·
+    <span class="status lib" style="display:inline-block">raw</span> gitignored, binary, or external mirror.
+    Each asset carries a stable ID — a <strong>running number within its category</strong> (1–N, it does <em>not</em> restart at each sub-section)
+    prefixed by a <strong>section letter</strong> (<code>A</code>–<code>F</code> data · <code>G</code>–<code>K</code> interfaces · <code>L</code>–<code>M</code> tools; dictionaries use their code) — searchable in the box above.
+    The bottom-right date is <code>◷ MM/YY</code> when the asset was <strong>first introduced</strong> (from git history);
+    for external stacks it is instead <code>↻ MM/YY</code> the <strong>last update</strong>, and the badge links to that stack's documented source of truth
+    (vidyut → GitHub release · Heritage → mirror commit · Samsaadhanii → site footer · DharmaMitra → news feed · VedaWeb → Zenodo data DOI).</p>
+</footer>
+
+<script>
+/* ============================== DATA ============================== */
+const CATS = [
+  {id:"data",  label:"Data assets", idx:"I",   blurb:"Derived datasets — someone already spent the compute. Query them."},
+  {id:"dict",  label:"Dictionaries", idx:"II",  blurb:"The 44 Cologne dictionaries digitised from canonical source text."},
+  {id:"iface", label:"Interfaces",  idx:"III", blurb:"Sites, search UIs, dashboards, reader apps and APIs that serve the data."},
+  {id:"tool",  label:"Tools",       idx:"IV",  blurb:"The toolkit you import, and the external stacks you call rather than clone."},
+];
+
+/* ---- Dictionaries (44) ---- */
+const LANGS = {SE:"Skt→Eng",ES:"Eng→Skt",SG:"Skt→Ger",SF:"Skt→Fr",SL:"Skt→Lat",SS:"Skt→Skt",SP:"Specialized"};
+const DICTS = [
+  ["MW","Monier-Williams Sanskrit-English Dictionary","SE","Monier-Williams",1899,1333,"MWS"],
+  ["PWG","Grosses Petersburger Wörterbuch","SG","Böhtlingk &amp; Roth",1855,4737,"PWG"],
+  ["PW","Sanskrit-Wörterbuch in kürzerer Fassung","SG","Otto Böhtlingk",1879,2141,"PWK"],
+  ["GRA","Wörterbuch zum Rig-Veda","SG","Hermann Grassmann",1873,1775,"GRA"],
+  ["AP90","Apte Practical Sanskrit-English Dictionary","SE","V. S. Apte",1890,1196,"AP90"],
+  ["AP","Practical Sanskrit-English Dictionary (rev.)","SE","Apte · Gode · Karve",1957,1768,"AP"],
+  ["MW72","Monier-Williams Sanskrit-English (1st ed.)","SE","Monier Williams",1872,1186,"MW72"],
+  ["WIL","Wilson Sanskrit-English Dictionary","SE","H. H. Wilson",1832,982,"WIL"],
+  ["YAT","Yates Sanskrit-English Dictionary","SE","Rev. W. Yates",1846,928,""],
+  ["GST","Goldstücker Sanskrit-English Dictionary","SE","Theodor Goldstücker",1856,334,""],
+  ["BEN","Benfey Sanskrit-English Dictionary","SE","Theodore Benfey",1866,1145,"BEN"],
+  ["LAN","Lanman's Sanskrit Reader Vocabulary","SE","C. R. Lanman",1884,403,""],
+  ["LRV","Vaidya Sanskrit-English Dictionary","SE","L. R. Vaidya",1889,889,"LRV"],
+  ["CAE","Cappeller Sanskrit-English Dictionary","SE","Carl Cappeller",1891,672,"CAE"],
+  ["MD","Macdonell Sanskrit-English Dictionary","SE","A. A. Macdonell",1893,384,"MD"],
+  ["SHS","Śabda-Sāgara Sanskrit-English Dictionary","SE","J. Vidyasagara",1900,839,"SHS"],
+  ["PD","Encyclopedic Dictionary of Sanskrit on Historical Principles","SE","Ghatage · Bhatta",1976,4328,"","https://sanskrit-lexicon.uni-koeln.de/scans/PDScan/2020/web/index.php"],
+  ["MWE","Monier-Williams English-Sanskrit Dictionary","ES","Monier Williams",1851,860,""],
+  ["BOR","Borooah English-Sanskrit Dictionary","ES","Anundoram Borooah",1877,772,"BOR"],
+  ["AE","Apte Student's English-Sanskrit Dictionary","ES","V. S. Apte",1920,501,"ApteES"],
+  ["BUR","Burnouf Dictionnaire Sanscrit-Français","SF","Burnouf · Leupol · Renou",1866,781,"BUR"],
+  ["STC","Stchoupak Dictionnaire Sanscrit-Français","SF","Stchoupak · Nitti · Renou",1932,904,"STC"],
+  ["BOP","Bopp Glossarium Sanscritum","SL","Franz Bopp",1847,420,"BOP"],
+  ["SKD","Śabdakalpadruma","SS","Rādhākānta Deva",1886,3164,"SKD"],
+  ["VCP","Vācaspatyam","SS","Tāranātha Tarkavācaspati",1873,5407,"VCP"],
+  ["CCS","Cappeller Sanskrit Wörterbuch","SG","Carl Cappeller",1887,541,"CCS"],
+  ["SCH","Schmidt Nachträge zum Sanskrit-Wörterbuch","SG","Richard Schmidt",1928,398,"SCH"],
+  ["ARMH","Abhidhānaratnamālā of Halāyudha","SS","Halāyudha · Aufrecht",1861,0,""],
+  ["ABCH","Abhidhānacintāmaṇi of Hemacandra","SS","Hemacandrācārya",1896,58,""],
+  ["ACPH","Abhidhānacintāmaṇipariśiṣṭa","SS","Hemacandrācārya",1896,8,""],
+  ["ACSJ","Abhidhānacintāmaṇiśiloñcha of Jinadeva","SS","Jinadeva",1896,5,""],
+  ["NMMB","Nāmamālikā of Bhoja","SS","Bhoja",1955,40,""],
+  ["INM","Index to the Names in the Mahābhārata","SP","S. Sörensen",1904,852,"INM"],
+  ["VEI","Vedic Index of Names and Subjects","SP","Macdonell &amp; Keith",1912,560,"VEI"],
+  ["PUI","The Purāṇa Index","SP","V. R. R. Dikshitar",1951,2232,""],
+  ["BHS","Buddhist Hybrid Sanskrit Dictionary","SP","Franklin Edgerton",1953,634,"BHS"],
+  ["FRI","Friš Sanskrit Reader Vocabulary","SP","Oldřich Friš",1956,349,"FRI"],
+  ["ACC","Aufrecht's Catalogus Catalogorum","SP","Theodor Aufrecht",1962,1216,"ACC"],
+  ["KRM","Kṛdantarūpamālā","SP","S. Ramasubba Sastri",1965,1489,"KRM"],
+  ["IEG","Indian Epigraphical Glossary","SP","D. C. Sircar",1966,580,""],
+  ["SNP","Meulenbeld's Sanskrit Names of Plants","SP","G. J. Meulenbeld",1974,94,""],
+  ["PE","Puranic Encyclopedia","SP","Vettam Mani",1975,922,""],
+  ["PGN","Names in the Gupta Inscriptions","SP","Tej Ram Sharma",1978,378,""],
+  ["MCI","Mahābhārata Cultural Index","SP","M. A. Mehendale",1993,981,"MCI"],
+];
+
+/* ---- Interfaces ---- */
+const IFACES = [
+  {g:"Dictionary web &amp; search",n:"Cologne Digital Sanskrit Dictionaries (CDSL)",s:"live",
+   b:"The flagship multi-dictionary search over all 43 dicts — headword lookup, entry display, scan-page links.",
+   url:"https://www.sanskrit-lexicon.uni-koeln.de/",repo:"csl-websanlexicon",stack:"PHP · SQLite"},
+  {g:"Dictionary web &amp; search",n:"C-SALT / Kosh API",s:"live",
+   b:"REST + GraphQL API over CDSL: SALT-compatible entry/id endpoints, scan resolution, citation IDs.",
+   url:"https://github.com/sanskrit-lexicon/csl-apidev",repo:"csl-apidev",stack:"PHP · SQLite"},
+  {g:"Dictionary web &amp; search",n:"kosha — translator-first dictionary",s:"beta",
+   b:"Multi-dict collapse (MW+PWG+AP90), scan-anchored, form lookup, evidence layer. P1 API done (115 tests); static cache next.",
+   url:"https://github.com/gasyoun/kosha",repo:"kosha",stack:"FastAPI · SQLite · static Pages"},
+  {g:"Corpus &amp; reader apps",n:"Samudra Manthanam",s:"live",
+   b:"Parallel Sanskrit–Russian corpus: full-text + morphological-stem search, scholarly reader, stable line anchors.",
+   url:"https://samskrtam.ru",repo:"SamudraManthanam",stack:"FastAPI · SQLite FTS5 · Pascal desktop"},
+  {g:"Corpus &amp; reader apps",n:"Sanskrit→Russian Glossary",s:"live",
+   b:"Three-layer word-aligned glossary (surface · lemma · root) with in-page fuzzy search and per-letter TSV/JSONL download.",
+   url:"https://gasyoun.github.io/SanskritRussian/",repo:"SanskritRussian",stack:"Static HTML · Fuse.js · JSONL"},
+  {g:"Corpus &amp; reader apps",n:"Russian Rāmāyaṇa portal",s:"live",
+   b:"Parallel-text reader + crowdfunding portal for Leonov's ongoing translation (Books IV–VII), journey map.",
+   url:"https://gasyoun.github.io/RussianRamayana/",repo:"RussianRamayana",stack:"Static HTML · Leaflet · CSL-JSON"},
+  {g:"Corpus &amp; reader apps",n:"Sanskrit Karaoke",s:"live",
+   b:"Verse wave-diagram visualiser + karaoke exporter: meter detection, syllable timing, MP4 export, SM-2 review, Telegram mini-app.",
+   url:"https://gasyoun.github.io/SanskritKaraoke/",repo:"SanskritKaraoke",stack:"Standalone JS · Chart.js"},
+  {g:"Dashboards &amp; data-viz",n:"CSL Observatory",s:"live",
+   b:"Org-wide metrics: repos, issues, PRs, contributors, bus-factor, taxonomy adoption + the correction-event typology.",
+   url:"https://sanskrit-lexicon.github.io/csl-observatory/",repo:"csl-observatory",stack:"Observable Framework · Python"},
+  {g:"Dashboards &amp; data-viz",n:"VisualDCS — verb-form frequency",s:"live",
+   b:"Pareto analysis of 781,616 verb examples across 38 tense/mood categories: bars, coverage curve, lemma heatmaps.",
+   url:"https://github.com/gasyoun/VisualDCS",repo:"VisualDCS",stack:"Standalone HTML · Chart.js"},
+  {g:"Dashboards &amp; data-viz",n:"VisualDCS — paradigm browser",s:"live",
+   b:"Interactive 6-root × 9-tense × 9-person verb-form browser, corpus colour-coding, flashcard mode, CSV/MD export.",
+   url:"https://github.com/gasyoun/VisualDCS",repo:"VisualDCS",stack:"Standalone HTML · Chart.js"},
+  {g:"Dashboards &amp; data-viz",n:"BookIndex / Zalizniakiada",s:"live",
+   b:"Single-file PWA for Zaliznyak's legacy: scholar network, sound-law simulator, accent reconstructor, KWIC over 27 lectures.",
+   url:"https://gasyoun.github.io/BookIndex/",repo:"BookIndex",stack:"D3 · Leaflet · PWA + service worker"},
+  {g:"Dashboards &amp; data-viz",n:"IndologyScholars — forum archive",s:"live",
+   b:"Network analysis over 1,362 talks by 270 scholars (Zograf &amp; Rerikh forums 2004–26), hypotheses register, JSON-LD.",
+   url:"https://gasyoun.github.io/IndologyScholars/",repo:"IndologyScholars",stack:"Static HTML · D3 · GeoJSON · RDF"},
+  {g:"Docs &amp; article sites",n:"CSL Guides",s:"live",
+   b:"Docusaurus docs: 5 audience sidebars, 43 deep dictionary pages (verified records), quizzes, comparison &amp; citation widgets.",
+   url:"https://sanskrit-lexicon.github.io/csl-guides/",repo:"csl-guides",stack:"Docusaurus 3 · React 19"},
+  {g:"Docs &amp; article sites",n:"CommentaryStrategies essays",s:"live",
+   b:"Comparative DH essays on Russian translators' commentary strategies (MBh, Rām, Upaniṣads) + TEI/CSV/JSON exports.",
+   url:"https://github.com/gasyoun/CommentaryStrategies",repo:"CommentaryStrategies",stack:"HTML · Python · TEI P5"},
+  {g:"Docs &amp; article sites",n:"SamudraManthanam corpus-FAQ",s:"live",
+   b:"Knowledge base (RU) generated by ZettelkastenWiki, deployed alongside the corpus site.",
+   url:"https://samskrtam.ru/corpus-faq/",repo:"ZettelkastenWiki",stack:"ZettelkastenWiki static"},
+  {g:"Docs &amp; article sites",n:"PWG article dashboard",s:"live",
+   b:"Per-entry PWG article site with live &lt;ls&gt; scan links (ls_resolver), on SanskritLexicography's gh-pages slot.",
+   url:"https://gasyoun.github.io/SanskritLexicography/",repo:"SanskritLexicography",stack:"Static HTML (build_article_site.py)"},
+  {g:"Docs &amp; article sites",n:"Uprava articles dashboard",s:"beta",
+   b:"Private, local-only publication-pipeline board over ARTICLES.md (readiness, venue, blocker). Deliberately not on Pages.",
+   url:"https://github.com/gasyoun/Uprava/tree/main/dashboard",repo:"Uprava",stack:"HTML + generated articles.js"},
+  {g:"Learning &amp; platform apps",n:"CSL App (Flutter)",s:"live",
+   b:"Offline cross-platform dictionary (Android/iOS/desktop/web): 50+ downloadable dicts, multi-scheme transliteration, themes.",
+   url:"https://github.com/sanskrit-lexicon/csl-app",repo:"csl-app",stack:"Flutter · Riverpod · sqflite"},
+  {g:"Learning &amp; platform apps",n:"Systema Sanscriticum",s:"beta",
+   b:"Laravel LMS for a Sanskrit school: student workbench, course shop, loyalty wallet, teacher analytics, certificates.",
+   url:"https://github.com/gasyoun/Systema-Sanscriticum",repo:"Systema-Sanscriticum",stack:"Laravel 10 · Filament · Livewire · MySQL"},
+  {g:"Learning &amp; platform apps",n:"csl-santam — Tamil lexicon search",s:"beta",
+   b:"PHP/Perl search app over a combined SQLite (MW + Cappeller + Cologne Online Tamil Lexicon), Harvard-Kyoto input.",
+   url:"https://github.com/sanskrit-lexicon/csl-santam",repo:"csl-santam",stack:"PHP · Perl · SQLite"},
+];
+
+/* ---- Data assets ---- */
+const DATA = [
+  {g:"Sanskrit → Russian & translation",n:"corpus_lexicon",b:"1.09 M word-aligned Sa→Ru rows (per verse-pair, SLP1-keyed, ~190k keys). The alignment asset.",
+   reuse:"Re-aligning/re-translating — <b>grep deepseek finds nothing</b>, look at the builder",repo:"SanskritLexicography",size:"1.09 M rows",
+   url:"https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/build_corpus_lexicon.py"},
+  {g:"Sanskrit → Russian & translation",n:"SanskritRussian glossary (3-layer)",b:"Ranked Sa→Ru glossary: surface 190,838 · lemma 40,370 · root 2,021; 87% token coverage, provenance-tagged.",
+   reuse:"Deriving another Sa→Ru signal (TM, root-gloss, RU frequencies)",repo:"SanskritRussian",size:"233k entries",
+   url:"https://github.com/gasyoun/SanskritRussian"},
+  {g:"Sanskrit → Russian & translation",n:"mw_en_tm.json",b:"SLP1-keyed MW English-gloss translation memory — the fuzzy-match TM behind the RU/EN kits.",
+   reuse:"Re-implementing the slp1_simplify fold — import build_simplified_index",repo:"SanskritLexicography",size:"187,506 · 12 MB",
+   url:"https://github.com/gasyoun/SanskritLexicography/tree/master/RussianTranslation/src"},
+  {g:"Sanskrit → Russian & translation",n:"lemma / root glossary (DCS)",b:"DCS lemma→gloss and root→gloss glossaries, bilingual, TSV + JSONL.",
+   reuse:"Re-deriving DCS glosses",repo:"SanskritRussian",size:"lemma 16–26 MB · root 5 MB",
+   url:"https://github.com/gasyoun/SanskritRussian"},
+
+  {g:"Roots & etymology",n:"mw_roots.tsv",b:"MW verbal-root inventory: 2,113 records with explicit verb_type (750 genuineroot + 1363 root), server-regenerated.",
+   reuse:"Re-scanning mw.txt (3 repos did → 750/809/1163)",repo:"csl-orig",size:"2,113 · 76 KB",
+   url:"https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/mw/mw_roots.tsv"},
+  {g:"Roots & etymology",n:"mw_etymology.tsv / pwg_etymology.tsv",b:"Headword→root derivation tables (Pāṇinian), extracted across 10 dicts.",
+   reuse:"Re-deriving derivations — WhitneyRoots & csl-atlas consume verbatim",repo:"csl-orig",size:"~9–11k rows each",
+   url:"https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/mw/mw_etymology.tsv"},
+  {g:"Roots & etymology",n:"etymology_stats (root_oracle, agreement, affix)",b:"Cross-dict aggregates: normalized roots, root productivity oracle, 41-pair agreement matrix (95% CI), affix entropy/frequency.",
+   reuse:"Recomputing cross-dict root agreement (Apte~AP 93.6%, WIL~MW 8.4% outlier)",repo:"csl-orig",size:"10 dicts",
+   url:"https://github.com/sanskrit-lexicon/csl-orig/tree/main/v02"},
+  {g:"Roots & etymology",n:"etymology-oracle.json",b:"csl-atlas cross-dictionary etymology aggregator consumed verbatim from etymology_stats — per-dict summaries + agreement.",
+   reuse:"Rebuilding the cross-dict etymology view",repo:"csl-atlas",size:"67k rows · 23 KB",
+   url:"https://github.com/sanskrit-lexicon/csl-atlas"},
+  {g:"Roots & etymology",n:"root_crosswalk.csv + class_concordance.csv",b:"MW ↔ Whitney root-class alignment and Whitney root-class concordance with frequency.",
+   reuse:"Re-triangulating MW↔Whitney↔DCS roots (built twice already)",repo:"MWS",size:"37 KB + 18 KB",
+   url:"https://github.com/gasyoun/MWS/tree/main/root_crosswalk"},
+  {g:"Roots & etymology",n:"Whitney_DCS_audit.json",b:"Whitney × DCS root audit — corpus attestation checked against the 935-root Whitney hub.",
+   reuse:"Re-auditing Whitney roots against DCS",repo:"WhitneyRoots",size:"415 KB",
+   url:"https://github.com/gasyoun/WhitneyRoots"},
+  {g:"Roots & etymology",n:"corpus_class_verdicts.json",b:"Corpus-verified root-class verdicts — ⚠ unaccented DCS can't split class I vs VI (never write these to app_data blind).",
+   reuse:"Re-deriving class verdicts from corpus",repo:"WhitneyRoots",size:"514 KB",
+   url:"https://github.com/gasyoun/WhitneyRoots"},
+  {g:"Roots & etymology",n:"dcs_ppp_verified.tsv",b:"5,181 corpus-attested past-passive-participle forms + occurrence counts (confirms han→hata, dā→datta 1471×).",
+   reuse:"Re-deriving PPP counts from the sqlite",repo:"VisualDCS",size:"5,181 forms",
+   url:"https://github.com/gasyoun/VisualDCS/tree/main/derived-data/Glagolnye-formy"},
+
+  {g:"Headwords & crosswalks",n:"union_headwords.tsv",b:"Cross-dict union headword index — every CDSL headword with per-dict provenance and analytical key columns.",
+   reuse:"Rebuilding a headword master — SpellCheck tags candidates union=N",repo:"SanskritLexicography",size:"~323k",
+   url:"https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/union/union_headwords.tsv"},
+  {g:"Headwords & crosswalks",n:"mw_heritage_crosswalk.tsv",b:"Entry-level MW → Sanskrit Heritage alignment: 185,803 MW entries, 25,140 Heritage-covered, 97.6% anchor-resolved.",
+   reuse:"Re-hitting the (bot-walled) INRIA site",repo:"SanskritLexicography",size:"185.8k · 3.2 MB",
+   url:"https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/mw_heritage_crosswalk.tsv"},
+  {g:"Headwords & crosswalks",n:"DCS↔CDSL crosswalk",b:"DCS lemma ↔ CDSL headword linkset, 12,946 rows (81.4% linked) — a reusable LOD linkset + Stream-B join key.",
+   reuse:"Re-deriving DCS↔CDSL joins",repo:"csl-apidev",size:"12,946 rows",
+   url:"https://github.com/sanskrit-lexicon/csl-apidev/blob/main/simple-search/dcs_xref/dcs_cdsl_xref.tsv"},
+  {g:"Headwords & crosswalks",n:"union coverage_additions.tsv",b:"Headwords found beyond the core CDSL dictionaries — the union index's net additions.",
+   reuse:"Re-computing the coverage delta",repo:"SanskritLexicography",size:"union",
+   url:"https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists/union"},
+  {g:"Headwords & crosswalks",n:"csl-atlas alignment-confidence.json",b:"Per-pair cross-dict headword alignment confidence scores, sharded (164 JSON files).",
+   reuse:"Re-scoring cross-dict alignments",repo:"csl-atlas",size:"164 shards",
+   url:"https://github.com/sanskrit-lexicon/csl-atlas"},
+  {g:"Headwords & crosswalks",n:"csl-atlas low-confidence review set",b:"Alignments flagged below threshold for manual review — the human-in-the-loop queue.",
+   reuse:"Re-flagging alignment review candidates",repo:"csl-atlas",size:"review set",
+   url:"https://github.com/sanskrit-lexicon/csl-atlas"},
+
+  {g:"Heritage & morphology oracles",n:"heritage_forms_oracle.tsv.gz",b:"Pandora → Heritage inflected-form alignment oracle, morphology-aware, gzip-compressed.",
+   reuse:"Re-aligning Cologne forms to Heritage morphology",repo:"SanskritLexicography",size:"526 KB gz",
+   url:"https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists"},
+  {g:"Heritage & morphology oracles",n:"heritage_dico_gloss.tsv",b:"Heritage DICO lemma glosses — SLP1 / Devanāgarī / English, 24.5k rows.",
+   reuse:"Re-scraping the (bot-walled) Heritage DICO gloss layer",repo:"SanskritLexicography",size:"24.5k · 4.4 MB",
+   url:"https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists"},
+  {g:"Heritage & morphology oracles",n:"heritage_forms_oracle_disagreements.tsv",b:"Cross-dictionary morphology disagreement audit — where Heritage and Cologne analyses diverge, 20.5k rows.",
+   reuse:"Re-auditing morphology disagreements",repo:"SanskritLexicography",size:"20.5k · 1.4 MB",
+   url:"https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists"},
+  {g:"Heritage & morphology oracles",n:"heritage_only_forms.tsv",b:"Inflected forms attested in Heritage but absent from MW/PWG/etc. — the Heritage-exclusive surface.",
+   reuse:"Re-computing Heritage-vs-Cologne form gaps",repo:"SanskritLexicography",size:"29 MB",
+   url:"https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists"},
+  {g:"Heritage & morphology oracles",n:"heritage_mirror/DATA/ frequency tables",b:"Heritage frequency & morphology corpus TSVs (pada_freq, comp_freq, comp_morph_freq, …) — 10+ exports.",
+   reuse:"Re-hitting INRIA for frequency data",repo:"SanskritLexicography",size:"22 MB",
+   url:"https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists/heritage_mirror"},
+  {g:"Heritage & morphology oracles",n:"sanhw1.xlsx (Sanskrit-Hybrid Word)",b:"Catalan-Pujol Sanskrit-Hybrid Word master headword list, 61k entries.",
+   reuse:"Sourcing another exhaustive headword master",repo:"SanskritLexicography",size:"61k · 40 MB",
+   url:"https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists"},
+
+  {g:"Frequency & corpus",n:"VisualDCS DCS ingest + lemma summary",b:"Canonical CoNLL-U → SQLite build + dcs_lemma_summary.json frequency table. ⚠ UD Tense=Past conflates aorist/perfect.",
+   reuse:"Re-parsing CoNLL-U (5 ingest paths exist)",repo:"VisualDCS",size:"~15.9k lemmas",
+   url:"https://github.com/gasyoun/VisualDCS/blob/main/src/DCS-data-2026/import_dcs_conllu.py"},
+  {g:"Frequency & corpus",n:"kosha frequency layer",b:"SLP1-keyed sidecar: whole-corpus counts + per-period vectors + core-vocab coverage (from DCS M9 archive).",
+   reuse:"Re-deriving frequency ordering — LEFT-JOIN it",repo:"kosha",size:"83,277 · 4.7 MB",
+   url:"https://github.com/gasyoun/kosha/blob/main/data/frequency/lemma_frequency.tsv"},
+  {g:"Frequency & corpus",n:"dcs_form2lemma.tsv",b:"DCS comprehensive form→lemma alignment, SLP1-keyed — the backbone of surface-form resolution.",
+   reuse:"Re-building DCS form resolution",repo:"SanskritRussian",size:"408k · 9.4 MB",
+   url:"https://github.com/gasyoun/SanskritRussian"},
+  {g:"Frequency & corpus",n:"dcs_lemma2root.tsv",b:"DCS lemma → root mapping, the join between the form layer and the root inventory.",
+   reuse:"Re-deriving lemma→root links",repo:"SanskritRussian",size:"245 KB",
+   url:"https://github.com/gasyoun/SanskritRussian"},
+  {g:"Frequency & corpus",n:"vidyut_form2lemma.tsv",b:"Stage-C fallback: forms DCS missed, resolved via the vidyut FST lexicon (form→lemma→POS→count).",
+   reuse:"Re-running the vidyut lemmatization fallback",repo:"SanskritRussian",size:"28.5k · 745 KB",
+   url:"https://github.com/gasyoun/SanskritRussian"},
+  {g:"Frequency & corpus",n:"surface_dcs_misses.tsv",b:"DCS resolution-gap analysis — every surface form that failed DCS lookup, the input to the vidyut fallback.",
+   reuse:"Re-computing the DCS coverage gap",repo:"SanskritRussian",size:"6.6 MB",
+   url:"https://github.com/gasyoun/SanskritRussian"},
+  {g:"Frequency & corpus",n:"Zaliznyak grammar index",b:"Compact Zaliznyak-style grammar tokens over all PWG: 98,639 headwords, 335 paradigm tokens; FAIR data package.",
+   reuse:"Transcribing static grammar tables — paradigms via vidyut",repo:"SanskritLexicography",size:"98,639 rows",
+   url:"https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/headword_index.tsv"},
+  {g:"Frequency & corpus",n:"correction_events_release.csv",b:"Release-grade correction event log: 50,953 events × 43 dicts × 210 correctors, 2014–2026 (typed + git variants).",
+   reuse:"Recomputing error-frequency/typology — pending Zenodo DOI",repo:"csl-observatory",size:"~52k · 59 MB",
+   url:"https://github.com/sanskrit-lexicon/csl-observatory"},
+
+  {g:"Text collections & other",n:"Indische Sprüche",b:"All 7,537 Böhtlingk subhāṣitas as JSONL (public domain), with translation + metadata.",
+   reuse:"Re-scraping sayings; for citations reuse existing PWG &lt;ls&gt; links",repo:"SanskritLexicography",size:"7,537 · 6.9 MB",
+   url:"https://github.com/gasyoun/SanskritLexicography/blob/master/IndischeSprueche/data/indische_sprueche.jsonl"},
+  {g:"Text collections & other",n:"ortho-drift reform maps",b:"19th-c.→modern spelling maps: de 15,685 · ru 7,709 · fr 254 · en 71 forms. A search-normalization asset.",
+   reuse:"Hand-normalizing archaic gloss text in full-text search",repo:"SanskritSpellCheck",size:"~23.7k forms",
+   url:"https://github.com/drdhaval2785/SanskritSpellCheck/tree/master/ortho_drift"},
+  {g:"Text collections & other",n:"do-not-file corpus",b:"2,297 deliberately non-standard headword spellings across 33 dicts — never a correction list.",
+   reuse:"Re-flagging known-deliberate variants (csl-atlas annotates against it)",repo:"SanskritSpellCheck",size:"2,297",
+   url:"https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt"},
+  {g:"Text collections & other",n:"csl-santam Tamil SQLite",b:"Combined Tamil-facing lexicon: MW + Cappeller + Cologne Online Tamil Lexicon, 321,620 entries.",
+   reuse:"Rebuilding a Tamil headword store (Wave-4 kosha fold planned)",repo:"csl-santam",size:"321,620 · 30 MB",
+   url:"https://github.com/sanskrit-lexicon/csl-santam"},
+  {g:"Text collections & other",n:"OCR'd dictionary front-matter",b:"Faithful Markdown + EN/RU editions of title pages, prefaces, abbreviation lists & addenda per dict (preface-OCR pass).",
+   reuse:"Re-OCR-ing prefaces — MW, SCH, PWG, GRA, MD & more done",repo:"per-dict repos",size:"multi-dict",
+   url:"https://github.com/gasyoun/csl-guides"},
+];
+
+/* ---- Tools ---- */
+const TOOLS = [
+  {g:"Import it — the code toolkit",n:"sanskrit-util",s:"lib",b:"One Python+JS package: IAST ⇄ SLP1 ⇄ Devanāgarī transcode + normalization keys (norm/form_key), parity-tested. v0.3.0 adds the full SLP1-side API.",
+   reuse:"Re-typing the SLP1 table (62 files) or re-deriving the ś-vs-acute / NFD length-loss traps",repo:"sanskrit-util",url:"https://github.com/sanskrit-lexicon/sanskrit-util"},
+  {g:"Import it — the code toolkit",n:"csl-pywork correction pipeline",s:"lib",b:"Dict correction + XML-generation toolchain: updateByLine, parseheadline, diff_to_changes, make_xml, generate_dict.sh.",
+   reuse:"Forking updateByLine.py an 84th time — pull the vendored original",repo:"csl-pywork",url:"https://github.com/sanskrit-lexicon/csl-pywork/tree/main/v02/makotemplates/pywork"},
+  {g:"Import it — the code toolkit",n:"web-endpoint template",s:"lib",b:"makotemplates source for getword / servepdf / serveimg PHP endpoints; 40+ dicts regenerate from it.",
+   reuse:"Editing 37 drifted per-dict copies — fix the template, regenerate",repo:"csl-websanlexicon",url:"https://github.com/sanskrit-lexicon/csl-websanlexicon/tree/main/v02/makotemplates/web/webtc"},
+  {g:"Import it — the code toolkit",n:"kosha/app/render.py",s:"lib",b:"Code-faithful Python port of the PHP SAX display engine (basicdisplay + basicadjust) for MW/PWG/AP90, golden-snapshotted.",
+   reuse:"Re-porting Cologne entry rendering to Python",repo:"kosha",url:"https://github.com/gasyoun/kosha/blob/main/app/render.py"},
+  {g:"Import it — the code toolkit",n:"ls_resolver.py",s:"lib",b:"&lt;ls&gt; citation → scanned-edition page-URL resolver (canonical for building click-through scan links).",
+   reuse:"Re-implementing citation→scan mapping",repo:"SanskritLexicography",url:"https://github.com/gasyoun/SanskritLexicography/tree/master/RussianTranslation/src"},
+  {g:"Import it — the code toolkit",n:"build_vidyut_fallback.py",s:"lib",b:"Stage-C lemmatizer resolving DCS-missed forms via the vidyut.kosha FST lexicon (verb/noun/indeclinable POS).",
+   reuse:"Writing another lemmatization fallback",repo:"SanskritLexicography",url:"https://github.com/gasyoun/SanskritLexicography/tree/master/RussianTranslation/src"},
+  {g:"Import it — the code toolkit",n:"RU translation kit",s:"lib",b:"Parameterized mw_ru / pwg_ru kit — parallel translate / QA-judge / re-translate / corpus-check stages over one build_src.py.",
+   reuse:"Cloning a third kit — parameterize the existing one",repo:"SanskritLexicography",url:"https://github.com/gasyoun/SanskritLexicography/tree/master/RussianTranslation"},
+  {g:"Import it — the code toolkit",n:"ZettelkastenWiki",s:"lib",b:"Canonical static-site generator for note/FAQ/wiki collections: stdlib core, render hooks, i18n, reusable pytest invariant harness.",
+   reuse:"Writing site generator #5 (csl-guides stays Docusaurus by design)",repo:"ZettelkastenWiki",url:"https://github.com/gasyoun/ZettelkastenWiki"},
+  {g:"Import it — the code toolkit",n:"CI & hygiene templates",s:"lib",b:"CodeQL, Dependabot (+auto-merge), pre-commit, CoC, CONTRIBUTING, branch protection via the /cologne-* skills.",
+   reuse:"Hand-writing CI per repo — run the skill (PHP repos use Semgrep)",repo:"ci_templates",url:"https://github.com/gasyoun/github-spine/blob/main/SHARED_CODE.md"},
+
+  {g:"Call it — external stacks (don't clone)",n:"Samsaadhanii / SCL",s:"ext",b:"Amba Kulkarni's stack (UoHyd): morph analyzer, sandhi/segmenter, compound processor, Pāṇinian parser, Amarakośa net, Dhātupāṭha — already consumes our dicts.",
+   reuse:"Call the live JSON APIs / cross-validate; don't clone the GPL source",repo:"external",url:"https://github.com/gasyoun/SanskritLexicography/blob/master/SAMSAADHANII_INDEX.md"},
+  {g:"Call it — external stacks (don't clone)",n:"Sanskrit Heritage (INRIA)",s:"ext",b:"Gérard Huet's dictionary + morphology + segmenter (LGPLLR): DICO hypertext dict, MW-aligned pages, frequency TSVs, OCaml banks.",
+   reuse:"Pull from the GitHub mirror — sanskrit.inria.fr is Anubis bot-walled",repo:"external",url:"https://github.com/darkone23/Heritage_Resources"},
+  {g:"Call it — external stacks (don't clone)",n:"DharmaMitra",s:"ext",b:"Berkeley AI-translation stack (MT, Deep Research with references, parallel-passage Explore, segmentation, OCR); a GPU morphology supplier to csl-atlas.",
+   reuse:"Reuse their MT error taxonomy (wired into pwg_ru/mw_ru judges); prospective Kosh-API consumer",repo:"external",url:"https://dharmamitra.org/"},
+  {g:"Call it — external stacks (don't clone)",n:"VedaWeb",s:"ext",b:"Cologne/UZH accented Rig-Veda + per-word morphology (Casaretto word-split, Lubotsky padapāṭha), CC BY 4.0, C-SALT-linked.",
+   reuse:"The validation set that unblocks the Vedic accent axis — bulk-export once",repo:"external",url:"https://vedaweb.uni-koeln.de/rigveda/"},
+  {g:"Call it — external stacks (don't clone)",n:"vidyut",s:"ext",b:"Rust Sanskrit toolkit (kosha FST lexicon, prakriyā generator, cheda segmenter, chandas meter) — the paradigm/lemma engine behind the RU kits & Zaliznyak index.",
+   reuse:"Hand-rolling paradigm generation — call vidyut for declensions & PPP validation",repo:"external",url:"https://github.com/ambuda-org/vidyut"},
+];
+
+/* ---- cross-cutting tags: CURATED per asset (accurate, not substring-guessed).
+       Clicking a chip pivots the index to everything sharing that tag. ---- */
+const TAGS={
+  // data
+  "corpus_lexicon":["Russian","translation","alignment","corpus"],
+  "SanskritRussian glossary (3-layer)":["Russian","translation","glossary","DCS"],
+  "mw_en_tm.json":["English","translation","TM","SLP1"],
+  "lemma / root glossary (DCS)":["Russian","translation","DCS","glossary"],
+  "mw_roots.tsv":["roots","verbs","word-formation","MW"],
+  "mw_etymology.tsv / pwg_etymology.tsv":["word-formation","roots","MW"],
+  "etymology_stats (root_oracle, agreement, affix)":["word-formation","roots","crosswalk"],
+  "etymology-oracle.json":["word-formation","roots","crosswalk"],
+  "root_crosswalk.csv + class_concordance.csv":["roots","verbs","crosswalk"],
+  "Whitney_DCS_audit.json":["roots","verbs","DCS"],
+  "corpus_class_verdicts.json":["roots","verbs","DCS"],
+  "dcs_ppp_verified.tsv":["verbs","morphology","DCS"],
+  "union_headwords.tsv":["headwords","crosswalk"],
+  "mw_heritage_crosswalk.tsv":["headwords","crosswalk","Heritage","MW"],
+  "DCS↔CDSL crosswalk":["headwords","crosswalk","DCS","alignment"],
+  "union coverage_additions.tsv":["headwords"],
+  "csl-atlas alignment-confidence.json":["headwords","alignment","crosswalk"],
+  "csl-atlas low-confidence review set":["headwords","alignment"],
+  "heritage_forms_oracle.tsv.gz":["Heritage","morphology","alignment"],
+  "heritage_dico_gloss.tsv":["Heritage","glossary","morphology"],
+  "heritage_forms_oracle_disagreements.tsv":["Heritage","morphology","crosswalk"],
+  "heritage_only_forms.tsv":["Heritage","morphology"],
+  "heritage_mirror/DATA/ frequency tables":["Heritage","frequency","morphology"],
+  "sanhw1.xlsx (Sanskrit-Hybrid Word)":["headwords","Heritage"],
+  "VisualDCS DCS ingest + lemma summary":["DCS","frequency","corpus","morphology"],
+  "kosha frequency layer":["frequency","DCS","corpus"],
+  "dcs_form2lemma.tsv":["DCS","morphology","alignment"],
+  "dcs_lemma2root.tsv":["DCS","roots"],
+  "vidyut_form2lemma.tsv":["vidyut","DCS","morphology"],
+  "surface_dcs_misses.tsv":["DCS","morphology"],
+  "Zaliznyak grammar index":["grammar","morphology","vidyut"],
+  "correction_events_release.csv":["corrections","corpus"],
+  "Indische Sprüche":["subhashita","corpus","PWG"],
+  "ortho-drift reform maps":["spelling","corrections"],
+  "do-not-file corpus":["spelling","corrections","headwords"],
+  "csl-santam Tamil SQLite":["Tamil","headwords"],
+  "OCR'd dictionary front-matter":["OCR"],
+  // interfaces
+  "Cologne Digital Sanskrit Dictionaries (CDSL)":["dictionary-web","search"],
+  "C-SALT / Kosh API":["API","dictionary-web"],
+  "kosha — translator-first dictionary":["dictionary-web","MW","translation"],
+  "Samudra Manthanam":["Russian","corpus","search"],
+  "Sanskrit→Russian Glossary":["Russian","translation","glossary","search"],
+  "Russian Rāmāyaṇa portal":["Russian","translation","reader"],
+  "Sanskrit Karaoke":["meter","learning"],
+  "CSL Observatory":["dashboard","corrections"],
+  "VisualDCS — verb-form frequency":["DCS","frequency","verbs","dashboard"],
+  "VisualDCS — paradigm browser":["DCS","verbs","morphology","dashboard"],
+  "BookIndex / Zalizniakiada":["dashboard","grammar"],
+  "IndologyScholars — forum archive":["dashboard"],
+  "CSL Guides":["docs","dictionary-web"],
+  "CommentaryStrategies essays":["docs","Russian"],
+  "SamudraManthanam corpus-FAQ":["docs","Russian"],
+  "PWG article dashboard":["docs","PWG"],
+  "Uprava articles dashboard":["dashboard"],
+  "CSL App (Flutter)":["dictionary-web","search"],
+  "Systema Sanscriticum":["learning"],
+  "csl-santam — Tamil lexicon search":["Tamil","search","dictionary-web"],
+  // tools
+  "sanskrit-util":["SLP1","transliteration","morphology"],
+  "csl-pywork correction pipeline":["corrections","pipeline"],
+  "web-endpoint template":["dictionary-web","API"],
+  "kosha/app/render.py":["MW","PWG","dictionary-web"],
+  "ls_resolver.py":["citations"],
+  "build_vidyut_fallback.py":["vidyut","DCS","morphology"],
+  "RU translation kit":["Russian","translation","TM"],
+  "ZettelkastenWiki":["docs"],
+  "CI & hygiene templates":["CI"],
+  "Samsaadhanii / SCL":["morphology","sandhi","roots"],
+  "Sanskrit Heritage (INRIA)":["Heritage","morphology","dictionary-web"],
+  "DharmaMitra":["translation","morphology","OCR"],
+  "VedaWeb":["Vedic","morphology","corpus"],
+  "vidyut":["vidyut","morphology","grammar"],
+};
+
+/* ---- real examples, keyed by exact asset name (samples verbatim from source files) ---- */
+const EX={
+  // data assets
+  "corpus_lexicon":{s:1,v:'row schema: <slp1-word>  <russian-rendering>  <verse-pair-id>   (output JSONL is gitignored)'},
+  "SanskritRussian glossary (3-layer)":{v:'A → принеси  ·  freq 43  ·  ADP        (lemma layer)'},
+  "mw_en_tm.json":{v:'"a": "the first letter of the alphabet | the first short vowel…"'},
+  "lemma / root glossary (DCS)":{v:'AGozi → Распространяя звуки  ·  verb        (root layer)'},
+  "mw_roots.tsv":{v:'aMS   aṃś   genuineroot   10P,10Ā'},
+  "mw_etymology.tsv / pwg_etymology.tsv":{v:'10   aṃśa   aMSa   aś   aS   fr-root   0Ā,0P   Y'},
+  "etymology_stats (root_oracle, agreement, affix)":{v:'root_oracle:  A   ā   kram   kram   1   mw'},
+  "etymology-oracle.json":{v:'{ "dictionaryCount": 10, "generatedAt": "2026-06-26T14:11…", "totals": {…} }'},
+  "root_crosswalk.csv + class_concordance.csv":{v:'1,aṃh,yes,114,,matched,0'},
+  "Whitney_DCS_audit.json":{v:'{ "root":"aṃh", "dcs_lemma":"aṃh", "status":"matched", "class_verdict":"whitney-missing" }'},
+  "corpus_class_verdicts.json":{v:'{ "aṃh": { "classes": [], "verdict": "not_attested" } }'},
+  "dcs_ppp_verified.tsv":{v:'vac   ukta   2   P.   7734        (√vac → ukta, 7734×)'},
+  "union_headwords.tsv":{v:'A   ā   12   AP BUR CAE CCS GRA MD MW PWG PWK SCH SKD VCP   fmn'},
+  "union coverage_additions.tsv":{v:'5   nominal   enad   enad'},
+  "mw_heritage_crosswalk.tsv":{v:'a   0        (MW headword → Heritage anchor id / coverage)'},
+  "DCS↔CDSL crosswalk":{v:'37875   tad   tad   tad   1   3734   pron'},
+  "csl-atlas alignment-confidence.json":{v:'{ "code":"mw", "label":"MW", "grammarReliable": true }'},
+  "csl-atlas low-confidence review set":{s:1,v:'the below-threshold subset of alignment-confidence.json, flagged for a human pass'},
+  "heritage_forms_oracle.tsv.gz":{s:1,v:'form  ↔  Heritage-analysed lemma + morphology  (gzip; see the disagreements TSV for shape)'},
+  "heritage_dico_gloss.tsv":{v:"akAra   DICO/1.html#akaara   [ ( a ) - kāra ] m. le son ou la lettre 'a'.   kaara"},
+  "heritage_forms_oracle_disagreements.tsv":{v:'ABAByAm   disagree   ABA   ABa   nominal   dcs   genuine-or-ambiguous'},
+  "heritage_only_forms.tsv":{s:1,v:'inflected forms present in Heritage but in no Cologne dict (one form per line)'},
+  "heritage_mirror/DATA/ frequency tables":{v:'comp_freq.tsv:   a   6894'},
+  "sanhw1.xlsx (Sanskrit-Hybrid Word)":{s:1,v:'xlsx: one headword per row, Catalan-Pujol master list (61k)'},
+  "VisualDCS DCS ingest + lemma summary":{v:'dcs_lemma_summary.json:  { "A": { "freqBand": 5, "attested": true } }'},
+  "kosha frequency layer":{v:'ca   155088   ind   1   9 Vedic=8283|1 -800=2897|…   176104'},
+  "dcs_form2lemma.tsv":{v:"''jYAya   AjYA   VERB   1"},
+  "dcs_lemma2root.tsv":{v:'ABA   BA   suffix'},
+  "vidyut_form2lemma.tsv":{v:'ABAga   ABAj   noun   2        (resolved via the vidyut FST)'},
+  "surface_dcs_misses.tsv":{v:"'maratejasi   'maratejasi   1   …        (form DCS could not resolve)"},
+  "Zaliznyak grammar index":{v:'a   2   f.   a   f·1   a-stem        (headword · G·T · stem-class)'},
+  "correction_events_release.csv":{v:'1a1bd21d909e0bb0, 2014-03-18, form, apes, pain, ghad → ghaṭ'},
+  "Indische Sprüche":{v:'{ "num":1, "saying_id":"Saying 1", "deva":"अंशो ऽपि दुष्टदिष्टानां…" }'},
+  "ortho-drift reform maps":{v:'de_reform_map.tsv:   aachner → aachener   (×75)'},
+  "do-not-file corpus":{v:'ABasvara        (deliberately non-standard — do not "correct")'},
+  "csl-santam Tamil SQLite":{s:1,v:'combined table: source(mwd|cap|otl) · headword · body — Harvard-Kyoto keys'},
+  "OCR'd dictionary front-matter":{s:1,v:'per dict: title-page + preface + abbreviations as faithful Markdown (+ EN/RU)'},
+  // interfaces — the live link on the card is the example; this is what to try
+  "Cologne Digital Sanskrit Dictionaries (CDSL)":{v:'try: look up देव across all 43 dictionaries'},
+  "C-SALT / Kosh API":{v:'try: salt_entries / salt_graphql endpoints over MW'},
+  "kosha — translator-first dictionary":{v:'try: collapse MW + PWG + AP90 for one headword'},
+  "Samudra Manthanam":{v:'try: regex + morphological-stem search across parallel Sa–Ru texts'},
+  "Sanskrit→Russian Glossary":{v:'try: a form → its surface / lemma / root Russian renderings'},
+  "Russian Rāmāyaṇa portal":{v:'try: read Book IV with the parallel Sanskrit–Russian reader'},
+  "Sanskrit Karaoke":{v:'try: wave diagram + meter detection for an anuṣṭubh verse'},
+  "CSL Observatory":{v:'try: the bus-factor and correction-typology charts'},
+  "VisualDCS — verb-form frequency":{v:'try: the Pareto curve over 781,616 verb examples'},
+  "VisualDCS — paradigm browser":{v:'try: 6 roots × 9 tenses × 9 person/number cells, flashcard mode'},
+  "BookIndex / Zalizniakiada":{v:'try: the sound-law simulator + KWIC concordance'},
+  "IndologyScholars — forum archive":{v:'try: the network of 1,362 talks by 270 scholars'},
+  "CSL Guides":{v:'try: a deep dictionary page + the comparison widget'},
+  "CommentaryStrategies essays":{v:'try: the Mahābhārata translator-commentary comparison'},
+  "SamudraManthanam corpus-FAQ":{v:'try: the Russian corpus knowledge base'},
+  "PWG article dashboard":{v:'try: a PWG entry with live <ls> scan-page links'},
+  "Uprava articles dashboard":{v:'try (local): the publication-readiness board over ARTICLES.md'},
+  "CSL App (Flutter)":{v:'try: offline lookup with ITRANS / HK / SLP1 / Devanāgarī input'},
+  "Systema Sanscriticum":{v:'try: the student workbench + course shop'},
+  "csl-santam — Tamil lexicon search":{v:'try: a Harvard-Kyoto search over 321k combined entries'},
+  // tools — usage snippet
+  "sanskrit-util":{v:'from sanskrit_util import to_slp1;  to_slp1("देव") → "deva"'},
+  "csl-pywork correction pipeline":{v:'python updateByLine.py mw.txt change.txt out.txt'},
+  "web-endpoint template":{v:'getword.php?key=deva&dict=mw → entry display'},
+  "kosha/app/render.py":{v:'render(entry_xml) → IAST <s>-display HTML (golden-snapshotted)'},
+  "ls_resolver.py":{v:'resolve("Spr. 1") → the boesp scan-page URL'},
+  "build_vidyut_fallback.py":{v:'ABAga → ABAj (noun)   — via the vidyut FST lexicon'},
+  "RU translation kit":{v:'1_perevod → 2_qa_sudya → 3_pereperevod → 4_korpus_proverka'},
+  "ZettelkastenWiki":{v:'zettelkastenwiki build ./notes → ./public'},
+  "CI & hygiene templates":{v:'/cologne-codeql-all · /cologne-dependabot-all'},
+  "Samsaadhanii / SCL":{v:'GET …/scl/SHMT/…/morph.cgi?word=Bavati → morphology'},
+  "Sanskrit Heritage (INRIA)":{v:'DICO/1.html#akaara → Heritage gloss + morphology'},
+  "DharmaMitra":{v:'Translate · Deep-Research (with references) · segmentation · OCR'},
+  "VedaWeb":{v:'bulk-export accented RV text + per-word UZH morphology (CC BY 4.0)'},
+  "vidyut":{v:'from vidyut.kosha import Kosha;  k.get("Bavati") → entries'},
+};
+
+/* ---- dataset severity: canonical (authoritative/reproducible) · derived (secondary/analysis) · raw (gitignored/binary/external) ---- */
+const SEV={
+  "corpus_lexicon":"canonical","SanskritRussian glossary (3-layer)":"canonical","mw_en_tm.json":"canonical",
+  "lemma / root glossary (DCS)":"derived",
+  "mw_roots.tsv":"canonical","mw_etymology.tsv / pwg_etymology.tsv":"canonical","etymology_stats (root_oracle, agreement, affix)":"canonical",
+  "etymology-oracle.json":"derived","root_crosswalk.csv + class_concordance.csv":"derived",
+  "Whitney_DCS_audit.json":"derived","corpus_class_verdicts.json":"derived","dcs_ppp_verified.tsv":"derived",
+  "union_headwords.tsv":"canonical","mw_heritage_crosswalk.tsv":"canonical","DCS↔CDSL crosswalk":"canonical",
+  "union coverage_additions.tsv":"derived","csl-atlas alignment-confidence.json":"derived","csl-atlas low-confidence review set":"raw",
+  "heritage_forms_oracle.tsv.gz":"raw","heritage_dico_gloss.tsv":"derived","heritage_forms_oracle_disagreements.tsv":"derived",
+  "heritage_only_forms.tsv":"raw","heritage_mirror/DATA/ frequency tables":"raw","sanhw1.xlsx (Sanskrit-Hybrid Word)":"raw",
+  "VisualDCS DCS ingest + lemma summary":"canonical","kosha frequency layer":"canonical","dcs_form2lemma.tsv":"canonical",
+  "dcs_lemma2root.tsv":"derived","vidyut_form2lemma.tsv":"derived","surface_dcs_misses.tsv":"derived",
+  "Zaliznyak grammar index":"canonical","correction_events_release.csv":"canonical","Indische Sprüche":"canonical",
+  "ortho-drift reform maps":"derived","do-not-file corpus":"derived","csl-santam Tamil SQLite":"raw",
+  "OCR'd dictionary front-matter":"raw",
+};
+const SEVMETA={canonical:["live","canonical"],derived:["beta","derived"],raw:["lib","raw"]};
+
+/* ---- stable per-asset IDs: a running number within each category (does NOT restart per
+       sub-section); the letter marks the sub-section (A–F data · G–K interfaces · L–M tools,
+       in document order; dictionaries use their code) ---- */
+const GROUP_LETTER={};
+let _letter=65; // 'A'
+function assignIds(list){
+  let n=0;
+  list.forEach(o=>{
+    if(!(o.g in GROUP_LETTER)) GROUP_LETTER[o.g]=String.fromCharCode(_letter++);
+    o._id=GROUP_LETTER[o.g]+(++n);
+  });
+}
+assignIds(DATA); assignIds(IFACES); assignIds(TOOLS);
+
+/* ---- first-introduced MM/YY per asset (git first-add / repo-first commit; external stacks omitted) ---- */
+const DATE={
+  // data
+  "corpus_lexicon":"06/26","SanskritRussian glossary (3-layer)":"07/26","mw_en_tm.json":"06/26","lemma / root glossary (DCS)":"07/26",
+  "mw_roots.tsv":"06/26","mw_etymology.tsv / pwg_etymology.tsv":"06/26","etymology_stats (root_oracle, agreement, affix)":"06/26",
+  "etymology-oracle.json":"06/26","root_crosswalk.csv + class_concordance.csv":"06/26","Whitney_DCS_audit.json":"06/26",
+  "corpus_class_verdicts.json":"06/26","dcs_ppp_verified.tsv":"07/26","union_headwords.tsv":"06/26","mw_heritage_crosswalk.tsv":"07/26",
+  "DCS↔CDSL crosswalk":"06/26","union coverage_additions.tsv":"06/26","csl-atlas alignment-confidence.json":"05/26",
+  "csl-atlas low-confidence review set":"05/26","heritage_forms_oracle.tsv.gz":"07/26","heritage_dico_gloss.tsv":"07/26",
+  "heritage_forms_oracle_disagreements.tsv":"07/26","heritage_only_forms.tsv":"11/14","heritage_mirror/DATA/ frequency tables":"07/26",
+  "sanhw1.xlsx (Sanskrit-Hybrid Word)":"11/14","VisualDCS DCS ingest + lemma summary":"06/26","kosha frequency layer":"07/26",
+  "dcs_form2lemma.tsv":"07/26","dcs_lemma2root.tsv":"07/26","vidyut_form2lemma.tsv":"07/26","surface_dcs_misses.tsv":"07/26",
+  "Zaliznyak grammar index":"06/26","correction_events_release.csv":"06/26","Indische Sprüche":"07/26","ortho-drift reform maps":"06/26",
+  "do-not-file corpus":"06/26","csl-santam Tamil SQLite":"06/15","OCR'd dictionary front-matter":"06/26",
+  // interfaces
+  "Cologne Digital Sanskrit Dictionaries (CDSL)":"07/18","C-SALT / Kosh API":"04/18","kosha — translator-first dictionary":"07/26",
+  "Samudra Manthanam":"04/26","Sanskrit→Russian Glossary":"07/26","Russian Rāmāyaṇa portal":"05/26","Sanskrit Karaoke":"04/26",
+  "CSL Observatory":"05/26","VisualDCS — verb-form frequency":"04/26","VisualDCS — paradigm browser":"04/26",
+  "BookIndex / Zalizniakiada":"04/26","IndologyScholars — forum archive":"04/26","CSL Guides":"06/26",
+  "CommentaryStrategies essays":"04/26","SamudraManthanam corpus-FAQ":"07/26","PWG article dashboard":"07/26",
+  "Uprava articles dashboard":"06/26","CSL App (Flutter)":"03/26","Systema Sanscriticum":"02/26","csl-santam — Tamil lexicon search":"06/15",
+  // tools (external stacks omitted — no local repo)
+  "sanskrit-util":"06/26","csl-pywork correction pipeline":"07/19","web-endpoint template":"07/18","kosha/app/render.py":"07/26",
+  "ls_resolver.py":"07/26","build_vidyut_fallback.py":"07/26","RU translation kit":"06/26","ZettelkastenWiki":"07/26","CI & hygiene templates":"06/26",
+  // external stacks — LAST-UPDATE (not first-introduced), each with a documented source of truth (EXT_SRC)
+  "vidyut":"01/25","Sanskrit Heritage (INRIA)":"03/25","Samsaadhanii / SCL":"12/25","DharmaMitra":"05/26","VedaWeb":"10/24",
+};
+
+/* ---- source-of-truth for external-stack "last update" dates (badge links here) ---- */
+const EXT_SRC={
+  "vidyut":{u:"https://github.com/ambuda-org/vidyut/releases",l:"GitHub release py-0.4.0 (2025-01-22)"},
+  "Sanskrit Heritage (INRIA)":{u:"https://github.com/darkone23/Heritage_Resources",l:"mirror latest commit (2025-03-02); live site bot-walled"},
+  "Samsaadhanii / SCL":{u:"https://sanskrit.uohyd.ac.in/scl/",l:'site footer "Updated on 25th Dec 2025"'},
+  "DharmaMitra":{u:"https://dharmamitra.github.io/dharmamitra-guides/news/",l:"news feed — latest capability update (Segment View, 2026-05-11)"},
+  "VedaWeb":{u:"https://doi.org/10.5281/zenodo.15489124",l:"Zenodo data v2 (2024-10-25), CC BY 4.0"},
+};
+
+/* ---- changelog: newest first. Add a dated row here whenever assets are added/retired. ---- */
+const CHANGELOG=[
+  {d:"07/26", title:"Initial index", body:"First publication of the capability catalogue.",
+   added:"44 dictionaries · 20 interfaces (16 live) · 37 datasets · 14 tools · 4 external stacks — each with a real example, a severity tier, a first-introduced date and a stable ID."},
+];
+
+/* ---- dictionary example lookups: Cologne scan year overrides + verified sample headwords ---- */
+const DICT_YEAR={LRV:2022,ABCH:2023,ACPH:2023,ACSJ:2023,FRI:2025,NMMB:2026};
+const DICT_HW={MW:"a",AP90:"a",PW:"a",PWG:"a",GRA:"a",BEN:"a",CAE:"a",MD:"a",SHS:"a",BOP:"a",
+  BOR:"A",MWE:"A",SKD:"a",VCP:"a",INM:"Abala",VEI:"Aṃśu",BHS:"a"};
+const dictUrl=code=>`https://www.sanskrit-lexicon.uni-koeln.de/scans/${code}Scan/${DICT_YEAR[code]||2020}/web/index.php`;
+
+/* ============================== RENDER ============================== */
+const $=(s,r=document)=>r.querySelector(s), el=(t,c)=>{const e=document.createElement(t);if(c)e.className=c;return e};
+const norm=s=>(s||"").toLowerCase();
+const repoUrl=r=>{
+  if(!r||r==="external"||r==="per-dict repos") return null;
+  const gasyoun=["MWS","PWG","VisualDCS","SanskritRussian","SanskritLexicography","SamudraManthanam","kosha","Uprava","BookIndex","IndologyScholars","SanskritKaraoke","RussianRamayana","CommentaryStrategies","Systema-Sanscriticum","ZettelkastenWiki","github-spine"];
+  const dhaval=["SanskritSpellCheck"];
+  if(dhaval.includes(r)) return "https://github.com/drdhaval2785/"+r;
+  const org = gasyoun.includes(r)?"gasyoun":"sanskrit-lexicon";
+  return `https://github.com/${org}/${r}`;
+};
+
+let ITEMS=[]; // unified index for search: {cat, hay, el, group}
+
+function statusLabel(s){
+  if(SEVMETA[s]) return SEVMETA[s];
+  return s==="live"?["live","Live"]:s==="beta"?["beta","Beta / local"]:s==="ext"?["lib","External"]:["lib","Source"];
+}
+
+function card(o, cat, statusKey){
+  const [sc,sl]=statusLabel(statusKey);
+  const c=el("article","card s-"+sc);
+  const top=el("div","card-top");
+  const h=el("h3"); h.innerHTML=(o.code?`<span class="code">${o.code}</span>`:"")+o.n; top.appendChild(h);
+  const badges=el("div","card-badges");
+  const st=el("span","status "+sc); st.textContent=sl; badges.appendChild(st);
+  if(o._id){const idb=el("span","idbadge"); idb.textContent=o._id; badges.appendChild(idb);}
+  top.appendChild(badges);
+  c.appendChild(top);
+  const b=el("p","blurb"); b.innerHTML=o.b; c.appendChild(b);
+  if(o.reuse){const r=el("p","reuse"); r.innerHTML="↻ instead of "+o.reuse; c.appendChild(r);}
+  const exd=EX[o.n];
+  if(exd){const e=el("div","example"+(exd.s?" schema":""));
+    if(exd.s){const lab=el("span","lab"); lab.textContent="schema"; e.appendChild(lab);}
+    e.appendChild(document.createTextNode(exd.v)); c.appendChild(e);}
+  const tg=(TAGS[o.n]||[]).slice(0,4);
+  if(tg.length){const td=el("div","tags"); tg.forEach(t=>{const bt=el("button","tagchip");
+    bt.type="button"; bt.textContent=t; bt.dataset.tag=t; td.appendChild(bt);}); c.appendChild(td);}
+  const meta=el("div","meta");
+  if(o.size){const m=el("span","m"); m.textContent=o.size; meta.appendChild(m);}
+  if(o.stack){const m=el("span","m"); m.textContent=o.stack; meta.appendChild(m);}
+  const ru=repoUrl(o.repo);
+  if(o.repo && o.repo!=="external"){
+    if(ru){const a=el("a","m repo"); a.href=ru; a.target="_blank"; a.rel="noopener"; a.textContent=o.repo; meta.appendChild(a);}
+    else {const m=el("span","m repo"); m.textContent=o.repo; meta.appendChild(m);}
+  }
+  if(o.url){const a=el("a","m"); a.href=o.url; a.target="_blank"; a.rel="noopener";
+    a.textContent = o.url.includes("github.com")?"source ↗":"open ↗"; meta.appendChild(a);}
+  const dt=DATE[o._id]||DATE[o.n]; const src=EXT_SRC[o.n];
+  if(dt){
+    const d=el(src?"a":"span","m date"+(src?" ext":""));
+    d.textContent=dt;
+    if(src){d.href=src.u; d.target="_blank"; d.rel="noopener"; d.title="last update — "+src.l;}
+    else d.title="first introduced";
+    meta.appendChild(d);
+  }
+  c.appendChild(meta);
+  return c;
+}
+
+function groupBlocks(list, cat, statusKeyFn){
+  const groups={};
+  list.forEach(o=>{(groups[o.g]=groups[o.g]||[]).push(o);});
+  const frag=document.createDocumentFragment();
+  Object.keys(groups).forEach(g=>{
+    const gh=el("div","subgroup-head");
+    const grid=el("div","grid");
+    groups[g].forEach(o=>{
+      const c=card(o,cat,statusKeyFn(o));
+      const tags=TAGS[o.n]||[];
+      const hay=norm([o._id,o.n,o.code,o.b,o.reuse,o.repo,o.stack,o.g,o.size,tags.join(" ")].join(" "));
+      ITEMS.push({cat,hay,node:c,type:"card",status:o.s||statusKeyFn(o),tags});
+      grid.appendChild(c);
+    });
+    // group label — prefixed with its section letter
+    const lbl=el("div"); lbl.style.cssText="font-family:var(--serif);font-size:14px;color:var(--ink-3);font-weight:600;margin:16px 0 9px;letter-spacing:.01em";
+    const gl=GROUP_LETTER[g];
+    lbl.innerHTML=(gl?`<span style="font-family:var(--mono);color:var(--haldi);font-weight:700">${gl}</span> · `:"")+g;
+    lbl.dataset.grouplabel=cat;
+    frag.appendChild(lbl); frag.appendChild(grid);
+  });
+  return frag;
+}
+
+function buildSections(){
+  const main=$("#main");
+  CATS.forEach(cat=>{
+    const sec=el("section","cat"); sec.id="sec-"+cat.id; sec.dataset.cat=cat.id;
+    const head=el("div","cat-head");
+    head.innerHTML=`<span class="idx">${cat.idx}</span><h2>${cat.label}</h2><p>${cat.blurb}</p>`;
+    sec.appendChild(head);
+
+    if(cat.id==="dict"){
+      // language subfilter
+      const sf=el("div","subfilters"); sf.id="langfilters";
+      const order=["all","SE","ES","SG","SF","SL","SS","SP"];
+      order.forEach(k=>{
+        const btn=el("button","chip"); btn.dataset.lang=k;
+        btn.setAttribute("aria-pressed", k==="all");
+        const cnt=k==="all"?DICTS.length:DICTS.filter(d=>d[2]===k).length;
+        btn.innerHTML=(k==="all"?"All languages":LANGS[k])+` · ${cnt}`;
+        sf.appendChild(btn);
+      });
+      sec.appendChild(sf);
+      // table
+      const tw=el("div","tablewrap");
+      const tbl=el("table","dicts");
+      tbl.innerHTML=`<thead><tr><th>Code</th><th>Dictionary</th><th>Language</th><th>Author</th><th class="num">Year</th><th class="num">Pages</th><th>Repo</th><th>Example</th></tr></thead>`;
+      const tb=el("tbody");
+      DICTS.forEach(d=>{
+        const [code,title,lg,author,year,pages,repo,exturl]=d;
+        const tr=el("tr"); tr.dataset.lang=lg;
+        const ru=repoUrl(repo);
+        let repoCell;
+        if(repo) repoCell = ru?`<a href="${ru}" target="_blank" rel="noopener">${repo}</a>`:repo;
+        else if(exturl) repoCell = `<a href="${exturl}" target="_blank" rel="noopener">Cologne ↗</a>`;
+        else repoCell = '<span class="norepo">csl-orig only</span>';
+        const hw=DICT_HW[code];
+        const exCell=`<a href="${dictUrl(code)}" target="_blank" rel="noopener">${hw?`<span class="hw">${hw}</span> ↗`:"browse ↗"}</a>`;
+        tr.innerHTML=
+          `<td class="code">${code}</td>`+
+          `<td class="title">${title}</td>`+
+          `<td><span class="lang lg-${lg}">${LANGS[lg]}</span></td>`+
+          `<td>${author}</td>`+
+          `<td class="num">${year||"—"}</td>`+
+          `<td class="num">${pages?pages.toLocaleString("en-US"):"—"}</td>`+
+          `<td>${repoCell}</td>`+
+          `<td class="ex">${exCell}</td>`;
+        const hay=norm([code,title,LANGS[lg],author,year,repo].join(" "));
+        ITEMS.push({cat:"dict",hay,node:tr,type:"row",lang:lg});
+        tb.appendChild(tr);
+      });
+      tbl.appendChild(tb); tw.appendChild(tbl); sec.appendChild(tw);
+    } else {
+      let list,statusFn;
+      if(cat.id==="data"){list=DATA; statusFn=o=>SEV[o.n]||"raw";}
+      else if(cat.id==="iface"){list=IFACES; statusFn=o=>o.s;}
+      else {list=TOOLS; statusFn=o=>o.s;}
+      if(cat.id==="iface"){
+        const sf=el("div","subfilters"); sf.id="statusfilters";
+        const opts=[["all","All"],["live","Live"],["beta","Beta / local"]];
+        opts.forEach(([k,lab])=>{
+          const btn=el("button","chip"); btn.dataset.status=k;
+          btn.setAttribute("aria-pressed",k==="all");
+          const cnt=k==="all"?IFACES.length:IFACES.filter(i=>i.s===k).length;
+          btn.innerHTML=`${lab} · ${cnt}`;
+          sf.appendChild(btn);
+        });
+        sec.appendChild(sf);
+      }
+      if(cat.id==="data"){
+        const sf=el("div","subfilters"); sf.id="sevfilters";
+        const opts=[["all","All"],["canonical","canonical"],["derived","derived"],["raw","raw"]];
+        opts.forEach(([k,lab])=>{
+          const btn=el("button","chip"); btn.dataset.sev=k;
+          btn.setAttribute("aria-pressed",k==="all");
+          const cnt=k==="all"?DATA.length:DATA.filter(d=>(SEV[d.n]||"raw")===k).length;
+          btn.innerHTML=`${lab} · ${cnt}`;
+          sf.appendChild(btn);
+        });
+        sec.appendChild(sf);
+      }
+      sec.appendChild(groupBlocks(list,cat.id,statusFn));
+    }
+    main.appendChild(sec);
+  });
+}
+
+/* changelog */
+function renderChangelog(){
+  const box=$("#changelog");
+  const rows=CHANGELOG.map(e=>
+    `<div class="cl-row"><div class="cl-date">${e.d}</div><div class="cl-body"><b>${e.title}</b> — ${e.body}`+
+    (e.added?` <span class="added">${e.added}</span>`:"")+`</div></div>`).join("");
+  box.innerHTML=`<h2>Changelog</h2><p class="sub">What changed in this index — newest first. A dated line lands here whenever assets are added or retired.</p>`+rows;
+}
+
+/* tallies */
+function buildTallies(){
+  const t=$("#tallies");
+  const data=[
+    [DICTS.length,"dictionaries"],
+    [IFACES.length+"+","interfaces"],
+    [IFACES.filter(i=>i.s==="live").length,"live &amp; deployed"],
+    [DATA.length+"+","data assets"],
+    [TOOLS.filter(x=>x.s==="lib").length,"reusable tools"],
+    ["4","external stacks"],
+  ];
+  data.forEach(([n,l])=>{const d=el("div","tally"); d.innerHTML=`<b>${n}</b><span>${l}</span>`; t.appendChild(d);});
+}
+
+/* tabs */
+let activeCat="all";
+function buildTabs(){
+  const tabs=$("#tabs");
+  const all=[{id:"all",label:"All"}].concat(CATS.map(c=>({id:c.id,label:c.label})));
+  all.forEach(c=>{
+    const b=el("button","tab"); b.dataset.cat=c.id; b.setAttribute("aria-pressed",c.id==="all");
+    let n = c.id==="all" ? (DICTS.length+IFACES.length+DATA.length+TOOLS.length)
+      : c.id==="dict"?DICTS.length : c.id==="iface"?IFACES.length : c.id==="data"?DATA.length : TOOLS.length;
+    b.innerHTML=`${c.label} <span class="n">${n}</span>`;
+    b.addEventListener("click",()=>{activeCat=c.id; activeTag="all";
+      [...tabs.children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.cat===c.id));
+      if(c.id!=="all"){const sec=$("#sec-"+c.id); if(sec) sec.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth",block:"start"});}
+      apply();
+    });
+    tabs.appendChild(b);
+  });
+}
+
+/* language filter */
+let activeLang="all";
+function wireLang(){
+  const sf=$("#langfilters"); if(!sf) return;
+  sf.addEventListener("click",e=>{const b=e.target.closest(".chip"); if(!b)return;
+    activeLang=b.dataset.lang; activeTag="all";
+    [...sf.children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.lang===activeLang));
+    apply();
+  });
+}
+
+/* interface status filter */
+let activeStatus="all";
+function wireStatus(){
+  const sf=$("#statusfilters"); if(!sf) return;
+  sf.addEventListener("click",e=>{const b=e.target.closest(".chip"); if(!b)return;
+    activeStatus=b.dataset.status; activeTag="all";
+    [...sf.children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.status===activeStatus));
+    apply();
+  });
+}
+
+/* clicked-tag filter (curated cross-cutting tags) */
+let activeTag="all";
+
+/* dataset severity filter */
+let activeSev="all";
+function wireSev(){
+  const sf=$("#sevfilters"); if(!sf) return;
+  sf.addEventListener("click",e=>{const b=e.target.closest(".chip"); if(!b)return;
+    activeSev=b.dataset.sev; activeTag="all";
+    [...sf.children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.sev===activeSev));
+    apply();
+  });
+}
+
+/* apply search + category + language */
+function apply(){
+  const q=norm($("#q").value.trim());
+  let shown=0;
+  // per-item visibility
+  ITEMS.forEach(it=>{
+    let vis=true;
+    if(activeCat!=="all" && it.cat!==activeCat) vis=false;
+    if(vis && q && !it.hay.includes(q)) vis=false;
+    if(vis && it.type==="row" && activeLang!=="all" && it.lang!==activeLang) vis=false;
+    if(vis && it.cat==="iface" && activeStatus!=="all" && it.status!==activeStatus) vis=false;
+    if(vis && it.cat==="data" && activeSev!=="all" && it.status!==activeSev) vis=false;
+    if(vis && activeTag!=="all" && !(it.tags||[]).includes(activeTag)) vis=false;
+    it.node.classList.toggle("hide",!vis);
+    if(vis) shown++;
+  });
+  document.querySelectorAll(".tagchip").forEach(ch=>ch.classList.toggle("on",activeTag!=="all"&&ch.dataset.tag===activeTag));
+  // section + group-label visibility
+  document.querySelectorAll("section.cat").forEach(sec=>{
+    const c=sec.dataset.cat;
+    let secVis = (activeCat==="all"||activeCat===c);
+    // hide section if nothing visible inside
+    const anyVis = [...sec.querySelectorAll(".card, tr[data-lang]")].some(n=>!n.classList.contains("hide"));
+    sec.classList.toggle("hide", !(secVis && anyVis));
+  });
+  // group labels: hide if the grid after them has no visible cards
+  document.querySelectorAll("[data-grouplabel]").forEach(lbl=>{
+    const grid=lbl.nextElementSibling;
+    const anyVis=grid&&[...grid.children].some(n=>!n.classList.contains("hide"));
+    lbl.style.display=anyVis?"":"none";
+  });
+  $("#noresult").classList.toggle("show",shown===0);
+  const cl=$("#countline");
+  const label = activeCat==="all"?"assets":CATS.find(c=>c.id===activeCat).label.toLowerCase();
+  cl.innerHTML=`Showing <b>${shown}</b> ${label}${q?` matching “${q.replace(/</g,"&lt;")}”`:""}${activeTag!=="all"?` tagged <b>#${activeTag}</b>`:""}${activeLang!=="all"?` · ${LANGS[activeLang]}`:""}`;
+}
+
+/* init */
+buildTallies(); buildTabs(); buildSections(); renderChangelog(); wireLang(); wireStatus(); wireSev();
+$("#q").addEventListener("input",()=>{ if($("#q").value) activeTag="all"; apply(); });
+
+/* tag chip → pivot the whole index to everything sharing that cluster */
+$("#main").addEventListener("click",e=>{
+  const t=e.target.closest(".tagchip"); if(!t) return;
+  activeCat="all"; activeLang="all"; activeStatus="all"; activeSev="all";
+  activeTag = (activeTag===t.dataset.tag) ? "all" : t.dataset.tag;  // toggle off if same
+  [...$("#tabs").children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.cat==="all"));
+  const lf=$("#langfilters"); if(lf)[...lf.children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.lang==="all"));
+  const stf=$("#statusfilters"); if(stf)[...stf.children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.status==="all"));
+  const svf=$("#sevfilters"); if(svf)[...svf.children].forEach(x=>x.setAttribute("aria-pressed",x.dataset.sev==="all"));
+  $("#q").value=""; apply();
+  window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"});
+});
+
+apply();
+</script>
+
+</body>
+</html>
