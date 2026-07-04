@@ -130,6 +130,11 @@
   .tagchip:hover{border-color:var(--lapis);color:var(--lapis);background:var(--lapis-soft)}
   .tagchip.on{background:var(--lapis);color:#fff;border-color:var(--lapis)}
   .tagchip.on::before{color:#fff;opacity:.7}
+  .tagchip.author{border-color:#e3d6bd;color:var(--haldi);background:#faf4e6}
+  .tagchip.author::before{content:"@";opacity:.55}
+  .tagchip.author:hover{border-color:var(--haldi);background:#f4ecd8}
+  .tagchip.author.on{background:var(--haldi);color:#fff;border-color:var(--haldi)}
+  .tagchip.author.on::before{color:#fff}
   .example{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);background:var(--leaf);
     border:1px solid var(--leaf-3);border-radius:3px;padding:6px 9px;white-space:pre-wrap;
     word-break:break-word;overflow-wrap:anywhere;line-height:1.5;min-height:calc(3em + 14px)}
@@ -237,6 +242,10 @@
     The bottom-right date is <code>◷ MM/YY</code> when the asset was <strong>first introduced</strong> (from git history);
     for external stacks it is instead <code>↻ MM/YY</code> the <strong>last update</strong>, and the badge links to that stack's documented source of truth
     (vidyut → GitHub release · Heritage → mirror commit · Samsaadhanii → site footer · DharmaMitra → news feed · VedaWeb → Zenodo data DOI).</p>
+  <p>Each card carries clickable tags — <code>#topic</code> (subject cluster, e.g. <code>#verbs</code>, <code>#Heritage</code>)
+    and <code>@surname</code> (primary author / maintainer, e.g. <code>@kulkarni</code>, <code>@huet</code>, <code>@gasuns</code>).
+    Click any tag to pivot the whole index to everything sharing it. Author attributions are best-effort — the builder of the
+    derived asset, or the external stack's lead.</p>
   <p class="byline">Last updated <time datetime="2026-07-04">04-07-2026</time> · compiled by <strong>Dr.&nbsp;Mārcis&nbsp;Gasūns</strong></p>
 </footer>
 
@@ -594,6 +603,42 @@ const TAGS={
   "vidyut":["vidyut","morphology","grammar"],
 };
 
+/* ---- author / maintainer surname per asset (rendered as an @surname tag) ---- */
+const AUTHOR={
+  // external stacks
+  "Samsaadhanii / SCL":"kulkarni","Sanskrit Heritage (INRIA)":"huet","DharmaMitra":"nehrdich",
+  "VedaWeb":"casaretto","vidyut":"prasad",
+  // tools
+  "sanskrit-util":"gasuns","csl-pywork correction pipeline":"funderburk","web-endpoint template":"funderburk",
+  "kosha/app/render.py":"gasuns","ls_resolver.py":"gasuns","build_vidyut_fallback.py":"gasuns",
+  "RU translation kit":"gasuns","ZettelkastenWiki":"gasuns","CI & hygiene templates":"gasuns",
+  // data
+  "corpus_lexicon":"gasuns","SanskritRussian glossary (3-layer)":"gasuns","mw_en_tm.json":"gasuns",
+  "lemma / root glossary (DCS)":"gasuns","mw_roots.tsv":"gasuns","mw_etymology.tsv / pwg_etymology.tsv":"gasuns",
+  "etymology_stats (root_oracle, agreement, affix)":"gasuns","etymology-oracle.json":"gasuns",
+  "root_crosswalk.csv + class_concordance.csv":"gasuns","Whitney_DCS_audit.json":"gasuns",
+  "corpus_class_verdicts.json":"gasuns","dcs_ppp_verified.tsv":"gasuns","union_headwords.tsv":"gasuns",
+  "mw_heritage_crosswalk.tsv":"gasuns","DCS↔CDSL crosswalk":"gasuns","union coverage_additions.tsv":"gasuns",
+  "csl-atlas alignment-confidence.json":"gasuns","csl-atlas low-confidence review set":"gasuns",
+  "heritage_forms_oracle.tsv.gz":"gasuns","heritage_dico_gloss.tsv":"huet",
+  "heritage_forms_oracle_disagreements.tsv":"gasuns","heritage_only_forms.tsv":"gasuns",
+  "heritage_mirror/DATA/ frequency tables":"huet","VisualDCS DCS ingest + lemma summary":"gasuns",
+  "kosha frequency layer":"gasuns","dcs_form2lemma.tsv":"gasuns","dcs_lemma2root.tsv":"gasuns",
+  "vidyut_form2lemma.tsv":"gasuns","surface_dcs_misses.tsv":"gasuns","Zaliznyak grammar index":"gasuns",
+  "correction_events_release.csv":"gasuns","Indische Sprüche":"boehtlingk","ortho-drift reform maps":"patel",
+  "do-not-file corpus":"patel","csl-santam Tamil SQLite":"funderburk","OCR'd dictionary front-matter":"gasuns",
+  // interfaces
+  "Cologne Digital Sanskrit Dictionaries (CDSL)":"funderburk","C-SALT / Kosh API":"funderburk",
+  "kosha — translator-first dictionary":"gasuns","Samudra Manthanam":"gasuns","Sanskrit→Russian Glossary":"gasuns",
+  "Russian Rāmāyaṇa portal":"gasuns","Sanskrit Karaoke":"gasuns","CSL Observatory":"gasuns",
+  "VisualDCS — verb-form frequency":"gasuns","VisualDCS — paradigm browser":"gasuns",
+  "BookIndex / Zalizniakiada":"gasuns","IndologyScholars — forum archive":"gasuns","CSL Guides":"gasuns",
+  "CommentaryStrategies essays":"gasuns","SamudraManthanam corpus-FAQ":"gasuns","PWG article dashboard":"gasuns",
+  "Uprava articles dashboard":"gasuns","Systema Sanscriticum":"gasuns","csl-santam — Tamil lexicon search":"funderburk",
+};
+function tagsFor(o){ const t=(TAGS[o.n]||[]).slice(0,4); const a=AUTHOR[o.n]; return a?t.concat(a):t; }
+const AUTHOR_SET=new Set(Object.values(AUTHOR));
+
 /* ---- real examples, keyed by exact asset name (samples verbatim from source files) ---- */
 const EX={
   // data assets
@@ -789,8 +834,8 @@ function card(o, cat, statusKey){
   if(exd){const e=el("div","example"+(exd.s?" schema":""));
     if(exd.s){const lab=el("span","lab"); lab.textContent="schema"; e.appendChild(lab);}
     e.appendChild(document.createTextNode(exd.v)); c.appendChild(e);}
-  const tg=(TAGS[o.n]||[]).slice(0,4);
-  if(tg.length){const td=el("div","tags"); tg.forEach(t=>{const bt=el("button","tagchip");
+  const auth=AUTHOR[o.n]; const tg=tagsFor(o);
+  if(tg.length){const td=el("div","tags"); tg.forEach(t=>{const bt=el("button","tagchip"+(t===auth?" author":""));
     bt.type="button"; bt.textContent=t; bt.dataset.tag=t; td.appendChild(bt);}); c.appendChild(td);}
   const meta=el("div","meta");
   if(o.size){const m=el("span","m"); m.textContent=o.size; meta.appendChild(m);}
@@ -823,7 +868,7 @@ function groupBlocks(list, cat, statusKeyFn){
     const grid=el("div","grid");
     groups[g].forEach(o=>{
       const c=card(o,cat,statusKeyFn(o));
-      const tags=TAGS[o.n]||[];
+      const tags=tagsFor(o);
       const hay=norm([o._id,o.n,o.code,o.b,o.reuse,o.repo,o.stack,o.g,o.size,tags.join(" ")].join(" "));
       ITEMS.push({cat,hay,node:c,type:"card",status:o.s||statusKeyFn(o),tags});
       grid.appendChild(c);
@@ -1034,7 +1079,7 @@ function apply(){
   $("#noresult").classList.toggle("show",shown===0);
   const cl=$("#countline");
   const label = activeCat==="all"?"assets":CATS.find(c=>c.id===activeCat).label.toLowerCase();
-  cl.innerHTML=`Showing <b>${shown}</b> ${label}${q?` matching “${q.replace(/</g,"&lt;")}”`:""}${activeTag!=="all"?` tagged <b>#${activeTag}</b>`:""}${activeLang!=="all"?` · ${LANGS[activeLang]}`:""}`;
+  cl.innerHTML=`Showing <b>${shown}</b> ${label}${q?` matching “${q.replace(/</g,"&lt;")}”`:""}${activeTag!=="all"?` tagged <b>${AUTHOR_SET.has(activeTag)?"@":"#"}${activeTag}</b>`:""}${activeLang!=="all"?` · ${LANGS[activeLang]}`:""}`;
 }
 
 /* init */
