@@ -880,7 +880,12 @@ function card(o, cat, statusKey){
   if(tg.length){const td=el("div","tags"); tg.forEach(t=>{const bt=el("button","tagchip"+(t===auth?" author":""));
     bt.type="button"; bt.textContent=t; bt.dataset.tag=t; td.appendChild(bt);}); c.appendChild(td);}
   const meta=el("div","meta");
-  if(o.size){const m=el("span","m"); m.textContent=o.size; meta.appendChild(m);}
+  let sizeLabel=o.size;
+  if(sizeLabel && cat==="data"){ // pill already shows the byte-size; keep only the count here
+    sizeLabel=sizeLabel.replace(/\d[\d.,]*\s*(MB|KB|GB)\b/gi,"").replace(/\bgz\b/gi,"")
+      .replace(/\s*·\s*·\s*/g," · ").replace(/^[\s·]+|[\s·]+$/g,"").trim();
+  }
+  if(sizeLabel){const m=el("span","m"); m.textContent=sizeLabel; meta.appendChild(m);}
   if(o.stack){const m=el("span","m"); m.textContent=o.stack; meta.appendChild(m);}
   const ru=repoUrl(o.repo);
   if(o.repo && o.repo!=="external"){
