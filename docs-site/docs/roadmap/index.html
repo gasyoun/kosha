@@ -236,6 +236,13 @@
       font-weight: 600;
     }
     .related { margin-top: 32px; color: var(--muted); }
+    .backlinks { margin-top: 28px; color: var(--muted); }
+    .backlinks h2 { font-size: 0.95rem; }
+    .status-summary { color: var(--muted); font-size: 0.9rem; margin: -8px 0 24px; }
+    .mi-section { margin-bottom: 28px; }
+    .mi-list { list-style: none; margin: 0; padding: 0; }
+    .mi-list li { margin: 4px 0; }
+    .mi-meta { color: var(--muted); font-size: 0.8rem; margin-left: 6px; }
     .page-meta {
       text-align: right;
       font-size: 0.8rem;
@@ -413,10 +420,11 @@
 <section class="cta">
   <h2>Next step</h2>
   <a href="https://github.com/gasyoun/kosha">Repository on GitHub</a>
+  <a class="secondary" href="https://gasyoun.github.io/kosha/features/">Features Index</a>
 </section>
 <section class="related"><h2>Related pages</h2><ul><li><a href="/kosha/docs-site/docs/positioning/">Positioning — &quot;Logeion for Sanskrit&quot;</a></li>
 <li><a href="/kosha/docs-site/docs/what-is-kosha/">What is the Gasuns Sanskrit Dictionary?</a></li></ul></section>
-      <footer>© 2026 Gasuns Sanskrit Dictionary · <a href="/kosha/docs-site/sitemap.xml">sitemap</a> · <a href="https://github.com/gasyoun/kosha">GitHub</a></footer>
+      <footer>© 2026 Gasuns Sanskrit Dictionary · <a href="/kosha/docs-site/sitemap.xml">sitemap</a> · <a href="https://github.com/gasyoun/kosha">GitHub</a> · <a href="https://gasyoun.github.io/kosha/features/">Features Index</a></footer>
     </main>
   </div>
   
@@ -452,7 +460,7 @@
         loadIndex().then(index => {
           if (input.value.trim().toLowerCase() !== q) return;  // stale result
           index
-            .filter(item => (item.terms || []).join(' ').toLowerCase().includes(q))
+            .filter(item => ((item.terms || []).join(' ') + ' ' + (item.text || '')).toLowerCase().includes(q))
             .slice(0, 8)
             .forEach(item => {
               const li = document.createElement('li');
