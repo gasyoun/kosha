@@ -3,9 +3,9 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/features/">
-<meta name="description" content="A clickable, filterable index of the Sanskrit Lexicon project: 44 dictionaries, 20 interfaces, 37 datasets and 14 tools, each with a real example and a stable ID.">
+<meta name="description" content="A clickable, filterable index of the Sanskrit Lexicon project: 44 dictionaries, 20 interfaces, 37 datasets and 15 tools, each with a real example and a stable ID.">
 <meta property="og:title" content="Kośa — Features Index of the Sanskrit Lexicon Project">
-<meta property="og:description" content="44 dictionaries, 20 interfaces, 37 datasets, 14 tools — with examples, tags and stable IDs.">
+<meta property="og:description" content="44 dictionaries, 20 interfaces, 37 datasets, 15 tools — with examples, tags and stable IDs.">
 <meta property="og:type" content="website">
 <meta charset="utf-8">
 <title>Kośa — Features Index of the Sanskrit Lexicon Project</title>
@@ -245,7 +245,7 @@
     <span class="status beta" style="display:inline-block">1–10 MB</span> medium ·
     <span class="status lib" style="display:inline-block">&lt;1 MB</span> small — so magnitudes are comparable (rows/entries alone are not). Filter by size in the Data section.</p>
   <p>Each asset carries a stable ID — a <strong>running number within its category</strong> (1–N, it does <em>not</em> restart at each sub-section)
-    prefixed by a <strong>section letter</strong> (<code>A</code>–<code>F</code> data · <code>G</code>–<code>K</code> interfaces · <code>L</code>–<code>M</code> tools; dictionaries use their code).
+    prefixed by a <strong>section letter</strong> (<code>A</code>–<code>F</code> data · <code>G</code>–<code>K</code> interfaces · <code>L</code>–<code>N</code> tools; dictionaries use their code).
     The <strong>ID (top-right) links to the asset's source</strong> <code>↗</code>; it's searchable in the box above.
     The bottom-right date is <code>◷ MM/YY</code> when the asset was <strong>first introduced</strong> (from git history);
     for external stacks it is instead <code>↻ MM/YY</code> the <strong>last update</strong>, and that badge links to the stack's documented source of truth
@@ -525,6 +525,9 @@ const TOOLS = [
    reuse:"Writing site generator #5 (csl-guides stays Docusaurus by design)",repo:"ZettelkastenWiki",url:"https://github.com/gasyoun/ZettelkastenWiki"},
   {g:"Import it — the code toolkit",n:"CI & hygiene templates",s:"lib",b:"CodeQL, Dependabot (+auto-merge), pre-commit, CoC, CONTRIBUTING, branch protection via the /cologne-* skills.",
    reuse:"Hand-writing CI per repo — run the skill (PHP repos use Semgrep)",repo:"ci_templates",url:"https://github.com/gasyoun/github-spine/blob/main/SHARED_CODE.md"},
+
+  {g:"Reuse it — research &amp; publication methods",n:"Literature-scan-into-paper pipeline",s:"lib",b:"Deep-research fan-out over a literature index (e.g. ACL Anthology) with adversarial claim verification, wired straight into an existing paper's own Related Work section + the publication tracker, same session — not left as a standalone findings doc.",
+   reuse:"Re-running an unscoped literature search from zero for every paper, or leaving a research pass's findings stranded in chat instead of in the manuscript",repo:"Uprava",url:"https://github.com/gasyoun/Uprava/blob/main/ARTICLES.md"},
 
   {g:"Call it — external stacks (don't clone)",n:"Samsaadhanii / SCL",s:"ext",b:"Amba Kulkarni's stack (UoHyd): morph analyzer, sandhi/segmenter, compound processor, Pāṇinian parser, Amarakośa net, Dhātupāṭha — already consumes our dicts.",
    reuse:"Call the live JSON APIs / cross-validate; don't clone the GPL source",repo:"external",url:"https://github.com/gasyoun/SanskritLexicography/blob/master/SAMSAADHANII_INDEX.md"},
@@ -823,6 +826,8 @@ const EXT_SRC={
 
 /* ---- changelog: newest first. Add a dated row here whenever assets are added/retired. ---- */
 const CHANGELOG=[
+  {d:"07/26", title:"New tools group: research & publication methods", body:"Added a fourth Tools subgroup for repeatable non-code methods (starting with the literature-scan-into-paper pipeline), distinct from code you import and stacks you call.",
+   added:"37 datasets · 15 tools (was 14) · Tools now spans L–N (was L–M)."},
   {d:"07/26", title:"Initial index", body:"First publication of the capability catalogue.",
    added:"44 dictionaries · 20 interfaces (16 live) · 37 datasets · 14 tools · 4 external stacks — each with a real example, a severity tier, a first-introduced date and a stable ID."},
 ];
