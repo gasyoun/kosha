@@ -236,6 +236,13 @@
       font-weight: 600;
     }
     .related { margin-top: 32px; color: var(--muted); }
+    .backlinks { margin-top: 28px; color: var(--muted); }
+    .backlinks h2 { font-size: 0.95rem; }
+    .status-summary { color: var(--muted); font-size: 0.9rem; margin: -8px 0 24px; }
+    .mi-section { margin-bottom: 28px; }
+    .mi-list { list-style: none; margin: 0; padding: 0; }
+    .mi-list li { margin: 4px 0; }
+    .mi-meta { color: var(--muted); font-size: 0.8rem; margin-left: 6px; }
     .page-meta {
       text-align: right;
       font-size: 0.8rem;
@@ -408,7 +415,7 @@
       <h1>Gasuns Sanskrit Dictionary — docs</h1>
 <section id="project"><h2>Project</h2><div class="article-cards"><a class="article-card" href="/kosha/docs-site/docs/positioning/"><strong class="ac-title">Positioning — &quot;Logeion for Sanskrit&quot;</strong><p class="ac-excerpt">The defensible slot no project occupies — multi-dictionary × scan-anchored print truth × corpus-graded evidence × trilingual glosses, open and citable.</p><span class="ac-cta">Read more →</span></a><a class="article-card" href="/kosha/docs-site/docs/roadmap/"><strong class="ac-title">Roadmap — phases P1–P7</strong><p class="ac-excerpt">Seven gated phases — data+API, public alpha, corpus evidence, forms and grammar, the advanced UI, the Russian layer, and a DOI-versioned v1.0.</p><span class="ac-cta">Read more →</span></a><a class="article-card" href="/kosha/docs-site/docs/what-is-kosha/"><strong class="ac-title">What is the Gasuns Sanskrit Dictionary?</strong><p class="ac-excerpt">A translator-first Sanskrit dictionary — every major dictionary on one page, every sense anchored to the scanned print, open, API-first and citable.</p><span class="ac-cta">Read more →</span></a></div></section><section id="faq"><h2>FAQ</h2><details class="faq-item"><summary>Data, licensing and citability</summary><div class="faq-answer"><p>Data, licensing and citability Three layers, three sets of terms: Dictionary data comes from the Cologne Digital Sanskrit Dictionaries and stays under its terms — see LICENSE DATA.md Code is open source — LICENSE.md…</p><p><a href="/kosha/docs-site/faq/data-licensing/">More →</a></p></div></details>
 <details class="faq-item"><summary>What works today?</summary><div class="faq-answer"><p>What works today? Pre alpha — no public lookup runs yet. This project publishes its status honestly: no document claims something is &quot;ready&quot; unless its check actually runs. What exists: A locked, gated engineering plan…</p><p><a href="/kosha/docs-site/faq/what-works-today/">More →</a></p></div></details></section>
-      <footer>© 2026 Gasuns Sanskrit Dictionary · <a href="/kosha/docs-site/sitemap.xml">sitemap</a> · <a href="https://github.com/gasyoun/kosha">GitHub</a></footer>
+      <footer>© 2026 Gasuns Sanskrit Dictionary · <a href="/kosha/docs-site/sitemap.xml">sitemap</a> · <a href="https://github.com/gasyoun/kosha">GitHub</a> · <a href="https://gasyoun.github.io/kosha/features/">Features Index</a></footer>
     </main>
   </div>
   
@@ -444,7 +451,7 @@
         loadIndex().then(index => {
           if (input.value.trim().toLowerCase() !== q) return;  // stale result
           index
-            .filter(item => (item.terms || []).join(' ').toLowerCase().includes(q))
+            .filter(item => ((item.terms || []).join(' ') + ' ' + (item.text || '')).toLowerCase().includes(q))
             .slice(0, 8)
             .forEach(item => {
               const li = document.createElement('li');
