@@ -111,9 +111,17 @@ CREATE INDEX IF NOT EXISTS forms_lemma ON forms(lemma_slp1);
 -- derived from nominals/pydecl/decline.py's fixed 24-slot `sup` order).
 -- Only nominal declensions are populated in K1; verb conjugations
 -- (vlgtab1/vlgtab2) are blocked upstream in MWinflect's own verbs pipeline
--- (Python-2-only syntax in verbs/pysanskritv2/inputs/clean.py) -- see
--- scripts/build_inflections.py module docstring and .ai_state.md for the
--- exact failure. `gcase`/`number` are NULL for indeclinables (model='ind').
+-- `gcase`/`number` are NULL for indeclinables (model='ind').
+--
+-- P4 Wave K2a (H181): verb conjugations ARE now ingested. The upstream
+-- MWinflect Python-2 syntax bug (verbs/pysanskritv2/inputs/clean.py's
+-- parenthesized-tuple lambda parameter) was fixed and prepared as an
+-- upstream PR, unblocking verbs/redo.sh -> verbs/pysanskritv2/tables/
+-- calc_tables.txt (present-system conjugations: pre/ipf/ipv/opt x
+-- active/middle/passive). Verb rows carry `person`/`tense`/`voice` (NULL for
+-- nominals) and NULL gender/gcase; nominal rows carry gender/gcase/number and
+-- NULL person/tense/voice. `model` is the declension paradigm for nominals
+-- (m_a, n_a, m_vat, ind) or a "v_<gana>"/"v_p" conjugation-class tag for verbs.
 CREATE TABLE IF NOT EXISTS inflections (
     form_slp1 TEXT NOT NULL,
     lemma_slp1 TEXT NOT NULL,
@@ -121,12 +129,32 @@ CREATE TABLE IF NOT EXISTS inflections (
     gender TEXT,
     gcase TEXT,
     number TEXT,
+    person TEXT,
+    tense TEXT,
+    voice TEXT,
     refs TEXT,
     source TEXT NOT NULL DEFAULT 'cologne_mwinflect',
-    PRIMARY KEY (form_slp1, lemma_slp1, model, gcase, number)
+    PRIMARY KEY (form_slp1, lemma_slp1, model, gcase, number, person, tense, voice)
 );
 CREATE INDEX IF NOT EXISTS inflections_form ON inflections(form_slp1);
 CREATE INDEX IF NOT EXISTS inflections_lemma ON inflections(lemma_slp1);
+
+-- P4 Wave K2a (H181): stem-normalization bridge. `inflections` (Cologne,
+-- case/number-labeled) and `forms` (DCS/vidyut/heritage, lemma-only) cite the
+-- same lexeme under different stem spellings -- classically the strong/weak
+-- nasal stem (Bagavant in `forms` vs Bagavat in `inflections`), or -an/-a
+-- (rAjan/rAja). This crosswalk maps each variant stem spelling to ONE
+-- canonical lemma key so the reverse-lookup pipeline surfaces a single
+-- unified answer. Built by scripts/build_stem_bridge.py: data-gated (a pair is
+-- bridged only when the two spellings SHARE a surface form AND are equal under
+-- a whitelisted morphophonemic collapse), so unrelated homographs are never
+-- merged. See data/SOURCES.md for the rule and coverage.
+CREATE TABLE IF NOT EXISTS stem_bridge (
+    variant_slp1 TEXT NOT NULL PRIMARY KEY,
+    canonical_slp1 TEXT NOT NULL,
+    rule TEXT
+);
+CREATE INDEX IF NOT EXISTS stem_bridge_canonical ON stem_bridge(canonical_slp1);
 """
 
 
@@ -141,6 +169,17 @@ def connect():
     if "category" not in cols:
         con.execute("ALTER TABLE forms ADD COLUMN category TEXT")
         con.commit()
+    # K2a (H181) migration: verb columns on `inflections` (nullable, so
+    # pre-K2a nominal rows keep working; `--stage inflections` repopulates
+    # both nominals and verbs). ALTER can't widen the PRIMARY KEY of an
+    # existing table, but verb rows carry NULL gcase (NULLs never collide in a
+    # SQLite unique index) and are Python-deduped in build_inflections, so the
+    # old PK stays correct; a fresh DB gets the wider PK from SCHEMA above.
+    icols = {row[1] for row in con.execute("PRAGMA table_info(inflections)")}
+    for c in ("person", "tense", "voice"):
+        if c not in icols:
+            con.execute(f"ALTER TABLE inflections ADD COLUMN {c} TEXT")
+    con.commit()
     # P3 migration: evidence-layer columns on lemmas (band, first_era,
     # example_*) -- see scripts/build_evidence.py ensure_columns(), called
     # again at --stage evidence time; done here too so a pre-existing DB
@@ -200,7 +239,7 @@ STAGES = {"lemmas": build_lemmas}
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--stage", choices=list(STAGES) + ["entries", "forms", "evidence", "inflections"], default=None)
+    ap.add_argument("--stage", choices=list(STAGES) + ["entries", "forms", "evidence", "inflections", "stem_bridge"], default=None)
     ap.add_argument("--dicts", default="mw,pwg,ap90")
     args = ap.parse_args()
 
@@ -219,6 +258,11 @@ def main():
         # machine) -- not part of the default no-flag build.
         from build_inflections import build_inflections  # noqa: E402
         build_inflections(con)
+    if args.stage == "stem_bridge":
+        # K2a (H181): stem-normalization crosswalk between `inflections` and
+        # `forms`. Requires both to be populated first.
+        from build_stem_bridge import build_stem_bridge  # noqa: E402
+        build_stem_bridge(con)
     if args.stage in (None, "evidence"):
         # P3 evidence layer: runs after lemmas + forms are populated (band
         # needs lemmas.rank_all; examples need the forms.form_slp1->lemma_slp1
