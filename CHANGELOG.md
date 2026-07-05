@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-07-05
+
 ### Added
 - **P4 Wave K2a** (H181) — reverse-lookup query pipeline, verb-form ingest,
   and the stem-normalization bridge. Executor: Opus 4.8 (`claude-opus-4-8`).
