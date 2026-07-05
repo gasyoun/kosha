@@ -82,11 +82,12 @@ def test_analyze_indeclinable_has_null_case_number():
     assert analyses[0]["number"] is None
 
 
-def test_analyze_verb_form_out_of_scope_returns_empty():
-    """K1 scope is nominals only (verb pipeline blocked upstream in
-    MWinflect -- see scripts/build_inflections.py docstring). A verb form
-    must not error, just come back empty like any other miss."""
+def test_analyze_verb_form_now_in_scope():
+    """K2a (H181) ingested verbs, so Bavati (3sg pres of BU) now resolves --
+    superseding K1's out-of-scope behavior. Full coverage lives in
+    tests/test_reverse_lookup.py; this just guards that the K1 endpoint still
+    surfaces the verb parse alongside any nominal homographs."""
     r = client.get("/api/v1/forms/Bavati/analyze?in=slp1")  # 3sg pres. of BU, a verb form
     assert r.status_code == 200
     analyses = r.json()["results"][0]["analyses"]
-    assert analyses == [] or all(a["model"] != "verb" for a in analyses)
+    assert any(a["lemma_slp1"] == "BU" and a["model"] == "v_1" for a in analyses)

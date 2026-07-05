@@ -14,6 +14,40 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **P4 Wave K2a** (H181) — reverse-lookup query pipeline, verb-form ingest,
+  and the stem-normalization bridge. Executor: Opus 4.8 (`claude-opus-4-8`).
+  - **Reverse-lookup cascade** ([`app/reverse_lookup.py`](https://github.com/gasyoun/kosha/blob/main/app/reverse_lookup.py))
+    behind `GET /api/v1/forms/{form}/analyze`: `inflections` exact hit →
+    `forms` witness → **vidyut-cheda segmentation** of a sandhied/compound
+    string, each stage tagged with a `resolved_by` provenance field
+    (`inflections`/`forms`/`segmentation`/`null`). Segmentation
+    ([`app/segmenter.py`](https://github.com/gasyoun/kosha/blob/main/app/segmenter.py))
+    runs vidyut 0.4.0 as a **local library over vendored data**
+    (`data/vidyut/`, gitignored); no live third-party call at build or query
+    (RISKS.md R12), and it degrades to an honest miss (`segmentation_available:
+    false`) when the data isn't vendored.
+  - **Verb conjugations ingested** — the upstream MWinflect Python-2 syntax
+    bug in `verbs/pysanskritv2/inputs/clean.py` (parenthesized-tuple lambda
+    parameter) that blocked `verbs/redo.sh` in K1 is fixed and prepared as an
+    on-its-merits upstream PR. [`scripts/build_inflections.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_inflections.py)
+    now loads present-system conjugations (pre/ipf/ipv/opt × active/middle/
+    passive) into `inflections` (**+67,140** rows; total 6,916,522) with new
+    `person`/`tense`/`voice` columns (NULL for nominals). So `Bavati` now
+    resolves as 3sg present of `BU`.
+  - **Stem-normalization bridge** ([`scripts/build_stem_bridge.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_stem_bridge.py)
+    → `stem_bridge` table, `--stage stem_bridge`) maps strong/weak stem-spelling
+    variants across `inflections` (`Bagavat`) and `forms` (`Bagavant`) to one
+    canonical lemma key. Narrow, data-gated rule (nt→t / drop-final-n, only
+    when the two spellings share a surface form) — 380 mappings; the named exit
+    case `Bagavant → Bagavat` unifies to one lemma.
+  - Tests: new [`tests/test_reverse_lookup.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_reverse_lookup.py)
+    (cascade, verb ingest, bridge, segmentation + graceful degradation); full
+    suite **161 passed**. Documented in
+    [`data/SOURCES.md`](https://github.com/gasyoun/kosha/blob/main/data/SOURCES.md)
+    (incl. the ṇatva caveat and the honest `dharmakSetre`-resolves-at-stage-1
+    deviation from the brief's assumption).
+
 ## [0.7.0] - 2026-07-03
 
 Phase 3 (evidence layer) + Phase 4 Wave K1 (inflection data ingest), landed
