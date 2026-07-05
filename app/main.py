@@ -26,6 +26,7 @@ from transliterate import to_slp1_auto, from_slp1_out  # noqa: E402
 from versions import parse_sense_id, has_archive, resolve_sense  # noqa: E402
 from cite import cite_object  # noqa: E402
 from evidence import build_evidence  # noqa: E402
+from reverse_lookup import analyze as reverse_analyze  # noqa: E402
 
 load_dotenv()
 
@@ -151,34 +152,31 @@ def get_form(form: str, in_: str = Query("auto", alias="in"),
 @app.get("/api/v1/forms/{form}/analyze")
 def analyze_form(form: str, in_: str = Query("auto", alias="in"),
                   con: sqlite3.Connection = Depends(get_db)):
-    """P4 Wave K1 (ROADMAP_INFLECT_2026_2027.md D3): grammatical analysis of
-    an inflected form -- case/number/gender for nominals -- sourced verbatim
-    from the Cologne csl-inflect tool's own generated tables (MWinflect
-    nominals/pysanskritv2/tables/calc_tables.txt, ingested by
-    scripts/build_inflections.py into the `inflections` sidecar). Not the
-    kosha `forms` table (D3 lemma-only sidecar, DCS/vidyut/heritage sourced) --
-    this is the Cologne engine specifically, and returns the full analysis,
-    not just the lemma. A form is often genuinely ambiguous in Sanskrit
-    (e.g. dharmakSetre is loc-sg of both the m_a and n_a stems, and also
-    nom/acc/voc-du of the n_a stem) -- every parse is returned, not just one.
-    Verb conjugations are out of scope for K1 (see build_inflections.py
-    module docstring for the upstream MWinflect verbs/ pipeline blocker) --
-    a verb form here returns an empty `analyses` list, same shape as a miss.
+    """P4 Wave K2a (H181): reverse-lookup query pipeline over an arbitrary
+    surface form. A honest cascade that reports which stage answered via
+    `resolved_by`:
+
+      1. `inflections` exact hit -- Cologne csl-inflect, case/number/person-
+         labeled (nominals AND, since K2a, verbs). Full grammatical parse(s);
+         a form genuinely ambiguous in Sanskrit (dharmakSetre = loc-sg of both
+         the m_a and n_a stems, plus nom/acc/voc-du of n_a) returns every
+         parse, not one. Verb forms (Bavati = 3sg pre of BU) now resolve here.
+      2. miss -> `forms` exact hit -- DCS/vidyut/heritage lemma witness
+         (lemma-only), returned under `forms_witnesses`.
+      3. miss -> vidyut-cheda segmentation (app/segmenter.py): split a
+         sandhied/compound string into padas and re-resolve each through 1-2,
+         returned under `segments`. Local vendored data only (RISKS.md R12); if
+         that data is absent, `segmentation_available` is false and the form is
+         an honest miss rather than an error.
+
+    Stem spellings that differ between `inflections` (Bagavat) and `forms`
+    (Bagavant) are unified via the `stem_bridge` crosswalk -- every result
+    carries `canonical_slp1`, and the top-level `lemmas` list has ONE entry per
+    canonical lemma with `has_entry` (is it a dictionary headword?).
     """
     slp1_form = to_slp1_auto(form, in_)
-    rows = con.execute(
-        "SELECT lemma_slp1, model, gender, gcase, number, refs, source "
-        "FROM inflections WHERE form_slp1=? ORDER BY lemma_slp1, model, gcase, number",
-        (slp1_form,),
-    ).fetchall()
-    analyses = [{
-        "lemma_slp1": r["lemma_slp1"], "lemma_iast": from_slp1_out(r["lemma_slp1"], "iast"),
-        "model": r["model"], "gender": r["gender"], "case": r["gcase"], "number": r["number"],
-        "refs": r["refs"], "source": r["source"],
-    } for r in rows]
-    if not analyses:
-        return envelope(con, {"form": form, "in": in_}, [{"analyses": [], "suggestions": []}])
-    return envelope(con, {"form": form, "in": in_}, [{"analyses": analyses}])
+    result = reverse_analyze(con, slp1_form)
+    return envelope(con, {"form": form, "in": in_, "form_slp1": slp1_form}, [result])
 
 
 @app.get("/api/v1/search")

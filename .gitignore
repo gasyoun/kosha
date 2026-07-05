@@ -6,6 +6,11 @@ __pycache__/
 data/raw/
 data/raw_sqlite/
 data/releases/
+# vidyut-cheda linguistic data (P4 K2a segmentation fallback) — vendored once
+# via `python -c "import vidyut; vidyut.download_data('data/vidyut')"`, ~sizeable
+# binary model + FSTs, regenerable; never committed (RISKS.md R12: local data,
+# not a live call). Pointed at by KOSHA_VIDYUT_DATA.
+data/vidyut/
 # P2 static-cache generator output (scripts/build_static_cache.py) — regenerable
 # from kosha.db; deployed to Pages by MG (A3), never committed in-repo.
 .pytest_cache/
