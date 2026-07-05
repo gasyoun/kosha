@@ -3,10 +3,12 @@
   import ParadigmTable from './components/ParadigmTable.svelte';
   import ReverseAnalyze from './components/ReverseAnalyze.svelte';
   import EntryView from './components/EntryView.svelte';
+  import History from './components/History.svelte';
+  import Stats from './components/Stats.svelte';
   import { getParadigm, API } from './lib/datasource.js';
   import { fromSlp1Out } from './lib/translit.js';
 
-  let mode = $state('forward');      // 'forward' | 'reverse'
+  let mode = $state('forward');      // 'forward' | 'reverse' | 'history' | 'stats'
   let out = $state('deva');          // Devanagari-default output (K2b-4)
   let forwardLemma = $state('');
   let paradigm = $state(null);
@@ -30,6 +32,7 @@
 
   function showEntry(slp1) { entryLemma = slp1; }
   function showForms(slp1) { mode = 'forward'; entryLemma = ''; loadForward(slp1); }
+  function selectFromHistory(slp1) { mode = 'forward'; entryLemma = ''; loadForward(slp1); }
 </script>
 
 <main>
@@ -46,6 +49,10 @@
   <nav class="tabs">
     <button class:active={mode === 'forward'} onclick={() => (mode = 'forward')}>Stem → paradigm</button>
     <button class:active={mode === 'reverse'} onclick={() => (mode = 'reverse')}>Analyse a form</button>
+    {#if API}
+      <button class:active={mode === 'history'} onclick={() => (mode = 'history')}>History</button>
+      <button class:active={mode === 'stats'} onclick={() => (mode = 'stats')}>Stats</button>
+    {/if}
     <span class="spacer"></span>
     <div class="script-toggle" role="radiogroup" aria-label="Output script">
       {#each [['deva', 'देव'], ['iast', 'IAST'], ['slp1', 'SLP1']] as [v, label]}
@@ -73,9 +80,17 @@
         {/each}
       {/if}
     </section>
-  {:else}
+  {:else if mode === 'reverse'}
     <section>
       <ReverseAnalyze onlemma={showEntry} {out} />
+    </section>
+  {:else if mode === 'history'}
+    <section>
+      <History {out} onselect={selectFromHistory} />
+    </section>
+  {:else}
+    <section>
+      <Stats {out} />
     </section>
   {/if}
 
