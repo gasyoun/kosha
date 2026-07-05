@@ -1,6 +1,6 @@
 # ROADMAP_INFLECT — drastic improvement of the Cologne inflected-form tool
 
-_Created: 03-07-2026 · Last updated: 03-07-2026_
+_Created: 03-07-2026 · Last updated: 05-07-2026_
 
 Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php)
 — and its drastically better successor inside kosha. Rulings elicited from MG
@@ -85,15 +85,31 @@ Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://
   included** — MWinflect's `verbs/` pipeline is blocked by an upstream
   Python-2-only syntax bug (`verbs/pysanskritv2/inputs/clean.py`); tracked as
   follow-up before/alongside K2. See `.ai_state.md` for the full build trace.
-- **Wave K2 — modern lookup UX + reverse lookup.** Devanagari/IAST input
-  with live transliteration, autocomplete against headwords, mobile layout,
-  clean paradigm tables with Devanagari default. Query pipeline per the
-  existing P4 plan: forms table → (miss) → segmentation fallback
-  (paste-anything). Exit test unchanged: `bhagavān` (form), `rāmeṇa`
-  (inflected), `dharmakṣetre` (sandhied) all resolve to entries.
-- **Wave K3 — dictionary integration.** Every stem links into the MW entry
-  display and back; entry view gains a "show all forms" control. Two silos
-  become one tool.
+- **Wave K2 — modern lookup UX + reverse lookup. ✅ done 05-07-2026.**
+  - **K2a — backend. ✅ done 05-07-2026 (Opus 4.8 `claude-opus-4-8`, H181).**
+    Reverse-lookup cascade (`inflections` → `forms` → vidyut-cheda
+    segmentation) behind `/api/v1/forms/{form}/analyze` with `resolved_by`
+    provenance; verb conjugations ingested (the K1 upstream Py-2 blocker fixed +
+    upstream-PR'd); `stem_bridge` reconciliation (`Bagavant`→`Bagavat`).
+  - **K2b — frontend. ✅ done 05-07-2026 (Opus 4.8 `claude-opus-4-8`, H183).**
+    Svelte 5 + Vite app ([`ui/`](https://github.com/gasyoun/kosha/tree/main/ui))
+    built into [`docs/inflect/`](https://github.com/gasyoun/kosha/tree/main/docs/inflect),
+    served at `gasyoun.github.io/kosha/inflect/`. Auto-detect input
+    (Devanagari/IAST/SLP1 → SLP1) with live transliteration, autocomplete off
+    the shared `lemmas.json` (prefix range-seek), Devanagari-default paradigm
+    tables with an IAST/SLP1 toggle, paste-anything reverse box, mobile layout
+    (in-container grid scroll). Data backend is **both** (K2b-2): static
+    pre-generated JSON by default (works with no live server), live API when
+    `window.KOSHA_API` is set. New `GET /api/v1/paradigm/{lemma}` +
+    [`scripts/build_paradigms.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_paradigms.py)
+    (parity-locked static shards). Exit forms `bhagavān` / `rāmeṇa` /
+    `dharmakṣetre` all resolve with visible provenance; `tattvamasi` resolves
+    via the live-API segmentation path.
+- **Wave K3 — dictionary integration. ✅ folded into K2b per MG 05-07-2026.**
+  The dictionary cross-links K3 owned — every stem/lemma links into its in-app
+  MW/PWG/AP90 entry, and the entry view gained a "show all forms" control back
+  into the paradigm UI — were delivered as part of K2b (H183 ruling K2b-3), not
+  as a separate wave. K3 owes nothing further.
 
 ### Evolution track
 

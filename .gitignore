@@ -14,6 +14,13 @@ data/vidyut/
 # P2 static-cache generator output (scripts/build_static_cache.py) — regenerable
 # from kosha.db; deployed to Pages by MG (A3), never committed in-repo.
 .pytest_cache/
+# K2b inflection UI (ui/) — build toolchain deps + local vitest artifacts.
+# The BUILT app (docs/inflect/) and the curated demo data shards ARE committed
+# (they are the Pages deploy input, like docs/cards/); the full-set data from
+# `build_paradigms.py --all` is deployed by MG out-of-band (A3), not committed.
+ui/node_modules/
+ui/dist/
+ui/coverage/
 # D5 measurement run outputs (machine-specific, regenerable via scripts/measure_d5.py)
 data/d5_run*.log
 data/d5_profile.log

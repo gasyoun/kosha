@@ -1,6 +1,6 @@
 # kosha — GitHub Pages static tier
 
-_Created: 03-07-2026 · Last updated: 03-07-2026_
+_Created: 03-07-2026 · Last updated: 05-07-2026_
 
 This directory is the **static tier** served by GitHub Pages (Phase 2 public
 alpha). Everything under it is **generated from `kosha.db`** by
@@ -24,6 +24,18 @@ Sized per the D5-3 decision
 The **full 222,179-lemma card set** (every entry-bearing lemma, ~682 MB) is not
 part of the Pages tier — it ships as a **release-asset tarball** (`--full-tarball`)
 for offline/mirror rebuildability (R1c/R4).
+
+### Inflection UI tier (P4 Wave K2b, `inflect/`)
+
+[`docs/inflect/`](https://github.com/gasyoun/kosha/tree/main/docs/inflect) holds
+the built Svelte inflection-lookup app (served at `gasyoun.github.io/kosha/inflect/`)
+plus its `data/` shards. Source + build/generate instructions are in
+[`../ui/README.md`](https://github.com/gasyoun/kosha/blob/main/ui/README.md); the
+paradigm/reverse shards come from
+[`../scripts/build_paradigms.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_paradigms.py)
+(committed `--demo` set; full `--all` set deployed out-of-band like the cards, A3).
+The app reuses this tier's `js/data/lemmas.json` for autocomplete and `cards/`
+for entry cross-links.
 
 Each `cards/<token>.json` is **byte-identical** to what
 `GET /api/v1/lemma/<slp1>?in=slp1` returns (locked by
