@@ -14,6 +14,35 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.11.0] - 2026-07-05
+
+### Added
+- **Search history + analytics (Phases A/B/C-frontend).** Executor: Sonnet 5
+  (`claude-sonnet-5`).
+  - Backend (Phases A/B): anonymous per-visitor search history
+    ([`app/history.py`](https://github.com/gasyoun/kosha/blob/main/app/history.py),
+    [`app/history_db.py`](https://github.com/gasyoun/kosha/blob/main/app/history_db.py),
+    [`app/identity.py`](https://github.com/gasyoun/kosha/blob/main/app/identity.py))
+    via a `kosha_anon_id` cookie, no login required; `GET`/`DELETE
+    /api/v1/history`; public credential-free aggregate analytics
+    (`GET /api/v1/stats/summary|timeseries|top`); a magic-link login stub
+    (`/api/v1/auth/request-link|verify`) for cross-device history sync,
+    email provider not yet chosen (@DECIDE). Writable history SQLite store
+    kept separate from the read-only dictionary DB so the monthly dict
+    rebuild never touches it. 13 new tests.
+  - Frontend (Phase C): `History.svelte` (recent searches, clear button,
+    magic-link request form) and `Stats.svelte` (summary cards, Chart.js
+    daily-volume chart, top-terms table) added to the K2b inflection UI's
+    tab bar, both hidden when no live API is configured (no static fallback
+    exists for personal/live-aggregate data). First use of **Chart.js** in
+    `ui/`. 4 new component tests.
+
+### Notes
+- Two items remain, both tracked in
+  [Uprava/GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md):
+  MG `@DECIDE` (email provider + production `CORS_ORIGINS`, both deploy-time
+  A3 steps) and an agent-doable `search_events` retention-purge script.
+
 ## [0.10.0] - 2026-07-05
 
 ### Added
