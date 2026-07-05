@@ -25,3 +25,6 @@ ui/coverage/
 data/d5_run*.log
 data/d5_profile.log
 data/d5_measurements.json
+# E1 dual-engine comparison outputs (regenerable via scripts/compare_vidyut_cologne.py);
+# the narrative lives in E1_DIVERGENCE_REPORT.md, the raw stats are regenerable.
+data/e1/
