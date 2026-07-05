@@ -27,6 +27,7 @@ from versions import parse_sense_id, has_archive, resolve_sense  # noqa: E402
 from cite import cite_object  # noqa: E402
 from evidence import build_evidence  # noqa: E402
 from reverse_lookup import analyze as reverse_analyze  # noqa: E402
+from paradigm import build_paradigm  # noqa: E402
 
 load_dotenv()
 
@@ -177,6 +178,32 @@ def analyze_form(form: str, in_: str = Query("auto", alias="in"),
     slp1_form = to_slp1_auto(form, in_)
     result = reverse_analyze(con, slp1_form)
     return envelope(con, {"form": form, "in": in_, "form_slp1": slp1_form}, [result])
+
+
+@app.get("/api/v1/paradigm/{lemma}")
+def get_paradigm(lemma: str, in_: str = Query("auto", alias="in"),
+                 con: sqlite3.Connection = Depends(get_db)):
+    """P4 Wave K2b (H183): forward stem->paradigm lookup. Returns every model's
+    full case x number (nominal) or voice/tense/person x number (verb) grid for
+    a stem, grouped from the `inflections` table. Same JSON shape the static
+    tier emits (scripts/build_paradigms.py) -- parity locked by
+    tests/test_paradigms.py. Cells carry SLP1 forms; the caller renders script.
+
+    A stem spelled as an `inflections` variant (Bagavant) is folded to its
+    canonical stem (Bagavat) via `stem_bridge` before lookup, so either spelling
+    lands one paradigm."""
+    slp1_lemma = to_slp1_auto(lemma, in_)
+    bridged = con.execute(
+        "SELECT canonical_slp1 FROM stem_bridge WHERE variant_slp1=?", (slp1_lemma,)
+    ).fetchone()
+    canonical = bridged["canonical_slp1"] if bridged else slp1_lemma
+    result = build_paradigm(con, canonical)
+    if result is None:
+        error("paradigm_not_found",
+              f"no inflection paradigm for '{lemma}' (slp1={canonical})", 404,
+              suggestions=["the stem may be a dictionary headword with no ingested "
+                           "inflection table (Cologne csl-inflect coverage is partial)"])
+    return envelope(con, {"lemma": lemma, "in": in_, "lemma_slp1": canonical}, [result])
 
 
 @app.get("/api/v1/search")

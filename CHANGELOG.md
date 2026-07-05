@@ -14,6 +14,52 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-07-05
+
+### Added
+- **P4 Wave K2b** (H183) — the translator-first Sanskrit **inflection lookup
+  UI**, the frontend half of the drastically-improved Cologne inflection tool.
+  Executor: Opus 4.8 (`claude-opus-4-8`).
+  - **Svelte 5 + Vite app** ([`ui/`](https://github.com/gasyoun/kosha/tree/main/ui))
+    building into [`docs/inflect/`](https://github.com/gasyoun/kosha/tree/main/docs/inflect),
+    served by the existing Pages deploy at `gasyoun.github.io/kosha/inflect/`
+    (62 kB JS bundle). Four features (H183 K2b-3, roadmap Wave K3 folded in):
+    **stem → paradigm** (auto-detect input → SLP1, Devanagari-default
+    case×number / verb grids with an IAST/SLP1 toggle), **paste-anything
+    reverse analysis** (wraps `/analyze`, shows `resolved_by` provenance),
+    **autocomplete** (prefix range-seek over the shared 323k `lemmas.json`,
+    live transliteration), and **dictionary cross-links** (every stem links to
+    its in-app MW/PWG/AP90 entry; the entry has a "show all forms" control back
+    to the paradigm — two silos, one tool).
+  - **Data backend is "both"** (K2b-2, [`ui/src/lib/datasource.js`](https://github.com/gasyoun/kosha/blob/main/ui/src/lib/datasource.js)):
+    static pre-generated JSON by default (works with **no live server** —
+    RISKS.md R1/R5/R12-clean), and the live FastAPI `/api/v1/…` when
+    `window.KOSHA_API` is set. Stage-3 vidyut segmentation degrades honestly to
+    `segmentation_available:false` in the static tier (the live-API path
+    resolves it).
+  - **New `GET /api/v1/paradigm/{lemma}`** endpoint + shared
+    [`app/paradigm.py`](https://github.com/gasyoun/kosha/blob/main/app/paradigm.py)
+    grouping module, and
+    [`scripts/build_paradigms.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_paradigms.py)
+    emitting parity-locked static paradigm + reverse-index shards
+    (`--demo` committed, `--all` deployed by MG out-of-band per A3). Bridged
+    stems fold (`Bagavant`→`Bagavat`).
+  - **Auto-detect input** (Devanagari/IAST/SLP1) via the vendored **sanskrit-util**
+    JS package (SHARED_CODE.md family #1 — no new transcoder); Devanagari
+    rendering uses `slp1_to_devanagari` (composes matras/conjuncts) not the
+    naive `iast_to_devanagari`.
+  - **Tests:** 6 new pytest (`tests/test_paradigms.py`, endpoint + static-shard
+    byte-parity) → **167 passed**; 17 vitest (translit auto-detect, token
+    parity, prefix seek, static data-path integration, full App e2e).
+  - **Data caveat surfaced verbatim** (D3): the Cologne m_a ṇatva bug
+    (MWinflect#6) is shown as-is, not silently "fixed" in the frontend.
+
+### Notes
+- Roadmap Wave **K3 folded into K2b** per MG 05-07-2026 — the inflection roadmap
+  now owes only Wave E1 (dual-engine vidyut comparison).
+- Pages tier re-measured: `docs/inflect/` = 2.0 MB (app + committed demo data);
+  total tier ~404 MB, ~60% headroom under the 1 GB soft limit unchanged.
+
 ## [0.8.0] - 2026-07-05
 
 ### Added
