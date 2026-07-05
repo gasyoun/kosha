@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 from dotenv import load_dotenv
-from fastapi import Depends, FastAPI, HTTPException, Query
+from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException, Query, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 
 sys.stdout.reconfigure(encoding="utf-8")
@@ -28,6 +28,10 @@ from cite import cite_object  # noqa: E402
 from evidence import build_evidence  # noqa: E402
 from reverse_lookup import analyze as reverse_analyze  # noqa: E402
 from paradigm import build_paradigm  # noqa: E402
+from history_db import log_search_event, open_connection as open_history_db, upsert_visitor  # noqa: E402
+from identity import hash_ip, resolve_anon_id  # noqa: E402
+from history import router as history_router  # noqa: E402
+from datetime import datetime, timezone  # noqa: E402
 
 load_dotenv()
 
@@ -48,14 +52,21 @@ except json.JSONDecodeError:
     origins = ["*"]
 
 # NB: allow_credentials must stay False while origins may be ["*"] —
-# Starlette silently drops the wildcard otherwise.
+# Starlette silently drops the wildcard otherwise. Cookie-scoped personal
+# history (/api/v1/history, /api/v1/auth/*) needs credentialed CORS, so a
+# production deployment MUST set CORS_ORIGINS to an explicit origin list
+# (e.g. ["https://samskrtam.ru", "https://gasyoun.github.io"]) in .env — the
+# wildcard default only works same-origin, credential-free (public
+# /api/v1/stats/* endpoints still work fine under it).
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    allow_credentials=False,
-    allow_methods=["GET"],
+    allow_credentials=origins != ["*"],
+    allow_methods=["GET", "POST", "DELETE"],
     allow_headers=["*"],
 )
+
+app.include_router(history_router)
 
 
 def envelope(con, query: dict, results):
@@ -206,8 +217,23 @@ def get_paradigm(lemma: str, in_: str = Query("auto", alias="in"),
     return envelope(con, {"lemma": lemma, "in": in_, "lemma_slp1": canonical}, [result])
 
 
+def _log_search_background(anon_id: str, ts: str, query_raw: str, query_slp1: str,
+                            mode: str, results_total: int, ip_hash: str | None):
+    # Opens its OWN connection rather than reusing a request-scoped Depends()
+    # connection: FastAPI tears down `Depends(...)` resources before
+    # BackgroundTasks run, so a request-scoped connection would already be
+    # closed by the time this executes.
+    hcon = open_history_db()
+    try:
+        upsert_visitor(hcon, anon_id, ts)
+        log_search_event(hcon, anon_id, ts, query_raw, query_slp1, mode, results_total, ip_hash)
+    finally:
+        hcon.close()
+
+
 @app.get("/api/v1/search")
-def search(q: str, mode: str = "prefix", limit: int = 50, offset: int = 0,
+def search(q: str, request: Request, response: Response, background_tasks: BackgroundTasks,
+           mode: str = "prefix", limit: int = 50, offset: int = 0,
            con: sqlite3.Connection = Depends(get_db)):
     if limit > 200:
         error("bad_request", "limit must be <= 200", 400)
@@ -239,6 +265,13 @@ def search(q: str, mode: str = "prefix", limit: int = 50, offset: int = 0,
     ).fetchall()
     results = [{"slp1": r["slp1"], "iast": r["iast"], "n_dicts": r["n_dicts"], "dicts": r["dicts"],
                 "rank_all": r["rank_all"]} for r in rows]
+    # Log after results are computed, via BackgroundTasks so this never adds
+    # latency to the D5-1 search SLO (KOSHA_DECISIONS_NEEDED.md D5-1).
+    anon_id = resolve_anon_id(request, response)
+    background_tasks.add_task(
+        _log_search_background, anon_id, datetime.now(timezone.utc).isoformat(),
+        q, slp1_q, mode, total, hash_ip(request),
+    )
     return {"data_version": data_version(con),
             "query": {"q": q, "mode": mode, "limit": limit, "offset": offset, "total": total},
             "results": results}
