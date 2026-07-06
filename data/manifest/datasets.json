@@ -288,6 +288,23 @@
         "Nagari script-teaching order"
       ],
       "notes": "Already tracked+public; listed for discovery."
+    },
+    {
+      "id": "varga-series-diachrony",
+      "title": "Consonant series (varga) by DCS period + Cramér's V",
+      "tier": "public",
+      "in_release": null,
+      "format": "csv",
+      "rows": 5,
+      "size_bytes": null,
+      "keying": "5 vargas × 5 DCS time-slots; column shares + counts + Δ(I→V)",
+      "source_repo": "https://github.com/gasyoun/VisualDCS",
+      "source_path": "derived-data/Fonetika/varga-series-diachrony/ (tracked)",
+      "builder": "aggregate_vargas.py over regen-2026/varna_freq.csv (deterministic)",
+      "consumers": [
+        "GasunsDhatu 2026 §2.6 (Table 5 replacement, L7 fix)"
+      ],
+      "notes": "Aggregation of dcs-grapheme-frequency; Cramér's V=0.037 → series composition near-stable across ~2kyr; corrects the 2014 П9 claim. Includes slot_era_map.csv."
     }
   ]
 }
