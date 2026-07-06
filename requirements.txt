@@ -2,7 +2,7 @@ fastapi>=0.115
 uvicorn[standard]>=0.50.1
 pydantic>=2.10
 python-dotenv>=1.2.2
-pytest>=8.0
+pytest>=9.1.1
 httpx>=0.28.1
 
 # Docs site (ZettelkastenWiki Wave-3 pilot, built by scripts/build_docs_site.py)
