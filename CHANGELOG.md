@@ -14,6 +14,25 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.12.0] - 2026-07-06
+
+### Added
+- **Sanskrit data-hub P-D0/P-D1 (kosha becomes the org data-hub).** Executor: Fable 5
+  (`claude-fable-5`), MG rulings 06-07-2026.
+  - [`DATA_HUB_ROADMAP.md`](https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md)
+    — 8 locked decisions (D-HUB-1…8), two-tier architecture (public releases /
+    restricted private backups), phases P-D0–P-D6.
+  - [`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
+    — machine-readable manifest of 15 canonical derived datasets across the org
+    (7 public released, 5 restricted, 3 already-public listed for discovery), with
+    keying, rights tier, builder, consumers per row + the agent contract
+    ([`data/manifest/README.md`](https://github.com/gasyoun/kosha/blob/main/data/manifest/README.md)).
+  - First public data release
+    [`data-v0.1.0`](https://github.com/gasyoun/kosha/releases/tag/data-v0.1.0):
+    mw_roots · mw_etymology · dcs_cdsl_xref · union_headwords ·
+    mw_heritage_crosswalk · lemma_frequency · headword_index (~29 MB, 718k rows,
+    all already public in source repos; CC BY-SA 4.0).
+
 ## [0.11.0] - 2026-07-05
 
 ### Added
