@@ -13,6 +13,7 @@
       "title": "MW verbal-root inventory",
       "tier": "public",
       "in_release": "data-v0.1.0",
+      "release_asset": "mw_roots.tsv",
       "format": "tsv",
       "rows": 2113,
       "size_bytes": 77094,
@@ -20,7 +21,11 @@
       "source_repo": "https://github.com/sanskrit-lexicon/csl-orig",
       "source_path": "v02/mw/mw_roots.tsv",
       "builder": "server-regenerated upstream (Cologne)",
-      "consumers": ["WhitneyRoots", "csl-atlas", "RussianTranslation verb worklist"],
+      "consumers": [
+        "WhitneyRoots",
+        "csl-atlas",
+        "RussianTranslation verb worklist"
+      ],
       "notes": "3 repos independently re-scanned mw.txt before this existed (got 750/809/1163) — consume this, never re-scan."
     },
     {
@@ -28,6 +33,7 @@
       "title": "Headword→root derivation table (Pāṇinian, 10 dicts)",
       "tier": "public",
       "in_release": "data-v0.1.0",
+      "release_asset": "mw_etymology.tsv",
       "format": "tsv",
       "rows": 9377,
       "size_bytes": 1602340,
@@ -35,7 +41,10 @@
       "source_repo": "https://github.com/sanskrit-lexicon/csl-orig",
       "source_path": "v02/mw/mw_etymology.tsv",
       "builder": "server-regenerated upstream (Cologne)",
-      "consumers": ["WhitneyRoots", "csl-atlas"],
+      "consumers": [
+        "WhitneyRoots",
+        "csl-atlas"
+      ],
       "notes": "Derivations, distinct from the root inventory (mw-roots)."
     },
     {
@@ -43,6 +52,7 @@
       "title": "DCS lemma ↔ CDSL headword crosswalk",
       "tier": "public",
       "in_release": "data-v0.1.0",
+      "release_asset": "dcs_cdsl_xref.tsv",
       "format": "tsv",
       "rows": 15902,
       "size_bytes": 633294,
@@ -50,7 +60,11 @@
       "source_repo": "https://github.com/sanskrit-lexicon/csl-apidev",
       "source_path": "simple-search/dcs_xref/dcs_cdsl_xref.tsv",
       "builder": "csl-apidev dcs_xref pipeline",
-      "consumers": ["simple-search", "csl-atlas", "VisualDCS"],
+      "consumers": [
+        "simple-search",
+        "csl-atlas",
+        "VisualDCS"
+      ],
       "notes": "Reusable LOD linkset — never re-derive DCS↔CDSL joins."
     },
     {
@@ -58,6 +72,7 @@
       "title": "Cross-dictionary union headword index",
       "tier": "public",
       "in_release": "data-v0.1.0",
+      "release_asset": "union_headwords.tsv",
       "format": "tsv",
       "rows": 323425,
       "size_bytes": 12397253,
@@ -65,7 +80,11 @@
       "source_repo": "https://github.com/gasyoun/SanskritLexicography",
       "source_path": "HeadwordLists/union/union_headwords.tsv",
       "builder": "HeadwordLists union build",
-      "consumers": ["kosha crosswalk", "SanskritSpellCheck (union=N tags)", "PWG→EN pilot (94,753 subset)"],
+      "consumers": [
+        "kosha crosswalk",
+        "SanskritSpellCheck (union=N tags)",
+        "PWG→EN pilot (94,753 subset)"
+      ],
       "notes": "THE headword master — 323k headwords across all dicts."
     },
     {
@@ -73,6 +92,7 @@
       "title": "MW ↔ Heritage (INRIA) entry-level crosswalk",
       "tier": "public",
       "in_release": "data-v0.1.0",
+      "release_asset": "mw_heritage_crosswalk.tsv",
       "format": "tsv",
       "rows": 185803,
       "size_bytes": 3263954,
@@ -80,7 +100,10 @@
       "source_repo": "https://github.com/gasyoun/SanskritLexicography",
       "source_path": "HeadwordLists/mw_heritage_crosswalk.tsv",
       "builder": "H099 Heritage mirror pipeline",
-      "consumers": ["kosha ingest (queued)", "csl-atlas witness column (queued)"],
+      "consumers": [
+        "kosha ingest (queued)",
+        "csl-atlas witness column (queued)"
+      ],
       "notes": "Crosswalk itself is ours/publishable; the Heritage mirror data behind it is LGPLLR-pending (restricted tier)."
     },
     {
@@ -88,6 +111,7 @@
       "title": "DCS lemma frequency sidecar (whole-corpus + per-period)",
       "tier": "public",
       "in_release": "data-v0.1.0",
+      "release_asset": "lemma_frequency.tsv",
       "format": "tsv",
       "rows": 83277,
       "size_bytes": 4910744,
@@ -95,7 +119,10 @@
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "data/frequency/lemma_frequency.tsv",
       "builder": "kosha DCS M9 join against union_headwords",
-      "consumers": ["kosha evidence layer", "Nagari teaching order"],
+      "consumers": [
+        "kosha evidence layer",
+        "Nagari teaching order"
+      ],
       "notes": "LEFT-JOIN this — never re-derive frequency ordering. ⚠ upstream UD Tense=Past conflates aorist/perfect."
     },
     {
@@ -103,6 +130,7 @@
       "title": "Zaliznyak-style compact grammar-token index over all PWG",
       "tier": "public",
       "in_release": "data-v0.1.0",
+      "release_asset": "zaliznyak_grammar_index.tsv",
       "format": "tsv",
       "rows": 98639,
       "size_bytes": 6124345,
@@ -110,7 +138,11 @@
       "source_repo": "https://github.com/gasyoun/SanskritLexicography",
       "source_path": "RussianTranslation/src/headword_index.tsv",
       "builder": "RussianTranslation grammar-index pipeline",
-      "consumers": ["pwg_ru nominal layer", "kosha P4 grammar tokens", "gramdict mapping"],
+      "consumers": [
+        "pwg_ru nominal layer",
+        "kosha P4 grammar tokens",
+        "gramdict mapping"
+      ],
       "notes": "FAIR data package; paradigms generated via vidyut, never transcribe static tables."
     },
     {
@@ -125,7 +157,10 @@
       "source_repo": "https://github.com/gasyoun/SanskritLexicography",
       "source_path": "RussianTranslation/src/corpus_lexicon.jsonl (GITIGNORED — single copy on MG disk)",
       "builder": "RussianTranslation/src/build_corpus_lexicon.py",
-      "consumers": ["SanskritRussian glossary", "pwg_ru TM"],
+      "consumers": [
+        "SanskritRussian glossary",
+        "pwg_ru TM"
+      ],
       "notes": "RIGHTS: aligns PUBLISHED Russian translations — not publishable as-is. BACKUP GAP: registered asset existing in exactly one place. P-D2/H233."
     },
     {
@@ -140,7 +175,10 @@
       "source_repo": "https://github.com/gasyoun/SanskritRussian",
       "source_path": "bulk layers gitignored; ranked site data tracked",
       "builder": "SanskritRussian build over corpus-lexicon",
-      "consumers": ["live search site", "pwg_ru gates"],
+      "consumers": [
+        "live search site",
+        "pwg_ru gates"
+      ],
       "notes": "Derived from corpus-lexicon → same rights caveat for bulk layers. Site-served ranked subset is public."
     },
     {
@@ -155,7 +193,10 @@
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "data/db/kosha.db (GITIGNORED — regenerable via scripts/build_db.py chain, but hours of compute)",
       "builder": "scripts/build_db.py (crosswalk → entries → forms → db)",
-      "consumers": ["kosha API", "P2 static cache"],
+      "consumers": [
+        "kosha API",
+        "P2 static cache"
+      ],
       "notes": "Regenerable but expensive; backup = cheap insurance. Candidate single queryable DB for P-D5."
     },
     {
@@ -170,7 +211,11 @@
       "source_repo": "https://github.com/gasyoun/VisualDCS",
       "source_path": "src/DCS-data-2026/dcs_full.sqlite (GITIGNORED)",
       "builder": "src/DCS-data-2026/import_dcs_conllu.py (canonical CoNLL-U ingest)",
-      "consumers": ["VisualDCS dashboards", "kosha frequency", "akshara stats"],
+      "consumers": [
+        "VisualDCS dashboards",
+        "kosha frequency",
+        "akshara stats"
+      ],
       "notes": "DCS upstream is CC BY 4.0; regenerable from CoNLL-U but the ingest is the canonical one — 5 repos historically re-parsed. P-D2/H233."
     },
     {
@@ -185,7 +230,11 @@
       "source_repo": "https://github.com/gasyoun/SamudraManthanam",
       "source_path": "web/corpus.db (GITIGNORED)",
       "builder": "SamudraManthanam ingest",
-      "consumers": ["pwg_ru gate dicts", "mw_ru validation", "corpus-lexicon upstream"],
+      "consumers": [
+        "pwg_ru gate dicts",
+        "mw_ru validation",
+        "corpus-lexicon upstream"
+      ],
       "notes": "RIGHTS: contains published RU translations — restricted. Single-copy backup gap. P-D2/H233."
     },
     {
@@ -200,7 +249,10 @@
       "source_repo": "https://github.com/gasyoun/SanskritLexicography",
       "source_path": "sparse-cloned locally, gitignored (inventory: HeadwordLists/HERITAGE_MIRROR_INVENTORY.md)",
       "builder": "H099 sparse clone of darkone23/Heritage_Resources",
-      "consumers": ["mw-heritage-crosswalk", "HeadwordLists coverage studies"],
+      "consumers": [
+        "mw-heritage-crosswalk",
+        "HeadwordLists coverage studies"
+      ],
       "notes": "LGPLLR rights @DECIDE pending — restricted until ruled. Upstream mirror exists on GitHub, so no backup urgency."
     },
     {
@@ -215,7 +267,9 @@
       "source_repo": "https://github.com/gasyoun/SanskritLexicography",
       "source_path": "IndischeSprueche/data/indische_sprueche.jsonl (tracked — already downloadable)",
       "builder": "IndischeSprueche extraction",
-      "consumers": ["PWG <ls> citation links"],
+      "consumers": [
+        "PWG <ls> citation links"
+      ],
       "notes": "Already tracked+public in its repo; listed for discovery, not re-released."
     },
     {
@@ -230,7 +284,9 @@
       "source_repo": "https://github.com/gasyoun/VisualDCS",
       "source_path": "derived-data/Fonetika/regen-2026/ (tracked)",
       "builder": "regen-2026 scripts, legacy .xlsx cross-checked 19/20",
-      "consumers": ["Nagari script-teaching order"],
+      "consumers": [
+        "Nagari script-teaching order"
+      ],
       "notes": "Already tracked+public; listed for discovery."
     }
   ]
