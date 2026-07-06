@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.13.0] - 2026-07-06
+
 ### Added
 - **Sanskrit data-hub P-D3: public data + tools directory page.** Executor:
   Opus 4.8 (`claude-opus-4-8`), MG ruling D-HUB-7 (06-07-2026), handoff H236.
