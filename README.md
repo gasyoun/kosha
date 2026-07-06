@@ -1,6 +1,6 @@
 # Gasuns Sanskrit Dictionary
 
-_Created: 02-07-2026 · Last updated: 03-07-2026_
+_Created: 02-07-2026 · Last updated: 06-07-2026_
 
 > **Status: pre-alpha — API runs locally, nothing is deployed yet.** Phase 1
 > (data + API against real MW/PWG/AP90 data, 115/115 tests green) is complete;
@@ -25,6 +25,18 @@ name collision with Ambuda's `vidyut-kosha`. Naming and identity review:
 [POSITIONING.md](https://github.com/gasyoun/kosha/blob/main/POSITIONING.md) ·
 one-page distillation:
 [POSITIONING_SUMMARY.md](https://github.com/gasyoun/kosha/blob/main/POSITIONING_SUMMARY.md).
+
+**Sanskrit NLP data & tools directory** — the project's public entry point for
+Sanskrit computational linguistics: our openly-licensed derived datasets
+(downloadable) plus the external stacks it builds on, with what-each-does /
+how-to-call / license. Live at
+[gasyoun.github.io/kosha/directory](https://gasyoun.github.io/kosha/directory/),
+rendered by
+[scripts/build_directory.py](https://github.com/gasyoun/kosha/blob/main/scripts/build_directory.py)
+from
+[data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
++ [data/manifest/external_tools.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/external_tools.json)
+(the single sources — no facts hand-copied into the page).
 
 ## What it will do
 

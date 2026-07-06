@@ -34,7 +34,7 @@ CONFIG = SiteConfig(
     ),
     seo_title_suffix=" — Gasuns Sanskrit Dictionary",
     default_cta_primary=("Repository on GitHub", "https://github.com/gasyoun/kosha"),
-    default_cta_secondary=("Features Index", "https://gasyoun.github.io/kosha/features/"),
+    default_cta_secondary=("Data & tools directory", "https://gasyoun.github.io/kosha/directory/"),
     home_title="Gasuns Sanskrit Dictionary — project docs",
     home_description=(
         "Project documentation for the translator-first Sanskrit dictionary: "
@@ -42,6 +42,7 @@ CONFIG = SiteConfig(
     ),
     footer_extra_html=(
         '<a href="https://github.com/gasyoun/kosha">GitHub</a> · '
+        '<a href="https://gasyoun.github.io/kosha/directory/">Data &amp; tools directory</a> · '
         '<a href="https://gasyoun.github.io/kosha/features/">Features Index</a>'
     ),
 )

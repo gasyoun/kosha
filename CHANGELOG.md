@@ -14,6 +14,28 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **Sanskrit data-hub P-D3: public data + tools directory page.** Executor:
+  Opus 4.8 (`claude-opus-4-8`), MG ruling D-HUB-7 (06-07-2026), handoff H236.
+  - [`directory/index.html`](https://github.com/gasyoun/kosha/blob/main/directory/index.html)
+    (live at [gasyoun.github.io/kosha/directory](https://gasyoun.github.io/kosha/directory/))
+    — the first curated directory for Sanskrit computational linguistics: 9
+    public datasets (downloadable), 6 restricted (listed "on request"), and 8
+    external stacks (vidyut/Ambuda, Sanskrit Heritage/INRIA, Samsaadhanii/SCL,
+    DharmaMitra, DCS, VedaWeb, Cologne CDSL) with what-it-does / how-to-call /
+    license / our-relation.
+  - [`scripts/build_directory.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_directory.py)
+    renders it from [`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
+    + a new [`data/manifest/external_tools.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/external_tools.json)
+    (single sources — no facts hand-copied into HTML). Carries schema.org
+    `Dataset` JSON-LD per public asset on an Organization `@id` spine (SEO
+    playbook P0) — the lever for Google/Yandex Dataset Search indexing.
+  - `datasets.json` gained a `release_asset` field on the 7 released rows so the
+    page can build 1-click download URLs from the manifest.
+  - Test invariants: [`tests/test_directory.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_directory.py)
+    (one Dataset node per public row, `@id` spine, no restricted-download or
+    gitignored-path leak). Wired from the README + docs-site landing footer.
+
 ## [0.12.0] - 2026-07-06
 
 ### Added

@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
+<meta name="description" content="9 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
+<meta property="og:description" content="9 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:type" content="website">
+<title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gasyoun.github.io/kosha/#org",
+      "name": "Gasuns Sanskrit Dictionary",
+      "url": "https://github.com/gasyoun/kosha",
+      "sameAs": [
+        "https://github.com/gasyoun/kosha"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gasyoun.github.io/kosha/#website",
+      "url": "https://gasyoun.github.io/kosha",
+      "name": "Gasuns Sanskrit Dictionary",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://gasyoun.github.io/kosha/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Data & tools directory"
+        }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "MW verbal-root inventory",
+      "description": "3 repos independently re-scanned mw.txt before this existed (got 750/809/1163) — consume this, never re-scan.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "mw-roots"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/data-v0.1.0/mw_roots.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Headword→root derivation table (Pāṇinian, 10 dicts)",
+      "description": "Derivations, distinct from the root inventory (mw-roots).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "mw-etymology"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/data-v0.1.0/mw_etymology.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS lemma ↔ CDSL headword crosswalk",
+      "description": "Reusable LOD linkset — never re-derive DCS↔CDSL joins.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dcs-cdsl-xref"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/data-v0.1.0/dcs_cdsl_xref.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Cross-dictionary union headword index",
+      "description": "THE headword master — 323k headwords across all dicts.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "union-headwords"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/data-v0.1.0/union_headwords.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "MW ↔ Heritage (INRIA) entry-level crosswalk",
+      "description": "Crosswalk itself is ours/publishable; the Heritage mirror data behind it is LGPLLR-pending (restricted tier).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "mw-heritage-crosswalk"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/data-v0.1.0/mw_heritage_crosswalk.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS lemma frequency sidecar (whole-corpus + per-period)",
+      "description": "LEFT-JOIN this — never re-derive frequency ordering. ⚠ upstream UD Tense=Past conflates aorist/perfect.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "kosha-lemma-frequency"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/data-v0.1.0/lemma_frequency.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Zaliznyak-style compact grammar-token index over all PWG",
+      "description": "FAIR data package; paradigms generated via vidyut, never transcribe static tables.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "zaliznyak-grammar-index"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/data-v0.1.0/zaliznyak_grammar_index.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Böhtlingk Indische Sprüche subhāṣitas",
+      "description": "Already tracked+public in its repo; listed for discovery, not re-released.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "indische-sprueche"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "jsonl",
+        "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS akshara/varṇa/ligature frequency tables",
+      "description": "Already tracked+public; listed for discovery.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dcs-grapheme-frequency"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv",
+        "contentUrl": "https://github.com/gasyoun/VisualDCS"
+      }
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --leaf:#F4EEE1;--leaf-2:#EDE5D3;--leaf-3:#E4D9C1;
+    --ink:#241B12;--ink-2:#4A3D2E;--ink-3:#6E5F4B;
+    --lapis:#2B4A8B;--lapis-soft:#e7ecf6;--haldi:#B0761B;
+    --live:#3F7D4E;--live-bg:#e6efe7;--res:#9a5b2a;--res-bg:#f4ecda;--ext-bg:#e9edf1;--ext:#5A6B82;
+    --serif:"Palatino Linotype","Book Antiqua",Palatino,Georgia,"Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:"SFMono-Regular","Cascadia Code",Consolas,"Liberation Mono",monospace;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--leaf);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;
+    background-image:radial-gradient(circle at 12% -8%,#faf6ec 0,transparent 46%),radial-gradient(circle at 100% 0,#efe7d5 0,transparent 40%);}
+  a{color:var(--lapis);text-decoration:none}
+  a:hover{text-decoration:underline;text-underline-offset:2px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  header.top{border-bottom:1px solid var(--leaf-3);position:relative;overflow:hidden}
+  header.top .deva{position:absolute;right:-1vw;top:50%;transform:translateY(-50%);font-family:var(--serif);
+    font-size:clamp(120px,20vw,260px);color:#000;opacity:.045;line-height:.8;user-select:none;pointer-events:none}
+  .masthead{padding:46px 0 30px;position:relative;z-index:1}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--haldi);font-weight:700}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,5vw,50px);line-height:1.04;margin:.28em 0 .12em;
+    letter-spacing:-.01em;max-width:20ch}
+  .lede{font-size:17px;color:var(--ink-2);max-width:64ch;margin:.5em 0 0}
+  .tallies{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:22px}
+  .tally{display:flex;align-items:baseline;gap:7px;background:var(--leaf-2);border:1px solid var(--leaf-3);border-radius:2px;padding:8px 13px}
+  .tally b{font-family:var(--serif);font-size:21px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--lapis)}
+  .tally span{font-size:12.5px;color:var(--ink-3)}
+  .nav{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;font-size:13.5px}
+  section.cat{padding:38px 0 8px}
+  h2{font-family:var(--serif);font-weight:600;font-size:26px;margin:0 0 4px;border-bottom:2px solid var(--haldi);display:inline-block;padding-bottom:3px}
+  .sub{color:var(--ink-3);font-size:13.5px;margin:6px 0 20px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+  .card{background:var(--leaf-2);border:1px solid var(--leaf-3);border-radius:5px;padding:16px 17px;display:flex;flex-direction:column}
+  .card-h{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .card h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:0 0 2px;line-height:1.2}
+  .badge{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-radius:3px;padding:3px 8px;white-space:nowrap}
+  .badge.pub{background:var(--live-bg);color:var(--live)}
+  .badge.res{background:var(--res-bg);color:var(--res)}
+  .badge.ext{background:var(--ext-bg);color:var(--ext)}
+  .org{font-size:12.5px;color:var(--haldi);font-weight:600;margin:0 0 6px}
+  .key{font-size:13.5px;color:var(--ink-2);margin:2px 0 8px}
+  .rel{font-size:12.5px;color:var(--ink-3);margin:0 0 8px}
+  .meta{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums;margin:0 0 8px;font-family:var(--mono)}
+  .chips{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 10px}
+  .chip{font-size:11px;background:var(--leaf);border:1px solid var(--leaf-3);border-radius:10px;padding:2px 9px;color:var(--ink-3)}
+  .card-f{margin-top:auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .dl{font-weight:600;font-size:13.5px;background:var(--lapis);color:#fff;border-radius:4px;padding:7px 14px}
+  .dl:hover{text-decoration:none;background:#213a70}
+  .dl.ghost{background:transparent;color:var(--lapis);border:1px solid var(--lapis)}
+  .dl.ghost:hover{background:var(--lapis-soft)}
+  .dl.none{background:transparent;color:var(--ink-3);font-weight:500;font-style:italic;font-size:12.5px;padding:0}
+  .lic{font-size:11.5px;color:var(--ink-3);font-family:var(--mono)}
+  footer{border-top:1px solid var(--leaf-3);margin-top:44px;padding:26px 0 40px;color:var(--ink-3);font-size:13px}
+  footer a{color:var(--lapis)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="deva">कोश</div>
+  <div class="wrap masthead">
+    <div class="eyebrow">Gasuns Sanskrit Dictionary · the Sanskrit data-hub</div>
+    <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
+    <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
+    <div class="tallies">
+      <div class="tally"><b>9</b><span>public datasets</span></div>
+      <div class="tally"><b>6</b><span>restricted (on request)</span></div>
+      <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
+    </div>
+    <div class="nav">
+      <a href="#datasets">↓ Our datasets</a>
+      <a href="#tools">↓ External tools</a>
+      <a href="https://github.com/gasyoun/kosha">Repository</a>
+      <a href="https://gasyoun.github.io/kosha/features/">Features Index</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="cat" id="datasets">
+    <h2>Our datasets</h2>
+    <p class="sub">Derived from the Cologne Digital Sanskrit Dictionaries and the DCS corpus. Public assets are CC BY-SA 4.0, downloadable from the <a href="https://github.com/gasyoun/kosha/releases">kosha data releases</a>. Rendered from <a href="https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json">datasets.json</a> — the single machine-readable source.</p>
+    <div class="grid">
+    <article class="card">
+      <div class="card-h">
+        <h3>MW verbal-root inventory</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">SLP1 root + explicit verb_type (750 genuineroot + 1363 root)</p>
+      <p class="meta">2,113 rows · 75.3 KB · TSV</p>
+      <div class="chips"><span class="chip">WhitneyRoots</span><span class="chip">csl-atlas</span><span class="chip">RussianTranslation verb worklist</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.1.0/mw_roots.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Headword→root derivation table (Pāṇinian, 10 dicts)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">SLP1 headword → root</p>
+      <p class="meta">9,377 rows · 1.5 MB · TSV</p>
+      <div class="chips"><span class="chip">WhitneyRoots</span><span class="chip">csl-atlas</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.1.0/mw_etymology.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS lemma ↔ CDSL headword crosswalk</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">DCS lemma id ↔ CDSL headword (SLP1), 81.4% linked</p>
+      <p class="meta">15,902 rows · 618.5 KB · TSV</p>
+      <div class="chips"><span class="chip">simple-search</span><span class="chip">csl-atlas</span><span class="chip">VisualDCS</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.1.0/dcs_cdsl_xref.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Cross-dictionary union headword index</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">SLP1 headword + per-dict provenance flags</p>
+      <p class="meta">323,425 rows · 11.8 MB · TSV</p>
+      <div class="chips"><span class="chip">kosha crosswalk</span><span class="chip">SanskritSpellCheck (union=N tags)</span><span class="chip">PWG→EN pilot (94,753 subset)</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.1.0/union_headwords.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>MW ↔ Heritage (INRIA) entry-level crosswalk</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">MW entry id → Heritage anchor (25,140 covered, 97.6% anchor-resolved)</p>
+      <p class="meta">185,803 rows · 3.1 MB · TSV</p>
+      <div class="chips"><span class="chip">kosha ingest (queued)</span><span class="chip">csl-atlas witness column (queued)</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.1.0/mw_heritage_crosswalk.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS lemma frequency sidecar (whole-corpus + per-period)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">SLP1 lemma; whole-corpus counts + per-period vectors + core-vocab coverage</p>
+      <p class="meta">83,277 rows · 4.7 MB · TSV</p>
+      <div class="chips"><span class="chip">kosha evidence layer</span><span class="chip">Nagari teaching order</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.1.0/lemma_frequency.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Zaliznyak-style compact grammar-token index over all PWG</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">SLP1 headword → paradigm token (335 tokens)</p>
+      <p class="meta">98,639 rows · 5.8 MB · TSV</p>
+      <div class="chips"><span class="chip">pwg_ru nominal layer</span><span class="chip">kosha P4 grammar tokens</span><span class="chip">gramdict mapping</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.1.0/zaliznyak_grammar_index.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Böhtlingk Indische Sprüche subhāṣitas</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">per-saying records, public domain</p>
+      <p class="meta">7,537 rows · JSONL</p>
+      <div class="chips"><span class="chip">PWG &lt;ls&gt; citation links</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS akshara/varṇa/ligature frequency tables</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">akshara 7,347 · varṇa 48 · conjunct 999; corpus-wide + per DCS time-slot</p>
+      <p class="meta">8,394 rows · CSV</p>
+      <div class="chips"><span class="chip">Nagari script-teaching order</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    </div>
+    <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>
+    <p class="sub">Rights-encumbered or unbackuped local-only assets — listed for discovery; available on request as rights clear.</p>
+    <div class="grid">
+    <article class="card">
+      <div class="card-h">
+        <h3>Sa→Ru word-aligned corpus lexicon</h3>
+        <span class="badge res">restricted</span>
+      </div>
+      <p class="key">SLP1 surface key (~190k keys), per verse-pair alignment</p>
+      <p class="meta">1,091,528 rows · 290.0 MB · JSONL</p>
+      <div class="chips"><span class="chip">SanskritRussian glossary</span><span class="chip">pwg_ru TM</span></div>
+      <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Ranked Sa→Ru glossary (surface/lemma/root layers)</h3>
+        <span class="badge res">restricted</span>
+      </div>
+      <p class="key">SLP1; surface 190,838 · lemma 40,370 · root 2,021; 87% token coverage</p>
+      <p class="meta">233,229 rows · 147.0 MB · JSONL</p>
+      <div class="chips"><span class="chip">live search site</span><span class="chip">pwg_ru gates</span></div>
+      <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>kosha unified lookup database</h3>
+        <span class="badge res">restricted</span>
+      </div>
+      <p class="key">9 tables: 444,773 entries · 323,425 lemmas · 692,403 senses · 1,378,401 forms · 6,916,522 inflections</p>
+      <p class="meta">444,773 rows · 1.7 GB · SQLITE</p>
+      <div class="chips"><span class="chip">kosha API</span><span class="chip">P2 static cache</span></div>
+      <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS 2026 full corpus database</h3>
+        <span class="badge res">restricted</span>
+      </div>
+      <p class="key">5,688,416 tokens · 754,726 sentences · 180,176 lemmas · 270 texts</p>
+      <p class="meta">5,688,416 rows · 921.0 MB · SQLITE</p>
+      <div class="chips"><span class="chip">VisualDCS dashboards</span><span class="chip">kosha frequency</span><span class="chip">akshara stats</span></div>
+      <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>SamudraManthanam Sa↔Ru verse-parallel corpus</h3>
+        <span class="badge res">restricted</span>
+      </div>
+      <p class="key">574,939 corpus lines · 148 sources, verse-aligned</p>
+      <p class="meta">574,939 rows · 619.0 MB · SQLITE</p>
+      <div class="chips"><span class="chip">pwg_ru gate dicts</span><span class="chip">mw_ru validation</span><span class="chip">corpus-lexicon upstream</span></div>
+      <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Sanskrit Heritage (INRIA) local mirror</h3>
+        <span class="badge res">restricted</span>
+      </div>
+      <p class="key">Heritage entry anchors; VH↔SLP1 bridge validated</p>
+      <p class="meta">MIXED (DICO HYPERTEXT, TSV, OCAML BANKS)</p>
+      <div class="chips"><span class="chip">mw-heritage-crosswalk</span><span class="chip">HeadwordLists coverage studies</span></div>
+      <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
+    </article>
+    </div>
+  </section>
+
+  <section class="cat" id="tools">
+    <h2>External tools &amp; stacks</h2>
+    <p class="sub">Call these, don't clone them. Rendered from <a href="https://github.com/gasyoun/kosha/blob/main/data/manifest/external_tools.json">external_tools.json</a>.</p>
+    <div class="grid">
+    <article class="card tool">
+      <div class="card-h">
+        <h3><a href="https://github.com/ambuda-org/vidyut">vidyut</a></h3>
+        <span class="badge ext">external</span>
+      </div>
+      <p class="org">Ambuda (ambuda-org)</p>
+      <p class="key">Rust Sanskrit toolkit: the kosha FST lexicon, a prakriyā (derivation) generator, the cheda segmenter, and a chandas meter identifier. The paradigm/lemma engine behind our RU translation kits and the Zaliznyak grammar index.</p>
+      <p class="rel"><b>Our relation:</b> We call vidyut for declension/conjugation paradigms and PPP validation rather than hand-rolling paradigm generation; it produces the paradigm tokens in zaliznyak-grammar-index.</p>
+      <div class="card-f">
+        <a class="dl ghost" href="https://github.com/ambuda-org/vidyut">Call / docs ↗</a>
+        <span class="lic">MIT</span>
+      </div>
+    </article>
+    <article class="card tool">
+      <div class="card-h">
+        <h3><a href="https://ambuda.org/">Ambuda</a></h3>
+        <span class="badge ext">external</span>
+      </div>
+      <p class="org">Ambuda (ambuda-org)</p>
+      <p class="key">Open-source Sanskrit reading platform and library (proofread texts, integrated dictionary + parser lookups). The reading front-end sibling of vidyut, built by the same community.</p>
+      <p class="rel"><b>Our relation:</b> Reference open-source reader; shares the vidyut engine we already consume. Not a data dependency of kosha.</p>
+      <div class="card-f">
+        <a class="dl ghost" href="https://ambuda.org/">Call / docs ↗</a>
+        <span class="lic">AGPL-3.0 (platform); texts vary</span>
+      </div>
+    </article>
+    <article class="card tool">
+      <div class="card-h">
+        <h3><a href="https://sanskrit.inria.fr/">Sanskrit Heritage (INRIA)</a></h3>
+        <span class="badge ext">external</span>
+      </div>
+      <p class="org">Gérard Huet, INRIA</p>
+      <p class="key">The Heritage dictionary + morphology generator + segmenter: DICO hypertext dictionary, MW-aligned entry pages, frequency TSVs, and OCaml morphology banks. A morphology oracle for form → lemma resolution.</p>
+      <p class="rel"><b>Our relation:</b> We align MW ↔ Heritage entries (see the mw-heritage-crosswalk dataset). Pull from the GitHub mirror — sanskrit.inria.fr is Anubis bot-walled. Mirror data itself is LGPLLR-pending in our restricted tier; the crosswalk is ours.</p>
+      <div class="card-f">
+        <a class="dl ghost" href="https://github.com/darkone23/Heritage_Resources">Call / docs ↗</a>
+        <span class="lic">LGPLLR</span>
+      </div>
+    </article>
+    <article class="card tool">
+      <div class="card-h">
+        <h3><a href="https://sanskrit.uohyd.ac.in/scl/">Samsaadhanii / SCL</a></h3>
+        <span class="badge ext">external</span>
+      </div>
+      <p class="org">Amba Kulkarni, University of Hyderabad</p>
+      <p class="key">The Sanskrit Computational Linguistics stack: morphological analyzer, sandhi splitter/segmenter, compound processor, Pāṇinian dependency parser, Amarakośa semantic net, and Dhātupāṭha resources. Already consumes the Cologne dictionaries.</p>
+      <p class="rel"><b>Our relation:</b> We call the live JSON endpoints and cross-validate against them; we do not clone the GPL source. It reuses our dictionary data downstream.</p>
+      <div class="card-f">
+        <a class="dl ghost" href="https://scl.samsaadhanii.in/scl/">Call / docs ↗</a>
+        <span class="lic">GPL</span>
+      </div>
+    </article>
+    <article class="card tool">
+      <div class="card-h">
+        <h3><a href="https://dharmamitra.org/">DharmaMitra</a></h3>
+        <span class="badge ext">external</span>
+      </div>
+      <p class="org">Sebastian Nehrdich et al., UC Berkeley</p>
+      <p class="key">AI-driven Sanskrit stack: machine translation, deep research with references, parallel-passage exploration, segmentation, and OCR. A GPU morphology supplier and translation service.</p>
+      <p class="rel"><b>Our relation:</b> We reuse their MT error taxonomy (wired into the pwg_ru/mw_ru QA judges) and are a prospective Kosh-API consumer/supplier. GPU-morphology supplier to csl-atlas.</p>
+      <div class="card-f">
+        <a class="dl ghost" href="https://dharmamitra.org/">Call / docs ↗</a>
+        <span class="lic">Free web service; models vary — see site</span>
+      </div>
+    </article>
+    <article class="card tool">
+      <div class="card-h">
+        <h3><a href="http://www.sanskrit-linguistics.org/dcs/">Digital Corpus of Sanskrit (DCS)</a></h3>
+        <span class="badge ext">external</span>
+      </div>
+      <p class="org">Oliver Hellwig</p>
+      <p class="key">A sandhi-split, morphologically and lexically analysed diachronic corpus of Sanskrit (~5.7M tokens, 270 texts) with per-token lemma, POS and morphology in CoNLL-U. The reference corpus for lemma frequency and attestation.</p>
+      <p class="rel"><b>Our relation:</b> Source of the dcs-cdsl-xref crosswalk and the kosha-lemma-frequency sidecar. We ingest the canonical CoNLL-U once — never re-parse.</p>
+      <div class="card-f">
+        <a class="dl ghost" href="https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu">Call / docs ↗</a>
+        <span class="lic">CC BY-SA 4.0</span>
+      </div>
+    </article>
+    <article class="card tool">
+      <div class="card-h">
+        <h3><a href="https://vedaweb.uni-koeln.de/rigveda/">VedaWeb</a></h3>
+        <span class="badge ext">external</span>
+      </div>
+      <p class="org">University of Cologne / UZH (C-SALT)</p>
+      <p class="key">Accented Rig-Veda with per-word morphology (Casaretto word-split, Lubotsky padapāṭha), aligned translations, and a query API. The validation set for Vedic accent.</p>
+      <p class="rel"><b>Our relation:</b> The accented-Vedic validation set that unblocks the Vedic-accent axis of the Zaliznyak index — bulk-export once, cross-validate.</p>
+      <div class="card-f">
+        <a class="dl ghost" href="https://vedaweb.uni-koeln.de/rigveda/api/">Call / docs ↗</a>
+        <span class="lic">CC BY 4.0</span>
+      </div>
+    </article>
+    <article class="card tool">
+      <div class="card-h">
+        <h3><a href="https://www.sanskrit-lexicon.uni-koeln.de/">Cologne Digital Sanskrit Dictionaries (CDSL)</a></h3>
+        <span class="badge ext">external</span>
+      </div>
+      <p class="org">University of Cologne (Cologne / sanskrit-lexicon)</p>
+      <p class="key">The canonical digitised Sanskrit dictionaries (MW, PWG, AP90, and 40+ more) as XML/text with scan-anchored entries and a lookup API. The lexical bedrock the whole project is built on.</p>
+      <p class="rel"><b>Our relation:</b> kosha collapses every CDSL dictionary&#x27;s entry for a headword onto one scan-anchored page; union-headwords, mw-roots and mw-etymology all derive from CDSL source.</p>
+      <div class="card-f">
+        <a class="dl ghost" href="https://www.sanskrit-lexicon.uni-koeln.de/scans/csldoc/">Call / docs ↗</a>
+        <span class="lic">CC BY-SA 4.0</span>
+      </div>
+    </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Part of the <a href="https://github.com/gasyoun/kosha">Gasuns Sanskrit Dictionary (kosha)</a> — the Cologne Digital Sanskrit Dictionaries data-hub. Datasets CC BY-SA 4.0. Generated from the data manifests; do not hand-edit this page.</p>
+    <p>Dr. Mārcis Gasūns · <a href="https://gasyoun.github.io/kosha/features/">Features Index</a> · <a href="https://gasyoun.github.io/kosha/questions/">Questions</a> · <a href="https://gasyoun.github.io/kosha/docs-site/">Docs</a></p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+{
+  "manifest_version": "0.1.0",
+  "generated": "2026-07-06",
+  "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
+  "note_for_agents": "Curated directory of external Sanskrit-NLP stacks the project consumes or cross-validates against — the companion to datasets.json (our data) for the public directory page. CALL these, don't clone: each row records what-it-does, a how-to-call entry point (api_url), its license, and our relation to it. Sourced from the public FEATURES_INDEX.md tools section + SAMSAADHANII_INDEX.md; no private-repo facts. Keep license fields conservative — verify upstream before asserting a stricter/looser license.",
+  "tools": [
+    {
+      "id": "vidyut",
+      "name": "vidyut",
+      "org": "Ambuda (ambuda-org)",
+      "what_it_does": "Rust Sanskrit toolkit: the kosha FST lexicon, a prakriyā (derivation) generator, the cheda segmenter, and a chandas meter identifier. The paradigm/lemma engine behind our RU translation kits and the Zaliznyak grammar index.",
+      "homepage": "https://github.com/ambuda-org/vidyut",
+      "api_url": "https://github.com/ambuda-org/vidyut",
+      "license": "MIT",
+      "our_relation": "We call vidyut for declension/conjugation paradigms and PPP validation rather than hand-rolling paradigm generation; it produces the paradigm tokens in zaliznyak-grammar-index."
+    },
+    {
+      "id": "ambuda",
+      "name": "Ambuda",
+      "org": "Ambuda (ambuda-org)",
+      "what_it_does": "Open-source Sanskrit reading platform and library (proofread texts, integrated dictionary + parser lookups). The reading front-end sibling of vidyut, built by the same community.",
+      "homepage": "https://ambuda.org/",
+      "api_url": "https://ambuda.org/",
+      "license": "AGPL-3.0 (platform); texts vary",
+      "our_relation": "Reference open-source reader; shares the vidyut engine we already consume. Not a data dependency of kosha."
+    },
+    {
+      "id": "heritage",
+      "name": "Sanskrit Heritage (INRIA)",
+      "org": "Gérard Huet, INRIA",
+      "what_it_does": "The Heritage dictionary + morphology generator + segmenter: DICO hypertext dictionary, MW-aligned entry pages, frequency TSVs, and OCaml morphology banks. A morphology oracle for form → lemma resolution.",
+      "homepage": "https://sanskrit.inria.fr/",
+      "api_url": "https://github.com/darkone23/Heritage_Resources",
+      "license": "LGPLLR",
+      "our_relation": "We align MW ↔ Heritage entries (see the mw-heritage-crosswalk dataset). Pull from the GitHub mirror — sanskrit.inria.fr is Anubis bot-walled. Mirror data itself is LGPLLR-pending in our restricted tier; the crosswalk is ours."
+    },
+    {
+      "id": "samsaadhanii",
+      "name": "Samsaadhanii / SCL",
+      "org": "Amba Kulkarni, University of Hyderabad",
+      "what_it_does": "The Sanskrit Computational Linguistics stack: morphological analyzer, sandhi splitter/segmenter, compound processor, Pāṇinian dependency parser, Amarakośa semantic net, and Dhātupāṭha resources. Already consumes the Cologne dictionaries.",
+      "homepage": "https://sanskrit.uohyd.ac.in/scl/",
+      "api_url": "https://scl.samsaadhanii.in/scl/",
+      "license": "GPL",
+      "our_relation": "We call the live JSON endpoints and cross-validate against them; we do not clone the GPL source. It reuses our dictionary data downstream."
+    },
+    {
+      "id": "dharmamitra",
+      "name": "DharmaMitra",
+      "org": "Sebastian Nehrdich et al., UC Berkeley",
+      "what_it_does": "AI-driven Sanskrit stack: machine translation, deep research with references, parallel-passage exploration, segmentation, and OCR. A GPU morphology supplier and translation service.",
+      "homepage": "https://dharmamitra.org/",
+      "api_url": "https://dharmamitra.org/",
+      "license": "Free web service; models vary — see site",
+      "our_relation": "We reuse their MT error taxonomy (wired into the pwg_ru/mw_ru QA judges) and are a prospective Kosh-API consumer/supplier. GPU-morphology supplier to csl-atlas."
+    },
+    {
+      "id": "dcs",
+      "name": "Digital Corpus of Sanskrit (DCS)",
+      "org": "Oliver Hellwig",
+      "what_it_does": "A sandhi-split, morphologically and lexically analysed diachronic corpus of Sanskrit (~5.7M tokens, 270 texts) with per-token lemma, POS and morphology in CoNLL-U. The reference corpus for lemma frequency and attestation.",
+      "homepage": "http://www.sanskrit-linguistics.org/dcs/",
+      "api_url": "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu",
+      "license": "CC BY-SA 4.0",
+      "our_relation": "Source of the dcs-cdsl-xref crosswalk and the kosha-lemma-frequency sidecar. We ingest the canonical CoNLL-U once — never re-parse."
+    },
+    {
+      "id": "vedaweb",
+      "name": "VedaWeb",
+      "org": "University of Cologne / UZH (C-SALT)",
+      "what_it_does": "Accented Rig-Veda with per-word morphology (Casaretto word-split, Lubotsky padapāṭha), aligned translations, and a query API. The validation set for Vedic accent.",
+      "homepage": "https://vedaweb.uni-koeln.de/rigveda/",
+      "api_url": "https://vedaweb.uni-koeln.de/rigveda/api/",
+      "license": "CC BY 4.0",
+      "our_relation": "The accented-Vedic validation set that unblocks the Vedic-accent axis of the Zaliznyak index — bulk-export once, cross-validate."
+    },
+    {
+      "id": "cdsl",
+      "name": "Cologne Digital Sanskrit Dictionaries (CDSL)",
+      "org": "University of Cologne (Cologne / sanskrit-lexicon)",
+      "what_it_does": "The canonical digitised Sanskrit dictionaries (MW, PWG, AP90, and 40+ more) as XML/text with scan-anchored entries and a lookup API. The lexical bedrock the whole project is built on.",
+      "homepage": "https://www.sanskrit-lexicon.uni-koeln.de/",
+      "api_url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/csldoc/",
+      "license": "CC BY-SA 4.0",
+      "our_relation": "kosha collapses every CDSL dictionary's entry for a headword onto one scan-anchored page; union-headwords, mw-roots and mw-etymology all derive from CDSL source."
+    }
+  ]
+}
