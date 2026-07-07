@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="9 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="19 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="9 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="19 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -299,6 +299,286 @@
         "encodingFormat": "csv",
         "contentUrl": "https://github.com/gasyoun/VisualDCS"
       }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Consonant series (varga) by DCS period + Cramér's V",
+      "description": "Aggregation of dcs-grapheme-frequency; Cramér's V=0.037 → series composition near-stable across ~2kyr; corrects the 2014 П9 claim. Includes slot_era_map.csv.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "varga-series-diachrony"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv",
+        "contentUrl": "https://github.com/gasyoun/VisualDCS"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS syntagmatic table — all corpus lemmas (Приложение 7)",
+      "description": "H291: a second, byte-different copy of the same data lives at derived-data/Sinonimy/S_P_D_F/Синтагматическая таблица DCS.csv (UTF-16LE, tab-delimited, Cyrillic header, 47 MB, 82,801 lines incl. blank separator rows) — same 'appendix table' family as this file, same underlying content verified by row-1 sample diff, both created 2026-06-05. This (semicolon-delimited, UTF-8, no BOM, 'Приложение 7' appendix numbering matching the Приложение-6 family below) is registered as canonical; the Sinonimy copy is left in place on disk as a raw/interim export, not separately registered.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dcs-sintagmatic-appendix7"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv",
+        "contentUrl": "https://github.com/gasyoun/VisualDCS"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS parallel-passage alignments, full-size export (PARA/Polnorazmernye)",
+      "description": "H291: a same-file-count, same-naming sibling directory PARA/Polnorazmernye-2022-archive/ (245 files, 56 MB) is a superseded 2022 snapshot — sample diff on 104_1--20.csv shows the archive uses a flat '!' match flag where the live version has richer PARTLY/+term-delta annotations. Archive left on disk as a historical snapshot, not separately registered.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dcs-parallel-passages-full"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv",
+        "contentUrl": "https://github.com/gasyoun/VisualDCS"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS verb roots grouped by class (with attested forms)",
+      "description": "H291 Step 2 bundle: 10 small per-class files registered as one row per MG ruling (bundle-worthy fragmented candidates → one row, not left as separate small files).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dcs-verb-roots-by-class"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv",
+        "contentUrl": "https://github.com/gasyoun/VisualDCS"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS verb-form frequency by class, with prefixed forms",
+      "description": "H291 Step 2 bundle: 10 small per-class files registered as one row per MG ruling. Sibling of dcs-verb-roots-by-class (same class-numbering scheme, prefixed-forms variant).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dcs-verb-class-prefix-frequency"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv",
+        "contentUrl": "https://github.com/gasyoun/VisualDCS"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS syntagmatic tables of frequent lexical cores, by historical period (Приложение 6)",
+      "description": "H291 Step 2 bundle: 7 per-period files registered as one row per MG ruling. Same 'appendix table' family as dcs-sintagmatic-appendix7 (Приложение 7 = all-corpus version; this is the per-period breakdown, Приложение 6).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dcs-sintagmatic-appendix6-periods"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv",
+        "contentUrl": "https://github.com/gasyoun/VisualDCS"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS parallel-passage alignments, 'stop-word' variant export (PARA/Stopovye)",
+      "description": "H291: the largest single derived-data bundle in VisualDCS (1.17 GB) — likely a stop-word-filtered variant of dcs-parallel-passages-full, not yet content-diffed against it. Git-tracked (confirmed 07-07-2026), so NOT a backup-risk giant; cross-referenced in Uprava/DATA_LAYERS_CENSUS.md § Actionable gaps instead of the unbackuped-giants table. rows left null: format is per-file alignment records, not a flat table — a meaningful row count needs a schema-aware parse, not a line count.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "stopovye-parallel-passages"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv",
+        "contentUrl": "https://github.com/gasyoun/VisualDCS"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS verb-form frequency in corpus (preliminary)",
+      "description": "H291 Step 4: same 'derived-data/Fonetika family of small frequency tables as the already-public dcs-grapheme-frequency; filename marks it explicitly 'preliminary data' (Предварительные данные).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dcs-verb-form-frequency-prelim"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv",
+        "contentUrl": "https://github.com/gasyoun/VisualDCS"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS compound (samāsa) dictionary derivation",
+      "description": "H291 Step 4: bundle of all *.csv in derived-data/Kompozity/ (the dir also holds non-csv working files — .xlsx/.doc/.ods/.7z — out of scope for this manifest, which tracks the csv exports).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dcs-compound-dictionary"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv",
+        "contentUrl": "https://github.com/gasyoun/VisualDCS"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Sanskrit-stem co-occurrence table (full)",
+      "description": "H291 Step 4: checked for an older non-'NEW' sibling per the open question in this handoff — none found (Sochetaemost-sanskritskih-osnov/ has period-bucketed .txt files under Sochetaemost/ and a separate Ishodnye-dannye/ raw-inputs dir, neither is a prior version of this file); 'NEW' reads as this file's permanent name, not a superseded/current pair.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dcs-stem-cooccurrence-full"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv",
+        "contentUrl": "https://github.com/gasyoun/VisualDCS"
+      }
     }
   ]
 }
@@ -369,8 +649,8 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>9</b><span>public datasets</span></div>
-      <div class="tally"><b>6</b><span>restricted (on request)</span></div>
+      <div class="tally"><b>19</b><span>public datasets</span></div>
+      <div class="tally"><b>7</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
     <div class="nav">
@@ -463,7 +743,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">per-saying records, public domain</p>
-      <p class="meta">7,537 rows · JSONL</p>
+      <p class="meta">7,537 rows · 6.9 MB · JSONL</p>
       <div class="chips"><span class="chip">PWG &lt;ls&gt; citation links</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
     </article>
@@ -473,8 +753,108 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">akshara 7,347 · varṇa 48 · conjunct 999; corpus-wide + per DCS time-slot</p>
-      <p class="meta">8,394 rows · CSV</p>
+      <p class="meta">8,394 rows · 4.0 KB · CSV</p>
       <div class="chips"><span class="chip">Nagari script-teaching order</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Consonant series (varga) by DCS period + Cramér&#x27;s V</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">5 vargas × 5 DCS time-slots; column shares + counts + Δ(I→V)</p>
+      <p class="meta">5 rows · 4.0 KB · CSV</p>
+      <div class="chips"><span class="chip">GasunsDhatu 2026 §2.6 (Table 5 replacement, L7 fix)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS syntagmatic table — all corpus lemmas (Приложение 7)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">lemma; total occurrences; co-occurrence count; ranked collocate list per lemma</p>
+      <p class="meta">82,800 rows · 25.7 MB · CSV</p>
+      
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS parallel-passage alignments, full-size export (PARA/Polnorazmernye)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one file per source-passage id (`&lt;id&gt;_&lt;n&gt;--&lt;m&gt;.csv`), 245 files; each row = a candidate parallel passage with a GOOD/PARTLY/… match verdict</p>
+      <p class="meta">506,787 rows · 56.2 MB · CSV</p>
+      
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS verb roots grouped by class (with attested forms)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">root,count — one file per verb class (1.csv…10.csv), roots that have attested corpus forms</p>
+      <p class="meta">463 rows · 4.4 KB · CSV</p>
+      
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS verb-form frequency by class, with prefixed forms</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">root;count — one file per verb class (1.csv…10.csv), includes prefixed verb forms</p>
+      <p class="meta">8,454 rows · 110.0 KB · CSV</p>
+      
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS syntagmatic tables of frequent lexical cores, by historical period (Приложение 6)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">lemma; frequency; collocates — one file per historical period (1.csv…7.csv)</p>
+      <p class="meta">19,076 rows · 22.9 MB · CSV</p>
+      
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS parallel-passage alignments, &#x27;stop-word&#x27; variant export (PARA/Stopovye)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one file per source-passage id, same naming scheme as dcs-parallel-passages-full; includes a split 7z archive member</p>
+      <p class="meta">1.1 GB · CSV</p>
+      
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS verb-form frequency in corpus (preliminary)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">verb form; frequency count, corpus-wide</p>
+      <p class="meta">106 rows · 8.0 KB · CSV</p>
+      
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS compound (samāsa) dictionary derivation</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">CompDic.csv (compound headword list, 37,333), cmps.csv (per-compound member breakdown, 401,478), names.csv (168,880 attested compounds w/ frequency vector, already noted in DATA_LAYERS_CENSUS.md), parts.csv (2,667), verbx.csv (3,400, verbal compounds); cmp400000.csv is present but empty (0 bytes)</p>
+      <p class="meta">613,758 rows · 104.8 MB · CSV</p>
+      
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Sanskrit-stem co-occurrence table (full)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">stem-pair co-occurrence rows, ID range 1–222342</p>
+      <p class="meta">353,352 rows · 34.6 MB · CSV</p>
+      
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
     </div>
@@ -487,7 +867,7 @@
         <span class="badge res">restricted</span>
       </div>
       <p class="key">SLP1 surface key (~190k keys), per verse-pair alignment</p>
-      <p class="meta">1,091,528 rows · 290.0 MB · JSONL</p>
+      <p class="meta">1,091,528 rows · 276.6 MB · JSONL</p>
       <div class="chips"><span class="chip">SanskritRussian glossary</span><span class="chip">pwg_ru TM</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
@@ -507,7 +887,7 @@
         <span class="badge res">restricted</span>
       </div>
       <p class="key">9 tables: 444,773 entries · 323,425 lemmas · 692,403 senses · 1,378,401 forms · 6,916,522 inflections</p>
-      <p class="meta">444,773 rows · 1.7 GB · SQLITE</p>
+      <p class="meta">444,773 rows · 1.5 GB · SQLITE</p>
       <div class="chips"><span class="chip">kosha API</span><span class="chip">P2 static cache</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
@@ -517,7 +897,7 @@
         <span class="badge res">restricted</span>
       </div>
       <p class="key">5,688,416 tokens · 754,726 sentences · 180,176 lemmas · 270 texts</p>
-      <p class="meta">5,688,416 rows · 921.0 MB · SQLITE</p>
+      <p class="meta">5,688,416 rows · 878.2 MB · SQLITE</p>
       <div class="chips"><span class="chip">VisualDCS dashboards</span><span class="chip">kosha frequency</span><span class="chip">akshara stats</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
@@ -527,7 +907,7 @@
         <span class="badge res">restricted</span>
       </div>
       <p class="key">574,939 corpus lines · 148 sources, verse-aligned</p>
-      <p class="meta">574,939 rows · 619.0 MB · SQLITE</p>
+      <p class="meta">574,939 rows · 590.7 MB · SQLITE</p>
       <div class="chips"><span class="chip">pwg_ru gate dicts</span><span class="chip">mw_ru validation</span><span class="chip">corpus-lexicon upstream</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
@@ -539,6 +919,16 @@
       <p class="key">Heritage entry anchors; VH↔SLP1 bridge validated</p>
       <p class="meta">MIXED (DICO HYPERTEXT, TSV, OCAML BANKS)</p>
       <div class="chips"><span class="chip">mw-heritage-crosswalk</span><span class="chip">HeadwordLists coverage studies</span></div>
+      <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Heritage (INRIA) form-level crosswalk extras (gloss, disagreements, forms-only)</h3>
+        <span class="badge res">restricted</span>
+      </div>
+      <p class="key">heritage_dico_gloss (mw_key1 → Heritage anchor + FR gloss), heritage_forms_oracle_disagreements (form → Heritage/kosha lemma disagreement class), heritage_only_forms (form → lemma, Heritage-only coverage)</p>
+      <p class="meta">1,037,239 rows · 34.5 MB · TSV</p>
+      
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
     </div>

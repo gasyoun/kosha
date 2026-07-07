@@ -319,8 +319,12 @@ def build(out_dir: Path) -> Path:
     datasets = json.loads((MANIFEST_DIR / "datasets.json").read_text(encoding="utf-8"))["datasets"]
     tools = json.loads((MANIFEST_DIR / "external_tools.json").read_text(encoding="utf-8"))["tools"]
 
+    # tier=intermediate is raw/working data feeding another registered dataset —
+    # not standalone-citable, not rights-gated; excluded from the rendered page
+    # entirely (simplest option per H291) rather than misleadingly bucketed
+    # into "restricted" (which implies rights-gating, not just unfinished).
     public = [d for d in datasets if d.get("tier") == "public"]
-    restricted = [d for d in datasets if d.get("tier") != "public"]
+    restricted = [d for d in datasets if d.get("tier") not in ("public", "intermediate")]
 
     desc = (
         f"{len(public)} openly-licensed Sanskrit datasets (downloadable) plus "
