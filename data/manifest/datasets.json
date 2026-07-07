@@ -506,6 +506,24 @@
         "csl-guides shared-tasks page (/about/shared-tasks) + leaderboard"
       ],
       "notes": "H281 (07-07-2026): public benchmark for the routing shared task — CC-BY-SA-4.0 (inherited from the gold panel, declared in-file), single-annotator gold (Fable 5 claude-fable-5, single pass — κ pending a human second pass), open golds / self-reported leaderboard. Data card: csl-guides /developers/data-cards."
+    },
+    {
+      "id": "correction-loci",
+      "title": "Correction loci — locus-resolved correction records across all csl-corrections change files (v1.0)",
+      "tier": "public",
+      "in_release": null,
+      "format": "tsv",
+      "rows": 39540,
+      "size_bytes": 9640333,
+      "keying": "(dict, L, k1) locus per correction record; line numbers are batch-time only, never a join key",
+      "source_repo": "https://github.com/sanskrit-lexicon/csl-corrections",
+      "source_path": "data/derived/correction_loci.tsv (tracked; derived from all batch_*/batches/* change files)",
+      "builder": "scripts/build_correction_loci.py --selftest (census invariants frozen 2026-07-07)",
+      "consumers": [
+        "csl-atlas correction feed (loci heatmap + radar axes, memo backlog #2)",
+        "docs/img/ corrections-native viz via scripts/build_correction_viz.py"
+      ],
+      "notes": "H294 (07-07-2026): memo docs/HYPOTHESES_AND_VIZ_MEMO.md §5.1 layer. 39,540 records = 39,536 old→new + 4 old→del; process∈{bulk,human} splits the two machine markup batches (BOR 21,990 + LRV/markhom 8,063 = 76%) from human correction. Corrector identity deliberately excluded — public tier. PR: https://github.com/sanskrit-lexicon/csl-corrections/pull/291"
     }
   ]
 }
