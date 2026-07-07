@@ -489,6 +489,23 @@
       "builder": "unknown (pre-2026 dump; see source_repo git history)",
       "consumers": [],
       "notes": "H291 Step 4: checked for an older non-'NEW' sibling per the open question in this handoff — none found (Sochetaemost-sanskritskih-osnov/ has period-bucketed .txt files under Sochetaemost/ and a separate Ishodnye-dannye/ raw-inputs dir, neither is a prior version of this file); 'NEW' reads as this file's permanent name, not a superseded/current pair."
+    },
+    {
+      "id": "which-dictionary-routing-benchmark",
+      "title": "Which-dictionary routing shared-task benchmark (v1.0)",
+      "tier": "public",
+      "in_release": null,
+      "format": "json",
+      "rows": 24,
+      "size_bytes": 5581,
+      "keying": "scenario id (G-01..G-18 dev, P-01..P-06 test) → gold + accepted CDSL dictionary codes over a 44-code answer space",
+      "source_repo": "https://github.com/sanskrit-lexicon/csl-guides",
+      "source_path": "src/data/routing-benchmark.json (tracked; derived from src/data/which-dictionary-gold.json)",
+      "builder": "scripts/build-routing-benchmark.mjs (scorer: scripts/score-routing-task.mjs)",
+      "consumers": [
+        "csl-guides shared-tasks page (/about/shared-tasks) + leaderboard"
+      ],
+      "notes": "H281 (07-07-2026): public benchmark for the routing shared task — CC-BY-SA-4.0 (inherited from the gold panel, declared in-file), single-annotator gold (Fable 5 claude-fable-5, single pass — κ pending a human second pass), open golds / self-reported leaderboard. Data card: csl-guides /developers/data-cards."
     }
   ]
 }
