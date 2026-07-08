@@ -88,6 +88,15 @@ def count_rows(path: Path, fmt: str | None) -> int | None:
     return None  # sqlite / mixed formats: size only, row count needs a schema-aware query
 
 
+def dir_size(path: Path) -> int:
+    """Recursive content size of a directory bundle -- path.stat().st_size on
+    a directory returns the filesystem's directory-entry size (a few KB on
+    NTFS), not the size of what's inside it, so a directory-shaped
+    source_path (trailing "/") must sum its files instead of being stat'd
+    directly."""
+    return sum(f.stat().st_size for f in path.rglob("*") if f.is_file())
+
+
 def refresh(dry_run: bool) -> int:
     manifest = json.loads(DATASETS_JSON.read_text(encoding="utf-8"))
     changed = 0
@@ -95,8 +104,8 @@ def refresh(dry_run: bool) -> int:
         path = local_path_for(ds)
         if path is None or not path.exists():
             continue  # gitignored/unbackuped/remote-only entries are left alone
-        size = path.stat().st_size
-        rows = count_rows(path, ds.get("format"))
+        size = dir_size(path) if path.is_dir() else path.stat().st_size
+        rows = None if path.is_dir() else count_rows(path, ds.get("format"))
         diffs = []
         if ds.get("size_bytes") != size:
             diffs.append(f"size_bytes {ds.get('size_bytes')} -> {size}")
