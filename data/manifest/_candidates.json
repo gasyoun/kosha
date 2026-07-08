@@ -1,4 +1,34 @@
 {
   "note": "Unregistered directories found by scripts/update_manifest.py scan -- each row is a directory bundle, not a single file (a 'dataset' is usually one export per text/class/period). Review each: decide whether it's really one manifest-worthy asset (bundle several files into one row with a glob/pattern note) or genuine noise to ignore, then add a proper row to datasets.json by hand (or via /findings-append) and delete its entry here. Never auto-merged.",
-  "candidates": []
+  "candidates": [
+    {
+      "dir": "C:\\Users\\user\\Documents\\GitHub\\VisualDCS\\derived-data\\Glagolnye-formy",
+      "file_count": 1,
+      "total_size_bytes": 8192,
+      "sample_files": [
+        "Частота появления глагольных форм в корпусе (Предварительные данные).csv"
+      ],
+      "suggested_source_repo": "https://github.com/gasyoun/VisualDCS"
+    },
+    {
+      "dir": "C:\\Users\\user\\Documents\\GitHub\\VisualDCS\\derived-data\\Paralleli-v-tekstah-korpusa-SRC\\PARA\\Polnorazmernye-2022-archive",
+      "file_count": 245,
+      "total_size_bytes": 55812085,
+      "sample_files": [
+        "104_1--20.csv",
+        "107_1--1.csv",
+        "10_1--1.csv"
+      ],
+      "suggested_source_repo": "https://github.com/gasyoun/VisualDCS"
+    },
+    {
+      "dir": "C:\\Users\\user\\Documents\\GitHub\\VisualDCS\\derived-data\\Sinonimy\\S_P_D_F",
+      "file_count": 1,
+      "total_size_bytes": 47457106,
+      "sample_files": [
+        "Синтагматическая таблица DCS.csv"
+      ],
+      "suggested_source_repo": "https://github.com/gasyoun/VisualDCS"
+    }
+  ]
 }
