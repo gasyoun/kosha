@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="19 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="21 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="19 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="21 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -579,6 +579,62 @@
         "encodingFormat": "csv",
         "contentUrl": "https://github.com/gasyoun/VisualDCS"
       }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Which-dictionary routing shared-task benchmark (v1.0)",
+      "description": "H281 (07-07-2026): public benchmark for the routing shared task — CC-BY-SA-4.0 (inherited from the gold panel, declared in-file), single-annotator gold (Fable 5 claude-fable-5, single pass — κ pending a human second pass), open golds / self-reported leaderboard. Data card: csl-guides /developers/data-cards.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "which-dictionary-routing-benchmark"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "json",
+        "contentUrl": "https://github.com/sanskrit-lexicon/csl-guides"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Correction loci — locus-resolved correction records across all csl-corrections change files (v1.0)",
+      "description": "H294 (07-07-2026): memo docs/HYPOTHESES_AND_VIZ_MEMO.md §5.1 layer. 39,540 records = 39,536 old→new + 4 old→del; process∈{bulk,human} splits the two machine markup batches (BOR 21,990 + LRV/markhom 8,063 = 76%) from human correction. Corrector identity deliberately excluded — public tier. PR: https://github.com/sanskrit-lexicon/csl-corrections/pull/291",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "correction-loci"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/sanskrit-lexicon/csl-corrections"
+      }
     }
   ]
 }
@@ -649,7 +705,7 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>19</b><span>public datasets</span></div>
+      <div class="tally"><b>21</b><span>public datasets</span></div>
       <div class="tally"><b>7</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
@@ -753,7 +809,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">akshara 7,347 · varṇa 48 · conjunct 999; corpus-wide + per DCS time-slot</p>
-      <p class="meta">8,394 rows · 4.0 KB · CSV</p>
+      <p class="meta">8,394 rows · 910.2 KB · CSV</p>
       <div class="chips"><span class="chip">Nagari script-teaching order</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
@@ -763,7 +819,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">5 vargas × 5 DCS time-slots; column shares + counts + Δ(I→V)</p>
-      <p class="meta">5 rows · 4.0 KB · CSV</p>
+      <p class="meta">5 rows · 7.5 KB · CSV</p>
       <div class="chips"><span class="chip">GasunsDhatu 2026 §2.6 (Table 5 replacement, L7 fix)</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
@@ -773,7 +829,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">lemma; total occurrences; co-occurrence count; ranked collocate list per lemma</p>
-      <p class="meta">82,800 rows · 25.7 MB · CSV</p>
+      <p class="meta">82,799 rows · 25.7 MB · CSV</p>
       
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
@@ -823,7 +879,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one file per source-passage id, same naming scheme as dcs-parallel-passages-full; includes a split 7z archive member</p>
-      <p class="meta">1.1 GB · CSV</p>
+      <p class="meta">1.3 GB · CSV</p>
       
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
@@ -843,7 +899,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">CompDic.csv (compound headword list, 37,333), cmps.csv (per-compound member breakdown, 401,478), names.csv (168,880 attested compounds w/ frequency vector, already noted in DATA_LAYERS_CENSUS.md), parts.csv (2,667), verbx.csv (3,400, verbal compounds); cmp400000.csv is present but empty (0 bytes)</p>
-      <p class="meta">613,758 rows · 104.8 MB · CSV</p>
+      <p class="meta">613,758 rows · 161.4 MB · CSV</p>
       
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
@@ -853,9 +909,29 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">stem-pair co-occurrence rows, ID range 1–222342</p>
-      <p class="meta">353,352 rows · 34.6 MB · CSV</p>
+      <p class="meta">353,351 rows · 34.6 MB · CSV</p>
       
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Which-dictionary routing shared-task benchmark (v1.0)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">scenario id (G-01..G-18 dev, P-01..P-06 test) → gold + accepted CDSL dictionary codes over a 44-code answer space</p>
+      <p class="meta">24 rows · 5.5 KB · JSON</p>
+      <div class="chips"><span class="chip">csl-guides shared-tasks page (/about/shared-tasks) + leaderboard</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/sanskrit-lexicon/csl-guides">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Correction loci — locus-resolved correction records across all csl-corrections change files (v1.0)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">(dict, L, k1) locus per correction record; line numbers are batch-time only, never a join key</p>
+      <p class="meta">39,540 rows · 9.2 MB · TSV</p>
+      <div class="chips"><span class="chip">csl-atlas correction feed (loci heatmap + radar axes, memo backlog #2)</span><span class="chip">docs/img/ corrections-native viz via scripts/build_correction_viz.py</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/sanskrit-lexicon/csl-corrections">In source repo ↗</a></div>
     </article>
     </div>
     <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>
@@ -927,7 +1003,7 @@
         <span class="badge res">restricted</span>
       </div>
       <p class="key">heritage_dico_gloss (mw_key1 → Heritage anchor + FR gloss), heritage_forms_oracle_disagreements (form → Heritage/kosha lemma disagreement class), heritage_only_forms (form → lemma, Heritage-only coverage)</p>
-      <p class="meta">1,037,239 rows · 34.5 MB · TSV</p>
+      <p class="meta">1,037,239 rows · 457.6 MB · TSV</p>
       
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
