@@ -101,7 +101,7 @@
       "source_path": "HeadwordLists/mw_heritage_crosswalk.tsv",
       "builder": "H099 Heritage mirror pipeline",
       "consumers": [
-        "kosha ingest (queued)",
+        "kosha ingest (H345, kosha.db heritage_anchor table + /api/v1/lemma `heritage` witness)",
         "csl-atlas witness column (queued)"
       ],
       "notes": "Crosswalk itself is ours/publishable; the Heritage mirror data behind it is LGPLLR-pending (restricted tier)."

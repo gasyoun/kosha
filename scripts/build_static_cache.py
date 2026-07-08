@@ -42,6 +42,7 @@ interrupted mid-way resumes in rank order without redoing work.
 import argparse
 import io
 import json
+import os
 import sqlite3
 import sys
 import tarfile
@@ -61,6 +62,9 @@ from evidence import build_evidence  # noqa: E402
 
 DEFAULT_DB = ROOT / "data" / "db" / "kosha.db"
 ALL_DICTS = ("mw", "pwg", "ap90")
+
+# H345: mirror of app/main.py's HERITAGE_BASE — same default, same env var.
+HERITAGE_BASE = os.getenv("HERITAGE_DICO_BASE", "https://sanskrit.inria.fr/")
 
 
 # --------------------------------------------------------------------------- #
@@ -121,6 +125,25 @@ def entry_payload(con, row, dv, out="iast", raw=False):
         "SELECT * FROM lemmas WHERE slp1=?", (row["slp1_key"],)
     ).fetchone()
     payload["evidence"] = build_evidence(lemma_row)
+    # H345: Heritage coverage witness -- mirror app/main.py::_entry_payload verbatim.
+    try:
+        her = con.execute(
+            "SELECT covered, anchor FROM heritage_anchor WHERE mw_key1=?",
+            (row["slp1_key"],),
+        ).fetchone()
+    except sqlite3.OperationalError:
+        payload["heritage"] = None
+    else:
+        if her is None or not her["covered"]:
+            payload["heritage"] = {"covered": False}
+        else:
+            anchor = her["anchor"]
+            payload["heritage"] = {
+                "covered": True,
+                "anchor": anchor,
+                "heritage_lemma": anchor.split("#", 1)[1] if anchor else None,
+                "url": HERITAGE_BASE + anchor if anchor else None,
+            }
     return payload
 
 

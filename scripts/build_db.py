@@ -23,11 +23,26 @@ sys.stderr.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = ROOT / "data" / "db" / "kosha.db"
 
+
+def _find_github_root(start: Path) -> Path:
+    """Walk up from ROOT to the GitHub/ dir that holds sibling repos.
+
+    ROOT.parent is correct for a normal checkout, but a git worktree
+    (kosha/.claude/worktrees/<name>/) nests ROOT two levels deeper, which
+    would silently point SIBLING at .claude/worktrees/ instead of GitHub/.
+    """
+    for candidate in (start, *start.parents):
+        if (candidate / "SanskritLexicography").is_dir():
+            return candidate
+    return start.parent
+
+
 # SanskritLexicography is a sibling repo (org convention: all repos under
 # the same GitHub/ root). Consume, don't rebuild (SHARED_CODE.md).
-SIBLING = ROOT.parent
+SIBLING = _find_github_root(ROOT)
 UNION_HEADWORDS = SIBLING / "SanskritLexicography" / "HeadwordLists" / "union" / "union_headwords.tsv"
 FREQ_TSV = ROOT / "data" / "frequency" / "lemma_frequency.tsv"
+HERITAGE_CROSSWALK = SIBLING / "SanskritLexicography" / "HeadwordLists" / "mw_heritage_crosswalk.tsv"
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT);
@@ -155,6 +170,26 @@ CREATE TABLE IF NOT EXISTS stem_bridge (
     rule TEXT
 );
 CREATE INDEX IF NOT EXISTS stem_bridge_canonical ON stem_bridge(canonical_slp1);
+
+-- H345: MW <-> Heritage (INRIA) entry-level crosswalk, consumed verbatim from
+-- SanskritLexicography/HeadwordLists/mw_heritage_crosswalk.tsv (never
+-- re-derived here -- the anchors come from the Heritage mirror's own MW<->DICO
+-- alignment, see that repo's mw_heritage_crosswalk.md). One row per unique MW
+-- key1 (SLP1, = entries.slp1_key for dict='mw'), full crosswalk fidelity
+-- including uncovered rows so "known uncovered" and "not an MW key" stay
+-- distinguishable. Match tiers, from `covered` x `anchor`:
+--   covered=1, anchor set   -- resolved to a DICO page anchor (link-out works)
+--   covered=1, anchor NULL  -- covered but anchor unresolved (homonym-suffix
+--                              mismatch, ~2.3% of covered; documented upstream)
+--   covered=0               -- MW entry not in Heritage's lexicon
+-- This is a coverage WITNESS only (is the headword in Heritage's hand-built
+-- lexicon?), independent of forms.source='heritage' (H111's rule-generated
+-- paradigm forms, lowest-trust). Do not conflate the two layers.
+CREATE TABLE IF NOT EXISTS heritage_anchor (
+    mw_key1 TEXT NOT NULL PRIMARY KEY,
+    covered INTEGER NOT NULL,
+    anchor TEXT
+);
 """
 
 
@@ -234,12 +269,48 @@ def build_lemmas(con):
     return count, joined
 
 
+def build_heritage(con):
+    """H345 — ingest the MW↔Heritage crosswalk verbatim (consume, don't
+    rebuild). Sibling feed like union_headwords; needs the SanskritLexicography
+    checkout. Idempotent: full delete + reload."""
+    if not HERITAGE_CROSSWALK.exists():
+        raise SystemExit(f"missing sibling feed: {HERITAGE_CROSSWALK}")
+
+    con.execute("DELETE FROM heritage_anchor")
+    rows = []
+    with open(HERITAGE_CROSSWALK, encoding="utf-8", newline="") as f:
+        for r in csv.DictReader(f, delimiter="\t"):
+            rows.append((
+                r["mw_key1"],
+                int(r["covered_flag"]),
+                r["heritage_entry_anchor"] or None,
+            ))
+    con.executemany(
+        "INSERT INTO heritage_anchor (mw_key1, covered, anchor) VALUES (?,?,?)",
+        rows,
+    )
+    con.commit()
+    total = con.execute("SELECT COUNT(*) FROM heritage_anchor").fetchone()[0]
+    covered = con.execute("SELECT COUNT(*) FROM heritage_anchor WHERE covered=1").fetchone()[0]
+    anchored = con.execute(
+        "SELECT COUNT(*) FROM heritage_anchor WHERE covered=1 AND anchor IS NOT NULL"
+    ).fetchone()[0]
+    joined = con.execute(
+        "SELECT COUNT(DISTINCT h.mw_key1) FROM heritage_anchor h "
+        "JOIN entries e ON e.dict='mw' AND e.slp1_key=h.mw_key1 WHERE h.covered=1"
+    ).fetchone()[0]
+    print(f"[heritage] {total} MW keys loaded: {covered} Heritage-covered "
+          f"({anchored} anchor-resolved, {covered - anchored} unresolved), "
+          f"{joined} covered keys join a loaded MW entry")
+    return total, covered, anchored, joined
+
+
 STAGES = {"lemmas": build_lemmas}
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--stage", choices=list(STAGES) + ["entries", "forms", "evidence", "inflections", "stem_bridge"], default=None)
+    ap.add_argument("--stage", choices=list(STAGES) + ["entries", "forms", "evidence", "inflections", "stem_bridge", "heritage"], default=None)
     ap.add_argument("--dicts", default="mw,pwg,ap90")
     args = ap.parse_args()
 
@@ -263,6 +334,11 @@ def main():
         # `forms`. Requires both to be populated first.
         from build_stem_bridge import build_stem_bridge  # noqa: E402
         build_stem_bridge(con)
+    if args.stage in (None, "heritage"):
+        # H345: Heritage coverage witness. Part of the default build (same
+        # sibling checkout the lemmas stage already requires); joined-entry
+        # count in its summary line is 0 until `--stage entries` has run.
+        build_heritage(con)
     if args.stage in (None, "evidence"):
         # P3 evidence layer: runs after lemmas + forms are populated (band
         # needs lemmas.rank_all; examples need the forms.form_slp1->lemma_slp1

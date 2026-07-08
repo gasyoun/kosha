@@ -55,7 +55,10 @@ learners, then scholars.
   compounded verse segmented at query time.
 - **Evidence-graded entries** — frequency bands and attestation from the
   [Digital Corpus of Sanskrit](http://www.sanskrit-linguistics.org/dcs/):
-  what a second-year should memorise vs look up and forget.
+  what a second-year should memorise vs look up and forget. A third witness,
+  Sanskrit Heritage (INRIA) coverage, links out per headword: 25,140 of
+  185,803 MW entries are attested in Heritage's hand-built lexicon (24,549
+  anchor-resolved, 591 covered but unresolved — H345).
 - **Generated paradigms + a compact grammar token** modelled on Zaliznyak's
   index from the Russian lexicographic tradition.
 - **Trilingual glosses** — English (MW) · German (PWG) · Russian (pwg_ru

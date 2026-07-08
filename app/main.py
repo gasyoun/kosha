@@ -40,6 +40,11 @@ load_dotenv()
 # defaults to the local dev API. In production this is the durable API mirror.
 PUBLIC_BASE = os.getenv("KOSHA_PUBLIC_BASE", "http://localhost:8000")
 
+# H345: link-out base for Heritage (INRIA) DICO anchors. heritage_anchor.anchor
+# is a site-relative path ("DICO/<n>.html#<key>") so the target host stays
+# configurable, like COLOGNE_SCAN_BASE for scans.
+HERITAGE_BASE = os.getenv("HERITAGE_DICO_BASE", "https://sanskrit.inria.fr/")
+
 app = FastAPI(
     title=os.getenv("API_TITLE", "kosha"),
     description=os.getenv("API_DESCRIPTION", "Fast Sanskrit Dictionary Lookup"),
@@ -119,6 +124,35 @@ def _entry_payload(con, row, out: str, raw: bool):
         "SELECT * FROM lemmas WHERE slp1=?", (row["slp1_key"],)
     ).fetchone()
     payload["evidence"] = build_evidence(lemma_row)
+    # H345: Heritage (INRIA) coverage witness — is this headword in Heritage's
+    # hand-built lexicon? Third witness alongside the DCS frequency layer,
+    # joined like it (keyed off the entry's own slp1_key = MW key1). A
+    # coverage/link-out signal only — NOT the forms.source='heritage'
+    # rule-generated paradigm layer (H111, lowest-trust; see build_db.py).
+    # try/except so a pre-H345 kosha.db (no heritage_anchor table yet, ro
+    # connection can't migrate) degrades to null instead of erroring.
+    try:
+        her = con.execute(
+            "SELECT covered, anchor FROM heritage_anchor WHERE mw_key1=?",
+            (row["slp1_key"],),
+        ).fetchone()
+    except sqlite3.OperationalError:
+        her = None
+        payload["heritage"] = None
+    else:
+        if her is None or not her["covered"]:
+            payload["heritage"] = {"covered": False}
+        else:
+            anchor = her["anchor"]
+            payload["heritage"] = {
+                "covered": True,
+                "anchor": anchor,
+                # DICO key after the page fragment = Heritage's own lemma
+                # spelling (Velthuis-style, homonym suffix kept, e.g.
+                # "a.mzaka#1"); None on the ~2.3% unresolved-anchor tier.
+                "heritage_lemma": anchor.split("#", 1)[1] if anchor else None,
+                "url": HERITAGE_BASE + anchor if anchor else None,
+            }
     return payload
 
 
@@ -345,6 +379,12 @@ def meta(con: sqlite3.Connection = Depends(get_db)):
         "entries": con.execute("SELECT COUNT(*) FROM entries").fetchone()[0],
         "forms": con.execute("SELECT COUNT(*) FROM forms").fetchone()[0],
     }
+    try:  # H345; absent on a pre-H345 kosha.db
+        counts["heritage_covered"] = con.execute(
+            "SELECT COUNT(*) FROM heritage_anchor WHERE covered=1"
+        ).fetchone()[0]
+    except sqlite3.OperationalError:
+        counts["heritage_covered"] = None
     return {
         "data_version": data_version(con),
         "sources": [dict(s) for s in sources],
