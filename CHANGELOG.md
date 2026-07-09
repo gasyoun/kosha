@@ -14,6 +14,20 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **Static print co-location page (public Pages tier).** Executor: Opus 4.8
+  (`claude-opus-4-8`), handoff H441.
+  - [`scripts/build_colocation_page.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_colocation_page.py)
+    renders [`colocation/`](https://github.com/gasyoun/kosha/tree/main/colocation)
+    from `kosha.db` only (RISKS.md R12, no live service) — the static web
+    counterpart of the `/api/v1/page` + `/api/v1/neighbors` endpoints (v0.15.0),
+    live at [gasyoun.github.io/kosha/colocation](https://gasyoun.github.io/kosha/colocation/).
+  - Self-contained `colocation/index.html` (dict tabs, head-word/column search,
+    Cologne scan links) + lazy per-dict `colocation/data/<dict>.js`. Grouped on
+    each dict's finest printed unit: PWG `(vol, page)` = Spalte (8,171 columns);
+    MW `(page, col)` cited `page,col` (3,998); Apte `(page, col)` cited `page+letter`
+    (3,228). 444,773 located entries across the three dictionaries.
+
 ## [0.15.0] - 2026-07-09
 
 ### Added
