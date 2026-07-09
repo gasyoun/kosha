@@ -22,11 +22,18 @@ sense citations pin to `data_version`, not to repo tags.
     from `kosha.db` only (RISKS.md R12, no live service) — the static web
     counterpart of the `/api/v1/page` + `/api/v1/neighbors` endpoints (v0.15.0),
     live at [gasyoun.github.io/kosha/colocation](https://gasyoun.github.io/kosha/colocation/).
-  - Self-contained `colocation/index.html` (dict tabs, head-word/column search,
-    Cologne scan links) + lazy per-dict `colocation/data/<dict>.js`. Grouped on
-    each dict's finest printed unit: PWG `(vol, page)` = Spalte (8,171 columns);
-    MW `(page, col)` cited `page,col` (3,998); Apte `(page, col)` cited `page+letter`
-    (3,228). 444,773 located entries across the three dictionaries.
+  - Self-contained `colocation/index.html` + lazy per-dict `colocation/data/<dict>.js`.
+    Grouped on each dict's finest printed unit: PWG `(vol, page)` = Spalte;
+    MW `(page, col)` cited `page,col`; Apte `(page, col)` cited `page+letter`.
+    444,773 located entries.
+  - **Paged two-column leaf view** — the book sets two columns per page, so the
+    browser shows a whole leaf (left col `2P−1` + right col `2P` for PWG, all
+    columns of the physical page for MW/Apte), with ← / → paging (and arrow keys),
+    a column jump box, dictionary-wide head-word search, and per-head-word
+    highlighting. Deep-linkable: `#<dict>/<col>?w=<slp1>` (the RU PWG article site
+    links every column-mate in here). Honest caveat surfaced in the UI: the source
+    records column numbers, not the book's printed page number, so left/right
+    *column* is exact but recto/verso of the leaf is not derivable.
 
 ## [0.15.0] - 2026-07-09
 
