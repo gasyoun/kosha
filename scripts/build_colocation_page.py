@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Generate the kosha static print-co-location page (GitHub Pages tier).
+"""Generate the kosha static print-co-location browser (GitHub Pages tier).
 
 "Which words were originally printed together on the same page/column?" — the
 static, public-web counterpart of the /api/v1/page + /api/v1/neighbors endpoints
@@ -7,15 +7,25 @@ static, public-web counterpart of the /api/v1/page + /api/v1/neighbors endpoints
 tier never calls a live service), into a self-contained page under
 `colocation/` served at gasyoun.github.io/kosha/colocation/.
 
-Per-dict co-location unit (entries.parse_pc stores different shapes per dict):
-  * pwg  -> (vol, page)   page = the Böhtlingk-Roth column/Spalte (fine unit)
-  * mw   -> (page, col)   page = physical page, col = column within it
-  * ap90 -> (page, col)   same
-Grouping on the finest available key per dict recovers the printed column.
+v2 (H441): a PAGED, two-column view of the printed leaf (points 2+3):
+  * the printed book sets TWO columns per page; the browser shows a whole leaf
+    (left + right column) at once and lets you page ← / → through leaves and
+    jump to any column/page.
+  * per-dict printed unit (entries.parse_pc stores different shapes):
+      pwg  -> (vol, page)  page = Böhtlingk-Roth column/Spalte; leaf = cols
+              2P-1 (LEFT) + 2P (RIGHT), P = ceil(col/2)
+      mw   -> (page, col)  page = physical page, col numeric -> cited "page,col"
+      ap90 -> (page, col)  col alphabetic -> cited "page+letter"
+    For mw/ap90 the physical page IS given, so a leaf = all columns of that page.
+  * HONEST caveat surfaced in the UI: the source stores COLUMN numbers, not the
+    book's printed page number, so we can label left/right COLUMN (derivable) but
+    NOT recto/verso of the physical leaf.
+  * deep-linkable: `#<dict>/<colkey>` opens that leaf; `?w=<slp1>` highlights a
+    word (the RU article site links in here per neighbour head-word).
 
 Output:
-  colocation/index.html        self-contained browser (dict tabs, search, scan links)
-  colocation/data/<dict>.js    window.COLOC_DATA['<dict>'] = [{key,label,scan,words}]
+  colocation/index.html        self-contained paged browser
+  colocation/data/<dict>.js    window.COLOC_DATA['<dict>'] = {leaves:[...], index:{colkey->leafIdx}}
                                (lazy-loaded per dict via <script src>, works on file://)
 
 Deterministic; no network; safe to regenerate + commit to main (Pages redeploys).
@@ -39,47 +49,74 @@ DICTS = ("pwg", "mw", "ap90")
 DICT_LABEL = {"pwg": "PWG (Böhtlingk–Roth)", "mw": "Monier-Williams", "ap90": "Apte 1890"}
 
 
-def group_key(dict_code, row):
-    """(label, scan_page, sort_key) for one entry's printed column."""
+def col_of(dict_code, row):
+    """(col_label, page_index, side, scan_page, sort_key) for one entry's column.
+
+    side is 'L'/'R' for PWG (derivable from the column's parity within its leaf),
+    '' for mw/ap90 (their column is a within-page label, not a leaf half)."""
     vol, page, col = row["vol"], row["page"], row["col"]
     if dict_code == "pwg":
-        # page IS the Spalte; volume-scoped
-        return (f"{vol}-{page:04d}", page, (vol, page, 0))
-    # mw / ap90: physical page + column-within-page. Canonical citation is
-    # "page,col" when the column is numeric (MW, e.g. 741,3) and "page+letter"
-    # when it is alphabetic (Apte, e.g. 45a) — never bare-concat a numeric col
-    # ("1"+"1" would read as page 11).
+        leaf = (page + 1) // 2               # physical leaf within the volume
+        side = "L" if page % 2 == 1 else "R"  # odd column = left, even = right
+        return (f"{vol}-{page:04d}", (vol, leaf), side, page, (vol, page))
     c = (col or "").strip()
     if not c:
         label = str(page)
     elif c.isalpha():
-        label = f"{page}{c}"
+        label = f"{page}{c}"       # Apte: 45a
     else:
-        label = f"{page},{c}"
-    return (label, page, (0, page, c))
+        label = f"{page},{c}"      # MW: 741,3
+    return (label, page, "", page, (page, c))
 
 
 def build_dict(con, dict_code):
     rows = con.execute(
         "SELECT L, slp1_key, vol, page, col FROM entries "
-        "WHERE dict=? AND page IS NOT NULL ORDER BY page, col, CAST(L AS REAL), L",
+        "WHERE dict=? AND page IS NOT NULL "
+        "ORDER BY COALESCE(vol,0), page, col, CAST(L AS REAL), L",
         (dict_code,),
     ).fetchall()
-    groups = collections.OrderedDict()
+    # 1) gather columns
+    cols = collections.OrderedDict()   # col_label -> {label, leaf, side, scan, words}
+    leaves = collections.OrderedDict()  # leaf_key  -> [col_label, ...]
     for r in rows:
-        label, scan_page, sortk = group_key(dict_code, r)
-        g = groups.get(label)
-        if g is None:
-            g = groups[label] = {"label": label, "scan_page": scan_page,
-                                 "sort": sortk, "words": []}
-        g["words"].append({"iast": from_slp1_out(r["slp1_key"], "iast"),
+        label, leaf_key, side, scan_page, _sort = col_of(dict_code, r)
+        c = cols.get(label)
+        if c is None:
+            c = cols[label] = {"c": label, "side": side,
+                               "scan": scan_url(dict_code, scan_page) or "",
+                               "words": []}
+            leaves.setdefault(leaf_key, [])
+            if label not in leaves[leaf_key]:
+                leaves[leaf_key].append(label)
+        c["words"].append({"iast": from_slp1_out(r["slp1_key"], "iast"),
                            "slp1": r["slp1_key"]})
-    out = []
-    for g in sorted(groups.values(), key=lambda x: x["sort"]):
-        out.append({"key": g["label"], "label": g["label"],
-                    "scan": scan_url(dict_code, g["scan_page"]) or "",
-                    "n": len(g["words"]), "words": g["words"]})
-    return out
+    # 2) assemble ordered leaves; for PWG fill the missing half so every leaf
+    #    shows both L and R even when one column had no entry starting in it.
+    out_leaves = []
+    index = {}
+    for leaf_key in sorted(leaves):
+        labels = leaves[leaf_key]
+        if dict_code == "pwg":
+            vol, leaf = leaf_key
+            left_col, right_col = 2 * leaf - 1, 2 * leaf
+            leaf_cols = []
+            for cc, side in ((left_col, "L"), (right_col, "R")):
+                lab = f"{vol}-{cc:04d}"
+                if lab in cols:
+                    leaf_cols.append(cols[lab])
+                else:
+                    leaf_cols.append({"c": lab, "side": side,
+                                      "scan": scan_url(dict_code, cc) or "", "words": []})
+            plabel = f"{vol}·leaf {leaf}"
+        else:
+            leaf_cols = [cols[l] for l in labels]
+            plabel = str(leaf_key)
+        li = len(out_leaves)
+        out_leaves.append({"p": plabel, "cols": leaf_cols})
+        for lc in leaf_cols:
+            index[lc["c"]] = li
+    return {"leaves": out_leaves, "index": index}
 
 
 def write_data(out_dir, dict_code, data):
@@ -98,80 +135,124 @@ INDEX_HTML = r"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>kosha — print co-location</title>
 <style>
-:root{--bg:#fff;--fg:#1a1a1a;--mut:#6a6a6a;--line:#e4e4e4;--accent:#7a1f1f;--card:#fafafa}
-@media(prefers-color-scheme:dark){:root{--bg:#161616;--fg:#e8e8e8;--mut:#9a9a9a;--line:#333;--accent:#e6928a;--card:#1e1e1e}}
-:root[data-theme=dark]{--bg:#161616;--fg:#e8e8e8;--mut:#9a9a9a;--line:#333;--accent:#e6928a;--card:#1e1e1e}
-:root[data-theme=light]{--bg:#fff;--fg:#1a1a1a;--mut:#6a6a6a;--line:#e4e4e4;--accent:#7a1f1f;--card:#fafafa}
+:root{--bg:#fff;--fg:#1a1a1a;--mut:#6a6a6a;--line:#e4e4e4;--accent:#7a1f1f;--card:#fafafa;--hl:#ffe27a}
+@media(prefers-color-scheme:dark){:root{--bg:#161616;--fg:#e8e8e8;--mut:#9a9a9a;--line:#333;--accent:#e6928a;--card:#1e1e1e;--hl:#6b5a00}}
+:root[data-theme=dark]{--bg:#161616;--fg:#e8e8e8;--mut:#9a9a9a;--line:#333;--accent:#e6928a;--card:#1e1e1e;--hl:#6b5a00}
+:root[data-theme=light]{--bg:#fff;--fg:#1a1a1a;--mut:#6a6a6a;--line:#e4e4e4;--accent:#7a1f1f;--card:#fafafa;--hl:#ffe27a}
 *{box-sizing:border-box}body{margin:0;font:15px/1.55 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
-header{padding:18px 24px;border-bottom:1px solid var(--line)}
-h1{font-size:20px;margin:0 0 4px}.sub{color:var(--mut);font-size:13px}
-#bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:2}
+header{padding:16px 24px 10px;border-bottom:1px solid var(--line)}
+h1{font-size:20px;margin:0 0 4px}.sub{color:var(--mut);font-size:13px;max-width:70ch}
+#bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:10px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:2}
 .tabs{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
 .tabs button{border:0;border-right:1px solid var(--line);background:var(--bg);color:var(--fg);padding:6px 14px;cursor:pointer;font-size:14px}
 .tabs button:last-child{border-right:0}.tabs button.on{background:var(--accent);color:#fff}
-#q{flex:1;min-width:180px;padding:7px 10px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--fg)}
-#count{color:var(--mut);font-size:13px}
-#list{padding:12px 24px;max-width:1000px}
-.col{margin:0 0 14px;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:10px}
-.col .clab{font-size:13px;color:var(--mut);font-family:ui-monospace,monospace}
-.col a.scan{color:var(--accent);font-size:12px;text-decoration:none;border-bottom:1px dotted var(--accent);margin-left:8px}
-.col a.scan:hover{border-bottom-color:transparent}
-.words{margin-top:7px;display:flex;flex-wrap:wrap;gap:5px}
-.w{font-style:italic;font-size:13px;padding:1px 8px;border:1px solid var(--line);border-radius:11px;color:var(--fg);white-space:nowrap}
-.w.hit{background:var(--accent);color:#fff;border-color:var(--accent)}
+.pager{display:inline-flex;gap:4px;align-items:center}
+.pager button{border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:7px;padding:6px 11px;cursor:pointer;font-size:15px}
+.pager button:disabled{opacity:.4;cursor:default}
+#jump,#q{padding:7px 10px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--fg)}
+#jump{width:120px}#q{flex:1;min-width:150px}
+#where{color:var(--mut);font-size:13px;white-space:nowrap}
+#leaf{padding:16px 24px;max-width:1100px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:680px){.cols{grid-template-columns:1fr}}
+.colbox{padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+.colbox .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:8px}
+.colbox .clab{font-size:13px;font-family:ui-monospace,monospace}
+.colbox .side{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#fff;background:var(--mut);border-radius:4px;padding:1px 6px}
+.colbox a.scan{color:var(--accent);font-size:12px;text-decoration:none;border-bottom:1px dotted var(--accent)}
+.colbox a.scan:hover{border-bottom-color:transparent}
+.words{display:flex;flex-wrap:wrap;gap:5px}
+.w{font-style:italic;font-size:13px;padding:1px 8px;border:1px solid var(--line);border-radius:11px;color:var(--fg);white-space:nowrap;cursor:pointer;text-decoration:none}
+.w:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.w.hl{background:var(--hl);border-color:var(--accent);font-weight:600}
+.empty{color:var(--mut);font-style:italic;font-size:13px}
 .na{color:var(--mut);font-style:italic;padding:20px 0}
-footer{padding:16px 24px;color:var(--mut);font-size:12px;border-top:1px solid var(--line)}
+.results{margin-bottom:14px;padding:10px 12px;border:1px dashed var(--line);border-radius:8px}
+.results a{display:inline-block;margin:2px 6px 2px 0;font-size:13px}
+footer{padding:14px 24px;color:var(--mut);font-size:12px;border-top:1px solid var(--line);max-width:80ch}
 a{color:var(--accent)}
 </style></head><body>
 <header><h1>kosha — print co-location</h1>
-<div class="sub">Which head-words were originally printed together on the same page/column of the scanned dictionary. Static snapshot of the <code>/api/v1/page</code> + <code>/api/v1/neighbors</code> endpoints — data rendered from <code>kosha.db</code>, no live server.</div></header>
+<div class="sub">Which head-words were originally printed together on the same leaf of the scanned dictionary. The book sets <b>two columns per page</b>; each leaf is shown as its left + right column. Static snapshot of <code>/api/v1/page</code> — rendered from <code>kosha.db</code>, no live server.</div></header>
 <div id="bar">
 <div class="tabs" id="tabs"></div>
-<input id="q" placeholder="filter by head-word (IAST or SLP1) or column, e.g. aṃśu / 1-0004 / 649…">
-<span id="count"></span>
+<span class="pager"><button id="prev" title="previous leaf">←</button><button id="next" title="next leaf">→</button></span>
+<input id="jump" placeholder="go to column, e.g. 1-0004 / 741,3 / 45a">
+<input id="q" placeholder="search a head-word (IAST or SLP1) across the whole dictionary…">
+<span id="where"></span>
 </div>
-<div id="list"><p class="na">Loading…</p></div>
-<footer>PWG column = Böhtlingk-Roth Spalte; MW/Apte = page+column. Scan links open the Cologne servepdf viewer. Built by <a href="https://github.com/gasyoun/kosha/blob/main/scripts/build_colocation_page.py">build_colocation_page.py</a> (H441).</footer>
+<div id="leaf"><p class="na">Loading…</p></div>
+<footer>PWG column = Böhtlingk-Roth Spalte; a leaf = columns 2P−1 (LEFT) + 2P (RIGHT). MW/Apte show the columns of one physical page. <b>Caveat:</b> the source records column numbers, not the book's printed page number, so left/right <i>column</i> is exact but recto/verso of the physical leaf is not derivable here. Every head-word links to its kosha entry; 🖼 opens the Cologne scan. Built by <a href="https://github.com/gasyoun/kosha/blob/main/scripts/build_colocation_page.py">build_colocation_page.py</a> (H441).</footer>
 <script>
-var DICTS=__DICTS__, LABELS=__LABELS__, cur='pwg', LIMIT=400;
-var tabs=document.getElementById('tabs'),q=document.getElementById('q'),
-    listEl=document.getElementById('list'),countEl=document.getElementById('count');
+var DICTS=__DICTS__, LABELS=__LABELS__, cur='pwg', idx=0;
+// kosha lemma link — the live lemma UI is deploy-gated; until it is up we point
+// head-words back into this browser at their own column (deep link), which IS live.
+function lemmaHref(dict,slp1,col){return '#'+dict+'/'+encodeURIComponent(col)+'?w='+encodeURIComponent(slp1);}
+var tabs=document.getElementById('tabs'),prev=document.getElementById('prev'),next=document.getElementById('next'),
+    jump=document.getElementById('jump'),q=document.getElementById('q'),
+    leafEl=document.getElementById('leaf'),whereEl=document.getElementById('where');
 window.COLOC_DATA=window.COLOC_DATA||{};
 DICTS.forEach(function(d){var b=document.createElement('button');b.textContent=LABELS[d];b.setAttribute('data-d',d);
- b.onclick=function(){cur=d;syncTabs();load();};tabs.appendChild(b);});
+ b.onclick=function(){go(d,0);};tabs.appendChild(b);});
 function syncTabs(){var bs=tabs.querySelectorAll('button');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i].getAttribute('data-d')===cur);}
 function esc(x){return (''+(x==null?'':x)).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
-function render(){
- var data=window.COLOC_DATA[cur]||[];var f=q.value.trim().toLowerCase();
- var rows=[];
- for(var i=0;i<data.length&&rows.length<LIMIT;i++){var g=data[i];
-  if(f){var km=g.label.toLowerCase().indexOf(f)>=0;
-   var wm=false;for(var j=0;j<g.words.length;j++){if(g.words[j].iast.toLowerCase().indexOf(f)>=0||g.words[j].slp1.toLowerCase().indexOf(f)>=0){wm=true;break;}}
-   if(!km&&!wm)continue;}
-  rows.push(g);
- }
- var total=data.length;
- countEl.textContent=rows.length+(rows.length>=LIMIT?'+':'')+' / '+total+' columns';
- if(!rows.length){listEl.innerHTML='<p class="na">No matching column.</p>';return;}
- var h='';rows.forEach(function(g){
-  h+='<div class="col"><span class="clab">'+esc(g.label)+' · '+g.n+' entries</span>'
-   +(g.scan?'<a class="scan" href="'+esc(g.scan)+'" target="_blank" rel="noopener">🖼 scan</a>':'')
-   +'<div class="words">';
-  g.words.forEach(function(w){var hit=f&&(w.iast.toLowerCase().indexOf(f)>=0||w.slp1.toLowerCase().indexOf(f)>=0);
-   h+='<span class="w'+(hit?' hit':'')+'" title="'+esc(w.slp1)+'">'+esc(w.iast)+'</span>';});
-  h+='</div></div>';
+function data(){return window.COLOC_DATA[cur]||{leaves:[],index:{}};}
+function renderLeaf(hlWord){
+ var D=data(),lv=D.leaves[idx];if(!lv){leafEl.innerHTML='<p class="na">—</p>';return;}
+ whereEl.textContent='leaf '+(idx+1)+' / '+D.leaves.length+'  ·  '+lv.p;
+ prev.disabled=idx<=0;next.disabled=idx>=D.leaves.length-1;
+ var h='<div class="cols">';
+ lv.cols.forEach(function(c){
+  h+='<div class="colbox"><div class="top"><span class="clab">'+esc(c.c)
+    +(c.side?' <span class="side">'+(c.side==='L'?'left col':'right col')+'</span>':'')+'</span>'
+    +(c.scan?'<a class="scan" href="'+esc(c.scan)+'" target="_blank" rel="noopener">🖼 scan</a>':'')+'</div>';
+  if(!c.words.length){h+='<div class="empty">— no entry starts here —</div>';}
+  else{h+='<div class="words">';c.words.forEach(function(w){
+   var hl=hlWord&&w.slp1===hlWord;
+   h+='<a class="w'+(hl?' hl':'')+'" href="'+lemmaHref(cur,w.slp1,c.c)+'" title="'+esc(w.slp1)+'">'+esc(w.iast)+'</a>';
+  });h+='</div>';}
+  h+='</div>';
  });
- listEl.innerHTML=h;
+ leafEl.innerHTML=h+'</div>';
+ if(hlWord){var e=leafEl.querySelector('.w.hl');if(e)e.scrollIntoView({block:'center'});}
 }
-function load(){
- if(window.COLOC_DATA[cur]){render();return;}
- listEl.innerHTML='<p class="na">Loading '+LABELS[cur]+'…</p>';
+function ensure(cb){if(window.COLOC_DATA[cur]){cb();return;}
+ leafEl.innerHTML='<p class="na">Loading '+LABELS[cur]+'…</p>';
  var sc=document.createElement('script');sc.src='data/'+cur+'.js';
- sc.onload=function(){render();};sc.onerror=function(){listEl.innerHTML='<p class="na">Failed to load '+cur+' data.</p>';};
- document.head.appendChild(sc);
-}
-q.oninput=render;
-syncTabs();load();
+ sc.onload=cb;sc.onerror=function(){leafEl.innerHTML='<p class="na">Failed to load '+cur+' data.</p>';};
+ document.head.appendChild(sc);}
+function go(dict,leafIdx,hlWord){cur=dict;syncTabs();ensure(function(){
+ var D=data();idx=Math.max(0,Math.min(leafIdx,D.leaves.length-1));renderLeaf(hlWord);
+ writeHash();});}
+function writeHash(){var D=data(),lv=D.leaves[idx];if(!lv||!lv.cols.length)return;
+ var col=lv.cols[0].c;history.replaceState(null,'','#'+cur+'/'+encodeURIComponent(col));}
+prev.onclick=function(){if(idx>0){idx--;renderLeaf();writeHash();}};
+next.onclick=function(){if(idx<data().leaves.length-1){idx++;renderLeaf();writeHash();}};
+document.addEventListener('keydown',function(e){if(e.target.tagName==='INPUT')return;
+ if(e.key==='ArrowLeft')prev.click();else if(e.key==='ArrowRight')next.click();});
+jump.onchange=function(){var k=jump.value.trim();var D=data();
+ if(k in D.index){go(cur,D.index[k]);}else{whereEl.textContent='no column '+k;}};
+// global search across the loaded dict's words
+q.oninput=function(){var f=q.value.trim().toLowerCase();
+ var old=document.querySelector('.results');if(old)old.remove();
+ if(f.length<2)return;var D=data(),hits=[],seen={};
+ for(var i=0;i<D.leaves.length&&hits.length<60;i++){var lv=D.leaves[i];
+  for(var j=0;j<lv.cols.length;j++){var c=lv.cols[j];
+   for(var k=0;k<c.words.length;k++){var w=c.words[k];
+    if((w.iast.toLowerCase().indexOf(f)>=0||w.slp1.toLowerCase().indexOf(f)>=0)&&!seen[w.slp1+'@'+c.c]){
+     seen[w.slp1+'@'+c.c]=1;hits.push({w:w,col:c.c,leaf:i});}}}}
+ var box=document.createElement('div');box.className='results';
+ box.innerHTML='<b>'+hits.length+(hits.length>=60?'+':'')+'</b> matches — click to open its leaf: ';
+ hits.forEach(function(hit){var a=document.createElement('a');a.href='#';a.className='';a.style.fontStyle='italic';
+  a.textContent=hit.w.iast+' ('+hit.col+')';a.onclick=function(ev){ev.preventDefault();go(cur,hit.leaf,hit.w.slp1);};box.appendChild(a);});
+ leafEl.parentNode.insertBefore(box,leafEl);
+};
+function fromHash(){var m=/^#([a-z0-9]+)\/([^?]+)(?:\?w=(.*))?$/.exec(location.hash||'');
+ if(!m)return false;var d=m[1];if(DICTS.indexOf(d)<0)return false;
+ var col=decodeURIComponent(m[2]),w=m[3]?decodeURIComponent(m[3]):null;
+ cur=d;syncTabs();ensure(function(){var D=data();var li=(col in D.index)?D.index[col]:0;idx=li;renderLeaf(w);});return true;}
+window.addEventListener('hashchange',fromHash);
+syncTabs();if(!fromHash())go('pwg',0);
 </script></body></html>
 """
 
@@ -199,12 +280,13 @@ def main():
     present = []
     for d in DICTS:
         data = build_dict(con, d)
-        if not data:
+        if not data["leaves"]:
             sys.stderr.write(f"  [coloc] {d}: no located entries, skipping\n")
             continue
         size = write_data(args.out, d, data)
         present.append(d)
-        print(f"  {d}: {len(data)} columns, {sum(g['n'] for g in data)} entries "
+        nwords = sum(len(c["words"]) for lf in data["leaves"] for c in lf["cols"])
+        print(f"  {d}: {len(data['leaves'])} leaves, {nwords} entries "
               f"-> data/{d}.js ({size // 1024} KB)")
     write_index(args.out, present)
     print(f"wrote {args.out}/index.html  (dicts: {', '.join(present)})")
