@@ -27,6 +27,9 @@ from versions import parse_sense_id, has_archive, resolve_sense  # noqa: E402
 from cite import cite_object  # noqa: E402
 from evidence import build_evidence  # noqa: E402
 from reverse_lookup import analyze as reverse_analyze  # noqa: E402
+from neighbors import (  # noqa: E402
+    entry_location, column_entries, physical_page_entries, group_label,
+)
 from paradigm import build_paradigm  # noqa: E402
 from history_db import log_search_event, open_connection as open_history_db, upsert_visitor  # noqa: E402
 from identity import hash_ip, resolve_anon_id  # noqa: E402
@@ -174,6 +177,67 @@ def get_lemma(key: str, in_: str = Query("auto", alias="in"), out: str = "iast",
         error("lemma_not_found", f"no entries for '{key}' (slp1={slp1_key})", 404,
               suggestions=[] if lemma is None else ["lemma exists in the union spine but has no dict entries"])
     return envelope(con, {"key": key, "in": in_, "out": out, "dicts": dict_list}, results)
+
+
+def _neighbor_payload(con, row, out: str, query_L=None):
+    return {
+        "dict": row["dict"], "L": row["L"],
+        "headword": from_slp1_out(row["slp1_key"], out),
+        "pc_raw": row["pc_raw"],
+        "scan_url": scan_url(row["dict"], row["page"]),
+        "is_query": row["L"] == query_L,
+    }
+
+
+@app.get("/api/v1/page/{dict_id}")
+def get_page(dict_id: str, page: int, vol: int = Query(None),
+             merge: int = 0, out: str = "iast",
+             con: sqlite3.Connection = Depends(get_db)):
+    """All entries that physically shared one printed column (or, with merge=1,
+    one two-column leaf) — the words that sat together on the page."""
+    d = dict_id.lower()
+    if d not in ALL_DICTS:
+        error("bad_dict", f"unknown dict '{dict_id}'; use one of {ALL_DICTS}", 404)
+    rows = (physical_page_entries(con, d, vol, page) if merge
+            else column_entries(con, d, vol, page))
+    if not rows:
+        error("page_empty", f"no entries at {group_label(d, vol, page, merge=bool(merge))}", 404,
+              suggestions=["check vol/page; PWG needs vol, MW/AP90 do not"])
+    results = [_neighbor_payload(con, r, out) for r in rows]
+    return envelope(con, {
+        "dict": d, "vol": vol, "page": page, "merge": bool(merge), "out": out,
+        "unit": "physical_page (2 columns)" if merge else "column",
+        "label": group_label(d, vol, page, merge=bool(merge)),
+        "count": len(results),
+    }, results)
+
+
+@app.get("/api/v1/neighbors/{dict_id}/{L}")
+def get_neighbors(dict_id: str, L: str, merge: int = 0, out: str = "iast",
+                  con: sqlite3.Connection = Depends(get_db)):
+    """Given one entry, the other words printed on the same column (or leaf).
+    The query entry is included, flagged is_query=true, in printed order."""
+    d = dict_id.lower()
+    if d not in ALL_DICTS:
+        error("bad_dict", f"unknown dict '{dict_id}'; use one of {ALL_DICTS}", 404)
+    loc = entry_location(con, d, L)
+    if loc is None:
+        error("entry_not_found", f"no {d} entry with L={L}", 404)
+    if loc["page"] is None:
+        error("no_location", f"{d} L={L} ({from_slp1_out(loc['slp1_key'], out)}) "
+              f"has an unparseable <pc> ({loc['pc_raw']!r}); no page location", 422)
+    rows = (physical_page_entries(con, d, loc["vol"], (loc["page"] + 1) // 2) if merge
+            else column_entries(con, d, loc["vol"], loc["page"]))
+    results = [_neighbor_payload(con, r, out, query_L=L) for r in rows]
+    return envelope(con, {
+        "dict": d, "L": L, "headword": from_slp1_out(loc["slp1_key"], out),
+        "merge": bool(merge), "out": out,
+        "unit": "physical_page (2 columns)" if merge else "column",
+        "label": group_label(d, loc["vol"],
+                             (loc["page"] + 1) // 2 if merge else loc["page"],
+                             merge=bool(merge)),
+        "count": len(results),
+    }, results)
 
 
 @app.get("/api/v1/form/{form}")
