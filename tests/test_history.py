@@ -121,3 +121,30 @@ def test_magic_link_cannot_be_reused(client, capsys):
     client.get(f"/api/v1/auth/verify?token={token}")
     r = client.get(f"/api/v1/auth/verify?token={token}")
     assert r.status_code == 404
+
+
+def test_purge_old_search_events_deletes_only_past_cutoff():
+    con = history_db.open_connection()
+    history_db.upsert_visitor(con, "v1", "2026-01-01T00:00:00+00:00")
+    history_db.log_search_event(con, "v1", "2026-01-01T00:00:00+00:00", "old", "old", "prefix", 1, None)
+    history_db.log_search_event(con, "v1", "2026-07-01T00:00:00+00:00", "new", "new", "prefix", 1, None)
+
+    deleted = history_db.purge_old_search_events(con, "2026-06-01T00:00:00+00:00")
+    assert deleted == 1
+
+    remaining = con.execute("SELECT query_raw FROM search_events").fetchall()
+    assert [r["query_raw"] for r in remaining] == ["new"]
+
+    # daily_rollup is a permanent aggregate — purge must never touch it.
+    rollup_days = {r["day"] for r in con.execute("SELECT day FROM daily_rollup").fetchall()}
+    assert rollup_days == {"2026-01-01", "2026-07-01"}
+    con.close()
+
+
+def test_purge_old_search_events_no_op_when_nothing_past_cutoff():
+    con = history_db.open_connection()
+    history_db.upsert_visitor(con, "v1", "2026-07-01T00:00:00+00:00")
+    history_db.log_search_event(con, "v1", "2026-07-01T00:00:00+00:00", "agni", "agni", "prefix", 1, None)
+    deleted = history_db.purge_old_search_events(con, "2020-01-01T00:00:00+00:00")
+    assert deleted == 0
+    con.close()
