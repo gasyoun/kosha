@@ -14,6 +14,28 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.15.0] - 2026-07-09
+
+### Added
+- **Print co-location endpoints — "which words shared a printed page/column".**
+  Executor: Opus 4.8 (`claude-opus-4-8`), handoff H434.
+  - [`app/neighbors.py`](https://github.com/gasyoun/kosha/blob/main/app/neighbors.py)
+    groups entries by the `(vol, page, col)` already parsed from each `<pc>`
+    marker (for PWG, `page` is the Böhtlingk-Roth Spalte — the same value
+    [`scan_resolver`](https://github.com/gasyoun/kosha/blob/main/app/scan_resolver.py)
+    feeds to `servepdf.php`).
+  - `GET /api/v1/page/{dict}?vol=&page=&merge=` — every entry sharing one printed
+    column (`merge=1` folds the two columns of a physical leaf).
+  - `GET /api/v1/neighbors/{dict}/{L}` — the column-mates of one entry, in
+    printed order, query entry flagged `is_query`; each result carries its
+    `headword` + `scan_url`.
+  - `(dict, vol, page, L)` index in
+    [`scripts/build_db.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_db.py)
+    for the group-filter + printed-order seek; 5 new tests
+    ([`tests/test_api.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_api.py),
+    25 green). Live PWG: 123,366 entries, 100 % `<pc>` coverage, 8,171 columns.
+    Fail-closed on unparseable `<pc>` (G-PC gate). [PR #33](https://github.com/gasyoun/kosha/pull/33).
+
 ## [0.14.0] - 2026-07-09
 
 ### Added
