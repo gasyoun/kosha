@@ -87,6 +87,11 @@ CREATE TABLE IF NOT EXISTS entries (
 -- a plain slp1_key-only index was NOT chosen because ORDER BY L made the planner
 -- prefer the ordered autoindex-scan). See D5_MEASUREMENTS.md §3.
 CREATE INDEX IF NOT EXISTS entries_dict_key ON entries(dict, slp1_key, L);
+-- Print co-location (app/neighbors.py): "which entries shared a printed column".
+-- The /api/v1/page + /api/v1/neighbors endpoints seek (dict, vol, page) and
+-- order by L, so a (dict, vol, page, L) index serves both the group filter and
+-- the printed-order sort without a table scan.
+CREATE INDEX IF NOT EXISTS entries_dict_loc ON entries(dict, vol, page, L);
 
 CREATE TABLE IF NOT EXISTS senses (
     entry_id INTEGER NOT NULL REFERENCES entries(id),
