@@ -109,3 +109,13 @@ def clear_visitor_history(con, anon_id: str) -> int:
     cur = con.execute("DELETE FROM search_events WHERE anon_id = ?", (anon_id,))
     con.commit()
     return cur.rowcount
+
+
+def purge_old_search_events(con, cutoff_ts: str) -> int:
+    """Delete raw search_events rows older than cutoff_ts (ISO ts string,
+    compared lexicographically like the rest of this module). daily_rollup
+    is untouched — it is the permanent aggregate the /api/v1/stats/* charts
+    read from, and has no per-visitor identifying data to retain-limit."""
+    cur = con.execute("DELETE FROM search_events WHERE ts < ?", (cutoff_ts,))
+    con.commit()
+    return cur.rowcount

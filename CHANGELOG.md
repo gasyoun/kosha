@@ -14,6 +14,19 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.14.0] - 2026-07-09
+
+### Added
+- **Search-history retention purge.** Executor: Sonnet 5
+  (`claude-sonnet-5`), handoff H416.
+  - [`scripts/purge_search_events.py`](https://github.com/gasyoun/kosha/blob/main/scripts/purge_search_events.py)
+    + [`history_db.purge_old_search_events()`](https://github.com/gasyoun/kosha/blob/main/app/history_db.py)
+    delete raw `search_events` rows (per-visitor query log) older than
+    `--days` (default 180). `daily_rollup` — the permanent anonymous
+    per-day/per-term aggregate the `/api/v1/stats/*` charts read from — is
+    never touched. `--dry-run` reports the count without deleting.
+    MG-run maintenance script (A3 local-first: no agent cron).
+
 ## [0.13.0] - 2026-07-06
 
 ### Added
