@@ -1,0 +1,79 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kosha — print co-location</title>
+<style>
+:root{--bg:#fff;--fg:#1a1a1a;--mut:#6a6a6a;--line:#e4e4e4;--accent:#7a1f1f;--card:#fafafa}
+@media(prefers-color-scheme:dark){:root{--bg:#161616;--fg:#e8e8e8;--mut:#9a9a9a;--line:#333;--accent:#e6928a;--card:#1e1e1e}}
+:root[data-theme=dark]{--bg:#161616;--fg:#e8e8e8;--mut:#9a9a9a;--line:#333;--accent:#e6928a;--card:#1e1e1e}
+:root[data-theme=light]{--bg:#fff;--fg:#1a1a1a;--mut:#6a6a6a;--line:#e4e4e4;--accent:#7a1f1f;--card:#fafafa}
+*{box-sizing:border-box}body{margin:0;font:15px/1.55 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+header{padding:18px 24px;border-bottom:1px solid var(--line)}
+h1{font-size:20px;margin:0 0 4px}.sub{color:var(--mut);font-size:13px}
+#bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:2}
+.tabs{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.tabs button{border:0;border-right:1px solid var(--line);background:var(--bg);color:var(--fg);padding:6px 14px;cursor:pointer;font-size:14px}
+.tabs button:last-child{border-right:0}.tabs button.on{background:var(--accent);color:#fff}
+#q{flex:1;min-width:180px;padding:7px 10px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--fg)}
+#count{color:var(--mut);font-size:13px}
+#list{padding:12px 24px;max-width:1000px}
+.col{margin:0 0 14px;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+.col .clab{font-size:13px;color:var(--mut);font-family:ui-monospace,monospace}
+.col a.scan{color:var(--accent);font-size:12px;text-decoration:none;border-bottom:1px dotted var(--accent);margin-left:8px}
+.col a.scan:hover{border-bottom-color:transparent}
+.words{margin-top:7px;display:flex;flex-wrap:wrap;gap:5px}
+.w{font-style:italic;font-size:13px;padding:1px 8px;border:1px solid var(--line);border-radius:11px;color:var(--fg);white-space:nowrap}
+.w.hit{background:var(--accent);color:#fff;border-color:var(--accent)}
+.na{color:var(--mut);font-style:italic;padding:20px 0}
+footer{padding:16px 24px;color:var(--mut);font-size:12px;border-top:1px solid var(--line)}
+a{color:var(--accent)}
+</style></head><body>
+<header><h1>kosha — print co-location</h1>
+<div class="sub">Which head-words were originally printed together on the same page/column of the scanned dictionary. Static snapshot of the <code>/api/v1/page</code> + <code>/api/v1/neighbors</code> endpoints — data rendered from <code>kosha.db</code>, no live server.</div></header>
+<div id="bar">
+<div class="tabs" id="tabs"></div>
+<input id="q" placeholder="filter by head-word (IAST or SLP1) or column, e.g. aṃśu / 1-0004 / 649…">
+<span id="count"></span>
+</div>
+<div id="list"><p class="na">Loading…</p></div>
+<footer>PWG column = Böhtlingk-Roth Spalte; MW/Apte = page+column. Scan links open the Cologne servepdf viewer. Built by <a href="https://github.com/gasyoun/kosha/blob/main/scripts/build_colocation_page.py">build_colocation_page.py</a> (H441).</footer>
+<script>
+var DICTS=["pwg", "mw", "ap90"], LABELS={"pwg": "PWG (B\u00f6htlingk\u2013Roth)", "mw": "Monier-Williams", "ap90": "Apte 1890"}, cur='pwg', LIMIT=400;
+var tabs=document.getElementById('tabs'),q=document.getElementById('q'),
+    listEl=document.getElementById('list'),countEl=document.getElementById('count');
+window.COLOC_DATA=window.COLOC_DATA||{};
+DICTS.forEach(function(d){var b=document.createElement('button');b.textContent=LABELS[d];b.setAttribute('data-d',d);
+ b.onclick=function(){cur=d;syncTabs();load();};tabs.appendChild(b);});
+function syncTabs(){var bs=tabs.querySelectorAll('button');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i].getAttribute('data-d')===cur);}
+function esc(x){return (''+(x==null?'':x)).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function render(){
+ var data=window.COLOC_DATA[cur]||[];var f=q.value.trim().toLowerCase();
+ var rows=[];
+ for(var i=0;i<data.length&&rows.length<LIMIT;i++){var g=data[i];
+  if(f){var km=g.label.toLowerCase().indexOf(f)>=0;
+   var wm=false;for(var j=0;j<g.words.length;j++){if(g.words[j].iast.toLowerCase().indexOf(f)>=0||g.words[j].slp1.toLowerCase().indexOf(f)>=0){wm=true;break;}}
+   if(!km&&!wm)continue;}
+  rows.push(g);
+ }
+ var total=data.length;
+ countEl.textContent=rows.length+(rows.length>=LIMIT?'+':'')+' / '+total+' columns';
+ if(!rows.length){listEl.innerHTML='<p class="na">No matching column.</p>';return;}
+ var h='';rows.forEach(function(g){
+  h+='<div class="col"><span class="clab">'+esc(g.label)+' · '+g.n+' entries</span>'
+   +(g.scan?'<a class="scan" href="'+esc(g.scan)+'" target="_blank" rel="noopener">🖼 scan</a>':'')
+   +'<div class="words">';
+  g.words.forEach(function(w){var hit=f&&(w.iast.toLowerCase().indexOf(f)>=0||w.slp1.toLowerCase().indexOf(f)>=0);
+   h+='<span class="w'+(hit?' hit':'')+'" title="'+esc(w.slp1)+'">'+esc(w.iast)+'</span>';});
+  h+='</div></div>';
+ });
+ listEl.innerHTML=h;
+}
+function load(){
+ if(window.COLOC_DATA[cur]){render();return;}
+ listEl.innerHTML='<p class="na">Loading '+LABELS[cur]+'…</p>';
+ var sc=document.createElement('script');sc.src='data/'+cur+'.js';
+ sc.onload=function(){render();};sc.onerror=function(){listEl.innerHTML='<p class="na">Failed to load '+cur+' data.</p>';};
+ document.head.appendChild(sc);
+}
+q.oninput=render;
+syncTabs();load();
+</script></body></html>
