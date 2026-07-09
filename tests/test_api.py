@@ -150,3 +150,48 @@ def test_salt_ids_bare_lemma_returns_all_homonyms():
 def test_salt_unknown_dict():
     r = client.get("/dicts/zzz/restful/entries?query=agni")
     assert "error" in r.json()
+
+
+# ---------------------------------------------------------------------------
+# Print co-location — /api/v1/page + /api/v1/neighbors (app/neighbors.py)
+# ---------------------------------------------------------------------------
+
+def test_page_column_colocation():
+    # PWG vol 1 column 4 held exactly the aṃśa-cluster (13 entries).
+    r = client.get("/api/v1/page/pwg", params={"vol": 1, "page": 4})
+    assert r.status_code == 200
+    body = r.json()
+    assert body["query"]["unit"] == "column"
+    assert body["query"]["label"] == "pwg 1-0004"
+    assert body["query"]["count"] == 13
+    assert all(e["pc_raw"] == "1-0004" for e in body["results"])
+    assert body["results"][0]["headword"] == "aṃśa"
+
+
+def test_page_merge_folds_two_columns():
+    # merge=1 folds columns 3+4 into one physical leaf; superset of column 4.
+    col = client.get("/api/v1/page/pwg", params={"vol": 1, "page": 4}).json()["query"]["count"]
+    page = client.get("/api/v1/page/pwg", params={"vol": 1, "page": 2, "merge": 1}).json()
+    assert page["query"]["label"] == "pwg 1-p0002"
+    assert page["query"]["count"] > col
+
+
+def test_neighbors_flags_query_entry():
+    r = client.get("/api/v1/neighbors/pwg/13")
+    assert r.status_code == 200
+    body = r.json()
+    q = [e for e in body["results"] if e["is_query"]]
+    assert len(q) == 1 and q[0]["L"] == "13"
+    # every neighbour shares the query entry's column
+    assert {e["pc_raw"] for e in body["results"]} == {"1-0004"}
+    assert q[0]["scan_url"].endswith("servepdf.php?page=4")
+
+
+def test_neighbors_unknown_entry():
+    r = client.get("/api/v1/neighbors/pwg/99999999")
+    assert r.status_code == 404
+
+
+def test_page_unknown_dict():
+    r = client.get("/api/v1/page/zzz", params={"page": 1})
+    assert r.status_code == 404
