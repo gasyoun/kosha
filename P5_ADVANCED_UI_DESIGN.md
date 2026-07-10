@@ -7,7 +7,7 @@ The wireframe-locking design session that
 §P5 requires **before** any build ("Design session first (judgment tier + MG)").
 Rulings elicited from MG 10-07-2026 (interview run by Opus 4.8 `claude-opus-4-8`).
 The build handoff is
-[H535](https://github.com/gasyoun/Uprava/blob/main/handoffs/H535-Opus_kosha_p5_advanced_ui_word_page_build_10.07.26.md).
+[H537](https://github.com/gasyoun/Uprava/blob/main/handoffs/H537-Opus_kosha_p5_advanced_ui_word_page_build_10.07.26.md).
 
 This spec supersedes the P5 bullets in the implementation plan for the four forks
 it settles; everything else in §P5 (Lighthouse ≥90 exit, Gītā-walkthrough exit)
@@ -127,7 +127,7 @@ the full entry. So:
   explicitly** (no-silent-caps, `IMPLEMENTATION_PLAN.md` cross-cutting rule); the
   SSR tail covers whatever the static head drops.
 
-## 6. Build sequence (H535)
+## 6. Build sequence (H537)
 
 Each step lands testable; CI (once it exists) stays green. Reuse the existing
 Svelte `ui/` app and `datasource.js` "both" shim — extend, don't fork.
