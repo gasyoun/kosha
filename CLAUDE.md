@@ -17,6 +17,10 @@ say so.
 
 ## Common commands
 
+> **Operator's view of the whole chain** — stage order, per-stage verification,
+> failure symptoms, deploy classes, release rituals:
+> [docs/PIPELINE_OPERATOR_RUNBOOK.md](docs/PIPELINE_OPERATOR_RUNBOOK.md) (H501).
+
 ```bash
 pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000     # run the FastAPI dev server (needs .env, see below)
