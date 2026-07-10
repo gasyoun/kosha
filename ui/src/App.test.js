@@ -38,9 +38,11 @@ beforeAll(() => {
 });
 
 describe('forward flow (exit check 1)', () => {
-  it('rAma renders the m_a paradigm in Devanagari by default', async () => {
+  it('rAma renders the m_a paradigm in Devanagari', async () => {
     const App = (await import('./App.svelte')).default;
-    const { container, getByLabelText } = render(App);
+    const { container, getByText, getByLabelText } = render(App);
+    // P5 made the word page the default tab; the forward flow lives behind its tab.
+    await fireEvent.click(getByText(/Stem → paradigm/i));
     const input = getByLabelText(/Sanskrit input/i);
     await fireEvent.input(input, { target: { value: 'rAma' } });
     await fireEvent.keyDown(input, { key: 'Enter' });
@@ -50,6 +52,39 @@ describe('forward flow (exit check 1)', () => {
       expect(container.textContent).toContain('रामेण');
     }, { timeout: 3000 });
     expect(container.textContent).toContain('राम');
+  });
+});
+
+describe('word-page flow (P5 exit check)', () => {
+  it('rAma opens a word page with MW/PWG/AP90 tabs and the entry', async () => {
+    const App = (await import('./App.svelte')).default;
+    const { container, getByLabelText } = render(App); // 'word' is the default tab
+    const input = getByLabelText(/Sanskrit input/i);
+    await fireEvent.input(input, { target: { value: 'rAma' } });
+    await fireEvent.keyDown(input, { key: 'Enter' });
+
+    await waitFor(() => {
+      expect(container.querySelector('.dict-tabs')).toBeTruthy();
+      // every dict panel present in the DOM (crawlable tabs, P5-1)
+      expect(container.querySelectorAll('.dict-panel').length).toBeGreaterThanOrEqual(2);
+      expect(container.textContent).toContain('band 1');   // rāma is core (band 1)
+    }, { timeout: 3000 });
+    // the view-mode toggle exists (P5-2)
+    expect(container.textContent).toMatch(/Gloss/);
+    expect(container.textContent).toMatch(/Adaptive/);
+  });
+
+  it('the sandhi: operator routes to the reverse analyser', async () => {
+    const App = (await import('./App.svelte')).default;
+    const { container, getByLabelText } = render(App);
+    const input = getByLabelText(/Sanskrit input/i);
+    await fireEvent.input(input, { target: { value: 'sandhi:bhagavān' } });
+    await fireEvent.keyDown(input, { key: 'Enter' });
+
+    await waitFor(() => {
+      expect(container.textContent).toMatch(/resolved by/i);
+      expect(container.textContent).toContain('inflections');
+    }, { timeout: 3000 });
   });
 });
 

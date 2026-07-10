@@ -2,9 +2,24 @@
   import { toSlp1Auto, detectScheme, fromSlp1Out } from '../lib/translit.js';
   import { prefixSuggest } from '../lib/autocomplete.js';
   import { loadLemmaIndex } from '../lib/datasource.js';
+  import { parseQuery } from '../lib/query.js';
 
-  // onselect(slp1) fires when a suggestion is chosen or Enter is pressed.
-  let { onselect, placeholder = 'rāma · राम · rAma' } = $props();
+  // onselect(slp1) fires when a suggestion is chosen or bare Enter is pressed.
+  // oncommand(kind, value) fires for the P5 operators `root:`/`sandhi:` — the
+  // raw text is inspected BEFORE transliteration so the operator prefix is not
+  // mangled (P5 §4). Callers that don't pass oncommand keep the old behaviour.
+  let { onselect, oncommand, placeholder = 'rāma · राम · rAma · root:BU · sandhi:tattvamasi' } = $props();
+
+  // Returns true if the raw text was an operator and was dispatched.
+  function dispatchOperator() {
+    const q = parseQuery(text);
+    if ((q.kind === 'root' || q.kind === 'sandhi') && oncommand) {
+      open = false;
+      oncommand(q.kind, q.value);
+      return true;
+    }
+    return false;
+  }
 
   let text = $state('');
   let suggestions = $state([]);
@@ -52,7 +67,10 @@
 
   function onKey(e) {
     if (!open) {
-      if (e.key === 'Enter' && slp1) onselect?.(slp1);
+      if (e.key === 'Enter') {
+        if (dispatchOperator()) return;
+        if (slp1) onselect?.(slp1);
+      }
       return;
     }
     if (e.key === 'ArrowDown') { active = Math.min(active + 1, suggestions.length - 1); e.preventDefault(); }
@@ -60,6 +78,7 @@
     else if (e.key === 'Enter') {
       e.preventDefault();
       if (active >= 0) choose(suggestions[active]);
+      else if (dispatchOperator()) return;
       else if (slp1) { open = false; onselect?.(slp1); }
     } else if (e.key === 'Escape') { open = false; }
   }
