@@ -15,6 +15,15 @@ sense citations pin to `data_version`, not to repo tags.
 ## [Unreleased]
 
 ### Added
+- **Pipeline operator runbook** ([docs/PIPELINE_OPERATOR_RUNBOOK.md](https://github.com/gasyoun/kosha/blob/main/docs/PIPELINE_OPERATOR_RUNBOOK.md),
+  H501, Fable 5 `claude-fable-5`) — the single operational spine for the whole
+  chain: the seven `build_db.py` stages in dependency order with rerun triggers,
+  API serve, the two static-tier deploy classes (committed-goes-live vs
+  gitignored-MG-deploys), the data-release citability ritual
+  (`archive_senses` → `build_crosswalk` → release asset → manifest refresh),
+  maintenance scripts, the verbatim never-touch list, and a failure-symptom
+  decoder (the `unable to open database file` wave = DB-less checkout, not a
+  regression). Every command/flag cross-checked against script source.
 - **B1 dictionary ↔ corpus concordance + the shared concordance core (Q1 of
   [CONCORDANCE_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/CONCORDANCE_ROADMAP.md)).**
   Executor: Fable 5 (`claude-fable-5`), handoff H380.
