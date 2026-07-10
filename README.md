@@ -231,6 +231,11 @@ on one machine; deployment is a copy step). The server reference
 Everything below is the engineering spine. All product and architecture
 decisions are **locked — do not re-litigate**; the documents are the contract.
 
+> **Running the pipeline?** Start from the operator runbook —
+> [docs/PIPELINE_OPERATOR_RUNBOOK.md](https://github.com/gasyoun/kosha/blob/main/docs/PIPELINE_OPERATOR_RUNBOOK.md):
+> stage order, per-stage verification, failure symptoms, deploy classes,
+> release rituals, the never-touch list.
+
 ### Build rule: reuse-first
 
 kosha is **glue over existing ecosystem assets**, not a rebuild. Canonical
