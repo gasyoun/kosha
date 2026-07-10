@@ -1,0 +1,4 @@
+anchor_type	anchor_id	anchor_key_slp1	target_locus	link_type	source_dataset	match_method	confidence	evidence_count	date
+id-gra	gra:3983	tva	https://vedaweb.example.org/1.1.6	translation-witness	VisualDCS/non-derived/vedaweb/grassmann_de_1876_1877.json	id-link	0.99	4712	08-07-2026
+root	unknownprefix:9999	bu	subject:sanskritgrammar:present-root-class	thematic	SanskritGrammar/SubjectConcordance/catalog.mdx	curated	-	-	10-07-2026
+whitney-sec	whitney-sec:611	-	subject:sanskritgrammar:present-root-class	thematic	SanskritGrammar/SubjectConcordance/catalog.mdx	curated	-	-	2026-07-10
