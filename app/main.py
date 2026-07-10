@@ -13,6 +13,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException, Query, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import HTMLResponse
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -31,6 +32,7 @@ from neighbors import (  # noqa: E402
     entry_location, column_entries, physical_page_entries, group_label,
 )
 from paradigm import build_paradigm  # noqa: E402
+from word_page import render_word_page, card_token  # noqa: E402
 from history_db import log_search_event, open_connection as open_history_db, upsert_visitor  # noqa: E402
 from identity import hash_ip, resolve_anon_id  # noqa: E402
 from history import router as history_router  # noqa: E402
@@ -177,6 +179,39 @@ def get_lemma(key: str, in_: str = Query("auto", alias="in"), out: str = "iast",
         error("lemma_not_found", f"no entries for '{key}' (slp1={slp1_key})", 404,
               suggestions=[] if lemma is None else ["lemma exists in the union spine but has no dict entries"])
     return envelope(con, {"key": key, "in": in_, "out": out, "dicts": dict_list}, results)
+
+
+@app.get("/w/{slp1}", response_class=HTMLResponse)
+def word_page(slp1: str, con: sqlite3.Connection = Depends(get_db)):
+    """P5-4 SSR half (H537): server-render the word page for the long tail — any
+    lemma, not just the top-N the static prerender ships. Renders the EXACT same
+    card the static tier holds (the /api/v1/lemma envelope) through the shared
+    app/word_page.py template, so static ∥ SSR are byte-comparable on primary
+    content (P5-4 parity; tests/test_word_page.py locks it). Permalinks address by
+    SLP1 key, the canonical addressing scheme (P5_ADVANCED_UI_DESIGN.md §3).
+    """
+    slp1_key = to_slp1_auto(slp1, "slp1")
+    results = []
+    for d in ALL_DICTS:
+        rows = con.execute(
+            "SELECT * FROM entries WHERE dict=? AND slp1_key=? ORDER BY L", (d, slp1_key)
+        ).fetchall()
+        for r in rows:
+            results.append(_entry_payload(con, r, "iast", False))
+    dv = data_version(con)
+    if not results:
+        # Crawlable, honest 404 — still links the browse spine, no fabricated body.
+        body = (f'<!doctype html><html lang="en"><head><meta charset="utf-8">'
+                f'<title>{slp1_key} — not found | kosha</title></head><body>'
+                f'<main style="max-width:40rem;margin:2rem auto;font-family:system-ui">'
+                f'<h1>No entry for <code>{slp1_key}</code></h1>'
+                f'<p>This SLP1 key has no MW / PWG / Apte entry. '
+                f'<a href="/browse/">Browse the dictionary →</a></p></main></body></html>')
+        return HTMLResponse(body, status_code=404)
+    card = {"data_version": dv,
+            "query": {"key": slp1_key, "in": "slp1", "out": "iast", "dicts": list(ALL_DICTS)},
+            "results": results}
+    return HTMLResponse(render_word_page(card, token=card_token(slp1_key), data_version=dv))
 
 
 def _neighbor_payload(con, row, out: str, query_L=None):
