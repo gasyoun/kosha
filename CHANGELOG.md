@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.16.0] - 2026-07-11
+
 ### Added
 - **P5 advanced UI — the word page** (H537, Opus 4.8 `claude-opus-4-8`), built
   from the locked design spec
