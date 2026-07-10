@@ -1,17 +1,28 @@
 #!/usr/bin/env python
-"""kosha concordance core (H380 / CONCORDANCE_ROADMAP Q1) — shared by Q1–Q4.
+"""kosha concordance core (H380 / CONCORDANCE_ROADMAP Q1) — shared by Q1–Q4
+and by Type-D grammar<->non-grammar concordances (H539 /
+TYPED_LINK_ID_GRAMMAR.md).
 
-One schema, four instantiations: every concordance in the program links a
-lexicon/grammar ANCHOR to a corpus LOCUS with evidence. This module owns the
-pieces all four quarters share, so Q2 (parallel-verse), Q3 (generated-vs-
-attested) and Q4 (sūtra→form) import it instead of re-rolling:
+One schema, instantiated for both corpus concordances (Type-B: Q1-Q4) and
+grammar<->non-grammar links (Type-D): every record links an ANCHOR to a
+TARGET LOCUS with evidence. This module owns the pieces every consumer
+shares, so no Type-D builder re-rolls a matcher or an ID scheme:
 
   * RECORD_FIELDS — the canonical concordance record (CONCORDANCE_ROADMAP
     §"The core idea"): anchor_type · anchor_id · anchor_key_slp1 ·
-    corpus_locus · corpus_text_id · match_method · confidence · evidence_count
+    target_locus · source_dataset · match_method · confidence ·
+    evidence_count. (Renamed from corpus_locus/corpus_text_id per
+    TYPED_LINK_ID_GRAMMAR.md §1 — the target is no longer always a corpus;
+    field positions and semantics are unchanged.)
+  * TYPE_D_RECORD_FIELDS — RECORD_FIELDS extended with the Type-D
+    discriminator (`link_type`) and provenance `date`; normalize_record()
+    maps either shape into one shared view (spec §1's stated goal).
   * the tiered matcher — exact SLP1 → form_key (length-preserving floor) →
     norm (relaxed) → normalize_sanskrit (fuzzy ASCII bucket), per-tier counts
-    always surfaced, lossy tiers unique-match-only (never a silent blur)
+    always surfaced, lossy tiers unique-match-only (never a silent blur).
+    Type-D adds two non-fuzzy tiers ABOVE exact in trust: id-link (a pure
+    join on a shared host-stable id) and curated (the source concordance's
+    own authoritative assertion) — see TIER_CONFIDENCE.
   * corpus locus + citation helpers — a host-independent citable ID
     (`dcs:<sent_id>`) plus the human locus (text · chapter ref · sentence
     counter). RISKS R1/R5: the ID embeds only DCS's own stable sentence id,
@@ -31,25 +42,76 @@ RECORD_FIELDS = [
     "anchor_type",       # dict-entry | parallel-verse | inflection | panini-sutra
     "anchor_id",         # stable ID in the source resource (B1: SLP1 headword key)
     "anchor_key_slp1",   # the SLP1 comparison key
-    "corpus_locus",      # human locus (B1 index rows: lemma-level -> 'lemma:<id>')
-    "corpus_text_id",    # which DCS text (B1 index rows: n_texts spread instead)
-    "match_method",      # xref | exact | floor | relaxed | fuzzy
+    "target_locus",      # human/host-independent locus (B1 index rows: lemma-level -> 'lemma:<id>')
+    "source_dataset",    # which dataset asserts the link (B1 index rows: n_texts spread instead)
+    "match_method",      # id-link | curated | xref | exact | floor | relaxed | fuzzy
     "confidence",        # tier-derived score
     "evidence_count",    # attestations backing the link
 ]
 
-# Tier -> confidence. xref = the human-validated dcs-cdsl-xref pipeline;
+# TYPED_LINK_ID_GRAMMAR.md §1: the Type-D record is a renamed superset of
+# RECORD_FIELDS — same anchor/target/evidence shape, plus a subtype
+# discriminator (link_type) and a provenance date. Field order here follows
+# the spec's §1 table, not a straight append.
+TYPE_D_RECORD_FIELDS = [
+    "anchor_type",
+    "anchor_id",
+    "anchor_key_slp1",
+    "target_locus",
+    "link_type",
+    "source_dataset",
+    "match_method",
+    "confidence",
+    "evidence_count",
+    "date",
+]
+
+# TYPED_LINK_ID_GRAMMAR.md §1: the three Type-D link subtypes.
+TYPE_D_LINK_TYPES = ("translation-witness", "commentary-citation", "thematic")
+
+# Tier -> confidence. id-link/curated (Type-D, TYPED_LINK_ID_GRAMMAR.md §1)
+# sit above exact in trust: id-link = a pure join on a shared host-stable id
+# (no matching at all, e.g. id_gra); curated = the source concordance's own
+# authoritative assertion. xref = the human-validated dcs-cdsl-xref pipeline;
 # exact = byte-identical SLP1; floor = length-preserving form_key (anusvāra/
 # homorganic-nasal fold + final-visarga strip — ā≠a is PRESERVED); relaxed =
 # norm (accent/length-lossy); fuzzy = ASCII bucket. The two lossy tiers are
-# only accepted when the bucket resolves to exactly ONE candidate.
+# only accepted when the bucket resolves to exactly ONE candidate — Type-D
+# keeps this same unique-match-only quarantine rule.
 TIER_CONFIDENCE = {
+    "id-link": 0.99,
     "xref": 0.99,
+    "curated": 0.97,
     "exact": 0.95,
     "floor": 0.85,
     "relaxed": 0.60,
     "fuzzy": 0.40,
 }
+
+
+def normalize_record(row):
+    """Map a Type-B or Type-D record (dict keyed by field name) into one
+    shared view: RECORD_FIELDS' keys plus link_type/date (None for Type-B
+    rows, which predate the discriminator). TYPED_LINK_ID_GRAMMAR.md §1:
+    'a shared reader can normalize a Type-B and a Type-D row into one view.'
+
+    Accepts either the current field names (target_locus/source_dataset) or
+    the pre-H539 names (corpus_locus/corpus_text_id) so callers holding an
+    older in-memory row don't need to migrate it first."""
+    target_locus = row.get("target_locus", row.get("corpus_locus"))
+    source_dataset = row.get("source_dataset", row.get("corpus_text_id"))
+    return {
+        "anchor_type": row.get("anchor_type"),
+        "anchor_id": row.get("anchor_id"),
+        "anchor_key_slp1": row.get("anchor_key_slp1"),
+        "target_locus": target_locus,
+        "link_type": row.get("link_type"),
+        "source_dataset": source_dataset,
+        "match_method": row.get("match_method"),
+        "confidence": row.get("confidence"),
+        "evidence_count": row.get("evidence_count"),
+        "date": row.get("date"),
+    }
 
 
 def citable_locus(sent_id):
