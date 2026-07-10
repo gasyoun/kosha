@@ -3,18 +3,50 @@
   import ParadigmTable from './components/ParadigmTable.svelte';
   import ReverseAnalyze from './components/ReverseAnalyze.svelte';
   import EntryView from './components/EntryView.svelte';
+  import WordPage from './components/WordPage.svelte';
   import History from './components/History.svelte';
   import Stats from './components/Stats.svelte';
   import { getParadigm, API } from './lib/datasource.js';
   import { fromSlp1Out } from './lib/translit.js';
+  import { wordHash, parseWordHash } from './lib/query.js';
+  import { toCsv, toAnki, downloadFile } from './lib/export.js';
 
-  let mode = $state('forward');      // 'forward' | 'reverse' | 'history' | 'stats'
+  let mode = $state('word');         // 'word' | 'forward' | 'reverse' | 'history' | 'stats'
   let out = $state('deva');          // Devanagari-default output (K2b-4)
   let forwardLemma = $state('');
   let paradigm = $state(null);
   let pLoading = $state(false);
   let pErr = $state(null);
   let entryLemma = $state('');       // in-app dictionary entry panel (K3-folded)
+  let wordSlp1 = $state('');         // P5 word page (the /w/{slp1} in-app twin)
+  let reverseSeed = $state('');      // sandhi: operator prefill for ReverseAnalyze
+  let lookups = $state([]);          // P5 §6 session lookups, for CSV/Anki export
+
+  // --- P5 hash routing (#/w/<slp1>) + operators -----------------------------
+  function goWord(slp1) {
+    if (!slp1) return;
+    wordSlp1 = slp1; mode = 'word'; entryLemma = '';
+    const h = wordHash(slp1);
+    if (location.hash !== h) location.hash = h;   // triggers hashchange, but goWord is idempotent
+  }
+  function syncFromHash() {
+    const slp1 = parseWordHash(location.hash);
+    if (slp1) { wordSlp1 = slp1; mode = 'word'; }
+  }
+  function onCommand(kind, value) {
+    if (kind === 'sandhi') { reverseSeed = value; mode = 'reverse'; }
+    else if (kind === 'root') { goWord(value); }   // the root's own entry + paradigm (P5 §4)
+  }
+  function recordLookup(meta) {
+    // de-dupe by slp1, most-recent-last
+    lookups = [...lookups.filter((l) => l.slp1 !== meta.slp1), meta];
+  }
+  $effect(() => {
+    syncFromHash();
+    const on = () => syncFromHash();
+    window.addEventListener('hashchange', on);
+    return () => window.removeEventListener('hashchange', on);
+  });
 
   async function loadForward(slp1) {
     forwardLemma = slp1;
@@ -47,6 +79,7 @@
   </header>
 
   <nav class="tabs">
+    <button class:active={mode === 'word'} onclick={() => (mode = 'word')}>Word page</button>
     <button class:active={mode === 'forward'} onclick={() => (mode = 'forward')}>Stem → paradigm</button>
     <button class:active={mode === 'reverse'} onclick={() => (mode = 'reverse')}>Analyse a form</button>
     {#if API}
@@ -61,7 +94,26 @@
     </div>
   </nav>
 
-  {#if mode === 'forward'}
+  {#if mode === 'word'}
+    <section>
+      <SearchBox onselect={goWord} oncommand={onCommand} />
+      {#if lookups.length}
+        <div class="export-bar">
+          <span>{lookups.length} word{lookups.length !== 1 ? 's' : ''} looked up this session</span>
+          <button onclick={() => downloadFile('kosha-lookups.csv', toCsv(lookups), 'text/csv')}>Export CSV</button>
+          <button onclick={() => downloadFile('kosha-lookups.txt', toAnki(lookups), 'text/plain')}>Export Anki</button>
+          <button class="clear" onclick={() => (lookups = [])}>clear</button>
+        </div>
+      {/if}
+      {#if wordSlp1}
+        <WordPage slp1={wordSlp1} {out} onloaded={recordLookup} />
+      {:else}
+        <p class="muted">Search a headword to open its word page — every dictionary,
+          its evidence, and its full paradigm on one address. Try
+          <code>root:BU</code> or <code>sandhi:tattvamasi</code>.</p>
+      {/if}
+    </section>
+  {:else if mode === 'forward'}
     <section>
       <SearchBox onselect={loadForward} />
       {#if pLoading}
@@ -82,7 +134,7 @@
     </section>
   {:else if mode === 'reverse'}
     <section>
-      <ReverseAnalyze onlemma={showEntry} {out} />
+      <ReverseAnalyze onlemma={showEntry} {out} seed={reverseSeed} />
     </section>
   {:else if mode === 'history'}
     <section>
@@ -158,4 +210,12 @@
   footer a { color: var(--accent); }
   .muted { color: var(--muted); }
   .err { color: #c0392b; }
+  .export-bar { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap;
+    margin: .8rem 0; font-size: .85rem; color: var(--muted); }
+  .export-bar button { font-size: .8rem; padding: .3rem .7rem; border: 1px solid var(--accent);
+    color: var(--accent); background: transparent; border-radius: 6px; cursor: pointer; }
+  .export-bar button:hover { background: var(--hit-bg); }
+  .export-bar button.clear { border-color: var(--border); color: var(--muted); }
+  code { font-family: monospace; background: var(--tag-bg); color: var(--tag-fg);
+    padding: .05rem .3rem; border-radius: 4px; font-size: .85em; }
 </style>

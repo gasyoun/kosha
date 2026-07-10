@@ -5,15 +5,21 @@
   // Paste-anything reverse box: wraps /api/v1/forms/{form}/analyze (or the
   // static reverse index). Shows each parse's provenance (`resolved_by`) so a
   // translator sees WHY a form resolved (H183 §4.5).
-  let { onlemma, out = 'deva' } = $props();
+  // `seed` prefills + runs the box (the P5 `sandhi:` operator routes here).
+  let { onlemma, out = 'deva', seed = '' } = $props();
 
   let text = $state('');
   let result = $state(null);
   let loading = $state(false);
   let err = $state(null);
   let lastForm = $state('');
+  let lastSeed = '';
 
   const scheme = $derived(text ? detectScheme(text) : null);
+
+  $effect(() => {
+    if (seed && seed !== lastSeed) { lastSeed = seed; text = seed; run(); }
+  });
 
   async function run() {
     const raw = text.trim();
