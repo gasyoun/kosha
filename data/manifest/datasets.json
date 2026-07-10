@@ -543,6 +543,25 @@
         "Q2-Q4 concordance program"
       ],
       "notes": "Q1 of CONCORDANCE_ROADMAP.md (concordance core: schema + tiered matcher + citable loci, reused Q2-Q4). Coverage sidecar dict_corpus_coverage.tsv (323425 rows): every union headword attested (66,257 = 20.5%) or classed absence — the 20.5% is the honest Zipf reality of a 5.7M-token corpus vs a 323k-headword union. Inputs consumed, never re-derived: dcs-cdsl-xref, union-headwords, dcs-full-sqlite. Citable loci are host-independent dcs:<sent_id> IDs (RISKS R5). DCS is CC BY 4.0; this derivative ships BY-SA with the public tier."
+    },
+    {
+      "id": "sundarakanda-two-tier-apparatus",
+      "title": "Sundarakāṇḍa two-tier commentary apparatus (Leonov LP volume)",
+      "tier": "restricted",
+      "in_release": null,
+      "release_asset": null,
+      "format": "json",
+      "rows": 1955,
+      "size_bytes": 3088484,
+      "keying": "vulgate verse address 5.<sarga>.<verse> (southern vulgate, 68 sargas)",
+      "source_repo": "https://github.com/gasyoun/CommentaryStrategies",
+      "source_path": "data/sundara_commentary_to_add.json (897 tier-2 notes) + data/leonov_own_notes.json (1058 tier-1) + data/sundara_decision_ledger.json (audit trail); per-chapter layers in data/lexical/, data/analysis/",
+      "builder": "scripts/apply_phase2_decisions.py + scripts/build_book_apparatus.py (method canon: docs/PHASE2_METHOD.md)",
+      "consumers": [
+        "sundarakanda_print_master (data/book/, MD+DOCX)",
+        "per-sarga interactive apparatus HTML (data/apparatus/)"
+      ],
+      "notes": "RIGHTS: tier-1 notes + verse anchors belong to Leonov/Kostina UNPUBLISHED translation — restricted until the LP volume ships (~08-2026); Sanskrit commentaries source = Gita Supersite, CC BY 4.0. Every tier-2 note carries review_required until both human gates pass (docs/MANUAL.md; role guides H497/H517/H533). Snapshot 10-07-2026, pre-gate counts."
     }
   ]
 }
