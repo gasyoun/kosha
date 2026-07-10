@@ -15,6 +15,27 @@ sense citations pin to `data_version`, not to repo tags.
 ## [Unreleased]
 
 ### Added
+- **B1 dictionary ↔ corpus concordance + the shared concordance core (Q1 of
+  [CONCORDANCE_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/CONCORDANCE_ROADMAP.md)).**
+  Executor: Fable 5 (`claude-fable-5`), handoff H380.
+  - [`scripts/concordance_core.py`](https://github.com/gasyoun/kosha/blob/main/scripts/concordance_core.py) —
+    the Q1–Q4 shared core: canonical record schema, tiered matcher (exact →
+    length-preserving `form_key` floor → lossy tiers, unique-bucket only) on the
+    canonical `sanskrit-util` keys, host-independent `dcs:<sent_id>` citable loci.
+  - [`scripts/build_dict_corpus_concordance.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_dict_corpus_concordance.py) →
+    [`data/concordance/`](https://github.com/gasyoun/kosha/tree/main/data/concordance):
+    **74,520 asserted links** (xref 12,836 · exact 61,373 · floor 311) joining the
+    323,425-headword union to the 5.69M-token DCS corpus; coverage sidecar classes
+    every headword (66,257 attested = 20.5%, the honest Zipf reality); manifest row
+    `dict-corpus-concordance` added same pass.
+  - **Golden-sample ruling** ([GOLDEN_SAMPLE.md](https://github.com/gasyoun/kosha/blob/main/data/concordance/GOLDEN_SAMPLE.md)):
+    mechanical checks 14/14, but the lossy `norm`-fold tier was 0/3 semantically
+    correct (aṃśaka↔aṃsaka, vikarṣaṇa↔vikarśana) — its 2,171 links are
+    **quarantined** to `dict_corpus_relaxed_candidates.tsv`, never asserted.
+  - [`concordance/dict/`](https://github.com/gasyoun/kosha/tree/main/concordance/dict) —
+    the reusable static concordance viewer (search → dict-provenance chips →
+    tier-badged lemma links → KWIC with citable loci; 25 lazy shards, 32.9 MB;
+    works on file://, trust block, CSV fallback; RISKS R12: no live service).
 - **Static print co-location page (public Pages tier).** Executor: Opus 4.8
   (`claude-opus-4-8`), handoff H441.
   - [`scripts/build_colocation_page.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_colocation_page.py)

@@ -524,6 +524,25 @@
         "docs/img/ corrections-native viz via scripts/build_correction_viz.py"
       ],
       "notes": "H294 (07-07-2026): memo docs/HYPOTHESES_AND_VIZ_MEMO.md §5.1 layer. 39,540 records = 39,536 old→new + 4 old→del; process∈{bulk,human} splits the two machine markup batches (BOR 21,990 + LRV/markhom 8,063 = 76%) from human correction. Corrector identity deliberately excluded — public tier. PR: https://github.com/sanskrit-lexicon/csl-corrections/pull/291"
+    },
+    {
+      "id": "dict-corpus-concordance",
+      "title": "CDSL headword ↔ DCS corpus concordance (B1, concordance core)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "dict_corpus_concordance.tsv",
+      "format": "tsv",
+      "rows": 74520,
+      "size_bytes": 6664132,
+      "keying": "union-headwords SLP1 key ↔ DCS lemma_id; canonical concordance-core schema (anchor_type/anchor_id/anchor_key_slp1/corpus_locus/match_method/confidence/evidence_count); ASSERTED tiers xref 12,836 · exact 61,373 · floor 311; the lossy relaxed tier (2,171) is QUARANTINED to dict_corpus_relaxed_candidates.tsv after the golden sample found 3/3 semantically wrong — per-tier table in data/concordance/BUILD_REPORT.md",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/concordance/dict_corpus_concordance.tsv",
+      "builder": "scripts/build_dict_corpus_concordance.py (concordance_core.py, H380 Q1)",
+      "consumers": [
+        "concordance/dict/ static viewer",
+        "Q2-Q4 concordance program"
+      ],
+      "notes": "Q1 of CONCORDANCE_ROADMAP.md (concordance core: schema + tiered matcher + citable loci, reused Q2-Q4). Coverage sidecar dict_corpus_coverage.tsv (323425 rows): every union headword attested (66,257 = 20.5%) or classed absence — the 20.5% is the honest Zipf reality of a 5.7M-token corpus vs a 323k-headword union. Inputs consumed, never re-derived: dcs-cdsl-xref, union-headwords, dcs-full-sqlite. Citable loci are host-independent dcs:<sent_id> IDs (RISKS R5). DCS is CC BY 4.0; this derivative ships BY-SA with the public tier."
     }
   ]
 }

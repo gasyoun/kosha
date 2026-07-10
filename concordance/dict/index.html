@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kosha — dictionary ↔ corpus concordance (B1)</title>
+<style>
+:root { --ink:#222; --mut:#667; --line:#ddd; --bg:#faf9f6; --card:#fff;
+        --xref:#0a7a2f; --exact:#1a6fb0; --floor:#a05a00; --relaxed:#8a4baf; --fuzzy:#888; }
+* { box-sizing:border-box; }
+body { margin:0; font:15px/1.5 Georgia,'Times New Roman',serif; color:var(--ink); background:var(--bg); }
+header { background:#2b3a4a; color:#fff; padding:14px 20px; }
+header h1 { margin:0; font-size:18px; font-weight:normal; }
+header .sub { font-size:12.5px; opacity:.75; margin-top:3px; }
+main { max-width:900px; margin:0 auto; padding:16px 20px 60px; }
+#q { width:100%; font-size:18px; padding:9px 12px; border:1px solid var(--line); border-radius:6px;
+     font-family:inherit; }
+#hint { font-size:12.5px; color:var(--mut); margin:6px 2px 14px; }
+#matches { margin:8px 0; }
+#matches a { display:inline-block; margin:2px 8px 2px 0; font-size:14.5px; }
+.entry { background:var(--card); border:1px solid var(--line); border-radius:8px;
+         padding:14px 18px; margin:14px 0; }
+.hw { font-size:21px; }
+.hw .slp { color:var(--mut); font-size:14px; margin-left:8px; font-family:Consolas,monospace; }
+.dicts { margin:5px 0 2px; }
+.dicts span { display:inline-block; font-size:11px; background:#eef0f3; border-radius:8px;
+              padding:1px 7px; margin:1px 3px 1px 0; color:#445; }
+.lem { border-top:1px solid #eee; margin-top:11px; padding-top:9px; }
+.lem .head { font-size:16px; }
+.tier { font-size:10.5px; color:#fff; border-radius:8px; padding:1px 7px; vertical-align:middle; margin-left:7px; }
+.stats { font-size:12.5px; color:var(--mut); margin-left:8px; }
+.kwic { margin:7px 0 0 14px; font-size:14px; }
+.kwic .sent { display:block; }
+.kwic mark { background:#fdf0c2; padding:0 2px; }
+.kwic .loc { color:var(--mut); font-size:12px; }
+.kwic .cite { font-family:Consolas,monospace; font-size:11.5px; color:#889; }
+#trust { border-top:2px solid var(--line); margin-top:34px; padding-top:12px;
+         font-size:12.5px; color:var(--mut); }
+#trust table { border-collapse:collapse; margin:6px 0; }
+#trust td, #trust th { border:1px solid var(--line); padding:2px 9px; font-size:12px; }
+.none { color:var(--mut); font-style:italic; }
+a { color:#1a6fb0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Dictionary ↔ corpus concordance <span style="opacity:.6">· B1 · kosha concordance program</span></h1>
+  <div class="sub">Every CDSL union headword → its attestations in the DCS corpus (5.69M tokens, 270 texts),
+  tier-matched, with citable host-independent loci. 74,520 asserted links · 66,257 attested headwords.</div>
+</header>
+<main>
+  <input id="q" placeholder="Type a headword — IAST (agni, ākāśa) or SLP1 (agni, AkASa) …" autocomplete="off">
+  <div id="hint">Attested headwords only (66,257 of 323,425 — the coverage sidecar in the dataset
+  explains every absence). KWIC shows at most 2 sample sentences per lemma link; the full
+  attestation set is in the <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/dict_corpus_concordance.tsv">dataset TSV</a>
+  (per-link <code>evidence_count</code>) and the canonical DCS SQLite.</div>
+  <div id="matches"></div>
+  <div id="out"></div>
+
+  <div id="trust">
+    <b>Trust block.</b> Source dataset:
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/dict_corpus_concordance.tsv">dict_corpus_concordance.tsv</a>
+    (74,520 rows, built 10-07-2026 by
+    <a href="https://github.com/gasyoun/kosha/blob/main/scripts/build_dict_corpus_concordance.py">build_dict_corpus_concordance.py</a>,
+    H380) from <i>union-headwords</i> (323,425), <i>dcs-cdsl-xref</i> (12,945 validated links, consumed not re-derived)
+    and <i>dcs-full-sqlite</i> (DCS 2026, CC BY 4.0). Match tiers (full table in the
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/BUILD_REPORT.md">build report</a>):
+    <table><tr><th>tier</th><th>meaning</th><th>links</th></tr>
+    <tr><td><span class="tier" style="background:var(--xref)">xref</span></td><td>human-validated dcs-cdsl-xref pipeline</td><td>12,836</td></tr>
+    <tr><td><span class="tier" style="background:var(--exact)">exact</span></td><td>byte-identical SLP1</td><td>61,373</td></tr>
+    <tr><td><span class="tier" style="background:var(--floor)">floor</span></td><td>length-preserving form_key fold</td><td>311</td></tr></table>
+    The lossy tiers are <b>not shown here</b>: the golden sample found the relaxed tier (norm-fold,
+    2,171 candidate links) semantically wrong in 3 of 3 checks (aṃśaka↔aṃsaka, vikarṣaṇa↔vikarśana),
+    so those ship only as a
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/dict_corpus_relaxed_candidates.tsv">review-candidates file</a>,
+    never asserted. Citable locus IDs are host-independent (<code>dcs:&lt;sent_id&gt;</code> — DCS's own
+    stable sentence id, resolvable against any copy of the corpus). CSV fallback: the dataset TSV above.
+  </div>
+</main>
+<script>
+window.CONC_DATA = {};
+// ---- minimal IAST -> SLP1 (longest-first; enough for headword keys) ----
+var I2S = [["ai","E"],["au","O"],["kh","K"],["gh","G"],["ch","C"],["jh","J"],
+  ["ṭh","W"],["ḍh","Q"],["th","T"],["dh","D"],["ph","P"],["bh","B"],
+  ["ā","A"],["ī","I"],["ū","U"],["ṝ","F"],["ṛ","f"],["ḹ","X"],["ḷ","x"],
+  ["ṃ","M"],["ṁ","M"],["ḥ","H"],["ṅ","N"],["ñ","Y"],["ṭ","w"],["ḍ","q"],
+  ["ṇ","R"],["ś","S"],["ṣ","z"]];
+function toSlp1(s){
+  s = (s||"").trim();
+  for (var i=0;i<I2S.length;i++) s = s.split(I2S[i][0]).join(I2S[i][1]);
+  return s;
+}
+function shardOf(k){ var c=(k||"?")[0].toLowerCase(); return /[a-z]/.test(c)?c:"_"; }
+var loaded = {};
+function ensureShard(k, cb){
+  if (loaded[k]) return cb();
+  var s = document.createElement("script");
+  s.src = "data/kwic_" + k + ".js";
+  s.onload = function(){ loaded[k]=1; cb(); };
+  s.onerror = function(){ loaded[k]=1; cb(); };
+  document.head.appendChild(s);
+}
+function esc(t){ var d=document.createElement("div"); d.textContent=t||""; return d.innerHTML; }
+function hi(sent, form){
+  if(!form) return esc(sent);
+  var i = sent.toLowerCase().indexOf(form.toLowerCase());
+  if(i<0) return esc(sent);
+  return esc(sent.slice(0,i)) + "<mark>" + esc(sent.slice(i,i+form.length)) + "</mark>" + esc(sent.slice(i+form.length));
+}
+var TIER_C = {xref:"var(--xref)",exact:"var(--exact)",floor:"var(--floor)",relaxed:"var(--relaxed)",fuzzy:"var(--fuzzy)"};
+function renderEntry(key, e){
+  var h = '<div class="entry"><div class="hw">' + esc(e.iast) +
+    '<span class="slp">' + esc(key) + '</span></div><div class="dicts">' +
+    e.dicts.split(" ").map(function(d){ return "<span>"+esc(d)+"</span>"; }).join("") + "</div>";
+  e.lemmas.forEach(function(L){
+    h += '<div class="lem"><span class="head">DCS lemma <i>' + esc(L.lemma) + "</i></span>" +
+      '<span class="tier" style="background:' + (TIER_C[L.tier]||"#888") + '">' + L.tier + "</span>" +
+      '<span class="stats">' + L.tok + " tokens · " + L.texts + " texts</span>";
+    (L.kwic||[]).forEach(function(kw){
+      h += '<div class="kwic"><span class="sent">' + hi(kw.sent, kw.form) + "</span>" +
+        '<span class="loc">' + esc(kw.locus) + " · </span><span class=\"cite\">" + esc(kw.cite) + "</span></div>";
+    });
+    h += "</div>";
+  });
+  return h + "</div>";
+}
+var q = document.getElementById("q"), out = document.getElementById("out"),
+    matches = document.getElementById("matches");
+function lookup(){
+  var raw = q.value.trim();
+  matches.innerHTML = ""; out.innerHTML = "";
+  if (!raw) return;
+  var key = toSlp1(raw), sk = shardOf(key);
+  ensureShard(sk, function(){
+    var shard = window.CONC_DATA[sk] || {};
+    if (shard[key]) { out.innerHTML = renderEntry(key, shard[key]); return; }
+    var pref = Object.keys(shard).filter(function(k){ return k.indexOf(key)===0; }).sort().slice(0,60);
+    if (!pref.length) { out.innerHTML = '<p class="none">No attested headword starts with “'+esc(raw)+'” — it may be unattested in DCS (see the coverage sidecar) or spelled differently.</p>'; return; }
+    matches.innerHTML = pref.map(function(k){
+      return '<a href="#'+encodeURIComponent(k)+'" data-k="'+esc(k)+'">'+esc(shard[k].iast)+"</a>";
+    }).join("");
+    matches.querySelectorAll("a").forEach(function(a){
+      a.onclick = function(ev){ ev.preventDefault(); q.value=a.dataset.k; lookup();
+        history.replaceState(null,"","#"+encodeURIComponent(a.dataset.k)); };
+    });
+  });
+}
+q.addEventListener("input", lookup);
+if (location.hash.length > 1) { q.value = decodeURIComponent(location.hash.slice(1)); lookup(); }
+</script>
+</body>
+</html>
