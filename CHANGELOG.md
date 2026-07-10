@@ -15,6 +15,24 @@ sense citations pin to `data_version`, not to repo tags.
 ## [Unreleased]
 
 ### Added
+- **Type-D concordance record shape + `typed_link_lint.py`** (H539, Sonnet 5
+  `claude-sonnet-5`) — extends
+  [`scripts/concordance_core.py`](https://github.com/gasyoun/kosha/blob/main/scripts/concordance_core.py)
+  per [`TYPED_LINK_ID_GRAMMAR.md`](https://github.com/gasyoun/Uprava/blob/main/TYPED_LINK_ID_GRAMMAR.md)
+  §1 (H499) so every Type-D (grammar ↔ non-grammar) concordance builder imports
+  one implementation instead of forking a schema: `RECORD_FIELDS`' `corpus_locus`/
+  `corpus_text_id` renamed to `target_locus`/`source_dataset` (positions/semantics
+  unchanged); `TYPE_D_RECORD_FIELDS` adds `link_type` + `date`;
+  `normalize_record()` maps either shape into one shared view; two new
+  `match_method` tiers above `exact` in trust — `id-link` (pure host-stable-id
+  join) and `curated` (source concordance's own assertion). New
+  [`scripts/typed_link_lint.py`](https://github.com/gasyoun/kosha/blob/main/scripts/typed_link_lint.py)
+  validates a Type-D dataset's anchor/target-locus prefixes, tail syntax,
+  `link_type`/`match_method`/`date` against the spec, exits non-zero per bad
+  row; tested against the spec's §4a/§4b landed worked examples plus negative
+  fixtures (URL-host locus, unknown prefix, bad date) in
+  `tests/fixtures/typed_link/`. No Type-D dataset registered in the manifest
+  (D2b parks that until Q2.1).
 - **Pipeline operator runbook** ([docs/PIPELINE_OPERATOR_RUNBOOK.md](https://github.com/gasyoun/kosha/blob/main/docs/PIPELINE_OPERATOR_RUNBOOK.md),
   H501, Fable 5 `claude-fable-5`) — the single operational spine for the whole
   chain: the seven `build_db.py` stages in dependency order with rerun triggers,
