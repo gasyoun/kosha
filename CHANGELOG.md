@@ -15,6 +15,43 @@ sense citations pin to `data_version`, not to repo tags.
 ## [Unreleased]
 
 ### Added
+- **P5 advanced UI — the word page** (H537, Opus 4.8 `claude-opus-4-8`), built
+  from the locked design spec
+  [`P5_ADVANCED_UI_DESIGN.md`](https://github.com/gasyoun/kosha/blob/main/P5_ADVANCED_UI_DESIGN.md)
+  (MG rulings 10-07-2026: Tabs · all-3 view modes · full P5 scope · both render
+  targets). One addressable word page per headword — every dictionary's entry,
+  its evidence, its paradigm — reached by the crawlable `/w/{slp1}` permalink.
+  - **Crawlable static prerender** — new
+    [`app/word_page.py`](https://github.com/gasyoun/kosha/blob/main/app/word_page.py)
+    shared template + [`scripts/build_word_pages.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_word_pages.py):
+    every dict panel present in the DOM (active shown, rest hidden) with a
+    `<noscript>` all-stacked fallback so a JS-less fetcher reads every entry
+    (§5); progressive JS hydrates tabs (P5-1), the Gloss/Full/Adaptive view-mode
+    toggle (P5-2, persisted to `localStorage`), and disclosures. Runs off the
+    committed static card set (no DB); logs actual N + Pages budget + dropped
+    tail (no silent caps). Plus a `/browse/<varṇa>` alphabetic spine linking
+    every word page. Regenerable Pages output, gitignored like the cards.
+  - **FastAPI SSR** — new `GET /w/{slp1}` route renders the long tail through the
+    *same* `render_word_page()` template, so static ∥ SSR are byte-comparable
+    (P5-4 parity); locked by
+    [`tests/test_word_page.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_word_page.py)
+    (15 no-DB structural/crawlability tests + a DB-gated SSR byte-parity check).
+  - **SPA word page** — new `WordPage.svelte` interactive twin (MW/PWG/AP90 tabs,
+    view-mode toggle sharing the same `localStorage` key, evidence + lazy
+    paradigm + scan disclosures), reached by `#/w/{slp1}` hash routing; composes
+    the existing `getEntry`/`getParadigm`/`ParadigmTable` (reuse ledger §7).
+  - **Search operators** (§4) — `root:` and `sandhi:` in the search box (caught
+    before transliteration), bare input auto-routes; `sandhi:` prefills the
+    reverse analyser.
+  - **Study tooling** — CSV (RFC-4180) and Anki (TSV) export of a session's word
+    lookups (`lib/export.js`). *Gītā 1 / Nala 1 reading packs are data-gated —
+    the DCS sentence-level lemmatised corpus is not present on disk
+    (`VisualDCS/dcs_full.sqlite` is a 0-byte LFS placeholder); tracked as a
+    follow-up, no verse tokenisation was fabricated.*
+  - +34 tests green (19 vitest lib + 15 pytest template); the SPA word-page and
+    `sandhi:` operator e2e flows verified in-browser. **Exit checks (MG sign-off
+    on live staging · Lighthouse mobile ≥90 · Gītā-verse walkthrough) remain
+    gated on MG's P2 `samskrtam.ru` deploy**, per the plan.
 - **Type-D concordance record shape + `typed_link_lint.py`** (H539, Sonnet 5
   `claude-sonnet-5`) — extends
   [`scripts/concordance_core.py`](https://github.com/gasyoun/kosha/blob/main/scripts/concordance_core.py)

@@ -15,6 +15,12 @@ data/vidyut/
 # P2 static-cache generator output (scripts/build_static_cache.py) — regenerable
 # from kosha.db; deployed to Pages by MG (A3), never committed in-repo.
 .pytest_cache/
+# P5 static word-page prerender (scripts/build_word_pages.py, H537) — one HTML
+# per attested lemma + the /browse spine. ~478 MB at full N, 100% regenerable
+# from the committed docs/cards/ set (the script needs no DB); MG regenerates at
+# deploy like build_static_cache.py. Not committed (the source + cards are).
+docs/w/
+docs/browse/
 # K2b inflection UI (ui/) — build toolchain deps + local vitest artifacts.
 # The BUILT app (docs/inflect/) and the curated demo data shards ARE committed
 # (they are the Pages deploy input, like docs/cards/); the full-set data from
