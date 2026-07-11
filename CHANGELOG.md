@@ -14,6 +14,23 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.20.1] - 2026-07-11
+
+### Changed
+- **H752: parked rival H730 lane salvaged into the merged protocol** (docs/provenance
+  only — no scored output changed). Grafted into
+  [docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md](https://github.com/gasyoun/kosha/blob/main/docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md):
+  the verified [Hellwig et al. 2026 (ISCLS)](https://aclanthology.org/2026.iscls-1.2/)
+  delta (supervised MW-definition WSD with Sanskrit Sembank gold — closes the
+  previously-flagged overlap check), SHA-256 input digests in
+  [frozen_sample.meta.json](https://github.com/gasyoun/kosha/blob/main/data/eval/defgen/frozen_sample.meta.json)
+  (independently computed by both racing lanes, byte-identical inputs confirmed), and the
+  gold-free inputs projection + 3-rater Fleiss-κ WSD design queued for the A59 paper
+  phase. The 500-headword seed-730 sample is declared the **single canonical frozen set**;
+  the parked 520-headword rival sample was never scored and its branch
+  `h730-defgen-eval-fable-lane` was deleted after salvage
+  ([Uprava FINDINGS §67](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)).
+
 ## [0.20.0] - 2026-07-11
 
 ### Added

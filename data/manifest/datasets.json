@@ -853,7 +853,7 @@
       "consumers": [
         "H730 protocol doc docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md (eLex/EURALEX/IJL paper candidate)"
       ],
-      "notes": "H730 (11-07-2026, Fable 5 claude-fable-5): first CDSL-side definition-modeling eval; joins A3 mw_en_tm x E26 lemma_frequency x C15 dcs_cdsl_xref x DCS 2026 sentences (CC BY 4.0, Hellwig). MW gloss text public domain. Judge scores gated (JUDGE-BENCH); WSD track is agreement-only pending DCS m_wordsem inventory recovery."
+      "notes": "H730 (11-07-2026, Fable 5 claude-fable-5): first CDSL-side definition-modeling eval; joins A3 mw_en_tm x E26 lemma_frequency x C15 dcs_cdsl_xref x DCS 2026 sentences (CC BY 4.0, Hellwig). MW gloss text public domain. Judge scores gated (JUDGE-BENCH); WSD track is agreement-only pending DCS m_wordsem inventory recovery. H752 (11-07-2026): SHA-256 input digests added to frozen_sample.meta.json; this 500-headword seed-730 sample declared the single canonical frozen set (the parked rival lane's 520-headword sample was never scored and its branch deleted)."
     }
   ]
 }
