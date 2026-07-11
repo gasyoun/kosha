@@ -104,7 +104,61 @@ is therefore future work; this pilot establishes the harness + an agreement ceil
 
 ## Results (11-07-2026 run)
 
-RESULTS_TABLES_PLACEHOLDER
+All 500 items generated and judged in every arm (0 empty candidates after retries; one A2
+item salvaged from a truncated JSON response, noted in-row).
+
+| Arm | corpus BLEU | corpus chrF | mean token-F1 | judge adequacy 0–5 | judge~chrF Spearman ρ | mean words |
+|---|---|---|---|---|---|---|
+| A0_random_floor | 3.13 | 12.02 | 0.097 | 0.186 | 0.117 | 41.5 |
+| A1_chat_ctx | 3.05 | 19.57 | 0.297 | 4.322 | 0.391 | 17.2 |
+| A2_chat_noctx | 3.43 | 17.30 | 0.294 | 4.084 | 0.466 | 22.7 |
+| A3_reasoner_ctx | 0.50 | 13.70 | 0.256 | 4.208 | 0.423 | 9.2 |
+
+Gold glosses average 41.5 words (median 26); every system under-generates senses relative
+to gold.
+
+**Judge gates.** (1) Floor separation: PASS — the judge scores the derangement floor 0.19
+vs 4.1–4.3 for systems, so it is not fooled by register-matched random MW text.
+(2) Judge~chrF: moderate positive (ρ 0.39–0.47 within system arms) — consistent with a
+noisy gold reference; neither signal is degenerate. (3) Human-scored subsample: NOT yet
+run — required before any paper-grade claim (next-steps #1).
+
+**Findings.**
+
+1. **BLEU is non-informative here** — the floor matches the systems (3.13 vs 3.05) because
+   any MW-register English shares enough n-grams with a 40-word gold; chrF and token-F1
+   both separate floor from systems cleanly. Drop BLEU in follow-ups.
+2. **Corpus context adds little over parametric memorization**: A1 − A2 = +2.3 chrF,
+   +0.003 token-F1, +0.24 judge. DeepSeek already "knows" MW (contamination caveat above);
+   attestations mostly sharpen sense selection, not content. The paper claim must be framed
+   as reproduction+grounding, and a post-1899 / non-MW-attested headword subset is the
+   clean way to isolate real generation ability.
+3. **Terseness is punished by surface metrics, not by the judge**: the reasoner writes the
+   shortest glosses (9.2 words mean), scores lowest on chrF (13.7 — recall against long
+   gold), yet the blinded judge puts it between the two chat arms (4.21). Metric choice
+   changes the system ranking — exactly the JUDGE-BENCH scenario the gates exist for.
+4. **Polysemy hurts, in every frequency band** (A1 per-cell chrF): poly5p is the worst
+   polysemy band within high (18.9), mid (19.4) and low (22.4) frequency. The frequency
+   gradient is inverted (low-frequency cells score *higher*, e.g. low/mono 33.5 vs
+   high/mono 21.3) because high-frequency MW entries have much longer, more complex gold
+   glosses — a stratification effect to keep in mind, not model skill at rare words.
+
+Per-cell chrF, arm A1 (freq/polysemy):
+
+| cell | chrF | cell | chrF | cell | chrF |
+|---|---|---|---|---|---|
+| high/mono | 21.30 | mid/mono | 27.51 | low/mono | 33.54 |
+| high/poly2_4 | 20.62 | mid/poly2_4 | 28.47 | low/poly2_4 | 30.04 |
+| high/poly5p | 18.91 | mid/poly5p | 19.42 | low/poly5p | 22.35 |
+
+**WSD agreement pilot** (50 poly5p lemmas × ≤3 sentences; 135/150 items with a valid pick
+from both models): raw inter-model agreement **0.748**, per-item uniform chance 0.142,
+**κ vs chance 0.706** — substantial agreement between independent models picking among a
+mean ~7 MW senses. This bounds the task as well-posed for models; gold accuracy remains
+unmeasurable until the DCS `m_wordsem` inventory is recovered (next-steps #2).
+
+Full numbers: [scores_summary.json](https://github.com/gasyoun/kosha/blob/main/data/eval/defgen/scores_summary.json) ·
+per-item: [scores_per_item.tsv](https://github.com/gasyoun/kosha/blob/main/data/eval/defgen/scores_per_item.tsv).
 
 ## Limitations + next steps (ranked)
 
