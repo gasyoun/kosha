@@ -1,0 +1,31 @@
+{
+  "sample": "frozen_sample_v1.jsonl",
+  "n": 520,
+  "seed": 730,
+  "target": 520,
+  "min_attest": 3,
+  "freq_tercile_cuts": [
+    27,
+    126
+  ],
+  "strata": {
+    "low/mono": 43,
+    "low/low": 43,
+    "low/mid": 43,
+    "low/high": 43,
+    "mid/mono": 43,
+    "mid/low": 43,
+    "mid/mid": 43,
+    "mid/high": 43,
+    "high/mono": 44,
+    "high/low": 44,
+    "high/mid": 44,
+    "high/high": 44
+  },
+  "inputs": {
+    "A3_mw_en_tm.json": "34a0794c999ae504b6519101a89da01875e1ceed03db3448d52064ba2b3e60b4",
+    "C15_dcs_cdsl_xref.tsv": "208a62862b852077acc67f4aaacc2e581eaf0fe93ac1b8340cd93d6151974a3c",
+    "E26_lemma_frequency.tsv": "3d54e4dbf4fc90c75fdd10b7ab538ddde548718b703c935cadb4c22e43314d07",
+    "dcs_full.sqlite": "8f3b06bd6ef0e47a9ccf81d147e73d5d240d64e0c12f6d789262eb422ebb23bc"
+  }
+}
