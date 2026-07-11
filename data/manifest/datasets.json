@@ -837,6 +837,23 @@
         "paper A58 (GWC / LT4HALA / eLex)"
       ],
       "notes": "Registered by H742 (11-07-2026, Fable 5 claude-fable-5). First SIL-semdom <-> classical-thesaurus map. CC BY-SA 4.0 (ID pairs only, no AK/UoHyd prose). Gold: 200 synsets dual-annotated blind (Fable 5 x Opus 4.8), exact kappa 0.677. Bridge candidates are a shortlist, NOT labels (top-1 17.5% - SanskritLexicography FINDINGS 76)."
+    },
+    {
+      "id": "mw-defgen-eval-sample",
+      "title": "MW definition-generation eval — frozen 500-headword sample + attestations + scored baseline outputs (H730)",
+      "tier": "public",
+      "in_release": null,
+      "format": "tsv+jsonl",
+      "rows": 500,
+      "size_bytes": 467302,
+      "keying": "SLP1 headword; 3x3 strata (E26 rank band x MW top-level sense count), seed 730; <=5 DCS attestation sentences per headword",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/eval/defgen/ (frozen_sample.tsv + attestations.jsonl frozen; gen_*/judge_*/wsd_*/scores_* are the 11-07-2026 run outputs)",
+      "builder": "scripts/defgen_build_sample.py (arms: scripts/defgen_run_baselines.py, scoring: scripts/defgen_score.py)",
+      "consumers": [
+        "H730 protocol doc docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md (eLex/EURALEX/IJL paper candidate)"
+      ],
+      "notes": "H730 (11-07-2026, Fable 5 claude-fable-5): first CDSL-side definition-modeling eval; joins A3 mw_en_tm x E26 lemma_frequency x C15 dcs_cdsl_xref x DCS 2026 sentences (CC BY 4.0, Hellwig). MW gloss text public domain. Judge scores gated (JUDGE-BENCH); WSD track is agreement-only pending DCS m_wordsem inventory recovery."
     }
   ]
 }
