@@ -687,6 +687,63 @@
         "kosha-db"
       ],
       "notes": "H691: registered so the census §2 'rebuildable from csl-orig' guess is now a verified recipe with checksums. Not a backup-risk asset."
+    },
+    {
+      "id": "correction-events-log",
+      "title": "Correction-event log, full trio (all/typed/final)",
+      "tier": "public",
+      "in_release": null,
+      "format": "csv",
+      "rows": 52498,
+      "size_bytes": 178001455,
+      "keying": "event_id -> date, dict, headword_iast, old/new IAST, edit-op trace, corrector, latency, evidence level; _typed adds empirical error typology, _final is the canonical enriched view",
+      "source_repo": "https://github.com/sanskrit-lexicon/csl-observatory",
+      "source_path": "observatory/site/src/data/correction_events_{all,typed,final}.csv",
+      "builder": "csl-observatory obs_q pipeline (git-mined 28,057 events + release diffs)",
+      "consumers": [
+        "SanskritLexicography FEATURES_INDEX (E41; release-only view already E32)",
+        "Uprava DATA_LAYERS_CENSUS section 4",
+        "corrector-behaviour / error-typology studies (A36 family)"
+      ],
+      "notes": "H694 (11-07-2026, Fable 5 claude-fable-5). 52,498 data rows per view; sizes 57.8+59.0+61.2 MB."
+    },
+    {
+      "id": "kompozity-names-compound-splits",
+      "title": "DCS proper-name compound splits with frequency vectors (Kompozity names.csv)",
+      "tier": "public",
+      "in_release": null,
+      "format": "csv",
+      "rows": 168880,
+      "size_bytes": 90664029,
+      "keying": "surface form; constituent-stem split; part count; total corpus frequency; per-period/text frequency tail (semicolon-delimited)",
+      "source_repo": "https://github.com/gasyoun/VisualDCS",
+      "source_path": "derived-data/Kompozity/names.csv",
+      "builder": "DCS-derived research archive (pre-2026 derivation; schema documented in derived-data/Kompozity/README.md)",
+      "consumers": [
+        "SanskritLexicography FEATURES_INDEX (E42)",
+        "Uprava DATA_LAYERS_CENSUS section 4",
+        "compound (samasa) morphology / onomastics studies"
+      ],
+      "notes": "H694 (11-07-2026, Fable 5 claude-fable-5). Example row: rajendra; rajan indra;2;863;..."
+    },
+    {
+      "id": "cdsl-headword-ngram-oracle",
+      "title": "Pan-CDSL headword character-n-gram oracle (allngramtxt.txt)",
+      "tier": "public",
+      "in_release": null,
+      "format": "txt",
+      "rows": 6656616,
+      "size_bytes": 82268027,
+      "keying": "one distinct SLP1 character n-gram per line, all lengths, sorted by length; derived from sanhw1.txt (union headword list)",
+      "source_repo": "https://github.com/sanskrit-lexicon/CORRECTIONS",
+      "source_path": "ngram/allngramtxt.txt",
+      "builder": "ngram/listngrams.py (CORRECTIONS)",
+      "consumers": [
+        "SanskritLexicography FEATURES_INDEX (F43)",
+        "Uprava DATA_LAYERS_CENSUS section 4",
+        "n-gram spell-check method (suspect-headword detection)"
+      ],
+      "notes": "H694 (11-07-2026, Fable 5 claude-fable-5). Membership oracle: a headword containing a chunk attested in no other headword is suspect."
     }
   ]
 }
