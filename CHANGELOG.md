@@ -14,6 +14,26 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.18.0] - 2026-07-11
+
+### Added
+- **Provenance fields across the dataset manifest** (H691, Fable 5
+  `claude-fable-5`, [PR #52](https://github.com/gasyoun/kosha/pull/52)): the census-§2
+  local-only giants now carry `sha256` (streamed), `provenance_verified` and an honest
+  `rebuild` recipe in
+  [`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
+  — `corpus-lexicon`, `sa-ru-glossary`, `kosha-db`, `dcs-full-sqlite`,
+  `samudra-corpus-db` updated with live counts.
+- **Three new manifest rows**: `archive-stopword-sqlite` (11 GB, 40,573,260 stop-word
+  parallels — the census's "uncounted blind spot" resolved, fully regenerable),
+  `samudra-offline-packs` (base+dict, SHA256s verified against their sidecars) and
+  `kosha-raw-sqlite` (mw/pwg/ap90 inputs, re-fetchable from the csl-sqlite release).
+
+### Fixed
+- `kosha-db` manifest keying corrected from "9 tables" to the live 8; flagged that the
+  current `kosha.db` build (05-07-2026) lacks the H345 `heritage_anchor` table — the
+  heritage witness needs a re-ingest on next rebuild.
+
 ## [0.17.0] - 2026-07-11
 
 ### Added
