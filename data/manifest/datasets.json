@@ -26,7 +26,8 @@
         "csl-atlas",
         "RussianTranslation verb worklist"
       ],
-      "notes": "3 repos independently re-scanned mw.txt before this existed (got 750/809/1163) — consume this, never re-scan."
+      "notes": "3 repos independently re-scanned mw.txt before this existed (got 750/809/1163) — consume this, never re-scan.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-roots.meta.md"
     },
     {
       "id": "mw-etymology",
@@ -45,7 +46,8 @@
         "WhitneyRoots",
         "csl-atlas"
       ],
-      "notes": "Derivations, distinct from the root inventory (mw-roots)."
+      "notes": "Derivations, distinct from the root inventory (mw-roots).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-etymology.meta.md"
     },
     {
       "id": "dcs-cdsl-xref",
@@ -65,7 +67,8 @@
         "csl-atlas",
         "VisualDCS"
       ],
-      "notes": "Reusable LOD linkset — never re-derive DCS↔CDSL joins."
+      "notes": "Reusable LOD linkset — never re-derive DCS↔CDSL joins.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/dcs-cdsl-xref.meta.md"
     },
     {
       "id": "union-headwords",
@@ -85,7 +88,8 @@
         "SanskritSpellCheck (union=N tags)",
         "PWG→EN pilot (94,753 subset)"
       ],
-      "notes": "THE headword master — 323k headwords across all dicts."
+      "notes": "THE headword master — 323k headwords across all dicts.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/union-headwords.meta.md"
     },
     {
       "id": "mw-heritage-crosswalk",
@@ -104,7 +108,8 @@
         "kosha ingest (H345, kosha.db heritage_anchor table + /api/v1/lemma `heritage` witness)",
         "csl-atlas witness column (queued)"
       ],
-      "notes": "Crosswalk itself is ours/publishable; the Heritage mirror data behind it is LGPLLR-pending (restricted tier)."
+      "notes": "Crosswalk itself is ours/publishable; the Heritage mirror data behind it is LGPLLR-pending (restricted tier).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-heritage-crosswalk.meta.md"
     },
     {
       "id": "kosha-lemma-frequency",
@@ -123,7 +128,8 @@
         "kosha evidence layer",
         "Nagari teaching order"
       ],
-      "notes": "LEFT-JOIN this — never re-derive frequency ordering. ⚠ upstream UD Tense=Past conflates aorist/perfect."
+      "notes": "LEFT-JOIN this — never re-derive frequency ordering. ⚠ upstream UD Tense=Past conflates aorist/perfect.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/kosha-lemma-frequency.meta.md"
     },
     {
       "id": "zaliznyak-grammar-index",
@@ -143,7 +149,8 @@
         "kosha P4 grammar tokens",
         "gramdict mapping"
       ],
-      "notes": "FAIR data package; paradigms generated via vidyut, never transcribe static tables."
+      "notes": "FAIR data package; paradigms generated via vidyut, never transcribe static tables.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-grammar-index.meta.md"
     },
     {
       "id": "corpus-lexicon",
