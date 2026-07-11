@@ -30,7 +30,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 # TYPED_LINK_ID_GRAMMAR.md §2 — grammar-anchor namespace (the "from" side).
 # Each entry: prefix -> compiled regex the TAIL (after the prefix) must match.
 ANCHOR_PATTERNS = {
-    "gra": re.compile(r"^\d+$"),                              # gra:3983
+    "gra": re.compile(r"^\d+(\.\d+)?$"),                       # gra:3983, gra:5833.1 (homonym suffix)
     "whitney-root": re.compile(r"^\d+$"),                      # whitney-root:1
     "whitney-sec": re.compile(r"^\d+(-\d+)?$"),                # whitney-sec:611[-641]
     "root": re.compile(r"^[A-Za-z]+$"),                        # root:BU (SLP1)
