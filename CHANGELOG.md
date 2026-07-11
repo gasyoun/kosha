@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.20.0] - 2026-07-11
+
 ### Added
 - **H730: first CDSL-side definition-generation + gloss-grounded WSD eval** — frozen
   500-headword MW sample (3×3 frequency×polysemy strata, seed 730) with ≤5 DCS attestation
