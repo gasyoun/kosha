@@ -14,6 +14,42 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.17.0] - 2026-07-11
+
+### Added
+- **Data statements for the entire public data tier** (H665, Fable 5
+  `claude-fable-5`, [PR #47](https://github.com/gasyoun/kosha/pull/47)): one
+  Bender-Friedman (2018) / Gebru et al. (2021) datasheet-form statement per
+  `data-v0.1.0` release asset under
+  [`docs/data-statements/`](https://github.com/gasyoun/kosha/tree/main/docs/data-statements)
+  — `mw-roots`, `mw-etymology`, `dcs-cdsl-xref`, `union-headwords`,
+  `mw-heritage-crosswalk`, `kosha-lemma-frequency`, `zaliznyak-grammar-index` —
+  each covering composition & schema, provenance, curation rationale, language
+  variety, process info, biases/limitations, intended use / known misuse,
+  license, maintenance & sunset plan, deprecation status, citation; plus a
+  [README index](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/README.md)
+  with the queued backlog for the not-yet-covered manifest rows.
+- **`data_statement` field in the dataset manifest**
+  ([`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)):
+  each of the 7 public released rows now links its data statement.
+- **Two JOHD data-paper drafts** (readiness 2/5, registered as A55/A56 in the
+  Uprava publication inventory):
+  [`papers/A55_UNION_HEADWORDS_DATA_PAPER_JOHD.md`](https://github.com/gasyoun/kosha/blob/main/papers/A55_UNION_HEADWORDS_DATA_PAPER_JOHD.md)
+  (union headword index, 323,425 rows / 15 dictionaries) and
+  [`papers/A56_ZALIZNYAK_GRAMMAR_INDEX_DATA_PAPER_JOHD.md`](https://github.com/gasyoun/kosha/blob/main/papers/A56_ZALIZNYAK_GRAMMAR_INDEX_DATA_PAPER_JOHD.md)
+  (grammar-token index, 98,639 rows / 335 paradigm tokens).
+- **`CITATION.cff`** — repo-level citation metadata (this release's freeze-time
+  sync; Zenodo DOI slot pending the GitHub–Zenodo wiring, a human `@DO`).
+- **Minimal-direction mockup of the data directory** (H587,
+  [PR #45](https://github.com/gasyoun/kosha/pull/45)):
+  [`directory/mockups/minimal.html`](https://github.com/gasyoun/kosha/blob/main/directory/mockups/minimal.html),
+  CSS-only restyle with markup byte-identical to the live directory page.
+
+### Changed
+- **README refreshed to the current data-hub role** (H550,
+  [PR #46](https://github.com/gasyoun/kosha/pull/46)): P4/P5 state, data-hub
+  framing brought current.
+
 ## [0.16.0] - 2026-07-11
 
 ### Added
