@@ -212,7 +212,7 @@
         "kosha API",
         "P2 static cache"
       ],
-      "notes": "Regenerable but expensive; backup = cheap insurance. Candidate single queryable DB for P-D5. ⚠ H691: live DB (built 05-07-2026, verified 11-07-2026) has 8 tables and NO heritage_anchor table — the H345 heritage-witness ingest is absent from the current build; re-run it if the heritage witness is needed.",
+      "notes": "Regenerable but expensive; backup = cheap insurance. Candidate single queryable DB for P-D5. ⚠ H691: live DB (built 05-07-2026, verified 11-07-2026) has 8 tables and NO heritage_anchor table — the H345 heritage-witness ingest is absent from the current build; re-run it if the heritage witness is needed. Completeness-audited 11-07-2026 (H687): loaded dicts mw/pwg/ap90 match live csl-orig <L> counts exactly (0.000% drift); 41/44 csl-orig dicts not full-text-loaded (union lemmas layer spans 15 codes) — see docs/KOSHA_DB_COMPLETENESS_AUDIT.md.",
       "sha256": "6f45b57f1ea30f62160560b7471896814310ebc8dada556efbd47219fbf8dc68",
       "provenance_verified": "2026-07-11 (H691, Fable 5 claude-fable-5)",
       "rebuild": "Regenerable (hours): scripts/build_crosswalk.py → build_entries.py → build_forms.py → build_db.py; raw inputs auto-downloaded (see kosha-raw-sqlite row)."
