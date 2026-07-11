@@ -1,15 +1,19 @@
 # Gasuns Sanskrit Dictionary
 
-_Created: 02-07-2026 · Last updated: 06-07-2026_
+_Created: 02-07-2026 · Last updated: 11-07-2026_
 
-> **Status: pre-alpha — API runs locally, nothing is deployed yet.** Phase 1
-> (data + API against real MW/PWG/AP90 data, 115/115 tests green) is complete;
-> the P2 static-cache generator for the public GitHub Pages tier is built
-> (released as [v0.5.0](https://github.com/gasyoun/kosha/releases/tag/v0.5.0)).
-> P3 (evidence layer) and P4 Wave K1 (Cologne inflection-table ingest) are
-> also done, released together as
-> [v0.7.0](https://github.com/gasyoun/kosha/releases/tag/v0.7.0). What
-> remains for a first public URL is MG's deploy step — see
+> **Status: pre-alpha — the lookup API + UI run locally and the public
+> dictionary URL is not deployed yet, but the data-hub tier already is live.**
+> Phase 1 (data + API against real MW/PWG/AP90 data) is complete; the P2
+> static-cache generator is built and the project's GitHub Pages tier is
+> serving ([data + tools directory](https://gasyoun.github.io/kosha/directory/)
+> and [features index](https://gasyoun.github.io/kosha/features/) both live).
+> P3 (evidence layer), P4 (nominal + verb inflection ingest, reverse-lookup
+> cascade, and the vidyut⇄Cologne comparison), and the P5 crawlable word page
+> are all done — latest release
+> [v0.16.0](https://github.com/gasyoun/kosha/releases/tag/v0.16.0). What remains
+> for the first public **dictionary lookup** URL is MG's samskrtam.ru deploy
+> step — see
 > [PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md)
 > and [.ai_state.md](https://github.com/gasyoun/kosha/blob/main/.ai_state.md)
 > for the exact resume point; no file in this repo claims to be "ready" unless
@@ -26,9 +30,34 @@ name collision with Ambuda's `vidyut-kosha`. Naming and identity review:
 one-page distillation:
 [POSITIONING_SUMMARY.md](https://github.com/gasyoun/kosha/blob/main/POSITIONING_SUMMARY.md).
 
-**Sanskrit NLP data & tools directory** — the project's public entry point for
-Sanskrit computational linguistics: our openly-licensed derived datasets
-(downloadable) plus the external stacks it builds on, with what-each-does /
+**The org's Sanskrit data-hub.** Beyond the dictionary, kosha is the
+`sanskrit-lexicon` ecosystem's canonical hub for reusable *derived* data — the
+place that actually **hosts the bytes** the org's reuse catalogues point at
+(MG rulings D-HUB-1..8,
+[DATA_HUB_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md)).
+It is a **two-tier** store:
+
+- **Public tier** — openly-licensed assets (crosswalks, union headwords, MW
+  roots, frequency layers) shipped as versioned `data-v*` GitHub Releases
+  (first cut
+  [data-v0.1.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.1.0)), CC
+  BY-SA 4.0, each past `/publish-safety-check`. samskrtam.ru becomes the
+  canonical host once MG opens the deploy gate.
+- **Restricted tier** — rights-encumbered or oversize single-copy data (corpus
+  alignments over published translations, the Heritage mirror, private corpora)
+  backed up privately and reachable only by the project's own agents, **never
+  published**.
+
+Every canonical dataset in **either** tier has one machine-readable row in
+[data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
+— currently **32 datasets** (22 public · 8 restricted · 2 intermediate) — the
+single source agents read to discover and fetch data; a new or changed derived
+dataset ends its session with a manifest row or it does not exist for reuse.
+
+**Sanskrit NLP data & tools directory** — the public face of that manifest and
+the project's entry point for Sanskrit computational linguistics: our
+downloadable datasets plus the **8 external stacks** it builds on (vidyut,
+Heritage, DCS, SCL/Samsaadhanii, DharmaMitra…), each with what-each-does /
 how-to-call / license. Live at
 [gasyoun.github.io/kosha/directory](https://gasyoun.github.io/kosha/directory/),
 rendered by
@@ -36,7 +65,8 @@ rendered by
 from
 [data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
 + [data/manifest/external_tools.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/external_tools.json)
-(the single sources — no facts hand-copied into the page).
+(the single sources — no facts hand-copied into the page), with schema.org
+`Dataset` JSON-LD per public asset.
 
 ## What it will do
 
@@ -86,8 +116,8 @@ scenarios it must serve:
 | **P1** Data + API | `kosha.db` (MW+PWG+AP90) + API v1 running locally, tests green | **done** — 115/115 tests green (see [D5_MEASUREMENTS.md](https://github.com/gasyoun/kosha/blob/main/D5_MEASUREMENTS.md)) |
 | **P2** Public alpha | first live URLs: static lookup on GitHub Pages + API on samskrtam.ru | **generator built** ([v0.5.0](https://github.com/gasyoun/kosha/releases/tag/v0.5.0)) — **next: MG deploy** |
 | **P3** Evidence layer | DCS frequency badges, corpus example per lemma | **done** ([v0.7.0](https://github.com/gasyoun/kosha/releases/tag/v0.7.0)) |
-| **P4** Forms & grammar | paste-anything segmentation, paradigm tables, grammar token | **Wave K1 done** (nominal inflection ingest + analysis API, [v0.7.0](https://github.com/gasyoun/kosha/releases/tag/v0.7.0)) — K2/K3 + verb conjugations still open, see [ROADMAP_INFLECT_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_INFLECT_2026_2027.md) |
-| **P5** Advanced UI | the project's own UI at samskrtam.ru/kosha | gated on P2 deploy (K2/K3 in progress) |
+| **P4** Forms & grammar | paste-anything segmentation, paradigm tables, grammar token | **Waves K1–K2 + E1 done** — nominal + verb inflection ingest, reverse-lookup cascade, inflection UI, and the vidyut⇄Cologne divergence comparison (90.5% agreement); K3 folded into K2b ([v0.9.0](https://github.com/gasyoun/kosha/releases/tag/v0.9.0)/[v0.10.0](https://github.com/gasyoun/kosha/releases/tag/v0.10.0), [ROADMAP_INFLECT_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_INFLECT_2026_2027.md)); E1 hybridize remainder + verb comparison queued |
+| **P5** Advanced UI | the project's own UI at samskrtam.ru/kosha | **word page built** — crawlable SSR + prerender + Svelte SPA with `root:`/`sandhi:` operators and CSV/Anki export ([v0.16.0](https://github.com/gasyoun/kosha/releases/tag/v0.16.0)); public URL + reading packs gated on P2 deploy / DCS corpus data |
 | **P6** Trilingual RU | Russian gloss layer beside DE/EN | gated on human review + rights |
 | **P7** v1.0 citable | DOI'd data release, dumps, "Cite" everywhere | gated on P2+P3 |
 
@@ -303,6 +333,8 @@ volume-page, hyphen, 7 volumes · AP90 `0001-a` = page-column-letter.
 | [POSITIONING.md](https://github.com/gasyoun/kosha/blob/main/POSITIONING.md) · [POSITIONING_SUMMARY.md](https://github.com/gasyoun/kosha/blob/main/POSITIONING_SUMMARY.md) | identity, audience, the UI decision |
 | [COMPARISON.md](https://github.com/gasyoun/kosha/blob/main/COMPARISON.md) | 12-platform live survey (02-07-2026) with feature matrix |
 | [D5_MEASUREMENTS.md](https://github.com/gasyoun/kosha/blob/main/D5_MEASUREMENTS.md) · [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md) | D5 measurement report + the SLO/cadence/cache-N decisions it settled |
+| [DATA_HUB_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md) · [data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) | data-hub rulings D-HUB-1..8, two-tier phases P-D0..P-D6, and the machine-readable dataset manifest agents read |
+| [docs/PIPELINE_OPERATOR_RUNBOOK.md](https://github.com/gasyoun/kosha/blob/main/docs/PIPELINE_OPERATOR_RUNBOOK.md) | operator runbook: stage order, per-stage verification, deploy classes, release rituals, never-touch list |
 | [CHANGELOG.md](https://github.com/gasyoun/kosha/blob/main/CHANGELOG.md) | SemVer history |
 
 | In [SanskritLexicography](https://github.com/gasyoun/SanskritLexicography) | What it holds |
