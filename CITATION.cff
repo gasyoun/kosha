@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software or its data releases, please cite it using the
+  metadata from this file. Data releases (data-v* tags) additionally carry
+  their own attribution requirements per LICENSE-DATA.md (Cologne Digital
+  Sanskrit Dictionaries, CC BY-SA 4.0; Digital Corpus of Sanskrit, O. Hellwig,
+  CC BY).
+title: "kosha — Gasuns Sanskrit Dictionary (Sanskrit data-hub)"
+type: software
+version: 0.17.0
+date-released: 2026-07-11
+# DOI: pending — GitHub–Zenodo integration not yet wired (human @DO, tracked
+# in Uprava/GTD_NEXT_ACTIONS.md); concept DOI will be recorded here once minted.
+authors:
+  - family-names: "Gasūns"
+    given-names: "Mārcis"
+    orcid: "https://orcid.org/0000-0003-4513-884X"
+repository-code: "https://github.com/gasyoun/kosha"
+url: "https://github.com/gasyoun/kosha"
+abstract: >-
+  Unified Sanskrit dictionary lookup (kosha) and the canonical data-hub for
+  derived Sanskrit datasets: cross-dictionary union headwords, MW root and
+  etymology tables, DCS-CDSL crosswalk, lemma frequency, MW-Heritage
+  crosswalk, and a Zaliznyak-style grammar-token index, served as data-v*
+  releases with per-dataset data statements under docs/data-statements/.
+keywords:
+  - Sanskrit
+  - lexicography
+  - dictionaries
+  - linked-data
+  - morphology
+license: CC-BY-NC-4.0
