@@ -819,6 +819,24 @@
         "SIL MDF program (papers/SIL_MDF_ECOSYSTEM_CORRELATION.md)"
       ],
       "notes": "Registered by H727 (11-07-2026, Fable 5 claude-fable-5). Restricted: bulk derives from the unreleased ai_translated store (no human review pass yet); regenerate anytime from the store. Grows with every promoted window; refresh rows/size on release."
+    },
+    {
+      "id": "semdom-amarakosha-crosswalk",
+      "title": "semdom <-> Amarakosha crosswalk (SIL semantic domains <-> AK vargas + synsets, ID pairs)",
+      "tier": "public",
+      "in_release": null,
+      "format": "csv (Level A varga map) + tsv (Level B candidates, gold, annotator passes)",
+      "rows": 5898,
+      "size_bytes": 418000,
+      "keying": "Level A: (ak_varga_id, semdom_code/guid) many-to-many; Level B: AK eid -> semdom codes (top-6 candidates) / adjudicated gold code",
+      "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+      "source_path": "data/semdom_varga_crosswalk.csv + data/semdom_ak_candidates.tsv + data/semdom_ak_gold.tsv (README of record: data/SEMDOM_AK_CROSSWALK_2026.md)",
+      "builder": "data/semdom_ak_bridge.py (MW glosses -> WordNet -> GWC-2023 bridge) + data/semdom_ak_metrics.py; Level A hand-authored, validated by data/semdom_varga_crosswalk.py",
+      "consumers": [
+        "csl-standards MDF/LIFT exports (sd semantic-domain field, H721)",
+        "paper A58 (GWC / LT4HALA / eLex)"
+      ],
+      "notes": "Registered by H742 (11-07-2026, Fable 5 claude-fable-5). First SIL-semdom <-> classical-thesaurus map. CC BY-SA 4.0 (ID pairs only, no AK/UoHyd prose). Gold: 200 synsets dual-annotated blind (Fable 5 x Opus 4.8), exact kappa 0.677. Bridge candidates are a shortlist, NOT labels (top-1 17.5% - SanskritLexicography FINDINGS 76)."
     }
   ]
 }
