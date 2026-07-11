@@ -204,7 +204,7 @@
         "kosha API",
         "P2 static cache"
       ],
-      "notes": "Regenerable but expensive; backup = cheap insurance. Candidate single queryable DB for P-D5."
+      "notes": "Regenerable but expensive; backup = cheap insurance. Candidate single queryable DB for P-D5. Completeness-audited 11-07-2026 (H687): loaded dicts mw/pwg/ap90 match live csl-orig <L> counts exactly (0.000% drift); 41/44 csl-orig dicts not full-text-loaded (union lemmas layer spans 15 codes) — see docs/KOSHA_DB_COMPLETENESS_AUDIT.md."
     },
     {
       "id": "dcs-full-sqlite",
