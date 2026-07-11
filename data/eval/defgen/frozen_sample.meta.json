@@ -808,6 +808,13 @@
     "c15_dcs_cdsl_xref": "csl-apidev/simple-search/dcs_xref/dcs_cdsl_xref.tsv (in_cdsl=1 only)",
     "dcs": "VisualDCS/src/DCS-data-2026/dcs_full.sqlite (DCS 2026, Hellwig, CC BY 4.0)"
   },
+  "inputs_sha256": {
+    "a3_mw_en_tm": "34a0794c999ae504b6519101a89da01875e1ceed03db3448d52064ba2b3e60b4",
+    "e26_lemma_frequency": "3d54e4dbf4fc90c75fdd10b7ab538ddde548718b703c935cadb4c22e43314d07",
+    "c15_dcs_cdsl_xref": "208a62862b852077acc67f4aaacc2e581eaf0fe93ac1b8340cd93d6151974a3c",
+    "dcs": "8f3b06bd6ef0e47a9ccf81d147e73d5d240d64e0c12f6d789262eb422ebb23bc"
+  },
+  "inputs_sha256_note": "Recomputed locally 11-07-2026 under H752; byte-identical to the digests independently recorded by the parked rival H730 lane (h730-defgen-eval-fable-lane, deleted after salvage) — both lanes consumed identical inputs.",
   "filters": {
     "sentence_tokens": [
       4,

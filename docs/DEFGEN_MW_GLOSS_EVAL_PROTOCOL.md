@@ -10,15 +10,26 @@ agreement pilot. Executes [H730](https://github.com/gasyoun/Uprava/blob/main/han
 minted under [H667](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H667-Fable_Uprava_acl-method-mining-venue-watch_11.07.26.md)).
 Venue targets: eLex 2027 · EURALEX 2028 · IJL.
 
-**Prior art verdict (H730 step 1).** No definition-generation or gloss eval exists in
+**Prior art verdict (H730 step 1; Hellwig delta verified at paper level by the parked
+rival H730 lane, grafted under
+[H752](https://github.com/gasyoun/Uprava/blob/main/handoffs/H752-Fable_kosha_defgen-parked-lane-salvage_11.07.26.md)).**
+No definition-generation or gloss eval exists in
 [kosha](https://github.com/gasyoun/kosha) or
 [csl-atlas](https://github.com/gasyoun/csl-atlas) (repo greps, 11-07-2026, zero hits;
 kosha [EVAL_PLAN.md](https://github.com/gasyoun/kosha/blob/main/EVAL_PLAN.md) covers
 lookup-service gates only). The nearest published work,
-[Hellwig et al. 2026](https://aclanthology.org/2026.iscls-1.2/), does WSD *from* lexicographic
-definitions on the DCS side; per the H667 mining pass the CDSL side of the crosswalk is
-untouched. The ACL Anthology landing page exposes no abstract; a PDF-level overlap check
-against their data release is a flagged to-verify for the paper phase, not for this protocol.
+[Hellwig et al. 2026 (ISCLS)](https://aclanthology.org/2026.iscls-1.2/), trains a
+*supervised* WSD system over MW lexicographic definitions, with Sanskrit Sembank human
+gold on DCS occurrences (343k connected tokens; code at
+[OliverHellwig/sanskrit/papers/2026iscls](https://github.com/OliverHellwig/sanskrit/tree/master/papers/2026iscls))
+— checked against the actual paper 11-07-2026 by the parked lane
+([Uprava FINDINGS §67](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)), which
+closes the overlap check this section previously flagged as to-verify. Track (b) below is
+therefore **not** novel as a task; the deltas are (a) zero-shot instruction LLMs instead
+of a fine-tuned bi-encoder, (b) the CDSL/kosha data spine instead of Sanskrit Sembank,
+and (c) inter-model agreement only — explicitly not an accuracy claim. Track (a),
+definition generation for Sanskrit, has no prior art in the org or, to our knowledge,
+the literature.
 
 ## Data (all pre-existing org assets — consumed, not rebuilt)
 
@@ -48,6 +59,9 @@ Target 56/cell (9 cells = 504); a candidate needs ≥ 3 usable DCS attestation s
 kept). **Final n = 500** — the low/mono cell exhausts at 52 (157 candidates skipped for
 < 3 usable sentences; every skip is logged in
 [frozen_sample.meta.json](https://github.com/gasyoun/kosha/blob/main/data/eval/defgen/frozen_sample.meta.json)).
+The meta also records **SHA-256 digests of all four inputs** (grafted under H752 from the
+parked rival H730 lane, whose independently computed digests match the local input files
+byte-for-byte — the two rival lanes provably consumed identical inputs).
 The freeze is the committed files
 [frozen_sample.tsv](https://github.com/gasyoun/kosha/blob/main/data/eval/defgen/frozen_sample.tsv) +
 [attestations.jsonl](https://github.com/gasyoun/kosha/blob/main/data/eval/defgen/attestations.jsonl) —
@@ -99,8 +113,11 @@ inter-model raw agreement + κ vs per-item uniform chance (1/k senses).
 those numeric IDs to sense glosses, so no MW-sense gold can be derived here without an
 external inventory. Recovering the DCS word-sense-ID inventory (from the DCS CoNLL-U
 releases) and mapping it onto MW sense divisions is the concrete unlock for a gold-scored
-WSD track — logged as a gap in the paper plan. Hellwig-style sense selection *with gold*
-is therefore future work; this pilot establishes the harness + an agreement ceiling.
+WSD track — logged as a gap in the paper plan; adopting the
+[Hellwig et al. 2026](https://aclanthology.org/2026.iscls-1.2/) eval split directly is the
+alternative unlock (parked-lane observation, grafted under H752). Gold-scored sense
+selection is therefore future work; this pilot establishes the harness + an agreement
+ceiling.
 
 ## Results (11-07-2026 run)
 
@@ -172,6 +189,15 @@ per-item: [scores_per_item.tsv](https://github.com/gasyoun/kosha/blob/main/data/
 5. **BERTScore / embedding metric** once a local torch stack is justified.
 6. **More models** — the arms are two DeepSeek variants + floor; adding a non-DeepSeek
    model family removes a same-vendor blind spot.
+7. **Parked-lane design upgrades for the paper phase** (grafted from the rival H730 lane
+   under [H752](https://github.com/gasyoun/Uprava/blob/main/handoffs/H752-Fable_kosha_defgen-parked-lane-salvage_11.07.26.md);
+   the branch itself is deleted): (a) a **gold-free inputs projection** — generation
+   agents read a derived inputs file (headword, grammar tag, attestation texts only),
+   never the frozen sample itself, so the gold answer key is structurally out of the
+   generation context rather than merely unprompted; (b) a **3-rater WSD re-run** (two
+   baseline models + an independent judge-tier model as third rater) reporting pairwise
+   Cohen's κ, 3-rater Fleiss κ and unanimity rate, upgrading the current 2-model
+   agreement pilot.
 
 ## Reproduction
 
@@ -192,6 +218,20 @@ Requires local siblings `SanskritLexicography`, `csl-apidev`, `VisualDCS` (DCS s
 
 Harness + protocol authored by Fable 5 (`claude-fable-5`), 11-07-2026, under H730.
 Generation/judge models: `deepseek-chat` and `deepseek-reasoner` (DeepSeek API, temperature
-0, 11-07-2026). Deterministic metrics: sacrebleu 2.6.0.
+0, 11-07-2026). Deterministic metrics: sacrebleu 2.6.0. Parked-lane salvage (this
+section's canonical-sample ruling, the verified Hellwig delta, input SHA-256 digests,
+next-steps #7) grafted by Fable 5 (`claude-fable-5`), 11-07-2026, under
+[H752](https://github.com/gasyoun/Uprava/blob/main/handoffs/H752-Fable_kosha_defgen-parked-lane-salvage_11.07.26.md).
+
+**Canonical frozen sample — exactly one.** H730 was executed by two racing sessions
+([Uprava FINDINGS §67](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)); the
+rival lane parked a *different* 520-headword sample (also seed 730, different builder →
+different membership) on a no-PR branch. Ruling (H752, 11-07-2026): **this 500-headword
+sample ([frozen_sample.tsv](https://github.com/gasyoun/kosha/blob/main/data/eval/defgen/frozen_sample.tsv) +
+[attestations.jsonl](https://github.com/gasyoun/kosha/blob/main/data/eval/defgen/attestations.jsonl),
+seed 730, scored results above) is the single frozen sample of record.** The parked
+520-headword sample was never scored, is NOT a second frozen set, and its branch
+(`h730-defgen-eval-fable-lane`) was deleted after salvage. Any future sample is a v2
+superseding v1 in writing, never a parallel alternative.
 
 _Dr. Mārcis Gasūns_
