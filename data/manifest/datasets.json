@@ -588,6 +588,25 @@
         "markup QA / under-marking triage"
       ],
       "notes": "H683 (11-07-2026, Fable 5 claude-fable-5). Verdicts in data/MARKUP_TAG_CENSUS_CSLORIG_2026.md: MW72/ARMH/FRI/NMMB under-marked; SKD/VCP expected-zero by construction; trace-tag inconsistencies flagged (SCH <ab> x2 in 29k entries, WIL <ls> x6 in 45k)."
+    },
+    {
+      "id": "headword-overlap-matrix",
+      "title": "Headword pairwise-overlap matrix (15-dict union)",
+      "tier": "public",
+      "in_release": null,
+      "format": "tsv",
+      "rows": 105,
+      "size_bytes": 2791,
+      "keying": "dict_a x dict_b (unordered pair) -> shared / union / Jaccard, on the union's exact SLP1 <k1> key",
+      "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+      "source_path": "data/headword_overlap_matrix.tsv (+ data/headword_unique_counts.tsv, per-dict uniques)",
+      "builder": "data/headword_overlap_matrix.py (consumes union_headwords.tsv, never rebuilds the union)",
+      "consumers": [
+        "SanskritLexicography FEATURES_INDEX (E40)",
+        "Uprava DATA_LAYERS_CENSUS section 3",
+        "A40 headword-inventory paper (H675)"
+      ],
+      "notes": "H684 (11-07-2026, Fable 5 claude-fable-5). CAE-CCS J=0.672 max; MW/PWG intersection = 94,753 (resolves the figure once mislabeled as the union size); BHS 58.7% unique, CCS 0.6%. Findings: data/HEADWORD_OVERLAP_UNION15_2026.md."
     }
   ]
 }
