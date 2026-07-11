@@ -158,8 +158,8 @@
       "tier": "restricted",
       "in_release": null,
       "format": "jsonl",
-      "rows": 1091528,
-      "size_bytes": 290001558,
+      "rows": 1093391,
+      "size_bytes": 290543363,
       "keying": "SLP1 surface key (~190k keys), per verse-pair alignment",
       "source_repo": "https://github.com/gasyoun/SanskritLexicography",
       "source_path": "RussianTranslation/src/corpus_lexicon.jsonl (GITIGNORED — single copy on MG disk)",
@@ -168,7 +168,10 @@
         "SanskritRussian glossary",
         "pwg_ru TM"
       ],
-      "notes": "RIGHTS: aligns PUBLISHED Russian translations — not publishable as-is. BACKUP GAP: registered asset existing in exactly one place. P-D2/H233."
+      "notes": "RIGHTS: aligns PUBLISHED Russian translations — not publishable as-is. BACKUP GAP: registered asset existing in exactly one place. P-D2/H233. Live count 11-07-2026: 1,093,391 rows (append-only, still growing); the ONLY genuinely single-copy giant in the census §2 list per the H691 sweep.",
+      "sha256": "9f3d852f1f1424c275af2cc1823dab1b561e649320e597d3cab013068ccc4072",
+      "provenance_verified": "2026-07-11 (H691, Fable 5 claude-fable-5)",
+      "rebuild": "NOT deterministically rebuildable — DeepSeek LLM alignment (RussianTranslation/src/build_corpus_lexicon.py, append-only, resumable) over the SamudraManthanam corpus; a re-run costs weeks + API spend and yields different output. SINGLE COPY on MG disk — backup pending H235."
     },
     {
       "id": "sa-ru-glossary",
@@ -186,7 +189,12 @@
         "live search site",
         "pwg_ru gates"
       ],
-      "notes": "Derived from corpus-lexicon → same rights caveat for bulk layers. Site-served ranked subset is public."
+      "notes": "Derived from corpus-lexicon → same rights caveat for bulk layers. Site-served ranked subset is public. H691: surface layer verified 190,838 lines, sha256 recorded; backup exists (tracked in gasyoun/SanskritRussian), so no census backup-gap for this asset.",
+      "sha256": {
+        "surface_glossary.jsonl": "d19ff0810a6482b025bccda0d49509082b9a495b38b07c1a7f7dd6d29c265434"
+      },
+      "provenance_verified": "2026-07-11 (H691, Fable 5 claude-fable-5)",
+      "rebuild": "Rebuildable from corpus-lexicon via RussianTranslation/src/build_surface_glossary.py (+ lemma/root siblings); bulk layers are ALSO git-tracked in gasyoun/SanskritRussian (surface_glossary.jsonl.gz, lemma_glossary.jsonl, root_glossary.jsonl) — backed up, not single-copy."
     },
     {
       "id": "kosha-db",
@@ -196,7 +204,7 @@
       "format": "sqlite",
       "rows": 444773,
       "size_bytes": 1654849536,
-      "keying": "9 tables: 444,773 entries · 323,425 lemmas · 692,403 senses · 1,378,401 forms · 6,916,522 inflections",
+      "keying": "8 tables: 444,773 entries · 323,425 lemmas · 692,403 senses · 1,378,401 forms · 6,916,522 inflections (+ meta, sources, stem_bridge)",
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "data/db/kosha.db (GITIGNORED — regenerable via scripts/build_db.py chain, but hours of compute)",
       "builder": "scripts/build_db.py (crosswalk → entries → forms → db)",
@@ -204,7 +212,10 @@
         "kosha API",
         "P2 static cache"
       ],
-      "notes": "Regenerable but expensive; backup = cheap insurance. Candidate single queryable DB for P-D5."
+      "notes": "Regenerable but expensive; backup = cheap insurance. Candidate single queryable DB for P-D5. ⚠ H691: live DB (built 05-07-2026, verified 11-07-2026) has 8 tables and NO heritage_anchor table — the H345 heritage-witness ingest is absent from the current build; re-run it if the heritage witness is needed.",
+      "sha256": "6f45b57f1ea30f62160560b7471896814310ebc8dada556efbd47219fbf8dc68",
+      "provenance_verified": "2026-07-11 (H691, Fable 5 claude-fable-5)",
+      "rebuild": "Regenerable (hours): scripts/build_crosswalk.py → build_entries.py → build_forms.py → build_db.py; raw inputs auto-downloaded (see kosha-raw-sqlite row)."
     },
     {
       "id": "dcs-full-sqlite",
@@ -223,7 +234,10 @@
         "kosha frequency",
         "akshara stats"
       ],
-      "notes": "DCS upstream is CC BY 4.0; regenerable from CoNLL-U but the ingest is the canonical one — 5 repos historically re-parsed. P-D2/H233."
+      "notes": "DCS upstream is CC BY 4.0; regenerable from CoNLL-U but the ingest is the canonical one — 5 repos historically re-parsed. P-D2/H233.",
+      "sha256": "8f3b06bd6ef0e47a9ccf81d147e73d5d240d64e0c12f6d789262eb422ebb23bc",
+      "provenance_verified": "2026-07-11 (H691, Fable 5 claude-fable-5)",
+      "rebuild": "Fully regenerable: python src/DCS-data-2026/import_dcs_conllu.py over the DCS CoNLL-U dump (upstream CC BY 4.0, redownloadable)."
     },
     {
       "id": "samudra-corpus-db",
@@ -231,9 +245,9 @@
       "tier": "restricted",
       "in_release": null,
       "format": "sqlite",
-      "rows": 574939,
+      "rows": 580552,
       "size_bytes": 619384832,
-      "keying": "574,939 corpus lines · 148 sources, verse-aligned",
+      "keying": "580,552 corpus lines · 152 sources, verse-aligned (FTS5 index included)",
       "source_repo": "https://github.com/gasyoun/SamudraManthanam",
       "source_path": "web/corpus.db (GITIGNORED)",
       "builder": "SamudraManthanam ingest",
@@ -242,7 +256,10 @@
         "mw_ru validation",
         "corpus-lexicon upstream"
       ],
-      "notes": "RIGHTS: contains published RU translations — restricted. Single-copy backup gap. P-D2/H233."
+      "notes": "RIGHTS: contains published RU translations — restricted. H691: NOT single-copy after all — source jsonl are git-tracked in the repo and the DB regenerates from them; census backup-gap row corrected. Was 574,939 lines/148 sources on 06-07-2026, 580,552/152 on 11-07-2026. P-D2/H233.",
+      "sha256": "cf5230bcd53bedbb501c28c3fc3d5c9ba466a92ac3f09769b0d675b8d94d01f6",
+      "provenance_verified": "2026-07-11 (H691, Fable 5 claude-fable-5)",
+      "rebuild": "Regenerable: python web/ingest/ingest.py over git-tracked web/corpus_builder/jsonl/ (WAL empty at verification — counts are live)."
     },
     {
       "id": "heritage-mirror",
@@ -605,6 +622,71 @@
         "paper A57 (LChange'27/NLP4DH candidate, ARTICLES.md)"
       ],
       "notes": "First Sanskrit LSC derivation (H728, 11-07-2026); freq-shift control Spearman -0.013; binary flag is a q75 heuristic pending ChiWUG-style gold over the 60-lemma target set."
+    },
+    {
+      "id": "archive-stopword-sqlite",
+      "title": "DCS parallel-passage stop-word run, queryable DB (M9 D2)",
+      "tier": "restricted",
+      "in_release": null,
+      "format": "sqlite",
+      "rows": 40573260,
+      "size_bytes": 11039064064,
+      "sha256": "211fea99d6fbe07bc226bb0ed46ea7f5264511743d9a682b21050107084a06ed",
+      "provenance_verified": "2026-07-11 (H691, Fable 5 claude-fable-5)",
+      "keying": "parallels 40,573,260 (method='stopword', run='2022-partial', structured columns only, no verse text) + parallel_text 102 + text_names 128 + _id_fullname 106",
+      "source_repo": "https://github.com/gasyoun/VisualDCS",
+      "source_path": "src/DCS-data-2026/archive_stopword.sqlite (GITIGNORED, 11.0 GB)",
+      "builder": "src/DCS-data-2026/import_archive.py stopword",
+      "rebuild": "Fully regenerable: python import_archive.py stopword — reassembles 11 7z-split CSVs from the git-tracked Stopovye/ export (= stopovye-parallel-passages row) and reloads ~40.5M rows. Deliberately NOT shipped (20-30x everything else); the compact sibling archive.sqlite ships as Release asset archive-2026-07.",
+      "consumers": [],
+      "notes": "H691: the census §2 'uncounted 11 GB blind spot' resolved — live counts match the M9 validation report (reports/m9_archive_ingest.md) exactly. Filter quality='GOOD' for the high-precision subset. The full 245-text stop-word run was deliberately deleted by MG 02-07-2026; only this 113-text partial survives."
+    },
+    {
+      "id": "samudra-offline-packs",
+      "title": "SamudraManthanam offline app packs (base + dict)",
+      "tier": "restricted",
+      "in_release": null,
+      "format": "sqlite",
+      "rows": 574939,
+      "size_bytes": 308195328,
+      "sha256": {
+        "base.db": "2a682a31579469c9c96f4919e2d5faf0e60d701609567d89589b242f0e321a06",
+        "dict.db": "6e15c63d1f1c4691c72e0601ef0ff7e9c5620f9ba2d08b9d8cb1c5673804fc1d"
+      },
+      "provenance_verified": "2026-07-11 (H691, Fable 5 claude-fable-5)",
+      "keying": "base.db 320,902 corpus lines / 146 sources (corpus minus MW+Apte) + dict.db 254,037 lines / 2 sources (MW+Apte); FTS5 + pack_meta/pack_sources",
+      "source_repo": "https://github.com/gasyoun/SamudraManthanam",
+      "source_path": "web/offline-packs/{base,dict}.db (GITIGNORED; .gz + .sha256 sidecars beside them)",
+      "builder": "web/scripts/build_offline_pack.py",
+      "rebuild": "Regenerable from corpus.db (samudra-corpus-db row) via python web/scripts/build_offline_pack.py. Both sha256 values verified against the existing .sha256 sidecar files — match.",
+      "consumers": [
+        "SamudraManthanam mobile/offline app"
+      ],
+      "notes": "H691: packs are a 13-06-2026 snapshot of corpus.db (574,939 lines = the census's 06-07 corpus count; corpus.db has since grown to 580,552) — stale vs live corpus but internally consistent. Same published-RU-translations rights caveat as samudra-corpus-db."
+    },
+    {
+      "id": "kosha-raw-sqlite",
+      "title": "kosha raw per-dict SQLite inputs (mw, pwg, ap90)",
+      "tier": "intermediate",
+      "in_release": null,
+      "format": "sqlite",
+      "rows": 444773,
+      "size_bytes": 185856000,
+      "sha256": {
+        "mw/mw.sqlite": "c4dc90a99de1386ba2ffd005b2131a253794da246627494c808fa5907ba50169",
+        "pwg/pwg.sqlite": "0966dd4b0cc4aeebb8bad24bb557bfb604ad57ce655ab93cc98aad12e4cfbe7c",
+        "ap90/ap90.sqlite": "5a9067e9811315295ee4bdc7720ae825ad0277b9f0c178c0b70d67946dd12171"
+      },
+      "provenance_verified": "2026-07-11 (H691, Fable 5 claude-fable-5)",
+      "keying": "mw 286,525 · pwg 123,366 · ap90 34,882 rows (one table per dict: key, lnum, data) — sums to kosha-db's 444,773 entries",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/raw_sqlite/{mw,pwg,ap90}/ (GITIGNORED; RELEASE_TAG.txt = 2026-06-28-08-27-31)",
+      "builder": "scripts/build_entries.py (auto-downloads the csl-sqlite release)",
+      "rebuild": "Re-fetchable, zero risk: scripts/build_entries.py re-downloads the sanskrit-lexicon csl-sqlite release named in RELEASE_TAG.txt; csl-orig commit is cross-dated at build time (see build_entries.py header).",
+      "consumers": [
+        "kosha-db"
+      ],
+      "notes": "H691: registered so the census §2 'rebuildable from csl-orig' guess is now a verified recipe with checksums. Not a backup-risk asset."
     }
   ]
 }
