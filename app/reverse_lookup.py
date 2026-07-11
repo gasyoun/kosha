@@ -6,7 +6,12 @@ that HONESTLY reports which stage answered (`resolved_by`):
   1. `inflections` exact hit -- Cologne csl-inflect, case/number/person-labeled
      (nominals + verbs). The authoritative grammatical parse.
   2. miss -> `forms` exact hit -- DCS/vidyut/heritage lemma witness (lemma-only,
-     no case/number). Trust order dcs > vidyut > heritage.
+     no case/number). Trust order dcs > vidyut > heritage. Heritage rows are
+     DEFAULT-OFF per the R7 ruling (10-07-2026, Uprava
+     docs/DECISIONS_roadmap_forks_2026H2.md): the 928,262 Heritage-surplus
+     forms are rule-generated under a different lemmatization policy, so they
+     are never served unless the caller opts in (`include_heritage=True` /
+     `?heritage=1` on the API).
   3. miss -> vidyut-cheda segmentation (app/segmenter.py) -- split a sandhied /
      compounded string into padas and re-resolve each pada through stages 1-2.
 
@@ -69,9 +74,13 @@ def _inflection_analyses(con: sqlite3.Connection, form_slp1: str):
     return out
 
 
-def _forms_witnesses(con: sqlite3.Connection, form_slp1: str):
+def _forms_witnesses(con: sqlite3.Connection, form_slp1: str,
+                     include_heritage: bool = False):
+    # R7 default-off: heritage witnesses only on explicit opt-in.
+    src_filter = "" if include_heritage else "AND source != 'heritage' "
     rows = con.execute(
         "SELECT DISTINCT lemma_slp1, source FROM forms WHERE form_slp1=? "
+        f"{src_filter}"
         "ORDER BY lemma_slp1, source",
         (form_slp1,),
     ).fetchall()
@@ -116,8 +125,12 @@ def _unified_lemmas(con: sqlite3.Connection, records):
     return out
 
 
-def analyze(con: sqlite3.Connection, form_slp1: str) -> dict:
-    """Run the reverse-lookup cascade. Returns the result block for one form."""
+def analyze(con: sqlite3.Connection, form_slp1: str,
+            include_heritage: bool = False) -> dict:
+    """Run the reverse-lookup cascade. Returns the result block for one form.
+
+    `include_heritage` (R7 opt-in) admits `source='heritage'` witnesses at
+    stages 2 and 3; by default they are excluded everywhere."""
     analyses = _inflection_analyses(con, form_slp1)
     if analyses:
         return {
@@ -126,7 +139,7 @@ def analyze(con: sqlite3.Connection, form_slp1: str) -> dict:
             "lemmas": _unified_lemmas(con, analyses),
         }
 
-    witnesses = _forms_witnesses(con, form_slp1)
+    witnesses = _forms_witnesses(con, form_slp1, include_heritage)
     if witnesses:
         return {
             "resolved_by": "forms",
@@ -162,7 +175,7 @@ def analyze(con: sqlite3.Connection, form_slp1: str) -> dict:
     for s in segs:
         seg_form = s["text"]
         seg_an = _inflection_analyses(con, seg_form)
-        seg_wit = _forms_witnesses(con, seg_form)
+        seg_wit = _forms_witnesses(con, seg_form, include_heritage)
         recs = []
         for a in seg_an:
             a = dict(a, resolved_by="segmentation")
