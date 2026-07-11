@@ -15,6 +15,10 @@ over-generates grammatically-possible but unattested forms (hypergeneration);
 H105's hand-adjudication also found occasional stem mis-assignment. Heritage
 rows are corroborating evidence only -- never surface a heritage-only
 form/lemma as authoritative without a dcs/vidyut row for the same form_slp1.
+Per the R7 ruling (10-07-2026, Uprava docs/DECISIONS_roadmap_forks_2026H2.md;
+implemented H696) heritage rows are additionally DEFAULT-OFF in every read
+path -- live API (`?heritage=1` opt-in on /api/v1/form and
+/api/v1/forms/{form}/analyze) and the static paradigm/reverse tier.
 The heritage feed is loaded LAST and is purely additive: it can only add rows
 (form_slp1, lemma_slp1, 'heritage') that don't already exist for
 (form_slp1, lemma_slp1) under dcs/vidyut, and it never touches existing

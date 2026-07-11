@@ -139,6 +139,9 @@ def _reverse_entry(con, form_slp1: str) -> dict:
     if analyses:
         return {"resolved_by": "inflections", "analyses": analyses,
                 "lemmas": _unified_lemmas(con, analyses)}
+    # R7 default-off (H696): the static tier is what "every cabinet visitor"
+    # sees, so heritage witnesses are excluded here (no opt-in is possible on
+    # pre-generated shards); _forms_witnesses defaults to include_heritage=False.
     witnesses = _forms_witnesses(con, form_slp1)
     if witnesses:
         return {"resolved_by": "forms", "forms_witnesses": witnesses,
@@ -154,16 +157,23 @@ def emit_reverse(con, lemmas, out_dir: Path, full_buckets: bool) -> int:
     rdir.mkdir(parents=True, exist_ok=True)
     buckets: dict[str, dict] = {}
 
+    # `source != 'heritage'`: R7 default-off (H696) — the 928k heritage-only
+    # surplus forms would only yield resolved_by=None entries (skipped below)
+    # since _reverse_entry excludes heritage witnesses; filtering here also
+    # avoids iterating them at all.
     if full_buckets:
         forms = [r[0] for r in con.execute("SELECT DISTINCT form_slp1 FROM inflections")]
-        forms += [r[0] for r in con.execute("SELECT DISTINCT form_slp1 FROM forms")]
+        forms += [r[0] for r in con.execute(
+            "SELECT DISTINCT form_slp1 FROM forms WHERE source != 'heritage'")]
         form_iter = sorted(set(forms))
     else:
         seen = set()
         for lem in lemmas:
             for r in con.execute("SELECT DISTINCT form_slp1 FROM inflections WHERE lemma_slp1=?", (lem,)):
                 seen.add(r[0])
-            for r in con.execute("SELECT DISTINCT form_slp1 FROM forms WHERE lemma_slp1=?", (lem,)):
+            for r in con.execute(
+                    "SELECT DISTINCT form_slp1 FROM forms WHERE lemma_slp1=? AND source != 'heritage'",
+                    (lem,)):
                 seen.add(r[0])
         form_iter = sorted(seen)
 

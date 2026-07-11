@@ -466,8 +466,11 @@
       "source_repo": "https://github.com/gasyoun/SanskritLexicography",
       "source_path": "HeadwordLists/ (tracked, *.tsv — heritage_dico_gloss/heritage_forms_oracle_disagreements/heritage_only_forms.tsv; excludes the separately-registered mw_heritage_crosswalk.tsv)",
       "builder": "H099 Heritage mirror pipeline (same builder as mw-heritage-crosswalk)",
-      "consumers": [],
-      "notes": "H291 Step 4: sibling of mw-heritage-crosswalk (same HeadwordLists dir, same Heritage mirror pipeline) — registered as tier=restricted for the same Heritage LGPLLR-pending rights reason as that entry."
+      "consumers": [
+        "kosha ingest (H111, kosha.db forms table: heritage_only_forms.tsv -> 951,991 source='heritage' rows, 928,262 distinct forms)",
+        "kosha default-off enforcement (H696, R7 ruling 10-07-2026: heritage witnesses opt-in only via ?heritage=1; excluded from the static tier)"
+      ],
+      "notes": "H291 Step 4: sibling of mw-heritage-crosswalk (same HeadwordLists dir, same Heritage mirror pipeline) — registered as tier=restricted for the same Heritage LGPLLR-pending rights reason as that entry. H696 (11-07-2026): the R7 ruling (Uprava docs/DECISIONS_roadmap_forks_2026H2.md) is implemented — the 928,262-form heritage surplus is ingested provenance-flagged and DEFAULT-OFF in every kosha lookup path."
     },
     {
       "id": "dcs-verb-form-frequency-prelim",

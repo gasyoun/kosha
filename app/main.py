@@ -277,25 +277,32 @@ def get_neighbors(dict_id: str, L: str, merge: int = 0, out: str = "iast",
 
 @app.get("/api/v1/form/{form}")
 def get_form(form: str, in_: str = Query("auto", alias="in"),
+             heritage: bool = Query(False),
              con: sqlite3.Connection = Depends(get_db)):
     # H111 trust ordering (highest to lowest): dcs > vidyut > heritage.
     # `source='heritage'` is Heritage/INRIA's rule-generated full paradigm —
-    # it over-generates unattested forms, so a heritage-only result here is
-    # corroborating evidence, not attested usage. Callers that need "attested"
-    # rather than "grammatically possible" should filter source != 'heritage'.
+    # it over-generates unattested forms under a different lemmatization
+    # policy. Per the R7 ruling (10-07-2026, Uprava
+    # docs/DECISIONS_roadmap_forks_2026H2.md) heritage rows are DEFAULT-OFF:
+    # served only when the caller opts in with `?heritage=1` (H696).
     slp1_form = to_slp1_auto(form, in_)
+    src_filter = "" if heritage else "AND source != 'heritage' "
     lemma_rows = con.execute(
-        "SELECT DISTINCT lemma_slp1, source FROM forms WHERE form_slp1=?", (slp1_form,)
+        "SELECT DISTINCT lemma_slp1, source FROM forms WHERE form_slp1=? "
+        f"{src_filter}", (slp1_form,)
     ).fetchall()
     lemmas = [{"lemma_slp1": r["lemma_slp1"], "lemma_iast": from_slp1_out(r["lemma_slp1"], "iast"),
                "source": r["source"]} for r in lemma_rows]
     if not lemmas:
-        return envelope(con, {"form": form, "in": in_}, [{"lemmas": [], "suggestions": []}])
-    return envelope(con, {"form": form, "in": in_}, [{"lemmas": lemmas}])
+        return envelope(con, {"form": form, "in": in_, "heritage": heritage},
+                        [{"lemmas": [], "suggestions": []}])
+    return envelope(con, {"form": form, "in": in_, "heritage": heritage},
+                    [{"lemmas": lemmas}])
 
 
 @app.get("/api/v1/forms/{form}/analyze")
 def analyze_form(form: str, in_: str = Query("auto", alias="in"),
+                  heritage: bool = Query(False),
                   con: sqlite3.Connection = Depends(get_db)):
     """P4 Wave K2a (H181): reverse-lookup query pipeline over an arbitrary
     surface form. A honest cascade that reports which stage answered via
@@ -307,7 +314,9 @@ def analyze_form(form: str, in_: str = Query("auto", alias="in"),
          the m_a and n_a stems, plus nom/acc/voc-du of n_a) returns every
          parse, not one. Verb forms (Bavati = 3sg pre of BU) now resolve here.
       2. miss -> `forms` exact hit -- DCS/vidyut/heritage lemma witness
-         (lemma-only), returned under `forms_witnesses`.
+         (lemma-only), returned under `forms_witnesses`. Heritage witnesses
+         are DEFAULT-OFF per the R7 ruling (10-07-2026) -- opt in with
+         `?heritage=1` (H696).
       3. miss -> vidyut-cheda segmentation (app/segmenter.py): split a
          sandhied/compound string into padas and re-resolve each through 1-2,
          returned under `segments`. Local vendored data only (RISKS.md R12); if
@@ -320,8 +329,9 @@ def analyze_form(form: str, in_: str = Query("auto", alias="in"),
     canonical lemma with `has_entry` (is it a dictionary headword?).
     """
     slp1_form = to_slp1_auto(form, in_)
-    result = reverse_analyze(con, slp1_form)
-    return envelope(con, {"form": form, "in": in_, "form_slp1": slp1_form}, [result])
+    result = reverse_analyze(con, slp1_form, include_heritage=heritage)
+    return envelope(con, {"form": form, "in": in_, "form_slp1": slp1_form,
+                          "heritage": heritage}, [result])
 
 
 @app.get("/api/v1/paradigm/{lemma}")
