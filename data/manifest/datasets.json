@@ -1,6 +1,6 @@
 {
   "manifest_version": "0.1.0",
-  "generated": "2026-07-07",
+  "generated": "2026-07-11",
   "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
   "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
   "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
@@ -569,6 +569,25 @@
         "per-sarga interactive apparatus HTML (data/apparatus/)"
       ],
       "notes": "RIGHTS: tier-1 notes + verse anchors belong to Leonov/Kostina UNPUBLISHED translation — restricted until the LP volume ships (~08-2026); Sanskrit commentaries source = Gita Supersite, CC BY 4.0. Every tier-2 note carries review_required until both human gates pass (docs/MANUAL.md; role guides H497/H517/H533). Snapshot 10-07-2026, pre-gate counts."
+    },
+    {
+      "id": "markup-tag-census",
+      "title": "Markup-tag frequency census (44 Cologne v02 dicts)",
+      "tier": "public",
+      "in_release": null,
+      "format": "tsv",
+      "rows": 671,
+      "size_bytes": 17820,
+      "keying": "dict code x tag -> count + per-1,000-entry rate (96 distinct tags, 1,496,157 entries)",
+      "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+      "source_path": "data/markup_tag_census.tsv",
+      "builder": "data/markup_tag_census.py (SanskritLexicography; reads local csl-orig/v02 read-only)",
+      "consumers": [
+        "SanskritLexicography FEATURES_INDEX (E39)",
+        "Uprava DATA_LAYERS_CENSUS section 3",
+        "markup QA / under-marking triage"
+      ],
+      "notes": "H683 (11-07-2026, Fable 5 claude-fable-5). Verdicts in data/MARKUP_TAG_CENSUS_CSLORIG_2026.md: MW72/ARMH/FRI/NMMB under-marked; SKD/VCP expected-zero by construction; trace-tag inconsistencies flagged (SCH <ab> x2 in 29k entries, WIL <ls> x6 in 45k)."
     }
   ]
 }
