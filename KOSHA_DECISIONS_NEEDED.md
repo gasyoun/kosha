@@ -1,6 +1,6 @@
 # kosha — D5 decisions record
 
-_Created: 03-07-2026 · Last updated: 03-07-2026_
+_Created: 03-07-2026 · Last updated: 11-07-2026_
 
 The three items
 [ARCHITECTURE.md](https://github.com/gasyoun/kosha/blob/main/ARCHITECTURE.md)
@@ -139,6 +139,18 @@ into this ingest. Trust ordering `dcs > vidyut > heritage` and the nullable
 and `scripts/build_forms.py`. The 6,966 nominal-only disagreements (higher-
 value DCS-correction candidates) are explicitly **out of scope** here — flagged
 for a future handoff, not folded in.
+
+**R7 update (10-07-2026, implemented 11-07-2026 by H696).** The roadmap-forks
+interview re-ruled the surplus set as *"ingest, provenance-flagged,
+default-off — and retain the oracle role"*
+([Uprava docs/DECISIONS_roadmap_forks_2026H2.md §R7](https://github.com/gasyoun/Uprava/blob/main/docs/DECISIONS_roadmap_forks_2026H2.md)).
+H111 had already delivered the ingest + provenance halves; H696 delivered
+default-off: heritage rows are excluded from `/api/v1/form`,
+`/api/v1/forms/{form}/analyze` (stages 2–3) and the static
+paradigm/reverse tier unless the caller opts in with `?heritage=1`
+(`include_heritage=True`). Tests: `tests/test_heritage_default_off.py`.
+The oracle role (point 3) is untouched — `heritage_forms_oracle.tsv.gz`
+and the disagreement pool remain external validation artifacts.
 
 ---
 

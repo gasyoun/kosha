@@ -1,6 +1,6 @@
 # Architecture contract — Gasuns Sanskrit Dictionary (kosha)
 
-_Created: 02-07-2026 · Last updated: 03-07-2026_
+_Created: 02-07-2026 · Last updated: 11-07-2026_
 
 The engineering contract for Phase 1, locking the four decisions M.G. took on
 02-07-2026 (A1–A4 below) on top of the product meta-decisions M1–M4
@@ -68,7 +68,10 @@ CREATE TABLE senses  (entry_id INTEGER NOT NULL REFERENCES entries(id),
 -- > 'heritage' (rule-generated FULL paradigm -- over-generates unattested
 -- forms; H105 also found occasional stem mis-assignment). A heritage-only
 -- form/lemma is corroborating evidence only, never surfaced as authoritative
--- without a dcs/vidyut row for the same form_slp1. `category` is NULL for
+-- without a dcs/vidyut row for the same form_slp1. Per the R7 ruling
+-- (10-07-2026, Uprava docs/DECISIONS_roadmap_forks_2026H2.md; implemented
+-- H696) heritage rows are DEFAULT-OFF in every lookup path (live API and
+-- static tier) -- served only on explicit opt-in (`?heritage=1`). `category` is NULL for
 -- dcs/vidyut; heritage rows carry the coarse Heritage grammatical category
 -- (nominal/finite-verb/participle/iic-compound/...) so consumers can filter
 -- the compound-initial categories, the largest hypergeneration source.
@@ -109,7 +112,7 @@ Prefix `/api/v1/`. JSON only. Every response carries the envelope:
 | Endpoint | Behavior |
 |---|---|
 | `GET /api/v1/lemma/{key}?in=auto&out=iast&dicts=mw,pwg,ap90` | Entries across requested dicts for one lemma. `in`: `auto` (default; detect SLP1/IAST/HK/Devanagari — the sanskritdictionary.com lesson) or explicit. `out`: `iast` (default), `deva`, `slp1`, `hk`. Each entry: `sense_id`s, rendered HTML, raw body on `?raw=1`, scan URL + label |
-| `GET /api/v1/form/{form}?in=auto` | Form→lemma(s) via `forms`, then as lemma lookup. Misses return `lemmas: []` plus fuzzy suggestions. `source` trust ordering: `dcs` > `vidyut` > `heritage` (H111) — a `heritage`-only result is corroborating evidence, not attested usage |
+| `GET /api/v1/form/{form}?in=auto&heritage=0` | Form→lemma(s) via `forms`, then as lemma lookup. Misses return `lemmas: []` plus fuzzy suggestions. `source` trust ordering: `dcs` > `vidyut` > `heritage` (H111) — a `heritage`-only result is corroborating evidence, not attested usage. `heritage` rows are **default-off** (R7 ruling 10-07-2026, H696): pass `heritage=1` to opt in; same flag on `/api/v1/forms/{form}/analyze` |
 | `GET /api/v1/search?q=&mode=prefix&limit=50&offset=0` | Headword search over `lemmas`; `mode`: `exact`/`prefix`/`fuzzy`. Paginated: `limit` ≤ 200, `offset`, `total` in envelope |
 | `GET /api/v1/sense/{dict}.{L}.{n}` | The citable unit: sense text (raw + rendered), parent entry, scan link, and a `cite` object (formatted string + BibTeX + CSL-JSON) pinned to `data_version` — the Gandhāri Cite button, versioned |
 | `GET /api/v1/meta` | `data_version`, per-dict `sources` rows, counts |

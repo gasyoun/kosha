@@ -14,6 +14,25 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Changed
+- **Heritage surplus forms are now default-off in every lookup path** (H696,
+  Fable 5 `claude-fable-5`) — implements the R7 ruling (10-07-2026,
+  [Uprava docs/DECISIONS_roadmap_forks_2026H2.md](https://github.com/gasyoun/Uprava/blob/main/docs/DECISIONS_roadmap_forks_2026H2.md)):
+  the 928,262 distinct `source='heritage'` forms (ingested provenance-flagged by
+  H111, count re-verified this pass) are excluded from `GET /api/v1/form/{form}`,
+  `GET /api/v1/forms/{form}/analyze` (stages 2–3, incl. per-pada segmentation
+  re-resolution) and the static paradigm/reverse tier
+  ([`scripts/build_paradigms.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_paradigms.py))
+  unless the caller opts in with `?heritage=1`. Committed demo reverse shards
+  regenerated without heritage witnesses; `dcs`/`vidyut` results are unchanged
+  in both modes. Heritage's external oracle role (ruling point 3) is untouched.
+
+### Added
+- [`tests/test_heritage_default_off.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_heritage_default_off.py)
+  (8 tests): heritage-only form absent by default / present with the flag on
+  both endpoints, native-source invariance under the flag, and the ruled
+  928,262 surplus-form ingest count asserted against the live DB.
+
 ## [0.18.0] - 2026-07-11
 
 ### Added
