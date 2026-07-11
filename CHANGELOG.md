@@ -14,6 +14,19 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.20.0] - 2026-07-11
+
+### Added
+- **H730: first CDSL-side definition-generation + gloss-grounded WSD eval** — frozen
+  500-headword MW sample (3×3 frequency×polysemy strata, seed 730) with ≤5 DCS attestation
+  sentences each ([data/eval/defgen/](https://github.com/gasyoun/kosha/tree/main/data/eval/defgen)),
+  4 baseline arms (random floor, deepseek-chat ±attestations, deepseek-reasoner), sacrebleu
+  BLEU/chrF + token-F1 + gated blinded LLM judge, WSD inter-model agreement pilot
+  (κ=0.706). Harness: `scripts/defgen_build_sample.py` / `defgen_run_baselines.py` /
+  `defgen_score.py`; protocol + results:
+  [docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md](https://github.com/gasyoun/kosha/blob/main/docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md);
+  manifest row `mw-defgen-eval-sample`.
+
 ## [0.19.0] - 2026-07-11
 
 ### Changed
