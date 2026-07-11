@@ -766,6 +766,59 @@
         "A40 headword-inventory paper (H675)"
       ],
       "notes": "H684 (11-07-2026, Fable 5 claude-fable-5). CAE-CCS J=0.672 max; MW/PWG intersection = 94,753 (resolves the figure once mislabeled as the union size); BHS 58.7% unique, CCS 0.6%. Findings: data/HEADWORD_OVERLAP_UNION15_2026.md."
+    },
+    {
+      "id": "mdf-pilot-cdsl",
+      "title": "CDSL MDF pilot export (50-case neutral-model slice, MW-focused)",
+      "tier": "public",
+      "in_release": null,
+      "format": "mdf (SFM, one record per file)",
+      "rows": 250,
+      "size_bytes": 90237,
+      "keying": "neutral-model case id -> one MDF record; markers per data/schema/mdf-export-profile.json (C&G 2000 App. B order)",
+      "source_repo": "https://github.com/sanskrit-lexicon/csl-standards",
+      "source_path": "data/pilot/mdf/ (builder scripts/export-mdf.mjs; validated by scripts/validate-mdf-profile.mjs)",
+      "builder": "scripts/export-mdf.mjs (docs/MDF_EXPORT_MAPPING.md is normative; lossy calls surfaced as \nt model-loss markers)",
+      "consumers": [
+        "Lexique Pro smoke test (H722)",
+        "SIL MDF program (papers/SIL_MDF_ECOSYSTEM_CORRELATION.md)"
+      ],
+      "notes": "Registered by H727 (11-07-2026, Fable 5 claude-fable-5). Third export profile beside TEI/OntoLex; App. B field-order + \\de ruling refined by H721 (csl-standards PR #107)."
+    },
+    {
+      "id": "lift-pilot-cdsl",
+      "title": "CDSL LIFT pilot export (fourth serialization, H721)",
+      "tier": "public",
+      "in_release": null,
+      "format": "lift (XML)",
+      "rows": 250,
+      "size_bytes": 309950,
+      "keying": "neutral-model case id -> one LIFT entry per file",
+      "source_repo": "https://github.com/sanskrit-lexicon/csl-standards",
+      "source_path": "data/pilot/lift/ (builder scripts/export-lift.mjs; validated by scripts/validate-lift-profile.mjs)",
+      "builder": "scripts/export-lift.mjs (docs/LIFT_EXPORT_MAPPING.md)",
+      "consumers": [
+        "Webonary / Dictionary App Builder channel assessment (H726)"
+      ],
+      "notes": "Registered by H727 (11-07-2026, Fable 5 claude-fable-5). Landed via csl-standards PR #107 (H721)."
+    },
+    {
+      "id": "pwg-ru-mdf-export",
+      "title": "PWG->RU translation cards as MDF (bilingual \\de RU / \\ge EN records)",
+      "tier": "restricted",
+      "in_release": null,
+      "format": "mdf (SFM, blank-line-delimited records, single file)",
+      "rows": 2350,
+      "size_bytes": 3931822,
+      "keying": "(key1, subcard) card -> one MDF record; senses -> \\sn (observed PWG numbering) + \\de RU (+ \\ge EN when promoted)",
+      "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+      "source_path": "RussianTranslation/src/pilot/output/pwg_ru_full.mdf (LOCAL-ONLY, derived from the local-only promoted store); public 30-card sample: RussianTranslation/docs/samples/pwg_ru_sample.mdf",
+      "builder": "RussianTranslation/src/pilot/export_mdf_pwg_ru.py (design: RussianTranslation/docs/MDF_EXPORT_PWG_RU.md; RANGE-SET closed-vocab gate over <ab>/\\ps)",
+      "consumers": [
+        "Lexique Pro / Webonary / Dictionary App Builder (SIL toolchain)",
+        "SIL MDF program (papers/SIL_MDF_ECOSYSTEM_CORRELATION.md)"
+      ],
+      "notes": "Registered by H727 (11-07-2026, Fable 5 claude-fable-5). Restricted: bulk derives from the unreleased ai_translated store (no human review pass yet); regenerate anytime from the store. Grows with every promoted window; refresh rows/size on release."
     }
   ]
 }
