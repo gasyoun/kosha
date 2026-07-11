@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.19.0] - 2026-07-11
+
 ### Changed
 - **Heritage surplus forms are now default-off in every lookup path** (H696,
   Fable 5 `claude-fable-5`) — implements the R7 ruling (10-07-2026,

@@ -7,7 +7,7 @@ message: >-
   CC BY).
 title: "kosha — Gasuns Sanskrit Dictionary (Sanskrit data-hub)"
 type: software
-version: 0.18.0
+version: 0.19.0
 date-released: 2026-07-11
 # DOI: pending — GitHub–Zenodo integration not yet wired (human @DO, tracked
 # in Uprava/GTD_NEXT_ACTIONS.md); concept DOI will be recorded here once minted.
