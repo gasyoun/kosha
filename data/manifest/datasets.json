@@ -588,6 +588,23 @@
         "markup QA / under-marking triage"
       ],
       "notes": "H683 (11-07-2026, Fable 5 claude-fable-5). Verdicts in data/MARKUP_TAG_CENSUS_CSLORIG_2026.md: MW72/ARMH/FRI/NMMB under-marked; SKD/VCP expected-zero by construction; trace-tag inconsistencies flagged (SCH <ab> x2 in 29k entries, WIL <ls> x6 in 45k)."
+    },
+    {
+      "id": "dcs-lsc-pilot",
+      "title": "Sanskrit lexical semantic change scores (PPMI-cosine, DCS 5-slot chronology)",
+      "tier": "public",
+      "in_release": null,
+      "format": "tsv",
+      "rows": 3049,
+      "size_bytes": 259928,
+      "keying": "IAST + SLP1 lemma; per-slot counts, cosine distances (5 slot pairs), freq-shift baseline, graded rank + binary flag (Vedic→Epic)",
+      "source_repo": "https://github.com/gasyoun/VisualDCS",
+      "source_path": "derived-lsc/ (tracked; lsc_scores.tsv + lsc_targets.tsv + lsc_stats.json)",
+      "builder": "build_lsc_pilot.py over sibling dcs-conllu + chapter-info.xml dcsTimeSlot (deterministic, --selftest)",
+      "consumers": [
+        "paper A57 (LChange'27/NLP4DH candidate, ARTICLES.md)"
+      ],
+      "notes": "First Sanskrit LSC derivation (H728, 11-07-2026); freq-shift control Spearman -0.013; binary flag is a q75 heuristic pending ChiWUG-style gold over the 60-lemma target set."
     }
   ]
 }
