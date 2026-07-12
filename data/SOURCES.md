@@ -105,6 +105,27 @@ spans) and the sense round-trip test.
 | **Deviation from the H181 brief** | The brief expected `dharmakSetre` to exercise the segmentation fallback. It does NOT: `Darmakzetra` is itself a Cologne inflection stem with dictionary entries, so `dharmakSetre` resolves at stage 1 (`inflections`) and still meets the roadmap exit bar ("resolve to entries"). The segmentation path is genuinely exercised by a form that misses both tables (`tattvamasi` → `tattvam` + `asi`), tested in [`tests/test_reverse_lookup.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_reverse_lookup.py). |
 | pytest | **161/161 green** locally: adds [`tests/test_reverse_lookup.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_reverse_lookup.py) (cascade stages, verb ingest, stem bridge, segmentation + its graceful-degradation contract) and updates the stale K1 verb-out-of-scope test. |
 
+## P4 Wave E1 hybridize — vidyut layered over Cologne (H185)
+
+MG ruling (05/10-07-2026): **HYBRIDIZE** — Cologne stays the attested base (D3),
+vidyut-prakriya (local, R12-clean) is layered over `inflections`. The "ṇatva
+override" the K2a caveat above deferred is now delivered.
+[`scripts/build_hybrid_forms.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_hybrid_forms.py)
+(`build_db.py --stage hybrid`, run AFTER `--stage inflections`) reuses the E1
+comparison's classifier so the applied set matches
+[E1_DIVERGENCE_REPORT.md](https://github.com/gasyoun/kosha/blob/main/E1_DIVERGENCE_REPORT.md)
+cell-for-cell.
+
+| Field | Value |
+|---|---|
+| **ṇatva auto-fix** | `source='hybrid-natva-fix'` — the vidyut-corrected form (`nfpeRa`) inserted as a NEW row for every cell whose only divergence is n↔ṇ. The buggy Cologne row (`nfpena`) is **not deleted** (reverse-lookup audit trail); the paradigm display prefers the fix and records the superseded form in `cell_notes`. Top-10k sample: **326 cells / 89 stems**. |
+| **Gap-fill** | `source='vidyut-gap-fill'` — vidyut form for a VIDYUT_ONLY cell Cologne left empty (cardinals, `m_card`). Top-10k: **16 cells / 17 rows**. |
+| **Disputed flag** | `disputed=1` on the Cologne rows of pronominal mis-models + feminine/consonant `other` forks — Cologne stays the display default, the flag is an editorial-review signal (surfaced in `cell_notes` + the `/analyze` per-parse `disputed`). Top-10k: **13,770 cells / 1,440 stems** (13,666 `other` + 104 `pronominal`). Representation-only (`final_stop`, 7,454) and pure coverage supersets are left untouched. |
+| **Scope** | Default target is the entry-bearing set (235,849 paradigms); MG runs the full `--stage hybrid` out-of-band (A3), like `build_paradigms --all`. Idempotent: each run resets its own prior rows + `disputed` flags first. |
+| **Schema** | `inflections` gains `source` (already present) values + a `disputed INTEGER NOT NULL DEFAULT 0` column ([`scripts/build_db.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_db.py) SCHEMA + migration ALTER). |
+| **Verbs (Task C)** | [`scripts/compare_vidyut_verbs.py`](https://github.com/gasyoun/kosha/blob/main/scripts/compare_vidyut_verbs.py) compares the present-system conjugations against vidyut `Tinanta` (answers [csl-inflect#8](https://github.com/sanskrit-lexicon/csl-inflect/issues/8)). Strict agreement is only **12.68 %** — a dhātu-IDENTITY mapping gap (bare Cologne root ≠ vidyut aupadeśika), NOT a grammar disagreement. **No verb hybridization applied**: a bare-root substitution would inject a different lexeme's forms. See the report's § Verbs. |
+| pytest | **229 passed / 2 skipped** locally: adds [`tests/test_hybrid_forms.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_hybrid_forms.py) (natva supersede, buggy-form-still-resolves, gap-fill, disputed-not-overwritten, untouched-stem, no-cologne-row-deleted). |
+
 ---
 
 _Dr. Mārcis Gasūns_
