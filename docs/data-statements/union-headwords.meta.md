@@ -113,7 +113,7 @@ with attribution to the Cologne Digital Sanskrit Dictionaries. `CITATION.cff`
 ## Provenance of this statement
 
 Authored 11-07-2026 by Fable 5 (`claude-fable-5`) under handoff
-[H665](https://github.com/gasyoun/Uprava/blob/main/handoffs/H665-Fable_kosha_dataset-data-statements_11.07.26.md),
+[H665](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H665-Fable_kosha_dataset-data-statements_11.07.26.md),
 from the manifest row, the release assets, column inspection of the live file,
 and a distinct-code scan of the `dicts` column (15 codes verified 11-07-2026).
 

@@ -2,7 +2,7 @@
 
 _Created: 11-07-2026 · Last updated: 11-07-2026_
 
-Produced by [H687](https://github.com/gasyoun/Uprava/blob/main/handoffs/H687-Fable_kosha_kosha-db-completeness-audit_11.07.26.md)
+Produced by [H687](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H687-Fable_kosha_kosha-db-completeness-audit_11.07.26.md)
 (Fable 5, `claude-fable-5`), answering the
 [DATA_LAYERS_CENSUS.md](https://github.com/gasyoun/Uprava/blob/main/DATA_LAYERS_CENSUS.md)
 §3 row "kosha.db (1.6 GB): rows per table · dicts loaded · index coverage".
