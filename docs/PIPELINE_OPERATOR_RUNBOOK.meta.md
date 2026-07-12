@@ -17,7 +17,7 @@ detail stays in docstrings).
 ## Provenance
 
 Authored 10-07-2026 by Fable 5 (`claude-fable-5`) under
-[H501](https://github.com/gasyoun/Uprava/blob/main/handoffs/H501-Fable_kosha_operator_runbook_manual_10.07.26.md)
+[H501](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H501-Fable_kosha_operator_runbook_manual_10.07.26.md)
 (the Fable manuals programme, manual-coverage census 10-07-2026; stub authored
 + executed in one pass at MG's direction). Shipped in
 [PR #39](https://github.com/gasyoun/kosha/pull/39). Every command/flag was

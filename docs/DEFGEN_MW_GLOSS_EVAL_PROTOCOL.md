@@ -5,14 +5,14 @@ _Created: 11-07-2026 · Last updated: 11-07-2026_
 **What this is.** The first definition-generation ("definition modeling") evaluation run on
 Sanskrit lexicographic data from the CDSL side: a frozen 500-headword Monier-Williams sample,
 four baseline arms, deterministic metrics + a gated LLM judge, and a gloss-grounded WSD
-agreement pilot. Executes [H730](https://github.com/gasyoun/Uprava/blob/main/handoffs/H730-Fable_kosha_definition-generation-gloss-eval_11.07.26.md)
+agreement pilot. Executes [H730](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H730-Fable_kosha_definition-generation-gloss-eval_11.07.26.md)
 (= opportunity #3 of [ACL_METHOD_OPPORTUNITIES_SANSKRIT_2026.md](https://github.com/gasyoun/Uprava/blob/main/ACL_METHOD_OPPORTUNITIES_SANSKRIT_2026.md),
 minted under [H667](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H667-Fable_Uprava_acl-method-mining-venue-watch_11.07.26.md)).
 Venue targets: eLex 2027 · EURALEX 2028 · IJL.
 
 **Prior art verdict (H730 step 1; Hellwig delta verified at paper level by the parked
 rival H730 lane, grafted under
-[H752](https://github.com/gasyoun/Uprava/blob/main/handoffs/H752-Fable_kosha_defgen-parked-lane-salvage_11.07.26.md)).**
+[H752](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H752-Fable_kosha_defgen-parked-lane-salvage_11.07.26.md)).**
 No definition-generation or gloss eval exists in
 [kosha](https://github.com/gasyoun/kosha) or
 [csl-atlas](https://github.com/gasyoun/csl-atlas) (repo greps, 11-07-2026, zero hits;
@@ -190,7 +190,7 @@ per-item: [scores_per_item.tsv](https://github.com/gasyoun/kosha/blob/main/data/
 6. **More models** — the arms are two DeepSeek variants + floor; adding a non-DeepSeek
    model family removes a same-vendor blind spot.
 7. **Parked-lane design upgrades for the paper phase** (grafted from the rival H730 lane
-   under [H752](https://github.com/gasyoun/Uprava/blob/main/handoffs/H752-Fable_kosha_defgen-parked-lane-salvage_11.07.26.md);
+   under [H752](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H752-Fable_kosha_defgen-parked-lane-salvage_11.07.26.md);
    the branch itself is deleted): (a) a **gold-free inputs projection** — generation
    agents read a derived inputs file (headword, grammar tag, attestation texts only),
    never the frozen sample itself, so the gold answer key is structurally out of the
@@ -221,7 +221,7 @@ Generation/judge models: `deepseek-chat` and `deepseek-reasoner` (DeepSeek API, 
 0, 11-07-2026). Deterministic metrics: sacrebleu 2.6.0. Parked-lane salvage (this
 section's canonical-sample ruling, the verified Hellwig delta, input SHA-256 digests,
 next-steps #7) grafted by Fable 5 (`claude-fable-5`), 11-07-2026, under
-[H752](https://github.com/gasyoun/Uprava/blob/main/handoffs/H752-Fable_kosha_defgen-parked-lane-salvage_11.07.26.md).
+[H752](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H752-Fable_kosha_defgen-parked-lane-salvage_11.07.26.md).
 
 **Canonical frozen sample — exactly one.** H730 was executed by two racing sessions
 ([Uprava FINDINGS §67](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)); the
