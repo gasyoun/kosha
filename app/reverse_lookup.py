@@ -47,7 +47,8 @@ def _has_entry(con: sqlite3.Connection, lemma: str) -> bool:
 
 def _inflection_analyses(con: sqlite3.Connection, form_slp1: str):
     rows = con.execute(
-        "SELECT lemma_slp1, model, gender, gcase, number, person, tense, voice, refs, source "
+        "SELECT lemma_slp1, model, gender, gcase, number, person, tense, voice, refs, "
+        "source, disputed "
         "FROM inflections WHERE form_slp1=? "
         "ORDER BY lemma_slp1, model, gcase, number, person, tense, voice",
         (form_slp1,),
@@ -68,7 +69,13 @@ def _inflection_analyses(con: sqlite3.Connection, form_slp1: str):
             "tense": r["tense"],
             "voice": r["voice"],
             "refs": r["refs"],
+            # E1 hybridize (H185): 'source' distinguishes the Cologne base
+            # ('cologne_mwinflect') from the vidyut-layered fixes
+            # ('hybrid-natva-fix', 'vidyut-gap-fill'); 'disputed' flags a
+            # pronominal/feminine fork the editor should review. The buggy
+            # Cologne form is still resolvable here (no cell deleted).
             "source": r["source"],
+            "disputed": bool(r["disputed"]),
             "resolved_by": "inflections",
         })
     return out

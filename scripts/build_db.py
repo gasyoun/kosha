@@ -142,6 +142,17 @@ CREATE INDEX IF NOT EXISTS forms_lemma ON forms(lemma_slp1);
 -- nominals) and NULL gender/gcase; nominal rows carry gender/gcase/number and
 -- NULL person/tense/voice. `model` is the declension paradigm for nominals
 -- (m_a, n_a, m_vat, ind) or a "v_<gana>"/"v_p" conjugation-class tag for verbs.
+--
+-- P4 Wave E1 hybridize (H185, MG ruling 05/10-07-2026 -- HYBRIDIZE): Cologne
+-- stays the attested base (D3), and scripts/build_hybrid_forms.py layers
+-- vidyut-prakriya over it (a local library, R12-clean). `source` gains two
+-- non-Cologne values: 'hybrid-natva-fix' (a vidyut-corrected form substituting
+-- a ṇatva-bug cell, MWinflect#6) and 'vidyut-gap-fill' (a vidyut form for a
+-- cell Cologne left empty, e.g. cardinal numerals). No Cologne row is deleted:
+-- the buggy form stays for the reverse-lookup audit trail, and the display
+-- layer (app/paradigm.py) prefers the fix. `disputed` (0/1) flags the
+-- pronominal mis-models and feminine-stem forks for editorial review WITHOUT
+-- overwriting them -- Cologne stays the default display, the flag is a signal.
 CREATE TABLE IF NOT EXISTS inflections (
     form_slp1 TEXT NOT NULL,
     lemma_slp1 TEXT NOT NULL,
@@ -154,6 +165,7 @@ CREATE TABLE IF NOT EXISTS inflections (
     voice TEXT,
     refs TEXT,
     source TEXT NOT NULL DEFAULT 'cologne_mwinflect',
+    disputed INTEGER NOT NULL DEFAULT 0,
     PRIMARY KEY (form_slp1, lemma_slp1, model, gcase, number, person, tense, voice)
 );
 CREATE INDEX IF NOT EXISTS inflections_form ON inflections(form_slp1);
@@ -219,6 +231,15 @@ def connect():
     for c in ("person", "tense", "voice"):
         if c not in icols:
             con.execute(f"ALTER TABLE inflections ADD COLUMN {c} TEXT")
+    # E1 hybridize (H185) migration: `source` predates this DB build, but
+    # `disputed` may not. Add it (NOT NULL DEFAULT 0) so a pre-E1 kosha.db
+    # queried before `--stage hybrid` runs doesn't error on the missing column.
+    if "disputed" not in icols:
+        con.execute("ALTER TABLE inflections ADD COLUMN disputed INTEGER NOT NULL DEFAULT 0")
+    if "source" not in icols:
+        con.execute(
+            "ALTER TABLE inflections ADD COLUMN source TEXT NOT NULL "
+            "DEFAULT 'cologne_mwinflect'")
     con.commit()
     # P3 migration: evidence-layer columns on lemmas (band, first_era,
     # example_*) -- see scripts/build_evidence.py ensure_columns(), called
@@ -315,7 +336,7 @@ STAGES = {"lemmas": build_lemmas}
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--stage", choices=list(STAGES) + ["entries", "forms", "evidence", "inflections", "stem_bridge", "heritage"], default=None)
+    ap.add_argument("--stage", choices=list(STAGES) + ["entries", "forms", "evidence", "inflections", "hybrid", "stem_bridge", "heritage"], default=None)
     ap.add_argument("--dicts", default="mw,pwg,ap90")
     args = ap.parse_args()
 
@@ -334,6 +355,14 @@ def main():
         # machine) -- not part of the default no-flag build.
         from build_inflections import build_inflections  # noqa: E402
         build_inflections(con)
+    if args.stage == "hybrid":
+        # P4 Wave E1 hybridize (H185): layer vidyut-prakriya over the Cologne
+        # `inflections` base -- auto-fix the ṇatva bug, gap-fill VIDYUT_ONLY
+        # cells, flag pronominal/feminine forks `disputed`. Run AFTER
+        # `--stage inflections` (which DELETEs+repopulates the table, wiping any
+        # prior hybrid rows); idempotent on its own re-runs.
+        from build_hybrid_forms import build_hybrid_forms  # noqa: E402
+        build_hybrid_forms(con)
     if args.stage == "stem_bridge":
         # K2a (H181): stem-normalization crosswalk between `inflections` and
         # `forms`. Requires both to be populated first.

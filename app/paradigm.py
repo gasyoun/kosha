@@ -9,9 +9,20 @@ byte-identical to the API response for the same lemma (locked by
 tests/test_paradigms.py, the K2a/P2 parity discipline).
 
 Cells carry forms as SLP1 keys; the frontend renders them into
-Devanagari/IAST/SLP1 client-side. Cells are surfaced VERBATIM -- the m_a ṇatva
-bug inherited from Cologne (MWinflect#6, e.g. nfpena for attested nfpeRa) is NOT
-silently corrected here (D3 / RISKS.md guardrail in H183 §7).
+Devanagari/IAST/SLP1 client-side.
+
+E1 hybridize (H185, MG ruling HYBRIDIZE): the `inflections` table now carries,
+besides the Cologne base (`source='cologne_mwinflect'`), vidyut-layered rows —
+`hybrid-natva-fix` (a corrected form for a ṇatva-bug cell, MWinflect#6) and
+`vidyut-gap-fill` (a form for a cell Cologne left empty) — plus a `disputed`
+flag on the pronominal/feminine forks. This builder resolves each cell to ONE
+authoritative display form-set: where a `hybrid-natva-fix` exists it SUPERSEDES
+the buggy Cologne form for display (the Cologne row is not deleted — it stays
+resolvable in reverse lookup, and the superseded form is preserved in
+`cell_notes` for the K2b UI). A sparse per-model `cell_notes` map records which
+cells were fixed, gap-filled, or flagged `disputed`, so the UI can surface an
+editorial-review affordance. Cells NOT touched by the hybrid pass stay verbatim
+Cologne (the pre-E1 D3 behaviour), rAma's ṇ-correct paradigm included.
 """
 import sqlite3
 
@@ -22,6 +33,38 @@ from transliterate import from_slp1_out
 CASE_ORDER = ["nom", "acc", "instr", "dat", "abl", "gen", "loc", "voc"]
 NUMBER_ORDER = ["sg", "du", "pl"]
 PERSON_ORDER = ["3", "2", "1"]  # Sanskrit prathama/madhyama/uttama order
+
+
+def _resolve_nominal_cell(rows):
+    """Given the (form, source, disputed) rows for one case x number cell,
+    return (display_forms, note). `display_forms` is the deduped, form-sorted
+    list the UI shows; a `hybrid-natva-fix` supersedes the Cologne form. `note`
+    is None for an untouched Cologne cell, else a sparse dict describing the
+    hybrid provenance / disputed flag (recorded per-cell in `cell_notes`)."""
+    by_src = {}
+    disputed = False
+    for form, source, dsp in rows:
+        by_src.setdefault(source or "cologne_mwinflect", set()).add(form)
+        disputed = disputed or bool(dsp)
+    cologne = sorted(by_src.get("cologne_mwinflect", set()))
+    fixed = sorted(by_src.get("hybrid-natva-fix", set()))
+    gap = sorted(by_src.get("vidyut-gap-fill", set()))
+    note = None
+    if fixed:
+        display = fixed
+        note = {"provenance": "hybrid-natva-fix"}
+        if cologne:
+            note["superseded"] = cologne  # the ṇatva-buggy Cologne form, kept for the UI
+    elif gap and not cologne:
+        display = gap
+        note = {"provenance": "vidyut-gap-fill"}
+    else:
+        # untouched Cologne (plus any additive forms that aren't a supersede)
+        display = sorted(set(cologne) | set(gap) | set(fixed))
+    if disputed:
+        note = dict(note or {})
+        note["disputed"] = True
+    return display, note
 
 
 def _has_entry(con, lemma_slp1):
@@ -42,7 +85,8 @@ def build_paradigm(con: sqlite3.Connection, lemma_slp1: str) -> dict | None:
     verb models (person/tense/voice non-null) a voice/tense/person x number
     grid."""
     rows = con.execute(
-        "SELECT form_slp1, model, gender, gcase, number, person, tense, voice, refs "
+        "SELECT form_slp1, model, gender, gcase, number, person, tense, voice, refs, "
+        "source, disputed "
         "FROM inflections WHERE lemma_slp1=? "
         "ORDER BY model, gcase, number, person, tense, voice, form_slp1",
         (lemma_slp1,),
@@ -59,7 +103,7 @@ def build_paradigm(con: sqlite3.Connection, lemma_slp1: str) -> dict | None:
                 "gender": r["gender"],
                 "refs": r["refs"],
                 "is_verb": r["person"] is not None,
-                "_cells": {},   # nominal: case -> number -> [forms]
+                "_cells": {},   # nominal: case -> number -> [(form, source, disputed)]
                 "_vcells": {},  # verb: voice -> tense -> person -> number -> [forms]
             }
         if r["person"] is not None:
@@ -73,7 +117,8 @@ def build_paradigm(con: sqlite3.Connection, lemma_slp1: str) -> dict | None:
         else:
             gcase = r["gcase"] or "?"
             number = r["number"] or "?"
-            m["_cells"].setdefault(gcase, {}).setdefault(number, []).append(r["form_slp1"])
+            m["_cells"].setdefault(gcase, {}).setdefault(number, []).append(
+                (r["form_slp1"], r["source"], r["disputed"]))
 
     out_models = []
     for model_key in sorted(models):
@@ -100,17 +145,23 @@ def build_paradigm(con: sqlite3.Connection, lemma_slp1: str) -> dict | None:
             })
         else:
             cells = {}
+            cell_notes = {}  # sparse: "case.number" -> hybrid/disputed provenance
             for gcase in _ordered(m["_cells"].keys(), CASE_ORDER):
-                cells[gcase] = {
-                    num: m["_cells"][gcase][num]
-                    for num in _ordered(m["_cells"][gcase].keys(), NUMBER_ORDER)
-                }
+                cells[gcase] = {}
+                for num in _ordered(m["_cells"][gcase].keys(), NUMBER_ORDER):
+                    display, note = _resolve_nominal_cell(m["_cells"][gcase][num])
+                    cells[gcase][num] = display
+                    if note is not None:
+                        cell_notes[f"{gcase}.{num}"] = note
             numbers = _ordered(
                 {n for byc in m["_cells"].values() for n in byc.keys()}, NUMBER_ORDER)
             out_models.append({
                 "model": m["model"], "type": "nominal", "gender": m["gender"],
                 "refs": m["refs"], "cases": _ordered(m["_cells"].keys(), CASE_ORDER),
                 "numbers": numbers, "cells": cells,
+                # E1 hybridize (H185): empty {} for an all-Cologne paradigm, so
+                # the field is stable but adds no noise to untouched stems.
+                "cell_notes": cell_notes,
             })
 
     # Note: no `lemma_deva` is emitted. Cells and lemma keys are SLP1; the

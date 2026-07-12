@@ -14,6 +14,43 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.21.0] - 2026-07-12
+
+### Added
+- **H185: P4 Wave E1 hybridize — vidyut layered over the Cologne inflection base
+  (MG ruling HYBRIDIZE).** New forms-layer pass
+  [`scripts/build_hybrid_forms.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_hybrid_forms.py)
+  (`build_db.py --stage hybrid`, run after `--stage inflections`) reuses the E1
+  comparison's classifier — so the applied set matches
+  [E1_DIVERGENCE_REPORT.md](https://github.com/gasyoun/kosha/blob/main/E1_DIVERGENCE_REPORT.md)
+  cell-for-cell (top-10k sample): **326 ṇatva cells / 89 stems** auto-fixed
+  ([MWinflect#6](https://github.com/sanskrit-lexicon/MWinflect/issues/6)) as
+  `source='hybrid-natva-fix'` rows, **16 `m_card` cells** gap-filled as
+  `source='vidyut-gap-fill'`, **13,770 cells / 1,440 stems** flagged
+  `disputed=1` (pronominal + feminine/consonant forks, for editorial review).
+  No Cologne row is deleted — the buggy form stays reverse-resolvable; the
+  display layer prefers the fix and records the superseded form. `inflections`
+  gains a `disputed` column; [`app/paradigm.py`](https://github.com/gasyoun/kosha/blob/main/app/paradigm.py)
+  emits a sparse per-model `cell_notes` provenance map and
+  [`app/reverse_lookup.py`](https://github.com/gasyoun/kosha/blob/main/app/reverse_lookup.py)
+  adds `source`/`disputed` to each `/analyze` parse. New
+  [`tests/test_hybrid_forms.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_hybrid_forms.py)
+  (6 tests); demo paradigm/reverse shards regenerated; **229 passed / 2 skipped**.
+- **H185 Task C: present-system verb comparison** answering
+  [csl-inflect#8](https://github.com/sanskrit-lexicon/csl-inflect/issues/8).
+  [`scripts/compare_vidyut_verbs.py`](https://github.com/gasyoun/kosha/blob/main/scripts/compare_vidyut_verbs.py)
+  maps Cologne `v_<gana>`/`v_p` rows into vidyut's `Tinanta` API. Finding: strict
+  agreement is only **12.68 %** (683 roots, 34,056 both-nonempty cells) — a
+  dhātu-IDENTITY mapping gap (bare Cologne root ≠ vidyut aupadeśika), not a
+  grammar disagreement. **No verb hybridization applied** (a bare-root
+  substitution would inject a different lexeme's forms); Cologne verb tables stay
+  as-is (D3). The dhātu-identity crosswalk is the flagged larger follow-on.
+
+### Note
+- The csl-inflect#10 nominal give-back drafted in E1 stays **parked** — posting
+  to the dormant, noise-averse upstream is diplomacy-gated (RELATIONS.md §2/§7)
+  and awaits a separate MG go-ahead (unchanged by this release).
+
 ## [0.20.1] - 2026-07-11
 
 ### Changed
