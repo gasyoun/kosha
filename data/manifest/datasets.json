@@ -872,6 +872,24 @@
         "reading/ static viewer"
       ],
       "notes": "P5 UI step 6b. Sibling Gitā 1 pack PARKED: the Bhagavadgita is absent from the DCS corpus (MBh book 6 omits adhyayas 23-40, the 18 Gita chapters); needs an external lemmatised source. Real DCS DB is VisualDCS/src/DCS-data-2026/dcs_full.sqlite (the 0-byte src/dcs_full.sqlite is a decoy)."
+    },
+    {
+      "id": "gita-reading-pack-1-experimental",
+      "title": "Bhagavadgita 1 reading pack (EXPERIMENTAL, machine-segmented)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "reading/data/gita-1.json",
+      "format": "json",
+      "rows": 46,
+      "size_bytes": 123323,
+      "keying": "one object per adhyaya; sentences[]=verses, tokens[] carry form/lemma/slp1//w-card href. Mula from GRETIL (public domain, vendored reading/data/sources/gita-1_mula_gretil.tsv, 46 verses); lemmas MACHINE-segmented via kosha's reverse-lookup cascade (forms table 549 tokens + vidyut-cheda fallback 16), 565/597 (94.6%) linked. NOT gold: the Bhagavadgita is absent from the DCS corpus, so some lemmas are wrong (long samasa, a few names/participles) - verify before citing. See reading/BUILD_REPORT_GITA.md.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "reading/data/gita-1.json",
+      "builder": "scripts/build_reading_pack_gita.py (app/segmenter.py vidyut-cheda + forms table, H848)",
+      "consumers": [
+        "reading/ static viewer"
+      ],
+      "notes": "H848 Task B. Sibling of the GOLD dcs-reading-pack-nala-1 (DCS-lemmatised). Mula source: GRETIL bhg4c01u.htm (4-commentary recension, 46 verses in adhyaya 1). Experimental quality flagged in the viewer banner + build report."
     }
   ]
 }

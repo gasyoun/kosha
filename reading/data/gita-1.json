@@ -1,0 +1,6297 @@
+{
+ "slug": "gita-1",
+ "title": "Gītā 1 — Arjunaviṣāda (Bhagavadgītā, adhyāya 1)",
+ "ref": "BhG 1",
+ "text_name": "Bhagavadgītā",
+ "source": "Mūla: GRETIL (public domain). Segmentation: vidyut-cheda (machine).",
+ "built": "2026-07-13",
+ "experimental": true,
+ "method": "MACHINE-SEGMENTED (vidyut-cheda) — the Bhagavadgītā is absent from the DCS gold corpus, so lemmas are auto-segmented and may be wrong (proper names, participles, some compounds). Verify before citing.",
+ "stats": {
+  "sentences": 46,
+  "tokens": 597,
+  "linked_tokens": 565,
+  "link_rate_pct": 94.6,
+  "tier_counts": {
+   "forms": 549,
+   "cheda": 16,
+   "none": 32
+  }
+ },
+ "sentences": [
+  {
+   "n": "1.1",
+   "locus": "Bhagavadgītā 1.1",
+   "dcs": null,
+   "text": "dhṛtarāṣṭra uvāca | dharma-kṣetre kuru-kṣetre samavetā yuyutsavaḥ | māmakāḥ pāṇḍavāś caiva kim akurvata saṃjaya",
+   "tokens": [
+    {
+     "form": "dhṛtarāṣṭra",
+     "lemma": "dhṛtarāṣṭra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "DftarAzwra",
+     "href": "../w/_44ftar_41zwra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "uvāca",
+     "lemma": "vac",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vac",
+     "href": "../w/vac.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dharmakṣetre",
+     "lemma": "dharmakṣetra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Darmakzetra",
+     "href": "../w/_44armakzetra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kurukṣetre",
+     "lemma": "kurukṣetra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kurukzetra",
+     "href": "../w/kurukzetra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "samavetā",
+     "lemma": "samave",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "samave",
+     "href": "../w/samave.html",
+     "tier": "forms"
+    },
+    {
+     "form": "yuyutsavaḥ",
+     "lemma": "yuyutsu",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yuyutsu",
+     "href": "../w/yuyutsu.html",
+     "tier": "forms"
+    },
+    {
+     "form": "māmakāḥ",
+     "lemma": "māmaka",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mAmaka",
+     "href": "../w/m_41maka.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pāṇḍavāś",
+     "lemma": "pāṇḍava",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pARqava",
+     "href": "../w/p_41_52qava.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "eva",
+     "href": "../w/eva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kim",
+     "lemma": "ka",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ka",
+     "href": "../w/ka.html",
+     "tier": "forms"
+    },
+    {
+     "form": "akurvata",
+     "lemma": "kṛ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kf",
+     "href": "../w/kf.html",
+     "tier": "forms"
+    },
+    {
+     "form": "saṃjaya",
+     "lemma": "saṃjaya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "saMjaya",
+     "href": "../w/sa_4djaya.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.2",
+   "locus": "Bhagavadgītā 1.2",
+   "dcs": null,
+   "text": "saṃjaya uvāca | dṛṣṭvā tu pāṇḍavānīkaṃ vyūḍhaṃ duryodhanas tadā | ācāryam upasaṃgamya rājā vacanam abravīt",
+   "tokens": [
+    {
+     "form": "saṃjaya",
+     "lemma": "saṃjaya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "saMjaya",
+     "href": "../w/sa_4djaya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "uvāca",
+     "lemma": "vac",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vac",
+     "href": "../w/vac.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dṛṣṭvā",
+     "lemma": "dṛś",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "dfS",
+     "href": "../w/df_53.html",
+     "tier": "forms"
+    },
+    {
+     "form": "tu",
+     "lemma": "idam",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "idam",
+     "href": "../w/idam.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pāṇḍavānīkaṃ",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "vyūḍhaṃ",
+     "lemma": "vyūh",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vyUh",
+     "href": "../w/vy_55h.html",
+     "tier": "forms"
+    },
+    {
+     "form": "duryodhanas",
+     "lemma": "duryodhana",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "duryoDana",
+     "href": "../w/duryo_44ana.html",
+     "tier": "forms"
+    },
+    {
+     "form": "tadā",
+     "lemma": "vā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vA",
+     "href": "../w/v_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ācāryam",
+     "lemma": "ācārya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "AcArya",
+     "href": "../w/_41c_41rya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "upasaṃgamya",
+     "lemma": "upasaṃgam",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "upasaMgam",
+     "href": "../w/upasa_4dgam.html",
+     "tier": "forms"
+    },
+    {
+     "form": "rājā",
+     "lemma": "rājan",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "rAjan",
+     "href": "../w/r_41jan.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vacanam",
+     "lemma": "vacana",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vacana",
+     "href": "../w/vacana.html",
+     "tier": "forms"
+    },
+    {
+     "form": "abravīt",
+     "lemma": "brū",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "brU",
+     "href": "../w/br_55.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.3",
+   "locus": "Bhagavadgītā 1.3",
+   "dcs": null,
+   "text": "paśyaitāṃ pāṇḍuputrāṇām ācārya mahatīṃ camūm | vyūḍhāṃ drupadaputreṇa tava śiṣyeṇa dhīmatā",
+   "tokens": [
+    {
+     "form": "paśyaitāṃ",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "pāṇḍuputrāṇām",
+     "lemma": "pāṇḍuputra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pARquputra",
+     "href": "../w/p_41_52quputra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ācārya",
+     "lemma": "ācārya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "AcArya",
+     "href": "../w/_41c_41rya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mahatīṃ",
+     "lemma": "mahat",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mahat",
+     "href": "../w/mahat.html",
+     "tier": "forms"
+    },
+    {
+     "form": "camūm",
+     "lemma": "camū",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "camU",
+     "href": "../w/cam_55.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vyūḍhāṃ",
+     "lemma": "vyūh",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vyUh",
+     "href": "../w/vy_55h.html",
+     "tier": "forms"
+    },
+    {
+     "form": "drupadaputreṇa",
+     "lemma": "drupadaputra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "drupadaputra",
+     "href": "../w/drupadaputra.html",
+     "tier": "cheda"
+    },
+    {
+     "form": "tava",
+     "lemma": "tvad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tvad",
+     "href": "../w/tvad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śiṣyeṇa",
+     "lemma": "śiṣya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Sizya",
+     "href": "../w/_53izya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dhīmatā",
+     "lemma": "dhīmat",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "DImat",
+     "href": "../w/_44_49mat.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.4",
+   "locus": "Bhagavadgītā 1.4",
+   "dcs": null,
+   "text": "atra śūrā maheṣvāsā bhīmārjunasamā yudhi | yuyudhāno virāṭaś ca drupadaś ca mahārathaḥ",
+   "tokens": [
+    {
+     "form": "atra",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "iti",
+     "href": "../w/iti.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śūrā",
+     "lemma": "śūra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "SUra",
+     "href": "../w/_53_55ra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "maheṣvāsā",
+     "lemma": "maheṣvāsa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mahezvAsa",
+     "href": "../w/mahezv_41sa.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bhīmārjunasamā",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "yudhi",
+     "lemma": "yudh",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yuD",
+     "href": "../w/yu_44.html",
+     "tier": "forms"
+    },
+    {
+     "form": "yuyudhāno",
+     "lemma": "yuyudhāna",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yuyuDAna",
+     "href": "../w/yuyu_44_41na.html",
+     "tier": "forms"
+    },
+    {
+     "form": "virāṭaś",
+     "lemma": "virāṭa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "virAwa",
+     "href": "../w/vir_41wa.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "drupadaś",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mahārathaḥ",
+     "lemma": "mahāratha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mahAraTa",
+     "href": "../w/mah_41ra_54a.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.5",
+   "locus": "Bhagavadgītā 1.5",
+   "dcs": null,
+   "text": "dhṛṣṭaketuś cekitānaḥ kāśirājaś ca vīryavān | purujit kuntibhojaś ca śaibyaś ca narapuṃgavaḥ",
+   "tokens": [
+    {
+     "form": "dhṛṣṭaketuś",
+     "lemma": "dhṛṣṭaketu",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Dfzwaketu",
+     "href": "../w/_44fzwaketu.html",
+     "tier": "forms"
+    },
+    {
+     "form": "cekitānaḥ",
+     "lemma": "cekitāna",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "cekitAna",
+     "href": "../w/cekit_41na.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kāśirājaś",
+     "lemma": "kāśirāja",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kASirAja",
+     "href": "../w/k_41_53ir_41ja.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vīryavān",
+     "lemma": "vīryavat",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vIryavat",
+     "href": "../w/v_49ryavat.html",
+     "tier": "forms"
+    },
+    {
+     "form": "purujit",
+     "lemma": "purujit",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "purujit",
+     "href": "../w/purujit.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kuntibhojaś",
+     "lemma": "kuntibhoja",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kuntiBoja",
+     "href": "../w/kunti_42oja.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śaibyaś",
+     "lemma": "śaibya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "SEbya",
+     "href": "../w/_53_45bya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "narapuṃgavaḥ",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    }
+   ]
+  },
+  {
+   "n": "1.6",
+   "locus": "Bhagavadgītā 1.6",
+   "dcs": null,
+   "text": "yudhāmanyuś ca vikrānta uttamaujāś ca vīryavān | saubhadro draupadeyāś ca sarva eva mahārathāḥ",
+   "tokens": [
+    {
+     "form": "yudhāmanyuś",
+     "lemma": "yudhāmanyu",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yuDAmanyu",
+     "href": "../w/yu_44_41manyu.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vikrānta",
+     "lemma": "vikram",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vikram",
+     "href": "../w/vikram.html",
+     "tier": "forms"
+    },
+    {
+     "form": "uttamaujāś",
+     "lemma": "uttamaujas",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "uttamOjas",
+     "href": "../w/uttam_4fjas.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vīryavān",
+     "lemma": "vīryavat",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vIryavat",
+     "href": "../w/v_49ryavat.html",
+     "tier": "forms"
+    },
+    {
+     "form": "saubhadro",
+     "lemma": "saubhadra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sOBadra",
+     "href": "../w/s_4f_42adra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "draupadeyāś",
+     "lemma": "draupadeya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "drOpadeya",
+     "href": "../w/dr_4fpadeya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sarva",
+     "lemma": "sarva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sarva",
+     "href": "../w/sarva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "eva",
+     "href": "../w/eva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "maha",
+     "lemma": "mah",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mah",
+     "href": "../w/mah.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ar",
+     "lemma": "arv",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "arv",
+     "href": "../w/arv.html",
+     "tier": "forms"
+    },
+    {
+     "form": "atha",
+     "lemma": "atha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "aTa",
+     "href": "../w/a_54a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "as",
+     "lemma": "as",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "as",
+     "href": "../w/as.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.7",
+   "locus": "Bhagavadgītā 1.7",
+   "dcs": null,
+   "text": "asmākaṃ tu viśiṣṭā ye tān nibodha dvijottama | nāyakā mama sainyasya saṃjñārthaṃ tān bravīmi te",
+   "tokens": [
+    {
+     "form": "asmākaṃ",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "tu",
+     "lemma": "idam",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "idam",
+     "href": "../w/idam.html",
+     "tier": "forms"
+    },
+    {
+     "form": "viśiṣṭā",
+     "lemma": "viśiṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "viSiz",
+     "href": "../w/vi_53iz.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ye",
+     "lemma": "yad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yad",
+     "href": "../w/yad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "tān",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "nibodha",
+     "lemma": "nibudh",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "nibuD",
+     "href": "../w/nibu_44.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dvijottama",
+     "lemma": "dvijottama",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "dvijottama",
+     "href": "../w/dvijottama.html",
+     "tier": "forms"
+    },
+    {
+     "form": "nāyakā",
+     "lemma": "nāyaka",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "nAyaka",
+     "href": "../w/n_41yaka.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mama",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sainyasya",
+     "lemma": "sainya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sEnya",
+     "href": "../w/s_45nya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "saṃjñārthaṃ",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "tān",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bravīmi",
+     "lemma": "brū",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "brU",
+     "href": "../w/br_55.html",
+     "tier": "forms"
+    },
+    {
+     "form": "te",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.8",
+   "locus": "Bhagavadgītā 1.8",
+   "dcs": null,
+   "text": "bhavān bhīṣmaś ca karṇaś ca kṛpaś ca samitiṃjayaḥ | aśvatthāmā vikarṇaś ca saumadattir jayadrathaḥ",
+   "tokens": [
+    {
+     "form": "bhavān",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bhīṣmaś",
+     "lemma": "bhīṣma",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "BIzma",
+     "href": "../w/_42_49zma.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "karṇaś",
+     "lemma": "karṇa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "karRa",
+     "href": "../w/kar_52a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kṛpaś",
+     "lemma": "kṛpa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kfpa",
+     "href": "../w/kfpa.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "samitiṃjayaḥ",
+     "lemma": "samitiṃjaya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "samitiMjaya",
+     "href": "../w/samiti_4djaya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "aśvatthāmā",
+     "lemma": "aśvatthāman",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "aSvatTAman",
+     "href": "../w/a_53vat_54_41man.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vikarṇaś",
+     "lemma": "vikarṇa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vikarRa",
+     "href": "../w/vikar_52a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "saumadattir",
+     "lemma": "saumadatti",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sOmadatti",
+     "href": "../w/s_4fmadatti.html",
+     "tier": "forms"
+    },
+    {
+     "form": "jayadrathaḥ",
+     "lemma": "jayadratha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "jayadraTa",
+     "href": "../w/jayadra_54a.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.9",
+   "locus": "Bhagavadgītā 1.9",
+   "dcs": null,
+   "text": "anye ca bahavaḥ śūrā madarthe tyaktajīvitāḥ | nānāśastrapraharaṇāḥ sarve yuddhaviśāradāḥ",
+   "tokens": [
+    {
+     "form": "anye",
+     "lemma": "anya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "anya",
+     "href": "../w/anya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bahavaḥ",
+     "lemma": "bahu",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "bahu",
+     "href": "../w/bahu.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śūrā",
+     "lemma": "śūra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "SUra",
+     "href": "../w/_53_55ra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "madarthe",
+     "lemma": "madartha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "madarTa",
+     "href": "../w/madar_54a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "tyaktajīvitās",
+     "lemma": "tyaktajīvita",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tyaktajIvita",
+     "href": "../w/tyaktaj_49vita.html",
+     "tier": "cheda"
+    },
+    {
+     "form": "nānāśastrapraharaṇāḥ",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "sarve",
+     "lemma": "sarva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sarva",
+     "href": "../w/sarva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "yuddhaviśāradās",
+     "lemma": "yuddhaviśārada",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yudDaviSArada",
+     "href": "../w/yud_44avi_53_41rada.html",
+     "tier": "cheda"
+    }
+   ]
+  },
+  {
+   "n": "1.10",
+   "locus": "Bhagavadgītā 1.10",
+   "dcs": null,
+   "text": "aparyāptaṃ tad asmākaṃ balaṃ bhīṣmābhirakṣitam | paryāptaṃ tv idam eteṣāṃ balaṃ bhīmābhirakṣitam",
+   "tokens": [
+    {
+     "form": "aparyāptaṃ",
+     "lemma": "aparyāpta",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "aparyApta",
+     "href": "../w/apary_41pta.html",
+     "tier": "forms"
+    },
+    {
+     "form": "tad",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "asmākaṃ",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "balaṃ",
+     "lemma": "bala",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "bala",
+     "href": "../w/bala.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bhīṣma",
+     "lemma": "bhīṣma",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "BIzma",
+     "href": "../w/_42_49zma.html",
+     "tier": "forms"
+    },
+    {
+     "form": "abhirakṣitam",
+     "lemma": "abhirakṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "aBirakz",
+     "href": "../w/a_42irakz.html",
+     "tier": "forms"
+    },
+    {
+     "form": "paryāptaṃ",
+     "lemma": "paryāp",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "paryAp",
+     "href": "../w/pary_41p.html",
+     "tier": "forms"
+    },
+    {
+     "form": "tv",
+     "lemma": "tu",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tu",
+     "href": "../w/tu.html",
+     "tier": "forms"
+    },
+    {
+     "form": "idam",
+     "lemma": "idam",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "idam",
+     "href": "../w/idam.html",
+     "tier": "forms"
+    },
+    {
+     "form": "eteṣāṃ",
+     "lemma": "etad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "etad",
+     "href": "../w/etad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "balaṃ",
+     "lemma": "bala",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "bala",
+     "href": "../w/bala.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bhīmā",
+     "lemma": "bhīma",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "BIma",
+     "href": "../w/_42_49ma.html",
+     "tier": "forms"
+    },
+    {
+     "form": "abhirakṣitam",
+     "lemma": "abhirakṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "aBirakz",
+     "href": "../w/a_42irakz.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.11",
+   "locus": "Bhagavadgītā 1.11",
+   "dcs": null,
+   "text": "ayaneṣu ca sarveṣu yathābhāgam avasthitāḥ | bhīṣmam evābhirakṣantu bhavantaḥ sarva eva hi",
+   "tokens": [
+    {
+     "form": "ayaneṣu",
+     "lemma": "ayana",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ayana",
+     "href": "../w/ayana.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sarveṣu",
+     "lemma": "sarva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sarva",
+     "href": "../w/sarva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "yathābhāgam",
+     "lemma": "yathābhāgam",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yaTABAgam",
+     "href": "../w/ya_54_41_42_41gam.html",
+     "tier": "forms"
+    },
+    {
+     "form": "avasthitāḥ",
+     "lemma": "avasthā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "avasTA",
+     "href": "../w/avas_54_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bhīṣmam",
+     "lemma": "bhīṣma",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "BIzma",
+     "href": "../w/_42_49zma.html",
+     "tier": "forms"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "eva",
+     "href": "../w/eva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "abhirakṣantu",
+     "lemma": "abhirakṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "aBirakz",
+     "href": "../w/a_42irakz.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bhavantaḥ",
+     "lemma": "bhū",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "BU",
+     "href": "../w/_42_55.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sarva",
+     "lemma": "sarva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sarva",
+     "href": "../w/sarva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "eva",
+     "href": "../w/eva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "hi",
+     "lemma": "hi",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "hi",
+     "href": "../w/hi.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.12",
+   "locus": "Bhagavadgītā 1.12",
+   "dcs": null,
+   "text": "tasya saṃjanayan harṣaṃ kuru-vṛddhaḥ pitāmahaḥ | siṃha-nādaṃ vinadyoccaiḥ śaṅkhaṃ dadhmau pratāpavān",
+   "tokens": [
+    {
+     "form": "tasya",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "saṃjanayan",
+     "lemma": "saṃjāni",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "harṣaṃ",
+     "lemma": "harṣa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "harza",
+     "href": "../w/harza.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kuruvṛddhaḥ",
+     "lemma": "kuruvṛddha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kuruvfdDa",
+     "href": "../w/kuruvfd_44a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pitāmahaḥ",
+     "lemma": "pitāmaha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pitAmaha",
+     "href": "../w/pit_41maha.html",
+     "tier": "forms"
+    },
+    {
+     "form": "siṃhanādaṃ",
+     "lemma": "siṃhanāda",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "siMhanAda",
+     "href": "../w/si_4dhan_41da.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vinadya",
+     "lemma": "vinad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vinad",
+     "href": "../w/vinad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "uccais",
+     "lemma": "uccais",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "uccEs",
+     "href": "../w/ucc_45s.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śaṅkhaṃ",
+     "lemma": "śaṅkha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "SaNKa",
+     "href": "../w/_53a_4e_4ba.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dadhmau",
+     "lemma": "dham",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Dam",
+     "href": "../w/_44am.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pratāpavān",
+     "lemma": "pratāpavat",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pratApavat",
+     "href": "../w/prat_41pavat.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.13",
+   "locus": "Bhagavadgītā 1.13",
+   "dcs": null,
+   "text": "tataḥ śaṅkhāś ca bheryaś ca paṇavānakagomukhāḥ | sahasaivābhyahanyanta sa śabdas tumulo 'bhavat",
+   "tokens": [
+    {
+     "form": "tataḥ",
+     "lemma": "tatas",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tatas",
+     "href": "../w/tatas.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śaṅkhāś",
+     "lemma": "śaṅkha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "SaNKa",
+     "href": "../w/_53a_4e_4ba.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bheryaś",
+     "lemma": "bherī",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "BerI",
+     "href": "../w/_42er_49.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "paṇavānakagomukhāḥ",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "sahasā",
+     "lemma": "sahas",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sahas",
+     "href": "../w/sahas.html",
+     "tier": "forms"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "eva",
+     "href": "../w/eva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "abhyahanyanta",
+     "lemma": "abhihan",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "aBihan",
+     "href": "../w/a_42ihan.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sa",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śabdas",
+     "lemma": "śabda",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Sabda",
+     "href": "../w/_53abda.html",
+     "tier": "forms"
+    },
+    {
+     "form": "tumulo",
+     "lemma": "tumula",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tumula",
+     "href": "../w/tumula.html",
+     "tier": "forms"
+    },
+    {
+     "form": "abhavat",
+     "lemma": "bhū",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "BU",
+     "href": "../w/_42_55.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.14",
+   "locus": "Bhagavadgītā 1.14",
+   "dcs": null,
+   "text": "tataḥ śvetair hayair yukte mahati syandane sthitau | mādhavaḥ pāṇḍavaś caiva divyau śaṅkhau pradadhmatuḥ",
+   "tokens": [
+    {
+     "form": "tataḥ",
+     "lemma": "tatas",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tatas",
+     "href": "../w/tatas.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śvetair",
+     "lemma": "śveta",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Sveta",
+     "href": "../w/_53veta.html",
+     "tier": "forms"
+    },
+    {
+     "form": "hayair",
+     "lemma": "haya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "haya",
+     "href": "../w/haya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "yukte",
+     "lemma": "yuj",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yuj",
+     "href": "../w/yuj.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mahati",
+     "lemma": "mahat",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mahat",
+     "href": "../w/mahat.html",
+     "tier": "forms"
+    },
+    {
+     "form": "syandane",
+     "lemma": "syandana",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "syandana",
+     "href": "../w/syandana.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sthitau",
+     "lemma": "sthā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sTA",
+     "href": "../w/s_54_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mādhavaḥ",
+     "lemma": "mādhava",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mADava",
+     "href": "../w/m_41_44ava.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pāṇḍavaś",
+     "lemma": "pāṇḍava",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pARqava",
+     "href": "../w/p_41_52qava.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "eva",
+     "href": "../w/eva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "divyau",
+     "lemma": "divya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "divya",
+     "href": "../w/divya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śaṅkhau",
+     "lemma": "śaṅkha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "SaNKa",
+     "href": "../w/_53a_4e_4ba.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pradadhmatuḥ",
+     "lemma": "pradham",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "praDam",
+     "href": "../w/pra_44am.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.15",
+   "locus": "Bhagavadgītā 1.15",
+   "dcs": null,
+   "text": "pāñcajanyaṃ hṛṣīkeśo devadattaṃ dhanaṃjayaḥ | pauṇḍraṃ dadhmau mahāśaṅkhaṃ bhīmakarmā vṛkodaraḥ",
+   "tokens": [
+    {
+     "form": "pāñcajanyaṃ",
+     "lemma": "pāñcajanya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pAYcajanya",
+     "href": "../w/p_41_59cajanya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "hṛṣīkeśo",
+     "lemma": "hṛṣīkeśa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "hfzIkeSa",
+     "href": "../w/hfz_49ke_53a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "devadattaṃ",
+     "lemma": "devadatta",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "devadatta",
+     "href": "../w/devadatta.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dhanaṃjayaḥ",
+     "lemma": "dhanaṃjaya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "DanaMjaya",
+     "href": "../w/_44ana_4djaya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pauṇḍraṃ",
+     "lemma": "pauṇḍra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pORqra",
+     "href": "../w/p_4f_52qra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dadhmau",
+     "lemma": "dham",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Dam",
+     "href": "../w/_44am.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mahāśaṅkhaṃ",
+     "lemma": "mahāśaṅkha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mahASaNKa",
+     "href": "../w/mah_41_53a_4e_4ba.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bhīmakarmā",
+     "lemma": "bhīmakarman",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "BImakarman",
+     "href": "../w/_42_49makarman.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vṛkodaraḥ",
+     "lemma": "vṛkodara",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vfkodara",
+     "href": "../w/vfkodara.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.16",
+   "locus": "Bhagavadgītā 1.16",
+   "dcs": null,
+   "text": "anantavijayaṃ rājā kuntīputro yudhiṣṭhiraḥ | nakulaḥ sahadevaś ca sughoṣamaṇipuṣpakau",
+   "tokens": [
+    {
+     "form": "anantavijayaṃ",
+     "lemma": "anantavijaya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "anantavijaya",
+     "href": "../w/anantavijaya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "rājā",
+     "lemma": "rājan",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "rAjan",
+     "href": "../w/r_41jan.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kuntīputro",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "yudhiṣṭhiraḥ",
+     "lemma": "yudhiṣṭhira",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yuDizWira",
+     "href": "../w/yu_44iz_57ira.html",
+     "tier": "forms"
+    },
+    {
+     "form": "nakulaḥ",
+     "lemma": "nakula",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "nakula",
+     "href": "../w/nakula.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sahadevaś",
+     "lemma": "sahadeva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sahadeva",
+     "href": "../w/sahadeva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sughoṣamaṇipuṣpakau",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    }
+   ]
+  },
+  {
+   "n": "1.17",
+   "locus": "Bhagavadgītā 1.17",
+   "dcs": null,
+   "text": "kāśyaś ca parameṣvāsaḥ śikhaṇḍī ca mahārathaḥ | dhṛṣṭadyumno virāṭaś ca sātyakiś cāparājitaḥ",
+   "tokens": [
+    {
+     "form": "kāśyaś",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "parameṣu",
+     "lemma": "parama",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "parama",
+     "href": "../w/parama.html",
+     "tier": "forms"
+    },
+    {
+     "form": "āsas",
+     "lemma": "as",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "as",
+     "href": "../w/as.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śikhaṇḍī",
+     "lemma": "śikhaṇḍin",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "SiKaRqin",
+     "href": "../w/_53i_4ba_52qin.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mahārathaḥ",
+     "lemma": "mahāratha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mahAraTa",
+     "href": "../w/mah_41ra_54a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dhṛṣṭadyumno",
+     "lemma": "dhṛṣṭadyumna",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Dfzwadyumna",
+     "href": "../w/_44fzwadyumna.html",
+     "tier": "forms"
+    },
+    {
+     "form": "virāṭaś",
+     "lemma": "virāṭa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "virAwa",
+     "href": "../w/vir_41wa.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sātyakiś",
+     "lemma": "sātyaki",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sAtyaki",
+     "href": "../w/s_41tyaki.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "aparājitas",
+     "lemma": "aparājita",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "aparAjita",
+     "href": "../w/apar_41jita.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.18",
+   "locus": "Bhagavadgītā 1.18",
+   "dcs": null,
+   "text": "drupado draupadeyāś ca sarvaśaḥ pṛthivīpate | saubhadraś ca mahābāhuḥ śaṅkhān dadhmuḥ pṛthak pṛthak",
+   "tokens": [
+    {
+     "form": "drupado",
+     "lemma": "drupada",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "drupada",
+     "href": "../w/drupada.html",
+     "tier": "forms"
+    },
+    {
+     "form": "draupadeyāś",
+     "lemma": "draupadeya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "drOpadeya",
+     "href": "../w/dr_4fpadeya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sarvaśaḥ",
+     "lemma": "sarvaśas",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sarvaSas",
+     "href": "../w/sarva_53as.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pṛthivīpate",
+     "lemma": "pṛthivīpati",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pfTivIpati",
+     "href": "../w/pf_54iv_49pati.html",
+     "tier": "forms"
+    },
+    {
+     "form": "saubhadraś",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mahābāhuḥ",
+     "lemma": "mahābāhu",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mahAbAhu",
+     "href": "../w/mah_41b_41hu.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śaṅkhān",
+     "lemma": "śaṅkha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "SaNKa",
+     "href": "../w/_53a_4e_4ba.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dadhmuḥ",
+     "lemma": "dham",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Dam",
+     "href": "../w/_44am.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pṛthak",
+     "lemma": "pṛthak",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pfTak",
+     "href": "../w/pf_54ak.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pṛthak",
+     "lemma": "pṛthak",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pfTak",
+     "href": "../w/pf_54ak.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.19",
+   "locus": "Bhagavadgītā 1.19",
+   "dcs": null,
+   "text": "sa ghoṣo dhārtarāṣṭrāṇāṃ hṛdayāni vyadārayat | nabhaś ca pṛthivīṃ caiva tumulo vyanunādayan",
+   "tokens": [
+    {
+     "form": "sa",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ghoṣo",
+     "lemma": "ghoṣa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Goza",
+     "href": "../w/_47oza.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dhārtarāṣṭrāṇāṃ",
+     "lemma": "dhārtarāṣṭra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "DArtarAzwra",
+     "href": "../w/_44_41rtar_41zwra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "hṛdayāni",
+     "lemma": "hṛdaya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "hfdaya",
+     "href": "../w/hfdaya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vyadārayat",
+     "lemma": "vidāri",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vidAri",
+     "href": "../w/vid_41ri.html",
+     "tier": "cheda"
+    },
+    {
+     "form": "nabhaś",
+     "lemma": "nabhas",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "naBas",
+     "href": "../w/na_42as.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pṛthivīṃ",
+     "lemma": "pṛthivī",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pfTivI",
+     "href": "../w/pf_54iv_49.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "eva",
+     "href": "../w/eva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "tumulo",
+     "lemma": "tumula",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tumula",
+     "href": "../w/tumula.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vī",
+     "lemma": "vī",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vI",
+     "href": "../w/v_49.html",
+     "tier": "forms"
+    },
+    {
+     "form": "anunā",
+     "lemma": "anu",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "anu",
+     "href": "../w/anu.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ādayan",
+     "lemma": "ādi",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Adi",
+     "href": "../w/_41di.html",
+     "tier": "cheda"
+    }
+   ]
+  },
+  {
+   "n": "1.20",
+   "locus": "Bhagavadgītā 1.20",
+   "dcs": null,
+   "text": "atha vyavasthitān dṛṣṭvā dhārtarāṣṭrān kapidhvajaḥ | pravṛtte śastrasaṃpāte dhanur udyamya pāṇḍavaḥ",
+   "tokens": [
+    {
+     "form": "atha",
+     "lemma": "atha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "aTa",
+     "href": "../w/a_54a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vyavasthitān",
+     "lemma": "vyavasthā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vyavasTA",
+     "href": "../w/vyavas_54_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dṛṣṭvā",
+     "lemma": "dṛś",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "dfS",
+     "href": "../w/df_53.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dhārtarāṣṭrān",
+     "lemma": "dhārtarāṣṭra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "DArtarAzwra",
+     "href": "../w/_44_41rtar_41zwra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kapidhvajaḥ",
+     "lemma": "kapidhvaja",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kapiDvaja",
+     "href": "../w/kapi_44vaja.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pravṛtte",
+     "lemma": "pravṛt",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pravft",
+     "href": "../w/pravft.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śastrasaṃpāte",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "dhanur",
+     "lemma": "dhanus",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Danus",
+     "href": "../w/_44anus.html",
+     "tier": "forms"
+    },
+    {
+     "form": "udyamya",
+     "lemma": "udyam",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "udyam",
+     "href": "../w/udyam.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pāṇḍavaḥ",
+     "lemma": "pāṇḍava",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pARqava",
+     "href": "../w/p_41_52qava.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.21",
+   "locus": "Bhagavadgītā 1.21",
+   "dcs": null,
+   "text": "hṛṣīkeśaṃ tadā vākyam idam āha mahīpate | senayor ubhayor madhye rathaṃ sthāpaya me 'cyuta",
+   "tokens": [
+    {
+     "form": "hṛṣīkeśaṃ",
+     "lemma": "hṛṣīkeśa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "hfzIkeSa",
+     "href": "../w/hfz_49ke_53a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "tadā",
+     "lemma": "vā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vA",
+     "href": "../w/v_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vākyam",
+     "lemma": "vākya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vAkya",
+     "href": "../w/v_41kya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "idam",
+     "lemma": "idam",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "idam",
+     "href": "../w/idam.html",
+     "tier": "forms"
+    },
+    {
+     "form": "āha",
+     "lemma": "karman",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "karman",
+     "href": "../w/karman.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mahīpate",
+     "lemma": "mahīpati",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mahIpati",
+     "href": "../w/mah_49pati.html",
+     "tier": "forms"
+    },
+    {
+     "form": "senayor",
+     "lemma": "senā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "senA",
+     "href": "../w/sen_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ubhayor",
+     "lemma": "ubhaya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "uBaya",
+     "href": "../w/u_42aya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "madhye",
+     "lemma": "madhya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "maDya",
+     "href": "../w/ma_44ya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "rathaṃ",
+     "lemma": "ratha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "raTa",
+     "href": "../w/ra_54a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sthā",
+     "lemma": "as",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "as",
+     "href": "../w/as.html",
+     "tier": "forms"
+    },
+    {
+     "form": "āpaya",
+     "lemma": "āpi",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Api",
+     "href": "../w/_41pi.html",
+     "tier": "forms"
+    },
+    {
+     "form": "me",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "acyuta",
+     "lemma": "acyuta",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "acyuta",
+     "href": "../w/acyuta.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.22",
+   "locus": "Bhagavadgītā 1.22",
+   "dcs": null,
+   "text": "yāvad etān nirīkṣe 'haṃ yoddhukāmān avasthitān | kair mayā saha yoddhavyam asmin raṇasamudyame",
+   "tokens": [
+    {
+     "form": "yāvad",
+     "lemma": "yāvat",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yAvat",
+     "href": "../w/y_41vat.html",
+     "tier": "forms"
+    },
+    {
+     "form": "etān",
+     "lemma": "etad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "etad",
+     "href": "../w/etad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "nirīkṣe",
+     "lemma": "nirīkṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "nirIkz",
+     "href": "../w/nir_49kz.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ahaṃ",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "yoddhukāmān",
+     "lemma": "yoddhukāma",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yodDukAma",
+     "href": "../w/yod_44uk_41ma.html",
+     "tier": "forms"
+    },
+    {
+     "form": "avasthitān",
+     "lemma": "avasthā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "avasTA",
+     "href": "../w/avas_54_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kair",
+     "lemma": "ka",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ka",
+     "href": "../w/ka.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mayā",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "saha",
+     "lemma": "saha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "saha",
+     "href": "../w/saha.html",
+     "tier": "forms"
+    },
+    {
+     "form": "yoddhavyam",
+     "lemma": "yudh",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yuD",
+     "href": "../w/yu_44.html",
+     "tier": "forms"
+    },
+    {
+     "form": "asmin",
+     "lemma": "idam",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "idam",
+     "href": "../w/idam.html",
+     "tier": "forms"
+    },
+    {
+     "form": "raṇasamudyame",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    }
+   ]
+  },
+  {
+   "n": "1.23",
+   "locus": "Bhagavadgītā 1.23",
+   "dcs": null,
+   "text": "yotsyamānān avekṣe 'haṃ ya ete 'tra samāgatāḥ | dhārtarāṣṭrasya durbuddher yuddhe priyacikīrṣavaḥ",
+   "tokens": [
+    {
+     "form": "yotsyamānān",
+     "lemma": "yudh",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yuD",
+     "href": "../w/yu_44.html",
+     "tier": "forms"
+    },
+    {
+     "form": "avekṣe",
+     "lemma": "avekṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "avekz",
+     "href": "../w/avekz.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ahaṃ",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ya",
+     "lemma": "yad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yad",
+     "href": "../w/yad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ete",
+     "lemma": "etad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "etad",
+     "href": "../w/etad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "atra",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "iti",
+     "href": "../w/iti.html",
+     "tier": "forms"
+    },
+    {
+     "form": "samāgatāḥ",
+     "lemma": "samāgam",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "samAgam",
+     "href": "../w/sam_41gam.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dhārtarāṣṭrasya",
+     "lemma": "dhārtarāṣṭra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "DArtarAzwra",
+     "href": "../w/_44_41rtar_41zwra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "durbuddher",
+     "lemma": "durbuddhi",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "durbudDi",
+     "href": "../w/durbud_44i.html",
+     "tier": "forms"
+    },
+    {
+     "form": "yuddhe",
+     "lemma": "yuddha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yudDa",
+     "href": "../w/yud_44a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "priyacikīrṣavas",
+     "lemma": "priyacikīrṣu",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "priyacikIrzu",
+     "href": "../w/priyacik_49rzu.html",
+     "tier": "cheda"
+    }
+   ]
+  },
+  {
+   "n": "1.24",
+   "locus": "Bhagavadgītā 1.24",
+   "dcs": null,
+   "text": "evam ukto hṛṣīkeśo guḍākeśena bhārata | senayor ubhayor madhye sthāpayitvā rathottamam",
+   "tokens": [
+    {
+     "form": "evam",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ukto",
+     "lemma": "vac",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vac",
+     "href": "../w/vac.html",
+     "tier": "forms"
+    },
+    {
+     "form": "hṛṣīkeśo",
+     "lemma": "hṛṣīkeśa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "hfzIkeSa",
+     "href": "../w/hfz_49ke_53a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "guḍākeśena",
+     "lemma": "guḍākeśa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "guqAkeSa",
+     "href": "../w/guq_41ke_53a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bhārata",
+     "lemma": "bhārata",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "BArata",
+     "href": "../w/_42_41rata.html",
+     "tier": "forms"
+    },
+    {
+     "form": "senayor",
+     "lemma": "senā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "senA",
+     "href": "../w/sen_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ubhayor",
+     "lemma": "ubhaya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "uBaya",
+     "href": "../w/u_42aya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "madhye",
+     "lemma": "madhya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "maDya",
+     "href": "../w/ma_44ya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sthā",
+     "lemma": "as",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "as",
+     "href": "../w/as.html",
+     "tier": "forms"
+    },
+    {
+     "form": "āpayitvā",
+     "lemma": "i",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "i",
+     "href": "../w/i.html",
+     "tier": "forms"
+    },
+    {
+     "form": "rathottamam",
+     "lemma": "rathottama",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "raTottama",
+     "href": "../w/ra_54ottama.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.25",
+   "locus": "Bhagavadgītā 1.25",
+   "dcs": null,
+   "text": "bhīṣma-droṇa-pramukhataḥ sarveṣāṃ ca mahīkṣitām | uvāca pārtha paśyaitān samavetān kurūn iti",
+   "tokens": [
+    {
+     "form": "bhīṣmadroṇapramukhataḥ",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "sarveṣāṃ",
+     "lemma": "sarva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sarva",
+     "href": "../w/sarva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mahīkṣitām",
+     "lemma": "mahīkṣit",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mahIkzit",
+     "href": "../w/mah_49kzit.html",
+     "tier": "forms"
+    },
+    {
+     "form": "uvāca",
+     "lemma": "vac",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vac",
+     "href": "../w/vac.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pārtha",
+     "lemma": "pārtha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pArTa",
+     "href": "../w/p_41r_54a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "paśya",
+     "lemma": "paś",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "paS",
+     "href": "../w/pa_53.html",
+     "tier": "forms"
+    },
+    {
+     "form": "etān",
+     "lemma": "etad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "etad",
+     "href": "../w/etad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "samavetān",
+     "lemma": "samave",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "samave",
+     "href": "../w/samave.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kurūn",
+     "lemma": "kuru",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kuru",
+     "href": "../w/kuru.html",
+     "tier": "forms"
+    },
+    {
+     "form": "iti",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.26",
+   "locus": "Bhagavadgītā 1.26",
+   "dcs": null,
+   "text": "tatrāpaśyat sthitān pārthaḥ pitṝn atha pitāmahān | ācāryān mātulān bhrātṝn putrān pautrān sakhīṃs tathā | śvaśurān suhṛdaś caiva senayor ubhayor api",
+   "tokens": [
+    {
+     "form": "tat",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "rā",
+     "lemma": "rai",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "rE",
+     "href": "../w/r_45.html",
+     "tier": "forms"
+    },
+    {
+     "form": "apaśyat",
+     "lemma": "paś",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "paS",
+     "href": "../w/pa_53.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sthitān",
+     "lemma": "sthā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sTA",
+     "href": "../w/s_54_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pārthaḥ",
+     "lemma": "pārtha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pArTa",
+     "href": "../w/p_41r_54a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pitṝn",
+     "lemma": "pitṛ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pitf",
+     "href": "../w/pitf.html",
+     "tier": "forms"
+    },
+    {
+     "form": "atha",
+     "lemma": "atha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "aTa",
+     "href": "../w/a_54a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pitāmahān",
+     "lemma": "pitāmaha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pitAmaha",
+     "href": "../w/pit_41maha.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ācāryān",
+     "lemma": "ācārya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "AcArya",
+     "href": "../w/_41c_41rya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mātulān",
+     "lemma": "mātula",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mAtula",
+     "href": "../w/m_41tula.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bhrātṝn",
+     "lemma": "bhrātṛ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "BrAtf",
+     "href": "../w/_42r_41tf.html",
+     "tier": "forms"
+    },
+    {
+     "form": "putrān",
+     "lemma": "putra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "putra",
+     "href": "../w/putra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pautrān",
+     "lemma": "pautra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pOtra",
+     "href": "../w/p_4ftra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sakhīṃs",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "tathā",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śvaśurān",
+     "lemma": "śvaśura",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "SvaSura",
+     "href": "../w/_53va_53ura.html",
+     "tier": "forms"
+    },
+    {
+     "form": "suhṛdaś",
+     "lemma": "suhṛd",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "suhfd",
+     "href": "../w/suhfd.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "eva",
+     "href": "../w/eva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "senayor",
+     "lemma": "senā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "senA",
+     "href": "../w/sen_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ubhayor",
+     "lemma": "ubhaya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "uBaya",
+     "href": "../w/u_42aya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "api",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "iti",
+     "href": "../w/iti.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.27",
+   "locus": "Bhagavadgītā 1.27",
+   "dcs": null,
+   "text": "tān samīkṣya sa kaunteyaḥ sarvān bandhūn avasthitān | kṛpayā parayāviṣṭo viṣīdann idam abravīt",
+   "tokens": [
+    {
+     "form": "tān",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "samīkṣya",
+     "lemma": "samīkṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "samIkz",
+     "href": "../w/sam_49kz.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sa",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kaunteyaḥ",
+     "lemma": "kaunteya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kOnteya",
+     "href": "../w/k_4fnteya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sarvān",
+     "lemma": "sarva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sarva",
+     "href": "../w/sarva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bandhūn",
+     "lemma": "bandhu",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "banDu",
+     "href": "../w/ban_44u.html",
+     "tier": "forms"
+    },
+    {
+     "form": "avasthitān",
+     "lemma": "avasthā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "avasTA",
+     "href": "../w/avas_54_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kṛpayā",
+     "lemma": "kṛpā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kfpA",
+     "href": "../w/kfp_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "parayā",
+     "lemma": "para",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "para",
+     "href": "../w/para.html",
+     "tier": "forms"
+    },
+    {
+     "form": "avis",
+     "lemma": "avi",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "avi",
+     "href": "../w/avi.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ṭo",
+     "lemma": "ṭa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "wa",
+     "href": "../w/wa.html",
+     "tier": "forms"
+    },
+    {
+     "form": "viṣi",
+     "lemma": "viṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "viz",
+     "href": "../w/viz.html",
+     "tier": "forms"
+    },
+    {
+     "form": "it",
+     "lemma": "id",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "id",
+     "href": "../w/id.html",
+     "tier": "forms"
+    },
+    {
+     "form": "an",
+     "lemma": "an",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "an",
+     "href": "../w/an.html",
+     "tier": "forms"
+    },
+    {
+     "form": "n",
+     "lemma": "n",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "n",
+     "href": "../w/n.html",
+     "tier": "forms"
+    },
+    {
+     "form": "idam",
+     "lemma": "idam",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "idam",
+     "href": "../w/idam.html",
+     "tier": "forms"
+    },
+    {
+     "form": "abravīt",
+     "lemma": "brū",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "brU",
+     "href": "../w/br_55.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.28",
+   "locus": "Bhagavadgītā 1.28",
+   "dcs": null,
+   "text": "dṛṣṭvemān svajanān kṛṣṇa yuyutsuṃ samupasthitam | sīdanti mama gātrāṇi mukhaṃ ca pariśuṣyati",
+   "tokens": [
+    {
+     "form": "dṛṣṭvā",
+     "lemma": "dṛś",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "dfS",
+     "href": "../w/df_53.html",
+     "tier": "forms"
+    },
+    {
+     "form": "im",
+     "lemma": "im",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "im",
+     "href": "../w/im.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ān",
+     "lemma": "āt",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "At",
+     "href": "../w/_41t.html",
+     "tier": "forms"
+    },
+    {
+     "form": "svajanān",
+     "lemma": "svajana",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "svajana",
+     "href": "../w/svajana.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kṛṣṇa",
+     "lemma": "kṛṣṇa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kfzRa",
+     "href": "../w/kfz_52a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "yuyutsuṃ",
+     "lemma": "yuyutsu",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yuyutsu",
+     "href": "../w/yuyutsu.html",
+     "tier": "forms"
+    },
+    {
+     "form": "samupasthitam",
+     "lemma": "samupasthā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "samupasTA",
+     "href": "../w/samupas_54_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sīdanti",
+     "lemma": "sad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sad",
+     "href": "../w/sad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mama",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "gātrāṇi",
+     "lemma": "gātra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "gAtra",
+     "href": "../w/g_41tra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mukhaṃ",
+     "lemma": "mukha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "muKa",
+     "href": "../w/mu_4ba.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pariśuṣyati",
+     "lemma": "pariśuṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pariSuz",
+     "href": "../w/pari_53uz.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.29",
+   "locus": "Bhagavadgītā 1.29",
+   "dcs": null,
+   "text": "vepathuś ca śarīre me romaharṣaś ca jāyate | gāṇḍīvaṃ sraṃsate hastāt tvak caiva paridahyate",
+   "tokens": [
+    {
+     "form": "vepathuś",
+     "lemma": "vepathu",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vepaTu",
+     "href": "../w/vepa_54u.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śarīre",
+     "lemma": "śarīra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "SarIra",
+     "href": "../w/_53ar_49ra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "me",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "romaharṣaś",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "jāyate",
+     "lemma": "jan",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "jan",
+     "href": "../w/jan.html",
+     "tier": "forms"
+    },
+    {
+     "form": "gāṇḍīvaṃ",
+     "lemma": "gāṇḍīva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "gARqIva",
+     "href": "../w/g_41_52q_49va.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sraṃsate",
+     "lemma": "sraṃs",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sraMs",
+     "href": "../w/sra_4ds.html",
+     "tier": "forms"
+    },
+    {
+     "form": "hastāt",
+     "lemma": "hasta",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "hasta",
+     "href": "../w/hasta.html",
+     "tier": "forms"
+    },
+    {
+     "form": "tvak",
+     "lemma": "tvac",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tvac",
+     "href": "../w/tvac.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "eva",
+     "href": "../w/eva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "paridahyate",
+     "lemma": "paridah",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "paridah",
+     "href": "../w/paridah.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.30",
+   "locus": "Bhagavadgītā 1.30",
+   "dcs": null,
+   "text": "na ca śaknomy avasthātuṃ bhramatīva ca me manaḥ | nimittāni ca paśyāmi viparītāni keśava",
+   "tokens": [
+    {
+     "form": "na",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śaknomy",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "avasthātuṃ",
+     "lemma": "avasthā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "avasTA",
+     "href": "../w/avas_54_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bhramati",
+     "lemma": "bhram",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Bram",
+     "href": "../w/_42ram.html",
+     "tier": "forms"
+    },
+    {
+     "form": "iva",
+     "lemma": "vā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vA",
+     "href": "../w/v_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "me",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "manaḥ",
+     "lemma": "manas",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "manas",
+     "href": "../w/manas.html",
+     "tier": "forms"
+    },
+    {
+     "form": "nimittāni",
+     "lemma": "nimitta",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "nimitta",
+     "href": "../w/nimitta.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "paśyāmi",
+     "lemma": "dṛś",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "dfS",
+     "href": "../w/df_53.html",
+     "tier": "forms"
+    },
+    {
+     "form": "viparītāni",
+     "lemma": "viparīta",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "viparIta",
+     "href": "../w/vipar_49ta.html",
+     "tier": "forms"
+    },
+    {
+     "form": "keśava",
+     "lemma": "keśava",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "keSava",
+     "href": "../w/ke_53ava.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.31",
+   "locus": "Bhagavadgītā 1.31",
+   "dcs": null,
+   "text": "na ca śreyo 'nupaśyāmi hatvā svajanam āhave | na kāṅkṣe vijayaṃ kṛṣṇa na ca rājyaṃ sukhāni ca",
+   "tokens": [
+    {
+     "form": "na",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śreyo",
+     "lemma": "śreyas",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Sreyas",
+     "href": "../w/_53reyas.html",
+     "tier": "forms"
+    },
+    {
+     "form": "anupaśyāmi",
+     "lemma": "anupaś",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "anupaS",
+     "href": "../w/anupa_53.html",
+     "tier": "forms"
+    },
+    {
+     "form": "hatvā",
+     "lemma": "han",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "han",
+     "href": "../w/han.html",
+     "tier": "forms"
+    },
+    {
+     "form": "svajanam",
+     "lemma": "svajana",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "svajana",
+     "href": "../w/svajana.html",
+     "tier": "forms"
+    },
+    {
+     "form": "āhave",
+     "lemma": "āhava",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Ahava",
+     "href": "../w/_41hava.html",
+     "tier": "forms"
+    },
+    {
+     "form": "na",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kāṅkṣe",
+     "lemma": "kāṅkṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kANkz",
+     "href": "../w/k_41_4ekz.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vijayaṃ",
+     "lemma": "vijaya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vijaya",
+     "href": "../w/vijaya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kṛṣṇa",
+     "lemma": "kṛṣṇa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kfzRa",
+     "href": "../w/kfz_52a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "na",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "rājyaṃ",
+     "lemma": "rājya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "rAjya",
+     "href": "../w/r_41jya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sukhāni",
+     "lemma": "sukha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "suKa",
+     "href": "../w/su_4ba.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.32",
+   "locus": "Bhagavadgītā 1.32",
+   "dcs": null,
+   "text": "kiṃ no rājyena govinda kiṃ bhogair jīvitena vā | yeṣām arthe kāṅkṣitaṃ no rājyaṃ bhogāḥ sukhāni ca",
+   "tokens": [
+    {
+     "form": "kiṃ",
+     "lemma": "ka",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ka",
+     "href": "../w/ka.html",
+     "tier": "forms"
+    },
+    {
+     "form": "no",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "rājyena",
+     "lemma": "rājya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "rAjya",
+     "href": "../w/r_41jya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "govinda",
+     "lemma": "govinda",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "govinda",
+     "href": "../w/govinda.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kiṃ",
+     "lemma": "ka",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ka",
+     "href": "../w/ka.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bhogair",
+     "lemma": "bhoga",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Boga",
+     "href": "../w/_42oga.html",
+     "tier": "forms"
+    },
+    {
+     "form": "jīvitena",
+     "lemma": "jīvita",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "jIvita",
+     "href": "../w/j_49vita.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vā",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "yeṣām",
+     "lemma": "yad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yad",
+     "href": "../w/yad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "arthe",
+     "lemma": "artha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "arTa",
+     "href": "../w/ar_54a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kāṅkṣitaṃ",
+     "lemma": "kāṅkṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kANkz",
+     "href": "../w/k_41_4ekz.html",
+     "tier": "forms"
+    },
+    {
+     "form": "no",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "rājyaṃ",
+     "lemma": "rājya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "rAjya",
+     "href": "../w/r_41jya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bhogāḥ",
+     "lemma": "bhoga",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Boga",
+     "href": "../w/_42oga.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sukhāni",
+     "lemma": "sukha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "suKa",
+     "href": "../w/su_4ba.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.33",
+   "locus": "Bhagavadgītā 1.33",
+   "dcs": null,
+   "text": "ta ime 'vasthitā yuddhe prāṇāṃs tyaktvā dhanāni ca | ācāryāḥ pitaraḥ putrās tathaiva ca pitāmahāḥ",
+   "tokens": [
+    {
+     "form": "ta",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ime",
+     "lemma": "idam",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "idam",
+     "href": "../w/idam.html",
+     "tier": "forms"
+    },
+    {
+     "form": "avasthitā",
+     "lemma": "avasthā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "avasTA",
+     "href": "../w/avas_54_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "yuddhe",
+     "lemma": "yuddha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yudDa",
+     "href": "../w/yud_44a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "prāṇāṃs",
+     "lemma": "prāṇa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "prARa",
+     "href": "../w/pr_41_52a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "tyaktvā",
+     "lemma": "tyaj",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tyaj",
+     "href": "../w/tyaj.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dhanāni",
+     "lemma": "dhana",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Dana",
+     "href": "../w/_44ana.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ācāryāḥ",
+     "lemma": "ācārya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "AcArya",
+     "href": "../w/_41c_41rya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pitaraḥ",
+     "lemma": "pitṛ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pitf",
+     "href": "../w/pitf.html",
+     "tier": "forms"
+    },
+    {
+     "form": "putrās",
+     "lemma": "putra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "putra",
+     "href": "../w/putra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "tathā",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "eva",
+     "href": "../w/eva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pitāmahāḥ",
+     "lemma": "pitāmaha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pitAmaha",
+     "href": "../w/pit_41maha.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.34",
+   "locus": "Bhagavadgītā 1.34",
+   "dcs": null,
+   "text": "mātulāḥ śvaśurāḥ pautrāḥ śyālāḥ saṃbandhinas tathā | etān na hantum icchāmi ghnato 'pi madhusūdana",
+   "tokens": [
+    {
+     "form": "mātulāḥ",
+     "lemma": "mātula",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mAtula",
+     "href": "../w/m_41tula.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śvaśurāḥ",
+     "lemma": "śvaśura",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "SvaSura",
+     "href": "../w/_53va_53ura.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pautrāḥ",
+     "lemma": "pautra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pOtra",
+     "href": "../w/p_4ftra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śyālāḥ",
+     "lemma": "śyāla",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "SyAla",
+     "href": "../w/_53y_41la.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sam",
+     "lemma": "sam",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sam",
+     "href": "../w/sam.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bandhinas",
+     "lemma": "bandh",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "banD",
+     "href": "../w/ban_44.html",
+     "tier": "cheda"
+    },
+    {
+     "form": "tathā",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "etān",
+     "lemma": "etad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "etad",
+     "href": "../w/etad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "na",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "hantum",
+     "lemma": "han",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "han",
+     "href": "../w/han.html",
+     "tier": "forms"
+    },
+    {
+     "form": "icchāmi",
+     "lemma": "iṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "iz",
+     "href": "../w/iz.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ghnato",
+     "lemma": "han",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "han",
+     "href": "../w/han.html",
+     "tier": "forms"
+    },
+    {
+     "form": "api",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "iti",
+     "href": "../w/iti.html",
+     "tier": "forms"
+    },
+    {
+     "form": "madhusūdana",
+     "lemma": "madhusūdana",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "maDusUdana",
+     "href": "../w/ma_44us_55dana.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.35",
+   "locus": "Bhagavadgītā 1.35",
+   "dcs": null,
+   "text": "api trailokyarājyasya hetoḥ kiṃ nu mahīkṛte | nihatya dhārtarāṣṭrān naḥ kā prītiḥ syāj janārdana",
+   "tokens": [
+    {
+     "form": "api",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "iti",
+     "href": "../w/iti.html",
+     "tier": "forms"
+    },
+    {
+     "form": "trā",
+     "lemma": "trā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "trA",
+     "href": "../w/tr_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "a",
+     "lemma": "a",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "a",
+     "href": "../w/a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ilā",
+     "lemma": "ilā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ilA",
+     "href": "../w/il_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "uk",
+     "lemma": "uc",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "uc",
+     "href": "../w/uc.html",
+     "tier": "forms"
+    },
+    {
+     "form": "i",
+     "lemma": "i",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "i",
+     "href": "../w/i.html",
+     "tier": "forms"
+    },
+    {
+     "form": "arāji",
+     "lemma": "rāj",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "rAj",
+     "href": "../w/r_41j.html",
+     "tier": "cheda"
+    },
+    {
+     "form": "asya",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "hetoḥ",
+     "lemma": "hetu",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "hetu",
+     "href": "../w/hetu.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kiṃ",
+     "lemma": "ka",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ka",
+     "href": "../w/ka.html",
+     "tier": "forms"
+    },
+    {
+     "form": "nu",
+     "lemma": "nu",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "nu",
+     "href": "../w/nu.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mahīkṛte",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "nihatya",
+     "lemma": "nihan",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "nihan",
+     "href": "../w/nihan.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dhārtarāṣṭrān",
+     "lemma": "dhārtarāṣṭra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "DArtarAzwra",
+     "href": "../w/_44_41rtar_41zwra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "naḥ",
+     "lemma": "na",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "na",
+     "href": "../w/na.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kā",
+     "lemma": "ka",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ka",
+     "href": "../w/ka.html",
+     "tier": "forms"
+    },
+    {
+     "form": "prītiḥ",
+     "lemma": "prīti",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "prIti",
+     "href": "../w/pr_49ti.html",
+     "tier": "forms"
+    },
+    {
+     "form": "syāj",
+     "lemma": "as",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "as",
+     "href": "../w/as.html",
+     "tier": "forms"
+    },
+    {
+     "form": "janārdana",
+     "lemma": "janārdana",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "janArdana",
+     "href": "../w/jan_41rdana.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.36",
+   "locus": "Bhagavadgītā 1.36",
+   "dcs": null,
+   "text": "pāpam evāśrayed asmān hatvaitān ātatāyinaḥ | tasmān nārhā vayaṃ hantuṃ dhārtarāṣṭrān svabāndhavān | svajanaṃ hi kathaṃ hatvā sukhinaḥ syāma mādhava",
+   "tokens": [
+    {
+     "form": "pāpam",
+     "lemma": "pāpa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pApa",
+     "href": "../w/p_41pa.html",
+     "tier": "forms"
+    },
+    {
+     "form": "evāśrayed",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "asmān",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "hatvā",
+     "lemma": "han",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "han",
+     "href": "../w/han.html",
+     "tier": "forms"
+    },
+    {
+     "form": "etān",
+     "lemma": "etad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "etad",
+     "href": "../w/etad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ātatāyinaḥ",
+     "lemma": "ātatāyin",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "AtatAyin",
+     "href": "../w/_41tat_41yin.html",
+     "tier": "forms"
+    },
+    {
+     "form": "tasmān",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "na",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "arhā",
+     "lemma": "arha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "arha",
+     "href": "../w/arha.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vayaṃ",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "hantuṃ",
+     "lemma": "han",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "han",
+     "href": "../w/han.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dhārtarāṣṭrān",
+     "lemma": "dhārtarāṣṭra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "DArtarAzwra",
+     "href": "../w/_44_41rtar_41zwra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "svabāndhavān",
+     "lemma": "svabāndhava",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "svabAnDava",
+     "href": "../w/svab_41n_44ava.html",
+     "tier": "forms"
+    },
+    {
+     "form": "svajanaṃ",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "hi",
+     "lemma": "hi",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "hi",
+     "href": "../w/hi.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kathaṃ",
+     "lemma": "katham",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kaTam",
+     "href": "../w/ka_54am.html",
+     "tier": "forms"
+    },
+    {
+     "form": "hatvā",
+     "lemma": "han",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "han",
+     "href": "../w/han.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sukhinaḥ",
+     "lemma": "sukhin",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "suKin",
+     "href": "../w/su_4bin.html",
+     "tier": "forms"
+    },
+    {
+     "form": "syāma",
+     "lemma": "as",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "as",
+     "href": "../w/as.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mādhava",
+     "lemma": "mādhava",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mADava",
+     "href": "../w/m_41_44ava.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.37",
+   "locus": "Bhagavadgītā 1.37",
+   "dcs": null,
+   "text": "yady apy ete na paśyanti lobhopahata-cetasaḥ | kula-kṣaya-kṛtaṃ doṣaṃ mitra-drohe ca pātakam",
+   "tokens": [
+    {
+     "form": "yady",
+     "lemma": "yad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yad",
+     "href": "../w/yad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "apy",
+     "lemma": "api",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "api",
+     "href": "../w/api.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ete",
+     "lemma": "etad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "etad",
+     "href": "../w/etad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "na",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "paśyanti",
+     "lemma": "dṛś",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "dfS",
+     "href": "../w/df_53.html",
+     "tier": "forms"
+    },
+    {
+     "form": "lobhopahatacetasaḥ",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "kulakṣayakṛtaṃ",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "doṣaṃ",
+     "lemma": "doṣa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "doza",
+     "href": "../w/doza.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mitradrohe",
+     "lemma": "mitradroha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mitradroha",
+     "href": "../w/mitradroha.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pātakam",
+     "lemma": "pātaka",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pAtaka",
+     "href": "../w/p_41taka.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.38",
+   "locus": "Bhagavadgītā 1.38",
+   "dcs": null,
+   "text": "kathaṃ na jñeyam asmābhiḥ pāpād asmān nivartitum | kulakṣayakṛtaṃ doṣaṃ prapaśyadbhir janārdana",
+   "tokens": [
+    {
+     "form": "kathaṃ",
+     "lemma": "katham",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kaTam",
+     "href": "../w/ka_54am.html",
+     "tier": "forms"
+    },
+    {
+     "form": "na",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "jñeyam",
+     "lemma": "jñā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "jYA",
+     "href": "../w/j_59_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "asmābhiḥ",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pāpād",
+     "lemma": "pāpa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pApa",
+     "href": "../w/p_41pa.html",
+     "tier": "forms"
+    },
+    {
+     "form": "asmān",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "nivartitum",
+     "lemma": "nivṛt",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "nivft",
+     "href": "../w/nivft.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kulakṣayakṛtaṃ",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "doṣaṃ",
+     "lemma": "doṣa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "doza",
+     "href": "../w/doza.html",
+     "tier": "forms"
+    },
+    {
+     "form": "prapaśyadbhir",
+     "lemma": "prapaś",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "prapaS",
+     "href": "../w/prapa_53.html",
+     "tier": "forms"
+    },
+    {
+     "form": "janārdana",
+     "lemma": "janārdana",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "janArdana",
+     "href": "../w/jan_41rdana.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.39",
+   "locus": "Bhagavadgītā 1.39",
+   "dcs": null,
+   "text": "kulakṣaye praṇaśyanti kuladharmāḥ sanātanāḥ | dharme naṣṭe kulaṃ kṛtsnam adharmo 'bhibhavaty uta",
+   "tokens": [
+    {
+     "form": "kulakṣaye",
+     "lemma": "kulakṣayā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kulakzayA",
+     "href": "../w/kulakzay_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "praṇaśyanti",
+     "lemma": "praṇaś",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "praRaS",
+     "href": "../w/pra_52a_53.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kuladharmās",
+     "lemma": "kuladharma",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kulaDarma",
+     "href": "../w/kula_44arma.html",
+     "tier": "cheda"
+    },
+    {
+     "form": "sanātanāḥ",
+     "lemma": "sanātana",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sanAtana",
+     "href": "../w/san_41tana.html",
+     "tier": "forms"
+    },
+    {
+     "form": "dharme",
+     "lemma": "dharma",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Darma",
+     "href": "../w/_44arma.html",
+     "tier": "forms"
+    },
+    {
+     "form": "naṣṭe",
+     "lemma": "naś",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "naS",
+     "href": "../w/na_53.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kulaṃ",
+     "lemma": "kula",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kula",
+     "href": "../w/kula.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kṛtsnam",
+     "lemma": "kṛtsna",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kftsna",
+     "href": "../w/kftsna.html",
+     "tier": "forms"
+    },
+    {
+     "form": "adharmo",
+     "lemma": "adharma",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "aDarma",
+     "href": "../w/a_44arma.html",
+     "tier": "forms"
+    },
+    {
+     "form": "abhibhavaty",
+     "lemma": "abhibhū",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "aBiBU",
+     "href": "../w/a_42i_42_55.html",
+     "tier": "forms"
+    },
+    {
+     "form": "uta",
+     "lemma": "uta",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "uta",
+     "href": "../w/uta.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.40",
+   "locus": "Bhagavadgītā 1.40",
+   "dcs": null,
+   "text": "adharmābhibhavāt kṛṣṇa praduṣyanti kulastriyaḥ | strīṣu duṣṭāsu vārṣṇeya jāyate varṇa-saṃkaraḥ",
+   "tokens": [
+    {
+     "form": "adharma",
+     "lemma": "adharma",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "aDarma",
+     "href": "../w/a_44arma.html",
+     "tier": "forms"
+    },
+    {
+     "form": "abhibhavāt",
+     "lemma": "abhibhava",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "aBiBava",
+     "href": "../w/a_42i_42ava.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kṛṣṇa",
+     "lemma": "kṛṣṇa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kfzRa",
+     "href": "../w/kfz_52a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "praduṣyanti",
+     "lemma": "praduṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "praduz",
+     "href": "../w/praduz.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kulastriyaḥ",
+     "lemma": "kulastrī",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kulastrI",
+     "href": "../w/kulastr_49.html",
+     "tier": "forms"
+    },
+    {
+     "form": "strīṣu",
+     "lemma": "strī",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "strI",
+     "href": "../w/str_49.html",
+     "tier": "forms"
+    },
+    {
+     "form": "duṣṭāsu",
+     "lemma": "duṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "duz",
+     "href": "../w/duz.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vārṣṇeya",
+     "lemma": "vārṣṇeya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vArzReya",
+     "href": "../w/v_41rz_52eya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "jāyate",
+     "lemma": "jan",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "jan",
+     "href": "../w/jan.html",
+     "tier": "forms"
+    },
+    {
+     "form": "varṇas",
+     "lemma": "varṇa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "varRa",
+     "href": "../w/var_52a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "am",
+     "lemma": "am",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "am",
+     "href": "../w/am.html",
+     "tier": "forms"
+    },
+    {
+     "form": "karas",
+     "lemma": "kṛ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kf",
+     "href": "../w/kf.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.41",
+   "locus": "Bhagavadgītā 1.41",
+   "dcs": null,
+   "text": "saṃkaro narakāyaiva kulaghnānāṃ kulasya ca | patanti pitaro hy eṣāṃ luptapiṇḍodakakriyāḥ",
+   "tokens": [
+    {
+     "form": "saṃkaro",
+     "lemma": "saṃkara",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "saMkara",
+     "href": "../w/sa_4dkara.html",
+     "tier": "forms"
+    },
+    {
+     "form": "narakāya",
+     "lemma": "naraka",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "naraka",
+     "href": "../w/naraka.html",
+     "tier": "forms"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "eva",
+     "href": "../w/eva.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kulaghnānāṃ",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "kulasya",
+     "lemma": "kula",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kula",
+     "href": "../w/kula.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "patanti",
+     "lemma": "pat",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pat",
+     "href": "../w/pat.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pitaro",
+     "lemma": "pitṛ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pitf",
+     "href": "../w/pitf.html",
+     "tier": "forms"
+    },
+    {
+     "form": "hy",
+     "lemma": "hi",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "hi",
+     "href": "../w/hi.html",
+     "tier": "forms"
+    },
+    {
+     "form": "eṣāṃ",
+     "lemma": "idam",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "idam",
+     "href": "../w/idam.html",
+     "tier": "forms"
+    },
+    {
+     "form": "luptapiṇḍodakakriyās",
+     "lemma": "luptapiṇḍodakakriya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "luptapiRqodakakriya",
+     "href": "../w/luptapi_52qodakakriya.html",
+     "tier": "cheda"
+    }
+   ]
+  },
+  {
+   "n": "1.42",
+   "locus": "Bhagavadgītā 1.42",
+   "dcs": null,
+   "text": "doṣair etaiḥ kulaghnānāṃ varṇasaṃkarakārakaiḥ | utsādyante jātidharmāḥ kuladharmāś ca śāśvatāḥ",
+   "tokens": [
+    {
+     "form": "doṣair",
+     "lemma": "doṣa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "doza",
+     "href": "../w/doza.html",
+     "tier": "forms"
+    },
+    {
+     "form": "etaiḥ",
+     "lemma": "etad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "etad",
+     "href": "../w/etad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kulaghnānāṃ",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "varṇas",
+     "lemma": "varṇa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "varRa",
+     "href": "../w/var_52a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "am",
+     "lemma": "am",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "am",
+     "href": "../w/am.html",
+     "tier": "forms"
+    },
+    {
+     "form": "karaka",
+     "lemma": "karaka",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "karaka",
+     "href": "../w/karaka.html",
+     "tier": "forms"
+    },
+    {
+     "form": "arakais",
+     "lemma": "ṛ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "f",
+     "href": "../w/f.html",
+     "tier": "cheda"
+    },
+    {
+     "form": "ut",
+     "lemma": "ud",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ud",
+     "href": "../w/ud.html",
+     "tier": "forms"
+    },
+    {
+     "form": "sādyante",
+     "lemma": "sad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "sad",
+     "href": "../w/sad.html",
+     "tier": "cheda"
+    },
+    {
+     "form": "jā",
+     "lemma": "ja",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ja",
+     "href": "../w/ja.html",
+     "tier": "forms"
+    },
+    {
+     "form": "atidha",
+     "lemma": "atidhā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "atiDA",
+     "href": "../w/ati_44_41.html",
+     "tier": "cheda"
+    },
+    {
+     "form": "ṝm",
+     "lemma": "ṝ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "F",
+     "href": "../w/_46.html",
+     "tier": "cheda"
+    },
+    {
+     "form": "ās",
+     "lemma": "ās",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "As",
+     "href": "../w/_41s.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kuladharmāś",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ca",
+     "href": "../w/ca.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śāśvatāḥ",
+     "lemma": "śāśvata",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "SASvata",
+     "href": "../w/_53_41_53vata.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.43",
+   "locus": "Bhagavadgītā 1.43",
+   "dcs": null,
+   "text": "utsanna-kula-dharmāṇāṃ manuṣyāṇāṃ janārdana | narake niyataṃ vāso bhavatīty anuśuśruma",
+   "tokens": [
+    {
+     "form": "utsannakuladharmāṇāṃ",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "manuṣyāṇāṃ",
+     "lemma": "manuṣya",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "manuzya",
+     "href": "../w/manuzya.html",
+     "tier": "forms"
+    },
+    {
+     "form": "janārdana",
+     "lemma": "janārdana",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "janArdana",
+     "href": "../w/jan_41rdana.html",
+     "tier": "forms"
+    },
+    {
+     "form": "narake",
+     "lemma": "naraka",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "naraka",
+     "href": "../w/naraka.html",
+     "tier": "forms"
+    },
+    {
+     "form": "niyataṃ",
+     "lemma": "niyam",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "niyam",
+     "href": "../w/niyam.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vāso",
+     "lemma": "vāsas",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vAsas",
+     "href": "../w/v_41sas.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bhavatīty",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "anuśuśruma",
+     "lemma": "anuśru",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "anuSru",
+     "href": "../w/anu_53ru.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.44",
+   "locus": "Bhagavadgītā 1.44",
+   "dcs": null,
+   "text": "aho bata mahat pāpaṃ kartuṃ vyavasitā vayam | yad rājyasukhalobhena hantuṃ svajanam udyatāḥ",
+   "tokens": [
+    {
+     "form": "aho",
+     "lemma": "ahar",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "ahar",
+     "href": "../w/ahar.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bata",
+     "lemma": "bata",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "bata",
+     "href": "../w/bata.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mahat",
+     "lemma": "mahat",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mahat",
+     "href": "../w/mahat.html",
+     "tier": "forms"
+    },
+    {
+     "form": "pāpaṃ",
+     "lemma": "pāpa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "pApa",
+     "href": "../w/p_41pa.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kartuṃ",
+     "lemma": "kṛ",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kf",
+     "href": "../w/kf.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vī",
+     "lemma": "vī",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vI",
+     "href": "../w/v_49.html",
+     "tier": "forms"
+    },
+    {
+     "form": "avas",
+     "lemma": "avas",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "avas",
+     "href": "../w/avas.html",
+     "tier": "forms"
+    },
+    {
+     "form": "itā",
+     "lemma": "i",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "i",
+     "href": "../w/i.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vayam",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "yad",
+     "lemma": "yad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yad",
+     "href": "../w/yad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "rājyasukhalobhena",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "hantuṃ",
+     "lemma": "han",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "han",
+     "href": "../w/han.html",
+     "tier": "forms"
+    },
+    {
+     "form": "svajanam",
+     "lemma": "svajana",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "svajana",
+     "href": "../w/svajana.html",
+     "tier": "forms"
+    },
+    {
+     "form": "udyatāḥ",
+     "lemma": "udyam",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "udyam",
+     "href": "../w/udyam.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.45",
+   "locus": "Bhagavadgītā 1.45",
+   "dcs": null,
+   "text": "yadi mām apratīkāram aśastraṃ śastra-pāṇayaḥ | dhārtarāṣṭrā raṇe hanyus tan me kṣemataraṃ bhavet",
+   "tokens": [
+    {
+     "form": "yadi",
+     "lemma": "yad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "yad",
+     "href": "../w/yad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "mām",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "apratīkāram",
+     "lemma": "apratīkāra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "apratIkAra",
+     "href": "../w/aprat_49k_41ra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "aśastraṃ",
+     "lemma": "aśastra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "aSastra",
+     "href": "../w/a_53astra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śastrapāṇayas",
+     "lemma": "śastrapāṇi",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "SastrapARi",
+     "href": "../w/_53astrap_41_52i.html",
+     "tier": "cheda"
+    },
+    {
+     "form": "dhārtarāṣṭrā",
+     "lemma": "dhārtarāṣṭra",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "DArtarAzwra",
+     "href": "../w/_44_41rtar_41zwra.html",
+     "tier": "forms"
+    },
+    {
+     "form": "raṇe",
+     "lemma": "raṇa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "raRa",
+     "href": "../w/ra_52a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "hanyus",
+     "lemma": "han",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "han",
+     "href": "../w/han.html",
+     "tier": "cheda"
+    },
+    {
+     "form": "tan",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "me",
+     "lemma": "mad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "mad",
+     "href": "../w/mad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "kṣemataraṃ",
+     "lemma": "kṣematara",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "kzematara",
+     "href": "../w/kzematara.html",
+     "tier": "forms"
+    },
+    {
+     "form": "bhavet",
+     "lemma": "bhū",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "BU",
+     "href": "../w/_42_55.html",
+     "tier": "forms"
+    }
+   ]
+  },
+  {
+   "n": "1.46",
+   "locus": "Bhagavadgītā 1.46",
+   "dcs": null,
+   "text": "evam uktvārjunaḥ saṃkhye rathopastha upāviśat | visṛjya saśaraṃ cāpaṃ śokasaṃvignamānasaḥ",
+   "tokens": [
+    {
+     "form": "evam",
+     "lemma": "tad",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "tad",
+     "href": "../w/tad.html",
+     "tier": "forms"
+    },
+    {
+     "form": "uktvā",
+     "lemma": "vac",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vac",
+     "href": "../w/vac.html",
+     "tier": "forms"
+    },
+    {
+     "form": "arjunas",
+     "lemma": "arjuna",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "arjuna",
+     "href": "../w/arjuna.html",
+     "tier": "forms"
+    },
+    {
+     "form": "saṃkhye",
+     "lemma": "saṃkhyā",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "saMKyA",
+     "href": "../w/sa_4d_4by_41.html",
+     "tier": "forms"
+    },
+    {
+     "form": "rathopastha",
+     "lemma": "rathopastha",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "raTopasTa",
+     "href": "../w/ra_54opas_54a.html",
+     "tier": "forms"
+    },
+    {
+     "form": "upāviśat",
+     "lemma": "upaviś",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "upaviS",
+     "href": "../w/upavi_53.html",
+     "tier": "forms"
+    },
+    {
+     "form": "visṛjya",
+     "lemma": "visṛj",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "visfj",
+     "href": "../w/visfj.html",
+     "tier": "forms"
+    },
+    {
+     "form": "saśaraṃ",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "resolved": false
+    },
+    {
+     "form": "cāpaṃ",
+     "lemma": "cāpa",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "cApa",
+     "href": "../w/c_41pa.html",
+     "tier": "forms"
+    },
+    {
+     "form": "śokas",
+     "lemma": "śoka",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "Soka",
+     "href": "../w/_53oka.html",
+     "tier": "forms"
+    },
+    {
+     "form": "am",
+     "lemma": "am",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "am",
+     "href": "../w/am.html",
+     "tier": "forms"
+    },
+    {
+     "form": "vignam",
+     "lemma": "vij",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "vij",
+     "href": "../w/vij.html",
+     "tier": "forms"
+    },
+    {
+     "form": "ānas",
+     "lemma": "an",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "an",
+     "href": "../w/an.html",
+     "tier": "forms"
+    },
+    {
+     "form": "as",
+     "lemma": "as",
+     "upos": "",
+     "morph": "",
+     "gloss": "",
+     "slp1": "as",
+     "href": "../w/as.html",
+     "tier": "forms"
+    }
+   ]
+  }
+ ]
+}
