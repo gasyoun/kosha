@@ -34,6 +34,8 @@ data/d5_profile.log
 data/d5_measurements.json
 # E1 dual-engine comparison outputs (regenerable via scripts/compare_vidyut_cologne.py);
 # the narrative lives in E1_DIVERGENCE_REPORT.md, the raw stats are regenerable.
-data/e1/
+# `dhatu_crosswalk.json` (H855) is the exception: a small COMMITTED run-time input
+# so the verb comparison needs only bundled vidyut, not the external vidyut-data.
+data/e1/e1_*
 # E1 hybridize pass measurement outputs (regenerable via scripts/build_hybrid_forms.py).
 data/hybrid/
