@@ -31,7 +31,8 @@
   .pk[disabled]{opacity:.5;cursor:not-allowed}
   .sent{border-top:1px solid var(--line);padding:1rem 0 .4rem}
   .locus{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-  .deva{font-size:1.15rem;margin:.25rem 0 .6rem;color:var(--fg)}
+  .deva{font-size:1.3rem;margin:.25rem 0 .1rem;color:var(--fg)}
+  .iast{font-size:.95rem;margin:0 0 .6rem;color:var(--muted);font-style:italic}
   .toks{display:flex;flex-wrap:wrap;gap:.3rem}
   .tok{display:inline-block;padding:.12rem .5rem;border-radius:.5rem;background:var(--chip);
     color:var(--link);text-decoration:none;font-size:.98rem;border:1px solid transparent}
@@ -106,9 +107,11 @@
         return '<span class="tok un" title="'+meta+' (no card)">'+esc(t.form)+
                '<small>'+esc(t.lemma)+'</small></span>';
       }).join("");
+      var head = s.deva
+        ? '<div class="deva">'+esc(s.deva)+'</div><div class="iast">'+esc(s.text)+'</div>'
+        : '<div class="deva">'+esc(s.text)+'</div>';
       return '<div class="sent"><div class="locus">'+esc(s.locus)+'</div>'+
-             '<div class="deva">'+esc(s.text)+'</div>'+
-             '<div class="toks">'+toks+'</div></div>';
+             head+'<div class="toks">'+toks+'</div></div>';
     }).join("");
     document.getElementById("passage").innerHTML = pas;
     document.querySelectorAll(".pk").forEach(function(b){
