@@ -14,6 +14,16 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **Upasarga semantics on the `/w/` root card (H876 W6 follow-up).** Root word-pages
+  now carry a crawlable "Preverb senses (upasarga)" `<details>` panel driven by the
+  [`sanskrit-upasarga-semantics`](https://github.com/gasyoun/kosha/blob/main/data/gita/upasarga_semantics.tsv)
+  dataset (√vac → pra-vac "declare"; √gam → ava-gam "understand"). Added
+  `_upasarga_block()` to [`app/word_page.py`](https://github.com/gasyoun/kosha/blob/main/app/word_page.py)
+  — a pure function of the SLP1 lemma + the committed dataset, so it is prerender ∥
+  SSR byte-identical, host-independent and crawlable (all 15 word-page tests pass).
+  This closes the deferred `/w/` surfacing of roadmap W6.
+
 ## [0.32.0] - 2026-07-13
 
 ### Added

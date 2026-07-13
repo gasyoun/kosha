@@ -29,7 +29,28 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent / "sanskrit-util" / "py"))
-from sanskrit_util import from_slp1, slp1_to_devanagari  # noqa: E402
+from sanskrit_util import from_slp1, slp1_to_devanagari, to_slp1  # noqa: E402
+
+
+def _load_upasarga():
+    """{root_slp1: [(combined, sense), …]} from the committed W6 dataset
+    (data/gita/upasarga_semantics.tsv). Loaded once; a pure function of the
+    committed file, so prerender ∥ SSR stay byte-identical."""
+    import csv
+    d = {}
+    p = Path(__file__).resolve().parent.parent / "data" / "gita" / "upasarga_semantics.tsv"
+    if not p.exists():
+        return d
+    with p.open(encoding="utf-8") as f:
+        for r in csv.DictReader(f, delimiter="\t"):
+            if not r["preverb"]:
+                continue
+            key = to_slp1(r["root"].replace("√", "").replace("-", "").strip())
+            d.setdefault(key, []).append((r["combined"], r["sense"]))
+    return d
+
+
+_UPASARGA = _load_upasarga()
 
 # Fixed presentation order (P5-1). RU is intentionally absent until the P6 gates
 # (G5 review + Kochergina rights) clear — see IMPLEMENTATION_PLAN.md §P6 and
@@ -187,6 +208,23 @@ def _paradigm_block(slp1, base):
     )
 
 
+def _upasarga_block(slp1):
+    """Root cards only: how preverbs (upasarga) shift this root's sense, from the
+    W6 dataset. A pure function of slp1 + the committed TSV, so it is prerender ∥
+    SSR byte-identical and crawlable (a static <details>, no host, no JS)."""
+    variants = _UPASARGA.get(slp1)
+    if not variants:
+        return ""
+    esc = html.escape
+    items = "".join(
+        f'<li><span class="upa-pv">{esc(c)}</span> — {esc(s)}</li>' for c, s in variants)
+    return (
+        '<details class="disclosure upasarga">'
+        '<summary>Preverb senses (upasarga)</summary>'
+        f'<ul class="upa-list">{items}</ul></details>'
+    )
+
+
 PAGE_CSS = """
 :root{--fg:#1a1a1a;--muted:#6b7280;--border:#d7d7db;--accent:#7b2d26;
 --card-bg:#fafafa;--head-bg:#f0f0f2;--hit-bg:#fdf3e7;--tag-bg:#ece7e0;
@@ -234,6 +272,8 @@ background:var(--card-bg)}
 .disclosure{margin:.8rem 0 0;border:1px solid var(--border);border-radius:8px;
 background:var(--card-bg);padding:.3rem .8rem}
 .disclosure summary{cursor:pointer;font-weight:600;font-size:.9rem;padding:.3rem 0}
+.upa-list{margin:.2rem 0 .4rem;padding-left:1.1rem;font-size:.9rem}
+.upa-pv{font-weight:600}
 .ev-list{margin:.2rem 0 .4rem;padding-left:1.1rem;font-size:.9rem}
 .example{margin:.3rem 0;padding:.4rem .7rem;border-left:3px solid var(--accent);
 background:var(--hit-bg);font-size:1.05rem}
@@ -309,6 +349,7 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
         + panels
         + _evidence_block(ev)
         + _paradigm_block(slp1, base)
+        + _upasarga_block(slp1)
         + '<footer class="wp-foot">Gasuns Sanskrit Dictionary · '
         + '<a href="%sinflect/">inflection lookup</a> · ' % esc(base)
         + '<a href="%sbrowse/">browse</a> · ' % esc(base)

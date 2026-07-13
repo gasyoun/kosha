@@ -999,9 +999,9 @@
       "builder": "scripts/extract_upasarga_semantics.py + scripts/build_upasarga_page.py (Gita.xlsm verbs sheet, H876 W6)",
       "consumers": [
         "reading/upasarga/ page",
-        "(follow-up) /w/ root-card upasarga panel"
+        "/w/ root-card upasarga panel (app/word_page.py)"
       ],
-      "notes": "H848 roadmap W6 (final workstream). Public/MIT, credit Dr. Marcis Gasuns. Data statement docs/data-statements/upasarga-semantics.meta.md. Deep /w/-card integration is a documented follow-up."
+      "notes": "H848 roadmap W6 (final workstream). Public/MIT, credit Dr. Marcis Gasuns. Data statement docs/data-statements/upasarga-semantics.meta.md. Surfaced on /w/ root cards (app/word_page.py _upasarga_block) + the reading/upasarga/ page."
     }
   ]
 }
