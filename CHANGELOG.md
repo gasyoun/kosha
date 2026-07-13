@@ -14,6 +14,18 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Changed
+- **H871 (roadmap W1): Gītā reader extended to all 18 adhyāyas.**
+  [`scripts/build_reading_pack_gita.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_reading_pack_gita.py)
+  now builds **one gold pack per chapter** (`reading/data/gita-1..18.js`) directly
+  off the W0 master [`data/gita/gita_gold_master.tsv`](https://github.com/gasyoun/kosha/blob/main/data/gita/gita_gold_master.tsv)
+  — **701 verses / 9,092 words, ~99.5 % linked** to `/w/` cards, with Devanagari +
+  IAST + English gloss per verse. The [`reading/`](https://github.com/gasyoun/kosha/blob/main/reading/index.html)
+  viewer gains a chapter picker (Nala 1 + Gītā 1–18). The chapter-1-only source
+  (`gita-1_gold_sanskritgrammar.tsv`) and `extract_gita_gold.py` are retired —
+  the reader is now unified on the master. Dataset `gita-reading-pack-1` →
+  `gita-reading-pack` (all 18 adhyāyas).
+
 ## [0.28.0] - 2026-07-13
 
 ### Added

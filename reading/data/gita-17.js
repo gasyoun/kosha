@@ -1,0 +1,3659 @@
+window.READING_DATA = window.READING_DATA || {};
+window.READING_DATA["gita-17"] = {
+ "slug": "gita-17",
+ "chapter": 17,
+ "title": "Gītā 17 — Śraddhātrayavibhāga (Bhagavadgītā)",
+ "ref": "BhG 17",
+ "text_name": "Bhagavadgītā",
+ "built": "2026-07-13",
+ "source": "Word-by-word gold analysis: SanskritGrammar/Concordance/Gita.xlsm (hand-curated), via data/gita/gita_gold_master.tsv.",
+ "stats": {
+  "sentences": 28,
+  "tokens": 339,
+  "linked_tokens": 338,
+  "link_rate_pct": 99.7
+ },
+ "sentences": [
+  {
+   "n": "17.1",
+   "locus": "Bhagavadgītā 17.1",
+   "dcs": null,
+   "text": "arjuna uvāca",
+   "deva": "अर्जुनः उवाच​ ये शास्त्रविधिम् उत्सृज्य​ यजन्ते श्रद्धया अन्विताः तेषाम् निष्ठा तु का कृष्ण​ सत्त्वम् आहो रजः तमः",
+   "tokens": [
+    {
+     "form": "arjunaḥ",
+     "lemma": "arjuna",
+     "upos": "",
+     "morph": "",
+     "gloss": "white, clear, Arjuna",
+     "deva": "अर्जुनः",
+     "slp1": "arjuna",
+     "href": "../w/arjuna.html"
+    },
+    {
+     "form": "uvāca",
+     "lemma": "√vac",
+     "upos": "",
+     "morph": "",
+     "gloss": "he spoke",
+     "deva": "उवाच​",
+     "slp1": "vac",
+     "href": "../w/vac.html"
+    },
+    {
+     "form": "ye",
+     "lemma": "yat",
+     "upos": "",
+     "morph": "",
+     "gloss": "those who",
+     "deva": "ये",
+     "slp1": "yat",
+     "href": "../w/yat.html"
+    },
+    {
+     "form": "śāstra-vidhim",
+     "lemma": "śāstra-vidhi",
+     "upos": "",
+     "morph": "",
+     "gloss": "injuction of scriptures",
+     "deva": "शास्त्रविधिम्",
+     "slp1": "SAstraviDi",
+     "href": "../w/_53_41stravi_44i.html"
+    },
+    {
+     "form": "utsṛjya",
+     "lemma": "ut-√sṛj",
+     "upos": "",
+     "morph": "",
+     "gloss": "after discarding",
+     "deva": "उत्सृज्य​",
+     "slp1": "utsfj",
+     "href": "../w/utsfj.html"
+    },
+    {
+     "form": "yajante",
+     "lemma": "√yaj",
+     "upos": "",
+     "morph": "",
+     "gloss": "they worship, they offer in sacrifice",
+     "deva": "यजन्ते",
+     "slp1": "yaj",
+     "href": "../w/yaj.html"
+    },
+    {
+     "form": "śraddhayā",
+     "lemma": "śraddhā",
+     "upos": "",
+     "morph": "",
+     "gloss": "with faith",
+     "deva": "श्रद्धया",
+     "slp1": "SradDA",
+     "href": "../w/_53rad_44_41.html"
+    },
+    {
+     "form": "anvitāḥ",
+     "lemma": "anvita",
+     "upos": "",
+     "morph": "",
+     "gloss": "who are endowed",
+     "deva": "अन्विताः",
+     "slp1": "anvita",
+     "href": "../w/anvita.html"
+    },
+    {
+     "form": "teṣām",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "of them",
+     "deva": "तेषाम्",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "niṣṭhā",
+     "lemma": "ni-ṣṭhā",
+     "upos": "",
+     "morph": "",
+     "gloss": "state, firmness, devotion, faith, perfection, conclusion, death",
+     "deva": "निष्ठा",
+     "slp1": "nizWA",
+     "href": "../w/niz_57_41.html"
+    },
+    {
+     "form": "tu",
+     "lemma": "tu",
+     "upos": "",
+     "morph": "",
+     "gloss": "but, then, or, and",
+     "deva": "तु",
+     "slp1": "tu",
+     "href": "../w/tu.html"
+    },
+    {
+     "form": "kā",
+     "lemma": "kim",
+     "upos": "",
+     "morph": "",
+     "gloss": "what",
+     "deva": "का",
+     "slp1": "kim",
+     "href": "../w/kim.html"
+    },
+    {
+     "form": "kṛṣṇa",
+     "lemma": "kṛṣṇa",
+     "upos": "",
+     "morph": "",
+     "gloss": "O dark one, O Kṛṣṇa",
+     "deva": "कृष्ण​",
+     "slp1": "kfzRa",
+     "href": "../w/kfz_52a.html"
+    },
+    {
+     "form": "sattvam",
+     "lemma": "sattva",
+     "upos": "",
+     "morph": "",
+     "gloss": "being, essence, wisdom, spirit, one of the three guṇas",
+     "deva": "सत्त्वम्",
+     "slp1": "sattva",
+     "href": "../w/sattva.html"
+    },
+    {
+     "form": "āho",
+     "lemma": "āho",
+     "upos": "",
+     "morph": "",
+     "gloss": "is it so?!",
+     "deva": "आहो",
+     "slp1": "Aho",
+     "href": "../w/_41ho.html"
+    },
+    {
+     "form": "rajaḥ",
+     "lemma": "rajas",
+     "upos": "",
+     "morph": "",
+     "gloss": "coloured, dust, passion, one of the three guṇas",
+     "deva": "रजः",
+     "slp1": "rajas",
+     "href": "../w/rajas.html"
+    },
+    {
+     "form": "tamaḥ",
+     "lemma": "tamas",
+     "upos": "",
+     "morph": "",
+     "gloss": "darkness, gloom, dullness, passivity, one of the three guṇas",
+     "deva": "तमः",
+     "slp1": "tamas",
+     "href": "../w/tamas.html"
+    }
+   ]
+  },
+  {
+   "n": "17.2",
+   "locus": "Bhagavadgītā 17.2",
+   "dcs": null,
+   "text": "śrī-bhagavān uvāca",
+   "deva": "श्रीभगवान् उवाच​ त्रिविधा भवति श्रद्धा देहिनाम् सा स्वभावजा सात्त्विकी राजसी च​ एव​ तामसी च​ इति ताम् शृणु",
+   "tokens": [
+    {
+     "form": "śrī-bhagavān",
+     "lemma": "śrī-bhagavant",
+     "upos": "",
+     "morph": "",
+     "gloss": "the Lord united with majesty",
+     "deva": "श्रीभगवान्",
+     "slp1": "Baj",
+     "href": "../w/_42aj.html"
+    },
+    {
+     "form": "uvāca",
+     "lemma": "√vac",
+     "upos": "",
+     "morph": "",
+     "gloss": "he spoke",
+     "deva": "उवाच​",
+     "slp1": "vac",
+     "href": "../w/vac.html"
+    },
+    {
+     "form": "tri-vidhā",
+     "lemma": "tri-vidha",
+     "upos": "",
+     "morph": "",
+     "gloss": "threefold, of three parts",
+     "deva": "त्रिविधा",
+     "slp1": "triviDa",
+     "href": "../w/trivi_44a.html"
+    },
+    {
+     "form": "bhavati",
+     "lemma": "√bhū",
+     "upos": "",
+     "morph": "",
+     "gloss": "it  is",
+     "deva": "भवति",
+     "slp1": "BU",
+     "href": "../w/_42_55.html"
+    },
+    {
+     "form": "śraddhā",
+     "lemma": "śraddhā",
+     "upos": "",
+     "morph": "",
+     "gloss": "faith",
+     "deva": "श्रद्धा",
+     "slp1": "SradDA",
+     "href": "../w/_53rad_44_41.html"
+    },
+    {
+     "form": "dehinām",
+     "lemma": "dehin",
+     "upos": "",
+     "morph": "",
+     "gloss": "of the embodied ones",
+     "deva": "देहिनाम्",
+     "slp1": "dehin",
+     "href": "../w/dehin.html"
+    },
+    {
+     "form": "sā",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that",
+     "deva": "सा",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "sva-bhāva-jā",
+     "lemma": "sva-bhāva-ja",
+     "upos": "",
+     "morph": "",
+     "gloss": "born from one’s own nature",
+     "deva": "स्वभावजा",
+     "slp1": "svaBAvaja",
+     "href": "../w/sva_42_41vaja.html"
+    },
+    {
+     "form": "sāttvikī",
+     "lemma": "sāttvikī",
+     "upos": "",
+     "morph": "",
+     "gloss": "pertaining to sattva, sattvic",
+     "deva": "सात्त्विकी",
+     "slp1": "sAttvikI",
+     "href": "../w/s_41ttvik_49.html"
+    },
+    {
+     "form": "rājasī",
+     "lemma": "rājaī",
+     "upos": "",
+     "morph": "",
+     "gloss": "pertaining to rajas, rajasic",
+     "deva": "राजसी",
+     "slp1": "raYj",
+     "href": "../w/ra_59j.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "certainly, just, merely",
+     "deva": "एव​",
+     "slp1": "eva",
+     "href": "../w/eva.html"
+    },
+    {
+     "form": "tāmasī",
+     "lemma": "tāmasī",
+     "upos": "",
+     "morph": "",
+     "gloss": "pertaining to tamas, tamasic",
+     "deva": "तामसी",
+     "slp1": "tAmasI",
+     "href": "../w/t_41mas_49.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "iti",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "thus",
+     "deva": "इति",
+     "slp1": "iti",
+     "href": "../w/iti.html"
+    },
+    {
+     "form": "tām",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that",
+     "deva": "ताम्",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "śṛṇu",
+     "lemma": "√śru",
+     "upos": "",
+     "morph": "",
+     "gloss": "you must listen",
+     "deva": "शृणु",
+     "slp1": "Sru",
+     "href": "../w/_53ru.html"
+    }
+   ]
+  },
+  {
+   "n": "17.3",
+   "locus": "Bhagavadgītā 17.3",
+   "dcs": null,
+   "text": "sattvānurūpā sarvasya śraddhā bhavati bhārata",
+   "deva": "सत्त्वानुरूपा सर्वस्य​ श्रद्धा भवति भारत​ श्रद्धामयः अयम् पुरुषः यः यच्छ्रद्धः सः एव​ सः",
+   "tokens": [
+    {
+     "form": "sattvānurūpā",
+     "lemma": "sattva-anurūpā",
+     "upos": "",
+     "morph": "",
+     "gloss": "according to being",
+     "deva": "सत्त्वानुरूपा",
+     "slp1": "as",
+     "href": "../w/as.html"
+    },
+    {
+     "form": "sarvasya",
+     "lemma": "sarva",
+     "upos": "",
+     "morph": "",
+     "gloss": "of all",
+     "deva": "सर्वस्य​",
+     "slp1": "sarva",
+     "href": "../w/sarva.html"
+    },
+    {
+     "form": "śraddhā",
+     "lemma": "śraddhā",
+     "upos": "",
+     "morph": "",
+     "gloss": "faith, confidence",
+     "deva": "श्रद्धा",
+     "slp1": "SradDA",
+     "href": "../w/_53rad_44_41.html"
+    },
+    {
+     "form": "bhavati",
+     "lemma": "√bhū",
+     "upos": "",
+     "morph": "",
+     "gloss": "it  is",
+     "deva": "भवति",
+     "slp1": "BU",
+     "href": "../w/_42_55.html"
+    },
+    {
+     "form": "bhārata",
+     "lemma": "bhārata",
+     "upos": "",
+     "morph": "",
+     "gloss": "O descendant of Bhārata",
+     "deva": "भारत​",
+     "slp1": "BArata",
+     "href": "../w/_42_41rata.html"
+    },
+    {
+     "form": "śraddhā-mayaḥ",
+     "lemma": "śraddhā-maya",
+     "upos": "",
+     "morph": "",
+     "gloss": "made of faith",
+     "deva": "श्रद्धामयः",
+     "slp1": "SradDAmaya",
+     "href": "../w/_53rad_44_41maya.html"
+    },
+    {
+     "form": "ayam",
+     "lemma": "idam",
+     "upos": "",
+     "morph": "",
+     "gloss": "he",
+     "deva": "अयम्",
+     "slp1": "idam",
+     "href": "../w/idam.html"
+    },
+    {
+     "form": "puruṣaḥ",
+     "lemma": "puruṣa",
+     "upos": "",
+     "morph": "",
+     "gloss": "a person",
+     "deva": "पुरुषः",
+     "slp1": "puruza",
+     "href": "../w/puruza.html"
+    },
+    {
+     "form": "yaḥ",
+     "lemma": "yat",
+     "upos": "",
+     "morph": "",
+     "gloss": "he who",
+     "deva": "यः",
+     "slp1": "yat",
+     "href": "../w/yat.html"
+    },
+    {
+     "form": "yac-chraddhaḥ",
+     "lemma": "yac-chraddha",
+     "upos": "",
+     "morph": "",
+     "gloss": "who has such faith",
+     "deva": "यच्छ्रद्धः",
+     "slp1": "yacCradDa",
+     "href": "../w/yac_43rad_44a.html"
+    },
+    {
+     "form": "saḥ",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "he",
+     "deva": "सः",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "certainly, just, merely",
+     "deva": "एव​",
+     "slp1": "eva",
+     "href": "../w/eva.html"
+    },
+    {
+     "form": "saḥ",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "he",
+     "deva": "सः",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    }
+   ]
+  },
+  {
+   "n": "17.4",
+   "locus": "Bhagavadgītā 17.4",
+   "dcs": null,
+   "text": "yajante sāttvikā devān yakṣa-rakṣāṃsi rājasāḥ",
+   "deva": "यजन्ते सात्त्विकाः देवान् यक्षरक्षाञ्सि राजसाः प्रेतान् भूतगणान् च​ अन्ये यजन्ते तामसाः जनाः",
+   "tokens": [
+    {
+     "form": "yajante",
+     "lemma": "√yaj",
+     "upos": "",
+     "morph": "",
+     "gloss": "they worship, they offer in sacrifice",
+     "deva": "यजन्ते",
+     "slp1": "yaj",
+     "href": "../w/yaj.html"
+    },
+    {
+     "form": "sāttvikāḥ",
+     "lemma": "sāttvika",
+     "upos": "",
+     "morph": "",
+     "gloss": "pertaining to sattva, sattvic",
+     "deva": "सात्त्विकाः",
+     "slp1": "sAttvika",
+     "href": "../w/s_41ttvika.html"
+    },
+    {
+     "form": "devān",
+     "lemma": "deva",
+     "upos": "",
+     "morph": "",
+     "gloss": "the gods, divinities",
+     "deva": "देवान्",
+     "slp1": "deva",
+     "href": "../w/deva.html"
+    },
+    {
+     "form": "yakṣa-rakṣāṁsi",
+     "lemma": "yakṣa-rakṣas",
+     "upos": "",
+     "morph": "",
+     "gloss": "yakṣas and rakṣāsas",
+     "deva": "यक्षरक्षाञ्सि",
+     "slp1": "yakz",
+     "href": "../w/yakz.html"
+    },
+    {
+     "form": "rājasāḥ",
+     "lemma": "rājasa",
+     "upos": "",
+     "morph": "",
+     "gloss": "related to rajas, rajasic",
+     "deva": "राजसाः",
+     "slp1": "rAjasa",
+     "href": "../w/r_41jasa.html"
+    },
+    {
+     "form": "pretān",
+     "lemma": "preta",
+     "upos": "",
+     "morph": "",
+     "gloss": "who are gone, departed, dead",
+     "deva": "प्रेतान्",
+     "slp1": "preta",
+     "href": "../w/preta.html"
+    },
+    {
+     "form": "bhūta-gaṇān",
+     "lemma": "bhūta-gaṇa",
+     "upos": "",
+     "morph": "",
+     "gloss": "hosts of spirits",
+     "deva": "भूतगणान्",
+     "slp1": "BUtagaRa",
+     "href": "../w/_42_55taga_52a.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "anye",
+     "lemma": "anya",
+     "upos": "",
+     "morph": "",
+     "gloss": "others",
+     "deva": "अन्ये",
+     "slp1": "anya",
+     "href": "../w/anya.html"
+    },
+    {
+     "form": "yajante",
+     "lemma": "√yaj",
+     "upos": "",
+     "morph": "",
+     "gloss": "they worship, they offer in sacrifice",
+     "deva": "यजन्ते",
+     "slp1": "yaj",
+     "href": "../w/yaj.html"
+    },
+    {
+     "form": "tāmasāḥ",
+     "lemma": "tāmasa",
+     "upos": "",
+     "morph": "",
+     "gloss": "related to tamas, tamasic",
+     "deva": "तामसाः",
+     "slp1": "tAmasa",
+     "href": "../w/t_41masa.html"
+    },
+    {
+     "form": "janāḥ",
+     "lemma": "jana",
+     "upos": "",
+     "morph": "",
+     "gloss": "people, men",
+     "deva": "जनाः",
+     "slp1": "jana",
+     "href": "../w/jana.html"
+    }
+   ]
+  },
+  {
+   "n": "17.5",
+   "locus": "Bhagavadgītā 17.5",
+   "dcs": null,
+   "text": "aśāstra-vihitaṃ ghoraṃ tapyante ye tapo janāḥ",
+   "deva": "अशास्त्रविहितम् घोरम् तप्यन्ते ये तपः जनाः दम्भाहञ्कारसञ्युक्ताः कामरागबलान्विताः",
+   "tokens": [
+    {
+     "form": "aśāstra-vihitam",
+     "lemma": "a-śāstra-vihita",
+     "upos": "",
+     "morph": "",
+     "gloss": "not prescribed by scriptures",
+     "deva": "अशास्त्रविहितम्",
+     "slp1": "aSAstravihita",
+     "href": "../w/a_53_41stravihita.html"
+    },
+    {
+     "form": "ghoram",
+     "lemma": "ghora",
+     "upos": "",
+     "morph": "",
+     "gloss": "terrible, ghastly",
+     "deva": "घोरम्",
+     "slp1": "Gora",
+     "href": "../w/_47ora.html"
+    },
+    {
+     "form": "tapyante",
+     "lemma": "√tap",
+     "upos": "",
+     "morph": "",
+     "gloss": "they scorch, they undergo austerity",
+     "deva": "तप्यन्ते",
+     "slp1": "tap",
+     "href": "../w/tap.html"
+    },
+    {
+     "form": "ye",
+     "lemma": "yat",
+     "upos": "",
+     "morph": "",
+     "gloss": "those who",
+     "deva": "ये",
+     "slp1": "yat",
+     "href": "../w/yat.html"
+    },
+    {
+     "form": "tapaḥ",
+     "lemma": "tapas",
+     "upos": "",
+     "morph": "",
+     "gloss": "heat, austerity",
+     "deva": "तपः",
+     "slp1": "tapas",
+     "href": "../w/tapas.html"
+    },
+    {
+     "form": "janāḥ",
+     "lemma": "jana",
+     "upos": "",
+     "morph": "",
+     "gloss": "people, men",
+     "deva": "जनाः",
+     "slp1": "jana",
+     "href": "../w/jana.html"
+    },
+    {
+     "form": "dambhāhaṁkāra-saṁyuktāḥ",
+     "lemma": "dambha-ahaṁ-kāra-saṁyukta",
+     "upos": "",
+     "morph": "",
+     "gloss": "endowed with deceit and egotism",
+     "deva": "दम्भाहञ्कारसञ्युक्ताः",
+     "slp1": "daB",
+     "href": "../w/da_42.html"
+    },
+    {
+     "form": "kāma-rāga-balānvitāḥ",
+     "lemma": "kāma-rāga-bala-anvita",
+     "upos": "",
+     "morph": "",
+     "gloss": "endowed with the power of desire and passion",
+     "deva": "कामरागबलान्विताः",
+     "slp1": "kam",
+     "href": "../w/kam.html"
+    }
+   ]
+  },
+  {
+   "n": "17.6",
+   "locus": "Bhagavadgītā 17.6",
+   "dcs": null,
+   "text": "karśayantaḥ śarīra-sthaṃ bhūta-grāmam acetasaḥ",
+   "deva": "कर्शयन्तः शरीरस्थम् भूतग्रामम् अचेतसः माम् च​ एव​ अन्तःशरीरस्थम् तान् विद्धि आसुरनिश्चयान्",
+   "tokens": [
+    {
+     "form": "karśayantaḥ",
+     "lemma": "karśayant",
+     "upos": "",
+     "morph": "",
+     "gloss": "who are making emaciated",
+     "deva": "कर्शयन्तः",
+     "slp1": "kfS",
+     "href": "../w/kf_53.html"
+    },
+    {
+     "form": "śarīra-stham",
+     "lemma": "śarīra-stha",
+     "upos": "",
+     "morph": "",
+     "gloss": "one situated in the body",
+     "deva": "शरीरस्थम्",
+     "slp1": "SarIrasTa",
+     "href": "../w/_53ar_49ras_54a.html"
+    },
+    {
+     "form": "bhūta-grāmam",
+     "lemma": "bhūta-grāma",
+     "upos": "",
+     "morph": "",
+     "gloss": "hosts of beings, pile of elements",
+     "deva": "भूतग्रामम्",
+     "slp1": "BUtagrAma",
+     "href": "../w/_42_55tagr_41ma.html"
+    },
+    {
+     "form": "acetasaḥ",
+     "lemma": "a-cetas",
+     "upos": "",
+     "morph": "",
+     "gloss": "unconscious, insensible, unthinking",
+     "deva": "अचेतसः",
+     "slp1": "acetas",
+     "href": "../w/acetas.html"
+    },
+    {
+     "form": "mām",
+     "lemma": "asmat",
+     "upos": "",
+     "morph": "",
+     "gloss": "me",
+     "deva": "माम्",
+     "slp1": "asmat",
+     "href": "../w/asmat.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "certainly, just, merely",
+     "deva": "एव​",
+     "slp1": "eva",
+     "href": "../w/eva.html"
+    },
+    {
+     "form": "antaḥ-śarīra-stham",
+     "lemma": "antaḥ-śarīra-stha",
+     "upos": "",
+     "morph": "",
+     "gloss": "one who is situated inside the body",
+     "deva": "अन्तःशरीरस्थम्",
+     "slp1": "antaHSarIrasTa",
+     "href": "../w/anta_48_53ar_49ras_54a.html"
+    },
+    {
+     "form": "tān",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "them",
+     "deva": "तान्",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "viddhi",
+     "lemma": "√vid",
+     "upos": "",
+     "morph": "",
+     "gloss": "you must know",
+     "deva": "विद्धि",
+     "slp1": "vid",
+     "href": "../w/vid.html"
+    },
+    {
+     "form": "āsura-niścayān",
+     "lemma": "āsura-niścaya",
+     "upos": "",
+     "morph": "",
+     "gloss": "whose resolves are demoniac",
+     "deva": "आसुरनिश्चयान्",
+     "slp1": "AsuraniScaya",
+     "href": "../w/_41surani_53caya.html"
+    }
+   ]
+  },
+  {
+   "n": "17.7",
+   "locus": "Bhagavadgītā 17.7",
+   "dcs": null,
+   "text": "āhāras tv api sarvasya tri-vidho bhavati priyaḥ",
+   "deva": "आहारः तु अपि सर्वस्य​ त्रिविधः भवति प्रियः यज्ञः तपः तथा दानम् तेषाम् भेदम् इमम् शृणु",
+   "tokens": [
+    {
+     "form": "āhāraḥ",
+     "lemma": "āhāra",
+     "upos": "",
+     "morph": "",
+     "gloss": "carrying near, fetching, taking food",
+     "deva": "आहारः",
+     "slp1": "AhAra",
+     "href": "../w/_41h_41ra.html"
+    },
+    {
+     "form": "tu",
+     "lemma": "tu",
+     "upos": "",
+     "morph": "",
+     "gloss": "but, then, or, and",
+     "deva": "तु",
+     "slp1": "tu",
+     "href": "../w/tu.html"
+    },
+    {
+     "form": "api",
+     "lemma": "api",
+     "upos": "",
+     "morph": "",
+     "gloss": "although, moreover, besides, even",
+     "deva": "अपि",
+     "slp1": "api",
+     "href": "../w/api.html"
+    },
+    {
+     "form": "sarvasya",
+     "lemma": "sarva",
+     "upos": "",
+     "morph": "",
+     "gloss": "of all",
+     "deva": "सर्वस्य​",
+     "slp1": "sarva",
+     "href": "../w/sarva.html"
+    },
+    {
+     "form": "tri-vidhaḥ",
+     "lemma": "tri-vidha",
+     "upos": "",
+     "morph": "",
+     "gloss": "threefold, of three parts",
+     "deva": "त्रिविधः",
+     "slp1": "triviDa",
+     "href": "../w/trivi_44a.html"
+    },
+    {
+     "form": "bhavati",
+     "lemma": "√bhū",
+     "upos": "",
+     "morph": "",
+     "gloss": "it  is",
+     "deva": "भवति",
+     "slp1": "BU",
+     "href": "../w/_42_55.html"
+    },
+    {
+     "form": "priyaḥ",
+     "lemma": "priya",
+     "upos": "",
+     "morph": "",
+     "gloss": "liked, dear, pleasant",
+     "deva": "प्रियः",
+     "slp1": "priya",
+     "href": "../w/priya.html"
+    },
+    {
+     "form": "yajñaḥ",
+     "lemma": "yajña",
+     "upos": "",
+     "morph": "",
+     "gloss": "sacrifice, worship",
+     "deva": "यज्ञः",
+     "slp1": "yajYa",
+     "href": "../w/yaj_59a.html"
+    },
+    {
+     "form": "tapaḥ",
+     "lemma": "tapas",
+     "upos": "",
+     "morph": "",
+     "gloss": "heat, austerity",
+     "deva": "तपः",
+     "slp1": "tapas",
+     "href": "../w/tapas.html"
+    },
+    {
+     "form": "tathā",
+     "lemma": "tathā",
+     "upos": "",
+     "morph": "",
+     "gloss": "in that manner, so, in like manner",
+     "deva": "तथा",
+     "slp1": "taTA",
+     "href": "../w/ta_54_41.html"
+    },
+    {
+     "form": "dānam",
+     "lemma": "dāna",
+     "upos": "",
+     "morph": "",
+     "gloss": "gift, charity",
+     "deva": "दानम्",
+     "slp1": "dAna",
+     "href": "../w/d_41na.html"
+    },
+    {
+     "form": "teṣām",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "of those",
+     "deva": "तेषाम्",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "bhedam",
+     "lemma": "bheda",
+     "upos": "",
+     "morph": "",
+     "gloss": "splitting, breaking, separation, division",
+     "deva": "भेदम्",
+     "slp1": "Beda",
+     "href": "../w/_42eda.html"
+    },
+    {
+     "form": "imam",
+     "lemma": "idam",
+     "upos": "",
+     "morph": "",
+     "gloss": "this",
+     "deva": "इमम्",
+     "slp1": "idam",
+     "href": "../w/idam.html"
+    },
+    {
+     "form": "śṛṇu",
+     "lemma": "√śru",
+     "upos": "",
+     "morph": "",
+     "gloss": "you must listen",
+     "deva": "शृणु",
+     "slp1": "Sru",
+     "href": "../w/_53ru.html"
+    }
+   ]
+  },
+  {
+   "n": "17.8",
+   "locus": "Bhagavadgītā 17.8",
+   "dcs": null,
+   "text": "āyuḥ-sattva-balārogya-sukha-prīti-vivardhanāḥ",
+   "deva": "आयुःसत्त्वबलारोग्यसुखप्रीतिविवर्धनाः रस्याः स्निग्धाः स्थिराः हृद्याः आहाराः सात्त्विकप्रियाः",
+   "tokens": [
+    {
+     "form": "āyuḥ-sattva-balārogya-sukha-prīti-vivardhanāḥ",
+     "lemma": "āyuḥ-sattva-balārogya-sukha-prīti-vivardhana",
+     "upos": "",
+     "morph": "",
+     "gloss": "which increase the length of life, being, strength, health, happiness and joy",
+     "deva": "आयुःसत्त्वबलारोग्यसुखप्रीतिविवर्धनाः",
+     "slp1": "as",
+     "href": "../w/as.html"
+    },
+    {
+     "form": "rasyāḥ",
+     "lemma": "rasya",
+     "upos": "",
+     "morph": "",
+     "gloss": "juicy, tasty",
+     "deva": "रस्याः",
+     "slp1": "rasya",
+     "href": "../w/rasya.html"
+    },
+    {
+     "form": "snigdhāḥ",
+     "lemma": "snigdha",
+     "upos": "",
+     "morph": "",
+     "gloss": "fatty, glutinous, slippery",
+     "deva": "स्निग्धाः",
+     "slp1": "snigDa",
+     "href": "../w/snig_44a.html"
+    },
+    {
+     "form": "sthirāḥ",
+     "lemma": "sthira",
+     "upos": "",
+     "morph": "",
+     "gloss": "firm, hard, solid",
+     "deva": "स्थिराः",
+     "slp1": "sTira",
+     "href": "../w/s_54ira.html"
+    },
+    {
+     "form": "hṛdyāḥ",
+     "lemma": "hṛdyā",
+     "upos": "",
+     "morph": "",
+     "gloss": "being in the heart, dear, cherished, pleasing",
+     "deva": "हृद्याः",
+     "slp1": "hfdyA",
+     "href": "../w/hfdy_41.html"
+    },
+    {
+     "form": "āhārāḥ",
+     "lemma": "āhāra",
+     "upos": "",
+     "morph": "",
+     "gloss": "foods",
+     "deva": "आहाराः",
+     "slp1": "AhAra",
+     "href": "../w/_41h_41ra.html"
+    },
+    {
+     "form": "sāttvika-priyāḥ",
+     "lemma": "sāttvika-priya",
+     "upos": "",
+     "morph": "",
+     "gloss": "dear to sattvic people",
+     "deva": "सात्त्विकप्रियाः",
+     "slp1": "as",
+     "href": "../w/as.html"
+    }
+   ]
+  },
+  {
+   "n": "17.9",
+   "locus": "Bhagavadgītā 17.9",
+   "dcs": null,
+   "text": "kaṭv-amla-lavaṇāty-uṣṇa-tīkṣṇa-rūkṣa-vidāhinaḥ",
+   "deva": "कट्वम्ललवणात्युष्णतीक्ष्णरूक्षविदाहिनः आहाराः राजसस्य​ इष्टाः दुःखशोकामयप्रदाः",
+   "tokens": [
+    {
+     "form": "kaṭv-amla-lavaṇāty-uṣṇa-tīkṣṇa-rūkṣa-vidāhinaḥ",
+     "lemma": "kaṭv-amla-lavaṇa-aty-uṣṇa-tīkṣṇa-rūkṣa-vidāhin",
+     "upos": "",
+     "morph": "",
+     "gloss": "excessively bitter, sour, salty, hot,  pungent, dry and burning",
+     "deva": "कट्वम्ललवणात्युष्णतीक्ष्णरूक्षविदाहिनः",
+     "slp1": "uz",
+     "href": "../w/uz.html"
+    },
+    {
+     "form": "āhārāḥ",
+     "lemma": "āhāra",
+     "upos": "",
+     "morph": "",
+     "gloss": "foods",
+     "deva": "आहाराः",
+     "slp1": "AhAra",
+     "href": "../w/_41h_41ra.html"
+    },
+    {
+     "form": "rājasasya",
+     "lemma": "rājasa",
+     "upos": "",
+     "morph": "",
+     "gloss": "of related to rajas, of rajasic",
+     "deva": "राजसस्य​",
+     "slp1": "rAjasa",
+     "href": "../w/r_41jasa.html"
+    },
+    {
+     "form": "iṣṭāḥ",
+     "lemma": "iṣṭa",
+     "upos": "",
+     "morph": "",
+     "gloss": "desired, worshipped",
+     "deva": "इष्टाः",
+     "slp1": "izwa",
+     "href": "../w/izwa.html"
+    },
+    {
+     "form": "duḥkha-śokāmaya-pradāḥ",
+     "lemma": "duḥkha-śoka-āmaya-prada",
+     "upos": "",
+     "morph": "",
+     "gloss": "giving distress, grief and disease",
+     "deva": "दुःखशोकामयप्रदाः",
+     "resolved": false
+    }
+   ]
+  },
+  {
+   "n": "17.10",
+   "locus": "Bhagavadgītā 17.10",
+   "dcs": null,
+   "text": "yāta-yāmaṃ gata-rasaṃ pūti paryuṣitaṃ ca yat",
+   "deva": "यातयामम् गतरसम् पूति पर्युषितम् च​ यत् उच्छिष्टम् अपि च​ अमेध्यम् भोजनम् तामसप्रियम्",
+   "tokens": [
+    {
+     "form": "yāta-yāmam",
+     "lemma": "yāta-yāma",
+     "upos": "",
+     "morph": "",
+     "gloss": "which finished its course, used, useless / of which three hours have passed",
+     "deva": "यातयामम्",
+     "slp1": "yAtayAma",
+     "href": "../w/y_41tay_41ma.html"
+    },
+    {
+     "form": "gata-rasam",
+     "lemma": "gata-rasa",
+     "upos": "",
+     "morph": "",
+     "gloss": "whose taste is gone",
+     "deva": "गतरसम्",
+     "slp1": "gatarasa",
+     "href": "../w/gatarasa.html"
+    },
+    {
+     "form": "pūti",
+     "lemma": "pūti",
+     "upos": "",
+     "morph": "",
+     "gloss": "foul-smelling, stinking, putrid",
+     "deva": "पूति",
+     "slp1": "pUti",
+     "href": "../w/p_55ti.html"
+    },
+    {
+     "form": "paryuṣitam",
+     "lemma": "pary-uṣita",
+     "upos": "",
+     "morph": "",
+     "gloss": "left over [for long time], stale",
+     "deva": "पर्युषितम्",
+     "slp1": "paryuzita",
+     "href": "../w/paryuzita.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "yat",
+     "lemma": "yat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that which",
+     "deva": "यत्",
+     "slp1": "yat",
+     "href": "../w/yat.html"
+    },
+    {
+     "form": "ucchiṣṭam",
+     "lemma": "ucchiṣṭa",
+     "upos": "",
+     "morph": "",
+     "gloss": "left remaining, left-over",
+     "deva": "उच्छिष्टम्",
+     "slp1": "ucCizwa",
+     "href": "../w/uc_43izwa.html"
+    },
+    {
+     "form": "api",
+     "lemma": "api",
+     "upos": "",
+     "morph": "",
+     "gloss": "although, moreover, besides, even",
+     "deva": "अपि",
+     "slp1": "api",
+     "href": "../w/api.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "amedhyam",
+     "lemma": "a-medhya",
+     "upos": "",
+     "morph": "",
+     "gloss": "not suitable for sacrifice, impure",
+     "deva": "अमेध्यम्",
+     "slp1": "ameDya",
+     "href": "../w/ame_44ya.html"
+    },
+    {
+     "form": "bhojanam",
+     "lemma": "bhojana",
+     "upos": "",
+     "morph": "",
+     "gloss": "food, meal",
+     "deva": "भोजनम्",
+     "slp1": "Bojana",
+     "href": "../w/_42ojana.html"
+    },
+    {
+     "form": "tāmasa-priyam",
+     "lemma": "tāmasa-priya",
+     "upos": "",
+     "morph": "",
+     "gloss": "dear to the tamasic",
+     "deva": "तामसप्रियम्",
+     "slp1": "tam",
+     "href": "../w/tam.html"
+    }
+   ]
+  },
+  {
+   "n": "17.11",
+   "locus": "Bhagavadgītā 17.11",
+   "dcs": null,
+   "text": "aphalākāṅkṣibhir yajño vidhi-dṛṣṭo ya ijyate",
+   "deva": "अफलाकाङ्क्षिभिः यज्ञः विधिदृष्टः यः इज्यते यष्टव्यम् एव​ इति मनः समाधाय​ सः सात्त्विकः",
+   "tokens": [
+    {
+     "form": "aphalākāṅkṣibhiḥ",
+     "lemma": "a-phala-ākāṅkṣin",
+     "upos": "",
+     "morph": "",
+     "gloss": "by those not expecting the fruit",
+     "deva": "अफलाकाङ्क्षिभिः",
+     "slp1": "Pal",
+     "href": "../w/_50al.html"
+    },
+    {
+     "form": "yajñaḥ",
+     "lemma": "yajña",
+     "upos": "",
+     "morph": "",
+     "gloss": "sacrifice, worship",
+     "deva": "यज्ञः",
+     "slp1": "yajYa",
+     "href": "../w/yaj_59a.html"
+    },
+    {
+     "form": "vidhi-dṛṣṭaḥ",
+     "lemma": "vidhi-dṛṣṭa",
+     "upos": "",
+     "morph": "",
+     "gloss": "in which the rules are seen",
+     "deva": "विधिदृष्टः",
+     "slp1": "viDidfzwa",
+     "href": "../w/vi_44idfzwa.html"
+    },
+    {
+     "form": "yaḥ",
+     "lemma": "yat",
+     "upos": "",
+     "morph": "",
+     "gloss": "he who",
+     "deva": "यः",
+     "slp1": "yat",
+     "href": "../w/yat.html"
+    },
+    {
+     "form": "ijyate",
+     "lemma": "√yaj",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is offered",
+     "deva": "इज्यते",
+     "slp1": "yaj",
+     "href": "../w/yaj.html"
+    },
+    {
+     "form": "yaṣṭavyam",
+     "lemma": "yaṣṭavya",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is to be offered",
+     "deva": "यष्टव्यम्",
+     "slp1": "yazwavya",
+     "href": "../w/yazwavya.html"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "certainly, just, merely",
+     "deva": "एव​",
+     "slp1": "eva",
+     "href": "../w/eva.html"
+    },
+    {
+     "form": "iti",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "thus",
+     "deva": "इति",
+     "slp1": "iti",
+     "href": "../w/iti.html"
+    },
+    {
+     "form": "manaḥ",
+     "lemma": "manas",
+     "upos": "",
+     "morph": "",
+     "gloss": "the mind",
+     "deva": "मनः",
+     "slp1": "manas",
+     "href": "../w/manas.html"
+    },
+    {
+     "form": "samādhāya",
+     "lemma": "sam-ā-√dhā",
+     "upos": "",
+     "morph": "",
+     "gloss": "after concentrating",
+     "deva": "समाधाय​",
+     "slp1": "samADA",
+     "href": "../w/sam_41_44_41.html"
+    },
+    {
+     "form": "saḥ",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "he",
+     "deva": "सः",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "sāttvikaḥ",
+     "lemma": "sāttvika",
+     "upos": "",
+     "morph": "",
+     "gloss": "related to sattva, sattvic",
+     "deva": "सात्त्विकः",
+     "slp1": "sAttvika",
+     "href": "../w/s_41ttvika.html"
+    }
+   ]
+  },
+  {
+   "n": "17.12",
+   "locus": "Bhagavadgītā 17.12",
+   "dcs": null,
+   "text": "abhisaṃdhāya tu phalaṃ dambhārtham api caiva yat",
+   "deva": "अभिसञ्धाय​ तु फलम् दम्भार्थम् अपि च​ एव​ यत् इज्यते भरतश्रेष्ठ​ तम् यज्ञम् विद्धि राजसम्",
+   "tokens": [
+    {
+     "form": "abhisaṁdhāya",
+     "lemma": "abhi-sam-√dhā",
+     "upos": "",
+     "morph": "",
+     "gloss": "aiming at",
+     "deva": "अभिसञ्धाय​",
+     "slp1": "DA",
+     "href": "../w/_44_41.html"
+    },
+    {
+     "form": "tu",
+     "lemma": "tu",
+     "upos": "",
+     "morph": "",
+     "gloss": "but, then, or, and",
+     "deva": "तु",
+     "slp1": "tu",
+     "href": "../w/tu.html"
+    },
+    {
+     "form": "phalam",
+     "lemma": "phala",
+     "upos": "",
+     "morph": "",
+     "gloss": "fruit, result",
+     "deva": "फलम्",
+     "slp1": "Pala",
+     "href": "../w/_50ala.html"
+    },
+    {
+     "form": "dambha-artham",
+     "lemma": "dambha-artham",
+     "upos": "",
+     "morph": "",
+     "gloss": "for the sake of deceit",
+     "deva": "दम्भार्थम्",
+     "slp1": "daB",
+     "href": "../w/da_42.html"
+    },
+    {
+     "form": "api",
+     "lemma": "api",
+     "upos": "",
+     "morph": "",
+     "gloss": "although, moreover, besides, even",
+     "deva": "अपि",
+     "slp1": "api",
+     "href": "../w/api.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "certainly, just, merely",
+     "deva": "एव​",
+     "slp1": "eva",
+     "href": "../w/eva.html"
+    },
+    {
+     "form": "yat",
+     "lemma": "yat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that which",
+     "deva": "यत्",
+     "slp1": "yat",
+     "href": "../w/yat.html"
+    },
+    {
+     "form": "ijyate",
+     "lemma": "√yaj",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is offered",
+     "deva": "इज्यते",
+     "slp1": "yaj",
+     "href": "../w/yaj.html"
+    },
+    {
+     "form": "bharata-śreṣṭha",
+     "lemma": "bharata-rṣabha",
+     "upos": "",
+     "morph": "",
+     "gloss": "O best of the Bharatas",
+     "deva": "भरतश्रेष्ठ​",
+     "slp1": "BaratarzaBa",
+     "href": "../w/_42aratarza_42a.html"
+    },
+    {
+     "form": "tam",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that",
+     "deva": "तम्",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "yajñam",
+     "lemma": "yajña",
+     "upos": "",
+     "morph": "",
+     "gloss": "sacrifice, worship",
+     "deva": "यज्ञम्",
+     "slp1": "yajYa",
+     "href": "../w/yaj_59a.html"
+    },
+    {
+     "form": "viddhi",
+     "lemma": "√vid",
+     "upos": "",
+     "morph": "",
+     "gloss": "you must know",
+     "deva": "विद्धि",
+     "slp1": "vid",
+     "href": "../w/vid.html"
+    },
+    {
+     "form": "rājasam",
+     "lemma": "rājasa",
+     "upos": "",
+     "morph": "",
+     "gloss": "related to rajas, rajasic",
+     "deva": "राजसम्",
+     "slp1": "rAjasa",
+     "href": "../w/r_41jasa.html"
+    }
+   ]
+  },
+  {
+   "n": "17.13",
+   "locus": "Bhagavadgītā 17.13",
+   "dcs": null,
+   "text": "vidhi-hīnam asṛṣṭānnaṃ mantra-hīnam adakṣiṇam",
+   "deva": "विधिहीनम् असृष्टान्नम् मन्त्रहीनम् अदक्षिणम् श्रद्धाविरहितम् यज्ञम् तामसम् परिचक्षते",
+   "tokens": [
+    {
+     "form": "vidhi-hīnam",
+     "lemma": "vidhi-hīna",
+     "upos": "",
+     "morph": "",
+     "gloss": "destitute of rules",
+     "deva": "विधिहीनम्",
+     "slp1": "viDihIna",
+     "href": "../w/vi_44ih_49na.html"
+    },
+    {
+     "form": "asṛṣṭānnam",
+     "lemma": "asṛṣṭa-anna",
+     "upos": "",
+     "morph": "",
+     "gloss": "in which food is not given",
+     "deva": "असृष्टान्नम्",
+     "slp1": "sfj",
+     "href": "../w/sfj.html"
+    },
+    {
+     "form": "mantra-hīnam",
+     "lemma": "mantra-hīna",
+     "upos": "",
+     "morph": "",
+     "gloss": "destitute of sacred formulas",
+     "deva": "मन्त्रहीनम्",
+     "slp1": "mantrahIna",
+     "href": "../w/mantrah_49na.html"
+    },
+    {
+     "form": "adakṣiṇam",
+     "lemma": "a-dakṣiṇa",
+     "upos": "",
+     "morph": "",
+     "gloss": "in which there is no remuneration for the priest",
+     "deva": "अदक्षिणम्",
+     "slp1": "adakziRa",
+     "href": "../w/adakzi_52a.html"
+    },
+    {
+     "form": "śraddhā-virahitam",
+     "lemma": "śraddhā-virahita",
+     "upos": "",
+     "morph": "",
+     "gloss": "deprived of faith",
+     "deva": "श्रद्धाविरहितम्",
+     "slp1": "SradDAvirahita",
+     "href": "../w/_53rad_44_41virahita.html"
+    },
+    {
+     "form": "yajñam",
+     "lemma": "yajña",
+     "upos": "",
+     "morph": "",
+     "gloss": "sacrifice, worship",
+     "deva": "यज्ञम्",
+     "slp1": "yajYa",
+     "href": "../w/yaj_59a.html"
+    },
+    {
+     "form": "tāmasam",
+     "lemma": "tāmasa",
+     "upos": "",
+     "morph": "",
+     "gloss": "related to tamas, tamasic",
+     "deva": "तामसम्",
+     "slp1": "tAmasa",
+     "href": "../w/t_41masa.html"
+    },
+    {
+     "form": "paricakṣate",
+     "lemma": "pari-√cakṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "they call",
+     "deva": "परिचक्षते",
+     "slp1": "paricakz",
+     "href": "../w/paricakz.html"
+    }
+   ]
+  },
+  {
+   "n": "17.14",
+   "locus": "Bhagavadgītā 17.14",
+   "dcs": null,
+   "text": "deva-dvija-guru-prājña-pūjanaṃ śaucam ārjavam",
+   "deva": "देवद्विजगुरुप्राज्ञपूजनम् शौचम् आर्जवम् ब्रह्मचर्यम् अहिञ्सा च​ शारीरम् तपः उच्यते",
+   "tokens": [
+    {
+     "form": "deva-dvija-guru-prājña-pūjanam",
+     "lemma": "deva-dvija-guru-prājña-pūjana",
+     "upos": "",
+     "morph": "",
+     "gloss": "worshipping the divinities, the twice-born, preceptors and the wise",
+     "deva": "देवद्विजगुरुप्राज्ञपूजनम्",
+     "slp1": "div",
+     "href": "../w/div.html"
+    },
+    {
+     "form": "śaucam",
+     "lemma": "śauca",
+     "upos": "",
+     "morph": "",
+     "gloss": "purity",
+     "deva": "शौचम्",
+     "slp1": "SOca",
+     "href": "../w/_53_4fca.html"
+    },
+    {
+     "form": "ārjavam",
+     "lemma": "ārjava",
+     "upos": "",
+     "morph": "",
+     "gloss": "simplicity, honesty, sincerity",
+     "deva": "आर्जवम्",
+     "slp1": "Arjava",
+     "href": "../w/_41rjava.html"
+    },
+    {
+     "form": "brahma-caryam",
+     "lemma": "brahma-carya",
+     "upos": "",
+     "morph": "",
+     "gloss": "celibacy practised by a student of the Vedas",
+     "deva": "ब्रह्मचर्यम्",
+     "slp1": "brahmacarya",
+     "href": "../w/brahmacarya.html"
+    },
+    {
+     "form": "ahiṁsā",
+     "lemma": "a-hiṁsā",
+     "upos": "",
+     "morph": "",
+     "gloss": "non-violence, harmlessness",
+     "deva": "अहिञ्सा",
+     "slp1": "ahiMsA",
+     "href": "../w/ahi_4ds_41.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "śārīram",
+     "lemma": "śārīra",
+     "upos": "",
+     "morph": "",
+     "gloss": "bodily, related to body",
+     "deva": "शारीरम्",
+     "slp1": "SArIra",
+     "href": "../w/_53_41r_49ra.html"
+    },
+    {
+     "form": "tapaḥ",
+     "lemma": "tapas",
+     "upos": "",
+     "morph": "",
+     "gloss": "heat, austerity",
+     "deva": "तपः",
+     "slp1": "tapas",
+     "href": "../w/tapas.html"
+    },
+    {
+     "form": "ucyate",
+     "lemma": "√vac",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is said",
+     "deva": "उच्यते",
+     "slp1": "vac",
+     "href": "../w/vac.html"
+    }
+   ]
+  },
+  {
+   "n": "17.15",
+   "locus": "Bhagavadgītā 17.15",
+   "dcs": null,
+   "text": "anudvega-karaṃ vākyaṃ satyaṃ priya-hitaṃ ca yat",
+   "deva": "अनुद्वेगकरम् वाक्यम् सत्यम् प्रियहितम् च​ यत् स्वाध्यायाभ्यसनम् च​ एव​ वाङ्मयम् तपः उच्यते",
+   "tokens": [
+    {
+     "form": "anudvega-karam",
+     "lemma": "an-udvega-kara",
+     "upos": "",
+     "morph": "",
+     "gloss": "which does not cause distress",
+     "deva": "अनुद्वेगकरम्",
+     "slp1": "anudvegakara",
+     "href": "../w/anudvegakara.html"
+    },
+    {
+     "form": "vākyam",
+     "lemma": "vākya",
+     "upos": "",
+     "morph": "",
+     "gloss": "word, the speech",
+     "deva": "वाक्यम्",
+     "slp1": "vAkya",
+     "href": "../w/v_41kya.html"
+    },
+    {
+     "form": "satyam",
+     "lemma": "satya",
+     "upos": "",
+     "morph": "",
+     "gloss": "truth, truthfulness",
+     "deva": "सत्यम्",
+     "slp1": "satya",
+     "href": "../w/satya.html"
+    },
+    {
+     "form": "priya-hitam",
+     "lemma": "priya-hita",
+     "upos": "",
+     "morph": "",
+     "gloss": "dear and beneficial",
+     "deva": "प्रियहितम्",
+     "slp1": "priyahita",
+     "href": "../w/priyahita.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "yat",
+     "lemma": "yat",
+     "upos": "",
+     "morph": "",
+     "gloss": "which",
+     "deva": "यत्",
+     "slp1": "yat",
+     "href": "../w/yat.html"
+    },
+    {
+     "form": "svādhyāyābhyasanam",
+     "lemma": "svādhyāya-abhyasana",
+     "upos": "",
+     "morph": "",
+     "gloss": "practice of recitiation",
+     "deva": "स्वाध्यायाभ्यसनम्",
+     "slp1": "DI",
+     "href": "../w/_44_49.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "certainly, just, merely",
+     "deva": "एव​",
+     "slp1": "eva",
+     "href": "../w/eva.html"
+    },
+    {
+     "form": "vāṅ-mayam",
+     "lemma": "vāc-maya",
+     "upos": "",
+     "morph": "",
+     "gloss": "made of speech",
+     "deva": "वाङ्मयम्",
+     "slp1": "vac",
+     "href": "../w/vac.html"
+    },
+    {
+     "form": "tapaḥ",
+     "lemma": "tapas",
+     "upos": "",
+     "morph": "",
+     "gloss": "heat, austerity",
+     "deva": "तपः",
+     "slp1": "tapas",
+     "href": "../w/tapas.html"
+    },
+    {
+     "form": "ucyate",
+     "lemma": "√vac",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is said",
+     "deva": "उच्यते",
+     "slp1": "vac",
+     "href": "../w/vac.html"
+    }
+   ]
+  },
+  {
+   "n": "17.16",
+   "locus": "Bhagavadgītā 17.16",
+   "dcs": null,
+   "text": "manaḥ-prasādaḥ saumyatvaṃ maunam ātma-vinigrahaḥ",
+   "deva": "मनःप्रसादः सौम्यत्वम् मौनम् आत्मविनिग्रहः भावसञ्शुद्धिः इति एतत् तपः मानसम् उच्यते",
+   "tokens": [
+    {
+     "form": "manaḥ-prasādaḥ",
+     "lemma": "manaḥ-prasāda",
+     "upos": "",
+     "morph": "",
+     "gloss": "satisfaction of the mind",
+     "deva": "मनःप्रसादः",
+     "slp1": "manaHprasAda",
+     "href": "../w/mana_48pras_41da.html"
+    },
+    {
+     "form": "saumyatvam",
+     "lemma": "saumyatva",
+     "upos": "",
+     "morph": "",
+     "gloss": "gentleness, mildness",
+     "deva": "सौम्यत्वम्",
+     "slp1": "sOmyatva",
+     "href": "../w/s_4fmyatva.html"
+    },
+    {
+     "form": "maunam",
+     "lemma": "mauna",
+     "upos": "",
+     "morph": "",
+     "gloss": "related to sages, silence, restrain of tongue",
+     "deva": "मौनम्",
+     "slp1": "mOna",
+     "href": "../w/m_4fna.html"
+    },
+    {
+     "form": "ātma-vinigrahaḥ",
+     "lemma": "ātma-vinigraha",
+     "upos": "",
+     "morph": "",
+     "gloss": "self-control",
+     "deva": "आत्मविनिग्रहः",
+     "slp1": "Atmavinigraha",
+     "href": "../w/_41tmavinigraha.html"
+    },
+    {
+     "form": "bhāva-saṁśuddhiḥ",
+     "lemma": "bhāva-saṁśuddhi",
+     "upos": "",
+     "morph": "",
+     "gloss": "purity of being, of nature",
+     "deva": "भावसञ्शुद्धिः",
+     "slp1": "BAvasaMSudDi",
+     "href": "../w/_42_41vasa_4d_53ud_44i.html"
+    },
+    {
+     "form": "iti",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "thus",
+     "deva": "इति",
+     "slp1": "iti",
+     "href": "../w/iti.html"
+    },
+    {
+     "form": "etat",
+     "lemma": "etat",
+     "upos": "",
+     "morph": "",
+     "gloss": "this",
+     "deva": "एतत्",
+     "slp1": "etat",
+     "href": "../w/etat.html"
+    },
+    {
+     "form": "tapaḥ",
+     "lemma": "tapas",
+     "upos": "",
+     "morph": "",
+     "gloss": "heat, austerity",
+     "deva": "तपः",
+     "slp1": "tapas",
+     "href": "../w/tapas.html"
+    },
+    {
+     "form": "mānasam",
+     "lemma": "mānasa",
+     "upos": "",
+     "morph": "",
+     "gloss": "pertaining to the mind",
+     "deva": "मानसम्",
+     "slp1": "mAnasa",
+     "href": "../w/m_41nasa.html"
+    },
+    {
+     "form": "ucyate",
+     "lemma": "√vac",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is said",
+     "deva": "उच्यते",
+     "slp1": "vac",
+     "href": "../w/vac.html"
+    }
+   ]
+  },
+  {
+   "n": "17.17",
+   "locus": "Bhagavadgītā 17.17",
+   "dcs": null,
+   "text": "śraddhayā parayā taptaṃ tapas tat tri-vidhaṃ naraiḥ",
+   "deva": "श्रद्धया परया तप्तम् तपः तत् त्रिविधम् नरैः अफलाकाङ्क्षिभिः युक्तैः सात्त्विकम् परिचक्षते",
+   "tokens": [
+    {
+     "form": "śraddhayā",
+     "lemma": "śraddhā",
+     "upos": "",
+     "morph": "",
+     "gloss": "with faith",
+     "deva": "श्रद्धया",
+     "slp1": "SradDA",
+     "href": "../w/_53rad_44_41.html"
+    },
+    {
+     "form": "parayā",
+     "lemma": "para",
+     "upos": "",
+     "morph": "",
+     "gloss": "with ancient, final, the best, the supreme",
+     "deva": "परया",
+     "slp1": "para",
+     "href": "../w/para.html"
+    },
+    {
+     "form": "taptam",
+     "lemma": "√tap",
+     "upos": "",
+     "morph": "",
+     "gloss": "burned, undergone",
+     "deva": "तप्तम्",
+     "slp1": "tap",
+     "href": "../w/tap.html"
+    },
+    {
+     "form": "tapaḥ",
+     "lemma": "tapas",
+     "upos": "",
+     "morph": "",
+     "gloss": "heat, austerity",
+     "deva": "तपः",
+     "slp1": "tapas",
+     "href": "../w/tapas.html"
+    },
+    {
+     "form": "tat",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that",
+     "deva": "तत्",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "tri-vidham",
+     "lemma": "tri-vidha",
+     "upos": "",
+     "morph": "",
+     "gloss": "threefold, of three parts",
+     "deva": "त्रिविधम्",
+     "slp1": "triviDa",
+     "href": "../w/trivi_44a.html"
+    },
+    {
+     "form": "naraiḥ",
+     "lemma": "nara",
+     "upos": "",
+     "morph": "",
+     "gloss": "by men",
+     "deva": "नरैः",
+     "slp1": "nara",
+     "href": "../w/nara.html"
+    },
+    {
+     "form": "aphalākāṅkṣibhiḥ",
+     "lemma": "a-phala-ākāṅkṣin",
+     "upos": "",
+     "morph": "",
+     "gloss": "by those not expecting the fruit",
+     "deva": "अफलाकाङ्क्षिभिः",
+     "slp1": "Pal",
+     "href": "../w/_50al.html"
+    },
+    {
+     "form": "yuktaiḥ",
+     "lemma": "yukta",
+     "upos": "",
+     "morph": "",
+     "gloss": "by those yoked, by those endowed with",
+     "deva": "युक्तैः",
+     "slp1": "yukta",
+     "href": "../w/yukta.html"
+    },
+    {
+     "form": "sāttvikam",
+     "lemma": "sāttvika",
+     "upos": "",
+     "morph": "",
+     "gloss": "related to sattva",
+     "deva": "सात्त्विकम्",
+     "slp1": "sAttvika",
+     "href": "../w/s_41ttvika.html"
+    },
+    {
+     "form": "paricakṣate",
+     "lemma": "pari-√cakṣ",
+     "upos": "",
+     "morph": "",
+     "gloss": "they call",
+     "deva": "परिचक्षते",
+     "slp1": "paricakz",
+     "href": "../w/paricakz.html"
+    }
+   ]
+  },
+  {
+   "n": "17.18",
+   "locus": "Bhagavadgītā 17.18",
+   "dcs": null,
+   "text": "sat-kāra-māna-pūjārthaṃ tapo dambhena caiva yat",
+   "deva": "सत्कारमानपूजाअर्थम् तपः दम्भेन​ च​ एव​ यत् क्रियते तत् इह​ प्रोक्तम् राजसम् चलम् अध्रुवम्",
+   "tokens": [
+    {
+     "form": "sat-kāra-māna-pūjā-artham",
+     "lemma": "sat-kāra-māna-pūjā-artham",
+     "upos": "",
+     "morph": "",
+     "gloss": "for the sake of respect,  honour and worship",
+     "deva": "सत्कारमानपूजाअर्थम्",
+     "slp1": "as",
+     "href": "../w/as.html"
+    },
+    {
+     "form": "tapaḥ",
+     "lemma": "tapas",
+     "upos": "",
+     "morph": "",
+     "gloss": "heat, austerity",
+     "deva": "तपः",
+     "slp1": "tapas",
+     "href": "../w/tapas.html"
+    },
+    {
+     "form": "dambhena",
+     "lemma": "dambha",
+     "upos": "",
+     "morph": "",
+     "gloss": "with deceit, with hypocrisy, with pride",
+     "deva": "दम्भेन​",
+     "slp1": "damBa",
+     "href": "../w/dam_42a.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "certainly, just, merely",
+     "deva": "एव​",
+     "slp1": "eva",
+     "href": "../w/eva.html"
+    },
+    {
+     "form": "yat",
+     "lemma": "yat",
+     "upos": "",
+     "morph": "",
+     "gloss": "which",
+     "deva": "यत्",
+     "slp1": "yat",
+     "href": "../w/yat.html"
+    },
+    {
+     "form": "kriyate",
+     "lemma": "√kṛ",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is done",
+     "deva": "क्रियते",
+     "slp1": "kf",
+     "href": "../w/kf.html"
+    },
+    {
+     "form": "tat",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that",
+     "deva": "तत्",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "iha",
+     "lemma": "iha",
+     "upos": "",
+     "morph": "",
+     "gloss": "here",
+     "deva": "इह​",
+     "slp1": "iha",
+     "href": "../w/iha.html"
+    },
+    {
+     "form": "proktam",
+     "lemma": "prokta",
+     "upos": "",
+     "morph": "",
+     "gloss": "spoken, called",
+     "deva": "प्रोक्तम्",
+     "slp1": "prokta",
+     "href": "../w/prokta.html"
+    },
+    {
+     "form": "rājasam",
+     "lemma": "rājasa",
+     "upos": "",
+     "morph": "",
+     "gloss": "related to rajas, rajasic",
+     "deva": "राजसम्",
+     "slp1": "rAjasa",
+     "href": "../w/r_41jasa.html"
+    },
+    {
+     "form": "calam",
+     "lemma": "cala",
+     "upos": "",
+     "morph": "",
+     "gloss": "restless, flickering",
+     "deva": "चलम्",
+     "slp1": "cala",
+     "href": "../w/cala.html"
+    },
+    {
+     "form": "adhruvam",
+     "lemma": "adhruva",
+     "upos": "",
+     "morph": "",
+     "gloss": "uncertain, unstable",
+     "deva": "अध्रुवम्",
+     "slp1": "aDruva",
+     "href": "../w/a_44ruva.html"
+    }
+   ]
+  },
+  {
+   "n": "17.19",
+   "locus": "Bhagavadgītā 17.19",
+   "dcs": null,
+   "text": "mūḍha-grāheṇātmano yat pīḍayā kriyate tapaḥ",
+   "deva": "मूढग्राहेण​ आत्मनः यत् पीडया क्रियते तपः परस्य​ उत्सादनार्थम् वा तत् तामसम् उदाहृतम्",
+   "tokens": [
+    {
+     "form": "mūḍha-grāheṇa",
+     "lemma": "mūḍha-grāha",
+     "upos": "",
+     "morph": "",
+     "gloss": "with a deluded conception",
+     "deva": "मूढग्राहेण​",
+     "slp1": "mUQagrAha",
+     "href": "../w/m_55_51agr_41ha.html"
+    },
+    {
+     "form": "ātmanaḥ",
+     "lemma": "ātman",
+     "upos": "",
+     "morph": "",
+     "gloss": "of the self",
+     "deva": "आत्मनः",
+     "slp1": "Atman",
+     "href": "../w/_41tman.html"
+    },
+    {
+     "form": "yat",
+     "lemma": "yat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that which",
+     "deva": "यत्",
+     "slp1": "yat",
+     "href": "../w/yat.html"
+    },
+    {
+     "form": "pīḍayā",
+     "lemma": "pīḍā",
+     "upos": "",
+     "morph": "",
+     "gloss": "with torture",
+     "deva": "पीडया",
+     "slp1": "pIqA",
+     "href": "../w/p_49q_41.html"
+    },
+    {
+     "form": "kriyate",
+     "lemma": "√kṛ",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is done",
+     "deva": "क्रियते",
+     "slp1": "kf",
+     "href": "../w/kf.html"
+    },
+    {
+     "form": "tapaḥ",
+     "lemma": "tapas",
+     "upos": "",
+     "morph": "",
+     "gloss": "heat, austerity",
+     "deva": "तपः",
+     "slp1": "tapas",
+     "href": "../w/tapas.html"
+    },
+    {
+     "form": "parasya",
+     "lemma": "para",
+     "upos": "",
+     "morph": "",
+     "gloss": "of the other, of the strange",
+     "deva": "परस्य​",
+     "slp1": "para",
+     "href": "../w/para.html"
+    },
+    {
+     "form": "utsādana-artham",
+     "lemma": "utsādana-artham",
+     "upos": "",
+     "morph": "",
+     "gloss": "for the sake of destruction",
+     "deva": "उत्सादनार्थम्",
+     "slp1": "sad",
+     "href": "../w/sad.html"
+    },
+    {
+     "form": "vā",
+     "lemma": "vā",
+     "upos": "",
+     "morph": "",
+     "gloss": "or, and, on the other side, but even if, however",
+     "deva": "वा",
+     "slp1": "vA",
+     "href": "../w/v_41.html"
+    },
+    {
+     "form": "tat",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that",
+     "deva": "तत्",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "tāmasam",
+     "lemma": "tāmasa",
+     "upos": "",
+     "morph": "",
+     "gloss": "related to tamas, tamasic",
+     "deva": "तामसम्",
+     "slp1": "tAmasa",
+     "href": "../w/t_41masa.html"
+    },
+    {
+     "form": "udāhṛtam",
+     "lemma": "ud-ā-hṛta",
+     "upos": "",
+     "morph": "",
+     "gloss": "set up, declared",
+     "deva": "उदाहृतम्",
+     "slp1": "udAhfta",
+     "href": "../w/ud_41hfta.html"
+    }
+   ]
+  },
+  {
+   "n": "17.20",
+   "locus": "Bhagavadgītā 17.20",
+   "dcs": null,
+   "text": "dātavyam iti yad dānaṃ dīyate ‘nupakāriṇe",
+   "deva": "दातव्यम् इति यत् दानम् दीयते अनुपकारिणे देशे काले च​ पात्रे च​ तत् दानम् सात्त्विकम् स्मृतम्",
+   "tokens": [
+    {
+     "form": "dātavyam",
+     "lemma": "dātavya",
+     "upos": "",
+     "morph": "",
+     "gloss": "to be given, what should be given",
+     "deva": "दातव्यम्",
+     "slp1": "dAtavya",
+     "href": "../w/d_41tavya.html"
+    },
+    {
+     "form": "iti",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "thus",
+     "deva": "इति",
+     "slp1": "iti",
+     "href": "../w/iti.html"
+    },
+    {
+     "form": "yat",
+     "lemma": "yat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that which",
+     "deva": "यत्",
+     "slp1": "yat",
+     "href": "../w/yat.html"
+    },
+    {
+     "form": "dānam",
+     "lemma": "dāna",
+     "upos": "",
+     "morph": "",
+     "gloss": "gift, charity",
+     "deva": "दानम्",
+     "slp1": "dAna",
+     "href": "../w/d_41na.html"
+    },
+    {
+     "form": "dīyate",
+     "lemma": "√dā",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is given",
+     "deva": "दीयते",
+     "slp1": "dA",
+     "href": "../w/d_41.html"
+    },
+    {
+     "form": "anupakāriṇe",
+     "lemma": "an-upakārin",
+     "upos": "",
+     "morph": "",
+     "gloss": "to one who is not giving in return",
+     "deva": "अनुपकारिणे",
+     "slp1": "anupakArin",
+     "href": "../w/anupak_41rin.html"
+    },
+    {
+     "form": "deśe",
+     "lemma": "deśa",
+     "upos": "",
+     "morph": "",
+     "gloss": "in a place, in a country",
+     "deva": "देशे",
+     "slp1": "deSa",
+     "href": "../w/de_53a.html"
+    },
+    {
+     "form": "kāle",
+     "lemma": "kāla",
+     "upos": "",
+     "morph": "",
+     "gloss": "in time",
+     "deva": "काले",
+     "slp1": "kAla",
+     "href": "../w/k_41la.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "pātre",
+     "lemma": "pātra",
+     "upos": "",
+     "morph": "",
+     "gloss": "to a worthy recipient",
+     "deva": "पात्रे",
+     "slp1": "pAtra",
+     "href": "../w/p_41tra.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "tat",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that",
+     "deva": "तत्",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "dānam",
+     "lemma": "dāna",
+     "upos": "",
+     "morph": "",
+     "gloss": "gift, charity",
+     "deva": "दानम्",
+     "slp1": "dAna",
+     "href": "../w/d_41na.html"
+    },
+    {
+     "form": "sāttvikam",
+     "lemma": "sāttvika",
+     "upos": "",
+     "morph": "",
+     "gloss": "related to sattva",
+     "deva": "सात्त्विकम्",
+     "slp1": "sAttvika",
+     "href": "../w/s_41ttvika.html"
+    },
+    {
+     "form": "smṛtam",
+     "lemma": "smṛta",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is known, it is remembered",
+     "deva": "स्मृतम्",
+     "slp1": "smfta",
+     "href": "../w/smfta.html"
+    }
+   ]
+  },
+  {
+   "n": "17.21",
+   "locus": "Bhagavadgītā 17.21",
+   "dcs": null,
+   "text": "yat tu praty-upakārārthaṃ phalam uddiśya vā punaḥ",
+   "deva": "यत् तु प्रत्युपकारार्थम् फलम् उद्दिश्य​ वा पुनः दीयते च​ परिक्लिष्टम् तत् दानम् राजसम् स्मृतम्",
+   "tokens": [
+    {
+     "form": "yat",
+     "lemma": "yat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that which",
+     "deva": "यत्",
+     "slp1": "yat",
+     "href": "../w/yat.html"
+    },
+    {
+     "form": "tu",
+     "lemma": "tu",
+     "upos": "",
+     "morph": "",
+     "gloss": "but, then, or, and",
+     "deva": "तु",
+     "slp1": "tu",
+     "href": "../w/tu.html"
+    },
+    {
+     "form": "praty-upakāra-artham",
+     "lemma": "praty-upakāra-artham",
+     "upos": "",
+     "morph": "",
+     "gloss": "for the sake of getting in return",
+     "deva": "प्रत्युपकारार्थम्",
+     "slp1": "kf",
+     "href": "../w/kf.html"
+    },
+    {
+     "form": "phalam",
+     "lemma": "phala",
+     "upos": "",
+     "morph": "",
+     "gloss": "fruit, result",
+     "deva": "फलम्",
+     "slp1": "Pala",
+     "href": "../w/_50ala.html"
+    },
+    {
+     "form": "uddiśya",
+     "lemma": "ut-√diś",
+     "upos": "",
+     "morph": "",
+     "gloss": "aiming at",
+     "deva": "उद्दिश्य​",
+     "slp1": "diS",
+     "href": "../w/di_53.html"
+    },
+    {
+     "form": "vā",
+     "lemma": "vā",
+     "upos": "",
+     "morph": "",
+     "gloss": "or, and, on the other side, but even if, however",
+     "deva": "वा",
+     "slp1": "vA",
+     "href": "../w/v_41.html"
+    },
+    {
+     "form": "punaḥ",
+     "lemma": "punaḥ",
+     "upos": "",
+     "morph": "",
+     "gloss": "back, again, moreover",
+     "deva": "पुनः",
+     "slp1": "punaH",
+     "href": "../w/puna_48.html"
+    },
+    {
+     "form": "dīyate",
+     "lemma": "√dā",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is given",
+     "deva": "दीयते",
+     "slp1": "dA",
+     "href": "../w/d_41.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "parikliṣṭam",
+     "lemma": "parikliṣṭam",
+     "upos": "",
+     "morph": "",
+     "gloss": "grudgingly, unwillingly",
+     "deva": "परिक्लिष्टम्",
+     "slp1": "pariklizwam",
+     "href": "../w/pariklizwam.html"
+    },
+    {
+     "form": "tat",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that",
+     "deva": "तत्",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "dānam",
+     "lemma": "dāna",
+     "upos": "",
+     "morph": "",
+     "gloss": "gift, charity",
+     "deva": "दानम्",
+     "slp1": "dAna",
+     "href": "../w/d_41na.html"
+    },
+    {
+     "form": "rājasam",
+     "lemma": "rājasa",
+     "upos": "",
+     "morph": "",
+     "gloss": "related to rajas, rajasic",
+     "deva": "राजसम्",
+     "slp1": "rAjasa",
+     "href": "../w/r_41jasa.html"
+    },
+    {
+     "form": "smṛtam",
+     "lemma": "smṛta",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is known, it is remembered",
+     "deva": "स्मृतम्",
+     "slp1": "smfta",
+     "href": "../w/smfta.html"
+    }
+   ]
+  },
+  {
+   "n": "17.22",
+   "locus": "Bhagavadgītā 17.22",
+   "dcs": null,
+   "text": "adeśa-kāle yad dānam apātrebhyaś ca dīyate",
+   "deva": "अदेशकाले यत् दानम् अपात्रेभ्यः च​ दीयते असत्कृतम् अवज्ञातम् तत् तामसम् उदाहृतम्",
+   "tokens": [
+    {
+     "form": "adeśa-kāle",
+     "lemma": "a-deśa-kāla",
+     "upos": "",
+     "morph": "",
+     "gloss": "in [improper] place and at [improper] time",
+     "deva": "अदेशकाले",
+     "slp1": "adeSakAla",
+     "href": "../w/ade_53ak_41la.html"
+    },
+    {
+     "form": "yat",
+     "lemma": "yat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that which",
+     "deva": "यत्",
+     "slp1": "yat",
+     "href": "../w/yat.html"
+    },
+    {
+     "form": "dānam",
+     "lemma": "dāna",
+     "upos": "",
+     "morph": "",
+     "gloss": "gift, charity",
+     "deva": "दानम्",
+     "slp1": "dAna",
+     "href": "../w/d_41na.html"
+    },
+    {
+     "form": "apātrebhyaḥ",
+     "lemma": "a-pātra",
+     "upos": "",
+     "morph": "",
+     "gloss": "to unworthy recipients",
+     "deva": "अपात्रेभ्यः",
+     "slp1": "apAtra",
+     "href": "../w/ap_41tra.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "dīyate",
+     "lemma": "√dā",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is given",
+     "deva": "दीयते",
+     "slp1": "dA",
+     "href": "../w/d_41.html"
+    },
+    {
+     "form": "asat-kṛtam",
+     "lemma": "asat-kṛtam",
+     "upos": "",
+     "morph": "",
+     "gloss": "disrespectfully",
+     "deva": "असत्कृतम्",
+     "slp1": "asatkftam",
+     "href": "../w/asatkftam.html"
+    },
+    {
+     "form": "avajñātam",
+     "lemma": "avajñātam",
+     "upos": "",
+     "morph": "",
+     "gloss": "despisingly",
+     "deva": "अवज्ञातम्",
+     "slp1": "jYA",
+     "href": "../w/j_59_41.html"
+    },
+    {
+     "form": "tat",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that",
+     "deva": "तत्",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "tāmasam",
+     "lemma": "tāmasa",
+     "upos": "",
+     "morph": "",
+     "gloss": "related to tamas, tamasic",
+     "deva": "तामसम्",
+     "slp1": "tAmasa",
+     "href": "../w/t_41masa.html"
+    },
+    {
+     "form": "udāhṛtam",
+     "lemma": "ud-ā-hṛta",
+     "upos": "",
+     "morph": "",
+     "gloss": "set up, declared",
+     "deva": "उदाहृतम्",
+     "slp1": "udAhfta",
+     "href": "../w/ud_41hfta.html"
+    }
+   ]
+  },
+  {
+   "n": "17.23",
+   "locus": "Bhagavadgītā 17.23",
+   "dcs": null,
+   "text": "oṃ tat sad iti nirdeśo brahmaṇas tri-vidhaḥ smṛtaḥ",
+   "deva": "ओम्तत्सत् इति निर्देशः ब्रह्मणः त्रिविधः स्मृतः ब्राह्मणाः तेन​ वेदाः च​ यज्ञाः च​ विहिताः पुरा",
+   "tokens": [
+    {
+     "form": "om tat sat",
+     "lemma": "om tat sat",
+     "upos": "",
+     "morph": "",
+     "gloss": "OM, TAT, SAT",
+     "deva": "ओम्तत्सत्",
+     "slp1": "as",
+     "href": "../w/as.html"
+    },
+    {
+     "form": "iti",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "thus",
+     "deva": "इति",
+     "slp1": "iti",
+     "href": "../w/iti.html"
+    },
+    {
+     "form": "nirdeśaḥ",
+     "lemma": "nirdeśa",
+     "upos": "",
+     "morph": "",
+     "gloss": "instruction, description, designation",
+     "deva": "निर्देशः",
+     "slp1": "nirdeSa",
+     "href": "../w/nirde_53a.html"
+    },
+    {
+     "form": "brahmaṇaḥ",
+     "lemma": "brahman",
+     "upos": "",
+     "morph": "",
+     "gloss": "of the spirit, of the Veda",
+     "deva": "ब्रह्मणः",
+     "slp1": "brahman",
+     "href": "../w/brahman.html"
+    },
+    {
+     "form": "tri-vidhaḥ",
+     "lemma": "tri-vidha",
+     "upos": "",
+     "morph": "",
+     "gloss": "threefold, of three parts",
+     "deva": "त्रिविधः",
+     "slp1": "triviDa",
+     "href": "../w/trivi_44a.html"
+    },
+    {
+     "form": "smṛtaḥ",
+     "lemma": "smṛta",
+     "upos": "",
+     "morph": "",
+     "gloss": "known, remembered",
+     "deva": "स्मृतः",
+     "slp1": "smfta",
+     "href": "../w/smfta.html"
+    },
+    {
+     "form": "brāhmaṇāḥ",
+     "lemma": "brāhmaṇa",
+     "upos": "",
+     "morph": "",
+     "gloss": "brahmins",
+     "deva": "ब्राह्मणाः",
+     "slp1": "brAhmaRa",
+     "href": "../w/br_41hma_52a.html"
+    },
+    {
+     "form": "tena",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "by that",
+     "deva": "तेन​",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "vedāḥ",
+     "lemma": "veda",
+     "upos": "",
+     "morph": "",
+     "gloss": "the Vedas",
+     "deva": "वेदाः",
+     "slp1": "veda",
+     "href": "../w/veda.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "yajñāḥ",
+     "lemma": "yajña",
+     "upos": "",
+     "morph": "",
+     "gloss": "sacrifices, worship",
+     "deva": "यज्ञाः",
+     "slp1": "yajYa",
+     "href": "../w/yaj_59a.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "vihitāḥ",
+     "lemma": "vihita",
+     "upos": "",
+     "morph": "",
+     "gloss": "placed, made",
+     "deva": "विहिताः",
+     "slp1": "vihita",
+     "href": "../w/vihita.html"
+    },
+    {
+     "form": "purā",
+     "lemma": "purā",
+     "upos": "",
+     "morph": "",
+     "gloss": "formerly, anciently, in the beginning",
+     "deva": "पुरा",
+     "slp1": "purA",
+     "href": "../w/pur_41.html"
+    }
+   ]
+  },
+  {
+   "n": "17.24",
+   "locus": "Bhagavadgītā 17.24",
+   "dcs": null,
+   "text": "tasmād om ity udāhṛtya yajña-dāna-tapaḥ-kriyāḥ",
+   "deva": "तस्मात् ओम् इति उदाहृत्य​ यज्ञदानतपःक्रियाः प्रवर्तन्ते विधानोक्ताः सततम् ब्रह्मवादिनाम्",
+   "tokens": [
+    {
+     "form": "tasmāt",
+     "lemma": "tasmāt",
+     "upos": "",
+     "morph": "",
+     "gloss": "from that",
+     "deva": "तस्मात्",
+     "slp1": "tasmAt",
+     "href": "../w/tasm_41t.html"
+    },
+    {
+     "form": "om",
+     "lemma": "om",
+     "upos": "",
+     "morph": "",
+     "gloss": "OM",
+     "deva": "ओम्",
+     "slp1": "om",
+     "href": "../w/om.html"
+    },
+    {
+     "form": "iti",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "thus",
+     "deva": "इति",
+     "slp1": "iti",
+     "href": "../w/iti.html"
+    },
+    {
+     "form": "udāhṛtya",
+     "lemma": "ud-ā-√hṛ",
+     "upos": "",
+     "morph": "",
+     "gloss": "after declaring",
+     "deva": "उदाहृत्य​",
+     "slp1": "udAhf",
+     "href": "../w/ud_41hf.html"
+    },
+    {
+     "form": "yajña-dāna-tapaḥ-kriyāḥ",
+     "lemma": "yajña-dāna-tapaḥ-kriya",
+     "upos": "",
+     "morph": "",
+     "gloss": "acts of sacrifice, charity and austerity",
+     "deva": "यज्ञदानतपःक्रियाः",
+     "slp1": "yaj",
+     "href": "../w/yaj.html"
+    },
+    {
+     "form": "pravartante",
+     "lemma": "pra-√vṛt",
+     "upos": "",
+     "morph": "",
+     "gloss": "they start to act, they act",
+     "deva": "प्रवर्तन्ते",
+     "slp1": "pravft",
+     "href": "../w/pravft.html"
+    },
+    {
+     "form": "vidhānoktāḥ",
+     "lemma": "vidhāna-ukta",
+     "upos": "",
+     "morph": "",
+     "gloss": "said in the precepts",
+     "deva": "विधानोक्ताः",
+     "slp1": "DA",
+     "href": "../w/_44_41.html"
+    },
+    {
+     "form": "satatam",
+     "lemma": "satatam",
+     "upos": "",
+     "morph": "",
+     "gloss": "constantly",
+     "deva": "सततम्",
+     "slp1": "satatam",
+     "href": "../w/satatam.html"
+    },
+    {
+     "form": "brahma-vādinām",
+     "lemma": "brahma-vādin",
+     "upos": "",
+     "morph": "",
+     "gloss": "of those who explain Brahman",
+     "deva": "ब्रह्मवादिनाम्",
+     "slp1": "brahmavAdin",
+     "href": "../w/brahmav_41din.html"
+    }
+   ]
+  },
+  {
+   "n": "17.25",
+   "locus": "Bhagavadgītā 17.25",
+   "dcs": null,
+   "text": "tad ity anabhisaṃdhāya phalaṃ yajña-tapaḥ-kriyāḥ",
+   "deva": "तत् इति अनभिसञ्धाय​ फलम् यज्ञतपःक्रियाः दानक्रियाः च​ विविधाः क्रियन्ते मोक्षकाङ्क्षिभिः",
+   "tokens": [
+    {
+     "form": "tat",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that",
+     "deva": "तत्",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "iti",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "thus",
+     "deva": "इति",
+     "slp1": "iti",
+     "href": "../w/iti.html"
+    },
+    {
+     "form": "anabhisaṁdhāya",
+     "lemma": "abhi-sam-√dhā",
+     "upos": "",
+     "morph": "",
+     "gloss": "not aiming at",
+     "deva": "अनभिसञ्धाय​",
+     "slp1": "DA",
+     "href": "../w/_44_41.html"
+    },
+    {
+     "form": "phalam",
+     "lemma": "phala",
+     "upos": "",
+     "morph": "",
+     "gloss": "fruit, result",
+     "deva": "फलम्",
+     "slp1": "Pala",
+     "href": "../w/_50ala.html"
+    },
+    {
+     "form": "yajña-tapaḥ-kriyāḥ",
+     "lemma": "yajña-tapaḥ-kriya",
+     "upos": "",
+     "morph": "",
+     "gloss": "acts of sacrifice and austerity",
+     "deva": "यज्ञतपःक्रियाः",
+     "slp1": "yaj",
+     "href": "../w/yaj.html"
+    },
+    {
+     "form": "dāna-kriyāḥ",
+     "lemma": "dāna-kriya",
+     "upos": "",
+     "morph": "",
+     "gloss": "acts of charity",
+     "deva": "दानक्रियाः",
+     "slp1": "dA",
+     "href": "../w/d_41.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "vividhāḥ",
+     "lemma": "vi-vidha",
+     "upos": "",
+     "morph": "",
+     "gloss": "manifold, different",
+     "deva": "विविधाः",
+     "slp1": "viviDa",
+     "href": "../w/vivi_44a.html"
+    },
+    {
+     "form": "kriyante",
+     "lemma": "√kṛ",
+     "upos": "",
+     "morph": "",
+     "gloss": "they are done",
+     "deva": "क्रियन्ते",
+     "slp1": "kf",
+     "href": "../w/kf.html"
+    },
+    {
+     "form": "mokṣa-kāṅkṣibhiḥ",
+     "lemma": "mokṣa-kāṅkṣin",
+     "upos": "",
+     "morph": "",
+     "gloss": "by those desiring liberation",
+     "deva": "मोक्षकाङ्क्षिभिः",
+     "slp1": "mokzakANkzin",
+     "href": "../w/mokzak_41_4ekzin.html"
+    }
+   ]
+  },
+  {
+   "n": "17.26",
+   "locus": "Bhagavadgītā 17.26",
+   "dcs": null,
+   "text": "sad-bhāve sādhu-bhāve ca sad ity etat prayujyate",
+   "deva": "सद्भावे साधुभावे च​ सत् इति एतत् प्रयुज्यते प्रशस्ते कर्मणि तथा सच्छब्दः पार्थ​ युज्यते",
+   "tokens": [
+    {
+     "form": "sad-bhāve",
+     "lemma": "sad-bhāva",
+     "upos": "",
+     "morph": "",
+     "gloss": "in the sense of being",
+     "deva": "सद्भावे",
+     "slp1": "sadBAva",
+     "href": "../w/sad_42_41va.html"
+    },
+    {
+     "form": "sādhu-bhāve",
+     "lemma": "sādhu-bhāva",
+     "upos": "",
+     "morph": "",
+     "gloss": "in the sense of saintliness",
+     "deva": "साधुभावे",
+     "slp1": "sADuBAva",
+     "href": "../w/s_41_44u_42_41va.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "sat",
+     "lemma": "sant",
+     "upos": "",
+     "morph": "",
+     "gloss": "being, existing, true, the essence",
+     "deva": "सत्",
+     "slp1": "sant",
+     "href": "../w/sant.html"
+    },
+    {
+     "form": "iti",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "thus",
+     "deva": "इति",
+     "slp1": "iti",
+     "href": "../w/iti.html"
+    },
+    {
+     "form": "etat",
+     "lemma": "etat",
+     "upos": "",
+     "morph": "",
+     "gloss": "to",
+     "deva": "एतत्",
+     "slp1": "etat",
+     "href": "../w/etat.html"
+    },
+    {
+     "form": "prayujyate",
+     "lemma": "pra-√yuj",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is used, it is engaged",
+     "deva": "प्रयुज्यते",
+     "slp1": "prayuj",
+     "href": "../w/prayuj.html"
+    },
+    {
+     "form": "praśaste",
+     "lemma": "praśasta",
+     "upos": "",
+     "morph": "",
+     "gloss": "in a praised, in an auspicious",
+     "deva": "प्रशस्ते",
+     "slp1": "praSasta",
+     "href": "../w/pra_53asta.html"
+    },
+    {
+     "form": "karmaṇi",
+     "lemma": "karman",
+     "upos": "",
+     "morph": "",
+     "gloss": "in activity",
+     "deva": "कर्मणि",
+     "slp1": "karman",
+     "href": "../w/karman.html"
+    },
+    {
+     "form": "tathā",
+     "lemma": "tathā",
+     "upos": "",
+     "morph": "",
+     "gloss": "in that manner, so, in like manner",
+     "deva": "तथा",
+     "slp1": "taTA",
+     "href": "../w/ta_54_41.html"
+    },
+    {
+     "form": "sac-chabdaḥ",
+     "lemma": "sat-śabda",
+     "upos": "",
+     "morph": "",
+     "gloss": "sound SAT",
+     "deva": "सच्छब्दः",
+     "slp1": "as",
+     "href": "../w/as.html"
+    },
+    {
+     "form": "pārtha",
+     "lemma": "pārtha",
+     "upos": "",
+     "morph": "",
+     "gloss": "O son of Pṛthā",
+     "deva": "पार्थ​",
+     "slp1": "pArTa",
+     "href": "../w/p_41r_54a.html"
+    },
+    {
+     "form": "yujyate",
+     "lemma": "√yuj",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is used",
+     "deva": "युज्यते",
+     "slp1": "yuj",
+     "href": "../w/yuj.html"
+    }
+   ]
+  },
+  {
+   "n": "17.27",
+   "locus": "Bhagavadgītā 17.27",
+   "dcs": null,
+   "text": "yajñe tapasi dāne ca sthitiḥ sad iti cocyate",
+   "deva": "यज्ञे तपसि दाने च​ स्थितिः सत् इति च​ उच्यते कर्म​ च​ एव​ तदर्थीयम् सत् इति एव​ अभिधीयते",
+   "tokens": [
+    {
+     "form": "yajñe",
+     "lemma": "yajña",
+     "upos": "",
+     "morph": "",
+     "gloss": "in sacrifice, in worship",
+     "deva": "यज्ञे",
+     "slp1": "yajYa",
+     "href": "../w/yaj_59a.html"
+    },
+    {
+     "form": "tapasi",
+     "lemma": "tapas",
+     "upos": "",
+     "morph": "",
+     "gloss": "in heat, in austerity",
+     "deva": "तपसि",
+     "slp1": "tapas",
+     "href": "../w/tapas.html"
+    },
+    {
+     "form": "dāne",
+     "lemma": "dāna",
+     "upos": "",
+     "morph": "",
+     "gloss": "in charity",
+     "deva": "दाने",
+     "slp1": "dAna",
+     "href": "../w/d_41na.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "sthitiḥ",
+     "lemma": "sthiti",
+     "upos": "",
+     "morph": "",
+     "gloss": "staying, state, condition, existence",
+     "deva": "स्थितिः",
+     "slp1": "sTiti",
+     "href": "../w/s_54iti.html"
+    },
+    {
+     "form": "sat",
+     "lemma": "sant",
+     "upos": "",
+     "morph": "",
+     "gloss": "being, existing, true, the essence",
+     "deva": "सत्",
+     "slp1": "sant",
+     "href": "../w/sant.html"
+    },
+    {
+     "form": "iti",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "thus",
+     "deva": "इति",
+     "slp1": "iti",
+     "href": "../w/iti.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "ucyate",
+     "lemma": "√vac",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is said",
+     "deva": "उच्यते",
+     "slp1": "vac",
+     "href": "../w/vac.html"
+    },
+    {
+     "form": "karma",
+     "lemma": "karman",
+     "upos": "",
+     "morph": "",
+     "gloss": "activity",
+     "deva": "कर्म​",
+     "slp1": "karman",
+     "href": "../w/karman.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "certainly, just, merely",
+     "deva": "एव​",
+     "slp1": "eva",
+     "href": "../w/eva.html"
+    },
+    {
+     "form": "tad-arthīyam",
+     "lemma": "tad-arthīya",
+     "upos": "",
+     "morph": "",
+     "gloss": "destined for that",
+     "deva": "तदर्थीयम्",
+     "slp1": "tadarTIya",
+     "href": "../w/tadar_54_49ya.html"
+    },
+    {
+     "form": "sat",
+     "lemma": "sant",
+     "upos": "",
+     "morph": "",
+     "gloss": "being, existing, true, the essence",
+     "deva": "सत्",
+     "slp1": "sant",
+     "href": "../w/sant.html"
+    },
+    {
+     "form": "iti",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "thus",
+     "deva": "इति",
+     "slp1": "iti",
+     "href": "../w/iti.html"
+    },
+    {
+     "form": "eva",
+     "lemma": "eva",
+     "upos": "",
+     "morph": "",
+     "gloss": "certainly, just, merely",
+     "deva": "एव​",
+     "slp1": "eva",
+     "href": "../w/eva.html"
+    },
+    {
+     "form": "abhidhīyate",
+     "lemma": "abhi-√dhā",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is called",
+     "deva": "अभिधीयते",
+     "slp1": "aBiDA",
+     "href": "../w/a_42i_44_41.html"
+    }
+   ]
+  },
+  {
+   "n": "17.28",
+   "locus": "Bhagavadgītā 17.28",
+   "dcs": null,
+   "text": "aśraddhayā hutaṃ dattaṃ tapas taptaṃ kṛtaṃ ca yat",
+   "deva": "अश्रद्धया हुतम् दत्तम् तपः तप्तम् कृतम् च​ यत् असत् इति उच्यते पार्थ​ न​ च​ तत् प्रेत्य​ न​ इह​",
+   "tokens": [
+    {
+     "form": "aśraddhayā",
+     "lemma": "a-śraddhā",
+     "upos": "",
+     "morph": "",
+     "gloss": "without faith",
+     "deva": "अश्रद्धया",
+     "slp1": "aSradDA",
+     "href": "../w/a_53rad_44_41.html"
+    },
+    {
+     "form": "hutam",
+     "lemma": "huta",
+     "upos": "",
+     "morph": "",
+     "gloss": "offered in sacrifice",
+     "deva": "हुतम्",
+     "slp1": "huta",
+     "href": "../w/huta.html"
+    },
+    {
+     "form": "dattam",
+     "lemma": "datta",
+     "upos": "",
+     "morph": "",
+     "gloss": "given",
+     "deva": "दत्तम्",
+     "slp1": "datta",
+     "href": "../w/datta.html"
+    },
+    {
+     "form": "tapaḥ",
+     "lemma": "tapas",
+     "upos": "",
+     "morph": "",
+     "gloss": "heat, austerity",
+     "deva": "तपः",
+     "slp1": "tapas",
+     "href": "../w/tapas.html"
+    },
+    {
+     "form": "taptam",
+     "lemma": "√tap",
+     "upos": "",
+     "morph": "",
+     "gloss": "undergone",
+     "deva": "तप्तम्",
+     "slp1": "tap",
+     "href": "../w/tap.html"
+    },
+    {
+     "form": "kṛtam",
+     "lemma": "kṛta",
+     "upos": "",
+     "morph": "",
+     "gloss": "done",
+     "deva": "कृतम्",
+     "slp1": "kfta",
+     "href": "../w/kfta.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "yat",
+     "lemma": "yat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that which",
+     "deva": "यत्",
+     "slp1": "yat",
+     "href": "../w/yat.html"
+    },
+    {
+     "form": "asat",
+     "lemma": "a-sant",
+     "upos": "",
+     "morph": "",
+     "gloss": "untrue, non-existing",
+     "deva": "असत्",
+     "slp1": "asant",
+     "href": "../w/asant.html"
+    },
+    {
+     "form": "iti",
+     "lemma": "iti",
+     "upos": "",
+     "morph": "",
+     "gloss": "thus",
+     "deva": "इति",
+     "slp1": "iti",
+     "href": "../w/iti.html"
+    },
+    {
+     "form": "ucyate",
+     "lemma": "√vac",
+     "upos": "",
+     "morph": "",
+     "gloss": "it is said",
+     "deva": "उच्यते",
+     "slp1": "vac",
+     "href": "../w/vac.html"
+    },
+    {
+     "form": "pārtha",
+     "lemma": "pārtha",
+     "upos": "",
+     "morph": "",
+     "gloss": "O son of Pṛthā",
+     "deva": "पार्थ​",
+     "slp1": "pArTa",
+     "href": "../w/p_41r_54a.html"
+    },
+    {
+     "form": "na",
+     "lemma": "na",
+     "upos": "",
+     "morph": "",
+     "gloss": "not",
+     "deva": "न​",
+     "slp1": "na",
+     "href": "../w/na.html"
+    },
+    {
+     "form": "ca",
+     "lemma": "ca",
+     "upos": "",
+     "morph": "",
+     "gloss": "and",
+     "deva": "च​",
+     "slp1": "ca",
+     "href": "../w/ca.html"
+    },
+    {
+     "form": "tat",
+     "lemma": "tat",
+     "upos": "",
+     "morph": "",
+     "gloss": "that",
+     "deva": "तत्",
+     "slp1": "tat",
+     "href": "../w/tat.html"
+    },
+    {
+     "form": "pretya",
+     "lemma": "pra-√i",
+     "upos": "",
+     "morph": "",
+     "gloss": "having died, after death, in the next world",
+     "deva": "प्रेत्य​",
+     "slp1": "i",
+     "href": "../w/i.html"
+    },
+    {
+     "form": "na",
+     "lemma": "na",
+     "upos": "",
+     "morph": "",
+     "gloss": "not",
+     "deva": "न​",
+     "slp1": "na",
+     "href": "../w/na.html"
+    },
+    {
+     "form": "iha",
+     "lemma": "iha",
+     "upos": "",
+     "morph": "",
+     "gloss": "here",
+     "deva": "इह​",
+     "slp1": "iha",
+     "href": "../w/iha.html"
+    }
+   ]
+  }
+ ]
+};
