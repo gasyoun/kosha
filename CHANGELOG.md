@@ -14,6 +14,21 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Changed
+- **H848: Gītā 1 reading pack upgraded EXPERIMENTAL → GOLD.** The machine
+  (GRETIL + vidyut-cheda) build is replaced by a hand-curated word-by-word
+  source — `SanskritGrammar/Concordance/Gita.xlsm` (`Grammar` sheet: lemma,
+  root, morphology, English + Russian gloss), vendored via
+  [`scripts/extract_gita_gold.py`](https://github.com/gasyoun/kosha/blob/main/scripts/extract_gita_gold.py)
+  to [`reading/data/sources/gita-1_gold_sanskritgrammar.tsv`](https://github.com/gasyoun/kosha/blob/main/reading/data/sources/gita-1_gold_sanskritgrammar.tsv)
+  (569 words / **47** verses — the full vulgate chapter). Rebuilt by
+  [`scripts/build_reading_pack_gita.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_reading_pack_gita.py):
+  **567/569 (99.6%) linked** to `/w/` cards (curated lemma 513 · root 46 ·
+  forms-table 8). The viewer now shows **Devanagari + IAST + English glosses**;
+  the experimental banner and the GRETIL source are removed. Dataset renamed
+  `gita-reading-pack-1-experimental` → `gita-reading-pack-1`. Same gold quality
+  class as the DCS-lemmatised Nala pack.
+
 ## [0.24.0] - 2026-07-13
 
 ### Added
