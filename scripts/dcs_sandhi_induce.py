@@ -184,8 +184,17 @@ def induce_coalescence(left_uns, right_uns, surface):
         return None, "align-fail"
     if out == lp + rp:
         return None, "no-sandhi"          # inputs pass through unchanged (a+v→av)
-    rule = re.sub(r"\s+", " ", "%s %s → %s" % (lp, rp, out)).strip()
-    return rule, None
+    # Notation: if the right word's initial phoneme survives unchanged at the end
+    # of the output, this is not a true vowel merge but the LEFT phoneme changing
+    # while the right stays — write it SPACED like the hand table / mode 1
+    # (`i e → y e`, `t b → d b`, `ḥ v → r v`), reserving merged form for genuine
+    # coalescence (`a a → ā`, `a e → ai`).
+    if out != rp and len(out) > len(rp) and out.endswith(rp):
+        out_left = out[: len(out) - len(rp)]
+        rule = "%s %s → %s %s" % (lp, rp, out_left, rp)
+    else:
+        rule = "%s %s → %s" % (lp, rp, out)
+    return re.sub(r"\s+", " ", rule).strip(), None
 
 
 # --- mode 2b: MWT right-edge sandhi (H888 Phase 1.1) ------------------------
