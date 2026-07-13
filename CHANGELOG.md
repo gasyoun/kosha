@@ -14,6 +14,24 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H848: P5 step-6b reading packs — Nala 1 built; Gītā 1 parked.** New builder
+  [`scripts/build_reading_pack.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_reading_pack.py)
+  turns a DCS chapter into a word-by-word reading pack whose every word links to its
+  kosha `/w/` dictionary card — **consuming** the H380 concordance core
+  ([`scripts/concordance_core.py`](https://github.com/gasyoun/kosha/blob/main/scripts/concordance_core.py)'s
+  `TieredMatcher`/`to_slp1` + the `card_token` twin), not re-rolling the join. **Nala 1**
+  (`MBh, 3, 50`, Nalopākhyāna) shipped: 65 sentences / 439 tokens, **434 (98.9%) linked**
+  (exact tier; 5 unlinked = DCS causative `-ay` stems + 1 indeclinable, honest residue).
+  Self-contained viewer [`reading/index.html`](https://github.com/gasyoun/kosha/blob/main/reading/index.html)
+  (+ `reading/data/nala-1.{js,json}`, [`reading/BUILD_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/reading/BUILD_REPORT.md)),
+  dataset `dcs-reading-pack-nala-1` in the manifest. Data-path finding: the real DCS DB is
+  `VisualDCS/src/DCS-data-2026/dcs_full.sqlite` (the 0-byte `src/dcs_full.sqlite` is a decoy).
+- **H848: Gītā 1 reading pack PARKED (data gap).** The Bhagavadgītā is absent from the DCS
+  corpus — Mahābhārata book 6 (Bhīṣmaparvan) omits exactly adhyāyas 23–40 (the 18 Gītā
+  chapters) and there is no standalone Bhagavadgītā text; a Gītā pack needs an external
+  lemmatised source (surfaced as `@DECIDE`).
+
 ## [0.21.0] - 2026-07-12
 
 ### Added
