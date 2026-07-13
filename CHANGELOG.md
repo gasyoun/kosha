@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.32.0] - 2026-07-13
+
 ### Added
 - **H876 (roadmap W6, final workstream): Sanskrit root × preverb (upasarga)
   semantics.** New public/MIT dataset
