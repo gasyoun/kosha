@@ -14,7 +14,21 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H888 (sandhi Phase 1): vowel-coalescence alignment mode.**
+  [`scripts/dcs_sandhi_induce.py`](https://github.com/gasyoun/kosha/blob/main/scripts/dcs_sandhi_induce.py)
+  now recovers the vowel-sandhi rules Phase 0 structurally missed. DCS records a
+  coalesced surface span as a CoNLL-U **multi-word token** (`5-6 nāgnir` over
+  `5 na` + `6 agniḥ`, whose own FORM stays un-coalesced), so a token-edge diff
+  never sees the merge. New **mode 2** aligns each MWT surface against its
+  component `Unsandhied` forms and reads the rule off the internal boundary
+  (`na`+`agniḥ` in `nāgnir` → `a a → ā`), sandhi-aware so `na`+`eva`→`naiva`
+  gives `a e → ai` (not a naïve alignment's `a e → i`).
+
 ### Fixed
+- **Sandhi Phase-0 MWT bug:** the inducer counted CoNLL-U MWT range lines (ID
+  `n-m`) as tokens, inflating `no-gold` junctions (Aṣṭāvakragīta 1,263 → **0**).
+  Mode 1 now skips range/enhanced-node lines and processes syntactic words only.
 - **PWG multi-volume scan-link disambiguation** (H839, Sonnet 5 `claude-sonnet-5`)
   — [`app/scan_resolver.py`](https://github.com/gasyoun/kosha/blob/main/app/scan_resolver.py)'s
   `scan_url()` silently defaulted a bare PWG page number to volume 1's scan
@@ -35,6 +49,13 @@ sense citations pin to `data_version`, not to repo tags.
   static cache / `colocation/data/pwg.js` — deferred to a separate pass so it
   can be built from a current (not 39-commits-stale) database rather than
   mixed into this fix.
+
+### Changed
+- **Sandhi pilots regenerated** with the merged mode-1 + mode-2 output.
+  Aṣṭāvakragīta now surfaces `a a → ā` as its #1 rule (122); Gītā-gold notation
+  coverage rose **47 % → 58 %** (75 → 93 of the 161 hand rules). Residual gap =
+  visarga elision at MWT right edges (`ḥ m → Ø m`), scoped as Phase 1.1. Credit:
+  Dr. Mārcis Gasūns.
 
 ## [0.37.0] - 2026-07-13
 
