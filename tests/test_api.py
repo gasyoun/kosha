@@ -197,7 +197,10 @@ def test_neighbors_flags_query_entry():
     assert len(q) == 1 and q[0]["L"] == "13"
     # every neighbour shares the query entry's column
     assert {e["pc_raw"] for e in body["results"]} == {"1-0004"}
-    assert q[0]["scan_url"].endswith("servepdf.php?page=4")
+    # H839 (13-07-2026): PWG scan_url now folds vol into page ("1-0004", not
+    # bare "4") -- Cologne's servepdf.php has no vol=/volume= param, so a bare
+    # page number silently defaulted to volume 1 regardless of the true volume.
+    assert q[0]["scan_url"].endswith("servepdf.php?page=1-0004")
 
 
 def test_neighbors_unknown_entry():

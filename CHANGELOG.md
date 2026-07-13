@@ -14,6 +14,28 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Fixed
+- **PWG multi-volume scan-link disambiguation** (H839, Sonnet 5 `claude-sonnet-5`)
+  — [`app/scan_resolver.py`](https://github.com/gasyoun/kosha/blob/main/app/scan_resolver.py)'s
+  `scan_url()` silently defaulted a bare PWG page number to volume 1's scan
+  regardless of the entry's real volume. Resolved by source read
+  ([`csl-apidev/parm.php`](https://github.com/sanskrit-lexicon/csl-apidev/blob/main/parm.php)
+  + `servepdfClass.php`) plus a live content-diff against the production
+  `servepdf.php` endpoint: Cologne has **no** `vol=`/`volume=` GET parameter
+  (any such param is silently ignored, which is why status-code probing alone
+  always returned 200); volume is instead embedded inside `page` itself as
+  `"{vol}-{page:04d}"`, matching PWG's own `<pc>` format and Cologne's
+  `pdffiles.txt` keys. `scan_url()` now takes `vol` and requires it for PWG
+  (returns `None` rather than an ambiguous link if omitted); every call site
+  (`app/main.py` ×3, `app/salt.py`, `scripts/build_static_cache.py`,
+  `scripts/build_colocation_page.py` ×2, `scripts/measure_d5.py`) updated to
+  pass `entries.vol`. New tests:
+  [`tests/test_scan_resolver.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_scan_resolver.py).
+  **Not included in this pass:** regenerating the committed `docs/cards/*.json`
+  static cache / `colocation/data/pwg.js` — deferred to a separate pass so it
+  can be built from a current (not 39-commits-stale) database rather than
+  mixed into this fix.
+
 ## [0.37.0] - 2026-07-13
 
 ### Changed

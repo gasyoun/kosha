@@ -110,7 +110,7 @@ def entry_payload(con, row, dv, out="iast", raw=False):
     """Mirror of app/main.py::_entry_payload — keep the two in lockstep."""
     payload = {
         "dict": row["dict"], "L": row["L"], "sense_ids": [],
-        "scan_url": scan_url(row["dict"], row["page"]),
+        "scan_url": scan_url(row["dict"], row["page"], row["vol"]),
         "headword": from_slp1_out(row["slp1_key"], out),
         "rendered_html": render(row["dict"], row["body"]),
     }

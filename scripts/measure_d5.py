@@ -362,7 +362,7 @@ def measure_static_cache():
                     "dict": d, "L": e["L"],
                     "headword": from_slp1_out(e["slp1_key"], "iast"),
                     "rendered_html": render(d, e["body"]),
-                    "scan_url": scan_url(d, e["page"]),
+                    "scan_url": scan_url(d, e["page"], e["vol"]),
                     "sense_ids": [f"{d}.{e['L']}.{s['sense_n']}" for s in senses],
                 })
         b = len(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
