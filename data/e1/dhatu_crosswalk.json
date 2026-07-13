@@ -1,0 +1,3911 @@
+{
+  "_about": "Cologne verb root -> vidyut aupadeśika-dhātu crosswalk (H855). Key 'model|root'; use Dhatu.mula(aupadeshika, gaṇa-of-model). via: 3sg=present-3sg match, direct=bare root already derives, bare=normalized-bare match, unresolved=no vidyut dhātu found.",
+  "vidyut_version": "0.4.0",
+  "gana_dhatupatha_entries": 1983,
+  "cologne_root_models": 779,
+  "resolved": 722,
+  "resolved_pct": 92.7,
+  "via_counts": {
+    "direct": 205,
+    "3sg": 474,
+    "unresolved": 57,
+    "bare": 43
+  },
+  "crosswalk": {
+    "v_10|BI": {
+      "aupadeshika": "BI",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|Bakz": {
+      "aupadeshika": "Bakza~",
+      "via": "3sg",
+      "code": "10.0033"
+    },
+    "v_10|Barts": {
+      "aupadeshika": "Bartsa~",
+      "via": "3sg",
+      "code": "10.0202"
+    },
+    "v_10|Cad": {
+      "aupadeshika": "Cada~",
+      "via": "3sg",
+      "code": "10.0370"
+    },
+    "v_10|Cal": {
+      "aupadeshika": "Cal",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|Gaww": {
+      "aupadeshika": "Gawwa~",
+      "via": "3sg",
+      "code": "10.0125"
+    },
+    "v_10|Gf": {
+      "aupadeshika": "Gf",
+      "via": "3sg",
+      "code": "10.0152"
+    },
+    "v_10|KaRq": {
+      "aupadeshika": "Kaqi~",
+      "via": "3sg",
+      "code": "10.0066"
+    },
+    "v_10|Kac": {
+      "aupadeshika": "Kac",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|SAl": {
+      "aupadeshika": "SAl",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|SIk": {
+      "aupadeshika": "SIka~",
+      "via": "3sg",
+      "code": "10.0320"
+    },
+    "v_10|SIl": {
+      "aupadeshika": "SIla",
+      "via": "3sg",
+      "code": "10.0419"
+    },
+    "v_10|SaW": {
+      "aupadeshika": "SaWa~",
+      "via": "3sg",
+      "code": "10.0041"
+    },
+    "v_10|Sabd": {
+      "aupadeshika": "Sabda~",
+      "via": "3sg",
+      "code": "10.0239"
+    },
+    "v_10|SiYj": {
+      "aupadeshika": "SiYj",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|Siz": {
+      "aupadeshika": "Si\\za~",
+      "via": "3sg",
+      "code": "10.0349"
+    },
+    "v_10|aG": {
+      "aupadeshika": "aG",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|aMS": {
+      "aupadeshika": "aMS",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|aMh": {
+      "aupadeshika": "ahi~",
+      "via": "3sg",
+      "code": "10.0328"
+    },
+    "v_10|aNK": {
+      "aupadeshika": "aNK",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|aNg": {
+      "aupadeshika": "anga",
+      "via": "3sg",
+      "code": "10.0474"
+    },
+    "v_10|aNk": {
+      "aupadeshika": "anka",
+      "via": "3sg",
+      "code": "10.0473"
+    },
+    "v_10|aYc": {
+      "aupadeshika": "ancu~",
+      "via": "3sg",
+      "code": "10.0266"
+    },
+    "v_10|anD": {
+      "aupadeshika": "anDa",
+      "via": "3sg",
+      "code": "10.0471"
+    },
+    "v_10|arT": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_10|aww": {
+      "aupadeshika": "adwa~",
+      "via": "3sg",
+      "code": "10.0037"
+    },
+    "v_10|cUrR": {
+      "aupadeshika": "curRa~",
+      "via": "3sg",
+      "code": "10.0026"
+    },
+    "v_10|carc": {
+      "aupadeshika": "carc",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|carv": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_10|gUrD": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_10|gaR": {
+      "aupadeshika": "gaRa",
+      "via": "3sg",
+      "code": "10.0391"
+    },
+    "v_10|gad": {
+      "aupadeshika": "gada",
+      "via": "3sg",
+      "code": "10.0399"
+    },
+    "v_10|gard": {
+      "aupadeshika": "garda~",
+      "via": "3sg",
+      "code": "10.0178"
+    },
+    "v_10|garh": {
+      "aupadeshika": "garha~",
+      "via": "3sg",
+      "code": "10.0383"
+    },
+    "v_10|hiMs": {
+      "aupadeshika": "hisi~",
+      "via": "3sg",
+      "code": "10.0366"
+    },
+    "v_10|il": {
+      "aupadeshika": "ila~",
+      "via": "3sg",
+      "code": "10.0167"
+    },
+    "v_10|jF": {
+      "aupadeshika": "jF",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|jan": {
+      "aupadeshika": "jan",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|kIrt": {
+      "aupadeshika": "kFta~",
+      "via": "3sg",
+      "code": "10.0155"
+    },
+    "v_10|kUq": {
+      "aupadeshika": "kUq",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|kaR": {
+      "aupadeshika": "kaRa~",
+      "via": "3sg",
+      "code": "10.0240"
+    },
+    "v_10|kaRW": {
+      "aupadeshika": "kaWi~",
+      "via": "3sg",
+      "code": "10.0385"
+    },
+    "v_10|kaRq": {
+      "aupadeshika": "kaqi~",
+      "via": "3sg",
+      "code": "10.0067"
+    },
+    "v_10|kaT": {
+      "aupadeshika": "kaTa",
+      "via": "3sg",
+      "code": "10.0389"
+    },
+    "v_10|kal": {
+      "aupadeshika": "kala~",
+      "via": "3sg",
+      "code": "10.0093"
+    },
+    "v_10|karR": {
+      "aupadeshika": "karRa~",
+      "via": "3sg",
+      "code": "10.0470"
+    },
+    "v_10|katr": {
+      "aupadeshika": "katra",
+      "via": "3sg",
+      "code": "10.0456"
+    },
+    "v_10|kaww": {
+      "aupadeshika": "kaww",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|kfp": {
+      "aupadeshika": "kfpa",
+      "via": "3sg",
+      "code": "10.0408"
+    },
+    "v_10|kuts": {
+      "aupadeshika": "kutsa~",
+      "via": "3sg",
+      "code": "10.0220"
+    },
+    "v_10|kuw": {
+      "aupadeshika": "kuw",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|kuww": {
+      "aupadeshika": "kuwwa~",
+      "via": "3sg",
+      "code": "10.0034"
+    },
+    "v_10|kzal": {
+      "aupadeshika": "kzala~",
+      "via": "3sg",
+      "code": "10.0086"
+    },
+    "v_10|laNG": {
+      "aupadeshika": "laGi~",
+      "via": "3sg",
+      "code": "10.0291"
+    },
+    "v_10|lag": {
+      "aupadeshika": "laga~",
+      "via": "3sg",
+      "code": "10.0263"
+    },
+    "v_10|lakz": {
+      "aupadeshika": "lakza~",
+      "via": "3sg",
+      "code": "10.0006"
+    },
+    "v_10|las": {
+      "aupadeshika": "lasa~",
+      "via": "3sg",
+      "code": "10.0253"
+    },
+    "v_10|laz": {
+      "aupadeshika": "laz",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|loc": {
+      "aupadeshika": "locf~",
+      "via": "3sg",
+      "code": "10.0308"
+    },
+    "v_10|lok": {
+      "aupadeshika": "lokf~",
+      "via": "3sg",
+      "code": "10.0307"
+    },
+    "v_10|luRw": {
+      "aupadeshika": "lunwa~",
+      "via": "3sg",
+      "code": "10.0039"
+    },
+    "v_10|luW": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_10|luw": {
+      "aupadeshika": "luwa~",
+      "via": "3sg",
+      "code": "10.0284"
+    },
+    "v_10|mArg": {
+      "aupadeshika": "mArga",
+      "via": "3sg",
+      "code": "10.0108"
+    },
+    "v_10|maMh": {
+      "aupadeshika": "mahi~",
+      "via": "3sg",
+      "code": "10.0330"
+    },
+    "v_10|mah": {
+      "aupadeshika": "maha",
+      "via": "3sg",
+      "code": "10.0406"
+    },
+    "v_10|mfg": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_10|mfj": {
+      "aupadeshika": "mfj",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|mfq": {
+      "aupadeshika": "mfq",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|mfz": {
+      "aupadeshika": "mfza~^",
+      "via": "3sg",
+      "code": "10.0387"
+    },
+    "v_10|mid": {
+      "aupadeshika": "mida~",
+      "via": "3sg",
+      "code": "10.0012"
+    },
+    "v_10|mleC": {
+      "aupadeshika": "mleCa~",
+      "via": "3sg",
+      "code": "10.0170"
+    },
+    "v_10|mokz": {
+      "aupadeshika": "mokza~",
+      "via": "3sg",
+      "code": "10.0256"
+    },
+    "v_10|mrakz": {
+      "aupadeshika": "mrakza~",
+      "via": "3sg",
+      "code": "10.0168"
+    },
+    "v_10|oj": {
+      "aupadeshika": "oj",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|olaRq": {
+      "aupadeshika": "olaqi~",
+      "via": "3sg",
+      "code": "10.0014"
+    },
+    "v_10|pIq": {
+      "aupadeshika": "pIqa~",
+      "via": "3sg",
+      "code": "10.0017"
+    },
+    "v_10|pUj": {
+      "aupadeshika": "pUja~",
+      "via": "3sg",
+      "code": "10.0144"
+    },
+    "v_10|paw": {
+      "aupadeshika": "pawa~",
+      "via": "3sg",
+      "code": "10.0282"
+    },
+    "v_10|piC": {
+      "aupadeshika": "piCa~",
+      "via": "3sg",
+      "code": "10.0061"
+    },
+    "v_10|piYj": {
+      "aupadeshika": "piji~",
+      "via": "3sg",
+      "code": "10.0047"
+    },
+    "v_10|pruz": {
+      "aupadeshika": "pruz",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|puw": {
+      "aupadeshika": "puwa~",
+      "via": "3sg",
+      "code": "10.0283"
+    },
+    "v_10|rUz": {
+      "aupadeshika": "rUz",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|raMh": {
+      "aupadeshika": "rahi~",
+      "via": "3sg",
+      "code": "10.0329"
+    },
+    "v_10|rac": {
+      "aupadeshika": "raca",
+      "via": "3sg",
+      "code": "10.0403"
+    },
+    "v_10|rah": {
+      "aupadeshika": "raha~",
+      "via": "3sg",
+      "code": "10.0122"
+    },
+    "v_10|ras": {
+      "aupadeshika": "rasa",
+      "via": "3sg",
+      "code": "10.0477"
+    },
+    "v_10|ric": {
+      "aupadeshika": "ri\\ca~",
+      "via": "3sg",
+      "code": "10.0348"
+    },
+    "v_10|ruj": {
+      "aupadeshika": "ruja~",
+      "via": "3sg",
+      "code": "10.0335"
+    },
+    "v_10|ruz": {
+      "aupadeshika": "ruza~",
+      "via": "3sg",
+      "code": "10.0187"
+    },
+    "v_10|sAntv": {
+      "aupadeshika": "zAntva~",
+      "via": "3sg",
+      "code": "10.0051"
+    },
+    "v_10|sUd": {
+      "aupadeshika": "zUda~",
+      "via": "3sg",
+      "code": "10.0242"
+    },
+    "v_10|sah": {
+      "aupadeshika": "zaha~",
+      "via": "3sg",
+      "code": "10.0341"
+    },
+    "v_10|sf": {
+      "aupadeshika": "sAra",
+      "via": "3sg",
+      "code": "10.0407"
+    },
+    "v_10|snih": {
+      "aupadeshika": "zRiha~",
+      "via": "3sg",
+      "code": "10.0055"
+    },
+    "v_10|spfh": {
+      "aupadeshika": "spfha",
+      "via": "3sg",
+      "code": "10.0410"
+    },
+    "v_10|taq": {
+      "aupadeshika": "taqa~",
+      "via": "3sg",
+      "code": "10.0064"
+    },
+    "v_10|tark": {
+      "aupadeshika": "tarka~",
+      "via": "3sg",
+      "code": "10.0311"
+    },
+    "v_10|tul": {
+      "aupadeshika": "tul",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|uDras": {
+      "aupadeshika": "uDrasa~",
+      "via": "3sg",
+      "code": "10.0271"
+    },
+    "v_10|ulaq": {
+      "aupadeshika": "ulaq",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|vAs": {
+      "aupadeshika": "vasa~",
+      "via": "3sg",
+      "code": "10.0273"
+    },
+    "v_10|vIj": {
+      "aupadeshika": "vIj",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|vaRw": {
+      "aupadeshika": "vawi~",
+      "via": "3sg",
+      "code": "10.0073"
+    },
+    "v_10|varD": {
+      "aupadeshika": "varDa~",
+      "via": "3sg",
+      "code": "10.0156"
+    },
+    "v_10|varR": {
+      "aupadeshika": "varRa~",
+      "via": "3sg",
+      "code": "10.0025"
+    },
+    "v_10|vas": {
+      "aupadeshika": "vasa~",
+      "via": "3sg",
+      "code": "10.0273"
+    },
+    "v_10|vfD": {
+      "aupadeshika": "varDa~",
+      "via": "3sg",
+      "code": "10.0156"
+    },
+    "v_10|vrIq": {
+      "aupadeshika": "vrIq",
+      "via": "direct",
+      "code": null
+    },
+    "v_10|vraj": {
+      "aupadeshika": "vraja~",
+      "via": "3sg",
+      "code": "10.0109"
+    },
+    "v_10|yat": {
+      "aupadeshika": "yata~",
+      "via": "3sg",
+      "code": "10.0261"
+    },
+    "v_1|BAs": {
+      "aupadeshika": "BAs",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|BAz": {
+      "aupadeshika": "BAz",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|BI": {
+      "aupadeshika": "BI",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|BU": {
+      "aupadeshika": "BU",
+      "via": "3sg",
+      "code": "01.0001"
+    },
+    "v_1|BUz": {
+      "aupadeshika": "BUza~",
+      "via": "3sg",
+      "code": "01.0777"
+    },
+    "v_1|BaR": {
+      "aupadeshika": "BaRa~",
+      "via": "3sg",
+      "code": "01.0515"
+    },
+    "v_1|Baj": {
+      "aupadeshika": "Ba\\ja~^",
+      "via": "3sg",
+      "code": "01.1153"
+    },
+    "v_1|Bakz": {
+      "aupadeshika": "Bakza~^",
+      "via": "3sg",
+      "code": "01.1039"
+    },
+    "v_1|Band": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|Barts": {
+      "aupadeshika": "Barts",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|Baz": {
+      "aupadeshika": "Baza~",
+      "via": "3sg",
+      "code": "01.0791"
+    },
+    "v_1|Bf": {
+      "aupadeshika": "Bf\\Y",
+      "via": "3sg",
+      "code": "01.1045"
+    },
+    "v_1|Bid": {
+      "aupadeshika": "Bidi~",
+      "via": "bare",
+      "code": "01.0067"
+    },
+    "v_1|Bikz": {
+      "aupadeshika": "Bikz",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|BrAj": {
+      "aupadeshika": "BrAj",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|BraMS": {
+      "aupadeshika": "BraMS",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|Bram": {
+      "aupadeshika": "Bramu~",
+      "via": "3sg",
+      "code": "01.0985"
+    },
+    "v_1|Brez": {
+      "aupadeshika": "Brezf~^",
+      "via": "3sg",
+      "code": "01.1027"
+    },
+    "v_1|Cad": {
+      "aupadeshika": "CadiH",
+      "via": "3sg",
+      "code": "01.0925"
+    },
+    "v_1|Cfd": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|DA": {
+      "aupadeshika": "DA",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|DAv": {
+      "aupadeshika": "DAvu~^",
+      "via": "3sg",
+      "code": "01.0685"
+    },
+    "v_1|DU": {
+      "aupadeshika": "DU",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|Dam": {
+      "aupadeshika": "DmA\\",
+      "via": "3sg",
+      "code": "01.1076"
+    },
+    "v_1|Danv": {
+      "aupadeshika": "Davi~",
+      "via": "3sg",
+      "code": "01.0681"
+    },
+    "v_1|Dav": {
+      "aupadeshika": "Davi~",
+      "via": "bare",
+      "code": "01.0681"
+    },
+    "v_1|De": {
+      "aupadeshika": "De\\w",
+      "via": "3sg",
+      "code": "01.1050"
+    },
+    "v_1|Df": {
+      "aupadeshika": "Df\\Y",
+      "via": "3sg",
+      "code": "01.1047"
+    },
+    "v_1|Dfz": {
+      "aupadeshika": "Dfz",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|DvaMs": {
+      "aupadeshika": "DvaMs",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|Dvan": {
+      "aupadeshika": "Dvana~",
+      "via": "3sg",
+      "code": "01.0928"
+    },
+    "v_1|Dvf": {
+      "aupadeshika": "Dvf\\",
+      "via": "3sg",
+      "code": "01.1089"
+    },
+    "v_1|DyE": {
+      "aupadeshika": "DyE\\",
+      "via": "3sg",
+      "code": "01.1056"
+    },
+    "v_1|GUrR": {
+      "aupadeshika": "GUrR",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|Gas": {
+      "aupadeshika": "Ga\\sx~",
+      "via": "3sg",
+      "code": "01.0812"
+    },
+    "v_1|Gaw": {
+      "aupadeshika": "Gaw",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|Gaww": {
+      "aupadeshika": "Gaww",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|Gf": {
+      "aupadeshika": "Gf\\",
+      "via": "3sg",
+      "code": "01.1088"
+    },
+    "v_1|Gfz": {
+      "aupadeshika": "Gfzu~",
+      "via": "3sg",
+      "code": "01.0805"
+    },
+    "v_1|GrA": {
+      "aupadeshika": "GrA\\",
+      "via": "3sg",
+      "code": "01.1075"
+    },
+    "v_1|Guz": {
+      "aupadeshika": "Guzi~r",
+      "via": "3sg",
+      "code": "01.0741"
+    },
+    "v_1|IK": {
+      "aupadeshika": "IK",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|INK": {
+      "aupadeshika": "IKi~",
+      "via": "3sg",
+      "code": "01.0151"
+    },
+    "v_1|Ih": {
+      "aupadeshika": "Iha~\\",
+      "via": "bare",
+      "code": "01.0719"
+    },
+    "v_1|Ij": {
+      "aupadeshika": "Ij",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|Ikz": {
+      "aupadeshika": "Ikz",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|Int": {
+      "aupadeshika": "Int",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|Irzy": {
+      "aupadeshika": "Irzya~",
+      "via": "3sg",
+      "code": "01.0588"
+    },
+    "v_1|Iz": {
+      "aupadeshika": "Iza~",
+      "via": "3sg",
+      "code": "01.0780"
+    },
+    "v_1|KAd": {
+      "aupadeshika": "KAdf~",
+      "via": "3sg",
+      "code": "01.0051"
+    },
+    "v_1|KE": {
+      "aupadeshika": "KE\\",
+      "via": "3sg",
+      "code": "01.1060"
+    },
+    "v_1|KaRq": {
+      "aupadeshika": "KaRq",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|KaYj": {
+      "aupadeshika": "Kaji~",
+      "via": "3sg",
+      "code": "01.0266"
+    },
+    "v_1|Kac": {
+      "aupadeshika": "Kac",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|Kall": {
+      "aupadeshika": "Kall",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|Kan": {
+      "aupadeshika": "Kanu~^",
+      "via": "3sg",
+      "code": "01.1020"
+    },
+    "v_1|Karj": {
+      "aupadeshika": "Karja~",
+      "via": "3sg",
+      "code": "01.0261"
+    },
+    "v_1|PaR": {
+      "aupadeshika": "PaRa~",
+      "via": "3sg",
+      "code": "01.0955"
+    },
+    "v_1|QOk": {
+      "aupadeshika": "QOk",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|SAl": {
+      "aupadeshika": "SAl",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|SI": {
+      "aupadeshika": "SI",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|SIk": {
+      "aupadeshika": "SIk",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|SIl": {
+      "aupadeshika": "SIla~",
+      "via": "3sg",
+      "code": "01.0601"
+    },
+    "v_1|SaMs": {
+      "aupadeshika": "Sansu~",
+      "via": "3sg",
+      "code": "01.0829"
+    },
+    "v_1|SaNk": {
+      "aupadeshika": "SaNk",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|SaW": {
+      "aupadeshika": "SaWa~",
+      "via": "3sg",
+      "code": "01.0394"
+    },
+    "v_1|Sad": {
+      "aupadeshika": "Sa\\dx~",
+      "via": "bare",
+      "code": "01.0991"
+    },
+    "v_1|Sap": {
+      "aupadeshika": "Sa\\pa~^",
+      "via": "3sg",
+      "code": "01.1155"
+    },
+    "v_1|Sas": {
+      "aupadeshika": "Sasu~",
+      "via": "3sg",
+      "code": "01.0828"
+    },
+    "v_1|Scut": {
+      "aupadeshika": "Scuti~r",
+      "via": "3sg",
+      "code": "01.0041"
+    },
+    "v_1|SfD": {
+      "aupadeshika": "SfDu~^",
+      "via": "3sg",
+      "code": "01.1014"
+    },
+    "v_1|SiYj": {
+      "aupadeshika": "SiYj",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|Sikz": {
+      "aupadeshika": "Sikz",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|SlAG": {
+      "aupadeshika": "SlAG",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|SlaT": {
+      "aupadeshika": "SlaTa~",
+      "via": "3sg",
+      "code": "01.0910"
+    },
+    "v_1|SnaT": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|SrA": {
+      "aupadeshika": "SrA",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|Sri": {
+      "aupadeshika": "SriY",
+      "via": "3sg",
+      "code": "01.1044"
+    },
+    "v_1|SuB": {
+      "aupadeshika": "SuBa~",
+      "via": "bare",
+      "code": "01.0500"
+    },
+    "v_1|SuD": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|Suc": {
+      "aupadeshika": "Suca~",
+      "via": "3sg",
+      "code": "01.0210"
+    },
+    "v_1|Svi": {
+      "aupadeshika": "wuo~Svi",
+      "via": "3sg",
+      "code": "01.1165"
+    },
+    "v_1|SyE": {
+      "aupadeshika": "SyE",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|Uh": {
+      "aupadeshika": "Uha~\\",
+      "via": "bare",
+      "code": "01.0735"
+    },
+    "v_1|Urd": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|Urv": {
+      "aupadeshika": "urvI~",
+      "via": "3sg",
+      "code": "01.0650"
+    },
+    "v_1|Uy": {
+      "aupadeshika": "UyI~\\",
+      "via": "bare",
+      "code": "01.0556"
+    },
+    "v_1|Uz": {
+      "aupadeshika": "Uza~",
+      "via": "3sg",
+      "code": "01.0779"
+    },
+    "v_1|aBr": {
+      "aupadeshika": "aBra~",
+      "via": "3sg",
+      "code": "01.0637"
+    },
+    "v_1|aMh": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|aNG": {
+      "aupadeshika": "aNG",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|aNg": {
+      "aupadeshika": "agi~",
+      "via": "3sg",
+      "code": "01.0155"
+    },
+    "v_1|aNk": {
+      "aupadeshika": "aNk",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|aR": {
+      "aupadeshika": "aRa~",
+      "via": "3sg",
+      "code": "01.0512"
+    },
+    "v_1|aRW": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|aW": {
+      "aupadeshika": "aWi~\\",
+      "via": "bare",
+      "code": "01.0294"
+    },
+    "v_1|aYc": {
+      "aupadeshika": "ancu~",
+      "via": "3sg",
+      "code": "01.0215"
+    },
+    "v_1|ac": {
+      "aupadeshika": "acu~^",
+      "via": "3sg",
+      "code": "01.0999"
+    },
+    "v_1|ag": {
+      "aupadeshika": "aga~",
+      "via": "3sg",
+      "code": "01.0902"
+    },
+    "v_1|aj": {
+      "aupadeshika": "aja~",
+      "via": "3sg",
+      "code": "01.0262"
+    },
+    "v_1|ak": {
+      "aupadeshika": "aka~",
+      "via": "3sg",
+      "code": "01.0901"
+    },
+    "v_1|akz": {
+      "aupadeshika": "akzU~",
+      "via": "3sg",
+      "code": "01.0742"
+    },
+    "v_1|al": {
+      "aupadeshika": "ala~",
+      "via": "3sg",
+      "code": "01.0593"
+    },
+    "v_1|amb": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|and": {
+      "aupadeshika": "adi~",
+      "via": "3sg",
+      "code": "01.0064"
+    },
+    "v_1|ant": {
+      "aupadeshika": "ati~",
+      "via": "3sg",
+      "code": "01.0063"
+    },
+    "v_1|aq": {
+      "aupadeshika": "aqa~",
+      "via": "3sg",
+      "code": "01.0414"
+    },
+    "v_1|aqq": {
+      "aupadeshika": "aqqa~",
+      "via": "3sg",
+      "code": "01.0403"
+    },
+    "v_1|arT": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|arb": {
+      "aupadeshika": "arba~",
+      "via": "3sg",
+      "code": "01.0481"
+    },
+    "v_1|arc": {
+      "aupadeshika": "arca~",
+      "via": "3sg",
+      "code": "01.0232"
+    },
+    "v_1|ard": {
+      "aupadeshika": "arda~",
+      "via": "3sg",
+      "code": "01.0057"
+    },
+    "v_1|arh": {
+      "aupadeshika": "arha~",
+      "via": "3sg",
+      "code": "01.0841"
+    },
+    "v_1|arj": {
+      "aupadeshika": "arja~",
+      "via": "3sg",
+      "code": "01.0256"
+    },
+    "v_1|arv": {
+      "aupadeshika": "arva~",
+      "via": "3sg",
+      "code": "01.0667"
+    },
+    "v_1|at": {
+      "aupadeshika": "ata~",
+      "via": "3sg",
+      "code": "01.0038"
+    },
+    "v_1|av": {
+      "aupadeshika": "ava~",
+      "via": "3sg",
+      "code": "01.0684"
+    },
+    "v_1|aw": {
+      "aupadeshika": "awa~",
+      "via": "3sg",
+      "code": "01.0332"
+    },
+    "v_1|aww": {
+      "aupadeshika": "aww",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|az": {
+      "aupadeshika": "aza~^",
+      "via": "3sg",
+      "code": "01.1030"
+    },
+    "v_1|bAD": {
+      "aupadeshika": "bADf~\\",
+      "via": "bare",
+      "code": "01.0005"
+    },
+    "v_1|banD": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|bfh": {
+      "aupadeshika": "bfha~",
+      "via": "3sg",
+      "code": "01.0836"
+    },
+    "v_1|buD": {
+      "aupadeshika": "buDa~",
+      "via": "3sg",
+      "code": "01.0994"
+    },
+    "v_1|cUz": {
+      "aupadeshika": "cUza~",
+      "via": "3sg",
+      "code": "01.0767"
+    },
+    "v_1|caYc": {
+      "aupadeshika": "cancu~",
+      "via": "3sg",
+      "code": "01.0217"
+    },
+    "v_1|cal": {
+      "aupadeshika": "cal",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|car": {
+      "aupadeshika": "cara~",
+      "via": "3sg",
+      "code": "01.0640"
+    },
+    "v_1|carc": {
+      "aupadeshika": "carca~",
+      "via": "3sg",
+      "code": "01.0814"
+    },
+    "v_1|carv": {
+      "aupadeshika": "carva~",
+      "via": "3sg",
+      "code": "01.0660"
+    },
+    "v_1|caw": {
+      "aupadeshika": "cawe~",
+      "via": "3sg",
+      "code": "01.0330"
+    },
+    "v_1|cit": {
+      "aupadeshika": "citI~",
+      "via": "3sg",
+      "code": "01.0039"
+    },
+    "v_1|cumb": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|dA": {
+      "aupadeshika": "dA",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|dAS": {
+      "aupadeshika": "dASf~^",
+      "via": "3sg",
+      "code": "01.1025"
+    },
+    "v_1|dah": {
+      "aupadeshika": "da\\ha~",
+      "via": "3sg",
+      "code": "01.1146"
+    },
+    "v_1|dakz": {
+      "aupadeshika": "dakz",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|dal": {
+      "aupadeshika": "dala~",
+      "via": "3sg",
+      "code": "01.0629"
+    },
+    "v_1|dfMh": {
+      "aupadeshika": "dfhi~",
+      "via": "3sg",
+      "code": "01.0835"
+    },
+    "v_1|dru": {
+      "aupadeshika": "dru\\",
+      "via": "3sg",
+      "code": "01.1095"
+    },
+    "v_1|dyut": {
+      "aupadeshika": "dyut",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|eD": {
+      "aupadeshika": "eDa~\\",
+      "via": "bare",
+      "code": "01.0002"
+    },
+    "v_1|eW": {
+      "aupadeshika": "eWa~\\",
+      "via": "bare",
+      "code": "01.0300"
+    },
+    "v_1|ej": {
+      "aupadeshika": "ejf~",
+      "via": "3sg",
+      "code": "01.0267"
+    },
+    "v_1|ez": {
+      "aupadeshika": "ez",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|f": {
+      "aupadeshika": "f\\",
+      "via": "3sg",
+      "code": "01.1086"
+    },
+    "v_1|fYj": {
+      "aupadeshika": "fYj",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|fj": {
+      "aupadeshika": "arja~",
+      "via": "3sg",
+      "code": "01.0256"
+    },
+    "v_1|fz": {
+      "aupadeshika": "fz",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|gAh": {
+      "aupadeshika": "gAhU~\\",
+      "via": "bare",
+      "code": "01.0736"
+    },
+    "v_1|gE": {
+      "aupadeshika": "gE\\",
+      "via": "3sg",
+      "code": "01.1065"
+    },
+    "v_1|gad": {
+      "aupadeshika": "gada~",
+      "via": "3sg",
+      "code": "01.0054"
+    },
+    "v_1|gal": {
+      "aupadeshika": "gala~",
+      "via": "3sg",
+      "code": "01.0627"
+    },
+    "v_1|gam": {
+      "aupadeshika": "ga\\mx~",
+      "via": "3sg",
+      "code": "01.1137"
+    },
+    "v_1|gard": {
+      "aupadeshika": "garda~",
+      "via": "3sg",
+      "code": "01.0059"
+    },
+    "v_1|garh": {
+      "aupadeshika": "garha~\\",
+      "via": "bare",
+      "code": "01.0723"
+    },
+    "v_1|garj": {
+      "aupadeshika": "garja~",
+      "via": "3sg",
+      "code": "01.0258"
+    },
+    "v_1|glE": {
+      "aupadeshika": "glE\\",
+      "via": "3sg",
+      "code": "01.1051"
+    },
+    "v_1|glah": {
+      "aupadeshika": "glaha~\\",
+      "via": "bare",
+      "code": "01.0738"
+    },
+    "v_1|graT": {
+      "aupadeshika": "graTi~\\",
+      "via": "bare",
+      "code": "01.0036"
+    },
+    "v_1|gras": {
+      "aupadeshika": "gras",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|gu": {
+      "aupadeshika": "gu",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|guD": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|guYj": {
+      "aupadeshika": "guji~",
+      "via": "3sg",
+      "code": "01.0231"
+    },
+    "v_1|guh": {
+      "aupadeshika": "guhU~^",
+      "via": "3sg",
+      "code": "01.1043"
+    },
+    "v_1|hA": {
+      "aupadeshika": "hA",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|had": {
+      "aupadeshika": "ha\\da~\\",
+      "via": "bare",
+      "code": "01.1132"
+    },
+    "v_1|han": {
+      "aupadeshika": "han",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|hary": {
+      "aupadeshika": "harya~",
+      "via": "3sg",
+      "code": "01.0592"
+    },
+    "v_1|has": {
+      "aupadeshika": "hase~",
+      "via": "3sg",
+      "code": "01.0822"
+    },
+    "v_1|hez": {
+      "aupadeshika": "hez",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|hf": {
+      "aupadeshika": "hf\\Y",
+      "via": "3sg",
+      "code": "01.1046"
+    },
+    "v_1|hfz": {
+      "aupadeshika": "hfzu~",
+      "via": "3sg",
+      "code": "01.0806"
+    },
+    "v_1|hiMs": {
+      "aupadeshika": "hiMs",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|hlAd": {
+      "aupadeshika": "hlAdI~\\",
+      "via": "bare",
+      "code": "01.0027"
+    },
+    "v_1|hlag": {
+      "aupadeshika": "hlage~",
+      "via": "bare",
+      "code": "01.0897"
+    },
+    "v_1|hrAd": {
+      "aupadeshika": "hrAda~\\",
+      "via": "bare",
+      "code": "01.0026"
+    },
+    "v_1|hras": {
+      "aupadeshika": "hrasa~",
+      "via": "3sg",
+      "code": "01.0808"
+    },
+    "v_1|hrez": {
+      "aupadeshika": "hrez",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|hval": {
+      "aupadeshika": "hvala~",
+      "via": "3sg",
+      "code": "01.0917"
+    },
+    "v_1|hve": {
+      "aupadeshika": "hve\\Y",
+      "via": "3sg",
+      "code": "01.1163"
+    },
+    "v_1|hvf": {
+      "aupadeshika": "hvf\\",
+      "via": "3sg",
+      "code": "01.1080"
+    },
+    "v_1|iK": {
+      "aupadeshika": "iKa~",
+      "via": "3sg",
+      "code": "01.0148"
+    },
+    "v_1|iNK": {
+      "aupadeshika": "iKi~",
+      "via": "3sg",
+      "code": "01.0149"
+    },
+    "v_1|iNg": {
+      "aupadeshika": "igi~",
+      "via": "3sg",
+      "code": "01.0163"
+    },
+    "v_1|ind": {
+      "aupadeshika": "idi~",
+      "via": "3sg",
+      "code": "01.0065"
+    },
+    "v_1|iw": {
+      "aupadeshika": "iwa~",
+      "via": "3sg",
+      "code": "01.0357"
+    },
+    "v_1|iz": {
+      "aupadeshika": "iz",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|jAgf": {
+      "aupadeshika": "jAgf",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|jF": {
+      "aupadeshika": "jf\\",
+      "via": "3sg",
+      "code": "01.1098"
+    },
+    "v_1|jIv": {
+      "aupadeshika": "jIva~",
+      "via": "bare",
+      "code": "01.0643"
+    },
+    "v_1|jan": {
+      "aupadeshika": "jan",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|jap": {
+      "aupadeshika": "jap",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|jf": {
+      "aupadeshika": "jf",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|ji": {
+      "aupadeshika": "ji",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|jinv": {
+      "aupadeshika": "jivi~",
+      "via": "3sg",
+      "code": "01.0678"
+    },
+    "v_1|juz": {
+      "aupadeshika": "juz",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|jval": {
+      "aupadeshika": "jvala~",
+      "via": "3sg",
+      "code": "01.0916"
+    },
+    "v_1|jvar": {
+      "aupadeshika": "jvara~",
+      "via": "3sg",
+      "code": "01.0885"
+    },
+    "v_1|kANkz": {
+      "aupadeshika": "kAkzi~",
+      "via": "3sg",
+      "code": "01.0760"
+    },
+    "v_1|kAS": {
+      "aupadeshika": "kAS",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kAs": {
+      "aupadeshika": "kAs",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kUR": {
+      "aupadeshika": "kUR",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kUj": {
+      "aupadeshika": "kUja~",
+      "via": "3sg",
+      "code": "01.0254"
+    },
+    "v_1|kUrd": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|kaK": {
+      "aupadeshika": "kaKa~",
+      "via": "3sg",
+      "code": "01.0128"
+    },
+    "v_1|kaNk": {
+      "aupadeshika": "kaNk",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kaR": {
+      "aupadeshika": "kaRa~",
+      "via": "3sg",
+      "code": "01.0517"
+    },
+    "v_1|kaRW": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|kaRq": {
+      "aupadeshika": "kaqi~",
+      "via": "3sg",
+      "code": "01.0418"
+    },
+    "v_1|kaRw": {
+      "aupadeshika": "kaRw",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kaW": {
+      "aupadeshika": "kaWa~",
+      "via": "3sg",
+      "code": "01.0385"
+    },
+    "v_1|kaYc": {
+      "aupadeshika": "kaYc",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kab": {
+      "aupadeshika": "kabf~\\",
+      "via": "bare",
+      "code": "01.0440"
+    },
+    "v_1|kac": {
+      "aupadeshika": "kac",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kad": {
+      "aupadeshika": "kadi~",
+      "via": "bare",
+      "code": "01.0073"
+    },
+    "v_1|kag": {
+      "aupadeshika": "kage~",
+      "via": "3sg",
+      "code": "01.0900"
+    },
+    "v_1|kaj": {
+      "aupadeshika": "kaj",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kak": {
+      "aupadeshika": "kak",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kam": {
+      "aupadeshika": "kam",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kamb": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|kamp": {
+      "aupadeshika": "kamp",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kan": {
+      "aupadeshika": "kanI~",
+      "via": "3sg",
+      "code": "01.0531"
+    },
+    "v_1|kand": {
+      "aupadeshika": "kadi~",
+      "via": "3sg",
+      "code": "01.0073"
+    },
+    "v_1|kaq": {
+      "aupadeshika": "kaqa~",
+      "via": "3sg",
+      "code": "01.0417"
+    },
+    "v_1|kaqq": {
+      "aupadeshika": "kaqqa~",
+      "via": "3sg",
+      "code": "01.0404"
+    },
+    "v_1|karj": {
+      "aupadeshika": "karja~",
+      "via": "3sg",
+      "code": "01.0260"
+    },
+    "v_1|kas": {
+      "aupadeshika": "kasa~",
+      "via": "3sg",
+      "code": "01.0996"
+    },
+    "v_1|katT": {
+      "aupadeshika": "katTa~\\",
+      "via": "bare",
+      "code": "01.0037"
+    },
+    "v_1|kaw": {
+      "aupadeshika": "kawe~",
+      "via": "3sg",
+      "code": "01.0331"
+    },
+    "v_1|kaz": {
+      "aupadeshika": "kaza~",
+      "via": "3sg",
+      "code": "01.0781"
+    },
+    "v_1|kf": {
+      "aupadeshika": "kf",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kft": {
+      "aupadeshika": "kft",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kfz": {
+      "aupadeshika": "kf\\za~",
+      "via": "3sg",
+      "code": "01.1145"
+    },
+    "v_1|klaT": {
+      "aupadeshika": "klaTa~",
+      "via": "3sg",
+      "code": "01.0913"
+    },
+    "v_1|klam": {
+      "aupadeshika": "klam",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kland": {
+      "aupadeshika": "kladi~",
+      "via": "3sg",
+      "code": "01.0075"
+    },
+    "v_1|krIq": {
+      "aupadeshika": "krIqf~",
+      "via": "3sg",
+      "code": "01.0405"
+    },
+    "v_1|kraT": {
+      "aupadeshika": "kraTa~",
+      "via": "3sg",
+      "code": "01.0912"
+    },
+    "v_1|kram": {
+      "aupadeshika": "kramu~",
+      "via": "3sg",
+      "code": "01.0545"
+    },
+    "v_1|krand": {
+      "aupadeshika": "kradi~",
+      "via": "3sg",
+      "code": "01.0074"
+    },
+    "v_1|kruS": {
+      "aupadeshika": "kru\\Sa~",
+      "via": "3sg",
+      "code": "01.0992"
+    },
+    "v_1|kuYc": {
+      "aupadeshika": "kunca~",
+      "via": "3sg",
+      "code": "01.0212"
+    },
+    "v_1|kuYj": {
+      "aupadeshika": "kuYj",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kuc": {
+      "aupadeshika": "kuca~",
+      "via": "3sg",
+      "code": "01.0211"
+    },
+    "v_1|kuts": {
+      "aupadeshika": "kuts",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kvaR": {
+      "aupadeshika": "kvaRa~",
+      "via": "3sg",
+      "code": "01.0518"
+    },
+    "v_1|kvaT": {
+      "aupadeshika": "kvaTe~",
+      "via": "bare",
+      "code": "01.0981"
+    },
+    "v_1|kxp": {
+      "aupadeshika": "kxp",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kzE": {
+      "aupadeshika": "kzE\\",
+      "via": "3sg",
+      "code": "01.1061"
+    },
+    "v_1|kzad": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|kzam": {
+      "aupadeshika": "kzam",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kzap": {
+      "aupadeshika": "kzap",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|kzar": {
+      "aupadeshika": "kzara~",
+      "via": "3sg",
+      "code": "01.0986"
+    },
+    "v_1|kzi": {
+      "aupadeshika": "kzi\\",
+      "via": "3sg",
+      "code": "01.0269"
+    },
+    "v_1|kzuB": {
+      "aupadeshika": "kzuBa~\\",
+      "via": "bare",
+      "code": "01.0854"
+    },
+    "v_1|kzud": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|kzvel": {
+      "aupadeshika": "kzvelf~",
+      "via": "3sg",
+      "code": "01.0618"
+    },
+    "v_1|lAYC": {
+      "aupadeshika": "lACi~",
+      "via": "3sg",
+      "code": "01.0235"
+    },
+    "v_1|lI": {
+      "aupadeshika": "lI",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|laB": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|laNG": {
+      "aupadeshika": "laNG",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|lag": {
+      "aupadeshika": "lage~",
+      "via": "3sg",
+      "code": "01.0895"
+    },
+    "v_1|lakz": {
+      "aupadeshika": "lakz",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|lal": {
+      "aupadeshika": "lala~",
+      "via": "3sg",
+      "code": "01.0416"
+    },
+    "v_1|lamb": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|lap": {
+      "aupadeshika": "lapa~",
+      "via": "3sg",
+      "code": "01.0468"
+    },
+    "v_1|las": {
+      "aupadeshika": "lasa~",
+      "via": "3sg",
+      "code": "01.0811"
+    },
+    "v_1|laz": {
+      "aupadeshika": "laza~^",
+      "via": "3sg",
+      "code": "01.1033"
+    },
+    "v_1|lip": {
+      "aupadeshika": "lip",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|loc": {
+      "aupadeshika": "loc",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|lok": {
+      "aupadeshika": "lok",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|luRw": {
+      "aupadeshika": "luwi~",
+      "via": "3sg",
+      "code": "01.0372"
+    },
+    "v_1|luW": {
+      "aupadeshika": "luWa~",
+      "via": "3sg",
+      "code": "01.0390"
+    },
+    "v_1|luYc": {
+      "aupadeshika": "lunca~",
+      "via": "3sg",
+      "code": "01.0214"
+    },
+    "v_1|lul": {
+      "aupadeshika": "lul",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|luq": {
+      "aupadeshika": "luqa~",
+      "via": "3sg",
+      "code": "01.0352"
+    },
+    "v_1|luw": {
+      "aupadeshika": "luwa~",
+      "via": "3sg",
+      "code": "01.0351"
+    },
+    "v_1|mArg": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|mIl": {
+      "aupadeshika": "mIla~",
+      "via": "3sg",
+      "code": "01.0595"
+    },
+    "v_1|mIv": {
+      "aupadeshika": "mIva~",
+      "via": "3sg",
+      "code": "01.0645"
+    },
+    "v_1|maMh": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|maRq": {
+      "aupadeshika": "maqi~",
+      "via": "3sg",
+      "code": "01.0361"
+    },
+    "v_1|maT": {
+      "aupadeshika": "maTe~",
+      "via": "3sg",
+      "code": "01.0983"
+    },
+    "v_1|mad": {
+      "aupadeshika": "madI~",
+      "via": "3sg",
+      "code": "01.0927"
+    },
+    "v_1|mah": {
+      "aupadeshika": "maha~",
+      "via": "3sg",
+      "code": "01.0831"
+    },
+    "v_1|mand": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|mf": {
+      "aupadeshika": "mf",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|mfD": {
+      "aupadeshika": "mfDu~^",
+      "via": "3sg",
+      "code": "01.1015"
+    },
+    "v_1|mfd": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|mfj": {
+      "aupadeshika": "mfj",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|mfz": {
+      "aupadeshika": "mfzu~",
+      "via": "3sg",
+      "code": "01.0804"
+    },
+    "v_1|miT": {
+      "aupadeshika": "miTf~^",
+      "via": "3sg",
+      "code": "01.1008"
+    },
+    "v_1|mid": {
+      "aupadeshika": "midf~^",
+      "via": "bare",
+      "code": "01.1006"
+    },
+    "v_1|mih": {
+      "aupadeshika": "mi\\ha~",
+      "via": "3sg",
+      "code": "01.1147"
+    },
+    "v_1|mlE": {
+      "aupadeshika": "mlE\\",
+      "via": "3sg",
+      "code": "01.1052"
+    },
+    "v_1|mleC": {
+      "aupadeshika": "mleCa~",
+      "via": "3sg",
+      "code": "01.0233"
+    },
+    "v_1|mluc": {
+      "aupadeshika": "mlucu~",
+      "via": "3sg",
+      "code": "01.0223"
+    },
+    "v_1|mnA": {
+      "aupadeshika": "mnA\\",
+      "via": "3sg",
+      "code": "01.1078"
+    },
+    "v_1|mokz": {
+      "aupadeshika": "mokz",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|mrad": {
+      "aupadeshika": "mrada~\\",
+      "via": "bare",
+      "code": "01.0871"
+    },
+    "v_1|mrakz": {
+      "aupadeshika": "mrakza~",
+      "via": "3sg",
+      "code": "01.0755"
+    },
+    "v_1|mruc": {
+      "aupadeshika": "mrucu~",
+      "via": "3sg",
+      "code": "01.0222"
+    },
+    "v_1|mud": {
+      "aupadeshika": "muda~\\",
+      "via": "bare",
+      "code": "01.0016"
+    },
+    "v_1|murC": {
+      "aupadeshika": "murCA~",
+      "via": "3sg",
+      "code": "01.0240"
+    },
+    "v_1|muz": {
+      "aupadeshika": "muza~",
+      "via": "3sg",
+      "code": "01.0796"
+    },
+    "v_1|myakz": {
+      "aupadeshika": "myakz",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|nAT": {
+      "aupadeshika": "nATf~\\",
+      "via": "bare",
+      "code": "01.0007"
+    },
+    "v_1|nI": {
+      "aupadeshika": "RI\\Y",
+      "via": "3sg",
+      "code": "01.1049"
+    },
+    "v_1|naB": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|naS": {
+      "aupadeshika": "naS",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|nad": {
+      "aupadeshika": "Rada~",
+      "via": "3sg",
+      "code": "01.0056"
+    },
+    "v_1|nakz": {
+      "aupadeshika": "Rakza~",
+      "via": "3sg",
+      "code": "01.0752"
+    },
+    "v_1|nam": {
+      "aupadeshika": "Ra\\ma~",
+      "via": "3sg",
+      "code": "01.1136"
+    },
+    "v_1|nand": {
+      "aupadeshika": "wunadi~",
+      "via": "3sg",
+      "code": "01.0070"
+    },
+    "v_1|nard": {
+      "aupadeshika": "narda~",
+      "via": "3sg",
+      "code": "01.0058"
+    },
+    "v_1|naw": {
+      "aupadeshika": "Rawa~",
+      "via": "3sg",
+      "code": "01.0347"
+    },
+    "v_1|nind": {
+      "aupadeshika": "Ridi~",
+      "via": "3sg",
+      "code": "01.0069"
+    },
+    "v_1|oK": {
+      "aupadeshika": "oKf~",
+      "via": "3sg",
+      "code": "01.0129"
+    },
+    "v_1|oR": {
+      "aupadeshika": "oRf~",
+      "via": "3sg",
+      "code": "01.0523"
+    },
+    "v_1|oj": {
+      "aupadeshika": "oj",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|olaRq": {
+      "aupadeshika": "olaRq",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|pA": {
+      "aupadeshika": "pA\\",
+      "via": "3sg",
+      "code": "01.1074"
+    },
+    "v_1|pAy": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|pI": {
+      "aupadeshika": "pI",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|pIy": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|pU": {
+      "aupadeshika": "pU",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|pUj": {
+      "aupadeshika": "pUj",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|pUy": {
+      "aupadeshika": "pUyI~\\",
+      "via": "bare",
+      "code": "01.0557"
+    },
+    "v_1|paR": {
+      "aupadeshika": "paR",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|paW": {
+      "aupadeshika": "paWa~",
+      "via": "3sg",
+      "code": "01.0381"
+    },
+    "v_1|pac": {
+      "aupadeshika": "qupa\\ca~^z",
+      "via": "3sg",
+      "code": "01.1151"
+    },
+    "v_1|pan": {
+      "aupadeshika": "pan",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|pat": {
+      "aupadeshika": "patx~",
+      "via": "3sg",
+      "code": "01.0979"
+    },
+    "v_1|paw": {
+      "aupadeshika": "pawa~",
+      "via": "3sg",
+      "code": "01.0333"
+    },
+    "v_1|pfc": {
+      "aupadeshika": "pfc",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|plu": {
+      "aupadeshika": "plu",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|pluz": {
+      "aupadeshika": "pluzu~",
+      "via": "3sg",
+      "code": "01.0801"
+    },
+    "v_1|praT": {
+      "aupadeshika": "praTa~\\",
+      "via": "bare",
+      "code": "01.0869"
+    },
+    "v_1|pru": {
+      "aupadeshika": "pru",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|pruT": {
+      "aupadeshika": "proTf~^",
+      "via": "3sg",
+      "code": "01.1005"
+    },
+    "v_1|puw": {
+      "aupadeshika": "puw",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|puz": {
+      "aupadeshika": "puza~",
+      "via": "3sg",
+      "code": "01.0797"
+    },
+    "v_1|pyE": {
+      "aupadeshika": "pyE",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|qI": {
+      "aupadeshika": "qI",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|rAj": {
+      "aupadeshika": "rAjf~^",
+      "via": "3sg",
+      "code": "01.0956"
+    },
+    "v_1|rAs": {
+      "aupadeshika": "rAs",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|rUz": {
+      "aupadeshika": "rUza~",
+      "via": "3sg",
+      "code": "01.0772"
+    },
+    "v_1|raB": {
+      "aupadeshika": "raBi~\\",
+      "via": "bare",
+      "code": "01.0449"
+    },
+    "v_1|raMh": {
+      "aupadeshika": "rahi~",
+      "via": "3sg",
+      "code": "01.0833"
+    },
+    "v_1|raP": {
+      "aupadeshika": "raPa~",
+      "via": "3sg",
+      "code": "01.0479"
+    },
+    "v_1|raR": {
+      "aupadeshika": "raRa~",
+      "via": "3sg",
+      "code": "01.0513"
+    },
+    "v_1|raYj": {
+      "aupadeshika": "ra\\nja~^",
+      "via": "3sg",
+      "code": "01.1154"
+    },
+    "v_1|rad": {
+      "aupadeshika": "rada~",
+      "via": "3sg",
+      "code": "01.0055"
+    },
+    "v_1|rah": {
+      "aupadeshika": "raha~",
+      "via": "3sg",
+      "code": "01.0832"
+    },
+    "v_1|rakz": {
+      "aupadeshika": "rakza~",
+      "via": "3sg",
+      "code": "01.0746"
+    },
+    "v_1|ram": {
+      "aupadeshika": "ram",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|rap": {
+      "aupadeshika": "rapa~",
+      "via": "3sg",
+      "code": "01.0467"
+    },
+    "v_1|ras": {
+      "aupadeshika": "rasa~",
+      "via": "3sg",
+      "code": "01.0810"
+    },
+    "v_1|raw": {
+      "aupadeshika": "rawa~",
+      "via": "3sg",
+      "code": "01.0334"
+    },
+    "v_1|rej": {
+      "aupadeshika": "rej",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|riB": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|riK": {
+      "aupadeshika": "riKa~",
+      "via": "3sg",
+      "code": "01.0168"
+    },
+    "v_1|riNK": {
+      "aupadeshika": "riNK",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|riNg": {
+      "aupadeshika": "rigi~",
+      "via": "3sg",
+      "code": "01.0164"
+    },
+    "v_1|ric": {
+      "aupadeshika": "ric",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|riz": {
+      "aupadeshika": "riza~",
+      "via": "3sg",
+      "code": "01.0790"
+    },
+    "v_1|ru": {
+      "aupadeshika": "ru",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|ruD": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|ruW": {
+      "aupadeshika": "ruWa~",
+      "via": "3sg",
+      "code": "01.0389"
+    },
+    "v_1|ruc": {
+      "aupadeshika": "ruc",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|ruh": {
+      "aupadeshika": "ru\\ha~",
+      "via": "3sg",
+      "code": "01.0995"
+    },
+    "v_1|ruz": {
+      "aupadeshika": "ruza~",
+      "via": "3sg",
+      "code": "01.0789"
+    },
+    "v_1|sAD": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|sKal": {
+      "aupadeshika": "sKala~",
+      "via": "3sg",
+      "code": "01.0625"
+    },
+    "v_1|sPAy": {
+      "aupadeshika": "sPAyI~\\",
+      "via": "bare",
+      "code": "01.0560"
+    },
+    "v_1|sPuw": {
+      "aupadeshika": "sPuwi~r",
+      "via": "3sg",
+      "code": "01.0379"
+    },
+    "v_1|sTA": {
+      "aupadeshika": "zWA\\",
+      "via": "3sg",
+      "code": "01.1077"
+    },
+    "v_1|sTag": {
+      "aupadeshika": "zWage~",
+      "via": "3sg",
+      "code": "01.0909"
+    },
+    "v_1|sUd": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|saYj": {
+      "aupadeshika": "za\\nja~",
+      "via": "3sg",
+      "code": "01.1142"
+    },
+    "v_1|sac": {
+      "aupadeshika": "zaca~^",
+      "via": "3sg",
+      "code": "01.1152"
+    },
+    "v_1|sad": {
+      "aupadeshika": "za\\dx~",
+      "via": "3sg",
+      "code": "01.0990"
+    },
+    "v_1|sah": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|san": {
+      "aupadeshika": "zaRa~",
+      "via": "3sg",
+      "code": "01.0535"
+    },
+    "v_1|sap": {
+      "aupadeshika": "zapa~",
+      "via": "3sg",
+      "code": "01.0466"
+    },
+    "v_1|sev": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|sf": {
+      "aupadeshika": "DAvu~^",
+      "via": "3sg",
+      "code": "01.0685"
+    },
+    "v_1|sfp": {
+      "aupadeshika": "sf\\px~",
+      "via": "3sg",
+      "code": "01.1138"
+    },
+    "v_1|siD": {
+      "aupadeshika": "ziDa~",
+      "via": "3sg",
+      "code": "01.0049"
+    },
+    "v_1|skamB": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|skand": {
+      "aupadeshika": "ska\\ndi~r",
+      "via": "3sg",
+      "code": "01.1134"
+    },
+    "v_1|smf": {
+      "aupadeshika": "smf\\",
+      "via": "3sg",
+      "code": "01.0919"
+    },
+    "v_1|smi": {
+      "aupadeshika": "smi",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|snih": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|spand": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|sparD": {
+      "aupadeshika": "sparDa~\\",
+      "via": "bare",
+      "code": "01.0003"
+    },
+    "v_1|sraMs": {
+      "aupadeshika": "sraMs",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|sru": {
+      "aupadeshika": "sru\\",
+      "via": "3sg",
+      "code": "01.1090"
+    },
+    "v_1|stamB": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|stan": {
+      "aupadeshika": "zwana~",
+      "via": "3sg",
+      "code": "01.0532"
+    },
+    "v_1|stuB": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|svad": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|svaj": {
+      "aupadeshika": "svaj",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|svan": {
+      "aupadeshika": "svana~",
+      "via": "3sg",
+      "code": "01.0932"
+    },
+    "v_1|svf": {
+      "aupadeshika": "svf",
+      "via": "3sg",
+      "code": "01.1081"
+    },
+    "v_1|svid": {
+      "aupadeshika": "YizvidA~",
+      "via": "3sg",
+      "code": "01.1133"
+    },
+    "v_1|syand": {
+      "aupadeshika": "syandU~\\",
+      "via": "bare",
+      "code": "01.0865"
+    },
+    "v_1|tF": {
+      "aupadeshika": "tF",
+      "via": "3sg",
+      "code": "01.1124"
+    },
+    "v_1|takz": {
+      "aupadeshika": "takzU~",
+      "via": "3sg",
+      "code": "01.0743"
+    },
+    "v_1|tap": {
+      "aupadeshika": "tap",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|tarj": {
+      "aupadeshika": "tarj",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|tfp": {
+      "aupadeshika": "tfp",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|tij": {
+      "aupadeshika": "teja~",
+      "via": "3sg",
+      "code": "01.0263"
+    },
+    "v_1|tras": {
+      "aupadeshika": "tras",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|tuj": {
+      "aupadeshika": "tuja~",
+      "via": "3sg",
+      "code": "01.0277"
+    },
+    "v_1|tyaj": {
+      "aupadeshika": "tya\\ja~",
+      "via": "3sg",
+      "code": "01.1141"
+    },
+    "v_1|u": {
+      "aupadeshika": "u",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|uC": {
+      "aupadeshika": "uCI~",
+      "via": "3sg",
+      "code": "01.0244"
+    },
+    "v_1|uK": {
+      "aupadeshika": "oKf~",
+      "via": "3sg",
+      "code": "01.0129"
+    },
+    "v_1|uW": {
+      "aupadeshika": "uWa~",
+      "via": "3sg",
+      "code": "01.0392"
+    },
+    "v_1|uYC": {
+      "aupadeshika": "uYC",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|uh": {
+      "aupadeshika": "uhi~r",
+      "via": "3sg",
+      "code": "01.0840"
+    },
+    "v_1|ukz": {
+      "aupadeshika": "ukza~",
+      "via": "3sg",
+      "code": "01.0745"
+    },
+    "v_1|uz": {
+      "aupadeshika": "uza~",
+      "via": "3sg",
+      "code": "01.0792"
+    },
+    "v_1|vAYC": {
+      "aupadeshika": "vACi~",
+      "via": "3sg",
+      "code": "01.0236"
+    },
+    "v_1|vAh": {
+      "aupadeshika": "vAhf~\\",
+      "via": "bare",
+      "code": "01.0952"
+    },
+    "v_1|vE": {
+      "aupadeshika": "o~vE\\",
+      "via": "3sg",
+      "code": "01.1070"
+    },
+    "v_1|vIj": {
+      "aupadeshika": "vIj",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|vaRw": {
+      "aupadeshika": "vawi~",
+      "via": "3sg",
+      "code": "01.0377"
+    },
+    "v_1|vaS": {
+      "aupadeshika": "vaS",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|vaYc": {
+      "aupadeshika": "vancu~",
+      "via": "3sg",
+      "code": "01.0216"
+    },
+    "v_1|vad": {
+      "aupadeshika": "vada~",
+      "via": "3sg",
+      "code": "01.1164"
+    },
+    "v_1|vah": {
+      "aupadeshika": "va\\ha~^",
+      "via": "3sg",
+      "code": "01.1159"
+    },
+    "v_1|vakz": {
+      "aupadeshika": "vakza~",
+      "via": "3sg",
+      "code": "01.0753"
+    },
+    "v_1|val": {
+      "aupadeshika": "val",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|valg": {
+      "aupadeshika": "valga~",
+      "via": "3sg",
+      "code": "01.0152"
+    },
+    "v_1|vam": {
+      "aupadeshika": "wuvama~",
+      "via": "3sg",
+      "code": "01.0984"
+    },
+    "v_1|van": {
+      "aupadeshika": "vana~",
+      "via": "3sg",
+      "code": "01.0533"
+    },
+    "v_1|vand": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|vap": {
+      "aupadeshika": "quva\\pa~^",
+      "via": "3sg",
+      "code": "01.1158"
+    },
+    "v_1|vas": {
+      "aupadeshika": "va\\sa~",
+      "via": "3sg",
+      "code": "01.1160"
+    },
+    "v_1|ve": {
+      "aupadeshika": "ve\\Y",
+      "via": "3sg",
+      "code": "01.1161"
+    },
+    "v_1|vell": {
+      "aupadeshika": "vella~",
+      "via": "3sg",
+      "code": "01.0619"
+    },
+    "v_1|ven": {
+      "aupadeshika": "venf~^",
+      "via": "3sg",
+      "code": "01.1019"
+    },
+    "v_1|vezw": {
+      "aupadeshika": "vezw",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|vf": {
+      "aupadeshika": "vf\\",
+      "via": "3sg",
+      "code": "01.1083"
+    },
+    "v_1|vfD": {
+      "aupadeshika": "vfDu~\\",
+      "via": "bare",
+      "code": "01.0863"
+    },
+    "v_1|vfj": {
+      "aupadeshika": "vfj",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|vft": {
+      "aupadeshika": "vft",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|vfz": {
+      "aupadeshika": "vfzu~",
+      "via": "3sg",
+      "code": "01.0803"
+    },
+    "v_1|vij": {
+      "aupadeshika": "vij",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|vip": {
+      "aupadeshika": "vip",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|viz": {
+      "aupadeshika": "vi\\zu~",
+      "via": "3sg",
+      "code": "01.0794"
+    },
+    "v_1|vrIq": {
+      "aupadeshika": "vrIq",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|vraj": {
+      "aupadeshika": "vraja~",
+      "via": "3sg",
+      "code": "01.0286"
+    },
+    "v_1|vyaT": {
+      "aupadeshika": "vyaTa~\\",
+      "via": "bare",
+      "code": "01.0868"
+    },
+    "v_1|vye": {
+      "aupadeshika": "vyaya~^",
+      "via": "3sg",
+      "code": "01.1024"
+    },
+    "v_1|yAc": {
+      "aupadeshika": "quyAcf~^",
+      "via": "3sg",
+      "code": "01.0954"
+    },
+    "v_1|yaB": {
+      "aupadeshika": "ya\\Ba~",
+      "via": "3sg",
+      "code": "01.1135"
+    },
+    "v_1|yaj": {
+      "aupadeshika": "ya\\ja~^",
+      "via": "3sg",
+      "code": "01.1157"
+    },
+    "v_1|yam": {
+      "aupadeshika": "ya\\ma~",
+      "via": "3sg",
+      "code": "01.1031"
+    },
+    "v_1|yat": {
+      "aupadeshika": "yat",
+      "via": "direct",
+      "code": null
+    },
+    "v_1|yuD": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_1|zWiv": {
+      "aupadeshika": "zWivu~",
+      "via": "3sg",
+      "code": "01.0641"
+    },
+    "v_4|Ar": {
+      "aupadeshika": "Ar",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|BraMS": {
+      "aupadeshika": "BranSu~",
+      "via": "3sg",
+      "code": "04.0138"
+    },
+    "v_4|Bram": {
+      "aupadeshika": "Bramu~",
+      "via": "3sg",
+      "code": "04.0102"
+    },
+    "v_4|DA": {
+      "aupadeshika": "DA",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|Kid": {
+      "aupadeshika": "Ki\\da~\\",
+      "via": "bare",
+      "code": "04.0066"
+    },
+    "v_4|Sam": {
+      "aupadeshika": "Samu~",
+      "via": "3sg",
+      "code": "04.0098"
+    },
+    "v_4|Sap": {
+      "aupadeshika": "Sa\\pa~^",
+      "via": "3sg",
+      "code": "04.0064"
+    },
+    "v_4|Sliz": {
+      "aupadeshika": "Sli\\za~",
+      "via": "3sg",
+      "code": "04.0083"
+    },
+    "v_4|So": {
+      "aupadeshika": "So\\",
+      "via": "3sg",
+      "code": "04.0040"
+    },
+    "v_4|SrA": {
+      "aupadeshika": "SrA",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|Sram": {
+      "aupadeshika": "Sramu~",
+      "via": "3sg",
+      "code": "04.0101"
+    },
+    "v_4|SuD": {
+      "aupadeshika": "Su\\Da~",
+      "via": "3sg",
+      "code": "04.0088"
+    },
+    "v_4|Suc": {
+      "aupadeshika": "I~Suci~^r",
+      "via": "3sg",
+      "code": "04.0061"
+    },
+    "v_4|Suz": {
+      "aupadeshika": "Su\\za~",
+      "via": "3sg",
+      "code": "04.0080"
+    },
+    "v_4|aR": {
+      "aupadeshika": "aR",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|as": {
+      "aupadeshika": "asu~",
+      "via": "3sg",
+      "code": "04.0106"
+    },
+    "v_4|banD": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_4|buD": {
+      "aupadeshika": "bu\\Da~\\",
+      "via": "bare",
+      "code": "04.0068"
+    },
+    "v_4|dA": {
+      "aupadeshika": "dA",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|dIp": {
+      "aupadeshika": "dIp",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|dam": {
+      "aupadeshika": "damu~",
+      "via": "3sg",
+      "code": "04.0100"
+    },
+    "v_4|dfMh": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_4|dfp": {
+      "aupadeshika": "df\\pa~",
+      "via": "3sg",
+      "code": "04.0093"
+    },
+    "v_4|div": {
+      "aupadeshika": "divu~",
+      "via": "3sg",
+      "code": "04.0001"
+    },
+    "v_4|druh": {
+      "aupadeshika": "dru\\ha~",
+      "via": "3sg",
+      "code": "04.0094"
+    },
+    "v_4|duh": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_4|duz": {
+      "aupadeshika": "du\\za~",
+      "via": "3sg",
+      "code": "04.0082"
+    },
+    "v_4|fD": {
+      "aupadeshika": "fDu~",
+      "via": "3sg",
+      "code": "04.0160"
+    },
+    "v_4|fYj": {
+      "aupadeshika": "fYj",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|gfD": {
+      "aupadeshika": "gfDu~",
+      "via": "3sg",
+      "code": "04.0161"
+    },
+    "v_4|guD": {
+      "aupadeshika": "guDa~",
+      "via": "3sg",
+      "code": "04.0014"
+    },
+    "v_4|hfz": {
+      "aupadeshika": "hfza~",
+      "via": "3sg",
+      "code": "04.0142"
+    },
+    "v_4|iz": {
+      "aupadeshika": "iza~",
+      "via": "3sg",
+      "code": "04.0022"
+    },
+    "v_4|jF": {
+      "aupadeshika": "jFz",
+      "via": "3sg",
+      "code": "04.0025"
+    },
+    "v_4|jan": {
+      "aupadeshika": "jan",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|jur": {
+      "aupadeshika": "jur",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|jyA": {
+      "aupadeshika": "jyA",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|kAS": {
+      "aupadeshika": "kAS",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|kfS": {
+      "aupadeshika": "kfSa~",
+      "via": "3sg",
+      "code": "04.0140"
+    },
+    "v_4|klam": {
+      "aupadeshika": "klamu~",
+      "via": "3sg",
+      "code": "04.0104"
+    },
+    "v_4|klid": {
+      "aupadeshika": "klidU~",
+      "via": "3sg",
+      "code": "04.0157"
+    },
+    "v_4|kram": {
+      "aupadeshika": "kram",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|kruD": {
+      "aupadeshika": "kru\\Da~",
+      "via": "3sg",
+      "code": "04.0086"
+    },
+    "v_4|kuT": {
+      "aupadeshika": "kuTa~",
+      "via": "3sg",
+      "code": "04.0012"
+    },
+    "v_4|kup": {
+      "aupadeshika": "kupa~",
+      "via": "3sg",
+      "code": "04.0146"
+    },
+    "v_4|kuts": {
+      "aupadeshika": "kuts",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|kuw": {
+      "aupadeshika": "kuw",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|kzam": {
+      "aupadeshika": "kzamU~",
+      "via": "3sg",
+      "code": "04.0103"
+    },
+    "v_4|kzip": {
+      "aupadeshika": "kzi\\pa~",
+      "via": "3sg",
+      "code": "04.0015"
+    },
+    "v_4|kzuB": {
+      "aupadeshika": "kzuBa~",
+      "via": "3sg",
+      "code": "04.0154"
+    },
+    "v_4|kzuD": {
+      "aupadeshika": "kzu\\Da~",
+      "via": "3sg",
+      "code": "04.0087"
+    },
+    "v_4|lI": {
+      "aupadeshika": "lI",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|laz": {
+      "aupadeshika": "laz",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|liS": {
+      "aupadeshika": "liS",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|luB": {
+      "aupadeshika": "luBa~",
+      "via": "3sg",
+      "code": "04.0153"
+    },
+    "v_4|lup": {
+      "aupadeshika": "lupa~",
+      "via": "3sg",
+      "code": "04.0150"
+    },
+    "v_4|luw": {
+      "aupadeshika": "luwa~",
+      "via": "3sg",
+      "code": "04.0133"
+    },
+    "v_4|mA": {
+      "aupadeshika": "mA",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|mad": {
+      "aupadeshika": "madI~",
+      "via": "3sg",
+      "code": "04.0105"
+    },
+    "v_4|man": {
+      "aupadeshika": "man",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|mfg": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_4|mfz": {
+      "aupadeshika": "mfza~^",
+      "via": "3sg",
+      "code": "04.0060"
+    },
+    "v_4|mid": {
+      "aupadeshika": "YimidA~",
+      "via": "3sg",
+      "code": "04.0158"
+    },
+    "v_4|muh": {
+      "aupadeshika": "mu\\ha~",
+      "via": "3sg",
+      "code": "04.0095"
+    },
+    "v_4|naB": {
+      "aupadeshika": "RaBa~",
+      "via": "3sg",
+      "code": "04.0155"
+    },
+    "v_4|naS": {
+      "aupadeshika": "Ra\\Sa~",
+      "via": "3sg",
+      "code": "04.0091"
+    },
+    "v_4|nah": {
+      "aupadeshika": "Ra\\ha~^",
+      "via": "3sg",
+      "code": "04.0062"
+    },
+    "v_4|nft": {
+      "aupadeshika": "nftI~",
+      "via": "3sg",
+      "code": "04.0010"
+    },
+    "v_4|pac": {
+      "aupadeshika": "pac",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|pad": {
+      "aupadeshika": "pa\\da~\\",
+      "via": "bare",
+      "code": "04.0065"
+    },
+    "v_4|pluz": {
+      "aupadeshika": "pluza~",
+      "via": "3sg",
+      "code": "04.0009"
+    },
+    "v_4|prI": {
+      "aupadeshika": "prI",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|pruz": {
+      "aupadeshika": "pruz",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|puT": {
+      "aupadeshika": "puTa~",
+      "via": "3sg",
+      "code": "04.0013"
+    },
+    "v_4|puz": {
+      "aupadeshika": "pu\\za~",
+      "via": "3sg",
+      "code": "04.0079"
+    },
+    "v_4|qI": {
+      "aupadeshika": "qI",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|rAD": {
+      "aupadeshika": "rA\\Da~",
+      "via": "3sg",
+      "code": "04.0077"
+    },
+    "v_4|rI": {
+      "aupadeshika": "rI",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|raD": {
+      "aupadeshika": "ra\\Da~",
+      "via": "3sg",
+      "code": "04.0090"
+    },
+    "v_4|raR": {
+      "aupadeshika": "raR",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|raYj": {
+      "aupadeshika": "ra\\nja~^",
+      "via": "3sg",
+      "code": "04.0063"
+    },
+    "v_4|ric": {
+      "aupadeshika": "ric",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|riz": {
+      "aupadeshika": "riza~",
+      "via": "3sg",
+      "code": "04.0144"
+    },
+    "v_4|rup": {
+      "aupadeshika": "rupa~",
+      "via": "3sg",
+      "code": "04.0149"
+    },
+    "v_4|ruz": {
+      "aupadeshika": "ruza~",
+      "via": "3sg",
+      "code": "04.0143"
+    },
+    "v_4|sAD": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_4|siD": {
+      "aupadeshika": "zi\\Du~",
+      "via": "3sg",
+      "code": "04.0089"
+    },
+    "v_4|siv": {
+      "aupadeshika": "zivu~",
+      "via": "3sg",
+      "code": "04.0002"
+    },
+    "v_4|snA": {
+      "aupadeshika": "snA",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|snih": {
+      "aupadeshika": "zRi\\ha~",
+      "via": "3sg",
+      "code": "04.0097"
+    },
+    "v_4|so": {
+      "aupadeshika": "zo\\",
+      "via": "3sg",
+      "code": "04.0042"
+    },
+    "v_4|sriv": {
+      "aupadeshika": "srivu~",
+      "via": "3sg",
+      "code": "04.0003"
+    },
+    "v_4|suh": {
+      "aupadeshika": "zuha~",
+      "via": "3sg",
+      "code": "04.0024"
+    },
+    "v_4|tam": {
+      "aupadeshika": "tam",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|tan": {
+      "aupadeshika": "tan",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|tap": {
+      "aupadeshika": "tap",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|tfp": {
+      "aupadeshika": "tf\\pa~",
+      "via": "3sg",
+      "code": "04.0092"
+    },
+    "v_4|tfz": {
+      "aupadeshika": "tfz",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|tras": {
+      "aupadeshika": "tras",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|tuz": {
+      "aupadeshika": "tu\\za~",
+      "via": "3sg",
+      "code": "04.0081"
+    },
+    "v_4|uc": {
+      "aupadeshika": "uca~",
+      "via": "3sg",
+      "code": "04.0135"
+    },
+    "v_4|vAS": {
+      "aupadeshika": "vAS",
+      "via": "direct",
+      "code": null
+    },
+    "v_4|vrIq": {
+      "aupadeshika": "vrIqa~",
+      "via": "3sg",
+      "code": "04.0021"
+    },
+    "v_4|vyaD": {
+      "aupadeshika": "vya\\Da~",
+      "via": "3sg",
+      "code": "04.0078"
+    },
+    "v_4|yas": {
+      "aupadeshika": "yasu~",
+      "via": "3sg",
+      "code": "04.0107"
+    },
+    "v_4|yuD": {
+      "aupadeshika": "yu\\Da~\\",
+      "via": "bare",
+      "code": "04.0069"
+    },
+    "v_4|yup": {
+      "aupadeshika": "yupa~",
+      "via": "3sg",
+      "code": "04.0148"
+    },
+    "v_4|zWiv": {
+      "aupadeshika": "zWivu~",
+      "via": "3sg",
+      "code": "04.0004"
+    },
+    "v_6|Brajj": {
+      "aupadeshika": "Bra\\sja~^",
+      "via": "3sg",
+      "code": "06.0004"
+    },
+    "v_6|Buj": {
+      "aupadeshika": "Bu\\jo~",
+      "via": "3sg",
+      "code": "06.0153"
+    },
+    "v_6|DU": {
+      "aupadeshika": "DU",
+      "via": "3sg",
+      "code": "06.0133"
+    },
+    "v_6|Di": {
+      "aupadeshika": "Di\\",
+      "via": "3sg",
+      "code": "06.0142"
+    },
+    "v_6|Kid": {
+      "aupadeshika": "Ki\\da~",
+      "via": "3sg",
+      "code": "06.0172"
+    },
+    "v_6|Kud": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_6|Sad": {
+      "aupadeshika": "Sa\\dx~",
+      "via": "bare",
+      "code": "06.0164"
+    },
+    "v_6|SuB": {
+      "aupadeshika": "SuBa~",
+      "via": "3sg",
+      "code": "06.0046"
+    },
+    "v_6|Suz": {
+      "aupadeshika": "Suz",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|ard": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_6|bfh": {
+      "aupadeshika": "bfhU~",
+      "via": "3sg",
+      "code": "06.0074"
+    },
+    "v_6|diS": {
+      "aupadeshika": "di\\Sa~^",
+      "via": "3sg",
+      "code": "06.0003"
+    },
+    "v_6|duh": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_6|fC": {
+      "aupadeshika": "fCa~",
+      "via": "3sg",
+      "code": "06.0016"
+    },
+    "v_6|fD": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_6|fP": {
+      "aupadeshika": "fPa~",
+      "via": "3sg",
+      "code": "06.0040"
+    },
+    "v_6|fYj": {
+      "aupadeshika": "fYj",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|fc": {
+      "aupadeshika": "fca~",
+      "via": "3sg",
+      "code": "06.0022"
+    },
+    "v_6|fz": {
+      "aupadeshika": "fzI~",
+      "via": "3sg",
+      "code": "06.0007"
+    },
+    "v_6|gF": {
+      "aupadeshika": "gF",
+      "via": "3sg",
+      "code": "06.0146"
+    },
+    "v_6|gumP": {
+      "aupadeshika": "gunPa~",
+      "via": "3sg",
+      "code": "06.0043"
+    },
+    "v_6|il": {
+      "aupadeshika": "ila~",
+      "via": "3sg",
+      "code": "06.0084"
+    },
+    "v_6|inv": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_6|ir": {
+      "aupadeshika": "ir",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|iz": {
+      "aupadeshika": "izu~",
+      "via": "3sg",
+      "code": "06.0078"
+    },
+    "v_6|jur": {
+      "aupadeshika": "jur",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|juz": {
+      "aupadeshika": "juz",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|kF": {
+      "aupadeshika": "kF",
+      "via": "3sg",
+      "code": "06.0145"
+    },
+    "v_6|kaq": {
+      "aupadeshika": "kaqa~",
+      "via": "3sg",
+      "code": "06.0108"
+    },
+    "v_6|kfp": {
+      "aupadeshika": "kfp",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|kft": {
+      "aupadeshika": "kftI~",
+      "via": "3sg",
+      "code": "06.0171"
+    },
+    "v_6|kfz": {
+      "aupadeshika": "kf\\za~^",
+      "via": "3sg",
+      "code": "06.0006"
+    },
+    "v_6|kuc": {
+      "aupadeshika": "kuca~",
+      "via": "3sg",
+      "code": "06.0095"
+    },
+    "v_6|kuw": {
+      "aupadeshika": "kuwa~",
+      "via": "3sg",
+      "code": "06.0093"
+    },
+    "v_6|kuz": {
+      "aupadeshika": "kuz",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|kzi": {
+      "aupadeshika": "kzi\\",
+      "via": "3sg",
+      "code": "06.0143"
+    },
+    "v_6|kzip": {
+      "aupadeshika": "kzi\\pa~^",
+      "via": "3sg",
+      "code": "06.0005"
+    },
+    "v_6|kzup": {
+      "aupadeshika": "kzup",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|lajj": {
+      "aupadeshika": "lajj",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|liK": {
+      "aupadeshika": "liKa~",
+      "via": "3sg",
+      "code": "06.0092"
+    },
+    "v_6|liS": {
+      "aupadeshika": "li\\Sa~",
+      "via": "3sg",
+      "code": "06.0157"
+    },
+    "v_6|lip": {
+      "aupadeshika": "li\\pa~^",
+      "via": "3sg",
+      "code": "06.0169"
+    },
+    "v_6|luB": {
+      "aupadeshika": "luBa~",
+      "via": "3sg",
+      "code": "06.0025"
+    },
+    "v_6|luW": {
+      "aupadeshika": "luWa~",
+      "via": "3sg",
+      "code": "06.0110"
+    },
+    "v_6|lup": {
+      "aupadeshika": "lu\\px~^",
+      "via": "3sg",
+      "code": "06.0167"
+    },
+    "v_6|luq": {
+      "aupadeshika": "luq",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|majj": {
+      "aupadeshika": "wuma\\sjo~",
+      "via": "3sg",
+      "code": "06.0151"
+    },
+    "v_6|mf": {
+      "aupadeshika": "mf",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|mfD": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_6|mfS": {
+      "aupadeshika": "mf\\Sa~",
+      "via": "3sg",
+      "code": "06.0161"
+    },
+    "v_6|mfj": {
+      "aupadeshika": "mfj",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|mfq": {
+      "aupadeshika": "mfqa~",
+      "via": "3sg",
+      "code": "06.0053"
+    },
+    "v_6|mil": {
+      "aupadeshika": "mila~",
+      "via": "3sg",
+      "code": "06.0091"
+    },
+    "v_6|miz": {
+      "aupadeshika": "miza~",
+      "via": "3sg",
+      "code": "06.0079"
+    },
+    "v_6|muc": {
+      "aupadeshika": "mu\\cx~^",
+      "via": "3sg",
+      "code": "06.0166"
+    },
+    "v_6|muz": {
+      "aupadeshika": "muz",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|nu": {
+      "aupadeshika": "RU",
+      "via": "3sg",
+      "code": "06.0132"
+    },
+    "v_6|nud": {
+      "aupadeshika": "Ru\\da~^",
+      "via": "3sg",
+      "code": "06.0002"
+    },
+    "v_6|pF": {
+      "aupadeshika": "pF",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|piC": {
+      "aupadeshika": "piC",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|piS": {
+      "aupadeshika": "piSa~",
+      "via": "3sg",
+      "code": "06.0173"
+    },
+    "v_6|praC": {
+      "aupadeshika": "pra\\Ca~",
+      "via": "3sg",
+      "code": "06.0149"
+    },
+    "v_6|puw": {
+      "aupadeshika": "puwa~",
+      "via": "3sg",
+      "code": "06.0094"
+    },
+    "v_6|riK": {
+      "aupadeshika": "riK",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|riP": {
+      "aupadeshika": "riPa~",
+      "via": "3sg",
+      "code": "06.0026"
+    },
+    "v_6|riS": {
+      "aupadeshika": "ri\\Sa~",
+      "via": "3sg",
+      "code": "06.0156"
+    },
+    "v_6|rih": {
+      "aupadeshika": "riha~",
+      "via": "3sg",
+      "code": "06.0027"
+    },
+    "v_6|ruS": {
+      "aupadeshika": "ru\\Sa~",
+      "via": "3sg",
+      "code": "06.0155"
+    },
+    "v_6|ruj": {
+      "aupadeshika": "ru\\jo~",
+      "via": "3sg",
+      "code": "06.0152"
+    },
+    "v_6|sPul": {
+      "aupadeshika": "sPula~",
+      "via": "3sg",
+      "code": "06.0122"
+    },
+    "v_6|sPur": {
+      "aupadeshika": "sPura~",
+      "via": "3sg",
+      "code": "06.0121"
+    },
+    "v_6|sPuw": {
+      "aupadeshika": "sPuwa~",
+      "via": "3sg",
+      "code": "06.0100"
+    },
+    "v_6|sU": {
+      "aupadeshika": "zU",
+      "via": "3sg",
+      "code": "06.0144"
+    },
+    "v_6|sad": {
+      "aupadeshika": "za\\dx~",
+      "via": "3sg",
+      "code": "06.0163"
+    },
+    "v_6|sfj": {
+      "aupadeshika": "sf\\ja~",
+      "via": "3sg",
+      "code": "06.0150"
+    },
+    "v_6|sic": {
+      "aupadeshika": "zi\\ca~^",
+      "via": "3sg",
+      "code": "06.0170"
+    },
+    "v_6|spfS": {
+      "aupadeshika": "spf\\Sa~",
+      "via": "3sg",
+      "code": "06.0158"
+    },
+    "v_6|tF": {
+      "aupadeshika": "tF",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|tfp": {
+      "aupadeshika": "tfpa~",
+      "via": "3sg",
+      "code": "06.0028"
+    },
+    "v_6|tud": {
+      "aupadeshika": "tu\\da~^",
+      "via": "3sg",
+      "code": "06.0001"
+    },
+    "v_6|tuj": {
+      "aupadeshika": "tuj",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|uB": {
+      "aupadeshika": "uBa~",
+      "via": "3sg",
+      "code": "06.0044"
+    },
+    "v_6|uNK": {
+      "aupadeshika": "uNK",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|uYC": {
+      "aupadeshika": "uYC",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|ubj": {
+      "aupadeshika": "ubja~",
+      "via": "3sg",
+      "code": "06.0023"
+    },
+    "v_6|ud": {
+      "aupadeshika": null,
+      "via": "unresolved",
+      "code": null
+    },
+    "v_6|ujJ": {
+      "aupadeshika": "ujJa~",
+      "via": "3sg",
+      "code": "06.0024"
+    },
+    "v_6|vas": {
+      "aupadeshika": "vas",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|viS": {
+      "aupadeshika": "vi\\Sa~",
+      "via": "3sg",
+      "code": "06.0160"
+    },
+    "v_6|vid": {
+      "aupadeshika": "vi\\dx~^",
+      "via": "3sg",
+      "code": "06.0168"
+    },
+    "v_6|vij": {
+      "aupadeshika": "vij",
+      "via": "direct",
+      "code": null
+    },
+    "v_6|vraSc": {
+      "aupadeshika": "o~vrascU~",
+      "via": "3sg",
+      "code": "06.0012"
+    },
+    "v_6|vyac": {
+      "aupadeshika": "vyaca~",
+      "via": "3sg",
+      "code": "06.0013"
+    },
+    "v_6|yu": {
+      "aupadeshika": "yu",
+      "via": "direct",
+      "code": null
+    }
+  }
+}

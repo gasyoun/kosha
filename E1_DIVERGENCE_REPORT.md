@@ -143,10 +143,12 @@ The @DECIDE is filed in
 MG **ruled HYBRIDIZE** (05-07-2026, reaffirmed 10-07-2026). The forms-layer pass
 [`scripts/build_hybrid_forms.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_hybrid_forms.py)
 (`build_db.py --stage hybrid`) now applies it over `inflections`, reusing this
-report's own classifier so the applied set matches the numbers above cell-for-cell
-(top-10k sample: **326 ṇatva cells / 89 stems** auto-fixed, **16 m_card cells**
-gap-filled, **13,770 cells / 1,440 stems** flagged `disputed` = 13,666 `other` +
-104 `pronominal` — identical to the DIFF taxonomy):
+report's own classifier. The shipped `kosha.db` materialises **326 ṇatva-fix
+rows / 55 stems**, **17 `m_card` gap-fill rows**, and **13,888 cells flagged
+`disputed`** (the `pronominal` + `other` forks). These are the full-pass counts;
+the top-10k characterization sample above reported 89 ṇatva-bearing stems / 16
+gap-fills / 13,770 disputed — the drift is sample-vs-full-run, not a classifier
+change (the 326 ṇatva **cell** count is stable across both):
 
 - **ṇatva → auto-fix.** Each affected cell gets the vidyut-corrected form as a
   new `source='hybrid-natva-fix'` row; the display layer
@@ -163,51 +165,62 @@ gap-filled, **13,770 cells / 1,440 stems** flagged `disputed` = 13,666 `other` +
 The full entry-bearing set (235,849 paradigms) is a longer offline pass MG runs
 out-of-band via `--stage hybrid` (A3), exactly like `build_paradigms --all`.
 
-## Verbs (H185 Task C — present-system comparison, answers #8)
+## Verbs (H185 Task C + H855 dhātu-identity crosswalk — present-system comparison, answers #8)
 
-The verb half is now run:
-[`scripts/compare_vidyut_verbs.py`](https://github.com/gasyoun/kosha/blob/main/scripts/compare_vidyut_verbs.py)
-maps Cologne's present-system rows (`v_<gana>`/`v_p`, ingested in K2a) into
-vidyut's `Tinanta` API (gaṇa Bhvādi/Divādi/Tudādi/Curādi; lakāra Laṭ/Laṅ/Loṭ/
-Vidhiliṅ; prayoga Kartari/Karmaṇi; dhātupada Parasmai/Ātmane) and diffs the same
-four classes as the nominal pass. This is the **third-engine answer to
-[#8](https://github.com/sanskrit-lexicon/csl-inflect/issues/8)** (Jim's
+The verb half runs
+[`scripts/compare_vidyut_verbs.py`](https://github.com/gasyoun/kosha/blob/main/scripts/compare_vidyut_verbs.py):
+Cologne's present-system rows (`v_<gana>`/`v_p`, ingested in K2a) → vidyut's
+`Tinanta` API (gaṇa Bhvādi/Divādi/Tudādi/Curādi; lakāra Laṭ/Laṅ/Loṭ/Vidhiliṅ;
+prayoga Kartari/Karmaṇi; dhātupada Parasmai/Ātmane), diffing the same four
+classes as the nominal pass. Third-engine answer to
+[#8](https://github.com/sanskrit-lexicon/csl-inflect/issues/8) (Jim's
 Cologne-vs-Huet verb line).
 
-**Headline — the verb comparison does NOT reproduce the nominal 90.5 %, and that
-gap is itself the finding.** Over 683 entry-bearing roots / 34,056 cells where
-both engines produced a form: **strict agreement is 12.68 %** (only +0.8 pp for
-the cosmetic `final_stop`/superset classes → 13.5 % "compatible"). **259 of 683
-roots derive nothing at all** from the bare root, and `COLOGNE_ONLY` is 29,268
-cells.
+**The first pass (v0.21.0, bare-root upadeśa) scored a misleading strict
+agreement of 12.68 %** — because `Dhatu.mula(bare_root, gaṇa)` is ambiguous where
+the nominal `Pratipadika.basic(stem)` was not: Cologne stores the bare SLP1
+root, vidyut wants the *aupadeśika* dhātu (accent + anubandhas), so **259/683
+roots derived nothing** and 29,268 cells fell to `COLOGNE_ONLY`. That low number
+was a **dhātu-identity mapping artifact, not grammar disagreement** — the
+report's named follow-on.
 
-| Class | Cells | Note |
-|---|---:|---|
-| AGREE (strict) | 4,320 | clean-mapping roots (e.g. **bhū**: `bhavati/bhavataḥ/bhavanti` agree) |
-| DIFF genuine conflict | 29,452 | dhātu-identity mismatch (below) |
-| DIFF final-stop (`akarat` vs `akarat`/`akarad`) | 126 | citation-form choice |
-| DIFF vidyut superset (`-tāt` imperatives) | 126 | vidyut richer |
-| COLOGNE_ONLY (vidyut empty) | 29,268 | vidyut couldn't derive the root |
-| VIDYUT_ONLY | 3,852 | — |
+**H855 builds that crosswalk**
+([`scripts/build_dhatu_crosswalk.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_dhatu_crosswalk.py)
+→ committed [`data/e1/dhatu_crosswalk.json`](https://github.com/gasyoun/kosha/blob/main/data/e1/dhatu_crosswalk.json)):
+each Cologne `(root, gaṇa)` is matched to the dhātupāṭha entry whose vidyut
+present-3sg-active equals Cologne's (else the bare root already derives, else a
+normalized-bare match) — **722/779 (92.7 %)** of the gaṇa-1/4/6/10 root-models
+resolved (3sg 474 / direct 205 / bare 43; 57 unresolved, never guessed).
+Example: `as` (div) now maps to the aupadeśika `asu~` (04.0106) → `asyati`,
+matching Cologne, instead of the wrong `Ayati`.
 
-**Why so low — a dhātu-IDENTITY mapping gap, not a grammar disagreement.** The
-nominal pass mapped cleanly because `Pratipadika.basic(stem)` is unambiguous.
-`Dhatu.mula(bare_root, gaṇa)` is **not**: Cologne stores the bare SLP1 root, but
-vidyut wants the *aupadeśika* dhātu (accent + it-markers + gaṇa disambiguation),
-so the bare root resolves to a **different or absent** vidyut dhātu. Clear
-example — `as` (div, "throw"): Cologne `asyati … asyate` (passive) vs vidyut
-`Ayati … yate`; vidyut derived a different lexeme entirely. Where the bare root
-*does* map (bhū, and other unambiguous roots) the engines agree exactly, just as
-for nominals.
+**With the correct upadeśa, strict agreement rises 12.68 % → 70.24 %** — near the
+nominal 90.5 %, confirming the low first number was mapping, not divergence. Over
+47,340 cells where both engines now produce a form:
 
-**Conclusion for #8 / the forms layer.** A meaningful verb give-back needs a
-**dhātu-identity crosswalk** (Cologne root+gaṇa ↔ vidyut `DhatupathaEntry`) —
-the concrete "larger follow-on" this report first flagged, now quantified. Until
-that exists, **no vidyut verb hybridization is warranted**: unlike the clean,
-high-value nominal ṇatva fix, a bare-root verb substitution would inject a
-different lexeme's forms. Cologne's verb tables stay as-is (D3). Raw stats:
-gitignored `data/e1/e1_verbs_divergence.json`; reproduce with
-`python scripts/compare_vidyut_verbs.py`.
+| Class | Cells (H855) | Before (bare-root) | Note |
+|---|---:|---:|---|
+| AGREE (strict) | 33,253 (70.24 %) | 4,320 (12.68 %) | clean once the dhātu resolves |
+| COMPATIBLE (+ cosmetic) | 36,284 (76.65 %) | — | AGREE + final-stop + superset |
+| DIFF genuine conflict | 11,056 | 29,452 | true divergence (accent/sandhi/gaṇa-shift) |
+| DIFF final-stop (t/d) | 937 | 126 | citation-form choice |
+| DIFF vidyut superset (`-tāt`) | 1,711 | 126 | vidyut richer |
+| DIFF cologne superset | 383 | — | Cologne richer |
+| COLOGNE_ONLY (vidyut empty) | 15,984 | 29,268 | residual: 110 still-underivable roots + 75 passives with no gaṇa to borrow |
+| VIDYUT_ONLY | 4,680 | 3,852 | — |
+
+Roots vidyut cannot derive dropped **259 → 110**. The crosswalk is a **committed
+run-time input** carrying only aupadeśika strings, so the comparison needs only
+bundled vidyut (`Dhatu.mula`); the external `vidyut-data` is a build-time-only
+input for the crosswalk builder (R12).
+
+**Conclusion for #8 / the forms layer (unchanged posture, D3).** The 70.24 %
+agreement is a *comparison* result, not a licence to hybridize verbs: the
+remaining 11,056 genuine conflicts are real accent/sandhi/gaṇa-assignment
+differences needing scholarly review, and 110 roots + 75 passives stay
+unresolved. Cologne's verb tables remain the display base. Raw stats: gitignored
+`data/e1/e1_verbs_divergence.json`; reproduce with `python
+scripts/build_dhatu_crosswalk.py && python scripts/compare_vidyut_verbs.py`.
 
 ## Deferred (deliberately)
 

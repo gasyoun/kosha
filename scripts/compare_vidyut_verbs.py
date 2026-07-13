@@ -47,6 +47,7 @@ sys.stderr.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_DB = ROOT / "data" / "db" / "kosha.db"
 DEFAULT_OUT = ROOT / "data" / "e1"
+DEFAULT_CROSSWALK = ROOT / "data" / "e1" / "dhatu_crosswalk.json"
 
 ROOT_SCRIPTS = ROOT / "scripts"
 sys.path.insert(0, str(ROOT_SCRIPTS))
@@ -81,6 +82,26 @@ def open_db(db_path: Path) -> sqlite3.Connection:
     con = sqlite3.connect(f"file:{db_path}?mode=ro", uri=True)
     con.row_factory = sqlite3.Row
     return con
+
+
+def load_crosswalk(path: Path) -> dict:
+    """Load the H855 Cologne-root -> aupadeśika-dhātu crosswalk
+    (`'model|root' -> aupadeśika`). A missing file yields {} -> every root falls
+    back to its bare-root upadeśa, i.e. the pre-H855 behaviour. The committed
+    crosswalk carries only aupadeśika strings, so this stays vidyut-data-free
+    (only bundled `Dhatu.mula` is used downstream — R12)."""
+    try:
+        data = json.loads(Path(path).read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return {}
+    return {k: e["aupadeshika"] for k, e in data.get("crosswalk", {}).items()
+            if e.get("aupadeshika")}
+
+
+def upadesha(cross: dict, root: str, model: str) -> str:
+    """The upadeśa to feed Dhatu.mula for this Cologne (root, model): the
+    crosswalk's aupadeśika if resolved, else the bare root (pre-H855 fallback)."""
+    return cross.get(f"{model}|{root}", root)
 
 
 def select_roots(con, limit: int):
@@ -141,13 +162,16 @@ def main():
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--examples", type=int, default=50)
+    ap.add_argument("--crosswalk", type=Path, default=DEFAULT_CROSSWALK,
+                    help="H855 root->aupadeśika crosswalk; absent -> bare-root fallback")
     args = ap.parse_args()
 
     con = open_db(args.db)
     v = Vyakarana()
+    cross = load_crosswalk(args.crosswalk)
     roots = select_roots(con, args.limit)
     print(f"[E1 verbs] comparing {len(roots)} entry-bearing verb root(s) "
-          "(vidyut Tinanta vs Cologne)")
+          f"(vidyut Tinanta vs Cologne; {len(cross)} roots via H855 dhātu crosswalk)")
 
     cls = Counter()
     per_voice = defaultdict(Counter)
@@ -158,14 +182,20 @@ def main():
 
     for n, (root, models, gana_model) in enumerate(roots, 1):
         try:
-            gana_dhatu = Dhatu.mula(root, GANA_OF_MODEL[gana_model]) if gana_model else None
+            gana_dhatu = (Dhatu.mula(upadesha(cross, root, gana_model),
+                                     GANA_OF_MODEL[gana_model]) if gana_model else None)
         except Exception:
             gana_dhatu = None
         root_vidyut_hits = 0
 
         for model in models:
             if model in GANA_OF_MODEL:
-                dhatu = Dhatu.mula(root, GANA_OF_MODEL[model])
+                # H855: use the crosswalk's aupadeśika upadeśa (falls back to the
+                # bare root — the pre-H855 behaviour — when unresolved).
+                try:
+                    dhatu = Dhatu.mula(upadesha(cross, root, model), GANA_OF_MODEL[model])
+                except Exception:
+                    dhatu = Dhatu.mula(root, GANA_OF_MODEL[model])
                 voices = ["active", "middle"]
             else:  # v_p passive — borrow the root's gaṇa
                 if gana_dhatu is None:
@@ -230,9 +260,10 @@ def main():
     compatible = (cls["AGREE"] + cls["DIFF_final_stop"]
                   + cls["DIFF_vidyut_superset"] + cls["DIFF_cologne_superset"])
     report = {
-        "handoff": "H185-C",
+        "handoff": "H185-C + H855 (dhātu-identity crosswalk)",
         "answers": "csl-inflect#8 (Huet verb comparison)",
         "sample_roots": len(roots),
+        "crosswalk_roots_resolved": len(cross),
         "roots_vidyut_underivable": len(roots_all_empty),
         "roots_no_gana_for_passive": len(sorted(set(roots_no_gana_passive))),
         "classes": dict(cls),
@@ -252,7 +283,8 @@ def main():
     lines = [
         "P4 Wave E1 verbs — vidyut Tinanta vs Cologne csl-inflect (present system)",
         f"entry-bearing roots        : {len(roots)}",
-        f"roots vidyut can't derive  : {len(roots_all_empty)} (bare-root upadeśa/gaṇa gap)",
+        f"roots via H855 crosswalk   : {len(cross)} (aupadeśika upadeśa; else bare-root)",
+        f"roots vidyut can't derive  : {len(roots_all_empty)} (residual upadeśa/gaṇa gap)",
         f"roots w/o gaṇa for passive : {len(sorted(set(roots_no_gana_passive)))}",
         f"cells both-nonempty        : {both}",
         f"AGREE (strict)             : {cls['AGREE']} "
