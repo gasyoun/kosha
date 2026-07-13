@@ -1,6 +1,6 @@
 # D5 — measurements, then the decisions they inform
 
-_Created: 03-07-2026 · Last updated: 03-07-2026_
+_Created: 03-07-2026 · Last updated: 13-07-2026_
 
 Phase 1 D5 ([PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md)):
 **measure the real system, then settle the SLO items
@@ -96,7 +96,7 @@ tests still green (results identical, only speed changed).
 | lemma `agni` (pwg, 4) | 112 ms | **7.2 ms** | — |
 | lemma `deva` (ap90, 1) | 38 ms | **14.2 ms** | — |
 | lemma `sTA` (pwg, 190 KB mega-body) | 188 ms (e2e) | — | **64 ms** |
-| search `ka` prefix (12,495 hits) | — | **61.8 ms** | 51 ms |
+| search `ka` prefix (12,495 hits, `LIKE`-scan — superseded by H838 below) | — | **61.8 ms** | 51 ms |
 | search `agni` exact | — | **0.24 ms** | — |
 | form `bhagavAn` | — | **0.16 ms** | 3.9 ms |
 | sense `mw.142512.1` (banD) | — | **0.84 ms** | 4.5 ms |
@@ -107,16 +107,49 @@ tracks warm within ~1.5× — expected, since every request already opens a fres
 connection, so there is no cross-request SQLite cache to lose.
 
 **What remains the slow path, honestly:**
-- **`search` prefix/fuzzy ≈ 50–70 ms** (p95 ~96 ms). `slp1 LIKE 'ka%'` scans
-  the 323k-row `lemmas` covering index because `LIKE` (case-insensitive by
-  default) cannot use a range seek. Flagged, not fixed here (scope: D5 is
-  measure+decide, and one justified perf fix already landed). The fix — rewrite
-  prefix search to a case-sensitive range `slp1 >= 'ka' AND slp1 < 'kb'` — is
-  an easy P2/P5 win when autocomplete UX wants <20 ms, and it also removes a
-  latent SLP1 correctness wrinkle (SLP1 is case-significant: `K`≠`k`, so
-  case-insensitive `LIKE` over-matches). Recorded for the search-UI phase.
+- **`search` fuzzy ≈ 94 ms** (p95 ~145 ms, `q=kam` mode=fuzzy, 5,262 hits).
+  `slp1 LIKE '%kam%'` is an unavoidable full scan — a substring match has no
+  index-seekable range, so this is inherent to the mode, not a bug. Left as
+  the honest remaining slow path (autocomplete UX should default to `prefix`,
+  not `fuzzy`, for latency-sensitive callers).
 - **Mega-card lemma render** (a headword whose PWG entry is one of the 9 bodies
   >100k chars): ~50–64 ms e2e. Rare (§4) but real; the tail the SLO must cover.
+
+**`search` prefix fixed (H838, 13-07-2026):** `slp1 LIKE 'ka%'` scanned the
+323k-row `lemmas` covering index (`SCAN ... USING COVERING INDEX
+sqlite_autoindex_lemmas_1`) because `LIKE` (case-insensitive by default)
+cannot use a range seek — **and** it silently over-matched: SLP1 is
+case-significant (`k`=ka, `K`=kha), so `ka%` wrongly matched 1,504 `K`-initial
+(kha) lemmas out of 12,495 total hits. Rewritten to a half-open range seek
+`slp1 >= 'ka' AND slp1 < 'kb'` (upper bound = prefix with its last character's
+codepoint incremented; `lemmas.slp1` already uses SQLite's default `BINARY`
+collation, so no schema change was needed) —
+[`app/main.py`](https://github.com/gasyoun/kosha/blob/main/app/main.py)
+`_prefix_range_bound` + the `search()` `mode == "prefix"` branch.
+`EXPLAIN QUERY PLAN` now shows `SEARCH lemmas USING COVERING INDEX
+sqlite_autoindex_lemmas_1 (slp1>? AND slp1<?)`. Regression test
+[`tests/test_api.py::test_search_prefix_case_significant_excludes_kha`](https://github.com/gasyoun/kosha/blob/main/tests/test_api.py)
+proves a `ka`-prefix search excludes every `Ka`-initial (kha) lemma (it fails
+against the old `LIKE` query, which leaked 15 kha lemmas into just the
+first ranked page).
+
+Re-measured 13-07-2026 (Sonnet 5, `claude-sonnet-5`), same harness
+([`scripts/measure_d5.py`](https://github.com/gasyoun/kosha/blob/main/scripts/measure_d5.py),
+which also needed a small unrelated fix: its direct `search()` handler call
+had drifted out of sync with the `request`/`response`/`background_tasks`
+params the anon-visitor-logging feature added after this harness was
+written):
+
+| `search` `ka` prefix | before (LIKE scan) | **after (range seek)** |
+|---|---:|---:|
+| hits (`total`) | 12,495 (1,504 wrongly incl. kha) | **7,041** (correct) |
+| handler WARM median | 61.8 ms | **3.26 ms** |
+| handler WARM p95 | ~96 ms | **7.17 ms** |
+| handler COLD (new-conn) | — | **5.24 ms** |
+| e2e (live uvicorn) | 51 ms | **11.82 ms** (p95 34.01 ms) |
+
+**~19x on handler median, ~4x e2e** — well under the <20 ms autocomplete-UX
+bar named above, and the latent case over-match is gone.
 
 ## 4. render() cost + body-size distribution
 

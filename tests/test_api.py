@@ -78,6 +78,19 @@ def test_search_limit_over_200_rejected():
     assert r.status_code == 400
 
 
+def test_search_prefix_case_significant_excludes_kha():
+    # H838: SLP1 is case-significant ('k' = ka, 'K' = kha). A 'ka'-prefix
+    # search must never return 'Ka'-initial (kha) lemmas -- the case-insensitive
+    # `LIKE 'ka%'` this replaced let 15 kha lemmas leak into just the first
+    # ranked page (Kalu, KaRqa, Ka, ... verified against data/db/kosha.db).
+    r = client.get("/api/v1/search?q=ka&mode=prefix&limit=200")
+    assert r.status_code == 200
+    results = r.json()["results"]
+    assert len(results) > 0
+    assert all(res["slp1"].startswith("ka") for res in results)
+    assert not any(res["slp1"].startswith("Ka") for res in results)
+
+
 def test_sense_roundtrip_from_lemma():
     lemma_r = client.get("/api/v1/lemma/agni")
     sense_id = lemma_r.json()["results"][0]["sense_ids"][0]

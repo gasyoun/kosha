@@ -166,9 +166,19 @@ def measure_handler_latency():
     # _entry_payload, sense_id formatting) minus only the HTTP/ASGI framing
     # (measured separately in section 4).
     import main as m  # noqa: E402
-    from fastapi import HTTPException
+    from fastapi import BackgroundTasks, HTTPException, Response
+    from starlette.requests import Request as StarletteRequest
     con_warm = _con()
     results = {}
+
+    def _fake_request():
+        # search()'s handler signature grew request/response/background_tasks
+        # params (anon-visitor logging, added after this harness was first
+        # written) -- a minimal ASGI scope is enough to satisfy
+        # resolve_anon_id()/hash_ip() (H838 remeasure needed this restored).
+        scope = {"type": "http", "headers": [], "client": ("127.0.0.1", 0),
+                  "method": "GET", "path": "/api/v1/search", "query_string": b""}
+        return StarletteRequest(scope)
 
     def call(fn, *a, **kw):
         try:
@@ -199,12 +209,18 @@ def measure_handler_latency():
     lat = {}
     for q, mode in SEARCH_QS:
         def work(q=q, mode=mode, con=con_warm):
-            m.search(q=q, mode=mode, limit=50, offset=0, con=con)
+            m.search(q=q, request=_fake_request(), response=Response(),
+                      background_tasks=BackgroundTasks(), mode=mode,
+                      limit=50, offset=0, con=con)
         work()
-        res = m.search(q=q, mode=mode, limit=50, offset=0, con=con_warm)
+        res = m.search(q=q, request=_fake_request(), response=Response(),
+                         background_tasks=BackgroundTasks(), mode=mode,
+                         limit=50, offset=0, con=con_warm)
         total = res["query"]["total"]
         warm = _time_ms(work, 20)
-        cold = _cold_call(lambda: m.search(q=q, mode=mode, limit=50, offset=0, con=_con()))
+        cold = _cold_call(lambda: m.search(
+            q=q, request=_fake_request(), response=Response(),
+            background_tasks=BackgroundTasks(), mode=mode, limit=50, offset=0, con=_con()))
         print(f"  q={q:8} mode={mode:7} total={total:>7,}  WARM median={warm['median_ms']:.2f}ms "
               f"p95={warm['p95_ms']:.2f}ms  COLD={cold:.2f}ms")
         lat[f"{q}/{mode}"] = {"total": total, "warm": warm, "cold_newcon_ms": round(cold, 3)}

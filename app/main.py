@@ -360,6 +360,19 @@ def get_paradigm(lemma: str, in_: str = Query("auto", alias="in"),
     return envelope(con, {"lemma": lemma, "in": in_, "lemma_slp1": canonical}, [result])
 
 
+def _prefix_range_bound(prefix: str) -> str:
+    """Exclusive upper bound for a half-open range seek over `prefix`
+    (D5_MEASUREMENTS.md §3 / H838): the smallest string that sorts after
+    every string starting with `prefix`, found by incrementing the last
+    character's codepoint. `slp1 >= prefix AND slp1 < bound` hits the
+    `slp1`/`slp1_key` index as a seek (BINARY collation, the SQLite
+    default, so this is case-sensitive) instead of `LIKE prefix||'%'`,
+    which forces a full scan AND is case-insensitive by default -- letting
+    a case-significant SLP1 prefix like 'ka' (ka) wrongly match 'KA' (kha).
+    """
+    return prefix[:-1] + chr(ord(prefix[-1]) + 1)
+
+
 def _log_search_background(anon_id: str, ts: str, query_raw: str, query_slp1: str,
                             mode: str, results_total: int, ip_hash: str | None):
     # Opens its OWN connection rather than reusing a request-scoped Depends()
@@ -384,7 +397,10 @@ def search(q: str, request: Request, response: Response, background_tasks: Backg
     if mode == "exact":
         where, params = "slp1 = ?", (slp1_q,)
     elif mode == "prefix":
-        where, params = "slp1 LIKE ?", (slp1_q + "%",)
+        if slp1_q:
+            where, params = "slp1 >= ? AND slp1 < ?", (slp1_q, _prefix_range_bound(slp1_q))
+        else:
+            where, params = "1=1", ()
     elif mode == "fuzzy":
         where, params = "slp1 LIKE ?", ("%" + slp1_q + "%",)
     else:

@@ -14,7 +14,22 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.34.0] - 2026-07-13
+
 ### Fixed
+- **`/api/v1/search` prefix mode: `LIKE 'ka%'` scan → `slp1 >= 'ka' AND slp1 <
+  'kb'` range seek** (H838, Sonnet 5 `claude-sonnet-5`) — fixes the
+  [D5_MEASUREMENTS.md](https://github.com/gasyoun/kosha/blob/main/D5_MEASUREMENTS.md)
+  §3-flagged defect: `LIKE` forced a full 323k-row `lemmas` scan (~62–70 ms) AND,
+  being case-insensitive by default, silently over-matched SLP1's case-significant
+  prefixes (`ka%` wrongly matched 1,504 `K`-initial/kha lemmas out of 12,495 hits).
+  The range seek hits the index (`EXPLAIN QUERY PLAN` now shows `SEARCH ... USING
+  COVERING INDEX`, not `SCAN`) and restores correctness (7,041 correct hits).
+  Handler latency 61.8 ms → **3.26 ms** median (p95 7.17 ms); e2e 51 ms →
+  **11.82 ms**. New regression test
+  `tests/test_api.py::test_search_prefix_case_significant_excludes_kha` (fails
+  against the old query, proving it catches the regression). D5 §3 re-measured
+  and logged.
 - **Re-ran the H345 `heritage_anchor` ingest on the live `kosha.db`** (H837,
   Sonnet 5 `claude-sonnet-5`) — fixes the H691-flagged regression where the
   05-07-built (and later 12-07-rebuilt) live DB carried no `heritage_anchor`
