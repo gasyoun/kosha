@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="22 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="41 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="22 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="41 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -663,6 +663,538 @@
         "encodingFormat": "tsv",
         "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/dict_corpus_concordance.tsv"
       }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Bloomfield-style parallel-passage concordance across the DCS corpus (B3)",
+      "description": "Q2 (B3) of CONCORDANCE_ROADMAP.md. Per-verse coverage sidecar parallel_passage_verses.tsv (501,231 rows, one per source verse incl. 0-parallel): 15,164 (3.0%) carry >=1 parallel occurrence. Input: VisualDCS/derived-data/Paralleli-v-tekstah-korpusa-SRC/PARA/Polnorazmernye/ (245 CSV files, the 2026 corrected/regenerated full-text-match pass) — consumed, never re-derived. Two open @DECIDE surfaced to a human, not self-ruled (R-C2): (1) which of three parallel-passage export variants (Polnorazmernye/ used here per the folder's own README default vs Polnorazmernye-2022-archive/ vs the differently-scoped Stopovye/) is the released canonical; (2) which digitization of Bloomfield's 1906 Vedic Concordance to key the Rgveda subset against (not found anywhere in the org — RV cross-reference not built this pass). The roadmap's prior '506,787 alignments' estimate (itself sourced from an admittedly-unverified README note) does not match this build's directly-parsed counts (501,231 verses / 153,045 links) — flagged, not silently reconciled. DCS-derived; ships BY-SA with the public tier pending the DCS-license composition @DECIDE already open on the roadmap.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "parallel-passage-concordance"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/parallel_passage_concordance.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Markup-tag frequency census (44 Cologne v02 dicts)",
+      "description": "H683 (11-07-2026, Fable 5 claude-fable-5). Verdicts in data/MARKUP_TAG_CENSUS_CSLORIG_2026.md: MW72/ARMH/FRI/NMMB under-marked; SKD/VCP expected-zero by construction; trace-tag inconsistencies flagged (SCH <ab> x2 in 29k entries, WIL <ls> x6 in 45k).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "markup-tag-census"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Sanskrit lexical semantic change scores (PPMI-cosine, DCS 5-slot chronology)",
+      "description": "First Sanskrit LSC derivation (H728, 11-07-2026); freq-shift control Spearman -0.013; binary flag is a q75 heuristic pending ChiWUG-style gold over the 60-lemma target set.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dcs-lsc-pilot"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/VisualDCS"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Correction-event log, full trio (all/typed/final)",
+      "description": "H694 (11-07-2026, Fable 5 claude-fable-5). 52,498 data rows per view; sizes 57.8+59.0+61.2 MB.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "correction-events-log"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv",
+        "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS proper-name compound splits with frequency vectors (Kompozity names.csv)",
+      "description": "H694 (11-07-2026, Fable 5 claude-fable-5). Example row: rajendra; rajan indra;2;863;...",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "kompozity-names-compound-splits"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv",
+        "contentUrl": "https://github.com/gasyoun/VisualDCS"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Pan-CDSL headword character-n-gram oracle (allngramtxt.txt)",
+      "description": "H694 (11-07-2026, Fable 5 claude-fable-5). Membership oracle: a headword containing a chunk attested in no other headword is suspect.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "cdsl-headword-ngram-oracle"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "txt",
+        "contentUrl": "https://github.com/sanskrit-lexicon/CORRECTIONS"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Headword pairwise-overlap matrix (15-dict union)",
+      "description": "H684 (11-07-2026, Fable 5 claude-fable-5). CAE-CCS J=0.672 max; MW/PWG intersection = 94,753 (resolves the figure once mislabeled as the union size); BHS 58.7% unique, CCS 0.6%. Findings: data/HEADWORD_OVERLAP_UNION15_2026.md.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "headword-overlap-matrix"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "CDSL MDF pilot export (50-case neutral-model slice, MW-focused)",
+      "description": "Registered by H727 (11-07-2026, Fable 5 claude-fable-5). Third export profile beside TEI/OntoLex; App. B field-order + \\de ruling refined by H721 (csl-standards PR #107).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "mdf-pilot-cdsl"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "mdf (SFM, one record per file)",
+        "contentUrl": "https://github.com/sanskrit-lexicon/csl-standards"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "CDSL LIFT pilot export (fourth serialization, H721)",
+      "description": "Registered by H727 (11-07-2026, Fable 5 claude-fable-5). Landed via csl-standards PR #107 (H721).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "lift-pilot-cdsl"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "lift (XML)",
+        "contentUrl": "https://github.com/sanskrit-lexicon/csl-standards"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "semdom <-> Amarakosha crosswalk (SIL semantic domains <-> AK vargas + synsets, ID pairs)",
+      "description": "Registered by H742 (11-07-2026, Fable 5 claude-fable-5). First SIL-semdom <-> classical-thesaurus map. CC BY-SA 4.0 (ID pairs only, no AK/UoHyd prose). Gold: 200 synsets dual-annotated blind (Fable 5 x Opus 4.8), exact kappa 0.677. Bridge candidates are a shortlist, NOT labels (top-1 17.5% - SanskritLexicography FINDINGS 76).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "semdom-amarakosha-crosswalk"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv (Level A varga map) + tsv (Level B candidates, gold, annotator passes)",
+        "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "MW definition-generation eval — frozen 500-headword sample + attestations + scored baseline outputs (H730)",
+      "description": "H730 (11-07-2026, Fable 5 claude-fable-5): first CDSL-side definition-modeling eval; joins A3 mw_en_tm x E26 lemma_frequency x C15 dcs_cdsl_xref x DCS 2026 sentences (CC BY 4.0, Hellwig). MW gloss text public domain. Judge scores gated (JUDGE-BENCH); WSD track is agreement-only pending DCS m_wordsem inventory recovery. H752 (11-07-2026): SHA-256 input digests added to frozen_sample.meta.json; this 500-headword seed-730 sample declared the single canonical frozen set (the parked rival lane's 520-headword sample was never scored and its branch deleted).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "mw-defgen-eval-sample"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv+jsonl",
+        "contentUrl": "https://github.com/gasyoun/kosha"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS reading pack — Nala 1 (Nalopākhyāna, Mahābhārata 3.50)",
+      "description": "P5 UI step 6b. Sibling Gitā 1 pack PARKED: the Bhagavadgita is absent from the DCS corpus (MBh book 6 omits adhyayas 23-40, the 18 Gita chapters); needs an external lemmatised source. Real DCS DB is VisualDCS/src/DCS-data-2026/dcs_full.sqlite (the 0-byte src/dcs_full.sqlite is a decoy).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dcs-reading-pack-nala-1"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "json",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/reading/data/nala-1.json"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Bhagavadgita gold word-by-word analysis (all 18 adhyayas)",
+      "description": "H848 roadmap W0 — the canonical master every Gita-gold workstream derives from. License MIT; public; author Dr. Marcis Gasuns (co-authors TBC). Data statement: docs/data-statements/gita-gold.meta.md. Upstream Gita.xlsm is local-only (not git-committed). Method is a template for other texts (MG ruling). See ROADMAP_GITA_GOLD_EXTRACTION_2026.md.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "gita-gold-master"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/data/gita/gita_gold_master.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Bhagavadgita gold morphology + compound dataset",
+      "description": "H848 roadmap W3. Decoder legend embedded in the extractor (from the Abbreviations sheet). License MIT; public; credit Dr. Marcis Gasuns. Data statement docs/data-statements/gita-morphology.meta.md. Feeds the W4 attested-corpus inflection-engine QA (H874).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "gita-morphology-gold"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/data/gita/gita_morphology_gold.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Gita inflection-engine QA — divergence ledger (E1 attested-corpus check)",
+      "description": "H848 roadmap W4. Report GITA_MORPHOLOGY_QA_REPORT.md — 93.0% agreement on nominals present in kosha (4,779/5,139). Divergences are candidate corrections, NOT auto-applied. Public/MIT.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "gita-inflection-qa"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/data/gita/gita_inflection_divergences.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Bhagavadgita reading packs — all 18 adhyayas (gold)",
+      "description": "H848 roadmap W1. Supersedes the chapter-1-only gita-reading-pack-1 (built from a separate ch-1 TSV; now unified on the master). Public/MIT, credit Dr. Marcis Gasuns. Sibling of dcs-reading-pack-nala-1.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "gita-reading-pack"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "js",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/reading/data/gita-1.js … gita-18.js"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Bhagavadgita sandhi — frequency-ranked rules",
+      "description": "H848 roadmap W2. Public/MIT, credit Dr. Marcis Gasuns. The first corpus-attested, frequency-ranked sandhi table in the ecosystem (categories: anusvara/nasal 1172, visarga 1163, vowel 813, consonant 264).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "gita-sandhi"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/data/gita/gita_sandhi.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Bhagavadgita etymology notes",
+      "description": "H848 roadmap W5. Public/MIT, credit Dr. Marcis Gasuns. Data statement docs/data-statements/gita-etymology.meta.md. Companion to the Russian gloss layer (master gloss_ru, now toggleable EN/Русский in the reader).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "gita-etymology"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/data/gita/gita_etymology.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Sanskrit root x preverb (upasarga) semantics",
+      "description": "H848 roadmap W6 (final workstream). Public/MIT, credit Dr. Marcis Gasuns. Data statement docs/data-statements/upasarga-semantics.meta.md. Surfaced on /w/ root cards (app/word_page.py _upasarga_block) + the reading/upasarga/ page.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "sanskrit-upasarga-semantics"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/data/gita/upasarga_semantics.tsv"
+      }
     }
   ]
 }
@@ -733,8 +1265,8 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>22</b><span>public datasets</span></div>
-      <div class="tally"><b>8</b><span>restricted (on request)</span></div>
+      <div class="tally"><b>41</b><span>public datasets</span></div>
+      <div class="tally"><b>11</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
     <div class="nav">
@@ -971,6 +1503,196 @@
       <div class="chips"><span class="chip">concordance/dict/ static viewer</span><span class="chip">Q2-Q4 concordance program</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/dict_corpus_concordance.tsv">Download ↓</a></div>
     </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Bloomfield-style parallel-passage concordance across the DCS corpus (B3)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">concordance-core schema (anchor_type=parallel-verse/anchor_id=para:&lt;textId&gt;:&lt;col1&gt;|&lt;col2&gt;/target_locus verbatim/match_method=GOOD|PARTLY/confidence/evidence_count); source verdict GOOD (13,862 exact) or PARTLY (139,183 partial, word-diff attached) from the export&#x27;s own meter-to-meter matcher, NOT the Q1 SLP1-tier vocabulary — see data/concordance/PARALLEL_BUILD_REPORT.md</p>
+      <p class="meta">153,045 rows · 30.6 MB · TSV</p>
+      <div class="chips"><span class="chip">concordance/parallels/ static viewer</span><span class="chip">Q3-Q4 concordance program</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/parallel_passage_concordance.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Markup-tag frequency census (44 Cologne v02 dicts)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">dict code x tag -&gt; count + per-1,000-entry rate (96 distinct tags, 1,496,157 entries)</p>
+      <p class="meta">671 rows · 17.4 KB · TSV</p>
+      <div class="chips"><span class="chip">SanskritLexicography FEATURES_INDEX (E39)</span><span class="chip">Uprava DATA_LAYERS_CENSUS section 3</span><span class="chip">markup QA / under-marking triage</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Sanskrit lexical semantic change scores (PPMI-cosine, DCS 5-slot chronology)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">IAST + SLP1 lemma; per-slot counts, cosine distances (5 slot pairs), freq-shift baseline, graded rank + binary flag (Vedic→Epic)</p>
+      <p class="meta">3,049 rows · 253.8 KB · TSV</p>
+      <div class="chips"><span class="chip">paper A57 (LChange&#x27;27/NLP4DH candidate, ARTICLES.md)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Correction-event log, full trio (all/typed/final)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">event_id -&gt; date, dict, headword_iast, old/new IAST, edit-op trace, corrector, latency, evidence level; _typed adds empirical error typology, _final is the canonical enriched view</p>
+      <p class="meta">52,498 rows · 169.8 MB · CSV</p>
+      <div class="chips"><span class="chip">SanskritLexicography FEATURES_INDEX (E41; release-only view already E32)</span><span class="chip">Uprava DATA_LAYERS_CENSUS section 4</span><span class="chip">corrector-behaviour / error-typology studies (A36 family)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/sanskrit-lexicon/csl-observatory">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS proper-name compound splits with frequency vectors (Kompozity names.csv)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">surface form; constituent-stem split; part count; total corpus frequency; per-period/text frequency tail (semicolon-delimited)</p>
+      <p class="meta">168,880 rows · 86.5 MB · CSV</p>
+      <div class="chips"><span class="chip">SanskritLexicography FEATURES_INDEX (E42)</span><span class="chip">Uprava DATA_LAYERS_CENSUS section 4</span><span class="chip">compound (samasa) morphology / onomastics studies</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Pan-CDSL headword character-n-gram oracle (allngramtxt.txt)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one distinct SLP1 character n-gram per line, all lengths, sorted by length; derived from sanhw1.txt (union headword list)</p>
+      <p class="meta">6,656,616 rows · 78.5 MB · TXT</p>
+      <div class="chips"><span class="chip">SanskritLexicography FEATURES_INDEX (F43)</span><span class="chip">Uprava DATA_LAYERS_CENSUS section 4</span><span class="chip">n-gram spell-check method (suspect-headword detection)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/sanskrit-lexicon/CORRECTIONS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Headword pairwise-overlap matrix (15-dict union)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">dict_a x dict_b (unordered pair) -&gt; shared / union / Jaccard, on the union&#x27;s exact SLP1 &lt;k1&gt; key</p>
+      <p class="meta">105 rows · 2.7 KB · TSV</p>
+      <div class="chips"><span class="chip">SanskritLexicography FEATURES_INDEX (E40)</span><span class="chip">Uprava DATA_LAYERS_CENSUS section 3</span><span class="chip">A40 headword-inventory paper (H675)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>CDSL MDF pilot export (50-case neutral-model slice, MW-focused)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">neutral-model case id -&gt; one MDF record; markers per data/schema/mdf-export-profile.json (C&amp;G 2000 App. B order)</p>
+      <p class="meta">250 rows · 88.1 KB · MDF (SFM, ONE RECORD PER FILE)</p>
+      <div class="chips"><span class="chip">Lexique Pro smoke test (H722)</span><span class="chip">SIL MDF program (papers/SIL_MDF_ECOSYSTEM_CORRELATION.md)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/sanskrit-lexicon/csl-standards">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>CDSL LIFT pilot export (fourth serialization, H721)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">neutral-model case id -&gt; one LIFT entry per file</p>
+      <p class="meta">250 rows · 302.7 KB · LIFT (XML)</p>
+      <div class="chips"><span class="chip">Webonary / Dictionary App Builder channel assessment (H726)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/sanskrit-lexicon/csl-standards">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>semdom &lt;-&gt; Amarakosha crosswalk (SIL semantic domains &lt;-&gt; AK vargas + synsets, ID pairs)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">Level A: (ak_varga_id, semdom_code/guid) many-to-many; Level B: AK eid -&gt; semdom codes (top-6 candidates) / adjudicated gold code</p>
+      <p class="meta">5,898 rows · 408.2 KB · CSV (LEVEL A VARGA MAP) + TSV (LEVEL B CANDIDATES, GOLD, ANNOTATOR PASSES)</p>
+      <div class="chips"><span class="chip">csl-standards MDF/LIFT exports (sd semantic-domain field, H721)</span><span class="chip">paper A58 (GWC / LT4HALA / eLex)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>MW definition-generation eval — frozen 500-headword sample + attestations + scored baseline outputs (H730)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">SLP1 headword; 3x3 strata (E26 rank band x MW top-level sense count), seed 730; &lt;=5 DCS attestation sentences per headword</p>
+      <p class="meta">500 rows · 456.3 KB · TSV+JSONL</p>
+      <div class="chips"><span class="chip">H730 protocol doc docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md (eLex/EURALEX/IJL paper candidate)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/kosha">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS reading pack — Nala 1 (Nalopākhyāna, Mahābhārata 3.50)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one object per DCS chapter (slug); sentences[] each carry the sandhied text + ordered tokens (form, lemma, slp1, /w card href, upos, morph, gloss). 439 tokens, 434 (98.9%) linked to a kosha card via the concordance-core exact/floor tiers; 5 unlinked = DCS causative/denominative -ay stems + 1 indeclinable (honest residue, see reading/BUILD_REPORT.md). DCS is CC BY 4.0; this derivative ships BY-SA with the public tier.</p>
+      <p class="meta">65 rows · 129.4 KB · JSON</p>
+      <div class="chips"><span class="chip">reading/ static viewer</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/reading/data/nala-1.json">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Bhagavadgita gold word-by-word analysis (all 18 adhyayas)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per analysed word (9,092; all 18 adhyayas); 21 fields = verse·lemma·devanagari·iast·form_type·code·tense·pada·vclass·root·root_tr·prefix·stem_end·gender·compound(TP/BV/DV)·mark·rule·sandhi·verse_iast·gloss_en·gloss_ru. Hand-curated (Combined sheet of SanskritGrammar/Concordance/Gita.xlsm); the garbled private-use Russian TRANSLITERATION column is dropped, the clean Cyrillic gloss kept (MG 13-07-2026).</p>
+      <p class="meta">9,092 rows · 1.1 MB · TSV</p>
+      <div class="chips"><span class="chip">reading/ Gita packs (W1)</span><span class="chip">gita sandhi/morphology/root-preverb datasets (W2/W3/W6)</span><span class="chip">E1 inflection-engine QA (W4)</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/data/gita/gita_gold_master.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Bhagavadgita gold morphology + compound dataset</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per analysed word (9,091); structured morphology decoded from the Gita.xlsm Grammar-sheet shorthand (col AB) via the workbook&#x27;s Abbreviations legend: verse·widx·form·lemma·root·pos·case·number·gender·person·tense·voice·nonfinite·derivation·compound·raw_morph. Nominals get case·number·gender; finite verbs person·number·tense·voice; participles/derivatives tagged; compound type TP/BV/DV/KD. raw_morph preserves the source shorthand.</p>
+      <p class="meta">9,091 rows · 578.3 KB · TSV</p>
+      <div class="chips"><span class="chip">E1 inflection-engine QA (W4 / H874)</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/data/gita/gita_morphology_gold.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Gita inflection-engine QA — divergence ledger (E1 attested-corpus check)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">DIVERGE (360) + GAP (919) rows from the W4 QA: gold Gita nominal case·number·gender NOT reproduced by kosha&#x27;s hybrid inflections. Cols verse·form·lemma·gold_case_num_gender·class·kosha_analyses. Finding: DIVERGE 71% pronouns (confirms E1&#x27;s flagged pronominal mis-modeling with attested text), GAP mostly compounds.</p>
+      <p class="meta">1,279 rows · 64.1 KB · TSV</p>
+      <div class="chips"><span class="chip">E1 hybrid forms layer — candidate disputed/gap-fill corrections (human @DO)</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/data/gita/gita_inflection_divergences.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Bhagavadgita reading packs — all 18 adhyayas (gold)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one viewer pack per adhyaya (gita-1..18.js, window.READING_DATA[slug]); 701 verses / 9,092 words, each word links to its kosha /w/ card (~99.5% linked). Devanagari + IAST + English + Russian gloss (EN/Русский toggle) per verse. Built from the W0 master gita_gold_master.tsv by scripts/build_reading_pack_gita.py. Each word also carries its sandhi rule (hover).</p>
+      <p class="meta">701 rows · 2.2 MB · JS</p>
+      <div class="chips"><span class="chip">reading/ static viewer</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/reading/data/gita-1.js … gita-18.js">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Bhagavadgita sandhi — frequency-ranked rules</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per distinct sandhi rule (161) attested across the whole Gita (3,412 junctions): rule (e.g. &#x27;aḥ a → o &#x27;&#x27;), category (visarga/anusvara/vowel-coalescence/consonant), count, pct, example words+verse. Corpus-attested + frequency-ranked, aggregated from the master&#x27;s per-word sandhi field. Teaching page reading/sandhi/index.html; per-word sandhi also shown on hover in the Gita reader.</p>
+      <p class="meta">161 rows · 14.0 KB · TSV</p>
+      <div class="chips"><span class="chip">reading/ viewer (per-word sandhi hover)</span><span class="chip">reading/sandhi/ page</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/data/gita/gita_sandhi.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Bhagavadgita etymology notes</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">101 hand-written etymological/explanatory notes on selected Gita words (verse·widx·form·lemma·root·etymology), from the Gita.xlsm Grammar sheet col AG (which the Combined master drops), aligned by verse+word-index. Curated highlight layer, not a full etymological dictionary.</p>
+      <p class="meta">101 rows · 12.1 KB · TSV</p>
+      <div class="chips"><span class="chip">Gita reader / lexical enrichment</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/data/gita/gita_etymology.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Sanskrit root x preverb (upasarga) semantics</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">148 verb roots attested in the Gita + 69 preverb-modified senses: root·preverb·combined·sense·count (empty preverb = base sense; √vac speak -&gt; pra-vac declare; √gam go -&gt; ava-gam understand). From the Gita.xlsm verbs sheet; a compositional dimension the Cologne dictionaries lack. Browsable page reading/upasarga/.</p>
+      <p class="meta">214 rows · 6.0 KB · TSV</p>
+      <div class="chips"><span class="chip">reading/upasarga/ page</span><span class="chip">/w/ root-card upasarga panel (app/word_page.py)</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/data/gita/upasarga_semantics.tsv">Download ↓</a></div>
+    </article>
     </div>
     <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>
     <p class="sub">Rights-encumbered or unbackuped local-only assets — listed for discovery; available on request as rights clear.</p>
@@ -981,7 +1703,7 @@
         <span class="badge res">restricted</span>
       </div>
       <p class="key">SLP1 surface key (~190k keys), per verse-pair alignment</p>
-      <p class="meta">1,091,528 rows · 276.6 MB · JSONL</p>
+      <p class="meta">1,093,391 rows · 277.1 MB · JSONL</p>
       <div class="chips"><span class="chip">SanskritRussian glossary</span><span class="chip">pwg_ru TM</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
@@ -1000,7 +1722,7 @@
         <h3>kosha unified lookup database</h3>
         <span class="badge res">restricted</span>
       </div>
-      <p class="key">9 tables: 444,773 entries · 323,425 lemmas · 692,403 senses · 1,378,401 forms · 6,916,522 inflections</p>
+      <p class="key">8 tables: 444,773 entries · 323,425 lemmas · 692,403 senses · 1,378,401 forms · 6,916,522 inflections (+ meta, sources, stem_bridge)</p>
       <p class="meta">444,773 rows · 1.5 GB · SQLITE</p>
       <div class="chips"><span class="chip">kosha API</span><span class="chip">P2 static cache</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
@@ -1020,8 +1742,8 @@
         <h3>SamudraManthanam Sa↔Ru verse-parallel corpus</h3>
         <span class="badge res">restricted</span>
       </div>
-      <p class="key">574,939 corpus lines · 148 sources, verse-aligned</p>
-      <p class="meta">574,939 rows · 590.7 MB · SQLITE</p>
+      <p class="key">580,552 corpus lines · 152 sources, verse-aligned (FTS5 index included)</p>
+      <p class="meta">580,552 rows · 590.7 MB · SQLITE</p>
       <div class="chips"><span class="chip">pwg_ru gate dicts</span><span class="chip">mw_ru validation</span><span class="chip">corpus-lexicon upstream</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
@@ -1042,7 +1764,7 @@
       </div>
       <p class="key">heritage_dico_gloss (mw_key1 → Heritage anchor + FR gloss), heritage_forms_oracle_disagreements (form → Heritage/kosha lemma disagreement class), heritage_only_forms (form → lemma, Heritage-only coverage)</p>
       <p class="meta">1,037,239 rows · 457.6 MB · TSV</p>
-      
+      <div class="chips"><span class="chip">kosha ingest (H111, kosha.db forms table: heritage_only_forms.tsv -&gt; 951,991 source=&#x27;heritage&#x27; rows, 928,262 distinct forms)</span><span class="chip">kosha default-off enforcement (H696, R7 ruling 10-07-2026: heritage witnesses opt-in only via ?heritage=1; excluded from the static tier)</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
     <article class="card">
@@ -1053,6 +1775,36 @@
       <p class="key">vulgate verse address 5.&lt;sarga&gt;.&lt;verse&gt; (southern vulgate, 68 sargas)</p>
       <p class="meta">1,955 rows · 2.9 MB · JSON</p>
       <div class="chips"><span class="chip">sundarakanda_print_master (data/book/, MD+DOCX)</span><span class="chip">per-sarga interactive apparatus HTML (data/apparatus/)</span></div>
+      <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS parallel-passage stop-word run, queryable DB (M9 D2)</h3>
+        <span class="badge res">restricted</span>
+      </div>
+      <p class="key">parallels 40,573,260 (method=&#x27;stopword&#x27;, run=&#x27;2022-partial&#x27;, structured columns only, no verse text) + parallel_text 102 + text_names 128 + _id_fullname 106</p>
+      <p class="meta">40,573,260 rows · 10.3 GB · SQLITE</p>
+      
+      <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>SamudraManthanam offline app packs (base + dict)</h3>
+        <span class="badge res">restricted</span>
+      </div>
+      <p class="key">base.db 320,902 corpus lines / 146 sources (corpus minus MW+Apte) + dict.db 254,037 lines / 2 sources (MW+Apte); FTS5 + pack_meta/pack_sources</p>
+      <p class="meta">574,939 rows · 293.9 MB · SQLITE</p>
+      <div class="chips"><span class="chip">SamudraManthanam mobile/offline app</span></div>
+      <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>PWG-&gt;RU translation cards as MDF (bilingual \de RU / \ge EN records)</h3>
+        <span class="badge res">restricted</span>
+      </div>
+      <p class="key">(key1, subcard) card -&gt; one MDF record; senses -&gt; \sn (observed PWG numbering) + \de RU (+ \ge EN when promoted)</p>
+      <p class="meta">2,350 rows · 3.7 MB · MDF (SFM, BLANK-LINE-DELIMITED RECORDS, SINGLE FILE)</p>
+      <div class="chips"><span class="chip">Lexique Pro / Webonary / Dictionary App Builder (SIL toolchain)</span><span class="chip">SIL MDF program (papers/SIL_MDF_ECOSYSTEM_CORRELATION.md)</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
     </div>

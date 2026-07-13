@@ -572,6 +572,25 @@
       "notes": "Q1 of CONCORDANCE_ROADMAP.md (concordance core: schema + tiered matcher + citable loci, reused Q2-Q4). Coverage sidecar dict_corpus_coverage.tsv (323425 rows): every union headword attested (66,257 = 20.5%) or classed absence — the 20.5% is the honest Zipf reality of a 5.7M-token corpus vs a 323k-headword union. Inputs consumed, never re-derived: dcs-cdsl-xref, union-headwords, dcs-full-sqlite. Citable loci are host-independent dcs:<sent_id> IDs (RISKS R5). DCS is CC BY 4.0; this derivative ships BY-SA with the public tier."
     },
     {
+      "id": "parallel-passage-concordance",
+      "title": "Bloomfield-style parallel-passage concordance across the DCS corpus (B3)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "parallel_passage_concordance.tsv",
+      "format": "tsv",
+      "rows": 153045,
+      "size_bytes": 32071796,
+      "keying": "concordance-core schema (anchor_type=parallel-verse/anchor_id=para:<textId>:<col1>|<col2>/target_locus verbatim/match_method=GOOD|PARTLY/confidence/evidence_count); source verdict GOOD (13,862 exact) or PARTLY (139,183 partial, word-diff attached) from the export's own meter-to-meter matcher, NOT the Q1 SLP1-tier vocabulary — see data/concordance/PARALLEL_BUILD_REPORT.md",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/concordance/parallel_passage_concordance.tsv",
+      "builder": "scripts/build_parallel_passage_concordance.py (concordance_core.py RECORD_FIELDS, H836 Q2)",
+      "consumers": [
+        "concordance/parallels/ static viewer",
+        "Q3-Q4 concordance program"
+      ],
+      "notes": "Q2 (B3) of CONCORDANCE_ROADMAP.md. Per-verse coverage sidecar parallel_passage_verses.tsv (501,231 rows, one per source verse incl. 0-parallel): 15,164 (3.0%) carry >=1 parallel occurrence. Input: VisualDCS/derived-data/Paralleli-v-tekstah-korpusa-SRC/PARA/Polnorazmernye/ (245 CSV files, the 2026 corrected/regenerated full-text-match pass) — consumed, never re-derived. Two open @DECIDE surfaced to a human, not self-ruled (R-C2): (1) which of three parallel-passage export variants (Polnorazmernye/ used here per the folder's own README default vs Polnorazmernye-2022-archive/ vs the differently-scoped Stopovye/) is the released canonical; (2) which digitization of Bloomfield's 1906 Vedic Concordance to key the Rgveda subset against (not found anywhere in the org — RV cross-reference not built this pass). The roadmap's prior '506,787 alignments' estimate (itself sourced from an admittedly-unverified README note) does not match this build's directly-parsed counts (501,231 verses / 153,045 links) — flagged, not silently reconciled. DCS-derived; ships BY-SA with the public tier pending the DCS-license composition @DECIDE already open on the roadmap."
+    },
+    {
       "id": "sundarakanda-two-tier-apparatus",
       "title": "Sundarakāṇḍa two-tier commentary apparatus (Leonov LP volume)",
       "tier": "restricted",
