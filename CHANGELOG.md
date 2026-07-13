@@ -14,6 +14,21 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H848: Gītā 1 reading pack (EXPERIMENTAL, machine-segmented).** Since the
+  Bhagavadgītā is absent from the DCS gold corpus (MBh book 6 omits adhyāyas
+  23–40), this pack takes its mūla from GRETIL (vendored public-domain text,
+  [`reading/data/sources/gita-1_mula_gretil.tsv`](https://github.com/gasyoun/kosha/blob/main/reading/data/sources/gita-1_mula_gretil.tsv),
+  46 verses) and lemmatises it by machine via
+  [`scripts/build_reading_pack_gita.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_reading_pack_gita.py)
+  — kosha's `forms`-table reverse-lookup (549 tokens) with a vidyut-cheda
+  fallback (16). **565/597 tokens (94.6%) linked** to `/w/` cards. Unlike the
+  gold Nala pack, lemmas are auto-derived and some are wrong (long samāsa
+  compounds, a few names/participles); the viewer shows an **experimental
+  banner** and [`reading/BUILD_REPORT_GITA.md`](https://github.com/gasyoun/kosha/blob/main/reading/BUILD_REPORT_GITA.md)
+  lists the residue. Dataset `gita-reading-pack-1-experimental`; the `reading/`
+  viewer now offers both Nala 1 (gold) and Gītā 1 (experimental).
+
 ## [0.22.0] - 2026-07-13
 
 ### Added
