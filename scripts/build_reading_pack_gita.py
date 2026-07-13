@@ -99,8 +99,8 @@ def main():
                 key, tier = resolve(r["lemma"], r["root"], r["iast"])
                 linked = tier is not None and in_kosha(key)
                 tok = {"form": r["iast"], "lemma": r["lemma"] or r["root"], "upos": "",
-                       "morph": "", "gloss": r["gloss_en"], "deva": r["devanagari"],
-                       "sandhi": r["sandhi"]}
+                       "morph": "", "gloss": r["gloss_en"], "gloss_ru": r["gloss_ru"],
+                       "deva": r["devanagari"], "sandhi": r["sandhi"]}
                 if linked:
                     n_link += 1
                     tok["slp1"] = key

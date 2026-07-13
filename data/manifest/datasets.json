@@ -938,7 +938,7 @@
       "format": "js",
       "rows": 701,
       "size_bytes": 2341759,
-      "keying": "one viewer pack per adhyaya (gita-1..18.js, window.READING_DATA[slug]); 701 verses / 9,092 words, each word links to its kosha /w/ card (~99.5% linked). Devanagari + IAST + English gloss per verse. Built from the W0 master gita_gold_master.tsv by scripts/build_reading_pack_gita.py.",
+      "keying": "one viewer pack per adhyaya (gita-1..18.js, window.READING_DATA[slug]); 701 verses / 9,092 words, each word links to its kosha /w/ card (~99.5% linked). Devanagari + IAST + English + Russian gloss (EN/Русский toggle) per verse. Built from the W0 master gita_gold_master.tsv by scripts/build_reading_pack_gita.py. Each word also carries its sandhi rule (hover).",
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "reading/data/gita-1.js",
       "builder": "scripts/build_reading_pack_gita.py (all 18 ch from the master, H871 W1)",
@@ -965,6 +965,24 @@
         "reading/sandhi/ page"
       ],
       "notes": "H848 roadmap W2. Public/MIT, credit Dr. Marcis Gasuns. The first corpus-attested, frequency-ranked sandhi table in the ecosystem (categories: anusvara/nasal 1172, visarga 1163, vowel 813, consonant 264)."
+    },
+    {
+      "id": "gita-etymology",
+      "title": "Bhagavadgita etymology notes",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/gita/gita_etymology.tsv",
+      "format": "tsv",
+      "rows": 101,
+      "size_bytes": 12396,
+      "keying": "101 hand-written etymological/explanatory notes on selected Gita words (verse·widx·form·lemma·root·etymology), from the Gita.xlsm Grammar sheet col AG (which the Combined master drops), aligned by verse+word-index. Curated highlight layer, not a full etymological dictionary.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/gita/gita_etymology.tsv",
+      "builder": "scripts/extract_gita_etymology.py (Gita.xlsm Grammar col AG, H875 W5)",
+      "consumers": [
+        "Gita reader / lexical enrichment"
+      ],
+      "notes": "H848 roadmap W5. Public/MIT, credit Dr. Marcis Gasuns. Data statement docs/data-statements/gita-etymology.meta.md. Companion to the Russian gloss layer (master gloss_ru, now toggleable EN/Русский in the reader)."
     }
   ]
 }
