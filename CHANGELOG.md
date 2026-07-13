@@ -14,6 +14,17 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Changed
+- **Pronoun correction phase 2: flag the wrong Cologne pronoun rows `disputed=1`.**
+  The `build_db.py --stage pronoun` step now also marks wrong Cologne pronoun rows
+  for editorial review (the E1 `disputed` mechanism; non-destructive). Scoped to the
+  `(form, lemma)` pairs the Gītā gold attests, a row is flagged when its case is
+  untagged (NULL) or its (case, number) is not gold-attested — **73 rows newly
+  flagged** (9 were already E1-flagged; 79 gold-consistent rows left untouched),
+  across 10 pronoun lemmas (sarva, etad, idam, kim, anya …). `(case, number)` — not
+  gender — is used to avoid flagging gender-ambiguous valid rows; details in
+  [`PRONOUN_CORRECTION_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/PRONOUN_CORRECTION_REPORT.md).
+
 ## [0.36.0] - 2026-07-13
 
 ### Added
