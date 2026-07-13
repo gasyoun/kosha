@@ -203,8 +203,8 @@
       "in_release": null,
       "format": "sqlite",
       "rows": 444773,
-      "size_bytes": 1654849536,
-      "keying": "8 tables: 444,773 entries · 323,425 lemmas · 692,403 senses · 1,378,401 forms · 6,916,522 inflections (+ meta, sources, stem_bridge)",
+      "size_bytes": 1673830400,
+      "keying": "10 tables: 444,773 entries · 323,425 lemmas · 692,403 senses · 1,378,401 forms · 6,916,865 inflections · 185,803 heritage_anchor rows (24,549 anchor-resolved) (+ meta, sources, stem_bridge)",
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "data/db/kosha.db (GITIGNORED — regenerable via scripts/build_db.py chain, but hours of compute)",
       "builder": "scripts/build_db.py (crosswalk → entries → forms → db)",
@@ -212,9 +212,9 @@
         "kosha API",
         "P2 static cache"
       ],
-      "notes": "Regenerable but expensive; backup = cheap insurance. Candidate single queryable DB for P-D5. ⚠ H691: live DB (built 05-07-2026, verified 11-07-2026) has 8 tables and NO heritage_anchor table — the H345 heritage-witness ingest is absent from the current build; re-run it if the heritage witness is needed. Completeness-audited 11-07-2026 (H687): loaded dicts mw/pwg/ap90 match live csl-orig <L> counts exactly (0.000% drift); 41/44 csl-orig dicts not full-text-loaded (union lemmas layer spans 15 codes) — see docs/KOSHA_DB_COMPLETENESS_AUDIT.md.",
-      "sha256": "6f45b57f1ea30f62160560b7471896814310ebc8dada556efbd47219fbf8dc68",
-      "provenance_verified": "2026-07-11 (H691, Fable 5 claude-fable-5)",
+      "notes": "Regenerable but expensive; backup = cheap insurance. Candidate single queryable DB for P-D5. H837 (13-07-2026, Sonnet 5 claude-sonnet-5): re-ran the H345 `--stage heritage` ingest on the live DB, fixing the H691-flagged regression — heritage_anchor table now present (185,803 rows, 24,549 anchor-resolved, matching H345's original counts exactly) and `/api/v1/lemma` verified live to return the `heritage` witness (spot-checked key `akAra`). Completeness-audited 11-07-2026 (H687): loaded dicts mw/pwg/ap90 match live csl-orig <L> counts exactly (0.000% drift); 41/44 csl-orig dicts not full-text-loaded (union lemmas layer spans 15 codes) — see docs/KOSHA_DB_COMPLETENESS_AUDIT.md. inflections row count drifted slightly (6,916,522 → 6,916,865) between the 05-07 and 12-07 live-DB rebuilds prior to this pass — not re-audited here, out of this handoff's scope.",
+      "sha256": "9e634b13380ff80d27934241c6b196a2579f21eed94b6f3bb4bc41f429c32391",
+      "provenance_verified": "2026-07-13 (H837, Sonnet 5 claude-sonnet-5)",
       "rebuild": "Regenerable (hours): scripts/build_crosswalk.py → build_entries.py → build_forms.py → build_db.py; raw inputs auto-downloaded (see kosha-raw-sqlite row)."
     },
     {
