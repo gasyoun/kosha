@@ -89,6 +89,14 @@ learners, then scholars.
   Sanskrit Heritage (INRIA) coverage, links out per headword: 25,140 of
   185,803 MW entries are attested in Heritage's hand-built lexicon (24,549
   anchor-resolved, 591 covered but unresolved — H345).
+- **Corpus-attested sandhi tables for reading** — every recurring sandhi in a
+  text, frequency-ranked with real attested examples, not a textbook's abstract
+  list. The [Bhagavadgītā sandhi page](https://github.com/gasyoun/kosha/blob/main/reading/sandhi/index.html)
+  ranks 161 rules over 3,412 junctions; a corpus-wide extractor
+  ([`scripts/dcs_sandhi_induce.py`](https://github.com/gasyoun/kosha/blob/main/scripts/dcs_sandhi_induce.py))
+  generalises it to any DCS text by inducing the rule notation (`aḥ a → o '`,
+  `a a → ā`) from DCS's gold word-splits — feeding reader hover, a graded
+  curriculum, and drills. Plan: [ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md).
 - **Generated paradigms + a compact grammar token** modelled on Zaliznyak's
   index from the Russian lexicographic tradition.
 - **Trilingual glosses** — English (MW) · German (PWG) · Russian (pwg_ru
@@ -334,6 +342,7 @@ volume-page, hyphen, 7 volumes · AP90 `0001-a` = page-column-letter.
 | [COMPARISON.md](https://github.com/gasyoun/kosha/blob/main/COMPARISON.md) | 12-platform live survey (02-07-2026) with feature matrix |
 | [D5_MEASUREMENTS.md](https://github.com/gasyoun/kosha/blob/main/D5_MEASUREMENTS.md) · [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md) | D5 measurement report + the SLO/cadence/cache-N decisions it settled |
 | [DATA_HUB_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md) · [data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) | data-hub rulings D-HUB-1..8, two-tier phases P-D0..P-D6, and the machine-readable dataset manifest agents read |
+| [ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md) · [.meta.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.meta.md) | corpus-wide sandhi extraction for pedagogy — DCS junction-rule inducer (mode 1 edge + mode 2 MWT coalescence), A/B/C split-method bake-off, per-text + merged tables, four teaching surfaces |
 | [docs/PIPELINE_OPERATOR_RUNBOOK.md](https://github.com/gasyoun/kosha/blob/main/docs/PIPELINE_OPERATOR_RUNBOOK.md) | operator runbook: stage order, per-stage verification, deploy classes, release rituals, never-touch list |
 | [CHANGELOG.md](https://github.com/gasyoun/kosha/blob/main/CHANGELOG.md) | SemVer history |
 
