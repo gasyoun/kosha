@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.37.0] - 2026-07-13
+
 ### Changed
 - **Pronoun correction phase 2: flag the wrong Cologne pronoun rows `disputed=1`.**
   The `build_db.py --stage pronoun` step now also marks wrong Cologne pronoun rows
