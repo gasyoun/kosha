@@ -96,12 +96,20 @@ a bug in Phase 0 — it is the discovery Phase 0 was built to make.
    `dharmamitra`); gate behind `--allow-network`, cache responses.
 4. **A/B/C report.** One table per pilot: coverage, distinct-rule agreement,
    where B/C recover junctions A's gold split lacks (the 27 % `no gold split`).
-5. **Gītā gold scoring.** Run all three on the Gītā text (inside the DCS
-   `Mahābhārata` dir; isolate by chapter range) and score against
-   `gita_sandhi.tsv` — the one place a human wrote the same notation independently.
+5. **Gītā gold scoring.** ✅ DONE (method A) — [`scripts/score_gita_gold.py`](https://github.com/gasyoun/kosha/blob/main/scripts/score_gita_gold.py).
+   DCS stores the Gītā inside the Mahābhārata as book-6 chapters relabelled
+   `MBh, 6, BhaGī 1…18` (the numeric MBh-6 sequence skips 23–40) — 18 `.conllu`
+   files, `*BhaGī*.conllu`. Scored against `gita_sandhi.tsv`:
+   **frequency-mass coverage 87.1 %** (2,971 / 3,412 junction-attestations) —
+   the true number, vs the 61 % rule-string proxy a small pilot gives (small
+   texts under-attest rare rules). Rule-string coverage 82/161. The missed
+   12.9 % is a long tail, each rule <1 %: final-`t` assimilation (`t b → d b`,
+   `t n → n n`, `t c → c c`) and semivowel `i`→`y` before non-`a` vowels
+   (`i e → y e`, `i ā → y ā`) → a future **Phase 1.2**. Method B/C scoring
+   pending their bindings.
 
-**Exit criterion:** a chosen default method (likely A + mode 2, with B filling
-`no-gold` gaps) reproducing ≥90 % of the Gītā hand rules by frequency mass.
+**Exit criterion:** ≥90 % of the Gītā hand rules by frequency mass. **Method A
+at 87.1 %** — within reach; Phase 1.2 (final-`t` + `i`-semivowel) closes the gap.
 
 ---
 
