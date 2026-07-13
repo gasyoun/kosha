@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.23.0] - 2026-07-13
+
 ### Added
 - **H848: Gītā 1 reading pack (EXPERIMENTAL, machine-segmented).** Since the
   Bhagavadgītā is absent from the DCS gold corpus (MBh book 6 omits adhyāyas
