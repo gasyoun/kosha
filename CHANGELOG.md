@@ -14,6 +14,23 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H882: corpus-wide sandhi extraction roadmap + Phase 0 DCS scaffold.**
+  Generalises the H872 Bhagavadgītā sandhi layer from one hand-annotated text to
+  every DCS text (GRETIL phase-3). New:
+  [ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md)
+  + `.meta.md`;
+  [`scripts/dcs_sandhi_induce.py`](https://github.com/gasyoun/kosha/blob/main/scripts/dcs_sandhi_induce.py)
+  (method A — junction-rule inducer over DCS `Unsandhied=`, reuses the H872
+  `categorise()` classifier verbatim, emits per-text `data/sandhi/<slug>_sandhi.tsv`);
+  [`scripts/compare_sandhi_methods.py`](https://github.com/gasyoun/kosha/blob/main/scripts/compare_sandhi_methods.py)
+  (A/B/C split-method bake-off skeleton + notation validation vs the Gītā hand
+  table). Pilots: Aṣṭāvakragīta (722 sandhi events, 100 % ruled, 147 rules) and
+  Hitopadeśa (4,554 events, 453 rules); method A independently reproduced 75 of
+  the Gītā's 161 hand rules. Finding: DCS pre-splits vowel coalescence into
+  separate tokens, so token-edge induction misses it (Phase-1 `# text =`
+  alignment mode planned). Credit: Dr. Mārcis Gasūns.
+
 ## [0.35.0] - 2026-07-13
 
 ### Fixed
@@ -118,7 +135,6 @@ sense citations pin to `data_version`, not to repo tags.
   [`docs/data-statements/upasarga-semantics.meta.md`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/upasarga-semantics.meta.md);
   a `/w/` root-card panel is a documented follow-up. Credit: Dr. Mārcis Gasūns.
   **This completes the Gītā-gold extraction roadmap (W0–W6).**
-
 ## [0.31.0] - 2026-07-13
 
 ### Added
