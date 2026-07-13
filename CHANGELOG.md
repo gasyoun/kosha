@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.41.0] - 2026-07-14
+
 ### Changed
 - **H897 (sandhi Phase 1.2): spaced-notation split — clears the 90 % Gītā-gold
   exit criterion.** Final-`t` assimilation, `i`→`y` semivowel, and MWT-internal
