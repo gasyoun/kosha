@@ -336,7 +336,7 @@ STAGES = {"lemmas": build_lemmas}
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--stage", choices=list(STAGES) + ["entries", "forms", "evidence", "inflections", "hybrid", "stem_bridge", "heritage"], default=None)
+    ap.add_argument("--stage", choices=list(STAGES) + ["entries", "forms", "evidence", "inflections", "hybrid", "pronoun", "stem_bridge", "heritage"], default=None)
     ap.add_argument("--dicts", default="mw,pwg,ap90")
     args = ap.parse_args()
 
@@ -363,6 +363,14 @@ def main():
         # prior hybrid rows); idempotent on its own re-runs.
         from build_hybrid_forms import build_hybrid_forms  # noqa: E402
         build_hybrid_forms(con)
+    if args.stage in (None, "pronoun"):
+        # Curated pronoun-paradigm correction (W4 QA follow-up): the gold Gītā
+        # attested pronoun analyses fill the sarvanāman gaps E1 flagged. Runs
+        # AFTER inflections/hybrid (adds `source='curated-gita-pronoun'` rows);
+        # idempotent (deletes its own prior rows first). Must be a stage so a
+        # rebuild re-applies it — else it regresses like the H345 heritage table.
+        from build_pronoun_corrections import apply_pronoun_corrections  # noqa: E402
+        apply_pronoun_corrections(con)
     if args.stage == "stem_bridge":
         # K2a (H181): stem-normalization crosswalk between `inflections` and
         # `forms`. Requires both to be populated first.
