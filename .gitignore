@@ -3,6 +3,9 @@ __pycache__/
 .env
 .env.deploy
 *.db
+# personal review/voting sheets (per Uprava's /review-sheet convention) -- working
+# artifacts for MG, not repo deliverables; decisions.json output lands here too
+review/
 *.sqlite
 data/raw/
 data/raw_sqlite/

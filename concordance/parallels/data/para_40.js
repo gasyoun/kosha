@@ -1,0 +1,2 @@
+window.PARA_DATA = window.PARA_DATA || {};
+window.PARA_DATA[40] = {"Aṣṭāvakragīta, 15: 15|17 2":{"locus":"Aṣṭāvakragīta, 15: 15","vp":"17 2","text":"nirvāsanaḥ sphūrtimātro na kiṁcid iva śāmyati ||","par":[{"loc":"Aṣṭāvakragīta Aṣṭāvakragīta, 11: 11 8","txt":"nānāścaryam idaṁ viśvaṁ na kiṁcid iti niścayī |nirvāsanaḥ sphūrtimātro na kiṁcid iva śāmyati ||","v":"PARTLY","d":"+ bhrānti - āścarya"}]}};

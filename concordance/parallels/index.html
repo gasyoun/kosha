@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kosha — parallel-passage concordance (B3)</title>
+<style>
+:root { --ink:#222; --mut:#667; --line:#ddd; --bg:#faf9f6; --card:#fff;
+        --good:#0a7a2f; --partly:#a05a00; }
+* { box-sizing:border-box; }
+body { margin:0; font:15px/1.5 Georgia,'Times New Roman',serif; color:var(--ink); background:var(--bg); }
+header { background:#2b3a4a; color:#fff; padding:14px 20px; }
+header h1 { margin:0; font-size:18px; font-weight:normal; }
+header .sub { font-size:12.5px; opacity:.75; margin-top:3px; }
+main { max-width:920px; margin:0 auto; padding:16px 20px 60px; }
+#tq { width:100%; font-size:17px; padding:9px 12px; border:1px solid var(--line); border-radius:6px;
+     font-family:inherit; }
+#hint { font-size:12.5px; color:var(--mut); margin:6px 2px 14px; }
+#tmatches { margin:8px 0; max-height:220px; overflow-y:auto; border:1px solid var(--line);
+            border-radius:6px; background:var(--card); display:none; }
+#tmatches div { padding:5px 10px; font-size:14px; cursor:pointer; border-bottom:1px solid #f0f0ee; }
+#tmatches div:hover { background:#eef2f6; }
+#tmatches .n { color:var(--mut); font-size:12px; float:right; }
+#vlist { margin:14px 0; }
+.vrow { padding:6px 10px; border-bottom:1px solid #eee; cursor:pointer; font-size:14.5px; }
+.vrow:hover { background:#f2f4f6; }
+.vrow .loc { color:var(--mut); font-size:12px; }
+.vrow .badge { display:inline-block; font-size:10.5px; color:#fff; border-radius:8px;
+               padding:1px 7px; margin-left:6px; }
+.entry { background:var(--card); border:1px solid var(--line); border-radius:8px;
+         padding:14px 18px; margin:14px 0; }
+.entry .src { font-size:16px; }
+.entry .loc { color:var(--mut); font-size:12.5px; }
+.par { border-top:1px solid #eee; margin-top:10px; padding-top:8px; }
+.par .tier { font-size:10.5px; color:#fff; border-radius:8px; padding:1px 7px; vertical-align:middle; }
+.par .tloc { font-size:12.5px; color:var(--mut); margin-left:6px; }
+.par .ttxt { display:block; margin-top:3px; }
+.par .diff { font-family:Consolas,monospace; font-size:12px; color:#a05a00; margin-left:6px; }
+#trust { border-top:2px solid var(--line); margin-top:34px; padding-top:12px;
+         font-size:12.5px; color:var(--mut); }
+#trust table { border-collapse:collapse; margin:6px 0; }
+#trust td, #trust th { border:1px solid var(--line); padding:2px 9px; font-size:12px; }
+.none { color:var(--mut); font-style:italic; }
+a { color:#1a6fb0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Parallel-passage concordance <span style="opacity:.6">· B3 · kosha concordance program</span></h1>
+  <div class="sub">A Bloomfield-style concordance of repeated/parallel verses across the DCS corpus —
+  501,231 source verses scanned, 15,164 carry &ge;1 parallel occurrence (153,045 links: 13,862 GOOD exact,
+  139,183 PARTLY partial), from the corpus-wide "full-size" (meter-to-meter) parallel-passage search.</div>
+</header>
+<main>
+  <input id="tq" placeholder="Type a text name to browse its parallel-carrying verses (Bhagavadgītā, Rāmāyaṇa …)" autocomplete="off">
+  <div id="hint">Only the 144 source texts that carry &ge;1 linked verse are searchable here (of 245 total —
+  the coverage stats in the trust block below explain the rest). Pick a text, then a verse, to see its
+  parallel occurrences with GOOD/PARTLY verdicts and word-level diffs.</div>
+  <div id="tmatches"></div>
+  <div id="vlist"></div>
+  <div id="out"></div>
+
+  <div id="trust">
+    <b>Trust block.</b> Source dataset:
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/parallel_passage_concordance.tsv">parallel_passage_concordance.tsv</a>
+    (153,045 rows) +
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/parallel_passage_verses.tsv">parallel_passage_verses.tsv</a>
+    (501,231 rows, per-verse coverage), built 13-07-2026 by
+    <a href="https://github.com/gasyoun/kosha/blob/main/scripts/build_parallel_passage_concordance.py">build_parallel_passage_concordance.py</a>
+    (H836) from
+    <a href="https://github.com/gasyoun/VisualDCS">VisualDCS/derived-data/Paralleli-v-tekstah-korpusa-SRC/PARA/Polnorazmernye/</a>
+    (245 CSV files). Full counts and caveats in the
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/PARALLEL_BUILD_REPORT.md">build report</a>:
+    <table><tr><th>verdict</th><th>meaning</th><th>links</th></tr>
+    <tr><td><span class="par tier" style="background:var(--good)">GOOD</span></td><td>exact meter-to-meter match</td><td>13,862</td></tr>
+    <tr><td><span class="par tier" style="background:var(--partly)">PARTLY</span></td><td>partial match, word-diff attached</td><td>139,183</td></tr></table>
+    <b>Open decisions (surfaced to a human, not self-ruled):</b> which of three parallel-passage
+    export variants is canonical for release (this build defaults to <code>Polnorazmernye/</code>,
+    the folder's own README's stated default) — see build report R-C2; and which digitization of
+    Bloomfield's 1906 <i>Vedic Concordance</i> to key the Ṛgveda subset against (not yet built — no
+    digitization was found anywhere in the org this pass).
+    Loci here are the PARA export's own citation scheme (work/book/chapter/verse/pada strings,
+    stored verbatim) — a distinct, not-yet-DCS-sentence-id-linked scheme from the B1 dict-concordance's
+    <code>dcs:&lt;sent_id&gt;</code> citations. CSV fallback: the dataset TSVs above.
+  </div>
+</main>
+<script src="data/_index.js"></script>
+<script>
+function esc(t){ var d=document.createElement("div"); d.textContent=t||""; return d.innerHTML; }
+var tq = document.getElementById("tq"), tmatches = document.getElementById("tmatches"),
+    vlist = document.getElementById("vlist"), out = document.getElementById("out");
+var IDX = (window.PARA_INDEX || []).filter(function(e){ return e.n_linked > 0; })
+            .sort(function(a,b){ return b.n_linked - a.n_linked; });
+var loadedShards = {};
+function ensureShard(id, cb){
+  if (loadedShards[id]) return cb();
+  var s = document.createElement("script");
+  s.src = "data/para_" + id + ".js";
+  s.onload = function(){ loadedShards[id]=1; cb(); };
+  s.onerror = function(){ loadedShards[id]=1; cb(); };
+  document.head.appendChild(s);
+}
+function showTextMatches(raw){
+  vlist.innerHTML = ""; out.innerHTML = "";
+  if (!raw) { tmatches.style.display="none"; return; }
+  var q = raw.toLowerCase();
+  var hits = IDX.filter(function(e){ return e.name.toLowerCase().indexOf(q) >= 0; }).slice(0, 60);
+  if (!hits.length) {
+    tmatches.style.display="block";
+    tmatches.innerHTML = '<div class="none">No parallel-carrying text matches “'+esc(raw)+'”.</div>';
+    return;
+  }
+  tmatches.style.display="block";
+  tmatches.innerHTML = hits.map(function(e){
+    return '<div data-id="'+e.id+'">'+esc(e.name)+'<span class="n">'+e.n_linked+' linked verses</span></div>';
+  }).join("");
+  Array.prototype.forEach.call(tmatches.querySelectorAll("div[data-id]"), function(d){
+    d.onclick = function(){ pickText(parseInt(d.dataset.id, 10)); };
+  });
+}
+function pickText(id){
+  tmatches.style.display = "none";
+  out.innerHTML = "";
+  ensureShard(id, function(){
+    var shard = (window.PARA_DATA || {})[id] || {};
+    var keys = Object.keys(shard);
+    vlist.innerHTML = keys.map(function(k){
+      var e = shard[k];
+      var nGood = e.par.filter(function(p){ return p.v === "GOOD"; }).length;
+      var nPartly = e.par.length - nGood;
+      var badges = (nGood ? '<span class="badge" style="background:var(--good)">'+nGood+' GOOD</span>' : "") +
+                   (nPartly ? '<span class="badge" style="background:var(--partly)">'+nPartly+' PARTLY</span>' : "");
+      return '<div class="vrow" data-k="'+esc(k)+'">' + esc(e.text) + badges +
+             '<div class="loc">' + esc(e.locus) + ", pada " + esc(e.vp.split(" ")[1]||"1") + '</div></div>';
+    }).join("");
+    Array.prototype.forEach.call(vlist.querySelectorAll(".vrow"), function(row){
+      row.onclick = function(){ renderVerse(shard[row.dataset.k]); };
+    });
+  });
+}
+function renderVerse(e){
+  var h = '<div class="entry"><div class="src">' + esc(e.text) + '</div>' +
+          '<div class="loc">' + esc(e.locus) + '</div>';
+  e.par.forEach(function(p){
+    h += '<div class="par"><span class="tier" style="background:' +
+         (p.v === "GOOD" ? "var(--good)" : "var(--partly)") + '">' + p.v + '</span>' +
+         '<span class="tloc">' + esc(p.loc) + '</span>' +
+         '<span class="ttxt">' + esc(p.txt) + '</span>' +
+         (p.d ? '<span class="diff">' + esc(p.d) + '</span>' : "") + '</div>';
+  });
+  out.innerHTML = h + "</div>";
+}
+tq.addEventListener("input", function(){ showTextMatches(tq.value.trim()); });
+</script>
+</body>
+</html>

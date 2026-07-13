@@ -1,0 +1,2 @@
+window.PARA_DATA = window.PARA_DATA || {};
+window.PARA_DATA[147] = {"KaiNigh, 2: 1|45 2":{"locus":"KaiNigh, 2: 1","vp":"45 2","text":"varṇyā snigdhā kaphaśvāsakāsabhūtaviṣāsrahā ||","par":[{"loc":"Bhāvaprakāśa BhPr, 1, 8: 4 133","txt":"manaḥśilā gururvarṇyā saroṣṇā lekhanī kaṭuḥ |tiktā snigdhā viṣaśvāsakāsabhūtakaphāsranut ||","v":"PARTLY","d":"+ han - nud"},{"loc":"Bhāvaprakāśa BhPr, 2, 3: 5 232","txt":"gurvī manaḥśilā varṇyā saroṣṇā lekhanī kaṭuḥ |tiktā snigdhā viṣaśvāsakāsabhūtakaphāsranut ||","v":"PARTLY","d":"+ han - nud"}]}};

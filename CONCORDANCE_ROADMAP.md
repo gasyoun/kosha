@@ -84,10 +84,32 @@ shared core), then the greenfield grammar work.
 
 ### Q2 (months 4–6) — B3 · Bloomfield-style parallel-passage concordance
 
-- **Inputs:** [`dcs-parallel-passages-full`](https://github.com/gasyoun/VisualDCS) (506,787 alignments, 245 files), `dcs-full-sqlite`.
-- **Build:** normalize the 245-file PARA export into one verse-keyed concordance; **content-diff the three known variants** (live `Polnorazmernye`, the 2022 archive, and the 1.17 GB `Stopovye` variant — an open question flagged in the manifest) and register one canonical; add a Bloomfield *pratīka* cross-reference for the RV subset.
-- **Deliverables:** dataset `parallel-passage-concordance` (manifest row + release) · web page `/concordance/parallels/` (click a verse → its repeated/parallel occurrences with GOOD/PARTLY verdicts).
-- **Exit checks:** every source passage's parallels navigable; verdict annotations surfaced; RV subset cross-linked to Bloomfield; variant provenance documented.
+**Status: core build shipped 13-07-2026 (H836, Sonnet 5 `claude-sonnet-5`); two exit checks
+blocked on human decisions, not self-ruled — see below.**
+
+- **Inputs:** [`dcs-parallel-passages-full`](https://github.com/gasyoun/VisualDCS) (245 files;
+  the prior "506,787 alignments" estimate did not survive a direct parse — this build's
+  authoritative count is 501,231 source verses / 153,045 GOOD+PARTLY links, see
+  [`PARALLEL_BUILD_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/PARALLEL_BUILD_REPORT.md)),
+  `dcs-full-sqlite`.
+- **Build:** normalize the 245-file PARA export into one verse-keyed concordance — **done**,
+  via [`scripts/build_parallel_passage_concordance.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_parallel_passage_concordance.py).
+  Content-diffing the three known variants (live `Polnorazmernye`, the 2022 archive, and the
+  differently-scoped `Stopovye` per-pada export) was **not independently re-done row-by-row**
+  this pass — the build defaults to `Polnorazmernye/` per the folder's own README default,
+  flagged as `@DECIDE` rather than self-ruled (R-C2). Bloomfield *pratīka* cross-reference for
+  the RV subset: **not built** — no digitization of Bloomfield's 1906 concordance was found
+  anywhere in the org; which source to key against is the other open `@DECIDE` below.
+- **Deliverables:** dataset `parallel-passage-concordance` (manifest row ✅, release pending —
+  same "unreleased" state as B1) · web page [`/concordance/parallels/`](https://github.com/gasyoun/kosha/blob/main/concordance/parallels/index.html) ✅ live.
+- **Exit checks:** every source passage's parallels navigable ✅; verdict annotations surfaced
+  ✅ (GOOD/PARTLY badges + word-diffs); RV subset cross-linked to Bloomfield ❌ (blocked on
+  `@DECIDE` below); variant provenance documented ✅ (build report + this section).
+- **`@DECIDE` (a human should decide, not self-ruled per H836):** (1) confirm `Polnorazmernye/`
+  as the released-canonical parallel-passage variant (or direct otherwise); (2) which
+  digitization of Bloomfield's 1906 *Vedic Concordance* to key the Ṛgveda subset against —
+  once chosen, a follow-up pass adds a `bloomfield_pratika` column to
+  `parallel_passage_verses.tsv` for the RV-subset rows.
 
 ### Q3 (months 7–9) — A3 · Generated-vs-attested morphology audit
 
