@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.26.0] - 2026-07-13
+
 ### Added
 - **H848 W0: Gītā gold master dataset.** New public/MIT dataset
   [`data/gita/gita_gold_master.tsv`](https://github.com/gasyoun/kosha/blob/main/data/gita/gita_gold_master.tsv)
