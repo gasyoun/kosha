@@ -1,0 +1,1280 @@
+verse	form	lemma	gold_case_num_gender	class	kosha_analyses
+1.01	kim	kim	acc/sg/n	DIVERGE	None.None.None
+1.03	tava	yuṣmat	gen/sg/	GAP	
+1.04	bhīmārjuna-samāḥ	bhīma-arjuna-sama	nom/pl/m	GAP	
+1.07	asmākam	asmat	gen/pl/	DIVERGE	acc.sg.m;acc.sg.n;nom.sg.n
+1.07	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+1.07	mama	asmat	gen/sg/	GAP	
+1.07	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+1.09	nānā-śastra-praharaṇāḥ	nānā-śastra-praharaṇa	nom/pl/m	GAP	
+1.10	tat	tat	nom/sg/n	GAP	
+1.10	asmākam	asmat	gen/pl/	DIVERGE	acc.sg.m;acc.sg.n;nom.sg.n
+1.10	bhīṣmābhirakṣitam	bhīṣma-abhi-rakṣita	nom/sg/n	GAP	
+1.10	idam	idam	nom/sg/n	DIVERGE	None.None.None
+1.10	eteṣām	etat	gen/pl/m	GAP	
+1.10	bhīmābhirakṣitam	bhīma-abhi-rakṣita	nom/sg/n	GAP	
+1.12	harṣaṁ	harṣa	acc/sg/m	GAP	
+1.13	paṇavānaka-gomukhāḥ	paṇava-ānaka-gomukha	nom/pl/m	GAP	
+1.16	kuntī-putraḥ	kuntī-putra	nom/sg/m	GAP	
+1.16	sughoṣa-maṇi-puṣpakau	su-ghoṣa-maṇi-puṣpaka	acc/du/m	GAP	
+1.20	śastra-saṁpāte	śastra-saṁpāta	loc/sg/m	GAP	
+1.21	idam	idam	acc/sg/n	DIVERGE	None.None.None
+1.21	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+1.22	asmin	idam	loc/sg/m	GAP	
+1.22	raṇa-samudyame	raṇa-sam-ud-yama	loc/sg/m	GAP	
+1.23	yotsyamānān	yotsyamāna	acc/pl/m	GAP	
+1.23	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+1.23	ete	etat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+1.23	priya-cikīrṣavaḥ	priya-cikīrṣu	instr/sg/m	DIVERGE	nom.pl.f;nom.pl.m;voc.pl.f;voc.pl.m
+1.28	viṣīdan	viṣīdant	nom/sg/m	GAP	
+1.28	idam	idam	acc/sg/n	DIVERGE	None.None.None
+1.28	imān	idam	acc/pl/m	GAP	
+1.29	mama	asmat	gen/sg/	GAP	
+1.29	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+1.30	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+1.33	yeṣām	yat	gen/pl/m	GAP	
+1.33	naḥ	asmat	gen/pl/	DIVERGE	nom.sg.m;voc.sg.f
+1.33	sukhāni	sukha	instr/pl/n	DIVERGE	acc.pl.n;nom.pl.n;voc.pl.n
+1.33	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+1.33	ime	idam	nom/pl/m	GAP	
+1.35	ghnataḥ	ghnant	acc/pl/m	GAP	
+1.36	naḥ	asmat	gen/pl/	DIVERGE	nom.sg.m;voc.sg.f
+1.36	kā	kim	nom/sg/f	GAP	
+1.36	asmān	asmat	acc/pl/	GAP	
+1.37	vayam	asmat	nom/pl/	DIVERGE	acc.sg.m
+1.38	ete	etat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+1.38	lobhopahata-cetasaḥ	lobha-upahata-cetas	nom/pl/m	GAP	
+1.38	kula-kṣaya-kṛtam	kula-kṣaya-kṛta	acc/sg/m	GAP	
+1.39	asmābhiḥ	asmat	instr/pl/	GAP	
+1.39	asmāt	idam	abl/sg/n	GAP	
+1.39	kula-kṣaya-kṛtam	kula-kṣaya-kṛta	acc/sg/m	GAP	
+1.39	prapaśyadbhiḥ	pra-paśyant	instr/pl/m	GAP	
+1.41	adharmābhibhavāt	a-dharma-abhi-bhava	abl/sg/m	GAP	
+1.41	kula-striyaḥ	kula-strī	nom/pl/f	GAP	
+1.42	eṣām	etat	gen/pl/m	DIVERGE	acc.sg.f
+1.43	varṇa-saṁkara-kārakaiḥ	varṇa-saṁkara-kāraka	instr/pl/m	GAP	
+1.44	utsanna-kula-dharmāṇāṁ	utsanna-kula-dharma	gen/pl/m	GAP	
+1.45	mahat	mahant	acc/sg/n	DIVERGE	nom.sg.f;voc.sg.f
+1.45	vayam	asmat	nom/pl/	DIVERGE	acc.sg.m
+1.45	rājya-sukha-lobhena	rājya-sukha-lobha	instr/sg/m	GAP	
+1.46	tat	tat	nom/sg/n	GAP	
+1.46	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+2.01	aśru-pūrṇākulekṣaṇam	aśru-pūrṇa-ākula-īkṣaṇa	acc/sg/m	GAP	
+2.01	viṣīdantam	viṣīdant	acc/sg/m	GAP	
+2.01	idam	idam	acc/sg/n	DIVERGE	None.None.None
+2.02	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+2.02	tvā	yuṣmat	acc/sg/	DIVERGE	nom.sg.f
+2.02	idam	idam	nom/sg/n	DIVERGE	None.None.None
+2.03	etat	etat	nom/sg/n	GAP	
+2.03	tvayi	yuṣmat	loc/sg/m	GAP	
+2.06	etat	etat	acc/sg/n	GAP	
+2.06	naḥ	asmat	gen/pl/	DIVERGE	nom.sg.m;voc.sg.f
+2.06	naḥ	asmat	acc/pl/	DIVERGE	nom.sg.m;voc.sg.f
+2.06	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+2.07	kārpaṇya-doṣopahata-svabhāvaḥ	kārpaṇya-doṣa-upahata-svabhāva	nom/sg/m	GAP	
+2.07	tvā	yuṣmat	acc/sg/m	DIVERGE	nom.sg.f
+2.07	dharma-saṁmūḍha-cetāḥ	dharma-saṁmūḍha-cetas	nom/sg/m	GAP	
+2.07	yat	yat	nom/sg/n	GAP	
+2.07	tan	tat	acc/sg/m	DIVERGE	voc.sg.m
+2.07	me	asmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+2.07	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+2.08	mama	asmat	gen/sg/	GAP	
+2.08	yat	yat	nom/sg/m	GAP	
+2.10	viṣīdantam	viṣīdant	acc/sg/m	GAP	
+2.10	idam	idam	acc/sg/n	DIVERGE	None.None.None
+2.11	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+2.12	ime	idam	nom/pl/m	GAP	
+2.12	vayam	asmat	nom/pl/	DIVERGE	acc.sg.m
+2.13	asmin	idam	loc/sg/m	GAP	
+2.14	śītoṣṇa-sukha-duḥkha-dāḥ	śīta-uṣṇa-sukha-duḥkha-da	nom/pl/m	GAP	
+2.15	ete	etat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+2.16	asataḥ	a-sant	gen/sg/n	GAP	
+2.16	sataḥ	sant	gen/sg/n	DIVERGE	nom.sg.m
+2.17	tat	tat	nom/sg/n	GAP	
+2.17	idam	idam	nom/sg/n	DIVERGE	None.None.None
+2.17	kaś-cit	kim-cit	nom/sg/m	GAP	
+2.18	ime	idam	nom/pl/m	GAP	
+2.19	enam	etat	acc/sg/m	GAP	
+2.19	enam	etat	acc/sg/m	GAP	
+2.19	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+2.20	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+2.20	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+2.21	enam	etat	acc/sg/m	GAP	
+2.21	kaṁ	kim	acc/sg/m	GAP	
+2.23	enam	etat	acc/sg/m	GAP	
+2.23	enam	etat	acc/sg/m	GAP	
+2.23	enam	etat	acc/sg/m	GAP	
+2.23	āpaḥ	ap	nom/pl/f	DIVERGE	acc.sg.n;nom.sg.m;nom.sg.n;voc.sg.n
+2.24	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+2.24	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+2.24	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+2.25	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+2.25	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+2.25	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+2.25	enam	etat	acc/sg/m	GAP	
+2.26	enam	etat	acc/sg/m	GAP	
+2.26	enam	etat	acc/sg/m	GAP	
+2.28	avyaktādīni	a-vyakta-ādi	nom/pl/n	GAP	
+2.28	vyakta-madhyāni	vyakta-madhya	nom/pl/n	GAP	
+2.28	avyakta-nidhanāni	a-vyakta-nidhana	nom/pl/n	GAP	
+2.28	kā	kim	nom/sg/f	GAP	
+2.29	kaś-cid	kim-cit	nom/sg/m	GAP	
+2.29	enam	etat	acc/sg/m	GAP	
+2.29	enam	etat	acc/sg/m	GAP	
+2.29	enam	etat	acc/sg/m	GAP	
+2.29	kaś-cit	kim-cit	nom/sg/m	GAP	
+2.30	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+2.31	anyat	anya	nom/sg/n	GAP	
+2.33	imam	idam	acc/sg/m	GAP	
+2.34	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+2.34	saṁbhāvitasya	saṁ-bhāvita	gen/sg/m	GAP	
+2.35	yeṣām	yat	gen/pl/m	GAP	
+2.36	avācya-vādān	avācya-vāda	acc/pl/m	GAP	
+2.36	tava	yuṣmat	gen/sg/	GAP	
+2.36	nindantaḥ	nindant	nom/pl/m	GAP	
+2.36	tava	yuṣmat	gen/sg/m	GAP	
+2.36	kim	kim	acc/sg/n	DIVERGE	None.None.None
+2.39	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+2.39	imām	idam	acc/sg/f	GAP	
+2.41	vyavasāyātmikā	vyavasāya-ātmikā	nom/sg/f	GAP	
+2.42	imām	idam	acc/sg/f	GAP	
+2.42	anyat	anya	nom/sg/n	GAP	
+2.43	janma-karma-phala-pradām	janma-karma-phala-pradā	acc/sg/f	GAP	
+2.43	kriyā-viśeṣa-bahulāṁ	kriyā-viśeṣa-bahulā	acc/sg/f	GAP	
+2.43	bhogaiśvarya-gatiṁ	bhoga-aiśvarya-gati	acc/sg/f	GAP	
+2.44	bhogaiśvarya-prasaktānām	bhoga-aiśvarya-prasakta	gen/pl/m	GAP	
+2.44	apahṛta-cetasām	apahṛta-cetas	gen/pl/m	GAP	
+2.44	vyavasāyātmikā	vyavasāya-ātmikā	nom/sg/f	GAP	
+2.45	traiguṇya-viṣayāḥ	traiguṇya-viṣaya	nom/pl/m	GAP	
+2.45	nitya-sattva-sthaḥ	nitya-sattva-stha	nom/sg/m	GAP	
+2.46	saṁplutodake	saṁpluta-udaka	loc/sg/n	GAP	
+2.46	vijānataḥ	vijānant	gen/sg/m	GAP	
+2.47	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+2.47	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+2.49	buddhi-yogād	buddhi-yoga	abl/sg/m	GAP	
+2.50	sukṛta-duṣkṛte	sukṛta-duṣkṛta	acc/du/n	GAP	
+2.51	janma-bandha-vinirmuktāḥ	janma-bandha-vinirmukta	nom/pl/m	GAP	
+2.51	anāmayam	an-āmaya	acc/pl/n	DIVERGE	acc.sg.m;acc.sg.n;nom.sg.n
+2.52	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+2.53	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+2.54	kā	kim	nom/sg/f	GAP	
+2.54	sthita-dhīḥ	sthita-dhī	nom/sg/m	GAP	
+2.55	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+2.56	anudvigna-manāḥ	an-ud-vigna-manas	nom/sg/m	GAP	
+2.56	sthita-dhīḥ	sthita-dhī	nom/sg/m	GAP	
+2.57	tat tat	tat	acc/sg/n	GAP	
+2.58	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+2.60	yatataḥ	yatant	gen/sg/m	DIVERGE	None.du.None
+2.62	dhyāyataḥ	dhyāyant	gen/sg/m	DIVERGE	None.du.None
+2.62	puṁsaḥ	puṁs	gen/sg/m	GAP	
+2.63	saṁmohaḥ	saṁ-moha	nom/sg/m	GAP	
+2.63	saṁmohāt	saṁ-moha	abl/sg/m	GAP	
+2.63	buddhi-nāśaḥ	buddhi-nāśa	nom/sg/m	GAP	
+2.63	buddhi-nāśāt	buddhi-nāśa	abl/sg/m	GAP	
+2.64	rāga-dveṣa-viyuktaiḥ	rāga-dveṣa-viyukta	instr/pl/m	GAP	
+2.64	caran	carant	nom/sg/m	GAP	
+2.64	ātma-vaśyaiḥ	ātma-vaśya	instr/pl/n	GAP	
+2.65	sarva-duḥkhānām	sarva-duḥkha	gen/pl/n	GAP	
+2.65	prasanna-cetasaḥ	prasanna-cetas	gen/sg/m	GAP	
+2.66	abhāvayataḥ	a-bhāvayant	gen/sg/m	GAP	
+2.67	caratām	carant	gen/pl/m	DIVERGE	None.du.None;None.sg.None
+2.67	yat	yat	acc/sg/n	GAP	
+2.67	tat	tat	nom/sg/n	GAP	
+2.69	tasyām	tat	loc/sg/f	GAP	
+2.69	yasyām	yat	loc/sg/f	DIVERGE	acc.sg.f
+2.69	paśyataḥ	paśyant	gen/sg/	DIVERGE	nom.sg.m
+2.70	acala-pratiṣṭham	acala-pratiṣṭha	acc/sg/m	GAP	
+2.70	āpaḥ	ap	nom/pl/f	DIVERGE	acc.sg.n;nom.sg.m;nom.sg.n;voc.sg.n
+2.71	pumān	puṁs	nom/sg/m	GAP	
+2.72	enām	etat	acc/sg/f	GAP	
+3.01	jyāyasī	jyāyasī	nom/sg/f	DIVERGE	acc.du.n;nom.du.n;voc.du.n
+3.01	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+3.01	tat	tat	nom/sg/n	GAP	
+3.02	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+3.02	tat	tat	acc/sg/n	GAP	
+3.03	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+3.03	asmin	idam	loc/sg/m	GAP	
+3.04	saṁnyasanād	saṁnyasana	abl/sg/n	GAP	
+3.05	kaś-cit	kim-cit	nom/sg/m	GAP	
+3.05	akarma-kṛt	a-karma-kṛt	nom/sg/m	GAP	
+3.06	smaran	smarant	nom/sg/m	GAP	
+3.08	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+3.09	yajñārthāt	yajña-artha	abl/sg/n	GAP	
+3.09	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+3.10	vaḥ	yuṣmat	gen/pl/	DIVERGE	nom.sg.m
+3.11	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+3.11	vaḥ	yuṣmat	acc/pl/	DIVERGE	nom.sg.m
+3.11	bhāvayantaḥ	bhāvayant	nom/pl/m	GAP	
+3.13	yajña-śiṣṭāśinaḥ	yajña-śiṣṭa-āśin	nom/pl/m	GAP	
+3.13	santaḥ	sant	nom/pl/m	DIVERGE	nom.sg.m
+3.13	sarva-kilbiṣaiḥ	sarva-kilbiṣa	instr/pl/n	GAP	
+3.13	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+3.13	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+3.13	ātma-kāraṇāt	ātma-kāraṇa	abl/sg/n	GAP	
+3.14	anna-saṁbhavaḥ	anna-saṁbhava	nom/sg/m	GAP	
+3.14	karma-samudbhavaḥ	karma-samudbhava	nom/sg/m	GAP	
+3.15	brahmodbhavam	brahma-udbhava	acc/sg/n	GAP	
+3.15	akṣara-samudbhavam	a-kṣara-samudbhava	acc/sg/m	GAP	
+3.16	indriyārāmaḥ	indriya-ārāma	nom/sg/m	GAP	
+3.18	kaś-cana	kim-cana	nom/sg/m	GAP	
+3.18	kaś-cit	kim-cit	nom/sg/m	GAP	
+3.18	artha-vyapāśrayaḥ	artha-vyapāśraya	nom/sg/m	GAP	
+3.19	ācaran	ācarant	nom/sg/m	GAP	
+3.20	janakādayaḥ	janaka-ādi	nom/pl/m	GAP	
+3.20	saṁpaśyan	saṁpaśyant	nom/sg/m	GAP	
+3.21	yat yat	yat	acc/sg/n	GAP	
+3.21	tat tat	tat	acc/sg/n	GAP	
+3.21	yat	yat	acc/sg/n	GAP	
+3.21	tat	tat	acc/sg/n	GAP	
+3.22	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+3.22	triṣu	tri	loc/pl/m	GAP	
+3.22	kiṁ-cana	kim-cana	nom/sg/m	GAP	
+3.23	mama	asmat	gen/sg/	GAP	
+3.24	ime	idam	nom/pl/m	GAP	
+3.24	imāḥ	idam	acc/pl/f	GAP	
+3.25	avidvāṁsaḥ	a-vidvas	nom/pl/m	GAP	
+3.25	vidvān	vidvas	nom/sg/m	GAP	
+3.26	vidvān	vidvas	nom/sg/m	GAP	
+3.26	samācaran	samācarant	nom/sg/m	GAP	
+3.27	ahaṁkāra-vimūḍhātmā	ahaṁkāra-vimūḍhātman	nom/sg/m	GAP	
+3.29	guṇa-saṁmūḍhāḥ	guṇa-saṁmūḍhāḥ	nom/pl/m	GAP	
+3.29	akṛtsna-vidaḥ	akṛtsna-vit	acc/pl/m	GAP	
+3.30	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+3.30	nir-āśīḥ	nir-ā-śis	nom/sg/m	GAP	
+3.31	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+3.31	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+3.31	idam	idam	acc/sg/n	DIVERGE	None.None.None
+3.31	anasūyantaḥ	an-asūyant	nom/pl/m	GAP	
+3.31	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+3.32	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+3.32	etat	etat	acc/sg/n	GAP	
+3.32	abhyasūyantaḥ	abhi-asūyant	nom/pl/m	GAP	
+3.32	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+3.32	sarva-jñāna-vimūḍhān	sarva-jñāna-vimūḍha	acc/pl/m	GAP	
+3.33	kim	kim	acc/sg/n	DIVERGE	None.None.None
+3.34	indriyasya indriyasya	indriya	gen/sg/n	GAP	
+3.35	śreyān	śreyas	nom/sg/m	GAP	
+3.36	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+3.36	anicchan	an-icchant	nom/sg/m	GAP	
+3.37	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+3.37	rajo-guṇa-samudbhavaḥ	rajo-guṇa-samudbhava	nom/sg/m	GAP	
+3.37	enam	etat	acc/sg/m	GAP	
+3.38	idam	idam	nom/sg/n	DIVERGE	None.None.None
+3.39	nitya-vairiṇā	nitya-vairin	instr/sg/m	GAP	
+3.41	enam	etat	acc/sg/m	GAP	
+3.41	jñāna-vijñāna-nāśanam	jñāna-vijñāna-nāśana	acc/sg/m	GAP	
+4.01	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+4.01	imam	idam	acc/sg/m	GAP	
+4.02	paraṁ-parā-prāptam	paraṁ-parā-prāpta	acc/sg/m	GAP	
+4.02	imam	idam	acc/sg/m	GAP	
+4.03	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+4.03	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+4.03	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+4.03	sakhā	sakhi	nom/sg/m	GAP	
+4.03	etat	etat	nom/sg/n	GAP	
+4.04	etat	etat	nom/sg/n	GAP	
+4.05	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+4.05	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+4.05	tava	yuṣmat	gen/sg/	GAP	
+4.06	san	sant	nom/sg/m	GAP	
+4.06	san	sant	nom/sg/m	GAP	
+4.06	ātma-māyayā	ātma-māyā	instr/sg/f	GAP	
+4.08	duṣkṛtām	duṣ-kṛta	acc/du/n	DIVERGE	acc.sg.f;gen.pl.f;gen.pl.m;gen.pl.n
+4.08	dharma-saṁsthāpanārthāya	dharma-saṁsthāpana-artha	dat/sg/n	GAP	
+4.08	yuge yuge	yuga	loc/sg/n	GAP	
+4.09	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+4.10	jñāna-tapasāḥ	jñāna-tapas	instr/sg/n	GAP	
+4.11	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+4.11	mama	asmat	gen/sg/	GAP	
+4.11	vartman	vartman	acc/sg/n	DIVERGE	voc.sg.n
+4.12	kāṅkṣantaḥ	kāṅkṣant	nom/pl/m	GAP	
+4.14	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+4.16	kim	kim	nom/sg/n	DIVERGE	None.None.None
+4.16	kim	kim	nom/sg/n	DIVERGE	None.None.None
+4.16	tat	tat	acc/sg/n	GAP	
+4.16	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+4.16	yat	yat	acc/sg/n	GAP	
+4.18	kṛtsna-karma-kṛt	kṛtsna-karma-kṛt	nom/sg/m	GAP	
+4.19	kāma-saṁkalpa-varjitāḥ	kāma-saṁkalpa-varjita	nom/pl/m	GAP	
+4.19	jñānāgni-dagdha-karmāṇam	jñāna-agni-dagdha-karmāṇa	acc/sg/m	GAP	
+4.19	paṇḍitaṁ	paṇḍita	acc/sg/m	GAP	
+4.20	karma-phalāsaṅgam	karma-phala-āsaṅga	acc/sg/m	GAP	
+4.20	nitya-tṛptaḥ	nitya-tṛpta	nom/sg/m	GAP	
+4.21	nir-āśīḥ	nir-ā-śis	nom/sg/m	GAP	
+4.21	tyakta-sarva-parigrahaḥ	tyakta-sarva-parigraha	nom/sg/m	GAP	
+4.21	kurvan	kurvant	nom/sg/m	GAP	
+4.22	yadṛcchā-lābha-saṁtuṣṭaḥ	yadṛcchā-lābha-saṁtuṣṭa	nom/sg/m	GAP	
+4.23	jñānāvasthita-cetasaḥ	jñāna-avasthita-cetas	gen/sg/m	GAP	
+4.23	ācarataḥ	ācarant	gen/sg/m	GAP	
+4.24	brahmāgnau	brahma-agni	loc/sg/m	GAP	
+4.25	brahmāgnāu	brahma-agni	loc/sg/m	GAP	
+4.26	indriyāgniṣu	indriya-agni	loc/pl/m	GAP	
+4.27	indriya-karmāṇi	indriya-karman	acc/pl/n	GAP	
+4.27	ātma-saṁyama-yogāgnau	ātma-saṁyama-yoga-agni	loc/sg/m	GAP	
+4.27	jñāna-dīpite	jñāna-dīpita	loc/sg/m	GAP	
+4.28	yoga-yajñāḥ	yoga-yajña	nom/pl/m	GAP	
+4.28	svādhyāya-jñāna-yajñāḥ	svādhyāya-jñāna-yajña	nom/pl/m	GAP	
+4.29	prāṇāpāna-gatī	prāṇa-apāna-gati	acc/du/f	GAP	
+4.29	prāṇāyāma-parāyaṇāḥ	prāṇa-āyāma-parāyaṇa	nom/pl/m	GAP	
+4.30	ete	etat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+4.30	yajña-kṣapita-kalmaṣāḥ	yajña-kṣapita-kalmaṣa	nom/pl/m	GAP	
+4.31	yajña-śiṣṭāmṛta-bhujaḥ	yajña-śiṣṭa-amṛta-bhuk	nom/pl/m	GAP	
+4.31	āyam	idam	nom/sg/m	DIVERGE	acc.sg.m
+4.33	śreyān	śreyas	nom/sg/m	GAP	
+4.34	tat	tat	acc/sg/n	GAP	
+4.34	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+4.35	yat	yat	acc/sg/n	GAP	
+4.35	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+4.36	pāpebhyaḥ	pāpa	gen/pl/m	DIVERGE	abl.pl.m;abl.pl.n;dat.pl.m;dat.pl.n
+4.36	sarvebhyaḥ	sarva	gen/pl/n	DIVERGE	abl.pl.m;abl.pl.n;dat.pl.m;dat.pl.n
+4.36	pāpa-kṛttamaḥ	pāpa-kṛttama	nom/sg/m	GAP	
+4.36	jñāna-plavena	jñāna-plava	instr/sg/m	GAP	
+4.38	tat	tat	acc/sg/n	GAP	
+4.38	yoga-saṁsiddhaḥ	yoga-saṁsiddha	nom/sg/m	GAP	
+4.40	ayaṁ	idam	nom/sg/m	GAP	
+4.41	yoga-saṁnyasta-karmāṇam	yoga-saṁnyasta-karman	acc/sg/m	GAP	
+4.41	jñāna-saṁchinna-saṁśayam	jñāna-saṁchinna-saṁśaya	acc/sg/m	GAP	
+4.42	ajñāna-saṁbhūtam	ajñāna-saṁbhūta	acc/sg/m	GAP	
+4.42	jñānāsinā	jñānāsi	instr/sg/m	GAP	
+4.42	enam	etat	acc/sg/m	GAP	
+5.01	yat	yat	nom/sg/n	GAP	
+5.01	tat	tat	acc/sg/n	GAP	
+5.01	me	asmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+5.02	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+5.02	karma-saṁnyāsāt	karma-saṁnyāsa	abl/sg/m	GAP	
+5.05	yat	yat	acc/sg/n	GAP	
+5.05	tat	tat	acc/sg/n	GAP	
+5.07	sarva-bhūtātma-bhūtātmā	sarva-bhūta-ātma-bhūta-ātman	nom/sg/m	GAP	
+5.07	kurvan	kurvant	nom/sg/m	GAP	
+5.08	paśyan	paśyant	nom/sg/m	GAP	
+5.08	śṛṇvan	śṛṇvant	nom/sg/m	GAP	
+5.08	spṛśan	spṛśant	nom/sg/m	GAP	
+5.08	jighran	jighrant	nom/sg/	GAP	
+5.08	aśnan	aśnant	nom/sg/m	GAP	
+5.08	gacchan	gacchant	nom/sg/m	GAP	
+5.08	svapan	svapant	nom/sg/m	GAP	
+5.08	śvasan	śvasant	nom/sg/m	GAP	
+5.09	pralapan	pra-lapant	nom/sg/m	GAP	
+5.09	visṛjan	visṛjant	nom/sg/m	GAP	
+5.09	gṛhṇan	gṛhṇant	nom/sg/m	GAP	
+5.09	unmiṣan	un-miṣant	nom/sg/m	GAP	
+5.09	nimiṣan	ni-miṣant	nom/sg/m	GAP	
+5.09	dhārayan	dhārayant	nom/sg/m	GAP	
+5.10	padma-patram	padma-patra	nom/sg/n	GAP	
+5.13	kurvan	kurvant	nom/sg/m	GAP	
+5.13	kārayan	kārayant	nom/sg/m	GAP	
+5.14	lokasya	loka	abl/sg/m	DIVERGE	gen.sg.m
+5.14	karma-phala-saṁyogam	karma-phala-saṁyoga	acc/sg/m	GAP	
+5.15	kasya-cit	kim-cit	gen/sg/m	GAP	
+5.16	tat	tat	nom/sg/n	GAP	
+5.16	yeṣām	yat	gen/pl/m	GAP	
+5.16	teṣām	tat	gen/pl/m	GAP	
+5.16	tat	tat	acc/sg/n	GAP	
+5.17	tad-buddhayaḥ	tad-buddhi	nom/pl/m	GAP	
+5.17	tad-ātmānaḥ	tad-ātman	nom/pl/m	GAP	
+5.17	tan-niṣṭhāḥ	tad-niṣṭha	nom/pl/m	GAP	
+5.17	jñāna-nirdhūta-kalmaṣāḥ	jñāna-nirdhūta-kalmaṣa	nom/pl/m	GAP	
+5.18	vidyā-vinaya-saṁpanne	vidyā-vinaya-saṁpanna	loc/sg/m	GAP	
+5.18	śuni	śvan	loc/sg/m	DIVERGE	voc.sg.f
+5.19	yeṣām	yat	gen/pl/m	GAP	
+5.19	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+5.21	asaktātmā	asakta-ātman	nom/sg/m	GAP	
+5.21	yat	yat	acc/sg/n	GAP	
+5.21	brahma-yoga-yuktātmā	brahma-yoga-yuktātman	nom/sg/m	GAP	
+5.22	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+5.22	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+5.23	kāma-krodhodbhavam	kāma-krodha-udbhava	acc/sg/m	GAP	
+5.26	kāma-krodha-viyuktānām	kāma-krodha-viyukta	gen/pl/m	GAP	
+5.26	viditātmanām	vidita-ātman	gen/pl/m	GAP	
+5.27	bhruvoḥ	bhrū	gen/du/f	GAP	
+5.27	nāsābhyantara-cāriṇau	nāsā-abhy-antara-cārin	acc/du/m	GAP	
+5.28	yatendriya-mano-buddhiḥ	yata-indriya-mano-buddhi	nom/sg/m	GAP	
+5.28	mokṣa-parāyaṇaḥ	mokṣa-parāyaṇa	nom/pl/m	DIVERGE	nom.sg.m
+5.28	vigatecchā-bhaya-krodhaḥ	vigata-icchā-bhaya-krodha	nom/sg/m	GAP	
+5.29	yajña-tapasām	yajña-tapas	gen/pl/n	GAP	
+6.01	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+6.02	asaṁnyasta-saṁkalpaḥ	a-saṁnyasta-saṁkalpa	nom/sg/m	GAP	
+6.02	kaś-cana	kim-cana	nom/sg/m	GAP	
+6.04	sarva-saṁkalpa-saṁnyāsī	sarva-saṁkalpa-saṁnyāsin	nom/sg/m	GAP	
+6.07	śītoṣṇa-sukha-duḥkheṣu	śīta-uṣṇa-sukha-duḥkha	loc/pl/n	GAP	
+6.07	mānāvamānayoḥ	māna-avamāna	loc/du/m	GAP	
+6.08	jñāna-vijñāna-tṛptātmā	jñāna-vijñāna-tṛpta-ātman	nom/sg/m	GAP	
+6.09	suhṛn-mitrāry-udāsīna-madhyastha-dveṣya-bandhuṣu	suhṛn-mitra-ary-udāsīna-madhya-stha-dveṣya-bandhu	loc/pl/m	GAP	
+6.10	nirāśīḥ	nir-āśis	nom/sg/m	GAP	
+6.11	cailājina-kuśottaram	caila-ajina-kuśa-uttara	acc/sg/n	GAP	
+6.12	yata-cittendriya-kriyaḥ	yata-citta-indriya-kriya	nom/sg/m	GAP	
+6.12	ātma-viśuddhaye	ātma-viśuddhi	dat/sg/f	GAP	
+6.13	kāya-śiro-grīvam	kāya-śiro-grīva	acc/sg/n	GAP	
+6.13	dhārayan	dhārayant	nom/sg/m	GAP	
+6.13	anavalokayan	an-ava-lokayant	nom/sg/m	GAP	
+6.14	vigatabhīḥ	vigata-bhī	nom/sg/m	GAP	
+6.14	brahmacāri-vrate	brahmacāri-vrata	loc/sg/n	GAP	
+6.15	yuñjan	yuñjant	nom/sg/	GAP	
+6.15	nirvāṇa-paramām	nirvāṇa-paramā	acc/sg/f	GAP	
+6.16	aty-aśnataḥ	ati-aśnant	gen/sg/m	GAP	
+6.16	anaśnataḥ	an-aśnant	gen/sg/m	GAP	
+6.16	ati-svapna-śīlasya	ati-svapna-śīlasya	gen/sg/m	GAP	
+6.16	jāgrataḥ	jāgrata	nom/sg/m	GAP	
+6.19	nivāta-sthaḥ	nivāta-stha	nom/sg/m	GAP	
+6.19	yata-cittasya	yata-citta	gen/sg/m	GAP	
+6.19	yuñjataḥ	yuñjant	gen/sg/	GAP	
+6.20	paśyan	paśyant	nom/sg/m	GAP	
+6.21	yat	yat	acc/sg/n	GAP	
+6.21	tat	tat	acc/sg/n	GAP	
+6.21	atīndriyam	ati-indriya	nom/du/n	DIVERGE	acc.sg.m;acc.sg.n;nom.sg.n
+6.21	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+6.22	yasmin	yat	loc/sg/m	GAP	
+6.23	duḥkha-saṁyoga-viyogam	duḥkha-saṁyoga-viyoga	acc/sg/m	GAP	
+6.23	yoga-saṁjñitam	yoga-saṁjñita	acc/sg/m	GAP	
+6.23	anirviṇṇa-cetasā	a-nirviṇṇa-cetas	instr/sg/m	GAP	
+6.26	etat	etat	acc/sg/n	GAP	
+6.27	praśānta-manasam	praśānta-manas	nom/sg/m	GAP	
+6.27	enam	etat	acc/sg/m	GAP	
+6.28	yuñjan	yuñjant	nom/sg/	GAP	
+6.28	brahma-saṁsparśam	brahma-saṁsparśa	acc/sg/n	GAP	
+6.29	yoga-yuktātmā	yoga-yuktātman	nom/sg/m	GAP	
+6.30	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+6.30	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+6.31	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+6.33	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+6.34	suduṣkaram	su-duṣ-kara	instr/sg/m	DIVERGE	acc.sg.m;acc.sg.n;nom.sg.n
+6.35	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+6.36	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+6.36	yatatā	yatant	instr/sg/m	GAP	
+6.37	calita-mānasaḥ	calita-mānasa	nom/sg/m	GAP	
+6.37	kām	kim	acc/sg/f	DIVERGE	None.None.None
+6.38	ubhaya-vibhraṣṭaḥ	ubhaya-vibhraṣṭa	nom/sg/m	GAP	
+6.38	pathi	pathin	loc/sg/n	GAP	
+6.39	etat	etat	acc/sg/n	GAP	
+6.39	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+6.40	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+6.40	kaś-cit	kim-cit	nom/sg/m	GAP	
+6.41	puṇya-kṛtān	puṇya-kṛta	acc/pl/m	GAP	
+6.42	etat	etat	nom/sg/n	GAP	
+6.42	durlabhataram	dur-labha-tara	nom/sg/n	GAP	
+6.42	yat	yat	nom/sg/n	GAP	
+6.43	buddhi-saṁyogam	buddhi-saṁyoga	acc/sg/m	GAP	
+6.45	yatamānaḥ	yatamāna	nom/sg/m	GAP	
+6.45	aneka-janma-saṁsiddhaḥ	aneka-janma-saṁsiddha	nom/sg/m	GAP	
+6.47	mad-gatena	mad-gata	instr/sg/m	GAP	
+6.47	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+7.01	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+7.01	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+7.01	yuñjan	yuñjant	nom/sg/m	GAP	
+7.01	mad-āśrayaḥ	mad-āśraya	nom/sg/m	GAP	
+7.01	samagram	samagra	nom/du/m	DIVERGE	acc.sg.m;acc.sg.n;nom.sg.n
+7.01	tat	tat	acc/sg/n	GAP	
+7.02	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+7.02	idam	idam	acc/sg/n	DIVERGE	None.None.None
+7.02	yat	yat	acc/sg/n	GAP	
+7.02	anyat	anya	nom/sg/n	GAP	
+7.03	kaś-cit	kim-cit	nom/sg/m	GAP	
+7.03	yatatām	yatant	gen/pl/m	DIVERGE	None.du.None;None.sg.None
+7.03	kaś-cit	kim-cit	nom/sg/m	GAP	
+7.04	āpaḥ	ap	nom/pl/f	DIVERGE	acc.sg.n;nom.sg.m;nom.sg.n;voc.sg.n
+7.04	iyam	idam	nom/sg/f	GAP	
+7.04	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+7.05	iyam	idam	nom/sg/f	GAP	
+7.05	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+7.05	idam	idam	nom/sg/n	DIVERGE	None.None.None
+7.07	anyat	anya	nom/sg/n	GAP	
+7.07	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+7.07	idam	idam	nom/sg/n	DIVERGE	None.None.None
+7.08	prabhā	pra-bhā	nom/sg/f	GAP	
+7.08	śaśi-sūryayoḥ	śaśi-sūrya	gen/du/m	GAP	
+7.11	kāma-rāga-vivarjitam	kāma-rāga-vivarjita	nom/sg/n	GAP	
+7.11	dharmāviruddhaḥ	dharma-aviruddha	nom/sg/m	GAP	
+7.12	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+7.12	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+7.12	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+7.12	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+7.13	tribhiḥ	tri	instr/pl/m	GAP	
+7.13	idam	idam	nom/sg/n	DIVERGE	None.None.None
+7.14	guṇa-mayī	guṇa-mayī	nom/sg/f	GAP	
+7.14	mama	asmat	gen/sg/	GAP	
+7.14	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+7.14	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+7.15	mūḍhāḥ	mūḍha	nom/sg/m	DIVERGE	acc.pl.f;nom.pl.f;nom.pl.m;voc.pl.f;voc.pl.m
+7.15	apahṛta-jñānāḥ	apahṛta-jñāna	nom/pl/m	GAP	
+7.17	teṣām	tat	gen/pl/m	GAP	
+7.17	mama	asmat	gen/sg/	GAP	
+7.18	ete	etat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+7.18	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+7.19	mahātmā	mahā-ātman	nom/sg/m	GAP	
+7.20	taiḥ taiḥ	tat	instr/pl/m	GAP	
+7.20	tam tam	tat	acc/sg/m	GAP	
+7.21	yaḥ yaḥ	yat	nom/sg/m	GAP	
+7.21	yām yām	yat	acc/sg/f	GAP	
+7.21	tasya tasya	tat	gen/sg/m	GAP	
+7.22	tasyāḥ	tat	gen/sg/f	GAP	
+7.23	teṣām	tat	gen/pl/m	GAP	
+7.23	tat	tat	nom/sg/n	GAP	
+7.23	deva-yajaḥ	deva-yaj	nom/pl/m	GAP	
+7.24	ajānantaḥ	a-jānant	nom/pl/m	GAP	
+7.24	mama	asmat	gen/sg/	GAP	
+7.25	yoga-māyā-samāvṛtaḥ	yoga-māyā-samāvṛta	nom/sg/m	GAP	
+7.25	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+7.26	kaś-cana	kim-cana	nom/sg/m	GAP	
+7.27	icchā-dveṣa-samutthena	icchā-dveṣa-samuttha	instr/sg/m	GAP	
+7.27	saṁmoham	saṁ-moha	acc/sg/m	GAP	
+7.28	yeṣām	yat	gen/pl/m	GAP	
+7.28	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+7.28	dvaṁdva-moha-nirmuktāḥ	dvaṁdva-moha-nirmukta	nom/pl/m	GAP	
+7.29	jarā-maraṇa-mokṣāya	jarā-maraṇa-mokṣa	dat/sg/m	GAP	
+7.29	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+7.29	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+7.29	tat	tat	acc/sg/n	GAP	
+7.30	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+7.30	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+7.30	yukta-cetasaḥ	yukta-cetas	nom/pl/m	GAP	
+8.01	kim	kim	nom/sg/n	DIVERGE	None.None.None
+8.01	tat	tat	nom/sg/n	GAP	
+8.01	kim	kim	nom/sg/n	DIVERGE	None.None.None
+8.01	kim	kim	nom/sg/n	DIVERGE	None.None.None
+8.01	kim	kim	nom/sg/n	DIVERGE	None.None.None
+8.01	kim	kim	nom/sg/n	DIVERGE	None.None.None
+8.02	asmin	idam	loc/sg/m	GAP	
+8.03	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+8.03	bhūta-bhāvodbhava-karaḥ	bhūta-bhāva-udbhava-kara	nom/sg/m	GAP	
+8.03	karma-saṁjñitaḥ	karma-saṁjñita	nom/sg/m	GAP	
+8.05	smaran	smarant	nom/sg/m	GAP	
+8.06	yam yam	yat	acc/sg/m	GAP	
+8.06	smaran	smarant	nom/sg/m	GAP	
+8.06	tam tam	tat	acc/sg/m	GAP	
+8.06	tad-bhāva-bhāvitaḥ	tad-bhāva-bhāvita	nom/sg/m	GAP	
+8.07	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+8.07	arpita-mano-buddhiḥ	arpita-mano-buddhi	nom/sg/m	GAP	
+8.08	abhyāsa-yoga-yuktena	abhyāsa-yoga-yukta	instr/sg/n	GAP	
+8.08	anucintayan	anu-cintayant	nom/sg/m	GAP	
+8.09	aṇīyāṁsam	aṇīyas	acc/sg/m	GAP	
+8.10	bhruvoḥ	bhrū	gen/du/f	GAP	
+8.11	yat	yat	acc/sg/n	GAP	
+8.11	yat	yat	acc/sg/n	GAP	
+8.11	yat	yat	acc/sg/n	GAP	
+8.11	icchantaḥ	icchant	nom/pl/m	GAP	
+8.11	tat	tat	acc/sg/n	GAP	
+8.11	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+8.12	sarva-dvārāṇi	sarva-dvāra	acc/pl/n	GAP	
+8.13	vyāharan	vy-ā-harant	nom/sg/m	GAP	
+8.13	anusmaran	anusmarant	nom/sg/m	GAP	
+8.13	tyajan	tyajant	nom/sg/	GAP	
+8.15	duḥkhālayam	duḥkha-ālaya	acc/sg/n	GAP	
+8.15	mahātmānaḥ	mahā-ātman	nom/pl/m	GAP	
+8.16	ā-brahma-bhuvanāt	ā-brahma-bhuvana	abl/sg/n	GAP	
+8.17	sahasra-yuga-paryantam	sahasra-yuga-paryanta	acc/sg/m	GAP	
+8.17	ahaḥ	ahar	acc/sg/n	DIVERGE	nom.sg.m
+8.17	yat	yat	acc/sg/n	GAP	
+8.17	yuga-sahasrāntām	yuga-sahasra-antā	acc/sg/f	GAP	
+8.17	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+8.17	aho-rātra-vidaḥ	aho-rātra-vit	nom/pl/m	GAP	
+8.18	avyakta-saṁjñake	avyakta-saṁjñaka	loc/sg/m	GAP	
+8.19	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+8.20	naśyatsu	naśyant	loc/pl/m	GAP	
+8.21	tat	tat	nom/sg/n	GAP	
+8.21	mama	asmat	gen/sg/	GAP	
+8.22	idam	idam	acc/sg/n	DIVERGE	None.None.None
+8.27	jānan	jānant	nom/sg/m	GAP	
+8.27	kaś-cana	kim-cana	nom/sg/m	GAP	
+8.28	yat	yat	acc/sg/n	GAP	
+8.28	tat	tat	acc/sg/n	GAP	
+8.28	idam	idam	acc/sg/n	DIVERGE	None.None.None
+9.01	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+9.01	idam	idam	acc/sg/n	DIVERGE	None.None.None
+9.01	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+9.01	guhyatamam	guhyatama	acc/sg/n	GAP	
+9.01	vijñāna-sahitam	vijñāna-sahita	acc/sg/n	GAP	
+9.01	yat	yat	acc/sg/n	GAP	
+9.02	idam	idam	nom/sg/n	DIVERGE	None.None.None
+9.03	mṛtyu-saṁsāra-vartmani	mṛtyu-saṁsāra-vartman	loc/sg/n	GAP	
+9.04	idam	idam	nom/sg/n	DIVERGE	None.None.None
+9.04	jagat	jagat	gen/sg/n	DIVERGE	acc.sg.n;nom.sg.f;nom.sg.m;nom.sg.n;voc.sg.f;voc.sg.m
+9.04	mat-sthāni	mat-stha	nom/pl/n	GAP	
+9.05	mat-sthāni	mat-stha	nom/pl/n	GAP	
+9.05	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+9.05	bhūta-sthaḥ	bhūta-stha	acc/sg/m	DIVERGE	nom.sg.m
+9.05	mama	asmat	gen/sg/	GAP	
+9.06	ākāśa-sthitaḥ	ākāśa-sthita	nom/sg/m	GAP	
+9.06	mahān	mahant	nom/sg/m	DIVERGE	acc.pl.m
+9.06	mat-sthāni	mat-stha	nom/pl/n	GAP	
+9.07	māmikām	māmikā	acc/sg/f	GAP	
+9.08	imam	idam	acc/sg/m	GAP	
+9.11	ajānantah	a-jānant	nom/pl/m	GAP	
+9.11	mama	asmat	gen/sg/	GAP	
+9.13	mahātmānaḥ	mahā-ātman	nom/pl/m	GAP	
+9.14	kīrtayantaḥ	kīrtayant	nom/pl/m	GAP	
+9.14	yatantaḥ	yatant	nom/pl/m	GAP	
+9.14	namasyantaḥ	namasyant	nom/pl/m	GAP	
+9.15	yajantaḥ	yajant	nom/pl/	DIVERGE	nom.sg.m
+9.16	mantrah	mantra	nom/sg/m	GAP	
+9.19	asat	a-sant	nom/sg/n	GAP	
+9.20	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+9.20	divi	div	loc/sg/f	DIVERGE	voc.sg.f
+9.21	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+9.21	gatāgataṁ	gata-āgata	acc/sg/n	GAP	
+9.22	cintayantaḥ	cintayant	nom/pl/m	GAP	
+9.22	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+9.22	teṣām	tat	gen/pl/m	GAP	
+9.22	nityābhiyuktānām	nitya-abhi-yukta	gen/pl/m	GAP	
+9.23	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+9.23	anya-devatā-bhaktāḥ	anya-devatā-bhakta	nom/pl/m	GAP	
+9.23	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+9.24	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+9.25	mad-yājinaḥ	mad-yājin	nom/pl/m	GAP	
+9.26	patram	patra	acc/sg/n	GAP	
+9.26	me	asmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+9.26	tat	tat	acc/sg/n	GAP	
+9.26	bhakty-upahṛtam	bhakty-upahṛta	acc/sg/n	GAP	
+9.27	yat	yat	acc/sg/n	GAP	
+9.27	yat	yat	acc/sg/n	GAP	
+9.27	yat	yat	acc/sg/n	GAP	
+9.27	yat	yat	acc/sg/n	GAP	
+9.27	yat	yat	acc/sg/n	GAP	
+9.27	tat	tat	acc/sg/n	GAP	
+9.27	mad-arpaṇam	mad-arpaṇa	nom/sg/n	GAP	
+9.28	saṁnyāsa-yoga-yuktātmā	saṁnyāsa-yoga-yukta-ātman	nom/sg/m	GAP	
+9.29	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+9.29	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+9.29	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+9.29	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+9.30	ananya-bhāk	an-anya-bhaj	nom/sg/m	GAP	
+9.31	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+9.32	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+9.32	striyaḥ	strī	nom/pl/f	GAP	
+9.32	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+9.33	imam	idam	acc/sg/m	GAP	
+9.34	man-manāḥ	man-manas	nom/sg/m	DIVERGE	nom.pl.m;voc.pl.m
+9.34	mad-yājī	mad-yājin	nom/sg/m	GAP	
+9.34	mat-parāyaṇaḥ	mat-parāyaṇa	nom/pl/m	DIVERGE	nom.sg.m
+10.01	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+10.01	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+10.01	yat	yat	acc/sg/n	GAP	
+10.01	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+10.01	prīyamāṇāya	prīyamāṇa	dat/sg/m	GAP	
+10.02	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+10.03	sarva-pāpaiḥ	sarva-pāpa	instr/pl/n	GAP	
+10.06	sapta	sapta	nom/pl/m	DIVERGE	voc.sg.m;voc.sg.n
+10.06	catvāraḥ	catur	nom/pl/m	GAP	
+10.06	yeṣām	yat	gen/pl/m	GAP	
+10.06	imāḥ	idam	nom/pl/f	GAP	
+10.07	mama	asmat	gen/sg/	GAP	
+10.07	avikampena	a-vikampa	instr/sg/m	GAP	
+10.09	mad-gata-prāṇāḥ	mad-gata-prāṇa	nom/pl/m	GAP	
+10.09	bodhayantaḥ	bodhayant	nom/pl/	GAP	
+10.09	kathayantaḥ	kathayant	nom/pl/	GAP	
+10.10	teṣām	tat	gen/pl/m	GAP	
+10.10	bhajatām	bhajant	gen/pl/	DIVERGE	None.du.None;None.sg.None
+10.10	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+10.11	teṣām	tat	gen/pl/m	GAP	
+10.11	ajñāna-jam	ajñāna-ja	acc/sg/n	GAP	
+10.11	ātma-bhāva-sthaḥ	ātma-bhāva-stha	nom/sg/m	GAP	
+10.13	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+10.14	etat	etat	nom/sg/n	GAP	
+10.14	yat	yat	acc/sg/n	GAP	
+10.14	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+10.16	ātma-vibhūtayaḥ	ātma-vibhūti	nom/pl/f	GAP	
+10.16	imān	idam	acc/pl/m	GAP	
+10.17	paricintayan	pari-cintayant	nom/sg/m	GAP	
+10.17	keṣu keṣu	kim	loc/pl/m	GAP	
+10.18	śṛṇvataḥ	śṛṇvant	gen/sg/m	GAP	
+10.18	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+10.19	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+10.19	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+10.19	ātma-vibhūtayaḥ	ātma-vibhūti	nom/pl/f	GAP	
+10.19	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+10.20	sarva-bhūtāśaya-sthitaḥ	sarva-bhūta-āśaya-sthitaḥ	nom/sg/m	GAP	
+10.23	yakṣa-rakṣasām	yakṣa-rakṣas	gen/pl/m	GAP	
+10.24	bṛhaspatim	bṛhas-pati	nom/sg/m	DIVERGE	acc.sg.m
+10.24	senānīnām	senānin	gen/pl/m	GAP	
+10.26	sarva-vṛkṣāṇām	sarva-vṛkṣa	gen/pl/n	GAP	
+10.29	aryamā	arya-man	nom/sg/m	GAP	
+10.29	saṁyamatām	saṁyamant	gen/pl/m	GAP	
+10.30	kalayatām	kalayant	gen/pl/m	DIVERGE	None.du.None;None.sg.None
+10.31	pavatām	pavant	gen/pl/m	DIVERGE	None.du.None;None.sg.None
+10.32	pravadatām	pravadant	gen/pl/m	GAP	
+10.33	ahaṁ	asmat	nom/sg/	GAP	
+10.33	viśvato-mukhaḥ	viśvato-mukha	acc/sg/m	DIVERGE	nom.sg.m
+10.34	bhaviṣyatām	bhaviṣyant	gen/pl/n	GAP	
+10.34	śrīḥ	śrī	nom/sg/f	DIVERGE	acc.pl.f
+10.36	chalayatām	chalayant	gen/pl/m	GAP	
+10.38	damayatām	damayant	gen/pl/m	GAP	
+10.38	jigīṣatām	jigīṣant	gen/pl/m	GAP	
+10.39	yat	yat	nom/sg/n	GAP	
+10.39	tat	tat	nom/sg/n	GAP	
+10.39	tat	tat	nom/sg/n	GAP	
+10.39	yat	yat	nom/sg/n	GAP	
+10.40	mama	asmat	gen/sg/	GAP	
+10.41	yad yad	yat	nom/sg/n	GAP	
+10.41	tat tat	tat	acc/sg/n	GAP	
+10.41	mama	asmat	gen/sg/	GAP	
+10.41	tejo-‘ṁśa-saṁbhavam	tejaḥ-aṁśa-saṁbhava	acc/sg/n	GAP	
+10.42	tava	yuṣmat	gen/sg/	GAP	
+10.42	idam	idam	acc/sg/n	DIVERGE	None.None.None
+11.01	mad-anugrahāya	mad-anugraha	dat/sg/m	GAP	
+11.01	adhyātma-saṁjñitam	adhy-ātma-saṁjñita	nom/sg/n	GAP	
+11.01	yat	yat	nom/sg/n	GAP	
+11.01	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+11.01	mama	asmat	gen/sg/	GAP	
+11.02	bhavāpyayau	bhava-apyaya	nom/du/m	GAP	
+11.02	kamala-patrākṣa	kamala-patra-akṣa	voc/sg/m	GAP	
+11.03	etat	etat	nom/sg/n	GAP	
+11.03	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.04	tat	tat	nom/sg/n	GAP	
+11.04	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.05	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+11.05	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.07	mama	asmat	gen/sg/	GAP	
+11.07	yat	yat	acc/sg/n	GAP	
+11.07	anyat	anya	acc/sg/n	GAP	
+11.08	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.08	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.10	aneka-vaktra-nayanam	aneka-vaktra-nayana	acc/sg/n	GAP	
+11.10	anekādbhuta-darśanam	aneka-adbhuta-darśana	acc/sg/n	GAP	
+11.10	aneka-divyābharaṇam	aneka-divya-ābharaṇa	acc/sg/n	GAP	
+11.10	divyānekodyatāyudham	divya-aneka-udyata-āyudha	acc/sg/n	GAP	
+11.11	divya-mālyāmbara-dharam	divya-mālya-ambara-dhara	acc/sg/n	GAP	
+11.11	divya-gandhānulepanam	divya-gandha-anulepana	acc/sg/n	GAP	
+11.12	divi	div	loc/sg/f	DIVERGE	voc.sg.f
+11.15	tava	yuṣmat	gen/sg/	GAP	
+11.15	bhūta-viśeṣa-saṁghān	bhūta-viśeṣa-saṁgha	acc/pl/n	GAP	
+11.16	aneka-bāhūdara-vaktra-netram	an-eka-bāhu-udara-vaktra-netra	acc/sg/m	GAP	
+11.16	tvā	yuṣmat	acc/sg/	DIVERGE	nom.sg.f
+11.16	tava	yuṣmat	gen/sg/	GAP	
+11.17	dīptānalārka-dyutim	dīpta-anala-arka-dyuti	acc/sg/m	GAP	
+11.18	śāśvata-dharma-goptā	śāśvata-dharma-goptṛ	nom/sg/m	GAP	
+11.18	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.19	ananta-bāhum	ananta-bāhu	acc/sg/m	GAP	
+11.19	śaśi-sūrya-netram	śaśi-sūrya-netra	acc/sg/m	GAP	
+11.19	dīpta-hutāśa-vaktram	dīpta-hutāśa-vaktra	acc/sg/m	GAP	
+11.19	idam	idam	acc/sg/n	DIVERGE	None.None.None
+11.19	tapantam	tapant	acc/sg/m	GAP	
+11.20	idam	idam	nom/sg/n	DIVERGE	None.None.None
+11.20	idam	idam	acc/sg/n	DIVERGE	None.None.None
+11.20	tava	yuṣmat	gen/sg/	GAP	
+11.21	amī	adas	nom/pl/m	DIVERGE	nom.sg.m
+11.21	tvā	yuṣmat	acc/sg/	DIVERGE	nom.sg.f
+11.21	sura-saṁghāḥ	sura-saṁgha	acc/pl/m	DIVERGE	nom.pl.m;voc.pl.m
+11.21	ke-cit	kim-cit	nom/pl/m	GAP	
+11.21	maha-rṣi-siddha-saṁghāḥ	maha-rṣi-siddha-saṁgha	acc/pl/m	GAP	
+11.22	rudrādityāḥ	rudra-āditya	nom/pl/m	GAP	
+11.22	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+11.22	uṣma-pāḥ	uṣma-pa	nom/pl/m	GAP	
+11.22	gandharva-yakṣāsura-siddha-saṁghāḥ	gandharva-yakṣa-asura-siddha-saṁgha	nom/pl/m	GAP	
+11.22	tvā	yuṣmat	acc/sg/	DIVERGE	nom.sg.f
+11.23	mahat	mahant	acc/sg/n	DIVERGE	nom.sg.f;voc.sg.f
+11.23	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.23	bahu-vaktra-netram	bahu-vaktra-netra	acc/sg/n	GAP	
+11.23	bahu-bāhūru-pādam	bahu-bāhu-ūru-pāda	acc/sg/n	GAP	
+11.23	bahūdaram	bahu-udara	acc/sg/n	GAP	
+11.23	bahu-daṁṣṭrā-karālam	bahu-daṁṣṭrā-karāla	acc/sg/n	GAP	
+11.24	nabhaḥ-spṛśam	nabhaḥ-spṛśa	acc/sg/n	GAP	
+11.24	dīpta-viśāla-netram	dīpta-viśāla-netra	acc/sg/n	GAP	
+11.24	pravyathitāntarātmā	pravyathita-antar-ātman	nom/sg/m	GAP	
+11.25	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.25	kālānala-saṁnibhāni	kāla-anala-saṁnibha	acc/pl/n	GAP	
+11.26	amī	adas	nom/pl/m	DIVERGE	nom.sg.m
+11.26	avani-pāla-saṁghaiḥ	avani-pāla-saṁgha	instr/pl/m	GAP	
+11.26	sūta-putraḥ	sūta-putra	nom/pl/m	DIVERGE	nom.sg.m
+11.26	asau	adas	nom/sg/m	DIVERGE	loc.sg.f;loc.sg.m
+11.26	asmatīyaiḥ	asmatīya	instr/pl/m	GAP	
+11.27	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.27	tvaramāṇāḥ	tvaramāna	nom/pl/m	GAP	
+11.27	ke-cit	kim-cit	nom/pl/m	GAP	
+11.27	daśanāntareṣu	daśana-antara	loc/pl/n	GAP	
+11.28	tava	yuṣmat	gen/sg/	GAP	
+11.28	amī	adas	nom/pl/m	DIVERGE	nom.sg.m
+11.29	tava	yuṣmat	gen/sg/	GAP	
+11.30	grasamānaḥ	grasamāna	nom/sg/m	GAP	
+11.30	jvaladbhiḥ	jvalant	instr/pl/n	GAP	
+11.30	tava	yuṣmat	gen/sg/	GAP	
+11.31	me	asmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.31	ugra-rūpaḥ	ugra-rūpa	nom/sg/m	GAP	
+11.31	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.31	tava	yuṣmat	gen/sg/	GAP	
+11.32	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+11.32	loka-kṣaya-kṛt	loka-kṣaya-kṛt	nom/sg/m	GAP	
+11.32	tvā	yuṣmat	acc/sg/	DIVERGE	nom.sg.f
+11.32	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+11.33	ete	etat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.35	etat	etat	nom/sg/n	GAP	
+11.35	vepamānaḥ	vepamāna	nom/sg/m	GAP	
+11.35	namas	namaḥ	acc/sg/n	DIVERGE	None.None.None
+11.35	kṛṣṇaṁ	kṛṣṇa	acc/sg/m	GAP	
+11.36	tava	yuṣmat	gen/sg/	GAP	
+11.37	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.37	ādi-kartre	ādi-kartṛ	abl/sg/n	DIVERGE	dat.sg.m
+11.37	asat	a-sant	nom/sg/n	GAP	
+11.37	yat	yat	nom/sg/n	GAP	
+11.39	namaḥ namaḥ	namaḥ	acc/sg/n	GAP	
+11.39	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.39	namaḥ namaḥ	namaḥ	acc/sg/n	GAP	
+11.39	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.40	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.40	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.41	sakhā	sakhi	nom/sg/m	GAP	
+11.41	yat	yat	nom/sg/n	GAP	
+11.41	sakhā	sakhi	nom/sg/m	GAP	
+11.41	ajānatā	a-jānant	instr/sg/m	GAP	
+11.41	tava	yuṣmat	gen/sg/	GAP	
+11.41	idam	idam	acc/sg/n	DIVERGE	None.None.None
+11.42	yat	yat	nom/sg/n	GAP	
+11.42	vihāra-śayyāsana-bhojaneṣu	vihāra-śayya-āsana-bhojana	loc/pl/n	GAP	
+11.42	tat	tat	nom/sg/n	GAP	
+11.43	garīyān	garīyas	nom/sg/m	GAP	
+11.43	tvat-samaḥ	tvat-sama	nom/sg/m	GAP	
+11.43	apratima-prabhāva	apratima-prabhāva	nom/sg/m	GAP	
+11.44	sakhā	sakhi	nom/sg/m	GAP	
+11.44	sakhyuḥ	sakhi	gen/sg/m	GAP	
+11.44	priyāya	priya	gen/sg/f	DIVERGE	dat.sg.m;dat.sg.n
+11.45	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.45	tat	tat	acc/sg/n	GAP	
+11.45	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.47	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+11.47	tava	yuṣmat	gen/sg/	GAP	
+11.47	idam	idam	nom/sg/n	DIVERGE	None.None.None
+11.47	yat	yat	nom/sg/n	GAP	
+11.47	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.47	tvat	yuṣmat	abl/sg/	DIVERGE	acc.sg.n;nom.sg.f;nom.sg.m;nom.sg.n;voc.sg.f;voc.sg.m
+11.48	veda-yajñādhyayanaih	veda-yajña-adhyayana	instr/pl/n	GAP	
+11.48	tvat-anyena	tvat-anya	instr/sg/m	GAP	
+11.48	kuru-pravīra	kuru-pravīra	voc/sg/m	GAP	
+11.49	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.49	mama	asmat	gen/sg/	GAP	
+11.49	idam	idam	acc/sg/n	DIVERGE	None.None.None
+11.49	vyapeta-bhīḥ	vyapeta-bhī	nom/sg/m	GAP	
+11.49	tat	tat	acc/sg/n	GAP	
+11.49	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+11.49	idam	idam	acc/sg/n	DIVERGE	None.None.None
+11.50	enam	etat	acc/sg/m	GAP	
+11.50	mahātmā	mahā-ātman	nom/sg/m	GAP	
+11.51	idam	idam	acc/sg/n	DIVERGE	None.None.None
+11.51	tava	yuṣmat	gen/sg/	GAP	
+11.51	gataḥ	gata	nom/pl/m	DIVERGE	nom.sg.m
+11.52	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+11.52	idam	idam	acc/sg/n	DIVERGE	None.None.None
+11.52	yat	yat	acc/sg/n	GAP	
+11.52	mama	asmat	gen/sg/	GAP	
+11.53	vedaiḥ	veda	instr/sg/m	DIVERGE	instr.pl.m
+11.55	mat-karma-kṛt	mat-karma-kṛt	nom/sg/m	GAP	
+12.01	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+12.01	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+12.01	teṣām	tat	gen/pl/m	GAP	
+12.01	ke	kim	nom/pl/m	DIVERGE	acc.du.n;loc.sg.m;loc.sg.n;nom.du.n;voc.du.n
+12.01	yoga-vittamāḥ	yoga-vittama	nom/pl/m	GAP	
+12.02	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+12.02	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+12.02	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+12.02	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+12.02	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+12.02	yuktatamā	yukta-tama	nom/pl/m	DIVERGE	nom.sg.f
+12.03	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+12.04	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+12.05	adhikataraḥ	adhikatara	nom/sg/m	GAP	
+12.05	teṣām	tat	gen/pl/m	GAP	
+12.05	avyaktāsakta-cetasām	avyakta-āsakta-cetas	gen/pl/m	GAP	
+12.06	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+12.06	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+12.06	dhyāyantaḥ	dhyāyant	nom/pl/m	GAP	
+12.07	teṣām	tat	gen/pl/m	GAP	
+12.07	mṛtyu-saṁsāra-sāgarāt	mṛtyu-saṁsāra-vartman	abl/sg/n	GAP	
+12.07	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+12.07	āveśita-cetasām	āveśita-cetas	gen/pl/m	GAP	
+12.08	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+12.08	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+12.08	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+12.09	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+12.10	mat-karma-paramaḥ	mat-karma-parama	nom/sg/m	GAP	
+12.10	kurvan	kurvant	nom/sg/m	GAP	
+12.11	etat	etat	acc/sg/n	GAP	
+12.11	mad-yogam	mad-yoga	acc/sg/m	GAP	
+12.11	sarva-karma-phala-tyāgam	sarva-karma-phala-tyāga	acc/sg/m	GAP	
+12.11	yatātmavān	yata-ātmavant	nom/sg/m	GAP	
+12.12	karma-phala-tyāgaḥ	karma-phala-tyāga	nom/sg/m	GAP	
+12.14	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+12.14	arpita-mano-buddhiḥ	arpita-mano-buddhi	nom/sg/m	GAP	
+12.14	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+12.15	yasmāt	yat	abl/sg/m	DIVERGE	None.None.None
+12.15	harṣāmarṣa-bhayodvegaiḥ	harṣa-amarṣa-bhaya-udvega	instr/pl/m	GAP	
+12.15	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+12.16	gata-vyathaḥ	gata-vyatha	acc/pl/m	DIVERGE	nom.sg.m
+12.16	sarvārambha-parityāgī	sarva-ārambha-parityāgin	nom/sg/m	GAP	
+12.16	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+12.17	śubhāśubha-parityāgī	śubha-aśubha-parityāgin	nom/sg/m	GAP	
+12.17	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+12.18	mānāvamānayoḥ	māna-avamāna	loc/du/m	GAP	
+12.18	śītoṣṇa-sukha-duḥkheṣu	śīta-uṣṇa-sukha-duḥkha	loc/pl/n	GAP	
+12.18	saṅga-vivarjitaḥ	saṅga-vivarjita	nom/sg/m	GAP	
+12.19	kena-cit	kim-cit	instr/sg/n	GAP	
+12.19	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+12.20	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+12.20	idam	idam	acc/sg/n	DIVERGE	None.None.None
+12.20	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+12.20	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+13.00	etat	etat	acc/sg/n	GAP	
+13.01	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+13.01	idam	idam	nom/sg/n	DIVERGE	None.None.None
+13.01	etat	etat	acc/sg/n	GAP	
+13.02	sarva-kṣetreṣu	sarva-kṣetra	loc/pl/n	GAP	
+13.02	kṣetra-kṣetrajñayoḥ	kṣetra-kṣetra-jña	gen/du/n	GAP	
+13.02	yat	yat	nom/sg/n	GAP	
+13.02	tat	tat	nom/sg/n	GAP	
+13.02	mama	asmat	gen/sg/	GAP	
+13.03	tat	tat	nom/sg/n	GAP	
+13.03	yat	yat	nom/sg/n	GAP	
+13.03	yad-vikāri	yad-vikārin	nom/sg/n	GAP	
+13.03	yat	yat	nom/sg/n	GAP	
+13.03	yat-prabhāvaḥ	yat-prabhāva	nom/sg/m	GAP	
+13.03	tat	tat	nom/sg/n	GAP	
+13.03	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+13.05	daśa	daśa	nom/pl/n	GAP	
+13.05	pañca	pañca	nom/pl/n	DIVERGE	voc.sg.m;voc.sg.n
+13.06	etat	etat	nom/sg/n	GAP	
+13.07	ātma-vinigrahaḥ	ātma-vinigraha	nom/sg/m	GAP	
+13.08	janma-mṛtyu-jarā-vyādhi-duḥkha-doṣānudarśanam	janma-mṛtyu-jarā-vyādhi-duḥkha-doṣa-anudarśana	nom/sg/n	GAP	
+13.09	putra-dāra-gṛhādiṣu	putra-dāra-gṛha-ādi	loc/pl/n	GAP	
+13.09	iṣṭāniṣṭopapattiṣu	iṣṭa-an-iṣṭa-upapatti	loc/pl/f	GAP	
+13.10	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+13.10	vivikta-deśa-sevitvam	vivikta-deśa-sevitva	nom/sg/n	GAP	
+13.11	adhy-ātma-jñāna-nityatvam	adhy-ātma-jñāna-nityatva	nom/sg/n	GAP	
+13.11	tattva-jñānārtha-darśanam	tattva-jñāna-artha-darśana	nom/sg/n	GAP	
+13.11	etat	etat	nom/sg/n	GAP	
+13.11	yat	yat	nom/sg/n	GAP	
+13.12	yat	yat	nom/sg/n	GAP	
+13.12	tat	tat	acc/sg/n	GAP	
+13.12	yat	yat	acc/sg/n	GAP	
+13.12	anādi / anādimat	an-ādi	acc/sg/n	GAP	
+13.12	mat-param / param	mat-para	nom/sg/n	GAP	
+13.12	tat	tat	nom/sg/n	GAP	
+13.12	asat	a-sant	nom/sg/n	GAP	
+13.13	tat	tat	nom/sg/n	GAP	
+13.13	akṣi-śiro-mukham	akṣi-śiro-mukha	nom/sg/n	GAP	
+13.14	sarvendriya-guṇābhāsam	sarva-indriya-guṇa-ābhāsa	nom/sg/n	GAP	
+13.14	sarvendriya-vivarjitam	sarva-indriya-vivarjita	nom/sg/n	GAP	
+13.15	tat	tat	nom/sg/n	GAP	
+13.15	tat	tat	nom/sg/n	GAP	
+13.16	bhūta-bhartṛ	bhūta-bhartṛ	nom/sg/n	GAP	
+13.16	tat	tat	nom/sg/n	GAP	
+13.17	tat	tat	nom/sg/n	GAP	
+13.18	etat	etat	acc/sg/n	GAP	
+13.19	prakṛti-saṁbhavān	prakṛti-saṁbhava	acc/pl/m	GAP	
+13.20	kārya-kāraṇa-kartṛtve	kārya-kāraṇa-kartṛtva	loc/sg/n	GAP	
+13.20	sukha-duḥkhānāṁ	sukha-duḥkha	gen/pl/m	GAP	
+13.21	sad-asad-yoni-janmasu	sad-asad-yoni-janman	loc/pl/m	GAP	
+13.22	asmin	idam	loc/sg/m	GAP	
+13.24	ke-cit	kim-cit	nom/pl/m	GAP	
+13.25	ajānantaḥ	a-jānant	nom/pl/m	GAP	
+13.25	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+13.25	śruti-parāyaṇāḥ	śruti-parāyaṇa	nom/pl/m	GAP	
+13.26	kṣetra-kṣetra-jña-saṁyogāt	kṣetra-kṣetra-jña-saṁyoga	abl/sg/n	GAP	
+13.26	tat	tat	acc/sg/n	GAP	
+13.27	tiṣṭhantam	tiṣṭhant	acc/sg/m	GAP	
+13.27	vinaśyatsu	vi-naśyant	loc/pl/m	GAP	
+13.27	avinaśyantam	a-vi-naśyant	acc/sg/m	GAP	
+13.28	paśyan	paśyant	nom/sg/m	GAP	
+13.30	bhūta-pṛthag-bhāvam	bhūta-pṛthag-bhāva	acc/sg/m	GAP	
+13.31	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+13.33	imam	idam	acc/sg/m	GAP	
+13.34	kṣetra-kṣetra-jñayoḥ	kṣetra-kṣetra-jña	gen/du/n	GAP	
+13.34	bhūta-prakṛti-mokṣam	bhūta-prakṛti-mokṣa	acc/sg/m	GAP	
+13.34	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+13.34	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+14.01	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+14.01	yat	yat	acc/sg/n	GAP	
+14.02	idam	idam	acc/sg/n	DIVERGE	None.None.None
+14.02	mama	asmat	gen/sg/	GAP	
+14.03	mama	asmat	gen/sg/	GAP	
+14.03	tasmin	tat	loc/sg/n	GAP	
+14.03	garbham	garbha	nom/sg/n	DIVERGE	acc.sg.m
+14.03	saṁbhavaḥ	saṁbhava	nom/sg/m	GAP	
+14.04	tāsām	tat	gen/pl/f	GAP	
+14.05	rajas	rajas	nom/sg/n	GAP	
+14.05	tamas	tamas	nom/sg/n	GAP	
+14.05	prakṛti-saṁbhavāḥ	prakṛti-saṁbhava	nom/pl/m	GAP	
+14.06	jñāna-saṅgena	jñāna-saṅga	instr/sg/m	GAP	
+14.07	tṛṣṇā-saṅga-samudbhavam	tṛṣṇā-saṅga-samudbhava	acc/sg/n	GAP	
+14.07	tat	tat	nom/sg/n	GAP	
+14.08	ajñāna-jam	ajñāna-ja	acc/sg/n	GAP	
+14.08	sarva-dehinām	sarva-dehin	gen/pl/m	GAP	
+14.08	pramādālasya-nidrābhiḥ	pramāda-ālasya-nidrā	instr/pl/f	GAP	
+14.08	tat	tat	nom/sg/n	GAP	
+14.11	sarva-dvāreṣu	sarva-dvāra	acc/pl/n	GAP	
+14.11	asmin	idam	loc/sg/m	GAP	
+14.15	mūḍha-yoniṣu	mūḍha-yoni	loc/pl/f	GAP	
+14.17	pramāda-mohau	pramāda-moha	nom/du/m	GAP	
+14.18	jaghanya-guṇa-vṛtta-sthāḥ	jaghanya-guṇa-vṛtta-stha	nom/pl/m	GAP	
+14.20	trīn	tri	acc/pl/m	GAP	
+14.20	deha-samudbhavān	deha-samudbhava	acc/pl/m	GAP	
+14.20	janma-mṛtyu-jarā-duḥkhaiḥ	janma-mṛtyu-jarā-duḥkha	instr/pl/n	GAP	
+14.21	trīn	tri	acc/pl/m	GAP	
+14.21	trīn	tri	acc/pl/m	GAP	
+14.22	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+14.22	saṁpravṛttāni	sam-pra-vṛtta	acc/pl/n	GAP	
+14.24	tulya-priyāpriyaḥ	tulya-priya-apriya	nom/sg/m	GAP	
+14.24	tulya-nindātma-saṁstutiḥ	tulya-nindā-ātma-saṁstuti	nom/sg/m	GAP	
+14.25	mānāvamānayoḥ	māna-avamāna	loc/du/m	GAP	
+14.25	mitrāri-pakṣayoḥ	mitra-ari-pakṣa	loc/du/m	GAP	
+14.25	sarvārambha-parityāgī	sarva-ārambha-parityāgin	nom/sg/m	GAP	
+14.27	aikāntikasya / ekāntikasya	ekāntika	gen/sg/n	GAP	
+15.01	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+15.01	adhaḥ-śākham	adhaḥ-śākha	acc/sg/m	GAP	
+15.02	guṇa-pravṛddhāḥ	guṇa-pravṛddha	nom/pl/f	GAP	
+15.02	viṣaya-pravālāḥ	viṣaya-pravāla	nom/pl/f	GAP	
+15.02	anusaṁtatāni	anu-saṁ-tata	nom/pl/n	GAP	
+15.02	karmānubandhīni	karma-anubandhi	nom/pl/n	GAP	
+15.03	saṁpratiṣṭhā	saṁpratiṣṭhā	nom/sg/f	GAP	
+15.03	enam	etat	acc/sg/m	GAP	
+15.03	suvirūḍha-mūlam	suvirūḍha-mūla	acc/sg/m	GAP	
+15.03	asaṅga-śastreṇa	asaṅga-śastra	instr/sg/n	GAP	
+15.04	tat	tat	nom/sg/n	GAP	
+15.04	yasmin	yat	loc/sg/m	GAP	
+15.05	nirmāṇa-mohāḥ	nir-māṇa-moha	nom/pl/m	GAP	
+15.05	jita-saṅga-doṣāḥ	jita-saṅga-doṣa	nom/pl/m	GAP	
+15.05	adhy-ātma-nityāḥ	adhi-ātma-nitya	nom/pl/m	GAP	
+15.05	sukha-duḥkha-saṁjñaiḥ	sukha-duḥkha-saṁjña	nom/pl/m	GAP	
+15.05	tat	tat	acc/sg/n	GAP	
+15.06	tat	tat	acc/sg/n	GAP	
+15.06	yat	yat	acc/sg/n	GAP	
+15.06	tat	tat	nom/sg/n	GAP	
+15.06	mama	asmat	gen/sg/	GAP	
+15.07	mama	asmat	gen/sg/	GAP	
+15.08	yat	yat	acc/sg/n	GAP	
+15.08	yat	yat	acc/sg/n	GAP	
+15.09	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+15.10	utkrāmantam	utkrāmant	acc/sg/m	GAP	
+15.10	bhuñjānam	bhuñjāna	acc/sg/m	GAP	
+15.11	yatantaḥ	yatant	nom/pl/m	GAP	
+15.11	enam	etat	acc/sg/m	GAP	
+15.11	yatantaḥ	yatant	nom/pl/m	GAP	
+15.11	akṛtātmānaḥ	a-kṛta-ātman	nom/pl/m	GAP	
+15.11	enam	etat	acc/sg/m	GAP	
+15.12	yat	yat	nom/sg/n	GAP	
+15.12	yat	yat	nom/sg/n	GAP	
+15.12	yat	yat	nom/sg/n	GAP	
+15.12	tat	tat	acc/sg/n	GAP	
+15.14	prāṇāpāna-samāyuktaḥ	prāṇa-apāna-samāyukta	nom/sg/f	GAP	
+15.16	dvau	dvi	nom/du/m	GAP	
+15.16	imau	idam	nom/du/m	GAP	
+15.19	sarva-bhāvena	sarva-bhāva	gen/pl/m	DIVERGE	instr.sg.m
+15.20	guhyatamam	guhyatama	nom/sg/n	GAP	
+15.20	idam	idam	acc/sg/n	DIVERGE	None.None.None
+15.20	etat	etat	nom/sg/n	GAP	
+16.01	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+16.01	jñāna-yoga-vyavasthitiḥ	jñāna-yoga-vyavasthiti	nom/sg/f	GAP	
+16.02	hrīḥ	hrī	nom/sg/f	DIVERGE	acc.pl.f
+16.02	acāpalam	a-cāpala	nom/sg/n	GAP	
+16.03	saṁpadam	saṁpad	acc/sg/f	GAP	
+16.04	saṁpadam	saṁpad	acc/sg/f	GAP	
+16.05	saṁpat	saṁpad	nom/sg/f	GAP	
+16.05	saṁpadam	saṁpad	acc/sg/f	GAP	
+16.06	dvau	dvi	nom/du/m	GAP	
+16.06	asmin	idam	loc/sg/m	GAP	
+16.06	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+16.08	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+16.08	aparaspara-saṁbhūtam	a-paras-para-saṁbhūta	nom/sg/n	GAP	
+16.08	kim	kim	nom/sg/n	DIVERGE	None.None.None
+16.08	anyat	anya	nom/sg/n	GAP	
+16.09	ahitāḥ	a-hita	nom/sg/m	DIVERGE	acc.pl.f;nom.pl.f;nom.pl.m;voc.pl.f;voc.pl.m
+16.10	dambha-māna-madānvitāḥ	dambha-māna-mada-anvita	nom/pl/m	GAP	
+16.11	pralayāntām	pralaya-antā	acc/sg/f	GAP	
+16.11	kāmopabhoga-paramāḥ	kāma-upabhoga-parama	nom/pl/m	GAP	
+16.12	āśā-pāśa-śataiḥ	āśā-pāśa-śata	instr/pl/n	GAP	
+16.12	kāma-krodha-parāyaṇāḥ	kāma-krodha-parāyaṇa	nom/pl/m	GAP	
+16.13	idam	idam	nom/sg/n	DIVERGE	None.None.None
+16.13	idam	idam	acc/sg/n	DIVERGE	None.None.None
+16.13	idam	idam	nom/sg/n	DIVERGE	None.None.None
+16.13	idam	idam	nom/sg/n	DIVERGE	None.None.None
+16.13	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+16.14	asau	adas	nom/sg/m	DIVERGE	loc.sg.f;loc.sg.m
+16.15	ajñāna-vimohitāḥ	ajñāna-vimohita	nom/pl/m	GAP	
+16.16	aneka-citta-vibhrāntāḥ	aneka-citta-vibhrānta	nom/pl/m	GAP	
+16.16	moha-jāla-samāvṛtāḥ	moha-jāla-samāvṛta	nom/pl/m	GAP	
+16.17	ātma-saṁbhāvitāḥ	ātma-saṁbhāvita	nom/pl/m	GAP	
+16.17	dhana-māna-madānvitāḥ	dhana-māna-mada-anvita	nom/pl/m	GAP	
+16.17	te	tat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+16.18	ātma-para-deheṣu	ātma-para-deha	loc/pl/m	GAP	
+16.18	pradviṣantaḥ	pra-dviṣant	nom/pl/m	GAP	
+16.19	dviṣataḥ	dviṣant	acc/pl/m	GAP	
+16.19	narādhamān	nara-adhama	nom/pl/m	DIVERGE	acc.pl.m
+16.19	yoniṣu	yoni	nom/sg/f	DIVERGE	loc.pl.f;loc.pl.m;loc.pl.n
+16.20	janmani janmani	janman	loc/sg/n	GAP	
+16.21	idam	idam	nom/sg/n	DIVERGE	None.None.None
+16.21	etat	etat	acc/sg/n	GAP	
+16.22	tamo-dvāraiḥ	tamas-dvāra	instr/pl/n	GAP	
+16.22	tribhiḥ	tri	instr/pl/m	GAP	
+16.24	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+16.24	kāryākārya-vyavasthitau	kārya-akārya-vyavasthiti	loc/sg/f	GAP	
+17.01	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+17.01	teṣām	tat	gen/pl/m	GAP	
+17.01	kā	kim	nom/sg/f	GAP	
+17.02	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+17.03	ayam	idam	nom/sg/m	DIVERGE	acc.sg.m
+17.04	yakṣa-rakṣāṁsi	yakṣa-rakṣas	acc/pl/n	GAP	
+17.05	ye	yat	nom/pl/m	DIVERGE	acc.du.f;loc.sg.m;nom.du.f;voc.du.f;voc.sg.f
+17.05	dambhāhaṁkāra-saṁyuktāḥ	dambha-ahaṁ-kāra-saṁyukta	nom/sg/m	GAP	
+17.05	kāma-rāga-balānvitāḥ	kāma-rāga-bala-anvita	nom/sg/m	GAP	
+17.06	karśayantaḥ	karśayant	nom/pl/m	GAP	
+17.06	antaḥ-śarīra-stham	antaḥ-śarīra-stha	acc/sg/m	GAP	
+17.06	āsura-niścayān	āsura-niścaya	acc/pl/m	GAP	
+17.07	teṣām	tat	gen/pl/m	GAP	
+17.07	imam	idam	acc/sg/m	GAP	
+17.08	āyuḥ-sattva-balārogya-sukha-prīti-vivardhanāḥ	āyuḥ-sattva-balārogya-sukha-prīti-vivardhana	nom/pl/m	GAP	
+17.08	sāttvika-priyāḥ	sāttvika-priya	nom/pl/m	GAP	
+17.09	kaṭv-amla-lavaṇāty-uṣṇa-tīkṣṇa-rūkṣa-vidāhinaḥ	kaṭv-amla-lavaṇa-aty-uṣṇa-tīkṣṇa-rūkṣa-vidāhin	nom/pl/m	GAP	
+17.09	duḥkha-śokāmaya-pradāḥ	duḥkha-śoka-āmaya-prada	nom/pl/m	GAP	
+17.10	yat	yat	nom/sg/n	GAP	
+17.10	tāmasa-priyam	tāmasa-priya	nom/pl/m	GAP	
+17.12	yat	yat	nom/sg/n	GAP	
+17.14	deva-dvija-guru-prājña-pūjanam	deva-dvija-guru-prājña-pūjana	nom/sg/n	GAP	
+17.15	yat	yat	nom/sg/n	GAP	
+17.15	svādhyāyābhyasanam	svādhyāya-abhyasana	nom/sg/n	GAP	
+17.15	vāṅ-mayam	vāc-maya	nom/pl/m	DIVERGE	acc.sg.m;acc.sg.n;nom.sg.n
+17.16	ātma-vinigrahaḥ	ātma-vinigraha	nom/sg/m	GAP	
+17.16	etat	etat	nom/sg/n	GAP	
+17.17	tat	tat	nom/sg/n	GAP	
+17.18	yat	yat	nom/sg/n	GAP	
+17.18	tat	tat	nom/sg/n	GAP	
+17.19	yat	yat	nom/sg/n	GAP	
+17.19	tat	tat	nom/sg/n	GAP	
+17.20	yat	yat	nom/sg/n	GAP	
+17.20	tat	tat	nom/sg/n	GAP	
+17.21	yat	yat	nom/sg/n	GAP	
+17.21	tat	tat	nom/sg/n	GAP	
+17.22	yat	yat	nom/sg/n	GAP	
+17.22	tat	tat	nom/sg/n	GAP	
+17.24	yajña-dāna-tapaḥ-kriyāḥ	yajña-dāna-tapaḥ-kriya	nom/pl/m	GAP	
+17.25	tat	tat	nom/sg/n	GAP	
+17.25	yajña-tapaḥ-kriyāḥ	yajña-tapaḥ-kriya	nom/pl/m	GAP	
+17.25	dāna-kriyāḥ	dāna-kriya	nom/pl/m	GAP	
+17.26	etat	etat	nom/sg/n	GAP	
+17.26	sac-chabdaḥ	sat-śabda	nom/sg/m	GAP	
+17.28	yat	yat	nom/sg/n	GAP	
+17.28	asat	a-sant	nom/sg/n	GAP	
+17.28	tat	tat	nom/sg/n	GAP	
+18.01	hṛṣīkeśa	hṛṣīkeśa	nom/sg/m	DIVERGE	voc.sg.m
+18.02	śrī-bhagavān	śrī-bhagavant	nom/sg/m	GAP	
+18.02	sarva-karma-phala-tyāgam	sarva-karma-phala-tyāga	acc/sg/m	GAP	
+18.03	eke	eka	nom/pl/n	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.03	yajña-dāna-tapaḥ-karma	yajña-dāna-tapaḥ-karma	nom/sg/n	GAP	
+18.04	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.04	saṁprakīrtitaḥ	saṁ-pra-kīrtita	nom/sg/m	GAP	
+18.05	yajña-dāna-tapaḥ-karma	yajña-dāna-tapaḥ-karma	nom/sg/n	GAP	
+18.05	tat	tat	nom/sg/n	GAP	
+18.06	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.08	yat	yat	acc/sg/n	GAP	
+18.08	kāya-kleśa-bhayāt	kāya-kleśa-bhaya	abl/sg/n	GAP	
+18.08	tyāga-phalam	tyāga-phala	acc/sg/m	GAP	
+18.09	yat	yat	nom/sg/n	GAP	
+18.11	karma-phala-tyāgī	karma-phala-parityāgin	nom/sg/m	GAP	
+18.12	atyāginām	a-tyāgin	gen/pl/m	GAP	
+18.13	pañca	pañca	acc/pl/n	DIVERGE	voc.sg.m;voc.sg.n
+18.13	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.15	śarīra-vāṅ-manobhiḥ	śarīra-vāk-manas	instr/pl/m	GAP	
+18.15	yat	yat	acc/sg/n	GAP	
+18.15	pañca	pañca	nom/pl/n	DIVERGE	voc.sg.m;voc.sg.n
+18.15	ete	etat	nom/pl/m	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.16	sati	sant	loc/sg/m	DIVERGE	voc.sg.f
+18.17	imān	idam	acc/pl/m	GAP	
+18.20	tat	tat	acc/sg/n	GAP	
+18.21	yat	yat	acc/sg/n	GAP	
+18.21	pṛthag-vidhān	pṛthag-vidha	nom/pl/n	DIVERGE	acc.pl.m
+18.21	tat	tat	acc/sg/n	GAP	
+18.22	yat	yat	nom/sg/n	GAP	
+18.22	ekasmin	eka	loc/sg/n	GAP	
+18.22	tat	tat	nom/sg/n	GAP	
+18.23	yat	yat	nom/sg/n	GAP	
+18.23	tat	tat	nom/sg/n	GAP	
+18.24	yat	yat	nom/sg/n	GAP	
+18.24	sāhaṁ-kāreṇa	sa-ahaṁ-kāra	acc/sg/m	DIVERGE	instr.sg.m;instr.sg.n
+18.24	tat	tat	nom/sg/n	GAP	
+18.25	yat	yat	nom/sg/n	GAP	
+18.25	tat	tat	nom/sg/n	GAP	
+18.26	dhṛty-utsāha-samanvitaḥ	dhṛty-utsāha-samanvita	nom/sg/m	GAP	
+18.27	karma-phala-prepsuḥ	karma-phala-prepsu	nom/sg/m	GAP	
+18.27	harṣa-śokānvitaḥ	harṣa-śoka-anvita	nom/sg/m	GAP	
+18.27	rājasaḥ	rājasa	acc/sg/m	DIVERGE	nom.sg.m
+18.29	procyamānam	procyamāna	acc/sg/m	GAP	
+18.33	manaḥ-prāṇendriya-kriyāḥ	manaḥ-prāṇa-indriya-kriyā	acc/pl/f	GAP	
+18.35	durmedhāḥ	dur-medhas	acc/sg/m	DIVERGE	acc.pl.f;nom.pl.f;nom.pl.m;nom.sg.f;nom.sg.m;voc.pl.f
+18.36	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.37	yat	yat	nom/sg/n	GAP	
+18.37	tat	tat	nom/sg/n	GAP	
+18.37	ātma-buddhi-prasāda-jam	ātma-buddhi-prasāda-ja	nom/sg/n	GAP	
+18.38	viṣayendriya-saṁyogāt	viṣaya-indriya-saṁyoga	abl/sg/n	GAP	
+18.38	yat	yat	nom/sg/n	GAP	
+18.38	tat	tat	nom/sg/n	GAP	
+18.39	yat	yat	nom/sg/n	GAP	
+18.39	nidrālasya-pramādottham	nidrālasya-pramāda-uttha	nom/sg/n	GAP	
+18.39	tat	tat	nom/sg/n	GAP	
+18.40	tat	tat	nom/sg/n	GAP	
+18.40	divi	div	loc/sg/f	DIVERGE	voc.sg.f
+18.40	yat	yat	nom/sg/n	GAP	
+18.40	tribhiḥ	tri	instr/pl/m	GAP	
+18.41	brāhmaṇa-kṣatriya-viśām	brāhmaṇa-kṣatriya-viś	gen/pl/m	GAP	
+18.43	apalāyanam	a-palāyana	nom/sg/n	GAP	
+18.43	kṣatra-karma	kṣatra-karma	nom/sg/n	GAP	
+18.44	kṛṣi-go-rakṣya-vāṇijyam	kṛṣi-go-rakṣya-vāṇijya	nom/sg/n	GAP	
+18.44	paricaryātmakam	paricarya-ātmaka	nom/sg/n	GAP	
+18.45	sve sve	sva	loc/sg/n	GAP	
+18.45	sva-karma-nirataḥ	sva-karma-nirata	nom/sg/m	GAP	
+18.45	tat	tat	acc/sg/n	GAP	
+18.46	idam	idam	acc/sg/n	DIVERGE	None.None.None
+18.47	śreyān	śreyas	nom/sg/m	GAP	
+18.47	sva-bhāva-niyatam	sva-bhāva-niyata	acc/sg/m	GAP	
+18.47	kurvan	kurvant	nom/sg/m	GAP	
+18.49	asakta-buddhiḥ	asakta-ātman	nom/sg/m	GAP	
+18.50	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.52	yata-vāk-kāya-mānasaḥ	yata-vāk-kāya-mānasa	nom/sg/m	GAP	
+18.52	dhyāna-yoga-paraḥ	dhyāna-yoga-para	nom/sg/m	GAP	
+18.54	mad-bhaktim	mad-bhakti	acc/sg/f	GAP	
+18.56	mad-vyapāśrayaḥ	mad-vyapāśraya	nom/sg/m	GAP	
+18.56	mat-prasādāt	mat-prasāda	abl/sg/m	GAP	
+18.57	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+18.58	sarva-durgāṇi	sarva-durga	acc/pl/n	GAP	
+18.58	mat-prasādāt	mad-prasāda	abl/sg/m	GAP	
+18.59	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.60	yat	yat	acc/sg/n	GAP	
+18.60	tat	tat	acc/sg/n	GAP	
+18.61	bhrāmayan	bhrāmayant	nom/sg/m	GAP	
+18.62	tat-prasādāt	tad-prasāda	abl/sg/m	GAP	
+18.63	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.63	guhyataram	guhyatara	nom/sg/n	GAP	
+18.63	etad	etad	acc/sg/n	DIVERGE	None.None.None
+18.64	sarva-guhyatamam	sarva-guhyatama	acc/sg/n	GAP	
+18.64	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.64	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.64	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.65	man-manāḥ	man-manas	nom/sg/m	DIVERGE	nom.pl.m;voc.pl.m
+18.65	mad-yājī	mad-yājin	nom/sg/m	GAP	
+18.65	te	yuṣmat	dat/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.65	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.66	sarva-dharmān	sarva-dharma	nom/pl/n	GAP	
+18.66	tvā	yuṣmat	acc/sg/	DIVERGE	nom.sg.f
+18.66	sarva-pāpebhyaḥ	sarva-pāpa	abl/pl/n	GAP	
+18.67	idam	idam	acc/sg/n	DIVERGE	None.None.None
+18.67	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.68	idam	idam	acc/sg/n	DIVERGE	None.None.None
+18.68	mayi	asmat	loc/sg/	DIVERGE	voc.sg.f
+18.69	kaś-cit	kim-cit	nom/sg/m	GAP	
+18.69	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.69	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.69	bhuvi	bhū	loc/sg/f	GAP	
+18.70	imam	idam	acc/sg/m	GAP	
+18.70	āvayoḥ	asmat	gen/du/	GAP	
+18.70	tenā	tat	instr/sg/m	GAP	
+18.70	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.72	etat	etat	nom/sg/n	GAP	
+18.72	ajñāna-saṁmohaḥ	ajñāna-saṁ-moha	nom/sg/m	GAP	
+18.72	te	yuṣmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.73	tvat-prasādāt	tvat-prasāda	abl/sg/m	GAP	
+18.73	tava	yuṣmat	gen/sg/m	GAP	
+18.74	imam	idam	acc/sg/m	GAP	
+18.75	vyāsa-prasādāt	vyāsa-prasāda	abl/sg/m	GAP	
+18.75	etat	etat	acc/sg/n	GAP	
+18.75	kathayataḥ	kathayant	abl/sg/	DIVERGE	None.du.None
+18.76	imam	idam	acc/sg/m	GAP	
+18.76	keśavārjunayoḥ	keśava-arjuna	gen/du/m	GAP	
+18.77	tat	tat	acc/sg/n	GAP	
+18.77	aty-adbhutam	ati-adbhuta	nom/du/n	DIVERGE	acc.sg.m;acc.sg.n;nom.sg.n
+18.77	me	asmat	gen/sg/	DIVERGE	acc.du.f;acc.du.n;loc.sg.m;loc.sg.n;nom.du.f;nom.du.n
+18.77	mahān	mahant	nom/sg/m	DIVERGE	acc.pl.m
+18.78	śrīḥ	śrī	nom/sg/f	DIVERGE	acc.pl.f
+18.78	mama	asmat	gen/sg/	GAP	
