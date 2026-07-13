@@ -1,22 +1,17 @@
 window.READING_DATA = window.READING_DATA || {};
 window.READING_DATA["gita-1"] = {
  "slug": "gita-1",
- "title": "Gītā 1 — Arjunaviṣāda (Bhagavadgītā, adhyāya 1)",
+ "chapter": 1,
+ "title": "Gītā 1 — Arjunaviṣāda (Bhagavadgītā)",
  "ref": "BhG 1",
  "text_name": "Bhagavadgītā",
  "built": "2026-07-13",
- "source": "Word-by-word gold analysis: SanskritGrammar/Concordance/Gita.xlsm (hand-curated lemma·root·morphology·English gloss).",
+ "source": "Word-by-word gold analysis: SanskritGrammar/Concordance/Gita.xlsm (hand-curated), via data/gita/gita_gold_master.tsv.",
  "stats": {
   "sentences": 47,
-  "tokens": 569,
-  "linked_tokens": 567,
-  "link_rate_pct": 99.6,
-  "tier_counts": {
-   "lemma": 513,
-   "root": 46,
-   "form": 8,
-   "none": 2
-  }
+  "tokens": 570,
+  "linked_tokens": 568,
+  "link_rate_pct": 99.6
  },
  "sentences": [
   {
@@ -24,150 +19,137 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.1",
    "dcs": null,
    "text": "dhṛtarāṣṭra uvāca",
-   "deva": "धृतराष्ट्र उवाच",
+   "deva": "धृतराष्ट्रः उवाच धर्मक्षेत्रे कुरुक्षेत्रे समवेताः युयुत्सवः मामकाः पाण्डवाः च एव किम् अकुर्वत सञ्जय​",
    "tokens": [
     {
      "form": "dhṛtarāṣṭraḥ",
      "lemma": "dhṛta-rāṣṭra",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "by whom the kingdom is held, Dhṛtarāṣṭra",
      "deva": "धृतराष्ट्रः",
      "slp1": "DftarAzwra",
-     "href": "../w/_44ftar_41zwra.html",
-     "tier": "lemma"
+     "href": "../w/_44ftar_41zwra.html"
     },
     {
      "form": "uvāca",
      "lemma": "√vac",
      "upos": "",
-     "morph": "Perf. P 1v.1",
+     "morph": "",
      "gloss": "he spoke",
      "deva": "उवाच",
      "slp1": "vac",
-     "href": "../w/vac.html",
-     "tier": "lemma"
+     "href": "../w/vac.html"
     },
     {
      "form": "dharma-kṣetre",
      "lemma": "dharma-kṣetra",
      "upos": "",
-     "morph": "7n.1 n.",
+     "morph": "",
      "gloss": "in the field of dharma",
      "deva": "धर्मक्षेत्रे",
      "slp1": "Darmakzetra",
-     "href": "../w/_44armakzetra.html",
-     "tier": "lemma"
+     "href": "../w/_44armakzetra.html"
     },
     {
      "form": "kuru-kṣetre",
      "lemma": "kuru-kṣetra",
      "upos": "",
-     "morph": "7n.1 n.",
+     "morph": "",
      "gloss": "in the field of the Kurus",
      "deva": "कुरुक्षेत्रे",
      "slp1": "kurukzetra",
-     "href": "../w/kurukzetra.html",
-     "tier": "lemma"
+     "href": "../w/kurukzetra.html"
     },
     {
      "form": "samavetāḥ",
      "lemma": "sam-aveta",
      "upos": "",
-     "morph": "PP 1n.3 m.",
+     "morph": "",
      "gloss": "assembled",
      "deva": "समवेताः",
      "slp1": "samaveta",
-     "href": "../w/samaveta.html",
-     "tier": "lemma"
+     "href": "../w/samaveta.html"
     },
     {
      "form": "yuyutsavaḥ",
      "lemma": "yuyutsu",
      "upos": "",
-     "morph": "des. 1n.3 m.",
+     "morph": "",
      "gloss": "desiring to fight",
      "deva": "युयुत्सवः",
      "slp1": "yuyutsu",
-     "href": "../w/yuyutsu.html",
-     "tier": "lemma"
+     "href": "../w/yuyutsu.html"
     },
     {
      "form": "māmakāḥ",
      "lemma": "māmaka",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "my, mine",
      "deva": "मामकाः",
      "slp1": "mAmaka",
-     "href": "../w/m_41maka.html",
-     "tier": "lemma"
+     "href": "../w/m_41maka.html"
     },
     {
      "form": "pāṇḍavāḥ",
      "lemma": "pāṇḍava",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "the sons of Pāṇḍu",
      "deva": "पाण्डवाः",
      "slp1": "pARqava",
-     "href": "../w/p_41_52qava.html",
-     "tier": "lemma"
+     "href": "../w/p_41_52qava.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "eva",
      "lemma": "eva",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव",
      "slp1": "eva",
-     "href": "../w/eva.html",
-     "tier": "lemma"
+     "href": "../w/eva.html"
     },
     {
      "form": "kim",
      "lemma": "kim",
      "upos": "",
-     "morph": "sn. 2n.1 n.",
+     "morph": "",
      "gloss": "what?",
      "deva": "किम्",
      "slp1": "kim",
-     "href": "../w/kim.html",
-     "tier": "lemma"
+     "href": "../w/kim.html"
     },
     {
      "form": "akurvata",
      "lemma": "√kṛ",
      "upos": "",
-     "morph": "Imperf. Ā 1v.3",
+     "morph": "",
      "gloss": "they did",
      "deva": "अकुर्वत",
      "slp1": "kf",
-     "href": "../w/kf.html",
-     "tier": "lemma"
+     "href": "../w/kf.html"
     },
     {
      "form": "saṁjaya",
      "lemma": "sam-jaya",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "conquest, complete victory, Saṁjaya",
      "deva": "सञ्जय​",
      "slp1": "ji",
-     "href": "../w/ji.html",
-     "tier": "root"
+     "href": "../w/ji.html"
     }
    ]
   },
@@ -176,150 +158,137 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.2",
    "dcs": null,
    "text": "saṃjaya uvāca",
-   "deva": "सञ्जय उवाच",
+   "deva": "सञ्जयः उवाच​ दृष्ट्वा तु पाण्डवानीकम् व्यूढम् दुर्योधनः तदा आचार्यम् उपसङ्गम्य​ राजा वचनम् अब्रवीत्",
    "tokens": [
     {
      "form": "saṁjayaḥ",
      "lemma": "sam-jaya",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "conquest, complete victory, Saṁjaya",
      "deva": "सञ्जयः",
      "slp1": "ji",
-     "href": "../w/ji.html",
-     "tier": "root"
+     "href": "../w/ji.html"
     },
     {
      "form": "uvāca",
      "lemma": "√vac",
      "upos": "",
-     "morph": "Perf. P 1v.1",
+     "morph": "",
      "gloss": "he spoke",
      "deva": "उवाच​",
      "slp1": "vac",
-     "href": "../w/vac.html",
-     "tier": "lemma"
+     "href": "../w/vac.html"
     },
     {
      "form": "dṛṣṭvā",
      "lemma": "√dṛś",
      "upos": "",
-     "morph": "absol.",
+     "morph": "",
      "gloss": "after seeing",
      "deva": "दृष्ट्वा",
      "slp1": "dfS",
-     "href": "../w/df_53.html",
-     "tier": "lemma"
+     "href": "../w/df_53.html"
     },
     {
      "form": "tu",
      "lemma": "tu",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "but, then, or, and",
      "deva": "तु",
      "slp1": "tu",
-     "href": "../w/tu.html",
-     "tier": "lemma"
+     "href": "../w/tu.html"
     },
     {
      "form": "pāṇḍavānīkam",
      "lemma": "pāṇḍava-anīka",
      "upos": "",
-     "morph": "2n.1 n.",
+     "morph": "",
      "gloss": "the army of the sons of Pāṇḍu",
      "deva": "पाण्डवानीकम्",
      "slp1": "pARqavAnIka",
-     "href": "../w/p_41_52qav_41n_49ka.html",
-     "tier": "form"
+     "href": "../w/p_41_52qav_41n_49ka.html"
     },
     {
      "form": "vyūḍham",
      "lemma": "vyūḍha",
      "upos": "",
-     "morph": "PP 2n.1 n.",
+     "morph": "",
      "gloss": "divided, arrayed",
      "deva": "व्यूढम्",
      "slp1": "vyUQa",
-     "href": "../w/vy_55_51a.html",
-     "tier": "lemma"
+     "href": "../w/vy_55_51a.html"
     },
     {
      "form": "duryodhanaḥ",
      "lemma": "dur-yodhana",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "difficult to fight with, Duryodhana",
      "deva": "दुर्योधनः",
      "slp1": "duryoDana",
-     "href": "../w/duryo_44ana.html",
-     "tier": "lemma"
+     "href": "../w/duryo_44ana.html"
     },
     {
      "form": "tadā",
      "lemma": "tadā",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "at that time, then",
      "deva": "तदा",
      "slp1": "tadA",
-     "href": "../w/tad_41.html",
-     "tier": "lemma"
+     "href": "../w/tad_41.html"
     },
     {
      "form": "ācāryam",
      "lemma": "ācārya",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "to teacher",
      "deva": "आचार्यम्",
      "slp1": "AcArya",
-     "href": "../w/_41c_41rya.html",
-     "tier": "lemma"
+     "href": "../w/_41c_41rya.html"
     },
     {
      "form": "upasaṅgamya",
      "lemma": "upa-sam-√gam",
      "upos": "",
-     "morph": "absol.",
+     "morph": "",
      "gloss": "having approached",
      "deva": "उपसङ्गम्य​",
      "slp1": "gam",
-     "href": "../w/gam.html",
-     "tier": "root"
+     "href": "../w/gam.html"
     },
     {
      "form": "rājā",
      "lemma": "rājan",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "king",
      "deva": "राजा",
      "slp1": "rAjan",
-     "href": "../w/r_41jan.html",
-     "tier": "lemma"
+     "href": "../w/r_41jan.html"
     },
     {
      "form": "vacanam",
      "lemma": "vacana",
      "upos": "",
-     "morph": "2n.1 n.",
+     "morph": "",
      "gloss": "speech",
      "deva": "वचनम्",
      "slp1": "vacana",
-     "href": "../w/vacana.html",
-     "tier": "lemma"
+     "href": "../w/vacana.html"
     },
     {
      "form": "abravīt",
      "lemma": "√brū",
      "upos": "",
-     "morph": "Imperf. P 1v.1",
+     "morph": "",
      "gloss": "he spoke",
      "deva": "अब्रवीत्",
      "slp1": "brU",
-     "href": "../w/br_55.html",
-     "tier": "lemma"
+     "href": "../w/br_55.html"
     }
    ]
   },
@@ -328,128 +297,117 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.3",
    "dcs": null,
    "text": "paśyaitāṃ pāṇḍu-putrāṇām ācārya mahatīṃ camūm",
-   "deva": "पश्यैतां पाण्डुपुत्राणामाचार्य महतीं चमूम्",
+   "deva": "पश्य​ एताम् पाण्डुपुत्राणाम् आचार्य​ महतीम् चमूम् व्यूढाम् द्रुपदपुत्रेण​ तव​ शिष्येण​ धीमता",
    "tokens": [
     {
      "form": "paśya",
      "lemma": "√dṛś",
      "upos": "",
-     "morph": "Imperat. P 2v.1",
+     "morph": "",
      "gloss": "you must see",
      "deva": "पश्य​",
      "slp1": "dfS",
-     "href": "../w/df_53.html",
-     "tier": "lemma"
+     "href": "../w/df_53.html"
     },
     {
      "form": "etām",
      "lemma": "etat",
      "upos": "",
-     "morph": "sn. 2n.1 f.",
+     "morph": "",
      "gloss": "this",
      "deva": "एताम्",
      "slp1": "etat",
-     "href": "../w/etat.html",
-     "tier": "lemma"
+     "href": "../w/etat.html"
     },
     {
      "form": "pāṇḍu-putrāṇām",
      "lemma": "pāṇḍu-putra",
      "upos": "",
-     "morph": "6n.3 m.",
+     "morph": "",
      "gloss": "of the sons of Pāṇḍu",
      "deva": "पाण्डुपुत्राणाम्",
      "slp1": "pARquputra",
-     "href": "../w/p_41_52quputra.html",
-     "tier": "lemma"
+     "href": "../w/p_41_52quputra.html"
     },
     {
      "form": "ācārya",
      "lemma": "ācārya",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "O teacher!",
      "deva": "आचार्य​",
      "slp1": "AcArya",
-     "href": "../w/_41c_41rya.html",
-     "tier": "lemma"
+     "href": "../w/_41c_41rya.html"
     },
     {
      "form": "mahatīm",
      "lemma": "mahatī",
      "upos": "",
-     "morph": "2n.1 f.",
+     "morph": "",
      "gloss": "great",
      "deva": "महतीम्",
      "slp1": "mahatI",
-     "href": "../w/mahat_49.html",
-     "tier": "lemma"
+     "href": "../w/mahat_49.html"
     },
     {
      "form": "camūm",
      "lemma": "camū",
      "upos": "",
-     "morph": "2n.1 f.",
+     "morph": "",
      "gloss": "army, troops",
      "deva": "चमूम्",
      "slp1": "camU",
-     "href": "../w/cam_55.html",
-     "tier": "lemma"
+     "href": "../w/cam_55.html"
     },
     {
      "form": "vyūḍhām",
      "lemma": "vyūḍhā",
      "upos": "",
-     "morph": "PP 2n.1 f.",
+     "morph": "",
      "gloss": "divided, arrayed",
      "deva": "व्यूढाम्",
      "slp1": "vyUQA",
-     "href": "../w/vy_55_51_41.html",
-     "tier": "lemma"
+     "href": "../w/vy_55_51_41.html"
     },
     {
      "form": "drupada-putreṇa",
      "lemma": "drupada-putra",
      "upos": "",
-     "morph": "3n.1 m.",
+     "morph": "",
      "gloss": "by the son of Drupada",
      "deva": "द्रुपदपुत्रेण​",
      "slp1": "drupadaputra",
-     "href": "../w/drupadaputra.html",
-     "tier": "lemma"
+     "href": "../w/drupadaputra.html"
     },
     {
      "form": "tava",
      "lemma": "yuṣmat",
      "upos": "",
-     "morph": "sn. 6n.1",
+     "morph": "",
      "gloss": "your",
      "deva": "तव​",
      "slp1": "yuzmat",
-     "href": "../w/yuzmat.html",
-     "tier": "lemma"
+     "href": "../w/yuzmat.html"
     },
     {
      "form": "śiṣyeṇa",
      "lemma": "śiṣya",
      "upos": "",
-     "morph": "PF 3n.1 m.",
+     "morph": "",
      "gloss": "by the one to be taught, by a disciple",
      "deva": "शिष्येण​",
      "slp1": "Sizya",
-     "href": "../w/_53izya.html",
-     "tier": "lemma"
+     "href": "../w/_53izya.html"
     },
     {
      "form": "dhīmatā",
      "lemma": "dhīmant",
      "upos": "",
-     "morph": "3n.1 m.",
+     "morph": "",
      "gloss": "by the one having intellect",
      "deva": "धीमता",
      "slp1": "DImant",
-     "href": "../w/_44_49mant.html",
-     "tier": "lemma"
+     "href": "../w/_44_49mant.html"
     }
    ]
   },
@@ -458,128 +416,117 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.4",
    "dcs": null,
    "text": "atra śūrā maheṣv-āsā bhīmārjuna-samā yudhi",
-   "deva": "अत्र शूरा महेष्वासा भीमार्जुनसमा युधि",
+   "deva": "अत्र​ शूराः महेष्वासाः भीमार्जुनसमाः युधि युयुधानः विराटः च​ द्रुपदः च​ महारथः",
    "tokens": [
     {
      "form": "atra",
      "lemma": "atra",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "here",
      "deva": "अत्र​",
      "slp1": "atra",
-     "href": "../w/atra.html",
-     "tier": "lemma"
+     "href": "../w/atra.html"
     },
     {
      "form": "śūrāḥ",
      "lemma": "śūra",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "the heroes",
      "deva": "शूराः",
      "slp1": "SUra",
-     "href": "../w/_53_55ra.html",
-     "tier": "lemma"
+     "href": "../w/_53_55ra.html"
     },
     {
      "form": "maheṣv-āsāḥ",
      "lemma": "mahā-iṣu-āsa",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "those who have great bows",
      "deva": "महेष्वासाः",
      "slp1": "mah",
-     "href": "../w/mah.html",
-     "tier": "root"
+     "href": "../w/mah.html"
     },
     {
      "form": "bhīmārjuna-samāḥ",
      "lemma": "bhīma-arjuna-sama",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "who are equal to Bhīma and Arjuna",
      "deva": "भीमार्जुनसमाः",
      "slp1": "BI",
-     "href": "../w/_42_49.html",
-     "tier": "root"
+     "href": "../w/_42_49.html"
     },
     {
      "form": "yudhi",
      "lemma": "yudh",
      "upos": "",
-     "morph": "7n.1 f.",
+     "morph": "",
      "gloss": "in battle",
      "deva": "युधि",
      "slp1": "yuD",
-     "href": "../w/yu_44.html",
-     "tier": "lemma"
+     "href": "../w/yu_44.html"
     },
     {
      "form": "yuyudhānaḥ",
      "lemma": "yuyudhāna",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "eager to fight, Yuyudhāna = Sātyaki",
      "deva": "युयुधानः",
      "slp1": "yuyuDAna",
-     "href": "../w/yuyu_44_41na.html",
-     "tier": "lemma"
+     "href": "../w/yuyu_44_41na.html"
     },
     {
      "form": "virāṭaḥ",
      "lemma": "virāṭa",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "brilliant, reighning, Virāṭa",
      "deva": "विराटः",
      "slp1": "virAwa",
-     "href": "../w/vir_41wa.html",
-     "tier": "lemma"
+     "href": "../w/vir_41wa.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "drupadaḥ",
      "lemma": "dru-pada",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "pillar, column or a rapid step, Drupada",
      "deva": "द्रुपदः",
      "slp1": "drupada",
-     "href": "../w/drupada.html",
-     "tier": "lemma"
+     "href": "../w/drupada.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "mahā-rathaḥ",
      "lemma": "mahā-ratha",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "who has a great chariot",
      "deva": "महारथः",
      "slp1": "mahAraTa",
-     "href": "../w/mah_41ra_54a.html",
-     "tier": "lemma"
+     "href": "../w/mah_41ra_54a.html"
     }
    ]
   },
@@ -588,128 +535,117 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.5",
    "dcs": null,
    "text": "dhṛṣṭa-ketuś cekitānaḥ kāśi-rājaś ca vīryavān",
-   "deva": "धृष्टकेतुश्चेकितानः काशिराजश्च वीर्यवान्",
+   "deva": "धृष्टकेतुः चेकितानः काशिराजः च​ वीर्यवान् पुरुजित् कुन्तिभोजः च​ शैब्यः च​ नरपुञ्गवः",
    "tokens": [
     {
      "form": "dhṛṣṭa-ketuḥ",
      "lemma": "dhṛṣṭa-ketu",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "bold leader, Dhṛṣṭaketu",
      "deva": "धृष्टकेतुः",
      "slp1": "Dfzwaketu",
-     "href": "../w/_44fzwaketu.html",
-     "tier": "lemma"
+     "href": "../w/_44fzwaketu.html"
     },
     {
      "form": "cekitānaḥ",
      "lemma": "cekitāna",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "highly intelligent, Cekitāna",
      "deva": "चेकितानः",
      "slp1": "cekitAna",
-     "href": "../w/cekit_41na.html",
-     "tier": "lemma"
+     "href": "../w/cekit_41na.html"
     },
     {
      "form": "kāśi-rājaḥ",
      "lemma": "kāśi-rāja",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "king of Kaśi",
      "deva": "काशिराजः",
      "slp1": "kASirAja",
-     "href": "../w/k_41_53ir_41ja.html",
-     "tier": "lemma"
+     "href": "../w/k_41_53ir_41ja.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "vīryavān",
      "lemma": "vīrya-vant",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "having strenght, valorous",
      "deva": "वीर्यवान्",
      "slp1": "vIryavant",
-     "href": "../w/v_49ryavant.html",
-     "tier": "lemma"
+     "href": "../w/v_49ryavant.html"
     },
     {
      "form": "purujit",
      "lemma": "puru-jit",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "conquering widely, Purujit",
      "deva": "पुरुजित्",
      "slp1": "purujit",
-     "href": "../w/purujit.html",
-     "tier": "lemma"
+     "href": "../w/purujit.html"
     },
     {
      "form": "kunti-bhojaḥ",
      "lemma": "kunti-bhoja",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "ruler of the Kunti land",
      "deva": "कुन्तिभोजः",
      "slp1": "kuntiBoja",
-     "href": "../w/kunti_42oja.html",
-     "tier": "lemma"
+     "href": "../w/kunti_42oja.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "śaibyaḥ",
      "lemma": "śaibya",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "ruler of the Śibi land",
      "deva": "शैब्यः",
      "slp1": "SEbya",
-     "href": "../w/_53_45bya.html",
-     "tier": "lemma"
+     "href": "../w/_53_45bya.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "nara-puṁgavaḥ",
      "lemma": "nara-puṅgava",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "bull among men, best of men",
      "deva": "नरपुञ्गवः",
      "slp1": "narapuNgava",
-     "href": "../w/narapu_4egava.html",
-     "tier": "lemma"
+     "href": "../w/narapu_4egava.html"
     }
    ]
   },
@@ -718,139 +654,127 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.6",
    "dcs": null,
    "text": "yudhā-manyuś ca vikrānta uttamaujāś ca vīryavān",
-   "deva": "युधामन्युश्च विक्रान्त उत्तमौजाश्च वीर्यवान्",
+   "deva": "युधामन्युः च​ विक्रान्तः उत्तमौजाः च​ वीर्यवान् सौभद्रः द्रौपदेयाः च​ सर्वे एव​ महारथाः",
    "tokens": [
     {
      "form": "yudhā-manyuḥ",
      "lemma": "yudhā-manyu",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "fighting with spirit, Yudhāmanyu",
      "deva": "युधामन्युः",
      "slp1": "yuDAmanyu",
-     "href": "../w/yu_44_41manyu.html",
-     "tier": "lemma"
+     "href": "../w/yu_44_41manyu.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "vikrāntaḥ",
      "lemma": "vikrānta",
      "upos": "",
-     "morph": "PP 1n.1 m.",
+     "morph": "",
      "gloss": "courageous",
      "deva": "विक्रान्तः",
      "slp1": "vikrAnta",
-     "href": "../w/vikr_41nta.html",
-     "tier": "lemma"
+     "href": "../w/vikr_41nta.html"
     },
     {
      "form": "uttamaujāḥ",
      "lemma": "uttama-ojas",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "supreme strenght, Uttamaujās",
      "deva": "उत्तमौजाः",
      "slp1": "uttamOjas",
-     "href": "../w/uttam_4fjas.html",
-     "tier": "form"
+     "href": "../w/uttam_4fjas.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "vīryavān",
      "lemma": "vīrya-vant",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "having strenght, valorous",
      "deva": "वीर्यवान्",
      "slp1": "vIryavant",
-     "href": "../w/v_49ryavant.html",
-     "tier": "lemma"
+     "href": "../w/v_49ryavant.html"
     },
     {
      "form": "saubhadraḥ",
      "lemma": "saubhadra",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "the son of Subhadra Abhimanyu",
      "deva": "सौभद्रः",
      "slp1": "sOBadra",
-     "href": "../w/s_4f_42adra.html",
-     "tier": "lemma"
+     "href": "../w/s_4f_42adra.html"
     },
     {
      "form": "draupadeyāḥ",
      "lemma": "draupadeya",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "the sons of Draupadī",
      "deva": "द्रौपदेयाः",
      "slp1": "drOpadeya",
-     "href": "../w/dr_4fpadeya.html",
-     "tier": "lemma"
+     "href": "../w/dr_4fpadeya.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "sarve",
      "lemma": "sarva",
      "upos": "",
-     "morph": "sn. 1n.3 m.",
+     "morph": "",
      "gloss": "all",
      "deva": "सर्वे",
      "slp1": "sarva",
-     "href": "../w/sarva.html",
-     "tier": "lemma"
+     "href": "../w/sarva.html"
     },
     {
      "form": "eva",
      "lemma": "eva",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
      "slp1": "eva",
-     "href": "../w/eva.html",
-     "tier": "lemma"
+     "href": "../w/eva.html"
     },
     {
      "form": "mahā-rathāḥ",
      "lemma": "mahā-ratha",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "those who have great chariots",
      "deva": "महारथाः",
      "slp1": "mahAraTa",
-     "href": "../w/mah_41ra_54a.html",
-     "tier": "lemma"
+     "href": "../w/mah_41ra_54a.html"
     }
    ]
   },
@@ -859,161 +783,147 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.7",
    "dcs": null,
    "text": "asmākaṃ tu viśiṣṭā ye tān nibodha dvijottama",
-   "deva": "अस्माकं तु विशिष्टा ये तान्निबोध द्विजोत्तम",
+   "deva": "अस्माकम् तु विशिष्टाः ये तान् निबोध​ द्विजोत्तम​ नायकाः मम​ सैन्यस्य​ सञ्ज्ञाअर्थम् तान् ब्रवीमि ते",
    "tokens": [
     {
      "form": "asmākam",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 6n.3",
+     "morph": "",
      "gloss": "our",
      "deva": "अस्माकम्",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "tu",
      "lemma": "tu",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "but, then, or, and",
      "deva": "तु",
      "slp1": "tu",
-     "href": "../w/tu.html",
-     "tier": "lemma"
+     "href": "../w/tu.html"
     },
     {
      "form": "viśiṣṭāḥ",
      "lemma": "viśiṣṭa",
      "upos": "",
-     "morph": "PP 1n.3 m.",
+     "morph": "",
      "gloss": "excellent, distinguished",
      "deva": "विशिष्टाः",
      "slp1": "viSizwa",
-     "href": "../w/vi_53izwa.html",
-     "tier": "lemma"
+     "href": "../w/vi_53izwa.html"
     },
     {
      "form": "ye",
      "lemma": "yat",
      "upos": "",
-     "morph": "sn. 1n.3 m.",
+     "morph": "",
      "gloss": "those who",
      "deva": "ये",
      "slp1": "yat",
-     "href": "../w/yat.html",
-     "tier": "lemma"
+     "href": "../w/yat.html"
     },
     {
      "form": "tān",
      "lemma": "tat",
      "upos": "",
-     "morph": "sn. 2n.3 m.",
+     "morph": "",
      "gloss": "them",
      "deva": "तान्",
      "slp1": "tat",
-     "href": "../w/tat.html",
-     "tier": "lemma"
+     "href": "../w/tat.html"
     },
     {
      "form": "nibodha",
      "lemma": "ni-√budh",
      "upos": "",
-     "morph": "Imperat. P 2v.1",
+     "morph": "",
      "gloss": "you must know",
      "deva": "निबोध​",
      "slp1": "nibuD",
-     "href": "../w/nibu_44.html",
-     "tier": "lemma"
+     "href": "../w/nibu_44.html"
     },
     {
      "form": "dvijottama",
      "lemma": "dvi-ja-uttama",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "O best among twiceborn",
      "deva": "द्विजोत्तम​",
      "slp1": "dvijottama",
-     "href": "../w/dvijottama.html",
-     "tier": "form"
+     "href": "../w/dvijottama.html"
     },
     {
      "form": "nāyakāḥ",
      "lemma": "nāyaka",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "leaders",
      "deva": "नायकाः",
      "slp1": "nAyaka",
-     "href": "../w/n_41yaka.html",
-     "tier": "lemma"
+     "href": "../w/n_41yaka.html"
     },
     {
      "form": "mama",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 6n.1",
+     "morph": "",
      "gloss": "my",
      "deva": "मम​",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "sainyasya",
      "lemma": "sainya",
      "upos": "",
-     "morph": "6n.1 m.",
+     "morph": "",
      "gloss": "of the army, of that which is related to army",
      "deva": "सैन्यस्य​",
      "slp1": "sEnya",
-     "href": "../w/s_45nya.html",
-     "tier": "lemma"
+     "href": "../w/s_45nya.html"
     },
     {
      "form": "saṁjñā-artham",
      "lemma": "saṁjñā-artham",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "for the sake of good understanding",
      "deva": "सञ्ज्ञाअर्थम्",
      "slp1": "jYA",
-     "href": "../w/j_59_41.html",
-     "tier": "root"
+     "href": "../w/j_59_41.html"
     },
     {
      "form": "tān",
      "lemma": "tat",
      "upos": "",
-     "morph": "sn. 2n.3 m.",
+     "morph": "",
      "gloss": "them",
      "deva": "तान्",
      "slp1": "tat",
-     "href": "../w/tat.html",
-     "tier": "lemma"
+     "href": "../w/tat.html"
     },
     {
      "form": "bravīmi",
      "lemma": "√brū",
      "upos": "",
-     "morph": "Praes. P 3v.1",
+     "morph": "",
      "gloss": "I speak",
      "deva": "ब्रवीमि",
      "slp1": "brU",
-     "href": "../w/br_55.html",
-     "tier": "lemma"
+     "href": "../w/br_55.html"
     },
     {
      "form": "te",
      "lemma": "yuṣmat",
      "upos": "",
-     "morph": "sn. 6n.1",
+     "morph": "",
      "gloss": "of your",
      "deva": "ते",
      "slp1": "yuzmat",
-     "href": "../w/yuzmat.html",
-     "tier": "lemma"
+     "href": "../w/yuzmat.html"
     }
    ]
   },
@@ -1022,172 +932,157 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.8",
    "dcs": null,
    "text": "bhavān bhīṣmaś ca karṇaś ca kṛpaś ca samitiṃ-jayaḥ",
-   "deva": "भवान्भीष्मश्च कर्णश्च कृपश्च समितिञ्जयः",
+   "deva": "भवान् भीष्मः च​ कर्णः च​ कृपः च​ समितिञ्जयः अश्वत्थामा विकर्णः च​ सौमदत्तिः तथा एव​ च​",
    "tokens": [
     {
      "form": "bhavān",
      "lemma": "bhavant",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "your honour",
      "deva": "भवान्",
      "slp1": "Bavant",
-     "href": "../w/_42avant.html",
-     "tier": "lemma"
+     "href": "../w/_42avant.html"
     },
     {
      "form": "bhīṣmaḥ",
      "lemma": "bhīṣma",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "frightful, Bhīṣma",
      "deva": "भीष्मः",
      "slp1": "BIzma",
-     "href": "../w/_42_49zma.html",
-     "tier": "lemma"
+     "href": "../w/_42_49zma.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "karṇaḥ",
      "lemma": "karṇa",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "ear, Karṇa",
      "deva": "कर्णः",
      "slp1": "karRa",
-     "href": "../w/kar_52a.html",
-     "tier": "lemma"
+     "href": "../w/kar_52a.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "kṛpaḥ",
      "lemma": "kṛpa",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "pity, compassion, Kṛpa",
      "deva": "कृपः",
      "slp1": "kfpa",
-     "href": "../w/kfpa.html",
-     "tier": "lemma"
+     "href": "../w/kfpa.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "samitiṁ-jayaḥ",
      "lemma": "samitiṁ-jaya",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "who conquers the assembly",
      "deva": "समितिञ्जयः",
      "slp1": "samitiMjaya",
-     "href": "../w/samiti_4djaya.html",
-     "tier": "lemma"
+     "href": "../w/samiti_4djaya.html"
     },
     {
      "form": "aśvatthāmā",
      "lemma": "aśva-sthā-man",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "having the strenght of a horse, Aśvatthāman",
      "deva": "अश्वत्थामा",
      "slp1": "sTA",
-     "href": "../w/s_54_41.html",
-     "tier": "root"
+     "href": "../w/s_54_41.html"
     },
     {
      "form": "vikarṇaḥ",
      "lemma": "vi-karṇa",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "earless, Vikarṇa",
      "deva": "विकर्णः",
      "slp1": "vikarRa",
-     "href": "../w/vikar_52a.html",
-     "tier": "lemma"
+     "href": "../w/vikar_52a.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "saumadattiḥ",
      "lemma": "sauma-datti",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "son of Somadatta – Bhūriśravas",
      "deva": "सौमदत्तिः",
      "slp1": "sOmadatti",
-     "href": "../w/s_4fmadatti.html",
-     "tier": "lemma"
+     "href": "../w/s_4fmadatti.html"
     },
     {
      "form": "tathā",
      "lemma": "tathā",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "in that manner, so, in like manner",
      "deva": "तथा",
      "slp1": "taTA",
-     "href": "../w/ta_54_41.html",
-     "tier": "lemma"
+     "href": "../w/ta_54_41.html"
     },
     {
      "form": "eva",
      "lemma": "eva",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
      "slp1": "eva",
-     "href": "../w/eva.html",
-     "tier": "lemma"
+     "href": "../w/eva.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     }
    ]
   },
@@ -1196,106 +1091,97 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.9",
    "dcs": null,
    "text": "anye ca bahavaḥ śūrā mad-arthe tyakta-jīvitāḥ",
-   "deva": "अन्ये च बहवः शूरा मदर्थे त्यक्तजीविताः",
+   "deva": "अन्ये च​ बहवः शूराः मदर्थे त्यक्तजीविताः नानाशस्त्रप्रहरणाः सर्वे युद्धविशारदाः",
    "tokens": [
     {
      "form": "anye",
      "lemma": "anya",
      "upos": "",
-     "morph": "sn. 1n.3 m.",
+     "morph": "",
      "gloss": "others",
      "deva": "अन्ये",
      "slp1": "anya",
-     "href": "../w/anya.html",
-     "tier": "lemma"
+     "href": "../w/anya.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "bahavaḥ",
      "lemma": "bahu",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "many",
      "deva": "बहवः",
      "slp1": "bahu",
-     "href": "../w/bahu.html",
-     "tier": "lemma"
+     "href": "../w/bahu.html"
     },
     {
      "form": "śūrāḥ",
      "lemma": "śūra",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "the heroes",
      "deva": "शूराः",
      "slp1": "SUra",
-     "href": "../w/_53_55ra.html",
-     "tier": "lemma"
+     "href": "../w/_53_55ra.html"
     },
     {
      "form": "mad-arthe",
      "lemma": "mad-artha",
      "upos": "",
-     "morph": "7n.1 m.",
+     "morph": "",
      "gloss": "for my sake, for my purpose",
      "deva": "मदर्थे",
      "slp1": "madarTa",
-     "href": "../w/madar_54a.html",
-     "tier": "lemma"
+     "href": "../w/madar_54a.html"
     },
     {
      "form": "tyakta-jīvitāḥ",
      "lemma": "tyakta-jīvita",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "those who have decided to give up their lives",
      "deva": "त्यक्तजीविताः",
      "slp1": "tyaktajIvita",
-     "href": "../w/tyaktaj_49vita.html",
-     "tier": "lemma"
+     "href": "../w/tyaktaj_49vita.html"
     },
     {
      "form": "nānā-śastra-praharaṇāḥ",
      "lemma": "nānā-śastra-praharaṇa",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "those who wield various weapons",
      "deva": "नानाशस्त्रप्रहरणाः",
      "slp1": "Sas",
-     "href": "../w/_53as.html",
-     "tier": "root"
+     "href": "../w/_53as.html"
     },
     {
      "form": "sarve",
      "lemma": "sarva",
      "upos": "",
-     "morph": "sn. 1n.3 m.",
+     "morph": "",
      "gloss": "they all",
      "deva": "सर्वे",
      "slp1": "sarva",
-     "href": "../w/sarva.html",
-     "tier": "lemma"
+     "href": "../w/sarva.html"
     },
     {
      "form": "yuddha-viśāradāḥ",
      "lemma": "yuddha-viśārada",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "proficient in battle",
      "deva": "युद्धविशारदाः",
      "slp1": "yudDaviSArada",
-     "href": "../w/yud_44avi_53_41rada.html",
-     "tier": "lemma"
+     "href": "../w/yud_44avi_53_41rada.html"
     }
    ]
   },
@@ -1304,128 +1190,117 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.10",
    "dcs": null,
    "text": "aparyāptaṃ tad asmākaṃ balaṃ bhīṣmābhirakṣitam",
-   "deva": "अपर्याप्तं तदस्माकं बलं भीष्माभिरक्षितम्",
+   "deva": "अपर्याप्तम् तत् अस्माकम् बलम् भीष्माभिरक्षितम् पर्याप्तम् तु इदम् एतेषाम् बलम् भीमाभिरक्षितम्",
    "tokens": [
     {
      "form": "aparyāptam",
      "lemma": "a-pari-āpta",
      "upos": "",
-     "morph": "PP 1n.1 n.",
+     "morph": "",
      "gloss": "unobtained: unlimited or insufficient",
      "deva": "अपर्याप्तम्",
      "slp1": "Ap",
-     "href": "../w/_41p.html",
-     "tier": "root"
+     "href": "../w/_41p.html"
     },
     {
      "form": "tat",
      "lemma": "tat",
      "upos": "",
-     "morph": "sn. 1n.1 n.",
+     "morph": "",
      "gloss": "that",
      "deva": "तत्",
      "slp1": "tat",
-     "href": "../w/tat.html",
-     "tier": "lemma"
+     "href": "../w/tat.html"
     },
     {
      "form": "asmākam",
      "lemma": "asmat",
      "upos": "",
-     "morph": "6n.3",
+     "morph": "",
      "gloss": "our",
      "deva": "अस्माकम्",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "balam",
      "lemma": "bala",
      "upos": "",
-     "morph": "1n.1 n.",
+     "morph": "",
      "gloss": "force, army",
      "deva": "बलम्",
      "slp1": "bala",
-     "href": "../w/bala.html",
-     "tier": "lemma"
+     "href": "../w/bala.html"
     },
     {
      "form": "bhīṣmābhirakṣitam",
      "lemma": "bhīṣma-abhi-rakṣita",
      "upos": "",
-     "morph": "1n.1 n.",
+     "morph": "",
      "gloss": "on all sides protected by Bhīṣma",
      "deva": "भीष्माभिरक्षितम्",
      "slp1": "BI",
-     "href": "../w/_42_49.html",
-     "tier": "root"
+     "href": "../w/_42_49.html"
     },
     {
      "form": "paryāptam",
      "lemma": "pari-āpta",
      "upos": "",
-     "morph": "PP 1n.1 n.",
+     "morph": "",
      "gloss": "obtained: limited or sufficient",
      "deva": "पर्याप्तम्",
      "slp1": "Ap",
-     "href": "../w/_41p.html",
-     "tier": "root"
+     "href": "../w/_41p.html"
     },
     {
      "form": "tu",
      "lemma": "tu",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "but, then, or, and",
      "deva": "तु",
      "slp1": "tu",
-     "href": "../w/tu.html",
-     "tier": "lemma"
+     "href": "../w/tu.html"
     },
     {
      "form": "idam",
      "lemma": "idam",
      "upos": "",
-     "morph": "sn. 1n.1 n.",
+     "morph": "",
      "gloss": "this",
      "deva": "इदम्",
      "slp1": "idam",
-     "href": "../w/idam.html",
-     "tier": "lemma"
+     "href": "../w/idam.html"
     },
     {
      "form": "eteṣām",
      "lemma": "etat",
      "upos": "",
-     "morph": "sn. 6n.3 m.",
+     "morph": "",
      "gloss": "their",
      "deva": "एतेषाम्",
      "slp1": "etat",
-     "href": "../w/etat.html",
-     "tier": "lemma"
+     "href": "../w/etat.html"
     },
     {
      "form": "balam",
      "lemma": "bala",
      "upos": "",
-     "morph": "1n.1 n.",
+     "morph": "",
      "gloss": "force, army",
      "deva": "बलम्",
      "slp1": "bala",
-     "href": "../w/bala.html",
-     "tier": "lemma"
+     "href": "../w/bala.html"
     },
     {
      "form": "bhīmābhirakṣitam",
      "lemma": "bhīma-abhi-rakṣita",
      "upos": "",
-     "morph": "1n.1 n.",
+     "morph": "",
      "gloss": "on all sides protected by Bhīma",
      "deva": "भीमाभिरक्षितम्",
      "slp1": "BI",
-     "href": "../w/_42_49.html",
-     "tier": "root"
+     "href": "../w/_42_49.html"
     }
    ]
   },
@@ -1434,139 +1309,127 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.11",
    "dcs": null,
    "text": "ayaneṣu ca sarveṣu yathā bhāgam avasthitāḥ",
-   "deva": "अयनेषु च सर्वेषु यथाभागमवस्थिताः",
+   "deva": "अयनेषु च​ सर्वेषु यथाभागम् अवस्थिताः भीष्मम् एव​ अभिरक्षन्तु भवन्तः सर्वे एव​ हि",
    "tokens": [
     {
      "form": "ayaneṣu",
      "lemma": "ayana",
      "upos": "",
-     "morph": "7n.3 n.",
+     "morph": "",
      "gloss": "on the paths",
      "deva": "अयनेषु",
      "slp1": "ayana",
-     "href": "../w/ayana.html",
-     "tier": "lemma"
+     "href": "../w/ayana.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "sarveṣu",
      "lemma": "sarva",
      "upos": "",
-     "morph": "sn. 7n.3 n.",
+     "morph": "",
      "gloss": "on all",
      "deva": "सर्वेषु",
      "slp1": "sarva",
-     "href": "../w/sarva.html",
-     "tier": "lemma"
+     "href": "../w/sarva.html"
     },
     {
      "form": "yathā bhāgam",
      "lemma": "yathā bhāgam",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "according to the division",
      "deva": "यथाभागम्",
      "slp1": "yaTABAgam",
-     "href": "../w/ya_54_41_42_41gam.html",
-     "tier": "lemma"
+     "href": "../w/ya_54_41_42_41gam.html"
     },
     {
      "form": "avasthitāḥ",
      "lemma": "avasthita",
      "upos": "",
-     "morph": "PP 1n.3 m.",
+     "morph": "",
      "gloss": "arrayed, placed",
      "deva": "अवस्थिताः",
      "slp1": "avasTita",
-     "href": "../w/avas_54ita.html",
-     "tier": "lemma"
+     "href": "../w/avas_54ita.html"
     },
     {
      "form": "bhīṣmam",
      "lemma": "bhīṣma",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "frightful, Bhīṣma",
      "deva": "भीष्मम्",
      "slp1": "BIzma",
-     "href": "../w/_42_49zma.html",
-     "tier": "lemma"
+     "href": "../w/_42_49zma.html"
     },
     {
      "form": "eva",
      "lemma": "eva",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
      "slp1": "eva",
-     "href": "../w/eva.html",
-     "tier": "lemma"
+     "href": "../w/eva.html"
     },
     {
      "form": "abhirakṣantu",
      "lemma": "abhi-√rakṣ",
      "upos": "",
-     "morph": "Imperat. P 1v.3",
+     "morph": "",
      "gloss": "they must protect",
      "deva": "अभिरक्षन्तु",
      "slp1": "aBirakz",
-     "href": "../w/a_42irakz.html",
-     "tier": "lemma"
+     "href": "../w/a_42irakz.html"
     },
     {
      "form": "bhavantaḥ",
      "lemma": "bhavant",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "your honours",
      "deva": "भवन्तः",
      "slp1": "Bavant",
-     "href": "../w/_42avant.html",
-     "tier": "lemma"
+     "href": "../w/_42avant.html"
     },
     {
      "form": "sarve",
      "lemma": "sarva",
      "upos": "",
-     "morph": "sn. 1n.3 m.",
+     "morph": "",
      "gloss": "all",
      "deva": "सर्वे",
      "slp1": "sarva",
-     "href": "../w/sarva.html",
-     "tier": "lemma"
+     "href": "../w/sarva.html"
     },
     {
      "form": "eva",
      "lemma": "eva",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
      "slp1": "eva",
-     "href": "../w/eva.html",
-     "tier": "lemma"
+     "href": "../w/eva.html"
     },
     {
      "form": "hi",
      "lemma": "hi",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "because, just, indeed, surely",
      "deva": "हि",
      "slp1": "hi",
-     "href": "../w/hi.html",
-     "tier": "lemma"
+     "href": "../w/hi.html"
     }
    ]
   },
@@ -1575,128 +1438,117 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.12",
    "dcs": null,
    "text": "tasya saṃjanayan harṣaṃ kuru-vṛddhaḥ pitā-mahaḥ",
-   "deva": "तस्य संजनयन्हर्षं कुरुवृद्धः पितामहः",
+   "deva": "तस्य​ सञ्जनयन् हर्षञ् कुरुवृद्धः पितामहः सिञ्हनादम् विनद्य​ उच्चैः शङ्खम् दध्मौ प्रतापवान्",
    "tokens": [
     {
      "form": "tasya",
      "lemma": "tat",
      "upos": "",
-     "morph": "sn. 6n.1 m.",
+     "morph": "",
      "gloss": "his",
      "deva": "तस्य​",
      "slp1": "tat",
-     "href": "../w/tat.html",
-     "tier": "lemma"
+     "href": "../w/tat.html"
     },
     {
      "form": "saṁjanayan",
      "lemma": "sam-janayant",
      "upos": "",
-     "morph": "PPr caus.1n.1 m.",
+     "morph": "",
      "gloss": "causing to be born, generating",
      "deva": "सञ्जनयन्",
      "slp1": "jan",
-     "href": "../w/jan.html",
-     "tier": "root"
+     "href": "../w/jan.html"
     },
     {
      "form": "harṣaṁ",
      "lemma": "harṣa",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "joy",
      "deva": "हर्षञ्",
      "slp1": "harza",
-     "href": "../w/harza.html",
-     "tier": "lemma"
+     "href": "../w/harza.html"
     },
     {
      "form": "kuru-vṛddhaḥ",
      "lemma": "kuru-vṛddha",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "the eldest of the Kurus",
      "deva": "कुरुवृद्धः",
      "slp1": "kuruvfdDa",
-     "href": "../w/kuruvfd_44a.html",
-     "tier": "lemma"
+     "href": "../w/kuruvfd_44a.html"
     },
     {
      "form": "pitā-mahaḥ",
      "lemma": "pitā-maha",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "grandfather",
      "deva": "पितामहः",
      "slp1": "pitAmaha",
-     "href": "../w/pit_41maha.html",
-     "tier": "lemma"
+     "href": "../w/pit_41maha.html"
     },
     {
      "form": "siṁha-nādam",
      "lemma": "siṁha-nāda",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "a roar like a lion’s",
      "deva": "सिञ्हनादम्",
      "slp1": "siMhanAda",
-     "href": "../w/si_4dhan_41da.html",
-     "tier": "lemma"
+     "href": "../w/si_4dhan_41da.html"
     },
     {
      "form": "vinadya",
      "lemma": "vi-√nad",
      "upos": "",
-     "morph": "absol.",
+     "morph": "",
      "gloss": "roaring",
      "deva": "विनद्य​",
      "slp1": "vinad",
-     "href": "../w/vinad.html",
-     "tier": "lemma"
+     "href": "../w/vinad.html"
     },
     {
      "form": "uccaiḥ",
      "lemma": "uccaiḥ",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "loudly",
      "deva": "उच्चैः",
      "slp1": "uccEH",
-     "href": "../w/ucc_45_48.html",
-     "tier": "lemma"
+     "href": "../w/ucc_45_48.html"
     },
     {
      "form": "śaṅkham",
      "lemma": "śaṅkha",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "conchshell",
      "deva": "शङ्खम्",
      "slp1": "SaNKa",
-     "href": "../w/_53a_4e_4ba.html",
-     "tier": "lemma"
+     "href": "../w/_53a_4e_4ba.html"
     },
     {
      "form": "dadhmau",
      "lemma": "√dhmā",
      "upos": "",
-     "morph": "Perf. P 1v.1",
+     "morph": "",
      "gloss": "he blew",
      "deva": "दध्मौ",
      "slp1": "DmA",
-     "href": "../w/_44m_41.html",
-     "tier": "lemma"
+     "href": "../w/_44m_41.html"
     },
     {
      "form": "pratāpavān",
      "lemma": "pratāpa-vant",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "who has power, majesty",
      "deva": "प्रतापवान्",
      "slp1": "pratApavant",
-     "href": "../w/prat_41pavant.html",
-     "tier": "lemma"
+     "href": "../w/prat_41pavant.html"
     }
    ]
   },
@@ -1705,68 +1557,63 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.13",
    "dcs": null,
    "text": "tataḥ śaṅkhāś ca bheryaś ca paṇavānaka-gomukhāḥ",
-   "deva": "ततः शङ्खाश्च भेर्यश्च पणवानकगोमुखाः",
+   "deva": "ततः शङ्खाः च​ भेर्यः च​ पणवानकगोमुखाः सहसा एव​ अभ्यहन्यन्त​ सः शब्दः तुमुलः अभवत्",
    "tokens": [
     {
      "form": "tataḥ",
      "lemma": "tataḥ",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "then, after that, from that, for that reason",
      "deva": "ततः",
      "slp1": "tataH",
-     "href": "../w/tata_48.html",
-     "tier": "lemma"
+     "href": "../w/tata_48.html"
     },
     {
      "form": "śaṅkhāḥ",
      "lemma": "śaṅkha",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "conchshells",
      "deva": "शङ्खाः",
      "slp1": "SaNKa",
-     "href": "../w/_53a_4e_4ba.html",
-     "tier": "lemma"
+     "href": "../w/_53a_4e_4ba.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "bheryaḥ",
      "lemma": "bherī",
      "upos": "",
-     "morph": "1n.3 f.",
+     "morph": "",
      "gloss": "kettle-drums",
      "deva": "भेर्यः",
      "slp1": "BerI",
-     "href": "../w/_42er_49.html",
-     "tier": "lemma"
+     "href": "../w/_42er_49.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "paṇavānaka-gomukhāḥ",
      "lemma": "paṇava-ānaka-gomukha",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "accompanying small drums, large drums, horns",
      "deva": "पणवानकगोमुखाः",
      "resolved": false
@@ -1775,78 +1622,71 @@ window.READING_DATA["gita-1"] = {
      "form": "sahasā",
      "lemma": "sahasā",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "suddenly, forcibly",
      "deva": "सहसा",
      "slp1": "sahasA",
-     "href": "../w/sahas_41.html",
-     "tier": "lemma"
+     "href": "../w/sahas_41.html"
     },
     {
      "form": "eva",
      "lemma": "eva",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
      "slp1": "eva",
-     "href": "../w/eva.html",
-     "tier": "lemma"
+     "href": "../w/eva.html"
     },
     {
      "form": "abhyahanyanta",
      "lemma": "abhi-√han",
      "upos": "",
-     "morph": "Imperf. pass. 1v.3",
+     "morph": "",
      "gloss": "they were struck, they were sounded",
      "deva": "अभ्यहन्यन्त​",
      "slp1": "aBihan",
-     "href": "../w/a_42ihan.html",
-     "tier": "lemma"
+     "href": "../w/a_42ihan.html"
     },
     {
      "form": "saḥ",
      "lemma": "tat",
      "upos": "",
-     "morph": "sn. 1n.1 m.",
+     "morph": "",
      "gloss": "that",
      "deva": "सः",
      "slp1": "tat",
-     "href": "../w/tat.html",
-     "tier": "lemma"
+     "href": "../w/tat.html"
     },
     {
      "form": "śabdaḥ",
      "lemma": "śabda",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "sound",
      "deva": "शब्दः",
      "slp1": "Sabda",
-     "href": "../w/_53abda.html",
-     "tier": "lemma"
+     "href": "../w/_53abda.html"
     },
     {
      "form": "tumulaḥ",
      "lemma": "tumula",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "tumultuous, piercing",
      "deva": "तुमुलः",
      "slp1": "tumula",
-     "href": "../w/tumula.html",
-     "tier": "lemma"
+     "href": "../w/tumula.html"
     },
     {
      "form": "abhavat",
      "lemma": "√bhū",
      "upos": "",
-     "morph": "Imperf. P 1v.1",
+     "morph": "",
      "gloss": "it was",
      "deva": "अभवत्",
      "slp1": "BU",
-     "href": "../w/_42_55.html",
-     "tier": "lemma"
+     "href": "../w/_42_55.html"
     }
    ]
   },
@@ -1855,161 +1695,147 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.14",
    "dcs": null,
    "text": "tataḥ śvetair hayair yukte mahati syandane sthitau",
-   "deva": "ततः श्वेतैर्हयैर्युक्ते महति स्यन्दने स्थितौ",
+   "deva": "ततः श्वेतैः हयैः युक्ते महति स्यन्दने स्थितौ माधवः पाण्डवः च​ एव​ दिव्यौ शङ्खौ प्रदध्मतुः",
    "tokens": [
     {
      "form": "tataḥ",
      "lemma": "tataḥ",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "then, after that, from that, for that reason",
      "deva": "ततः",
      "slp1": "tataH",
-     "href": "../w/tata_48.html",
-     "tier": "lemma"
+     "href": "../w/tata_48.html"
     },
     {
      "form": "śvetaiḥ",
      "lemma": "śveta",
      "upos": "",
-     "morph": "3n.3 m.",
+     "morph": "",
      "gloss": "with white",
      "deva": "श्वेतैः",
      "slp1": "Sveta",
-     "href": "../w/_53veta.html",
-     "tier": "lemma"
+     "href": "../w/_53veta.html"
     },
     {
      "form": "hayaiḥ",
      "lemma": "haya",
      "upos": "",
-     "morph": "3n.3 m.",
+     "morph": "",
      "gloss": "with horses",
      "deva": "हयैः",
      "slp1": "haya",
-     "href": "../w/haya.html",
-     "tier": "lemma"
+     "href": "../w/haya.html"
     },
     {
      "form": "yukte",
      "lemma": "yukta",
      "upos": "",
-     "morph": "PP 7n.1 m.",
+     "morph": "",
      "gloss": "yoked",
      "deva": "युक्ते",
      "slp1": "yukta",
-     "href": "../w/yukta.html",
-     "tier": "lemma"
+     "href": "../w/yukta.html"
     },
     {
      "form": "mahati",
      "lemma": "mahant",
      "upos": "",
-     "morph": "7n.1 m.",
+     "morph": "",
      "gloss": "on great",
      "deva": "महति",
      "slp1": "mahant",
-     "href": "../w/mahant.html",
-     "tier": "lemma"
+     "href": "../w/mahant.html"
     },
     {
      "form": "syandane",
      "lemma": "syandana",
      "upos": "",
-     "morph": "7n.1 m.",
+     "morph": "",
      "gloss": "on a war-chariot, on a swiftly moving chariot",
      "deva": "स्यन्दने",
      "slp1": "syandana",
-     "href": "../w/syandana.html",
-     "tier": "lemma"
+     "href": "../w/syandana.html"
     },
     {
      "form": "sthitau",
      "lemma": "sthita",
      "upos": "",
-     "morph": "PP 1n.2 m.",
+     "morph": "",
      "gloss": "those two standing",
      "deva": "स्थितौ",
      "slp1": "sTita",
-     "href": "../w/s_54ita.html",
-     "tier": "lemma"
+     "href": "../w/s_54ita.html"
     },
     {
      "form": "mādhavaḥ",
      "lemma": "mādhava",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "descendant of king Madhu",
      "deva": "माधवः",
      "slp1": "mADava",
-     "href": "../w/m_41_44ava.html",
-     "tier": "lemma"
+     "href": "../w/m_41_44ava.html"
     },
     {
      "form": "pāṇḍavaḥ",
      "lemma": "pāṇḍava",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "son of Pāṇḍu",
      "deva": "पाण्डवः",
      "slp1": "pARqava",
-     "href": "../w/p_41_52qava.html",
-     "tier": "lemma"
+     "href": "../w/p_41_52qava.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "eva",
      "lemma": "eva",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
      "slp1": "eva",
-     "href": "../w/eva.html",
-     "tier": "lemma"
+     "href": "../w/eva.html"
     },
     {
      "form": "divyau",
      "lemma": "divya",
      "upos": "",
-     "morph": "2n.2 m.",
+     "morph": "",
      "gloss": "two divine",
      "deva": "दिव्यौ",
      "slp1": "divya",
-     "href": "../w/divya.html",
-     "tier": "lemma"
+     "href": "../w/divya.html"
     },
     {
      "form": "śaṅkhau",
      "lemma": "śaṅkha",
      "upos": "",
-     "morph": "2n.2 m.",
+     "morph": "",
      "gloss": "two conchshells",
      "deva": "शङ्खौ",
      "slp1": "SaNKa",
-     "href": "../w/_53a_4e_4ba.html",
-     "tier": "lemma"
+     "href": "../w/_53a_4e_4ba.html"
     },
     {
      "form": "pradadhmatuḥ",
      "lemma": "pra-√dhmā",
      "upos": "",
-     "morph": "Perf. P 1v.2",
+     "morph": "",
      "gloss": "they two blew",
      "deva": "प्रदध्मतुः",
      "slp1": "praDmA",
-     "href": "../w/pra_44m_41.html",
-     "tier": "lemma"
+     "href": "../w/pra_44m_41.html"
     }
    ]
   },
@@ -2018,106 +1844,97 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.15",
    "dcs": null,
    "text": "pāñcajanyaṃ hṛṣīkeśo devadattaṃ dhanaṃjayaḥ",
-   "deva": "पाञ्चजन्यं हृषीकेशो देवदत्तं धनंजयः",
+   "deva": "पाञ्चजन्यम् हृषीकेशः देवदत्तम् धनञ्जयः पौण्ड्रम् दध्मौ महाशङ्खम् भीमकर्मा वृकोदरः",
    "tokens": [
     {
      "form": "pāñca-janyam",
      "lemma": "pāñca-janya",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "of Pañcajana, obtained form the demon Pañcajana",
      "deva": "पाञ्चजन्यम्",
      "slp1": "pAYcajanya",
-     "href": "../w/p_41_59cajanya.html",
-     "tier": "lemma"
+     "href": "../w/p_41_59cajanya.html"
     },
     {
      "form": "hṛṣīkeśaḥ",
      "lemma": "hṛṣīkeśa",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "erect hair, Hṛṣīkeśa",
      "deva": "हृषीकेशः",
      "slp1": "hfzIkeSa",
-     "href": "../w/hfz_49ke_53a.html",
-     "tier": "lemma"
+     "href": "../w/hfz_49ke_53a.html"
     },
     {
      "form": "deva-dattam",
      "lemma": "deva-datta",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "given by the gods, Devadatta",
      "deva": "देवदत्तम्",
      "slp1": "devadatta",
-     "href": "../w/devadatta.html",
-     "tier": "lemma"
+     "href": "../w/devadatta.html"
     },
     {
      "form": "dhanaṁjayaḥ",
      "lemma": "dhanaṁ-jaya",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "winner of wealth, Dhanaṁjaya",
      "deva": "धनञ्जयः",
      "slp1": "DanaMjaya",
-     "href": "../w/_44ana_4djaya.html",
-     "tier": "lemma"
+     "href": "../w/_44ana_4djaya.html"
     },
     {
      "form": "pauṇḍram",
      "lemma": "pauṇḍra",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "of Puṇḍra",
      "deva": "पौण्ड्रम्",
      "slp1": "pORqra",
-     "href": "../w/p_4f_52qra.html",
-     "tier": "lemma"
+     "href": "../w/p_4f_52qra.html"
     },
     {
      "form": "dadhmau",
      "lemma": "√dhmā",
      "upos": "",
-     "morph": "Perf. P 1v.1",
+     "morph": "",
      "gloss": "he blew",
      "deva": "दध्मौ",
      "slp1": "DmA",
-     "href": "../w/_44m_41.html",
-     "tier": "lemma"
+     "href": "../w/_44m_41.html"
     },
     {
      "form": "mahā-śaṅkham",
      "lemma": "mahā-śaṅkha",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "great conchshell",
      "deva": "महाशङ्खम्",
      "slp1": "mahASaNKa",
-     "href": "../w/mah_41_53a_4e_4ba.html",
-     "tier": "lemma"
+     "href": "../w/mah_41_53a_4e_4ba.html"
     },
     {
      "form": "bhīma-karmā",
      "lemma": "bhīma-karman",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "one whose acts are frightful",
      "deva": "भीमकर्मा",
      "slp1": "BImakarman",
-     "href": "../w/_42_49makarman.html",
-     "tier": "lemma"
+     "href": "../w/_42_49makarman.html"
     },
     {
      "form": "vṛkodaraḥ",
      "lemma": "vṛka-udara",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "one who has a belly like a wolf’s",
      "deva": "वृकोदरः",
      "slp1": "vfkodara",
-     "href": "../w/vfkodara.html",
-     "tier": "form"
+     "href": "../w/vfkodara.html"
     }
    ]
   },
@@ -2126,95 +1943,87 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.16",
    "dcs": null,
    "text": "anantavijayaṃ rājā kuntī-putro yudhiṣṭhiraḥ",
-   "deva": "अनन्तविजयं राजा कुन्तीपुत्रो युधिष्ठिरः",
+   "deva": "अनन्तविजयम् राजा कुन्तीपुत्रः युधिष्ठिरः नकुलः सहदेवः च​ सुघोषमणिपुष्पकौ",
    "tokens": [
     {
      "form": "ananta-vijayam",
      "lemma": "ananta-vijaya",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "one whose victory is without end",
      "deva": "अनन्तविजयम्",
      "slp1": "anantavijaya",
-     "href": "../w/anantavijaya.html",
-     "tier": "lemma"
+     "href": "../w/anantavijaya.html"
     },
     {
      "form": "rājā",
      "lemma": "rājan",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "king",
      "deva": "राजा",
      "slp1": "rAjan",
-     "href": "../w/r_41jan.html",
-     "tier": "lemma"
+     "href": "../w/r_41jan.html"
     },
     {
      "form": "kuntī-putraḥ",
      "lemma": "kuntī-putra",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "son of Kuntī",
      "deva": "कुन्तीपुत्रः",
      "slp1": "kuntIputra",
-     "href": "../w/kunt_49putra.html",
-     "tier": "lemma"
+     "href": "../w/kunt_49putra.html"
     },
     {
      "form": "yudhiṣṭhiraḥ",
      "lemma": "yudhi-sthira",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "firm in battle",
      "deva": "युधिष्ठिरः",
      "slp1": "yuD",
-     "href": "../w/yu_44.html",
-     "tier": "root"
+     "href": "../w/yu_44.html"
     },
     {
      "form": "nakulaḥ",
      "lemma": "nakula",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "mongoose, Nakula",
      "deva": "नकुलः",
      "slp1": "nakula",
-     "href": "../w/nakula.html",
-     "tier": "lemma"
+     "href": "../w/nakula.html"
     },
     {
      "form": "sahadevaḥ",
      "lemma": "saha-deva",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "companion of gods, Sahadeva",
      "deva": "सहदेवः",
      "slp1": "sahadeva",
-     "href": "../w/sahadeva.html",
-     "tier": "lemma"
+     "href": "../w/sahadeva.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "sughoṣa-maṇi-puṣpakau",
      "lemma": "su-ghoṣa-maṇi-puṣpaka",
      "upos": "",
-     "morph": "2n.2 m.",
+     "morph": "",
      "gloss": "Excellent Sound and Jewel-flower",
      "deva": "सुघोषमणिपुष्पकौ",
      "slp1": "Guz",
-     "href": "../w/_47uz.html",
-     "tier": "root"
+     "href": "../w/_47uz.html"
     }
    ]
   },
@@ -2223,139 +2032,127 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.17",
    "dcs": null,
    "text": "kāśyaś ca parameṣv-āsaḥ śikhaṇḍī ca mahā-rathaḥ",
-   "deva": "काश्यश्च परमेष्वासः शिखण्डी च महारथः",
+   "deva": "काश्यः च​ परमेष्वासः शिखण्डी च​ महारथः धृष्टद्युम्नः विराटः च​ सात्यकिः च​ अपराजितः",
    "tokens": [
     {
      "form": "kāśyaḥ",
      "lemma": "kāśya",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "ruler of Kaśi",
      "deva": "काश्यः",
      "slp1": "kASya",
-     "href": "../w/k_41_53ya.html",
-     "tier": "lemma"
+     "href": "../w/k_41_53ya.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "parameṣvāsaḥ",
      "lemma": "parama-iṣu-āsa",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "one who has the best bow",
      "deva": "परमेष्वासः",
      "slp1": "as",
-     "href": "../w/as.html",
-     "tier": "root"
+     "href": "../w/as.html"
     },
     {
      "form": "śikhaṇḍī",
      "lemma": "śikhaṇḍin",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "crested one",
      "deva": "शिखण्डी",
      "slp1": "SiKaRqin",
-     "href": "../w/_53i_4ba_52qin.html",
-     "tier": "lemma"
+     "href": "../w/_53i_4ba_52qin.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "mahā-rathaḥ",
      "lemma": "mahā-ratha",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "who has a great chariot",
      "deva": "महारथः",
      "slp1": "mahAraTa",
-     "href": "../w/mah_41ra_54a.html",
-     "tier": "lemma"
+     "href": "../w/mah_41ra_54a.html"
     },
     {
      "form": "dhṛṣṭa-dyumnaḥ",
      "lemma": "dhṛṣṭa-dyumna",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "bold power",
      "deva": "धृष्टद्युम्नः",
      "slp1": "Dfzwadyumna",
-     "href": "../w/_44fzwadyumna.html",
-     "tier": "lemma"
+     "href": "../w/_44fzwadyumna.html"
     },
     {
      "form": "virāṭaḥ",
      "lemma": "virāṭa",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "reigning",
      "deva": "विराटः",
      "slp1": "virAwa",
-     "href": "../w/vir_41wa.html",
-     "tier": "lemma"
+     "href": "../w/vir_41wa.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "sātyakiḥ",
      "lemma": "sātyaki",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "whose nature is truth",
      "deva": "सात्यकिः",
      "slp1": "sAtyaki",
-     "href": "../w/s_41tyaki.html",
-     "tier": "lemma"
+     "href": "../w/s_41tyaki.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "aparā-jitaḥ",
      "lemma": "a-parā-jita",
      "upos": "",
-     "morph": "PP 1n.1 m.",
+     "morph": "",
      "gloss": "invincible",
      "deva": "अपराजितः",
      "slp1": "aparAjita",
-     "href": "../w/apar_41jita.html",
-     "tier": "lemma"
+     "href": "../w/apar_41jita.html"
     }
    ]
   },
@@ -2364,128 +2161,117 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.18",
    "dcs": null,
    "text": "drupado draupadeyāś ca sarvaśaḥ pṛthivīpate",
-   "deva": "द्रुपदो द्रौपदेयाश्च सर्वशः पृथिवीपते",
+   "deva": "द्रुपदः द्रौपदेयाः च​ सर्वशः पृथिवीपते सौभद्रः च​ महाबाहुः शङ्खान् दध्मुः पृथक्पृथक्",
    "tokens": [
     {
      "form": "drupadaḥ",
      "lemma": "dru-pada",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "pillar, column or a sudden step",
      "deva": "द्रुपदः",
      "slp1": "drupada",
-     "href": "../w/drupada.html",
-     "tier": "lemma"
+     "href": "../w/drupada.html"
     },
     {
      "form": "draupadeyāḥ",
      "lemma": "draupadeya",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "sons of Drupada’s daughter",
      "deva": "द्रौपदेयाः",
      "slp1": "drOpadeya",
-     "href": "../w/dr_4fpadeya.html",
-     "tier": "lemma"
+     "href": "../w/dr_4fpadeya.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "sarvaśaḥ",
      "lemma": "sarvaśaḥ",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "all, whole",
      "deva": "सर्वशः",
      "slp1": "sarvaSas",
-     "href": "../w/sarva_53as.html",
-     "tier": "form"
+     "href": "../w/sarva_53as.html"
     },
     {
      "form": "pṛthivīpate",
      "lemma": "pṛthivī-pati",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "O lord of the earth",
      "deva": "पृथिवीपते",
      "slp1": "pfTivIpati",
-     "href": "../w/pf_54iv_49pati.html",
-     "tier": "lemma"
+     "href": "../w/pf_54iv_49pati.html"
     },
     {
      "form": "saubhadraḥ",
      "lemma": "saubhadra",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "son of Subhadrā",
      "deva": "सौभद्रः",
      "slp1": "sOBadra",
-     "href": "../w/s_4f_42adra.html",
-     "tier": "lemma"
+     "href": "../w/s_4f_42adra.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "mahā-bāhuḥ",
      "lemma": "mahā-bāhu",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "who has mighty arms",
      "deva": "महाबाहुः",
      "slp1": "mahAbAhu",
-     "href": "../w/mah_41b_41hu.html",
-     "tier": "lemma"
+     "href": "../w/mah_41b_41hu.html"
     },
     {
      "form": "śaṅkhān",
      "lemma": "śaṅkha",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "conchshells",
      "deva": "शङ्खान्",
      "slp1": "SaNKa",
-     "href": "../w/_53a_4e_4ba.html",
-     "tier": "lemma"
+     "href": "../w/_53a_4e_4ba.html"
     },
     {
      "form": "dadhmuḥ",
      "lemma": "√dhmā",
      "upos": "",
-     "morph": "Perf. P 1v.3",
+     "morph": "",
      "gloss": "they blew",
      "deva": "दध्मुः",
      "slp1": "DmA",
-     "href": "../w/_44m_41.html",
-     "tier": "lemma"
+     "href": "../w/_44m_41.html"
     },
     {
      "form": "pṛthak pṛthak",
      "lemma": "pṛthak pṛthak",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "separately, singly, one by one",
      "deva": "पृथक्पृथक्",
      "slp1": "pfT",
-     "href": "../w/pf_54.html",
-     "tier": "root"
+     "href": "../w/pf_54.html"
     }
    ]
   },
@@ -2494,139 +2280,127 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.19",
    "dcs": null,
    "text": "sa ghoṣo dhārtarāṣṭrāṇāṃ hṛdayāni vyadārayat",
-   "deva": "स घोषो धार्तराष्ट्राणां हृदयानि व्यदारयत्",
+   "deva": "सः घोषः धार्तराष्ट्राणाम् हृदयानि व्यदारयत् नभः च​ पृथिवीम् च​ एव​ तुमुलः व्यनुनादयन्",
    "tokens": [
     {
      "form": "saḥ",
      "lemma": "tat",
      "upos": "",
-     "morph": "sn. 1n.1 m.",
+     "morph": "",
      "gloss": "that",
      "deva": "सः",
      "slp1": "tat",
-     "href": "../w/tat.html",
-     "tier": "lemma"
+     "href": "../w/tat.html"
     },
     {
      "form": "ghoṣaḥ",
      "lemma": "ghoṣa",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "noise",
      "deva": "घोषः",
      "slp1": "Goza",
-     "href": "../w/_47oza.html",
-     "tier": "lemma"
+     "href": "../w/_47oza.html"
     },
     {
      "form": "dhārtarāṣṭrāṇām",
      "lemma": "dhārtarāṣṭra",
      "upos": "",
-     "morph": "6n.3 m.",
+     "morph": "",
      "gloss": "of the sons of Dhṛtarāṣṭra",
      "deva": "धार्तराष्ट्राणाम्",
      "slp1": "DArtarAzwra",
-     "href": "../w/_44_41rtar_41zwra.html",
-     "tier": "lemma"
+     "href": "../w/_44_41rtar_41zwra.html"
     },
     {
      "form": "hṛdayāni",
      "lemma": "hṛdaya",
      "upos": "",
-     "morph": "2n.3 n.",
+     "morph": "",
      "gloss": "the hearts",
      "deva": "हृदयानि",
      "slp1": "hfdaya",
-     "href": "../w/hfdaya.html",
-     "tier": "lemma"
+     "href": "../w/hfdaya.html"
     },
     {
      "form": "vyadārayat",
      "lemma": "vi-√dṝ",
      "upos": "",
-     "morph": "Imperf. caus. P 1v.1",
+     "morph": "",
      "gloss": "it caused to break",
      "deva": "व्यदारयत्",
      "slp1": "vidF",
-     "href": "../w/vid_46.html",
-     "tier": "lemma"
+     "href": "../w/vid_46.html"
     },
     {
      "form": "nabhaḥ",
      "lemma": "nabhas",
      "upos": "",
-     "morph": "2n.1 n.",
+     "morph": "",
      "gloss": "the sky",
      "deva": "नभः",
      "slp1": "naBas",
-     "href": "../w/na_42as.html",
-     "tier": "lemma"
+     "href": "../w/na_42as.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "pṛthivīm",
      "lemma": "pṛthivī",
      "upos": "",
-     "morph": "2n.1 f.",
+     "morph": "",
      "gloss": "the earth",
      "deva": "पृथिवीम्",
      "slp1": "pfTivI",
-     "href": "../w/pf_54iv_49.html",
-     "tier": "lemma"
+     "href": "../w/pf_54iv_49.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "eva",
      "lemma": "eva",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
      "slp1": "eva",
-     "href": "../w/eva.html",
-     "tier": "lemma"
+     "href": "../w/eva.html"
     },
     {
      "form": "tumulaḥ",
      "lemma": "tumula",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "tumultuous",
      "deva": "तुमुलः",
      "slp1": "tumula",
-     "href": "../w/tumula.html",
-     "tier": "lemma"
+     "href": "../w/tumula.html"
     },
     {
      "form": "vyanunādayan",
      "lemma": "vi-anu-nādayant",
      "upos": "",
-     "morph": "PPr caus.1n.1 m.",
+     "morph": "",
      "gloss": "causing to vibrate",
      "deva": "व्यनुनादयन्",
      "slp1": "nad",
-     "href": "../w/nad.html",
-     "tier": "root"
+     "href": "../w/nad.html"
     }
    ]
   },
@@ -2635,117 +2409,107 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.20",
    "dcs": null,
    "text": "atha vyavasthitān dṛṣṭvā dhārtarāṣṭrān kapi-dhvajaḥ",
-   "deva": "अथ व्यवस्थितान् दृष्ट्वा धार्तराष्ट्रान्कपिध्वजः",
+   "deva": "अथ​ व्यवस्थितान् दृष्ट्वा धार्तराष्ट्रान् कपिध्वजः प्रवृत्ते शस्त्रसञ्पाते धनुः उद्यम्य​ पाण्डवः",
    "tokens": [
     {
      "form": "atha",
      "lemma": "atha",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "then, now, moreover, certainly, rather",
      "deva": "अथ​",
      "slp1": "aTa",
-     "href": "../w/a_54a.html",
-     "tier": "lemma"
+     "href": "../w/a_54a.html"
     },
     {
      "form": "vyavasthitān",
      "lemma": "vi-ava-sthita",
      "upos": "",
-     "morph": "PP 2n.3 m.",
+     "morph": "",
      "gloss": "arrayed",
      "deva": "व्यवस्थितान्",
      "slp1": "sTA",
-     "href": "../w/s_54_41.html",
-     "tier": "root"
+     "href": "../w/s_54_41.html"
     },
     {
      "form": "dṛṣṭvā",
      "lemma": "√dṛś",
      "upos": "",
-     "morph": "absol.",
+     "morph": "",
      "gloss": "after seeing",
      "deva": "दृष्ट्वा",
      "slp1": "dfS",
-     "href": "../w/df_53.html",
-     "tier": "lemma"
+     "href": "../w/df_53.html"
     },
     {
      "form": "dhārtarāṣṭrān",
      "lemma": "dhārtarāṣṭra",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "of the sons of Dhṛtarāṣṭra",
      "deva": "धार्तराष्ट्रान्",
      "slp1": "DArtarAzwra",
-     "href": "../w/_44_41rtar_41zwra.html",
-     "tier": "lemma"
+     "href": "../w/_44_41rtar_41zwra.html"
     },
     {
      "form": "kapi-dhvajaḥ",
      "lemma": "kapi-dhvaja",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "one whose banner is a monkey",
      "deva": "कपिध्वजः",
      "slp1": "kapiDvaja",
-     "href": "../w/kapi_44vaja.html",
-     "tier": "lemma"
+     "href": "../w/kapi_44vaja.html"
     },
     {
      "form": "pravṛtte",
      "lemma": "pra-vṛtta",
      "upos": "",
-     "morph": "PP 7n.1 m. loc.abs.",
+     "morph": "",
      "gloss": "when it began",
      "deva": "प्रवृत्ते",
      "slp1": "pravftta",
-     "href": "../w/pravftta.html",
-     "tier": "lemma"
+     "href": "../w/pravftta.html"
     },
     {
      "form": "śastra-saṁpāte",
      "lemma": "śastra-saṁpāta",
      "upos": "",
-     "morph": "m. 7n.1 loc.abs.",
+     "morph": "",
      "gloss": "falling of weapons",
      "deva": "शस्त्रसञ्पाते",
      "slp1": "SastrasaMpAta",
-     "href": "../w/_53astrasa_4dp_41ta.html",
-     "tier": "lemma"
+     "href": "../w/_53astrasa_4dp_41ta.html"
     },
     {
      "form": "dhanuḥ",
      "lemma": "dhanuḥ",
      "upos": "",
-     "morph": "2n.1 n.",
+     "morph": "",
      "gloss": "a bow",
      "deva": "धनुः",
      "slp1": "DanuH",
-     "href": "../w/_44anu_48.html",
-     "tier": "lemma"
+     "href": "../w/_44anu_48.html"
     },
     {
      "form": "udyamya",
      "lemma": "ud-√yam",
      "upos": "",
-     "morph": "absol.",
+     "morph": "",
      "gloss": "after raising",
      "deva": "उद्यम्य​",
      "slp1": "udyam",
-     "href": "../w/udyam.html",
-     "tier": "lemma"
+     "href": "../w/udyam.html"
     },
     {
      "form": "pāṇḍavaḥ",
      "lemma": "pāṇḍava",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "son of Pāṇḍu",
      "deva": "पाण्डवः",
      "slp1": "pARqava",
-     "href": "../w/p_41_52qava.html",
-     "tier": "lemma"
+     "href": "../w/p_41_52qava.html"
     }
    ]
   },
@@ -2754,172 +2518,157 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.21",
    "dcs": null,
    "text": "arjuna uvāca",
-   "deva": "अर्जुन उवाच",
+   "deva": "अर्जुनः उवाच​ हृषीकेशम् तदा वाक्यम् इदम् आह​ महीपते सेनयोः उभयोः मध्ये रथम् स्थापय​ मे अच्युत​",
    "tokens": [
     {
      "form": "arjunaḥ",
      "lemma": "arjuna",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "white, clear, Arjuna",
      "deva": "अर्जुनः",
      "slp1": "arjuna",
-     "href": "../w/arjuna.html",
-     "tier": "lemma"
+     "href": "../w/arjuna.html"
     },
     {
      "form": "uvāca",
      "lemma": "√vac",
      "upos": "",
-     "morph": "Perf. P 1v.1",
+     "morph": "",
      "gloss": "he spoke",
      "deva": "उवाच​",
      "slp1": "vac",
-     "href": "../w/vac.html",
-     "tier": "lemma"
+     "href": "../w/vac.html"
     },
     {
      "form": "hṛṣīkeśam",
      "lemma": "hṛṣīkeśa",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "to Hṛṣīkeśa, to one with erect hair",
      "deva": "हृषीकेशम्",
      "slp1": "hfzIkeSa",
-     "href": "../w/hfz_49ke_53a.html",
-     "tier": "lemma"
+     "href": "../w/hfz_49ke_53a.html"
     },
     {
      "form": "tadā",
      "lemma": "tadā",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "then",
      "deva": "तदा",
      "slp1": "tadA",
-     "href": "../w/tad_41.html",
-     "tier": "lemma"
+     "href": "../w/tad_41.html"
     },
     {
      "form": "vākyam",
      "lemma": "vākya",
      "upos": "",
-     "morph": "PF 2n.1 n.",
+     "morph": "",
      "gloss": "word, the speech",
      "deva": "वाक्यम्",
      "slp1": "vAkya",
-     "href": "../w/v_41kya.html",
-     "tier": "lemma"
+     "href": "../w/v_41kya.html"
     },
     {
      "form": "idam",
      "lemma": "idam",
      "upos": "",
-     "morph": "2n.1 n.",
+     "morph": "",
      "gloss": "this",
      "deva": "इदम्",
      "slp1": "idam",
-     "href": "../w/idam.html",
-     "tier": "lemma"
+     "href": "../w/idam.html"
     },
     {
      "form": "āha",
      "lemma": "√ah",
      "upos": "",
-     "morph": "Perf. P 1v.1",
+     "morph": "",
      "gloss": "he spoke",
      "deva": "आह​",
      "slp1": "ah",
-     "href": "../w/ah.html",
-     "tier": "lemma"
+     "href": "../w/ah.html"
     },
     {
      "form": "mahī-pate",
      "lemma": "mahī-pati",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "O lord of the earth",
      "deva": "महीपते",
      "slp1": "mahIpati",
-     "href": "../w/mah_49pati.html",
-     "tier": "lemma"
+     "href": "../w/mah_49pati.html"
     },
     {
      "form": "senayoḥ",
      "lemma": "senā",
      "upos": "",
-     "morph": "6n.2 f.",
+     "morph": "",
      "gloss": "of the two armies",
      "deva": "सेनयोः",
      "slp1": "senA",
-     "href": "../w/sen_41.html",
-     "tier": "lemma"
+     "href": "../w/sen_41.html"
     },
     {
      "form": "ubhayoḥ",
      "lemma": "ubhā",
      "upos": "",
-     "morph": "sn. 6n.2 f.",
+     "morph": "",
      "gloss": "of both",
      "deva": "उभयोः",
      "slp1": "uBA",
-     "href": "../w/u_42_41.html",
-     "tier": "lemma"
+     "href": "../w/u_42_41.html"
     },
     {
      "form": "madhye",
      "lemma": "madhya",
      "upos": "",
-     "morph": "7n.1 n.",
+     "morph": "",
      "gloss": "in the middle, inside",
      "deva": "मध्ये",
      "slp1": "maDya",
-     "href": "../w/ma_44ya.html",
-     "tier": "lemma"
+     "href": "../w/ma_44ya.html"
     },
     {
      "form": "ratham",
      "lemma": "ratha",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "chariot",
      "deva": "रथम्",
      "slp1": "raTa",
-     "href": "../w/ra_54a.html",
-     "tier": "lemma"
+     "href": "../w/ra_54a.html"
     },
     {
      "form": "sthāpaya",
      "lemma": "√sthā",
      "upos": "",
-     "morph": "Imperat. caus. P 2v.1",
+     "morph": "",
      "gloss": "cause to stand",
      "deva": "स्थापय​",
      "slp1": "sTA",
-     "href": "../w/s_54_41.html",
-     "tier": "lemma"
+     "href": "../w/s_54_41.html"
     },
     {
      "form": "me",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 6n.1",
+     "morph": "",
      "gloss": "my",
      "deva": "मे",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "acyuta",
      "lemma": "a-cyuta",
      "upos": "",
-     "morph": "PP 8n.1 m.",
+     "morph": "",
      "gloss": "O unfailling one",
      "deva": "अच्युत​",
      "slp1": "acyuta",
-     "href": "../w/acyuta.html",
-     "tier": "lemma"
+     "href": "../w/acyuta.html"
     }
    ]
   },
@@ -2928,139 +2677,127 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.22",
    "dcs": null,
    "text": "yāvad etān nirīkṣe ‘haṃ yoddhu-kāmān avasthitān",
-   "deva": "यावदेतान्निरीक्षेऽहं योद्धुकामानवस्थितान्",
+   "deva": "यावत् एतान् निरीक्षे अहम् योद्धुकामान् अवस्थितान् कैः मया सह​ योद्धव्यम् अस्मिन् रणसमुद्यमे",
    "tokens": [
     {
      "form": "yāvat",
      "lemma": "yāvat",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "as long as, as great",
      "deva": "यावत्",
      "slp1": "yAvat",
-     "href": "../w/y_41vat.html",
-     "tier": "lemma"
+     "href": "../w/y_41vat.html"
     },
     {
      "form": "etān",
      "lemma": "etat",
      "upos": "",
-     "morph": "sn. 2n.3 m.",
+     "morph": "",
      "gloss": "these",
      "deva": "एतान्",
      "slp1": "etat",
-     "href": "../w/etat.html",
-     "tier": "lemma"
+     "href": "../w/etat.html"
     },
     {
      "form": "nirīkṣe",
      "lemma": "nir-√īkṣ",
      "upos": "",
-     "morph": "Praes. Ā 3v.1",
+     "morph": "",
      "gloss": "I look at",
      "deva": "निरीक्षे",
      "slp1": "nirIkz",
-     "href": "../w/nir_49kz.html",
-     "tier": "lemma"
+     "href": "../w/nir_49kz.html"
     },
     {
      "form": "aham",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 1n.1",
+     "morph": "",
      "gloss": "I",
      "deva": "अहम्",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "yoddhu-kāmān",
      "lemma": "yoddhu-kāma",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "those who are eager to fight",
      "deva": "योद्धुकामान्",
      "slp1": "yodDukAma",
-     "href": "../w/yod_44uk_41ma.html",
-     "tier": "lemma"
+     "href": "../w/yod_44uk_41ma.html"
     },
     {
      "form": "avasthitān",
      "lemma": "ava-sthita",
      "upos": "",
-     "morph": "PP 2n.3 m.",
+     "morph": "",
      "gloss": "arrayed",
      "deva": "अवस्थितान्",
      "slp1": "avasTita",
-     "href": "../w/avas_54ita.html",
-     "tier": "lemma"
+     "href": "../w/avas_54ita.html"
     },
     {
      "form": "kaiḥ",
      "lemma": "kim",
      "upos": "",
-     "morph": "sn. 3n.3 m.",
+     "morph": "",
      "gloss": "with whom",
      "deva": "कैः",
      "slp1": "kim",
-     "href": "../w/kim.html",
-     "tier": "lemma"
+     "href": "../w/kim.html"
     },
     {
      "form": "mayā",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 3n.1",
+     "morph": "",
      "gloss": "by me",
      "deva": "मया",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "saha",
      "lemma": "saha",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "along with",
      "deva": "सह​",
      "slp1": "saha",
-     "href": "../w/saha.html",
-     "tier": "lemma"
+     "href": "../w/saha.html"
     },
     {
      "form": "yoddhavyam",
      "lemma": "yoddhavya",
      "upos": "",
-     "morph": "PF 1n.1 n.",
+     "morph": "",
      "gloss": "to be fought with",
      "deva": "योद्धव्यम्",
      "slp1": "yodDavya",
-     "href": "../w/yod_44avya.html",
-     "tier": "lemma"
+     "href": "../w/yod_44avya.html"
     },
     {
      "form": "asmin",
      "lemma": "idam",
      "upos": "",
-     "morph": "sn. 7n.1 m.",
+     "morph": "",
      "gloss": "in this",
      "deva": "अस्मिन्",
      "slp1": "idam",
-     "href": "../w/idam.html",
-     "tier": "lemma"
+     "href": "../w/idam.html"
     },
     {
      "form": "raṇa-samudyame",
      "lemma": "raṇa-sam-ud-yama",
      "upos": "",
-     "morph": "7n.1 m.",
+     "morph": "",
      "gloss": "in the engagement in battle",
      "deva": "रणसमुद्यमे",
      "slp1": "raR",
-     "href": "../w/ra_52.html",
-     "tier": "root"
+     "href": "../w/ra_52.html"
     }
    ]
   },
@@ -3069,128 +2806,117 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.23",
    "dcs": null,
    "text": "yotsyamānān avekṣe ‘haṃ ya ete ‘tra samāgatāḥ",
-   "deva": "योत्स्यमानानवेक्षेऽहं य एतेऽत्र समागताः",
+   "deva": "योत्स्यमानान् अवेक्षे अहम् ये एते अत्र​ समागताः धार्तराष्ट्रस्य​ दुर्बुद्धेः युद्धे प्रियचिकीर्षवः",
    "tokens": [
     {
      "form": "yotsyamānān",
      "lemma": "yotsyamāna",
      "upos": "",
-     "morph": "PPr Fut. 2n.3 m.",
+     "morph": "",
      "gloss": "those who will be fighting",
      "deva": "योत्स्यमानान्",
      "slp1": "yuD",
-     "href": "../w/yu_44.html",
-     "tier": "root"
+     "href": "../w/yu_44.html"
     },
     {
      "form": "avekṣe",
      "lemma": "ava-√īkṣ",
      "upos": "",
-     "morph": "Praes. Ā 3v.1",
+     "morph": "",
      "gloss": "I look at",
      "deva": "अवेक्षे",
      "slp1": "Ikz",
-     "href": "../w/_49kz.html",
-     "tier": "root"
+     "href": "../w/_49kz.html"
     },
     {
      "form": "aham",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 1n.1",
+     "morph": "",
      "gloss": "I",
      "deva": "अहम्",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "ye",
      "lemma": "yat",
      "upos": "",
-     "morph": "sn. 1n.3 m.",
+     "morph": "",
      "gloss": "those who",
      "deva": "ये",
      "slp1": "yat",
-     "href": "../w/yat.html",
-     "tier": "lemma"
+     "href": "../w/yat.html"
     },
     {
      "form": "ete",
      "lemma": "etat",
      "upos": "",
-     "morph": "sn. 1n.3 m.",
+     "morph": "",
      "gloss": "these",
      "deva": "एते",
      "slp1": "etat",
-     "href": "../w/etat.html",
-     "tier": "lemma"
+     "href": "../w/etat.html"
     },
     {
      "form": "atra",
      "lemma": "atra",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "here",
      "deva": "अत्र​",
      "slp1": "atra",
-     "href": "../w/atra.html",
-     "tier": "lemma"
+     "href": "../w/atra.html"
     },
     {
      "form": "samāgatāḥ",
      "lemma": "sam-āgata",
      "upos": "",
-     "morph": "PP 1n.3 m.",
+     "morph": "",
      "gloss": "who are assembled",
      "deva": "समागताः",
      "slp1": "samAgata",
-     "href": "../w/sam_41gata.html",
-     "tier": "lemma"
+     "href": "../w/sam_41gata.html"
     },
     {
      "form": "dhārtarāṣṭrasya",
      "lemma": "dhārtarāṣṭra",
      "upos": "",
-     "morph": "6n.1 m.",
+     "morph": "",
      "gloss": "of the son of Dhṛtarāṣṭra",
      "deva": "धार्तराष्ट्रस्य​",
      "slp1": "DArtarAzwra",
-     "href": "../w/_44_41rtar_41zwra.html",
-     "tier": "lemma"
+     "href": "../w/_44_41rtar_41zwra.html"
     },
     {
      "form": "durbuddheḥ",
      "lemma": "dur-buddhi",
      "upos": "",
-     "morph": "6n.1 m.",
+     "morph": "",
      "gloss": "of one with bad intelligence, of avi-minded",
      "deva": "दुर्बुद्धेः",
      "slp1": "durbudDi",
-     "href": "../w/durbud_44i.html",
-     "tier": "lemma"
+     "href": "../w/durbud_44i.html"
     },
     {
      "form": "yuddhe",
      "lemma": "yuddha",
      "upos": "",
-     "morph": "7n.1 n.",
+     "morph": "",
      "gloss": "in battle",
      "deva": "युद्धे",
      "slp1": "yudDa",
-     "href": "../w/yud_44a.html",
-     "tier": "lemma"
+     "href": "../w/yud_44a.html"
     },
     {
      "form": "priya-cikīrṣavaḥ",
      "lemma": "priya-cikīrṣu",
      "upos": "",
-     "morph": "3n.1 m.",
+     "morph": "",
      "gloss": "those who desire to please",
      "deva": "प्रियचिकीर्षवः",
      "slp1": "priyacikIrzu",
-     "href": "../w/priyacik_49rzu.html",
-     "tier": "lemma"
+     "href": "../w/priyacik_49rzu.html"
     }
    ]
   },
@@ -3199,139 +2925,127 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.24",
    "dcs": null,
    "text": "saṃjaya uvāca",
-   "deva": "सञ्जय उवाच",
+   "deva": "सञ्जयः उवाच​ एवम् उक्तः हृषीकेशः गुडाकेशेन​ भारत​ सेनयोः उभयोः मध्ये स्थापयित्वा रथोत्तमम्",
    "tokens": [
     {
      "form": "saṁjayaḥ",
      "lemma": "sam-jaya",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "conquest, complete victory, Saṁjaya",
      "deva": "सञ्जयः",
      "slp1": "ji",
-     "href": "../w/ji.html",
-     "tier": "root"
+     "href": "../w/ji.html"
     },
     {
      "form": "uvāca",
      "lemma": "√vac",
      "upos": "",
-     "morph": "Perf. P 1v.1",
+     "morph": "",
      "gloss": "he spoke",
      "deva": "उवाच​",
      "slp1": "vac",
-     "href": "../w/vac.html",
-     "tier": "lemma"
+     "href": "../w/vac.html"
     },
     {
      "form": "evam",
      "lemma": "evam",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "thus",
      "deva": "एवम्",
      "slp1": "evam",
-     "href": "../w/evam.html",
-     "tier": "lemma"
+     "href": "../w/evam.html"
     },
     {
      "form": "uktaḥ",
      "lemma": "ukta",
      "upos": "",
-     "morph": "PP 1n.1 m.",
+     "morph": "",
      "gloss": "who is spoken to",
      "deva": "उक्तः",
      "slp1": "ukta",
-     "href": "../w/ukta.html",
-     "tier": "lemma"
+     "href": "../w/ukta.html"
     },
     {
      "form": "hṛṣīkeśaḥ",
      "lemma": "hṛṣīkeśa",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "erect hair, Hṛṣīkeśa",
      "deva": "हृषीकेशः",
      "slp1": "hfzIkeSa",
-     "href": "../w/hfz_49ke_53a.html",
-     "tier": "lemma"
+     "href": "../w/hfz_49ke_53a.html"
     },
     {
      "form": "guḍākeśena",
      "lemma": "guḍākeśa",
      "upos": "",
-     "morph": "3n.1 m.",
+     "morph": "",
      "gloss": "by one with thick hair",
      "deva": "गुडाकेशेन​",
      "slp1": "guqAkeSa",
-     "href": "../w/guq_41ke_53a.html",
-     "tier": "lemma"
+     "href": "../w/guq_41ke_53a.html"
     },
     {
      "form": "bhārata",
      "lemma": "bhārata",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "O descendant of Bhārata",
      "deva": "भारत​",
      "slp1": "BArata",
-     "href": "../w/_42_41rata.html",
-     "tier": "lemma"
+     "href": "../w/_42_41rata.html"
     },
     {
      "form": "senayoḥ",
      "lemma": "senā",
      "upos": "",
-     "morph": "6n.2 f.",
+     "morph": "",
      "gloss": "of the two armies",
      "deva": "सेनयोः",
      "slp1": "senA",
-     "href": "../w/sen_41.html",
-     "tier": "lemma"
+     "href": "../w/sen_41.html"
     },
     {
      "form": "ubhayoḥ",
      "lemma": "ubhā",
      "upos": "",
-     "morph": "sn. 6n.2 f.",
+     "morph": "",
      "gloss": "of both",
      "deva": "उभयोः",
      "slp1": "uBA",
-     "href": "../w/u_42_41.html",
-     "tier": "lemma"
+     "href": "../w/u_42_41.html"
     },
     {
      "form": "madhye",
      "lemma": "madhya",
      "upos": "",
-     "morph": "7n.1 n.",
+     "morph": "",
      "gloss": "in the middle, inside",
      "deva": "मध्ये",
      "slp1": "maDya",
-     "href": "../w/ma_44ya.html",
-     "tier": "lemma"
+     "href": "../w/ma_44ya.html"
     },
     {
      "form": "sthāpayitvā",
      "lemma": "√sthā",
      "upos": "",
-     "morph": "absol. caus.",
+     "morph": "",
      "gloss": "after causing to stand",
      "deva": "स्थापयित्वा",
      "slp1": "sTA",
-     "href": "../w/s_54_41.html",
-     "tier": "lemma"
+     "href": "../w/s_54_41.html"
     },
     {
      "form": "rathottamam",
      "lemma": "ratha-uttama",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "the excellent chariot",
      "deva": "रथोत्तमम्",
      "slp1": "raTottama",
-     "href": "../w/ra_54ottama.html",
-     "tier": "form"
+     "href": "../w/ra_54ottama.html"
     }
    ]
   },
@@ -3340,128 +3054,117 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.25",
    "dcs": null,
    "text": "bhīṣma-droṇa-pramukhataḥ sarveṣāṃ ca mahīkṣitām",
-   "deva": "भीष्मद्रोणप्रमुखतः सर्वेषां च महीक्षिताम्",
+   "deva": "भीष्मद्रोणप्रमुखतः सर्वेषाम् च​ महीक्षिताम् उवाच​ पार्थ​ पश्य​ एतान् समवेतान् कुरून् इति",
    "tokens": [
     {
      "form": "bhīṣma-droṇa-pramukhataḥ",
      "lemma": "bhīṣma-droṇa-pramukhatas",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "in front of Bhīṣma and Droṇa",
      "deva": "भीष्मद्रोणप्रमुखतः",
      "slp1": "BI",
-     "href": "../w/_42_49.html",
-     "tier": "root"
+     "href": "../w/_42_49.html"
     },
     {
      "form": "sarveṣām",
      "lemma": "sarva",
      "upos": "",
-     "morph": "sn. 6n.3 m.",
+     "morph": "",
      "gloss": "of all these",
      "deva": "सर्वेषाम्",
      "slp1": "sarva",
-     "href": "../w/sarva.html",
-     "tier": "lemma"
+     "href": "../w/sarva.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "mahī-kṣitām",
      "lemma": "mahī-kṣit",
      "upos": "",
-     "morph": "6n.3 m.",
+     "morph": "",
      "gloss": "of those who rule the earth",
      "deva": "महीक्षिताम्",
      "slp1": "mahIkzit",
-     "href": "../w/mah_49kzit.html",
-     "tier": "lemma"
+     "href": "../w/mah_49kzit.html"
     },
     {
      "form": "uvāca",
      "lemma": "√vac",
      "upos": "",
-     "morph": "Perf. P 1v.1",
+     "morph": "",
      "gloss": "he spoke",
      "deva": "उवाच​",
      "slp1": "vac",
-     "href": "../w/vac.html",
-     "tier": "lemma"
+     "href": "../w/vac.html"
     },
     {
      "form": "pārtha",
      "lemma": "pārtha",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "O son of Pṛthā",
      "deva": "पार्थ​",
      "slp1": "pArTa",
-     "href": "../w/p_41r_54a.html",
-     "tier": "lemma"
+     "href": "../w/p_41r_54a.html"
     },
     {
      "form": "paśya",
      "lemma": "√dṛś",
      "upos": "",
-     "morph": "Imperat. P 2v.1",
+     "morph": "",
      "gloss": "you must see",
      "deva": "पश्य​",
      "slp1": "dfS",
-     "href": "../w/df_53.html",
-     "tier": "lemma"
+     "href": "../w/df_53.html"
     },
     {
      "form": "etān",
      "lemma": "etat",
      "upos": "",
-     "morph": "sn. 2n.3 m.",
+     "morph": "",
      "gloss": "these",
      "deva": "एतान्",
      "slp1": "etat",
-     "href": "../w/etat.html",
-     "tier": "lemma"
+     "href": "../w/etat.html"
     },
     {
      "form": "samavetān",
      "lemma": "samaveta",
      "upos": "",
-     "morph": "PP 2n.3 m.",
+     "morph": "",
      "gloss": "those who are assembled",
      "deva": "समवेतान्",
      "slp1": "samaveta",
-     "href": "../w/samaveta.html",
-     "tier": "lemma"
+     "href": "../w/samaveta.html"
     },
     {
      "form": "kurūn",
      "lemma": "kuru",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "members of the Kuru dynasty",
      "deva": "कुरून्",
      "slp1": "kuru",
-     "href": "../w/kuru.html",
-     "tier": "lemma"
+     "href": "../w/kuru.html"
     },
     {
      "form": "iti",
      "lemma": "iti",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "thus",
      "deva": "इति",
      "slp1": "iti",
-     "href": "../w/iti.html",
-     "tier": "lemma"
+     "href": "../w/iti.html"
     }
    ]
   },
@@ -3470,161 +3173,147 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.26",
    "dcs": null,
    "text": "tatrāpaśyat sthitān pārthaḥ pitṝn atha pitā-mahān",
-   "deva": "तत्रापश्यत्स्थितान्पार्थः पितृ़नथ पितामहान्",
+   "deva": "तत्र​ अपश्यत् स्थितान् पार्थः पित्ṝन् अथ​ पितामहान् आचार्यान् मातुलान् भ्रात्ṝन् पुत्रान् पौत्रान् सखीन् तथा",
    "tokens": [
     {
      "form": "tatra",
      "lemma": "tatra",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "there",
      "deva": "तत्र​",
      "slp1": "tatra",
-     "href": "../w/tatra.html",
-     "tier": "lemma"
+     "href": "../w/tatra.html"
     },
     {
      "form": "apaśyat",
      "lemma": "√dṛś",
      "upos": "",
-     "morph": "Imperf. P 1v.1",
+     "morph": "",
      "gloss": "he saw",
      "deva": "अपश्यत्",
      "slp1": "dfS",
-     "href": "../w/df_53.html",
-     "tier": "lemma"
+     "href": "../w/df_53.html"
     },
     {
      "form": "sthitān",
      "lemma": "sthita",
      "upos": "",
-     "morph": "PP 2n.3 m.",
+     "morph": "",
      "gloss": "situated",
      "deva": "स्थितान्",
      "slp1": "sTita",
-     "href": "../w/s_54ita.html",
-     "tier": "lemma"
+     "href": "../w/s_54ita.html"
     },
     {
      "form": "pārthaḥ",
      "lemma": "pārtha",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "son of Pṛthā",
      "deva": "पार्थः",
      "slp1": "pArTa",
-     "href": "../w/p_41r_54a.html",
-     "tier": "lemma"
+     "href": "../w/p_41r_54a.html"
     },
     {
      "form": "pitṝn",
      "lemma": "pitṛ",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "fathers",
      "deva": "पित्ṝन्",
      "slp1": "pitf",
-     "href": "../w/pitf.html",
-     "tier": "lemma"
+     "href": "../w/pitf.html"
     },
     {
      "form": "atha",
      "lemma": "atha",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "then, now, moreover, certainly, rather",
      "deva": "अथ​",
      "slp1": "aTa",
-     "href": "../w/a_54a.html",
-     "tier": "lemma"
+     "href": "../w/a_54a.html"
     },
     {
      "form": "pitā-mahān",
      "lemma": "pitā-maha",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "grandfathers",
      "deva": "पितामहान्",
      "slp1": "pitAmaha",
-     "href": "../w/pit_41maha.html",
-     "tier": "lemma"
+     "href": "../w/pit_41maha.html"
     },
     {
      "form": "ācāryān",
      "lemma": "ācārya",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "teachers",
      "deva": "आचार्यान्",
      "slp1": "AcArya",
-     "href": "../w/_41c_41rya.html",
-     "tier": "lemma"
+     "href": "../w/_41c_41rya.html"
     },
     {
      "form": "mātulān",
      "lemma": "mātula",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "maternal uncles",
      "deva": "मातुलान्",
      "slp1": "mAtula",
-     "href": "../w/m_41tula.html",
-     "tier": "lemma"
+     "href": "../w/m_41tula.html"
     },
     {
      "form": "bhrātṝn",
      "lemma": "bhrātṛ",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "brothers",
      "deva": "भ्रात्ṝन्",
      "slp1": "BrAtf",
-     "href": "../w/_42r_41tf.html",
-     "tier": "lemma"
+     "href": "../w/_42r_41tf.html"
     },
     {
      "form": "putrān",
      "lemma": "putra",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "sons",
      "deva": "पुत्रान्",
      "slp1": "putra",
-     "href": "../w/putra.html",
-     "tier": "lemma"
+     "href": "../w/putra.html"
     },
     {
      "form": "pautrān",
      "lemma": "pautra",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "grandsons",
      "deva": "पौत्रान्",
      "slp1": "pOtra",
-     "href": "../w/p_4ftra.html",
-     "tier": "lemma"
+     "href": "../w/p_4ftra.html"
     },
     {
      "form": "sakhīn",
      "lemma": "sakhi",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "friends",
      "deva": "सखीन्",
      "slp1": "saKi",
-     "href": "../w/sa_4bi.html",
-     "tier": "lemma"
+     "href": "../w/sa_4bi.html"
     },
     {
      "form": "tathā",
      "lemma": "tathā",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "in that manner, so, in like manner",
      "deva": "तथा",
      "slp1": "taTA",
-     "href": "../w/ta_54_41.html",
-     "tier": "lemma"
+     "href": "../w/ta_54_41.html"
     }
    ]
   },
@@ -3633,161 +3322,147 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.27",
    "dcs": null,
    "text": "śvaśurān suhṛdaś caiva senayor ubhayor api",
-   "deva": "श्वशुरान्सुहृदश्चैव सेनयोरुभयोरपि",
+   "deva": "श्वशुरान् सुहृदः च​ एव​ सेनयोः उभयोः अपि तान् समीक्ष्य​ सः कौन्तेय​: सर्वान् बन्धून् अवस्थितान्",
    "tokens": [
     {
      "form": "śvaśurān",
      "lemma": "śvaśura",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "fathers-in-law",
      "deva": "श्वशुरान्",
      "slp1": "SvaSura",
-     "href": "../w/_53va_53ura.html",
-     "tier": "lemma"
+     "href": "../w/_53va_53ura.html"
     },
     {
      "form": "suhṛdaḥ",
      "lemma": "su-hṛd",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "well-wishers",
      "deva": "सुहृदः",
      "slp1": "suhfd",
-     "href": "../w/suhfd.html",
-     "tier": "lemma"
+     "href": "../w/suhfd.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "eva",
      "lemma": "eva",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
      "slp1": "eva",
-     "href": "../w/eva.html",
-     "tier": "lemma"
+     "href": "../w/eva.html"
     },
     {
      "form": "senayoḥ",
      "lemma": "senā",
      "upos": "",
-     "morph": "7n.2 f.",
+     "morph": "",
      "gloss": "in the two armies",
      "deva": "सेनयोः",
      "slp1": "senA",
-     "href": "../w/sen_41.html",
-     "tier": "lemma"
+     "href": "../w/sen_41.html"
     },
     {
      "form": "ubhayoḥ",
      "lemma": "ubhā",
      "upos": "",
-     "morph": "sn. 7n.2 f.",
+     "morph": "",
      "gloss": "in both",
      "deva": "उभयोः",
      "slp1": "uBA",
-     "href": "../w/u_42_41.html",
-     "tier": "lemma"
+     "href": "../w/u_42_41.html"
     },
     {
      "form": "api",
      "lemma": "api",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "although, moreover, besides, even",
      "deva": "अपि",
      "slp1": "api",
-     "href": "../w/api.html",
-     "tier": "lemma"
+     "href": "../w/api.html"
     },
     {
      "form": "tān",
      "lemma": "tat",
      "upos": "",
-     "morph": "sn. 2n.3 m.",
+     "morph": "",
      "gloss": "them",
      "deva": "तान्",
      "slp1": "tat",
-     "href": "../w/tat.html",
-     "tier": "lemma"
+     "href": "../w/tat.html"
     },
     {
      "form": "samīkṣya",
      "lemma": "sam-√īkṣ",
      "upos": "",
-     "morph": "absol.",
+     "morph": "",
      "gloss": "after seeing",
      "deva": "समीक्ष्य​",
      "slp1": "samIkz",
-     "href": "../w/sam_49kz.html",
-     "tier": "lemma"
+     "href": "../w/sam_49kz.html"
     },
     {
      "form": "saḥ",
      "lemma": "tat",
      "upos": "",
-     "morph": "sn. 1n.1 m.",
+     "morph": "",
      "gloss": "he",
      "deva": "सः",
      "slp1": "tat",
-     "href": "../w/tat.html",
-     "tier": "lemma"
+     "href": "../w/tat.html"
     },
     {
      "form": "kaunteyaḥ",
      "lemma": "kaunteya",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "son of Kuntī",
      "deva": "कौन्तेय​:",
      "slp1": "kOnteya",
-     "href": "../w/k_4fnteya.html",
-     "tier": "lemma"
+     "href": "../w/k_4fnteya.html"
     },
     {
      "form": "sarvān",
      "lemma": "sarva",
      "upos": "",
-     "morph": "sn. 2n.3 m.",
+     "morph": "",
      "gloss": "all",
      "deva": "सर्वान्",
      "slp1": "sarva",
-     "href": "../w/sarva.html",
-     "tier": "lemma"
+     "href": "../w/sarva.html"
     },
     {
      "form": "bandhūn",
      "lemma": "bandhu",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "relatives",
      "deva": "बन्धून्",
      "slp1": "banDu",
-     "href": "../w/ban_44u.html",
-     "tier": "lemma"
+     "href": "../w/ban_44u.html"
     },
     {
      "form": "avasthitān",
      "lemma": "avasthita",
      "upos": "",
-     "morph": "PP 2n.3 m.",
+     "morph": "",
      "gloss": "who are arrayed",
      "deva": "अवस्थितान्",
      "slp1": "avasTita",
-     "href": "../w/avas_54ita.html",
-     "tier": "lemma"
+     "href": "../w/avas_54ita.html"
     }
    ]
   },
@@ -3796,161 +3471,147 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.28",
    "dcs": null,
    "text": "arjuna uvāca",
-   "deva": "अर्जुन उवाच",
+   "deva": "अर्जुनः उवाच​ कृपया परया आविष्टः विषीदन् इदम् अब्रवीत् दृष्ट्वा इमान् स्वजनान् कृष्ण​ युयुत्सून् समुपस्थितान्",
    "tokens": [
     {
      "form": "arjunaḥ",
      "lemma": "arjuna",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "white, clear, Arjuna",
      "deva": "अर्जुनः",
      "slp1": "arjuna",
-     "href": "../w/arjuna.html",
-     "tier": "lemma"
+     "href": "../w/arjuna.html"
     },
     {
      "form": "uvāca",
      "lemma": "√vac",
      "upos": "",
-     "morph": "Perf. P 1v.1",
+     "morph": "",
      "gloss": "he spoke",
      "deva": "उवाच​",
      "slp1": "vac",
-     "href": "../w/vac.html",
-     "tier": "lemma"
+     "href": "../w/vac.html"
     },
     {
      "form": "kṛpayā",
      "lemma": "kṛpā",
      "upos": "",
-     "morph": "3n.1 f.",
+     "morph": "",
      "gloss": "with pity, compassion",
      "deva": "कृपया",
      "slp1": "kfpA",
-     "href": "../w/kfp_41.html",
-     "tier": "lemma"
+     "href": "../w/kfp_41.html"
     },
     {
      "form": "parayā",
      "lemma": "parā",
      "upos": "",
-     "morph": "3n.1 f.",
+     "morph": "",
      "gloss": "with great",
      "deva": "परया",
      "slp1": "parA",
-     "href": "../w/par_41.html",
-     "tier": "lemma"
+     "href": "../w/par_41.html"
     },
     {
      "form": "āviṣṭaḥ",
      "lemma": "āviṣṭa",
      "upos": "",
-     "morph": "PP 1n.1 m.",
+     "morph": "",
      "gloss": "filled, subject to",
      "deva": "आविष्टः",
      "slp1": "Avizwa",
-     "href": "../w/_41vizwa.html",
-     "tier": "lemma"
+     "href": "../w/_41vizwa.html"
     },
     {
      "form": "viṣīdan",
      "lemma": "viṣīdant",
      "upos": "",
-     "morph": "PPr act. 1n.1 m.",
+     "morph": "",
      "gloss": "grieving",
      "deva": "विषीदन्",
      "slp1": "sad",
-     "href": "../w/sad.html",
-     "tier": "root"
+     "href": "../w/sad.html"
     },
     {
      "form": "idam",
      "lemma": "idam",
      "upos": "",
-     "morph": "sn. 2n.1 n.",
+     "morph": "",
      "gloss": "this",
      "deva": "इदम्",
      "slp1": "idam",
-     "href": "../w/idam.html",
-     "tier": "lemma"
+     "href": "../w/idam.html"
     },
     {
      "form": "abravīt",
      "lemma": "√brū",
      "upos": "",
-     "morph": "Imperf. 1v.1 P",
+     "morph": "",
      "gloss": "he spoke;",
      "deva": "अब्रवीत्",
      "slp1": "brU",
-     "href": "../w/br_55.html",
-     "tier": "lemma"
+     "href": "../w/br_55.html"
     },
     {
      "form": "dṛṣṭvā",
      "lemma": "√dṛś",
      "upos": "",
-     "morph": "absol.",
+     "morph": "",
      "gloss": "after seeing",
      "deva": "दृष्ट्वा",
      "slp1": "dfS",
-     "href": "../w/df_53.html",
-     "tier": "lemma"
+     "href": "../w/df_53.html"
     },
     {
      "form": "imān",
      "lemma": "idam",
      "upos": "",
-     "morph": "sn. 2n.3 m.",
+     "morph": "",
      "gloss": "these",
      "deva": "इमान्",
      "slp1": "idam",
-     "href": "../w/idam.html",
-     "tier": "lemma"
+     "href": "../w/idam.html"
     },
     {
      "form": "sva-janān",
      "lemma": "sva-jana",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "own people",
      "deva": "स्वजनान्",
      "slp1": "svajana",
-     "href": "../w/svajana.html",
-     "tier": "lemma"
+     "href": "../w/svajana.html"
     },
     {
      "form": "kṛṣṇa",
      "lemma": "kṛṣṇa",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "O dark one, O Kṛṣṇa",
      "deva": "कृष्ण​",
      "slp1": "kfzRa",
-     "href": "../w/kfz_52a.html",
-     "tier": "lemma"
+     "href": "../w/kfz_52a.html"
     },
     {
      "form": "yuyutsūn",
      "lemma": "yuyutsu",
      "upos": "",
-     "morph": "des. 2n.3 m.",
+     "morph": "",
      "gloss": "those desiring to fight",
      "deva": "युयुत्सून्",
      "slp1": "yuyutsu",
-     "href": "../w/yuyutsu.html",
-     "tier": "lemma"
+     "href": "../w/yuyutsu.html"
     },
     {
      "form": "samupasthitān",
      "lemma": "sam-upa-sthita",
      "upos": "",
-     "morph": "PP 2n.3 m.",
+     "morph": "",
      "gloss": "those assembled",
      "deva": "समुपस्थितान्",
      "slp1": "samupasTita",
-     "href": "../w/samupas_54ita.html",
-     "tier": "lemma"
+     "href": "../w/samupas_54ita.html"
     }
    ]
   },
@@ -3959,150 +3620,137 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.29",
    "dcs": null,
    "text": "sīdanti mama gātrāṇi mukhaṃ ca pariśuṣyati",
-   "deva": "सीदन्ति मम गात्राणि मुखं च परिशुष्यति",
+   "deva": "सीदन्ति मम​ गात्राणि मुखम् च​ परिशुष्यति वेपथुः च​ शरीरे मे रोमहर्षः च​ जायते",
    "tokens": [
     {
      "form": "sīdanti",
      "lemma": "√sad",
      "upos": "",
-     "morph": "Praes. P 1v.3",
+     "morph": "",
      "gloss": "they sink down",
      "deva": "सीदन्ति",
      "slp1": "sad",
-     "href": "../w/sad.html",
-     "tier": "lemma"
+     "href": "../w/sad.html"
     },
     {
      "form": "mama",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 6n.1",
+     "morph": "",
      "gloss": "my",
      "deva": "मम​",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "gātrāṇi",
      "lemma": "gātra",
      "upos": "",
-     "morph": "1n.3 n.",
+     "morph": "",
      "gloss": "limbs, the body",
      "deva": "गात्राणि",
      "slp1": "gAtra",
-     "href": "../w/g_41tra.html",
-     "tier": "lemma"
+     "href": "../w/g_41tra.html"
     },
     {
      "form": "mukham",
      "lemma": "mukha",
      "upos": "",
-     "morph": "1n.1 n.",
+     "morph": "",
      "gloss": "face, mouth",
      "deva": "मुखम्",
      "slp1": "muKa",
-     "href": "../w/mu_4ba.html",
-     "tier": "lemma"
+     "href": "../w/mu_4ba.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "pariśuṣyati",
      "lemma": "pari-√śuṣ",
      "upos": "",
-     "morph": "Praes. P 1v.1",
+     "morph": "",
      "gloss": "it s drying up",
      "deva": "परिशुष्यति",
      "slp1": "pariSuz",
-     "href": "../w/pari_53uz.html",
-     "tier": "lemma"
+     "href": "../w/pari_53uz.html"
     },
     {
      "form": "vepathuḥ",
      "lemma": "vepathu",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "trembling",
      "deva": "वेपथुः",
      "slp1": "vepaTu",
-     "href": "../w/vepa_54u.html",
-     "tier": "lemma"
+     "href": "../w/vepa_54u.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "śarīre",
      "lemma": "śarīra",
      "upos": "",
-     "morph": "7n.1 n.",
+     "morph": "",
      "gloss": "in the body",
      "deva": "शरीरे",
      "slp1": "SarIra",
-     "href": "../w/_53ar_49ra.html",
-     "tier": "lemma"
+     "href": "../w/_53ar_49ra.html"
     },
     {
      "form": "me",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 6n.1",
+     "morph": "",
      "gloss": "my",
      "deva": "मे",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "roma-harṣaḥ",
      "lemma": "roma-harṣa",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "bristling of the hair",
      "deva": "रोमहर्षः",
      "slp1": "romaharza",
-     "href": "../w/romaharza.html",
-     "tier": "lemma"
+     "href": "../w/romaharza.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "jāyate",
      "lemma": "√jan",
      "upos": "",
-     "morph": "Praes. Ā 1v.1",
+     "morph": "",
      "gloss": "it occurs",
      "deva": "जायते",
      "slp1": "jan",
-     "href": "../w/jan.html",
-     "tier": "lemma"
+     "href": "../w/jan.html"
     }
    ]
   },
@@ -4111,183 +3759,167 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.30",
    "dcs": null,
    "text": "gāṇḍīvaṃ sraṃsate hastāt tvak caiva paridahyate",
-   "deva": "गाण्डीवं स्रंसते हस्तात्त्वक्चैव परिदह्यते",
+   "deva": "गाण्डीवम् स्रञ्सते हस्तात् त्वक् च​ एव​ परिदह्यते न​ च​ शक्नोमि अवस्थातुम् भ्रमति इव​ च​ मे मनः",
    "tokens": [
     {
      "form": "gāṇḍīvam",
      "lemma": "gāṇḍīva",
      "upos": "",
-     "morph": "2n.1 n.",
+     "morph": "",
      "gloss": "a bow, a bow  of Arjuna",
      "deva": "गाण्डीवम्",
      "slp1": "gARqIva",
-     "href": "../w/g_41_52q_49va.html",
-     "tier": "lemma"
+     "href": "../w/g_41_52q_49va.html"
     },
     {
      "form": "sraṁsate",
      "lemma": "√sraṁs",
      "upos": "",
-     "morph": "Praes. Ā 1v.1",
+     "morph": "",
      "gloss": "it falls down",
      "deva": "स्रञ्सते",
      "slp1": "sraMs",
-     "href": "../w/sra_4ds.html",
-     "tier": "lemma"
+     "href": "../w/sra_4ds.html"
     },
     {
      "form": "hastāt",
      "lemma": "hasta",
      "upos": "",
-     "morph": "5n.1 m.",
+     "morph": "",
      "gloss": "from the hand",
      "deva": "हस्तात्",
      "slp1": "hasta",
-     "href": "../w/hasta.html",
-     "tier": "lemma"
+     "href": "../w/hasta.html"
     },
     {
      "form": "tvak",
      "lemma": "tvac",
      "upos": "",
-     "morph": "1n.1 f.",
+     "morph": "",
      "gloss": "the skin",
      "deva": "त्वक्",
      "slp1": "tvac",
-     "href": "../w/tvac.html",
-     "tier": "lemma"
+     "href": "../w/tvac.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "eva",
      "lemma": "eva",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
      "slp1": "eva",
-     "href": "../w/eva.html",
-     "tier": "lemma"
+     "href": "../w/eva.html"
     },
     {
      "form": "paridahyate",
      "lemma": "pari-√dah",
      "upos": "",
-     "morph": "Praes. pass. 1v.1",
+     "morph": "",
      "gloss": "is burned",
      "deva": "परिदह्यते",
      "slp1": "paridah",
-     "href": "../w/paridah.html",
-     "tier": "lemma"
+     "href": "../w/paridah.html"
     },
     {
      "form": "na",
      "lemma": "na",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "not",
      "deva": "न​",
      "slp1": "na",
-     "href": "../w/na.html",
-     "tier": "lemma"
+     "href": "../w/na.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "śaknomi",
      "lemma": "√śak",
      "upos": "",
-     "morph": "Praes. P 3v.1",
+     "morph": "",
      "gloss": "I am able",
      "deva": "शक्नोमि",
      "slp1": "Sak",
-     "href": "../w/_53ak.html",
-     "tier": "lemma"
+     "href": "../w/_53ak.html"
     },
     {
      "form": "avasthātum",
      "lemma": "ava-√sthā",
      "upos": "",
-     "morph": "inf.",
+     "morph": "",
      "gloss": "to stand",
      "deva": "अवस्थातुम्",
      "slp1": "avasTA",
-     "href": "../w/avas_54_41.html",
-     "tier": "lemma"
+     "href": "../w/avas_54_41.html"
     },
     {
      "form": "bhramati",
      "lemma": "√bhram",
      "upos": "",
-     "morph": "Praes. P 1v.1",
+     "morph": "",
      "gloss": "it roams",
      "deva": "भ्रमति",
      "slp1": "Bram",
-     "href": "../w/_42ram.html",
-     "tier": "lemma"
+     "href": "../w/_42ram.html"
     },
     {
      "form": "iva",
      "lemma": "iva",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "like, in the same manner as, almost, exactly",
      "deva": "इव​",
      "slp1": "iva",
-     "href": "../w/iva.html",
-     "tier": "lemma"
+     "href": "../w/iva.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "me",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 6n.1",
+     "morph": "",
      "gloss": "my",
      "deva": "मे",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "manaḥ",
      "lemma": "manas",
      "upos": "",
-     "morph": "1n.1 n.",
+     "morph": "",
      "gloss": "the mind",
      "deva": "मनः",
      "slp1": "manas",
-     "href": "../w/manas.html",
-     "tier": "lemma"
+     "href": "../w/manas.html"
     }
    ]
   },
@@ -4296,139 +3928,127 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.31",
    "dcs": null,
    "text": "nimittāni ca paśyāmi viparītāni keśava",
-   "deva": "निमित्तानि च पश्यामि विपरीतानि केशव",
+   "deva": "निमित्तानि च​ पश्यामि विपरीतानि केशव​ न​ च​ श्रेयः अनुपश्यामि हत्वा स्वजनम् आहवे",
    "tokens": [
     {
      "form": "nimittāni",
      "lemma": "nimitta",
      "upos": "",
-     "morph": "2n.3 n.",
+     "morph": "",
      "gloss": "omens, signs, causes",
      "deva": "निमित्तानि",
      "slp1": "nimitta",
-     "href": "../w/nimitta.html",
-     "tier": "lemma"
+     "href": "../w/nimitta.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "paśyāmi",
      "lemma": "√dṛś",
      "upos": "",
-     "morph": "Praes. P 3v.1",
+     "morph": "",
      "gloss": "I see",
      "deva": "पश्यामि",
      "slp1": "dfS",
-     "href": "../w/df_53.html",
-     "tier": "lemma"
+     "href": "../w/df_53.html"
     },
     {
      "form": "viparītāni",
      "lemma": "viparīta",
      "upos": "",
-     "morph": "2n.3 n.",
+     "morph": "",
      "gloss": "reversed, wrong",
      "deva": "विपरीतानि",
      "slp1": "viparIta",
-     "href": "../w/vipar_49ta.html",
-     "tier": "lemma"
+     "href": "../w/vipar_49ta.html"
     },
     {
      "form": "keśava",
      "lemma": "keśa-va",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "who has [beautiful] hair",
      "deva": "केशव​",
      "slp1": "keSava",
-     "href": "../w/ke_53ava.html",
-     "tier": "lemma"
+     "href": "../w/ke_53ava.html"
     },
     {
      "form": "na",
      "lemma": "na",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "not",
      "deva": "न​",
      "slp1": "na",
-     "href": "../w/na.html",
-     "tier": "lemma"
+     "href": "../w/na.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "śreyaḥ",
      "lemma": "śreyas",
      "upos": "",
-     "morph": "2n.1 n.",
+     "morph": "",
      "gloss": "better, higher, perfect, the auspiciousness, the welfare",
      "deva": "श्रेयः",
      "slp1": "Sreyas",
-     "href": "../w/_53reyas.html",
-     "tier": "lemma"
+     "href": "../w/_53reyas.html"
     },
     {
      "form": "anupaśyāmi",
      "lemma": "anu-√dṛś",
      "upos": "",
-     "morph": "Praes. P 3v.1",
+     "morph": "",
      "gloss": "I foresee",
      "deva": "अनुपश्यामि",
      "slp1": "anudfS",
-     "href": "../w/anudf_53.html",
-     "tier": "lemma"
+     "href": "../w/anudf_53.html"
     },
     {
      "form": "hatvā",
      "lemma": "√han",
      "upos": "",
-     "morph": "absol.",
+     "morph": "",
      "gloss": "after killing",
      "deva": "हत्वा",
      "slp1": "han",
-     "href": "../w/han.html",
-     "tier": "lemma"
+     "href": "../w/han.html"
     },
     {
      "form": "sva-janam",
      "lemma": "sva-janam",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "own people",
      "deva": "स्वजनम्",
      "slp1": "jan",
-     "href": "../w/jan.html",
-     "tier": "root"
+     "href": "../w/jan.html"
     },
     {
      "form": "āhave",
      "lemma": "āhava",
      "upos": "",
-     "morph": "7n.1 m.",
+     "morph": "",
      "gloss": "in battle",
      "deva": "आहवे",
      "slp1": "Ahava",
-     "href": "../w/_41hava.html",
-     "tier": "lemma"
+     "href": "../w/_41hava.html"
     }
    ]
   },
@@ -4437,95 +4057,87 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.32",
    "dcs": null,
    "text": "na kāṅkṣe vijayaṃ kṛṣṇa na ca rājyaṃ sukhāni ca",
-   "deva": "न काङ्क्षे विजयं कृष्ण न च राज्यं सुखानि च",
+   "deva": "न​ काङ्क्षे विजयम् कृष्ण​ न​ च​ राज्यम् सुखानि च​ किम् नः राज्येन​ गोविन्द​ किम् भोगैः जीवितेन​ वा",
    "tokens": [
     {
      "form": "na",
      "lemma": "na",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "not",
      "deva": "न​",
      "slp1": "na",
-     "href": "../w/na.html",
-     "tier": "lemma"
+     "href": "../w/na.html"
     },
     {
      "form": "kāṅkṣe",
      "lemma": "√kāṅkṣ",
      "upos": "",
-     "morph": "Praes. Ā 3v.1",
+     "morph": "",
      "gloss": "I desire",
      "deva": "काङ्क्षे",
      "slp1": "kANkz",
-     "href": "../w/k_41_4ekz.html",
-     "tier": "lemma"
+     "href": "../w/k_41_4ekz.html"
     },
     {
      "form": "vijayam",
      "lemma": "vijaya",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "victory",
      "deva": "विजयम्",
      "slp1": "vijaya",
-     "href": "../w/vijaya.html",
-     "tier": "lemma"
+     "href": "../w/vijaya.html"
     },
     {
      "form": "kṛṣṇa",
      "lemma": "kṛṣṇa",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "O dark one, O Kṛṣṇa",
      "deva": "कृष्ण​",
      "slp1": "kfzRa",
-     "href": "../w/kfz_52a.html",
-     "tier": "lemma"
+     "href": "../w/kfz_52a.html"
     },
     {
      "form": "na",
      "lemma": "na",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "not",
      "deva": "न​",
      "slp1": "na",
-     "href": "../w/na.html",
-     "tier": "lemma"
+     "href": "../w/na.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "rājyam",
      "lemma": "rājya",
      "upos": "",
-     "morph": "PF 2n.1 n.",
+     "morph": "",
      "gloss": "a kingdom, power",
      "deva": "राज्यम्",
      "slp1": "rAjya",
-     "href": "../w/r_41jya.html",
-     "tier": "lemma"
+     "href": "../w/r_41jya.html"
     },
     {
      "form": "sukhāni",
      "lemma": "sukha",
      "upos": "",
-     "morph": "2n.3 n.",
+     "morph": "",
      "gloss": "pleasures, comforts",
      "deva": "सुखानि",
      "slp1": "suKa",
-     "href": "../w/su_4ba.html",
-     "tier": "lemma"
+     "href": "../w/su_4ba.html"
     },
     {
      "form": "ca",
@@ -4535,96 +4147,87 @@ window.READING_DATA["gita-1"] = {
      "gloss": "Unexpected Python Error: <Error getting traceback - traceback.print_exception() failed>",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "form"
+     "href": "../w/ca.html"
     },
     {
      "form": "kim",
      "lemma": "kim",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "what for – requires instrumental",
      "deva": "किम्",
      "slp1": "kim",
-     "href": "../w/kim.html",
-     "tier": "lemma"
+     "href": "../w/kim.html"
     },
     {
      "form": "naḥ",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 4i.3x",
+     "morph": "",
      "gloss": "for us",
      "deva": "नः",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "rājyena",
      "lemma": "rājya",
      "upos": "",
-     "morph": "PF 3n.1 n.",
+     "morph": "",
      "gloss": "with a kingdom",
      "deva": "राज्येन​",
      "slp1": "rAjya",
-     "href": "../w/r_41jya.html",
-     "tier": "lemma"
+     "href": "../w/r_41jya.html"
     },
     {
      "form": "govinda",
      "lemma": "govinda",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "one who gets the cows",
      "deva": "गोविन्द​",
      "slp1": "govinda",
-     "href": "../w/govinda.html",
-     "tier": "lemma"
+     "href": "../w/govinda.html"
     },
     {
      "form": "kim",
      "lemma": "kim",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "what for – requires instrumental",
      "deva": "किम्",
      "slp1": "kim",
-     "href": "../w/kim.html",
-     "tier": "lemma"
+     "href": "../w/kim.html"
     },
     {
      "form": "bhogaiḥ",
      "lemma": "bhoga",
      "upos": "",
-     "morph": "3n.3 m.",
+     "morph": "",
      "gloss": "with luxuries",
      "deva": "भोगैः",
      "slp1": "Boga",
-     "href": "../w/_42oga.html",
-     "tier": "lemma"
+     "href": "../w/_42oga.html"
     },
     {
      "form": "jīvitena",
      "lemma": "jīvita",
      "upos": "",
-     "morph": "PP 3n.1 n.",
+     "morph": "",
      "gloss": "with life",
      "deva": "जीवितेन​",
      "slp1": "jIvita",
-     "href": "../w/j_49vita.html",
-     "tier": "lemma"
+     "href": "../w/j_49vita.html"
     },
     {
      "form": "vā",
      "lemma": "vā",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "or, and, on the other side, but even if, however",
      "deva": "वा",
      "slp1": "vA",
-     "href": "../w/v_41.html",
-     "tier": "lemma"
+     "href": "../w/v_41.html"
     }
    ]
   },
@@ -4633,183 +4236,167 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.33",
    "dcs": null,
    "text": "yeṣām arthe kāṅkṣitaṃ no rājyaṃ bhogāḥ sukhāni ca",
-   "deva": "येषामर्थे काङ्क्षितं नो राज्यं भोगाः सुखानि च",
+   "deva": "येषाम् अर्थे काङ्क्षितम् नः राज्यम् भोगाः सुखानि च​ ते इमे अवस्थिताः युद्धे प्राणान् त्यक्त्वा धनानि च​",
    "tokens": [
     {
      "form": "yeṣām",
      "lemma": "yat",
      "upos": "",
-     "morph": "sn. 6n.3 m.",
+     "morph": "",
      "gloss": "of whom",
      "deva": "येषाम्",
      "slp1": "yat",
-     "href": "../w/yat.html",
-     "tier": "lemma"
+     "href": "../w/yat.html"
     },
     {
      "form": "arthe",
      "lemma": "artha",
      "upos": "",
-     "morph": "7n.1 m.",
+     "morph": "",
      "gloss": "for the sake",
      "deva": "अर्थे",
      "slp1": "arTa",
-     "href": "../w/ar_54a.html",
-     "tier": "lemma"
+     "href": "../w/ar_54a.html"
     },
     {
      "form": "kāṅkṣitam",
      "lemma": "kāṅkṣita",
      "upos": "",
-     "morph": "PP 1n.1 n.",
+     "morph": "",
      "gloss": "desired, longed for",
      "deva": "काङ्क्षितम्",
      "slp1": "kANkzita",
-     "href": "../w/k_41_4ekzita.html",
-     "tier": "lemma"
+     "href": "../w/k_41_4ekzita.html"
     },
     {
      "form": "naḥ",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 6n.3",
+     "morph": "",
      "gloss": "our",
      "deva": "नः",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "rājyam",
      "lemma": "rājya",
      "upos": "",
-     "morph": "PF 1n.1 n.",
+     "morph": "",
      "gloss": "a kingdom, power",
      "deva": "राज्यम्",
      "slp1": "rAjya",
-     "href": "../w/r_41jya.html",
-     "tier": "lemma"
+     "href": "../w/r_41jya.html"
     },
     {
      "form": "bhogāḥ",
      "lemma": "bhoga",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "luxuries",
      "deva": "भोगाः",
      "slp1": "Boga",
-     "href": "../w/_42oga.html",
-     "tier": "lemma"
+     "href": "../w/_42oga.html"
     },
     {
      "form": "sukhāni",
      "lemma": "sukha",
      "upos": "",
-     "morph": "3n.3 n.",
+     "morph": "",
      "gloss": "pleasures, comforts",
      "deva": "सुखानि",
      "slp1": "suKa",
-     "href": "../w/su_4ba.html",
-     "tier": "lemma"
+     "href": "../w/su_4ba.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "te",
      "lemma": "tat",
      "upos": "",
-     "morph": "sn. 1n.3 m.",
+     "morph": "",
      "gloss": "they",
      "deva": "ते",
      "slp1": "tat",
-     "href": "../w/tat.html",
-     "tier": "lemma"
+     "href": "../w/tat.html"
     },
     {
      "form": "ime",
      "lemma": "idam",
      "upos": "",
-     "morph": "sn. 1n.3 m.",
+     "morph": "",
      "gloss": "these",
      "deva": "इमे",
      "slp1": "idam",
-     "href": "../w/idam.html",
-     "tier": "lemma"
+     "href": "../w/idam.html"
     },
     {
      "form": "avasthitāḥ",
      "lemma": "avasthita",
      "upos": "",
-     "morph": "PP 1n.3 m.",
+     "morph": "",
      "gloss": "who are arrayed",
      "deva": "अवस्थिताः",
      "slp1": "avasTita",
-     "href": "../w/avas_54ita.html",
-     "tier": "lemma"
+     "href": "../w/avas_54ita.html"
     },
     {
      "form": "yuddhe",
      "lemma": "yuddha",
      "upos": "",
-     "morph": "7n.1 n.",
+     "morph": "",
      "gloss": "in battle",
      "deva": "युद्धे",
      "slp1": "yudDa",
-     "href": "../w/yud_44a.html",
-     "tier": "lemma"
+     "href": "../w/yud_44a.html"
     },
     {
      "form": "prāṇān",
      "lemma": "prāṇa",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "breath, the life",
      "deva": "प्राणान्",
      "slp1": "prARa",
-     "href": "../w/pr_41_52a.html",
-     "tier": "lemma"
+     "href": "../w/pr_41_52a.html"
     },
     {
      "form": "tyaktvā",
      "lemma": "√tyaj",
      "upos": "",
-     "morph": "absol.",
+     "morph": "",
      "gloss": "after abandoning",
      "deva": "त्यक्त्वा",
      "slp1": "tyaj",
-     "href": "../w/tyaj.html",
-     "tier": "lemma"
+     "href": "../w/tyaj.html"
     },
     {
      "form": "dhanāni",
      "lemma": "dhana",
      "upos": "",
-     "morph": "2n.3 n.",
+     "morph": "",
      "gloss": "booty, prey, riches",
      "deva": "धनानि",
      "slp1": "Dana",
-     "href": "../w/_44ana.html",
-     "tier": "lemma"
+     "href": "../w/_44ana.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     }
    ]
   },
@@ -4818,150 +4405,137 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.34",
    "dcs": null,
    "text": "ācāryāḥ pitaraḥ putrās tathaiva ca pitāmahāḥ",
-   "deva": "आचार्याः पितरः पुत्रास्तथैव च पितामहाः",
+   "deva": "आचार्याः पितरः पुत्राः तथा एव​ च​ पितामहाः मातुलाः श्वशुराः पौत्रान् स्यालाः सम्बन्धिनः तथा",
    "tokens": [
     {
      "form": "ācāryāḥ",
      "lemma": "ācārya",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "teachers",
      "deva": "आचार्याः",
      "slp1": "AcArya",
-     "href": "../w/_41c_41rya.html",
-     "tier": "lemma"
+     "href": "../w/_41c_41rya.html"
     },
     {
      "form": "pitaraḥ",
      "lemma": "pitṛ",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "fathers",
      "deva": "पितरः",
      "slp1": "pitf",
-     "href": "../w/pitf.html",
-     "tier": "lemma"
+     "href": "../w/pitf.html"
     },
     {
      "form": "putrāḥ",
      "lemma": "putra",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "sons",
      "deva": "पुत्राः",
      "slp1": "putra",
-     "href": "../w/putra.html",
-     "tier": "lemma"
+     "href": "../w/putra.html"
     },
     {
      "form": "tathā",
      "lemma": "tathā",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "in that manner, so, in like manner",
      "deva": "तथा",
      "slp1": "taTA",
-     "href": "../w/ta_54_41.html",
-     "tier": "lemma"
+     "href": "../w/ta_54_41.html"
     },
     {
      "form": "eva",
      "lemma": "eva",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
      "slp1": "eva",
-     "href": "../w/eva.html",
-     "tier": "lemma"
+     "href": "../w/eva.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "pitāmahāḥ",
      "lemma": "pitā-maha",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "grandfathers",
      "deva": "पितामहाः",
      "slp1": "pitAmaha",
-     "href": "../w/pit_41maha.html",
-     "tier": "lemma"
+     "href": "../w/pit_41maha.html"
     },
     {
      "form": "mātulāḥ",
      "lemma": "mātula",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "maternal uncles",
      "deva": "मातुलाः",
      "slp1": "mAtula",
-     "href": "../w/m_41tula.html",
-     "tier": "lemma"
+     "href": "../w/m_41tula.html"
     },
     {
      "form": "śvaśurāḥ",
      "lemma": "śvaśura",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "fathers-in-law",
      "deva": "श्वशुराः",
      "slp1": "SvaSura",
-     "href": "../w/_53va_53ura.html",
-     "tier": "lemma"
+     "href": "../w/_53va_53ura.html"
     },
     {
      "form": "pautrāḥ",
      "lemma": "pautra",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "grandsons",
      "deva": "पौत्रान्",
      "slp1": "pOtra",
-     "href": "../w/p_4ftra.html",
-     "tier": "lemma"
+     "href": "../w/p_4ftra.html"
     },
     {
      "form": "syālāḥ",
      "lemma": "syāla",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "brothers-in-law",
      "deva": "स्यालाः",
      "slp1": "syAla",
-     "href": "../w/sy_41la.html",
-     "tier": "lemma"
+     "href": "../w/sy_41la.html"
     },
     {
      "form": "sambandhinaḥ",
      "lemma": "sam-bandhin",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "relatives",
      "deva": "सम्बन्धिनः",
      "slp1": "sambanDin",
-     "href": "../w/samban_44in.html",
-     "tier": "lemma"
+     "href": "../w/samban_44in.html"
     },
     {
      "form": "tathā",
      "lemma": "tathā",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "in that manner, so, in like manner",
      "deva": "तथा",
      "slp1": "taTA",
-     "href": "../w/ta_54_41.html",
-     "tier": "lemma"
+     "href": "../w/ta_54_41.html"
     }
    ]
   },
@@ -4970,150 +4544,137 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.35",
    "dcs": null,
    "text": "etān na hantum icchāmi ghnato ‘pi madhusūdana",
-   "deva": "एतान्न हन्तुमिच्छामि घ्नतोऽपि मधुसूदन",
+   "deva": "एतान् न​ हन्तुम् इच्छामि घ्नतः अपि मधुसूदन​ अपि त्रैलोक्यराज्यस्य​ हेतोः किम् नु महीकृते",
    "tokens": [
     {
      "form": "etān",
      "lemma": "etat",
      "upos": "",
-     "morph": "sn. 2n.3 m.",
+     "morph": "",
      "gloss": "them",
      "deva": "एतान्",
      "slp1": "etat",
-     "href": "../w/etat.html",
-     "tier": "lemma"
+     "href": "../w/etat.html"
     },
     {
      "form": "na",
      "lemma": "na",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "not",
      "deva": "न​",
      "slp1": "na",
-     "href": "../w/na.html",
-     "tier": "lemma"
+     "href": "../w/na.html"
     },
     {
      "form": "hantum",
      "lemma": "√han",
      "upos": "",
-     "morph": "inf.",
+     "morph": "",
      "gloss": "to kill",
      "deva": "हन्तुम्",
      "slp1": "han",
-     "href": "../w/han.html",
-     "tier": "lemma"
+     "href": "../w/han.html"
     },
     {
      "form": "icchāmi",
      "lemma": "√iṣ",
      "upos": "",
-     "morph": "Praes. P 3v.1",
+     "morph": "",
      "gloss": "I desire",
      "deva": "इच्छामि",
      "slp1": "iz",
-     "href": "../w/iz.html",
-     "tier": "lemma"
+     "href": "../w/iz.html"
     },
     {
      "form": "ghnataḥ",
      "lemma": "ghnant",
      "upos": "",
-     "morph": "PPr 2n.3 m.",
+     "morph": "",
      "gloss": "who are killing",
      "deva": "घ्नतः",
      "slp1": "Gnant",
-     "href": "../w/_47nant.html",
-     "tier": "lemma"
+     "href": "../w/_47nant.html"
     },
     {
      "form": "api",
      "lemma": "api",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "although, moreover, besides, even",
      "deva": "अपि",
      "slp1": "api",
-     "href": "../w/api.html",
-     "tier": "lemma"
+     "href": "../w/api.html"
     },
     {
      "form": "madhu-sūdana",
      "lemma": "madhu-sūdana",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "O slayer of Madhu",
      "deva": "मधुसूदन​",
      "slp1": "maDusUdana",
-     "href": "../w/ma_44us_55dana.html",
-     "tier": "lemma"
+     "href": "../w/ma_44us_55dana.html"
     },
     {
      "form": "api",
      "lemma": "api",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "although, moreover, besides, even",
      "deva": "अपि",
      "slp1": "api",
-     "href": "../w/api.html",
-     "tier": "lemma"
+     "href": "../w/api.html"
     },
     {
      "form": "trai-lokya-rājyasya",
      "lemma": "trai-lokya-rājya",
      "upos": "",
-     "morph": "6n.1 n.",
+     "morph": "",
      "gloss": "of the kingdom of the three worlds",
      "deva": "त्रैलोक्यराज्यस्य​",
      "slp1": "trElokyarAjya",
-     "href": "../w/tr_45lokyar_41jya.html",
-     "tier": "lemma"
+     "href": "../w/tr_45lokyar_41jya.html"
     },
     {
      "form": "hetoḥ",
      "lemma": "hetoḥ",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "for the cause, for the reason",
      "deva": "हेतोः",
      "slp1": "hetu",
-     "href": "../w/hetu.html",
-     "tier": "form"
+     "href": "../w/hetu.html"
     },
     {
      "form": "kim",
      "lemma": "kim",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "whether? how? why? wherefrom?",
      "deva": "किम्",
      "slp1": "kim",
-     "href": "../w/kim.html",
-     "tier": "lemma"
+     "href": "../w/kim.html"
     },
     {
      "form": "nu",
      "lemma": "nu",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "indeed",
      "deva": "नु",
      "slp1": "nu",
-     "href": "../w/nu.html",
-     "tier": "lemma"
+     "href": "../w/nu.html"
     },
     {
      "form": "mahī-kṛte",
      "lemma": "mahī-kṛte",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "for the sake of [ruling] the earth",
      "deva": "महीकृते",
      "slp1": "mah",
-     "href": "../w/mah.html",
-     "tier": "root"
+     "href": "../w/mah.html"
     }
    ]
   },
@@ -5122,161 +4683,147 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.36",
    "dcs": null,
    "text": "nihatya dhārtarāṣṭrān naḥ kā prītiḥ syāj janārdana",
-   "deva": "निहत्य धार्तराष्ट्रान्नः का प्रीतिः स्याज्जनार्दन",
+   "deva": "निहत्य​ धार्तराष्ट्रान् नः का प्रीतिः स्यात् जनार्दन​ पापम् एव​ आश्रयेत् अस्मान् हत्वा एतान् आततायिनः",
    "tokens": [
     {
      "form": "nihatya",
      "lemma": "ni-√han",
      "upos": "",
-     "morph": "absol.",
+     "morph": "",
      "gloss": "after killing",
      "deva": "निहत्य​",
      "slp1": "nihan",
-     "href": "../w/nihan.html",
-     "tier": "lemma"
+     "href": "../w/nihan.html"
     },
     {
      "form": "dhārtarāṣṭrān",
      "lemma": "dhārtarāṣṭra",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "the sons of Dhṛtarāṣṭra",
      "deva": "धार्तराष्ट्रान्",
      "slp1": "DArtarAzwra",
-     "href": "../w/_44_41rtar_41zwra.html",
-     "tier": "lemma"
+     "href": "../w/_44_41rtar_41zwra.html"
     },
     {
      "form": "naḥ",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 6n.3",
+     "morph": "",
      "gloss": "our",
      "deva": "नः",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "kā",
      "lemma": "kim",
      "upos": "",
-     "morph": "sn. 1n.1 f.",
+     "morph": "",
      "gloss": "what?",
      "deva": "का",
      "slp1": "kim",
-     "href": "../w/kim.html",
-     "tier": "lemma"
+     "href": "../w/kim.html"
     },
     {
      "form": "prītiḥ",
      "lemma": "prīti",
      "upos": "",
-     "morph": "1n.1 f.",
+     "morph": "",
      "gloss": "delight, joy",
      "deva": "प्रीतिः",
      "slp1": "prIti",
-     "href": "../w/pr_49ti.html",
-     "tier": "lemma"
+     "href": "../w/pr_49ti.html"
     },
     {
      "form": "syāt",
      "lemma": "√as",
      "upos": "",
-     "morph": "Pot. P 1v.1",
+     "morph": "",
      "gloss": "it would be",
      "deva": "स्यात्",
      "slp1": "as",
-     "href": "../w/as.html",
-     "tier": "lemma"
+     "href": "../w/as.html"
     },
     {
      "form": "janārdana",
      "lemma": "jana-ardana",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "exciting / agitating people, O Janārdana",
      "deva": "जनार्दन​",
      "slp1": "jan",
-     "href": "../w/jan.html",
-     "tier": "root"
+     "href": "../w/jan.html"
     },
     {
      "form": "pāpam",
      "lemma": "pāpa",
      "upos": "",
-     "morph": "1n.1 n.",
+     "morph": "",
      "gloss": "evil, sin",
      "deva": "पापम्",
      "slp1": "pApa",
-     "href": "../w/p_41pa.html",
-     "tier": "lemma"
+     "href": "../w/p_41pa.html"
     },
     {
      "form": "eva",
      "lemma": "eva",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
      "slp1": "eva",
-     "href": "../w/eva.html",
-     "tier": "lemma"
+     "href": "../w/eva.html"
     },
     {
      "form": "āśrayet",
      "lemma": "ā-√śri",
      "upos": "",
-     "morph": "Pot. P 1v.1",
+     "morph": "",
      "gloss": "it would lean on",
      "deva": "आश्रयेत्",
      "slp1": "ASri",
-     "href": "../w/_41_53ri.html",
-     "tier": "lemma"
+     "href": "../w/_41_53ri.html"
     },
     {
      "form": "asmān",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 2n.3",
+     "morph": "",
      "gloss": "us",
      "deva": "अस्मान्",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "hatvā",
      "lemma": "√han",
      "upos": "",
-     "morph": "absol.",
+     "morph": "",
      "gloss": "after killing",
      "deva": "हत्वा",
      "slp1": "han",
-     "href": "../w/han.html",
-     "tier": "lemma"
+     "href": "../w/han.html"
     },
     {
      "form": "etān",
      "lemma": "etat",
      "upos": "",
-     "morph": "sn. 2n.3 m.",
+     "morph": "",
      "gloss": "these",
      "deva": "एतान्",
      "slp1": "etat",
-     "href": "../w/etat.html",
-     "tier": "lemma"
+     "href": "../w/etat.html"
     },
     {
      "form": "ātatāyinaḥ",
      "lemma": "ātatāyin",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "aggressors",
      "deva": "आततायिनः",
      "slp1": "AtatAyin",
-     "href": "../w/_41tat_41yin.html",
-     "tier": "lemma"
+     "href": "../w/_41tat_41yin.html"
     }
    ]
   },
@@ -5285,161 +4832,147 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.37",
    "dcs": null,
    "text": "tasmān nārhā vayaṃ hantuṃ dhārtarāṣṭrān sa-bāndhavān",
-   "deva": "तस्मान्नार्हा वयं हन्तुं धार्तराष्ट्रान्स्वबान्धवान्",
+   "deva": "तस्मात् न​ अर्हाः वयम् हन्तुम् धार्तराष्ट्रान् सबान्धवान् स्वजनम् हि कथम् हत्वा सुखिनः स्याम​ माधव​",
    "tokens": [
     {
      "form": "tasmāt",
      "lemma": "tasmāt",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "from that",
      "deva": "तस्मात्",
      "slp1": "tasmAt",
-     "href": "../w/tasm_41t.html",
-     "tier": "lemma"
+     "href": "../w/tasm_41t.html"
     },
     {
      "form": "na",
      "lemma": "na",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "not",
      "deva": "न​",
      "slp1": "na",
-     "href": "../w/na.html",
-     "tier": "lemma"
+     "href": "../w/na.html"
     },
     {
      "form": "arhāḥ",
      "lemma": "arha",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "who deserve, who ought to",
      "deva": "अर्हाः",
      "slp1": "arha",
-     "href": "../w/arha.html",
-     "tier": "lemma"
+     "href": "../w/arha.html"
     },
     {
      "form": "vayam",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 1n.3",
+     "morph": "",
      "gloss": "we",
      "deva": "वयम्",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "hantum",
      "lemma": "√han",
      "upos": "",
-     "morph": "inf.",
+     "morph": "",
      "gloss": "to kill",
      "deva": "हन्तुम्",
      "slp1": "han",
-     "href": "../w/han.html",
-     "tier": "lemma"
+     "href": "../w/han.html"
     },
     {
      "form": "dhārtarāṣṭrān",
      "lemma": "dhārtarāṣṭra",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "the sons of Dhṛtarāṣṭra",
      "deva": "धार्तराष्ट्रान्",
      "slp1": "DArtarAzwra",
-     "href": "../w/_44_41rtar_41zwra.html",
-     "tier": "lemma"
+     "href": "../w/_44_41rtar_41zwra.html"
     },
     {
      "form": "sa-bāndhavān",
      "lemma": "sa-bāndhava",
      "upos": "",
-     "morph": "2n.3 m.",
+     "morph": "",
      "gloss": "those who are with their relatives",
      "deva": "सबान्धवान्",
      "slp1": "sabAnDava",
-     "href": "../w/sab_41n_44ava.html",
-     "tier": "lemma"
+     "href": "../w/sab_41n_44ava.html"
     },
     {
      "form": "sva-janam",
      "lemma": "sva-jana",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "own people",
      "deva": "स्वजनम्",
      "slp1": "svajana",
-     "href": "../w/svajana.html",
-     "tier": "lemma"
+     "href": "../w/svajana.html"
     },
     {
      "form": "hi",
      "lemma": "hi",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "we could bebecause, just, indeed, surely",
      "deva": "हि",
      "slp1": "hi",
-     "href": "../w/hi.html",
-     "tier": "lemma"
+     "href": "../w/hi.html"
     },
     {
      "form": "katham",
      "lemma": "katham",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "how?, in what manner?",
      "deva": "कथम्",
      "slp1": "kaTam",
-     "href": "../w/ka_54am.html",
-     "tier": "lemma"
+     "href": "../w/ka_54am.html"
     },
     {
      "form": "hatvā",
      "lemma": "√han",
      "upos": "",
-     "morph": "absol.",
+     "morph": "",
      "gloss": "after killing",
      "deva": "हत्वा",
      "slp1": "han",
-     "href": "../w/han.html",
-     "tier": "lemma"
+     "href": "../w/han.html"
     },
     {
      "form": "sukhinaḥ",
      "lemma": "sukhin",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "happy men",
      "deva": "सुखिनः",
      "slp1": "suKin",
-     "href": "../w/su_4bin.html",
-     "tier": "lemma"
+     "href": "../w/su_4bin.html"
     },
     {
      "form": "syāma",
      "lemma": "√as",
      "upos": "",
-     "morph": "Pot. P 3v.3",
+     "morph": "",
      "gloss": "we could be",
      "deva": "स्याम​",
      "slp1": "as",
-     "href": "../w/as.html",
-     "tier": "lemma"
+     "href": "../w/as.html"
     },
     {
      "form": "mādhava",
      "lemma": "mādhava",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "O descendant of king Madhu",
      "deva": "माधव​",
      "slp1": "mADava",
-     "href": "../w/m_41_44ava.html",
-     "tier": "lemma"
+     "href": "../w/m_41_44ava.html"
     }
    ]
   },
@@ -5448,128 +4981,117 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.38",
    "dcs": null,
    "text": "yady apy ete na paśyanti lobhopahata-cetasaḥ",
-   "deva": "यद्यप्येते न पश्यन्ति लोभोपहतचेतसः",
+   "deva": "यदि अपि एते न​ पश्यन्ति लोभोपहतचेतसः कुलक्षयकृतम् दोषम् मित्रद्रोहे च​ पातकम्",
    "tokens": [
     {
      "form": "yadi",
      "lemma": "yadi",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "if",
      "deva": "यदि",
      "slp1": "yadi",
-     "href": "../w/yadi.html",
-     "tier": "lemma"
+     "href": "../w/yadi.html"
     },
     {
      "form": "api",
      "lemma": "api",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "although, moreover, besides, even",
      "deva": "अपि",
      "slp1": "api",
-     "href": "../w/api.html",
-     "tier": "lemma"
+     "href": "../w/api.html"
     },
     {
      "form": "ete",
      "lemma": "etat",
      "upos": "",
-     "morph": "sn. 1n.3 m.",
+     "morph": "",
      "gloss": "these",
      "deva": "एते",
      "slp1": "etat",
-     "href": "../w/etat.html",
-     "tier": "lemma"
+     "href": "../w/etat.html"
     },
     {
      "form": "na",
      "lemma": "na",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "not",
      "deva": "न​",
      "slp1": "na",
-     "href": "../w/na.html",
-     "tier": "lemma"
+     "href": "../w/na.html"
     },
     {
      "form": "paśyanti",
      "lemma": "√dṛś",
      "upos": "",
-     "morph": "Praes. P 1v.3",
+     "morph": "",
      "gloss": "they see",
      "deva": "पश्यन्ति",
      "slp1": "dfS",
-     "href": "../w/df_53.html",
-     "tier": "lemma"
+     "href": "../w/df_53.html"
     },
     {
      "form": "lobhopahata-cetasaḥ",
      "lemma": "lobha-upahata-cetas",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "whose minds are affected by greed",
      "deva": "लोभोपहतचेतसः",
      "slp1": "luB",
-     "href": "../w/lu_42.html",
-     "tier": "root"
+     "href": "../w/lu_42.html"
     },
     {
      "form": "kula-kṣaya-kṛtam",
      "lemma": "kula-kṣaya-kṛta",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "done by the destruction of family",
      "deva": "कुलक्षयकृतम्",
      "slp1": "kzi",
-     "href": "../w/kzi.html",
-     "tier": "root"
+     "href": "../w/kzi.html"
     },
     {
      "form": "doṣam",
      "lemma": "doṣa",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "evil, fault, guilt",
      "deva": "दोषम्",
      "slp1": "doza",
-     "href": "../w/doza.html",
-     "tier": "lemma"
+     "href": "../w/doza.html"
     },
     {
      "form": "mitra-drohe",
      "lemma": "mitra-droha",
      "upos": "",
-     "morph": "7n.1 m.",
+     "morph": "",
      "gloss": "in hostility to friends",
      "deva": "मित्रद्रोहे",
      "slp1": "mitradroha",
-     "href": "../w/mitradroha.html",
-     "tier": "lemma"
+     "href": "../w/mitradroha.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "pātakam",
      "lemma": "pātaka",
      "upos": "",
-     "morph": "2n.1 n.",
+     "morph": "",
      "gloss": "that which causes to fall: crime, sin",
      "deva": "पातकम्",
      "slp1": "pAtaka",
-     "href": "../w/p_41taka.html",
-     "tier": "lemma"
+     "href": "../w/p_41taka.html"
     }
    ]
   },
@@ -5578,128 +5100,117 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.39",
    "dcs": null,
    "text": "kathaṃ na jñeyam asmābhiḥ pāpād asmān nivartitum",
-   "deva": "कथं न ज्ञेयमस्माभिः पापादस्मान्निवर्तितुम्",
+   "deva": "कथम् न​ ज्ञेयम् अस्माभिः पापात् अस्मात् निवर्तितुम् कुलक्षयकृतम् दोषम् प्रपश्यद्भिः जनार्दन​",
    "tokens": [
     {
      "form": "katham",
      "lemma": "katham",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "how?, in what manner?",
      "deva": "कथम्",
      "slp1": "kaTam",
-     "href": "../w/ka_54am.html",
-     "tier": "lemma"
+     "href": "../w/ka_54am.html"
     },
     {
      "form": "na",
      "lemma": "na",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "not",
      "deva": "न​",
      "slp1": "na",
-     "href": "../w/na.html",
-     "tier": "lemma"
+     "href": "../w/na.html"
     },
     {
      "form": "jñeyam",
      "lemma": "jñeya",
      "upos": "",
-     "morph": "PF 1n.1 n.",
+     "morph": "",
      "gloss": "to be known, to be learnt",
      "deva": "ज्ञेयम्",
      "slp1": "jYeya",
-     "href": "../w/j_59eya.html",
-     "tier": "lemma"
+     "href": "../w/j_59eya.html"
     },
     {
      "form": "asmābhiḥ",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 3n.3",
+     "morph": "",
      "gloss": "by us",
      "deva": "अस्माभिः",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "pāpāt",
      "lemma": "pāpa",
      "upos": "",
-     "morph": "5n.1 n.",
+     "morph": "",
      "gloss": "from evil, from sin",
      "deva": "पापात्",
      "slp1": "pApa",
-     "href": "../w/p_41pa.html",
-     "tier": "lemma"
+     "href": "../w/p_41pa.html"
     },
     {
      "form": "asmāt",
      "lemma": "idam",
      "upos": "",
-     "morph": "sn. 5n.1 n.",
+     "morph": "",
      "gloss": "from this",
      "deva": "अस्मात्",
      "slp1": "idam",
-     "href": "../w/idam.html",
-     "tier": "lemma"
+     "href": "../w/idam.html"
     },
     {
      "form": "nivartitum",
      "lemma": "ni-√vṛt",
      "upos": "",
-     "morph": "inf.",
+     "morph": "",
      "gloss": "to stop, to turn back",
      "deva": "निवर्तितुम्",
      "slp1": "nivft",
-     "href": "../w/nivft.html",
-     "tier": "lemma"
+     "href": "../w/nivft.html"
     },
     {
      "form": "kula-kṣaya-kṛtam",
      "lemma": "kula-kṣaya-kṛta",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "done by the destruction of family",
      "deva": "कुलक्षयकृतम्",
      "slp1": "kzi",
-     "href": "../w/kzi.html",
-     "tier": "root"
+     "href": "../w/kzi.html"
     },
     {
      "form": "doṣam",
      "lemma": "doṣa",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "evil, fault, guilt",
      "deva": "दोषम्",
      "slp1": "doza",
-     "href": "../w/doza.html",
-     "tier": "lemma"
+     "href": "../w/doza.html"
     },
     {
      "form": "prapaśyadbhiḥ",
      "lemma": "pra-paśyant",
      "upos": "",
-     "morph": "PPr 3n.3 m.",
+     "morph": "",
      "gloss": "by those who see, who understand",
      "deva": "प्रपश्यद्भिः",
      "slp1": "dfS",
-     "href": "../w/df_53.html",
-     "tier": "root"
+     "href": "../w/df_53.html"
     },
     {
      "form": "janārdana",
      "lemma": "jana-ardana",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "exciting / agitating people, O Janārdana",
      "deva": "जनार्दन​",
      "slp1": "jan",
-     "href": "../w/jan.html",
-     "tier": "root"
+     "href": "../w/jan.html"
     }
    ]
   },
@@ -5708,128 +5219,117 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.40",
    "dcs": null,
    "text": "kula-kṣaye praṇaśyanti kula-dharmāḥ sanātanāḥ",
-   "deva": "कुलक्षये प्रणश्यन्ति कुलधर्माः सनातनाः",
+   "deva": "कुलक्षये प्रणश्यन्ति कुलधर्माः सनातनाः धर्मे नष्टे कुलम् कृत्स्नम् अधर्मः अभिभवति उत​",
    "tokens": [
     {
      "form": "kula-kṣaye",
      "lemma": "kula-kṣaya",
      "upos": "",
-     "morph": "7n.1 m.",
+     "morph": "",
      "gloss": "in the destruction of family",
      "deva": "कुलक्षये",
      "slp1": "kulakzaya",
-     "href": "../w/kulakzaya.html",
-     "tier": "lemma"
+     "href": "../w/kulakzaya.html"
     },
     {
      "form": "praṇaśyanti",
      "lemma": "pra–√naś",
      "upos": "",
-     "morph": "Praes. P 1v.3",
+     "morph": "",
      "gloss": "they perish",
      "deva": "प्रणश्यन्ति",
      "slp1": "naS",
-     "href": "../w/na_53.html",
-     "tier": "root"
+     "href": "../w/na_53.html"
     },
     {
      "form": "kula-dharmāḥ",
      "lemma": "kula-dharma",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "the family laws",
      "deva": "कुलधर्माः",
      "slp1": "kulaDarma",
-     "href": "../w/kula_44arma.html",
-     "tier": "lemma"
+     "href": "../w/kula_44arma.html"
     },
     {
      "form": "sanātanāḥ",
      "lemma": "sanātana",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "eternal, primeval",
      "deva": "सनातनाः",
      "slp1": "sanAtana",
-     "href": "../w/san_41tana.html",
-     "tier": "lemma"
+     "href": "../w/san_41tana.html"
     },
     {
      "form": "dharme",
      "lemma": "dharma",
      "upos": "",
-     "morph": "7n.1 m. loc.abs.",
+     "morph": "",
      "gloss": "when the law",
      "deva": "धर्मे",
      "slp1": "Darma",
-     "href": "../w/_44arma.html",
-     "tier": "lemma"
+     "href": "../w/_44arma.html"
     },
     {
      "form": "naṣṭe",
      "lemma": "naṣṭa",
      "upos": "",
-     "morph": "PP 7n.1 m. loc.abs.",
+     "morph": "",
      "gloss": "when it perishes",
      "deva": "नष्टे",
      "slp1": "nazwa",
-     "href": "../w/nazwa.html",
-     "tier": "lemma"
+     "href": "../w/nazwa.html"
     },
     {
      "form": "kulam",
      "lemma": "kula",
      "upos": "",
-     "morph": "2n.1 n.",
+     "morph": "",
      "gloss": "tribe, family",
      "deva": "कुलम्",
      "slp1": "kula",
-     "href": "../w/kula.html",
-     "tier": "lemma"
+     "href": "../w/kula.html"
     },
     {
      "form": "kṛtsnam",
      "lemma": "kṛtsna",
      "upos": "",
-     "morph": "2n.1 n.",
+     "morph": "",
      "gloss": "whole",
      "deva": "कृत्स्नम्",
      "slp1": "kftsna",
-     "href": "../w/kftsna.html",
-     "tier": "lemma"
+     "href": "../w/kftsna.html"
     },
     {
      "form": "adharmaḥ",
      "lemma": "a-dharma",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "lawlessness",
      "deva": "अधर्मः",
      "slp1": "aDarma",
-     "href": "../w/a_44arma.html",
-     "tier": "lemma"
+     "href": "../w/a_44arma.html"
     },
     {
      "form": "abhibhavati",
      "lemma": "abhi-√bhū",
      "upos": "",
-     "morph": "Praes. P 1v.1",
+     "morph": "",
      "gloss": "it overcomes",
      "deva": "अभिभवति",
      "slp1": "aBiBU",
-     "href": "../w/a_42i_42_55.html",
-     "tier": "lemma"
+     "href": "../w/a_42i_42_55.html"
     },
     {
      "form": "uta",
      "lemma": "uta",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and, also, even, or",
      "deva": "उत​",
      "slp1": "uta",
-     "href": "../w/uta.html",
-     "tier": "lemma"
+     "href": "../w/uta.html"
     }
    ]
   },
@@ -5838,106 +5338,97 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.41",
    "dcs": null,
    "text": "adharmābhibhavāt kṛṣṇa praduṣyanti kula-striyaḥ",
-   "deva": "अधर्माभिभवात्कृष्ण प्रदुष्यन्ति कुलस्त्रियः",
+   "deva": "अधर्माभिभवात् कृष्ण​ प्रदुष्यन्ति कुलस्त्रियः स्त्रीषु दुष्टासु वार्ष्णेय​ जायते वर्णसञ्करः",
    "tokens": [
     {
      "form": "adharmābhibhavāt",
      "lemma": "a-dharma-abhi-bhava",
      "upos": "",
-     "morph": "5n.1 m.",
+     "morph": "",
      "gloss": "from the predominance of lawlessness",
      "deva": "अधर्माभिभवात्",
      "slp1": "BU",
-     "href": "../w/_42_55.html",
-     "tier": "root"
+     "href": "../w/_42_55.html"
     },
     {
      "form": "kṛṣṇa",
      "lemma": "kṛṣṇa",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "O dark one, O Kṛṣṇa",
      "deva": "कृष्ण​",
      "slp1": "kfzRa",
-     "href": "../w/kfz_52a.html",
-     "tier": "lemma"
+     "href": "../w/kfz_52a.html"
     },
     {
      "form": "praduṣyanti",
      "lemma": "pra-√duṣ",
      "upos": "",
-     "morph": "Praes. P 1v.3",
+     "morph": "",
      "gloss": "they are polluted",
      "deva": "प्रदुष्यन्ति",
      "slp1": "praduz",
-     "href": "../w/praduz.html",
-     "tier": "lemma"
+     "href": "../w/praduz.html"
     },
     {
      "form": "kula-striyaḥ",
      "lemma": "kula-strī",
      "upos": "",
-     "morph": "1n.3 f.",
+     "morph": "",
      "gloss": "family women",
      "deva": "कुलस्त्रियः",
      "slp1": "kulastrI",
-     "href": "../w/kulastr_49.html",
-     "tier": "lemma"
+     "href": "../w/kulastr_49.html"
     },
     {
      "form": "strīṣu",
      "lemma": "strī",
      "upos": "",
-     "morph": "7n.3 f. loc.abs.",
+     "morph": "",
      "gloss": "when the women",
      "deva": "स्त्रीषु",
      "slp1": "strI",
-     "href": "../w/str_49.html",
-     "tier": "lemma"
+     "href": "../w/str_49.html"
     },
     {
      "form": "duṣṭāsu",
      "lemma": "duṣṭa",
      "upos": "",
-     "morph": "PP 7n.3 f.",
+     "morph": "",
      "gloss": "when they are polluted",
      "deva": "दुष्टासु",
      "slp1": "duzwa",
-     "href": "../w/duzwa.html",
-     "tier": "lemma"
+     "href": "../w/duzwa.html"
     },
     {
      "form": "vārṣṇeya",
      "lemma": "vārṣṇeya",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "O descendant of Vṛṣṇis",
      "deva": "वार्ष्णेय​",
      "slp1": "vArzReya",
-     "href": "../w/v_41rz_52eya.html",
-     "tier": "lemma"
+     "href": "../w/v_41rz_52eya.html"
     },
     {
      "form": "jāyate",
      "lemma": "√jan",
      "upos": "",
-     "morph": "Praes. Ā 1v.1",
+     "morph": "",
      "gloss": "it is born",
      "deva": "जायते",
      "slp1": "jan",
-     "href": "../w/jan.html",
-     "tier": "lemma"
+     "href": "../w/jan.html"
     },
     {
      "form": "varṇa-saṁkaraḥ",
      "lemma": "varṇa-saṁkara",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "confusion of social classes",
      "deva": "वर्णसञ्करः",
      "slp1": "varRasaMkara",
-     "href": "../w/var_52asa_4dkara.html",
-     "tier": "lemma"
+     "href": "../w/var_52asa_4dkara.html"
     }
    ]
   },
@@ -5946,128 +5437,117 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.42",
    "dcs": null,
    "text": "saṃkaro narakāyaiva kula-ghnānāṃ kulasya ca",
-   "deva": "सङ्करो नरकायैव कुलघ्नानां कुलस्य च",
+   "deva": "सञ्करः नरकाय​ एव​ कुलघ्नानाम् कुलस्य​ च​ पतन्ति पितरः हि एषाम् लुप्तपिण्डोदकक्रियाः",
    "tokens": [
     {
      "form": "saṁkaraḥ",
      "lemma": "saṁkara",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "confusion",
      "deva": "सञ्करः",
      "slp1": "saMkara",
-     "href": "../w/sa_4dkara.html",
-     "tier": "lemma"
+     "href": "../w/sa_4dkara.html"
     },
     {
      "form": "narakāya",
      "lemma": "naraka",
      "upos": "",
-     "morph": "4n.1 m.",
+     "morph": "",
      "gloss": "for hell",
      "deva": "नरकाय​",
      "slp1": "naraka",
-     "href": "../w/naraka.html",
-     "tier": "lemma"
+     "href": "../w/naraka.html"
     },
     {
      "form": "eva",
      "lemma": "eva",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
      "slp1": "eva",
-     "href": "../w/eva.html",
-     "tier": "lemma"
+     "href": "../w/eva.html"
     },
     {
      "form": "kula-ghnānām",
      "lemma": "kula-ghna",
      "upos": "",
-     "morph": "6n.3 m.",
+     "morph": "",
      "gloss": "of those who destroy the family",
      "deva": "कुलघ्नानाम्",
      "slp1": "kulaGna",
-     "href": "../w/kula_47na.html",
-     "tier": "lemma"
+     "href": "../w/kula_47na.html"
     },
     {
      "form": "kulasya",
      "lemma": "kula",
      "upos": "",
-     "morph": "6n.1 n.",
+     "morph": "",
      "gloss": "of the family",
      "deva": "कुलस्य​",
      "slp1": "kula",
-     "href": "../w/kula.html",
-     "tier": "lemma"
+     "href": "../w/kula.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "patanti",
      "lemma": "√pat",
      "upos": "",
-     "morph": "Praes. P 1v.3",
+     "morph": "",
      "gloss": "they fall",
      "deva": "पतन्ति",
      "slp1": "pat",
-     "href": "../w/pat.html",
-     "tier": "lemma"
+     "href": "../w/pat.html"
     },
     {
      "form": "pitaraḥ",
      "lemma": "pitṛ",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "fathers, forefathers",
      "deva": "पितरः",
      "slp1": "pitf",
-     "href": "../w/pitf.html",
-     "tier": "lemma"
+     "href": "../w/pitf.html"
     },
     {
      "form": "hi",
      "lemma": "hi",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "because, just, indeed, surely",
      "deva": "हि",
      "slp1": "hi",
-     "href": "../w/hi.html",
-     "tier": "lemma"
+     "href": "../w/hi.html"
     },
     {
      "form": "eṣām",
      "lemma": "etat",
      "upos": "",
-     "morph": "sn. 6n.3 m.",
+     "morph": "",
      "gloss": "of these",
      "deva": "एषाम्",
      "slp1": "etat",
-     "href": "../w/etat.html",
-     "tier": "lemma"
+     "href": "../w/etat.html"
     },
     {
      "form": "lupta-piṇḍodaka-kriyāḥ",
      "lemma": "lupta-piṇḍa-udaka-kriya",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "those for whom the religious offering of food and water has stopped",
      "deva": "लुप्तपिण्डोदकक्रियाः",
      "slp1": "lup",
-     "href": "../w/lup.html",
-     "tier": "root"
+     "href": "../w/lup.html"
     }
    ]
   },
@@ -6076,106 +5556,97 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.43",
    "dcs": null,
    "text": "doṣair etaiḥ kula-ghnānāṃ varṇa-saṃkara-kārakaiḥ",
-   "deva": "दोषैरेतैः कुलघ्नानां वर्णसङ्करकारकैः",
+   "deva": "दोषैः एतैः कुलघ्नानाम् वर्णसञ्करकारकैः उत्साद्यन्ते जातिधर्माः कुलधर्माः च​ शाश्वताः",
    "tokens": [
     {
      "form": "doṣaiḥ",
      "lemma": "doṣa",
      "upos": "",
-     "morph": "3n.3 m.",
+     "morph": "",
      "gloss": "by the faults, sins",
      "deva": "दोषैः",
      "slp1": "doza",
-     "href": "../w/doza.html",
-     "tier": "lemma"
+     "href": "../w/doza.html"
     },
     {
      "form": "etaiḥ",
      "lemma": "etat",
      "upos": "",
-     "morph": "sn. 3n.3 m.",
+     "morph": "",
      "gloss": "by these",
      "deva": "एतैः",
      "slp1": "etat",
-     "href": "../w/etat.html",
-     "tier": "lemma"
+     "href": "../w/etat.html"
     },
     {
      "form": "kula-ghnānām",
      "lemma": "kula-ghna",
      "upos": "",
-     "morph": "6n.3 m.",
+     "morph": "",
      "gloss": "of those who destroy the family",
      "deva": "कुलघ्नानाम्",
      "slp1": "kulaGna",
-     "href": "../w/kula_47na.html",
-     "tier": "lemma"
+     "href": "../w/kula_47na.html"
     },
     {
      "form": "varṇa-saṁkara-kārakaiḥ",
      "lemma": "varṇa-saṁkara-kāraka",
      "upos": "",
-     "morph": "3n.3 m.",
+     "morph": "",
      "gloss": "by these being the causes of the confussion of social classes",
      "deva": "वर्णसञ्करकारकैः",
      "slp1": "varR",
-     "href": "../w/var_52.html",
-     "tier": "root"
+     "href": "../w/var_52.html"
     },
     {
      "form": "utsādyante",
      "lemma": "ut-√sad",
      "upos": "",
-     "morph": "Praes. caus. pass. 1v.3",
+     "morph": "",
      "gloss": "they are caused to decline",
      "deva": "उत्साद्यन्ते",
      "slp1": "utsad",
-     "href": "../w/utsad.html",
-     "tier": "lemma"
+     "href": "../w/utsad.html"
     },
     {
      "form": "jāti-dharmāḥ",
      "lemma": "jāti-dharma",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "the caste laws",
      "deva": "जातिधर्माः",
      "slp1": "jAtiDarma",
-     "href": "../w/j_41ti_44arma.html",
-     "tier": "lemma"
+     "href": "../w/j_41ti_44arma.html"
     },
     {
      "form": "kula-dharmāḥ",
      "lemma": "kula-dharma",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "the family laws",
      "deva": "कुलधर्माः",
      "slp1": "kulaDarma",
-     "href": "../w/kula_44arma.html",
-     "tier": "lemma"
+     "href": "../w/kula_44arma.html"
     },
     {
      "form": "ca",
      "lemma": "ca",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "and",
      "deva": "च​",
      "slp1": "ca",
-     "href": "../w/ca.html",
-     "tier": "lemma"
+     "href": "../w/ca.html"
     },
     {
      "form": "śāśvatāḥ",
      "lemma": "śāśvata",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "eternal, permanent",
      "deva": "शाश्वताः",
      "slp1": "SASvata",
-     "href": "../w/_53_41_53vata.html",
-     "tier": "lemma"
+     "href": "../w/_53_41_53vata.html"
     }
    ]
   },
@@ -6184,106 +5655,97 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.44",
    "dcs": null,
    "text": "utsanna-kula-dharmāṇāṃ manuṣyāṇāṃ janārdana",
-   "deva": "उत्सन्नकुलधर्माणां मनुष्याणां जनार्दन",
+   "deva": "उत्सन्नकुलधर्माणाञ् मनुष्याणाम् जनार्दन​ नरके नियतम् वासः भवति इति अनुशुश्रुम​",
    "tokens": [
     {
      "form": "utsanna-kula-dharmāṇāṁ",
      "lemma": "utsanna-kula-dharma",
      "upos": "",
-     "morph": "6n.3 m.",
+     "morph": "",
      "gloss": "of those whose family laws are destroyed",
      "deva": "उत्सन्नकुलधर्माणाञ्",
      "slp1": "sad",
-     "href": "../w/sad.html",
-     "tier": "root"
+     "href": "../w/sad.html"
     },
     {
      "form": "manuṣyāṇām",
      "lemma": "manuṣya",
      "upos": "",
-     "morph": "6n.3 m.",
+     "morph": "",
      "gloss": "of men",
      "deva": "मनुष्याणाम्",
      "slp1": "manuzya",
-     "href": "../w/manuzya.html",
-     "tier": "lemma"
+     "href": "../w/manuzya.html"
     },
     {
      "form": "janārdana",
      "lemma": "Janārdana",
      "upos": "",
-     "morph": "8n.1 m.",
+     "morph": "",
      "gloss": "exciting / agitating people, O Janārdana",
      "deva": "जनार्दन​",
      "slp1": "jan",
-     "href": "../w/jan.html",
-     "tier": "root"
+     "href": "../w/jan.html"
     },
     {
      "form": "narake",
      "lemma": "naraka",
      "upos": "",
-     "morph": "7n.1 m.",
+     "morph": "",
      "gloss": "in hell",
      "deva": "नरके",
      "slp1": "naraka",
-     "href": "../w/naraka.html",
-     "tier": "lemma"
+     "href": "../w/naraka.html"
     },
     {
      "form": "niyatam",
      "lemma": "niyatam",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "constantly, surely",
      "deva": "नियतम्",
      "slp1": "niyatam",
-     "href": "../w/niyatam.html",
-     "tier": "lemma"
+     "href": "../w/niyatam.html"
     },
     {
      "form": "vāsaḥ",
      "lemma": "vāsa",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "dwelling, residence, situation, garment",
      "deva": "वासः",
      "slp1": "vAsa",
-     "href": "../w/v_41sa.html",
-     "tier": "lemma"
+     "href": "../w/v_41sa.html"
     },
     {
      "form": "bhavati",
      "lemma": "√bhū",
      "upos": "",
-     "morph": "Praes. P 1v.1",
+     "morph": "",
      "gloss": "it is",
      "deva": "भवति",
      "slp1": "BU",
-     "href": "../w/_42_55.html",
-     "tier": "lemma"
+     "href": "../w/_42_55.html"
     },
     {
      "form": "iti",
      "lemma": "iti",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "thus",
      "deva": "इति",
      "slp1": "iti",
-     "href": "../w/iti.html",
-     "tier": "lemma"
+     "href": "../w/iti.html"
     },
     {
      "form": "anuśuśruma",
      "lemma": "anu-√śru",
      "upos": "",
-     "morph": "Perf. P 3v.3",
+     "morph": "",
      "gloss": "we heard repeatedly",
      "deva": "अनुशुश्रुम​",
      "slp1": "anuSru",
-     "href": "../w/anu_53ru.html",
-     "tier": "lemma"
+     "href": "../w/anu_53ru.html"
     }
    ]
   },
@@ -6292,13 +5754,13 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.45",
    "dcs": null,
    "text": "aho bata mahat pāpaṃ kartuṃ vyavasitā vayam",
-   "deva": "अहो बत महत्पापं कर्तुं व्यवसिता वयम्",
+   "deva": "अहोबत​ महत् पापम् कर्तुम् व्यवसिताः वयम् यत् राज्यसुखलोभेन​ हन्तुम् स्वजनम् उद्यताः यति",
    "tokens": [
     {
      "form": "aho bata",
      "lemma": "aho bata",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "alas!",
      "deva": "अहोबत​",
      "resolved": false
@@ -6307,111 +5769,111 @@ window.READING_DATA["gita-1"] = {
      "form": "mahat",
      "lemma": "mahant",
      "upos": "",
-     "morph": "2n.1 n.",
+     "morph": "",
      "gloss": "great",
      "deva": "महत्",
      "slp1": "mahant",
-     "href": "../w/mahant.html",
-     "tier": "lemma"
+     "href": "../w/mahant.html"
     },
     {
      "form": "pāpam",
      "lemma": "pāpa",
      "upos": "",
-     "morph": "2n.1 n.",
+     "morph": "",
      "gloss": "evil, sin",
      "deva": "पापम्",
      "slp1": "pApa",
-     "href": "../w/p_41pa.html",
-     "tier": "lemma"
+     "href": "../w/p_41pa.html"
     },
     {
      "form": "kartum",
      "lemma": "√kṛ",
      "upos": "",
-     "morph": "inf.",
+     "morph": "",
      "gloss": "to do",
      "deva": "कर्तुम्",
      "slp1": "kf",
-     "href": "../w/kf.html",
-     "tier": "lemma"
+     "href": "../w/kf.html"
     },
     {
      "form": "vyavasitāḥ",
      "lemma": "vi-ava-sita",
      "upos": "",
-     "morph": "PP 1n.3 m.",
+     "morph": "",
      "gloss": "those who are determined",
      "deva": "व्यवसिताः",
      "slp1": "so",
-     "href": "../w/so.html",
-     "tier": "root"
+     "href": "../w/so.html"
     },
     {
      "form": "vayam",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 1n.3",
+     "morph": "",
      "gloss": "we",
      "deva": "वयम्",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "yat",
      "lemma": "yat",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "which",
      "deva": "यत्",
      "slp1": "yat",
-     "href": "../w/yat.html",
-     "tier": "lemma"
+     "href": "../w/yat.html"
     },
     {
      "form": "rājya-sukha-lobhena",
      "lemma": "rājya-sukha-lobha",
      "upos": "",
-     "morph": "3n.1 m.",
+     "morph": "",
      "gloss": "with greed for royal pleasures",
      "deva": "राज्यसुखलोभेन​",
      "slp1": "rAj",
-     "href": "../w/r_41j.html",
-     "tier": "root"
+     "href": "../w/r_41j.html"
     },
     {
      "form": "hantum",
      "lemma": "√han",
      "upos": "",
-     "morph": "inf.",
+     "morph": "",
      "gloss": "to kill",
      "deva": "हन्तुम्",
      "slp1": "han",
-     "href": "../w/han.html",
-     "tier": "lemma"
+     "href": "../w/han.html"
     },
     {
      "form": "sva-janam",
      "lemma": "sva-janam",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "own people",
      "deva": "स्वजनम्",
      "slp1": "jan",
-     "href": "../w/jan.html",
-     "tier": "root"
+     "href": "../w/jan.html"
     },
     {
      "form": "udyatāḥ",
      "lemma": "udyata",
      "upos": "",
-     "morph": "PP 1n.3 m.",
+     "morph": "",
      "gloss": "those who are prepared",
      "deva": "उद्यताः",
      "slp1": "udyata",
-     "href": "../w/udyata.html",
-     "tier": "lemma"
+     "href": "../w/udyata.html"
+    },
+    {
+     "form": "yati",
+     "lemma": "",
+     "upos": "",
+     "morph": "",
+     "gloss": "Unexpected Python Error: <Error getting traceback - traceback.print_exception() failed>",
+     "deva": "यति",
+     "slp1": "yat",
+     "href": "../w/yat.html"
     }
    ]
   },
@@ -6420,139 +5882,127 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.46",
    "dcs": null,
    "text": "yadi mām apratī-kāram aśastraṃ śastra-pāṇayaḥ",
-   "deva": "यदि मामप्रतीकारमशस्त्रं शस्त्रपाणयः",
+   "deva": "यदि माम् अप्रतीकारम् अशस्त्रम् शस्त्रपाणयः धार्तराष्ट्राः रणे हन्युः तत् मे क्षेमतरम् भवेत्",
    "tokens": [
     {
      "form": "yadi",
      "lemma": "yadi",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "if",
      "deva": "यदि",
      "slp1": "yadi",
-     "href": "../w/yadi.html",
-     "tier": "lemma"
+     "href": "../w/yadi.html"
     },
     {
      "form": "mām",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 2n.1",
+     "morph": "",
      "gloss": "me",
      "deva": "माम्",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "apratī-kāram",
      "lemma": "a-pratī-kāram",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "who is unresisting",
      "deva": "अप्रतीकारम्",
      "slp1": "kf",
-     "href": "../w/kf.html",
-     "tier": "root"
+     "href": "../w/kf.html"
     },
     {
      "form": "aśastram",
      "lemma": "a-śastra",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "who is unarmed",
      "deva": "अशस्त्रम्",
      "slp1": "aSastra",
-     "href": "../w/a_53astra.html",
-     "tier": "lemma"
+     "href": "../w/a_53astra.html"
     },
     {
      "form": "śastra-pāṇayaḥ",
      "lemma": "śastra-pāṇi",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "those who have weapons in hand",
      "deva": "शस्त्रपाणयः",
      "slp1": "SastrapARi",
-     "href": "../w/_53astrap_41_52i.html",
-     "tier": "lemma"
+     "href": "../w/_53astrap_41_52i.html"
     },
     {
      "form": "dhārtarāṣṭrāḥ",
      "lemma": "dhārtarāṣṭra",
      "upos": "",
-     "morph": "1n.3 m.",
+     "morph": "",
      "gloss": "the sons of Dhṛtarāṣṭra",
      "deva": "धार्तराष्ट्राः",
      "slp1": "DArtarAzwra",
-     "href": "../w/_44_41rtar_41zwra.html",
-     "tier": "lemma"
+     "href": "../w/_44_41rtar_41zwra.html"
     },
     {
      "form": "raṇe",
      "lemma": "raṇa",
      "upos": "",
-     "morph": "7n.1 m.",
+     "morph": "",
      "gloss": "in battle",
      "deva": "रणे",
      "slp1": "raRa",
-     "href": "../w/ra_52a.html",
-     "tier": "lemma"
+     "href": "../w/ra_52a.html"
     },
     {
      "form": "hanyuḥ",
      "lemma": "√han",
      "upos": "",
-     "morph": "Pot. P 1v.3",
+     "morph": "",
      "gloss": "they would kill",
      "deva": "हन्युः",
      "slp1": "han",
-     "href": "../w/han.html",
-     "tier": "lemma"
+     "href": "../w/han.html"
     },
     {
      "form": "tat",
      "lemma": "tat",
      "upos": "",
-     "morph": "sn. 1n.1 n.",
+     "morph": "",
      "gloss": "that",
      "deva": "तत्",
      "slp1": "tat",
-     "href": "../w/tat.html",
-     "tier": "lemma"
+     "href": "../w/tat.html"
     },
     {
      "form": "me",
      "lemma": "asmat",
      "upos": "",
-     "morph": "sn. 6n.1",
+     "morph": "",
      "gloss": "my, for me",
      "deva": "मे",
      "slp1": "asmat",
-     "href": "../w/asmat.html",
-     "tier": "lemma"
+     "href": "../w/asmat.html"
     },
     {
      "form": "kṣema-taram",
      "lemma": "kṣema-tara",
      "upos": "",
-     "morph": "1n.1 n.",
+     "morph": "",
      "gloss": "greater peace",
      "deva": "क्षेमतरम्",
      "slp1": "kzematara",
-     "href": "../w/kzematara.html",
-     "tier": "lemma"
+     "href": "../w/kzematara.html"
     },
     {
      "form": "bhavet",
      "lemma": "√bhū",
      "upos": "",
-     "morph": "Pot. Ā 1v.1",
+     "morph": "",
      "gloss": "it would be",
      "deva": "भवेत्",
      "slp1": "BU",
-     "href": "../w/_42_55.html",
-     "tier": "lemma"
+     "href": "../w/_42_55.html"
     }
    ]
   },
@@ -6561,139 +6011,127 @@ window.READING_DATA["gita-1"] = {
    "locus": "Bhagavadgītā 1.47",
    "dcs": null,
    "text": "saṃjaya uvāca",
-   "deva": "सञ्जय उवाच",
+   "deva": "सञ्जयः उवाच​ एवम् उक्त्वा अर्जुनः सञ्ख्ये रथोपस्थे उपाविशत् विसृज्य​ सशरम् चापम् शोकसञ्विग्नमानसः",
    "tokens": [
     {
      "form": "saṁjayaḥ",
      "lemma": "sam-jaya",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "conquest, complete victory, Saṁjaya",
      "deva": "सञ्जयः",
      "slp1": "ji",
-     "href": "../w/ji.html",
-     "tier": "root"
+     "href": "../w/ji.html"
     },
     {
      "form": "uvāca",
      "lemma": "√vac",
      "upos": "",
-     "morph": "Perf. P 1v.1",
+     "morph": "",
      "gloss": "he spoke",
      "deva": "उवाच​",
      "slp1": "vac",
-     "href": "../w/vac.html",
-     "tier": "lemma"
+     "href": "../w/vac.html"
     },
     {
      "form": "evam",
      "lemma": "evam",
      "upos": "",
-     "morph": "av.",
+     "morph": "",
      "gloss": "thus",
      "deva": "एवम्",
      "slp1": "evam",
-     "href": "../w/evam.html",
-     "tier": "lemma"
+     "href": "../w/evam.html"
     },
     {
      "form": "uktvā",
      "lemma": "√vac",
      "upos": "",
-     "morph": "absol.",
+     "morph": "",
      "gloss": "after speaking",
      "deva": "उक्त्वा",
      "slp1": "vac",
-     "href": "../w/vac.html",
-     "tier": "lemma"
+     "href": "../w/vac.html"
     },
     {
      "form": "arjunaḥ",
      "lemma": "arjuna",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "white, clear, Arjuna",
      "deva": "अर्जुनः",
      "slp1": "arjuna",
-     "href": "../w/arjuna.html",
-     "tier": "lemma"
+     "href": "../w/arjuna.html"
     },
     {
      "form": "saṁkhye",
      "lemma": "saṁkhya",
      "upos": "",
-     "morph": "7n.1 n.",
+     "morph": "",
      "gloss": "in battle",
      "deva": "सञ्ख्ये",
      "slp1": "saMKya",
-     "href": "../w/sa_4d_4bya.html",
-     "tier": "lemma"
+     "href": "../w/sa_4d_4bya.html"
     },
     {
      "form": "rathopasthe",
      "lemma": "ratha-upastha",
      "upos": "",
-     "morph": "7n.1 m.",
+     "morph": "",
      "gloss": "rathasyoparīti – on the seat of the chariot",
      "deva": "रथोपस्थे",
      "slp1": "sTA",
-     "href": "../w/s_54_41.html",
-     "tier": "root"
+     "href": "../w/s_54_41.html"
     },
     {
      "form": "upāviśat",
      "lemma": "upa-ā-√viś",
      "upos": "",
-     "morph": "Imperf. P 1v.1",
+     "morph": "",
      "gloss": "he sat down",
      "deva": "उपाविशत्",
      "slp1": "viS",
-     "href": "../w/vi_53.html",
-     "tier": "root"
+     "href": "../w/vi_53.html"
     },
     {
      "form": "visṛjya",
      "lemma": "vi-√sṛj",
      "upos": "",
-     "morph": "absol.",
+     "morph": "",
      "gloss": "after casting aside",
      "deva": "विसृज्य​",
      "slp1": "visfj",
-     "href": "../w/visfj.html",
-     "tier": "lemma"
+     "href": "../w/visfj.html"
     },
     {
      "form": "sa-śaram",
      "lemma": "sa-śara",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "which is with arrows",
      "deva": "सशरम्",
      "slp1": "saSara",
-     "href": "../w/sa_53ara.html",
-     "tier": "lemma"
+     "href": "../w/sa_53ara.html"
     },
     {
      "form": "cāpam",
      "lemma": "cāpa",
      "upos": "",
-     "morph": "2n.1 m.",
+     "morph": "",
      "gloss": "a bow",
      "deva": "चापम्",
      "slp1": "cApa",
-     "href": "../w/c_41pa.html",
-     "tier": "lemma"
+     "href": "../w/c_41pa.html"
     },
     {
      "form": "śoka-saṁvigna-mānasaḥ",
      "lemma": "śoka-saṁvigna-mānasa",
      "upos": "",
-     "morph": "1n.1 m.",
+     "morph": "",
      "gloss": "one whose mind is afflicted with grief",
      "deva": "शोकसञ्विग्नमानसः",
      "slp1": "SokasaMvignamAnasa",
-     "href": "../w/_53okasa_4dvignam_41nasa.html",
-     "tier": "lemma"
+     "href": "../w/_53okasa_4dvignam_41nasa.html"
     }
    ]
   }
