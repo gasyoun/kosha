@@ -890,6 +890,26 @@
         "reading/ static viewer"
       ],
       "notes": "H848 Task B. Supersedes the earlier EXPERIMENTAL GRETIL + vidyut-cheda machine build (MG named the gold source SanskritGrammar/Concordance/Gita.xlsm 13-07-2026). Sibling of dcs-reading-pack-nala-1 (DCS-gold Nala)."
+    },
+    {
+      "id": "gita-gold-master",
+      "title": "Bhagavadgita gold word-by-word analysis (all 18 adhyayas)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/gita/gita_gold_master.tsv",
+      "format": "tsv",
+      "rows": 9092,
+      "size_bytes": 1147528,
+      "keying": "one row per analysed word (9,092; all 18 adhyayas); 21 fields = verse·lemma·devanagari·iast·form_type·code·tense·pada·vclass·root·root_tr·prefix·stem_end·gender·compound(TP/BV/DV)·mark·rule·sandhi·verse_iast·gloss_en·gloss_ru. Hand-curated (Combined sheet of SanskritGrammar/Concordance/Gita.xlsm); the garbled private-use Russian TRANSLITERATION column is dropped, the clean Cyrillic gloss kept (MG 13-07-2026).",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/gita/gita_gold_master.tsv",
+      "builder": "scripts/extract_gita_master.py (from SanskritGrammar/Concordance/Gita.xlsm, H848 W0)",
+      "consumers": [
+        "reading/ Gita packs (W1)",
+        "gita sandhi/morphology/root-preverb datasets (W2/W3/W6)",
+        "E1 inflection-engine QA (W4)"
+      ],
+      "notes": "H848 roadmap W0 — the canonical master every Gita-gold workstream derives from. License MIT; public; author Dr. Marcis Gasuns (co-authors TBC). Data statement: docs/data-statements/gita-gold.meta.md. Upstream Gita.xlsm is local-only (not git-committed). Method is a template for other texts (MG ruling). See ROADMAP_GITA_GOLD_EXTRACTION_2026.md."
     }
   ]
 }

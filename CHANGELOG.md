@@ -14,6 +14,21 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H848 W0: Gītā gold master dataset.** New public/MIT dataset
+  [`data/gita/gita_gold_master.tsv`](https://github.com/gasyoun/kosha/blob/main/data/gita/gita_gold_master.tsv)
+  — the hand-curated word-by-word analysis of the **whole Bhagavadgītā** (9,092
+  words · all 18 adhyāyas · 21 fields: lemma, root, gender, stem-class,
+  **compound type**, morphology code, **sandhi rule**, English + Russian gloss),
+  extracted from `SanskritGrammar/Concordance/Gita.xlsm`'s `Combined` sheet by
+  [`scripts/extract_gita_master.py`](https://github.com/gasyoun/kosha/blob/main/scripts/extract_gita_master.py).
+  The garbled private-use Russian *transliteration* column is dropped; the clean
+  Cyrillic *gloss* is kept. Registered in the manifest (`gita-gold-master`) +
+  data statement [`docs/data-statements/gita-gold.meta.md`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/gita-gold.meta.md).
+  This is **W0** of [`ROADMAP_GITA_GOLD_EXTRACTION_2026.md`](https://github.com/gasyoun/kosha/blob/main/ROADMAP_GITA_GOLD_EXTRACTION_2026.md)
+  — the master every Gītā-gold workstream (reader all-18-ch, sandhi, morphology,
+  inflection-QA, root/preverb semantics) derives from. Credit: Dr. Mārcis Gasūns.
+
 ## [0.25.0] - 2026-07-13
 
 ### Changed
