@@ -42,6 +42,7 @@ import re
 import sys
 import unicodedata
 from collections import Counter, defaultdict
+from difflib import SequenceMatcher
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
@@ -187,6 +188,33 @@ def induce_coalescence(left_uns, right_uns, surface):
     return rule, None
 
 
+# --- mode 2b: MWT right-edge sandhi (H888 Phase 1.1) ------------------------
+def induce_mwt_edge(last_uns, surface, next_uns):
+    """Right-edge sandhi of an MWT: the LAST component word's final sandhi with
+    the token AFTER the MWT. That change is invisible in the component's own
+    (un-sandhied) FORM and shows only in the MWT surface tail — so mode 1 misses
+    it. `agniḥ` (last of `5-6 nāgnir`) before `na` → surface tail `…r`, giving
+    `ḥ n → r n`.
+
+    Take the last non-`equal` alignment op between the component's Unsandhied and
+    the surface, provided it ends at the component's final phoneme. Handles
+    substitution (`ḥ→r`/`s`), elision (`ḥ→Ø`), and multi-char (`aḥ→o`)."""
+    lu, sf = nfc(last_uns), nfc(surface)
+    env = first_phoneme(nfc(next_uns)) if next_uns else ""
+    if not env or not lu:
+        return None, "no-env"
+    ops = SequenceMatcher(None, lu, sf, autojunk=False).get_opcodes()
+    tag, i1, i2, j1, j2 = ops[-1]
+    if tag == "equal" or i2 != len(lu):
+        return None, "no-edge"            # component's tail survives unchanged
+    in_left = lu[i1:i2]
+    out = sf[j1:j2]
+    if len(in_left) > 3 or in_left == out:
+        return None, "align-fail" if len(in_left) > 3 else "no-edge"
+    rule = re.sub(r"\s+", " ", "%s %s → %s %s" % (in_left, env, out or "Ø", env)).strip()
+    return rule, None
+
+
 # same 4-class scheme as scripts/build_gita_sandhi.py:categorise()
 def categorise(rule):
     junction = rule.split("→")[0].strip()
@@ -280,7 +308,7 @@ def induce_from_files(files, debug=False):
                 if len(examples[rule]) < 4:
                     examples[rule].append("%s %s+%s" % (ref or "", w["form"], x["form"]))
 
-            # mode 2 — vowel coalescence inside each MWT
+            # mode 2 — vowel coalescence inside each MWT (+ 2b: MWT right edge)
             for m in mwts:
                 comps = [by_id[k] for k in range(m["start"], m["end"] + 1) if k in by_id]
                 if len(comps) < 2:
@@ -302,6 +330,21 @@ def induce_from_files(files, debug=False):
                     counts[rule] += 1
                     if len(examples[rule]) < 4:
                         examples[rule].append("%s %s+%s→%s" % (ref or "", lc["uns"], rc["uns"], m["surface"]))
+
+                # mode 2b — right-edge sandhi: last component vs the word after the MWT
+                last_c = by_id.get(m["end"])
+                next_w = by_id.get(m["end"] + 1)
+                if last_c and last_c["uns"] and next_w and next_w["uns"]:
+                    st["mwt_edges"] += 1
+                    rule, flag = induce_mwt_edge(last_c["uns"], m["surface"], next_w["uns"])
+                    if rule is None:
+                        st["mwt_no_edge"] += 1
+                    else:
+                        if flag:
+                            flagged["mwtedge:" + flag] += 1
+                        counts[rule] += 1
+                        if len(examples[rule]) < 4:
+                            examples[rule].append("%s %s→%s +%s" % (ref or "", last_c["uns"], m["surface"], next_w["form"]))
 
     return counts, examples, st, flagged, debug_rows
 
@@ -353,6 +396,8 @@ def main():
           % (st["junctions"], st["no_gold"], st["no_sandhi"]))
     print("mode 2 (MWT) boundaries: %d  (no-gold %d · no-coalescence %d)"
           % (st["mwt_boundaries"], st["mwt_no_gold"], st["mwt_no_sandhi"]))
+    print("mode 2b (MWT edges):     %d  (no-edge %d)"
+          % (st["mwt_edges"], st["mwt_no_edge"]))
     print("rules: %d distinct over %d events" % (len(counts), total))
     print("flagged: %s" % (dict(flagged) or "none"))
     print("categories:", dict(cat.most_common()))

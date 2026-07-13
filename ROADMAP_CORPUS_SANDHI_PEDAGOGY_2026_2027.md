@@ -1,4 +1,4 @@
-_Created: 13-07-2026 · Last updated: 13-07-2026 (Phase 1 mode-2 shipped, H888)_
+_Created: 13-07-2026 · Last updated: 13-07-2026 (Phase 1.1 MWT-edge visarga shipped, H894)_
 
 # Corpus-wide sandhi extraction for Sanskrit pedagogy — roadmap (2026–2027)
 
@@ -78,9 +78,17 @@ a bug in Phase 0 — it is the discovery Phase 0 was built to make.
    `na`+`eva`→`naiva` gives `a e → ai`). Also fixed a Phase-0 bug (MWT range
    lines were counted as tokens). Result: `a a → ā`, `a ā → ā`, `a e → ai`,
    `a i → e`, `i a → y a`, `e a → e '`, `a u → o` all recovered; Gītā-gold
-   coverage **47 % → 58 %** (93/161). **Residual (Phase 1.1):** visarga elision
-   at MWT *right* edges (`ḥ m → Ø m`, `ḥ y → Ø y`) — the MWT-final word's sandhi
-   with the token after it, visible only in the MWT surface tail.
+   coverage **47 % → 58 %** (93/161).
+   - **Phase 1.1 — MWT right-edge visarga.** ✅ DONE (H894). The MWT-final word's
+     sandhi with the token *after* the MWT is hidden in the component's
+     un-sandhied FORM and shows only in the MWT surface tail. New **mode 2b**
+     (`induce_mwt_edge`) takes the last alignment op ending at the component's
+     final phoneme — handling substitution (`ḥ t → s t`, `ḥ v → r v`), elision
+     (`ḥ i → Ø i`, `ḥ e → Ø e`), and multi-char (`aḥ → o`). Coverage
+     **58 % → 61 %** (98/161); visarga now the top category. Remaining gap is a
+     long tail of low-frequency rules a small pilot under-attests (truer test =
+     running on the Gītā text itself, item 5) plus a few malformed Gītā-table
+     entries (stray Cyrillic glyphs).
 2. **Method B — Vidyut cheda.** Reconstruct the raw line from FORM, segment with
    `vidyut-data/cheda/model.msgpack`, run the *same* inducer → isolates splitter
    quality. Score against A on the same text (junction-level agreement + rule P/R/F1).
