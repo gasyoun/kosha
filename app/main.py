@@ -109,7 +109,7 @@ ALL_DICTS = ("mw", "pwg", "ap90")
 def _entry_payload(con, row, out: str, raw: bool):
     payload = {
         "dict": row["dict"], "L": row["L"], "sense_ids": [],
-        "scan_url": scan_url(row["dict"], row["page"]),
+        "scan_url": scan_url(row["dict"], row["page"], row["vol"]),
         "headword": from_slp1_out(row["slp1_key"], out),
         "rendered_html": render(row["dict"], row["body"]),
     }
@@ -219,7 +219,7 @@ def _neighbor_payload(con, row, out: str, query_L=None):
         "dict": row["dict"], "L": row["L"],
         "headword": from_slp1_out(row["slp1_key"], out),
         "pc_raw": row["pc_raw"],
-        "scan_url": scan_url(row["dict"], row["page"]),
+        "scan_url": scan_url(row["dict"], row["page"], row["vol"]),
         "is_query": row["L"] == query_L,
     }
 
@@ -490,7 +490,7 @@ def get_sense(sense_id: str, v: str = Query(None),
         "sense_n": sense_n, "resolved_from": "live",
         "text_raw": body_span, "text_rendered": render(dict_code, body_span),
         "entry": {"dict": dict_code, "L": L, "headword": headword},
-        "scan_url": scan_url(dict_code, row["page"]),
+        "scan_url": scan_url(dict_code, row["page"], row["vol"]),
         "cite": cite_object(dict_code, L, sense_n, dv, PUBLIC_BASE, headword),
     }
     return envelope(con, {"sense_id": sense_id, "v": v}, [result])

@@ -84,7 +84,7 @@ def build_dict(con, dict_code):
         c = cols.get(label)
         if c is None:
             c = cols[label] = {"c": label, "side": side,
-                               "scan": scan_url(dict_code, scan_page) or "",
+                               "scan": scan_url(dict_code, scan_page, r["vol"]) or "",
                                "words": []}
             leaves.setdefault(leaf_key, [])
             if label not in leaves[leaf_key]:
@@ -107,7 +107,7 @@ def build_dict(con, dict_code):
                     leaf_cols.append(cols[lab])
                 else:
                     leaf_cols.append({"c": lab, "side": side,
-                                      "scan": scan_url(dict_code, cc) or "", "words": []})
+                                      "scan": scan_url(dict_code, cc, vol) or "", "words": []})
             plabel = f"{vol}·leaf {leaf}"
         else:
             leaf_cols = [cols[l] for l in labels]

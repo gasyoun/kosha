@@ -78,7 +78,7 @@ def salt_entry(con, row, hom_count: int, data_version_str: str) -> dict:
             "lnum": str(row["L"]),
             "page": str(row["page"]) if row["page"] is not None else None,
             "column": str(row["col"]) if row["col"] is not None else None,
-            "scanUrl": scan_url(row["dict"], row["page"]),
+            "scanUrl": scan_url(row["dict"], row["page"], row["vol"]),
             "references": refs,
             "accentedKey": row["k2"],
         },
