@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.39.0] - 2026-07-14
+
 ### Added
 - **H894 (sandhi Phase 1.1): MWT right-edge visarga.** New **mode 2b**
   (`induce_mwt_edge` in [`scripts/dcs_sandhi_induce.py`](https://github.com/gasyoun/kosha/blob/main/scripts/dcs_sandhi_induce.py))
