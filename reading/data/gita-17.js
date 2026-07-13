@@ -28,6 +28,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "white, clear, Arjuna",
      "deva": "अर्जुनः",
+     "sandhi": "ḥ u → Ø u",
      "slp1": "arjuna",
      "href": "../w/arjuna.html"
     },
@@ -38,6 +39,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "he spoke",
      "deva": "उवाच​",
+     "sandhi": "",
      "slp1": "vac",
      "href": "../w/vac.html"
     },
@@ -48,6 +50,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "those who",
      "deva": "ये",
+     "sandhi": "",
      "slp1": "yat",
      "href": "../w/yat.html"
     },
@@ -58,6 +61,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "injuction of scriptures",
      "deva": "शास्त्रविधिम्",
+     "sandhi": "",
      "slp1": "SAstraviDi",
      "href": "../w/_53_41stravi_44i.html"
     },
@@ -68,6 +72,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "after discarding",
      "deva": "उत्सृज्य​",
+     "sandhi": "",
      "slp1": "utsfj",
      "href": "../w/utsfj.html"
     },
@@ -78,6 +83,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "they worship, they offer in sacrifice",
      "deva": "यजन्ते",
+     "sandhi": "",
      "slp1": "yaj",
      "href": "../w/yaj.html"
     },
@@ -88,6 +94,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "with faith",
      "deva": "श्रद्धया",
+     "sandhi": "ā a → ā",
      "slp1": "SradDA",
      "href": "../w/_53rad_44_41.html"
     },
@@ -98,6 +105,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "who are endowed",
      "deva": "अन्विताः",
+     "sandhi": "",
      "slp1": "anvita",
      "href": "../w/anvita.html"
     },
@@ -108,6 +116,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "of them",
      "deva": "तेषाम्",
+     "sandhi": "m n → ṃ n",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -118,6 +127,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "state, firmness, devotion, faith, perfection, conclusion, death",
      "deva": "निष्ठा",
+     "sandhi": "",
      "slp1": "nizWA",
      "href": "../w/niz_57_41.html"
     },
@@ -128,6 +138,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "but, then, or, and",
      "deva": "तु",
+     "sandhi": "",
      "slp1": "tu",
      "href": "../w/tu.html"
     },
@@ -138,6 +149,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "what",
      "deva": "का",
+     "sandhi": "",
      "slp1": "kim",
      "href": "../w/kim.html"
     },
@@ -148,6 +160,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "O dark one, O Kṛṣṇa",
      "deva": "कृष्ण​",
+     "sandhi": "",
      "slp1": "kfzRa",
      "href": "../w/kfz_52a.html"
     },
@@ -158,6 +171,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "being, essence, wisdom, spirit, one of the three guṇas",
      "deva": "सत्त्वम्",
+     "sandhi": "",
      "slp1": "sattva",
      "href": "../w/sattva.html"
     },
@@ -168,6 +182,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "is it so?!",
      "deva": "आहो",
+     "sandhi": "",
      "slp1": "Aho",
      "href": "../w/_41ho.html"
     },
@@ -178,6 +193,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "coloured, dust, passion, one of the three guṇas",
      "deva": "रजः",
+     "sandhi": "ḥ t → s t",
      "slp1": "rajas",
      "href": "../w/rajas.html"
     },
@@ -188,6 +204,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "darkness, gloom, dullness, passivity, one of the three guṇas",
      "deva": "तमः",
+     "sandhi": "",
      "slp1": "tamas",
      "href": "../w/tamas.html"
     }
@@ -207,6 +224,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "the Lord united with majesty",
      "deva": "श्रीभगवान्",
+     "sandhi": "",
      "slp1": "Baj",
      "href": "../w/_42aj.html"
     },
@@ -217,6 +235,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "he spoke",
      "deva": "उवाच​",
+     "sandhi": "",
      "slp1": "vac",
      "href": "../w/vac.html"
     },
@@ -227,6 +246,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "threefold, of three parts",
      "deva": "त्रिविधा",
+     "sandhi": "",
      "slp1": "triviDa",
      "href": "../w/trivi_44a.html"
     },
@@ -237,6 +257,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it  is",
      "deva": "भवति",
+     "sandhi": "",
      "slp1": "BU",
      "href": "../w/_42_55.html"
     },
@@ -247,6 +268,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "faith",
      "deva": "श्रद्धा",
+     "sandhi": "",
      "slp1": "SradDA",
      "href": "../w/_53rad_44_41.html"
     },
@@ -257,6 +279,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "of the embodied ones",
      "deva": "देहिनाम्",
+     "sandhi": "m s → ṃ s",
      "slp1": "dehin",
      "href": "../w/dehin.html"
     },
@@ -267,6 +290,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that",
      "deva": "सा",
+     "sandhi": "",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -277,6 +301,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "born from one’s own nature",
      "deva": "स्वभावजा",
+     "sandhi": "",
      "slp1": "svaBAvaja",
      "href": "../w/sva_42_41vaja.html"
     },
@@ -287,6 +312,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "pertaining to sattva, sattvic",
      "deva": "सात्त्विकी",
+     "sandhi": "",
      "slp1": "sAttvikI",
      "href": "../w/s_41ttvik_49.html"
     },
@@ -297,6 +323,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "pertaining to rajas, rajasic",
      "deva": "राजसी",
+     "sandhi": "",
      "slp1": "raYj",
      "href": "../w/ra_59j.html"
     },
@@ -307,6 +334,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "a e → ai",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -317,6 +345,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
+     "sandhi": "",
      "slp1": "eva",
      "href": "../w/eva.html"
     },
@@ -327,6 +356,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "pertaining to tamas, tamasic",
      "deva": "तामसी",
+     "sandhi": "",
      "slp1": "tAmasI",
      "href": "../w/t_41mas_49.html"
     },
@@ -337,6 +367,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "a i → e",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -347,6 +378,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "thus",
      "deva": "इति",
+     "sandhi": "",
      "slp1": "iti",
      "href": "../w/iti.html"
     },
@@ -357,6 +389,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that",
      "deva": "ताम्",
+     "sandhi": "m ś → ṃ ś",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -367,6 +400,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "you must listen",
      "deva": "शृणु",
+     "sandhi": "",
      "slp1": "Sru",
      "href": "../w/_53ru.html"
     }
@@ -386,6 +420,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "according to being",
      "deva": "सत्त्वानुरूपा",
+     "sandhi": "",
      "slp1": "as",
      "href": "../w/as.html"
     },
@@ -396,6 +431,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "of all",
      "deva": "सर्वस्य​",
+     "sandhi": "",
      "slp1": "sarva",
      "href": "../w/sarva.html"
     },
@@ -406,6 +442,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "faith, confidence",
      "deva": "श्रद्धा",
+     "sandhi": "",
      "slp1": "SradDA",
      "href": "../w/_53rad_44_41.html"
     },
@@ -416,6 +453,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it  is",
      "deva": "भवति",
+     "sandhi": "",
      "slp1": "BU",
      "href": "../w/_42_55.html"
     },
@@ -426,6 +464,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "O descendant of Bhārata",
      "deva": "भारत​",
+     "sandhi": "",
      "slp1": "BArata",
      "href": "../w/_42_41rata.html"
     },
@@ -436,6 +475,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "made of faith",
      "deva": "श्रद्धामयः",
+     "sandhi": "aḥ a → o '",
      "slp1": "SradDAmaya",
      "href": "../w/_53rad_44_41maya.html"
     },
@@ -446,6 +486,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "he",
      "deva": "अयम्",
+     "sandhi": "m p → ṃ p",
      "slp1": "idam",
      "href": "../w/idam.html"
     },
@@ -456,6 +497,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "a person",
      "deva": "पुरुषः",
+     "sandhi": "aḥ y → o y",
      "slp1": "puruza",
      "href": "../w/puruza.html"
     },
@@ -466,6 +508,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "he who",
      "deva": "यः",
+     "sandhi": "aḥ y → o y",
      "slp1": "yat",
      "href": "../w/yat.html"
     },
@@ -476,6 +519,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "who has such faith",
      "deva": "यच्छ्रद्धः",
+     "sandhi": "",
      "slp1": "yacCradDa",
      "href": "../w/yac_43rad_44a.html"
     },
@@ -486,6 +530,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "he",
      "deva": "सः",
+     "sandhi": "",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -496,6 +541,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
+     "sandhi": "",
      "slp1": "eva",
      "href": "../w/eva.html"
     },
@@ -506,6 +552,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "he",
      "deva": "सः",
+     "sandhi": "",
      "slp1": "tat",
      "href": "../w/tat.html"
     }
@@ -525,6 +572,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "they worship, they offer in sacrifice",
      "deva": "यजन्ते",
+     "sandhi": "",
      "slp1": "yaj",
      "href": "../w/yaj.html"
     },
@@ -535,6 +583,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "pertaining to sattva, sattvic",
      "deva": "सात्त्विकाः",
+     "sandhi": "ḥ d → Ø d",
      "slp1": "sAttvika",
      "href": "../w/s_41ttvika.html"
     },
@@ -545,6 +594,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "the gods, divinities",
      "deva": "देवान्",
+     "sandhi": "",
      "slp1": "deva",
      "href": "../w/deva.html"
     },
@@ -555,6 +605,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "yakṣas and rakṣāsas",
      "deva": "यक्षरक्षाञ्सि",
+     "sandhi": "",
      "slp1": "yakz",
      "href": "../w/yakz.html"
     },
@@ -565,6 +616,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "related to rajas, rajasic",
      "deva": "राजसाः",
+     "sandhi": "",
      "slp1": "rAjasa",
      "href": "../w/r_41jasa.html"
     },
@@ -575,6 +627,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "who are gone, departed, dead",
      "deva": "प्रेतान्",
+     "sandhi": "",
      "slp1": "preta",
      "href": "../w/preta.html"
     },
@@ -585,6 +638,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "hosts of spirits",
      "deva": "भूतगणान्",
+     "sandhi": "n с → ṃś с",
      "slp1": "BUtagaRa",
      "href": "../w/_42_55taga_52a.html"
     },
@@ -595,6 +649,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "a a → ā",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -605,6 +660,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "others",
      "deva": "अन्ये",
+     "sandhi": "",
      "slp1": "anya",
      "href": "../w/anya.html"
     },
@@ -615,6 +671,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "they worship, they offer in sacrifice",
      "deva": "यजन्ते",
+     "sandhi": "",
      "slp1": "yaj",
      "href": "../w/yaj.html"
     },
@@ -625,6 +682,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "related to tamas, tamasic",
      "deva": "तामसाः",
+     "sandhi": "ḥ j → Ø j",
      "slp1": "tAmasa",
      "href": "../w/t_41masa.html"
     },
@@ -635,6 +693,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "people, men",
      "deva": "जनाः",
+     "sandhi": "",
      "slp1": "jana",
      "href": "../w/jana.html"
     }
@@ -654,6 +713,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "not prescribed by scriptures",
      "deva": "अशास्त्रविहितम्",
+     "sandhi": "m g → ṃ g",
      "slp1": "aSAstravihita",
      "href": "../w/a_53_41stravihita.html"
     },
@@ -664,6 +724,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "terrible, ghastly",
      "deva": "घोरम्",
+     "sandhi": "m t → ṃ t",
      "slp1": "Gora",
      "href": "../w/_47ora.html"
     },
@@ -674,6 +735,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "they scorch, they undergo austerity",
      "deva": "तप्यन्ते",
+     "sandhi": "",
      "slp1": "tap",
      "href": "../w/tap.html"
     },
@@ -684,6 +746,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "those who",
      "deva": "ये",
+     "sandhi": "",
      "slp1": "yat",
      "href": "../w/yat.html"
     },
@@ -694,6 +757,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "heat, austerity",
      "deva": "तपः",
+     "sandhi": "aḥ j → o j",
      "slp1": "tapas",
      "href": "../w/tapas.html"
     },
@@ -704,6 +768,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "people, men",
      "deva": "जनाः",
+     "sandhi": "",
      "slp1": "jana",
      "href": "../w/jana.html"
     },
@@ -714,6 +779,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "endowed with deceit and egotism",
      "deva": "दम्भाहञ्कारसञ्युक्ताः",
+     "sandhi": "",
      "slp1": "daB",
      "href": "../w/da_42.html"
     },
@@ -724,6 +790,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "endowed with the power of desire and passion",
      "deva": "कामरागबलान्विताः",
+     "sandhi": "",
      "slp1": "kam",
      "href": "../w/kam.html"
     }
@@ -743,6 +810,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "who are making emaciated",
      "deva": "कर्शयन्तः",
+     "sandhi": "",
      "slp1": "kfS",
      "href": "../w/kf_53.html"
     },
@@ -753,6 +821,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "one situated in the body",
      "deva": "शरीरस्थम्",
+     "sandhi": "m b → ṃ b",
      "slp1": "SarIrasTa",
      "href": "../w/_53ar_49ras_54a.html"
     },
@@ -763,6 +832,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "hosts of beings, pile of elements",
      "deva": "भूतग्रामम्",
+     "sandhi": "",
      "slp1": "BUtagrAma",
      "href": "../w/_42_55tagr_41ma.html"
     },
@@ -773,6 +843,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "unconscious, insensible, unthinking",
      "deva": "अचेतसः",
+     "sandhi": "",
      "slp1": "acetas",
      "href": "../w/acetas.html"
     },
@@ -783,6 +854,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "me",
      "deva": "माम्",
+     "sandhi": "m c → ṃ c",
      "slp1": "asmat",
      "href": "../w/asmat.html"
     },
@@ -793,6 +865,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "a e → ai",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -803,6 +876,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
+     "sandhi": "a a → ā",
      "slp1": "eva",
      "href": "../w/eva.html"
     },
@@ -813,6 +887,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "one who is situated inside the body",
      "deva": "अन्तःशरीरस्थम्",
+     "sandhi": "m t → ṃ t",
      "slp1": "antaHSarIrasTa",
      "href": "../w/anta_48_53ar_49ras_54a.html"
     },
@@ -823,6 +898,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "them",
      "deva": "तान्",
+     "sandhi": "",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -833,6 +909,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "you must know",
      "deva": "विद्धि",
+     "sandhi": "i ā → y ā",
      "slp1": "vid",
      "href": "../w/vid.html"
     },
@@ -843,6 +920,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "whose resolves are demoniac",
      "deva": "आसुरनिश्चयान्",
+     "sandhi": "",
      "slp1": "AsuraniScaya",
      "href": "../w/_41surani_53caya.html"
     }
@@ -862,6 +940,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "carrying near, fetching, taking food",
      "deva": "आहारः",
+     "sandhi": "ḥ t → s t",
      "slp1": "AhAra",
      "href": "../w/_41h_41ra.html"
     },
@@ -872,6 +951,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "but, then, or, and",
      "deva": "तु",
+     "sandhi": "u a → v a",
      "slp1": "tu",
      "href": "../w/tu.html"
     },
@@ -882,6 +962,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "although, moreover, besides, even",
      "deva": "अपि",
+     "sandhi": "",
      "slp1": "api",
      "href": "../w/api.html"
     },
@@ -892,6 +973,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "of all",
      "deva": "सर्वस्य​",
+     "sandhi": "",
      "slp1": "sarva",
      "href": "../w/sarva.html"
     },
@@ -902,6 +984,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "threefold, of three parts",
      "deva": "त्रिविधः",
+     "sandhi": "aḥ b → o b",
      "slp1": "triviDa",
      "href": "../w/trivi_44a.html"
     },
@@ -912,6 +995,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it  is",
      "deva": "भवति",
+     "sandhi": "",
      "slp1": "BU",
      "href": "../w/_42_55.html"
     },
@@ -922,6 +1006,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "liked, dear, pleasant",
      "deva": "प्रियः",
+     "sandhi": "",
      "slp1": "priya",
      "href": "../w/priya.html"
     },
@@ -932,6 +1017,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "sacrifice, worship",
      "deva": "यज्ञः",
+     "sandhi": "ḥ t → s t",
      "slp1": "yajYa",
      "href": "../w/yaj_59a.html"
     },
@@ -942,6 +1028,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "heat, austerity",
      "deva": "तपः",
+     "sandhi": "ḥ t → s t",
      "slp1": "tapas",
      "href": "../w/tapas.html"
     },
@@ -952,6 +1039,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "in that manner, so, in like manner",
      "deva": "तथा",
+     "sandhi": "",
      "slp1": "taTA",
      "href": "../w/ta_54_41.html"
     },
@@ -962,6 +1050,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "gift, charity",
      "deva": "दानम्",
+     "sandhi": "m t → ṃ t",
      "slp1": "dAna",
      "href": "../w/d_41na.html"
     },
@@ -972,6 +1061,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "of those",
      "deva": "तेषाम्",
+     "sandhi": "m b → ṃ b",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -982,6 +1072,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "splitting, breaking, separation, division",
      "deva": "भेदम्",
+     "sandhi": "",
      "slp1": "Beda",
      "href": "../w/_42eda.html"
     },
@@ -992,6 +1083,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "this",
      "deva": "इमम्",
+     "sandhi": "m ś → ṃ ś",
      "slp1": "idam",
      "href": "../w/idam.html"
     },
@@ -1002,6 +1094,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "you must listen",
      "deva": "शृणु",
+     "sandhi": "",
      "slp1": "Sru",
      "href": "../w/_53ru.html"
     }
@@ -1021,6 +1114,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "which increase the length of life, being, strength, health, happiness and joy",
      "deva": "आयुःसत्त्वबलारोग्यसुखप्रीतिविवर्धनाः",
+     "sandhi": "",
      "slp1": "as",
      "href": "../w/as.html"
     },
@@ -1031,6 +1125,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "juicy, tasty",
      "deva": "रस्याः",
+     "sandhi": "",
      "slp1": "rasya",
      "href": "../w/rasya.html"
     },
@@ -1041,6 +1136,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "fatty, glutinous, slippery",
      "deva": "स्निग्धाः",
+     "sandhi": "",
      "slp1": "snigDa",
      "href": "../w/snig_44a.html"
     },
@@ -1051,6 +1147,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "firm, hard, solid",
      "deva": "स्थिराः",
+     "sandhi": "ḥ h → Ø h",
      "slp1": "sTira",
      "href": "../w/s_54ira.html"
     },
@@ -1061,6 +1158,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "being in the heart, dear, cherished, pleasing",
      "deva": "हृद्याः",
+     "sandhi": "ḥ ā → Ø ā",
      "slp1": "hfdyA",
      "href": "../w/hfdy_41.html"
     },
@@ -1071,6 +1169,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "foods",
      "deva": "आहाराः",
+     "sandhi": "",
      "slp1": "AhAra",
      "href": "../w/_41h_41ra.html"
     },
@@ -1081,6 +1180,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "dear to sattvic people",
      "deva": "सात्त्विकप्रियाः",
+     "sandhi": "",
      "slp1": "as",
      "href": "../w/as.html"
     }
@@ -1100,6 +1200,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "excessively bitter, sour, salty, hot,  pungent, dry and burning",
      "deva": "कट्वम्ललवणात्युष्णतीक्ष्णरूक्षविदाहिनः",
+     "sandhi": "",
      "slp1": "uz",
      "href": "../w/uz.html"
     },
@@ -1110,6 +1211,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "foods",
      "deva": "आहाराः",
+     "sandhi": "ḥ ṛ → Ø ṛ",
      "slp1": "AhAra",
      "href": "../w/_41h_41ra.html"
     },
@@ -1120,6 +1222,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "of related to rajas, of rajasic",
      "deva": "राजसस्य​",
+     "sandhi": "a i → e",
      "slp1": "rAjasa",
      "href": "../w/r_41jasa.html"
     },
@@ -1130,6 +1233,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "desired, worshipped",
      "deva": "इष्टाः",
+     "sandhi": "ḥ d → Ø d",
      "slp1": "izwa",
      "href": "../w/izwa.html"
     },
@@ -1140,6 +1244,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "giving distress, grief and disease",
      "deva": "दुःखशोकामयप्रदाः",
+     "sandhi": "",
      "resolved": false
     }
    ]
@@ -1158,6 +1263,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "which finished its course, used, useless / of which three hours have passed",
      "deva": "यातयामम्",
+     "sandhi": "m g → ṃ g",
      "slp1": "yAtayAma",
      "href": "../w/y_41tay_41ma.html"
     },
@@ -1168,6 +1274,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "whose taste is gone",
      "deva": "गतरसम्",
+     "sandhi": "m p → ṃ p",
      "slp1": "gatarasa",
      "href": "../w/gatarasa.html"
     },
@@ -1178,6 +1285,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "foul-smelling, stinking, putrid",
      "deva": "पूति",
+     "sandhi": "",
      "slp1": "pUti",
      "href": "../w/p_55ti.html"
     },
@@ -1188,6 +1296,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "left over [for long time], stale",
      "deva": "पर्युषितम्",
+     "sandhi": "m c → ṃ c",
      "slp1": "paryuzita",
      "href": "../w/paryuzita.html"
     },
@@ -1198,6 +1307,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -1208,6 +1318,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that which",
      "deva": "यत्",
+     "sandhi": "",
      "slp1": "yat",
      "href": "../w/yat.html"
     },
@@ -1218,6 +1329,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "left remaining, left-over",
      "deva": "उच्छिष्टम्",
+     "sandhi": "",
      "slp1": "ucCizwa",
      "href": "../w/uc_43izwa.html"
     },
@@ -1228,6 +1340,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "although, moreover, besides, even",
      "deva": "अपि",
+     "sandhi": "",
      "slp1": "api",
      "href": "../w/api.html"
     },
@@ -1238,6 +1351,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "a a → ā",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -1248,6 +1362,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "not suitable for sacrifice, impure",
      "deva": "अमेध्यम्",
+     "sandhi": "m b → ṃ b",
      "slp1": "ameDya",
      "href": "../w/ame_44ya.html"
     },
@@ -1258,6 +1373,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "food, meal",
      "deva": "भोजनम्",
+     "sandhi": "m t → ṃ t",
      "slp1": "Bojana",
      "href": "../w/_42ojana.html"
     },
@@ -1268,6 +1384,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "dear to the tamasic",
      "deva": "तामसप्रियम्",
+     "sandhi": "",
      "slp1": "tam",
      "href": "../w/tam.html"
     }
@@ -1287,6 +1404,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "by those not expecting the fruit",
      "deva": "अफलाकाङ्क्षिभिः",
+     "sandhi": "ḥ y → r y",
      "slp1": "Pal",
      "href": "../w/_50al.html"
     },
@@ -1297,6 +1415,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "sacrifice, worship",
      "deva": "यज्ञः",
+     "sandhi": "aḥ v → o v",
      "slp1": "yajYa",
      "href": "../w/yaj_59a.html"
     },
@@ -1307,6 +1426,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "in which the rules are seen",
      "deva": "विधिदृष्टः",
+     "sandhi": "aḥ y → o y",
      "slp1": "viDidfzwa",
      "href": "../w/vi_44idfzwa.html"
     },
@@ -1317,6 +1437,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "he who",
      "deva": "यः",
+     "sandhi": "ḥ i → Ø i",
      "slp1": "yat",
      "href": "../w/yat.html"
     },
@@ -1327,6 +1448,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is offered",
      "deva": "इज्यते",
+     "sandhi": "",
      "slp1": "yaj",
      "href": "../w/yaj.html"
     },
@@ -1337,6 +1459,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is to be offered",
      "deva": "यष्टव्यम्",
+     "sandhi": "",
      "slp1": "yazwavya",
      "href": "../w/yazwavya.html"
     },
@@ -1347,6 +1470,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
+     "sandhi": "a i → e",
      "slp1": "eva",
      "href": "../w/eva.html"
     },
@@ -1357,6 +1481,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "thus",
      "deva": "इति",
+     "sandhi": "",
      "slp1": "iti",
      "href": "../w/iti.html"
     },
@@ -1367,6 +1492,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "the mind",
      "deva": "मनः",
+     "sandhi": "",
      "slp1": "manas",
      "href": "../w/manas.html"
     },
@@ -1377,6 +1503,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "after concentrating",
      "deva": "समाधाय​",
+     "sandhi": "",
      "slp1": "samADA",
      "href": "../w/sam_41_44_41.html"
     },
@@ -1387,6 +1514,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "he",
      "deva": "सः",
+     "sandhi": "ḥ s → Ø s",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -1397,6 +1525,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "related to sattva, sattvic",
      "deva": "सात्त्विकः",
+     "sandhi": "",
      "slp1": "sAttvika",
      "href": "../w/s_41ttvika.html"
     }
@@ -1416,6 +1545,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "aiming at",
      "deva": "अभिसञ्धाय​",
+     "sandhi": "",
      "slp1": "DA",
      "href": "../w/_44_41.html"
     },
@@ -1426,6 +1556,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "but, then, or, and",
      "deva": "तु",
+     "sandhi": "",
      "slp1": "tu",
      "href": "../w/tu.html"
     },
@@ -1436,6 +1567,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "fruit, result",
      "deva": "फलम्",
+     "sandhi": "m d → ṃ d",
      "slp1": "Pala",
      "href": "../w/_50ala.html"
     },
@@ -1446,6 +1578,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "for the sake of deceit",
      "deva": "दम्भार्थम्",
+     "sandhi": "a a → ā",
      "slp1": "daB",
      "href": "../w/da_42.html"
     },
@@ -1456,6 +1589,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "although, moreover, besides, even",
      "deva": "अपि",
+     "sandhi": "",
      "slp1": "api",
      "href": "../w/api.html"
     },
@@ -1466,6 +1600,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "a e → ai",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -1476,6 +1611,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
+     "sandhi": "",
      "slp1": "eva",
      "href": "../w/eva.html"
     },
@@ -1486,6 +1622,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that which",
      "deva": "यत्",
+     "sandhi": "",
      "slp1": "yat",
      "href": "../w/yat.html"
     },
@@ -1496,6 +1633,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is offered",
      "deva": "इज्यते",
+     "sandhi": "",
      "slp1": "yaj",
      "href": "../w/yaj.html"
     },
@@ -1506,6 +1644,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "O best of the Bharatas",
      "deva": "भरतश्रेष्ठ​",
+     "sandhi": "",
      "slp1": "BaratarzaBa",
      "href": "../w/_42aratarza_42a.html"
     },
@@ -1516,6 +1655,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that",
      "deva": "तम्",
+     "sandhi": "m y → ṃ y",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -1526,6 +1666,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "sacrifice, worship",
      "deva": "यज्ञम्",
+     "sandhi": "m v → ṃ v",
      "slp1": "yajYa",
      "href": "../w/yaj_59a.html"
     },
@@ -1536,6 +1677,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "you must know",
      "deva": "विद्धि",
+     "sandhi": "",
      "slp1": "vid",
      "href": "../w/vid.html"
     },
@@ -1546,6 +1688,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "related to rajas, rajasic",
      "deva": "राजसम्",
+     "sandhi": "",
      "slp1": "rAjasa",
      "href": "../w/r_41jasa.html"
     }
@@ -1565,6 +1708,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "destitute of rules",
      "deva": "विधिहीनम्",
+     "sandhi": "",
      "slp1": "viDihIna",
      "href": "../w/vi_44ih_49na.html"
     },
@@ -1575,6 +1719,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "in which food is not given",
      "deva": "असृष्टान्नम्",
+     "sandhi": "m m → ṃ m",
      "slp1": "sfj",
      "href": "../w/sfj.html"
     },
@@ -1585,6 +1730,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "destitute of sacred formulas",
      "deva": "मन्त्रहीनम्",
+     "sandhi": "",
      "slp1": "mantrahIna",
      "href": "../w/mantrah_49na.html"
     },
@@ -1595,6 +1741,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "in which there is no remuneration for the priest",
      "deva": "अदक्षिणम्",
+     "sandhi": "",
      "slp1": "adakziRa",
      "href": "../w/adakzi_52a.html"
     },
@@ -1605,6 +1752,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "deprived of faith",
      "deva": "श्रद्धाविरहितम्",
+     "sandhi": "m y → ṃ y",
      "slp1": "SradDAvirahita",
      "href": "../w/_53rad_44_41virahita.html"
     },
@@ -1615,6 +1763,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "sacrifice, worship",
      "deva": "यज्ञम्",
+     "sandhi": "m t → ṃ t",
      "slp1": "yajYa",
      "href": "../w/yaj_59a.html"
     },
@@ -1625,6 +1774,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "related to tamas, tamasic",
      "deva": "तामसम्",
+     "sandhi": "m p → ṃ p",
      "slp1": "tAmasa",
      "href": "../w/t_41masa.html"
     },
@@ -1635,6 +1785,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "they call",
      "deva": "परिचक्षते",
+     "sandhi": "",
      "slp1": "paricakz",
      "href": "../w/paricakz.html"
     }
@@ -1654,6 +1805,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "worshipping the divinities, the twice-born, preceptors and the wise",
      "deva": "देवद्विजगुरुप्राज्ञपूजनम्",
+     "sandhi": "m ś → ṃ ś",
      "slp1": "div",
      "href": "../w/div.html"
     },
@@ -1664,6 +1816,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "purity",
      "deva": "शौचम्",
+     "sandhi": "",
      "slp1": "SOca",
      "href": "../w/_53_4fca.html"
     },
@@ -1674,6 +1827,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "simplicity, honesty, sincerity",
      "deva": "आर्जवम्",
+     "sandhi": "",
      "slp1": "Arjava",
      "href": "../w/_41rjava.html"
     },
@@ -1684,6 +1838,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "celibacy practised by a student of the Vedas",
      "deva": "ब्रह्मचर्यम्",
+     "sandhi": "",
      "slp1": "brahmacarya",
      "href": "../w/brahmacarya.html"
     },
@@ -1694,6 +1849,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "non-violence, harmlessness",
      "deva": "अहिञ्सा",
+     "sandhi": "",
      "slp1": "ahiMsA",
      "href": "../w/ahi_4ds_41.html"
     },
@@ -1704,6 +1860,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -1714,6 +1871,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "bodily, related to body",
      "deva": "शारीरम्",
+     "sandhi": "m t → ṃ t",
      "slp1": "SArIra",
      "href": "../w/_53_41r_49ra.html"
     },
@@ -1724,6 +1882,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "heat, austerity",
      "deva": "तपः",
+     "sandhi": "ḥ u → Ø u",
      "slp1": "tapas",
      "href": "../w/tapas.html"
     },
@@ -1734,6 +1893,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is said",
      "deva": "उच्यते",
+     "sandhi": "",
      "slp1": "vac",
      "href": "../w/vac.html"
     }
@@ -1753,6 +1913,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "which does not cause distress",
      "deva": "अनुद्वेगकरम्",
+     "sandhi": "m v → ṃ v",
      "slp1": "anudvegakara",
      "href": "../w/anudvegakara.html"
     },
@@ -1763,6 +1924,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "word, the speech",
      "deva": "वाक्यम्",
+     "sandhi": "m s → ṃ s",
      "slp1": "vAkya",
      "href": "../w/v_41kya.html"
     },
@@ -1773,6 +1935,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "truth, truthfulness",
      "deva": "सत्यम्",
+     "sandhi": "m p → ṃ p",
      "slp1": "satya",
      "href": "../w/satya.html"
     },
@@ -1783,6 +1946,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "dear and beneficial",
      "deva": "प्रियहितम्",
+     "sandhi": "m c → ṃ c",
      "slp1": "priyahita",
      "href": "../w/priyahita.html"
     },
@@ -1793,6 +1957,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -1803,6 +1968,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "which",
      "deva": "यत्",
+     "sandhi": "",
      "slp1": "yat",
      "href": "../w/yat.html"
     },
@@ -1813,6 +1979,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "practice of recitiation",
      "deva": "स्वाध्यायाभ्यसनम्",
+     "sandhi": "m c → ṃ c",
      "slp1": "DI",
      "href": "../w/_44_49.html"
     },
@@ -1823,6 +1990,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "a e → ai",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -1833,6 +2001,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
+     "sandhi": "",
      "slp1": "eva",
      "href": "../w/eva.html"
     },
@@ -1843,6 +2012,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "made of speech",
      "deva": "वाङ्मयम्",
+     "sandhi": "m t → ṃ t",
      "slp1": "vac",
      "href": "../w/vac.html"
     },
@@ -1853,6 +2023,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "heat, austerity",
      "deva": "तपः",
+     "sandhi": "ḥ u → Ø u",
      "slp1": "tapas",
      "href": "../w/tapas.html"
     },
@@ -1863,6 +2034,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is said",
      "deva": "उच्यते",
+     "sandhi": "",
      "slp1": "vac",
      "href": "../w/vac.html"
     }
@@ -1882,6 +2054,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "satisfaction of the mind",
      "deva": "मनःप्रसादः",
+     "sandhi": "",
      "slp1": "manaHprasAda",
      "href": "../w/mana_48pras_41da.html"
     },
@@ -1892,6 +2065,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "gentleness, mildness",
      "deva": "सौम्यत्वम्",
+     "sandhi": "m m → ṃ m",
      "slp1": "sOmyatva",
      "href": "../w/s_4fmyatva.html"
     },
@@ -1902,6 +2076,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "related to sages, silence, restrain of tongue",
      "deva": "मौनम्",
+     "sandhi": "",
      "slp1": "mOna",
      "href": "../w/m_4fna.html"
     },
@@ -1912,6 +2087,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "self-control",
      "deva": "आत्मविनिग्रहः",
+     "sandhi": "",
      "slp1": "Atmavinigraha",
      "href": "../w/_41tmavinigraha.html"
     },
@@ -1922,6 +2098,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "purity of being, of nature",
      "deva": "भावसञ्शुद्धिः",
+     "sandhi": "ḥ i → r i",
      "slp1": "BAvasaMSudDi",
      "href": "../w/_42_41vasa_4d_53ud_44i.html"
     },
@@ -1932,6 +2109,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "thus",
      "deva": "इति",
+     "sandhi": "i e → y e",
      "slp1": "iti",
      "href": "../w/iti.html"
     },
@@ -1942,6 +2120,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "this",
      "deva": "एतत्",
+     "sandhi": "",
      "slp1": "etat",
      "href": "../w/etat.html"
     },
@@ -1952,6 +2131,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "heat, austerity",
      "deva": "तपः",
+     "sandhi": "aḥ m → o m",
      "slp1": "tapas",
      "href": "../w/tapas.html"
     },
@@ -1962,6 +2142,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "pertaining to the mind",
      "deva": "मानसम्",
+     "sandhi": "",
      "slp1": "mAnasa",
      "href": "../w/m_41nasa.html"
     },
@@ -1972,6 +2153,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is said",
      "deva": "उच्यते",
+     "sandhi": "",
      "slp1": "vac",
      "href": "../w/vac.html"
     }
@@ -1991,6 +2173,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "with faith",
      "deva": "श्रद्धया",
+     "sandhi": "",
      "slp1": "SradDA",
      "href": "../w/_53rad_44_41.html"
     },
@@ -2001,6 +2184,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "with ancient, final, the best, the supreme",
      "deva": "परया",
+     "sandhi": "",
      "slp1": "para",
      "href": "../w/para.html"
     },
@@ -2011,6 +2195,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "burned, undergone",
      "deva": "तप्तम्",
+     "sandhi": "m t → ṃ t",
      "slp1": "tap",
      "href": "../w/tap.html"
     },
@@ -2021,6 +2206,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "heat, austerity",
      "deva": "तपः",
+     "sandhi": "ḥ t → s t",
      "slp1": "tapas",
      "href": "../w/tapas.html"
     },
@@ -2031,6 +2217,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that",
      "deva": "तत्",
+     "sandhi": "",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -2041,6 +2228,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "threefold, of three parts",
      "deva": "त्रिविधम्",
+     "sandhi": "m n → ṃ n",
      "slp1": "triviDa",
      "href": "../w/trivi_44a.html"
     },
@@ -2051,6 +2239,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "by men",
      "deva": "नरैः",
+     "sandhi": "",
      "slp1": "nara",
      "href": "../w/nara.html"
     },
@@ -2061,6 +2250,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "by those not expecting the fruit",
      "deva": "अफलाकाङ्क्षिभिः",
+     "sandhi": "ḥ y → r y",
      "slp1": "Pal",
      "href": "../w/_50al.html"
     },
@@ -2071,6 +2261,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "by those yoked, by those endowed with",
      "deva": "युक्तैः",
+     "sandhi": "",
      "slp1": "yukta",
      "href": "../w/yukta.html"
     },
@@ -2081,6 +2272,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "related to sattva",
      "deva": "सात्त्विकम्",
+     "sandhi": "m p → ṃ p",
      "slp1": "sAttvika",
      "href": "../w/s_41ttvika.html"
     },
@@ -2091,6 +2283,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "they call",
      "deva": "परिचक्षते",
+     "sandhi": "",
      "slp1": "paricakz",
      "href": "../w/paricakz.html"
     }
@@ -2110,6 +2303,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "for the sake of respect,  honour and worship",
      "deva": "सत्कारमानपूजाअर्थम्",
+     "sandhi": "m t → ṃ t",
      "slp1": "as",
      "href": "../w/as.html"
     },
@@ -2120,6 +2314,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "heat, austerity",
      "deva": "तपः",
+     "sandhi": "aḥ d → o d",
      "slp1": "tapas",
      "href": "../w/tapas.html"
     },
@@ -2130,6 +2325,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "with deceit, with hypocrisy, with pride",
      "deva": "दम्भेन​",
+     "sandhi": "",
      "slp1": "damBa",
      "href": "../w/dam_42a.html"
     },
@@ -2140,6 +2336,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "a e → ai",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -2150,6 +2347,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
+     "sandhi": "",
      "slp1": "eva",
      "href": "../w/eva.html"
     },
@@ -2160,6 +2358,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "which",
      "deva": "यत्",
+     "sandhi": "",
      "slp1": "yat",
      "href": "../w/yat.html"
     },
@@ -2170,6 +2369,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is done",
      "deva": "क्रियते",
+     "sandhi": "",
      "slp1": "kf",
      "href": "../w/kf.html"
     },
@@ -2180,6 +2380,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that",
      "deva": "तत्",
+     "sandhi": "t i → d i",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -2190,6 +2391,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "here",
      "deva": "इह​",
+     "sandhi": "",
      "slp1": "iha",
      "href": "../w/iha.html"
     },
@@ -2200,6 +2402,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "spoken, called",
      "deva": "प्रोक्तम्",
+     "sandhi": "m r → ṃ r",
      "slp1": "prokta",
      "href": "../w/prokta.html"
     },
@@ -2210,6 +2413,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "related to rajas, rajasic",
      "deva": "राजसम्",
+     "sandhi": "m c → ṃ c",
      "slp1": "rAjasa",
      "href": "../w/r_41jasa.html"
     },
@@ -2220,6 +2424,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "restless, flickering",
      "deva": "चलम्",
+     "sandhi": "",
      "slp1": "cala",
      "href": "../w/cala.html"
     },
@@ -2230,6 +2435,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "uncertain, unstable",
      "deva": "अध्रुवम्",
+     "sandhi": "",
      "slp1": "aDruva",
      "href": "../w/a_44ruva.html"
     }
@@ -2249,6 +2455,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "with a deluded conception",
      "deva": "मूढग्राहेण​",
+     "sandhi": "a ā → ā",
      "slp1": "mUQagrAha",
      "href": "../w/m_55_51agr_41ha.html"
     },
@@ -2259,6 +2466,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "of the self",
      "deva": "आत्मनः",
+     "sandhi": "aḥ y → o y",
      "slp1": "Atman",
      "href": "../w/_41tman.html"
     },
@@ -2269,6 +2477,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that which",
      "deva": "यत्",
+     "sandhi": "",
      "slp1": "yat",
      "href": "../w/yat.html"
     },
@@ -2279,6 +2488,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "with torture",
      "deva": "पीडया",
+     "sandhi": "",
      "slp1": "pIqA",
      "href": "../w/p_49q_41.html"
     },
@@ -2289,6 +2499,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is done",
      "deva": "क्रियते",
+     "sandhi": "",
      "slp1": "kf",
      "href": "../w/kf.html"
     },
@@ -2299,6 +2510,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "heat, austerity",
      "deva": "तपः",
+     "sandhi": "",
      "slp1": "tapas",
      "href": "../w/tapas.html"
     },
@@ -2309,6 +2521,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "of the other, of the strange",
      "deva": "परस्य​",
+     "sandhi": "a u → o",
      "slp1": "para",
      "href": "../w/para.html"
     },
@@ -2319,6 +2532,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "for the sake of destruction",
      "deva": "उत्सादनार्थम्",
+     "sandhi": "",
      "slp1": "sad",
      "href": "../w/sad.html"
     },
@@ -2329,6 +2543,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "or, and, on the other side, but even if, however",
      "deva": "वा",
+     "sandhi": "",
      "slp1": "vA",
      "href": "../w/v_41.html"
     },
@@ -2339,6 +2554,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that",
      "deva": "तत्",
+     "sandhi": "",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -2349,6 +2565,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "related to tamas, tamasic",
      "deva": "तामसम्",
+     "sandhi": "",
      "slp1": "tAmasa",
      "href": "../w/t_41masa.html"
     },
@@ -2359,6 +2576,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "set up, declared",
      "deva": "उदाहृतम्",
+     "sandhi": "",
      "slp1": "udAhfta",
      "href": "../w/ud_41hfta.html"
     }
@@ -2378,6 +2596,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "to be given, what should be given",
      "deva": "दातव्यम्",
+     "sandhi": "",
      "slp1": "dAtavya",
      "href": "../w/d_41tavya.html"
     },
@@ -2388,6 +2607,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "thus",
      "deva": "इति",
+     "sandhi": "",
      "slp1": "iti",
      "href": "../w/iti.html"
     },
@@ -2398,6 +2618,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that which",
      "deva": "यत्",
+     "sandhi": "t d → d d",
      "slp1": "yat",
      "href": "../w/yat.html"
     },
@@ -2408,6 +2629,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "gift, charity",
      "deva": "दानम्",
+     "sandhi": "m d → ṃ d",
      "slp1": "dAna",
      "href": "../w/d_41na.html"
     },
@@ -2418,6 +2640,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is given",
      "deva": "दीयते",
+     "sandhi": "e a → e '",
      "slp1": "dA",
      "href": "../w/d_41.html"
     },
@@ -2428,6 +2651,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "to one who is not giving in return",
      "deva": "अनुपकारिणे",
+     "sandhi": "",
      "slp1": "anupakArin",
      "href": "../w/anupak_41rin.html"
     },
@@ -2438,6 +2662,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "in a place, in a country",
      "deva": "देशे",
+     "sandhi": "",
      "slp1": "deSa",
      "href": "../w/de_53a.html"
     },
@@ -2448,6 +2673,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "in time",
      "deva": "काले",
+     "sandhi": "",
      "slp1": "kAla",
      "href": "../w/k_41la.html"
     },
@@ -2458,6 +2684,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -2468,6 +2695,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "to a worthy recipient",
      "deva": "पात्रे",
+     "sandhi": "",
      "slp1": "pAtra",
      "href": "../w/p_41tra.html"
     },
@@ -2478,6 +2706,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -2488,6 +2717,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that",
      "deva": "तत्",
+     "sandhi": "t d → d d",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -2498,6 +2728,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "gift, charity",
      "deva": "दानम्",
+     "sandhi": "m s → ṃ s",
      "slp1": "dAna",
      "href": "../w/d_41na.html"
     },
@@ -2508,6 +2739,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "related to sattva",
      "deva": "सात्त्विकम्",
+     "sandhi": "m s → ṃ s",
      "slp1": "sAttvika",
      "href": "../w/s_41ttvika.html"
     },
@@ -2518,6 +2750,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is known, it is remembered",
      "deva": "स्मृतम्",
+     "sandhi": "",
      "slp1": "smfta",
      "href": "../w/smfta.html"
     }
@@ -2537,6 +2770,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that which",
      "deva": "यत्",
+     "sandhi": "",
      "slp1": "yat",
      "href": "../w/yat.html"
     },
@@ -2547,6 +2781,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "but, then, or, and",
      "deva": "तु",
+     "sandhi": "",
      "slp1": "tu",
      "href": "../w/tu.html"
     },
@@ -2557,6 +2792,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "for the sake of getting in return",
      "deva": "प्रत्युपकारार्थम्",
+     "sandhi": "m p → ṃ p",
      "slp1": "kf",
      "href": "../w/kf.html"
     },
@@ -2567,6 +2803,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "fruit, result",
      "deva": "फलम्",
+     "sandhi": "",
      "slp1": "Pala",
      "href": "../w/_50ala.html"
     },
@@ -2577,6 +2814,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "aiming at",
      "deva": "उद्दिश्य​",
+     "sandhi": "",
      "slp1": "diS",
      "href": "../w/di_53.html"
     },
@@ -2587,6 +2825,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "or, and, on the other side, but even if, however",
      "deva": "वा",
+     "sandhi": "",
      "slp1": "vA",
      "href": "../w/v_41.html"
     },
@@ -2597,6 +2836,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "back, again, moreover",
      "deva": "पुनः",
+     "sandhi": "",
      "slp1": "punaH",
      "href": "../w/puna_48.html"
     },
@@ -2607,6 +2847,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is given",
      "deva": "दीयते",
+     "sandhi": "",
      "slp1": "dA",
      "href": "../w/d_41.html"
     },
@@ -2617,6 +2858,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -2627,6 +2869,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "grudgingly, unwillingly",
      "deva": "परिक्लिष्टम्",
+     "sandhi": "m t → ṃ t",
      "slp1": "pariklizwam",
      "href": "../w/pariklizwam.html"
     },
@@ -2637,6 +2880,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that",
      "deva": "तत्",
+     "sandhi": "t d → d d",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -2647,6 +2891,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "gift, charity",
      "deva": "दानम्",
+     "sandhi": "m r → ṃ r",
      "slp1": "dAna",
      "href": "../w/d_41na.html"
     },
@@ -2657,6 +2902,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "related to rajas, rajasic",
      "deva": "राजसम्",
+     "sandhi": "m s → ṃ s",
      "slp1": "rAjasa",
      "href": "../w/r_41jasa.html"
     },
@@ -2667,6 +2913,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is known, it is remembered",
      "deva": "स्मृतम्",
+     "sandhi": "",
      "slp1": "smfta",
      "href": "../w/smfta.html"
     }
@@ -2686,6 +2933,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "in [improper] place and at [improper] time",
      "deva": "अदेशकाले",
+     "sandhi": "",
      "slp1": "adeSakAla",
      "href": "../w/ade_53ak_41la.html"
     },
@@ -2696,6 +2944,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that which",
      "deva": "यत्",
+     "sandhi": "t d → d d",
      "slp1": "yat",
      "href": "../w/yat.html"
     },
@@ -2706,6 +2955,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "gift, charity",
      "deva": "दानम्",
+     "sandhi": "",
      "slp1": "dAna",
      "href": "../w/d_41na.html"
     },
@@ -2716,6 +2966,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "to unworthy recipients",
      "deva": "अपात्रेभ्यः",
+     "sandhi": "ḥ c → ś c",
      "slp1": "apAtra",
      "href": "../w/ap_41tra.html"
     },
@@ -2726,6 +2977,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -2736,6 +2988,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is given",
      "deva": "दीयते",
+     "sandhi": "",
      "slp1": "dA",
      "href": "../w/d_41.html"
     },
@@ -2746,6 +2999,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "disrespectfully",
      "deva": "असत्कृतम्",
+     "sandhi": "",
      "slp1": "asatkftam",
      "href": "../w/asatkftam.html"
     },
@@ -2756,6 +3010,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "despisingly",
      "deva": "अवज्ञातम्",
+     "sandhi": "m t → ṃ t",
      "slp1": "jYA",
      "href": "../w/j_59_41.html"
     },
@@ -2766,6 +3021,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that",
      "deva": "तत्",
+     "sandhi": "",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -2776,6 +3032,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "related to tamas, tamasic",
      "deva": "तामसम्",
+     "sandhi": "",
      "slp1": "tAmasa",
      "href": "../w/t_41masa.html"
     },
@@ -2786,6 +3043,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "set up, declared",
      "deva": "उदाहृतम्",
+     "sandhi": "",
      "slp1": "udAhfta",
      "href": "../w/ud_41hfta.html"
     }
@@ -2805,6 +3063,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "OM, TAT, SAT",
      "deva": "ओम्तत्सत्",
+     "sandhi": "t ī → d ī",
      "slp1": "as",
      "href": "../w/as.html"
     },
@@ -2815,6 +3074,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "thus",
      "deva": "इति",
+     "sandhi": "",
      "slp1": "iti",
      "href": "../w/iti.html"
     },
@@ -2825,6 +3085,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "instruction, description, designation",
      "deva": "निर्देशः",
+     "sandhi": "aḥ b → o b",
      "slp1": "nirdeSa",
      "href": "../w/nirde_53a.html"
     },
@@ -2835,6 +3096,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "of the spirit, of the Veda",
      "deva": "ब्रह्मणः",
+     "sandhi": "ḥ t → s t",
      "slp1": "brahman",
      "href": "../w/brahman.html"
     },
@@ -2845,6 +3107,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "threefold, of three parts",
      "deva": "त्रिविधः",
+     "sandhi": "",
      "slp1": "triviDa",
      "href": "../w/trivi_44a.html"
     },
@@ -2855,6 +3118,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "known, remembered",
      "deva": "स्मृतः",
+     "sandhi": "",
      "slp1": "smfta",
      "href": "../w/smfta.html"
     },
@@ -2865,6 +3129,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "brahmins",
      "deva": "ब्राह्मणाः",
+     "sandhi": "ḥ t → s t",
      "slp1": "brAhmaRa",
      "href": "../w/br_41hma_52a.html"
     },
@@ -2875,6 +3140,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "by that",
      "deva": "तेन​",
+     "sandhi": "",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -2885,6 +3151,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "the Vedas",
      "deva": "वेदाः",
+     "sandhi": "ḥ c → ś c",
      "slp1": "veda",
      "href": "../w/veda.html"
     },
@@ -2895,6 +3162,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -2905,6 +3173,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "sacrifices, worship",
      "deva": "यज्ञाः",
+     "sandhi": "ḥ c → ś c",
      "slp1": "yajYa",
      "href": "../w/yaj_59a.html"
     },
@@ -2915,6 +3184,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -2925,6 +3195,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "placed, made",
      "deva": "विहिताः",
+     "sandhi": "",
      "slp1": "vihita",
      "href": "../w/vihita.html"
     },
@@ -2935,6 +3206,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "formerly, anciently, in the beginning",
      "deva": "पुरा",
+     "sandhi": "",
      "slp1": "purA",
      "href": "../w/pur_41.html"
     }
@@ -2954,6 +3226,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "from that",
      "deva": "तस्मात्",
+     "sandhi": "t o → d o",
      "slp1": "tasmAt",
      "href": "../w/tasm_41t.html"
     },
@@ -2964,6 +3237,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "OM",
      "deva": "ओम्",
+     "sandhi": "",
      "slp1": "om",
      "href": "../w/om.html"
     },
@@ -2974,6 +3248,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "thus",
      "deva": "इति",
+     "sandhi": "i u → y u",
      "slp1": "iti",
      "href": "../w/iti.html"
     },
@@ -2984,6 +3259,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "after declaring",
      "deva": "उदाहृत्य​",
+     "sandhi": "",
      "slp1": "udAhf",
      "href": "../w/ud_41hf.html"
     },
@@ -2994,6 +3270,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "acts of sacrifice, charity and austerity",
      "deva": "यज्ञदानतपःक्रियाः",
+     "sandhi": "",
      "slp1": "yaj",
      "href": "../w/yaj.html"
     },
@@ -3004,6 +3281,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "they start to act, they act",
      "deva": "प्रवर्तन्ते",
+     "sandhi": "",
      "slp1": "pravft",
      "href": "../w/pravft.html"
     },
@@ -3014,6 +3292,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "said in the precepts",
      "deva": "विधानोक्ताः",
+     "sandhi": "",
      "slp1": "DA",
      "href": "../w/_44_41.html"
     },
@@ -3024,6 +3303,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "constantly",
      "deva": "सततम्",
+     "sandhi": "m b → ṃ b",
      "slp1": "satatam",
      "href": "../w/satatam.html"
     },
@@ -3034,6 +3314,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "of those who explain Brahman",
      "deva": "ब्रह्मवादिनाम्",
+     "sandhi": "",
      "slp1": "brahmavAdin",
      "href": "../w/brahmav_41din.html"
     }
@@ -3053,6 +3334,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that",
      "deva": "तत्",
+     "sandhi": "t i → d i",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -3063,6 +3345,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "thus",
      "deva": "इति",
+     "sandhi": "i a → y a",
      "slp1": "iti",
      "href": "../w/iti.html"
     },
@@ -3073,6 +3356,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "not aiming at",
      "deva": "अनभिसञ्धाय​",
+     "sandhi": "",
      "slp1": "DA",
      "href": "../w/_44_41.html"
     },
@@ -3083,6 +3367,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "fruit, result",
      "deva": "फलम्",
+     "sandhi": "m y → ṃ y",
      "slp1": "Pala",
      "href": "../w/_50ala.html"
     },
@@ -3093,6 +3378,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "acts of sacrifice and austerity",
      "deva": "यज्ञतपःक्रियाः",
+     "sandhi": "",
      "slp1": "yaj",
      "href": "../w/yaj.html"
     },
@@ -3103,6 +3389,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "acts of charity",
      "deva": "दानक्रियाः",
+     "sandhi": "ḥ c → ś c",
      "slp1": "dA",
      "href": "../w/d_41.html"
     },
@@ -3113,6 +3400,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -3123,6 +3411,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "manifold, different",
      "deva": "विविधाः",
+     "sandhi": "",
      "slp1": "viviDa",
      "href": "../w/vivi_44a.html"
     },
@@ -3133,6 +3422,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "they are done",
      "deva": "क्रियन्ते",
+     "sandhi": "",
      "slp1": "kf",
      "href": "../w/kf.html"
     },
@@ -3143,6 +3433,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "by those desiring liberation",
      "deva": "मोक्षकाङ्क्षिभिः",
+     "sandhi": "",
      "slp1": "mokzakANkzin",
      "href": "../w/mokzak_41_4ekzin.html"
     }
@@ -3162,6 +3453,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "in the sense of being",
      "deva": "सद्भावे",
+     "sandhi": "",
      "slp1": "sadBAva",
      "href": "../w/sad_42_41va.html"
     },
@@ -3172,6 +3464,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "in the sense of saintliness",
      "deva": "साधुभावे",
+     "sandhi": "",
      "slp1": "sADuBAva",
      "href": "../w/s_41_44u_42_41va.html"
     },
@@ -3182,6 +3475,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -3192,6 +3486,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "being, existing, true, the essence",
      "deva": "सत्",
+     "sandhi": "t i → d i",
      "slp1": "sant",
      "href": "../w/sant.html"
     },
@@ -3202,6 +3497,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "thus",
      "deva": "इति",
+     "sandhi": "i e → y e",
      "slp1": "iti",
      "href": "../w/iti.html"
     },
@@ -3212,6 +3508,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "to",
      "deva": "एतत्",
+     "sandhi": "",
      "slp1": "etat",
      "href": "../w/etat.html"
     },
@@ -3222,6 +3519,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is used, it is engaged",
      "deva": "प्रयुज्यते",
+     "sandhi": "",
      "slp1": "prayuj",
      "href": "../w/prayuj.html"
     },
@@ -3232,6 +3530,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "in a praised, in an auspicious",
      "deva": "प्रशस्ते",
+     "sandhi": "",
      "slp1": "praSasta",
      "href": "../w/pra_53asta.html"
     },
@@ -3242,6 +3541,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "in activity",
      "deva": "कर्मणि",
+     "sandhi": "",
      "slp1": "karman",
      "href": "../w/karman.html"
     },
@@ -3252,6 +3552,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "in that manner, so, in like manner",
      "deva": "तथा",
+     "sandhi": "",
      "slp1": "taTA",
      "href": "../w/ta_54_41.html"
     },
@@ -3262,6 +3563,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "sound SAT",
      "deva": "सच्छब्दः",
+     "sandhi": "",
      "slp1": "as",
      "href": "../w/as.html"
     },
@@ -3272,6 +3574,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "O son of Pṛthā",
      "deva": "पार्थ​",
+     "sandhi": "",
      "slp1": "pArTa",
      "href": "../w/p_41r_54a.html"
     },
@@ -3282,6 +3585,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is used",
      "deva": "युज्यते",
+     "sandhi": "",
      "slp1": "yuj",
      "href": "../w/yuj.html"
     }
@@ -3301,6 +3605,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "in sacrifice, in worship",
      "deva": "यज्ञे",
+     "sandhi": "",
      "slp1": "yajYa",
      "href": "../w/yaj_59a.html"
     },
@@ -3311,6 +3616,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "in heat, in austerity",
      "deva": "तपसि",
+     "sandhi": "",
      "slp1": "tapas",
      "href": "../w/tapas.html"
     },
@@ -3321,6 +3627,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "in charity",
      "deva": "दाने",
+     "sandhi": "",
      "slp1": "dAna",
      "href": "../w/d_41na.html"
     },
@@ -3331,6 +3638,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -3341,6 +3649,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "staying, state, condition, existence",
      "deva": "स्थितिः",
+     "sandhi": "",
      "slp1": "sTiti",
      "href": "../w/s_54iti.html"
     },
@@ -3351,6 +3660,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "being, existing, true, the essence",
      "deva": "सत्",
+     "sandhi": "t i → d i",
      "slp1": "sant",
      "href": "../w/sant.html"
     },
@@ -3361,6 +3671,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "thus",
      "deva": "इति",
+     "sandhi": "",
      "slp1": "iti",
      "href": "../w/iti.html"
     },
@@ -3371,6 +3682,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "a u → o",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -3381,6 +3693,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is said",
      "deva": "उच्यते",
+     "sandhi": "",
      "slp1": "vac",
      "href": "../w/vac.html"
     },
@@ -3391,6 +3704,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "activity",
      "deva": "कर्म​",
+     "sandhi": "",
      "slp1": "karman",
      "href": "../w/karman.html"
     },
@@ -3401,6 +3715,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "a e → ai",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -3411,6 +3726,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
+     "sandhi": "",
      "slp1": "eva",
      "href": "../w/eva.html"
     },
@@ -3421,6 +3737,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "destined for that",
      "deva": "तदर्थीयम्",
+     "sandhi": "m s → ṃ s",
      "slp1": "tadarTIya",
      "href": "../w/tadar_54_49ya.html"
     },
@@ -3431,6 +3748,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "being, existing, true, the essence",
      "deva": "सत्",
+     "sandhi": "t i → d i",
      "slp1": "sant",
      "href": "../w/sant.html"
     },
@@ -3441,6 +3759,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "thus",
      "deva": "इति",
+     "sandhi": "i e → y e",
      "slp1": "iti",
      "href": "../w/iti.html"
     },
@@ -3451,6 +3770,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "certainly, just, merely",
      "deva": "एव​",
+     "sandhi": "a a → ā",
      "slp1": "eva",
      "href": "../w/eva.html"
     },
@@ -3461,6 +3781,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is called",
      "deva": "अभिधीयते",
+     "sandhi": "",
      "slp1": "aBiDA",
      "href": "../w/a_42i_44_41.html"
     }
@@ -3480,6 +3801,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "without faith",
      "deva": "अश्रद्धया",
+     "sandhi": "",
      "slp1": "aSradDA",
      "href": "../w/a_53rad_44_41.html"
     },
@@ -3490,6 +3812,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "offered in sacrifice",
      "deva": "हुतम्",
+     "sandhi": "m d → ṃ d",
      "slp1": "huta",
      "href": "../w/huta.html"
     },
@@ -3500,6 +3823,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "given",
      "deva": "दत्तम्",
+     "sandhi": "m t → ṃ t",
      "slp1": "datta",
      "href": "../w/datta.html"
     },
@@ -3510,6 +3834,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "heat, austerity",
      "deva": "तपः",
+     "sandhi": "ḥ t → s t",
      "slp1": "tapas",
      "href": "../w/tapas.html"
     },
@@ -3520,6 +3845,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "undergone",
      "deva": "तप्तम्",
+     "sandhi": "m k → ṃ k",
      "slp1": "tap",
      "href": "../w/tap.html"
     },
@@ -3530,6 +3856,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "done",
      "deva": "कृतम्",
+     "sandhi": "m c → ṃ c",
      "slp1": "kfta",
      "href": "../w/kfta.html"
     },
@@ -3540,6 +3867,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -3550,6 +3878,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that which",
      "deva": "यत्",
+     "sandhi": "",
      "slp1": "yat",
      "href": "../w/yat.html"
     },
@@ -3560,6 +3889,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "untrue, non-existing",
      "deva": "असत्",
+     "sandhi": "t i → d i",
      "slp1": "asant",
      "href": "../w/asant.html"
     },
@@ -3570,6 +3900,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "thus",
      "deva": "इति",
+     "sandhi": "i u → y u",
      "slp1": "iti",
      "href": "../w/iti.html"
     },
@@ -3580,6 +3911,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "it is said",
      "deva": "उच्यते",
+     "sandhi": "",
      "slp1": "vac",
      "href": "../w/vac.html"
     },
@@ -3590,6 +3922,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "O son of Pṛthā",
      "deva": "पार्थ​",
+     "sandhi": "",
      "slp1": "pArTa",
      "href": "../w/p_41r_54a.html"
     },
@@ -3600,6 +3933,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "not",
      "deva": "न​",
+     "sandhi": "",
      "slp1": "na",
      "href": "../w/na.html"
     },
@@ -3610,6 +3944,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "and",
      "deva": "च​",
+     "sandhi": "",
      "slp1": "ca",
      "href": "../w/ca.html"
     },
@@ -3620,6 +3955,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "that",
      "deva": "तत्",
+     "sandhi": "",
      "slp1": "tat",
      "href": "../w/tat.html"
     },
@@ -3630,6 +3966,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "having died, after death, in the next world",
      "deva": "प्रेत्य​",
+     "sandhi": "",
      "slp1": "i",
      "href": "../w/i.html"
     },
@@ -3640,6 +3977,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "not",
      "deva": "न​",
+     "sandhi": "",
      "slp1": "na",
      "href": "../w/na.html"
     },
@@ -3650,6 +3988,7 @@ window.READING_DATA["gita-17"] = {
      "morph": "",
      "gloss": "here",
      "deva": "इह​",
+     "sandhi": "",
      "slp1": "iha",
      "href": "../w/iha.html"
     }

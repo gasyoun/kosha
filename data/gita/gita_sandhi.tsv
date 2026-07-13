@@ -1,0 +1,162 @@
+rule	category	count	pct	examples
+a a → ā	vowel coalescence	193	5.66	1.11 eva · 1.13 eva · 1.17 ca · 1.26 tatra
+aḥ a → o '	visarga	139	4.07	1.13 tumulaḥ · 1.31 śreyaḥ · 1.35 ghnataḥ · 1.40 adharmaḥ
+ḥ t → s t	visarga	128	3.75	1.02 duryodhanaḥ · 1.08 saumadattiḥ · 1.13 śabdaḥ · 1.34 putrāḥ
+m p → ṃ p	anusvāra / nasal	113	3.31	1.39 doṣam · 2.07 tvām · 2.11 tvam · 2.15 puruṣam
+m s → ṃ s	anusvāra / nasal	109	3.19	1.21 ratham · 1.30 gāṇḍīvam · 1.32 rājyam · 1.45 hantum
+m t → ṃ t	anusvāra / nasal	106	3.11	1.07 asmākam · 1.10 aparyāptam · 1.10 paryāptam · 1.21 hṛṣīkeśam
+ḥ c → ś c	visarga	101	2.96	1.01 pāṇḍavāḥ · 1.04 virāṭaḥ · 1.04 drupadaḥ · 1.05 dhṛṣṭa-ketuḥ
+a e → ai	vowel coalescence	101	2.96	1.01 ca · 1.03 paśya · 1.14 ca · 1.19 ca
+m v → ṃ v	anusvāra / nasal	100	2.93	1.02 pāṇḍavānīkam · 1.12 siṁha-nādam · 1.43 kula-ghnānām · 1.44 niyatam
+m c → ṃ c	anusvāra / nasal	98	2.87	1.03 mahatīm · 1.19 pṛthivīm · 1.25 sarveṣām · 1.29 mukham
+i a → y a	vowel coalescence	91	2.67	1.30 śaknomi · 1.38 yadi · 2.22 jīrṇāni · 2.40 api
+m k → ṃ k	anusvāra / nasal	83	2.43	1.32 vijayam · 1.40 kulam · 1.42 kula-ghnānām · 1.45 pāpam
+m b → ṃ b	anusvāra / nasal	74	2.17	1.15 mahā-śaṅkham · 1.30 avasthātum · 1.32 kim · 1.33 rājyam
+m n → ṃ n	anusvāra / nasal	70	2.05	1.32 kim · 1.33 kāṅkṣitam · 1.35 kim · 1.39 katham
+m d → ṃ d	anusvāra / nasal	69	2.02	1.02 vyūḍham · 1.03 vyūḍhām · 1.12 śaṅkham · 1.15 deva-dattam
+m y → ṃ y	anusvāra / nasal	69	2.02	2.13 kaumāram · 2.19 hantāram · 2.21 nityam · 2.48 samatvam
+m m → ṃ m	anusvāra / nasal	65	1.91	1.38 doṣam · 2.03 klaibyam · 2.19 enam · 2.26 tvam
+aḥ m → o m	visarga	56	1.64	2.69 paśyataḥ · 3.16 indriyārāmaḥ · 3.29 akṛtsna-vidaḥ · 3.31 anasūyantaḥ
+e a → e '	vowel coalescence	53	1.55	1.21 me · 1.22 nirīkṣe · 1.23 avekṣe · 1.23 atra
+ḥ u → Ø u	visarga	49	1.44	1.01 dhṛtarāṣṭraḥ · 1.02 saṁjayaḥ · 1.06 vikrāntaḥ · 1.21 arjunaḥ
+ā a → ā	vowel coalescence	48	1.41	1.07 saṁjñā-artham · 1.47 uktvā · 2.05 hatvā · 2.26 tathā
+t a → d a	consonant / other	46	1.35	1.36 āśrayet · 1.39 pāpāt · 2.27 tasmāt · 2.34 maraṇāt
+m j → ṃ j	anusvāra / nasal	46	1.35	1.44 manuṣyāṇām · 2.12 aham · 2.13 yauvanam · 2.27 dhruvam
+a ā → ā	vowel coalescence	44	1.29	1.36 eva · 2.08 ca · 2.12 na · 2.55 eva
+aḥ b → o b	visarga	38	1.11	1.44 vāsaḥ · 2.05 śreyaḥ · 2.35 bahu-mataḥ · 2.40 mahataḥ
+aḥ y → o y	visarga	38	1.11	2.06 garīyaḥ · 3.14 parjanyaḥ · 3.25 avidvāṁsaḥ · 4.30 yajña-vidaḥ
+m ś → ṃ ś	anusvāra / nasal	36	1.06	1.46 aśastram · 1.47 cāpam · 2.07 aham · 2.26 enam
+m g → ṃ g	anusvāra / nasal	36	1.06	2.09 hṛṣīkeśam · 2.51 padam · 4.13 sṛṣṭam · 4.17 boddhavyam
+ḥ a → r a	visarga	36	1.06	2.16 ubhayoḥ · 2.24 sthāṇuḥ · 2.65 hāniḥ · 2.66 buddhiḥ
+aḥ n → o n	visarga	34	1.0	2.16 bhāvaḥ · 2.40 pratyavāyaḥ · 2.45 nirdvaṁdvaḥ · 2.45 nitya-sattva-sthaḥ
+ā e → ai	vowel coalescence	32	0.94	1.08 tathā · 1.13 sahasā · 1.34 tathā · 1.36 hatvā
+i e → y e	vowel coalescence	31	0.91	1.38 api · 1.42 hi · 2.15 vyathayanti · 2.28 avyakta-nidhanāni
+a i → e	vowel coalescence	29	0.85	2.12 na · 2.40 na · 2.61 yasya · 3.18 akṛtena
+ḥ e → Ø e	visarga	29	0.85	2.19 yaḥ · 2.21 yaḥ · 2.24 aśoṣyaḥ · 3.12 stenaḥ
+ḥ m → Ø m	visarga	28	0.82	1.04 śūrāḥ · 1.07 nāyakāḥ · 1.09 śūrāḥ · 3.13 santaḥ
+m h → ṃ h	anusvāra / nasal	28	0.82	1.15 pāñca-janyam · 1.19 dhārtarāṣṭrāṇām · 1.37 vayam · 1.37 sva-janam
+aḥ v → o v	visarga	28	0.82	2.16 asataḥ · 2.16 abhāvaḥ · 2.62 dhyāyataḥ · 3.35 sva-dharmaḥ
+a u → o	vowel coalescence	24	0.7	1.12 vinadya · 2.18 nityasya · 2.32 ca · 2.65 asya
+i ā → y ā	vowel coalescence	24	0.7	2.23 kledayanti · 2.65 hi · 3.13 pacanti · 3.19 hi
+ḥ y → Ø y	visarga	22	0.64	1.01 samavetāḥ · 1.04 bhīmārjuna-samāḥ · 1.07 viśiṣṭāḥ · 1.33 avasthitāḥ
+ḥ m → r m	visarga	22	0.64	1.21 ubhayoḥ · 1.22 kaiḥ · 1.24 ubhayoḥ · 2.10 ubhayoḥ
+i i → ī	vowel coalescence	22	0.64	1.30 bhramati · 1.44 bhavati · 2.05 api · 2.42 asti
+ā ā → ā	vowel coalescence	21	0.62	1.28 parayā · 2.01 kṛpayā · 3.38 yathā · 4.07 tadā
+ḥ v → Ø v	visarga	21	0.62	1.37 arhāḥ · 1.45 vyavasitāḥ · 2.45 traiguṇya-viṣayāḥ · 2.59 viṣayāḥ
+aḥ d → o d	visarga	21	0.62	4.22 yadṛcchā-lābha-saṁtuṣṭaḥ · 6.35 manaḥ · 6.36 yogaḥ · 10.05 tapaḥ
+ḥ y → r y	visarga	20	0.59	1.14 hayaiḥ · 1.23 durbuddheḥ · 2.39 buddhiḥ · 3.38 vahniḥ
+u a → v a	vowel coalescence	20	0.59	2.16 tu · 2.56 duḥkheṣu · 3.13 tu · 5.21 bāhya-sparśeṣu
+ḥ b → Ø b	visarga	19	0.56	1.04 maheṣv-āsāḥ · 3.11 devāḥ · 3.12 yaḥ · 4.14 saḥ
+m r → ṃ r	anusvāra / nasal	19	0.56	1.16 ananta-vijayam · 2.08 ṛddham · 2.59 rasa-varjam · 4.02 imam
+t j → j j	consonant / other	18	0.53	1.36 syāt · 4.16 yat · 4.33 yajñāt · 4.35 yat
+t b → d b	consonant / other	18	0.53	2.63 krodhāt · 2.63 smṛti-bhraṁśāt · 3.14 annāt · 3.14 yajñāt
+t n → n n	consonant / other	17	0.5	1.37 tasmāt · 1.39 asmāt · 2.06 katarat · 2.07 syāt
+i u → y u	vowel coalescence	17	0.5	1.40 abhibhavati · 2.03 tvayi · 6.08 iti · 6.18 iti
+t v → d v	consonant / other	17	0.5	2.06 etat · 2.06 yat vā · 2.17 tat · 2.29 āścarya-vat
+t y → d y	consonant / other	17	0.5	2.08 apanudyāt · 2.18 tasmāt · 2.50 tasmāt · 2.68 tasmāt
+ḥ b → r b	visarga	17	0.5	2.47 karma-phala-hetuḥ · 4.07 glāniḥ · 4.12 siddhiḥ · 4.24 haviḥ
+ḥ v → r v	visarga	17	0.5	2.52 buddhiḥ · 2.64 ātma-vaśyaiḥ · 3.40 etaiḥ · 5.04 ubhayoḥ
+aḥ h → o h	visarga	17	0.5	2.60 yatataḥ · 2.65 prasanna-cetasaḥ · 3.08 jyāyaḥ · 3.18 arthaḥ
+n t → ṃs t	anusvāra / nasal	15	0.44	1.26 sakhīn · 1.33 prāṇān · 2.05 artha-kāmān · 2.14 tān
+aḥ j → o j	visarga	15	0.44	2.06 naḥ · 3.21 itaraḥ · 4.04 bhavataḥ · 4.10 bahavaḥ
+ḥ ā → Ø ā	visarga	15	0.44	2.45 niryoga-kṣemaḥ · 2.61 yuktaḥ · 3.06 yaḥ · 6.14 yuktaḥ
+m l → ṃ l	anusvāra / nasal	14	0.41	1.42 eṣām · 4.31 āyam · 4.39 jñānam · 6.22 yam
+t m → n m	consonant / other	14	0.41	1.46 tat · 2.67 yat · 5.01 tat · 6.39 etat
+ā i → e	vowel coalescence	13	0.38	1.28 dṛṣṭvā · 2.41 ekā · 7.05 aparā · 7.05 yayā
+ḥ j → r j	visarga	13	0.38	1.32 bhogaiḥ · 1.39 prapaśyadbhiḥ · 3.01 buddhiḥ · 3.33 prakṛteḥ
+ā u → o	vowel coalescence	13	0.38	2.03 tyaktvā · 2.55 tadā · 3.10 purā · 3.38 yathā
+t ś → c c	consonant / other	13	0.38	2.07 yat · 2.08 yat · 2.31 yuddhāt · 5.01 yat
+ḥ i → Ø i	visarga	13	0.38	2.18 antavantaḥ · 6.08 yuktaḥ · 6.18 yuktaḥ · 6.36 duṣprāpaḥ
+t c → c c	consonant / other	13	0.38	2.29 āścarya-vat · 6.37 yogāt · 9.19 asat · 10.39 yat
+ḥ n → r n	visarga	13	0.38	2.67 vāyuḥ · 3.30 nir-āśīḥ · 3.34 tayoḥ · 4.14 karmabhiḥ
+t d → d d	consonant / other	13	0.38	6.23 vidyāt · 6.34 balavat · 6.40 kaś-cit · 8.21 tat
+t e → d e	consonant / other	12	0.35	1.22 yāvat · 2.25 tasmāt · 3.02 tat · 3.21 tat tat
+ḥ e → r e	visarga	12	0.35	1.43 doṣaiḥ · 2.41 buddhiḥ · 3.17 ātma-ratiḥ · 5.01 etayoḥ
+ḥ a → o '	visarga	12	0.35	2.20 śāśvataḥ · 2.22 naraḥ · 2.24 acchedyaḥ · 2.24 adāhyaḥ
+ḥ d → Ø d	visarga	12	0.35	3.12 devāḥ · 5.22 bhogāḥ · 8.25 ṣaṇ-māsāḥ · 9.03 puruṣāḥ
+ḥ u → r u	visarga	11	0.32	1.20 dhanuḥ · 1.21 senayoḥ · 1.24 senayoḥ · 1.27 senayoḥ
+n с → ṃś с	anusvāra / nasal	11	0.32	2.11 prajñā-vādān · 2.11 agatāsūn · 2.36 avācya-vādān · 2.71 pumān
+ḥ n → Ø n	visarga	11	0.32	2.18 dehāḥ · 2.45 vedāḥ · 3.24 lokāḥ · 5.03 saḥ
+e i → a i	vowel coalescence	10	0.29	1.33 te · 2.09 yotsye · 3.28 vartante · 4.12 yajante
+ḥ i → r i	visarga	10	0.29	3.16 aghāyuḥ · 3.24 utsīdeyuḥ · 3.42 āhuḥ · 4.01 manuḥ
+t ā → d ā	consonant / other	10	0.29	3.21 ācarati · 6.05 uddharet · 6.26 etat · 9.09 udāsīnavat
+t i → d i	consonant / other	10	0.29	3.36 balāt · 8.11 yat · 16.11 etāvat · 17.18 tat
+ḥ d → r d	visarga	9	0.26	2.13 dehāntara-prāptiḥ · 2.27 mṛtyuḥ · 3.12 taiḥ · 10.14 viduḥ
+ḥ ā → r ā	visarga	9	0.26	6.05 bandhuḥ · 6.05 ripuḥ · 6.06 bandhuḥ · 7.04 bhūmiḥ
+ḥ j → Ø j	visarga	8	0.23	2.43 svarga-parāḥ · 3.16 saḥ · 3.20 āsthitāḥ · 3.40 eṣaḥ
+aḥ g → o g	visarga	8	0.23	3.38 āvṛtaḥ · 4.17 karmaṇaḥ · 7.09 puṇyaḥ · 11.21 prāñjalayaḥ
+ḥ p → Ø p	visarga	7	0.21	2.21 saḥ · 4.10 jñāna-tapasāḥ · 5.10 saḥ · 8.22 saḥ
+ḥ h → Ø h	visarga	7	0.21	2.41 bahu-śākhāḥ · 2.51 buddhi-yuktāḥ · 7.18 saḥ · 10.16 divyāḥ
+ḥ g → r g	visarga	7	0.21	3.05 prakṛti-jaiḥ · 7.13 tribhiḥ · 11.43 guruḥ · 15.05 sukha-duḥkha-saṁjñaiḥ
+ḥ g → Ø g	visarga	6	0.18	1.19 saḥ · 3.28 guṇāḥ · 8.24 prayātāḥ · 9.21 anuprapannāḥ
+t u → d u	consonant / other	6	0.18	2.35 raṇāt · 2.37 tasmāt · 4.03 etat · 11.12 yuga-pat
+n a → nn a	consonant / other	6	0.18	3.36 anicchan · 4.06 san · 5.07 kurvan · 5.08 jighran
+ḥ s → Ø s	visarga	6	0.18	5.23 saḥ · 6.01 saḥ · 8.20 saḥ · 15.19 saḥ
+aḥ l → o l	visarga	6	0.18	11.32 pravṛddhaḥ · 11.33 yaśaḥ · 11.43 anyaḥ · 12.15 lokaḥ
+ḥ v → o v	visarga	5	0.15	1.04 yuyudhānaḥ · 1.17 dhṛṣṭa-dyumnaḥ · 1.19 tumulaḥ · 1.28 āviṣṭaḥ
+ḥ d → o d	visarga	5	0.15	1.06 saubhadraḥ · 1.15 hṛṣīkeśaḥ · 1.18 drupadaḥ · 1.19 ghoṣaḥ
+e e → a e	vowel coalescence	5	0.15	1.06 sarve · 1.11 sarve · 1.23 ye · 3.22 varte
+ḥ n → o n	visarga	5	0.15	1.42 saṁkaraḥ · 2.19 vijānītaḥ · 2.20 ajaḥ · 2.20 purāṇaḥ
+u e → v e	vowel coalescence	5	0.15	2.12 tu · 3.17 tu · 3.32 tu · 13.25 tu
+ḥ l → r l	visarga	5	0.15	3.25 cikīrṣuḥ · 10.16 vibhūtibhiḥ · 14.21 kaiḥ · 18.27 karma-phala-prepsuḥ
+ḥ t → Ø t	visarga	5	0.15	7.22 saḥ · 8.10 saḥ · 10.40 eṣaḥ · 18.09 saḥ
+m b→ ṃ b	anusvāra / nasal	4	0.12	1.10 asmākam · 1.10 balam · 1.10 eteṣām · 1.10 balam
+ḥ h → r h	visarga	4	0.12	1.14 śvetaiḥ · 10.02 ādiḥ · 10.18 tṛptiḥ · 16.14 śatruḥ
+ḥ k → Ø k	visarga	4	0.12	1.27 saḥ · 3.37 eṣaḥ · 4.02 saḥ · 18.08 saḥ
+t r → d r	consonant / other	4	0.12	1.45 yat · 2.35 bhayāt · 18.24 tat · 18.36 abhyāsāt
+ḥ r → Ø r	visarga	4	0.12	1.46 dhārtarāṣṭrāḥ · 3.37 eṣaḥ · 7.12 bhāvāḥ · 7.22 tasyāḥ
+n l → ṃl l	anusvāra / nasal	4	0.12	4.39 śraddhā-vān · 6.41 puṇya-kṛtān · 18.17 imān · 18.71 śubhān
+ḥ c → Ø c	visarga	4	0.12	6.30 saḥ · 7.17 saḥ · 12.15 saḥ · 13.03 saḥ
+t g → d g	consonant / other	4	0.12	15.06 yat · 16.10 mohāt · 18.63 guhyāt · 18.75 etat
+ḥ ś → Ø ś	visarga	3	0.09	1.13 saḥ · 2.70 saḥ · 2.71 saḥ
+ḥ y → o y	visarga	3	0.09	1.16 kuntī-putraḥ · 2.38 tataḥ · 2.39 yuktaḥ
+n ś → ñ ś	consonant / other	3	0.09	2.05 mahānubhāvān · 5.08 paśyan · 5.08 svapan
+au a → āv a	vowel coalescence	3	0.09	2.08 bhūmau · 2.53 samādhau · 4.22 siddhau
+u i → v i	vowel coalescence	3	0.09	3.07 tu · 3.10 astu · 18.36 tu
+t l → l l	consonant / other	3	0.09	8.16 ā-brahma-bhuvanāt · 11.30 samantāt · 13.13 śrutimat
+aḥ r → o r	visarga	3	0.09	8.25 dhūmaḥ · 11.09 tataḥ · 14.07 rajaḥ
+ḥ ṛ → Ø ṛ	visarga	3	0.09	9.17 oṁ-kāraḥ · 9.33 bhaktāḥ · 17.09 āhārāḥ
+ḥ h → o h	visarga	2	0.06	1.24 uktaḥ · 1.42 pitaraḥ
+n i → nn i	consonant / other	2	0.06	1.28 viṣīdan · 2.10 prahasan
+ḥ r → o r	visarga	2	0.06	1.32 naḥ · 1.33 naḥ
+t h → d dh	consonant / other	2	0.06	2.31 dharmyāt · 6.42 etat
+u u → ū	vowel coalescence	2	0.06	2.62 teṣu · 10.40 tu
+au u → āv u	vowel coalescence	2	0.06	5.02 niḥśreyasa-karau · 13.19 ubhau
+n e → nn e	consonant / other	2	0.06	6.15 yuñjan · 6.28 yuñjan
+t ī → d ī	consonant / other	2	0.06	6.42 yat · 17.23 om tat sat
+ḥ k → s k	visarga	2	0.06	9.34 namaḥ · 18.65 namaḥ
+aḥ n → o n, ḥ t → s t	visarga	2	0.06	11.39 namaḥ namaḥ · 11.39 namaḥ namaḥ
+ḥ r → r a	visarga	1	0.03	1.27 ubhayoḥ
+e u → a u	vowel coalescence	1	0.03	1.47 rathopasthe
+au a→ āv a	vowel coalescence	1	0.03	2.04 pūjārhau
+ḥ g → o g	visarga	1	0.03	2.06 naḥ
+ḥ m → o m	visarga	1	0.03	2.27 dhruvaḥ
+ḥ j → o j	visarga	1	0.03	2.50 buddhi-yuktaḥ
+an ā → ā	consonant / other	1	0.03	4.11 vartman
+āu a → āv a	vowel coalescence	1	0.03	4.25 brahmāgnāu
+k b → g b	consonant / other	1	0.03	5.04 pṛthak
+k u → g u	consonant / other	1	0.03	5.04 samyak
+n j → ñ j	consonant / other	1	0.03	5.08 spṛśan
+n u → nn u	consonant / other	1	0.03	5.09 gṛhṇan
+ḥ b → o b	visarga	1	0.03	5.26 abhitas
+n ā → nn ā	consonant / other	1	0.03	6.20 paśyan
+aḥ y → o y,	visarga	1	0.03	6.26 yataḥ yataḥ
+ḥ t → s t,aḥ y → o y	visarga	1	0.03	6.26 tataḥ tataḥ
+u ā → v ā	vowel coalescence	1	0.03	7.18 tu
+ḥ t → s t, ḥ h → r h	visarga	1	0.03	7.20 taiḥ taiḥ
+m t → ṃ t, m n → ṃ n	anusvāra / nasal	1	0.03	7.20 tam tam
+aḥ y → o y, aḥ y → o y	visarga	1	0.03	7.21 yaḥ yaḥ
+m y → ṃ y, m t → ṃ t	anusvāra / nasal	1	0.03	7.21 yām yām
+m y → ṃ y, m v → ṃ v	anusvāra / nasal	1	0.03	8.06 yam yam
+ḥ l → Ø l	visarga	1	0.03	9.21 kāma-kāmāḥ
+k v → g v	consonant / other	1	0.03	9.30 samyak
+t ṛ → d ṛ	consonant / other	1	0.03	10.14 etat
+t ū → d ū	consonant / other	1	0.03	10.41 śrīmat
+k m → ṅ m	consonant / other	1	0.03	11.49 īdṛk
+ḥ ū → Ø ū	visarga	1	0.03	12.08 ataḥ
+i ī → ī	vowel coalescence	1	0.03	15.08 utkrāmati
+au i → āv i	vowel coalescence	1	0.03	15.16 dvau
+ḥ ī → Ø ī	visarga	1	0.03	15.17 avyayaḥ
+t o → d o	consonant / other	1	0.03	17.24 tasmāt
+ī i → ī	vowel coalescence	1	0.03	18.11 tyāgī
+t a → d a, e a → e '	consonant / other	1	0.03	18.38 tat-agre
