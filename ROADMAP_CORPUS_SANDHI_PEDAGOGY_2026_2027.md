@@ -1,4 +1,4 @@
-_Created: 13-07-2026 · Last updated: 13-07-2026_
+_Created: 13-07-2026 · Last updated: 13-07-2026 (Phase 1 mode-2 shipped, H888)_
 
 # Corpus-wide sandhi extraction for Sanskrit pedagogy — roadmap (2026–2027)
 
@@ -70,11 +70,17 @@ a bug in Phase 0 — it is the discovery Phase 0 was built to make.
 
 ## 2. Phase 1 — dual-mode inducer + A/B/C bake-off + gold scoring
 
-1. **Vowel-coalescence mode (mode 2).** Character-align each `# text =` string to
-   its space-joined FORM tokens; at each merge/deletion site emit the coalescence
-   rule (`a a → ā`, `a i → e`, `i a → y a`, avagraha `e a → e '`). Merge with the
-   token-edge rules from mode 1. Target: recover the ~40–50 vowel rules the Gītā
-   hand table shows.
+1. **Vowel-coalescence mode (mode 2).** ✅ DONE (H888). The mechanism turned out
+   cleaner than free-text alignment: DCS records each coalesced span as a
+   CoNLL-U **multi-word token** (`5-6 nāgnir` over `5 na` + `6 agniḥ`), so mode 2
+   aligns the MWT surface against its component `Unsandhied` forms and reads the
+   rule off the internal boundary (`na`+`agniḥ` → `a a → ā`; sandhi-aware so
+   `na`+`eva`→`naiva` gives `a e → ai`). Also fixed a Phase-0 bug (MWT range
+   lines were counted as tokens). Result: `a a → ā`, `a ā → ā`, `a e → ai`,
+   `a i → e`, `i a → y a`, `e a → e '`, `a u → o` all recovered; Gītā-gold
+   coverage **47 % → 58 %** (93/161). **Residual (Phase 1.1):** visarga elision
+   at MWT *right* edges (`ḥ m → Ø m`, `ḥ y → Ø y`) — the MWT-final word's sandhi
+   with the token after it, visible only in the MWT surface tail.
 2. **Method B — Vidyut cheda.** Reconstruct the raw line from FORM, segment with
    `vidyut-data/cheda/model.msgpack`, run the *same* inducer → isolates splitter
    quality. Score against A on the same text (junction-level agreement + rule P/R/F1).
