@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.25.0] - 2026-07-13
+
 ### Changed
 - **H848: Gītā 1 reading pack upgraded EXPERIMENTAL → GOLD.** The machine
   (GRETIL + vidyut-cheda) build is replaced by a hand-curated word-by-word
