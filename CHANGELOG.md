@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.40.0] - 2026-07-14
+
 ### Added
 - **Bloomfield RV pratīka cross-reference (H896)** — resolves the CONCORDANCE_ROADMAP.md
   Bloomfield-source `@DECIDE` left open by H836. MG obtained direct written permission from
