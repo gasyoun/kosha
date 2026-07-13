@@ -946,6 +946,25 @@
         "reading/ static viewer"
       ],
       "notes": "H848 roadmap W1. Supersedes the chapter-1-only gita-reading-pack-1 (built from a separate ch-1 TSV; now unified on the master). Public/MIT, credit Dr. Marcis Gasuns. Sibling of dcs-reading-pack-nala-1."
+    },
+    {
+      "id": "gita-sandhi",
+      "title": "Bhagavadgita sandhi — frequency-ranked rules",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/gita/gita_sandhi.tsv",
+      "format": "tsv",
+      "rows": 161,
+      "size_bytes": 14379,
+      "keying": "one row per distinct sandhi rule (161) attested across the whole Gita (3,412 junctions): rule (e.g. 'aḥ a → o ''), category (visarga/anusvara/vowel-coalescence/consonant), count, pct, example words+verse. Corpus-attested + frequency-ranked, aggregated from the master's per-word sandhi field. Teaching page reading/sandhi/index.html; per-word sandhi also shown on hover in the Gita reader.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/gita/gita_sandhi.tsv",
+      "builder": "scripts/build_gita_sandhi.py (from the W0 master gita_gold_master.tsv, H872 W2)",
+      "consumers": [
+        "reading/ viewer (per-word sandhi hover)",
+        "reading/sandhi/ page"
+      ],
+      "notes": "H848 roadmap W2. Public/MIT, credit Dr. Marcis Gasuns. The first corpus-attested, frequency-ranked sandhi table in the ecosystem (categories: anusvara/nasal 1172, visarga 1163, vowel 813, consonant 264)."
     }
   ]
 }
