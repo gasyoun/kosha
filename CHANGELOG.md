@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.28.0] - 2026-07-13
+
 ### Added
 - **H874 (roadmap W4): Gītā inflection-engine QA — the first attested-corpus check
   of the E1 hybrid forms layer.** [`scripts/gita_inflection_qa.py`](https://github.com/gasyoun/kosha/blob/main/scripts/gita_inflection_qa.py)
