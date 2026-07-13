@@ -8,7 +8,7 @@ extract **all** layers (18-adhyāya reader · sandhi · morphology+compound ·
 Russian+etymology); and **inflection-engine QA is a committed workstream**, not
 a nice-to-have.
 
-> **Status (13-07-2026): the roadmap is COMPLETE — all of W0–W6 shipped.** W0 master (v0.26.0) · W1 reader-all-18 (v0.29.0) · W2 sandhi (v0.30.0) · W3 morphology+compound (v0.27.0) · W4 inflection-engine QA (v0.28.0) · W5 Russian+etymology (v0.31.0) · W6 upasarga semantics (v0.32.0). Follow-ups noted inline (gold recension check · /w/ upasarga panel · the W4 pronoun-corrections `@DO`).
+> **Status (13-07-2026): the roadmap is COMPLETE — all of W0–W6 shipped.** W0 master (v0.26.0) · W1 reader-all-18 (v0.29.0) · W2 sandhi (v0.30.0) · W3 morphology+compound (v0.27.0) · W4 inflection-engine QA (v0.28.0) · W5 Russian+etymology (v0.31.0) · W6 upasarga semantics (v0.32.0). Follow-ups noted inline (gold recension check · the W4 pronoun-corrections `@DO`).
 
 ## 1. Context
 
