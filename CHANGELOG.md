@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.38.0] - 2026-07-13
+
 ### Added
 - **H888 (sandhi Phase 1): vowel-coalescence alignment mode.**
   [`scripts/dcs_sandhi_induce.py`](https://github.com/gasyoun/kosha/blob/main/scripts/dcs_sandhi_induce.py)
