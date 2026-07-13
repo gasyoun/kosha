@@ -72,13 +72,39 @@
 <!-- data shards: each sets window.READING_DATA[slug] -->
 <script src="data/nala-1.js"></script>
 <script src="data/gita-1.js"></script>
+<script src="data/gita-2.js"></script>
+<script src="data/gita-3.js"></script>
+<script src="data/gita-4.js"></script>
+<script src="data/gita-5.js"></script>
+<script src="data/gita-6.js"></script>
+<script src="data/gita-7.js"></script>
+<script src="data/gita-8.js"></script>
+<script src="data/gita-9.js"></script>
+<script src="data/gita-10.js"></script>
+<script src="data/gita-11.js"></script>
+<script src="data/gita-12.js"></script>
+<script src="data/gita-13.js"></script>
+<script src="data/gita-14.js"></script>
+<script src="data/gita-15.js"></script>
+<script src="data/gita-16.js"></script>
+<script src="data/gita-17.js"></script>
+<script src="data/gita-18.js"></script>
 <script>
 (function(){
   var DATA = window.READING_DATA || {};
-  var PACKS = [
-    {slug:"nala-1", label:"Nala 1"},
-    {slug:"gita-1", label:"Gītā 1"}
-  ];
+  function sortkey(s){
+    if(s.indexOf("nala")===0) return [0, parseInt(s.split("-")[1])||0];
+    if(s.indexOf("gita")===0) return [1, parseInt(s.split("-")[1])||0];
+    return [2,0];
+  }
+  var PACKS = Object.keys(DATA).sort(function(a,b){
+    var ka=sortkey(a), kb=sortkey(b); return ka[0]-kb[0] || ka[1]-kb[1];
+  }).map(function(slug){
+    var d=DATA[slug];
+    var label = slug.indexOf("gita")===0 ? ("Gītā "+(d.chapter||slug.split("-")[1]))
+              : slug.indexOf("nala")===0 ? ("Nala "+slug.split("-")[1]) : slug;
+    return {slug:slug, label:label};
+  });
   function esc(s){return (s==null?"":String(s)).replace(/[&<>"]/g,function(c){
     return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
 
