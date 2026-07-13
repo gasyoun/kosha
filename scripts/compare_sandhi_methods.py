@@ -41,19 +41,10 @@ VIDYUT_CHEDA = Path("C:/Users/user/Documents/GitHub/vidyut-data/cheda/model.msgp
 
 # --- method A: DCS gold splits (implemented) --------------------------------
 def method_A(text, dcs_root):
-    """Induce rules from DCS gold Unsandhied splits. Returns Counter(rule -> n)."""
-    text_dir = Path(dcs_root) / text
-    counts = Counter()
-    for f in sorted(text_dir.glob("*.conllu")):
-        for _ref, sent in ind.read_sentences(f):
-            for i in range(len(sent) - 1):
-                (lf, lu), (rf, ru) = sent[i], sent[i + 1]
-                if lu is None or ru is None:
-                    continue
-                rule, flag = ind.induce_rule(lu, lf, ru, rf)
-                if rule is None or flag == "empty-side":
-                    continue
-                counts[rule] += 1
+    """Induce rules from DCS gold Unsandhied splits (mode 1 edge + mode 2 MWT
+    coalescence). Returns Counter(rule -> n)."""
+    files = sorted((Path(dcs_root) / text).glob("*.conllu"))
+    counts, _examples, _st, _flagged, _dbg = ind.induce_from_files(files)
     return counts
 
 
