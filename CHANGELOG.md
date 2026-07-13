@@ -14,6 +14,22 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H876 (roadmap W6, final workstream): Sanskrit root × preverb (upasarga)
+  semantics.** New public/MIT dataset
+  [`data/gita/upasarga_semantics.tsv`](https://github.com/gasyoun/kosha/blob/main/data/gita/upasarga_semantics.tsv)
+  — **148 verb roots + 69 preverb-modified senses** (√vac "speak" → pra-vac
+  "declare"; √gam "go" → ava-gam "understand", sam-adhi-gam "attain") from the
+  `Gita.xlsm` `verbs` sheet, a compositional dimension the Cologne dictionaries
+  lack. Built by [`scripts/extract_upasarga_semantics.py`](https://github.com/gasyoun/kosha/blob/main/scripts/extract_upasarga_semantics.py)
+  (preverbs classified by their trailing `-`, so the sheet's irregular column
+  alignment parses correctly) + a browsable page `reading/upasarga/`
+  ([`scripts/build_upasarga_page.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_upasarga_page.py)),
+  linked from the reader. Data statement
+  [`docs/data-statements/upasarga-semantics.meta.md`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/upasarga-semantics.meta.md);
+  a `/w/` root-card panel is a documented follow-up. Credit: Dr. Mārcis Gasūns.
+  **This completes the Gītā-gold extraction roadmap (W0–W6).**
+
 ## [0.31.0] - 2026-07-13
 
 ### Added

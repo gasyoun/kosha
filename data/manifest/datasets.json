@@ -983,6 +983,25 @@
         "Gita reader / lexical enrichment"
       ],
       "notes": "H848 roadmap W5. Public/MIT, credit Dr. Marcis Gasuns. Data statement docs/data-statements/gita-etymology.meta.md. Companion to the Russian gloss layer (master gloss_ru, now toggleable EN/Русский in the reader)."
+    },
+    {
+      "id": "sanskrit-upasarga-semantics",
+      "title": "Sanskrit root x preverb (upasarga) semantics",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/gita/upasarga_semantics.tsv",
+      "format": "tsv",
+      "rows": 214,
+      "size_bytes": 6161,
+      "keying": "148 verb roots attested in the Gita + 69 preverb-modified senses: root·preverb·combined·sense·count (empty preverb = base sense; √vac speak -> pra-vac declare; √gam go -> ava-gam understand). From the Gita.xlsm verbs sheet; a compositional dimension the Cologne dictionaries lack. Browsable page reading/upasarga/.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/gita/upasarga_semantics.tsv",
+      "builder": "scripts/extract_upasarga_semantics.py + scripts/build_upasarga_page.py (Gita.xlsm verbs sheet, H876 W6)",
+      "consumers": [
+        "reading/upasarga/ page",
+        "(follow-up) /w/ root-card upasarga panel"
+      ],
+      "notes": "H848 roadmap W6 (final workstream). Public/MIT, credit Dr. Marcis Gasuns. Data statement docs/data-statements/upasarga-semantics.meta.md. Deep /w/-card integration is a documented follow-up."
     }
   ]
 }
