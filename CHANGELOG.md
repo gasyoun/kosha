@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.36.0] - 2026-07-13
+
 ### Added
 - **H882: corpus-wide sandhi extraction roadmap + Phase 0 DCS scaffold.**
   Generalises the H872 Bhagavadgītā sandhi layer from one hand-annotated text to
