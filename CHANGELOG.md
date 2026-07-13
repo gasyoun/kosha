@@ -24,6 +24,13 @@ sense citations pin to `data_version`, not to repo tags.
   (`aḥ → o`). Pilots regenerated; Gītā-gold notation coverage **58 % → 61 %**
   (93 → 98 of 161 hand rules), visarga now the top category. Credit: Dr. Mārcis
   Gasūns.
+- **Gītā gold scoring** (roadmap item 5):
+  [`scripts/score_gita_gold.py`](https://github.com/gasyoun/kosha/blob/main/scripts/score_gita_gold.py)
+  runs method A on the *actual* DCS Bhagavadgītā (18 `MBh, 6, BhaGī N` chapters)
+  and scores against `gita_sandhi.tsv`. **Frequency-mass coverage 87.1 %**
+  (2,971 / 3,412 attestations) — the true figure, vs the 61 % rule-string proxy
+  a small pilot gives. Missed 12.9 % = a long tail (final-`t` assimilation,
+  `i`-semivowel before non-`a` vowels) → Phase 1.2.
 
 ## [0.38.0] - 2026-07-13
 
