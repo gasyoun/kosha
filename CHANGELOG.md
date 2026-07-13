@@ -14,6 +14,38 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H836 (CONCORDANCE_ROADMAP Q2, B3): Bloomfield-style parallel-passage concordance.**
+  New public dataset `parallel-passage-concordance`
+  ([manifest row](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json))
+  built by [`scripts/build_parallel_passage_concordance.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_parallel_passage_concordance.py)
+  from `VisualDCS/derived-data/Paralleli-v-tekstah-korpusa-SRC/PARA/Polnorazmernye/`
+  (245 CSV files, the 2026 corrected full-text-match pass): 501,231 source verses
+  parsed, 15,164 (3.0%) carry ≥1 parallel occurrence, 153,045 total links (13,862
+  GOOD exact + 139,183 PARTLY partial, word-diff attached). New static viewer
+  [`concordance/parallels/`](https://github.com/gasyoun/kosha/blob/main/concordance/parallels/index.html)
+  (text picker → verse list → GOOD/PARTLY parallels with diffs). Full counts +
+  honest caveats in [`data/concordance/PARALLEL_BUILD_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/PARALLEL_BUILD_REPORT.md):
+  the roadmap's prior "506,787 alignments" estimate (itself sourced from an
+  admittedly-unverified upstream README note) doesn't match this build's
+  directly-parsed counts — flagged, not silently reconciled. Two open `@DECIDE`
+  surfaced to a human, not self-ruled: which of three PARA export variants is
+  canonical (defaults to `Polnorazmernye/` per the folder's own README), and
+  which Bloomfield *Vedic Concordance* (1906) digitization to key the Ṛgveda
+  subset against (not found anywhere in the org — RV cross-reference not built
+  this pass).
+- **H836 Task A: relaxed-candidate pre-classification + review sheet.** New
+  [`scripts/classify_relaxed_candidates.py`](https://github.com/gasyoun/kosha/blob/main/scripts/classify_relaxed_candidates.py)
+  computes a per-row SLP1 diff signature for the 2,171 Q1/H380 relaxed-tier
+  dict↔corpus candidates and pre-classifies 740 as "worth-a-closer-look"
+  (single word-final vowel-length diff — the masc/neut -a vs fem -ā stem-citation
+  pattern) vs 1,431 "likely-spurious" (default, per the Q1 golden sample's 3/3-wrong
+  finding on this exact tier); emits `data/concordance/relaxed_candidates_classified.tsv`.
+  [`scripts/build_relaxed_review_sheet.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_relaxed_review_sheet.py)
+  generates a gitignored Russian-language `/review-sheet` HTML voting sheet
+  (`review/kosha-concordance-relaxed_q2_review.html`, not committed — a personal
+  working artifact) for MG. Only MG-approved rows get asserted into the concordance.
+
 ## [0.33.0] - 2026-07-13
 
 ### Added
