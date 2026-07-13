@@ -14,6 +14,22 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H874 (roadmap W4): Gītā inflection-engine QA — the first attested-corpus check
+  of the E1 hybrid forms layer.** [`scripts/gita_inflection_qa.py`](https://github.com/gasyoun/kosha/blob/main/scripts/gita_inflection_qa.py)
+  cross-checks every Bhagavadgītā nominal's **gold** case·number·gender (H873)
+  against kosha's Cologne+vidyut hybrid `inflections` paradigm. Result:
+  **93.0 % agreement** on nominals present in kosha (4,779/5,139); **360 divergences
+  + 919 gaps** as a corrections feed. **Finding:** divergences are **71 % pronouns**
+  (untagged `None.None.None` or wrong cell) — confirming and quantifying, with
+  attested text, the pronominal mis-modelling
+  [`E1_DIVERGENCE_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/E1_DIVERGENCE_REPORT.md)
+  flagged synthetically; gaps are mostly long compounds. Report
+  [`GITA_MORPHOLOGY_QA_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/GITA_MORPHOLOGY_QA_REPORT.md)
+  + ledger [`data/gita/gita_inflection_divergences.tsv`](https://github.com/gasyoun/kosha/blob/main/data/gita/gita_inflection_divergences.tsv)
+  (`gita-inflection-qa`). Candidate `disputed`/gap-fill corrections are surfaced,
+  **not auto-applied** (a human `@DO` adjudicates). Public/MIT.
+
 ## [0.27.0] - 2026-07-13
 
 ### Added

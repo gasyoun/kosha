@@ -928,6 +928,24 @@
         "E1 inflection-engine QA (W4 / H874)"
       ],
       "notes": "H848 roadmap W3. Decoder legend embedded in the extractor (from the Abbreviations sheet). License MIT; public; credit Dr. Marcis Gasuns. Data statement docs/data-statements/gita-morphology.meta.md. Feeds the W4 attested-corpus inflection-engine QA (H874)."
+    },
+    {
+      "id": "gita-inflection-qa",
+      "title": "Gita inflection-engine QA — divergence ledger (E1 attested-corpus check)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/gita/gita_inflection_divergences.tsv",
+      "format": "tsv",
+      "rows": 1279,
+      "size_bytes": 65589,
+      "keying": "DIVERGE (360) + GAP (919) rows from the W4 QA: gold Gita nominal case·number·gender NOT reproduced by kosha's hybrid inflections. Cols verse·form·lemma·gold_case_num_gender·class·kosha_analyses. Finding: DIVERGE 71% pronouns (confirms E1's flagged pronominal mis-modeling with attested text), GAP mostly compounds.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/gita/gita_inflection_divergences.tsv",
+      "builder": "scripts/gita_inflection_qa.py (H873 gold morphology vs kosha inflections, H874 W4)",
+      "consumers": [
+        "E1 hybrid forms layer — candidate disputed/gap-fill corrections (human @DO)"
+      ],
+      "notes": "H848 roadmap W4. Report GITA_MORPHOLOGY_QA_REPORT.md — 93.0% agreement on nominals present in kosha (4,779/5,139). Divergences are candidate corrections, NOT auto-applied. Public/MIT."
     }
   ]
 }
