@@ -14,6 +14,18 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Fixed
+- **Re-ran the H345 `heritage_anchor` ingest on the live `kosha.db`** (H837,
+  Sonnet 5 `claude-sonnet-5`) — fixes the H691-flagged regression where the
+  05-07-built (and later 12-07-rebuilt) live DB carried no `heritage_anchor`
+  table, so `/api/v1/lemma`'s `heritage` witness was silently absent. Re-ran
+  `python scripts/build_db.py --stage heritage`; row counts match H345's
+  original ingest exactly (185,803 MW keys, 25,140 Heritage-covered,
+  24,549 anchor-resolved, 591 unresolved). Verified live against a running
+  API instance (`GET /api/v1/lemma/akAra` now returns a populated `heritage`
+  object). `data/manifest/datasets.json` `kosha-db` row updated (new SHA256,
+  size, table count, provenance date).
+
 ### Added
 - **H836 (CONCORDANCE_ROADMAP Q2, B3): Bloomfield-style parallel-passage concordance.**
   New public dataset `parallel-passage-concordance`
