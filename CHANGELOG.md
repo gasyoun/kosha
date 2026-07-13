@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.27.0] - 2026-07-13
+
 ### Added
 - **H873 (roadmap W3): Gītā gold morphology + compound dataset.** New public/MIT
   dataset [`data/gita/gita_morphology_gold.tsv`](https://github.com/gasyoun/kosha/blob/main/data/gita/gita_morphology_gold.tsv)
