@@ -92,9 +92,31 @@ def apply_pronoun_corrections(con):
             (form, lemma, "pronoun", gen, gc, num, SOURCE)).rowcount
     con.commit()
     total = c.execute("SELECT COUNT(*) FROM inflections WHERE source=?", (SOURCE,)).fetchone()[0]
+
+    # Phase 2 — flag the WRONG Cologne pronoun rows `disputed=1` (a review flag,
+    # like E1's pronominal-fork flags; non-destructive). Scoped to the exact
+    # (form,lemma) pairs the gold attests: a Cologne row is flagged when its case
+    # is untagged (NULL) or its (case,number) is not gold-attested for that form
+    # +lemma. Uses (case,number) — not gender — to avoid flagging gender-ambiguous
+    # valid rows. Some flags may still be valid non-attested cells → editorial
+    # review (that's what `disputed` means), never a deletion.
+    gold_cn = {}
+    for form, lemma, gc, num, gen in corr:
+        gold_cn.setdefault((form, lemma), set()).add((gc, num))
+    flagged = 0
+    for (form, lemma), cn in gold_cn.items():
+        for rowid, gc, num in c.execute(
+                "SELECT rowid, gcase, number FROM inflections WHERE form_slp1=? AND "
+                "lemma_slp1=? AND source IS NOT ?", (form, lemma, SOURCE)).fetchall():
+            if gc is None or (gc, num) not in cn:
+                flagged += c.execute(
+                    "UPDATE inflections SET disputed=1 WHERE rowid=? AND "
+                    "COALESCE(disputed, 0)=0", (rowid,)).rowcount
+    con.commit()
     print(f"[pronoun] {len(corr)} curated analyses; {added} new rows inserted "
-          f"({len(corr) - added} already present); {total} total curated-pronoun rows")
-    return added, total
+          f"({len(corr) - added} already present); {total} total curated-pronoun rows; "
+          f"{flagged} wrong Cologne rows flagged disputed")
+    return added, total, flagged
 
 
 def main():
