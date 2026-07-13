@@ -14,6 +14,24 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H894 (sandhi Phase 1.1): MWT right-edge visarga.** New **mode 2b**
+  (`induce_mwt_edge` in [`scripts/dcs_sandhi_induce.py`](https://github.com/gasyoun/kosha/blob/main/scripts/dcs_sandhi_induce.py))
+  recovers the last-in-MWT word's sandhi with the token *after* the MWT — hidden
+  in the component's un-sandhied FORM, visible only in the MWT surface tail. It
+  takes the last alignment op ending at the component's final phoneme, handling
+  substitution (`ḥ t → s t`, `ḥ v → r v`), elision (`ḥ i → Ø i`), and multi-char
+  (`aḥ → o`). Pilots regenerated; Gītā-gold notation coverage **58 % → 61 %**
+  (93 → 98 of 161 hand rules), visarga now the top category. Credit: Dr. Mārcis
+  Gasūns.
+- **Gītā gold scoring** (roadmap item 5):
+  [`scripts/score_gita_gold.py`](https://github.com/gasyoun/kosha/blob/main/scripts/score_gita_gold.py)
+  runs method A on the *actual* DCS Bhagavadgītā (18 `MBh, 6, BhaGī N` chapters)
+  and scores against `gita_sandhi.tsv`. **Frequency-mass coverage 87.1 %**
+  (2,971 / 3,412 attestations) — the true figure, vs the 61 % rule-string proxy
+  a small pilot gives. Missed 12.9 % = a long tail (final-`t` assimilation,
+  `i`-semivowel before non-`a` vowels) → Phase 1.2.
+
 ## [0.38.0] - 2026-07-13
 
 ### Added
