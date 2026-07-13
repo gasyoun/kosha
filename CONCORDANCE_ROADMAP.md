@@ -1,6 +1,6 @@
 # Sanskrit Concordance Program — 1-Year Roadmap
 
-_Created: 08-07-2026 · Last updated: 08-07-2026_
+_Created: 08-07-2026 · Last updated: 13-07-2026_
 
 A twelve-month plan to build a portfolio of four Sanskrit **concordances** —
 grammar and nongrammar — each shipped as a citable dataset (registered in the
@@ -84,8 +84,8 @@ shared core), then the greenfield grammar work.
 
 ### Q2 (months 4–6) — B3 · Bloomfield-style parallel-passage concordance
 
-**Status: core build shipped 13-07-2026 (H836, Sonnet 5 `claude-sonnet-5`); two exit checks
-blocked on human decisions, not self-ruled — see below.**
+**Status: core build shipped 13-07-2026 (H836); Bloomfield RV cross-reference shipped
+13-07-2026 (H896). One exit check still blocked on a human decision — see below.**
 
 - **Inputs:** [`dcs-parallel-passages-full`](https://github.com/gasyoun/VisualDCS) (245 files;
   the prior "506,787 alignments" estimate did not survive a direct parse — this build's
@@ -97,19 +97,26 @@ blocked on human decisions, not self-ruled — see below.**
   Content-diffing the three known variants (live `Polnorazmernye`, the 2022 archive, and the
   differently-scoped `Stopovye` per-pada export) was **not independently re-done row-by-row**
   this pass — the build defaults to `Polnorazmernye/` per the folder's own README default,
-  flagged as `@DECIDE` rather than self-ruled (R-C2). Bloomfield *pratīka* cross-reference for
-  the RV subset: **not built** — no digitization of Bloomfield's 1906 concordance was found
-  anywhere in the org; which source to key against is the other open `@DECIDE` below.
+  flagged as `@DECIDE` rather than self-ruled (R-C2, still open). **Bloomfield *pratīka*
+  cross-reference for the RV subset: DONE** (H896, 13-07-2026) — MG obtained written
+  permission from Marco Franceschini (University of Bologna) for his digital edition of
+  Bloomfield's 1906 *A Vedic Concordance* (HOS 9); see
+  [`BLOOMFIELD_RV_CROSSREF_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/BLOOMFIELD_RV_CROSSREF_REPORT.md)
+  for the full method (position-independent, text-validated join — 85% of the 13,581 RV
+  subset rows populated, remainder is genuine orthographic edition variance, documented not
+  forced) and
+  [`data/manifest/rights/franceschini_hos9_permission_2026-07-13.md`](https://github.com/gasyoun/kosha/blob/main/data/manifest/rights/franceschini_hos9_permission_2026-07-13.md)
+  for the rights grant.
 - **Deliverables:** dataset `parallel-passage-concordance` (manifest row ✅, release pending —
-  same "unreleased" state as B1) · web page [`/concordance/parallels/`](https://github.com/gasyoun/kosha/blob/main/concordance/parallels/index.html) ✅ live.
+  same "unreleased" state as B1) · dataset `bloomfield-rv-citations` (manifest row ✅) · web page
+  [`/concordance/parallels/`](https://github.com/gasyoun/kosha/blob/main/concordance/parallels/index.html)
+  ✅ live, now surfacing the Bloomfield pratīka when present.
 - **Exit checks:** every source passage's parallels navigable ✅; verdict annotations surfaced
-  ✅ (GOOD/PARTLY badges + word-diffs); RV subset cross-linked to Bloomfield ❌ (blocked on
-  `@DECIDE` below); variant provenance documented ✅ (build report + this section).
-- **`@DECIDE` (a human should decide, not self-ruled per H836):** (1) confirm `Polnorazmernye/`
-  as the released-canonical parallel-passage variant (or direct otherwise); (2) which
-  digitization of Bloomfield's 1906 *Vedic Concordance* to key the Ṛgveda subset against —
-  once chosen, a follow-up pass adds a `bloomfield_pratika` column to
-  `parallel_passage_verses.tsv` for the RV-subset rows.
+  ✅ (GOOD/PARTLY badges + word-diffs); RV subset cross-linked to Bloomfield ✅ (85% validated
+  join, H896); variant provenance documented ✅ (build report + this section).
+- **`@DECIDE` (a human should decide, not self-ruled) — one item remains:** confirm
+  `Polnorazmernye/` as the released-canonical parallel-passage variant (or direct otherwise) —
+  R-C2. The Bloomfield-digitization-source `@DECIDE` is **resolved** (see above).
 
 ### Q3 (months 7–9) — A3 · Generated-vs-attested morphology audit
 
@@ -143,7 +150,7 @@ output, not an error.
 **Open @DECIDE (a human should decide):**
 1. **License composition** — B1/B3 join DCS (CC BY 4.0) → concordances inherit BY-SA cleanly; but A4 embeds vidyut-prakriya derivation metadata — confirm the derivation output's license before the A4 release.
 2. **Papers, later?** — this cycle is datasets + web only by choice. A3 ("generated vs attested Sanskrit morphology") and A4 ("a Paninian concordance of the DCS") are both strong Axx paper candidates for a Year-2 pass — parked, not dropped.
-3. **Bloomfield cross-reference source** (Q2) — which digitization of the 1906 *Vedic Concordance* to key against for the RV subset.
+3. ~~**Bloomfield cross-reference source** (Q2) — which digitization of the 1906 *Vedic Concordance* to key against for the RV subset.~~ **RESOLVED 13-07-2026 (H896):** Marco Franceschini's digital edition (Harvard Oriental Series 9), rights-cleared by the author's direct written permission — see [`data/manifest/rights/franceschini_hos9_permission_2026-07-13.md`](https://github.com/gasyoun/kosha/blob/main/data/manifest/rights/franceschini_hos9_permission_2026-07-13.md).
 
 **Delivery discipline:** each quarter → a manifest row in the **same pass** as the
 dataset (agent contract), a public-tier release via [`/cut-release`](https://github.com/gasyoun/kosha/blob/main/CLAUDE.md) +
