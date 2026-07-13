@@ -588,7 +588,26 @@
         "concordance/parallels/ static viewer",
         "Q3-Q4 concordance program"
       ],
-      "notes": "Q2 (B3) of CONCORDANCE_ROADMAP.md. Per-verse coverage sidecar parallel_passage_verses.tsv (501,231 rows, one per source verse incl. 0-parallel): 15,164 (3.0%) carry >=1 parallel occurrence. Input: VisualDCS/derived-data/Paralleli-v-tekstah-korpusa-SRC/PARA/Polnorazmernye/ (245 CSV files, the 2026 corrected/regenerated full-text-match pass) — consumed, never re-derived. Two open @DECIDE surfaced to a human, not self-ruled (R-C2): (1) which of three parallel-passage export variants (Polnorazmernye/ used here per the folder's own README default vs Polnorazmernye-2022-archive/ vs the differently-scoped Stopovye/) is the released canonical; (2) which digitization of Bloomfield's 1906 Vedic Concordance to key the Rgveda subset against (not found anywhere in the org — RV cross-reference not built this pass). The roadmap's prior '506,787 alignments' estimate (itself sourced from an admittedly-unverified README note) does not match this build's directly-parsed counts (501,231 verses / 153,045 links) — flagged, not silently reconciled. DCS-derived; ships BY-SA with the public tier pending the DCS-license composition @DECIDE already open on the roadmap."
+      "notes": "Q2 (B3) of CONCORDANCE_ROADMAP.md. Per-verse coverage sidecar parallel_passage_verses.tsv (501,231 rows, one per source verse incl. 0-parallel): 15,164 (3.0%) carry >=1 parallel occurrence; RV-subset rows (13,581) now also carry a `bloomfield_pratika` column (H896 follow-up, see bloomfield-rv-citations row below) — 85% validated against Bloomfield's 1906 concordance. Input: VisualDCS/derived-data/Paralleli-v-tekstah-korpusa-SRC/PARA/Polnorazmernye/ (245 CSV files, the 2026 corrected/regenerated full-text-match pass) — consumed, never re-derived. One open @DECIDE remains, surfaced to a human, not self-ruled (R-C2): which of three parallel-passage export variants (Polnorazmernye/ used here per the folder's own README default vs Polnorazmernye-2022-archive/ vs the differently-scoped Stopovye/) is the released canonical. The sibling @DECIDE (which Bloomfield digitization to key the RV subset against) is RESOLVED — see bloomfield-rv-citations. The roadmap's prior '506,787 alignments' estimate (itself sourced from an admittedly-unverified README note) does not match this build's directly-parsed counts (501,231 verses / 153,045 links) — flagged, not silently reconciled. DCS-derived; ships BY-SA with the public tier pending the DCS-license composition @DECIDE already open on the roadmap."
+    },
+    {
+      "id": "bloomfield-rv-citations",
+      "title": "Bloomfield 1906 Vedic Concordance — direct Ṛgveda citations (pratīka index)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "bloomfield_rv_citations.tsv",
+      "format": "tsv",
+      "rows": 36680,
+      "size_bytes": 2753991,
+      "keying": "maṇḍala + sūkta + verse + pada_letter (a/b/c/d, blank if unlettered) → pratīka text + full raw citation string",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/concordance/bloomfield_rv_citations.tsv",
+      "builder": "scripts/build_bloomfield_rv_crossref.py (H896, kosha CONCORDANCE_ROADMAP Q2 R-C2-sibling @DECIDE)",
+      "consumers": [
+        "parallel_passage_verses.tsv bloomfield_pratika column",
+        "concordance/parallels/ static viewer"
+      ],
+      "notes": "Every direct RV.<mandala>.<sukta>.<verse><pada-letter> citation extracted from Marco Franceschini's digital edition of Maurice Bloomfield's A Vedic Concordance (Harvard Oriental Series 9, 1906) — 88,835 total concordance entries scanned (the concordance indexes the WHOLE Vedic corpus, not just RV), 10,374 distinct RV (mandala,sukta,verse) keys cited. Used to populate parallel_passage_verses.tsv's bloomfield_pratika column for the RV subset (13,581 rows): 11,522 (85%) validated by substring-matching the Bloomfield pratika (parenthetical variant-reading asides stripped, form_key()-normalized, final character dropped to tolerate the pausa-vs-sandhi boundary mismatch) against the row's own recorded source_text — NOT positionally assumed (the row-pair layout is a printed first-half/second-half split, which does not line up 1:1 with Bloomfield's grammatical a/b/c/d pada lettering for 4-pada meters; naive positional mapping would have silently mismatched). Remaining 15% residue is genuine orthographic variance between the two independently-produced digitizations (anusvara-vs-homorganic-nasal spelling, consonant-doubling variants), documented not chased further — full method + counts in data/concordance/BLOOMFIELD_RV_CROSSREF_REPORT.md. RIGHTS: public tier by direct written permission from Marco Franceschini (University of Bologna), non-exclusive/worldwide/perpetual, covering all current and future kosha versions — see data/manifest/rights/franceschini_hos9_permission_2026-07-13.md and LICENSE-DATA.md. Required citation: \"Digitization by Marco Franceschini (University of Bologna), of Maurice Bloomfield's A Vedic Concordance (Harvard Oriental Series 9, 1906). Used with permission.\""
     },
     {
       "id": "sundarakanda-two-tier-apparatus",

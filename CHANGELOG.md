@@ -14,6 +14,21 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **Bloomfield RV pratīka cross-reference (H896)** — resolves the CONCORDANCE_ROADMAP.md
+  Bloomfield-source `@DECIDE` left open by H836. MG obtained direct written permission from
+  Marco Franceschini (University of Bologna) for his digital edition of Bloomfield's 1906
+  *A Vedic Concordance* (Harvard Oriental Series 9) — public tier, non-exclusive/worldwide/
+  perpetual (grant text in
+  [`data/manifest/rights/franceschini_hos9_permission_2026-07-13.md`](https://github.com/gasyoun/kosha/blob/main/data/manifest/rights/franceschini_hos9_permission_2026-07-13.md)).
+  New [`scripts/build_bloomfield_rv_crossref.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_bloomfield_rv_crossref.py)
+  adds a `bloomfield_pratika` column to `parallel_passage_verses.tsv` for the RV subset
+  (11,522/13,581 rows, 85%, independently text-validated rather than positionally assumed —
+  see [`BLOOMFIELD_RV_CROSSREF_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/BLOOMFIELD_RV_CROSSREF_REPORT.md)
+  for the method and the honest residue) + new dataset `bloomfield-rv-citations` (36,680 rows,
+  every direct RV citation in Bloomfield's concordance). Manifest rows, `LICENSE-DATA.md`,
+  and `/concordance/parallels/` updated.
+
 ## [0.39.0] - 2026-07-14
 
 ### Added

@@ -36,6 +36,8 @@ main { max-width:920px; margin:0 auto; padding:16px 20px 60px; }
 .par .tloc { font-size:12.5px; color:var(--mut); margin-left:6px; }
 .par .ttxt { display:block; margin-top:3px; }
 .par .diff { font-family:Consolas,monospace; font-size:12px; color:#a05a00; margin-left:6px; }
+.bloomfield { border-top:1px dashed var(--line); margin-top:10px; padding-top:8px; font-size:13.5px; }
+.bloomfield .tag { font-size:10.5px; color:#fff; background:#5a3d8a; border-radius:8px; padding:1px 7px; margin-right:6px; }
 #trust { border-top:2px solid var(--line); margin-top:34px; padding-top:12px;
          font-size:12.5px; color:var(--mut); }
 #trust table { border-collapse:collapse; margin:6px 0; }
@@ -74,11 +76,16 @@ a { color:#1a6fb0; }
     <table><tr><th>verdict</th><th>meaning</th><th>links</th></tr>
     <tr><td><span class="par tier" style="background:var(--good)">GOOD</span></td><td>exact meter-to-meter match</td><td>13,862</td></tr>
     <tr><td><span class="par tier" style="background:var(--partly)">PARTLY</span></td><td>partial match, word-diff attached</td><td>139,183</td></tr></table>
-    <b>Open decisions (surfaced to a human, not self-ruled):</b> which of three parallel-passage
+    <b>Bloomfield 1906 cross-reference:</b> Ṛgveda verses shown here also carry, when validated
+    (85% of the RV subset — see
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/BLOOMFIELD_RV_CROSSREF_REPORT.md">build report</a>),
+    the matching entry from Marco Franceschini's digital edition of Bloomfield's 1906 <i>A Vedic
+    Concordance</i> (Harvard Oriental Series 9) — used by direct written permission from the
+    author, public tier (see
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/manifest/rights/franceschini_hos9_permission_2026-07-13.md">rights record</a>).
+    <b>Open decision (surfaced to a human, not self-ruled):</b> which of three parallel-passage
     export variants is canonical for release (this build defaults to <code>Polnorazmernye/</code>,
-    the folder's own README's stated default) — see build report R-C2; and which digitization of
-    Bloomfield's 1906 <i>Vedic Concordance</i> to key the Ṛgveda subset against (not yet built — no
-    digitization was found anywhere in the org this pass).
+    the folder's own README's stated default) — see build report R-C2.
     Loci here are the PARA export's own citation scheme (work/book/chapter/verse/pada strings,
     stored verbatim) — a distinct, not-yet-DCS-sentence-id-linked scheme from the B1 dict-concordance's
     <code>dcs:&lt;sent_id&gt;</code> citations. CSV fallback: the dataset TSVs above.
@@ -148,6 +155,9 @@ function renderVerse(e){
          '<span class="ttxt">' + esc(p.txt) + '</span>' +
          (p.d ? '<span class="diff">' + esc(p.d) + '</span>' : "") + '</div>';
   });
+  if (e.bp) {
+    h += '<div class="bloomfield"><span class="tag">Bloomfield 1906</span>' + esc(e.bp) + '</div>';
+  }
   out.innerHTML = h + "</div>";
 }
 tq.addEventListener("input", function(){ showTextMatches(tq.value.trim()); });
