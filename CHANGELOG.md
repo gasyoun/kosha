@@ -14,6 +14,20 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Fixed
+- **Curated pronoun-paradigm correction — closes the W4 QA finding.** The Gītā
+  inflection QA (H874) showed kosha's hybrid `inflections` layer mis-models
+  pronouns (71 % of divergences). Per MG, this **corrects** it:
+  [`scripts/build_pronoun_corrections.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_pronoun_corrections.py)
+  takes the **208 gold attested pronoun analyses** from the Gītā and inserts them
+  into `inflections` as `source='curated-gita-pronoun'` rows — wired as
+  **`build_db.py --stage pronoun`** (idempotent, non-destructive, re-applied on
+  rebuild). Re-running the QA on the corrected engine: nominal agreement
+  **93.0 % → 98.7 %**, divergences **360 → 73**, gaps **919 → 588**
+  ([`PRONOUN_CORRECTION_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/PRONOUN_CORRECTION_REPORT.md);
+  dataset [`pronoun-corrections`](https://github.com/gasyoun/kosha/blob/main/data/gita/pronoun_corrections.tsv)).
+  Public/MIT, credit Dr. Mārcis Gasūns.
+
 ## [0.34.0] - 2026-07-13
 
 ### Fixed
