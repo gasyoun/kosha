@@ -51,8 +51,13 @@ extracted data (as W0 does) rather than read the workbook at build time.
 
 ## 2. Foundation
 
-### W0 — Vendor the canonical master dataset _(launchable now; everything depends on it)_
-Extract the **full `Combined` sheet** (9,091 words × 18 adhyāyas × 24 fields,
+### W0 — Vendor the canonical master dataset ✅ DONE (13-07-2026)
+Shipped: [`data/gita/gita_gold_master.tsv`](https://github.com/gasyoun/kosha/blob/main/data/gita/gita_gold_master.tsv)
+(**9,092 words · 18 adhyāyas · 21 fields**) via
+[`scripts/extract_gita_master.py`](https://github.com/gasyoun/kosha/blob/main/scripts/extract_gita_master.py);
+registered public/MIT in the manifest + data statement
+[`docs/data-statements/gita-gold.meta.md`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/gita-gold.meta.md).
+Everything below reads this file. _Original plan:_ extract the **full `Combined` sheet** (9,091 words × 18 adhyāyas × 24 fields,
 + the `Grammar` etymology-notes column) into a committed kosha dataset
 `data/gita/gita_gold.tsv` (+ per-chapter JSON), generalising the ch-1 pilot
 [`scripts/extract_gita_gold.py`](https://github.com/gasyoun/kosha/blob/main/scripts/extract_gita_gold.py)
@@ -149,10 +154,10 @@ after W3. Mint each as its own `H###` at kickoff (see the metadoc backlog).
 - **License / public-tier:** confirm the derived datasets may ship public tier
   (the gloss/analysis is the author's) before any release.
 
-## 7. Open questions (for MG)
-1. Russian **transliteration** font-encoding — is there a transcode map, or drop col F/G-translit and keep only the Cyrillic gloss?
-2. Author **credit line** wording + license for the derived datasets.
-3. Should the full `gita_gold` master ship as a **public** citable dataset (Zenodo-DOI'd), or restricted?
-4. Beyond the Gītā — is `Gita.xlsm`'s method reusable for **other texts** (a template for future gold packs)?
+## 7. Decisions (MG, 13-07-2026 — all resolved)
+1. Russian **transliteration** font-encoding → **dropped** (garbled private-use bytes); the clean Cyrillic **gloss** is kept.
+2. License → **MIT**; credit **Dr. Mārcis Gasūns** (co-authors of `Gita.xlsm` TBC on confirmation).
+3. The `gita_gold` master → **ship public** (citable; Zenodo-DOI at a data release).
+4. The workbook's method → **yes, a template for other texts** (a reusable gold-pack pipeline).
 
 _Dr. Mārcis Gasūns_
