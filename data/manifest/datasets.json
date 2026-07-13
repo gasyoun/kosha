@@ -1021,6 +1021,25 @@
         "/w/ root-card upasarga panel (app/word_page.py)"
       ],
       "notes": "H848 roadmap W6 (final workstream). Public/MIT, credit Dr. Marcis Gasuns. Data statement docs/data-statements/upasarga-semantics.meta.md. Surfaced on /w/ root cards (app/word_page.py _upasarga_block) + the reading/upasarga/ page."
+    },
+    {
+      "id": "pronoun-corrections",
+      "title": "Curated pronoun-paradigm corrections (E1/W4 fix)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/gita/pronoun_corrections.tsv",
+      "format": "tsv",
+      "rows": 208,
+      "size_bytes": 8543,
+      "keying": "208 curated correct analyses (form_slp1·lemma_slp1·gcase·number·gender·source) for Sanskrit pronouns (sarvanaman), from the gold Gita attested pronoun forms. Applied to inflections as source='curated-gita-pronoun' via build_db.py --stage pronoun (non-destructive INSERT OR IGNORE). Fixed the W4 QA's pronominal mis-modeling: nominal agreement 93.0%->98.7%, divergences 360->73, gaps 919->588.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/gita/pronoun_corrections.tsv",
+      "builder": "scripts/build_pronoun_corrections.py (from gita-morphology-gold; build_db.py --stage pronoun)",
+      "consumers": [
+        "kosha inflections layer (source=curated-gita-pronoun)",
+        "E1 hybrid forms"
+      ],
+      "notes": "W4 QA follow-up (H874), MG «do correction». Report PRONOUN_CORRECTION_REPORT.md. Public/MIT, credit Dr. Marcis Gasuns. Attested-forms correction; full-paradigm generation + disputed-flagging the wrong Cologne rows are further steps."
     }
   ]
 }
