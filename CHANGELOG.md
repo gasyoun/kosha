@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.22.0] - 2026-07-13
+
 ### Added
 - **H848: P5 step-6b reading packs — Nala 1 built; Gītā 1 parked.** New builder
   [`scripts/build_reading_pack.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_reading_pack.py)
