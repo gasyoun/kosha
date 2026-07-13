@@ -41,6 +41,9 @@
   .parked{margin:2.2rem 0 0;padding:1rem 1.1rem;border:1px dashed var(--line);
     border-radius:.6rem;background:var(--card);color:var(--muted);font-size:.9rem}
   .parked b{color:var(--fg)}
+  .banner{margin:0 0 1.2rem;padding:.7rem 1rem;border-radius:.5rem;font-size:.85rem;
+    background:rgba(180,120,20,.13);border:1px solid rgba(180,120,20,.35);color:var(--fg)}
+  .banner b{color:var(--accent)}
   a.src{color:var(--link)}
   footer{margin-top:2rem;color:var(--muted);font-size:.8rem}
   code{background:var(--chip);padding:.05rem .3rem;border-radius:.3rem;font-size:.85em}
@@ -54,14 +57,8 @@
     <p class="stats" id="stats"></p>
     <div class="picker" id="picker" role="tablist"></div>
   </header>
+  <div class="banner" id="banner" hidden></div>
   <main id="passage"></main>
-
-  <section class="parked">
-    <b>Gītā 1 — parked (data gap).</b> The Bhagavadgītā is absent from the DCS corpus:
-    Mahābhārata book 6 (Bhīṣmaparvan) omits exactly adhyāyas 23–40 — the 18 Gītā chapters —
-    and there is no standalone Bhagavadgītā text in the corpus. A Gītā reading pack needs an
-    external lemmatised source; tracked as an open decision.
-  </section>
 
   <footer>
     Text &amp; lemmatisation: <a class="src" href="https://www.sanskrit-linguistics.org/dcs/">Digital Corpus of Sanskrit</a> (CC BY 4.0).
@@ -73,12 +70,13 @@
 
 <!-- data shards: each sets window.READING_DATA[slug] -->
 <script src="data/nala-1.js"></script>
+<script src="data/gita-1.js"></script>
 <script>
 (function(){
   var DATA = window.READING_DATA || {};
   var PACKS = [
     {slug:"nala-1", label:"Nala 1"},
-    {slug:"gita-1", label:"Gītā 1", disabled:true}
+    {slug:"gita-1", label:"Gītā 1"}
   ];
   function esc(s){return (s==null?"":String(s)).replace(/[&<>"]/g,function(c){
     return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
@@ -92,6 +90,12 @@
     document.getElementById("stats").innerHTML =
       "<b>"+st.sentences+"</b> sentences · <b>"+st.tokens+"</b> words · <b>"+
       st.linked_tokens+"</b> linked to a card (<b>"+st.link_rate_pct+"%</b>)";
+    var ban = document.getElementById("banner");
+    if(d.experimental){
+      ban.innerHTML = "<b>Experimental — machine-segmented.</b> "+esc(d.method||
+        "Lemmas are auto-segmented and may be wrong; verify before citing.");
+      ban.hidden = false;
+    } else { ban.hidden = true; }
     var pas = d.sentences.map(function(s){
       var toks = s.tokens.map(function(t){
         var meta = esc(t.lemma) + (t.morph? " · "+esc(t.morph):"") + (t.gloss? " · "+esc(t.gloss):"");
