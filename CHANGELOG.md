@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.31.0] - 2026-07-13
+
 ### Added
 - **H875 (roadmap W5): Gītā Russian gloss layer + etymology dataset.** The Gītā
   reader gains an **English / Русский gloss toggle** (the master's `gloss_ru`,
