@@ -62,10 +62,10 @@
   <main id="passage"></main>
 
   <footer>
-    Text &amp; lemmatisation: <a class="src" href="https://www.sanskrit-linguistics.org/dcs/">Digital Corpus of Sanskrit</a> (CC BY 4.0).
-    Word links resolve to kosha dictionary cards. Build details:
-    <a class="src" href="https://github.com/gasyoun/kosha/blob/main/reading/BUILD_REPORT.md">BUILD_REPORT.md</a> ·
-    <a class="src" href="https://github.com/gasyoun/kosha/blob/main/scripts/build_reading_pack.py">build_reading_pack.py</a>.
+    Text &amp; lemmatisation: <a class="src" href="https://www.sanskrit-linguistics.org/dcs/">Digital Corpus of Sanskrit</a> (CC BY 4.0)
+    · Gītā: hand-curated (Dr. Mārcis Gasūns). Word links resolve to kosha dictionary cards; hover a Gītā word for its lemma, gloss and sandhi.
+    <br><b><a class="src" href="sandhi/">Gītā sandhi rules →</a></b> (frequency-ranked).
+    Build details: <a class="src" href="https://github.com/gasyoun/kosha/blob/main/scripts/build_reading_pack_gita.py">build_reading_pack_gita.py</a>.
   </footer>
 </div>
 
@@ -125,7 +125,8 @@
     } else { ban.hidden = true; }
     var pas = d.sentences.map(function(s){
       var toks = s.tokens.map(function(t){
-        var meta = esc(t.lemma) + (t.morph? " · "+esc(t.morph):"") + (t.gloss? " · "+esc(t.gloss):"");
+        var meta = esc(t.lemma) + (t.morph? " · "+esc(t.morph):"") + (t.gloss? " · "+esc(t.gloss):"")
+                 + (t.sandhi? " · sandhi: "+esc(t.sandhi):"");
         if(t.href){
           return '<a class="tok" href="'+esc(t.href)+'" title="'+meta+'">'+esc(t.form)+
                  '<small>'+esc(t.lemma)+'</small></a>';

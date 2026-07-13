@@ -14,6 +14,18 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H872 (roadmap W2): Gītā sandhi layer.** New public/MIT dataset
+  [`data/gita/gita_sandhi.tsv`](https://github.com/gasyoun/kosha/blob/main/data/gita/gita_sandhi.tsv)
+  — the **first corpus-attested, frequency-ranked sandhi table** in the ecosystem:
+  161 distinct rules over 3,412 sandhi junctions across the whole Bhagavadgītā
+  (`aḥ a → o '`, `ḥ t → s t`, anusvāra assimilations …), each with a category
+  (visarga / anusvāra / vowel-coalescence / consonant), count, share and example
+  words. Built by [`scripts/build_gita_sandhi.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_gita_sandhi.py)
+  from the W0 master. A theme-aware teaching page `reading/sandhi/` renders the
+  ranked table, and the Gītā reader now shows each word's **sandhi rule on hover**.
+  Credit: Dr. Mārcis Gasūns.
+
 ## [0.29.0] - 2026-07-13
 
 ### Changed
