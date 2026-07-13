@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.35.0] - 2026-07-13
+
 ### Fixed
 - **Curated pronoun-paradigm correction — closes the W4 QA finding.** The Gītā
   inflection QA (H874) showed kosha's hybrid `inflections` layer mis-models
