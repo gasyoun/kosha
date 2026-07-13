@@ -685,6 +685,20 @@ sense citations pin to `data_version`, not to repo tags.
     (one Dataset node per public row, `@id` spine, no restricted-download or
     gitignored-path leak). Wired from the README + docs-site landing footer.
 
+## [data-v0.1.0] - 2026-07-06
+
+### Added
+- **P-D0 data-hub roadmap + machine-readable datasets manifest** (D-HUB-1..8,
+  [#23](https://github.com/gasyoun/kosha/pull/23)) — kosha becomes the org
+  Sanskrit data-hub per MG rulings 06-07-2026: two-tier (public releases /
+  restricted backups), samskrtam.ru as the canonical big-file host after
+  deploy, interim distribution via GitHub Releases `data-v*` tags, and
+  [`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
+  as the single source of truth for public/restricted asset metadata. This
+  tag is the first of the separate **data-release** track (see the file
+  header above) — distinct from the `vX.Y.Z` **repo-release** track this
+  changelog otherwise documents.
+
 ## [0.12.0] - 2026-07-06
 
 ### Added
