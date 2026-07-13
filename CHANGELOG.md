@@ -14,6 +14,37 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H855: E1 verb dhātu-identity crosswalk — present-system agreement 12.68 % →
+  70.24 %.** The H185 Task C verb comparison scored a misleading 12.68 % because
+  `Dhatu.mula(bare_root, gaṇa)` is ambiguous where the nominal
+  `Pratipadika.basic(stem)` was not — Cologne stores the bare SLP1 root, vidyut
+  wants the *aupadeśika* dhātu — so 259/683 roots derived nothing (a mapping
+  artifact, not divergence). New builder
+  [`scripts/build_dhatu_crosswalk.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_dhatu_crosswalk.py)
+  matches each Cologne `(root, gaṇa)` to the dhātupāṭha entry whose vidyut
+  present-3sg-active equals Cologne's (else direct/normalized-bare), resolving
+  **722/779 (92.7 %)** of the gaṇa-1/4/6/10 root-models. The committed
+  [`data/e1/dhatu_crosswalk.json`](https://github.com/gasyoun/kosha/blob/main/data/e1/dhatu_crosswalk.json)
+  carries only aupadeśika strings, so
+  [`scripts/compare_vidyut_verbs.py`](https://github.com/gasyoun/kosha/blob/main/scripts/compare_vidyut_verbs.py)
+  needs only bundled vidyut at run time (external `vidyut-data` is a build-time
+  input to the crosswalk builder only — R12). Re-run: strict agreement
+  **70.24 %** (near the nominal 90.5 %), roots-vidyut-can't-derive **259 → 110**,
+  `COLOGNE_ONLY` **29,268 → 15,984**; the 11,056 residual conflicts are real
+  accent/sandhi/gaṇa-shift divergences. New
+  [`tests/test_dhatu_crosswalk.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_dhatu_crosswalk.py)
+  (6 tests). Still **no verb hybridization** (D3); Task B give-back stays
+  MG-gated. Answers [csl-inflect#8](https://github.com/sanskrit-lexicon/csl-inflect/issues/8).
+
+### Changed
+- **[`E1_DIVERGENCE_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/E1_DIVERGENCE_REPORT.md)**
+  Verbs section rewritten with the crosswalk before/after; the ṇatva/gap-fill/
+  `disputed` figures reconciled to the shipped-DB materialisation (326 ṇatva-fix
+  rows / 55 stems, 17 gap-fill, 13,888 disputed) vs the top-10k characterization
+  sample (89 stems / 16 / 13,770) — a sample-vs-full-run drift, not a classifier
+  change.
+
 ## [0.23.0] - 2026-07-13
 
 ### Added
