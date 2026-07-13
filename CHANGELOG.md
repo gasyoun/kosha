@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.30.0] - 2026-07-13
+
 ### Added
 - **H872 (roadmap W2): Gītā sandhi layer.** New public/MIT dataset
   [`data/gita/gita_sandhi.tsv`](https://github.com/gasyoun/kosha/blob/main/data/gita/gita_sandhi.tsv)
