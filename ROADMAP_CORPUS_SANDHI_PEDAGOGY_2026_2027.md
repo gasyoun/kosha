@@ -103,13 +103,20 @@ a bug in Phase 0 — it is the discovery Phase 0 was built to make.
    **frequency-mass coverage 87.1 %** (2,971 / 3,412 junction-attestations) —
    the true number, vs the 61 % rule-string proxy a small pilot gives (small
    texts under-attest rare rules). Rule-string coverage 82/161. The missed
-   12.9 % is a long tail, each rule <1 %: final-`t` assimilation (`t b → d b`,
-   `t n → n n`, `t c → c c`) and semivowel `i`→`y` before non-`a` vowels
-   (`i e → y e`, `i ā → y ā`) → a future **Phase 1.2**. Method B/C scoring
-   pending their bindings.
+   12.9 % is a long tail, each rule <1 %. Method B/C scoring pending their bindings.
+   - **Phase 1.2 — spaced notation.** ✅ DONE (H897). The missed final-`t`
+     assimilation, `i`→`y` semivowel, and MWT-internal visarga were all *induced*
+     but written in merged form (`t a → da`, `i e → ye`, `ḥ v → rv`) instead of
+     the hand table's spaced form (`t a → d a`, `i e → y e`, `ḥ v → r v`). One
+     rule in `induce_coalescence` — split the output when the right word's
+     initial phoneme survives unchanged — fixed it, leaving genuine coalescence
+     (`a a → ā`, `a e → ai`) merged. **Frequency-mass coverage 87.1 % → 96.3 %**
+     (rule-string 82 → 116/161). The residual 3.7 % is mostly malformed
+     `gita_sandhi.tsv` entries (a stray-Cyrillic rule, a space-less `m b→`) and
+     `aḥ`-vs-`ḥ` notation variants — worth a source-side fix, not an inducer one.
 
-**Exit criterion:** ≥90 % of the Gītā hand rules by frequency mass. **Method A
-at 87.1 %** — within reach; Phase 1.2 (final-`t` + `i`-semivowel) closes the gap.
+**Exit criterion:** ≥90 % of the Gītā hand rules by frequency mass. **✅ MET —
+method A at 96.3 %** (H897). Method B/C bake-off + Phase 2 sweep are next.
 
 ---
 

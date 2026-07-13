@@ -14,6 +14,20 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Changed
+- **H897 (sandhi Phase 1.2): spaced-notation split — clears the 90 % Gītā-gold
+  exit criterion.** Final-`t` assimilation, `i`→`y` semivowel, and MWT-internal
+  visarga were being *induced* but written merged (`t a → da`, `i e → ye`,
+  `ḥ v → rv`) rather than in the hand table's spaced form (`t a → d a`,
+  `i e → y e`, `ḥ v → r v`). One rule in `induce_coalescence`
+  ([`scripts/dcs_sandhi_induce.py`](https://github.com/gasyoun/kosha/blob/main/scripts/dcs_sandhi_induce.py))
+  — split the output when the right word's initial phoneme survives unchanged —
+  fixes it, leaving genuine coalescence (`a a → ā`, `a e → ai`) merged.
+  **Gītā-gold frequency-mass coverage 87.1 % → 96.3 %** (rule-string 82 →
+  116/161), clearing the roadmap's ≥90 % exit criterion. Residual 3.7 % is
+  mostly malformed `gita_sandhi.tsv` entries + `aḥ`/`ḥ` notation variants.
+  Credit: Dr. Mārcis Gasūns.
+
 ## [0.39.0] - 2026-07-14
 
 ### Added
