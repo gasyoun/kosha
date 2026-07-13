@@ -14,6 +14,19 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H873 (roadmap W3): Gītā gold morphology + compound dataset.** New public/MIT
+  dataset [`data/gita/gita_morphology_gold.tsv`](https://github.com/gasyoun/kosha/blob/main/data/gita/gita_morphology_gold.tsv)
+  — 9,091 words, each with structured morphology decoded from the `Gita.xlsm`
+  `Grammar`-sheet shorthand via the workbook's `Abbreviations` legend:
+  case·number·gender (nominals), person·number·tense·voice (finite verbs),
+  non-finite/derivation tags, and **compound type** (TP/BV/DV/KD). Built by
+  [`scripts/extract_gita_morphology.py`](https://github.com/gasyoun/kosha/blob/main/scripts/extract_gita_morphology.py)
+  (the decode legend is embedded from the `Abbreviations` sheet); `raw_morph`
+  preserves the source shorthand. Registered (`gita-morphology-gold`) + data
+  statement [`docs/data-statements/gita-morphology.meta.md`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/gita-morphology.meta.md).
+  This is the gold input to **W4** (the E1 inflection-engine QA). Credit: Dr. Mārcis Gasūns.
+
 ## [0.26.0] - 2026-07-13
 
 ### Added

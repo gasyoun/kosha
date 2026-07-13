@@ -910,6 +910,24 @@
         "E1 inflection-engine QA (W4)"
       ],
       "notes": "H848 roadmap W0 — the canonical master every Gita-gold workstream derives from. License MIT; public; author Dr. Marcis Gasuns (co-authors TBC). Data statement: docs/data-statements/gita-gold.meta.md. Upstream Gita.xlsm is local-only (not git-committed). Method is a template for other texts (MG ruling). See ROADMAP_GITA_GOLD_EXTRACTION_2026.md."
+    },
+    {
+      "id": "gita-morphology-gold",
+      "title": "Bhagavadgita gold morphology + compound dataset",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/gita/gita_morphology_gold.tsv",
+      "format": "tsv",
+      "rows": 9091,
+      "size_bytes": 592133,
+      "keying": "one row per analysed word (9,091); structured morphology decoded from the Gita.xlsm Grammar-sheet shorthand (col AB) via the workbook's Abbreviations legend: verse·widx·form·lemma·root·pos·case·number·gender·person·tense·voice·nonfinite·derivation·compound·raw_morph. Nominals get case·number·gender; finite verbs person·number·tense·voice; participles/derivatives tagged; compound type TP/BV/DV/KD. raw_morph preserves the source shorthand.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/gita/gita_morphology_gold.tsv",
+      "builder": "scripts/extract_gita_morphology.py (from Gita.xlsm Grammar + Abbreviations legend, H873 W3)",
+      "consumers": [
+        "E1 inflection-engine QA (W4 / H874)"
+      ],
+      "notes": "H848 roadmap W3. Decoder legend embedded in the extractor (from the Abbreviations sheet). License MIT; public; credit Dr. Marcis Gasuns. Data statement docs/data-statements/gita-morphology.meta.md. Feeds the W4 attested-corpus inflection-engine QA (H874)."
     }
   ]
 }
