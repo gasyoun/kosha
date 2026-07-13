@@ -44,8 +44,33 @@ compound-splitter (vidyut-cheda) is the next lever, not a paradigm fix.
   not every cell of every pronoun paradigm — a data-driven fix from real usage.
   Generating full pronoun paradigms is a further enhancement.
 - **Non-destructive:** wrong Cologne pronoun rows still exist alongside the curated
-  correct ones (the QA is set-membership, so agreement rises regardless);
-  superseding/`disputed`-flagging the wrong Cologne rows is a separate step.
+  correct ones (the QA is set-membership, so agreement rises regardless).
 - Public/MIT, credit Dr. Mārcis Gasūns (the gold analyses).
+
+## Phase 2 — flagging the wrong Cologne rows `disputed=1`
+
+The same `--stage pronoun` step then marks the wrong Cologne pronoun rows
+`disputed=1` — a **review flag** (the mechanism E1 already uses for pronominal
+forks), never a deletion. Scoped to the exact `(form_slp1, lemma_slp1)` pairs the
+gold attests: a Cologne row is flagged when its case is **untagged (NULL)** or its
+**(case, number)** is **not gold-attested** for that form+lemma (gender is
+ignored to avoid flagging gender-ambiguous valid rows).
+
+Of the 161 Cologne rows over the gold pronoun (form,lemma) pairs:
+
+| | count |
+|---|--:|
+| gold-consistent (left untouched) | 79 |
+| already `disputed` (from E1) | 9 |
+| **newly flagged `disputed=1`** | **73** |
+
+10 pronoun lemmas touched (sarva, etad, idam, kim, anya, eka, ubha, sva, pūrva,
+sama). Some flags may be valid non-attested cells → that is exactly what
+`disputed` (editorial review) is for; nothing is removed.
+
+> **Applied on a full DB read.** The shared `kosha.db` was under a concurrent
+> rebuild this session (the flag is reset by `--stage inflections`' repopulate);
+> because phase 2 is part of the idempotent `--stage pronoun`, a clean rebuild
+> re-applies it deterministically.
 
 _Dr. Mārcis Gasūns_

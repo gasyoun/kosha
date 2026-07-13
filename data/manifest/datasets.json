@@ -1039,7 +1039,7 @@
         "kosha inflections layer (source=curated-gita-pronoun)",
         "E1 hybrid forms"
       ],
-      "notes": "W4 QA follow-up (H874), MG «do correction». Report PRONOUN_CORRECTION_REPORT.md. Public/MIT, credit Dr. Marcis Gasuns. Attested-forms correction; full-paradigm generation + disputed-flagging the wrong Cologne rows are further steps."
+      "notes": "W4 QA follow-up (H874), MG «do correction». Report PRONOUN_CORRECTION_REPORT.md. Public/MIT, credit Dr. Marcis Gasuns. Attested-forms correction (full-paradigm generation is a further step). Phase 2 flags 73 wrong Cologne pronoun rows disputed=1 (untagged or case/number contradicting the gold; 9 already E1-flagged; 79 gold-consistent untouched) — a review flag, non-destructive."
     }
   ]
 }
