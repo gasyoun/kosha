@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.24.0] - 2026-07-13
+
 ### Added
 - **H855: E1 verb dhātu-identity crosswalk — present-system agreement 12.68 % →
   70.24 %.** The H185 Task C verb comparison scored a misleading 12.68 % because
