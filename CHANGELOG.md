@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.29.0] - 2026-07-13
+
 ### Changed
 - **H871 (roadmap W1): Gītā reader extended to all 18 adhyāyas.**
   [`scripts/build_reading_pack_gita.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_reading_pack_gita.py)
