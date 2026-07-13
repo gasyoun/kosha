@@ -14,6 +14,18 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H875 (roadmap W5): Gītā Russian gloss layer + etymology dataset.** The Gītā
+  reader gains an **English / Русский gloss toggle** (the master's `gloss_ru`,
+  ~9,091 words, now carried per token and switchable in the viewer). New public/MIT
+  dataset [`data/gita/gita_etymology.tsv`](https://github.com/gasyoun/kosha/blob/main/data/gita/gita_etymology.tsv)
+  — **101 hand-written etymological notes** on selected words (`putra – one who
+  saves from hell`; `uttama – superlative of ud`), extracted by
+  [`scripts/extract_gita_etymology.py`](https://github.com/gasyoun/kosha/blob/main/scripts/extract_gita_etymology.py)
+  from the `Grammar` sheet's col AG (which the master drops), aligned by
+  verse+word-index. Data statement [`docs/data-statements/gita-etymology.meta.md`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/gita-etymology.meta.md).
+  Credit: Dr. Mārcis Gasūns.
+
 ## [0.30.0] - 2026-07-13
 
 ### Added
