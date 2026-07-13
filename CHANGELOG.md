@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.33.0] - 2026-07-13
+
 ### Added
 - **Upasarga semantics on the `/w/` root card (H876 W6 follow-up).** Root word-pages
   now carry a crawlable "Preverb senses (upasarga)" `<details>` panel driven by the
