@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""H882 / Phase 0 + H903 / Phase 1 — sandhi split-method A/B/C comparison harness.
+"""H882 Phase 0 + H903 (method B) + H908 (method C) — sandhi split-method A/B/C harness.
 
 The roadmap's central experiment: for a text with NO hand-annotated sandhi, three
 ways to obtain the word-split that the junction-rule inducer needs, compared on
@@ -10,7 +10,9 @@ the SAME text —
   B  Vidyut cheda         — segment raw text with the offline vidyut-cheda model
                             (vidyut-data/cheda/model.msgpack), then induce. IMPLEMENTED
                             (H903 — see method_B docstring for scope/limitations).
-  C  Neural (DharmaMitra) — API segmenter, higher recall on hard junctions. STUB.
+  C  Neural (DharmaMitra) — `unsandhied` segmentation API, cached; then induce.
+                            IMPLEMENTED (H908 — --allow-network; far outperforms B,
+                            near-perfect precision — see method_C docstring).
 
 Because A uses gold splits, it is the reference; B and C are scored *against A*
 on the same text (junction-level agreement + rule-inventory P/R/F1). Separately,
@@ -24,6 +26,7 @@ Usage:
 """
 import argparse
 import csv
+import json
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -36,6 +39,13 @@ import dcs_sandhi_induce as ind  # noqa: E402
 GITA_GOLD = ROOT / "data" / "gita" / "gita_sandhi.tsv"
 VIDYUT_DATA_ROOT = Path("C:/Users/user/Documents/GitHub/vidyut-data")
 VIDYUT_CHEDA = VIDYUT_DATA_ROOT / "cheda" / "model.msgpack"
+
+# method C — DharmaMitra neural segmenter (API-only; contract reused from
+# csl-atlas/scripts/lib/dharmamitra_infer.py). `unsandhied` mode returns one
+# `_`-joined segmentation string per input text, already in IAST with visarga.
+DM_API = "https://dharmamitra.org/api/tagging/"
+DM_CACHE = ROOT / "data" / "sandhi" / "_cache"
+DM_BATCH = 32
 
 _chedaka = None  # lazy singleton — model load cost paid once per process
 
@@ -229,13 +239,120 @@ def method_A_mode1_strict(text, dcs_root):
 
 
 # --- method C: neural DharmaMitra segmenter (STUB) --------------------------
-def method_C(text, dcs_root):
-    """PHASE 1. Segment via the DharmaMitra neural API (API-only, not vendored —
-    see kosha/data/manifest/external_tools.json row `dharmamitra`). Same
-    induce_rule() tail. Gate behind an explicit --allow-network flag and a
-    cost/rate note; cache responses under data/sandhi/_cache/."""
-    raise NotImplementedError(
-        "method C (neural) is a Phase-1 task — DharmaMitra API, see external_tools.json")
+def _dm_segment(sentences, text_id, allow_network):
+    """Return {sentence: [pre-sandhi tokens]} via the DharmaMitra `unsandhied`
+    API, cached to data/sandhi/_cache/dharmamitra_<id>.json so re-runs never
+    re-hit the network. Only uncached sentences are sent (batched); if any are
+    uncached and allow_network is False, raises so the caller SKIPS method C."""
+    DM_CACHE.mkdir(parents=True, exist_ok=True)
+    cache_path = DM_CACHE / ("dharmamitra_%s.json" % ind.slug(text_id))
+    cache = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else {}
+    todo = [s for s in dict.fromkeys(sentences) if s not in cache]
+    if todo:
+        if not allow_network:
+            raise NotImplementedError(
+                "%d/%d sentences uncached; pass --allow-network to query DharmaMitra"
+                % (len(todo), len(set(sentences))))
+        import time
+        import requests
+        for i in range(0, len(todo), DM_BATCH):
+            chunk = todo[i:i + DM_BATCH]
+            # the API occasionally drops the TLS connection under sustained load;
+            # retry with backoff, and persist the cache after EVERY batch so a
+            # later failure never loses completed work.
+            for attempt in range(4):
+                try:
+                    resp = requests.post(DM_API, json={"texts": chunk, "mode": "unsandhied",
+                                                       "human_readable_tags": True}, timeout=120)
+                    resp.raise_for_status()
+                    break
+                except Exception as e:
+                    if attempt == 3:
+                        cache_path.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+                        raise RuntimeError("DharmaMitra batch failed after 4 tries "
+                                           "(%d cached so far); rerun to resume: %s" % (len(cache), e))
+                    time.sleep(2 ** attempt)
+            for sent, seg in zip(chunk, resp.json()["results"]):
+                cache[sent] = [t for t in seg.split("_") if t]
+            cache_path.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+            print("  DharmaMitra: %d/%d sentences queried" % (min(i + DM_BATCH, len(todo)), len(todo)))
+            time.sleep(0.3)  # be polite to a free academic API
+    return cache
+
+
+def method_C(text, dcs_root, stats_out=None, allow_network=False):
+    """Segment each DCS sentence's raw text with the DharmaMitra neural
+    segmenter (API-only), then feed the predicted split through the SAME
+    induce_rule() tail as methods A/B — so C is directly comparable to B, only
+    the splitter differs (neural vs vidyut-cheda's finite-state). Structure
+    mirrors method_B verbatim (see its docstring for the units/alignment/skip
+    scope); the only change is `pred` comes from `_dm_segment` (already IAST
+    with visarga, so no transliteration/pausa-normalize needed)."""
+    files = sorted((Path(dcs_root) / text).glob("*.conllu"))
+    # gather every raw sentence first, so the API is queried in cached batches
+    sents = [ref for f in files for ref, _w, _m in ind.read_sentences(f) if ref]
+    dm = _dm_segment(sents, text, allow_network)
+
+    counts = Counter()
+    examples = defaultdict(list)
+    st = Counter()
+    for f in files:
+        for ref, words, mwts in ind.read_sentences(f):
+            if not ref:
+                continue
+            st["sentences"] += 1
+            units = _sentence_units(words, mwts)
+            for i in range(len(units) - 1):
+                u, nx = units[i], units[i + 1]
+                if u["n"] != 1 or nx["n"] != 1:
+                    continue
+                st["mode1_total"] += 1
+                if u["uns"] is None or nx["uns"] is None:
+                    st["no_gold_total"] += 1
+
+            pred = dm.get(ref)
+            if pred is None:
+                st["dm_fail"] += 1
+                continue
+
+            idx, aligned, drift = 0, [], False
+            for u in units:
+                if idx + u["n"] > len(pred):
+                    drift = True
+                    break
+                pu = _pausa_normalize(pred[idx]) if u["n"] == 1 else None
+                aligned.append((pu, u))
+                idx += u["n"]
+            if drift or idx != len(pred):
+                st["skipped_count_mismatch"] += 1
+                continue
+
+            for i in range(len(aligned) - 1):
+                pu, u = aligned[i]
+                nu, nx = aligned[i + 1]
+                if u["n"] != 1 or nx["n"] != 1:
+                    st["skipped_mwt_adjacent"] += 1
+                    continue
+                st["junctions"] += 1
+                gold_no_gold = u["uns"] is None or nx["uns"] is None
+                rule, flag = ind.induce_rule(pu, u["surf"], nu, nx["surf"])
+                if rule is None:
+                    st["no_sandhi"] += 1
+                    continue
+                if flag == "empty-side":
+                    continue
+                counts[rule] += 1
+                if gold_no_gold:
+                    st["no_gold_recovered"] += 1
+                if len(examples[rule]) < 4:
+                    examples[rule].append("%s %s+%s" % (ref, u["surf"], nx["surf"]))
+
+    st["distinct_rules"] = len(counts)
+    st["events"] = sum(counts.values())
+    if stats_out is not None:
+        stats_out.update(st)
+        stats_out["examples"] = examples
+    return counts
 
 
 # --- scoring ----------------------------------------------------------------
@@ -262,16 +379,21 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--text", required=True)
     ap.add_argument("--dcs-root", default=str(ind.DEFAULT_DCS))
-    ap.add_argument("--methods", default="A", help="subset of ABC, e.g. 'A' or 'AB'")
+    ap.add_argument("--methods", default="A", help="subset of ABC, e.g. 'A' or 'ABC'")
+    ap.add_argument("--allow-network", action="store_true",
+                    help="permit method C to query the DharmaMitra API (else C uses cache only)")
     args = ap.parse_args()
 
     results = {}
-    b_stats = {}
+    stats = {"B": {}, "C": {}}
     for m in args.methods.upper():
         if m == "B":
-            fn = lambda text, root: method_B(text, root, stats_out=b_stats)  # noqa: E731
+            fn = lambda text, root: method_B(text, root, stats_out=stats["B"])  # noqa: E731
+        elif m == "C":
+            fn = lambda text, root: method_C(text, root, stats_out=stats["C"],  # noqa: E731
+                                             allow_network=args.allow_network)
         else:
-            fn = {"A": method_A, "C": method_C}[m]
+            fn = {"A": method_A}[m]
         try:
             results[m] = fn(args.text, args.dcs_root)
             print("method %s: %d distinct rules over %d junctions"
@@ -279,24 +401,24 @@ def main():
         except NotImplementedError as e:
             print("method %s: SKIPPED — %s" % (m, e))
 
-    if "B" in results and b_stats:
-        print("  B coverage: %d sentences · %d junctions scored · skipped "
-              "%d (MWT-adjacent) + %d (count mismatch) + %d (cheda failure)"
-              % (b_stats.get("sentences", 0), b_stats.get("junctions", 0),
-                 b_stats.get("skipped_mwt_adjacent", 0),
-                 b_stats.get("skipped_count_mismatch", 0),
-                 b_stats.get("cheda_fail", 0)))
-        no_gold_total = b_stats.get("no_gold_total", 0)
-        no_gold_recovered = b_stats.get("no_gold_recovered", 0)
-        mode1_total = b_stats.get("mode1_total", 0)
-        if no_gold_total:
-            print("  no-gold recovery: of %d mode-1 junctions, %d (%.1f%%) have NO "
-                  "gold Unsandhied on either side (A structurally can't induce there) "
-                  "— B produced a rule for %d of those (%.1f%%)"
-                  % (mode1_total, no_gold_total,
-                     100.0 * no_gold_total / mode1_total if mode1_total else 0.0,
-                     no_gold_recovered,
-                     100.0 * no_gold_recovered / no_gold_total))
+    for m, failkey in (("B", "cheda_fail"), ("C", "dm_fail")):
+        st = stats[m]
+        if m in results and st:
+            print("  %s coverage: %d sentences · %d junctions scored · skipped "
+                  "%d (MWT-adjacent) + %d (count mismatch) + %d (splitter failure)"
+                  % (m, st.get("sentences", 0), st.get("junctions", 0),
+                     st.get("skipped_mwt_adjacent", 0),
+                     st.get("skipped_count_mismatch", 0), st.get(failkey, 0)))
+            mode1_total = st.get("mode1_total", 0)
+            no_gold_total = st.get("no_gold_total", 0)
+            if no_gold_total:
+                print("  %s no-gold recovery: of %d mode-1 junctions, %d (%.1f%%) have NO "
+                      "gold Unsandhied either side (A can't induce there) — %s produced a "
+                      "rule for %d (%.1f%%)"
+                      % (m, mode1_total, no_gold_total,
+                         100.0 * no_gold_total / mode1_total if mode1_total else 0.0, m,
+                         st.get("no_gold_recovered", 0),
+                         100.0 * st.get("no_gold_recovered", 0) / no_gold_total))
 
     # B/C scored against A (the gold-split ceiling) on the same text
     if "A" in results:
@@ -305,14 +427,16 @@ def main():
                 p, r, f, tp = pr_f1(results["A"], results[m])
                 print("  %s vs A (full): P=%.3f R=%.3f F1=%.3f (%d shared rules)" % (m, p, r, f, tp))
 
-    # fair baseline: B only attempts mode-1 word-word junctions (Phase-1 scope),
-    # so also score it against the SAME slice of gold A rather than A's full set
-    if "B" in results:
+    # fair baseline: B/C only attempt mode-1 word-word junctions (Phase-1 scope),
+    # so also score against the SAME slice of gold A rather than A's full set
+    if ("B" in results or "C" in results) and "A" in results:
         a_mode1 = method_A_mode1_strict(args.text, args.dcs_root)
-        p, r, f, tp = pr_f1(a_mode1, results["B"])
-        print("  B vs A (mode-1-only, apples-to-apples): P=%.3f R=%.3f F1=%.3f "
-              "(%d shared rules; A mode-1-only has %d distinct rules)"
-              % (p, r, f, tp, len(a_mode1)))
+        for m in ("B", "C"):
+            if m in results:
+                p, r, f, tp = pr_f1(a_mode1, results[m])
+                print("  %s vs A (mode-1-only, apples-to-apples): P=%.3f R=%.3f F1=%.3f "
+                      "(%d shared; A mode-1-only has %d rules)"
+                      % (m, p, r, f, tp, len(a_mode1)))
 
     # validate method-A notation against the Gītā hand table
     gita = load_rule_set(GITA_GOLD)
