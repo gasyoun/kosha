@@ -1,6 +1,6 @@
 # Gasuns Sanskrit Dictionary
 
-_Created: 02-07-2026 · Last updated: 11-07-2026_
+_Created: 02-07-2026 · Last updated: 13-07-2026_
 
 > **Status: pre-alpha — the lookup API + UI run locally and the public
 > dictionary URL is not deployed yet, but the data-hub tier already is live.**
@@ -50,7 +50,7 @@ It is a **two-tier** store:
 
 Every canonical dataset in **either** tier has one machine-readable row in
 [data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
-— currently **32 datasets** (22 public · 8 restricted · 2 intermediate) — the
+— currently **57 datasets** (43 public · 11 restricted · 3 intermediate) — the
 single source agents read to discover and fetch data; a new or changed derived
 dataset ends its session with a manifest row or it does not exist for reuse.
 
@@ -99,6 +99,17 @@ learners, then scholars.
   curriculum, and drills. Plan: [ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md).
 - **Generated paradigms + a compact grammar token** modelled on Zaliznyak's
   index from the Russian lexicographic tradition.
+- **Concordance program** — a Bloomfield-style portfolio of Sanskrit
+  concordances, each shipped as both a citable dataset and a web viewer. Live
+  so far: dictionary entry ↔ DCS corpus occurrence
+  ([`/concordance/dict/`](https://github.com/gasyoun/kosha/blob/main/concordance/dict/index.html),
+  74,520 asserted links) and a corpus-wide parallel-passage/repeated-verse
+  concordance
+  ([`/concordance/parallels/`](https://github.com/gasyoun/kosha/blob/main/concordance/parallels/index.html),
+  153,045 GOOD/PARTLY links across 245 texts), with the Ṛgveda subset
+  cross-linked to Marco Franceschini's digital edition of Bloomfield's 1906
+  *A Vedic Concordance* (used by direct permission). Full plan:
+  [CONCORDANCE_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/CONCORDANCE_ROADMAP.md).
 - **Trilingual glosses** — English (MW) · German (PWG) · Russian (pwg_ru
   translation layer) side by side; unique worldwide.
 - **Offline PWA** — the static cache tier makes offline lookup nearly free.
@@ -342,6 +353,7 @@ volume-page, hyphen, 7 volumes · AP90 `0001-a` = page-column-letter.
 | [COMPARISON.md](https://github.com/gasyoun/kosha/blob/main/COMPARISON.md) | 12-platform live survey (02-07-2026) with feature matrix |
 | [D5_MEASUREMENTS.md](https://github.com/gasyoun/kosha/blob/main/D5_MEASUREMENTS.md) · [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md) | D5 measurement report + the SLO/cadence/cache-N decisions it settled |
 | [DATA_HUB_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md) · [data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) | data-hub rulings D-HUB-1..8, two-tier phases P-D0..P-D6, and the machine-readable dataset manifest agents read |
+| [CONCORDANCE_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/CONCORDANCE_ROADMAP.md) | 1-year concordance program (dict↔corpus, parallel-passage, morphology audit, Pāṇinian sūtra↔corpus) — schema, build order, open `@DECIDE`s |
 | [ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md) · [.meta.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.meta.md) | corpus-wide sandhi extraction for pedagogy — DCS junction-rule inducer (mode 1 edge + mode 2 MWT coalescence), A/B/C split-method bake-off, per-text + merged tables, four teaching surfaces |
 | [docs/PIPELINE_OPERATOR_RUNBOOK.md](https://github.com/gasyoun/kosha/blob/main/docs/PIPELINE_OPERATOR_RUNBOOK.md) | operator runbook: stage order, per-stage verification, deploy classes, release rituals, never-touch list |
 | [CHANGELOG.md](https://github.com/gasyoun/kosha/blob/main/CHANGELOG.md) | SemVer history |
