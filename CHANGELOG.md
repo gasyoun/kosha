@@ -34,6 +34,29 @@ sense citations pin to `data_version`, not to repo tags.
   (`data/frequency/README.md`'s own caveat) — the cumulative column here is computed by
   this script, not copied from the source.
 
+## [0.50.0] - 2026-07-14
+
+### Added
+- **H950 (pedagogy Wave 2, W2b): roots frequency + attestation curriculum.**
+  REUSE/INTEGRATE, not a rebuild — [WhitneyRoots](https://github.com/gasyoun/WhitneyRoots)
+  already owns the 935-root explorer and already computes a per-root
+  MW↔Whitney↔DCS triangulation with corpus frequency and attested forms
+  (`WhitneyRoots/src/dcs_freq.json`). New
+  [`scripts/build_roots_frequency.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_roots_frequency.py)
+  reads that canonical source and adds the missing graded-curriculum framing —
+  rank order + cumulative `coverage_pct` — producing
+  [`data/roots/roots_frequency.tsv`](https://github.com/gasyoun/kosha/blob/main/data/roots/roots_frequency.tsv)
+  + `.json` (629 unique DCS-lemma rows, deduped from 717 Whitney-hub roots with
+  attestation — 74 homonym-shared lemmas collapsed so the same corpus mass
+  isn't triple-counted). Coverage headline: learn top 25 roots → 58.7% of
+  verb-token occurrences; top 50 → 71.7%; top 100 → 85.4%; top 200 → 95.3%.
+  `roots-frequency-curriculum` manifest row registered; no kosha roots UI
+  shipped, per the architecture's integration-surface rule — WhitneyRoots and
+  Systema are the intended consumers. `tests/test_roots_frequency.py` (8
+  tests: monotone coverage, dense ranks, every root traceable to WhitneyRoots's
+  own hub, no homonym double-counting, TSV/JSON agreement, no fabricated
+  attested forms).
+
 ## [0.49.0] - 2026-07-14
 
 ### Added
