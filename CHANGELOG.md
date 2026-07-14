@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.51.0] - 2026-07-14
+
 ### Added
 - **H947: frequency-graded vocabulary curriculum (Wave 1, W1b).** Applies the shipped
   sandhi-curriculum method to words — "learn the N most frequent lemmas → read X% of the
