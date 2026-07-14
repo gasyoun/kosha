@@ -1024,6 +1024,26 @@
       "notes": "H902 roadmap Phase 4 (surface 2/4: graded curriculum). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Derived from the corpus-sandhi dataset; weighting is human-tunable per the MG ruling."
     },
     {
+      "id": "sandhi-drills",
+      "title": "Sandhi drills — join/split/identify practice items",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/sandhi/sandhi_drills.json",
+      "format": "json",
+      "rows": 396,
+      "size_bytes": 203642,
+      "keying": "one item per row: id, type (join/split/identify), rule, category, lesson, difficulty, question, answer, choices (4-way MCQ with same-class distractors), context (attested example sentence). 396 items over the 132 curriculum rules covering 90% of corpus sandhi (lessons 1-9; lesson-10 long tail excluded by default, --max-lesson to widen). Also shipped as data/sandhi/sandhi_drills.tsv (flat fallback) and data/sandhi/sandhi_drills.apkg (Anki deck, genanki). Web quiz reading/sandhi/drills/index.html (self-contained MCQ, theme-aware).",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/sandhi/sandhi_drills.json",
+      "builder": "scripts/build_sandhi_drills.py over sandhi-curriculum + corpus-sandhi",
+      "consumers": [
+        "reading/sandhi/drills/ page (web quiz)",
+        "sandhi_drills.apkg (Anki deck)",
+        "graded sandhi teaching (Phase 4, surface 4b)"
+      ],
+      "notes": "H918 roadmap Phase 4 (surface 4b: drills/flashcards, the last core-programme surface — sibling surface 4a is the SanskritGrammar reader-hover, H917). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Deterministic build (seeded RNG, seed 20260714) so choice ordering/distractors are reproducible across rebuilds."
+    },
+    {
       "id": "corpus-sandhi",
       "title": "Corpus sandhi — frequency-ranked rules across 17 texts",
       "tier": "public",
