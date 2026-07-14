@@ -32,6 +32,25 @@ sense citations pin to `data_version`, not to repo tags.
   + a 15-dir corpus sample); see
   [`ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md`](https://github.com/gasyoun/kosha/blob/main/ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md)
   §2 for the full writeup. Method C (DharmaMitra) remains explicitly deferred.
+- **H901 (sandhi Phase 2b): broadened corpus sandhi sweep, 8 → 17 texts.**
+  Extends H900's `scripts/build_corpus_sandhi.py` `TEXTS` list with kāvya
+  (Buddhacarita, Kumārasaṃbhava, Kirātārjunīya, Meghadūta), more readers
+  (Daśakumāracarita, Bhāratamañjarī), śataka/nīti (Śatakatraya,
+  Bhallaṭaśataka), and the **full** Rāmāyaṇa (606 files) and **full**
+  Mahābhārata (1,995 files) — the latter replaces H900's Bhagavadgītā-only
+  glob (the Gītā's 18 chapters are already inside the full-corpus sweep, so
+  keeping the narrow row would have double-counted those tokens in the merged
+  global table; `data/sandhi/bhagavadgita_sandhi.tsv` retired accordingly).
+  **580,230 sandhi events · 9,840 distinct rules** (was 53,291 / 1,674); the
+  top **83** rules now cover 80% of all corpus sandhi (was 69 — moved up
+  slightly, plausibly kāvya's more varied sandhi spreading the frequency mass
+  across more rules, reported honestly rather than smoothed over). **Scale
+  finding:** the handoff worried the full Mahābhārata (~2,000 files) would
+  need a parvan/`--limit` sample gate — measured instead of assumed (~10
+  files/s on a 300-file timing sample), the full corpus ran directly in a few
+  minutes on one machine, no sampling gate needed. `corpus-sandhi` manifest
+  row updated; `ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md` + its `.meta.md`
+  updated (backlog item 2 ticked).
 
 ## [0.42.0] - 2026-07-14
 
