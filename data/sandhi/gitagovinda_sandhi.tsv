@@ -1,0 +1,138 @@
+rule	category	count	pct	examples
+a a → ā	vowel coalescence	35	8.22	vyaktānurāgam iva khelatanaṅgakhedasvedāmbupūram anupūrayatu priyam vaḥ vyakta+anurāgam→vyaktānurāgam · adya utsaṅgavasadbhujaṅgakavalakleśāt iva īśācalam prāleyaplavanecchayā anusarati śrīkhaṇḍaśailānilaḥ īśa+acalam→īśācalam · kṛtaparirambhaṇacumbanayā parirabhya kṛtādharapānam kṛta+adharapānam→kṛtādharapānam · kṛtānutāpaḥ sa kalindanandinītaṭāntakuñje viṣasāda mādhavaḥ kṛta+anutāpaḥ→kṛtānutāpaḥ
+a ā → ā	vowel coalescence	34	7.98	vahasi vapuṣi viśade vasanam jaladābham halahatibhītimilitayamunābham jalada+ābham→jaladābham · paulastyam jayate halam kalayate kāruṇyam ātanvate mlecchān mūrchayate daśākṛtikṛte kṛṣṇāya tubhyam namaḥ daśa+ākṛti→daśākṛtikṛte · madhumuranarakavināśana garuḍāsana e garuḍa+āsanaḥ→garuḍāsana · alasanimīlitalocanayā pulakāvalilalitakapolam pulaka+āvali→pulakāvalilalitakapolam
+iḥ h → Ø h	visarga	27	6.34	keśava dhṛtamīnaśarīra jaya jagadīśa hare jagadīśa+hare · keśava dhṛtakacchaparūpa jaya jagadīśa hare jagadīśa+hare · keśava dhṛtaśūkararūpa jaya jagadīśa hare jagadīśa+hare · keśava dhṛtanaraharirūpa jaya jagadīśa hare jagadīśa+hare
+iḥ j → Ø j	visarga	20	4.69	keśava dhṛtamīnaśarīra jaya jagadīśa hare śarīraiḥ→dhṛtamīnaśarīra +jaya · keśava dhṛtakacchaparūpa jaya jagadīśa hare rūpaiḥ→dhṛtakacchaparūpa +jaya · keśava dhṛtaśūkararūpa jaya jagadīśa hare rūpaiḥ→dhṛtaśūkararūpa +jaya · keśava dhṛtanaraharirūpa jaya jagadīśa hare rūpaiḥ→dhṛtanaraharirūpa +jaya
+iḥ m → Ø m	visarga	20	4.69	pāṇau mā kuru cūtasāyakam amum mā cāpam āropaya krīḍānirjitaviśva mūrchitajanāghātena kim pauruṣam viśvaiḥ→krīḍānirjitaviśva +mūrchita · sā virahe tava dīnā mādhava manasijaviśikhabhayāt iva bhāvanayā tvayi līnā mādhava+manasija · sā virahe tava dīnā mādhava manasijaviśikhabhayāt iva bhāvanayā tvayi līnā mādhava+manasija · sā virahe tava dīnā mādhava manasijaviśikhabhayāt iva bhāvanayā tvayi līnā mādhava+manasija
+iḥ y → Ø y	visarga	16	3.76	harihari yāhi mādhava yāhi keśava mā vada kaitavavādam tām anusara sarasīruhalocana yā tava harati viṣādam mādhava+yāhi · harihari yāhi mādhava yāhi keśava mā vada kaitavavādam tām anusara sarasīruhalocana yā tava harati viṣādam locanaiḥ→sarasīruhalocana +yā · harihari yāhi mādhava yāhi keśava mā vada kaitavavādam tām anusara sarasīruhalocana yā tava harati viṣādam mādhava+yāhi · harihari yāhi mādhava yāhi keśava mā vada kaitavavādam tām anusara sarasīruhalocana yā tava harati viṣādam locanaiḥ→sarasīruhalocana +yā
+e k → ava k	consonant / other	14	3.29	tava karakamalavare nakham adbhutaśṛṅgam dalitahiraṇyakaśiputanubhṛṅgam tava+kara · moham tāvat ayam ca tanvi tanutām bimbādharaḥ rāgavān sadvṛttastanamaṇḍalaḥ tava katham prāṇaiḥ mama krīḍati tava+katham · rādhikā virahe tava keśava tava+keśava · rādhikā virahe tava keśava tava+keśava
+ā a → ā	vowel coalescence	13	3.05	kāpi vilāsavilolavilocanakhelanajanitamanojam kā+api→kāpi · kāpi kapolatale militā lapitum kimapi śrutimūle kā+api→kāpi · kāpi harim anubhavati kṛtasukṛtakāminī kā+api→kāpi · viśaṅkamānā ramitam kayāpi janārdanam dṛṣṭavat etat āha kayā+api→kayāpi
+a u → o	vowel coalescence	12	2.82	śṛṅgārottarasatprameyaracanaiḥ ācāryagovardhanaspardhī ko 'pi na viśrutaḥ śrutidharaḥ dhoyī kavikṣmāpatiḥ śṛṅgāra+uttara→śṛṅgārottarasatprameyaracanaiḥ · viśveṣām anurañjanena janayan ānandam indīvaraśreṇīśyāmalakomalaiḥ upanayan aṅgaiḥ anaṅgotsavam anaṅga+utsavam→anaṅgotsavam · kiṃca snigdharasālamaulimukulāni ālokya harṣodayāt unmīlanti kuhūḥ kuhūḥ iti kalottālāḥ pikānām giraḥ harṣa+udayāt→harṣodayāt · kiṃca snigdharasālamaulimukulāni ālokya harṣodayāt unmīlanti kuhūḥ kuhūḥ iti kalottālāḥ pikānām giraḥ kala+uttālāḥ→kalottālāḥ
+iḥ dh → Ø dh	visarga	12	2.82	keśava dhṛtamīnaśarīra jaya jagadīśa hare keśava+dhṛta · keśava dhṛtakacchaparūpa jaya jagadīśa hare keśava+dhṛta · keśava dhṛtaśūkararūpa jaya jagadīśa hare keśava+dhṛta · keśava dhṛtanaraharirūpa jaya jagadīśa hare keśava+dhṛta
+e v → ava v	consonant / other	10	2.35	tava virahe vanamālī sakhi sīdati tava+virahe · tava virahe vanamālī sakhi sīdati tava+virahe · tava virahe vanamālī sakhi sīdati tava+virahe · tava virahe vanamālī sakhi sīdati tava+virahe
+e h → ava h	consonant / other	10	2.35	harihari yāhi mādhava yāhi keśava mā vada kaitavavādam tām anusara sarasīruhalocana yā tava harati viṣādam tava+harati · harihari yāhi mādhava yāhi keśava mā vada kaitavavādam tām anusara sarasīruhalocana yā tava harati viṣādam tava+harati · harihari yāhi mādhava yāhi keśava mā vada kaitavavādam tām anusara sarasīruhalocana yā tava harati viṣādam tava+harati · caraṇakamalagaladalaktakasiktam idam tava hṛdayam udāram tava+hṛdayam
+t a → d a	consonant / other	8	1.88	sphuradatimuktalatāparirambhaṇamukulitapulakitacūte vṛndāvanavipine parisaraparigatayamunājalapūte sphurat+atimukta→sphuradatimuktalatāparirambhaṇamukulitapulakitacūte · saṃcaradadharasudhāmadhuradhvanimukharitamohanavaṃśam saṃcarat+adhara→saṃcaradadharasudhāmadhuradhvanimukharitamohanavaṃśam · aviralanipatitamadanaśarāt iva bhavadavanāya viśālam bhavat+avanāya→bhavadavanāya · daśanapadam bhavadadharagatam mama janayati cetasi khedam bhavat+adhara→bhavadadharagatam
+e d → ava d	consonant / other	8	1.88	sā virahe tava dīnā mādhava manasijaviśikhabhayāt iva bhāvanayā tvayi līnā tava+dīnā · sā virahe tava dīnā mādhava manasijaviśikhabhayāt iva bhāvanayā tvayi līnā tava+dīnā · sā virahe tava dīnā mādhava manasijaviśikhabhayāt iva bhāvanayā tvayi līnā tava+dīnā · sā virahe tava dīnā mādhava manasijaviśikhabhayāt iva bhāvanayā tvayi līnā tava+dīnā
+e y → ihari y	consonant / other	8	1.88	harihari yāhi mādhava yāhi keśava mā vada kaitavavādam tām anusara sarasīruhalocana yā tava harati viṣādam hare→harihari +yāhi · harihari yāhi mādhava yāhi keśava mā vada kaitavavādam tām anusara sarasīruhalocana yā tava harati viṣādam hare→harihari +yāhi · harihari yāhi mādhava yāhi keśava mā vada kaitavavādam tām anusara sarasīruhalocana yā tava harati viṣādam hare→harihari +yāhi · harihari yāhi mādhava yāhi keśava mā vada kaitavavādam tām anusara sarasīruhalocana yā tava harati viṣādam hare→harihari +yāhi
+m _ → m aye	anusvāra / nasal	8	1.88	mādhave mā kuru mānini mānam aye mānam+aye · mādhave mā kuru mānini mānam aye mānam+aye · mādhave mā kuru mānini mānam aye mānam+aye · mādhave mā kuru mānini mānam aye mānam+aye
+h → hari h	consonant / other	7	1.64	harihari hatādaratayā gatā sā kupitā iva hari→harihari +hata · harihari hatādaratayā gatā sā kupitā iva hari→harihari +hata · harihari hatādaratayā gatā sā kupitā iva hari→harihari +hata · harihari hatādaratayā gatā sā kupitā iva hari→harihari +hata
+iḥ p → Ø p	visarga	5	1.17	chalayasi vikramaṇe balim adbhutavāmana padanakhanīrajanitajanapāvana vāmanaiḥ→adbhutavāmana +pada · āśleṣāt anu cumbanāt anu nakhollekhāt anu svāntaja prodbodhāt anu saṃbhramāt anu ratārambhāt anu prītayoḥ jaiḥ→svāntaja +prodbodhāt · manobhavānandana candanānila prasīda re dakṣiṇa muñca vāmatām anilaiḥ→candanānila +prasīda · bādhām vidhehi malayānila pañcabāṇa prāṇān gṛhāṇa na gṛham punaḥ āśrayiṣye pañcabāṇa+prāṇān
+iḥ v → Ø v	visarga	5	1.17	vimuktabādhām kuruṣe na rādhām upendra vajrāt api dāruṇaḥ asi upendra+vajrāt · tava kitava vidhāya amandakandarpacintām rasajaladhinimagnā dhyānalagnā mṛgākṣī kitava+vidhāya · kṣaṇam jagatprāṇa vidhāya mādhavaṃ puraḥ mama prāṇaharaḥ bhaviṣyasi jagatprāṇa+vidhāya · vihitakalaṅkakalam kamalānana viśramitaśramaśīkare ānanaiḥ→kamalānana +viśramita
+s t → ḥ t	consonant / other	4	0.94	itaḥ tataḥ tām anusṛtya rādhikām anaṅgabāṇavraṇakhinnamānasaḥ itaḥ+tataḥ · itaḥ tataḥ tām anusṛtya rādhikām anaṅgabāṇavraṇakhinnamānasaḥ tataḥ+tām · dhyāyan tvām aniśam japan api tava eva ālāpamantrāvalīm bhūyaḥ tvatkucakumbhanirbharaparīrambhāmṛtam vāñchati bhūyaḥ+tvad · nāsā abhyeti tilaprasūnapadavīm kundābhadanti priye prāyaḥ tvanmukhasevayā vijayate viśvam saḥ puṣpāyudhaḥ prāyaḥ+tvad
+iḥ t → Ø t	visarga	4	0.94	pratipadam idam api nigadati mādhava tava caraṇe patitā aham mādhava+tava · smarāturām daivatavaidyahṛdya tvadaṅgasaṅgāmṛtamātrasādhyām hṛdyaiḥ→daivatavaidyahṛdya +tvad · daśanavasanam aruṇam tava kṛṣṇa tanoti tanoḥ anurūpam kṛṣṇa+tanoti · mama adya prakhyātapraṇayabharabhaṅgena kitava tvadālokaḥ śokād api kim api lajjām janayati kitava+tvad
+i a → y a	vowel coalescence	3	0.7	ittham nandanideśataḥ calitayoḥ pratyadhvakuñjadrumam rādhāmādhavayoḥ jayanti yamunākūle rahaḥkelayaḥ prati+adhva→pratyadhvakuñjadrumam · sā mām drakṣyati vakṣyati smarakathām pratyaṅgam āliṅganaiḥ prītim yāsyati raṃsyate sakhi samāgatya iti cintākulaḥ prati+aṅgam→pratyaṅgam · dhūrtānām abhisārasatvarahṛdām viṣvaknikuñje sakhi dhvāntam nīlanicolacāru sudṛśām pratyaṅgam āliṅgati prati+aṅgam→pratyaṅgam
+d a → t a	consonant / other	3	0.7	kelikalākutukena ca kācit amum yamunājalakūle kācit+amum · kvacit api latākuñje guñjanmadhuvratamaṇḍalī mukharaśikhare līnā dīnā api uvāca rahaḥ sakhīm kvacit+api · vadasi yadi kiṃcit api dantarucikaumudī harati daratimiram atighoram kiṃcit+api
+s p → ḥ p	consonant / other	3	0.7	svacchandam vrajasundarībhiḥ abhitaḥ pratiaṅgam āliṅgitaḥ śṛṅgāraḥ sakhi mūrtimān iva madhau mugdhaḥ hariḥ krīḍati abhitaḥ+prati · dhyānalayena puraḥ parikalpya bhavantam atīva durāpam puraḥ+parikalpya · aṅgeṣu ābharaṇam karoti bahuśaḥ patre api saṃcāriṇi prāptam tvām pariśaṅkate vitanute śayyām ciram dhyāyati bahuśaḥ+patre
+s g → ḥ g	consonant / other	3	0.7	tat na vedmi kutaḥ gatā asi na tena te anunayāmi kutaḥ+gatā · dṛśyase purataḥ gatāgatam eva me vidadhāsi purataḥ+gatāgatam · ripuḥ iva sakhīsaṃvāsaḥ ayam śikhī iva himānilaḥ viṣam iva sudhāraśmiḥ yasmin dunoti manaḥgate manas+gate→manaḥgate
+e p → ava p	consonant / other	3	0.7	vratam iva tava parirambhasukhāya karoti kusumaśayanīyam tava+parirambha · racayati śayanam sacakitanayanam paśyati tava panthānam tava+panthānam · tava padapallavavairiparābhavam idam anubhavatu suveśam tava+pada
+s m → ḥ m	consonant / other	3	0.7	vikirati muhuḥ śvāsān āśāḥ puraḥ muhuḥ īkṣate praviśati muhuḥ kuñjam guñjan muhuḥ bahu tāmyati puraḥ+muhuḥ · kṣaṇam jagatprāṇa vidhāya mādhavaṃ puraḥ mama prāṇaharaḥ bhaviṣyasi puraḥ+mama · darśayati iva bahiḥ madanadrumanavakisalayaparivāram bahiḥ+madana
+e l → ava l	consonant / other	2	0.47	vasati daśanaśikhare dharaṇī tava lagnā śaśini kalaṅkakalā iva nimagnā tava+lagnā · nīlanalinābham api tanvi tava locanam dhārayati kokanadarūpam tava+locanam
+iḥ bh → Ø bh	visarga	2	0.47	dinamaṇimaṇḍalamaṇḍana bhavakhaṇḍana e maṇḍanaiḥ→dinamaṇimaṇḍalamaṇḍana +bhava · amalakamaladalalocana bhavamocana e locanaiḥ→amalakamaladalalocana +bhava
+r ā → ḥ ā	consonant / other	2	0.47	murārim ārāt upadarśayantī asau sakhī samakṣam punaḥ āha rādhikām punaḥ+āha · bādhām vidhehi malayānila pañcabāṇa prāṇān gṛhāṇa na gṛham punaḥ āśrayiṣye punaḥ+āśrayiṣye
+d u → t u	consonant / other	2	0.47	gopavadhūḥ anugāyati kācit udañcitapañcamarāgam kācit+udañcita · mārāṅke ratikelisaṃkularaṇārambhe tayā sāhasaprāyam kāntajayāya kiṃcit upari prārambhi yatsambhramāt kiṃcit+upari
+r a → ḥ a	consonant / other	2	0.47	yuvatiṣu valattṛṣṇe kṛṣṇe vihāriṇi mām vinā punaḥ api manaḥ vāmam kāmam karoti karomi kim punaḥ+api · muhuḥ avalokitamaṇḍanalīlā muhuḥ+avalokita
+m p → ṃ p	anusvāra / nasal	2	0.47	kim purā iva sasaṃbhramaṃ parirambhaṇam na dadāsi sambhramam→sasaṃbhramaṃ +parirambhaṇam · kṣaṇam jagatprāṇa vidhāya mādhavaṃ puraḥ mama prāṇaharaḥ bhaviṣyasi mādhavaṃ+puraḥ
+ḥ i → Ø i	visarga	2	0.47	malayajarajaḥ na idam bhasma prihārahite mayi prahara na harabhrāntyā anaṅga krudhā kimu dhāvasi na+idam · idānīm rādhāyāḥ priyatamasamālokasamaye papāta svedāmbuprasara iva harṣāśrunikaraḥ prasaraḥ→svedāmbuprasara +iva
+d m → n m	consonant / other	2	0.47	sā bimbādharamādhurī iti viṣayāsaṅge api cen mānasam tasyām lagnasamādhi hanta virahavyādhiḥ katham vardhate cen+mānasam · nāsā abhyeti tilaprasūnapadavīm kundābhadanti priye prāyaḥ tvanmukhasevayā vijayate viśvam saḥ puṣpāyudhaḥ tvad+mukha→tvanmukhasevayā
+r ś → ḥ ś	consonant / other	2	0.47	vikirati muhuḥ śvāsān āśāḥ puraḥ muhuḥ īkṣate praviśati muhuḥ kuñjam guñjan muhuḥ bahu tāmyati muhuḥ+śvāsān · racayati muhuḥ śayyām paryākulam muhuḥ īkṣate madanakadanaklāntaḥ kānte priyaḥ tava vartate muhuḥ+śayyām
+r ī → ḥ ī	consonant / other	2	0.47	vikirati muhuḥ śvāsān āśāḥ puraḥ muhuḥ īkṣate praviśati muhuḥ kuñjam guñjan muhuḥ bahu tāmyati muhuḥ+īkṣate · racayati muhuḥ śayyām paryākulam muhuḥ īkṣate madanakadanaklāntaḥ kānte priyaḥ tava vartate muhuḥ+īkṣate
+ā p → m p	consonant / other	2	0.47	aṅgeṣu ābharaṇam karoti bahuśaḥ patre api saṃcāriṇi prāptam tvām pariśaṅkate vitanute śayyām ciram dhyāyati tvām+pariśaṅkate · saḥ tvām paśyati vepate pulakayati ānandati svidyati pratyudgacchati mūrchati sthiratamaḥpuñje nikuñje priyaḥ tvām+paśyati
+a e → ai	vowel coalescence	2	0.47	iti ākalpavikalpatalparacanāsaṃkalpalīlāśatavyāsaktā api vinā tvayā varatanuḥ naiṣā niśām neṣyati na+eṣā→naiṣā · tat sarvam jayadevapaṇḍitakaveḥ kṛṣṇaikatānātmanaḥ sānandāḥ pariśodhayantu sudhiyaḥ śrīgītagovindataḥ kṛṣṇa+ekatāna→kṛṣṇaikatānātmanaḥ
+ā ā → ā	vowel coalescence	2	0.47	paśya adya priyasaṃgamāya dayitasya ākṛṣyamāṇam guṇair utkaṇṭhārtibharāt iva sphuṭat idam cetaḥ svayam yāsyāmi utkaṇṭhā+ārti→utkaṇṭhārtibharāt · sā mām drakṣyati vakṣyati smarakathām pratyaṅgam āliṅganaiḥ prītim yāsyati raṃsyate sakhi samāgatya iti cintākulaḥ cintā+ākulaḥ→cintākulaḥ
+iḥ c → Ø c	visarga	2	0.47	manobhavānandana candanānila prasīda re dakṣiṇa muñca vāmatām ānandanaiḥ→manobhavānandana +candana · kuru yadunandana candanaśiśiratareṇa kareṇa payodhare yadunandana+candana
+e s → ava s	consonant / other	2	0.47	vapuḥ anuharati tava smarasaṅgarakharanakharakṣatarekham tava+smara · vihasati yuvatisabhā tava sakalā tava+sakalā
+s i → ḥ i	consonant / other	2	0.47	bahiḥ iva malinataram tava kṛṣṇa manaḥ api bhaviṣyati nūnam bahiḥ+iva · tava idam paśyantyāḥ prasaradanurāgam bahiḥ iva priyāpādālaktachuritam aruṇachāyahṛdayam bahiḥ+iva
+e m → i m	consonant / other	2	0.47	vyathayati vṛthā maunam tanvi prapañcaya pañcamam taruṇi madhurālāpaiḥ tāpam vinodaya dṛṣṭibhiḥ taruṇi+madhura · śaśimukhi mukharaya maṇiraśanāguṇam anuguṇakaṇṭhaninādam mukhe→śaśimukhi +mukharaya
+s s → ḥ s	consonant / other	2	0.47	asya aṅgam tat alaṃkuru kṣaṇam iha bhrūkṣepalakṣmīlavakrīte dāse iva upasevitapadāmbhoje kutaḥ sambhramaḥ kutaḥ+sambhramaḥ · niṣpandā jaghanasthalī śithilā dorvalliḥ utkampitam vakṣaḥ mīlitam akṣi pauruṣarasaḥ strīṇām kutaḥ sidhyati kutaḥ+sidhyati
+c → aḥ c	consonant / other	1	0.23	ittham nandanideśataḥ calitayoḥ pratyadhvakuñjadrumam rādhāmādhavayoḥ jayanti yamunākūle rahaḥkelayaḥ nideśāt→nandanideśataḥ +calitayoḥ
+s k → ḥ k	consonant / other	1	0.23	ittham nandanideśataḥ calitayoḥ pratyadhvakuñjadrumam rādhāmādhavayoḥ jayanti yamunākūle rahaḥkelayaḥ rahas+kelayaḥ→rahaḥkelayaḥ
+aḥ a → o '	visarga	1	0.23	śṛṅgārottarasatprameyaracanaiḥ ācāryagovardhanaspardhī ko 'pi na viśrutaḥ śrutidharaḥ dhoyī kavikṣmāpatiḥ ko+'pi
+e t → ava t	consonant / other	1	0.23	kṣitiḥ ativipulatare tava tiṣṭhati pṛṣṭhe dharaṇidharaṇakiṇacakragariṣṭhe tava+tiṣṭhati
+ī dh → i dh	consonant / other	1	0.23	kṣitiḥ ativipulatare tava tiṣṭhati pṛṣṭhe dharaṇidharaṇakiṇacakragariṣṭhe dharaṇī+dharaṇa→dharaṇidharaṇakiṇacakragariṣṭhe
+iḥ d → Ø d	visarga	1	0.23	nindasi yajñavidheḥ ahaha śrutijātam sadayahṛdaya darśitapaśughātam hṛdayaiḥ→sadayahṛdaya +darśita
+e n → ubhyam n	consonant / other	1	0.23	paulastyam jayate halam kalayate kāruṇyam ātanvate mlecchān mūrchayate daśākṛtikṛte kṛṣṇāya tubhyam namaḥ tubhyam+namaḥ
+iḥ g → Ø g	visarga	1	0.23	madhumuranarakavināśana garuḍāsana e vināśanaiḥ→madhumuranarakavināśana +garuḍa
+t b → d b	consonant / other	1	0.23	amandam kandarpajvarajanitacintākulatayā valadbādhām rādhām sarasam idam ūce sahacarī valat+bādhām→valadbādhām
+t m → n m	consonant / other	1	0.23	kvacit api latākuñje guñjanmadhuvratamaṇḍalī mukharaśikhare līnā dīnā api uvāca rahaḥ sakhīm guñjat+madhuvrata→guñjanmadhuvratamaṇḍalī
+ā m → ī m	consonant / other	1	0.23	kvacit api latākuñje guñjanmadhuvratamaṇḍalī mukharaśikhare līnā dīnā api uvāca rahaḥ sakhīm maṇḍalā→guñjanmadhuvratamaṇḍalī +mukhara
+m ś → ṃ ś	anusvāra / nasal	1	0.23	viśadakadambatale militam kalikaluṣabhayaṃ śamayantam bhayam→kalikaluṣabhayaṃ +śamayantam
+ḥ a → ḥ '	visarga	1	0.23	durālokastokastabakanavakāśokalatikāvikāsaḥ kāsāropavanapavano 'pi vyathayati pavanaḥ+'pi
+ḥ a → pavano a	visarga	1	0.23	durālokastokastabakanavakāśokalatikāvikāsaḥ kāsāropavanapavano 'pi vyathayati pavanaḥ→kāsāropavanapavano +'pi
+t bh → d bh	consonant / other	1	0.23	api bhrāmyadbhṛṅgīraṇitaramaṇīyā na mukulaprasūtiḥ cūtānām sakhi śikhariṇī iyam sukhayati bhrāmyat+bhṛṅgī→bhrāmyadbhṛṅgīraṇitaramaṇīyā
+ḥ k → Ø k	visarga	1	0.23	kṛtānutāpaḥ sa kalindanandinītaṭāntakuñje viṣasāda mādhavaḥ sa+kalinda
+ak v → ā v	consonant / other	1	0.23	kim vane anusarāmi tām iha kim vṛthā vilapāmi vṛthā+vilapāmi
+o kh → vi kh	consonant / other	1	0.23	tanvi khinnam asūyayā hṛdayam tava ākalayāmi tanvi+khinnam
+e ā → ava ā	vowel coalescence	1	0.23	tanvi khinnam asūyayā hṛdayam tava ākalayāmi tava+ākalayāmi
+ama v → e v	consonant / other	1	0.23	dṛśyase purataḥ gatāgatam eva me vidadhāsi me+vidadhāsi
+e ī → ava ī	vowel coalescence	1	0.23	kṣamyatām aparam kadāpi tava īdṛśam na karomi tava+īdṛśam
+iḥ k → ī k	visarga	1	0.23	hṛdi bisalatāhāraḥ na ayam bhujaṅgamanāyakaḥ kuvalayadalaśreṇī kaṇṭhe na sā garaladyutiḥ śreṇiḥ→kuvalayadalaśreṇī +kaṇṭhe
+iḥ k → Ø k	visarga	1	0.23	malayajarajaḥ na idam bhasma prihārahite mayi prahara na harabhrāntyā anaṅga krudhā kimu dhāvasi anaṅga+krudhā
+iḥ ś → Ø ś	visarga	1	0.23	tasyāḥ eva mṛgīdṛśaḥ manasijapreṅkhatkaṭākṣāśuga śreṇījarjaritam manāk api manaḥ na adya api saṃdhukṣate āśugaiḥ→manasijapreṅkhatkaṭākṣāśuga +śreṇi
+i j → ī j	consonant / other	1	0.23	tasyāḥ eva mṛgīdṛśaḥ manasijapreṅkhatkaṭākṣāśuga śreṇījarjaritam manāk api manaḥ na adya api saṃdhukṣate śreṇi+jarjaritam→śreṇījarjaritam
+o t → vi t	consonant / other	1	0.23	moham tāvat ayam ca tanvi tanutām bimbādharaḥ rāgavān sadvṛttastanamaṇḍalaḥ tava katham prāṇaiḥ mama krīḍati tanvi+tanu
+t v → d v	consonant / other	1	0.23	moham tāvat ayam ca tanvi tanutām bimbādharaḥ rāgavān sadvṛttastanamaṇḍalaḥ tava katham prāṇaiḥ mama krīḍati sat+vṛtta→sadvṛttastanamaṇḍalaḥ
+s v → ḥ v	consonant / other	1	0.23	praṇamati makaram adhaḥ vinidhāya kare ca śaram navacūtam adhaḥ+vinidhāya
+e c → ava c	consonant / other	1	0.23	pratipadam idam api nigadati mādhava tava caraṇe patitā aham tava+caraṇe
+ā e → m e	vowel coalescence	1	0.23	kiṃtu klāntivaśena śītalatanum tvām ekam eva priyam dhyāyantī rahasi sthitā kathamapi kṣīṇā kṣaṇam prāṇiti tvām+ekam
+r j → ḥ j	consonant / other	1	0.23	iti madhuripuṇā sakhī niyuktā svayam idam etya punaḥ jagāda rādhām punaḥ+jagāda
+i _ → i rujam	consonant / other	1	0.23	manasi valitavirahe niśi niśi rujam upayāti niśi+rujam
+_ u → rujam u	consonant / other	1	0.23	manasi valitavirahe niśi niśi rujam upayāti rujam+upayāti
+e n → ava n	consonant / other	1	0.23	luṭhati dharaṇiśayane bahu vilapati tava nāma tava+nāma
+ī ś → i ś	consonant / other	1	0.23	luṭhati dharaṇiśayane bahu vilapati tava nāma dharaṇī+śayane→dharaṇiśayane
+r m → ḥ m	consonant / other	1	0.23	pūrvam yatra samam tvayā ratipateḥ āsāditāḥ siddhayaḥ tasmin eva nikuñjamanmathamahātīrthe punaḥ mādhavaḥ punaḥ+mādhavaḥ
+ā a → m a	vowel coalescence	1	0.23	dhyāyan tvām aniśam japan api tava eva ālāpamantrāvalīm bhūyaḥ tvatkucakumbhanirbharaparīrambhāmṛtam vāñchati tvām+aniśam
+e e → ava e	vowel coalescence	1	0.23	dhyāyan tvām aniśam japan api tava eva ālāpamantrāvalīm bhūyaḥ tvatkucakumbhanirbharaparīrambhāmṛtam vāñchati tava+eva
+d k → t k	consonant / other	1	0.23	dhyāyan tvām aniśam japan api tava eva ālāpamantrāvalīm bhūyaḥ tvatkucakumbhanirbharaparīrambhāmṛtam vāñchati tvad+kuca→tvatkucakumbhanirbharaparīrambhāmṛtam
+a ī → e	vowel coalescence	1	0.23	na kuru nitambini gamanavilambanam anusara tam hṛdayeśam hṛdaya+īśam→hṛdayeśam
+ī i → iḥ i	vowel coalescence	1	0.23	hariḥ abhimānī rajaniḥ idānīm iyam api yāti virāmam rajaniḥ+idānīm
+r k → ḥ k	consonant / other	1	0.23	vikirati muhuḥ śvāsān āśāḥ puraḥ muhuḥ īkṣate praviśati muhuḥ kuñjam guñjan muhuḥ bahu tāmyati muhuḥ+kuñjam
+r b → ḥ b	consonant / other	1	0.23	vikirati muhuḥ śvāsān āśāḥ puraḥ muhuḥ īkṣate praviśati muhuḥ kuñjam guñjan muhuḥ bahu tāmyati muhuḥ+bahu
+ā d → ī d	consonant / other	1	0.23	kokānām karuṇasvanena sadṛśī dīrghā madabhyarthanā tat mugdhe viphalam vilambanam asau ramyaḥ abhisārakṣaṇaḥ sadṛśī+dīrghā
+r s → ḥ s	consonant / other	1	0.23	sabhayacakitam vinyasyantīm dṛśam timire pathi pratitaru muhuḥ sthitvā mandam padāni vitanvatīm muhuḥ+sthitvā
+ā u → m u	vowel coalescence	1	0.23	kathamapi rahaḥ prāptām aṅgaiḥ anaṅgataraṃgibhiḥ sumukhi subhagaḥ paśyan saḥ tvām upaitu kṛtārthatām tvām+upaitu
+e s → i s	consonant / other	1	0.23	kathamapi rahaḥ prāptām aṅgaiḥ anaṅgataraṃgibhiḥ sumukhi subhagaḥ paśyan saḥ tvām upaitu kṛtārthatām mukhe→sumukhi +subhagaḥ
+d c → c c	consonant / other	1	0.23	taccaritam govinde manasijamande sakhī prāha tad+caritam→taccaritam
+e r → ava r	consonant / other	1	0.23	jīvati param iha tava ratikalayā tava+rati
+ā ś → a ś	consonant / other	1	0.23	madhuripuḥ aham iti bhāvanaśīlā bhāvanā+śīlā→bhāvanaśīlā
+ḥ d → r d	visarga	1	0.23	vṛndāvanāntaram adīpayat aṃśujālair diksundarīvadanacandanabinduḥ induḥ jālaiḥ→aṃśujālair +diś
+ś s → k s	consonant / other	1	0.23	vṛndāvanāntaram adīpayat aṃśujālair diksundarīvadanacandanabinduḥ induḥ diś+sundarī→diksundarīvadanacandanabinduḥ
+j a → k a	consonant / other	1	0.23	srak api hṛdi hanti mām ativiṣamaśilayā srak+api
+ḥ ā → Ø ā	visarga	1	0.23	kāntaḥ klāntamanāḥ manāk api pathi prasthātum eva akṣamaḥ saṃketīkṛtamañjuvañjulalatākuñje api yat na āgataḥ na+āgataḥ
+n a → d a	consonant / other	1	0.23	vicaladalakalalitānanacandrā vicalan+alaka→vicaladalakalalitānanacandrā
+s a → r a	consonant / other	1	0.23	bahirapavaraṇam yāvakabharaṇam janayati hṛdi yojite bahis+apavaraṇam→bahirapavaraṇam
+i _ → i sudṛśam	consonant / other	1	0.23	ramayati sudṛśam kāmapi subhṛśam khalahaladharasodare ramayati+sudṛśam
+_ k → sudṛśam k	consonant / other	1	0.23	ramayati sudṛśam kāmapi subhṛśam khalahaladharasodare sudṛśam+kām
+ḥ u → r u	visarga	1	0.23	paśya adya priyasaṃgamāya dayitasya ākṛṣyamāṇam guṇair utkaṇṭhārtibharāt iva sphuṭat idam cetaḥ svayam yāsyāmi guṇair+utkaṇṭhā
+ā _ → ā rujam	consonant / other	1	0.23	vahati na sā rujam atikaruṇena sā+rujam
+_ a → rujam a	consonant / other	1	0.23	vahati na sā rujam atikaruṇena rujam+ati
+r v → ḥ v	consonant / other	1	0.23	hṛdayam adaye tasmin evam punaḥ valate balāt kuvalayadṛśām vāmaḥ kāmaḥ nikāmaniraṅkuśaḥ punaḥ+valate
+t _ → t kuvalayadṛśām	consonant / other	1	0.23	hṛdayam adaye tasmin evam punaḥ valate balāt kuvalayadṛśām vāmaḥ kāmaḥ nikāmaniraṅkuśaḥ balāt+kuvalayadṛśām
+_ v → kuvalayadṛśām v	consonant / other	1	0.23	hṛdayam adaye tasmin evam punaḥ valate balāt kuvalayadṛśām vāmaḥ kāmaḥ nikāmaniraṅkuśaḥ kuvalayadṛśām+vāmaḥ
+ī j → i j	consonant / other	1	0.23	rajanijanitagurujāgararāgakaṣāyitam alasaniveśam rajanī+janita→rajanijanitagurujāgararāgakaṣāyitam
+a → aḥ a	vowel coalescence	1	0.23	śṛṇuta sudhāmadhuram vibudhāḥ vibudhālayataḥ api durāpam ālayāt→vibudhālayataḥ +api
+e i → ava i	vowel coalescence	1	0.23	tava idam paśyantyāḥ prasaradanurāgam bahiḥ iva priyāpādālaktachuritam aruṇachāyahṛdayam tava+idam
+e ś → ava ś	consonant / other	1	0.23	yuktam tat viparītakāriṇi tava śrīkhaṇḍacarcā viṣam śītāṃśuḥ tapanaḥ himam hutavahaḥ krīḍāmudaḥ yātanāḥ tava+śrīkhaṇḍa
+e gh → ava gh	consonant / other	1	0.23	rasatu raśanā api tava ghanajaghanamaṇḍale ghoṣayatu manmathanideśam tava+ghana
+e t → i t	consonant / other	1	0.23	caṇḍi tvam eva mudam añca na pañcabāṇacaṇḍālakāṇḍadalanāt asavaḥ prayāntu caṇḍi+tvam
+ak m → ā m	consonant / other	1	0.23	vyathayati vṛthā maunam tanvi prapañcaya pañcamam taruṇi madhurālāpaiḥ tāpam vinodaya dṛṣṭibhiḥ vṛthā+maunam
+e v → i v	consonant / other	1	0.23	sumukhi vimukhībhāvam tāvat vimuñca na muñca mām svayam atiśayasnigdhaḥ mugdhe priyaḥ aham upasthitaḥ mukhe→sumukhi +vimukhībhāvam
+e c → i c	consonant / other	1	0.23	bandhūkadyutibāndhavaḥ ayam adharaḥ snigdhaḥ madhūkachaviḥ gaṇḍaḥ caṇḍi cakāsti nīlanalinaśrīmocanam locanam caṇḍi+cakāsti
+e m → ava m	consonant / other	1	0.23	dṛśau tava madālase vadanam indusaṃdīpakam gatiḥ janamanoramā vidhutarambham ūrudvayam tava+mada
+a ū → o	vowel coalescence	1	0.23	preraṇam iva karabhoru karoti gatim pratimuñca vilambam karabha+ūro→karabhoru
+k → ru k	consonant / other	1	0.23	preraṇam iva karabhoru karoti gatim pratimuñca vilambam ūro→karabhoru +karoti
+e r → i r	consonant / other	1	0.23	caṇḍi rasitaraśanāravaḍiṇḍimam abhisara sarasam alajjam caṇḍi+rasita
+k → a k	consonant / other	1	0.23	akṣṇoḥ nikṣipadañjanam śravaṇayoḥ tāpicchagucchāvalīm mūrdhni śyāmasarojadāma kucayoḥ kastūrikāpatrakam dām→śyāmasarojadāma +kucayoḥ
+_ s → abhisārasatvarahṛdām s	consonant / other	1	0.23	dhūrtānām abhisārasatvarahṛdām viṣvaknikuñje sakhi dhvāntam nīlanicolacāru sudṛśām pratyaṅgam āliṅgati _→abhisārasatvarahṛdām +sakhi
+s r → ḥ r	consonant / other	1	0.23	kāśmīragauravapuṣām abhisārikāṇām ābaddharekham abhitaḥ rucimañjarībhiḥ abhitaḥ+ruci
+_ a → kāśmīragauravapuṣām a	consonant / other	1	0.23	kāśmīragauravapuṣām abhisārikāṇām ābaddharekham abhitaḥ rucimañjarībhiḥ _→kāśmīragauravapuṣām +abhisārikāṇām
+d p → t p	consonant / other	1	0.23	etat tamāladalanīlatamam tamisram tatpremahemanikaṣopalatām tanoti tad+prema→tatpremahemanikaṣopalatām
+ā c → m c	consonant / other	1	0.23	tvām cittena ciram vahan ayam atiśrāntaḥ bhṛśam tāpitaḥ kandarpeṇa tu pātum icchati sudhāsaṃbādhabimbādharam tvām+cittena
+a _ → a hṛdi	consonant / other	1	0.23	praṇamata hṛdi suciram vinidhāya harim sukṛtodayasāram praṇamata+hṛdi
+_ s → hṛdi s	consonant / other	1	0.23	praṇamata hṛdi suciram vinidhāya harim sukṛtodayasāram hṛdi+su
+s a → ḥ a	consonant / other	1	0.23	bhajantyāḥ talpāntam kṛtakapaṭakaṇḍūtipihitasmitam yāte gehāt bahiḥ avahitālīparijane bahiḥ+avahita
+r n → ḥ n	consonant / other	1	0.23	sarasamanasam dṛṣṭvā rādhām muhuḥ navapallavaprasavaśayane nikṣiptākṣīm uvāca hariḥ priyām muhuḥ+nava
+s v → r v	consonant / other	1	0.23	niṣpandā jaghanasthalī śithilā dorvalliḥ utkampitam vakṣaḥ mīlitam akṣi pauruṣarasaḥ strīṇām kutaḥ sidhyati dos+vallī→dorvalliḥ
+ī u → iḥ u	vowel coalescence	1	0.23	niṣpandā jaghanasthalī śithilā dorvalliḥ utkampitam vakṣaḥ mīlitam akṣi pauruṣarasaḥ strīṇām kutaḥ sidhyati vallī→dorvalliḥ +utkampitam
+iḥ l → Ø l	visarga	1	0.23	tvadadharacumbanalambitakajjalam ujjvalaya priya locane priya+locane
+iḥ n → Ø n	visarga	1	0.23	manasijapāśavilāsadhare śubhaveśa niveśaya kuṇḍale veśaiḥ→śubhaveśa +niveśaya
+a bh → ī bh	consonant / other	1	0.23	racaya kucayoḥ patram citram kuruṣva kapolayoḥ ghaṭaya jaghane kāñcīm añca srajā kavarībharam kavara+bharam→kavarībharam
