@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.47.0] - 2026-07-14
+
 ### Added
 - **Sandhi programme hub doc** — new
   [SANDHI_PROGRAMME.md](https://github.com/gasyoun/kosha/blob/main/SANDHI_PROGRAMME.md)
