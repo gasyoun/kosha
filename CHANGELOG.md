@@ -14,6 +14,17 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H902 (sandhi Phase 4, surface 3/4): per-class reference pages.** New
+  [`scripts/build_sandhi_reference.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_sandhi_reference.py)
+  emits a corpus-wide look-up reference — every recurring sandhi grouped by class
+  (anusvāra 34.7 % · visarga 32.1 % · vowel coalescence 19.9 % · consonant 13.3 %
+  of all sandhi), each ranked by frequency with an attested example, at
+  [`reading/sandhi/reference/`](https://github.com/gasyoun/kosha/blob/main/reading/sandhi/reference/index.html)
+  (theme-aware, self-contained; top 50 per class, the 3,794-rule consonant tail
+  summarised). A look-up companion to the graded curriculum. Credit: Dr. Mārcis
+  Gasūns. (Remaining Phase-4 surfaces: reader hover, drills/flashcards.)
+
 ## [0.45.0] - 2026-07-14
 
 ### Added
