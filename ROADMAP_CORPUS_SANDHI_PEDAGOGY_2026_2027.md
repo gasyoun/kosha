@@ -1,4 +1,4 @@
-_Created: 13-07-2026 · Last updated: 14-07-2026 (Phase 2b broadened corpus sweep, H901; Method B vidyut-cheda bake-off, H903)_
+_Created: 13-07-2026 · Last updated: 14-07-2026 (Phase 2b broadened corpus sweep, H901; Method B vidyut-cheda bake-off, H903; MG difficulty-metric ruling recorded, §5)_
 
 # Corpus-wide sandhi extraction for Sanskrit pedagogy — roadmap (2026–2027)
 
@@ -214,8 +214,17 @@ before ingest. Lower priority than a complete, gold-quality DCS layer.
 | **Drills / flashcards** | junction pairs (split ⇄ join) + distractors | generate Anki/quiz items; reuse csl-guides `sandhi-quiz.json` shape |
 | **Reference tables** | merged tsv per rule-class | corpus-wide `reading/sandhi/` pages per class (visarga/anusvāra/vowel/consonant), ranked, with attested examples |
 
-Difficulty metric is the one genuinely new pedagogy artifact (a human should
-confirm its weighting before it drives curriculum order).
+Difficulty metric is the one genuinely new pedagogy artifact.
+
+**MG ruling (14-07-2026): confirmed — proceed with the frequency × class ×
+environment-count formula.** One condition: **the actual weighting parameters
+(the per-class/per-environment weights, not just the formula shape) must be
+exposed in a README/config alongside the curriculum builder, not hard-coded
+invisibly inside the script** — so the weighting can be fine-tuned later
+without a full re-engineering session. Whoever implements H902 should ship a
+small, human-readable weights table (e.g. `data/sandhi/difficulty_weights.md`
+or a `--weights <file>` JSON alongside the builder script) that the curriculum
+generator reads, not constants buried in Python.
 
 ---
 
