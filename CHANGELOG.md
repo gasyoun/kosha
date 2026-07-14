@@ -14,6 +14,21 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H908 (sandhi Method C): DharmaMitra neural segmenter — the A/B/C bake-off's
+  clear winner.** `method_C` in
+  [`scripts/compare_sandhi_methods.py`](https://github.com/gasyoun/kosha/blob/main/scripts/compare_sandhi_methods.py)
+  segments each DCS sentence via the DharmaMitra `unsandhied` API
+  ([`dharmamitra.org/api/tagging/`](https://dharmamitra.org/api/tagging/), contract
+  reused from `csl-atlas/scripts/lib/dharmamitra_infer.py`) and feeds the split
+  through the same induce tail as A/B — so only the splitter differs.
+  `--allow-network`; responses cached under `data/sandhi/_cache/` (per-batch
+  retry + incremental writes). **Method C ≫ Method B** on the fair (mode-1-only)
+  comparison to DCS gold: F1 **0.795 vs 0.282** (Amaruśataka) and **0.704 vs
+  0.224** (Hitopadeśa), with C precision 0.90–0.97 — the neural splitter's word
+  boundaries match DCS far more often than vidyut-cheda's. **Verdict:** use
+  method C as the splitter for the GRETIL path (Phase 3) where no DCS gold exists.
+
 ## [0.43.0] - 2026-07-14
 
 ### Added

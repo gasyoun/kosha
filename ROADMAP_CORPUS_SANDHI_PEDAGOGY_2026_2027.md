@@ -1,4 +1,4 @@
-_Created: 13-07-2026 · Last updated: 14-07-2026 (Phase 2b broadened corpus sweep, H901; Method B vidyut-cheda bake-off, H903; MG difficulty-metric ruling recorded, §5)_
+_Created: 13-07-2026 · Last updated: 14-07-2026 (Phase 2b broadened corpus sweep, H901; Method B vidyut-cheda bake-off, H903; MG difficulty-metric ruling recorded, §5; Method C DharmaMitra neural bake-off, H908 — C ≫ B)_
 
 # Corpus-wide sandhi extraction for Sanskrit pedagogy — roadmap (2026–2027)
 
@@ -114,9 +114,25 @@ a bug in Phase 0 — it is the discovery Phase 0 was built to make.
    and vidyut disagree on where a "word" ends. `no_gold_total`/`no_gold_recovered`
    counters are wired for item 4 below but never fired on these 2 texts (see
    there — DCS's `Unsandhied` coverage looks complete on the sample checked).
-3. **Method C — neural (DharmaMitra).** API-only ([`external_tools.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/external_tools.json) row
-   `dharmamitra`); gate behind `--allow-network`, cache responses. **Not started**
-   — explicitly deferred by H903 ("(Later) method C").
+3. **Method C — neural (DharmaMitra).** ✅ DONE (H908). Segments via the
+   DharmaMitra `unsandhied` API ([`https://dharmamitra.org/api/tagging/`](https://dharmamitra.org/api/tagging/),
+   contract reused from `csl-atlas/scripts/lib/dharmamitra_infer.py`), same
+   induce tail as A/B; `--allow-network`, responses cached under
+   `data/sandhi/_cache/` (per-batch retry + incremental writes — the API drops
+   TLS under load). **C decisively beats B** — the neural splitter's word
+   boundaries match DCS far more often (count-mismatch skips ~1/4 of B's):
+
+   | Text | B vs A (mode-1, fair) F1 | **C vs A (mode-1, fair) F1** | C precision |
+   |---|---|---|---|
+   | Amaruśataka | 0.282 | **0.795** | 0.970 |
+   | Hitopadeśa | 0.224 | **0.704** | 0.903 |
+
+   C is ~3× B's F1 with near-perfect precision (0.90–0.97) — when DharmaMitra
+   emits a rule it is almost always A's rule; its gap is recall (it still
+   over-segments compounds, so some sentences skip on count mismatch). **Verdict
+   for the GRETIL path (Phase 3): use method C, not B, as the splitter where no
+   DCS gold exists.** Method D (offline byt5 model, `--source local`) is a future
+   option if API dependence becomes a problem.
 4. **A/B/C report — "27 % no gold split" claim NOT reproduced.** One table per
    pilot: coverage, distinct-rule agreement, where B/C recover junctions A's
    gold split lacks. H903 measured this directly (`no_gold_total`/
