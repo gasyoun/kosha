@@ -252,8 +252,16 @@ environment-generality`) with the weights in
 teaching page [`reading/sandhi/curriculum/`](https://github.com/gasyoun/kosha/blob/main/reading/sandhi/curriculum/index.html).
 **Headline: learn 23 rules → read 50 % of all corpus sandhi; 79 → 80 %; 132 →
 90 %.** Easy high-frequency rules first (the mechanical `m → ṃ` anusvāra family +
-`a a → ā` lead; visarga later per the class weights). Remaining Phase-4 surfaces:
-reader hover, drills/flashcards, per-class reference pages.
+`a a → ā` lead; visarga later per the class weights).
+
+**Per-class reference pages ✅ SHIPPED (H902, surface 3 of 4)** —
+[`scripts/build_sandhi_reference.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_sandhi_reference.py)
+emits a look-up companion to the curriculum: every corpus rule grouped by class
+(anusvāra 34.7 % · visarga 32.1 % · vowel 19.9 % · consonant 13.3 % of all
+sandhi), each class ranked by frequency with an attested example, at
+[`reading/sandhi/reference/`](https://github.com/gasyoun/kosha/blob/main/reading/sandhi/reference/index.html)
+(top 50 per class; the 3,794-rule consonant tail is summarised, not dumped).
+**Remaining Phase-4 surfaces: reader hover, drills/flashcards.**
 
 ---
 
