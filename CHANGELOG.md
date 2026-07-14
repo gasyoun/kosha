@@ -14,6 +14,24 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H945: kosha pedagogy engine-room build plan (`/ask`).** A layered build plan
+  generalising the shipped corpus-sandhi programme's six-stage pattern to the rest of
+  kosha's pedagogy data — the *engine-room* half of the org-wide digital-Sanskrit-pedagogy
+  field defined in
+  [SanskritGrammar `DIGITAL_SANSKRIT_PEDAGOGY_FIELD_2026.md`](https://github.com/gasyoun/SanskritGrammar/blob/main/DIGITAL_SANSKRIT_PEDAGOGY_FIELD_2026.md)
+  (H912). Cover + decisions
+  [`PLAN_KOSHA_PEDAGOGY_ENGINE_2026_2027.md`](https://github.com/gasyoun/kosha/blob/main/PLAN_KOSHA_PEDAGOGY_ENGINE_2026_2027.md)
+  (+ `.meta.md`); layers
+  [roadmap](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP_KOSHA_PEDAGOGY_SURFACES_2026_2027.md) ·
+  [architecture](https://github.com/gasyoun/kosha/blob/main/docs/ARCHITECTURE_KOSHA_PEDAGOGY_SURFACES.md) ·
+  [implementation](https://github.com/gasyoun/kosha/blob/main/docs/IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE1.md) ·
+  [verification](https://github.com/gasyoun/kosha/blob/main/docs/VERIFICATION_KOSHA_PEDAGOGY_SURFACES.md).
+  Four build waves (morphology drills · vocabulary curriculum · samāsa trainer ·
+  graded-reader + difficulty scorer), two reuse/integrate (roots → WhitneyRoots, metre →
+  SanskritKaraoke), one agenda (audio); wave handoffs H946–H951 minted. No papers this
+  cycle — surfaces + measurement instrumentation only.
+
 ## [0.48.0] - 2026-07-14
 
 ### Added
