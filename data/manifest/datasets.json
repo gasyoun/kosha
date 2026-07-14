@@ -1024,6 +1024,44 @@
       "notes": "H902 roadmap Phase 4 (surface 2/4: graded curriculum). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Derived from the corpus-sandhi dataset; weighting is human-tunable per the MG ruling."
     },
     {
+      "id": "vocab-curriculum",
+      "title": "Frequency-graded vocabulary curriculum — ordered teaching syllabus",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/frequency/vocab_curriculum.tsv",
+      "format": "tsv",
+      "rows": 6667,
+      "size_bytes": 1122775,
+      "keying": "one row per core-vocabulary lemma (6,667 of 7,120 Leonchenko core_rank lemmas; 453 dropped for having no committed dictionary card), ordered by core_rank: rank, lemma_slp1, deva, iast, gloss, core_rank, coverage_pct, cumulative_pct, lesson (134 lessons of 50), card_href. cumulative_pct is computed here (running sum of the source coverage_pct marginal weight), not copied from the source feed. Learn 284 lemmas -> read 30% of the core-vocabulary corpus mass; 1122 -> 50%; 4978 -> 70%. Teaching page reading/vocabulary/curriculum/index.html.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/frequency/vocab_curriculum.tsv",
+      "builder": "scripts/build_vocab_curriculum.py over lemma_frequency.tsv (core_rank/coverage_pct) + docs/cards/",
+      "consumers": [
+        "reading/vocabulary/curriculum/ page",
+        "vocab-drills dataset"
+      ],
+      "notes": "H947 Wave-1 pedagogy build (W1b). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Applies the sandhi-curriculum method to words; gloss is the lemma's own dictionary card teaser (MW preferred), not DCS's lemma.meanings (only ~23% coverage on this lemma set, rejected as primary source)."
+    },
+    {
+      "id": "vocab-drills",
+      "title": "Vocabulary drills — recognition/recall practice items",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/frequency/vocab_drills.json",
+      "format": "json",
+      "rows": 13334,
+      "size_bytes": 7336024,
+      "keying": "one item per row: aspect=vocabulary, type (recognition: word->gloss / recall: gloss->word), prompt, answer, distractors (same-lesson-band lemmas), rank (core_rank), evidence (docs/cards/<token>.json), source_dataset=vocab-curriculum (ARCHITECTURE shared item schema). 2 items per curriculum lemma (6,667 x 2 = 13,334). Also shipped as data/frequency/vocab_curriculum.apkg (Anki deck, genanki, one Basic note per lemma: front=deva/iast, back=gloss).",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/frequency/vocab_drills.json",
+      "builder": "scripts/build_vocab_curriculum.py over vocab-curriculum",
+      "consumers": [
+        "vocab_curriculum.apkg (Anki deck)",
+        "Systema/csl-guides quiz component (future, via the shared item schema)"
+      ],
+      "notes": "H947 Wave-1 pedagogy build (W1b). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. No SRS scheduling here (deck items only, per the fence in H947 — Systema \"Saraswati\" owns scheduling)."
+    },
+    {
       "id": "sandhi-drills",
       "title": "Sandhi drills — join/split/identify practice items",
       "tier": "public",

@@ -14,6 +14,26 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H947: frequency-graded vocabulary curriculum (Wave 1, W1b).** Applies the shipped
+  sandhi-curriculum method to words — "learn the N most frequent lemmas → read X% of the
+  corpus" — over the Leonchenko core-vocabulary layer already carried by
+  [`lemma_frequency.tsv`](https://github.com/gasyoun/kosha/blob/main/data/frequency/lemma_frequency.tsv)
+  (`core_rank`/`coverage_pct`). New
+  [`scripts/build_vocab_curriculum.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_vocab_curriculum.py)
+  emits [`data/frequency/vocab_curriculum.tsv`](https://github.com/gasyoun/kosha/blob/main/data/frequency/vocab_curriculum.tsv)
+  (6,667 lemmas over 134 lessons; 453 core lemmas dropped for having no committed
+  dictionary card — no dead `/w/` links), `vocab_drills.json` (13,334 recognition/recall
+  items, ARCHITECTURE shared item schema), `vocab_curriculum.apkg` (Anki deck), and
+  [`reading/vocabulary/curriculum/index.html`](https://github.com/gasyoun/kosha/blob/main/reading/vocabulary/curriculum/index.html).
+  Coverage headline: 284 lemmas → 30%, 1,122 → 50%, 4,978 → 70% of the core-vocabulary
+  corpus mass. `datasets.json` gains `vocab-curriculum` + `vocab-drills` rows;
+  `tests/test_vocab_curriculum.py` (8 tests, all green) locks monotone coverage, every
+  lemma resolving to a real card, and lesson sizes. Gotcha worth flagging: the source
+  feed's `coverage_pct` is a per-lemma **marginal** weight, not already-cumulative
+  (`data/frequency/README.md`'s own caveat) — the cumulative column here is computed by
+  this script, not copied from the source.
+
 ## [0.49.0] - 2026-07-14
 
 ### Added
