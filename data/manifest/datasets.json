@@ -1063,6 +1063,25 @@
       "notes": "H900 roadmap Phase 2, broadened by H901 Phase 2b (14-07-2026). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS). Texts swept (difficulty order): Hitopadesa, Vetalapancavimsatika, Sukasaptati, Amarusataka, Astavakragita, Gitagovinda, Kathasaritsagara, Buddhacarita, Kumarasambhava, Kiratarjuniya, Meghaduta, Dasakumaracarita, Bharatamanjari, Satakatraya, Bhallatasataka, Ramayana, Mahabharata (full -- replaces H900's Bhagavadgita-only glob; the Gita's 18 chapters are already inside the full-Mahabharata sweep, so the narrow row was retired rather than double-counted). Per-text tables also shipped as data/sandhi/<id>_sandhi.tsv. H901 finding: the handoff's scale worry for the full Mahabharata (~2,000 files, 'gate/sample by parvan') did not materialize -- measured at ~10 files/s, the full corpus ran directly in a few minutes, no sampling gate needed. Top-N-for-80% moved 69->83 rules (slightly above the handoff's ~60-80 expectation, plausibly kavya's more varied sandhi spreading the frequency mass -- reported, not smoothed over). Extends the Gita-only gita-sandhi dataset corpus-wide."
     },
     {
+      "id": "roots-frequency-curriculum",
+      "title": "Roots frequency + attestation curriculum (W2b)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/roots/roots_frequency.tsv",
+      "format": "tsv",
+      "rows": 629,
+      "size_bytes": 119296,
+      "keying": "one row per unique DCS lemma (629, deduped from 717 Whitney-hub roots with corpus attestation -- 74 homonym-shared lemmas collapsed to avoid triple-counting the same corpus mass): rank, root_iast (one or more Whitney root strings joined by ' / ' when homonym-shared), dcs_lemma, grammar_class, dcs_status, attested_count, coverage_pct (cumulative), top_attested_forms.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/roots/roots_frequency.tsv, data/roots/roots_frequency.json",
+      "builder": "scripts/build_roots_frequency.py -- REUSE/INTEGRATE, not a re-derivation: reads WhitneyRoots/src/dcs_freq.json (the canonical MW<->Whitney<->DCS triangulation built by WhitneyRoots/scripts/root_triangulation.py from the canonical dcs-full-sqlite ingest) and adds the graded-curriculum framing (rank + cumulative coverage_pct) that source lacks.",
+      "consumers": [
+        "WhitneyRoots (a 'learn roots in this order' layer to import instead of re-deriving its own ranking)",
+        "Systema (future roots drill ordering)"
+      ],
+      "notes": "H950 roadmap Wave 2 W2b. Stops at stage 6 (data + export) per the pedagogy-surface architecture's integration-surface rule -- no kosha roots UI shipped; WhitneyRoots owns the 935-root explorer. Coverage headline: learn top 25 roots -> 58.7% of verb-token occurrences; top 50 -> 71.7%; top 100 -> 85.4%; top 200 -> 95.3% (549,549 total attested-lemma tokens, DCS 2026 CoNLL-U snapshot). 181 Whitney-hub roots have no DCS attestation at all and are excluded (grammarian/lexical roots, not corpus-absent by data error). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY 4.0 (Oliver Hellwig / DCS)."
+    },
+    {
       "id": "gita-etymology",
       "title": "Bhagavadgita etymology notes",
       "tier": "public",
