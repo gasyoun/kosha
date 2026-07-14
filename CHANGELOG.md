@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.42.0] - 2026-07-14
+
 ### Added
 - **H900 (sandhi Phase 2): corpus-wide sandhi sweep + merged frequency-ranked table.**
   New [`scripts/build_corpus_sandhi.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_corpus_sandhi.py)
