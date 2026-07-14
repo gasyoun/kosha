@@ -1,0 +1,15 @@
+{
+  "_doc": "Sandhi graded-curriculum weights. MG ruling 14-07-2026: order rules by frequency × class × environment-generality; the WEIGHTS (not just the formula) must live here, visibly tunable, NOT hard-coded in Python. build_sandhi_curriculum.py reads this file (override with --weights <file>). Edit and re-run the builder to re-tune the syllabus.",
+  "priority_formula": "priority(rule) = global_count**frequency_exponent * class_weight[category] * (1 + environment_generality_weight * ln(1 + family_size)); rules are taught in DESCENDING priority (highest-value, easiest first). family_size = number of corpus rules sharing the same left-input→left-output transformation (a large family = a general principle, e.g. 'm → ṃ before any consonant').",
+  "frequency_exponent": 1.0,
+  "class_weight": {
+    "_doc": "higher = easier = taught earlier among similar-frequency rules. anusvāra (m→ṃ) is mechanical; vowel coalescence is regular; visarga has more conditioned variants; consonant assimilation is hardest.",
+    "anusvāra / nasal": 1.0,
+    "vowel coalescence": 0.9,
+    "visarga": 0.75,
+    "consonant / other": 0.6
+  },
+  "environment_generality_weight": 0.15,
+  "lesson_coverage_step": 0.1,
+  "min_count": 3
+}

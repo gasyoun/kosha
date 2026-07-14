@@ -14,6 +14,23 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H902 (sandhi Phase 4, surface 2/4): graded curriculum.** New
+  [`scripts/build_sandhi_curriculum.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_sandhi_curriculum.py)
+  turns the corpus sandhi table into an ordered teaching syllabus — "learn these
+  N junctions to read X % of all sandhi." Rules are ordered by the MG-ruled
+  priority (`frequency × class × environment-generality`, 14-07-2026), with the
+  weights in a tunable, visible config
+  [`data/sandhi/difficulty_weights.json`](https://github.com/gasyoun/kosha/blob/main/data/sandhi/difficulty_weights.json)
+  (per the ruling — not hard-coded; edit + re-run to re-tune). Outputs
+  `data/sandhi/sandhi_curriculum.tsv` (2,181 rules, 10 lessons) + a theme-aware
+  page [`reading/sandhi/curriculum/`](https://github.com/gasyoun/kosha/blob/main/reading/sandhi/curriculum/index.html).
+  **Headline: 23 rules → 50 %, 79 → 80 %, 132 → 90 %** of all corpus sandhi;
+  easy high-frequency rules first. New `sandhi-curriculum` dataset registered in
+  [`datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json).
+  Credit: Dr. Mārcis Gasūns. (Remaining Phase-4 surfaces: reader hover, drills,
+  reference pages.)
+
 ## [0.44.0] - 2026-07-14
 
 ### Added
