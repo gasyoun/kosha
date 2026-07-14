@@ -14,6 +14,14 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **Sandhi programme hub doc** — new
+  [SANDHI_PROGRAMME.md](https://github.com/gasyoun/kosha/blob/main/SANDHI_PROGRAMME.md)
+  consolidates the whole sandhi programme (v0.36→v0.46) into one "what exists &
+  how to use it" page: the pipeline, headline results (inducer 96.3 % Gītā-gold,
+  17-text corpus, A/B/C bake-off verdict method C ≫ B), every dataset/script/page,
+  rebuild steps, and cross-repo consumers. Linked from the README Document map.
+
 ## [0.46.0] - 2026-07-14
 
 ### Added
