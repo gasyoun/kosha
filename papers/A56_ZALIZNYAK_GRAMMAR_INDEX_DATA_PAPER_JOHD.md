@@ -127,7 +127,7 @@ attribution.
 ## Provenance
 
 Drafted 11-07-2026 by Fable 5 (`claude-fable-5`) under handoff
-[H665](https://github.com/gasyoun/Uprava/blob/main/handoffs/H665-Fable_kosha_dataset-data-statements_11.07.26.md)
+[H665](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H665-Fable_kosha_dataset-data-statements_11.07.26.md)
 from the dataset's data statement. Registered as A56 in
 [ARTICLES.md](https://github.com/gasyoun/Uprava/blob/main/ARTICLES.md).
 

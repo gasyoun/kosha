@@ -24,7 +24,7 @@ via the `data_statement` field.
 
 ## Out of scope this pass (queued backlog)
 
-Per [H665](https://github.com/gasyoun/Uprava/blob/main/handoffs/H665-Fable_kosha_dataset-data-statements_11.07.26.md),
+Per [H665](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H665-Fable_kosha_dataset-data-statements_11.07.26.md),
 statements were authored for the **kosha-served public tier** only. Queued for
 a later pass, each citing this backlog as owner until a handoff is minted:
 
