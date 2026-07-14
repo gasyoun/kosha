@@ -14,6 +14,25 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H903 (sandhi Phase 1, method B): vidyut-cheda bake-off vs gold DCS splits.**
+  [`scripts/compare_sandhi_methods.py`](https://github.com/gasyoun/kosha/blob/main/scripts/compare_sandhi_methods.py)
+  `method_B` binds the offline `vidyut-cheda` segmenter (`Chedaka` over the
+  `vidyut-data/` root, not the `.msgpack` file directly), transliterates
+  IAST↔SLP1, and induces sandhi rules from cheda's predicted pre-sandhi splits
+  through the SAME `induce_rule()` gold uses — isolating splitter quality from
+  notation. Scope: mode-1 (plain word-word) junctions only, since
+  `Chedaka.run()` returns no character offsets to re-anchor a predicted
+  sub-word split within an MWT span. Scored on 2 texts: Hitopadeśa (500 rules
+  / 1,359 junctions scored, mode-1-only F1=0.224 vs gold's 437-rule slice) and
+  Amaruśataka (61 rules / 73 junctions, F1=0.282). Also added
+  `method_A_mode1_strict` (fair gold baseline matching B's scope) and
+  no-gold-recovery instrumentation — which found the roadmap's planning-stage
+  "~27 % no gold split" estimate does NOT reproduce on DCS (0 % on both texts
+  + a 15-dir corpus sample); see
+  [`ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md`](https://github.com/gasyoun/kosha/blob/main/ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md)
+  §2 for the full writeup. Method C (DharmaMitra) remains explicitly deferred.
+
 ## [0.42.0] - 2026-07-14
 
 ### Added

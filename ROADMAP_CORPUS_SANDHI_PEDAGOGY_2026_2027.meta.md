@@ -1,4 +1,4 @@
-_Created: 13-07-2026 · Last updated: 13-07-2026_
+_Created: 13-07-2026 · Last updated: 14-07-2026_
 
 # Metadoc — Corpus-wide sandhi extraction roadmap
 
@@ -26,7 +26,10 @@ curriculum difficulty metric and GRETIL license scope.
    prose-only in §5).
 2. Fill concrete DCS text names for each Phase-2 tier (currently exemplary, not
    exhaustive) — derive from `dcs-conllu/files/` + a difficulty proxy.
-3. Add expected `no-gold` recovery numbers once method B is measured.
+3. ✅ DONE (H903) — `no-gold` recovery numbers measured: 0 % no-gold mode-1
+   junctions found on Hitopadeśa/Amaruśataka + a 15-dir DCS sample; the
+   roadmap's ~27 % planning estimate was NOT reproduced (§2 item 4). Remaining:
+   method C (DharmaMitra) still unstarted, explicitly deferred by H903.
 4. Cross-link the Phase-4 surfaces to their owning repos' issues once opened.
 
 ## Limitations / known gaps
@@ -49,5 +52,6 @@ curriculum difficulty metric and GRETIL license scope.
 | Date | Model | Change |
 |---|---|---|
 | 13-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | Created with Phase 0 shipped + proven; Phases 1–4 planned. |
+| 14-07-2026 | Sonnet 5 `claude-sonnet-5` | H903 — method B (vidyut-cheda) implemented + scored on 2 texts; "27 % no gold split" risk claim measured and not reproduced. |
 
 _Dr. Mārcis Gasūns_

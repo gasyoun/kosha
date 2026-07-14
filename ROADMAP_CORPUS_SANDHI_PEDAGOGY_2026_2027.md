@@ -1,4 +1,4 @@
-_Created: 13-07-2026 · Last updated: 14-07-2026 (Phase 2 first corpus sweep shipped, H900)_
+_Created: 13-07-2026 · Last updated: 14-07-2026 (Method B vidyut-cheda bake-off shipped, H903)_
 
 # Corpus-wide sandhi extraction for Sanskrit pedagogy — roadmap (2026–2027)
 
@@ -89,13 +89,47 @@ a bug in Phase 0 — it is the discovery Phase 0 was built to make.
      long tail of low-frequency rules a small pilot under-attests (truer test =
      running on the Gītā text itself, item 5) plus a few malformed Gītā-table
      entries (stray Cyrillic glyphs).
-2. **Method B — Vidyut cheda.** Reconstruct the raw line from FORM, segment with
-   `vidyut-data/cheda/model.msgpack`, run the *same* inducer → isolates splitter
-   quality. Score against A on the same text (junction-level agreement + rule P/R/F1).
+2. **Method B — Vidyut cheda.** ✅ DONE (H903). `Chedaka(vidyut-data/)` bound
+   (root dir, not the `.msgpack` directly); input transliterated IAST→SLP1,
+   predicted tokens SLP1→IAST + pausa-normalized (trailing underlying `-s`/`-r`
+   → `ḥ`, matching DCS's own `Unsandhied` convention). `Chedaka.run()` returns
+   only `text`/`lemma`/`data` — **no character offsets** — so a predicted token
+   can't be re-anchored to an arbitrary surface span; scope is therefore mode-1
+   (plain word-word) junctions only, consumed `n`-at-a-time per DCS word/MWT
+   unit and the whole sentence skipped on a count mismatch (cheda routinely
+   over-segments a DCS "word" into compound parts DCS keeps as one token, e.g.
+   `hitopadeśaḥ`→`hita`+`upadeśaḥ`, `dhūrjaṭeḥ`→`dhūs`+`jaṭ`+`es` — a genuine
+   splitter-granularity mismatch, not a bug). Results on 2 pedagogical texts
+   (`scripts/compare_sandhi_methods.py --text <name> --methods AB`):
+
+   | Text | A rules/junctions | B rules/junctions scored | B vs A (full) F1 | B vs A (mode-1-only, fair) F1 |
+   |---|---|---|---|---|
+   | Hitopadeśa | 615 / 8,713 | 500 / 1,359 | 0.188 | 0.224 |
+   | Amaruśataka | 216 / 989 | 61 / 73 | 0.166 | 0.282 |
+
+   Even on the fair (mode-1-only) slice, B recovers well under a third of A's
+   rule inventory — vidyut-cheda alone, without gold, is nowhere near the A
+   ceiling; a meaningful chunk of B's sentences are dropped outright to the
+   count-mismatch skip (62–84 % of sentences in these two texts) because DCS
+   and vidyut disagree on where a "word" ends. `no_gold_total`/`no_gold_recovered`
+   counters are wired for item 4 below but never fired on these 2 texts (see
+   there — DCS's `Unsandhied` coverage looks complete on the sample checked).
 3. **Method C — neural (DharmaMitra).** API-only ([`external_tools.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/external_tools.json) row
-   `dharmamitra`); gate behind `--allow-network`, cache responses.
-4. **A/B/C report.** One table per pilot: coverage, distinct-rule agreement,
-   where B/C recover junctions A's gold split lacks (the 27 % `no gold split`).
+   `dharmamitra`); gate behind `--allow-network`, cache responses. **Not started**
+   — explicitly deferred by H903 ("(Later) method C").
+4. **A/B/C report — "27 % no gold split" claim NOT reproduced.** One table per
+   pilot: coverage, distinct-rule agreement, where B/C recover junctions A's
+   gold split lacks. H903 measured this directly (`no_gold_total`/
+   `no_gold_recovered` in `method_B`'s stats, gated on `w["uns"] is None`): zero
+   no-gold mode-1 junctions in Hitopadeśa (3,432 sentences) or Amaruśataka (212
+   sentences), and a 15-directory random sample across the wider DCS corpus
+   (3 files each) also showed zero. This ~27 % figure — cited in this roadmap's
+   §Risks as a planning-stage estimate — does not hold on what was actually
+   sampled; DCS `Unsandhied` coverage looks complete wherever a token exists.
+   If a real no-gold gap exists, it's likely GRETIL-specific (§0: "no DCS/GRETIL
+   text has [Unsandhied] annotation" refers to GRETIL lacking the field
+   entirely, a **Phase 3** concern, not a DCS gap) — re-verify against GRETIL
+   once that phase starts rather than trusting the 27 % number for DCS.
 5. **Gītā gold scoring.** ✅ DONE (method A) — [`scripts/score_gita_gold.py`](https://github.com/gasyoun/kosha/blob/main/scripts/score_gita_gold.py).
    DCS stores the Gītā inside the Mahābhārata as book-6 chapters relabelled
    `MBh, 6, BhaGī 1…18` (the numeric MBh-6 sequence skips 23–40) — 18 `.conllu`
@@ -179,7 +213,9 @@ confirm its weighting before it drives curriculum order).
 - **Licensing.** DCS = CC BY-SA 4.0 (attribute Oliver Hellwig / DCS). GRETIL
   varies per text — publish-safety-check gate. Derived tables are ODbL-compatible
   share-alike; credit Dr. Mārcis Gasūns for the pedagogy layer.
-- **Risks.** (a) DCS `no gold split` ~27 % of junctions — method B recall matters.
+- **Risks.** (a) DCS `no gold split` ~27 % of junctions **— H903 measured this
+  directly and did NOT reproduce it (0 % on 2 pedagogical texts + a 15-dir DCS
+  sample); the real "no gold split" gap looks GRETIL-specific, see §2 item 4.**
   (b) DCS chapter boundaries for isolating the Gītā from Mahābhārata. (c) IAST
   glyph artifacts in DCS source (e.g. `kḷ` mojibake) — normalise on read.
   (d) Two-sided coalescences (5–6 %) need verification, not blind trust.
