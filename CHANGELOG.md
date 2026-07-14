@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.43.0] - 2026-07-14
+
 ### Added
 - **H903 (sandhi Phase 1, method B): vidyut-cheda bake-off vs gold DCS splits.**
   [`scripts/compare_sandhi_methods.py`](https://github.com/gasyoun/kosha/blob/main/scripts/compare_sandhi_methods.py)
