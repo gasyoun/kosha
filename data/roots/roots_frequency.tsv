@@ -1,0 +1,630 @@
+rank	root_iast	dcs_lemma	grammar_class	dcs_status	attested_count	coverage_pct	top_attested_forms
+1	1 kṛ / 2 kṛ / 3 kṛ	kṛ	1,2,6	homonym_shared	40799	7.4241	kṛtvā:6008; kuryāt:2720; kṛta:2601; karoti:2396; kṛtam:1646; kurute:1170; kṛtaṃ:1052; kuru:878; cakāra:871; cakre:852; kṛtaḥ:740; kuryād:677; kriyate:665; kurvanti:665; kāryaṃ:608
+2	bhū	bhū	1	matched	40393	14.7743	bhavati:9633; bhavet:5615; bhavanti:3200; bhaviṣyati:2001; abhavat:1697; bhūtvā:1535; abhūt:1372; babhūva:1220; bhava:945; 'bhavat:909; bhaved:771; bhavaty:543; bhaviṣyanti:500; bhūtam:489; abhavan:440
+3	1 as / 2 as	as	2,4	homonym_shared	35753	21.2802	syāt:5508; asi:5164; asti:3927; āsīt:1833; syād:1790; astu:1733; 'si:1482; asmi:1460; 'smi:744; syuḥ:716; sati:703; stha:663; santi:641; 'sti:585; san:581
+4	vac	vac	2	matched	33948	27.4576	uvāca:13880; ucyate:2868; uktam:2586; uktvā:2372; uktaḥ:1698; ūcuḥ:889; ukta:789; uktaṃ:704; uktā:587; vakṣyāmi:566; ukte:556; avocat:538; vaktum:408; uktāḥ:394; ukto:316
+5	gach / gam	gam	6	homonym_shared	18341	30.7951	gatvā:1938; gataḥ:1522; gatam:1155; jagāma:1140; gacchati:966; gaccha:890; gata:788; gatāḥ:730; gate:727; gacchet:518; gatā:490; gacchanti:397; gato:293; jagmuḥ:253; agamat:247
+6	dṛś	dṛś	4	matched	14866	33.5002	dṛṣṭvā:5327; dadarśa:1083; dṛśyate:809; paśyati:533; dṛṣṭa:487; dṛṣṭaḥ:351; dṛśyante:330; dṛṣṭā:320; dṛṣṭaṃ:296; draṣṭuṃ:290; paśyanti:287; draṣṭum:257; dadṛśuḥ:216; dadṛśe:215; paśyāmi:211
+7	1 dā / 2 dā / 3 dā / 4 dā	dā	1,4	homonym_shared	12008	35.6853	dattvā:1825; dadyāt:1442; dadāti:791; dadau:699; datta:407; dehi:402; dattaṃ:389; dadyād:376; deyaṃ:350; dadāmi:268; dattam:244; deyam:234; dattā:220; dīyate:197; dāsyāmi:146
+8	1 vid / 2 vid	vid	1,2	homonym_shared	11314	37.744	veda:2359; vidyate:1085; vidvān:840; viduḥ:646; vidyāt:619; viddhi:505; viditvā:403; vetti:225; vettha:203; vindate:190; vidyād:187; viditaṃ:184; vindati:175; vidur:137; vidita:112
+9	śru	śru	4	matched	10505	39.6556	śrutvā:3776; śṛṇu:1453; śrutam:425; śrotum:392; śrūyate:298; śrutaṃ:275; śṛṇuṣva:214; śṛṇoti:200; chrutvā:180; śuśrāva:167; śrūyatāṃ:164; śrutaḥ:155; śṛṇuyāt:132; śrotuṃ:129; śruta:127
+10	brū	brū	6	matched	9781	41.4354	abravīt:3486; brūhi:797; 'bravīt:623; brūyāt:585; abruvan:562; bravīmi:363; abravīd:334; brūyād:273; 'bravīd:258; brūte:192; bruvan:181; 'bruvan:128; bruvāṇaṃ:86; brūta:77; bravīhi:77
+11	ah	ah	1	matched	9447	43.1545	āha:6731; āhuḥ:1800; āhur:704; āttha:103; āhus:52; āhatuḥ:28; āhuś:15; āhū:6; au1:1; āhatuś:1; āhatus:1; visratetyādi:1; styānatvarahitam:1; 'pravartanam:1; śukraśoṇitaśuddhyanantaraṃ:1
+12	sthā	sthā	1	matched	9268	44.841	sthitaḥ:903; tiṣṭhati:877; sthitam:622; sthitā:462; tiṣṭha:449; tasthau:419; sthitāḥ:383; sthito:328; tiṣṭhanti:326; tiṣṭhan:313; sthitaṃ:285; sthitvā:275; sthite:245; tiṣṭhet:161; sthita:119
+13	jan	jan	4	matched	9247	46.5236	jāyate:2346; jāta:663; jātaḥ:634; jajñe:515; jāyante:425; jāto:407; jātā:406; jātam:365; jātaṃ:298; ajāyata:287; jātāḥ:250; jāte:223; jajñire:167; ajījanat:114; jātasya:113
+14	han	han	8	matched	8744	48.1147	hanti:1000; hatvā:917; hata:839; jaghāna:473; hataḥ:423; jahi:407; hate:371; hato:311; hataṃ:291; hanyāt:239; hatāḥ:230; hatam:200; ghnanti:175; hatā:173; hantuṃ:172
+15	yaj	yaj	2	matched	6755	49.3439	yajamānaḥ:530; yajate:443; yajati:441; yajamāno:433; yajeta:385; yajamānasya:381; iṣṭvā:364; yajamāna:327; yaja:272; yajamānam:244; yajamānāya:236; yajamānaṃ:226; yajet:177; yajante:135; yajanti:127
+16	hu	hu	3	matched	6418	50.5118	juhoti:2019; juhuyāt:853; hutvā:853; hutam:213; juhvati:182; juhuyād:180; juhomi:172; juhoty:159; huta:142; hutaṃ:116; hute:80; hūyate:77; ajuhot:77; hotavyam:63; juhāva:42
+17	yuj	yuj	1	matched	5933	51.5914	yuktam:757; yuktaḥ:722; yuktaṃ:425; yuktā:336; yuktāḥ:289; yukto:286; yujyate:261; yukta:228; yuktena:219; yuktasya:135; yunakti:135; yuktāni:119; yojyaṃ:119; yukte:89; yuktaiḥ:82
+18	yā	yā	2	matched	5649	52.6193	yāti:1175; yayau:970; yānti:671; yāhi:321; yayuḥ:263; yāte:126; yāmi:119; yātam:114; yāsyāmi:107; yātu:102; yātaḥ:93; yāto:81; yātaṃ:76; yāsyati:76; yāsi:72
+19	1 pā / 2 pā / 3 pā	pā	1,2,3	homonym_shared	5393	53.6007	pibet:1035; pāhi:558; pītvā:420; pātu:284; piba:152; pibati:138; pibed:132; pītaṃ:132; pāta:130; pibanti:121; pīta:108; pītam:79; pāti:76; pibā:68; pāntu:67
+20	jñā	jñā	4	matched	5041	54.518	jñātvā:995; jñeyā:308; jānāti:283; jñeyaṃ:258; jñeyaḥ:214; jñeyam:210; jānāmi:198; jāne:136; jñeyo:135; jānanti:128; jānan:123; jānāsi:97; jñāyate:88; jñātum:83; jānīyāt:79
+21	1 iṣ / 2 iṣ / ich	iṣ	1,6	homonym_shared	4842	55.3991	icchāmi:805; icchasi:465; icchati:408; iṣyate:372; icchanti:237; icchet:202; iṣṭa:194; iṣṭam:170; icchatā:156; icchan:152; iṣṭaṃ:75; aicchat:70; iyeṣa:57; iṣṭā:53; iṣṭaḥ:52
+22	1 paś / 2 paś	paś	4	homonym_shared	4732	56.2601	paśya:869; apaśyat:575; paśyāmi:395; paśyati:277; paśyet:223; apaśyan:177; paśyasi:175; paśyata:129; paśyan:122; apaśyaṃ:120; paśyanti:107; apaśyam:98; apaśyāma:96; apaśyad:79; 'paśyat:61
+23	man	man	1	matched	4697	57.1148	manye:620; mataḥ:359; manyate:351; manyase:324; matvā:305; matam:290; matā:287; manyante:200; mene:197; manyeta:180; amanyata:130; matāḥ:119; menire:95; mato:77; maṃsyante:76
+24	1 dhā / 2 dhā	dhā	1,4	homonym_shared	4694	57.969	dadhāti:914; dhatte:368; dhehi:354; dadhātu:171; dadhe:159; dhīmahi:120; dadhāmi:107; dadhire:95; dhatta:89; dadhati:78; hitam:77; dhattam:66; dhīyate:65; dhāḥ:61; adhatta:58
+25	smṛ	smṛ	1	matched	4142	58.7227	smṛtaḥ:1133; smṛtam:708; smṛtāḥ:547; smṛtā:404; smṛtvā:148; smaran:131; smarāmi:88; sasmāra:84; smṛto:80; smaret:77; smṛtaṃ:67; smṛtau:62; smarati:59; smaranti:51; smara:43
+26	1 ji / 2 ji	ji	9	homonym_shared	4082	59.4655	jita:719; jayati:459; jitvā:331; jayet:312; jaya:240; jetuṃ:121; jitam:103; ajayat:93; jitaḥ:84; jitā:79; jayanti:77; jitāḥ:68; jayema:59; jayatāṃ:58; jetum:54
+27	car	car	1	matched	4027	60.1983	carati:618; caret:540; caranti:342; cacāra:247; caran:244; cara:109; cared:101; caritvā:89; cariṣyāmi:84; carāmi:83; carita:74; carataḥ:64; carantam:56; cariṣyati:53; carato:52
+28	vad	vad	1	matched	3914	60.9105	vadanti:546; vada:381; vadati:308; uditam:251; vadet:237; avadat:218; vadāmi:147; vadatāṃ:141; vadasva:103; vadasi:96; avādīt:94; vadan:80; uditaḥ:76; vadantaḥ:76; uditā:50
+29	muc	muc	6	matched	3850	61.6111	mucyate:442; mukta:358; muktvā:262; mumoca:237; muñcati:228; muktaḥ:208; muñca:131; mukto:120; muktā:97; muñcāmi:78; muktāḥ:73; mucyante:71; muñcatam:68; muktam:67; mucyeta:67
+30	1 i / 2 i	i	5,9	homonym_shared	3673	62.2794	eti:1096; yanti:405; etu:211; ihi:154; āyan:150; yantu:129; iyāt:124; eṣyati:102; ita:65; ety:54; yanty:51; emi:44; eṣyasi:39; eṣi:39; ait:38
+31	labh	labh	1	matched	3345	62.8881	labhate:684; labdha:401; labdhvā:391; labhet:276; lebhe:262; labhyate:132; labhante:112; labheta:97; labdhaṃ:82; labdham:59; lebhire:46; labdhā:42; labdhaḥ:35; labdhavān:35; lapsyase:33
+32	1 pat / 2 pat	pat	1	homonym_shared	3123	63.4564	papāta:419; patati:237; patitaṃ:203; patanti:192; patitā:129; apatat:122; patita:109; patitaḥ:96; patito:96; patatāṃ:68; petur:65; patite:59; patitāḥ:57; petuḥ:54; pata:53
+33	prach	pracch	1	aliased	2851	63.9752	papraccha:427; pṛṣṭaḥ:291; pṛṣṭo:250; pṛcchati:222; pṛcchāmi:135; apṛcchat:122; pṛṣṭvā:106; pṛṣṭā:91; papracchuḥ:60; pṛcchasi:53; pṛṣṭavān:52; pṛccha:51; pṛcchate:45; pṛcchataḥ:41; pṛcchanti:36
+34	1 hṛ / 2 hṛ / har	hṛ	2,9	homonym_shared	2792	64.4832	harati:320; haret:314; hṛta:239; haranti:163; jahāra:145; hṛtvā:133; hṛtā:95; hṛtaṃ:79; hared:65; harate:62; hṛtam:59; harāmi:58; hṛte:52; hara:50; hriyate:46
+35	sṛj	sṛj	2	matched	2749	64.9835	asṛjata:359; asṛjat:187; sasarja:177; sṛṣṭvā:140; sṛṣṭā:120; sṛja:113; sṛjate:79; sṛjati:77; sṛṣṭaḥ:70; sṛṣṭāḥ:69; sṛṣṭa:63; sṛṣṭam:61; sṛṣṭaṃ:55; sasṛje:47; asṛjyata:45
+36	1 hā / 2 hā	hā	1,3	homonym_shared	2739	65.4819	hīna:394; hitvā:343; hīnaḥ:223; hīnam:209; hīyate:154; jahāti:117; hīnāḥ:95; hīnā:85; jahyāt:71; hīnaṃ:69; hīne:56; heya:46; jahau:44; hīnasya:43; hīnān:40
+37	1 bhuj / 2 bhuj	bhuj	6	homonym_shared	2725	65.9777	bhuktvā:381; bhuñjīta:275; bhuṅkte:264; bhuñjate:124; bhukta:93; bhuktaṃ:81; bhuṅkṣva:77; bhujyate:66; bhuñjāno:63; bhuktam:59; bhogya:49; bhoktuṃ:48; bhoktum:47; bubhuje:42; bhoktavyaṃ:35
+38	bandh	bandh	4	matched	2654	66.4607	baddhvā:532; baddha:483; baddhaḥ:219; baddham:138; badhnāti:134; badhyate:121; baddho:120; baddhaṃ:90; baddhā:87; badhnīyāt:63; babandha:53; baddhāḥ:51; badhāna:36; baddhe:36; baddhasya:36
+39	1 mṛ / 2 mṛ	mṛ	4,9	homonym_shared	2615	66.9365	mṛta:478; mriyate:381; mṛtaṃ:353; mṛto:145; mṛte:127; mṛtaḥ:127; mṛtam:119; mṛtā:93; mṛtasya:80; mamāra:61; mriyante:59; mṛtāḥ:58; mriyeta:45; mṛtānāṃ:37; mṛtān:27
+40	1 vas / 2 vas / 3 vas	vas	1,2,6	homonym_shared	2538	67.3984	vaset:213; vasati:209; vasanti:176; uvāsa:134; vasan:104; uṣitaḥ:85; uṣitvā:71; avasat:61; vasa:60; uṣitam:44; vased:42; uṣya:41; vasānaḥ:40; uṣitāḥ:37; vatsyāmi:36
+41	vṛt	vṛt	3	matched	2479	67.8495	vartate:637; vartamāne:152; vartante:136; avartata:116; vṛttaṃ:105; vṛttam:96; varteta:84; vṛtte:62; vṛttaḥ:61; vartamānasya:59; vartamānaḥ:54; vartamāno:49; vartase:42; vartamānaṃ:37; vṛtta:35
+42	kṣip	kṣip	6	matched	2461	68.2973	kṣipet:746; kṣiptvā:639; cikṣepa:216; kṣiptaṃ:95; kṣipan:62; kṣipta:49; kṣiptaḥ:43; kṣiptā:42; kṣipto:40; kṣiptam:37; kṣipati:36; kṣiped:26; akṣipat:21; kṣipte:20; kṣepyaṃ:20
+43	tyaj	tyaj	3	matched	2417	68.7371	tyaktvā:685; tyajet:318; tyakta:222; tyaja:100; tyajati:81; tatyāja:65; tyajanti:65; tyaktum:48; tyajed:44; tyaktā:44; tyaktaṃ:37; tyaktuṃ:34; tyajāmi:33; tyakṣyāmi:27; tyajan:26
+44	śudh	śudh	7	matched	2410	69.1756	śuddha:680; śuddhaṃ:356; śudhyati:246; śuddham:148; śuddhaḥ:135; śuddhā:85; śuddho:83; śudhyate:58; śudhyanti:55; śuddhe:50; śundhasva:46; śuddhāḥ:43; śuddhasya:41; śuddhena:37; śudhyet:28
+45	arh	arh	1	matched	2380	69.6087	arhasi:1204; arhati:732; arhanti:108; arhatha:85; 'rhati:38; arhate:26; arhāmi:25; arhataḥ:24; arhase:16; arhan:12; arhaty:12; arhasy:11; 'rhasi:7; arhata:7; arhathaḥ:7
+46	nī	nī	2	matched	2350	70.0363	nayet:180; nītvā:164; nayati:123; naya:121; nayanti:107; nītā:76; nināya:75; nīyate:73; anayat:69; nayāmi:60; nayatu:57; ninye:54; nīto:52; nītaḥ:52; netuṃ:31
+47	āp	āp	1	matched	2314	70.4574	āpnoti:943; āpnuyāt:345; āptvā:119; āptam:76; āpa:69; āpnuhi:58; āpnuvanti:56; āpta:54; āpyate:40; āptavān:35; āpsyasi:28; āpnuvan:27; āpuḥ:26; āpnuyuḥ:25; āptaṃ:25
+48	dah	dah	2	matched	2275	70.8714	dagdha:248; dahati:169; dahet:145; dagdhvā:126; dagdhaṃ:94; dagdhā:94; dadāha:94; dahyate:79; daha:72; dagdham:62; dagdhaḥ:51; dagdhāḥ:50; dahyamānā:39; dahed:37; adahat:35
+49	jīv	jīv	1	matched	2222	71.2757	jīvati:445; jīvet:302; jīvan:158; jīvanti:152; jīvase:119; jīvitum:92; jīva:79; jīved:62; jīvāmi:49; jīvataḥ:45; jīvato:40; jīvat:34; jīvatu:32; jīvasi:31; jīvann:25
+50	1 stu / 2 stu	stu	1	homonym_shared	2204	71.6768	stuvanti:191; stuvate:125; tuṣṭāva:107; stutvā:101; stuta:87; tuṣṭuvuḥ:79; tuṣṭuvānaḥ:79; stute:76; stutaḥ:65; stuto:57; astuvata:52; stuvīta:50; astuvan:42; stuhi:42; stūyamāno:40
+51	pū	pū	1	matched	2162	72.0702	pavasva:217; pavate:205; pūtam:127; pūtaḥ:116; pūta:95; punāti:87; pavamāna:74; punātu:71; pūto:65; punantu:62; pūtā:53; pūtaṃ:50; pavamānaḥ:50; pavata:46; pūtāḥ:41
+52	chid	chid	1	matched	2139	72.4594	cicheda:469; chinna:371; chittvā:318; chinnam:69; chinddhi:64; chinatti:60; chinnaṃ:50; chinnā:45; chinnaḥ:45; achinat:43; chinne:32; chindyāt:31; chidyate:29; chinnāḥ:29; chettum:29
+53	1 vṛ / 2 vṛ	vṛ	1,5	homonym_shared	2083	72.8385	vṛtaḥ:445; vṛṇīṣva:137; vṛtam:137; vṛto:116; vavre:99; vṛṇīmahe:86; vṛṇīte:79; vṛtā:79; vṛtāḥ:62; vṛtaṃ:55; vṛṇe:47; avṛṇīta:37; vṛṇīta:32; vṛtām:30; vṛtvā:28
+54	tap	tap	4	matched	2065	73.2142	tapta:233; tapati:223; taptaṃ:164; taptvā:133; tepe:109; taptam:94; 'tapyata:60; tapyate:58; taptāni:39; tapte:36; atapyata:32; tatāpa:31; tapanti:30; taptena:26; taptasya:24
+55	pac	pac	1	matched	2058	73.5887	pacet:976; pacyāt:156; paktvā:131; pācyaṃ:104; pacyate:100; pacati:91; paced:55; pacyante:35; pacanti:31; apacat:22; pacyasva:22; paca:21; pācyam:21; pacyād:15; pacyata:10
+56	bhid	bhid	3	matched	2047	73.9612	bhinna:434; bhittvā:294; bibheda:115; bhidyate:115; bhinnam:77; bhinnaṃ:74; bhinne:67; bhinnā:52; bhinnaḥ:43; bhinatti:43; bhinddhi:41; bhidyante:40; bhinnāḥ:33; bhidyeta:31; bhindyāt:27
+57	1 sidh / 2 sidh	sidh	1,4	homonym_shared	2028	74.3302	siddham:389; siddhaṃ:302; sidhyati:218; siddha:208; siddhaḥ:131; sidhyanti:99; siddhā:87; siddhena:74; siddhe:69; siddho:59; siddhāḥ:49; siddhaiḥ:33; siddhasya:29; siddhāni:25; sidhyet:25
+58	ās	ās	1,2,4	matched	1955	74.686	āste:455; āsate:171; āsīnaḥ:170; āsīnam:170; āsīta:146; āsīnaṃ:111; āsīno:61; āsata:61; āsta:39; āsyatām:30; āstāṃ:28; āstām:26; āsīnāya:25; āsīnā:24; āssva:23
+59	śak	śak	4	matched	1952	75.0412	śakyate:221; śakto:160; śaktaḥ:140; śaknoti:126; śaśāka:82; śaknomi:62; śakṣyāmi:55; śekuḥ:54; aśakat:52; śakeyam:51; śaktā:49; śaktāḥ:49; aśaknuvan:47; aśaknot:43; śaknuyāt:40
+60	1 aś / 2 aś	aś	1	homonym_shared	1948	75.3956	aśnute:374; aśnīyāt:258; aśnāti:192; aśīya:105; aśnanti:76; aśnan:52; aśita:37; aśnīyād:34; aśyāma:30; āśata:29; ānaśe:25; aśīmahi:24; ānaśuḥ:22; 'śnute:21; aṣṭu:21
+61	rakṣ	rakṣ	4	matched	1929	75.7467	rakṣa:139; rakṣati:131; rakṣatu:109; rakṣanti:76; rakṣet:75; rakṣitam:71; rakṣan:65; rakṣasva:53; rakṣitā:50; rakṣitaḥ:45; rakṣyate:44; rakṣitāḥ:44; rakṣed:39; rakṣantu:39; rakṣituṃ:36
+62	1 gā / 2 gā	gā	2,4	homonym_shared	1911	76.0944	gāyati:211; agāt:185; gāyet:116; gīyate:86; gāyanti:83; jaguḥ:69; jagau:61; gāyata:57; gāya:46; agād:41; jigāti:37; geyam:32; gītaṃ:30; agām:29; gāyan:29
+63	vah / vāh	vah	2	homonym_shared	1845	76.4301	vahanti:208; vahati:200; vaha:199; vahantu:71; vahet:53; vahan:45; uvāha:40; vahate:31; vakṣi:30; vahata:26; avahan:25; vahasi:24; voḍhuṃ:24; voḍhum:24; avahat:24
+64	bhṛ	bhṛ	1	matched	1822	76.7617	bibharti:261; bhara:172; bibhrat:74; bibhrad:65; bibhratī:52; bibhṛyāt:41; bibharṣi:37; babhāra:37; bibhrataḥ:36; bibhrati:34; bhṛtam:30; bhṛta:25; bharā:24; bibhran:24; bhare:22
+65	śaṃs	śaṃs	2	matched	1785	77.0865	śaṃsati:339; śasyate:222; śaśaṃsa:96; śaṃsanti:92; śaṃsa:90; śastaṃ:58; śastvā:55; śaṃsaty:47; śasyante:47; śaṃsed:46; śastam:46; śaṃset:40; śastaḥ:35; śasta:32; śastā:25
+66	prī	prī	9	matched	1770	77.4086	prītaḥ:337; prīṇāti:313; prīto:234; prīta:153; prītā:104; prītāḥ:77; prītena:44; prīyatām:32; prītau:31; prīyate:25; prīyatāṃ:25; prīyante:20; prīṇātu:20; prīyamāṇo:19; prīṇāmi:18
+67	jap	jap	4	matched	1702	77.7183	japet:470; japati:394; japtvā:124; japitvā:112; japan:104; japed:91; japen:41; jajāpa:37; japatāṃ:33; japanti:31; japaty:23; japann:17; japtaṃ:15; japataḥ:13; japtavyaṃ:9
+68	krudh	krudh	4	matched	1659	78.0202	kruddho:448; kruddhaḥ:404; kruddhā:102; kruddhaṃ:83; kruddhasya:81; kruddha:70; kruddhāḥ:55; kruddhena:49; cukrodha:39; kruddhau:35; kruddham:34; kruddhe:29; kruddhān:20; kruddhas:17; krudhaḥ:16
+69	snā	snā	4	matched	1648	78.32	snātvā:899; snātaḥ:111; snāyāt:77; snāto:59; snāta:52; snāti:49; snātā:41; snātāḥ:33; snātam:30; snāyād:26; snātasya:24; snātuṃ:22; snātām:20; snātaṃ:16; snātum:13
+70	vyadh	vyadh	4	matched	1636	78.6177	vivyādha:511; viddhvā:225; viddhaḥ:85; vidhyati:83; avidhyat:68; viddho:65; vidhyet:53; viddha:41; viddhā:40; viddhaṃ:35; vidhya:34; viddham:34; viddhasya:30; avidhyad:29; vivyadhuḥ:20
+71	vṛdh	vṛdh	6	matched	1619	78.9123	vardhate:276; vavṛdhe:78; vṛddham:70; vṛddha:60; vāvṛdhe:51; avardhata:48; vardhante:47; vardhasva:45; vṛdhe:45; vṛddhaḥ:39; vṛddhāḥ:27; vardhanti:26; vāvṛdhānaḥ:24; vardhatāṃ:23; vṛddhaiḥ:21
+72	ram	ram	4	matched	1553	79.1949	rataḥ:328; ramate:179; ratāḥ:169; reme:78; ramante:55; ratam:53; ratā:52; ramasva:38; ramadhvam:27; remire:22; ramamāṇasya:21; ratān:20; rame:19; ratasya:18; rata:17
+73	bhāṣ	bhāṣ	1	matched	1532	79.4737	abhāṣata:488; bhāṣitam:151; babhāṣe:150; bhāṣate:147; bhāṣase:60; bhāṣante:53; bhāṣitaṃ:42; abhāṣanta:30; bhāṣitum:24; bhāṣitaḥ:21; bhāṣeta:21; bhāṣitā:20; bhāṣiṣye:17; bhāṣamāṇasya:17; bhāṣamāṇaṃ:14
+74	1 pṛ / 2 pṛ / 3 pṛ	pṛ	1,5	homonym_shared	1512	79.7488	pūrṇa:333; pūrṇe:134; pūrṇam:132; pūrṇaṃ:107; pūrṇā:95; pūrṇaḥ:61; pūrṇām:44; pūrṇāṃ:38; pūrṇāḥ:31; pūrṇāni:26; parṣad:22; pūrṇena:20; pūrṇo:20; pūrṇayā:20; pṛṇīhi:16
+75	1 naś / 2 naś	naś	1	homonym_shared	1418	80.0069	naṣṭa:296; naśyati:204; naṣṭe:112; naśyanti:106; naṣṭaṃ:78; naśyate:43; naṣṭam:41; naṣṭā:39; naśyet:31; naṣṭāḥ:24; naṣṭaḥ:22; ānaṭ:20; naṣṭeṣu:17; naśyed:16; anīnaśat:14
+76	1 jṛ / 2 jṛ	jṛ	1,6	homonym_shared	1414	80.2642	jīrṇe:340; jīrṇa:214; jīryati:87; jīrṇaḥ:87; jīrṇam:82; jīrṇaṃ:73; jīryate:72; jīrṇasya:52; jarat:45; jarati:33; jīrṇo:25; jīryataḥ:21; jīryanti:20; jāryaṃ:19; jīrṇā:18
+77	bhī	bhī	1	matched	1384	80.516	bhītā:138; bhītaḥ:131; bhīta:107; bhītāḥ:88; bhīto:84; bibheti:50; bibhemi:47; bhetavyaṃ:39; bibhyati:31; abibhayuḥ:29; abibhet:28; bhaiḥ:27; bhītasya:24; bhītaṃ:24; bhaiṣṭa:22
+78	dviṣ	dviṣ	1	matched	1343	80.7604	dveṣṭi:296; dviṣmaḥ:96; dviṣatāṃ:94; dviṣato:76; dviṣantaṃ:73; dviṣyāt:69; dviṣat:49; dviṣataḥ:43; dviṣmas:42; dviṣan:40; dviṣantam:39; dviṣma:39; dviṣmo:35; dviṣatām:29; dviṣate:28
+79	sev	sev	4	matched	1328	81.0021	seveta:185; sevitam:154; sevate:87; sevitaḥ:77; sevyaṃ:71; sevitaṃ:67; sevite:39; sevitām:37; sevitā:35; sevyate:34; sevyā:31; siṣeve:27; sevante:24; sevyamāno:24; sevyaḥ:22
+80	yudh	yudh	2	matched	1267	81.2326	yudhyasva:96; yoddhum:73; yoddhuṃ:52; yuyudhe:52; yudhyamānasya:47; yotsye:46; yudhyamānaṃ:31; yudhyate:28; yudhyataḥ:28; yuyudhāte:27; yudhyante:27; yudhyeta:27; ayudhyata:26; yudhyatāṃ:25; ayudhyanta:24
+81	vadh	vadh	4	matched	1236	81.4575	vadhyaḥ:144; avadhīt:113; vadhyamānā:69; vadhyamānāḥ:61; vadhya:59; vadhyāḥ:48; vadhyo:42; vadhyate:33; vadhyam:31; vadhiṣyāmi:31; vadhyamānaṃ:30; vadhiṣyati:27; vadhīḥ:25; avadhīḥ:23; vadhyā:22
+82	dhṛ	dhṛ	4	matched	1229	81.6812	dhṛta:262; dādhāra:111; dhṛtvā:106; dhṛtaḥ:74; dadhāra:68; dhṛtā:62; dhṛtam:62; dhṛtaṃ:45; dhṛto:40; dadhre:29; dhriyate:28; dhṛte:18; dhriyamāṇena:15; dhriyante:14; dhriyatām:13
+83	juṣ	juṣ	6	matched	1226	81.9043	juṣṭaṃ:191; juṣasva:176; juṣṭam:151; juṣāṇā:48; juṣāṇo:46; juṣṭā:34; juṣṭām:30; juṣṭaḥ:29; juṣṭo:29; juṣanta:29; juṣantām:26; juṣāṇaḥ:25; juṣantāṃ:21; juṣatām:21; juṣṭāṃ:19
+84	vraj	vraj	1	matched	1202	82.123	vrajet:465; vraja:127; vrajati:105; vrajanti:91; vrajan:74; vrajāmi:57; vrajed:24; vrajantaṃ:19; vrajataḥ:14; vrajaty:13; vrajanty:11; vrajata:11; vrajann:10; vrajantam:9; vrajato:9
+85	1 kṣi / 2 kṣi	kṣi	4	homonym_shared	1181	82.3379	kṣīṇa:347; kṣīṇe:105; kṣīyate:95; kṣīyante:40; kṣīṇaḥ:39; kṣīṇaṃ:36; kṣīṇasya:34; kṣīṇā:33; kṣeti:25; kṣiṇoti:21; kṣeṣṭhā:18; kṣīṇam:17; kṣitam:16; kṣitaḥ:15; kṣīṇāḥ:15
+86	bhaj	bhaj	1	matched	1164	82.5497	bhajet:130; bhajate:120; bheje:89; bhaja:83; bhajasva:81; bhajante:61; bhejire:53; bhajeta:43; bhajati:35; bhajanti:28; bhakṣīya:28; bhaje:16; bhaktam:16; bhajatāṃ:14; bhajed:13
+87	dhyā	dhyā	3	matched	1164	82.7615	dhyātvā:258; dhyāyet:154; dhyāyan:110; dhyāyati:73; dadhyau:50; dhyāyanti:36; dhyeyaḥ:28; dhyāyed:27; dhyāyate:24; dhyeya:20; dhyāyann:19; dhyāta:18; dhyāyataḥ:15; dhyeyaṃ:14; dhyāyanto:13
+88	dham	dham	1	matched	1162	82.9729	dhamet:361; dhmātaṃ:225; dhaman:50; dhmātaḥ:45; dhmātvā:45; dhmātam:40; dhāmyaṃ:39; dhmāte:36; dhamed:34; dhmāto:27; dhmātā:22; dadhmau:21; dadhmuḥ:19; dhmātāḥ:17; dhāmyam:16
+89	dīp	dīp	4	matched	1162	83.1844	dīpta:393; dīptaṃ:96; dīptam:68; dīpyate:66; dīpyamānaṃ:39; dīptāṃ:35; dīpte:32; dīptaḥ:30; dīptā:29; dīptaiḥ:28; dīptena:24; dīpyamānā:21; dīpto:20; dīpyamānam:20; dīptām:17
+90	1 śam / 2 śam / 3 śam	śam	9	homonym_shared	1159	83.3953	śānta:245; śāmyati:101; śāntaḥ:98; śāntaṃ:81; śāntā:74; śāntam:68; śānto:55; śāntāḥ:51; śāntāya:43; śānte:38; śāmyanti:32; śāmyet:11; śāntena:9; śāmya:9; śāntaiḥ:8
+91	hṛṣ	hṛṣ	1	matched	1147	83.604	hṛṣṭa:291; hṛṣṭaḥ:176; hṛṣṭā:123; hṛṣṭāḥ:108; hṛṣṭo:103; hṛṣyati:33; hṛṣyanti:21; jaharṣa:20; hṛṣṭau:16; hṛṣṭaṃ:14; hṛṣṭena:12; hṛṣyet:12; hṛṣṭam:11; hṛṣṭānāṃ:10; hṛṣṭaiḥ:10
+92	budh	budh	1	matched	1118	83.8074	buddhvā:278; budhyate:77; boddhavyam:50; bubudhe:50; budhyase:32; boddhavyaṃ:31; budhyeta:27; budhyasva:26; bodhyam:23; bodhyaḥ:23; buddha:22; abudhyata:22; budhyante:20; buddhaḥ:17; abodhi:16
+93	1 śī / 2 śī	śī	4	homonym_shared	1116	84.0105	śete:271; śayānaṃ:124; śayīta:113; śerate:65; śayānam:41; śeṣe:40; śaye:39; śayānaḥ:35; śayāno:28; śayānasya:24; śiśye:23; śayitā:16; śayānau:13; śayānān:13; śayānāṃ:11
+94	muh	muh	4	matched	1103	84.2112	mūḍha:244; mūḍhaḥ:88; mūḍho:77; mūḍhāḥ:64; mugdha:53; muhyati:49; mūḍhā:47; muhyanti:45; mumoha:45; mugdhe:37; mūḍhasya:20; mūḍhaṃ:19; mugdhā:17; mūḍham:16; muhyāmi:14
+95	svap	svap	1	matched	1100	84.4114	supta:111; suptā:95; suptaṃ:77; svapiti:74; suptaḥ:58; suṣvāpa:51; suptasya:42; supto:35; supte:31; suptvā:31; svapet:30; suptam:28; svapan:27; suptān:22; supteṣu:17
+96	yach / yam	yam	6	homonym_shared	1093	84.6103	yaccha:206; yata:180; yacchati:98; yacchatu:30; yacchata:28; yacchantu:26; yacchet:23; yataḥ:22; yacchanti:22; yacchatam:22; ayāmi:19; yemire:19; yacchaty:17; yantum:12; yaṃsat:12
+97	mad	mad	3	matched	1085	84.8077	matta:284; madema:48; mattaḥ:48; madanti:46; mattā:39; matto:38; mattam:34; mattāḥ:33; amīmadanta:32; mattena:18; mattaṃ:17; madanty:16; matsva:16; mattau:15; matsi:15
+98	dru	dru	9	matched	1073	85.003	drutaṃ:132; drute:120; dravati:116; druta:112; drutam:95; dravanti:57; dudruvuḥ:32; drava:25; drutvā:24; dravet:23; dudrāva:20; dravate:18; dravataḥ:17; dravat:17; drutā:12
+99	piṣ	piṣ	1	matched	1062	85.1962	piṣṭvā:476; piṣṭaiḥ:78; piṣṭam:73; piṣṭaṃ:68; piṣṭa:38; peṣyaṃ:35; piṣṭaḥ:33; piṣṭena:23; piṣṭāḥ:22; piṣṭair:17; piṣṭāni:17; pinaṣṭi:16; piṣṭā:14; piṣṭān:11; pipeṣa:11
+100	spṛś	spṛś	6	matched	1059	85.3889	spṛṣṭvā:158; spṛśet:104; spṛśati:71; spṛṣṭa:59; spṛśanti:43; aspṛśat:39; spṛśan:38; pasparśa:34; spṛṣṭam:33; spṛṣṭaṃ:28; spṛśed:26; spṛṣṭo:25; spṛṣṭaḥ:22; spṛṣṭā:20; spṛśa:16
+101	viś	viś	3	matched	1053	85.5805	viveśa:347; viviśuḥ:86; viśanti:74; viśati:64; viśet:46; aviśat:42; viśa:40; viviśur:40; viśantv:23; viśantu:18; viśate:17; 'viśat:16; viviśatuḥ:12; viśāmi:11; viśan:10
+102	sad	sad	6	matched	953	85.754	sīda:208; sīdati:101; sīdanti:58; sanna:28; sīdāmi:26; sīdata:25; sīdan:20; asadan:18; sīdatu:15; satsi:15; sīdantu:15; sasāda:12; sīdann:11; sīdat:11; sannaḥ:11
+103	1 rudh / 2 rudh	rudh	1	homonym_shared	892	85.9163	ruddhvā:545; ruddha:47; ruṇaddhi:34; runddhe:30; rurodha:26; ruddhaḥ:17; ruddhā:17; ruddhaṃ:14; ruddho:11; rundhyāt:10; roddhuṃ:7; ruddham:7; rurudhuḥ:7; ruddheṣu:6; ruddhe:5
+104	su	su	6	matched	878	86.076	sutam:100; sutaḥ:78; sutasya:71; suta:62; sutaṃ:49; sunvate:46; sute:41; sutā:24; suto:22; sunavāma:20; sunvato:16; asāvi:16; sunvataḥ:14; suṣumā:13; suteṣu:13
+105	av	av	1	matched	867	86.2338	avatu:112; avase:99; ava:65; avantu:62; avati:43; 'vantu:34; āvitha:21; avatho:21; avā:20; avitā:20; āvatam:15; 'vase:14; avanti:14; āvat:13; āvataṃ:13
+106	tṛ	tṛ	3	matched	862	86.3907	tarati:123; tīrtvā:57; taranti:45; tarema:44; tira:35; tatra:25; taret:24; tarat:18; tīrṇaḥ:17; tīrṇa:15; tāriṣat:14; tara:14; taran:13; ataran:12; tariṣyanti:12
+107	dīkṣ	dīkṣ	1	matched	855	86.5462	dīkṣitaḥ:114; dīkṣate:113; dīkṣita:95; dīkṣito:66; dīkṣitasya:49; dīkṣeta:34; dīkṣante:28; dīkṣitas:21; dīkṣitaṃ:20; dīkṣatāṃ:19; dīkṣitāḥ:16; adīkṣanta:16; dīkṣitā:15; dīkṣitam:13; adīkṣiṣṭa:13
+108	tuṣ	tuṣ	4	matched	840	86.6991	tuṣṭaḥ:173; tuṣṭo:168; tuṣṭā:61; tutoṣa:61; tuṣṭāḥ:56; tuṣṭa:54; tuṣyati:48; tuṣyanti:31; tuṣṭena:28; tuṣṭe:18; tuṣṭaiḥ:11; atuṣyat:9; tuṣyet:8; tuṣṭasya:7; tuṣṭaṃ:6
+109	duṣ	duṣ	4	matched	829	86.8499	duṣṭa:353; duṣyati:63; duṣṭam:54; duṣṭaṃ:49; duṣṭā:30; duṣṭaḥ:29; duṣyanti:28; duṣṭe:27; duṣṭāḥ:24; duṣṭo:20; duṣṭena:18; duṣṭānāṃ:17; duṣṭasya:16; duṣṭaiḥ:10; duṣṭān:8
+110	jval	jval	1	matched	827	87.0004	jvalita:79; jvalan:79; jvalantam:66; jvalat:65; jvalati:61; jajvāla:50; jvalantaṃ:34; jvalitaṃ:26; jvalantīm:21; jvalitā:17; jvalann:17; jvālanīyaḥ:15; jvalanti:14; jvaladbhiḥ:14; jvalate:12
+111	duh	duh	1	matched	806	87.1471	duhe:109; dugdhā:39; duhanti:39; dhukṣva:37; duhānā:28; dugdham:24; adhok:19; duhyamānā:18; duduhe:16; duhratāṃ:15; dogdhi:15; duhām:14; duha:14; dudoha:14; dugdhe:14
+112	sah	sah	1	matched	791	87.291	sahate:75; sahasva:60; soḍhuṃ:58; sahyam:39; saheta:33; sahya:33; soḍhum:28; sahante:24; sehe:22; sahamānā:21; sahamānam:16; sehire:15; sahamānaḥ:11; sahantī:11; sahe:9
+113	hiṃs	hiṃs	7	matched	788	87.4344	hinasti:187; hiṃsīḥ:121; hiṃsīr:93; hiṃsanti:35; hiṃsyāt:26; hiṃsiṣam:25; hiṃsīt:16; hiṃsan:15; hiṃsiṣṭaṃ:14; hiṃsyād:11; hiṃsitaḥ:11; hiṃsiṣṭa:10; hiṃsiṣṭam:9; hiṃsati:9; hiṃsyuḥ:9
+114	lip	lip	4	matched	778	87.576	liptvā:198; lipta:89; lipyate:83; liptam:54; limpet:52; liptaṃ:50; liptāyām:42; lipet:27; liptāni:21; lipte:20; liptaḥ:20; liptā:15; limped:13; lipto:8; liptām:6
+115	khyā	khyā	4	matched	777	87.7174	khyātaṃ:160; khyātaḥ:133; khyāto:115; khyātā:106; khyātam:36; khyāta:29; akhyad:26; khyāyate:25; khyātāḥ:23; akhyat:17; khyātau:16; khyātās:6; khyātas:6; khyātāni:5; khyāyante:5
+116	śuc	śuc	6	matched	777	87.8588	śocati:84; śocanti:72; śocāmi:49; śocasi:47; śucaḥ:41; śocitum:37; śocan:33; śuśoca:22; śuco:19; śocyaḥ:19; śocet:17; śocyā:12; śoca:11; śocantaḥ:11; śocataḥ:10
+117	vī	vī	2	matched	770	87.9989	vīta:281; vīhi:79; vetu:50; vyetu:42; vyantu:34; vyeti:24; vītaye:24; veti:17; veṣi:16; vetv:15; viyanti:14; ver:14; vītaṃ:12; vītaya:10; vyantv:10
+118	1 ci / 2 ci	ci	1,3	homonym_shared	763	88.1377	cinute:94; cīyate:61; citaḥ:48; cinoti:48; citam:45; cinvīta:45; cinvanti:22; cite:20; citvā:18; citā:18; citāḥ:13; cita:13; cinvānas:11; cito:10; cinvānaḥ:9
+119	yāc	yāc	1	matched	755	88.2751	ayācata:60; yācati:48; yācitaḥ:44; yācitam:41; yācate:34; yāce:31; yayāce:30; yācito:27; yācita:23; yācet:21; yācamānāya:19; yācataḥ:17; yāceta:15; yācitā:12; yācyamānaḥ:12
+120	bhañj	bhañj	4	matched	754	88.4123	bhagna:230; bhagnaṃ:49; babhañja:47; bhagnā:36; bhagne:32; bhagnāḥ:29; bhaṅktvā:28; bhagnam:22; bhagnaḥ:21; bhagneṣu:19; bhagno:16; abhajyata:16; bhajyate:13; bhagnān:12; bhagnaiḥ:10
+121	bhā	bhā	2	matched	741	88.5472	bhāti:282; babhau:244; bhānti:73; babhuḥ:38; bhāty:27; bhāsi:22; bhāhi:13; bhānty:7; babhur:7; bhāsy:4; babhatuḥ:3; bhāntam:3; bhāyād:2; bhāyāt:2; bhāte:2
+122	1 tan / 2 tan	tan	4,8	homonym_shared	716	88.6774	tato:72; tāyate:55; tanvate:53; atanvata:39; tatāna:37; tanute:37; tanoti:29; tatam:27; tata:23; tanvan:15; tataṃ:15; tanomi:13; tanuṣva:11; tanvānā:11; tanvānās:11
+123	cyu	cyu	1	matched	715	88.8075	cyutaḥ:103; cyutāḥ:88; cyutam:78; cyavate:66; cyutā:60; cyuta:52; cyutaiḥ:36; cyutān:21; cyavante:19; cyutvā:16; cyutaṃ:13; cyuto:12; cyutānām:11; cyute:9; acucyavuḥ:9
+124	añj	añj	1	matched	708	88.9364	anakti:90; aktam:78; anaktu:40; akta:35; aktvā:30; aktaḥ:30; ajyate:28; aktāḥ:24; akte:20; aktām:19; añjanti:18; añjate:18; aṅkte:17; aktau:17; aktena:14
+125	ad	ad	2	matched	699	89.0636	atti:133; adyāt:84; adanti:36; atta:31; adyate:29; addhi:24; atty:23; attu:19; attave:18; adyād:16; ādyam:14; adantu:12; adan:11; attum:11; ādyo:9
+126	tṛp	tṛp	6	matched	696	89.1902	tṛpyati:101; tṛptaḥ:70; tṛptāḥ:60; tṛpyanti:43; tṛptā:35; tṛpto:34; tṛpyatu:27; tṛpyāmi:23; tṛpta:19; tṛptasya:18; tṛpte:17; tṛpyantu:17; tṛpya:11; tṛpyaty:9; tṛptam:9
+127	mṛd	mṛd	6,9	matched	692	89.3161	mardyaṃ:219; mardyam:140; mṛditaṃ:25; mṛdita:20; mamarda:19; mardyaḥ:18; mṛditā:16; mṛditvā:14; marditum:13; mṛditaḥ:12; mṛditam:11; mṛdnāti:11; mṛdnīyāt:11; mṛdite:9; mṛditāḥ:9
+128	sic	sic	4	matched	687	89.4412	siñcati:68; siktaṃ:66; sicyate:40; siktam:40; siñcet:37; sikta:32; siktvā:23; siñca:16; siktā:16; siñcata:13; siktaḥ:13; siñcantu:12; siñcyāt:11; siṣicuḥ:10; secyam:10
+129	1 mā / 2 mā / 3 mā	mā	3,4	homonym_shared	680	89.5649	mitam:105; mimīte:84; mita:60; mitaḥ:34; mitā:31; amimīta:25; meya:20; mitāḥ:17; mitaṃ:15; mitaiḥ:12; mame:11; mimāti:10; mamire:10; mimīta:10; mite:9
+130	rud	rud	1	matched	669	89.6866	rudatī:69; ruroda:63; roditi:35; rudatīṃ:34; rudan:27; rudanti:25; ruruduḥ:23; rodiṣi:22; rudatīm:14; rudantī:13; rudatyaḥ:12; rudantaḥ:12; rudyate:11; rudati:11; rurudur:10
+131	nam	nam	1	matched	666	89.8078	nata:154; natvā:72; namati:49; namāmi:44; nanāma:40; namanti:23; nato:22; natāḥ:19; nataḥ:16; nataṃ:14; namet:14; nama:12; namantu:10; namanta:8; namantāṃ:8
+132	nind	nind	1	matched	649	89.9259	ninditā:82; nindite:49; nindita:49; ninditām:45; ninditam:42; ninditaḥ:35; nindanti:23; nindati:20; nindya:19; nindan:16; ninditaṃ:14; ninditāḥ:12; nininda:12; nindyate:11; nindyā:10
+133	1 śrī / 2 śrī	śrī	4	homonym_shared	644	90.0431	śṛtam:167; śṛtaṃ:128; śrīṇāti:37; śṛta:27; śrīṇanti:20; śṛto:18; śṛtena:18; śṛtaḥ:17; śṛtā:15; śṛte:14; śrīṇītām:10; śṛtām:9; śrātam:8; śṛtāni:8; śṛtaiḥ:8
+134	vand	vand	1	matched	632	90.1581	vanditvā:113; vavande:81; vande:63; vandya:21; avandata:19; vandate:17; vandasva:15; vandite:15; vanditaḥ:15; vanditam:13; vandita:12; vandyā:12; vavandire:11; vandyaḥ:11; vandyo:11
+135	mud	mud	1	matched	612	90.2695	modate:167; mudita:60; muditā:44; mumude:40; muditaḥ:38; muditāḥ:36; mudito:34; modante:21; muditau:13; mumoda:12; modamānaḥ:10; modamānā:8; muditam:7; modamānāḥ:7; modanti:6
+136	bhram	bhram	4	matched	592	90.3772	bhramati:56; bhrānta:54; bhraman:46; babhrāma:44; bhramanti:40; bhramate:38; babhramuḥ:20; bhramat:18; bhrāmyan:15; bhrāntvā:15; bhramasi:11; bhramato:11; bhrāmyati:10; bhrāntaṃ:9; bhrāmyat:9
+137	1 dhāv / 2 dhāv	dhāv	1,4	homonym_shared	582	90.4831	dhāvati:72; dhauta:64; dhāvanti:37; dhāvataḥ:22; dhāvate:19; dhāvata:18; dhāvasi:15; dhautaiḥ:15; dhāvatu:14; dhautam:13; dhāvantaṃ:12; adhāvat:11; dhāvan:11; dhāvet:11; dhāvatāṃ:10
+138	path / paṭh	paṭh	1	homonym_shared	582	90.589	paṭhet:135; paṭhanti:83; paṭhyate:48; paṭhan:41; paṭhati:34; paṭhed:23; paṭhate:21; paṭhitvā:18; paṭhatāṃ:13; paṭhitaḥ:12; paṭhitaṃ:11; paṭhyante:10; paṭhitam:9; paṭheta:9; papāṭha:8
+139	vṛṣ	vṛṣ	6	matched	580	90.6946	varṣati:148; vavarṣa:94; varṣanti:32; varṣatu:26; avarṣat:14; vṛṣasva:13; varṣet:13; varṣaty:10; varṣan:10; varṣiṣyati:10; vṛṣṭaṃ:10; vavarṣuḥ:8; varṣann:7; varṣate:7; vavṛṣuḥ:7
+140	gup	gup	1	matched	563	90.797	guptam:69; guptaṃ:67; gupta:51; guptā:43; guptaḥ:39; gupto:27; guptāṃ:20; gupte:18; jugopa:18; guptām:13; guptāḥ:13; gopyaṃ:12; gopyā:11; gopanīyaṃ:11; guptāni:11
+141	yat	yat	1	matched	548	90.8967	yateta:40; yatto:40; yatate:34; yattā:33; yattaḥ:31; yatasva:26; yattāḥ:20; yatante:19; yatamāno:16; yatamānasya:16; yatiṣye:13; yatamānāḥ:12; yatamānaṃ:11; yattaṃ:11; yattau:11
+142	śubh	śubh	6	matched	547	90.9963	śuśubhe:166; śobhate:96; aśobhata:61; śobhante:23; aśobhanta:20; śumbhasva:18; śubhe:15; śobhase:13; śubhaṃ:9; śobhamānam:9; śumbhamānā:8; śumbhamānāḥ:7; śobhamānā:7; aśobhetāṃ:5; śobhamāno:4
+143	tvar	tvar	1	matched	539	91.0943	tvaramāṇo:65; tvaritaḥ:64; tvarito:62; tvaramāṇaḥ:44; tvaran:40; tvaritā:29; tvaritāḥ:29; tvarita:28; tvaramāṇā:19; tvarate:12; tvareta:10; tvarasva:8; tvaramāṇāḥ:8; tvaritaṃ:7; tvaradhvaṃ:7
+144	sru	sru	1	matched	538	91.1922	sravati:85; sravet:58; sravanti:45; sruta:41; srava:39; susrāva:36; sravat:25; sravantu:17; srute:16; srutam:14; sravate:11; sraved:8; sravadbhiḥ:8; susruvuḥ:8; asravat:6
+145	1 śās / 2 śās	śās	1	homonym_shared	533	91.2892	śiṣṭa:97; śaśāsa:56; śādhi:39; śāsti:37; śiṣṭāḥ:27; śiṣṭā:23; śāsato:18; śiṣṭān:13; śiṣṭaiḥ:12; śāsati:11; śiṣṭānāṃ:11; śiṣṭaḥ:10; śāsad:8; śiṣṭaṃ:8; śiṣṭair:7
+146	sū	sū	6	matched	532	91.386	suṣuve:84; asūta:61; sūte:51; sūyate:30; suva:27; sūyā:24; asūyata:22; sūta:20; sūtave:16; suvati:9; suvāmi:9; sāvīḥ:8; suṣāva:8; sasūva:7; savitave:7
+147	kup	kup	4	matched	521	91.4808	kupito:98; kupitaḥ:59; kupitā:54; kupyati:47; cukopa:32; kupitāḥ:29; kupitaṃ:25; kupita:24; kupite:22; kupyanti:21; kupitena:12; kupyate:10; kupyet:7; kupitair:5; kupyasi:5
+148	gras	gras	1	matched	519	91.5753	grasate:107; grasati:51; grastaḥ:32; grasta:31; grastam:28; graste:24; agrasat:16; grastaṃ:15; graset:15; grasitam:12; grastasya:10; grastā:10; grastāḥ:9; grastān:7; grasyate:6
+149	śā	śā	4	matched	519	91.6697	śitaiḥ:180; śita:76; śitair:57; śitān:47; śitāḥ:23; śitena:21; śiśīhi:11; śiśādhi:10; śiśāno:10; śitāñ:10; śiśīte:9; śitam:6; śitaḥ:6; śiśāmi:5; śiśītam:5
+150	likh	likh	6	matched	509	91.7623	likhet:62; likhitvā:53; likhyate:32; likhitam:27; likhitaṃ:25; likhiṣyanti:23; likhita:20; likhitā:18; likhati:16; likhyante:12; likhed:12; likhite:11; likhyamānāyāṃ:10; lilekha:9; lekhya:9
+151	ruc	ruc	1	matched	501	91.8535	rocate:246; rocatāṃ:20; rocata:14; rucitaḥ:14; arocata:12; rocase:12; roceta:11; rucitaṃ:10; rucitam:10; rocatām:10; rocamānaḥ:9; arocathāḥ:9; rocante:8; ruce:7; rucito:7
+152	krīḍ	krīḍ	1	matched	494	91.9434	krīḍate:56; krīḍati:48; krīḍan:43; krīḍanti:41; krīḍato:20; cikrīḍa:19; krīḍitvā:18; krīḍantau:14; krīḍann:14; krīḍantam:10; krīḍataḥ:10; krīḍantaṃ:10; krīḍatā:9; cikrīḍuḥ:6; krīḍat:6
+153	cal	cal	1	matched	491	92.0327	cacāla:104; calat:69; calati:47; calita:43; calitaḥ:28; calitā:25; calanti:14; calitaṃ:11; celuḥ:10; calite:10; calet:9; cala:8; calitam:6; calito:6; calituṃ:6
+154	ruh	ruh	1	matched	487	92.1214	rohati:69; rūḍha:56; roha:42; rohanti:22; ruhema:20; rohatu:17; rohet:15; rohata:11; rūḍhe:11; rūḍham:11; rohāva:11; ruroha:10; ruheyam:10; aruham:9; rūḍhaḥ:9
+155	śap	śap	1	matched	484	92.2094	śaśāpa:93; śapto:39; śaptaḥ:37; śape:33; śaptvā:18; aśapat:17; śaptā:17; śaptāḥ:13; śepe:11; śapeyaṃ:10; śaptum:10; śapāmahe:9; śapati:8; śapāt:8; śaptavān:8
+156	math	math	4,9	matched	475	92.2959	mathitvā:74; mathyamāne:27; manthanti:25; manthati:25; mathitaṃ:19; mathyate:19; mathita:16; mamanthuḥ:15; mathyamānāya:15; mathite:10; mathitam:10; manthet:9; mathito:9; mamantha:9; matha:9
+157	īkṣ	īkṣ	4	matched	473	92.3819	aikṣata:95; īkṣate:67; īkṣeta:52; īkṣamāṇaḥ:25; īkṣāṃcakre:25; īkṣyate:20; īkṣitum:19; īkṣitaḥ:12; īkṣya:11; īkṣante:10; īkṣitam:9; īkṣata:8; īkṣamāṇo:8; īkṣita:7; īkṣasva:6
+158	guh	guh	6	matched	468	92.4671	gūḍha:171; gūḍham:33; guhyaṃ:27; gūḍhaṃ:26; guhyam:22; gūḍhaḥ:18; gūḍho:18; guhya:15; gūḍhāḥ:8; gūhet:7; gūḍhā:7; gūhamānā:7; gūḍhe:6; gūhati:6; gūhanti:5
+159	gad	gad	1	matched	466	92.5519	jagāda:286; gadato:41; gadataḥ:18; jagade:15; gaditaṃ:14; gaditam:10; jagaduḥ:8; gadito:8; gadyate:8; gaditā:6; gadite:6; gadituṃ:4; gaditaḥ:4; gada:3; agādiṣam:3
+160	nad	nad	1	matched	460	92.6356	nanāda:143; nadan:41; neduḥ:35; anadat:30; nadanti:19; nadanto:19; nedur:15; nadatsu:14; nadatāṃ:13; nadadbhiḥ:12; nadato:11; nadat:10; anadan:10; nadantaṃ:9; nadataḥ:9
+161	bādh	bādh	1	matched	456	92.7186	bādhate:116; bādhyate:48; bādhasva:30; bādhante:28; bādhamānaḥ:12; bādhitum:11; bādhitaḥ:10; abādhata:9; bādhyante:9; bādhamānā:9; bādhatām:7; bādhe:7; babādhe:7; bādhase:7; bādheta:6
+162	śri	śri	1	matched	451	92.8006	śritaḥ:53; śritāḥ:43; śritā:33; śritam:27; śiśriye:24; aśret:15; aśrayanta:14; śrayantām:13; śrayasva:12; śrayate:10; śrito:10; śrayet:9; śrayatām:8; aśiśriyat:8; śrita:8
+163	trā	trā	2	matched	445	92.8816	trāyasva:80; trāhi:69; trātum:59; trāyate:36; trātuṃ:14; trātā:13; trāyatāṃ:11; trāyase:11; trāyethām:11; trāyatām:10; trāyante:8; trāti:7; atrāyata:7; trātāḥ:7; trāyantām:6
+164	krī	krī	1	matched	439	92.9615	krīṇāti:71; krītvā:50; krīte:23; krīṇāni:23; krītaḥ:22; krīta:18; krītam:17; krītaṃ:17; krīto:17; krīṇanti:16; krītā:15; krīṇīyāt:14; krīṇāmi:14; krītāya:8; krītāḥ:7
+165	kṣam	kṣam	1	matched	439	93.0414	kṣantum:65; kṣamasva:44; kṣamate:43; kṣāntaṃ:22; kṣamyatāṃ:18; kṣantavyaṃ:17; kṣamyatām:15; kṣantavyam:15; kṣāntam:13; kṣāntaḥ:12; kṣāntā:12; cakṣame:12; kṣānto:10; kṣama:10; kṣameta:9
+166	puṣ	puṣ	6	matched	438	93.1211	puṣṭa:53; puṣyati:52; puṣṇāti:33; pupoṣa:17; puṣṭāḥ:16; puṣṭaḥ:15; puṣyanti:13; puṣṭam:13; puṣyasi:13; puṣṭaṃ:10; puṣyase:10; puṣṇanti:9; apuṣyat:9; puṣṭo:7; puṣṇāmi:6
+167	īś	īś	2	matched	425	93.1984	īśe:118; īśate:37; īśiṣe:33; īṣṭe:30; īśānaḥ:27; īśānaṃ:22; īśata:22; īśānam:17; īśāte:16; īśānā:15; īśāno:14; īśāthe:8; īśāna:7; īśīta:4; īśānāḥ:4
+168	has	has	1	matched	419	93.2747	hasan:75; hasann:51; jahāsa:43; hasanti:32; hasati:21; hasantī:13; haset:11; hasatā:10; jahasuḥ:10; hasita:10; ahasat:9; hasatī:9; hāsya:7; hasantaṃ:6; hasantam:5
+169	puṭ	puṭ	6	matched	418	93.3507	puṭet:225; puṭitaṃ:83; puṭitam:42; puṭed:15; puṭito:11; puṭitaḥ:9; puṭitā:7; puṭita:5; puṭitvā:5; puṭitāni:3; puṭitāḥ:2; puṭitasya:2; puṭati:2; puṭan:2; puṭitaiḥ:1
+170	kram	kram	4	matched	414	93.4261	kramate:62; krāmati:54; akramīt:21; kramasva:16; cakrame:14; krāma:13; krāmanti:13; akramīd:12; krame:11; krānta:9; krānte:9; akramuḥ:9; kramadhvam:6; krāntvā:6; kramet:5
+171	arc	arc	1	matched	413	93.5012	arcata:24; arcanti:24; arcite:24; arca:21; arcan:18; arcati:17; arcanty:13; arcāmi:13; arcet:11; arcā:11; arcya:10; arcitvā:9; arcann:9; arcāma:8; arcitum:8
+172	lih	lih	4	matched	405	93.5749	lihet:145; lihyāt:95; līḍhaṃ:26; līḍhvā:22; līḍha:19; lihyād:15; līḍham:9; lihyān:8; lihan:8; līḍhā:6; leḍhi:4; līḍho:4; lihyamāna:4; lihed:4; lihānaḥ:3
+173	rāj	rāj	2	matched	405	93.6486	rarāja:114; rājate:38; rājati:37; reje:30; rājasi:22; rejur:14; rejuḥ:13; rejatuḥ:13; rājase:7; rājatā:7; rājantam:7; rāja:6; rājan:6; rājante:5; rājitam:5
+174	1 gṛ / 2 gṛ / 3 gṛ	gṛ	9	homonym_shared	399	93.7212	gṛṇanti:42; gṛṇate:39; gṛṇantaḥ:20; gṛṇānā:19; gṛṇānaḥ:17; gṛṇāno:17; gṛṇīmasi:17; girati:15; gṛṇāna:15; gṛṇe:13; gṛṇīhi:12; gṛṇanto:12; gṛṇīṣe:12; gṛṇan:11; jagāra:10
+175	vyath	vyath	1	matched	397	93.7935	vyathate:45; vivyathe:41; vyathita:37; vyathito:34; vyathitā:30; vyathitāḥ:28; vyathitaḥ:27; vyathitaṃ:24; vyathantāṃ:8; vyatheta:8; vyathitam:8; vyathamānā:8; vyathamānām:7; vivyathuḥ:7; vyathanti:4
+176	ṛdh	ṛdh	6	matched	392	93.8648	ṛdhnoti:82; ṛddhaṃ:32; ārdhnot:29; ṛdhyate:25; ārdhnuvan:23; ṛdhyāsam:13; ṛdhnoty:13; ṛdhnuyām:11; ṛddham:10; ṛdhnuyād:10; ṛdhnuvanti:9; ṛdhyante:8; ṛddhāḥ:7; ṛddhaḥ:7; ṛdhyāsma:6
+177	śram	śram	1	matched	382	93.9343	śrāntaḥ:56; śrānta:50; śrānto:39; śrāntā:22; śrāntasya:21; śrāntam:18; śrāntaṃ:18; śrāntāḥ:16; aśrāmyat:14; śrāntebhyas:8; śrāntau:7; śrāntāya:5; śrāmyati:5; śrāntāt:5; śrāmyantaś:5
+178	khad / khād	khād	1	homonym_shared	369	94.0014	khādet:117; khādati:33; khādan:20; khādanti:17; khāded:16; khādanīya:15; khādanīyena:10; khāden:7; khāda:6; khādita:6; khāditaṃ:6; khādanīyaṃ:6; khādataḥ:5; khādata:5; khādann:4
+179	svid	svid	4	matched	369	94.0686	svinna:61; svinnaṃ:59; svinnam:30; svinnasya:26; svedyaṃ:23; svinnaḥ:20; svinno:13; svinnā:13; svidyati:10; svinnāṃ:9; svinnāni:8; svinne:8; svedyaḥ:7; svidyate:6; svinnāḥ:5
+180	prath	prath	1	matched	365	94.135	prathitaṃ:51; prathita:38; prathasva:35; prathitaḥ:25; prathitā:25; paprathe:24; prathito:24; prathate:20; prathatām:15; prathantu:6; aprathetām:5; prathatāṃ:5; aprathata:5; prathitāḥ:5; papratha:4
+181	kṛṣ	kṛṣ	6	matched	360	94.2005	kṛṣṭa:33; karṣati:27; cakarṣa:24; kṛṣṭe:21; kṛṣṭam:13; kṛṣyate:13; kṛṣati:13; karṣet:9; kṛṣṭaṃ:8; kṛṣṭā:8; kṛṣyamāṇaḥ:8; karṣan:7; karṣann:6; kṛṣṭaḥ:6; kṛṣṭena:5
+182	sphur	sphur	6	matched	357	94.2655	sphurat:128; sphurati:51; sphurita:36; sphuret:13; sphuran:9; sphurantam:8; sphuranti:7; sphuratā:7; sphurantī:7; sphuritvā:6; sphurantaṃ:6; asphurat:5; sphurantīṃ:5; asphurad:4; sphuritaṃ:4
+183	nṛt	nṛt	4	matched	353	94.3297	nṛtyanti:40; nanṛtuḥ:36; nanarta:35; nṛtyati:29; nṛtyan:18; nṛtyann:17; nanṛtur:11; nṛtyantaṃ:10; nṛtyantī:9; nṛtyadbhir:9; nṛtyatām:6; nṛtyantam:6; nanṛtuś:6; nṛtyamānaṃ:6; nṛtyat:5
+184	khan	khan	2	matched	352	94.3938	khanati:62; khanet:36; khātvā:35; khanāmi:19; khanitvā:12; khananti:10; akhanat:10; khanāmasi:9; khanantaḥ:9; khanema:9; akhanad:6; akhanan:6; khanan:6; khananta:6; khanate:6
+185	iḍ / īḍ	īḍ	2	homonym_shared	352	94.4578	īḍe:43; īḍyaḥ:32; īḍate:27; īṭṭe:21; īḍyam:20; īḍitaḥ:20; īﾱate:18; īḍyo:16; īﾱe:13; īḍya:11; īḍito:9; īḍyaṃ:9; īḍita:8; īḍiṣva:7; īḍenyo:6
+186	mil	mil	6	matched	346	94.5208	milati:92; milanti:49; militaṃ:34; militvā:21; militā:16; militam:15; milita:15; militaiḥ:13; milet:11; milite:10; milat:10; militaḥ:10; milate:8; militāḥ:7; militena:6
+187	śikṣ	śikṣ	6	matched	345	94.5836	śikṣitavyam:58; śikṣate:46; śikṣā:18; śikṣamāṇaḥ:18; śikṣiṣyante:16; śikṣamāṇasya:14; śikṣa:13; śikṣasva:13; śikṣitavyaṃ:12; śikṣan:9; śikṣamāṇo:8; śikṣitvā:6; śikṣante:5; śikṣeta:5; aśikṣata:5
+188	majj	majj	1	matched	343	94.646	majjati:42; magna:25; magnā:23; magno:21; magnaḥ:19; majjanti:18; magnaṃ:18; magnam:14; magnānām:10; magnām:10; magnāḥ:9; mamajja:8; magnāṃ:6; magnasya:6; majjantaṃ:5
+189	dam	dam	4	matched	342	94.7082	dānto:58; dāntaḥ:52; dāntāḥ:32; dāntaṃ:28; dāntā:26; dānta:22; dāntān:15; dāntaiḥ:14; dāntasya:13; dāntam:10; dāntāya:10; dāntena:8; dānteṣu:6; dāntānāṃ:5; dānte:4
+190	bhraṃś	bhraṃś	1	matched	340	94.7701	bhraṣṭa:89; bhraṣṭaḥ:37; bhraśyate:23; bhraṣṭā:20; bhraṣṭāḥ:20; bhraṣṭaṃ:19; bhraṣṭo:19; bhraṣṭasya:13; bhraṣṭam:9; bhraśyati:7; bhraṣṭaiḥ:6; bhraṣṭām:5; bhṛṣṭaṃ:4; bhṛṣṭān:4; bhraṣṭe:4
+191	stṛ	stṛ	5	matched	334	94.8309	stṛṇāti:50; stṛṇute:39; stīrtvā:21; stṛṇāmi:15; stṛṇīta:12; stīrṇam:11; stīrṇaṃ:9; stīrṇa:8; stīrṇe:8; stṛṇuta:8; stṛṇīhi:7; stṛṣīya:7; stṛṇāty:7; astṛṇuta:7; stṛtaḥ:7
+192	nud	nud	7	matched	332	94.8913	nudate:38; nudasva:36; anudanta:20; nuda:20; nunnāḥ:15; nudatu:12; nunnaḥ:10; nudati:9; nunude:8; nudatām:7; nudan:7; nunnam:7; nuttā:6; nunnā:6; nunna:6
+193	lubh	lubh	4	matched	325	94.9504	lubdhaḥ:51; lubdhāḥ:39; lubdha:28; lubdhena:25; lubdho:24; lubdhasya:23; lubdham:22; lubdhā:17; lubdhaṃ:13; lubdhaiḥ:11; lubdhān:10; lubdhānāṃ:7; lubdhānām:6; lubdheṣu:5; lubhyanti:4
+194	sac	sac	1	matched	323	95.0092	sacante:48; sacate:39; sacanta:20; sacantām:20; sacemahi:19; siṣakti:13; sacata:9; siṣaktu:9; sacasva:8; sacadhvam:8; sacatām:7; sacase:7; sakṣīmahi:7; saścasi:7; sacethe:7
+195	1 vap / 2 vap	vap	1	homonym_shared	320	95.0674	vapati:37; vapate:23; avapat:21; vapāmi:20; vapata:18; uptam:18; uptvā:15; vapet:14; vapa:13; upta:13; vapanti:12; vapasi:10; 'vapat:7; vapatu:6; uptaṃ:6
+196	vaś	vaś	1	matched	302	95.1224	uśanti:28; uśatī:24; uśmasi:22; vaṣṭi:17; uśantaḥ:17; uśatīr:16; uśatīḥ:15; uśan:14; uśann:11; uśataḥ:9; uśato:8; uśantam:8; vāvaśānāḥ:7; vaṣṭy:6; uśantaṃ:6
+197	mṛj	mṛj	3	matched	298	95.1766	mṛṣṭa:70; mṛjanti:26; mṛṣṭvā:15; mṛjmahe:9; mṛṣṭaṃ:9; mṛjanty:9; mṛṣṭam:8; mārṣṭi:8; mṛjyate:8; mṛje:7; mārṣṭu:7; mṛṣṭaḥ:7; mṛṣṭā:6; mṛjyamānaḥ:6; mṛṣṭe:5
+198	1 vā / 2 vā / 3 vā	vā	2	homonym_shared	298	95.2308	vāti:77; vavau:60; vānti:29; vātu:24; vavur:16; vāhi:13; vavuḥ:12; vāsi:8; vāntu:6; vāta:4; vāyati:4; vānam:3; vāyuḥ:3; vāyāt:3; vāty:3
+199	plu	plu	1	matched	297	95.2849	plutam:66; plavate:25; plutaḥ:17; pupluve:13; plutaiḥ:12; pluta:9; plavamānaṃ:9; plutaṃ:8; plavatāṃ:8; plutā:7; plavamānā:6; plavamānaḥ:5; plutena:5; plaveta:4; plavamānasya:4
+200	daṃś	daṃś	1	matched	296	95.3387	daṣṭa:29; daṣṭaḥ:27; daṣṭasya:25; daṣṭo:23; daṣṭe:20; daṣṭaṃ:19; daṣṭā:11; daśati:11; daṣṭam:11; daṣṭāḥ:10; daśanti:9; daṣṭānām:9; daṣṭānāṃ:8; daśyate:6; daśa:5
+201	stambh	stambh	5	matched	291	95.3917	stabdha:62; stabdhvā:19; stabdhā:18; stabhāna:16; tastambha:15; stabdhaḥ:15; astabhnād:13; stabdhaṃ:11; stabdham:10; stabdho:10; astabhnāt:6; stabdhe:6; stabdhau:6; stabhnāmi:5; astabhnā:5
+202	dāś	dāś	5	matched	290	95.4444	dāśuṣe:150; dāśuṣo:20; dāśuṣaḥ:17; dāśvāṃsam:14; dāśema:14; dadāśa:9; dāśat:7; dāśati:6; dāśvāṃso:5; dadāśuṣe:5; dāśad:5; dāśuṣa:4; dāśvān:3; dāśāt:3; dāśvāṁ:3
+203	vṛj	vṛj	7	matched	283	95.4959	vṛṅkte:79; avṛñjata:33; vṛkta:27; vṛṇaktu:24; vṛṇakti:11; vṛṅgdhi:9; vṛṅdhi:8; vṛñjate:7; vṛñjanti:5; vṛṅktām:4; vṛṅkṣva:3; vṛjyate:3; vṛkṣi:3; vṛjyāḥ:3; vark:3
+204	1 śṛ / 2 śṛ / 3 śṛ	śṛ	9	homonym_shared	278	95.5465	śīrṇa:66; śṛṇīhi:22; śīryate:21; aśīryata:16; śīrṇaṃ:11; śīryamāṇa:7; śīryante:7; śīrṇam:7; śīrṇāḥ:7; śīrṇā:7; śṛṇāti:6; śīrṇe:5; śṛṇītām:4; śṛṇātu:4; śīryaḥ:4
+205	kṣan	kṣan	8	matched	276	95.5968	kṣata:104; kṣataḥ:31; kṣatam:29; kṣate:14; kṣataṃ:11; kṣatāḥ:11; kṣatā:11; kṣatān:8; kṣato:6; kṣatasya:5; kṣatām:5; kṣatau:5; kṣatānām:4; kṣatānāṃ:4; kṣataiḥ:4
+206	dṛh	dṛh	4	matched	274	95.6466	dṛṃha:149; dṛṃhasva:17; dṛṃhati:13; adṛṃhan:11; dṛṃhantāṃ:8; dṛḍhā:7; adṛṃhat:7; dṛṃhaty:6; dṛṃhata:4; 'dṛṃhan:4; dṛﾱhāni:3; adṛṃhad:3; dṛṃheta:3; dṛṃhataṃ:3; dṛhya:3
+207	śaṅk	śaṅk	1	matched	273	95.6963	śaṅke:38; śaṅkitaḥ:34; śaṅkitāḥ:20; śaṅkitā:12; śaṅkamānaḥ:12; śaṅkate:11; śaṅketa:10; śaṅkita:10; śaṅkamānā:7; śaṅkamāno:7; śaṅkito:7; śaṅkitam:6; śaṅkitaṃ:5; śaṅkase:5; śaṅkitum:5
+208	chad	chad	1	matched	270	95.7454	channa:52; channam:47; channā:34; channaṃ:31; channaḥ:21; channāḥ:17; channo:13; channaiḥ:11; channām:8; channe:5; channena:5; channas:4; channāṃ:4; channau:3; channāni:3
+209	1 lī / 2 lī	lī	1	homonym_shared	268	95.7942	līyate:68; līna:27; līnā:19; līyante:19; līnaṃ:19; līnaḥ:16; līnāḥ:15; līnāni:13; līnam:11; līne:10; līno:9; līyeta:4; līyamāne:3; līnām:3; līneṣu:3
+210	tras	tras	4	matched	267	95.8428	trastāḥ:45; trasta:35; trastā:31; trastaḥ:21; trasto:15; trastān:12; trastam:9; trastaiḥ:8; trastaṃ:7; tatrāsa:6; trasyati:5; trasanti:5; traset:4; trastāni:4; trastānāṃ:4
+211	cit	cit	3	matched	266	95.8912	cikitvān:47; ciketa:37; cikituṣe:19; ceti:16; cetati:13; aceti:8; cikite:8; ciketati:8; cikiddhi:6; citānāḥ:5; cikitvāṁ:5; cikitvo:5; ciketat:4; cikitre:4; cikituṣī:3
+212	riṣ	riṣ	1	matched	257	95.9379	riṣyati:27; riṣāma:27; riṣāmā:18; riṣyate:13; riṣam:11; rīriṣo:10; rīriṣaḥ:9; riṣat:9; riṣyataḥ:9; riṣyaty:7; riṣṭaḥ:7; riṣan:7; riṣad:6; rīriṣata:5; riṣyāti:5
+213	skand	skand	1	matched	247	95.9829	skandati:41; skannam:35; skannaṃ:22; caskanda:21; skandet:20; skanna:15; skanne:11; skanded:8; skannā:7; skān:6; skannasya:6; askandat:5; skandaty:5; askān:4; skandate:3
+214	dhū	dhū	2	matched	245	96.0275	dhūta:43; dhunīta:17; dhunvan:13; dhunoti:10; dhuta:9; dhūnute:6; dhūtasya:6; dhūtvā:5; dhūnuṣva:5; dhūnuhi:5; adhūṣata:5; dhūnvanti:5; dhūnoti:5; dhunute:4; dhūnvan:4
+215	rādh	rādh	5	matched	240	96.0711	rādhnoti:43; rādhyatāṃ:24; arātsma:19; rādhyatām:16; rādhi:15; rādhyāsam:14; 'rādhi:7; rādhnuvanti:5; rarādha:5; arātsuḥ:5; arādhi:5; arādhnuvan:4; rādhat:4; rādhiṣi:4; 'rātsur:4
+216	kruś	kruś	4	matched	238	96.1145	cukruśuḥ:41; cukrośa:24; krośatāṃ:17; krośanti:15; krośantīṃ:14; krośato:11; krośantaḥ:10; cukruśur:10; krośantī:7; krośati:5; krośataḥ:5; krośadbhiḥ:4; krośatas:4; krośanto:4; krośatu:3
+217	kamp	kamp	1	matched	237	96.1576	akampata:36; cakampe:36; kampate:32; cakampire:15; kampita:14; kampitaḥ:10; kampamāna:6; kampamānā:6; kampitā:6; kampitāḥ:6; kampante:5; kampitaiḥ:4; kampati:4; kampamānaḥ:3; kampitam:3
+218	kṣubh	kṣubh	1	matched	236	96.2005	kṣubhita:31; cukṣubhe:28; kṣobhyam:26; kṣubdha:18; kṣobhyaḥ:13; kṣubhitāḥ:11; kṣubhitaṃ:11; kṣobhya:9; cukṣubhuḥ:6; kṣubhito:5; kṣubhite:5; kṣubhitā:5; kṣubhitaḥ:5; cukṣubhire:4; kṣubhyati:4
+219	lag	lag	1	matched	236	96.2435	lagnam:52; lagna:48; lagnā:26; lagnena:15; lagnaṃ:13; lagnaiḥ:12; lagati:12; lagnaḥ:10; lagnām:7; laget:7; lagnāḥ:5; laganti:4; lagne:4; lagneṣu:3; lagnayā:3
+220	smi	smi	1	matched	227	96.2848	smayann:51; smayamāno:27; smita:24; smayan:23; smitvā:13; smayamānaḥ:12; smayamāna:9; smayate:7; smayamānā:6; smayeta:5; smayamānena:3; asmayata:3; smitam:3; smayamānāḥ:3; smayantī:2
+221	hi	hi	5	matched	224	96.3255	hinvanti:26; hinvanty:16; hinva:14; hitaḥ:12; hinvāno:10; hinota:9; hinvire:8; hinoti:7; hinvantu:7; hiyānaḥ:7; hiṇomi:6; hiṇuta:6; hinomi:6; hinvānaḥ:6; hito:5
+222	vam	vam	1	matched	223	96.3661	vamet:28; vānta:20; vaman:17; vāntam:14; vamati:14; vamanto:14; vāntaṃ:13; vānte:7; vamanti:6; vamantaḥ:6; vamantam:6; vamiti:5; vamantaṃ:4; vānto:4; vamataḥ:3
+223	1 kṛt / 2 kṛt	kṛt	2,6	homonym_shared	220	96.4061	kṛtta:47; cakarta:42; kṛntati:15; akṛntan:13; kṛntanti:7; kṛtya:7; kṛttaḥ:6; kṛttaṃ:5; kṛttā:5; kṛnta:4; kṛṇatti:4; kṛttam:4; kartsyāmi:3; akṛntann:3; kṛntāmi:3
+224	kṣar	kṣar	2	matched	220	96.4462	kṣaranti:39; kṣarati:27; akṣaran:17; akṣarat:14; kṣarantu:11; kṣarat:10; kṣaran:9; kṣarantaḥ:8; akṣār:8; kṣarate:7; akṣāḥ:6; kṣaranta:5; kṣarantī:4; kṣarita:4; kṣara:3
+225	van	van	6	matched	220	96.4862	vāvāna:16; vanute:16; vanate:16; vanavat:8; vanema:7; vanvan:6; vanāmahe:6; vanemahi:6; vanvann:6; vanuṣva:5; vanvānā:5; avanvata:5; vanutho:5; vanataṃ:5; vanvīta:4
+226	bhrāj	bhrāj	1	matched	219	96.5261	bhrājate:28; bhrājamānaṃ:17; bhrājamāno:14; bhrājanti:13; bhrājat:12; bhrājante:12; bhrājase:9; bhrājanta:8; bhrājamānaḥ:8; bhrājamānam:7; bhrājamānā:7; babhrāja:6; bhrājamānāḥ:5; bhrājantaḥ:4; bhrājanto:4
+227	1 rā / 2 rā	rā	1,4	homonym_shared	214	96.565	rāsva:34; rāta:28; rarāṇaḥ:16; raruṣaḥ:10; rarāṇā:10; rāsi:9; rāsvā:8; rāsate:6; rirīhi:6; arāsata:5; rarāṇo:5; rāsantām:5; rātāḥ:5; rarimā:5; rātaṃ:3
+228	kliś	kliś	9	matched	213	96.6038	kliṣṭa:41; kliśyate:14; kliśyante:10; kliṣṭaṃ:9; kliṣṭam:9; kliśyanti:8; kliśnāti:8; kliṣṭo:7; kliśyamānāḥ:6; kliśyamānaḥ:6; kliṣṭe:5; kliṣṭā:5; kliśyati:5; kliṣṭāḥ:5; kliṣṭaḥ:5
+229	gal	gal	1	matched	212	96.6423	galita:56; galat:25; galitam:21; galite:16; galitaṃ:16; galati:13; galitvā:9; galitaḥ:6; galitasya:5; galitau:4; galanti:4; galitaiḥ:3; galitena:3; galitā:3; galatām:3
+230	1 vidh / 2 vidh	vidh	1,6	homonym_shared	209	96.6804	vidhema:137; vidhate:15; vidheyaṃ:10; vidhataḥ:8; avidhat:6; vidhes:5; 'vidhad:3; vidhato:3; vidhantam:3; vindhate:3; vidheyam:2; 'vidhat:2; vidheḥ:1; avidhāma:1; vidher:1
+231	ric	ric	7	matched	206	96.7179	rikta:55; ricyate:15; riktam:12; riricāno:12; ririce:11; riricānam:11; riricāna:9; rikte:7; aricyata:5; ricyata:4; riktaḥ:4; āraik:4; riṇakti:3; rireca:3; riktāḥ:3
+232	sṛ	sṛ	3	matched	204	96.755	sasāra:21; sarati:19; asarat:11; sisrate:10; sartave:9; sṛtvā:6; sasṛvāṃsaṃ:5; sara:5; sasṛvāṃsam:5; sarat:5; sasrur:5; sṛta:4; sasruṣīḥ:4; asaram:4; asaran:4
+233	kāṅkṣ	kāṅkṣ	2	matched	202	96.7917	kāṅkṣati:20; kāṅkṣitānām:17; kāṅkṣitaṃ:14; kāṅkṣitam:13; kāṅkṣante:11; kāṅkṣito:9; kāṅkṣate:8; kāṅkṣitaḥ:6; kāṅkṣamāṇo:5; kāṅkṣe:5; kāṅkṣitā:5; kāṅkṣase:4; kāṅkṣamāṇaḥ:4; kāṅkṣiṣyati:3; kāṅkṣeta:3
+234	ceṣṭ	ceṣṭ	1	matched	200	96.8281	ceṣṭitam:38; ceṣṭate:28; ceṣṭati:12; ceṣṭitaṃ:11; ceṣṭitaḥ:10; ceṣṭitaiḥ:10; aceṣṭata:8; ceṣṭanti:6; ceṣṭeta:5; ceṣṭamānaṃ:5; ceṣṭituṃ:5; ceṣṭitum:4; ceṣṭante:4; ceṣṭite:3; ceṣṭamānaḥ:3
+235	1 yu / 2 yu	yu	2,3	homonym_shared	199	96.8643	yuvate:15; yuyodhy:15; yoṣam:11; yuyota:9; yuvase:8; yuvasva:8; yutam:6; yutaḥ:6; yuyotu:5; ayuvata:5; yute:5; yauṣṭaṃ:5; yaumi:4; yoṣaṃ:4; yuyotana:4
+236	san	san	8	matched	196	96.9	sanitā:21; sanema:19; sanoti:15; sasāna:13; sasavāṃso:8; sanat:8; saneyam:6; sanuyāma:6; sanā:6; asanāma:5; sasavān:5; set:4; saniṣyan:4; saniṣyantīnām:3; sanitāsi:3
+237	śiṣ	śiṣ	6	matched	194	96.9353	śiṣyate:26; śiṣṭāḥ:25; śiṣṭaṃ:17; śiṣṭam:12; śiṣṭān:10; śiṣṭvā:10; śiṣṭe:10; śiṣṭā:9; śinaṣṭi:6; śiṣṭeṣu:6; śiṣṭāni:5; śiṣṭaḥ:4; śiṣṭa:4; śeṣi:3; śiṣṭena:3
+238	sṛp	sṛp	1	matched	192	96.9702	sarpanti:48; sarpati:41; sarpata:14; sarpate:9; sarpa:5; sarpet:4; sarpatām:4; sasarpa:4; sarped:3; sarpat:3; sṛptvā:3; asṛpta:2; sarpatāṃ:2; sṛpaḥ:2; sarpatu:2
+239	ī	ī		matched	192	97.0052	īmahe:115; īyate:22; īyase:16; īmaha:13; iyānaḥ:8; iyānāḥ:3; īyata:2; īyamāno:2; īyante:2; iyāno:2; iyānā:2; īyamānaḥ:1; īyamānāḥ:1; iyānāso:1; ayamāna:1
+240	1 ukṣ / 2 ukṣ	ukṣ	4	homonym_shared	191	97.0399	ukṣitam:26; ukṣitaḥ:22; ukṣitāḥ:21; ukṣita:19; ukṣitaiḥ:13; ukṣatu:12; ukṣitau:11; ukṣamāṇā:6; ukṣitā:6; ukṣatam:5; ukṣitān:4; ukṣamāṇās:4; ukṣata:3; ukṣantu:3; ukṣite:3
+241	mūrch	mūrch	1	matched	189	97.0743	mūrta:23; mūrtaṃ:18; mūrchati:12; mūrchanti:12; mūrchitaḥ:12; mūrtā:10; mūrtam:9; mūrchito:7; mūrtayā:5; mūrchitvā:5; mūrchitaṃ:5; mūrtaḥ:4; mūrchan:4; mūrchitām:4; mūrtāḥ:4
+242	diś	diś	6	matched	186	97.1082	diśāmi:16; diṣṭaṃ:13; diśantu:13; dideśa:11; diṣṭam:11; diśanti:9; diṣṭa:9; diśati:9; diśatu:9; diśa:8; diṣṭaḥ:6; diśet:6; diśantā:4; diṣṭe:4; diśāmy:4
+243	spṛdh	spṛdh	6	matched	186	97.142	aspardhanta:39; spardhate:33; paspṛdhire:12; 'spardhanta:8; spardhamānā:8; spardhante:7; spardhamānaḥ:7; spardhamānāḥ:6; apaspṛdhethāṃ:5; spardhamāno:5; spardhya:5; spardheta:5; spardhan:4; spardhase:4; paspṛdhāte:2
+244	ślāgh	ślāgh	1	matched	186	97.1759	ślāghyaḥ:21; ślāghya:21; ślāghyo:15; ślāghyaṃ:12; ślāghyam:11; ślāghyā:8; ślāghate:7; ślāghamānaḥ:6; ślāghyas:6; ślāghase:6; ślāghanīyaṃ:5; ślāghyāṃ:4; ślāghanīyo:4; ślāghanīya:3; ślāghamānā:3
+245	dih	dih	2	matched	185	97.2095	digdha:83; dihyāt:15; digdhena:10; digdhaḥ:10; digdham:10; digdhaṃ:10; digdhāḥ:8; digdhā:7; dihet:4; digdhe:3; adihan:2; dihānaḥ:2; digdhām:2; digdhānām:2; digdhvā:2
+246	garh	garh	1	matched	185	97.2432	garhitam:29; garhitaḥ:15; garhitaṃ:15; garhitāḥ:9; garhita:8; jagarhe:6; garhite:5; garhate:5; garhya:4; garhito:4; garhitā:4; garhitena:4; garhase:4; garhyam:3; garhyaṃ:3
+247	krand	krand	1	matched	183	97.2765	acikradat:16; akrandad:16; akrandaḥ:11; krandati:10; cakranda:8; kranda:8; acikradad:8; krandantī:8; akrān:8; krandanti:5; krandan:5; akrandat:4; krandate:4; krandantīṃ:4; krandamānā:4
+248	pinv	pinv	1	matched	182	97.3096	pinvasva:31; pinvate:21; pinvamānā:18; pinva:15; pinvanty:14; pinvatam:8; pinvamānāḥ:7; pinvamānaḥ:6; pinvamānam:4; pinvamāne:3; pinvanti:3; pinvataṃ:3; apinvatam:3; apinvata:3; pinvati:2
+249	vāñch	vāñch	1	matched	180	97.3424	vāñchati:42; vāñchanti:25; vāñchitam:13; vāñchitaṃ:12; vāñchasi:11; vāñchita:10; vāñchantv:6; vāñcha:6; vāñchan:6; vāñchantu:5; vāñchanty:3; vāñchitaḥ:3; vāñchate:2; vāñchet:2; vāñchantaḥ:2
+250	garj	garj	1	matched	179	97.3749	garjanti:19; garjan:11; garjantaṃ:11; garjantam:10; garjatām:10; garjantaḥ:8; garjat:7; garjati:7; jagarjuḥ:6; garjataḥ:6; garjanto:6; garjatāṃ:6; garjato:5; garjita:4; garjasi:4
+251	edh	edh	1	matched	172	97.4062	edhate:65; edhiṣīmahi:23; edhante:19; edhitaḥ:9; edhantāṃ:6; edhanti:6; edhita:4; edhitam:3; edhasva:3; edhitum:3; edhiṣīya:2; edhamānam:2; edhete:2; edhamānā:2; edhamāno:2
+252	1 śuṣ / 2 śuṣ	śuṣ	6	homonym_shared	166	97.4364	śuṣyati:41; śoṣyaṃ:18; śuṣyanti:15; śuṣyat:11; śuṣyataḥ:6; śuṣyatu:4; śuṣyato:4; śuṣyate:4; aśuṣyat:4; śuṣyantu:3; śuṣya:3; śuṣyantaṃ:3; aśuṣyan:3; śuṣyatā:3; śoṣyam:3
+253	pyā	pyā	2	matched	165	97.4665	pyāyasva:30; pyāyatām:20; pipyuṣīm:10; pīpāya:9; pīpeḥ:8; pīpihi:7; pyāsiṣīmahi:6; pīpayanta:6; pipyuṣī:6; pipyataṃ:5; pīpivāṃsam:3; pyāyatāṃ:3; pinvāte:3; pīpayat:3; pipyathur:3
+254	bhakṣ	bhakṣ	4	matched	162	97.4959	bhakṣya:20; bhakṣyāḥ:12; bhakṣyaṃ:11; bhakṣyam:10; bhakṣyā:10; bhakṣīmahi:9; bhakṣet:8; bhakṣituṃ:5; bhakṣyaḥ:5; bhakṣyo:4; bhakṣyamāṇā:4; bhakṣyatāṃ:4; bhakṣyān:4; bhakṣīya:4; bhakṣyamāṇaḥ:3
+255	muṣ	muṣ	9	matched	162	97.5254	muṣṇāti:29; muṣita:23; muṣitā:10; muṣitaḥ:8; muṣitaṃ:5; moṣīḥ:5; muṣṇanti:5; muṣito:5; muṣitvā:5; muṣitam:5; muṣitāḥ:4; muṣiṣyāmaḥ:4; muṣyate:4; muṣṇan:4; muṣṇantam:3
+256	takṣ	takṣ	5	matched	161	97.5547	tatakṣa:18; takṣan:10; taṣṭam:8; tatakṣuḥ:7; takṣati:6; takṣad:6; taṣṭa:5; tatakṣatuḥ:5; taṣṭaḥ:5; takṣata:5; tatakṣur:5; tatakṣāte:4; tatakṣatur:4; tāḍhi:3; takṣato:3
+257	spṛ	spṛ	9	matched	160	97.5838	spṛṇoti:48; spṛṇomi:14; spṛṇute:11; spṛtaṃ:10; spṛṇāti:9; spṛtam:8; spṛtvā:5; spṛṇoty:5; spṛtaḥ:5; aspṛṇvata:5; spṛtāḥ:4; aspārṣam:3; ṣparad:3; aspṛṇvaṃs:2; spṛṇuhi:2
+258	ghṛṣ	ghṛṣ	4	matched	156	97.6122	ghṛṣṭaṃ:33; ghṛṣṭam:31; ghṛṣṭvā:29; ghṛṣṭa:17; ghṛṣṭaḥ:9; ghṛṣṭo:7; ghṛṣṭena:7; ghṛṣṭā:4; ghṛṣṭeṣu:3; ghṛṣṭe:3; ghṛṣṭāḥ:2; ghṛṣṭāni:2; ghṛṣṭān:2; ghṛṣṭānām:1; gharṣet:1
+259	vip	vip	1	matched	156	97.6406	vepamānā:26; vepamāna:21; vepamānaḥ:17; vepate:15; vepamāno:12; vepamānāṃ:6; vepamānam:5; vepiḍhvam:4; vepamānāḥ:4; vepamānān:4; vepantīṃ:4; vepamānaṃ:3; vepamānau:3; vepamāne:2; vepanti:2
+260	sphuṭ	sphuṭ	6	matched	154	97.6686	sphuṭita:32; sphuṭanti:19; sphuṭati:14; sphuṭitā:10; sphuṭitaṃ:10; sphuṭitaḥ:9; sphuṭat:6; asphuṭat:6; sphuṭite:5; pusphoṭa:5; sphuṭatām:3; sphoṭati:3; sphuṭet:3; sphuṭitam:3; sphuṭatu:2
+261	śvas	śvas	1	matched	154	97.6967	śvasan:58; śvasiti:21; śvasantam:8; śvasati:5; śvasat:5; śvasanto:4; śvasatāṃ:3; śvasita:3; śvasadbhir:3; śvasihi:2; śvasantī:2; śaśvasuḥ:2; śvasann:2; śvasantaḥ:2; śvasiṣi:2
+262	carv	carv	1	matched	151	97.7241	cūrṇam:48; cūrṇaṃ:40; cūrṇāni:23; cūrṇa:12; cūrṇaḥ:6; cūrṇo:2; carvitā:2; cūrṇāḥ:2; cūrṇām:2; carvituṃ:1; carvitum:1; carvitaḥ:1; cūrṇān:1; cūrṇaiḥ:1; cūrṇe:1
+263	1 dṛ / 2 dṛ	dṛ	1,9	homonym_shared	151	97.7516	dīryate:32; darṣi:11; dīryeta:8; dīrṇe:7; dīryante:7; dīryati:7; dadāra:6; dīrṇam:5; dīryataḥ:5; dīrṇaṃ:5; darṣīṣṭa:5; dīrṇa:3; dīryamāṇāṃ:3; dīryatām:3; darṣat:3
+264	mṛṣ	mṛṣ	2	matched	150	97.7789	amṛṣyata:30; mamṛṣe:22; amṛṣyanta:14; mṛṣyate:11; mṛṣyamāṇaḥ:7; mṛṣyanti:6; mṛṣyante:6; mṛṣyatām:5; mīmṛṣo:4; mṛṣyatāṃ:4; mṛṣyāmi:4; mṛṣye:4; amṛṣyat:3; mṛṣyati:3; marṣaṇīyo:3
+265	ṛṣ	ṛṣ	1,6	matched	147	97.8057	arṣati:46; arṣa:32; arṣanti:21; arṣasi:17; arṣā:7; ṛṣatu:3; arṣatu:3; arṣantv:2; arṣanty:2; arṣann:2; arṣan:2; ṛṣaty:1; ārṣat:1; arṣase:1; arṣantu:1
+266	vraśc	vraśc	6	matched	145	97.832	vṛśca:30; vṛścet:19; vṛścati:16; vṛścāmi:10; vṛkṇam:10; vṛścanti:7; vṛścate:7; vṛścyeta:5; vṛkṇa:3; vṛścat:3; vṛścatu:2; vṛścatām:2; vṛścantām:2; vṛkṇaḥ:2; vṛścā:2
+267	khid	khid	6	matched	141	97.8577	khinnaḥ:23; khinna:18; khinnā:18; khinno:13; khidyate:9; khinnam:7; khinnāḥ:4; khinnena:4; khinnām:4; khidyati:3; khinnānām:3; khidāmi:2; khida:2; khinnau:2; khinnayā:2
+268	pad	pad	1	matched	134	97.8821	panna:16; padyate:15; padye:10; pādi:9; padyatām:9; padyasva:9; padīṣṭa:8; apadyata:7; padyeta:4; padyante:3; padyantām:3; pannam:3; pādy:3; padyamānaḥ:3; apadmahi:3
+269	dhṛṣ	dhṛṣ	1	matched	133	97.9063	dhṛṣatā:12; dhṛṣṭaḥ:11; dhṛṣṭam:8; dadharṣati:7; dhṛṣat:7; dharṣa:7; dhṛṣṭa:6; dhṛṣṭo:6; dhṛṣṭaṃ:6; dadharṣa:4; dhṛṣṭā:4; dhṛṣyaḥ:3; dhṛṣan:3; dadhṛṣvān:3; dhṛṣito:3
+270	pṛc	pṛc	3	matched	133	97.9305	pṛcyantām:10; pṛcyate:8; pipṛgdhi:7; pṛcyasva:7; pṛṇakṣi:7; pṛṅktam:7; pṛcyantāṃ:5; pṛcyadhvam:5; pṛñcatīr:4; pṛṅktaṃ:4; pṛcyatām:4; pṛṅkta:4; pṛñcanti:3; pṛktaṃ:3; pṛṇaktu:3
+271	sraṃs	sraṃs	9	matched	133	97.9547	srasta:86; sraṃsate:7; srastaṃ:5; sraste:4; srastāṃ:2; srastena:2; srastā:2; srastam:2; srastair:2; sraṃsanta:2; srastaḥ:2; srasann:1; sraṃsatāṃ:1; sraṃsatām:1; asisrasat:1
+272	mṛḍ	mṛḍ	6	matched	131	97.9785	mṛḍa:45; mṛḍata:10; mṛḍantu:8; mṛﾱa:7; mṛḍatām:7; mṛḍāti:6; mṛḍataṃ:6; mṛḍā:6; mṛﾱā:6; mṛﾱatā:6; mṛﾱata:3; mṛḍantv:2; mṛḍatā:2; mṛḍāt:2; mṛḍatam:2
+273	nah	nah	1	matched	131	98.0024	nahyāmi:20; nahyati:10; naddham:9; nahyethām:8; naddha:8; naddhaḥ:7; nahyadhvaṃ:7; nahyata:5; naddhaṃ:5; naddhāḥ:5; nahyāmy:4; naddhāni:4; nahyadhvam:3; nahyasva:3; nahya:3
+274	dhvaṃs	dhvaṃs	1	matched	130	98.026	dhvasta:57; dhvastam:11; dhvastaṃ:9; dhvastā:7; dhvastaḥ:6; dhvaṃsate:5; dhvastāḥ:5; dhvaste:4; dhvaṃsa:3; dhvastāṃ:3; dhvaṃsante:2; dhvastām:2; dadhvase:2; dhvasto:1; dhvaṃsati:1
+275	ghrā	ghrā	3	matched	130	98.0497	ghrāyati:27; jighrati:22; jighran:8; jighranti:7; ghrātvā:6; jighrann:5; jighret:5; ghrātam:5; ghreyaṃ:5; jighred:3; ghreyāṇi:3; ghrāsyati:2; jighratī:2; ghrātaḥ:2; ghrāte:2
+276	lamb	lamb	1	matched	130	98.0733	lambate:20; lambamāne:10; lambitam:9; lambamānān:9; lambamāna:9; lambante:6; lalambe:5; lambita:5; lambāmahe:4; lambamānāṃ:3; lambamānā:3; lambamānāni:3; lambamānaiḥ:2; lambamānam:2; lambamānasya:2
+277	nand	nand	1	matched	129	98.0968	nananda:39; nandanti:21; nandati:15; nananduḥ:7; nanandatuḥ:5; nandāmi:5; nanditam:3; nandāma:3; anandat:3; nandasi:3; nandatu:2; nandate:2; nandatsu:2; nandantu:2; nandanty:2
+278	ruj	ruj	6	matched	129	98.1203	rujan:17; rugṇaḥ:12; ruja:11; rugṇa:8; rujati:7; rujanti:6; rugṇāḥ:5; rugṇasya:4; ruroja:4; rujad:4; arujat:3; rujyate:3; rujann:3; rugṇā:3; rujatā:2
+279	1 phal / 2 phal	phal	1	homonym_shared	127	98.1434	phalanti:44; phalati:40; phaliṣyati:13; paphāla:7; phalate:6; phalanty:5; phaled:2; phalet:2; phalantī:1; pheluḥ:1; phaliṣyato:1; phalaty:1; phalantu:1; phalitavyaṃ:1; phalen:1
+280	jalp	jalp	1	matched	126	98.1663	jalpan:18; jalpati:12; jalpanti:12; jalpataḥ:11; jalpatām:6; jalpet:5; jalpasi:5; jalpato:4; jajalpuḥ:4; jalpatāṃ:4; jalpitam:4; jalpitum:3; jalpanto:3; jalpantī:3; jalpantyām:2
+281	klid	klid	4	matched	125	98.1891	klinna:42; klinnam:21; klinnaṃ:14; klinnāḥ:6; klinnaḥ:5; klinnā:5; klidyati:4; klinnena:4; klidyate:3; kledyaṃ:3; kledyam:2; klinne:2; klinno:2; klinnāni:2; kledyaḥ:2
+282	snih	snih	4	matched	125	98.2118	snigdha:42; snigdhaṃ:25; snigdhasya:14; snihyati:10; snigdham:6; snigdhaḥ:5; snigdhān:4; snigdho:2; snehanīyaṃ:2; snihyantam:1; snehanīyān:1; snehanīyāni:1; snigdhāya:1; snigdhe:1; snihyanti:1
+283	ghaṭ	ghaṭ	1	matched	119	98.2335	ghaṭate:17; ghaṭita:16; ghaṭante:9; ghaṭeta:6; ghaṭitam:6; ghaṭamānā:5; ghaṭasva:5; ghaṭamānena:4; ghaṭadbhiḥ:4; ghaṭitā:4; ghaṭamāna:3; ghaṭamānasya:3; ghaṭamānaṃ:3; ghaṭitāni:2; ghaṭāmaḥ:2
+284	skhal	skhal	1	matched	118	98.2549	skhalita:32; skhalat:20; skhalati:8; skhalitā:7; skhalanti:5; skhalan:4; skhalitam:4; skhalite:4; skhalitaṃ:3; caskhaluḥ:3; skhalate:2; skhalataḥ:2; caskhāla:2; skhalato:2; skhalitaḥ:2
+285	lup	lup	6	matched	117	98.2762	lupta:43; lupyate:19; lupyeta:10; lupte:5; lupyeran:4; luptāḥ:4; luptā:3; luptam:3; luptaḥ:3; lumpatām:2; lumpati:2; lumpatam:1; lumpata:1; lupyamānāyām:1; lumpasi:1
+286	nard	nard	1	matched	116	98.2973	nardataḥ:15; nardantau:11; nanarda:10; nardatām:9; nardatāṃ:9; nardanti:5; nardanto:5; nardet:4; nardan:4; nardamāno:4; nardamāne:4; nardamānāḥ:3; nardamānā:3; nardantaḥ:3; nardati:3
+287	1 jakṣ / 2 jakṣ	jakṣ	1	homonym_shared	114	98.3181	jagdhvā:42; jagdha:14; jagdham:11; jagdhaṃ:10; jagdho:9; jagdhasya:3; jagdhāḥ:3; jagdhā:3; jagdhum:2; jakṣataḥ:1; jakṣadhvam:1; jakṣata:1; jakṣatu:1; jagdhi:1; jakṣatyāṃ:1
+288	bhās	bhās	1	matched	112	98.3385	bhāsate:39; babhāse:24; bhāsante:7; bhāsamānam:6; bhāsita:4; bhāsataḥ:3; bhāsitam:3; bhāsanti:3; bhāsan:3; bhāsitaṃ:2; babhāsire:2; bhāsamāne:2; bhāsitām:1; bhāsamānāni:1; bhāsati:1
+289	1 dīv / 2 dīv / div	dīv	1,4	homonym_shared	110	98.3585	dīvyāmi:19; dīvyan:8; devitum:6; dīvya:6; dīvyāva:5; dīvyato:4; dīvyati:4; dideva:3; dīvyāma:3; dīvyataḥ:3; dīvyatāṃ:3; deviṣyāmi:2; dīvyadhvam:2; dīvyāmaḥ:2; devitā:2
+290	lajj	lajj	1	matched	109	98.3783	lajjitā:16; lajjase:14; lajjamānā:12; lajjate:7; lajjitaḥ:6; lajjitāḥ:5; lajjita:5; lajjāmahe:4; lajjante:3; lajjitam:3; lajjamāno:3; lajjati:3; lajjitayā:2; lajjamāna:2; lajjamānena:2
+291	dṛp	dṛp	1	matched	106	98.3976	dṛptaḥ:21; dṛptaṃ:17; dṛpta:16; dṛpto:7; dṛptānāṃ:5; dṛptau:5; dṛptān:5; dṛptam:4; dṛptasya:3; dṛptayoḥ:3; dṛptā:3; dṛptair:2; dṛpyati:1; adṛpan:1; dṛpyāmi:1
+292	syand	syand	1	matched	106	98.4169	syandante:17; syandamānā:13; syandamānānāṃ:9; syandate:8; syandamānāḥ:5; syandamānānām:4; asiṣyadat:4; syandamāna:3; asiṣyadad:3; syandamānaiḥ:2; syandati:2; syandanti:2; syandamānam:2; syanderan:2; syandamāne:2
+293	bhikṣ	bhikṣ	1	matched	103	98.4356	bhikṣeta:25; bhikṣitvā:10; bhikṣate:8; bhikṣamāṇāḥ:6; bhikṣe:5; bhikṣamāṇaḥ:4; bhikṣituṃ:4; bhikṣito:3; bibhikṣe:3; bhikṣamāṇo:3; bhikṣitum:3; bhikṣamāṇā:3; bhikṣamāṇeṣu:2; bhikṣasva:2; bhikṣitam:2
+294	cakṣ	cakṣ	2	matched	103	98.4544	caṣṭe:31; cakṣase:16; cakṣate:16; cakṣva:8; acakṣata:4; acaṣṭa:4; cakṣāthām:3; cacakṣa:3; cakṣe:2; cakṣata:2; cakṣāṇo:2; cakṣāthe:2; cakṣi:2; cakṣāṇaḥ:1; 'cakṣata:1
+295	mī	mī	4	matched	103	98.4731	minanti:22; mināti:16; mīyate:16; minatī:3; minat:3; mimāya:2; minantā:2; amināḥ:2; meṣṭhāḥ:2; 'mīyata:2; amīyetām:2; minīmasi:2; minan:2; amināt:2; mināty:2
+296	ruṣ	ruṣ	6	matched	102	98.4917	ruṣito:17; ruṣṭo:11; ruṣṭaḥ:9; ruṣitaḥ:7; ruṣita:6; ruṣṭā:6; ruṣitā:6; ruṣṭam:3; ruṣṭena:3; ruṣitena:3; ruṣitāḥ:3; roṣāti:2; ruṣṭa:2; ruṣṭe:2; roṣanti:2
+297	kūj	kūj	1	matched	101	98.5101	kūjat:18; kūjatāṃ:8; kūjati:8; kūjanti:7; kūjan:5; kūjet:4; kūjitam:4; kūjatā:4; kūjatām:4; kūjantaṃ:3; kūjita:3; cukūja:3; kūjadbhir:3; kūjataḥ:2; kūjantī:2
+298	lal	lal	1	matched	101	98.5284	lalita:46; lalitam:11; lalitaṃ:9; lalat:4; lalitā:4; lalitaḥ:2; lalite:2; lalitaiḥ:2; lalitāḥ:2; lalitau:2; lalantu:2; lalitāṃ:1; lalitān:1; lalitāni:1; lalitasya:1
+299	īh	īh	1	matched	101	98.5468	īhate:26; īheta:14; īhante:14; īhase:7; īhamānaḥ:6; īhitam:4; aihata:4; īhamānasya:3; īhita:2; īhamānāḥ:2; īhitum:2; īhitaiḥ:1; īhatu:1; īhatuḥ:1; īhantaḥ:1
+300	1 mi / 2 mi	mi	5	homonym_shared	99	98.5648	minoti:45; minuyāt:10; minvanti:8; minotu:7; minuyād:5; minotv:4; minoty:2; minomi:2; mīyate:2; mimāya:2; mitā:2; mitaḥ:2; minvan:2; meṣyan:1; mīyante:1
+301	pṛṇ	pṛṇ	6	matched	99	98.5828	pṛṇa:49; pṛṇasva:9; pṛṇadhvam:5; pṛṇanti:5; pṛṇan:3; pṛṇethām:3; pṛṇati:3; pṛṇato:2; pṛṇasvā:2; pṛṇatā:2; apṛṇad:2; pṛṇātha:1; pṛṇantaḥ:1; pṛṇad:1; pṛṇantī:1
+302	tam	tam	4	matched	99	98.6009	tāmyati:21; tamitor:12; tānta:6; atāmyat:6; tatāma:5; tāntaḥ:5; tāmyat:4; tānto:3; tamitos:3; tāmyatā:3; tāmyet:3; tāntasya:3; tāmyanti:2; tāntā:2; tamitoḥ:2
+303	tud	tud	7	matched	99	98.6189	tudan:13; tudyate:10; tudanti:7; tudyamāno:5; tuda:4; tudati:4; tudyamānaḥ:4; tudasi:3; tunnā:2; tundānā:2; tudantu:2; tudyamānena:2; tudyamānaṃ:2; tudyata:2; tutoda:2
+304	kṣudh	kṣudh	4	matched	98	98.6367	kṣudhito:17; kṣudhitasya:13; kṣudhitaḥ:12; kṣudhitaṃ:9; kṣudhita:8; kṣudhitair:4; kṣudhitā:4; kṣudhitāḥ:4; kṣudhitena:4; kṣudhitāya:3; kṣudhitāyā:2; kṣudhyan:2; kṣudhitāni:2; kṣudhitau:2; kṣudhyatām:2
+305	1 ūh / 2 ūh	ūh	1,4	homonym_shared	98	98.6545	ohate:15; ūhet:10; ūhati:9; ūha:7; ūhe:5; ūhitvā:5; auhata:4; ūhyam:3; ūhāmi:2; auhatām:2; ūhyate:2; ūhed:2; ūhyaṃ:2; ūhanti:2; ūhyā:2
+306	dabh	dabh	4	matched	96	98.672	dabhan:26; dabdhaḥ:9; dadambha:8; dabhāya:5; dabdha:5; dabhāty:4; dabdhena:4; debhuḥ:4; dabhāti:3; dabhnoti:3; dabhann:3; dabdham:2; dabhad:2; dabhat:2; dabheyam:2
+307	mārg	mārg		matched	94	98.6891	mārgamāṇaḥ:8; mārgitavyas:8; mārgeta:6; mārgadhvaṃ:6; mārgamāṇā:5; mārgamāṇo:5; mārgasva:4; mārgati:4; mārgituṃ:3; mārgamāṇasya:3; mārgitavyaṃ:3; mārgamāṇāḥ:3; mārgan:3; mārgate:3; mārgitavyā:3
+308	bhṛjj	bhṛjj	4	matched	93	98.706	bhṛṣṭa:24; bhṛṣṭam:13; bhṛṣṭān:11; bhṛṣṭaṃ:11; bhṛṣṭvā:6; bhṛṣṭā:4; bhṛṣṭānām:3; bhṛṣṭāḥ:3; bhṛṣṭām:2; bhṛṣṭāṃ:2; bhṛjjati:2; bhṛṣṭaiḥ:2; bhṛṣṭāni:2; bhṛṣṭaḥ:1; bhṛṣṭānāṃ:1
+309	jyā	jyā	9	matched	93	98.723	jināti:38; jīyate:15; jītāḥ:4; jinato:3; jināmi:3; jītaḥ:2; jītā:2; jinīyād:2; jinanti:2; jīyante:2; jyeyaḥ:1; jītvā:1; jītasya:1; jinatāṃ:1; jītaṃ:1
+310	śliṣ	śliṣ	6	matched	92	98.7397	śliṣṭa:33; śliṣṭā:6; śliṣṭaṃ:5; śliṣṭam:4; śliṣṭaḥ:4; śliṣyati:4; śliṣyate:4; śliṣṭāḥ:3; śliṣṭe:2; śliṣyet:2; śliṣṭau:2; śliṣṭaiḥ:2; śliṣṭān:2; śliṣṭvā:2; _:1
+311	kvath	kvath	1	matched	91	98.7563	kvathitaṃ:22; kvathita:15; kvathitaiḥ:9; kvathitam:6; kvathitāḥ:5; kvathitā:5; kvathitena:5; kvathite:4; kvathitāṃ:3; kvathitair:2; kvathito:2; kvathitāni:2; kvathitasya:2; kvathat:1; kvathati:1
+312	klam	klam	4	matched	90	98.7726	klānta:28; klāntaḥ:9; klāntam:8; klāntā:8; klānto:7; klāmyanti:5; klāntāḥ:4; klāntān:3; klāntasya:3; klānte:3; klāntaṃ:3; klāntānām:2; klāntām:1; klāmyat:1; klāntau:1
+313	mlā	mlā	4	matched	89	98.7888	mlāna:29; mlāyanti:9; mlānam:8; mlānā:7; mamluś:7; mlānaṃ:4; mlāne:4; mlāyante:3; mlātāni:2; mlāyantu:1; mlāyeta:1; mlānāḥ:1; mlāyatā:1; mlāyat:1; mlānām:1
+314	jū	jū	1	matched	88	98.8048	jūtam:22; jūtaḥ:21; junanti:8; junāḥ:6; jūtā:4; javate:4; jūtāḥ:3; jūte:2; jūtāsaḥ:2; jūtāni:1; jūtaiḥ:1; jūtām:1; junāsi:1; junāma:1; jūjuvad:1
+315	jṛmbh	jṛmbh	1	matched	88	98.8209	jṛmbhate:17; jṛmbhitam:8; jṛmbhamāṇasya:4; jajṛmbhire:4; jṛmbhamāṇā:4; jajṛmbhe:4; jṛmbhamāṇo:3; jṛmbhite:3; jṛmbhamāṇāṃ:3; jṛmbhamāṇaḥ:3; jṛmbhato:2; jṛmbhamāṇaṃ:2; ajṛmbhata:2; jṛmbhita:2; jṛmbhatām:2
+316	īr	īr	2	matched	87	98.8367	īrate:38; īratām:10; airata:8; īrṣva:7; airat:5; īrte:4; īryamāṇaḥ:3; īrdhvaṃ:2; īryamāṇam:2; īryamāṇena:1; īryamāṇe:1; airataṃ:1; īratāṃ:1; airac:1; airaṃ:1
+317	1 ru / 2 ru	ru	1	homonym_shared	86	98.8523	rauti:10; rurāva:9; ruvanti:6; ruvanto:4; rutam:3; ruvati:3; ruvan:3; rāviṣṭa:2; ravat:2; ruvat:2; ruva:2; rutāḥ:2; ruvann:2; ruvato:2; ruteṣu:2
+318	sādh	sādh	1	matched	86	98.868	sādha:10; sādhan:8; sādhye:5; sīṣadhāma:4; sādhyā:4; sādhyāḥ:4; sādhyaḥ:3; sādhate:3; sādhat:3; sādhanta:2; sādhya:2; sādhyān:2; sādhyam:2; sādhanīyā:2; sādhyate:2
+319	ej	ej	1	matched	85	98.8834	ejati:30; ejat:18; ejatu:10; ejad:4; aijata:4; ejan:4; ejatha:2; ejāti:2; ejathā:1; ejamānān:1; ejiyeta:1; ejata:1; ejann:1; ejatā:1; ejate:1
+320	glā	glā	4	matched	85	98.8989	glāna:19; glāyati:11; glānaḥ:10; glānāḥ:4; glāyate:4; glāyet:3; glānasya:2; glāyec:2; glānebhyaḥ:2; glānāṃ:2; glānam:2; glāne:2; glānānāṃ:2; glāyaḥ:1; glānāyāḥ:1
+321	vrīḍ	vrīḍ	1	matched	84	98.9142	vrīḍitā:26; vrīḍito:15; vrīḍitaḥ:7; vrīḍitāḥ:6; vrīḍita:5; vrīḍitaṃ:5; vrīḍamānā:5; vrīḍann:3; vrīḍitāṃ:2; vrīḍitān:2; vrīḍitas:1; vrīḍitaiḥ:1; vrīḍitasya:1; vrīḍitavyam:1; vrīḍan:1
+322	miṣ	miṣ	6	matched	83	98.9293	miṣatāṃ:32; miṣato:15; miṣataḥ:15; miṣantaṃ:4; miṣanti:3; miṣat:2; miṣatām:2; miṣatā:1; miṣator:1; miṣatsv:1; miṣatos:1; miṣatas:1; miṣatīṃ:1; miṣata:1; miṣantam:1
+323	du / dū	du	4	homonym_shared	82	98.9442	dunoti:19; dūyate:14; dūyamānena:8; dūyamāna:8; dūyatā:3; dūyamānaṃ:3; dūyamānaḥ:3; dūyati:3; dunotu:2; dūnā:2; adūyata:2; dūyante:2; dutāḥ:1; dūnāḥ:1; dunvanty:1
+324	kam	kam	4	matched	82	98.9591	cakame:39; kamanīya:11; kamanīyam:4; cakamānāya:3; acakamata:2; kāmyam:2; kāmya:2; kamanīyena:1; kāntaṃ:1; kamanīyaḥ:1; cakamire:1; cakamuḥ:1; kāntaḥ:1; kamanīyo:1; kamanīyaṃ:1
+325	lū	lū	8	matched	81	98.9739	lūna:21; lūnaḥ:12; lunoti:8; lūnam:8; lūno:5; lunanti:3; lūnasya:3; lūnān:3; lūnaṃ:2; lūtvā:2; lunāti:2; lūnād:1; alunād:1; lunīdhvam:1; lūnānām:1
+326	svad	svad	1	matched	81	98.9886	svadate:10; svadantu:8; svaditam:7; svadantām:6; svāttam:6; svadata:5; svadasva:4; svadatu:4; svadanti:4; svadante:3; svāttaṃ:3; svadatv:3; svaditasya:2; svadātu:2; svaditaṃ:2
+327	dyut	dyut	1	matched	75	99.0023	adyaut:10; dyotate:9; adidyutat:8; adyaud:5; dyotamānam:4; dyutat:4; dyotata:3; dyotamānāṃ:3; dyutānaḥ:3; dyuttam:2; dyotamānā:2; dyotamāna:2; dyotatāṃ:1; dyuttaṃ:1; dyotamānaṃ:1
+328	1 sā / 2 sā	sā	6	homonym_shared	75	99.0159	sitaḥ:8; ṣyāmi:4; syāmi:4; sya:4; sitā:4; sitvā:3; ṣya:3; sitāḥ:3; ṣitām:3; ṣyatu:3; sitaṃ:2; syataṃ:2; syati:2; ṣyā:2; sitam:2
+329	bhaṇ	bhaṇ	1	matched	73	99.0292	bhaṇyate:23; bhaṇitam:12; bhaṇa:7; abhāṇi:5; bhaṇati:4; bhaṇita:4; bhaṇāmi:2; babhāṇa:2; bhaṇitaḥ:2; bhaṇitā:2; bhaṇito:2; bhaṇite:1; bhaṇitāḥ:1; bhaṇyante:1; bhaṇanti:1
+330	ghas	ghas	1	matched	73	99.0425	jaghāsa:15; akṣan:14; akṣann:12; jakṣivāṃsaḥ:5; jakṣuḥ:3; aghat:3; 'kṣann:3; ghaso:2; ghasaḥ:1; ghasan:1; jakṣivān:1; ajīghasat:1; jakṣivāṃso:1; aghasta:1; ghastu:1
+331	vāś	vāś	1	matched	73	99.0558	vavāśire:8; vāśyate:5; vāvaśānā:5; avīvaśat:4; vāśyeta:3; avāvaśanta:3; vāśyet:2; vāśatī:2; vāśanto:2; vāśyamānam:2; vāśate:2; vāśati:2; vāśantyaḥ:2; vāśyamāne:2; vāvaśanta:2
+332	cumb	cumb	1	matched	71	99.0687	cumbati:17; cumbita:14; cucumba:5; cumbitā:4; cumbitam:3; cumbantī:3; cumbann:2; cumbat:2; cumban:2; cucumbe:2; cumbāmi:1; acumbiṣam:1; cumbitvā:1; cumbyamānaḥ:1; cumbyamāna:1
+333	druh	druh	6	matched	70	99.0814	druhyet:19; druhyati:5; drugdhaḥ:4; drogdhavyam:3; druhaḥ:3; dudroha:2; druhyed:2; druhyād:2; drogdhavyaṃ:2; drugdha:2; druhyeta:2; druhyer:1; druhyeyam:1; adrukṣo:1; druhyen:1
+334	mih	mih	1	matched	70	99.0942	mehati:34; mihe:3; mehanti:3; meheta:3; mekṣyan:3; mehen:2; mehataḥ:2; mehato:2; mīﾱhuṣo:2; mekṣyāmy:1; mehantī:1; mīḍhvāṃś:1; mehed:1; mehantam:1; mīḍhuṣe:1
+335	gāh	gāh	1	matched	69	99.1067	gāhate:15; gāhamānaḥ:7; gāhamānaṃ:5; jagāhe:5; gāhamānam:4; gāhanta:4; gāhamāno:3; gāhase:2; agāhata:2; agāhiṣi:2; gāhanīyam:2; gāhata:1; gāḍhaḥ:1; agāhe:1; gāhamānā:1
+336	rabh	rabh	1	matched	67	99.1189	rabhasva:22; rabhe:13; rabhāmahe:7; rabhadhvam:6; rabhemahi:6; rabhadhvaṃ:2; arapsi:1; rabhantām:1; rabhamāṇāḥ:1; rabhatāṃ:1; rabhathāḥ:1; rabhantāṃ:1; rebhira:1; rārabhe:1; rabhante:1
+337	sīv	sīv	4	matched	67	99.1311	sīvyet:18; syūta:9; sīvyed:7; syūtā:4; sīvyati:3; sīvyadhvam:3; syūtvā:3; syūtam:3; syūtaṃ:2; sīvyatv:2; sīvyen:2; sīvyatu:2; syūtaḥ:1; syūte:1; syūtau:1
+338	gṛdh	gṛdh	4	matched	61	99.1422	gṛddhāḥ:9; gṛdhyed:4; gṛdhyet:4; gṛdhyataḥ:4; gṛddhā:3; gṛddho:3; gṛddhaiḥ:2; gṛddhena:2; gṛdhnanti:2; gṛddhāṃ:2; gṛdhyanti:2; gṛdhyati:2; gṛdhnanty:2; jāgṛdhuḥ:2; gṛdhad:1
+339	aṭ	aṭ	1	matched	60	99.1531	aṭati:13; aṭate:9; aṭan:5; aṭitvā:4; aṭamāno:2; aṭantyā:2; aṭasi:2; aṭamānas:2; aṭamānau:2; aṭatā:2; aṭa:1; aṭaty:1; aṭamānā:1; aṭāmi:1; aṭatī:1
+340	kṣud	kṣud	1	matched	60	99.164	kṣuṇṇa:13; kṣuṇṇaṃ:8; kṣuṇṇam:7; kṣuṇṇāḥ:3; kṣuṇṇe:3; kṣuṇṇā:3; kṣuṇṇān:3; kṣuṇṇāṃ:2; kṣuttvā:2; kṣuṇṇo:2; kṣuṇṇād:1; kṣuṇṇām:1; kṣuṇṇaḥ:1; kṣuṇṇāni:1; kṣuṇṇānāṃ:1
+341	mah	mah	1	matched	60	99.175	māmahantām:23; maṃhate:7; amaṃhata:5; māmahe:5; maṃhase:5; mahemā:3; māmahasva:2; maṃhasva:1; māmahāna:1; maheta:1; māmahānaṃ:1; māmahaḥ:1; mahema:1; māmahanta:1; mahe:1
+342	ri / rī	ri	9	homonym_shared	60	99.1859	rīyate:11; riṇāti:10; riṇann:6; ariṇāt:4; riṇanti:3; ariṇā:3; riṇīte:3; ariṇīta:3; rīyata:2; riṇīthaḥ:2; riṇītho:1; riṇāmi:1; ariṇan:1; riṇā:1; rīyamāṇā:1
+343	las	las	1	matched	59	99.1966	lasat:47; lasati:3; lalāsa:3; _:3; lasantyo:1; lasita:1; lasite:1
+344	kath	kath	4	matched	57	99.207	kathitaṃ:13; kathitaḥ:6; kathituṃ:5; kathanīya:4; kathanīyam:4; kathanīyaṃ:3; kathitam:3; kathyaḥ:2; kathanīyā:2; kathitān:2; kathite:2; kathyamānān:1; kathanīyas:1; akathyata:1; kathanīyo:1
+345	nakṣ	nakṣ	1	matched	57	99.2174	nakṣati:10; nakṣanta:9; nakṣat:4; nanakṣe:4; nakṣasva:3; nakṣanti:3; nakṣata:3; nakṣan:3; nakṣamāṇā:2; nakṣante:2; nakṣanto:2; anakṣan:2; nakṣatu:1; nakṣamāṇau:1; nakṣase:1
+346	kan	kan	1	matched	56	99.2275	cākan:10; cake:8; cakānaḥ:5; cākano:3; cakānāḥ:3; cākann:2; kāyamāno:2; cakānaś:2; kanat:2; cākana:2; cākananta:2; cākanat:2; cākantu:1; cākanāma:1; kāniṣaḥ:1
+347	aj	aj	1	matched	55	99.2376	aja:8; ājad:5; ājat:4; ajati:4; ajantu:3; ajā:3; ajatv:2; ajatu:2; ajāmasi:2; āja:2; ajāmaḥ:1; ajato:1; ajataḥ:1; ajanti:1; ajāmahai:1
+348	stubh	stubh	2	matched	55	99.2476	stobhati:21; stobhet:9; stobdhi:4; stobhed:3; stobdhy:3; stobdhavyam:3; stobhanti:2; ṣṭobhanty:2; stobhanta:2; stobha:1; stubdheṣu:1; ṣṭobhata:1; ṣṭobhati:1; ṣṭobhanti:1; ṣṭobhantu:1
+349	tṛṣ	tṛṣ	4	matched	55	99.2576	tṛṣyate:9; tātṛṣuḥ:5; tṛṣyan:3; tṛṣyati:3; tṛṣat:2; tṛṣṭam:2; tātṛṣur:2; tṛṣyataḥ:2; tṛṣyet:2; tṛṣyantīḥ:2; tṛṣyann:2; tatṛṣāṇo:2; tātṛṣāṇaḥ:2; tṛṣṭa:1; tṛṣyadbhiḥ:1
+350	val	val	1	matched	54	99.2674	valita:19; valat:8; valitam:7; valate:4; valitaṃ:3; valitaiḥ:2; valitām:2; valati:2; valantī:1; valitena:1; valante:1; valitāḥ:1; valantyā:1; valitau:1; valitayā:1
+351	vṛh	vṛh	6	matched	54	99.2772	vṛhāmasi:12; vṛhāmi:11; vṛha:8; vṛhataṃ:3; vṛheva:2; vṛhati:2; vṛhanti:2; vṛhatād:2; vṛhyate:1; vṛhatam:1; vṛhāmo:1; vṛhantu:1; 'vṛhyata:1; vṛhat:1; vavarhā:1
+352	ghūrṇ	ghūrṇ	1	matched	53	99.2869	ghūrṇita:9; ghūrṇamāna:7; ghūrṇate:4; ghūrṇati:3; ghūrṇat:3; aghūrṇata:3; ghūrṇitaḥ:3; ghūrṇamānaiś:2; ghūrṇamānāḥ:2; ghūrṇitā:1; ghūrṇamānā:1; ghūrṇamānaiḥ:1; jughūrṇire:1; ghūrṇamāneṣv:1; ghūrṇamānaḥ:1
+353	dhī	dhī	2	matched	52	99.2963	dīdhyānāḥ:9; dīdhyānaḥ:5; dīdhyānā:4; dīdhyānāṃ:4; dīdhayā:3; dīdhiyuḥ:3; dhītam:3; dīdhye:2; adīdhayuḥ:2; dīdhyatyo:1; dīdhīthāṃ:1; dīdhīthā:1; dīdhyo:1; dīdhyur:1; dīdhyata:1
+354	nāth	nāth	1	matched	52	99.3058	nāthito:24; nāthitam:6; anāthanta:5; anāthata:3; nāthitā:2; nāthamānaḥ:2; nāthitāya:2; nāthitāḥ:1; nāthamānasya:1; nāthamāna:1; nāthasva:1; nāthitān:1; nāthitād:1; nāthitāsaḥ:1; nāthitaḥ:1
+355	spand	spand	1	matched	52	99.3153	spandate:27; spandeta:3; spandituṃ:3; spandamānaḥ:2; spandamāna:2; paspande:2; spandanti:2; spandita:1; spanditaḥ:1; spandeyātāṃ:1; spandet:1; spanditavyam:1; spandata:1; spandamānād:1; spandante:1
+356	ras	ras	1	matched	51	99.3245	rarāsa:22; rasan:3; rasyate:2; rasat:2; rasita:2; arasat:2; 'rasat:1; resur:1; rasitāḥ:1; rasite:1; rasitā:1; rasatu:1; rasyata:1; rasati:1; raset:1
+357	uc	uc	4	matched	51	99.3338	ucita:10; ucitam:9; ucyati:4; uvoca:4; ucyatu:2; ucitāḥ:2; ucitena:2; ucyatām:1; ucya:1; ucitāṃ:1; ucitām:1; ucitasya:1; ucite:1; ucitaiḥ:1; ucitayā:1
+358	dhūrv	dhūrv	6	matched	50	99.3429	dhūrva:13; dhūrvati:11; dhūrvantu:4; dhūrvāmaḥ:4; adhūrvan:4; dhūrvantam:2; dhūrvāma:2; dhūrvanti:2; adhūrvaṃs:2; dhūrvantaṃ:2; dhūrvataḥ:1; dhūrvato:1; dhūrvāmi:1; dhūrvituṃ:1
+359	ujh	ujh	6	matched	50	99.352	ujhati:13; ujjhitvā:10; ujhita:4; ujhanti:4; ujhitum:3; ujhitaḥ:2; ujhitam:2; ujhantī:1; ujhatam:1; aujhatām:1; ujhitair:1; ujhatām:1; ujhatī:1; ujhatsu:1; ujhitaiḥ:1
+360	bhūṣ	bhūṣ	1	matched	48	99.3607	bhūṣa:12; bhūṣati:8; bhūṣan:4; bhūṣathaḥ:3; abhūṣañ:2; abhūṣan:2; bhūṣasi:2; bhūṣanty:2; bhūṣata:2; bhūṣanti:2; bhūṣatā:1; bhūṣema:1; bhūṣāt:1; bhūṣatho:1; bhūṣato:1
+361	cak	cak	1	matched	48	99.3695	cakita:17; cakitaḥ:10; cakito:4; cakitaiḥ:4; cakitāḥ:3; cakitā:3; cakitam:3; cakitasya:1; cakitaś:1; cakitau:1; cakitāni:1
+362	hvṛ	hvṛ	3	matched	48	99.3782	juhurāṇam:9; hvār:7; hrutaḥ:4; jihvaratam:3; hrutasya:2; juhurāṇo:2; jihvaraḥ:2; hrutam:2; hvāḥ:2; hvārṣīt:2; juhuranta:2; hrutāḥ:1; jīhvaratam:1; hrutā:1; hvārṣīd:1
+363	dhanv	dhanv	1	matched	47	99.3868	dadhanvire:8; dadhanve:7; dhanva:7; dhanvā:5; dadhanvān:4; adhanvat:2; adhanviṣuḥ:2; dhanvasi:2; dhanvantu:2; dhanvantv:2; dhanvate:1; dhanvann:1; dhanvāty:1; dhanvanti:1; dadhanvāṁ:1
+364	rih	rih	2	matched	47	99.3953	rihanti:20; reḍhi:8; rihāṇā:4; rihāṇe:3; rihāṇāḥ:3; rihann:2; rihatī:2; rīḍhaḥ:1; rihanty:1; rīḍham:1; rihate:1; ririhvāṃsaṃ:1
+365	vyā	vye	2,4	aliased	46	99.4037	avyata:9; vyayantām:7; vyayasva:6; vyata:3; vīta:2; vītāya:2; avyayaḥ:1; vyayat:1; vyaye:1; vyayantu:1; vītaḥ:1; vyayate:1; vivya:1; avyayat:1; vyayeyam:1
+366	kāś	kāś	1	matched	45	99.4119	cakāśire:26; cakāśe:14; cakāśete:2; akāśata:1; cakāśetāṃ:1; kāśitā:1
+367	radh	radh	4	matched	45	99.4201	radhāma:9; radhya:7; radham:3; rīradhaḥ:3; rīradhāsi:2; radhyāmo:2; randhīḥ:2; rīradhataṃ:2; radhyantu:1; raddhānām:1; radhyatu:1; arīradhat:1; radhyāmaḥ:1; radhyanti:1; radhyati:1
+368	1 ran / 2 ran	ran	1	homonym_shared	45	99.4283	rārandhi:7; rāraṇat:5; raṇa:4; rāraṇa:3; raṇan:3; reṇuḥ:2; rarāṇa:2; raṇyati:2; raṇanti:2; araṇat:1; rāran:1; rarāṇatā:1; raṇiṣṭana:1; rārantu:1; raṇann:1
+369	vakṣ	vakṣ	6	matched	45	99.4364	vavakṣitha:10; vavakṣa:8; vavakṣe:5; ukṣamāṇāḥ:3; vavakṣatuḥ:3; ukṣitaḥ:2; vavakṣuḥ:2; ukṣitāso:1; ukṣantam:1; ukṣitam:1; ukṣamāṇam:1; ukṣite:1; vavakṣire:1; ukṣamāṇā:1; ukṣamāṇe:1
+370	1 ṛj / 2 ṛj	ṛj	1	homonym_shared	44	99.4445	ṛñjate:10; ṛñjase:7; 'rjasy:4; ṛñjan:4; ṛñje:3; ārjat:2; ṛñjasānaḥ:2; ṛjyanto:2; arjate:1; arjanīyāḥ:1; arjituṃ:1; ṛjyad:1; ṛñjasānam:1; ṛjyate:1; ṛñjatī:1
+371	veṣṭ	veṣṭ	1	matched	43	99.4523	veṣṭyam:5; veṣṭate:3; veṣṭita:3; veṣṭyaṃ:3; veṣṭatāṃ:2; veṣṭamānaṃ:2; veṣṭitam:2; veṣṭā:1; veṣṭamānaḥ:1; veṣṭito:1; veṣṭamānāni:1; veṣṭamānāḥ:1; viveṣṭatus:1; veṣṭitāḥ:1; veṣṭitaḥ:1
+372	lul	lul	1	matched	42	99.4599	lulita:19; lulitaṃ:6; lulitam:5; lulite:4; lolat:2; lulitau:1; lulitān:1; lulitāṃ:1; lulito:1; lulitāt:1; lulitāḥ:1
+373	valg	valg	1	matched	42	99.4676	valgita:8; valgat:5; vavalgatuḥ:3; valgantam:3; vavalga:3; valga:2; valgate:2; valgase:2; valganti:2; valgatā:2; valgamānaṃ:1; valgamāne:1; valgantyaḥ:1; valgatām:1; valged:1
+374	nabh	nabh	1	matched	40	99.4748	nabhantām:38; nabhasva:1; nabhatāṃ:1
+375	prā	prā	2	matched	40	99.4821	aprāḥ:9; paprau:9; aprā:5; paprātha:5; prāsy:2; paprur:2; papra:1; paprā:1; prāḥ:1; paprathuḥ:1; prāsi:1; papratur:1; papriṣe:1; aprāyi:1
+376	rej	rej	1	matched	40	99.4894	rejate:8; rejante:6; rejamāne:5; rejati:3; rejata:3; arejetām:2; rejamānā:2; arejetāṃ:1; arejanta:1; rejamānaḥ:1; rejamāno:1; rejad:1; rejatha:1; rejete:1; rejanta:1
+377	lakṣ	lakṣ	1	matched	39	99.4965	lakṣyate:17; lakṣyamāṇam:3; lakṣyamāṇe:2; lakṣitam:2; lakṣitā:2; lakṣitaḥ:2; lakṣyante:2; lakṣyase:1; lakṣitas:1; lakṣito:1; lakṣyamāṇena:1; lakṣyamāṇeṣu:1; alakṣata:1; lakṣitāḥ:1; lakṣyamāṇasya:1
+378	svaj	svaj	1	matched	39	99.5036	sasvaje:19; ṣvajasva:2; ṣasvajāte:2; svajethāḥ:2; ṣasvaje:2; svajāte:2; svajasva:1; asvajata:1; svajitvā:1; svajethā:1; sasvajāte:1; sasvajuḥ:1; svajeya:1; svajante:1; ṣvajadhvaṃ:1
+379	svar	svar	1	matched	39	99.5107	asvaran:14; svarati:6; svaranti:5; svara:4; svarann:2; asvarann:2; svarata:1; svarantam:1; asvārṣṭām:1; svarantu:1; svarāti:1; asvār:1
+380	tṛd	tṛd	7	matched	39	99.5178	tṛndhi:10; tatarda:6; tarda:4; tṛṇatti:3; tardaḥ:2; atṛṇat:2; atṛṇad:2; tṛṇatty:1; tarddhi:1; tṛnddhi:1; tṛndyāt:1; atṛṇan:1; atṛndan:1; tatṛdānā:1; tatṛdānāḥ:1
+381	day	day	1	matched	38	99.5247	dayate:12; dayase:9; dayamāno:5; dayadhvam:3; dayamānaḥ:3; dayasva:2; dayeta:1; dayatāṃ:1; dayanta:1; dayamānaṃ:1
+382	paṇ	paṇ	1	matched	36	99.5313	paṇate:14; paṇyamānaḥ:2; paṇamāno:2; paṇyatām:2; paṇitvā:2; paṇatu:2; paṇante:2; paṇadhvam:1; paṇitavya:1; paṇasva:1; paṇituṃ:1; paṇyate:1; paṇāvahe:1; paṇāvaḥ:1; paṇeta:1
+383	piś	piś	6	matched	36	99.5378	piṃśatu:8; piṃśa:4; pipiśe:4; apiṃśata:3; apiṃśad:2; piśitā:2; pipeśa:2; apiṃśan:2; piśyamānā:1; piśitāya:1; piṃśati:1; pipiśre:1; piśā:1; piśānāḥ:1; pipiśur:1
+384	tuj	tuj	6	matched	35	99.5442	tuje:5; tūtujāna:3; tūtujānaḥ:3; tujaye:2; tujatā:2; tūtujānā:2; tuñjanti:2; tuñjata:1; tujyamānāsa:1; tujann:1; tujete:1; tujyate:1; tuñjāte:1; tuñjate:1; tutujyāt:1
+385	rad	rad	1	matched	34	99.5504	radite:8; aradat:4; raditaṃ:3; rada:3; arado:3; radati:2; radantām:1; aradatam:1; radantā:1; radā:1; radantīr:1; ratsi:1; radantī:1; rarāda:1; radanti:1
+386	spṛh	spṛh	6	matched	34	99.5565	spṛhaṇīya:15; spṛhaṇīyo:5; spṛhaṇīyā:3; spṛhaṇīyaṃ:3; spṛhan:3; spṛhaṇīyaḥ:2; spṛhaṇīyāṃ:1; spṛhaṇīyam:1; spṛhaṇīyena:1
+387	mṛś	mṛś	2	matched	33	99.5626	mṛśāmasi:7; mṛśa:4; mṛṣṭa:3; mṛśan:2; mṛśate:2; mṛśed:2; mṛśantīm:1; amṛśad:1; mṛśanta:1; mṛśyāmi:1; mṛṣṭasya:1; amṛkṣat:1; mṛśet:1; mṛkṣataṃ:1; mṛkṣo:1
+388	1 uṣ / 2 uṣ	uṣ	6	homonym_shared	33	99.5686	oṣa:7; oṣati:5; uṣyate:4; oṣatāt:3; uṣṇan:2; oṣata:1; oṣataṃ:1; oṣantī:1; auṣat:1; uṣyatā:1; oṣatas:1; oṣet:1; oṣat:1; uṣye:1; uṣṭā:1
+389	dhvan	dhvan	1	matched	32	99.5744	dhvanat:6; dhvanati:4; dhvanitam:3; dhvāntā:3; dadhvanur:2; dhvanita:2; dhvananti:2; dhvanitaṃ:2; dhvāntaṃ:1; dhvanate:1; dhvanataḥ:1; dadhvāna:1; dhvānta:1; adhvanīt:1; dhvanatā:1
+390	laṅgh	laṅgh	1	matched	32	99.5802	laṅghyaḥ:6; laṅghya:5; laṅghyate:5; laṅghyam:4; laṅghyām:2; laṅghanīyān:1; laṅghyāś:1; laṅghyayā:1; laṅghyo:1; laṅghanīyāni:1; laṅghed:1; laṅgheta:1; laṅghet:1; laṅghyatāṃ:1; laṅghyāḥ:1
+391	cud	cud	1	matched	31	99.5858	acūcudam:7; acūcudat:3; codate:3; cucoda:2; coda:2; codasva:2; codata:2; codāmi:2; coditāḥ:1; acūcudaḥ:1; 'cūcudad:1; codyāḥ:1; codantaṃ:1; codīḥ:1; codad:1
+392	dhi	dhi	5	matched	31	99.5915	dhinoti:10; dhinuhi:8; dhinvanti:5; dhinotu:2; dhinotv:1; dhinavat:1; adhinot:1; adhinvīt:1; dhinavad:1; adhinvan:1
+393	cāy	cāy	1	matched	30	99.5969	acāyat:9; acāyan:6; 'cāyat:3; cāyamānaḥ:2; cāyyo:2; acāyiṣam:1; cāyitvā:1; acāyiṣaṃ:1; cāyat:1; cāyyaḥ:1; cāyanty:1; 'cāyad:1; cāyamānāḥ:1
+394	ghuṣ	ghuṣ	1	matched	30	99.6024	ghuṣyatāṃ:5; ghuṣyate:4; ghuṣṭaṃ:2; ghuṣyatām:2; ghoṣy:2; ghoṣat:1; ghuṣṭāḥ:1; ghuṣṭāsu:1; ghuṣyantāṃ:1; ghuṣṭāni:1; ghuṣṭas:1; ghuṣṭa:1; ghuṣyamāṇe:1; ghoṣad:1; ghuṣṭaḥ:1
+395	hīḍ	hīḍ	6	matched	29	99.6077	heḍamānaḥ:5; jihīḍa:4; heḍan:3; heḍatā:3; hīḍitāḥ:2; jīhiḍāma:1; jihīḍe:1; ajīhiḍat:1; aheḍat:1; heḍyān:1; heḍyāni:1; jihīḍire:1; hīḍamānena:1; jihīḍānasya:1; hīḍitaḥ:1
+396	viṣ	viṣ	1	matched	29	99.613	viveṣa:5; viviḍḍhi:3; viṣṭvī:3; aviveṣīḥ:3; aveṣan:2; viviṣyāḥ:1; viṣṭaṃ:1; viṣṭaḥ:1; veṣantīr:1; viṣṭam:1; viviṣma:1; viviṣmaḥ:1; viviṣur:1; vivekṣi:1; viveṣo:1
+397	hras	hras	1	matched	28	99.6181	hrasanti:9; hrasati:7; hrasate:5; hrastaḥ:2; hrasita:1; hrasitaṃ:1; hrasatu:1; hrasatībhiḥ:1; hrasantībhir:1
+398	hrī	hrī	3	matched	28	99.6231	hrīta:5; hrītā:4; jihrīyāt:2; jihreṣi:2; hrīto:1; jihriyuḥ:1; hrītāḥ:1; jihremi:1; hrīyamāṇo:1; jihreti:1; hrītāyā:1; hrītaḥ:1; hrīyamāṇam:1; jihrīmaḥ:1; jihretu:1
+399	katth	katth	1	matched	28	99.6282	katthase:13; katthate:3; katthitum:2; katthanta:1; katthethā:1; katthamāno:1; katthati:1; katthamānaḥ:1; kattheta:1; katthasi:1; katthamānasya:1; katthatas:1; katthamānaṃ:1
+400	kvaṇ	kvaṇ	1	matched	28	99.6333	kvaṇat:10; kvaṇita:6; kvaṇan:3; kvaṇed:1; kvaṇatā:1; _:1; kvaṇadbhyāṃ:1; kvaṇitaḥ:1; kvaṇantam:1; kvaṇantībhir:1; kvaṇitām:1; kvaṇati:1
+401	mṛṇ	mṛṇ	6	matched	28	99.6384	mṛṇa:13; mṛṇan:3; mṛṇasi:2; mṛṇe:1; mṛṇataṃ:1; mṛṇata:1; amīmṛṇan:1; mṛṇat:1; mṛṇantaṃ:1; mṛṇanti:1; amṛṇataṃ:1; amṛṇo:1; mṛṇā:1
+402	truṭ	truṭ	4	matched	28	99.6435	truṭitaṃ:6; truṭita:5; truṭati:5; truṭyat:3; truṭyanti:2; truṭite:2; truṭyate:1; truṭyantam:1; truṭyet:1; truṭyati:1; truṭitāṃ:1
+403	dal	dal	1	matched	27	99.6484	dalita:12; dalati:4; dalat:2; dalitāḥ:2; dalanti:2; dalitam:1; dalitaḥ:1; dalitā:1; adalat:1; dalite:1
+404	iyakṣ	iyakṣ		matched	27	99.6534	iyakṣaty:4; iyakṣati:3; iyakṣamāṇaṃ:3; iyakṣantaḥ:3; iyakṣasi:3; iyakṣamāṇā:2; iyakṣan:2; yiyakṣeta:1; iyakṣata:1; iyakṣamāṇam:1; iyakṣate:1; iyakṣanti:1; iyakṣantas:1; iyakṣān:1
+405	vij	vij	6	matched	27	99.6583	vijante:3; vikthāḥ:3; vikthā:3; vignaḥ:2; vijamānaḥ:1; vijantām:1; vijantāṃ:1; vijamānā:1; vignena:1; vignam:1; vignā:1; vigno:1; vignaṃ:1; vijate:1; vigna:1
+406	heṣ	heṣ	1	matched	26	99.663	heṣanti:3; heṣamāṇānāṃ:3; heṣatāṃ:3; heṣate:2; heṣamāṇaiḥ:2; heṣantam:2; heṣante:1; jiheṣe:1; aheṣiṣyata:1; aheṣata:1; heṣamāṇo:1; heṣamāṇaiś:1; heṣamāṇānām:1; heṣatā:1; heṣantau:1
+407	lap	lap	4	matched	26	99.6677	lalāpa:7; alapat:5; lapan:3; lapantu:2; lapitāḥ:1; alāpi:1; lapantaḥ:1; alapiṣam:1; lapitum:1; alapan:1; lapitaṃ:1; lapethāḥ:1; lapati:1
+408	1 luṭh / 2 luṭh	luṭh	6	homonym_shared	26	99.6725	luṭhat:6; luṭhati:6; luloṭha:3; luṭhan:3; luṭhasi:2; luṭhanti:1; luṭhitaṃ:1; luṭhato:1; luṭhamānaiḥ:1; luṭhet:1; luṭhamāno:1
+409	ribh	ribh	1	matched	26	99.6772	rebhan:8; rebhanto:2; rebhanta:2; rebhanti:2; rebhante:2; rebhataḥ:2; rebhamāṇāḥ:1; rebhate:1; rebhati:1; rirebha:1; ribhyate:1; rebhadbhiḥ:1; rebhad:1; rebhatyau:1
+410	bhas	bhas	1	matched	25	99.6817	babhasti:6; bapsati:3; bapsataḥ:3; bapsad:2; babhastu:1; bapsatā:1; babhasat:1; bhasat:1; bhasan:1; bhasathaḥ:1; bapsatī:1; bapsatas:1; bapsat:1; bhasatho:1; bapsatho:1
+411	cṛt	cṛt	6	matched	25	99.6863	cṛtāmasi:10; cṛta:7; cṛtā:2; cṛtatv:2; cṛtyantām:1; cṛtyantāṃ:1; cṛtāmi:1; cṛtanty:1
+412	ghṛ	ghṛ	3	matched	25	99.6908	jigharmi:14; jigharmy:5; jigharti:3; aghriyata:2; ghṛtaṃ:1
+413	mikṣ	mikṣ	1	matched	25	99.6954	mimikṣatām:7; mimikṣatam:7; mimikṣire:3; mimikṣa:2; mimikṣatāṃ:1; mimikṣvā:1; mimikṣati:1; mimikṣuḥ:1; mimikṣe:1; mimikṣatuḥ:1
+414	vañc	vañc	1	matched	24	99.6998	vacyamānā:4; vacyasva:3; vañcati:2; vañcasi:2; vacyante:2; vañcitaiḥ:1; vañcyamānaḥ:1; avañcyata:1; vañcyamānaṃ:1; vañcyate:1; vañcate:1; vañcitāḥ:1; vañcanty:1; vacyate:1; vacyantāṃ:1
+415	īṣ	īṣ	1	matched	24	99.7041	īṣate:8; īṣamāṇā:4; eṣati:2; īṣatu:2; eṣate:2; īṣataḥ:1; īṣamāṇo:1; īṣato:1; īṣamāṇa:1; īṣamāṇāḥ:1; īṣante:1
+416	cañc	cañc	1	matched	23	99.7083	cañcat:20; cañcatā:2; cañcati:1
+417	sap	sap	1	matched	23	99.7125	sapeya:6; sapema:6; sapanta:2; sapanto:1; sapantaḥ:1; sapāmy:1; sapantā:1; sepuḥ:1; sapante:1; sīṣapanta:1; asapanta:1; sapanti:1
+418	sas	sas	2	matched	23	99.7167	sasantu:4; sastu:4; sasato:2; sasantaḥ:2; sasantam:2; sasan:1; sastām:1; sasatām:1; sasantaṃ:1; sasatīm:1; asastana:1; sasto:1; sastv:1; sasty:1
+419	śṛdh	śṛdh	1	matched	23	99.7209	śardhate:4; śardhataḥ:3; śardha:2; śardhato:2; śardhantaṃ:2; śardhan:2; śardhamānaḥ:1; śardhatām:1; śardhantam:1; śardhata:1; śardhad:1; śardhantaḥ:1; śardhatāṃ:1; śardhatas:1
+420	chand	chand	2	matched	22	99.7249	chandyamāno:4; chantsad:3; chantsat:2; acchān:2; chandati:1; acacchadan:1; chandyamāne:1; chandyamānā:1; chandyamānāḥ:1; cchantsad:1; chantsy:1; acchānta:1; cacchanda:1; cachadyāt:1; acchāntsuḥ:1
+421	cūṣ	cūṣ	1	matched	22	99.7289	coṣyaṃ:6; coṣya:4; coṣyam:2; cūṣyate:2; cūṣitavyāni:1; cūṣati:1; cūṣet:1; coṣyāṇi:1; coṣyaiḥ:1; coṣyāṇām:1; coṣyeṇa:1; cūṣyante:1
+422	das	das	1	matched	22	99.7329	dasyanti:5; dasyati:4; dastam:3; dasan:1; adasyat:1; 'dasyan:1; dasyanty:1; dasad:1; dasamāno:1; dasat:1; dasyet:1; dāsīt:1; dasyaty:1
+423	gur	gur	6	matched	22	99.7369	gūrtāḥ:5; gūrta:4; gūrtaḥ:4; gūrtā:3; gurasva:2; juguryā:1; juguryāt:1; gūrtam:1; jugurat:1
+424	mṛdh	mṛdh	9	matched	22	99.7409	mṛddhā:2; mardhīḥ:2; mṛdha:2; mardhanti:2; mardhiṣṭam:2; mardhantaḥ:2; mṛdhnīte:1; mṛddhasya:1; mṛdhyāḥ:1; mardhīr:1; mardhantīḥ:1; mṛdhāti:1; mardhataḥ:1; mardhiṣad:1; mardhati:1
+425	1 drā / 2 drā	drā	2	homonym_shared	21	99.7447	drāntv:7; dadrāṇaṃ:5; drāhy:2; dadrāṇam:2; drātv:1; drātu:1; drāti:1; dadruḥ:1; drāsad:1
+426	nij	nij	2	matched	21	99.7485	niktvā:4; anijam:2; niktam:2; niktaḥ:2; anaik:1; nikṣva:1; nijya:1; niktena:1; nijyatām:1; niktābhir:1; niktasya:1; nikta:1; niktaiḥ:1; ninikta:1; nijmaḥ:1
+427	pluṣ	pluṣ	4	matched	21	99.7523	pluṣṭa:7; pluṣṭam:3; pluṣṭām:1; pluṣṭaṃ:1; pluṣyat:1; pluṣṭeṣu:1; pluṣṭe:1; pluṣṭebhyo:1; pluṣyate:1; pruṣṭa:1; pluṣyan:1; ploṣat:1; pluṣṭo:1
+428	śnath	śnath	2	matched	21	99.7562	śnathiṣṭana:3; śnathad:3; śiśnathat:3; śnathitā:2; śiśnathaḥ:2; śiśnatho:2; śnathihi:1; śnathitam:1; śnathihy:1; aśiśnat:1; śnathiṣṭam:1; śiśnathaṃ:1
+429	cakās	cakās	2	matched	20	99.7598	cakāsti:14; cakāsati:2; cakāsad:1; cakāsat:1; cakāstu:1; cakāsyātām:1
+430	kṣu	kṣu	2	matched	20	99.7634	kṣutvā:8; kṣuyāt:2; kṣute:2; kṣuvatas:1; kṣuvantīṃ:1; kṣuvato:1; kṣutaṃ:1; kṣuvatīṃ:1; kṣuvata:1; kṣauti:1; kṣuvataḥ:1
+431	skambh	skambh	8	matched	20	99.7671	skabhitā:6; skabhnuvanto:3; skabhnāti:2; caskabhāne:1; caskambha:1; skabhnuvanta:1; skabhitāsa:1; skambhathu:1; skambhur:1; skabhitvy:1; cāskambha:1; skabhito:1
+432	stan	stan	2	matched	20	99.7707	stanatāṃ:5; stanat:2; stanitāḥ:1; stanaḥ:1; astānīt:1; stana:1; tastāna:1; stanatīm:1; stanantyo:1; stanadbhiḥ:1; stanantī:1; stanatas:1; stanamānānāṃ:1; ṣṭanihi:1; stann:1
+433	vyac	vyac	3	matched	20	99.7744	vivyāca:8; vivikto:2; vivyajmi:1; avivyak:1; vivyaṅ:1; vivyacanta:1; vivyaktha:1; vivyacuḥ:1; avivyacur:1; vivyacad:1; vivyācā:1; aviviktām:1
+434	svan	svan	1	matched	19	99.7778	svananti:5; svanat:5; svanataḥ:1; sasvanuḥ:1; sasvāna:1; sasvanur:1; svanate:1; svanatāṃ:1; sasvanatuḥ:1; svānīt:1; asvanīd:1
+435	tṛh	tṛh	7	matched	19	99.7813	atṛham:2; tṛṃhatī:2; tṛṃhyam:2; tṛṃhanti:2; tṛﾱhā:2; tṛḍhvā:1; tṛhyantām:1; tṛṇahān:1; tṛhyante:1; tṛhyamāṇānāṃ:1; tatarha:1; tṛṃhatībhyaś:1; atṛṇaham:1; tṛṃhad:1
+436	ven	ven	1	matched	19	99.7847	venaḥ:3; venanti:2; vena:2; venanto:2; venatam:2; venati:2; venantā:1; venataḥ:1; avenad:1; avenat:1; venantam:1; venan:1
+437	1 śad / 2 śad	śad	1	homonym_shared	19	99.7882	śāśadānā:4; śāśadmahe:3; śāśadānaḥ:2; śāśadānām:2; śāśadāna:1; chāśadānam:1; śāśadaḥ:1; śatsyanti:1; śanno:1; śāśadre:1; śāśaduś:1; śāśadānān:1
+438	bṛṃh	bṛṃh	1	matched	18	99.7915	bṛṃhantau:2; bṛṃhatāṃ:2; bṛṃhatām:2; bṛṃhanti:2; barhīt:2; babarha:1; bṛhataṃ:1; bṛṃhyāṃs:1; bṛṃhyān:1; bṛṃhate:1; bṛṃhati:1; barhīḥ:1; babṛhāṇasya:1
+439	dagh	dagh	5	matched	18	99.7947	dhag:7; dhak:3; daghan:1; daghaḥ:1; daghyante:1; daghnuyāt:1; daghyā:1; dhaktam:1; dhaṅ:1; daghma:1
+440	khac	khac	1	matched	18	99.798	khacita:7; khacitena:3; khacitaiḥ:2; khacat:2; khacitaṃ:1; khacatā:1; khacitaḥ:1; khacitam:1
+441	vlī	vlī	9	matched	18	99.8013	avlīyata:4; avlīnāt:4; avlināt:2; vlīyante:2; 'vlīyata:1; 'vlīyanta:1; vlīyamānam:1; vleṣyati:1; vlīnāti:1; vlināt:1
+442	ṣṭhīv	ṣṭhīv	1	matched	18	99.8046	ṣṭhīvati:7; ṣṭhīvet:3; ṣṭhīvitvā:3; ṣṭhīvan:2; ṣṭhīvat:1; ṣṭhyūta:1; ṣṭhutvā:1
+443	kṣvid / kṣviḍ	kṣviḍ	1	homonym_shared	17	99.8077	kṣveḍantaḥ:4; kṣveḍanti:4; kṣveḍan:2; kṣveḍanto:2; kṣveḍamāṇaiś:1; kṣvedet:1; kṣveḍen:1; kṣveḍita:1; kṣveḍati:1
+444	kṣap	kṣap	1	matched	16	99.8106	kṣapet:7; kṣapitvā:3; kṣapituṃ:1; kṣaperaṃs:1; kṣaped:1; kṣapatāṃ:1; kṣapeyus:1; kṣapiṣyāmo:1
+445	tur	tur	6	matched	16	99.8135	turvaṇe:5; turyāma:3; tuturyāt:3; turan:1; turate:1; tuturyāma:1; turatas:1; tuturyād:1
+446	tviṣ	tviṣ	6	matched	16	99.8164	titviṣe:4; tviṣitaḥ:3; titviṣa:2; titviṣāṇaḥ:2; titviṣāte:1; tviṣito:1; titviṣāṇasya:1; atviṣanta:1; atviṣur:1
+447	śrath	śrath	1	matched	16	99.8193	śiśrathaḥ:3; śiśratho:2; śiśrathat:2; śrathnītha:1; śrathnāno:1; śrathnanti:1; aśrathnan:1; śiśrathas:1; śiśrathantu:1; śrathnīte:1; śaśrathe:1; śrathnā:1
+448	chṛd	chṛd	7	matched	15	99.822	chṛṇattu:5; śchṛṇattu:4; chṛndhi:3; aśchāḥ:1; charditvā:1; chṛndantu:1
+449	iṅg	iṅg	4	matched	15	99.8248	iṅgate:6; iṅgati:4; iṅgyamānāni:2; iṅgitam:1; iṅgitā:1; iṅganti:1
+450	rah	rah	1	matched	15	99.8275	rahitam:4; rahite:4; rahitā:3; rahita:2; rahanti:1; rahitaṃ:1
+451	ubj	ubj	6	matched	15	99.8302	ubjatam:3; ubja:2; ubjad:1; ubjataṃ:1; ubjanto:1; ubjatu:1; ubjann:1; aubjo:1; aubjad:1; aubjaḥ:1; ubjaḥ:1; ubjantu:1
+452	am	am	2	matched	14	99.8328	amamat:9; ame:2; amanta:1; amanti:1; amīṣi:1
+453	irajy	irajy		matched	14	99.8353	irajyann:3; irajyasi:3; irajyantā:2; irajyati:2; irajyathaḥ:1; irajyanta:1; irajyata:1; irajyantaṃ:1
+454	kṛp	kṛp	1	matched	14	99.8379	akṛpanta:3; akṛpran:2; kṛpamāṇam:2; kṛpamānasya:1; kṛpyamāṇān:1; kṛpate:1; cakṛpanta:1; akrapiṣṭa:1; akṛpetām:1; kṛpanta:1
+455	guñj	guñj	1	matched	13	99.8402	guñjat:7; guñjanti:1; guñjan:1; guñjadbhiḥ:1; juguñja:1; guñjitaiḥ:1; guñjitena:1
+456	hval	hval	1	matched	13	99.8426	hvalati:9; hvalet:3; hvaled:1
+457	myakṣ	myakṣ	1	matched	13	99.845	mimikṣuḥ:4; amyak:3; mimyakṣa:3; myakṣa:1; amyakṣi:1; mimikṣur:1
+458	sagh	sagh	5	matched	13	99.8473	saghyāsaṃ:7; saghyāsam:4; 'saghnor:1; saghat:1
+459	si	si	5	matched	13	99.8497	sinanti:2; asināt:2; sinātv:1; sinantu:1; sināmi:1; sinoti:1; sinītaḥ:1; sinomy:1; sinomi:1; sinīthaḥ:1; sitam:1
+460	sūd	sūd	1	matched	13	99.8521	suṣūdati:3; suṣūdaḥ:2; suṣūdatā:1; suṣūdata:1; sūdet:1; asūṣudanta:1; suṣūdo:1; suṣūdima:1; suṣūdatha:1; suṣūdat:1
+461	sūrkṣ	sūrkṣ	1	matched	13	99.8544	sūrkṣyam:7; sūrkṣet:3; sūrkṣata:1; sūrkṣati:1; asūrkṣat:1
+462	ścut	ścut	1	matched	13	99.8568	ścotanti:8; ścotanty:3; ścyotante:1; ścotati:1
+463	dhvṛ	dhvṛ	1	matched	12	99.859	dhvara:4; dhvarāma:2; dhvarantam:1; dhvarāt:1; dhvarantaṃ:1; dhvarād:1; adhūrṣata:1; dhūrvaṇe:1
+464	1 dī / 2 dī	dī	4	homonym_shared	12	99.8612	adīyam:2; dīyanti:2; dīyat:1; dīyathaḥ:1; dīyatam:1; dīya:1; dīyan:1; dīyann:1; dīyati:1; dīyā:1
+465	sridh	sridh	1	matched	12	99.8633	sredhantaḥ:2; sredhantī:2; sredhatā:1; sredhati:1; sredhata:1; sredhantaṃ:1; sridhat:1; sridhānaiḥ:1; sredhadbhiḥ:1; asredhan:1
+466	tuś	tuś	1	matched	12	99.8655	tośate:6; tośamānā:3; tośase:3
+467	śiñj	śiñj	2	matched	12	99.8677	śiṅkte:5; śiñjāna:5; śiśiñjire:1; śiñjan:1
+468	bhaṣ	bhaṣ	1	matched	11	99.8697	bhaṣanti:2; bhaṣan:1; bhaṣataḥ:1; bhaṣeyuḥ:1; bhaṣante:1; bhaṣantaḥ:1; bhaṣet:1; bhaṣase:1; bhaṣanto:1; bhaṣituṃ:1
+469	cat	cat	1	matched	11	99.8717	cattāya:5; cattā:2; catto:1; acīcatam:1; catantaṃ:1; catantam:1
+470	inakṣ	inakṣ		matched	11	99.8737	inakṣat:4; inakṣan:3; inakṣata:1; inakṣantaḥ:1; inakṣantam:1; inakṣasi:1
+471	luñc	luñc	1	matched	11	99.8757	luñcitān:3; lucyete:1; luluñce:1; luñcitasya:1; luñcitaṃ:1; luñcitāṃl:1; luñcitair:1; luñcitā:1; luñcitaiḥ:1
+472	rap	rap	1	matched	11	99.8777	rapema:2; rapāmi:2; rapat:2; rapad:1; rapantī:1; arapat:1; 'rapad:1; rapati:1
+473	raṃh	raṃh	1	matched	11	99.8797	raṃhamāṇaḥ:2; rārahāṇā:1; rārahāṇāḥ:1; raṃhyo:1; araṃha:1; raṃhate:1; raṃhamāṇā:1; araṃhata:1; rārahāṇa:1; raṃhyaṃ:1
+474	vell	vell	1	matched	11	99.8817	vellat:5; vellita:3; vellitaḥ:1; vellaty:1; vellate:1
+475	yup	yup	4	matched	11	99.8837	yupitā:4; yuyopima:2; ayūyupan:1; yupitam:1; yupitaḥ:1; yūyupāma:1; yuyopa:1
+476	an	an	1	matched	10	99.8855	anati:3; anat:2; āna:2; āniṣur:1; anyāt:1; ānīt:1
+477	kaṣ	kaṣ	1	matched	10	99.8874	kaṣeta:2; kaṣati:2; kaṣantī:2; kaṣet:1; kaṣamāṇam:1; kaṣan:1; kaṣanti:1
+478	kās	kās	1	matched	10	99.8892	kāsate:3; kāset:2; kāsamānasya:1; cakāse:1; kāsamānaś:1; kāsamānaḥ:1; kāseta:1
+479	nas	nas	1	matched	10	99.891	nasanta:4; nasate:4; nasīmahi:1; nasāmahe:1
+480	pūy	pūy	1	matched	10	99.8928	pūyati:7; pūyitaḥ:1; 'pūyat:1; pūyen:1
+481	raṭ	raṭ	1	matched	10	99.8946	raṭati:4; raṭitum:2; raṭantam:1; raṭann:1; raṭatsu:1; raṭanti:1
+482	sphūrj	sphūrj	1	matched	10	99.8965	sphūrjat:7; sphūrjatyāṃ:1; sphūrjate:1; sphūrjitaḥ:1
+483	vrādh	vrādh	1	matched	10	99.8983	vrādhanta:3; vrādhataś:2; vrādhato:2; vrādhantam:2; vrādhataḥ:1
+484	ḍhauk	ḍhauk	1	matched	10	99.9001	ḍhaukitam:2; ḍhaukasva:1; ḍhaukitvā:1; ḍhaukadhvam:1; ḍhaukatām:1; ḍuḍhauke:1; ḍhaukitaiḥ:1; aḍhaukata:1; ḍhaukitaṃ:1
+485	glah	glah	1	matched	9	99.9017	glahate:3; glahamānānāṃ:2; glahamānāḥ:1; 'glahīṣyad:1; glahamānānām:1; glahann:1
+486	jas	jas	4	matched	9	99.9034	jasyata:2; jajastam:2; ajījasaḥ:1; jajāsa:1; ajījasat:1; jasamānam:1; jasamānāya:1
+487	kṣṇu	kṣṇu	2	matched	9	99.905	kṣaṇute:3; kṣṇutam:2; kṣuṇuvāno:1; kṣaṇvate:1; kṣṇutaṃ:1; kṣṇaumi:1
+488	med	med	6	matched	9	99.9067	medyato:2; medyanti:2; medyati:2; medyate:1; medyantu:1; medatāṃ:1
+489	tarj	tarj	1	matched	9	99.9083	tarjyamānaḥ:3; tarjyamānā:2; tarjyamānasya:1; tarjamānaḥ:1; tarjamānam:1; tarjyamānāṃ:1
+490	turv / tūrv	tūrv	1	homonym_shared	9	99.9099	tūrvan:3; tūrvatha:2; tūrvanto:1; tūrvann:1; tūrvataṃ:1; tūrvasi:1
+491	uñch	uñch	6	matched	9	99.9116	uñchanti:4; uñchato:2; uñchati:1; uñchantam:1; uñchan:1
+492	śim	śim	4	matched	9	99.9132	śimyantu:6; śimyantaḥ:2; śimyati:1
+493	at	at	1	matched	8	99.9147	atasi:4; atati:2; atamānaṃ:1; 'tamānāḥ:1
+494	cyut	cyut	1	matched	8	99.9161	cyotat:2; cyotati:2; cyotatsu:1; cyotanti:1; cyuttvā:1; cyotanta:1
+495	dakṣ	dakṣ	1	matched	8	99.9176	dakṣamāṇo:2; dadakṣe:2; dakṣata:2; dakṣamāṇāḥ:1; dakṣate:1
+496	dhraj	dhraj	1	matched	8	99.919	dhrajato:4; dhrajantam:2; adhrajan:1; dhrajataḥ:1
+497	dudh	dudh	1	matched	8	99.9205	dodhataḥ:6; dodhato:1; dodhata:1
+498	jvar	jvar	1	matched	8	99.9219	jvaryate:3; jvariṣyāmi:1; jvaritā:1; jvaret:1; jvarati:1; jvaryeta:1
+499	kṛś	kṛś	1	matched	8	99.9234	kṛśitaḥ:1; kṛśāmi:1; cakarśa:1; karśed:1; karśanīyaḥ:1; kṛśyanti:1; kṛśyati:1; kṛśyato:1
+500	pan	pan	1	matched	8	99.9248	pananta:3; panitāro:1; panita:1; papne:1; paniṣṭa:1; papana:1
+501	tsar	tsar	1	matched	8	99.9263	tsarati:2; tsarat:2; tsaran:1; tsarantaḥ:1; tatsāra:1; atsāḥ:1
+502	1 vic / 2 vic	vic	4	homonym_shared	8	99.9278	vinaktu:2; viveca:1; vicyadhvaṃ:1; vinaktv:1; vicyate:1; viñcanti:1; vivikvāṁ:1
+503	chā	chā	4	matched	7	99.929	chyati:3; chyantu:2; chāta:1; chya:1
+504	khel	khel	1	matched	7	99.9303	khelanti:1; khelato:1; khelante:1; khelita:1; khelatām:1; khelati:1; khelat:1
+505	kṣad	kṣad	1	matched	7	99.9316	kṣadante:2; kṣadāmahe:1; kṣadase:1; cakṣadānam:1; cakṣadāna:1; cakṣade:1
+506	laḍ	laḍ	1	matched	7	99.9329	laḍat:5; laḍatā:1; laḍantyaḥ:1
+507	liś	liś	6	matched	7	99.9341	liśate:4; aliśanta:2; liśante:1
+508	niṃs	niṃs	2	matched	7	99.9354	niṃsate:4; niṃsānaṃ:1; niṃsānam:1; niṃsata:1
+509	pruth	pruth	1	matched	7	99.9367	prothad:2; prothat:2; protha:1; prothamāno:1; prothantam:1
+510	pruṣ	pruṣ	4	matched	7	99.9379	pruṣṇute:2; pruṣitam:1; pruṣitasya:1; pruṣṇuvanti:1; pruṣṇavad:1; pruṣā:1
+511	1 pī / 2 pī	pī	4	homonym_shared	7	99.9392	pīyati:3; pīyataḥ:1; pīyaty:1; pīyanti:1; pīyato:1
+512	raṇv	raṇv	1	matched	7	99.9405	raṇva:3; raṇvatv:3; raṇvatu:1
+513	tak	tak	2	matched	7	99.9418	taktaḥ:3; takto:2; takty:1; atakta:1
+514	tim	tim	4	matched	7	99.943	timyat:3; timitam:1; timitaiḥ:1; timyan:1; timitāni:1
+515	bharts	bharts	1	matched	6	99.9441	bhartsyamānā:3; abhartsyata:1; bhartsyamānau:1; bhartsyate:1
+516	hnu	hnu	1	matched	6	99.9452	hnuvate:3; hnuvāne:1; hnutaḥ:1; hnavāyyam:1
+517	mith	mith	6	matched	6	99.9463	mithatīr:2; methāmasi:1; methete:1; mithatī:1; mimetha:1
+518	mīl	mīl	1	matched	6	99.9474	mīlita:2; mīlat:2; mīlati:1; mīlyate:1
+519	naṭ	naṭ	1	matched	6	99.9485	naṭat:3; naṭadbhir:1; naṭanīyam:1; naṭante:1
+520	psā	psā	2	matched	6	99.9496	psāto:1; psāhi:1; psātv:1; psāyād:1; psātaḥ:1; psātā:1
+521	rup	rup	6	matched	6	99.9507	rūrupaḥ:4; arūrupaḥ:1; rūrupāma:1
+522	tij	tij	1	matched	6	99.9518	tejamānaḥ:2; tejase:2; tiktān:1; tejate:1
+523	ār	ār	1,4	matched	6	99.9529	āritaḥ:3; āryanti:2; ārita:1
+524	śruṣ	śruṣ	1	matched	6	99.954	śroṣamāṇāḥ:2; śroṣamāṇā:2; śroṣan:1; śroṣantv:1
+525	śvit	śvit	1	matched	6	99.9551	aśvait:3; aśvaid:1; aśiśvitat:1; aśvitan:1
+526	śyā	śyā	4	matched	6	99.9561	śyāyati:2; śyāna:2; śyānam:1; śīyatām:1
+527	ṛd	ṛd	1	matched	6	99.9572	ṛdantu:2; ardati:1; ardituṃ:1; arditum:1; ārdan:1
+528	bhand	bhand	1	matched	5	99.9581	bhandamāne:2; bhandamānaḥ:1; bhandate:1; bhandat:1
+529	bhiṣaj	bhiṣaj	2	matched	5	99.9591	abhiṣṇak:4; bhiṣajyam:1
+530	jeh	jeh	1	matched	5	99.96	jehamānam:2; jehamānā:1; jehamānasya:1; jehamānāḥ:1
+531	khañj	khañj	1	matched	5	99.9609	khañjann:2; khañjan:1; khañjati:1; khañjat:1
+532	kuṣ	kuṣ	9	matched	5	99.9618	kuṣṇāti:3; kuṣṇīyāt:2
+533	rapś	rapś	1	matched	5	99.9627	rapśate:2; rapśat:1; rarapśa:1; rarapśe:1
+534	taṃs	taṃs	1	matched	5	99.9636	tatasre:5
+535	tu	tu	2	matched	5	99.9645	tūtāva:1; tūtod:1; tūtot:1; tūtoḥ:1; tavīty:1
+536	vīj	vīj	1	matched	5	99.9654	vījet:1; vījantaḥ:1; vivyajur:1; vījamānāḥ:1; avījyata:1
+537	yād	yād	1	matched	5	99.9663	yādamānāḥ:2; yādamānaḥ:1; yādamānā:1; yādamāno:1
+538	āñch	āñch	1	matched	5	99.9672	āñchet:4; āñched:1
+539	1 akṣ / 2 akṣ	akṣ	5	homonym_shared	4	99.968	akṣṇuhi:1; akṣiṣuḥ:1; ākṣiṣur:1; ākṣāṇe:1
+540	aṅg	aṅg	1	matched	4	99.9687	aṅgat:4
+541	bhan	bhan	1	matched	4	99.9694	bhananta:2; bhananti:1; bhanati:1
+542	bhreṣ	bhreṣ	1	matched	4	99.9702	bhreṣann:3; bhreṣate:1
+543	cup	cup	1	matched	4	99.9709	copati:4
+544	kuṭṭ	kuṭṭ	6	matched	4	99.9716	kuṭṭa:4
+545	kūrd	kūrd	1	matched	4	99.9723	kūrdat:1; kūrdate:1; kūrdantyaḥ:1; kūrdantas:1
+546	nikṣ	nikṣ	1	matched	4	99.9731	nikṣa:4
+547	ubh	ubh	6	matched	4	99.9738	ubhnāḥ:1; unab:1; ubdhaṃ:1; aubhnād:1
+548	vat	vat	1	matched	4	99.9745	vatema:2; vatantas:1; avīvatan:1
+549	īrṣy	īrṣy	1	matched	4	99.9753	īrṣyāmi:2; īrṣyet:1; īrṣyati:1
+550	bharv	bharv	1	matched	3	99.9758	bharvan:2; bharvati:1
+551	bhur	bhur	6	matched	3	99.9763	bhuramāṇaṃ:1; bhuranta:1; bhurantu:1
+552	dhav	dhav	1	matched	3	99.9769	dhavadhve:1; dhavante:1; adhavanta:1
+553	drū	drū	9	matched	3	99.9774	drūṇāno:3
+554	hlād	hlād	1	matched	3	99.978	hlādate:1; hlādante:1; ajihladat:1
+555	hās	hās	1	matched	3	99.9785	hāsante:1; hāsamānā:1; hāsate:1
+556	mokṣ	mokṣ		matched	3	99.9791	mokṣamāṇā:2; mukṣīyamāṇaḥ:1
+557	mruc	mruc	1	matched	3	99.9796	amrucad:1; mlocanti:1; mrocann:1
+558	rip	rip	6	matched	3	99.9802	riptam:2; riripur:1
+559	sarj	sarj	1	matched	3	99.9807	sarjataḥ:1; sarjad:1; sarjati:1
+560	snu	snu	2	matched	3	99.9813	snuta:2; snuvanti:1
+561	subh	subh	6	matched	3	99.9818	asumbhan:1; subdhān:1; sumbhanti:1
+562	tand	tand	1	matched	3	99.9823	tandate:2; tandran:1
+563	tañc	tañc	7	matched	3	99.9829	tanacmi:3
+564	tvaṅg	tvaṅg	1	matched	3	99.9834	tvaṅgat:3
+565	can	can	1	matched	2	99.9838	caniṣṭaṃ:1; caniṣṭhad:1
+566	caṭ	caṭ	1	matched	2	99.9842	caṭita:1; caṭataḥ:1
+567	dad	dad	1	matched	2	99.9845	dadasva:1; dadate:1
+568	dhan	dhan	1	matched	2	99.9849	dadhanyuḥ:1; dadhanad:1
+569	dās	dās	1	matched	2	99.9853	dāsatu:1; dāsati:1
+570	dṛbh	dṛbh	6	matched	2	99.9856	dṛbdha:1; dṛbdhā:1
+571	ghaṭṭ	ghaṭṭ	1	matched	2	99.986	ghaṭṭate:2
+572	hikk	hikk	1	matched	2	99.9864	hikkato:1; hikkamānau:1
+573	hiṇḍ	hiṇḍ	4	matched	2	99.9867	hiṇḍitam:1; hiṇḍan:1
+574	hreṣ	hreṣ	1	matched	2	99.9871	hreṣante:1; hreṣato:1
+575	jūrv	jūrv	1	matched	2	99.9874	jūrvan:1; jūrva:1
+576	maṇṭ	maṇṭ	1	matched	2	99.9878	maṇṭeta:2
+577	mlech	mlech	1	matched	2	99.9882	mlechanti:1; mlechet:1
+578	mnā	mnā	1	matched	2	99.9885	manan:1; amnāyi:1
+579	mṛch	mṛch	1	matched	2	99.9889	mṛcchante:2
+580	ned	ned	1	matched	2	99.9893	nedanty:2
+581	pīḍ	pīḍ	1	matched	2	99.9896	apīpiḍat:1; pipīḍe:1
+582	riś	riś	6	matched	2	99.99	riśantīḥ:1; riśantām:1
+583	trap	trap	1	matched	2	99.9904	traperan:1; trapamāṇā:1
+584	viṣṭ	viṣṭ	6	matched	2	99.9907	viṣṭitaṃ:2
+585	yas	yas	3	matched	2	99.9911	yayastu:2
+586	yeṣ	yeṣ	1	matched	2	99.9914	yeṣantam:1; yeṣantī:1
+587	śas	śas	4	matched	2	99.9918	śāsti:1; śasta:1
+588	ślath	ślath	1	matched	2	99.9922	ślathat:2
+589	śriṣ	śriṣ	4	matched	2	99.9925	śriṣan:1; śreṣāma:1
+590	śuj	śuj	6	matched	2	99.9929	śūśujānān:1; śūśujānaḥ:1
+591	bhrī	bhrī	7	matched	1	99.9931	bhrīṇanti:1
+592	bhuraj	bhuraj	6	matched	1	99.9933	bhurajanta:1
+593	bhyas	bhyas		matched	1	99.9934	abhyasetāṃ:1
+594	cand	cand	1	matched	1	99.9936	candati:1
+595	dan	dan	1	matched	1	99.9938	dano:1
+596	gard	gard	1	matched	1	99.994	agardad:1
+597	guṇṭh	guṇṭh	1	matched	1	99.9942	guṇṭhanti:1
+598	hūrch	hūrch	1	matched	1	99.9944	hūrchantaṃ:1
+599	iradh	iradh		matched	1	99.9945	iradhanta:1
+600	jri	jri	1	matched	1	99.9947	jrayati:1
+601	jyut	jyut	1	matched	1	99.9949	jyotatām:1
+602	kal	kal	1	matched	1	99.9951	kalanīyam:1
+603	kharj	kharj	1	matched	1	99.9953	kharjati:1
+604	khud	khud	6	matched	1	99.9955	khudata:1
+605	kū	kū	6	matched	1	99.9956	kuvate:1
+606	kṣā	kṣā	4	matched	1	99.9958	kṣāyatas:1
+607	luḍ	luḍ	1	matched	1	99.996	luḍita:1
+608	mrad	mrad	1	matched	1	99.9962	mrada:1
+609	mrit	mrit	4	matched	1	99.9964	mrityet:1
+610	mṛc	mṛc	6	matched	1	99.9965	mṛkṣīṣṭa:1
+611	mṛkṣ	mṛkṣ	6	matched	1	99.9967	mimṛkṣuḥ:1
+612	1 nu / 2 nu	nu	2	homonym_shared	1	99.9969	anaviṣṭa:1
+613	pibd	pibd	1	matched	1	99.9971	pibdamānā:1
+614	rac	rac	1	matched	1	99.9973	racanīyā:1
+615	riph	riph	6	matched	1	99.9975	riphatī:1
+616	sku	sku	8	matched	1	99.9976	skūyamānasya:1
+617	sphar	sphar	1	matched	1	99.9978	spharitvā:1
+618	stṛh	stṛh	6	matched	1	99.998	stṛhatīṃ:1
+619	svād	svād	1	matched	1	99.9982	svādate:1
+620	taḍ	taḍ	2	matched	1	99.9984	tatāḍa:1
+621	taṭ	taṭ	1	matched	1	99.9985	taṭati:1
+622	u	u	5	matched	1	99.9987	unoti:1
+623	vaṇṭ	vaṇṭ	1	matched	1	99.9989	vaṇṭyamānam:1
+624	vrad	vrad	1	matched	1	99.9991	avradanta:1
+625	yabh	yabh	1	matched	1	99.9993	yabhituṃ:1
+626	yakṣ	yakṣ	1	matched	1	99.9995	yakṣanta:1
+627	īṅkh	īṅkh	1	matched	1	99.9996	īṅkhasva:1
+628	ścam	ścam	9	matched	1	99.9998	ścamnan:1
+629	ṭaṅk	ṭaṅk	1	matched	1	100.0	ṭaṅkitam:1
