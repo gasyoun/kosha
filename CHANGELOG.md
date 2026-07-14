@@ -14,6 +14,34 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.52.0] - 2026-07-15
+
+### Added
+- **H948: samāsa (compound) analysis trainer — pedagogy Wave 1, surface W1c.**
+  [`scripts/build_samasa_trainer.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_samasa_trainer.py)
+  applies the six-stage pedagogy contract
+  ([ARCHITECTURE_KOSHA_PEDAGOGY_SURFACES.md](https://github.com/gasyoun/kosha/blob/main/docs/ARCHITECTURE_KOSHA_PEDAGOGY_SURFACES.md))
+  to compound analysis: [`data/gita/gita_morphology_gold.tsv`](https://github.com/gasyoun/kosha/blob/main/data/gita/gita_morphology_gold.tsv)
+  (815 hand-tagged Gītā compounds) as the verified-type gold seed, joined against
+  the VisualDCS `Kompozity` compound dictionary (`cmps.csv` × `names.csv`,
+  168,421 corpus-attested compounds ranked by frequency) for corpus-scale
+  split-only practice.
+  [`data/samasa/samasa_curriculum.tsv`](https://github.com/gasyoun/kosha/blob/main/data/samasa/samasa_curriculum.tsv)
+  (759 gold-verified compounds, karmadhāraya/tatpuruṣa first then
+  bahuvrīhi/dvandva per the MG 14-07-2026 ordering ruling, ranked within type
+  by corpus frequency) + [`reference.tsv`](https://github.com/gasyoun/kosha/blob/main/data/samasa/reference.tsv)
+  (per-type look-up) + [`samasa_drills.json`](https://github.com/gasyoun/kosha/blob/main/data/samasa/samasa_drills.json)
+  (3,565 identify/split items, 100% evidence-backed) + `samasa_drills.apkg`
+  (Anki) + `reading/samasa/{curriculum,drills,reference}/index.html`
+  (theme-aware, cross-links the hosted
+  [csl-guides samāsa quiz](https://sanskrit-lexicon.github.io/csl-guides/docs/users/samasa-quiz)
+  rather than duplicating it). Type distribution honestly reported, not
+  balanced: TP=458, BV=298, DV=2, KD=1 — dvandva/karmadhāraya are severely
+  underrepresented in the gold set and the corpus pool cannot fill the gap
+  (no verified type there). `samasa-trainer` manifest row registered;
+  [`tests/test_samasa_trainer.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_samasa_trainer.py)
+  (11 tests) green, no regressions in the existing suite.
+
 ## [0.51.0] - 2026-07-14
 
 ### Added
