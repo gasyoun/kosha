@@ -116,7 +116,7 @@ Cologne-vs-Huet noun-declension comparison (`decline_one_huet.py`,
 vidyut-prakriya comparison over 10k entry-bearing stems — that corroborates the
 Huet line and quantifies where the three engines part ways. The drafted
 give-back comment for #10 is in the E1 handoff
-([H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md));
+([H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md));
 **it is not posted** — posting to the dormant, noise-averse upstream is
 diplomacy-gated (RELATIONS.md §2/§7) and awaits MG's go-ahead. [#8](https://github.com/sanskrit-lexicon/csl-inflect/issues/8)
 is verb-side and is answered by the verb follow-on, not this nominal pass.
@@ -144,7 +144,7 @@ This pass is nominals only. Verb conjugation needs a dhātu → (gaṇa, lakāra
 pada, prayoga) mapping from Cologne's `v_<gana>`/`v_p` models into vidyut's
 `Tinanta` API — a larger effort that also answers
 [#8](https://github.com/sanskrit-lexicon/csl-inflect/issues/8) directly. Queued
-in [H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md).
+in [H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md).
 
 ## Optional paper
 
