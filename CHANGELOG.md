@@ -14,6 +14,27 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.48.0] - 2026-07-14
+
+### Added
+- **H918 (sandhi Phase 4, surface 4b): drills/flashcards — the last core-programme
+  surface.** New
+  [`scripts/build_sandhi_drills.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_sandhi_drills.py)
+  turns the graded curriculum's 132 highest-value rules (lessons 1–9, 90 % of all
+  corpus sandhi) into 396 practice items — join (`X + Y → ?`), split
+  (`Z → original junction?`), identify-class — each with 4-way multiple-choice
+  same-class distractors and an attested corpus example. Shipped in all three
+  formats MG requested: item-data JSON/TSV
+  ([`data/sandhi/sandhi_drills.json`](https://github.com/gasyoun/kosha/blob/main/data/sandhi/sandhi_drills.json) /
+  [`.tsv`](https://github.com/gasyoun/kosha/blob/main/data/sandhi/sandhi_drills.tsv)),
+  an Anki deck
+  ([`sandhi_drills.apkg`](https://github.com/gasyoun/kosha/blob/main/data/sandhi/sandhi_drills.apkg),
+  genanki), and a self-contained theme-aware web quiz at
+  [`reading/sandhi/drills/`](https://github.com/gasyoun/kosha/blob/main/reading/sandhi/drills/index.html).
+  Registered as the `sandhi-drills` dataset. Credit: Dr. Mārcis Gasūns. (Sibling
+  surface 4a, reader hover, is a separate SanskritGrammar handoff, H917 — Phase 4
+  is now fully shipped on the kosha side.)
+
 ## [0.47.0] - 2026-07-14
 
 ### Added
