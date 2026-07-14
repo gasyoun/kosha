@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.46.0] - 2026-07-14
+
 ### Added
 - **H902 (sandhi Phase 4, surface 3/4): per-class reference pages.** New
   [`scripts/build_sandhi_reference.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_sandhi_reference.py)
