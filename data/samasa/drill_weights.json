@@ -1,0 +1,6 @@
+{
+  "_doc": "Samasa (compound) trainer weights (H948). MG ruling 14-07-2026: teach the transparent types (karmadharaya, tatpurusa) before the harder ones (bahuvrihi, dvandva) -- this ORDER, not just a formula, must live here, visibly tunable, NOT hard-coded in Python. build_samasa_trainer.py reads this file (override with --weights <file>).",
+  "type_teaching_order": ["KD", "TP", "BV", "DV"],
+  "min_corpus_freq": 1,
+  "corpus_drill_cap": 2000
+}
