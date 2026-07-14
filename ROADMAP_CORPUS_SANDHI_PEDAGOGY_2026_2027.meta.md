@@ -22,8 +22,12 @@ curriculum difficulty metric and GRETIL license scope.
   numbers in §1.
 
 ## Ranked improvement backlog (of the roadmap itself)
-1. Add the difficulty-metric formula once a human confirms weighting (currently
-   prose-only in §5).
+1. ~~Add the difficulty-metric formula once a human confirms weighting (currently
+   prose-only in §5).~~ **CONFIRMED (MG, 14-07-2026):** proceed with frequency
+   × class × environment-count. Condition: H902 must ship the actual weighting
+   parameters in a human-readable README/config alongside the builder (not
+   hard-coded), so MG can fine-tune them later without a re-engineering pass —
+   see §5's ruling note. Still open until H902 actually ships it.
 2. ~~Fill concrete DCS text names for each Phase-2 tier (currently exemplary, not
    exhaustive) — derive from `dcs-conllu/files/` + a difficulty proxy.~~ **DONE
    (H901, 14-07-2026):** all four Phase-2 tiers now name concrete texts —
@@ -60,5 +64,6 @@ curriculum difficulty metric and GRETIL license scope.
 | 13-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | Created with Phase 0 shipped + proven; Phases 1–4 planned. |
 | 14-07-2026 | Sonnet 5 `claude-sonnet-5` | Phase 2b (H901): broadened the corpus sweep 8→17 texts (+Rāmāyaṇa, full Mahābhārata, kāvya, more readers, śataka/nīti); ticked backlog item 2. |
 | 14-07-2026 | Sonnet 5 `claude-sonnet-5` | H903 — method B (vidyut-cheda) implemented + scored on 2 texts; "27 % no gold split" risk claim measured and not reproduced. |
+| 14-07-2026 | Sonnet 5 `claude-sonnet-5` | Recorded MG's difficulty-metric ruling (confirmed, weights must be exposed in a README/config for later tuning) — §5 + backlog item 1. |
 
 _Dr. Mārcis Gasūns_
