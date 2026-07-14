@@ -1,4 +1,4 @@
-_Created: 13-07-2026 · Last updated: 13-07-2026 (Phase 1.1 MWT-edge visarga shipped, H894)_
+_Created: 13-07-2026 · Last updated: 14-07-2026 (Phase 2 first corpus sweep shipped, H900)_
 
 # Corpus-wide sandhi extraction for Sanskrit pedagogy — roadmap (2026–2027)
 
@@ -122,22 +122,30 @@ method A at 96.3 %** (H897). Method B/C bake-off + Phase 2 sweep are next.
 
 ## 3. Phase 2 — DCS corpus sweep (pedagogical-difficulty order)
 
-Process order (learner path, not corpus size):
+**First sweep ✅ DONE (H900)** — [`scripts/build_corpus_sandhi.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_corpus_sandhi.py)
+runs the validated method-A inducer over a curated 8-text set in learner order
+and builds per-text tables + the merged
+[`data/sandhi/corpus_sandhi.tsv`](https://github.com/gasyoun/kosha/blob/main/data/sandhi/corpus_sandhi.tsv).
+**53,291 sandhi events · 1,674 distinct rules; the top 69 rules cover 80 % of all
+corpus sandhi** — the graded-curriculum backbone. Texts swept: Hitopadeśa,
+Vetālapañcaviṃśatikā, Śukasaptati, Amaruśataka, Aṣṭāvakragīta, Bhagavadgītā,
+Gītagovinda, Kathāsaritsāgara.
 
-1. **Easy readers** — Hitopadeśa ✅ pilot, Pañcatantra, Vetālapañcaviṃśati, easy nīti.
-2. **Gītā-family** — Aṣṭāvakragīta ✅ pilot, Bhagavadgītā (validation), other gītās.
+Remaining process order (learner path, not corpus size):
+
+1. **Easy readers** — ✅ Hitopadeśa, Vetāla, Śukasaptati, Kathāsaritsāgara; more nīti to add.
+2. **Gītā-family** — ✅ Aṣṭāvakragīta, Bhagavadgītā, Gītagovinda; other gītās.
 3. **Epic** — Rāmāyaṇa, Mahābhārata (largest; stabilises global frequency).
-4. **Kāvya** — Kālidāsa, Bhāravi, etc.
+4. **Kāvya** — Kālidāsa, Bhāravi, etc. (Amaruśataka ✅ started).
 5. **Śāstra / commentary** — dense sandhi, last.
 
 **Outputs (both, per the decision):**
-- Per-text: `data/sandhi/<slug>_sandhi.tsv` (Gītā schema + `text_id`).
-- Merged: `data/sandhi/corpus_sandhi.tsv` — global frequency ranks across all
-  processed texts (`rule · category · global_count · global_pct · n_texts ·
-  top_texts · examples`), rebuilt each sweep. Drives curriculum ordering.
-- **Manifest:** add `gita-sandhi` + `dcs-corpus-sandhi` rows to
-  [`datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) when the merged dataset is first cut (17-field schema);
-  data-statement `.meta.md` per the hub convention.
+- Per-text: `data/sandhi/<id>_sandhi.tsv` (Gītā schema).
+- Merged: `data/sandhi/corpus_sandhi.tsv` — global ranks (`rule · category ·
+  global_count · global_pct · n_texts · top_texts · examples`), rebuilt each sweep.
+- **Manifest:** ✅ `corpus-sandhi` row added to
+  [`datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
+  (beside the existing `gita-sandhi`); a data-statement `.meta.md` is a follow-up.
 
 ---
 
