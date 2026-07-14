@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="48 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="50 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="48 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="50 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -1198,6 +1198,62 @@
     },
     {
       "@type": "Dataset",
+      "name": "Frequency-graded vocabulary curriculum — ordered teaching syllabus",
+      "description": "H947 Wave-1 pedagogy build (W1b). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Applies the sandhi-curriculum method to words; gloss is the lemma's own dictionary card teaser (MW preferred), not DCS's lemma.meanings (only ~23% coverage on this lemma set, rejected as primary source).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "vocab-curriculum"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/data/frequency/vocab_curriculum.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Vocabulary drills — recognition/recall practice items",
+      "description": "H947 Wave-1 pedagogy build (W1b). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. No SRS scheduling here (deck items only, per the fence in H947 — Systema \"Saraswati\" owns scheduling).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "vocab-drills"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "json",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/data/frequency/vocab_drills.json"
+      }
+    },
+    {
+      "@type": "Dataset",
       "name": "Sandhi drills — join/split/identify practice items",
       "description": "H918 roadmap Phase 4 (surface 4b: drills/flashcards, the last core-programme surface — sibling surface 4a is the SanskritGrammar reader-hover, H917). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Deterministic build (seeded RNG, seed 20260714) so choice ordering/distractors are reproducible across rebuilds.",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -1461,7 +1517,7 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>48</b><span>public datasets</span></div>
+      <div class="tally"><b>50</b><span>public datasets</span></div>
       <div class="tally"><b>11</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
@@ -1891,6 +1947,26 @@
     </article>
     <article class="card">
       <div class="card-h">
+        <h3>Frequency-graded vocabulary curriculum — ordered teaching syllabus</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per core-vocabulary lemma (6,667 of 7,120 Leonchenko core_rank lemmas; 453 dropped for having no committed dictionary card), ordered by core_rank: rank, lemma_slp1, deva, iast, gloss, core_rank, coverage_pct, cumulative_pct, lesson (134 lessons of 50), card_href. cumulative_pct is computed here (running sum of the source coverage_pct marginal weight), not copied from the source feed. Learn 284 lemmas -&gt; read 30% of the core-vocabulary corpus mass; 1122 -&gt; 50%; 4978 -&gt; 70%. Teaching page reading/vocabulary/curriculum/index.html.</p>
+      <p class="meta">6,667 rows · 1.1 MB · TSV</p>
+      <div class="chips"><span class="chip">reading/vocabulary/curriculum/ page</span><span class="chip">vocab-drills dataset</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/data/frequency/vocab_curriculum.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Vocabulary drills — recognition/recall practice items</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one item per row: aspect=vocabulary, type (recognition: word-&gt;gloss / recall: gloss-&gt;word), prompt, answer, distractors (same-lesson-band lemmas), rank (core_rank), evidence (docs/cards/&lt;token&gt;.json), source_dataset=vocab-curriculum (ARCHITECTURE shared item schema). 2 items per curriculum lemma (6,667 x 2 = 13,334). Also shipped as data/frequency/vocab_curriculum.apkg (Anki deck, genanki, one Basic note per lemma: front=deva/iast, back=gloss).</p>
+      <p class="meta">13,334 rows · 7.2 MB · JSON</p>
+      <div class="chips"><span class="chip">vocab_curriculum.apkg (Anki deck)</span><span class="chip">Systema/csl-guides quiz component (future, via the shared item schema)</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/data/frequency/vocab_drills.json">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
         <h3>Sandhi drills — join/split/identify practice items</h3>
         <span class="badge pub">public</span>
       </div>
@@ -1955,7 +2031,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one row per gold-verified compound (759; from the 815-row gita-morphology-gold compound column, minus 56 ambiguous dual-tag rows), ordered as a graded syllabus: rank, lesson (1-4 = KD/TP/BV/DV, transparent types first per the MG 14-07-2026 ruling), type, type_name, compound, form, verse, corpus_freq, cumulative_freq_pct. Within a lesson, ranked by corpus frequency (VisualDCS Kompozity names.csv join). Companion data/samasa/reference.tsv (per-type ranked lookup) and data/samasa/samasa_drills.json (3,565 identify/split practice items: 759 gold-verified identify, 806 gold-verified split, 2,000 corpus-derived unverified-type split, capped from a 168,421-item ranked corpus pool per data/samasa/drill_weights.json). Teaching pages reading/samasa/{curriculum,drills,reference}/index.html.</p>
-      <p class="meta">759 rows · 50.1 KB · TSV</p>
+      <p class="meta">759 rows · 50.8 KB · TSV</p>
       <div class="chips"><span class="chip">reading/samasa/{curriculum,drills,reference}/ pages</span><span class="chip">samasa_drills.apkg (Anki deck)</span><span class="chip">csl-guides samasa-quiz (cross-linked, not duplicated)</span><span class="chip">graded compound-analysis teaching (pedagogy Wave 1, W1c)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/data/samasa/samasa_curriculum.tsv">Download ↓</a></div>
     </article>
