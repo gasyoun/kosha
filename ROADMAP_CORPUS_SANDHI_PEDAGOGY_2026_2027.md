@@ -242,6 +242,19 @@ small, human-readable weights table (e.g. `data/sandhi/difficulty_weights.md`
 or a `--weights <file>` JSON alongside the builder script) that the curriculum
 generator reads, not constants buried in Python.
 
+**Graded curriculum ✅ SHIPPED (H902, surface 2 of 4)** —
+[`scripts/build_sandhi_curriculum.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_sandhi_curriculum.py)
+orders the corpus rules by the MG-ruled priority (`frequency × class ×
+environment-generality`) with the weights in
+[`data/sandhi/difficulty_weights.json`](https://github.com/gasyoun/kosha/blob/main/data/sandhi/difficulty_weights.json)
+(tunable, per the ruling — edit + re-run, no code change). Emits
+`data/sandhi/sandhi_curriculum.tsv` (2,181 rules, 10 lessons) + a theme-aware
+teaching page [`reading/sandhi/curriculum/`](https://github.com/gasyoun/kosha/blob/main/reading/sandhi/curriculum/index.html).
+**Headline: learn 23 rules → read 50 % of all corpus sandhi; 79 → 80 %; 132 →
+90 %.** Easy high-frequency rules first (the mechanical `m → ṃ` anusvāra family +
+`a a → ā` lead; visarga later per the class weights). Remaining Phase-4 surfaces:
+reader hover, drills/flashcards, per-class reference pages.
+
 ---
 
 ## 6. Data schema, licensing, risks
