@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.49.0] - 2026-07-14
+
 ### Added
 - **H945: kosha pedagogy engine-room build plan (`/ask`).** A layered build plan
   generalising the shipped corpus-sandhi programme's six-stage pattern to the rest of
