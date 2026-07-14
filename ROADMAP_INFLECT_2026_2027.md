@@ -115,7 +115,7 @@ Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://
 
 - **Wave E1 — dual-engine comparison (the vidyut path, D3). 🔶 nominal
   comparison done 05-07-2026 (Opus 4.8 `claude-opus-4-8`); ruling + give-back
-  post + verbs pending ([H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md)).**
+  post + verbs pending ([H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md)).**
   - **Done:** [`scripts/compare_vidyut_cologne.py`](https://github.com/gasyoun/kosha/blob/main/scripts/compare_vidyut_cologne.py)
     (vidyut-prakriya 0.4.0 local, R12-clean) + [`E1_DIVERGENCE_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/E1_DIVERGENCE_REPORT.md):
     **90.5 % cell agreement** over 240k cells / 10k nominal stems, divergences
@@ -126,14 +126,14 @@ Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://
   - **(a) give-back** to [#10](https://github.com/sanskrit-lexicon/csl-inflect/issues/10)
     ([#8](https://github.com/sanskrit-lexicon/csl-inflect/issues/8) = verb side):
     **drafted, not posted** — diplomacy-gated (RELATIONS.md §2/§7), awaits MG
-    go-ahead. Draft in [H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md).
+    go-ahead. Draft in [H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md).
   - **(b) ruling** migrate/hybridize/stay: report **recommends hybridize** (keep
     Cologne base per D3, layer vidyut to auto-fix ṇatva + fill gaps + flag
     forks). Filed as an **@DECIDE** in [Uprava/GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md).
   - **(c) optional paper** — three-engine (Cologne/Huet/vidyut) divergence table;
     scaffold only if MG wants it.
   - **Pending:** the ruling, the (cleared) upstream post, and the **verb
-    comparison** (answers #8) — all in [H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md).
+    comparison** (answers #8) — all in [H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md).
 
 ## 4. Non-goals (considered and ruled out — do not re-propose)
 

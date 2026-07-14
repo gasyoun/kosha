@@ -984,7 +984,7 @@ sense citations pin to `data_version`, not to repo tags.
   @DECIDE) and the **give-back post** to csl-inflect#10 (diplomacy-gated,
   drafted not posted), plus the agent-doable **verb comparison** (answers
   csl-inflect#8) — all queued in
-  [H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md).
+  [H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md).
   E1 raw comparison output (`data/e1/`) is gitignored (regenerable).
 
 ## [0.9.0] - 2026-07-05
