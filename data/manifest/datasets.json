@@ -1005,6 +1005,25 @@
       "notes": "H848 roadmap W2. Public/MIT, credit Dr. Marcis Gasuns. The first corpus-attested, frequency-ranked sandhi table in the ecosystem (categories: anusvara/nasal 1172, visarga 1163, vowel 813, consonant 264)."
     },
     {
+      "id": "sandhi-curriculum",
+      "title": "Graded sandhi curriculum — ordered teaching syllabus",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/sandhi/sandhi_curriculum.tsv",
+      "format": "tsv",
+      "rows": 2181,
+      "size_bytes": 135792,
+      "keying": "one row per sandhi rule (2,181), ordered as a graded syllabus: rank, rule, category, count, pct, cumulative_pct, family_size, priority, lesson (10 lessons). Priority = frequency x class x environment-generality (MG ruling 14-07-2026); weights in data/sandhi/difficulty_weights.json (tunable). Learn 23 rules -> read 50% of all corpus sandhi; 79 -> 80%; 132 -> 90%. Teaching page reading/sandhi/curriculum/index.html.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/sandhi/sandhi_curriculum.tsv",
+      "builder": "scripts/build_sandhi_curriculum.py over corpus-sandhi + difficulty_weights.json",
+      "consumers": [
+        "reading/sandhi/curriculum/ page",
+        "graded sandhi teaching (Phase 4)"
+      ],
+      "notes": "H902 roadmap Phase 4 (surface 2/4: graded curriculum). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Derived from the corpus-sandhi dataset; weighting is human-tunable per the MG ruling."
+    },
+    {
       "id": "corpus-sandhi",
       "title": "Corpus sandhi — frequency-ranked rules across 17 texts",
       "tier": "public",
