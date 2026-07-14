@@ -24,8 +24,14 @@ curriculum difficulty metric and GRETIL license scope.
 ## Ranked improvement backlog (of the roadmap itself)
 1. Add the difficulty-metric formula once a human confirms weighting (currently
    prose-only in §5).
-2. Fill concrete DCS text names for each Phase-2 tier (currently exemplary, not
-   exhaustive) — derive from `dcs-conllu/files/` + a difficulty proxy.
+2. ~~Fill concrete DCS text names for each Phase-2 tier (currently exemplary, not
+   exhaustive) — derive from `dcs-conllu/files/` + a difficulty proxy.~~ **DONE
+   (H901, 14-07-2026):** all four Phase-2 tiers now name concrete texts —
+   easy readers, Gītā-family, epic (Rāmāyaṇa + full Mahābhārata), kāvya
+   (Buddhacarita/Kumārasaṃbhava/Kirātārjunīya/Meghadūta) — cross-checked
+   against `dcs-conllu/files/` for actual presence (Raghuvaṃśa/Bhaṭṭikāvya/
+   Śakuntalā/Pañcatantra confirmed absent from the DCS export, not silently
+   dropped). Śāstra/commentary tier remains unswept.
 3. ✅ DONE (H903) — `no-gold` recovery numbers measured: 0 % no-gold mode-1
    junctions found on Hitopadeśa/Amaruśataka + a 15-dir DCS sample; the
    roadmap's ~27 % planning estimate was NOT reproduced (§2 item 4). Remaining:
@@ -52,6 +58,7 @@ curriculum difficulty metric and GRETIL license scope.
 | Date | Model | Change |
 |---|---|---|
 | 13-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | Created with Phase 0 shipped + proven; Phases 1–4 planned. |
+| 14-07-2026 | Sonnet 5 `claude-sonnet-5` | Phase 2b (H901): broadened the corpus sweep 8→17 texts (+Rāmāyaṇa, full Mahābhārata, kāvya, more readers, śataka/nīti); ticked backlog item 2. |
 | 14-07-2026 | Sonnet 5 `claude-sonnet-5` | H903 — method B (vidyut-cheda) implemented + scored on 2 texts; "27 % no gold split" risk claim measured and not reproduced. |
 
 _Dr. Mārcis Gasūns_
