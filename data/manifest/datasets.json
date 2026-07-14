@@ -1005,6 +1005,25 @@
       "notes": "H848 roadmap W2. Public/MIT, credit Dr. Marcis Gasuns. The first corpus-attested, frequency-ranked sandhi table in the ecosystem (categories: anusvara/nasal 1172, visarga 1163, vowel 813, consonant 264)."
     },
     {
+      "id": "corpus-sandhi",
+      "title": "Corpus sandhi — frequency-ranked rules across 8 texts",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/sandhi/corpus_sandhi.tsv",
+      "format": "tsv",
+      "rows": 1674,
+      "size_bytes": 372499,
+      "keying": "one row per distinct sandhi rule (1,674) aggregated across 8 pedagogically-ordered DCS texts (53,291 sandhi events): rule, category, global_count, global_pct, n_texts, top_texts, examples. Induced by method A from DCS gold word-splits (96.3% Gita-gold frequency-mass coverage). The top 69 rules cover 80% of all corpus sandhi occurrences — the graded-curriculum backbone.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/sandhi/corpus_sandhi.tsv",
+      "builder": "scripts/build_corpus_sandhi.py over scripts/dcs_sandhi_induce.py (method A); source DCS CoNLL-U (dcs-conllu)",
+      "consumers": [
+        "reading/sandhi/ pages (planned)",
+        "graded sandhi curriculum (planned)"
+      ],
+      "notes": "H900 roadmap Phase 2. Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS). Texts swept (difficulty order): Hitopadesa, Vetalapancavimsatika, Sukasaptati, Amarusataka, Astavakragita, Bhagavadgita, Gitagovinda, Kathasaritsagara. Per-text tables also shipped as data/sandhi/<id>_sandhi.tsv. Extends the Gita-only gita-sandhi dataset corpus-wide."
+    },
+    {
       "id": "gita-etymology",
       "title": "Bhagavadgita etymology notes",
       "tier": "public",

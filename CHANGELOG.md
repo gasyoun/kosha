@@ -14,6 +14,21 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H900 (sandhi Phase 2): corpus-wide sandhi sweep + merged frequency-ranked table.**
+  New [`scripts/build_corpus_sandhi.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_corpus_sandhi.py)
+  runs the validated method-A inducer (96.3 % Gītā-gold coverage) across a curated
+  8-text pedagogical set in learner-difficulty order (Hitopadeśa, Vetālapañcaviṃśatikā,
+  Śukasaptati, Amaruśataka, Aṣṭāvakragīta, Bhagavadgītā, Gītagovinda, Kathāsaritsāgara)
+  and builds per-text tables plus the merged
+  [`data/sandhi/corpus_sandhi.tsv`](https://github.com/gasyoun/kosha/blob/main/data/sandhi/corpus_sandhi.tsv)
+  with global frequency ranks (`rule · category · global_count · global_pct ·
+  n_texts · top_texts · examples`). **53,291 sandhi events, 1,674 distinct rules;
+  the top 69 rules cover 80 % of all corpus sandhi** — the graded-curriculum
+  backbone. New public dataset `corpus-sandhi` registered in
+  [`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json).
+  Credit: Dr. Mārcis Gasūns; source DCS CC BY-SA 4.0 (Oliver Hellwig / DCS).
+
 ## [0.41.0] - 2026-07-14
 
 ### Changed
