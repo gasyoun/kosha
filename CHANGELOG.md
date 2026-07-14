@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.44.0] - 2026-07-14
+
 ### Added
 - **H908 (sandhi Method C): DharmaMitra neural segmenter — the A/B/C bake-off's
   clear winner.** `method_C` in
