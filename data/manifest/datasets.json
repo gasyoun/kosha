@@ -1006,14 +1006,14 @@
     },
     {
       "id": "corpus-sandhi",
-      "title": "Corpus sandhi — frequency-ranked rules across 8 texts",
+      "title": "Corpus sandhi — frequency-ranked rules across 17 texts",
       "tier": "public",
       "in_release": "unreleased",
       "release_asset": "data/sandhi/corpus_sandhi.tsv",
       "format": "tsv",
-      "rows": 1674,
-      "size_bytes": 372499,
-      "keying": "one row per distinct sandhi rule (1,674) aggregated across 8 pedagogically-ordered DCS texts (53,291 sandhi events): rule, category, global_count, global_pct, n_texts, top_texts, examples. Induced by method A from DCS gold word-splits (96.3% Gita-gold frequency-mass coverage). The top 69 rules cover 80% of all corpus sandhi occurrences — the graded-curriculum backbone.",
+      "rows": 9840,
+      "size_bytes": 2161307,
+      "keying": "one row per distinct sandhi rule (9,840) aggregated across 17 DCS texts (580,230 sandhi events): rule, category, global_count, global_pct, n_texts, top_texts, examples. Induced by method A from DCS gold word-splits (96.3% Gita-gold frequency-mass coverage). The top 83 rules cover 80% of all corpus sandhi occurrences — the graded-curriculum backbone.",
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "data/sandhi/corpus_sandhi.tsv",
       "builder": "scripts/build_corpus_sandhi.py over scripts/dcs_sandhi_induce.py (method A); source DCS CoNLL-U (dcs-conllu)",
@@ -1021,7 +1021,7 @@
         "reading/sandhi/ pages (planned)",
         "graded sandhi curriculum (planned)"
       ],
-      "notes": "H900 roadmap Phase 2. Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS). Texts swept (difficulty order): Hitopadesa, Vetalapancavimsatika, Sukasaptati, Amarusataka, Astavakragita, Bhagavadgita, Gitagovinda, Kathasaritsagara. Per-text tables also shipped as data/sandhi/<id>_sandhi.tsv. Extends the Gita-only gita-sandhi dataset corpus-wide."
+      "notes": "H900 roadmap Phase 2, broadened by H901 Phase 2b (14-07-2026). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS). Texts swept (difficulty order): Hitopadesa, Vetalapancavimsatika, Sukasaptati, Amarusataka, Astavakragita, Gitagovinda, Kathasaritsagara, Buddhacarita, Kumarasambhava, Kiratarjuniya, Meghaduta, Dasakumaracarita, Bharatamanjari, Satakatraya, Bhallatasataka, Ramayana, Mahabharata (full -- replaces H900's Bhagavadgita-only glob; the Gita's 18 chapters are already inside the full-Mahabharata sweep, so the narrow row was retired rather than double-counted). Per-text tables also shipped as data/sandhi/<id>_sandhi.tsv. H901 finding: the handoff's scale worry for the full Mahabharata (~2,000 files, 'gate/sample by parvan') did not materialize -- measured at ~10 files/s, the full corpus ran directly in a few minutes, no sampling gate needed. Top-N-for-80% moved 69->83 rules (slightly above the handoff's ~60-80 expectation, plausibly kavya's more varied sandhi spreading the frequency mass -- reported, not smoothed over). Extends the Gita-only gita-sandhi dataset corpus-wide."
     },
     {
       "id": "gita-etymology",

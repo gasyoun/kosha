@@ -1,4 +1,4 @@
-_Created: 13-07-2026 · Last updated: 14-07-2026 (Method B vidyut-cheda bake-off shipped, H903)_
+_Created: 13-07-2026 · Last updated: 14-07-2026 (Phase 2b broadened corpus sweep, H901; Method B vidyut-cheda bake-off, H903)_
 
 # Corpus-wide sandhi extraction for Sanskrit pedagogy — roadmap (2026–2027)
 
@@ -160,18 +160,31 @@ method A at 96.3 %** (H897). Method B/C bake-off + Phase 2 sweep are next.
 runs the validated method-A inducer over a curated 8-text set in learner order
 and builds per-text tables + the merged
 [`data/sandhi/corpus_sandhi.tsv`](https://github.com/gasyoun/kosha/blob/main/data/sandhi/corpus_sandhi.tsv).
-**53,291 sandhi events · 1,674 distinct rules; the top 69 rules cover 80 % of all
-corpus sandhi** — the graded-curriculum backbone. Texts swept: Hitopadeśa,
-Vetālapañcaviṃśatikā, Śukasaptati, Amaruśataka, Aṣṭāvakragīta, Bhagavadgītā,
-Gītagovinda, Kathāsaritsāgara.
+53,291 sandhi events · 1,674 distinct rules; the top 69 rules covered 80 % of
+corpus sandhi at that scale. Texts swept: Hitopadeśa, Vetālapañcaviṃśatikā,
+Śukasaptati, Amaruśataka, Aṣṭāvakragīta, Bhagavadgītā, Gītagovinda,
+Kathāsaritsāgara.
+
+**Phase 2b ✅ DONE (H901, 14-07-2026)** — broadened to 17 texts: + kāvya
+(Buddhacarita, Kumārasaṃbhava, Kirātārjunīya, Meghadūta), + readers
+(Daśakumāracarita, Bhāratamañjarī), + śataka/nīti (Śatakatraya,
+Bhallaṭaśataka), + the **full** Rāmāyaṇa (606 files) and **full** Mahābhārata
+(1,995 files — superseding H900's Bhagavadgītā-only glob; the Gītā's 18
+chapters are already inside the full sweep). **580,230 sandhi events · 9,840
+distinct rules; the top 83 rules cover 80 %** — moved up from 69, plausibly
+kāvya's more varied sandhi spreading the frequency mass across more rules; the
+handoff's a-priori worry that the full Mahābhārata would need a parvan/`--limit`
+sample gate did not hold up under measurement (~10 files/s, full corpus in a
+few minutes) — no sampling gate was added. Raghuvaṃśa/Bhaṭṭikāvya/Śakuntalā/
+Pañcatantra were candidates but are not present in this DCS export.
 
 Remaining process order (learner path, not corpus size):
 
-1. **Easy readers** — ✅ Hitopadeśa, Vetāla, Śukasaptati, Kathāsaritsāgara; more nīti to add.
-2. **Gītā-family** — ✅ Aṣṭāvakragīta, Bhagavadgītā, Gītagovinda; other gītās.
-3. **Epic** — Rāmāyaṇa, Mahābhārata (largest; stabilises global frequency).
-4. **Kāvya** — Kālidāsa, Bhāravi, etc. (Amaruśataka ✅ started).
-5. **Śāstra / commentary** — dense sandhi, last.
+1. **Easy readers** — ✅ Hitopadeśa, Vetāla, Śukasaptati, Kathāsaritsāgara, Daśakumāracarita, Bhāratamañjarī.
+2. **Gītā-family** — ✅ Aṣṭāvakragīta, Bhagavadgītā (inside the full Mahābhārata sweep), Gītagovinda.
+3. **Epic** — ✅ Rāmāyaṇa, Mahābhārata (full — stabilised global frequency).
+4. **Kāvya** — ✅ Buddhacarita, Kumārasaṃbhava, Kirātārjunīya, Meghadūta, Amaruśataka. Raghuvaṃśa/Bhaṭṭikāvya/Śakuntalā not in the DCS export.
+5. **Śāstra / commentary** — dense sandhi, last (not yet swept).
 
 **Outputs (both, per the decision):**
 - Per-text: `data/sandhi/<id>_sandhi.tsv` (Gītā schema).
