@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.45.0] - 2026-07-14
+
 ### Added
 - **H902 (sandhi Phase 4, surface 2/4): graded curriculum.** New
   [`scripts/build_sandhi_curriculum.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_sandhi_curriculum.py)
