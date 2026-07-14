@@ -34,15 +34,42 @@ DCS = Path("C:/Users/user/Documents/GitHub/dcs-conllu/files")
 OUT = ROOT / "data" / "sandhi"
 
 # curated pedagogical set, learner-difficulty order (dir, glob, id, label)
+#
+# Phase 2b (H901) broadens this from H900's 8-text base toward corpus-wide
+# global frequency ranks: + Rāmāyaṇa, + kāvya (Kirātārjunīya, Kumārasaṃbhava,
+# Meghadūta, Buddhacarita), + more readers (Daśakumāracarita,
+# Bhāratamañjarī), + śataka/nīti sets (Śatakatraya, Bhallaṭaśataka), and the
+# **full** Mahābhārata (replacing the old BhaGī-only glob below -- the Gītā's
+# own 18 chapters are already inside the full-corpus sweep, so keeping a
+# separate narrow-glob row would double-count those tokens in the global
+# merged table). Raghuvaṃśa/Bhaṭṭikāvya/Śakuntalā/Pañcatantra were candidates
+# per the roadmap but are not present in this DCS export -- omitted, not
+# silently skipped.
+#
+# Scale note: the handoff worried the full Mahābhārata (~2,000 files) would
+# need a parvan/`--limit` sample gate. Measured directly instead of assumed:
+# 300 MBh files induced in ~30 s (~10 files/s) -- the full ~1,995-file corpus
+# runs in a few minutes on one machine, well within a normal session. No
+# sampling gate was needed; if this script's runtime becomes a real problem
+# later, add one then.
 TEXTS = [
     ("Hitopadeśa", "*.conllu", "hitopadesa", "Hitopadeśa"),
     ("Vetālapañcaviṃśatikā", "*.conllu", "vetalapancavimsatika", "Vetālapañcaviṃśatikā"),
     ("Śukasaptati", "*.conllu", "sukasaptati", "Śukasaptati"),
     ("Amaruśataka", "*.conllu", "amarusataka", "Amaruśataka"),
     ("Aṣṭāvakragīta", "*.conllu", "astavakragita", "Aṣṭāvakragīta"),
-    ("Mahābhārata", "*BhaGī*.conllu", "bhagavadgita", "Bhagavadgītā"),
     ("Gītagovinda", "*.conllu", "gitagovinda", "Gītagovinda"),
     ("Kathāsaritsāgara", "*.conllu", "kathasaritsagara", "Kathāsaritsāgara"),
+    ("Buddhacarita", "*.conllu", "buddhacarita", "Buddhacarita"),
+    ("Kumārasaṃbhava", "*.conllu", "kumarasambhava", "Kumārasaṃbhava"),
+    ("Kirātārjunīya", "*.conllu", "kiratarjuniya", "Kirātārjunīya"),
+    ("Meghadūta", "*.conllu", "meghaduta", "Meghadūta"),
+    ("Daśakumāracarita", "*.conllu", "dasakumaracarita", "Daśakumāracarita"),
+    ("Bhāratamañjarī", "*.conllu", "bharatamanjari", "Bhāratamañjarī"),
+    ("Śatakatraya", "*.conllu", "satakatraya", "Śatakatraya"),
+    ("Bhallaṭaśataka", "*.conllu", "bhallatasataka", "Bhallaṭaśataka"),
+    ("Rāmāyaṇa", "*.conllu", "ramayana", "Rāmāyaṇa"),
+    ("Mahābhārata", "*.conllu", "mahabharata", "Mahābhārata (full, incl. Bhagavadgītā)"),
 ]
 
 
