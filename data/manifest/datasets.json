@@ -912,6 +912,24 @@
       "notes": "P5 UI step 6b. Sibling Gitā 1 pack PARKED: the Bhagavadgita is absent from the DCS corpus (MBh book 6 omits adhyayas 23-40, the 18 Gita chapters); needs an external lemmatised source. Real DCS DB is VisualDCS/src/DCS-data-2026/dcs_full.sqlite (the 0-byte src/dcs_full.sqlite is a decoy)."
     },
     {
+      "id": "kosha-srs-deck-b1-demo",
+      "title": "SRS deck — Rung B1 demo (Nala 1 content vocabulary, frequency-ordered)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/srs/srs-deck-b1-demo.json",
+      "format": "json",
+      "rows": 164,
+      "size_bytes": 25510,
+      "keying": "one row per unique content-word lemma (SLP1), {rank, slp1, deva, iast, gloss}, core_rank-ordered",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/srs/srs-deck-b1-demo.json",
+      "builder": "scripts/build_demo_srs_deck.py (LAST_MILE_PIPELINE_SPEC.md Hop B + §4 demo path)",
+      "consumers": [
+        "Systema-Sanscriticum Saraswati SRS (Wave-2 importer, flag-gated)"
+      ],
+      "notes": "Rung B1 one-verse-set proof of the kosha->Systema last-mile pipeline (SanskritGrammar docs/LAST_MILE_PIPELINE_SPEC.md, H916). Derived from the existing dcs-reading-pack-nala-1 (no new segmentation), joined to lemma_frequency.tsv core_rank, function words (grammar_all in ind/pron) stripped per the wave-1a finding. 439 tokens -> 164 unique content-word cards (108 dup, 136 function-word, 26 no-core-rank, 5 no-slp1 — full accounting in the file's stats block). Deliberately scoped to ONE reading pack, NOT the general vocabulary curriculum (that is H947's separate, in-flight scope) — avoids duplicating queued work."
+    },
+    {
       "id": "gita-gold-master",
       "title": "Bhagavadgita gold word-by-word analysis (all 18 adhyayas)",
       "tier": "public",
