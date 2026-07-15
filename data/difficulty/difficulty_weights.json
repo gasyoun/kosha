@@ -1,0 +1,9 @@
+{
+  "_comment": "Difficulty-scorer weights (W2a, H949). ONE estimator, not 'the' difficulty — tune these; a human should confirm. Axes: vocab (lemma rarity), sandhi (boundary fusion), morphology (form rarity), compound (Cpd-member share). They are re-normalised to sum to 1 at score time, so relative sizes are what matter.",
+  "weights": {
+    "vocab": 0.4,
+    "sandhi": 0.2,
+    "morphology": 0.25,
+    "compound": 0.15
+  }
+}

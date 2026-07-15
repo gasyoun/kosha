@@ -1,0 +1,841 @@
+signature	count	share_pct
+NOUN|Cpd	589935	10.370813
+PART|	414149	7.280568
+ADV|	339182	5.962679
+NOUN|Nom Sing Masc	315721	5.550245
+CONJ|	203247	3.572998
+NOUN|Acc Sing Masc	167602	2.946374
+NOUN|Nom Sing Neut	142486	2.504845
+ADJ|Cpd	126438	2.222728
+NOUN|Acc Sing Neut	118440	2.082126
+VERB|	114233	2.008169
+ADJ|Nom Sing Masc	110136	1.936145
+VERB|Sing p3 Pres Ind	108623	1.909547
+NOUN|Nom Sing Fem	102803	1.807234
+PRON|Nom Sing Masc	86796	1.525838
+NOUN|Nom Plur Masc	82380	1.448206
+VERB|Sing p3 Pres Opt	81153	1.426636
+NOUN|Loc Sing Masc	73116	1.285349
+VERB|Nom Sing Masc	70211	1.23428
+VERB|Sing p3 Past Ind	68415	1.202707
+NOUN|Gen Sing Masc	62814	1.104244
+NOUN|Acc Sing Fem	62459	1.098003
+ADJ|Nom Sing Neut	60872	1.070105
+NOUN|Loc Sing Neut	57555	1.011793
+PRON|Nom Sing Neut	55192	0.970253
+NOUN|Ins Sing Masc	54232	0.953376
+NOUN|Voc Sing Masc	53056	0.932703
+PRON|Acc Sing Neut	47231	0.830301
+VERB|Nom Sing Neut	46915	0.824746
+VERB|Cpd	45427	0.798588
+NOUN|Acc Plur Masc	41777	0.734422
+NOUN|Ins Plur Masc	40781	0.716913
+PRON|Cpd	40608	0.713872
+NOUN|Ins Sing Neut	39639	0.696837
+ADJ|Acc Sing Masc	39126	0.687819
+ADJ|Acc Sing Neut	38297	0.673245
+ADJ|Nom Plur Masc	36171	0.635871
+PRON|Acc Sing Masc	34935	0.614143
+PRON|Nom Plur Masc	34906	0.613633
+VERB|Plur p3 Pres Ind	33824	0.594612
+PRON|Gen Sing	32392	0.569438
+VERB|Sing p3 Impf Ind	31870	0.560261
+SCONJ|	31499	0.553739
+NOUN|Gen Plur Masc	30326	0.533119
+ADP|	30318	0.532978
+NOUN|Abl Sing Masc	30212	0.531114
+VERB|Sing p2 Pres Imp	30107	0.529269
+ADJ|Nom Sing Fem	28975	0.509369
+PRON|Gen Sing Masc	28867	0.50747
+NUM|Cpd	26999	0.474631
+NOUN|Abl Sing Neut	25066	0.44065
+NOUN|Ins Sing Fem	24372	0.42845
+VERB|Nom Plur Masc	24063	0.423018
+PRON|Nom Sing	21503	0.378014
+PRON|Nom Sing Fem	21468	0.377399
+VERB|Nom Sing Masc Pres	20792	0.365515
+NOUN|Loc Sing Fem	20777	0.365251
+NOUN|Dat Sing Masc	20384	0.358342
+NOUN|Nom Plur Fem	19853	0.349008
+VERB|Sing p3 Pres Ind Pass	19556	0.343786
+VERB|Nom Sing Fem	19277	0.338882
+VERB|Plur p3 Past Ind	17487	0.307414
+NOUN|Acc Plur Neut	17477	0.307238
+VERB|Acc Sing Masc	16654	0.29277
+VERB|Sing p1 Pres Ind	16453	0.289237
+PRON|Acc Sing	16354	0.287497
+NOUN|Ins Plur Neut	15368	0.270163
+NOUN|Gen Sing Neut	15305	0.269056
+ADJ|Acc Sing Fem	14859	0.261215
+VERB|Sing p2 Pres Ind	13891	0.244198
+NOUN|Nom Plur Neut	13822	0.242985
+NOUN|Acc Plur Fem	12898	0.226742
+NOUN|Loc Plur Masc	12060	0.21201
+PRON|Acc Sing Fem	11966	0.210357
+ADJ|Ins Plur Masc	11071	0.194624
+ADJ|Loc Sing Masc	11053	0.194307
+VERB|Acc Sing Neut	10947	0.192444
+NOUN|Nom Dual Masc	10940	0.192321
+PRON|Acc Plur Masc	10884	0.191336
+ADJ|Acc Plur Masc	10879	0.191248
+PRON|Ins Sing Masc	10859	0.190897
+ADJ|Voc Sing Masc	10581	0.18601
+NOUN|Gen Sing Fem	10378	0.182441
+ADJ|Gen Sing Masc	10350	0.181949
+VERB|Plur p3 Impf Ind	9771	0.17177
+PRON|Gen Plur Masc	9433	0.165828
+VERB|Sing p3 Pres Imp	9403	0.165301
+ADJ|Ins Sing Masc	9344	0.164264
+VERB|Loc Sing Masc	8894	0.156353
+ADJ|Gen Plur Masc	8750	0.153821
+PRON|Ins Sing	8490	0.149251
+INTJ|	8025	0.141076
+VERB|Sing p3 Fut Ind	7809	0.137279
+NOUN|Dat Sing Fem	7784	0.136839
+NOUN|Gen Plur Neut	7778	0.136734
+NOUN|Gen Plur Fem	7294	0.128226
+PRON|Dat Sing	7134	0.125413
+ADJ|Loc Sing Neut	7118	0.125131
+NOUN|	6681	0.117449
+PRON|Ins Sing Neut	6676	0.117361
+ADJ|Nom Plur Fem	6670	0.117256
+NOUN|Loc Plur Neut	6619	0.116359
+PRON|Loc Sing Masc	6404	0.11258
+PRON|Nom Plur Fem	6312	0.110962
+PRON|Gen Plur	6306	0.110857
+NOUN|Voc Sing Fem	6199	0.108976
+NOUN|Ins Plur Fem	6134	0.107833
+VERB|Sing p1 Fut Ind	6001	0.105495
+NOUN|Dat Sing Neut	5702	0.100239
+NOUN|Acc Dual Masc	5601	0.098463
+NUM|Nom Sing Neut	5588	0.098235
+VERB|Acc Sing Fem	5585	0.098182
+VERB|Nom Plur Masc Pres	5503	0.09674
+VERB|Acc Sing Masc Pres	5478	0.096301
+ADJ|Ins Sing Neut	5284	0.092891
+VERB|Plur p2 Pres Imp	4995	0.08781
+PRON|Ins Plur Masc	4979	0.087529
+VERB|Loc Sing Neut	4976	0.087476
+NUM|Nom Plur Masc	4936	0.086773
+ADJ|Acc Plur Neut	4875	0.0857
+NOUN|Loc Plur Fem	4780	0.08403
+NUM|Acc Sing Neut	4704	0.082694
+VERB|Acc Plur Masc	4675	0.082185
+ADJ|Nom Plur Neut	4574	0.080409
+VERB|Gen Sing Masc Pres	4567	0.080286
+NOUN|Cpd Masc	4557	0.08011
+ADJ|Dat Sing Masc	4511	0.079302
+PRON|Acc Plur	4342	0.076331
+PRON|Nom Plur Neut	4335	0.076208
+VERB|Plur p3 Pres Opt	4275	0.075153
+PRON|Nom Dual Masc	4262	0.074924
+PRON|Dat Sing Masc	4174	0.073377
+ADJ|Nom Dual Masc	4131	0.072621
+VERB|Plur p3 Pres Imp	4052	0.071232
+VERB|Nom Plur Fem	3965	0.069703
+ADJ|Ins Plur Neut	3958	0.06958
+VERB|Gen Sing Masc	3895	0.068472
+NOUN|Voc Plur Masc	3882	0.068244
+VERB|Ins Plur Masc	3742	0.065783
+PRON|Dat Plur	3707	0.065168
+PRON|Ins Sing Fem	3669	0.0645
+NOUN|Dat Plur Masc	3660	0.064341
+VERB|Plur p1 Pres Ind	3439	0.060456
+PRON|Gen Sing Neut	3434	0.060368
+VERB|Nom Plur Neut	3363	0.05912
+PRON|Gen Sing Fem	3329	0.058522
+VERB|Nom Sing Masc Past	3320	0.058364
+PRON|Loc Sing Neut	3190	0.056079
+PRON|Nom Plur	3158	0.055516
+VERB|Plur p3 Pres Ind Pass	3127	0.054971
+ADJ|Acc Plur Fem	3087	0.054268
+VERB|Nom Dual Masc	3084	0.054215
+VERB|Sing p3 Pres Imp Pass	2987	0.05251
+PRON|Abl Sing Neut	2980	0.052387
+PRON|Acc Plur Neut	2954	0.05193
+NOUN|Gen Dual Masc	2945	0.051772
+VERB|Plur p3 Fut Ind	2942	0.051719
+NOUN|Abl Sing Fem	2880	0.050629
+PRON|Acc Plur Fem	2773	0.048748
+ADJ|Ins Sing Fem	2685	0.047201
+VERB|Nom Sing Fem Pres	2666	0.046867
+ADJ|Voc Sing Fem	2643	0.046463
+NUM|Nom Sing Masc	2621	0.046076
+NOUN|Cpd Neut	2582	0.04539
+VERB|Gen Plur Masc Pres	2581	0.045373
+NUM|Ins Plur Masc	2546	0.044758
+NUM|Nom Plur Neut	2520	0.044301
+NOUN|Ins Dual Masc	2444	0.042965
+PRON|Abl Sing Masc	2443	0.042947
+PRON|Loc Sing Fem	2425	0.04263
+PRON|Loc Sing	2336	0.041066
+PRON|Loc Plur Masc	2269	0.039888
+VERB|Gen Plur Masc	2245	0.039466
+VERB|Sing p2 Fut Ind	2200	0.038675
+VERB|Ins Sing Masc	2194	0.03857
+NOUN|Acc Dual Neut	2117	0.037216
+NUM|Acc Plur Neut	2113	0.037146
+NOUN|Nom Dual Neut	2082	0.036601
+ADJ|Loc Plur Masc	2079	0.036548
+NOUN|Nom Dual Fem	2061	0.036232
+VERB|Cpd Pres	2059	0.036196
+VERB|Sing p1 Past Ind	2031	0.035704
+NUM|Acc Plur Masc	2021	0.035528
+ADJ|Gen Sing Neut	1984	0.034878
+VERB|Dual p3 Pres Ind	1976	0.034737
+ADJ|Abl Sing Masc	1888	0.03319
+ADJ|	1861	0.032716
+NOUN|Abl Plur Masc	1853	0.032575
+VERB|Sing p1 Pres Opt	1836	0.032276
+VERB|Sing p2 Past Jus	1828	0.032135
+NUM|Nom Sing Fem	1822	0.03203
+ADJ|Loc Sing Fem	1770	0.031116
+VERB|Dual p3 Past Ind	1763	0.030993
+VERB|Nom Sing Masc Pres Pass	1677	0.029481
+VERB|Plur p1 Fut Ind	1660	0.029182
+VERB|Loc Sing Masc Pres	1605	0.028215
+PRON|Acc Dual Masc	1554	0.027319
+NOUN|Acc Dual Fem	1540	0.027073
+VERB|Sing p2 Past Ind	1535	0.026985
+VERB|Ins Sing Masc Pres	1524	0.026791
+VERB|Dual p2 Pres Imp	1483	0.026071
+PRON|Ins Plur Neut	1459	0.025649
+PRON|Gen Plur Fem	1437	0.025262
+NUM|Acc Sing Masc	1427	0.025086
+PRON|Gen Dual Masc	1426	0.025068
+VERB|Sing p3 Pres Sub	1420	0.024963
+VERB|Ins Sing Neut	1412	0.024822
+NOUN|Voc Dual Masc	1405	0.024699
+NOUN|Loc Dual Masc	1388	0.0244
+ADJ|Abl Sing Neut	1380	0.02426
+VERB|Ins Plur Neut	1378	0.024225
+VERB|Plur p1 Pres Opt	1352	0.023768
+VERB|Sing p1 Impf Ind	1314	0.0231
+VERB|Loc Plur Masc	1269	0.022308
+ADJ|Acc Dual Masc	1253	0.022027
+VERB|Acc Plur Neut	1242	0.021834
+NUM|Nom Plur Fem	1222	0.021482
+ADJ|Ins Plur Fem	1214	0.021342
+NUM|Ins Plur Neut	1205	0.021183
+VERB|Plur p2 Pres Ind	1196	0.021025
+NOUN|Cpd Fem	1163	0.020445
+VERB|Sing p3 Past Jus	1126	0.019795
+VERB|Acc Sing Fem Pres	1116	0.019619
+PRON|Ins Plur Fem	1095	0.01925
+PRON|Gen Plur Neut	1078	0.018951
+ADJ|Voc Plur Masc	1021	0.017949
+VERB|Sing p3 Impf Ind Pass	1004	0.01765
+VERB|Loc Sing Fem	994	0.017474
+NOUN|Ins Dual Neut	981	0.017246
+NUM|Acc Plur Fem	974	0.017123
+PRON|Loc Plur Neut	971	0.01707
+VERB|Acc Plur Masc Pres	960	0.016876
+VERB|Nom Sing Neut Pres	954	0.016771
+VERB|Dat Sing Masc Pres	951	0.016718
+VERB|Sing p2 Past Imp	928	0.016314
+PRON|Dat Sing Fem	901	0.015839
+VERB|Plur p1 Past Ind	901	0.015839
+PRON|Gen Dual	898	0.015786
+ADJ|Gen Plur Neut	883	0.015523
+VERB|Sing p2 Impf Ind	881	0.015488
+VERB|Dual p3 Impf Ind	878	0.015435
+NOUN|Gen Dual Neut	863	0.015171
+VERB|Nom Plur Fem Pres	857	0.015066
+NUM|Ins Plur Fem	847	0.01489
+VERB|Nom Sing Neut Past	847	0.01489
+NOUN|Abl Plur Neut	842	0.014802
+NUM|Loc Plur Masc	840	0.014767
+VERB|Sing p2 Pres Opt	837	0.014714
+ADJ|Loc Plur Neut	829	0.014573
+PRON|Loc Plur Fem	828	0.014556
+PRON|Dat Plur Masc	817	0.014363
+NUM|Nom Dual Masc	803	0.014116
+NOUN|Dat Plur Fem	791	0.013905
+ADJ|Nom Dual Fem	770	0.013536
+VERB|Nom Dual Masc Pres	770	0.013536
+ADJ|Dat Plur Masc	765	0.013448
+VERB|Sing p3 Pres Opt Pass	734	0.012903
+VERB|Acc Sing Masc Past	732	0.012868
+VERB|Sing p3 Past Ind Pass	731	0.012851
+NUM|Gen Plur Masc	730	0.012833
+VERB|Sing p3 Past Sub	728	0.012798
+NUM|Acc Sing Fem	720	0.012657
+NUM|Ins Sing Neut	720	0.012657
+VERB|Ins Plur Masc Pres	718	0.012622
+VERB|Nom Sing Masc Fut	709	0.012464
+VERB|Gen Sing Neut	705	0.012394
+VERB|Dat Sing Masc	704	0.012376
+VERB|Nom Plur Masc Past	699	0.012288
+VERB|Acc Plur Fem	677	0.011901
+PRON|Nom Dual Fem	671	0.011796
+NOUN|Gen Dual Fem	639	0.011233
+ADJ|Gen Sing Fem	638	0.011216
+PRON|Ins Plur	630	0.011075
+ADJ|Gen Dual Masc	628	0.01104
+PRON|	618	0.010864
+VERB|Ins Sing Fem	615	0.010811
+ADJ|Nom Dual Neut	603	0.0106
+PRON|Abl Plur Masc	601	0.010565
+VERB|Loc Sing Neut Pres	599	0.01053
+VERB|Nom Plur Masc Pres Pass	576	0.010126
+ADJ|Loc Plur Fem	565	0.009932
+NUM|Nom Dual Neut	558	0.009809
+NUM|Ins Sing Masc	549	0.009651
+VERB|Acc Sing Masc Pres Pass	541	0.009511
+VERB|Sing p3 Pres Jus	529	0.0093
+ADJ|Gen Plur Fem	524	0.009212
+PRON|Nom Dual Neut	513	0.009018
+NOUN|Abl Plur Fem	512	0.009001
+VERB|Abl Sing Masc	503	0.008843
+VERB|Dual p2 Pres Ind	493	0.008667
+NUM|Ins Sing Fem	487	0.008561
+VERB|Acc Dual Masc	486	0.008544
+NOUN|Gen Plur	483	0.008491
+NOUN|Voc Plur Fem	481	0.008456
+PRON|Ins Dual Masc	477	0.008385
+VERB|Loc Plur Neut	477	0.008385
+VERB|Cpd Past	465	0.008175
+VERB|Sing p1 Past Opt	464	0.008157
+PRON|Acc Dual	463	0.008139
+VERB|Sing p1 Pres Sub	463	0.008139
+VERB|Dual p3 Pres Imp	459	0.008069
+NOUN|Ins Dual Fem	454	0.007981
+VERB|Cpd Pres Pass	451	0.007928
+ADJ|Acc Dual Neut	450	0.007911
+VERB|Dual p3 Pres Opt	444	0.007805
+VERB|Plur p1 Pres Imp	442	0.00777
+VERB|Plur p3 Pres Jus	440	0.007735
+NOUN|Dat Dual Masc	433	0.007612
+VERB|Sing p1 Pres Imp	426	0.007489
+NOUN|Loc Dual Neut	424	0.007454
+PRON|Nom Dual	411	0.007225
+NOUN|Loc Dual Fem	406	0.007137
+VERB|Loc Sing Masc Pres Pass	405	0.00712
+VERB|Plur p3 Impf Ind Pass	404	0.007102
+VERB|Voc Sing Masc	403	0.007085
+VERB|Nom Sing Fem Pres Pass	397	0.006979
+PRON|Abl Sing	394	0.006926
+VERB|Sing p2 Pres Sub	393	0.006909
+VERB|Nom Dual Neut	388	0.006821
+ADJ|Nom Sing	379	0.006663
+PRON|Acc Dual Neut	377	0.006628
+ADJ|Dat Sing Neut	372	0.00654
+NUM|Acc Dual Masc	369	0.006487
+NUM|Nom Dual Fem	365	0.006417
+VERB|Gen Sing Masc Past	361	0.006346
+VERB|Nom Sing Neut Pres Pass	359	0.006311
+PRON|Loc Plur	354	0.006223
+VERB|Sing p1 Past Jus	351	0.00617
+VERB|Loc Plur Masc Pres	351	0.00617
+ADJ|Acc Dual Fem	348	0.006118
+PRON|Abl Plur	345	0.006065
+VERB|Nom Sing Fem Past	341	0.005995
+NUM|Gen Plur Neut	334	0.005872
+PRON|Acc Dual Fem	331	0.005819
+VERB|Sing p1 Past Prec	331	0.005819
+VERB|Plur p1 Past Opt	328	0.005766
+VERB|Gen Plur Neut	321	0.005643
+VERB|Sing p2 Pres Ind Pass	316	0.005555
+VERB|Acc Sing Neut Pres Pass	315	0.005538
+VERB|Abl Sing Neut	309	0.005432
+VERB|Dual p2 Past Imp	307	0.005397
+VERB|Plur p1 Pres Sub	307	0.005397
+VERB|Acc Sing Neut Pres	306	0.005379
+NOUN|Acc Sing	305	0.005362
+VERB|Loc Plur Fem	297	0.005221
+NOUN|Abl Dual Masc	294	0.005168
+VERB|Dat Sing Masc Past	294	0.005168
+VERB|Gen Sing Fem	292	0.005133
+VERB|Ins Plur Fem	292	0.005133
+ADJ|Dat Sing Fem	289	0.005081
+VERB|Plur p3 Past Jus	288	0.005063
+NUM|Loc Plur Neut	287	0.005045
+NUM|Ins Dual Fem	283	0.004975
+VERB|Plur p2 Fut Ind	282	0.004957
+NUM|Acc Dual Fem	274	0.004817
+VERB|Acc Sing Neut Past	274	0.004817
+NUM|Acc Dual Neut	272	0.004782
+NOUN|Dat Plur Neut	268	0.004711
+VERB|Sing p2 Past Sub	268	0.004711
+NOUN|Nom Plur	266	0.004676
+VERB|Nom Dual Fem	265	0.004659
+VERB|Loc Sing Neut Pres Pass	255	0.004483
+ADJ|Abl Plur Masc	251	0.004412
+ADJ|Voc Dual Masc	251	0.004412
+VERB|Loc Sing Masc Past	249	0.004377
+NUM|Gen Sing Masc	247	0.004342
+VERB|Gen Sing Masc Pres Pass	241	0.004237
+VERB|Plur p1 Past Jus	240	0.004219
+VERB|Voc Sing Fem	240	0.004219
+VERB|Acc Plur Fem Pres	234	0.004114
+NOUN|Nom Sing	233	0.004096
+ADJ|Ins Dual Masc	231	0.004061
+VERB|Plur p3 Pres Sub	227	0.003991
+VERB|Plur p2 Past Imp	225	0.003955
+PRON|Gen Dual Neut	223	0.00392
+NUM|Gen Sing Neut	222	0.003903
+VERB|Plur p3 Pres Imp Pass	221	0.003885
+VERB|Plur p2 Past Ind	219	0.00385
+NUM|Gen Dual Masc	214	0.003762
+VERB|Gen Sing Fem Pres	212	0.003727
+VERB|Plur p1 Impf Ind	207	0.003639
+VERB|Acc Sing Fem Pres Pass	205	0.003604
+VERB|Gen Dual Masc Pres	205	0.003604
+VERB|Dual p2 Past Ind	203	0.003569
+PRON|Dat Dual	201	0.003533
+VERB|Dual p3 Pres Ind Pass	197	0.003463
+NUM|Loc Sing Neut	191	0.003358
+VERB|Gen Plur Fem	190	0.00334
+VERB|Loc Sing Fem Pres	186	0.00327
+PRON|Dat Plur Fem	185	0.003252
+VERB|Sing p3 Past Opt	183	0.003217
+NUM|Ins Dual Masc	182	0.003199
+NOUN|Acc Plur	178	0.003129
+VERB|Plur p2 Impf Ind	176	0.003094
+VERB|Nom Plur Fem Past	176	0.003094
+VERB|Sing p2 Pres Jus	175	0.003076
+VERB|Dual p3 Fut Ind	170	0.002989
+VERB|Gen Dual Masc	169	0.002971
+VERB|Loc Sing Fem Pres Pass	164	0.002883
+VERB|Voc Sing Masc Pres	163	0.002865
+ADJ|Loc Dual Masc	162	0.002848
+NUM|Cpd Neut	161	0.00283
+PRON|Abl Plur Neut	160	0.002813
+PRON|Ins Dual Neut	160	0.002813
+VERB|Acc Sing Fem Past	160	0.002813
+VERB|Ins Sing Neut Pres	160	0.002813
+NOUN|Voc Sing Neut	154	0.002707
+PRON|Dat Sing Neut	154	0.002707
+NOUN|Loc Plur	153	0.00269
+VERB|Sing p3 Fut Cond	153	0.00269
+NUM|Loc Plur Fem	150	0.002637
+VERB|Ins Sing Fem Pres	148	0.002602
+VERB|Dual p1 Pres Ind	145	0.002549
+VERB|Sing p3 Past Prec	145	0.002549
+NOUN|Ins Plur	144	0.002531
+VERB|Acc Dual Masc Pres	144	0.002531
+VERB|Sing p3 Past Imp	143	0.002514
+PRON|Abl Plur Fem	141	0.002479
+VERB|Dat Sing Masc Pres Pass	141	0.002479
+VERB|Gen Sing Neut Pres	141	0.002479
+VERB|Cpd Fut	140	0.002461
+NUM|Loc Sing Masc	139	0.002444
+VERB|Acc Plur Masc Past	134	0.002356
+PRON|Ins Dual Fem	133	0.002338
+PRON|Abl Sing Fem	132	0.002321
+PRON|Gen Dual Fem	132	0.002321
+VERB|Loc Plur Masc Pres Pass	131	0.002303
+VERB|Dual p2 Impf Ind	130	0.002285
+VERB|Plur p1 Past Sub	127	0.002233
+VERB|Nom Plur Neut Pres	126	0.002215
+VERB|Nom Plur Masc Fut	125	0.002197
+ADJ|Ins Dual Fem	124	0.00218
+ADJ|Abl Sing Fem	123	0.002162
+ADJ|Gen Dual Neut	121	0.002127
+NOUN|Voc Dual Fem	121	0.002127
+ADJ|Voc Plur Fem	119	0.002092
+VERB|Gen Plur Fem Pres	119	0.002092
+NOUN|Dat Dual Fem	118	0.002074
+VERB|Acc Dual Neut	117	0.002057
+VERB|Acc Plur Masc Pres Pass	117	0.002057
+VERB|Plur p2 Past Jus	115	0.002022
+VERB|Nom Dual Masc Past	114	0.002004
+NUM|	113	0.001986
+VERB|Dual p1 Pres Imp	113	0.001986
+VERB|Abl Sing Masc Pres	113	0.001986
+VERB|Dual p2 Past Jus	107	0.001881
+NUM|Dat Plur Fem	105	0.001846
+NUM|Abl Sing Neut	103	0.001811
+VERB|Plur p3 Pres Opt Pass	103	0.001811
+VERB|Gen Sing Masc Fut	103	0.001811
+ADJ|Abl Plur Neut	101	0.001776
+NOUN|Abl Dual Neut	101	0.001776
+VERB|Gen Plur Masc Pres Pass	101	0.001776
+VERB|Gen Plur Neut Pres	97	0.001705
+NUM|Gen Plur Fem	95	0.00167
+VERB|Dat Plur Masc	95	0.00167
+VERB|Abl Plur Masc	94	0.001652
+VERB|Sing p1 Pres Ind Pass	93	0.001635
+PRON|Dat Dual Masc	91	0.0016
+VERB|Dual p1 Fut Ind	91	0.0016
+VERB|Ins Dual Masc	91	0.0016
+VERB|Nom Sing Neut Fut	89	0.001565
+NUM|Loc Sing Fem	86	0.001512
+VERB|Nom Dual Fem Pres	83	0.001459
+ADJ|Acc Sing	81	0.001424
+VERB|Ins Plur Neut Pres	81	0.001424
+VERB|Dat Plur Masc Pres	79	0.001389
+VERB|Loc Plur Neut Pres	79	0.001389
+VERB|Loc Plur Neut Pres Pass	78	0.001371
+VERB|Nom Plur Fem Pres Pass	77	0.001354
+VERB|Loc Sing Neut Past	76	0.001336
+NUM|Abl Plur Masc	75	0.001318
+NUM|Loc Dual Masc	75	0.001318
+ADJ|Gen Dual Fem	73	0.001283
+VERB|Pres	73	0.001283
+VERB|Plur p3 Plp Ind	72	0.001266
+ADJ|Dat Plur Fem	71	0.001248
+VERB|Dual p1 Pres Sub	71	0.001248
+VERB|Plur p2 Pres Sub	71	0.001248
+VERB|Plur p3 Past Sub	71	0.001248
+NUM|Ins Dual Neut	69	0.001213
+PRON|Ins Dual	69	0.001213
+VERB|Acc Sing Masc Fut	69	0.001213
+VERB|Gen Plur Masc Past	69	0.001213
+VERB|Acc Plur Fem Past	68	0.001195
+VERB|Nom Plur Neut Past	68	0.001195
+VERB|Plur p2 Pres Opt	67	0.001178
+VERB|Nom Plur Neut Pres Pass	67	0.001178
+ADJ|Nom Plur	66	0.00116
+VERB|Plur p3 Past Imp	66	0.00116
+VERB|Ins Plur Masc Pres Pass	65	0.001143
+VERB|Loc Sing Fem Past	65	0.001143
+VERB|Plur p1 Fut Cond	63	0.001108
+VERB|Ins Sing Masc Pres Pass	61	0.001072
+VERB|Sing p2 Past Opt	60	0.001055
+VERB|Ins Plur Fem Pres	60	0.001055
+VERB|Gen Sing Neut Pres Pass	59	0.001037
+VERB|Ins Sing Masc Past	59	0.001037
+NUM|Gen Sing Fem	58	0.00102
+PRON|Loc Dual Masc	58	0.00102
+ADJ|Ins Dual Neut	57	0.001002
+ADJ|Loc Dual Neut	56	0.000984
+NOUN|Gen Sing	55	0.000967
+ADJ|Abl Sing	54	0.000949
+NUM|Gen Dual Neut	54	0.000949
+VERB|Voc Sing Masc Past	53	0.000932
+VERB|Sing p1 Past Sub	52	0.000914
+VERB|Sing p2 Pres Imp Pass	52	0.000914
+VERB|Dat Sing Fem	51	0.000897
+VERB|Ins Sing Neut Pres Pass	51	0.000897
+VERB|Loc Plur Fem Pres Pass	51	0.000897
+VERB|Nom Dual Masc Pres Pass	51	0.000897
+VERB|Nom Dual Neut Pres	50	0.000879
+ADJ|Loc Dual Fem	49	0.000861
+NOUN|Abl Dual Fem	49	0.000861
+VERB|Gen Sing Neut Past	49	0.000861
+VERB|Loc Plur Fem Pres	49	0.000861
+NUM|Dat Plur Masc	48	0.000844
+VERB|Abl Sing Masc Past	48	0.000844
+VERB|Sing p3 Plp Ind	47	0.000826
+ADJ|Dat Dual Masc	46	0.000809
+ADJ|Voc Sing Neut	45	0.000791
+NOUN|Abl Plur	45	0.000791
+PRON|Loc Dual Neut	45	0.000791
+ADJ|Dat Plur Neut	43	0.000756
+ADP|Nom Sing Masc	43	0.000756
+VERB|Plur p2 Pres Imp Pass	43	0.000756
+PRON|Loc Dual Fem	42	0.000738
+VERB|Acc Plur Neut Pres	42	0.000738
+VERB|Ins Plur Masc Past	42	0.000738
+PRON|Abl Dual Masc	41	0.000721
+VERB|Sing p2 Fut Cond	40	0.000703
+VERB|Acc Plur Neut Past	39	0.000686
+VERB|Gen Sing Fem Pres Pass	39	0.000686
+VERB|Plur p1 Past Prec	38	0.000668
+VERB|Sing p2 Past Prec	38	0.000668
+VERB|Acc Dual Fem	38	0.000668
+VERB|Acc Plur Neut Pres Pass	38	0.000668
+VERB|Ins Sing Neut Past	38	0.000668
+VERB|Loc Dual Masc	38	0.000668
+VERB|Loc Sing Masc Fut	38	0.000668
+NUM|Gen Dual Fem	37	0.00065
+VERB|Dual p3 Pres Sub	37	0.00065
+VERB|Ins Dual Neut	37	0.00065
+VERB|Acc Plur Fem Pres Pass	36	0.000633
+VERB|Gen Plur Masc Fut	36	0.000633
+ADJ|Abl Plur Fem	35	0.000615
+NOUN|Ins Sing	35	0.000615
+NOUN|Loc Sing	35	0.000615
+NUM|Cpd Fem	35	0.000615
+VERB|Abl Sing Neut Pres	35	0.000615
+PRON|Dat Plur Neut	34	0.000598
+NOUN|Voc Dual Neut	33	0.00058
+NUM|Abl Sing Masc	32	0.000563
+VERB|Ins Plur Neut Pres Pass	32	0.000563
+NUM|Abl Plur Neut	31	0.000545
+VERB|Dual p3 Past Imp	30	0.000527
+VERB|Plur p1 Pres Ind Pass	30	0.000527
+VERB|Acc Sing Fem Fut	30	0.000527
+VERB|Dual p2 Fut Ind	29	0.00051
+VERB|Ins Sing Fem Pres Pass	28	0.000492
+VERB|Loc Plur Masc Past	27	0.000475
+VERB|Voc Sing Fem Pres	27	0.000475
+VERB|Sing p1 Fut Cond	26	0.000457
+VERB|Dat Sing Neut	26	0.000457
+VERB|Loc Plur Masc Fut	26	0.000457
+VERB|Voc Plur Masc	26	0.000457
+NOUN|Dat Dual Neut	25	0.000439
+NOUN|Ins Dual	25	0.000439
+VERB|Dual p1 Impf Ind	25	0.000439
+VERB|Dual p1 Pres Opt	25	0.000439
+VERB|Dual p3 Impf Ind Pass	25	0.000439
+VERB|Sing p1 Pres Jus	25	0.000439
+VERB|Abl Plur Neut	25	0.000439
+VERB|Nom Sing Fem Fut	25	0.000439
+ADJ|Abl Dual Masc	24	0.000422
+VERB|Plur p2 Past Sub	24	0.000422
+VERB|Plur p3 Past Ind Pass	24	0.000422
+VERB|Abl Sing Masc Pres Pass	24	0.000422
+VERB|Acc Sing Neut Fut	24	0.000422
+VERB|Ins Sing Masc Fut	24	0.000422
+NUM|Abl Sing Fem	23	0.000404
+PRON|Voc Sing Masc	23	0.000404
+VERB|Dual p3 Past Sub	23	0.000404
+VERB|Plur p3 Fut Cond	23	0.000404
+NUM|Dat Sing Masc	22	0.000387
+VERB|Dual p2 Past Sub	22	0.000387
+VERB|Plur p2 Fut Cond	22	0.000387
+VERB|Gen Plur Neut Pres Pass	22	0.000387
+VERB|Nom Dual Fem Past	22	0.000387
+NUM|Abl Plur Fem	21	0.000369
+NUM|Dat Dual Fem	21	0.000369
+VERB|Abl Sing Neut Past	21	0.000369
+VERB|Dat Sing Fem Pres	21	0.000369
+ADJ|Ins Plur	20	0.000352
+VERB|Sing p3 Fut Pot	20	0.000352
+VERB|Acc Dual Masc Pres Pass	20	0.000352
+VERB|Acc Plur Masc Fut	20	0.000352
+VERB|Gen Dual Neut	20	0.000352
+VERB|Nom Dual Neut Past	20	0.000352
+PRON|Dat Dual Fem	19	0.000334
+VERB|Dual p2 Pres Sub	19	0.000334
+VERB|Plur p3 Past Opt	19	0.000334
+VERB|Sing p2 Plp Ind	19	0.000334
+NUM|Dat Dual Masc	18	0.000316
+VERB|Abl Sing Neut Pres Pass	18	0.000316
+VERB|Loc Plur Neut Past	18	0.000316
+ADP|Cpd	17	0.000299
+NUM|Dat Sing Neut	17	0.000299
+NUM|Loc Dual Fem	17	0.000299
+NUM|Loc Dual Neut	16	0.000281
+PRON|Abl Dual Neut	16	0.000281
+VERB|Dual p1 Past Ind	16	0.000281
+VERB|Dat Plur Fem	16	0.000281
+VERB|Ins Sing Fem Past	16	0.000281
+VERB|Loc Plur Fem Past	16	0.000281
+ADJ|Loc Sing	15	0.000264
+NOUN|Voc Plur	15	0.000264
+NUM|Ins Plur	15	0.000264
+VERB|Abl Sing Fem	15	0.000264
+VERB|Gen Plur Fem Past	15	0.000264
+ADJ|Gen Sing	14	0.000246
+ADJ|Voc Dual Fem	14	0.000246
+PRON|Voc Plur Masc	14	0.000246
+VERB|Plur p3 Pqp Ind	14	0.000246
+VERB|Abl Plur Fem	14	0.000246
+VERB|Abl Plur Masc Pres	14	0.000246
+VERB|Acc Dual Masc Past	14	0.000246
+VERB|Acc Dual Neut Pres	14	0.000246
+VERB|Ins Dual Fem	14	0.000246
+VERB|Loc Sing Neut Fut	14	0.000246
+NOUN|Dat Plur	13	0.000229
+NUM|Cpd Masc	13	0.000229
+VERB|Plur p3 Past Prec	13	0.000229
+VERB|Nom Plur Neut Fut	13	0.000229
+VERB|Voc Plur Fem Pres	13	0.000229
+VERB|Voc Plur Masc Pres	13	0.000229
+NOUN|Dat Sing	12	0.000211
+PART|Nom Sing Masc	12	0.000211
+VERB|Dual p3 Pres Imp Pass	12	0.000211
+VERB|Sing p1 Plp Ind	12	0.000211
+VERB|Dat Plur Masc Pres Pass	12	0.000211
+VERB|Gen Dual Fem Pres	12	0.000211
+VERB|Gen Plur Fem Pres Pass	12	0.000211
+VERB|Gen Sing Fem Past	12	0.000211
+VERB|Ins Plur Neut Past	12	0.000211
+ADJ|Gen Plur	11	0.000193
+VERB|Dual p3 Past Jus	11	0.000193
+VERB|Acc Dual Fem Pres	11	0.000193
+VERB|Dat Sing Masc Fut	11	0.000193
+NOUN|Voc Plur Neut	10	0.000176
+VERB|Dual p2 Plp Ind	10	0.000176
+VERB|Dual p2 Pres Opt	10	0.000176
+VERB|Plur p1 Pres Jus	10	0.000176
+VERB|Sing p3 Pqp Ind	10	0.000176
+VERB|Gen Dual Fem	10	0.000176
+VERB|Ins Plur Fem Past	10	0.000176
+NUM|Dat Sing Fem	9	0.000158
+VERB|Sing p1 Impf Ind Pass	9	0.000158
+VERB|Acc Dual Fem Past	9	0.000158
+VERB|Dat Dual Masc Pres Pass	9	0.000158
+ADJ|Abl Dual Neut	8	0.000141
+NOUN|Abl Sing	8	0.000141
+VERB|Acc Dual Neut Pres Pass	8	0.000141
+VERB|Dat Dual Neut Pres Pass	8	0.000141
+VERB|Loc Dual Masc Pres	8	0.000141
+VERB|Nom Dual Masc Fut	8	0.000141
+VERB|Voc Sing Fem Past	8	0.000141
+ADJ|Acc Plur	7	0.000123
+NOUN|Loc Dual	7	0.000123
+NOUN|Voc Sing	7	0.000123
+NUM|Abl Dual Masc	7	0.000123
+NUM|Voc Plur Neut	7	0.000123
+PRON|Loc Dual	7	0.000123
+VERB|Pres Pass	7	0.000123
+VERB|Dual p1 Fut Cond	7	0.000123
+VERB|Plur p2 Past Prec	7	0.000123
+VERB|Plur p2 Pres Jus	7	0.000123
+VERB|Acc Dual Neut Past	7	0.000123
+VERB|Dat Plur Fem Pres	7	0.000123
+VERB|Dat Sing Neut Pres	7	0.000123
+VERB|Gen Plur Neut Past	7	0.000123
+VERB|Ins Sing Fem Fut	7	0.000123
+VERB|Loc Dual Neut	7	0.000123
+NUM|Voc Plur Masc	6	0.000105
+PRON|Abl Dual	6	0.000105
+VERB|Sing p2 Pqp Ind	6	0.000105
+VERB|Abl Dual Masc	6	0.000105
+VERB|Abl Sing Masc Fut	6	0.000105
+VERB|Dat Sing Fem Past	6	0.000105
+VERB|Gen Dual Masc Pres Pass	6	0.000105
+VERB|Ins Dual Masc Pres	6	0.000105
+VERB|Ins Dual Masc Pres Pass	6	0.000105
+VERB|Ins Plur Masc Fut	6	0.000105
+VERB|Loc Dual Fem	6	0.000105
+VERB|Nom Dual Fem Pres Pass	6	0.000105
+NUM|Voc Plur Fem	5	8.8e-05
+PART|Gen Sing	5	8.8e-05
+PART|Gen Sing Masc	5	8.8e-05
+PRON|Abl Dual Fem	5	8.8e-05
+PRON|Voc Sing Fem	5	8.8e-05
+VERB|Dual p3 Fut Cond	5	8.8e-05
+VERB|Dual p3 Past Opt	5	8.8e-05
+VERB|Dual p3 Pres Jus	5	8.8e-05
+VERB|Plur p3 Fut Pot	5	8.8e-05
+VERB|Sing p1 Pres Opt Pass	5	8.8e-05
+VERB|Dat Dual Masc	5	8.8e-05
+VERB|Dat Sing Fem Pres Pass	5	8.8e-05
+VERB|Gen Dual Masc Past	5	8.8e-05
+VERB|Nom Dual Neut Fut	5	8.8e-05
+VERB|Voc Plur Fem	5	8.8e-05
+ADP|Abl Sing Masc	4	7e-05
+ADP|Loc Sing Masc	4	7e-05
+NUM|Dat Plur Neut	4	7e-05
+PART|Abl Sing Masc	4	7e-05
+VERB|Dual p2 Past Opt	4	7e-05
+VERB|Dual p2 Pres Imp Pass	4	7e-05
+VERB|Dual p3 Past Ind Pass	4	7e-05
+VERB|Plur p2 Plp Ind	4	7e-05
+VERB|Sing p1 Pres Imp Pass	4	7e-05
+VERB|Sing p2 Fut Pot	4	7e-05
+VERB|Abl Sing Fem Pres	4	7e-05
+VERB|Acc Plur Neut Fut	4	7e-05
+VERB|Dat Plur Masc Past	4	7e-05
+VERB|Dat Plur Neut	4	7e-05
+VERB|Gen Dual Neut Pres	4	7e-05
+VERB|Gen Dual Neut Pres Pass	4	7e-05
+VERB|Gen Plur Fem Fut	4	7e-05
+VERB|Gen Sing Neut Fut	4	7e-05
+VERB|Loc Dual Masc Pres Pass	4	7e-05
+VERB|Nom Plur Fem Fut	4	7e-05
+VERB|Voc Sing Fem Fut	4	7e-05
+VERB|Voc Sing Neut	4	7e-05
+ADJ|Ins Sing	3	5.3e-05
+ADJ|Nom Dual	3	5.3e-05
+ADP|Gen Sing Masc	3	5.3e-05
+NOUN|Gen Dual	3	5.3e-05
+NUM|Abl Dual Neut	3	5.3e-05
+NUM|Voc Sing Fem	3	5.3e-05
+VERB|Dual p2 Past Prec	3	5.3e-05
+VERB|Plur p1 Pres Imp Pass	3	5.3e-05
+VERB|Plur p2 Pres Ind Pass	3	5.3e-05
+VERB|Sing p1 Fut Pot	3	5.3e-05
+VERB|Abl Dual Neut	3	5.3e-05
+VERB|Abl Plur Masc Past	3	5.3e-05
+VERB|Acc Dual Fem Pres Pass	3	5.3e-05
+VERB|Acc Plur Fem Fut	3	5.3e-05
+VERB|Dat Dual Masc Pres	3	5.3e-05
+VERB|Gen Plur Neut Fut	3	5.3e-05
+VERB|Gen Sing Fem Fut	3	5.3e-05
+VERB|Ins Plur Fem Pres Pass	3	5.3e-05
+VERB|Ins Sing Neut Fut	3	5.3e-05
+VERB|Nom Dual Neut Pres Pass	3	5.3e-05
+VERB|Voc Sing Masc Pres Pass	3	5.3e-05
+ADJ|Abl Dual Fem	2	3.5e-05
+ADJ|Voc Dual Neut	2	3.5e-05
+ADJ|Voc Plur Neut	2	3.5e-05
+NOUN|Acc Dual	2	3.5e-05
+NUM|Abl Dual Fem	2	3.5e-05
+NUM|Dat Dual Neut	2	3.5e-05
+NUM|Voc Dual Fem	2	3.5e-05
+PART|Gen Dual Masc	2	3.5e-05
+PRON|Dat Dual Neut	2	3.5e-05
+PRON|Voc Dual Masc	2	3.5e-05
+VERB|Dual p1 Past Sub	2	3.5e-05
+VERB|Dual p3 Pres Opt Pass	2	3.5e-05
+VERB|Plur p1 Plp Ind	2	3.5e-05
+VERB|Plur p1 Pres Opt Pass	2	3.5e-05
+VERB|Sing p1 Pqp Ind	2	3.5e-05
+VERB|Sing p2 Pres Opt Pass	2	3.5e-05
+VERB|Abl Plur Neut Past	2	3.5e-05
+VERB|Abl Sing Fem Past	2	3.5e-05
+VERB|Abl Sing Neut Fut	2	3.5e-05
+VERB|Dat Plur Fem Pres Pass	2	3.5e-05
+VERB|Dat Sing Neut Past	2	3.5e-05
+VERB|Gen Dual Masc Fut	2	3.5e-05
+VERB|Ins Dual Fem Past	2	3.5e-05
+VERB|Ins Dual Neut Past	2	3.5e-05
+VERB|Loc Dual Fem Pres Pass	2	3.5e-05
+VERB|Loc Dual Masc Past	2	3.5e-05
+VERB|Loc Plur Neut Fut	2	3.5e-05
+VERB|Voc Dual Masc	2	3.5e-05
+VERB|Voc Dual Masc Pres	2	3.5e-05
+VERB|Voc Plur Neut Pres	2	3.5e-05
+ADJ|Cpd Masc	1	1.8e-05
+ADJ|Dat Dual Fem	1	1.8e-05
+ADJ|Dat Dual Neut	1	1.8e-05
+ADJ|Dat Plur	1	1.8e-05
+ADJ|Dat Sing	1	1.8e-05
+ADJ|Loc Plur	1	1.8e-05
+ADJ|Voc Sing	1	1.8e-05
+ADP|Abl Dual Masc	1	1.8e-05
+ADP|Abl Plur Masc	1	1.8e-05
+ADP|Cpd Masc	1	1.8e-05
+ADP|Voc Sing Masc	1	1.8e-05
+INTJ|Gen Dual Masc	1	1.8e-05
+NUM|Abl Sing	1	1.8e-05
+NUM|Voc Dual Masc	1	1.8e-05
+NUM|Voc Sing Masc	1	1.8e-05
+NUM|Voc Sing Neut	1	1.8e-05
+PART|Nom Sing	1	1.8e-05
+PRON|Voc Plur Fem	1	1.8e-05
+VERB|Fut	1	1.8e-05
+VERB|Dual p1 Past Jus	1	1.8e-05
+VERB|Dual p1 Past Opt	1	1.8e-05
+VERB|Dual p1 Past Prec	1	1.8e-05
+VERB|Dual p2 Fut Cond	1	1.8e-05
+VERB|Dual p2 Pres Ind Pass	1	1.8e-05
+VERB|Dual p3 Past Prec	1	1.8e-05
+VERB|Dual p3 Plp Ind	1	1.8e-05
+VERB|Plur p2 Impf Ind Pass	1	1.8e-05
+VERB|Plur p2 Past Opt	1	1.8e-05
+VERB|Plur p2 Pqp Ind	1	1.8e-05
+VERB|Sing p1 Past Imp	1	1.8e-05
+VERB|Abl Dual Masc Pres	1	1.8e-05
+VERB|Abl Plur Fem Past	1	1.8e-05
+VERB|Abl Plur Masc Pres Pass	1	1.8e-05
+VERB|Abl Sing Fem Pres Pass	1	1.8e-05
+VERB|Acc Dual Neut Fut	1	1.8e-05
+VERB|Dat Dual Fem	1	1.8e-05
+VERB|Dat Plur Fem Past	1	1.8e-05
+VERB|Dat Sing Neut Fut	1	1.8e-05
+VERB|Dat Sing Neut Pres Pass	1	1.8e-05
+VERB|Ins Dual Fem Pres Pass	1	1.8e-05
+VERB|Ins Dual Masc Past	1	1.8e-05
+VERB|Ins Dual Neut Pres Pass	1	1.8e-05
+VERB|Ins Plur Fem Fut	1	1.8e-05
+VERB|Ins Plur Neut Fut	1	1.8e-05
+VERB|Loc Dual Fem Past	1	1.8e-05
+VERB|Loc Dual Fem Pres	1	1.8e-05
+VERB|Loc Dual Masc Fut	1	1.8e-05
+VERB|Loc Dual Neut Past	1	1.8e-05
+VERB|Loc Dual Neut Pres Pass	1	1.8e-05
+VERB|Loc Sing Fem Fut	1	1.8e-05
+VERB|Nom Dual Fem Fut	1	1.8e-05
+VERB|Voc Dual Fem	1	1.8e-05
+VERB|Voc Dual Fem Pres	1	1.8e-05
+VERB|Voc Dual Masc Past	1	1.8e-05
+VERB|Voc Plur Masc Past	1	1.8e-05
+VERB|Voc Sing Masc Fut	1	1.8e-05
+VERB|Voc Sing Neut Past	1	1.8e-05
