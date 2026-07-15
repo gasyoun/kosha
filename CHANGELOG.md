@@ -17,6 +17,30 @@ sense citations pin to `data_version`, not to repo tags.
 ## [0.58.0] - 2026-07-15
 
 ### Added
+- **H951: per-verse metre annotation over the reading packs — Wave 3 pedagogy (W3a).**
+  The field (§3.9) names "metre-ID wired into reading" as a gap. This ships the **data
+  layer** for it and **no UI** — SanskritKaraoke owns the metre trainer (scope re-checked
+  15-07, unchanged); kosha's contribution is the corpus-grounded per-verse annotation those
+  tools lack (the ARCHITECTURE integration-surface rule). `scripts/build_reading_pack_metre.py`
+  annotates every reading-pack sentence via **`vidyut.chandas`** (the real metre classifier,
+  over a vendored `data/vidyut/chandas/meters.tsv`) with an honest two-tier + null method:
+  strict vṛtta (`method=vidyut-chandas`, high confidence, **≥8-syllable guard** so a prose
+  heading can't spuriously match); anuṣṭubh (`method=syllable-heuristic`, medium — vidyut
+  doesn't classify the loose śloka, but the DCS sentences align to half-ślokas, and **all
+  840 anuṣṭubh tags land at exactly 16 syllables** = 2 pādas); everything else left
+  **unresolved with an empty metre** (prose, speaker-tags, fragments — never guessed).
+- **Coverage: 89% identified** (12% strict vṛtta + 77% anuṣṭubh) across 1,095 sentences /
+  23 packs, **11% honestly unresolved**. Validation anchor: Bhāravi's Kirātārjunīya-1 scans
+  **92/92 as vaṃśastha** — correct for that canto. Outputs: `data/metre/reading_pack_metre.tsv`
+  (per-sentence: metre, type, method, confidence, syllables) + `metre_coverage.tsv` (per-pack
+  distribution). Two `datasets.json` rows (`reading-pack-metre`, the vendored
+  `vidyut-chandas-meters`), `vidyut` added to `requirements.txt`, and 9 tests (no fabricated
+  metre, ≥8-syllable vṛtta guard, anuṣṭubh pāda-alignment, Kirātārjunīya-all-vṛtta anchor,
+  coverage-sums-match, non-SLP1-doesn't-crash). Deterministic. Build: Opus 4.8 (`claude-opus-4-8[1m]`).
+
+## [0.58.0] - 2026-07-15
+
+### Added
 - **H972 — defgen eval, F1_fable_ctx arm (15-07-2026, Fable 5 `claude-fable-5`)**: the
   non-DeepSeek model family called for by the protocol's next-steps #6, generated
   in-session by the Claude Code session itself over a **gold-free inputs projection**
