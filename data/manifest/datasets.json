@@ -1080,6 +1080,45 @@
       "notes": "H947 Wave-1 pedagogy build (W1b). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. No SRS scheduling here (deck items only, per the fence in H947 — Systema \"Saraswati\" owns scheduling)."
     },
     {
+      "id": "morphology-curriculum",
+      "title": "Graded morphology curriculum — corpus-attested paradigms, ordered teaching syllabus",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/morphology/morphology_curriculum.tsv",
+      "format": "tsv",
+      "rows": 7134,
+      "size_bytes": 482612,
+      "keying": "one row per (lemma, declension/conjugation model) paradigm that has at least one corpus-attested cell (7,134 of 5,985 core-vocabulary lemmas x their models), ordered by class bucket (a-stems -> other-vowel-stems -> consonant-stems -> pronouns -> present-class-verbs -> other per drill_weights.json) then by lemma core_rank: rank, lemma_slp1, lemma_iast, model, kind (nominal/verb), bucket, core_rank, n_attested_cells, corpus_count, pct, cumulative_pct, lesson (10 lessons). Learn 4,862 paradigms -> cover 50% of attested nominal/verbal tokens; 6,351 -> 80%; 6,708 -> 90% (bucket-first ordering trades coverage-efficiency for pedagogical class sequencing — an honest, expected tradeoff, not a defect). Teaching page reading/morphology/curriculum/index.html.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/morphology/morphology_curriculum.tsv",
+      "builder": "scripts/build_morphology_drills.py + build_morphology_curriculum.py over app/paradigm.py (P4 K2b) + lemma_frequency.tsv (core_rank) + VisualDCS dcs_full.sqlite attestation join",
+      "consumers": [
+        "reading/morphology/curriculum/ page",
+        "morphology-drills dataset"
+      ],
+      "notes": "H946 Wave-1 pedagogy build (W1a). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Drills only forms the corpus actually attests (field RQ1: 'stop drilling forms that never appear') — 38,782/254,805 candidate cells (15.2%) survived the DCS attestation join over the core-vocabulary lemma set; the rest are dropped by default (--include-generated keeps them, flagged attested:false). DCS aggregates by lemma TEXT not lemma_id, so a handful of homonym-shared lemma spellings pool their attestation counts (same simplification H950 already accepted). Verb voice (active/middle) is not part of the attestation match key — DCS's feat_voice marks only passive, an honest upstream tagging limitation."
+    },
+    {
+      "id": "morphology-drills",
+      "title": "Morphology drills — fill/match practice items, evidence-linked to a DCS corpus locus",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/morphology/drills.json",
+      "format": "json",
+      "rows": 12000,
+      "size_bytes": 7387058,
+      "keying": "one item per row: aspect=morphology, type (fill: lemma+cell->form / match: form->cell), prompt, answer, choices (4-way MCQ, same-lemma-paradigm distractors), distractors, rank (core_rank), evidence (dcs:<sent_id> locus), source_dataset=morphology-drills, corpus_count (ARCHITECTURE shared item schema). 12,000 items over the top 6,000/38,782 attested cells by (core_rank, corpus frequency) — --max-drill-cells 0 rebuilds the full set; the curriculum TSV is never scoped by this cap. Also shipped as data/morphology/morphology_drills.apkg (Anki deck, genanki, 6,000 fill-type notes). Web quiz reading/morphology/drills/index.html (self-contained MCQ, theme-aware, fill/match type filter).",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/morphology/drills.json",
+      "builder": "scripts/build_morphology_drills.py + build_morphology_curriculum.py over morphology-curriculum",
+      "consumers": [
+        "reading/morphology/drills/ page (web quiz)",
+        "morphology_drills.apkg (Anki deck)",
+        "Systema/csl-guides quiz component (future, via the shared item schema)"
+      ],
+      "notes": "H946 Wave-1 pedagogy build (W1a). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Deterministic build (seeded RNG, seed 20260715) so choice ordering/distractors are reproducible across rebuilds. No fabricated forms: answer is verified (a real DCS-attested cell) or the item is dropped, per the shared item schema's 'no evidence, no item' rule."
+    },
+    {
       "id": "sandhi-drills",
       "title": "Sandhi drills — join/split/identify practice items",
       "tier": "public",

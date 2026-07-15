@@ -1,0 +1,9 @@
+{
+  "_doc": "Morphology graded-curriculum weights (Wave 1 W1a, H946). Follows the sandhi programme's MG ruling: weights are a visible, tunable config, NOT hard-coded in Python -- edit this file and re-run scripts/build_morphology_drills.py to re-tune the syllabus. Lessons group by declension/conjugation CLASS bucket (a-stems -> other-vowel-stems -> consonant-stems -> pronouns -> present-class-verbs -> other), per IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE1.md SS3. The bucket-ASSIGNMENT rule itself (which Cologne model prefix is which class) is a linguistic fact, not a tunable number, and lives in build_morphology_curriculum.py's bucket_for_model(); this file holds only what MG can re-tune without touching code.",
+  "lesson_group_order": ["a-stems", "other-vowel-stems", "consonant-stems", "pronouns",
+                          "present-class-verbs", "other"],
+  "pronoun_lemmas": ["sarva", "viSva", "tad", "etad", "idam", "adas", "asmad", "yuzmad",
+                      "kim", "eka", "dvi", "yad", "anya", "anyatara", "itara", "ubaya",
+                      "eka2", "ekatara", "katama", "katara"],
+  "lesson_coverage_step": 0.1
+}
