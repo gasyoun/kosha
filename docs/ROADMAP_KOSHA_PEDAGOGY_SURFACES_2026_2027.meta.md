@@ -36,12 +36,12 @@ Waves 0–2 are **fully shipped**; the roadmap's status column carries the relea
 | 1c | Samāsa trainer | ✅ v0.52.0 (H948) |
 | 2a | Difficulty scorer + graded readers | ✅ v0.55.0 (H949) |
 | 2b | Roots frequency layer | ✅ v0.50.0 (H950, reuse/integrate) |
-| 3a | Metre-in-reading | ✅ v0.58.0 (H951, reuse/integrate) |
+| 3a | Metre-in-reading | ✅ v0.59.0 (H951, reuse/integrate) |
 | 3b | Script / Devanāgarī | ⚪ roadmap-only (csl-guides owns it) |
 | 4 | Audio | agenda — external-gated (recorded reciter / TTS decision) |
 
 ## Ranked improvement backlog (of the roadmap itself)
-1. ~~**W3a is the only actionable wave left.**~~ **DONE (H951, 15-07-2026, v0.58.0):**
+1. ~~**W3a is the only actionable wave left.**~~ **DONE (H951, 15-07-2026, v0.59.0):**
    W3a shipped (per-verse metre annotation, reuse/integrate). **The kosha build programme
    is now complete** — every buildable surface (W1a–c, W2a–b, W3a) is shipped; only W3b
    (reuse-only, csl-guides owns it) and W4 (external-gated audio agenda) remain, neither a
@@ -111,6 +111,6 @@ W3a next).
 | 15-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | Metadoc created. Recorded that Waves 0–2 are fully shipped (W1a–c, W2a, W2b) with per-surface releases and W3a unblocked; seeded the improvement backlog (W3a flip discipline, W2a weighting ruling, unscored Gītā packs, W4 entry condition). |
 | 15-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | Added the three template-v2 sections (Intended use / known misuse · Maintenance & sunset plan · Deprecation status) so the metadoc registers 3/3 in the org census. |
 | 15-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | Backlog item 3 (18 Gītā packs unscored) closed via H977 — reduced 3-axis Gītā ordering (v0.57.0). |
-| 15-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | W3a metre-in-reading shipped (H951, v0.58.0) — status table + backlog item 1 flipped; **kosha build programme complete** (W3b reuse-only, W4 external-gated remain). |
+| 15-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | W3a metre-in-reading shipped (H951, v0.59.0) — status table + backlog item 1 flipped; **kosha build programme complete** (W3b reuse-only, W4 external-gated remain). |
 
 _Dr. Mārcis Gasūns_
