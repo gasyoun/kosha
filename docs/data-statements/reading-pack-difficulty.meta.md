@@ -48,4 +48,27 @@ Corpus of Sanskrit (**CC BY 4.0**, Oliver Hellwig / DCS) — attribute DCS on an
 deck; a `/publish-safety-check` + `/data-release` gate applies before public distribution
 (VERIFICATION R8).
 
+## Intended use / known misuse
+**For:** ordering reading packs into a graded sequence; auto-levelling a graded reader;
+feeding W3a metre-in-reading a difficulty-sorted pack list. **Misuse:** reading the score
+as *the* difficulty rather than one estimator (the weighting is a modelling choice — R5);
+reading it as measured *learning* difficulty (it scores text properties, not learner
+outcomes — R6); comparing scores across different weight settings (they are only
+comparable under one `difficulty_weights.json`); ranking a non-UD pack (the 18 Gītā packs
+have no morphology signal and are deliberately unscored, not "easy"); quoting the sandhi
+axis as induced-rule density (it is a boundary-fusion proxy).
+
+## Maintenance & sunset plan
+Re-run `build_difficulty_signals.py` (once, when the DCS release changes) then
+`build_difficulty_scorer.py` (whenever a reading pack is added or the weights are retuned);
+both are deterministic, so a rebuild with unchanged inputs is a no-op. The weights are the
+one human-tunable knob — a confirmed ruling should be recorded here and in the roadmap
+metadoc backlog. Sunset: superseded if a measured learning-difficulty signal (a user study,
+field RQ4) ever replaces the frequency proxy — at that point the composite gains an
+empirical axis and this estimator becomes the cold-start fallback; the asset stays
+downloadable for reproducibility.
+
+## Deprecation status
+`active` — the difficulty spine consumed by graded-reader levelling and W3a.
+
 _Dr. Mārcis Gasūns_
