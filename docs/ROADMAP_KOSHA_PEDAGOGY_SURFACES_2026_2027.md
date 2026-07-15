@@ -43,7 +43,7 @@ It **is** the template — Wave 1 copies its scripts' shape. *Unblocked by:* not
 
 | Deliverable | Verdict | Unblocked by | Handoff |
 |---|---|---|---|
-| **W3a — Metre-ID wired into reading.** Do **not** rebuild a metre trainer — [SanskritKaraoke](https://github.com/gasyoun/SanskritKaraoke) owns it (wave notation + quizzes + Apte prosody). kosha's contribution: annotate the reading packs with per-verse metre (the field §3.9 gap: "metre-ID as a graded drill wired into reading") using vidyut-chandas `meters.tsv` | ✅ SHIPPED v0.58.0 (reuse/integrate) | `data/vidyut/chandas/meters.tsv` + reading packs (W2a) | [H951](https://github.com/gasyoun/Uprava/blob/main/handoffs/H951-Sonnet_kosha_pedagogy-w3-metre-in-reading-integration_14.07.26.md) |
+| **W3a — Metre-ID wired into reading.** Do **not** rebuild a metre trainer — [SanskritKaraoke](https://github.com/gasyoun/SanskritKaraoke) owns it (wave notation + quizzes + Apte prosody). kosha's contribution: annotate the reading packs with per-verse metre (the field §3.9 gap: "metre-ID as a graded drill wired into reading") using vidyut-chandas `meters.tsv` | ✅ SHIPPED v0.59.0 (reuse/integrate) | `data/vidyut/chandas/meters.tsv` + reading packs (W2a) | [H951](https://github.com/gasyoun/Uprava/blob/main/handoffs/H951-Sonnet_kosha_pedagogy-w3-metre-in-reading-integration_14.07.26.md) |
 | **W3b — Script / Devanāgarī** | ⚪ REUSE (roadmap only) | [csl-guides](https://github.com/sanskrit-lexicon/csl-guides) already owns the devanāgarī/transliteration quizzes + "name-in-devanāgarī" tool; kosha adds no surface. Revisit only if a kosha-specific onboarding need appears | — |
 
 ## Wave 4 — audio (2028, external-gated agenda)
