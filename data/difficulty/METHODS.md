@@ -39,4 +39,42 @@ Raw (pre-normalisation) weights as stored: `{"vocab": 0.4, "sandhi": 0.2, "morph
 | 4 | nala-2 | **0.3308** | 0.5163 | 0.1837 | 0.2796 | 0.1173 |
 | 5 | kiratarjuniya-1 | **0.3891** | 0.6205 | 0.2169 | 0.2804 | 0.1826 |
 
+## Reduced 3-axis ordering — packs without UD morphology (H977)
+
+The Gītā reading packs come from a different builder (`build_reading_pack_gita.py`) that emits **no UD morphology**, so the 4-axis scorer above skips them. They do carry three signals of their own, so they get a **separate** ordering on a reduced formula:
+
+```
+difficulty_reduced = w_vocab·VOCAB + w_sandhi·SANDHI + w_compound·COMPOUND
+```
+with the morphology weight dropped and the other three renormalised to sum to 1 (`{"vocab": 0.5333333333333333, "sandhi": 0.26666666666666666, "compound": 0.19999999999999998}`). The axes differ from the 4-axis scorer:
+
+| axis | weight | what it measures (reduced) |
+|---|---:|---|
+| VOCAB | 0.533 | mean rarity of **non-compound** content lemmas (`slp1` → `lemma_frequency.tsv`); compounds excluded here, scored on the compound axis so they are not double-counted as rare |
+| SANDHI | 0.267 | fraction of tokens carrying an **induced junction rule** (the pack's own per-token `sandhi` field) — a real sandhi signal, *not* the boundary proxy the 4-axis scorer uses |
+| COMPOUND | 0.200 | fraction of tokens whose lemma is a hyphen-segmented compound |
+
+> **Not comparable to the 4-axis table above.** Different axis set *and* a different sandhi definition — this ranks the Gītā chapters **among themselves** only. Do not read a Gītā score against a Nala/Kirātārjunīya score. Output: [`gita_reading_pack_difficulty.tsv`](gita_reading_pack_difficulty.tsv).
+
+| # | pack | difficulty | vocab | sandhi | compound |
+|---:|---|---:|---:|---:|---:|
+| 1 | gita-14 | **0.3966** | 0.4838 | 0.3374 | 0.2432 |
+| 2 | gita-2 | **0.4043** | 0.491 | 0.3532 | 0.2414 |
+| 3 | gita-13 | **0.4062** | 0.4614 | 0.3958 | 0.2731 |
+| 4 | gita-3 | **0.4062** | 0.4774 | 0.3711 | 0.2633 |
+| 5 | gita-17 | **0.407** | 0.4759 | 0.3864 | 0.2507 |
+| 6 | gita-1 | **0.4091** | 0.4996 | 0.3404 | 0.2596 |
+| 7 | gita-18 | **0.4118** | 0.51 | 0.3374 | 0.249 |
+| 8 | gita-8 | **0.4167** | 0.4944 | 0.3641 | 0.2797 |
+| 9 | gita-6 | **0.4176** | 0.4783 | 0.4167 | 0.2569 |
+| 10 | gita-5 | **0.4201** | 0.4956 | 0.3736 | 0.2809 |
+| 11 | gita-4 | **0.4225** | 0.5053 | 0.3755 | 0.2646 |
+| 12 | gita-10 | **0.425** | 0.5256 | 0.4071 | 0.1804 |
+| 13 | gita-11 | **0.4285** | 0.5256 | 0.3783 | 0.2366 |
+| 14 | gita-15 | **0.4329** | 0.4979 | 0.4517 | 0.2345 |
+| 15 | gita-16 | **0.4453** | 0.5455 | 0.3945 | 0.2457 |
+| 16 | gita-7 | **0.4468** | 0.5549 | 0.4094 | 0.2084 |
+| 17 | gita-12 | **0.455** | 0.5542 | 0.371 | 0.3024 |
+| 18 | gita-9 | **0.459** | 0.5745 | 0.3761 | 0.2613 |
+
 _Dr. Mārcis Gasūns_
