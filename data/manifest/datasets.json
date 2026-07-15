@@ -246,7 +246,7 @@
       "in_release": null,
       "format": "sqlite",
       "rows": 580552,
-      "size_bytes": 619384832,
+      "size_bytes": 655200256,
       "keying": "580,552 corpus lines · 152 sources, verse-aligned (FTS5 index included)",
       "source_repo": "https://github.com/gasyoun/SamudraManthanam",
       "source_path": "web/corpus.db (GITIGNORED)",
@@ -427,7 +427,7 @@
       "in_release": null,
       "format": "jsonl",
       "rows": 3120777,
-      "size_bytes": 2451260414,
+      "size_bytes": 2451270843,
       "keying": "per-source *.renou*/assembled_cards*/dictionary-name jsonl files; formats and schemas vary by pipeline stage",
       "source_repo": "https://github.com/gasyoun/SanskritLexicography",
       "source_path": "RussianTranslation/src/ (GITIGNORED, 55 files — all *.jsonl in this dir except corpus_lexicon.jsonl)",
@@ -883,7 +883,7 @@
       "in_release": null,
       "format": "tsv+jsonl",
       "rows": 500,
-      "size_bytes": 1161421,
+      "size_bytes": 1315248,
       "keying": "SLP1 headword; 3x3 strata (E26 rank band x MW top-level sense count), seed 730; <=5 DCS attestation sentences per headword",
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "data/eval/defgen/ (frozen_sample.tsv + attestations.jsonl frozen; gen_*/judge_*/wsd_*/scores_* are run outputs: A-arms 11-07-2026, F1_fable_ctx 15-07-2026 H972)",
@@ -1261,7 +1261,7 @@
       "release_asset": "data/difficulty/reading_pack_difficulty.tsv",
       "format": "tsv",
       "rows": 5,
-      "size_bytes": 601,
+      "size_bytes": 607,
       "keying": "one row per scored reading pack, ascending difficulty: order, slug, difficulty (composite in [0,1]), vocab, sandhi, morphology, compound (four per-axis loads in [0,1]), content_tokens, tokens, sentences, title. Composite = weighted sum of the four axes; weights live in data/difficulty/difficulty_weights.json (tunable -- a human should confirm, VERIFICATION R5). Companion reading_pack_difficulty.json (same rows + the weights) and the graded-reading page reading/difficulty/index.html (easiest first). Method + limitations: data/difficulty/METHODS.md.",
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "data/difficulty/reading_pack_difficulty.tsv",
@@ -1281,7 +1281,7 @@
       "release_asset": "data/difficulty/gita_reading_pack_difficulty.tsv",
       "format": "tsv",
       "rows": 18,
-      "size_bytes": 1852,
+      "size_bytes": 1871,
       "keying": "one row per Gita chapter pack, ascending difficulty: order, slug, difficulty (reduced composite in [0,1]), vocab, sandhi, compound (three per-axis loads), content_tokens, tokens, sentences, title. The Gita packs carry no UD morphology, so they are scored on THREE axes -- vocab (slp1 -> lemma_frequency, non-compound content lemmas), sandhi (fraction of tokens carrying the pack's own per-token induced junction rule -- a real sandhi signal, NOT the 4-axis boundary proxy), compound (hyphen-lemma share) -- with the morphology weight dropped and the rest renormalised. Companion gita_reading_pack_difficulty.json + a labelled section on reading/difficulty/index.html.",
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "data/difficulty/gita_reading_pack_difficulty.tsv",
@@ -1291,6 +1291,43 @@
         "graded-reader auto-levelling within the Gita (once UD morphology is added, these fold into the 4-axis score)"
       ],
       "notes": "H977 kosha pedagogy Wave 2 (W2a follow-up), closing the '18 Gita packs unscored' gap H949 flagged. **NOT comparable to reading-pack-difficulty** (4-axis): different axis set AND a different sandhi definition -- this ranks the Gita chapters among THEMSELVES only. Honest ONE-estimator framing carries over (R5/R6). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY 4.0 (Oliver Hellwig / DCS)."
+    },
+    {
+      "id": "reading-pack-metre",
+      "title": "Reading-pack per-verse metre annotation (W3a)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/metre/reading_pack_metre.tsv",
+      "format": "tsv",
+      "rows": 1095,
+      "size_bytes": 146758,
+      "keying": "one row per reading-pack sentence: pack, locus, dcs, syllables, metre, metre_type (vrtta/jati), method, confidence, text-preview. Two-tier + null method: strict vrtta via vidyut.chandas (method=vidyut-chandas, confidence=high, requires >=8 syllables); anustubh via a syllable heuristic (method=syllable-heuristic, confidence=medium -- every such tag is a whole-pada multiple of 8 in [8,32], and 840/840 land at exactly 16 = a half-sloka); everything else left unresolved with an empty metre (prose, headings, fragments -- never guessed). Companion metre_coverage.tsv (per-pack distribution + identified %).",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/metre/reading_pack_metre.tsv",
+      "builder": "scripts/build_reading_pack_metre.py over reading/data/*.js|json + vidyut.chandas (vendored data/vidyut/chandas/meters.tsv)",
+      "consumers": [
+        "SanskritKaraoke (metre trainer UI -- the consuming surface; kosha emits the data layer only)",
+        "reading packs (per-verse metre for graded reading, field 3.9)"
+      ],
+      "notes": "H951 kosha pedagogy Wave 3 (W3a). REUSE/INTEGRATE, not greenfield: NO metre trainer/UI shipped in kosha -- SanskritKaraoke owns that (scope re-checked 15-07, unchanged). Coverage: 12% strict vrtta (high, validated -- Kiratarjuniya-1 scans 92/92 vamsastha, correct for Bharavi's canto 1), 77% anustubh (medium heuristic), 11% unresolved (honest, mostly prose/speaker-tags). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; metre engine vidyut (MIT, Arun Prasad); source DCS is CC BY 4.0 (Oliver Hellwig / DCS)."
+    },
+    {
+      "id": "vidyut-chandas-meters",
+      "title": "vidyut-chandas metre definitions (vendored)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/vidyut/chandas/meters.tsv",
+      "format": "tsv",
+      "rows": 144,
+      "size_bytes": 5227,
+      "keying": "vendored verbatim from vidyut-data/chandas/meters.tsv: meter name, type (vrtta), G/L pattern string. Consumed by vidyut.chandas.Chandas to classify strict vrttas. Vendored so kosha's metre annotator is self-contained (no sibling-clone dependency at build time).",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/vidyut/chandas/meters.tsv",
+      "builder": "vendored from github.com/ambuda-org/vidyut-data (chandas/meters.tsv)",
+      "consumers": [
+        "scripts/build_reading_pack_metre.py (reading-pack-metre)"
+      ],
+      "notes": "H951. Upstream: vidyut-data (MIT, Arun Prasad / ambuda-org). Vendored copy pinned; re-sync from vidyut-data if upstream meters change."
     },
     {
       "id": "morph-signature-freq",
