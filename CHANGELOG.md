@@ -14,7 +14,7 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
-## [0.58.0] - 2026-07-15
+## [0.59.0] - 2026-07-15
 
 ### Added
 - **H951: per-verse metre annotation over the reading packs — Wave 3 pedagogy (W3a).**
