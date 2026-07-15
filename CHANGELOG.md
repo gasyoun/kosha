@@ -14,6 +14,30 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.57.0] - 2026-07-15
+
+### Added
+- **H977: reduced 3-axis difficulty ordering for the 18 Gītā reading packs — W2a follow-up.**
+  W2a (v0.55.0) shipped the difficulty scorer but **skipped the 18 Gītā packs**: their builder
+  (`build_reading_pack_gita.py`) emits no UD morphology, so scoring them on the 4 axes would
+  fabricate the morphology + compound loads. This closes that gap the honest way. The Gītā
+  packs do carry three signals of their own (verified: 100 % a lemma via `slp1`, 37.5 % a
+  populated per-token `sandhi` field, 24.9 % a hyphenated compound lemma), so
+  `scripts/build_difficulty_scorer.py` gained `score_pack_reduced`:
+  `difficulty_reduced = w_vocab·VOCAB + w_sandhi·SANDHI + w_compound·COMPOUND` — the morphology
+  weight dropped and the other three renormalised. VOCAB = rarity of **non-compound** content
+  lemmas (compounds excluded so they are not double-penalised as unknown-rare); SANDHI =
+  fraction of tokens carrying the pack's **own induced junction rule** (a real signal, *not*
+  the 4-axis boundary proxy); COMPOUND = hyphen-lemma share.
+- **Shipped as a SEPARATE ordering, explicitly not comparable to the 4-axis packs** (R5/R6
+  honesty carries over): different axis set *and* a different sandhi definition, so the 18
+  Gītā chapters are ranked **among themselves** only. New `data/difficulty/gita_reading_pack_difficulty.tsv`
+  (+ `.json`), a labelled section on `reading/difficulty/index.html`, an extended
+  `data/difficulty/METHODS.md`, a `gita-reading-pack-difficulty` manifest row, and 5 new tests
+  (all 18 scored, reduced axes in range + ascending, composite == reduced formula with no
+  morphology term, Gītā packs never leak into the 4-axis table, no double-count of compounds).
+  The 4-axis UD ordering (5 packs) is unchanged. Build: Opus 4.8 (`claude-opus-4-8[1m]`).
+
 ## [0.56.0] - 2026-07-15
 
 ### Changed
