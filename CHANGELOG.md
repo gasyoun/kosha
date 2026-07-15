@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.53.0] - 2026-07-15
+
 ### Added
 - **H955: SRS deck — Rung B1 demo (last-mile pipeline).** `scripts/build_demo_srs_deck.py`
   emits `data/srs/srs-deck-b1-demo.json`: the content-word vocabulary of the existing
