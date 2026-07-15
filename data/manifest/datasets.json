@@ -427,7 +427,7 @@
       "in_release": null,
       "format": "jsonl",
       "rows": 3120777,
-      "size_bytes": 2450860607,
+      "size_bytes": 2451071668,
       "keying": "per-source *.renou*/assembled_cards*/dictionary-name jsonl files; formats and schemas vary by pipeline stage",
       "source_repo": "https://github.com/gasyoun/SanskritLexicography",
       "source_path": "RussianTranslation/src/ (GITIGNORED, 55 files — all *.jsonl in this dir except corpus_lexicon.jsonl)",
@@ -1087,7 +1087,7 @@
       "release_asset": "data/morphology/morphology_curriculum.tsv",
       "format": "tsv",
       "rows": 7134,
-      "size_bytes": 482612,
+      "size_bytes": 489747,
       "keying": "one row per (lemma, declension/conjugation model) paradigm that has at least one corpus-attested cell (7,134 of 5,985 core-vocabulary lemmas x their models), ordered by class bucket (a-stems -> other-vowel-stems -> consonant-stems -> pronouns -> present-class-verbs -> other per drill_weights.json) then by lemma core_rank: rank, lemma_slp1, lemma_iast, model, kind (nominal/verb), bucket, core_rank, n_attested_cells, corpus_count, pct, cumulative_pct, lesson (10 lessons). Learn 4,862 paradigms -> cover 50% of attested nominal/verbal tokens; 6,351 -> 80%; 6,708 -> 90% (bucket-first ordering trades coverage-efficiency for pedagogical class sequencing — an honest, expected tradeoff, not a defect). Teaching page reading/morphology/curriculum/index.html.",
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "data/morphology/morphology_curriculum.tsv",
@@ -1106,7 +1106,7 @@
       "release_asset": "data/morphology/drills.json",
       "format": "json",
       "rows": 12000,
-      "size_bytes": 7387058,
+      "size_bytes": 7686925,
       "keying": "one item per row: aspect=morphology, type (fill: lemma+cell->form / match: form->cell), prompt, answer, choices (4-way MCQ, same-lemma-paradigm distractors), distractors, rank (core_rank), evidence (dcs:<sent_id> locus), source_dataset=morphology-drills, corpus_count (ARCHITECTURE shared item schema). 12,000 items over the top 6,000/38,782 attested cells by (core_rank, corpus frequency) — --max-drill-cells 0 rebuilds the full set; the curriculum TSV is never scoped by this cap. Also shipped as data/morphology/morphology_drills.apkg (Anki deck, genanki, 6,000 fill-type notes). Web quiz reading/morphology/drills/index.html (self-contained MCQ, theme-aware, fill/match type filter).",
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "data/morphology/drills.json",
@@ -1252,6 +1252,120 @@
         "graded compound-analysis teaching (pedagogy Wave 1, W1c)"
       ],
       "notes": "H948 kosha pedagogy Wave 1 (docs/IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE1.md §W1c). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS). Type distribution is honestly skewed, not balanced: TP=458, BV=298, DV=2, KD=1 gold examples -- dvandva and karmadharaya are severely underrepresented in the Gita gold set and corpus-derived items cannot fill the gap (no verified type). 9 gold rows (lexicalized bahuvrihis like \"govinda\") carry no hyphen-segmented lemma and are identify-only, excluded from split."
+    },
+    {
+      "id": "reading-pack-difficulty",
+      "title": "Reading-pack difficulty scores + graded ordering (W2a)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/difficulty/reading_pack_difficulty.tsv",
+      "format": "tsv",
+      "rows": 5,
+      "size_bytes": 601,
+      "keying": "one row per scored reading pack, ascending difficulty: order, slug, difficulty (composite in [0,1]), vocab, sandhi, morphology, compound (four per-axis loads in [0,1]), content_tokens, tokens, sentences, title. Composite = weighted sum of the four axes; weights live in data/difficulty/difficulty_weights.json (tunable -- a human should confirm, VERIFICATION R5). Companion reading_pack_difficulty.json (same rows + the weights) and the graded-reading page reading/difficulty/index.html (easiest first). Method + limitations: data/difficulty/METHODS.md.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/difficulty/reading_pack_difficulty.tsv",
+      "builder": "scripts/build_difficulty_scorer.py over reading/data/*.json + lemma_frequency.tsv (vocab) + morph-signature-freq (morphology); sandhi + compound read off the pack",
+      "consumers": [
+        "reading/difficulty/ page (graded reading sequence)",
+        "graded-reader auto-levelling (W2a join point, ARCHITECTURE data-flow)",
+        "W3a metre-in-reading (H951, consumes the ordered packs)"
+      ],
+      "notes": "H949 kosha pedagogy Wave 2 (W2a), the difficulty spine. ONE estimator, not 'the' difficulty (R5): four corpus-grounded axes -- vocab-frequency x sandhi-density x morphology-rarity x compound-load -- documented in METHODS.md and honestly limited (frequency != learnability, R6; sandhi is a boundary-fusion proxy). Scores only packs carrying UD morphology; the 18 Gita packs (built by build_reading_pack_gita.py from a non-UD source) are SKIPPED, not fabricated into a score. Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY 4.0 (Oliver Hellwig / DCS)."
+    },
+    {
+      "id": "morph-signature-freq",
+      "title": "DCS morphological-form frequency table (difficulty-scorer signal)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/difficulty/morph_signature_freq.tsv",
+      "format": "tsv",
+      "rows": 840,
+      "size_bytes": 27408,
+      "keying": "one row per distinct '<upos>|<morph>' form signature over all ~5.69M DCS tokens: signature, count, share_pct. The signature is keyed exactly as the reading packs display it (build_reading_pack.morph_str), so a pack token joins with no re-derivation. Drives the difficulty scorer's morphology axis (rarer form = higher parsing load).",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/difficulty/morph_signature_freq.tsv",
+      "builder": "scripts/build_difficulty_signals.py (GROUP BY the UD morph features over VisualDCS/src/DCS-data-2026/dcs_full.sqlite)",
+      "consumers": [
+        "scripts/build_difficulty_scorer.py (morphology axis)"
+      ],
+      "notes": "H949 kosha pedagogy Wave 2 (W2a). Derived once from the DCS full sqlite so the scorer needs no heavy DB at score time (the source->derive->consume split the sandhi programme uses). Source DCS is CC BY 4.0 (Oliver Hellwig / DCS)."
+    },
+    {
+      "id": "dcs-reading-pack-nala-2",
+      "title": "DCS reading pack — Nala 2 (Nalopakhyana, Mahabharata 3.51)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "reading/data/nala-2.json",
+      "format": "json",
+      "rows": 61,
+      "size_bytes": 118208,
+      "keying": "one object per DCS chapter (slug); sentences[] each carry the sandhied text + ordered tokens (form, lemma, slp1, /w card href, upos, morph, gloss). 392 tokens, 385 (98.2%) linked to a kosha card via concordance-core exact/floor tiers.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "reading/data/nala-2.json",
+      "builder": "scripts/build_reading_pack.py (concordance_core.py, H848)",
+      "consumers": [
+        "reading/ static viewer",
+        "reading-pack-difficulty (W2a scorer)"
+      ],
+      "notes": "H949 Wave-2 W2a: new graded reading pack beyond Nala 1. DCS is CC BY 4.0; derivative ships BY-SA with the public tier."
+    },
+    {
+      "id": "dcs-reading-pack-nala-3",
+      "title": "DCS reading pack — Nala 3 (Nalopakhyana, Mahabharata 3.52)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "reading/data/nala-3.json",
+      "format": "json",
+      "rows": 51,
+      "size_bytes": 101905,
+      "keying": "one object per DCS chapter (slug); sentences[] carry sandhied text + ordered tokens (form, lemma, slp1, /w href, upos, morph, gloss). 351 tokens, 337 (96.0%) linked.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "reading/data/nala-3.json",
+      "builder": "scripts/build_reading_pack.py (concordance_core.py, H848)",
+      "consumers": [
+        "reading/ static viewer",
+        "reading-pack-difficulty (W2a scorer)"
+      ],
+      "notes": "H949 Wave-2 W2a: new graded reading pack beyond Nala 1. DCS is CC BY 4.0; derivative ships BY-SA with the public tier."
+    },
+    {
+      "id": "dcs-reading-pack-hitopadesa-0",
+      "title": "DCS reading pack — Hitopadesa, Prastavika (opening)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "reading/data/hitopadesa-0.json",
+      "format": "json",
+      "rows": 125,
+      "size_bytes": 265353,
+      "keying": "one object per DCS chapter (slug); sentences[] carry sandhied text + ordered tokens (form, lemma, slp1, /w href, upos, morph, gloss). 900 tokens, 885 (98.3%) linked.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "reading/data/hitopadesa-0.json",
+      "builder": "scripts/build_reading_pack.py (concordance_core.py, H848)",
+      "consumers": [
+        "reading/ static viewer",
+        "reading-pack-difficulty (W2a scorer)"
+      ],
+      "notes": "H949 Wave-2 W2a: new graded reading pack (didactic prose+verse) for difficulty spread. DCS is CC BY 4.0; derivative ships BY-SA with the public tier."
+    },
+    {
+      "id": "dcs-reading-pack-kiratarjuniya-1",
+      "title": "DCS reading pack — Kiratarjuniya 1 (Bharavi)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "reading/data/kiratarjuniya-1.json",
+      "format": "json",
+      "rows": 92,
+      "size_bytes": 257965,
+      "keying": "one object per DCS chapter (slug); sentences[] carry sandhied text + ordered tokens (form, lemma, slp1, /w href, upos, morph, gloss). 876 tokens, 854 (97.5%) linked.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "reading/data/kiratarjuniya-1.json",
+      "builder": "scripts/build_reading_pack.py (concordance_core.py, H848)",
+      "consumers": [
+        "reading/ static viewer",
+        "reading-pack-difficulty (W2a scorer)"
+      ],
+      "notes": "H949 Wave-2 W2a: new graded reading pack (classical kavya, the hardest of the scored set at difficulty 0.389) chosen to test the scorer's spread. DCS is CC BY 4.0; derivative ships BY-SA with the public tier."
     }
   ]
 }

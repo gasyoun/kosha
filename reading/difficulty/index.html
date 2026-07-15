@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading packs by difficulty — kosha</title>
+<style>
+:root{--bg:#fff;--fg:#1a1a1a;--mut:#666;--line:#e2e2e2;--bar:#c9def5;--accent:#2b6cb0}
+@media(prefers-color-scheme:dark){:root{--bg:#15171a;--fg:#e8e8e8;--mut:#9aa0a6;--line:#2c2f34;--bar:#274b6d;--accent:#7fb0e0}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:960px;margin:0 auto;padding:2rem 1rem}
+h1{font-size:1.5rem;margin:0 0 .25rem}
+p.sub{color:var(--mut);margin:.25rem 0 1.5rem}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:.5rem .55rem;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{font-weight:600;color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+td.num{text-align:right;font-variant-numeric:tabular-nums;position:relative}
+td.ord{color:var(--mut);text-align:right}
+td.ti{white-space:normal;color:var(--mut);font-size:13px}
+td.slug{font-weight:600}
+.bar{position:absolute;left:0;top:50%;transform:translateY(-50%);height:70%;width:var(--p);
+     background:var(--bar);border-radius:3px;z-index:0}
+td.num b{position:relative;z-index:1}
+.note{color:var(--mut);font-size:13px;margin-top:1.5rem;border-top:1px solid var(--line);padding-top:1rem}
+code{background:rgba(128,128,128,.15);padding:.1em .35em;border-radius:4px;font-size:.9em}
+</style></head>
+<body><main>
+<h1>Reading packs by difficulty</h1>
+<p class="sub">kosha pedagogy · W2a difficulty scorer — a graded reading sequence, easiest first.
+Score is one estimator on four axes (weights: vocab 0.4, sandhi 0.2, morphology 0.25, compound 0.15), not a ground truth.</p>
+<div class="wrap"><table>
+<thead><tr><th>#</th><th>pack</th><th>title</th><th>difficulty</th><th>vocab</th>
+<th>sandhi</th><th>morph</th><th>compound</th><th>tokens</th></tr></thead>
+<tbody>
+<tr><td class="ord">1</td><td class="slug">nala-3</td><td class="ti">Nala 3 — Nalopākhyāna (Mahābhārata 3.52)</td><td class="num"><span class="bar" style="--p:32%"></span><b>0.318</b></td><td class="num">0.497</td><td class="num">0.188</td><td class="num">0.284</td><td class="num">0.071</td><td class="num">351</td></tr>
+<tr><td class="ord">2</td><td class="slug">nala-1</td><td class="ti">Nala 1 — Nalopākhyāna (Mahābhārata 3.50)</td><td class="num"><span class="bar" style="--p:32%"></span><b>0.320</b></td><td class="num">0.511</td><td class="num">0.153</td><td class="num">0.273</td><td class="num">0.109</td><td class="num">439</td></tr>
+<tr><td class="ord">3</td><td class="slug">hitopadesa-0</td><td class="ti">Hitopadeśa — Prastāvikā (opening)</td><td class="num"><span class="bar" style="--p:33%"></span><b>0.328</b></td><td class="num">0.512</td><td class="num">0.184</td><td class="num">0.265</td><td class="num">0.134</td><td class="num">900</td></tr>
+<tr><td class="ord">4</td><td class="slug">nala-2</td><td class="ti">Nala 2 — Nalopākhyāna (Mahābhārata 3.51)</td><td class="num"><span class="bar" style="--p:33%"></span><b>0.331</b></td><td class="num">0.516</td><td class="num">0.184</td><td class="num">0.280</td><td class="num">0.117</td><td class="num">392</td></tr>
+<tr><td class="ord">5</td><td class="slug">kiratarjuniya-1</td><td class="ti">Kirātārjunīya 1 (Bhāravi)</td><td class="num"><span class="bar" style="--p:39%"></span><b>0.389</b></td><td class="num">0.621</td><td class="num">0.217</td><td class="num">0.280</td><td class="num">0.183</td><td class="num">876</td></tr>
+</tbody></table></div>
+<p class="note">Axes — <b>vocab</b>: lemma corpus-rarity · <b>sandhi</b>: word-boundary
+fusion density · <b>morph</b>: morphological-form rarity · <b>compound</b>: share of
+compound members (DCS <code>Cpd</code>). Method + limitations:
+<code>data/difficulty/METHODS.md</code>. Weights are tunable in
+<code>data/difficulty/difficulty_weights.json</code> — a human should confirm them.</p>
+</main></body></html>
