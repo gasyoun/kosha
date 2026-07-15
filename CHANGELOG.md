@@ -14,6 +14,24 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.58.0] - 2026-07-15
+
+### Added
+- **H972 — defgen eval, F1_fable_ctx arm (15-07-2026, Fable 5 `claude-fable-5`)**: the
+  non-DeepSeek model family called for by the protocol's next-steps #6, generated
+  in-session by the Claude Code session itself over a **gold-free inputs projection**
+  (next-steps #7a; new [`scripts/defgen_fable_arm.py`](https://github.com/gasyoun/kosha/blob/main/scripts/defgen_fable_arm.py)
+  emit/assemble, so the MW gold gloss is structurally absent from the generation
+  context). 500/500 items, scored with the existing H730 harness (`defgen_score.py`
+  ARMS extended) and judged blind by `deepseek-chat`. **F1 leads every arm on every
+  metric**: corpus chrF 24.35 (+4.78 over A1), token-F1 0.340, BLEU 5.14, judge
+  adequacy 4.60 (floor separation intact, judge~chrF ρ 0.415); mean gloss length 17.1
+  words, so the lead is content, not verbosity. Frequency-gradient inversion and
+  polysemy penalty replicate. Full numbers + caveats (in-session arm is a strong-model
+  reference point, not a reproducible baseline):
+  [`docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md`](https://github.com/gasyoun/kosha/blob/main/docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md);
+  manifest row `mw-defgen-eval-sample` updated.
+
 ## [0.57.0] - 2026-07-15
 
 ### Added
