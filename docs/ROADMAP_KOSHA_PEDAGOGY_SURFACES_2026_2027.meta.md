@@ -48,11 +48,13 @@ Waves 0–2 are **fully shipped**; the roadmap's status column carries the relea
    defensible default weights in [`difficulty_weights.json`](https://github.com/gasyoun/kosha/blob/main/data/difficulty/difficulty_weights.json)
    but "a human should confirm" is still open. Record the ruling here + in the W2a data
    statement once made, the way the sandhi roadmap recorded its difficulty-metric ruling.
-3. **The 18 Gītā reading packs are unscored** (no UD morphology from `build_reading_pack_gita.py`).
-   Either (a) re-annotate them with UD features so the W2a scorer can rank them, or (b)
-   add a reduced-axis score (vocab + their per-token `sandhi` field + hyphen-compound) —
-   a separate, clearly-labelled ordering, not mixed with the UD packs. Currently skipped
-   with a logged reason; flagged so it is not mistaken for "all packs covered".
+3. ~~**The 18 Gītā reading packs are unscored** (no UD morphology).~~ **DONE (H977,
+   15-07-2026, v0.57.0):** took option (b) — a reduced 3-axis score (vocab + the packs'
+   own per-token `sandhi` field + hyphen-compound), a **separate** `gita_reading_pack_difficulty.tsv`
+   ordering ranked among the Gītā chapters only, explicitly not comparable to the UD 4-axis
+   packs (different axes + a different sandhi definition). Remaining option (a) — re-annotate
+   the Gītā packs with UD features so they fold into the single 4-axis ranking — stays open
+   as a nicer-but-larger future.
 4. **W4 audio has no concrete entry condition.** It waits on an external content decision
    (reciter or TTS) owned at the field/Systema level (H912 Wave 4); the roadmap should link
    the decision once it exists rather than leave "agenda".
@@ -106,5 +108,6 @@ W3a next).
 | 14-07-2026 | Opus 4.8 `claude-opus-4-8` | Roadmap created (H945, `/ask`): Waves 1–4 planned over the shipped Wave-0 sandhi pattern; build-vs-reuse verdicts set from a cross-repo asset sweep. |
 | 15-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | Metadoc created. Recorded that Waves 0–2 are fully shipped (W1a–c, W2a, W2b) with per-surface releases and W3a unblocked; seeded the improvement backlog (W3a flip discipline, W2a weighting ruling, unscored Gītā packs, W4 entry condition). |
 | 15-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | Added the three template-v2 sections (Intended use / known misuse · Maintenance & sunset plan · Deprecation status) so the metadoc registers 3/3 in the org census. |
+| 15-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | Backlog item 3 (18 Gītā packs unscored) closed via H977 — reduced 3-axis Gītā ordering (v0.57.0). |
 
 _Dr. Mārcis Gasūns_
