@@ -40,7 +40,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 DATA = os.path.join(REPO, "data", "eval", "defgen")
 SEED = 730
-ARMS = ["A0_random_floor", "A1_chat_ctx", "A2_chat_noctx", "A3_reasoner_ctx"]
+ARMS = ["A0_random_floor", "A1_chat_ctx", "A2_chat_noctx", "A3_reasoner_ctx",
+        "F1_fable_ctx"]  # F1: H972 in-session Claude arm (claude-fable-5), gold-free projection
 WSD_N_LEMMAS = 50
 WSD_MAX_SENT = 3
 
