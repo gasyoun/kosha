@@ -68,6 +68,31 @@ Waves 0–2 are **fully shipped**; the roadmap's status column carries the relea
   SanskritKaraoke / csl-guides) actually wiring the emitted data layer; the roadmap tracks
   the kosha-side data, not the downstream UI integration.
 
+## Intended use / known misuse
+**For:** onboarding a session before it picks up the next pedagogy wave (which surface,
+what it consumes, build-vs-reuse verdict); a human checking wave status at a glance.
+**Misuse:** reading a ✅ SHIPPED marker as a *learning-outcome* claim (it is a build
+status; frequency ≠ learnability, R6) — outcomes belong to the deferred user study;
+treating the roadmap as the source of truth for a surface's *measured* results (those
+live in each surface's CHANGELOG, manifest row, data statement, and METHODS.md); reading
+a REUSE surface's ✅ as "the downstream app is wired" (it marks the kosha-side data layer
+only). Do not add a surface here without its build-vs-reuse verdict grounded in the
+cross-repo asset sweep — the whole point is not to rebuild what another repo owns.
+
+## Maintenance & sunset plan
+Updated per wave, in the same pass the wave ships: flip the surface's roadmap-table row
+to ✅ with its release version, and tick this metadoc's status table + revision history
+with it (the §84 stale-row discipline — a shipped surface left at 🟢 BUILD re-invites a
+duplicate build). Only W3a (H951) remains actionable; W3b is roadmap-only and W4 is an
+external-gated agenda. Sunset: when W3a ships and W4's external content decision is made,
+the build programme is complete — at that point this roadmap becomes a historical record
+of the pedagogy-surface build-out and its status table freezes; it is superseded, not
+deleted (the shipped surfaces remain the reference).
+
+## Deprecation status
+`active` — the plan of record for kosha's pedagogy-surface build-out (Waves 0–2 shipped,
+W3a next).
+
 ## Related
 - Plan (cover): [`PLAN_KOSHA_PEDAGOGY_ENGINE_2026_2027.md`](https://github.com/gasyoun/kosha/blob/main/PLAN_KOSHA_PEDAGOGY_ENGINE_2026_2027.md) (+ its metadoc).
 - Architecture: [`docs/ARCHITECTURE_KOSHA_PEDAGOGY_SURFACES.md`](https://github.com/gasyoun/kosha/blob/main/docs/ARCHITECTURE_KOSHA_PEDAGOGY_SURFACES.md).
@@ -80,5 +105,6 @@ Waves 0–2 are **fully shipped**; the roadmap's status column carries the relea
 |---|---|---|
 | 14-07-2026 | Opus 4.8 `claude-opus-4-8` | Roadmap created (H945, `/ask`): Waves 1–4 planned over the shipped Wave-0 sandhi pattern; build-vs-reuse verdicts set from a cross-repo asset sweep. |
 | 15-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | Metadoc created. Recorded that Waves 0–2 are fully shipped (W1a–c, W2a, W2b) with per-surface releases and W3a unblocked; seeded the improvement backlog (W3a flip discipline, W2a weighting ruling, unscored Gītā packs, W4 entry condition). |
+| 15-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | Added the three template-v2 sections (Intended use / known misuse · Maintenance & sunset plan · Deprecation status) so the metadoc registers 3/3 in the org census. |
 
 _Dr. Mārcis Gasūns_
