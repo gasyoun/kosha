@@ -1,0 +1,6 @@
+order	slug	difficulty	vocab	sandhi	morphology	compound	content_tokens	tokens	sentences	title
+1	nala-3	0.3182	0.497	0.188	0.2845	0.0712	255.0	351	51	Nala 3 — Nalopākhyāna (Mahābhārata 3.52)
+2	nala-1	0.3195	0.511	0.1526	0.2728	0.1093	356.0	439	65	Nala 1 — Nalopākhyāna (Mahābhārata 3.50)
+3	hitopadesa-0	0.3281	0.5118	0.1844	0.2652	0.1344	716.0	900	125	Hitopadeśa — Prastāvikā (opening)
+4	nala-2	0.3308	0.5163	0.1837	0.2796	0.1173	317.0	392	61	Nala 2 — Nalopākhyāna (Mahābhārata 3.51)
+5	kiratarjuniya-1	0.3891	0.6205	0.2169	0.2804	0.1826	729.0	876	92	Kirātārjunīya 1 (Bhāravi)
