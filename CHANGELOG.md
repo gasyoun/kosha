@@ -14,6 +14,46 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.55.0] - 2026-07-15
+
+### Added
+- **H949: reading-pack difficulty scorer — Wave 2 pedagogy (W2a), the difficulty spine.**
+  The field (§3.4/§6) names a text-difficulty scorer as a gap; this scores every
+  UD-annotated kosha reading pack on four corpus-grounded axes and orders them into a
+  graded reading sequence (easiest first). `scripts/build_difficulty_scorer.py`:
+  `difficulty = w_vocab·VOCAB + w_sandhi·SANDHI + w_morph·MORPH + w_compound·COMPOUND`,
+  each axis a per-token load in [0,1] — **VOCAB** = mean corpus-rarity of content lemmas
+  (from `lemma_frequency.tsv`, the W1b signal); **SANDHI** = fraction of word-boundaries
+  fused by sandhi, measured off the pack; **MORPH** = mean surprisal of each token's
+  `upos|morph` form over the 840 corpus signatures; **COMPOUND** = share of compound
+  members (DCS `feat_case=Cpd`). The consumed morph signal is derived once by
+  `scripts/build_difficulty_signals.py` (GROUP BY the UD morph features over the 5.69M-token
+  DCS full sqlite → `data/difficulty/morph_signature_freq.tsv`, keyed byte-identically to
+  how the reading packs display morph, so a pack token joins with no re-derivation), which
+  keeps the scorer heavy-DB-free at score time — the same source→derive→consume split the
+  sandhi programme uses.
+- **W2a is ONE estimator, not "the" difficulty** (VERIFICATION R5). Weights live in
+  `data/difficulty/difficulty_weights.json` (tunable — **a human should confirm**; defaults
+  vocab 0.40 · sandhi 0.20 · morphology 0.25 · compound 0.15) and the formula + honest
+  limitations (frequency ≠ learnability R6; sandhi is a boundary-fusion proxy) are documented
+  in `data/difficulty/METHODS.md`. Outputs: `reading_pack_difficulty.tsv`/`.json`, the graded
+  page `reading/difficulty/index.html`, and a data statement
+  `docs/data-statements/reading-pack-difficulty.meta.md`.
+- **Four new reading packs beyond Nala 1, ordered by the scorer** (via the existing
+  `build_reading_pack.py`, all UD-complete, 96–98 % card-linked): `nala-2` (MBh 3.51),
+  `nala-3` (MBh 3.52), `hitopadesa-0` (Hitopadeśa opening), `kiratarjuniya-1` (Bhāravi).
+  On the 5 scored packs the ordering validates the scorer — Kirātārjunīya (dense kāvya)
+  is hardest (0.389) while the Nala narrative chapters + Hitopadeśa cluster near 0.32,
+  the expected register gradient. The 18 Gītā packs are **skipped, not scored**: their
+  builder (`build_reading_pack_gita.py`) emits no UD morphology, so scoring them would
+  fabricate morph/compound loads — the scorer detects this (`ud_coverage < 0.5`) and logs
+  the skip rather than inventing a number.
+- Tests: `tests/test_difficulty_scorer.py` (axes + composite in range, composite equals the
+  documented weighted sum, ascending-difficulty ordering, deterministic scoring, non-UD
+  packs skipped-not-fabricated, kāvya-harder-than-epic sanity anchor). Six new
+  `datasets.json` rows (`reading-pack-difficulty`, `morph-signature-freq`, the four packs).
+  Build: Opus 4.8 (`claude-opus-4-8[1m]`).
+
 ## [0.54.0] - 2026-07-15
 
 ### Added
