@@ -59,6 +59,12 @@ OUT_TSV = ROOT / "data" / "difficulty" / "reading_pack_difficulty.tsv"
 OUT_JSON = ROOT / "data" / "difficulty" / "reading_pack_difficulty.json"
 METHODS_MD = ROOT / "data" / "difficulty" / "METHODS.md"
 PAGE_HTML = ROOT / "reading" / "difficulty" / "index.html"
+# Reduced 3-axis ordering for packs that carry no UD morphology (the Gītā packs).
+# A SEPARATE ranking — not comparable to the 4-axis UD packs (different axis set + a
+# different sandhi definition), so it lands in its own files, never merged in.
+REDUCED_OUT_TSV = ROOT / "data" / "difficulty" / "gita_reading_pack_difficulty.tsv"
+REDUCED_OUT_JSON = ROOT / "data" / "difficulty" / "gita_reading_pack_difficulty.json"
+REDUCED_AXES = ("vocab", "sandhi", "compound")
 
 # Default weights — a defensible starting point, NOT a truth. Vocabulary is the
 # heaviest because unknown words block comprehension most directly; morphology and
@@ -211,6 +217,73 @@ def composite(sub, w):
         + w["morphology"] * sub["morphology"] + w["compound"] * sub["compound"], 4)
 
 
+def reduced_weights(w_raw):
+    """The 4-axis weights with morphology dropped and the remaining three
+    renormalised to sum to 1 — so the reduced composite stays in [0,1] and keeps the
+    relative vocab:sandhi:compound emphasis the human set for the full scorer."""
+    three = {k: w_raw[k] for k in REDUCED_AXES}
+    s = sum(three.values())
+    if s <= 0:
+        sys.exit("reduced weights sum to 0")
+    return {k: v / s for k, v in three.items()}
+
+
+def reducible(pack):
+    """A non-UD pack is reduced-scorable when its tokens carry the signals the three
+    reduced axes need — a lemma (vocab), the per-token `sandhi` field (sandhi), a
+    hyphenated compound lemma (compound). The Gītā packs do; a bare-text pack would
+    not, and is left unscored rather than scored on empty axes."""
+    toks = [t for s in pack["sentences"] for t in s["tokens"]]
+    if not toks:
+        return False
+    has_lemma = sum(1 for t in toks if (t.get("lemma") or "").strip()) / len(toks)
+    has_sandhi_field = any("sandhi" in t for t in toks)
+    return has_lemma >= 0.5 and has_sandhi_field
+
+
+def score_pack_reduced(pack, vocab_ranks, maxrank):
+    """Three axes over a non-UD pack, each in [0,1]:
+      vocab    — mean corpus-rarity of NON-compound content lemmas (`slp1` → freq;
+                 compounds are excluded here and scored on the compound axis instead,
+                 so they are not double-penalised as 'unknown = rare').
+      sandhi   — fraction of tokens carrying an induced junction rule (the real
+                 per-token `sandhi` field), NOT the UD boundary proxy.
+      compound — fraction of tokens whose lemma is a hyphen-segmented compound.
+    Function words need no special-casing: with no upos to filter on, the rarity
+    metric self-handles them (ca/tad rank ~1–2 → ~0 vocab load)."""
+    log_maxrank = math.log10(maxrank + 1)
+    v_sum = v_n = 0.0
+    san = cpd = tok_total = 0
+    for s in pack["sentences"]:
+        for t in s["tokens"]:
+            tok_total += 1
+            lemma = t.get("lemma") or ""
+            is_compound = "-" in lemma
+            if is_compound:
+                cpd += 1
+            if (t.get("sandhi") or "").strip():
+                san += 1
+            if lemma and not is_compound:
+                # Gītā packs carry `slp1` directly; fall back to transcoding the lemma.
+                slp1 = (t.get("slp1") or "").strip() or to_slp1(lemma)
+                r = vocab_ranks.get(slp1)
+                v = 1.0 if r is None else min(1.0, math.log10(r) / log_maxrank)
+                v_sum += v
+                v_n += 1
+    return {
+        "vocab": round(v_sum / v_n, 4) if v_n else 0.0,
+        "sandhi": round(san / tok_total, 4) if tok_total else 0.0,
+        "compound": round(cpd / tok_total, 4) if tok_total else 0.0,
+        "content_tokens": v_n,
+        "tokens": tok_total,
+        "sentences": len(pack["sentences"]),
+    }
+
+
+def composite_reduced(sub, w3):
+    return round(sum(w3[a] * sub[a] for a in REDUCED_AXES), 4)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--packs", default=str(ROOT / "reading" / "data"))
@@ -233,22 +306,28 @@ def main():
         if p.stem not in seen:
             paths.append(p)
 
-    rows, skipped = [], []
+    w3 = reduced_weights(w_raw)
+    rows, reduced_rows, skipped = [], [], []
     for p in paths:
         pack = load_pack(p)
-        cov = ud_coverage(pack)
-        if cov < 0.5:
-            skipped.append((pack.get("slug", p.stem), round(cov, 3)))
-            continue
-        sub = score_pack(pack, vocab_ranks, maxrank, morph_shares, minshare)
-        rows.append({
-            "slug": pack.get("slug", p.stem),
-            "title": pack.get("title", p.stem),
-            "difficulty": composite(sub, w),
-            **sub,
-        })
+        slug = pack.get("slug", p.stem)
+        title = pack.get("title", p.stem)
+        if ud_coverage(pack) >= 0.5:
+            sub = score_pack(pack, vocab_ranks, maxrank, morph_shares, minshare)
+            rows.append({"slug": slug, "title": title,
+                         "difficulty": composite(sub, w), **sub})
+        elif reducible(pack):
+            # No UD morphology, but the reduced 3-axis signals are present (Gītā packs).
+            sub = score_pack_reduced(pack, vocab_ranks, maxrank)
+            reduced_rows.append({"slug": slug, "title": title,
+                                 "difficulty": composite_reduced(sub, w3), **sub})
+        else:
+            skipped.append((slug, round(ud_coverage(pack), 3)))
     rows.sort(key=lambda r: r["difficulty"])
     for i, r in enumerate(rows, 1):
+        r["order"] = i
+    reduced_rows.sort(key=lambda r: r["difficulty"])
+    for i, r in enumerate(reduced_rows, 1):
         r["order"] = i
 
     OUT_TSV.parent.mkdir(parents=True, exist_ok=True)
@@ -263,23 +342,40 @@ def main():
         {"weights": w_raw, "weights_normalised": w, "packs": rows},
         ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
-    write_methods(w_raw, w, rows, maxrank, len(morph_shares))
+    # Reduced 3-axis ordering (Gītā packs) — separate files, never merged with the
+    # 4-axis UD ranking above.
+    rcols = ["order", "slug", "difficulty", "vocab", "sandhi", "compound",
+             "content_tokens", "tokens", "sentences", "title"]
+    with open(REDUCED_OUT_TSV, "w", encoding="utf-8", newline="") as f:
+        wtr = csv.DictWriter(f, fieldnames=rcols, delimiter="\t", lineterminator="\n")
+        wtr.writeheader()
+        for r in reduced_rows:
+            wtr.writerow({k: r[k] for k in rcols})
+    REDUCED_OUT_JSON.write_text(json.dumps(
+        {"note": "Reduced 3-axis score (vocab, sandhi, compound) for packs without UD "
+                 "morphology. NOT comparable to reading_pack_difficulty.* (4-axis, "
+                 "different sandhi definition) — a separate within-set ranking.",
+         "weights_normalised": w3, "packs": reduced_rows},
+        ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+    write_methods(w_raw, w, rows, maxrank, len(morph_shares), reduced_rows, w3)
     if args.emit_page:
-        write_page(w_raw, rows)
+        write_page(w_raw, rows, reduced_rows)
 
-    print(f"scored {len(rows)} reading packs -> {OUT_TSV.name}")
+    print(f"scored {len(rows)} UD reading packs -> {OUT_TSV.name}")
+    print(f"scored {len(reduced_rows)} non-UD packs (reduced 3-axis) -> {REDUCED_OUT_TSV.name}")
     if skipped:
-        print(f"skipped {len(skipped)} pack(s) lacking UD morphology "
-              f"(non-UD source, would fabricate morph/compound): "
-              + ", ".join(f"{s}({c})" for s, c in skipped))
-    print(f"weights (normalised): {w}")
-    print(f"{'ord':>3}  {'slug':<16} {'diff':>6}  {'voc':>5} {'san':>5} {'mor':>5} {'cpd':>5}")
+        print(f"skipped {len(skipped)} pack(s) with neither UD morphology nor reduced "
+              f"signals: " + ", ".join(f"{s}({c})" for s, c in skipped))
+    print(f"UD weights (normalised): {w}")
     for r in rows:
-        print(f"{r['order']:>3}  {r['slug']:<16} {r['difficulty']:>6}  "
-              f"{r['vocab']:>5} {r['sandhi']:>5} {r['morphology']:>5} {r['compound']:>5}")
+        print(f"  {r['order']:>2}  {r['slug']:<16} {r['difficulty']:>6}")
+    print(f"reduced weights (normalised): {w3}")
+    for r in reduced_rows:
+        print(f"  {r['order']:>2}  {r['slug']:<16} {r['difficulty']:>6}")
 
 
-def write_methods(w_raw, w, rows, maxrank, n_sigs):
+def write_methods(w_raw, w, rows, maxrank, n_sigs, reduced_rows=None, w3=None):
     lines = [
         "# Reading-pack difficulty scorer — methods\n",
         "_Auto-generated by `scripts/build_difficulty_scorer.py` (W2a, H949)._\n",
@@ -324,11 +420,48 @@ def write_methods(w_raw, w, rows, maxrank, n_sigs):
         lines.append(
             f"| {r['order']} | {r['slug']} | **{r['difficulty']}** | {r['vocab']} | "
             f"{r['sandhi']} | {r['morphology']} | {r['compound']} |")
+
+    if reduced_rows:
+        lines += [
+            "",
+            "## Reduced 3-axis ordering — packs without UD morphology (H977)\n",
+            "The Gītā reading packs come from a different builder "
+            "(`build_reading_pack_gita.py`) that emits **no UD morphology**, so the "
+            "4-axis scorer above skips them. They do carry three signals of their own, so "
+            "they get a **separate** ordering on a reduced formula:\n",
+            "```",
+            "difficulty_reduced = w_vocab·VOCAB + w_sandhi·SANDHI + w_compound·COMPOUND",
+            "```",
+            "with the morphology weight dropped and the other three renormalised to sum "
+            f"to 1 (`{json.dumps(w3)}`). The axes differ from the 4-axis scorer:\n",
+            "| axis | weight | what it measures (reduced) |",
+            "|---|---:|---|",
+            f"| VOCAB | {w3['vocab']:.3f} | mean rarity of **non-compound** content lemmas "
+            "(`slp1` → `lemma_frequency.tsv`); compounds excluded here, scored on the "
+            "compound axis so they are not double-counted as rare |",
+            f"| SANDHI | {w3['sandhi']:.3f} | fraction of tokens carrying an **induced "
+            "junction rule** (the pack's own per-token `sandhi` field) — a real sandhi "
+            "signal, *not* the boundary proxy the 4-axis scorer uses |",
+            f"| COMPOUND | {w3['compound']:.3f} | fraction of tokens whose lemma is a "
+            "hyphen-segmented compound |",
+            "",
+            "> **Not comparable to the 4-axis table above.** Different axis set *and* a "
+            "different sandhi definition — this ranks the Gītā chapters **among "
+            "themselves** only. Do not read a Gītā score against a Nala/Kirātārjunīya "
+            "score. Output: [`gita_reading_pack_difficulty.tsv`](gita_reading_pack_difficulty.tsv).\n",
+            "| # | pack | difficulty | vocab | sandhi | compound |",
+            "|---:|---|---:|---:|---:|---:|",
+        ]
+        for r in reduced_rows:
+            lines.append(
+                f"| {r['order']} | {r['slug']} | **{r['difficulty']}** | {r['vocab']} | "
+                f"{r['sandhi']} | {r['compound']} |")
+
     lines += ["", "_Dr. Mārcis Gasūns_"]
     METHODS_MD.write_text("\n".join(lines), encoding="utf-8")
 
 
-def write_page(w_raw, rows):
+def write_page(w_raw, rows, reduced_rows=None):
     PAGE_HTML.parent.mkdir(parents=True, exist_ok=True)
     tr = []
     for r in rows:
@@ -342,9 +475,39 @@ def write_page(w_raw, rows):
             f'<td class="num">{r["vocab"]:.3f}</td><td class="num">{r["sandhi"]:.3f}</td>'
             f'<td class="num">{r["morphology"]:.3f}</td><td class="num">{r["compound"]:.3f}</td>'
             f'<td class="num">{r["tokens"]}</td></tr>')
-    html = PAGE_TEMPLATE.replace("{{ROWS}}", "\n".join(tr)).replace(
-        "{{WEIGHTS}}", ", ".join(f"{k} {v}" for k, v in w_raw.items()))
+    rtr = []
+    for r in (reduced_rows or []):
+        bar = int(round(r["difficulty"] * 100))
+        rtr.append(
+            f'<tr><td class="ord">{r["order"]}</td>'
+            f'<td class="slug">{r["slug"]}</td>'
+            f'<td class="ti">{r["title"]}</td>'
+            f'<td class="num"><span class="bar" style="--p:{bar}%"></span>'
+            f'<b>{r["difficulty"]:.3f}</b></td>'
+            f'<td class="num">{r["vocab"]:.3f}</td><td class="num">{r["sandhi"]:.3f}</td>'
+            f'<td class="num">{r["compound"]:.3f}</td>'
+            f'<td class="num">{r["tokens"]}</td></tr>')
+    reduced_block = ""
+    if rtr:
+        reduced_block = REDUCED_SECTION.replace("{{RROWS}}", "\n".join(rtr))
+    html = (PAGE_TEMPLATE
+            .replace("{{ROWS}}", "\n".join(tr))
+            .replace("{{REDUCED}}", reduced_block)
+            .replace("{{WEIGHTS}}", ", ".join(f"{k} {v}" for k, v in w_raw.items())))
     PAGE_HTML.write_text(html, encoding="utf-8", newline="\n")
+
+
+REDUCED_SECTION = """<h2 class="rh">Gītā chapters — reduced 3-axis score</h2>
+<p class="sub">The Gītā packs carry no UD morphology, so they are ranked on three axes
+only (vocab · sandhi · compound) and <b>only against each other</b> — not comparable to
+the table above (different axes + a different sandhi measure).</p>
+<div class="wrap"><table>
+<thead><tr><th>#</th><th>pack</th><th>title</th><th>difficulty</th><th>vocab</th>
+<th>sandhi</th><th>compound</th><th>tokens</th></tr></thead>
+<tbody>
+{{RROWS}}
+</tbody></table></div>
+"""
 
 
 PAGE_TEMPLATE = """<!doctype html>
@@ -359,6 +522,7 @@ body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-appl
 main{max-width:960px;margin:0 auto;padding:2rem 1rem}
 h1{font-size:1.5rem;margin:0 0 .25rem}
 p.sub{color:var(--mut);margin:.25rem 0 1.5rem}
+h2.rh{font-size:1.15rem;margin:2rem 0 .25rem;border-top:1px solid var(--line);padding-top:1.5rem}
 .wrap{overflow-x:auto}
 table{border-collapse:collapse;width:100%;font-size:14px}
 th,td{padding:.5rem .55rem;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
@@ -383,6 +547,7 @@ Score is one estimator on four axes (weights: {{WEIGHTS}}), not a ground truth.<
 <tbody>
 {{ROWS}}
 </tbody></table></div>
+{{REDUCED}}
 <p class="note">Axes — <b>vocab</b>: lemma corpus-rarity · <b>sandhi</b>: word-boundary
 fusion density · <b>morph</b>: morphological-form rarity · <b>compound</b>: share of
 compound members (DCS <code>Cpd</code>). Method + limitations:

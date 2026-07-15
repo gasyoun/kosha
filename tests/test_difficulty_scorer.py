@@ -35,11 +35,13 @@ JSONF = ROOT / "data" / "difficulty" / "reading_pack_difficulty.json"
 WEIGHTS = ROOT / "data" / "difficulty" / "difficulty_weights.json"
 METHODS = ROOT / "data" / "difficulty" / "METHODS.md"
 MORPH = ROOT / "data" / "difficulty" / "morph_signature_freq.tsv"
+REDUCED_TSV = ROOT / "data" / "difficulty" / "gita_reading_pack_difficulty.tsv"
 
 pytestmark = pytest.mark.skipif(
     not TSV.exists(), reason="reading_pack_difficulty.tsv not built")
 
 AXES = ("vocab", "sandhi", "morphology", "compound")
+REDUCED_AXES = ("vocab", "sandhi", "compound")
 
 
 def _rows():
@@ -47,8 +49,13 @@ def _rows():
         return list(csv.DictReader(f, delimiter="\t"))
 
 
+def _reduced_rows():
+    with open(REDUCED_TSV, encoding="utf-8") as f:
+        return list(csv.DictReader(f, delimiter="\t"))
+
+
 def test_assets_present():
-    for p in (TSV, JSONF, WEIGHTS, METHODS, MORPH):
+    for p in (TSV, JSONF, WEIGHTS, METHODS, MORPH, REDUCED_TSV):
         assert p.exists(), f"missing release asset {p.name}"
 
 
@@ -128,3 +135,65 @@ def test_kavya_harder_than_epic_narrative():
     if "kiratarjuniya-1" in d and "nala-1" in d:
         assert d["kiratarjuniya-1"] > d["nala-1"], (
             f"kāvya {d['kiratarjuniya-1']} not > epic {d['nala-1']}")
+
+
+# --- reduced 3-axis ordering (H977: non-UD Gītā packs) ------------------------
+
+@pytest.mark.skipif(not REDUCED_TSV.exists(), reason="gita reduced tsv not built")
+def test_reduced_all_gita_packs_scored():
+    """Every Gītā pack the 4-axis scorer skips is instead reduced-scored — the
+    '18 packs unscored' W2a gap is closed, not left as a silent hole."""
+    slugs = {r["slug"] for r in _reduced_rows()}
+    assert len(slugs) >= 18, f"expected ≥18 Gītā packs, got {sorted(slugs)}"
+    assert all(s.startswith("gita-") for s in slugs), slugs
+
+
+@pytest.mark.skipif(not REDUCED_TSV.exists(), reason="gita reduced tsv not built")
+def test_reduced_axes_in_range_and_ascending():
+    rows = _reduced_rows()
+    for r in rows:
+        for a in REDUCED_AXES + ("difficulty",):
+            v = float(r[a])
+            assert 0.0 <= v <= 1.0, f"{r['slug']} {a}={v} out of [0,1]"
+    diffs = [float(r["difficulty"]) for r in rows]
+    assert diffs == sorted(diffs), "reduced packs not ordered easiest→hardest"
+
+
+@pytest.mark.skipif(not REDUCED_TSV.exists(), reason="gita reduced tsv not built")
+def test_reduced_composite_matches_reduced_weighted_sum():
+    """The reduced composite equals the 3-axis formula with the morphology weight
+    dropped and the rest renormalised — no morphology term sneaks in."""
+    _w, raw = bds.load_weights()
+    w3 = bds.reduced_weights(raw)
+    assert abs(sum(w3.values()) - 1.0) <= 1e-9 and "morphology" not in w3
+    for r in _reduced_rows():
+        sub = {a: float(r[a]) for a in REDUCED_AXES}
+        expect = bds.composite_reduced(sub, w3)
+        assert abs(expect - float(r["difficulty"])) <= 1e-4, (
+            f"{r['slug']}: table {r['difficulty']} != recomputed {expect}")
+
+
+def test_reduced_is_separate_not_merged():
+    """Honesty guard: the reduced Gītā ordering must NOT be mixed into the 4-axis
+    table — they use different axes + a different sandhi definition, so a Gītā slug
+    must never appear among the UD rows."""
+    ud_slugs = {r["slug"] for r in _rows()}
+    assert not any(s.startswith("gita-") for s in ud_slugs), (
+        f"Gītā packs leaked into the 4-axis ranking: {ud_slugs}")
+
+
+def test_reduced_scoring_deterministic_and_no_double_count():
+    """score_pack_reduced is deterministic; a compound token is counted on the
+    compound axis and excluded from vocab (not double-penalised as unknown-rare)."""
+    vr, mx = bds.load_vocab_ranks()
+    pack = {"sentences": [{"text": "dharmakṣetre kurukṣetre uvāca", "tokens": [
+        {"lemma": "dharma-kṣetra", "slp1": "Darmakzetra", "sandhi": "e a → Ø a"},
+        {"lemma": "kuru-kṣetra", "slp1": "kurukzetra", "sandhi": ""},
+        {"lemma": "vac", "slp1": "vac", "sandhi": ""},
+    ]}]}
+    a = bds.score_pack_reduced(pack, vr, mx)
+    b = bds.score_pack_reduced(pack, vr, mx)
+    assert a == b
+    assert a["compound"] == round(2 / 3, 4)      # two hyphenated lemmas of three tokens
+    assert a["content_tokens"] == 1              # only `vac` (non-compound) hits vocab
+    assert a["sandhi"] == round(1 / 3, 4)        # one token carries an induced rule
