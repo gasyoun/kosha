@@ -14,6 +14,34 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.56.0] - 2026-07-15
+
+### Changed
+- **W2a follow-through: pedagogy-surfaces roadmap marked shipped ([#116](https://github.com/gasyoun/kosha/pull/116)).**
+  [`docs/ROADMAP_KOSHA_PEDAGOGY_SURFACES_2026_2027.md`](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP_KOSHA_PEDAGOGY_SURFACES_2026_2027.md)
+  still showed `🟢 BUILD` / `🟡 REUSE` verdicts for six surfaces that had all shipped;
+  flipped them to `✅ SHIPPED vX.Y.Z` **preserving the build-vs-reuse design intent**
+  (W1a v0.54.0 · W1b v0.51.0 · W1c v0.52.0 · W2a v0.55.0 · W2b v0.50.0), marked W3a
+  **UNBLOCKED** (next; consumes the W2a reading packs), and ticked the Wave 1 + Wave 2
+  headings ✅ to match Wave 0.
+
+### Added
+- **Companion metadoc for the pedagogy-surfaces roadmap ([#117](https://github.com/gasyoun/kosha/pull/117)).**
+  New [`docs/ROADMAP_KOSHA_PEDAGOGY_SURFACES_2026_2027.meta.md`](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP_KOSHA_PEDAGOGY_SURFACES_2026_2027.meta.md)
+  (the last genre-named doc in the pedagogy set lacking one): purpose · audience ·
+  provenance (H945, `/ask`) · status table (Waves 0–2 shipped, W3a unblocked) · ranked
+  improvement backlog (flip W3a on ship — the §84 stale-row lesson applied to roadmaps;
+  W2a weighting ruling; the 18 unscored Gītā packs) · limitations · revision history.
+  Registered in [`Uprava/METADOCS_INDEX.md`](https://github.com/gasyoun/Uprava/blob/main/METADOCS_INDEX.md).
+
+### Fixed
+- **Two kosha pedagogy metadocs aligned to template-v2 ([#118](https://github.com/gasyoun/kosha/pull/118)).**
+  The roadmap metadoc and the [`reading-pack-difficulty`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/reading-pack-difficulty.meta.md)
+  data statement scored 0/3 on the org census's template-v2 check; added the three
+  required sections — `## Intended use / known misuse` (carrying the R5 one-estimator and
+  R6 build-status-≠-learning-gain caveats), `## Maintenance & sunset plan`, and
+  `## Deprecation status` (`active`) — both now 3/3 (org v2 coverage 62/126 → 64/127).
+
 ## [0.55.0] - 2026-07-15
 
 ### Added
