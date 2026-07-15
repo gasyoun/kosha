@@ -14,6 +14,17 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H955: SRS deck — Rung B1 demo (last-mile pipeline).** `scripts/build_demo_srs_deck.py`
+  emits `data/srs/srs-deck-b1-demo.json`: the content-word vocabulary of the existing
+  `dcs-reading-pack-nala-1` (439 tokens), joined to `lemma_frequency.tsv` `core_rank`,
+  function words stripped (`grammar_all` in `ind`/`pron`, the wave-1a method) — 164
+  cards, `core_rank`-ordered. Proves [`docs/LAST_MILE_PIPELINE_SPEC.md`](https://github.com/gasyoun/SanskritGrammar/blob/main/docs/LAST_MILE_PIPELINE_SPEC.md)
+  Hop B end-to-end on one concrete text (reader ↔ SRS deck share the same word set) —
+  deliberately narrower than H947's general `vocab_curriculum.tsv` (6,667 lemmas, already
+  shipped in 0.51.0), which it does not duplicate or supersede. `kosha-srs-deck-b1-demo`
+  manifest row registered. Systema-side import lands separately (H955, Systema-Sanscriticum).
+
 ## [0.52.0] - 2026-07-15
 
 ### Added
