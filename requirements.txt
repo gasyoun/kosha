@@ -7,3 +7,5 @@ httpx>=0.28.1
 
 # Docs site (ZettelkastenWiki Wave-3 pilot, built by scripts/build_docs_site.py)
 zettelkastenwiki @ git+https://github.com/gasyoun/ZettelkastenWiki@6b3eb831ce252ac8585ba507940b8c8271a4983f
+
+vidyut>=0.4.0  # metre classification (vidyut.chandas) — W3a reading-pack metre layer (H951)

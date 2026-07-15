@@ -15,6 +15,10 @@ data/releases/
 # binary model + FSTs, regenerable; never committed (RISKS.md R12: local data,
 # not a live call). Pointed at by KOSHA_VIDYUT_DATA.
 data/vidyut/
+# ...except the small vendored chandas meters table (5 KB, load-bearing for the W3a
+# metre annotator scripts/build_reading_pack_metre.py; H951) — tracked intentionally.
+!data/vidyut/chandas/
+!data/vidyut/chandas/meters.tsv
 # P2 static-cache generator output (scripts/build_static_cache.py) — regenerable
 # from kosha.db; deployed to Pages by MG (A3), never committed in-repo.
 .pytest_cache/
