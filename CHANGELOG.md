@@ -14,6 +14,32 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.54.0] - 2026-07-15
+
+### Added
+- **H946: morphology drills — Wave 1 pedagogy (W1a).** `scripts/build_morphology_drills.py`
+  turns the P4 paradigm engine (`app/paradigm.py`) into graded, frequency-filtered,
+  answer-keyed declension/conjugation drills — the novel move: drill only forms the
+  corpus actually attests (field RQ1: "stop drilling forms that never appear"). New
+  one-pass VisualDCS `dcs_full.sqlite` attestation join (`(lemma, form, morphology)` ->
+  corpus locus/count; nominal case/gender/number map directly from DCS's UD tags, verb
+  person/number/tense-mood collapse onto kosha's `pre`/`ipf`/`ipv`/`opt` vocabulary —
+  voice is NOT part of the verb match key since DCS's `feat_voice` marks only passive,
+  an honest upstream limitation, not a silent overclaim). Over the 5,985 core-vocabulary
+  lemmas with entries: 38,782/254,805 candidate paradigm cells (15.2%) survived
+  attestation. `data/morphology/morphology_curriculum.tsv` (7,134 paradigms, class-bucket
+  ordered a-stems → other-vowel-stems → consonant-stems → pronouns → present-class-verbs
+  → other per `drill_weights.json`, tunable not hard-coded) — learn 4,862 paradigms to
+  cover 50% of attested nominal/verbal tokens, 6,351 → 80%, 6,708 → 90%.
+  `data/morphology/drills.json` (12,000 fill/match items over the top 6,000 attested
+  cells by frequency, `--max-drill-cells 0` for the full set) + `morphology_drills.apkg`
+  (Anki, 6,000 notes, verified re-imports as a valid collection) +
+  `reading/morphology/{curriculum,drills}/index.html` (self-contained, theme-aware,
+  Devanāgarī/IAST/SLP1 toggle). `morphology-curriculum` + `morphology-drills` manifest
+  rows. `tests/test_morphology_drills.py` (11 tests: every item answer-keyed and
+  evidence-backed, no unattested form in default mode, coverage monotone, lesson-bucket
+  ordering never regresses, Anki note count matches).
+
 ## [0.53.0] - 2026-07-15
 
 ### Added
