@@ -2,6 +2,8 @@ __pycache__/
 *.pyc
 .env
 .env.deploy
+# machine-local Claude Code settings, not a repo deliverable
+.claude/settings.local.json
 *.db
 # personal review/voting sheets (per Uprava's /review-sheet convention) -- working
 # artifacts for MG, not repo deliverables; decisions.json output lands here too
