@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.61.0] - 2026-07-18
+
 ### Added
 
 - `data/manifest/rights/vidyut_prakriya_derivation_2026-07.md` — the A4-gating rights record
@@ -23,6 +25,20 @@ sense citations pin to `data_version`, not to repo tags.
   texts public domain) stated **separately**, each with its source file; the composition ruling
   for A4 output (**CC BY-SA 4.0, vidyut attributed**, ShareAlike inherited from CDSL). No `@DECIDE`
   triggered — both licences compose cleanly into BY-SA.
+- `scripts/build_morphology_attestation_audit.py` + `data/concordance/morph_attest_{AG,GnA,AnG}.tsv`
+  + `data/concordance/MORPHOLOGY_ATTESTATION_BUILD_REPORT.md` — **A3, the generated-vs-attested
+  morphology audit** (Concordance-Q3 W1b, [H1262](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1262-Opus_kosha_a3_attested_form_join_morphology_audit_18.07.26.md)).
+  Joins `kosha.db` `forms` (non-heritage, 426,410 rows) against DCS attested surface forms (381,413
+  distinct) on `form_key()` equality (length-preserving floor tier; no NFD+strip path): **AG 401,368
+  / G¬A 25,042 / A¬G 2**, both denominators reconciled. Manifest row `morphology-attestation-audit`
+  added (`in_release: unreleased` — publication gated on the W1a rights record, H1263 / D2).
+- **Key finding (the artefact A4 cannot start without, D12):** 93.30% of the generated side is
+  itself DCS-derived, so full-set AG is a 99.99% round-trip — the **vidyut-engine subtotal (AG
+  3,550 / 28,567 = 12.43% attested)** is the only research-meaningful figure, and A¬G is degenerate
+  (=2) and cannot measure engine gaps here. Reported the `forms`-vs-`inflections` (1.38M vs 6.9M)
+  plan-set contradiction (STOP-AND-SURFACE, not resolved) — see
+  [SanskritLexicography CONTRADICTIONS §6 / FINDINGS §94](https://github.com/gasyoun/SanskritLexicography/blob/master/FINDINGS.md).
+  Read-only build; no data release cut.
 
 ### Fixed
 
