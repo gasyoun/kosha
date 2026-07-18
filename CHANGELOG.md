@@ -14,6 +14,26 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.60.0] - 2026-07-18
+
+### Added
+
+- `docs/PLAN_KOSHA_CONCORDANCE_Q3_2026H2.md` + its `.meta.md` — the Concordance Q3 (Pāṇini /
+  derivation chains) plan index, with the decisions-taken table for the 18-07-2026 rulings and the
+  autonomy contract. Wave-1 handoffs H1262–H1267 (all 🟡 queued).
+- `docs/ROADMAP_KOSHA_2026H2.md` + its `.meta.md`, `docs/ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md`,
+  `docs/IMPLEMENTATION_KOSHA_CONCORDANCE_Q3.md`, `docs/VERIFICATION_KOSHA_CONCORDANCE_Q3.md` —
+  the rest of the layered plan set, authored by the `/ask-batch` 2026-07 slice-2 pass.
+
+### Changed
+
+- Recorded four corrections the authoring + adversarial-verify passes measured against the repo:
+  A3 (the attested-form join A4 depends on) **does not exist** and is absorbed into wave 1;
+  all 77 manifest rows already carry `in_release` (the field missing from 38 is `release_asset`),
+  so the defect is an undefined vocabulary rather than an absent field; the static-head cutoff is
+  **N = 11,148** for exactly 95.00% of 4,550,704 corpus tokens; and 402 + 477 MB = 879 MB is 86% of
+  the Pages cap rather than an overflow, so the head/tail split stands on headroom grounds.
+
 ## [0.59.0] - 2026-07-15
 
 ### Added
