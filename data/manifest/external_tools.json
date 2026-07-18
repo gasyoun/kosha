@@ -12,6 +12,8 @@
       "homepage": "https://github.com/ambuda-org/vidyut",
       "api_url": "https://github.com/ambuda-org/vidyut",
       "license": "MIT",
+      "bundled_data_license": "MIT",
+      "bundled_data_provenance": "vidyut's derivation data (dhātupāṭha, sūtrapāṭha/Aṣṭādhyāyī, gaṇa-sūtras, Liṅgānuśāsana, Phiṭ-sūtras) is NOT bundled in the pip wheel — it is a separate download (data-*.zip from the ambuda-org/vidyut releases). Per vidyut-prakriya/data/README.md it was sourced from ashtadhyayi.com, whose author granted it under an MIT license; the underlying sūtra/dhātupāṭha texts are classical public-domain works. Both code and data therefore compose cleanly into a CC BY-SA 4.0 output. See data/manifest/rights/vidyut_prakriya_derivation_2026-07.md (W1a/H1263).",
       "our_relation": "We call vidyut for declension/conjugation paradigms and PPP validation rather than hand-rolling paradigm generation; it produces the paradigm tokens in zaliznyak-grammar-index."
     },
     {
@@ -61,7 +63,8 @@
       "what_it_does": "A sandhi-split, morphologically and lexically analysed diachronic corpus of Sanskrit (~5.7M tokens, 270 texts) with per-token lemma, POS and morphology in CoNLL-U. The reference corpus for lemma frequency and attestation.",
       "homepage": "http://www.sanskrit-linguistics.org/dcs/",
       "api_url": "https://github.com/OliverHellwig/sanskrit/tree/master/dcs/data/conllu",
-      "license": "CC BY-SA 4.0",
+      "license": "CC BY 4.0",
+      "license_source": "DCS's own dcs/data/conllu/readme.md: \"The data in this directory are licensed under the Creative Commons BY 4.0 (CC BY 4.0) license.\" (read 18-07-2026; file last updated 2024-10-29). Corrected from CC BY-SA 4.0 in W1a/H1263 — external_tools.json was the outlier; CONCORDANCE_ROADMAP.md:151 and the datasets.json rows already said CC BY 4.0.",
       "our_relation": "Source of the dcs-cdsl-xref crosswalk and the kosha-lemma-frequency sidecar. We ingest the canonical CoNLL-U once — never re-parse."
     },
     {
