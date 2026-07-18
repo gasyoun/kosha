@@ -14,6 +14,27 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+
+- `data/manifest/rights/vidyut_prakriya_derivation_2026-07.md` — the A4-gating rights record
+  (W1a / [H1263](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1263-Opus_kosha_vidyut_derivation_metadata_rights_record_18.07.26.md)):
+  vidyut **code** licence (MIT, from the installed `LICENSE.md`) and vidyut **derivation-data**
+  licence (MIT, from `vidyut-prakriya/data/README.md` via ashtadhyayi.com; source sūtra/dhātu
+  texts public domain) stated **separately**, each with its source file; the composition ruling
+  for A4 output (**CC BY-SA 4.0, vidyut attributed**, ShareAlike inherited from CDSL). No `@DECIDE`
+  triggered — both licences compose cleanly into BY-SA.
+
+### Fixed
+
+- **DCS licence contradiction resolved from Hellwig's own published terms.** DCS's
+  [`dcs/data/conllu/readme.md`](https://github.com/OliverHellwig/sanskrit/blob/master/dcs/data/conllu/readme.md)
+  states the CoNLL-U data is **CC BY 4.0**; `data/manifest/external_tools.json` (`id: dcs`) was the
+  outlier at CC BY-SA 4.0 and is corrected to **CC BY 4.0** (with a `license_source` citation).
+  `CONCORDANCE_ROADMAP.md`:151 and the 14 `datasets.json` assertions were already correct and left
+  unchanged (the unrelated Gita Supersite BY-4.0 mention deliberately untouched). Added
+  `bundled_data_license`/`bundled_data_provenance` to the `vidyut` manifest row; marked the two
+  resolved rows in `ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md` §7.
+
 ## [0.60.0] - 2026-07-18
 
 ### Added
