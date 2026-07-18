@@ -62,9 +62,12 @@ def download_url(ds: dict) -> str | None:
         return None
     rel = ds.get("in_release")
     asset = ds.get("release_asset")
-    if rel and asset:
+    # a release_asset naming a *range* of files (e.g. "gita-1.js ... gita-18.js") is a
+    # human-authored summary, not a single downloadable path -- never build a broken
+    # multi-file href from it (real filenames/paths never contain whitespace).
+    if rel and asset and " " not in asset:
         return f"{GITHUB}/releases/download/{rel}/{asset}"
-    # public but not in a kosha release -> already public in its source repo
+    # public but not a single kosha release asset -> already public in its source repo
     return ds.get("source_repo")
 
 

@@ -70,7 +70,11 @@ def test_no_restricted_download_leak(page, datasets):
         if d.get("tier") == "public" and d.get("release_asset")
     }
     for url in re.findall(r"releases/download/[^\"'< ]+", page):
-        asset = url.rsplit("/", 1)[-1]
+        # build_directory.py builds this as f"releases/download/{rel}/{asset}", and
+        # asset (release_asset) may itself contain slashes (e.g. "reading/data/nala-1.json")
+        # -- strip only the release tag, not just the last path component.
+        rest = url[len("releases/download/"):]
+        asset = rest.split("/", 1)[1] if "/" in rest else rest
         assert asset in released_assets, f"non-public asset linked: {url}"
 
 
