@@ -1422,6 +1422,24 @@
         "reading-pack-difficulty (W2a scorer)"
       ],
       "notes": "H949 Wave-2 W2a: new graded reading pack (classical kavya, the hardest of the scored set at difficulty 0.389) chosen to test the scorer's spread. DCS is CC BY 4.0; derivative ships BY-SA with the public tier."
+    },
+    {
+      "id": "handoff-lifecycle-gold",
+      "title": "Handoff lifecycle gold standard (170 adversarially-verified verdicts)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "format": "jsonl",
+      "rows": 170,
+      "size_bytes": 318777,
+      "keying": "H### id → verdict (ARCHIVE_AS_DONE/RERUN_NEEDED/RETIRE_AS_DEAD/RUNNABLE_NOW/GENUINELY_BLOCKED/NEEDS_STUB_FILL/UNCLEAR) + classifier verdict + adversarial-verifier verdict (upheld/refuted/uncontested)",
+      "source_repo": "https://github.com/gasyoun/Uprava",
+      "source_path": "data/handoff_lifecycle_gold.jsonl",
+      "builder": "tools/build_handoff_gold_set.py (35 batch classifiers on Opus 4.8 + per-verdict adversarial verifier, H1251)",
+      "consumers": [
+        "handoff-lifecycle sweep tool agreement measurement (H1251)",
+        "Uprava handoff-status audit baseline"
+      ],
+      "notes": "H1251 (18-07-2026, Haiku 4.5 claude-haiku-4-5-20251001): 170 active handoffs (all in Uprava/handoffs/ as of 18-07-2026) classified + adversarially verified. Audit method: 35 batch classifiers (Opus 4.8) run independently on each handoff's body, each verdict re-checked by an independent adversarial verifier; verifier wins on refutation. Verdict breakdown: ARCHIVE_AS_DONE 57 · GENUINELY_BLOCKED 53 · NEEDS_STUB_FILL 4 · RERUN_NEEDED 22 · RETIRE_AS_DEAD 12 · RUNNABLE_NOW 22. Verification stats: 91 upheld · 15 refuted · 64 uncontested. 64 unverified verdicts reflect the audit's sampling strategy (only verdicts of consequence were re-checked); gold set is a baseline, not scripture — a later handoff correcting a gold row with evidence is legitimate and must be logged."
     }
   ]
 }
