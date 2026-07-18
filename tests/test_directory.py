@@ -9,8 +9,10 @@ gitignored/local path.
 from __future__ import annotations
 
 import json
+import posixpath
 import re
 from pathlib import Path
+from urllib.parse import unquote, urlsplit
 
 import pytest
 
@@ -41,6 +43,23 @@ def _jsonld(page: str) -> dict:
     return json.loads(m.group(1))
 
 
+def _normalise_release_path(value: str) -> str:
+    """Canonical manifest-style path, independent of URL encoding/separators."""
+    decoded = unquote(value).replace("\\", "/")
+    return posixpath.normpath("/" + decoded).lstrip("/")
+
+
+def _release_relative_asset(url: str) -> str:
+    """Drop scheme/repository/release tag, retaining the full asset subpath."""
+    path = urlsplit(url).path
+    marker = "releases/download/"
+    assert marker in path, f"not a release download URL: {url}"
+    after_marker = path.split(marker, 1)[1]
+    _, separator, asset = after_marker.partition("/")
+    assert separator and asset, f"release download has no asset path: {url}"
+    return _normalise_release_path(asset)
+
+
 def test_page_renders(page):
     assert "<title>" in page and "Sanskrit NLP Data" in page
 
@@ -65,17 +84,21 @@ def test_id_spine_present(page):
 def test_no_restricted_download_leak(page, datasets):
     """Every releases/download URL in the page must belong to a public row."""
     released_assets = {
-        d["release_asset"]
+        _normalise_release_path(d["release_asset"])
         for d in datasets
         if d.get("tier") == "public" and d.get("release_asset")
     }
     for url in re.findall(r"releases/download/[^\"'< ]+", page):
-        # build_directory.py builds this as f"releases/download/{rel}/{asset}", and
-        # asset (release_asset) may itself contain slashes (e.g. "reading/data/nala-1.json")
-        # -- strip only the release tag, not just the last path component.
-        rest = url[len("releases/download/"):]
-        asset = rest.split("/", 1)[1] if "/" in rest else rest
+        asset = _release_relative_asset(url)
         assert asset in released_assets, f"non-public asset linked: {url}"
+
+
+def test_release_asset_normalization_preserves_subdirectories():
+    url = (
+        "https://github.com/gasyoun/kosha/releases/download/v0.40.0/"
+        "reading%2Fdata/./nala-1.json?download=1"
+    )
+    assert _release_relative_asset(url) == "reading/data/nala-1.json"
 
 
 def test_no_local_or_gitignored_paths(page):
