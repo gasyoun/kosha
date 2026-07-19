@@ -1492,6 +1492,26 @@
       ],
       "notes": "A3 = the artefact A4 cannot start without (D12). Sidecars in data/concordance/: morph_attest_GnA.tsv (over-generation), morph_attest_AnG.tsv (engine gap), MORPHOLOGY_ATTESTATION_BUILD_REPORT.md. CIRCULARITY: 93.30% of the generated side is itself source='dcs' (ingested DCS surface tokens), so its AG is a 99.99% round-trip; the research-meaningful figure is the vidyut-engine subtotal — AG 3,550 / 28,567 = 12.43% attested, 25,017 over-generated. Consequently A¬G is degenerate (=2: oṃ + one OCR token) and CANNOT measure engine gaps here — reported as the finding, not hidden (genuine_engine_gap=0, nothing routed to the csl-inflect give-back). CONTRADICTION surfaced (STOP-AND-SURFACE, not resolved): the plan set's 6.9M generated figure is `inflections` (6,917,018 rows), not `forms` (1,378,401) — built on forms per the deliverable text; A4's generated-side table is a human call. Read-only build. PUBLICATION GATED on the W1a rights record (H1263 / D2): unreleased until the DCS BY-SA/BY-4.0 licence contradiction is settled.",
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
+    },
+    {
+      "id": "ru-gloss-layer",
+      "title": "Inline Sanskrit→Russian gloss layer (reading packs, W-RU-a)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "ru_gloss_layer.tsv",
+      "format": "tsv",
+      "rows": 2958,
+      "size_bytes": 194571,
+      "keying": "one row per (reading pack, sentence, token index); joins each pack token to the three SanskritRussian PUBLIC site-tier layers — surface (token slp1 → surface_glossary), lemma (lemma slp1 → lemma_glossary), root (lemma → dcs_lemma2root → root_glossary) — emitting surface_ru/lemma_ru/root_ru + a layer_hit provenance column. 95.6% of tokens carry a lemma-layer RU gloss.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/ru_gloss/ru_gloss_layer.tsv",
+      "builder": "scripts/build_ru_gloss_layer.py (W-RU-a / H1278)",
+      "consumers": [
+        "reading/data/*.json reading packs (additive token.gloss_ru)",
+        "reading/index.html Russian gloss toggle"
+      ],
+      "notes": "RIGHTS GATE (PLAN decision 14): RU glosses come ONLY from SanskritRussian's public, GitHub-Pages-served surface/lemma/root glossaries; the restricted upstream RussianTranslation/src/corpus_lexicon.jsonl is never read. Additive: the English token `gloss` is untouched; RU lives under token.gloss_ru {surface,lemma,root}. Coverage report: reading/RU_GLOSS_COVERAGE.md — the measured 95.6% shows the public subset suffices (no rights unlock needed). Gītā packs are PARKED (the Bhagavadgītā is absent from the DCS full corpus), so the layer applies to the 5 built packs (nala 1-3, hitopadeśa, kirātārjunīya).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/ru-gloss-layer.meta.md"
     }
   ]
 }

@@ -1,0 +1,2959 @@
+pack	sent_n	sent_sub	tok_idx	form_slp1	surface_ru	lemma_ru	root_ru	layer_hit
+hitopadesa-0	1	1	0	sidDiH	успех	совершенства		surface+lemma
+hitopadesa-0	1	1	1	sADye	предмете обоснования	садхьи		surface+lemma
+hitopadesa-0	1	1	2	satAm	добродетельных	есть	есть	surface+lemma+root
+hitopadesa-0	1	1	3	astu	да будет	есть	есть	surface+lemma+root
+hitopadesa-0	1	1	4	prasAdAt	милостью	милость		surface+lemma
+hitopadesa-0	1	1	5	tasya	его	он		surface+lemma
+hitopadesa-0	1	1	6	DUrjaweH		Дхурджати		lemma
+hitopadesa-0	1	2	0	jAhnavI	Джахнави	Джахнави		surface+lemma
+hitopadesa-0	1	2	1	Pena	пеной	пену		surface+lemma
+hitopadesa-0	1	2	2	leKA	линия	линия		surface+lemma
+hitopadesa-0	1	2	3	iva	как	как		surface+lemma
+hitopadesa-0	1	2	4	yad	что	что		surface+lemma
+hitopadesa-0	1	2	5	mUrDani	голову	голову		surface+lemma
+hitopadesa-0	1	2	6	SaSinaH	лунного	луна		surface+lemma
+hitopadesa-0	1	2	7	kalA	часть	часть		surface+lemma
+hitopadesa-0	10	1	0	aTa	и	и		surface+lemma
+hitopadesa-0	10	1	1	kaTAmuKam				none
+hitopadesa-0	10	2	0	asti	есть	есть	есть	surface+lemma+root
+hitopadesa-0	10	2	1	BAgIraTI	Бхагиратхи	Бхагиратхи		surface+lemma
+hitopadesa-0	10	2	2	tIre	берегу	берегу		surface+lemma
+hitopadesa-0	10	2	3	pAwaliputra				none
+hitopadesa-0	10	2	4	nAmaDeyam	имя	имя		surface+lemma
+hitopadesa-0	10	2	5	nagaram	город	город		surface+lemma
+hitopadesa-0	10	3	0	tatra	там	там		surface+lemma
+hitopadesa-0	10	3	1	sarva	все	все		surface+lemma
+hitopadesa-0	10	3	2	svAmi	господина	хозяин		surface+lemma
+hitopadesa-0	10	3	3	guRa	гуны	гуны		surface+lemma
+hitopadesa-0	10	3	4	upetaH	имѣлъ	отстранен от зла, связан с благими качествами		surface+lemma
+hitopadesa-0	10	3	5	sudarSano		Сударшана		lemma
+hitopadesa-0	10	3	6	nAma	имя	имя		surface+lemma
+hitopadesa-0	10	3	7	narapatir	царь	царь		surface+lemma
+hitopadesa-0	10	3	8	AsIt	был	есть	есть	surface+lemma+root
+hitopadesa-0	10	4	0	sa	он	он		surface+lemma
+hitopadesa-0	10	4	1	BUpatir		царь		lemma
+hitopadesa-0	10	4	2	ekadA	однажды	однажды		surface+lemma
+hitopadesa-0	10	4	3	kena	кем	что		surface+lemma
+hitopadesa-0	10	4	4	api	также	также		surface+lemma
+hitopadesa-0	10	4	5	pAWyamAnaM		чтения	чтения	lemma+root
+hitopadesa-0	10	4	6	Sloka	стих	стих		surface+lemma
+hitopadesa-0	10	4	7	dvayam	двойное	два		surface+lemma
+hitopadesa-0	10	4	8	SuSrAva	услышал	услышав	услышав	surface+lemma+root
+hitopadesa-0	10	5	0	aneka	многими	многие		surface+lemma
+hitopadesa-0	10	5	1	saMSaya	сомнения	сомнения		surface+lemma
+hitopadesa-0	10	5	2	ucCedi				none
+hitopadesa-0	10	5	3	parokza	втайне	втайне		surface+lemma
+hitopadesa-0	10	5	4	arTasya	расчета	ради		surface+lemma
+hitopadesa-0	10	5	5	darSakam		вызвавший появление		lemma
+hitopadesa-0	10	6	0	sarvasya	всего	все		surface+lemma
+hitopadesa-0	10	6	1	locanaM	глаз	глазами		surface+lemma
+hitopadesa-0	10	6	2	SAstraM	шастру	шастры		surface+lemma
+hitopadesa-0	10	6	3	yasya	которого	что		surface+lemma
+hitopadesa-0	10	6	4	na	не	не		surface+lemma
+hitopadesa-0	10	6	5	asti	есть	есть	есть	surface+lemma+root
+hitopadesa-0	10	6	6	anDa	слепой	слепой		surface+lemma
+hitopadesa-0	10	6	7	eva	именно	именно		surface+lemma
+hitopadesa-0	10	6	8	saH	он	он		surface+lemma
+hitopadesa-0	11	1	0	yOvanaM				none
+hitopadesa-0	11	1	1	Dana	богатство	богатство		surface+lemma
+hitopadesa-0	11	1	2	sampattiH		процветание		lemma
+hitopadesa-0	11	1	3	praBu	владыка	владыка		surface+lemma
+hitopadesa-0	11	1	4	tvam	ты	ты		surface+lemma
+hitopadesa-0	11	1	5	a	о	о		surface+lemma
+hitopadesa-0	11	1	6	viveki		отличен		lemma
+hitopadesa-0	11	1	7	tA	эти	эти		surface+lemma
+hitopadesa-0	11	2	0	ekEkam				none
+hitopadesa-0	11	2	1	apy	хотя	также		surface+lemma
+hitopadesa-0	11	2	2	anarTAya	горе	не-артха		surface+lemma
+hitopadesa-0	11	2	3	kim	что	что		surface+lemma
+hitopadesa-0	11	2	4	u	же	и	и	surface+lemma+root
+hitopadesa-0	11	2	5	yatra	где	где		surface+lemma
+hitopadesa-0	11	2	6	catuzwayam	четыре	четыре		surface+lemma
+hitopadesa-0	12	1	0	ity	так	так		surface+lemma
+hitopadesa-0	12	1	1	AkarRya	Услышав	Услышав	Услышав	surface+lemma+root
+hitopadesa-0	12	1	2	AtmanaH	себя	себя		surface+lemma
+hitopadesa-0	12	1	3	putrARAm	сыновей	сын		surface+lemma
+hitopadesa-0	12	1	4	anaDigata	не предполагающий достаточное	не предполагающий достаточное		surface+lemma
+hitopadesa-0	12	1	5	SAstrARAm		шастры		lemma
+hitopadesa-0	12	1	6	nityam	всегда	всегда		surface+lemma
+hitopadesa-0	12	1	7	unmArga				none
+hitopadesa-0	12	1	8	gAminAm		не приносящій жертвы		lemma
+hitopadesa-0	12	1	9	SAstra	шастры	шастры		surface+lemma
+hitopadesa-0	12	1	10	ananuzWAnena		невыполнение		lemma
+hitopadesa-0	12	1	11	udvigna	взволнованный	страшится	страшится	surface+lemma+root
+hitopadesa-0	12	1	12	manAH		ум		lemma
+hitopadesa-0	12	1	13	sa	он	он		surface+lemma
+hitopadesa-0	12	1	14	rAjA	царь	царь		surface+lemma
+hitopadesa-0	12	1	15	cintayAmAsa	подумал	подумал	подумал	surface+lemma+root
+hitopadesa-0	12	2	0	ko	кто	что		surface+lemma
+hitopadesa-0	12	2	1	rTaH		ради		lemma
+hitopadesa-0	12	2	2	putreRa	сыном	сын		surface+lemma
+hitopadesa-0	12	2	3	jAtena	в рожденном	родился	родился	surface+lemma+root
+hitopadesa-0	12	2	4	yo	кто	что		surface+lemma
+hitopadesa-0	12	2	5	na	не	не		surface+lemma
+hitopadesa-0	12	2	6	vidvAn	знаток	мудрый		surface+lemma
+hitopadesa-0	12	2	7	na	не	не		surface+lemma
+hitopadesa-0	12	2	8	DArmikaH	добродетельный	добродетельный		surface+lemma
+hitopadesa-0	12	3	0	kARena		одноглазый		lemma
+hitopadesa-0	12	3	1	cakzuzA	глазом	глаз		surface+lemma
+hitopadesa-0	12	3	2	kiM	что	что		surface+lemma
+hitopadesa-0	12	3	3	vA	или	или	или	surface+lemma+root
+hitopadesa-0	12	3	4	cakzuH	глаз	глаз		surface+lemma
+hitopadesa-0	12	3	5	pIqA	самоистязанием	самоистязанием		surface+lemma
+hitopadesa-0	12	3	6	eva	именно	именно		surface+lemma
+hitopadesa-0	12	3	7	kevalam	только	только		surface+lemma
+hitopadesa-0	13	1	0	ajAta	не родился	неродившихся		surface+lemma
+hitopadesa-0	13	1	1	mfta	умершего	умирает	умирает	surface+lemma+root
+hitopadesa-0	13	1	2	mUrKAnAm		глупец		lemma
+hitopadesa-0	13	1	3	varam	дар	лучший		surface+lemma
+hitopadesa-0	13	1	4	AdyO		изначальный		lemma
+hitopadesa-0	13	1	5	na	не	не		surface+lemma
+hitopadesa-0	13	1	6	ca	и	и		surface+lemma
+hitopadesa-0	13	1	7	antimaH		последней		lemma
+hitopadesa-0	13	2	0	sakfd	однажды	однажды		surface+lemma
+hitopadesa-0	13	2	1	duHKa	страдание	горе		surface+lemma
+hitopadesa-0	13	2	2	karO		руки		lemma
+hitopadesa-0	13	2	3	AdyAv		изначальный		lemma
+hitopadesa-0	13	2	4	antimas		последней		lemma
+hitopadesa-0	13	2	5	tu	же	же	же	surface+lemma+root
+hitopadesa-0	13	2	6	pade	месте	след		surface+lemma
+hitopadesa-0	13	2	7	pade	месте	след		surface+lemma
+hitopadesa-0	14	1	0	kiM	что	что		surface+lemma
+hitopadesa-0	14	1	1	ca	и	и		surface+lemma
+hitopadesa-0	14	2	0	varaM	дар	лучший		surface+lemma
+hitopadesa-0	14	2	1	garBasrAvo		выкидыше		lemma
+hitopadesa-0	14	2	2	varam	дар	лучший		surface+lemma
+hitopadesa-0	14	2	3	api	также	также		surface+lemma
+hitopadesa-0	14	2	4	ca	и	и		surface+lemma
+hitopadesa-0	14	2	5	na	не	не		surface+lemma
+hitopadesa-0	14	2	6	eva	именно	именно		surface+lemma
+hitopadesa-0	14	2	7	aBigamanam	связь	сближении		surface+lemma
+hitopadesa-0	14	2	8	varaM	дар	лучший		surface+lemma
+hitopadesa-0	14	2	9	jAtaH	родился	родился	родился	surface+lemma+root
+hitopadesa-0	14	2	10	preto	отсюда	после смерти	после смерти	surface+lemma+root
+hitopadesa-0	14	2	11	varam	дар	лучший		surface+lemma
+hitopadesa-0	14	2	12	api	также	также		surface+lemma
+hitopadesa-0	14	2	13	ca	и	и		surface+lemma
+hitopadesa-0	14	3	0	varaM	дар	лучший		surface+lemma
+hitopadesa-0	14	3	1	vanDyA	бесплодная	бесплодная		surface+lemma
+hitopadesa-0	14	3	2	BAryA	жена	жена		surface+lemma
+hitopadesa-0	14	3	3	varam	дар	лучший		surface+lemma
+hitopadesa-0	14	3	4	api	также	также		surface+lemma
+hitopadesa-0	14	3	5	ca	и	и		surface+lemma
+hitopadesa-0	14	3	6	garBezu	во чрева	зародыш		surface+lemma
+hitopadesa-0	14	3	7	vasatir		ночи		lemma
+hitopadesa-0	14	3	8	na	не	не		surface+lemma
+hitopadesa-0	14	3	9	vA	или	или	или	surface+lemma+root
+hitopadesa-0	14	3	10	a	о	о		surface+lemma
+hitopadesa-0	14	3	11	vidvAn	знаток	знает	знает	surface+lemma+root
+hitopadesa-0	14	3	12	rUpa	образ	образ		surface+lemma
+hitopadesa-0	14	3	13	draviRa	богатство	богатство		surface+lemma
+hitopadesa-0	14	3	14	guRa	гуны	гуны		surface+lemma
+hitopadesa-0	14	3	15	yuktaH	наделенный	союзником	союзником	surface+lemma+root
+hitopadesa-0	14	3	16	pi	и	также		surface+lemma
+hitopadesa-0	14	3	17	tanayaH	сын	сын		surface+lemma
+hitopadesa-0	15	1	0	sa	он	он		surface+lemma
+hitopadesa-0	15	1	1	jAto	рожденный	родился	родился	surface+lemma+root
+hitopadesa-0	15	1	2	yena	которым	что		surface+lemma
+hitopadesa-0	15	1	3	jAtena	в рожденном	родился	родился	surface+lemma+root
+hitopadesa-0	15	1	4	yAti	идет	идут	идут	surface+lemma+root
+hitopadesa-0	15	1	5	vaMSaH	род	род		surface+lemma
+hitopadesa-0	15	1	6	samunnatim				none
+hitopadesa-0	15	2	0	parivartini		неусыпной		lemma
+hitopadesa-0	15	2	1	saMsAre	в сансаре	сансары		surface+lemma
+hitopadesa-0	15	2	2	mftaH	умер	умирает	умирает	surface+lemma+root
+hitopadesa-0	15	2	3	ko	кто	что		surface+lemma
+hitopadesa-0	15	2	4	vA	или	или	или	surface+lemma+root
+hitopadesa-0	15	2	5	na	не	не		surface+lemma
+hitopadesa-0	15	2	6	jAyate	рождается	родился	родился	surface+lemma+root
+hitopadesa-0	16	1	0	anyac	другой	другой		surface+lemma
+hitopadesa-0	16	1	1	ca	и	и		surface+lemma
+hitopadesa-0	16	2	0	guRi		элементов		lemma
+hitopadesa-0	16	2	1	gaRa	сонмы	сонмы		surface+lemma
+hitopadesa-0	16	2	2	gaRanA	счете	счете		surface+lemma
+hitopadesa-0	16	2	3	AramBe		начало		lemma
+hitopadesa-0	16	2	4	na	не	не		surface+lemma
+hitopadesa-0	16	2	5	patati	падает	упал	упал	surface+lemma+root
+hitopadesa-0	16	2	6	kaWinI				none
+hitopadesa-0	16	2	7	sa	он			surface
+hitopadesa-0	16	2	8	samBramAt	смущенная	рвение		surface+lemma
+hitopadesa-0	16	2	9	yasya	которого	что		surface+lemma
+hitopadesa-0	16	3	0	tena	тем	он		surface+lemma
+hitopadesa-0	16	3	1	ambA	Амба	мать		surface+lemma
+hitopadesa-0	16	3	2	yadi	если	если		surface+lemma
+hitopadesa-0	16	3	3	sutinI				none
+hitopadesa-0	16	3	4	vada	скажи	говорят	говорят	surface+lemma+root
+hitopadesa-0	16	3	5	vanDyA	бесплодная	бесплодная		surface+lemma
+hitopadesa-0	16	3	6	kIdfSI	чему подобно	какова		surface+lemma
+hitopadesa-0	16	3	7	Bavati	становится	будет	будет	surface+lemma+root
+hitopadesa-0	17	1	0	api	также	также		surface+lemma
+hitopadesa-0	17	1	1	ca	и	и		surface+lemma
+hitopadesa-0	17	2	0	dAne	щедрости	дары		surface+lemma
+hitopadesa-0	17	2	1	tapasi	подвижничеству	подвижничество		surface+lemma
+hitopadesa-0	17	2	2	SOrye				none
+hitopadesa-0	17	2	3	ca	и	и		surface+lemma
+hitopadesa-0	17	2	4	yasya	которого	что		surface+lemma
+hitopadesa-0	17	2	5	na	не	не		surface+lemma
+hitopadesa-0	17	2	6	praTitaM	прославленной	прославленный	прославленный	surface+lemma+root
+hitopadesa-0	17	2	7	manaH	ум	ум		surface+lemma
+hitopadesa-0	17	3	0	vidyAyAm		знание		lemma
+hitopadesa-0	17	3	1	arTa	ради	ради		surface+lemma
+hitopadesa-0	17	3	2	lABe	из-за нее	прибыль		surface+lemma
+hitopadesa-0	17	3	3	ca	и	и		surface+lemma
+hitopadesa-0	17	3	4	mAtur	матери	мать		surface+lemma
+hitopadesa-0	17	3	5	uccAra	испражняться	испражняться		surface+lemma
+hitopadesa-0	17	3	6	eva	именно	именно		surface+lemma
+hitopadesa-0	17	3	7	saH	он	он		surface+lemma
+hitopadesa-0	18	1	0	aparaM	последующего	другие		surface+lemma
+hitopadesa-0	18	1	1	ca	и	и		surface+lemma
+hitopadesa-0	18	2	0	varam	дар	лучший		surface+lemma
+hitopadesa-0	18	2	1	eko	один	один		surface+lemma
+hitopadesa-0	18	2	2	guRI		элементов		lemma
+hitopadesa-0	18	2	3	putro	сын	сын		surface+lemma
+hitopadesa-0	18	2	4	na	не	не		surface+lemma
+hitopadesa-0	18	2	5	ca	и	и		surface+lemma
+hitopadesa-0	18	2	6	mUrKa	глупец	глупец		surface+lemma
+hitopadesa-0	18	2	7	SatEH		сто		lemma
+hitopadesa-0	18	2	8	api	также	также		surface+lemma
+hitopadesa-0	18	3	0	ekaS		один		lemma
+hitopadesa-0	18	3	1	candramAs	Чандрамас	луна		surface+lemma
+hitopadesa-0	18	3	2	tamo	мрак	мрак		surface+lemma
+hitopadesa-0	18	3	3	hanti	убивает	убит	убит	surface+lemma+root
+hitopadesa-0	18	3	4	na	не	не		surface+lemma
+hitopadesa-0	18	3	5	ca	и	и		surface+lemma
+hitopadesa-0	18	3	6	tArA	звезды	звезды		surface+lemma
+hitopadesa-0	18	3	7	gaREH		сонмы		lemma
+hitopadesa-0	18	3	8	api	также	также		surface+lemma
+hitopadesa-0	19	1	0	puRya	святые	святая		surface+lemma
+hitopadesa-0	19	1	1	tIrTe	тиртхе	тиртхе		surface+lemma
+hitopadesa-0	19	1	2	kftaM	совершен	сделал	сделал	surface+lemma+root
+hitopadesa-0	19	1	3	yena	которым	что		surface+lemma
+hitopadesa-0	19	1	4	tapaH	подвижничество	подвижничество		surface+lemma
+hitopadesa-0	19	1	5	kvApy		где-либо		lemma
+hitopadesa-0	19	1	6	atiduzkaram		труднее		lemma
+hitopadesa-0	19	2	0	tasya	его	он		surface+lemma
+hitopadesa-0	19	2	1	putro	сын	сын		surface+lemma
+hitopadesa-0	19	2	2	Baved	да проявят	будет	будет	surface+lemma+root
+hitopadesa-0	19	2	3	vaSyaH	во власти	послушным		surface+lemma
+hitopadesa-0	19	2	4	samfdDo		процветающим	врагов	lemma+root
+hitopadesa-0	19	2	5	DArmikaH	добродетельный	добродетельный		surface+lemma
+hitopadesa-0	19	2	6	suDIH	мудрый	мудрый		surface+lemma
+hitopadesa-0	2	1	0	Sruto	знаменит	услышав	услышав	surface+lemma+root
+hitopadesa-0	2	1	1	hitopadeSo				none
+hitopadesa-0	2	1	2	yaM	кого	это		surface+lemma
+hitopadesa-0	2	1	3	pAwavaM	искусство	Ваджроли		surface+lemma
+hitopadesa-0	2	1	4	saMskfta	освященное			surface
+hitopadesa-0	2	1	5	uktizu		говорится		lemma
+hitopadesa-0	2	2	0	vAcAM		речь		lemma
+hitopadesa-0	2	2	1	sarvatra	везде	везде		surface+lemma
+hitopadesa-0	2	2	2	vEcitryaM				none
+hitopadesa-0	2	2	3	nIti	политика	политика		surface+lemma
+hitopadesa-0	2	2	4	vidyAm	знание	знание		surface+lemma
+hitopadesa-0	2	2	5	dadAti	дает	дает	взяв	surface+lemma+root
+hitopadesa-0	2	2	6	ca	и	и		surface+lemma
+hitopadesa-0	20	1	0	taTA	так	так		surface+lemma
+hitopadesa-0	20	1	1	ca	и	и		surface+lemma
+hitopadesa-0	20	1	2	uktam	сказано	сказал	сказал	surface+lemma+root
+hitopadesa-0	20	2	0	arTa	ради	ради		surface+lemma
+hitopadesa-0	20	2	1	AgamaH	приход	пришел		surface+lemma
+hitopadesa-0	20	2	2	nityam	всегда	всегда		surface+lemma
+hitopadesa-0	20	2	3	a	о	о		surface+lemma
+hitopadesa-0	20	2	4	rogi		больной		lemma
+hitopadesa-0	20	2	5	tA	эти	эти		surface+lemma
+hitopadesa-0	20	2	6	ca	и	и		surface+lemma
+hitopadesa-0	20	2	7	priyA	любимая	приятное		surface+lemma
+hitopadesa-0	20	2	8	ca	и	и		surface+lemma
+hitopadesa-0	20	2	9	BAryA	жена	жена		surface+lemma
+hitopadesa-0	20	2	10	priya	дорог	приятное		surface+lemma
+hitopadesa-0	20	2	11	vAdinI	говорящая	говорящие		surface+lemma
+hitopadesa-0	20	2	12	ca	и	и		surface+lemma
+hitopadesa-0	20	3	0	vaSyaS		послушным		lemma
+hitopadesa-0	20	3	1	ca	и	и		surface+lemma
+hitopadesa-0	20	3	2	putro	сын	сын		surface+lemma
+hitopadesa-0	20	3	3	arTa	ради	ради		surface+lemma
+hitopadesa-0	20	3	4	karI	слон	слон		surface+lemma
+hitopadesa-0	20	3	5	ca	и	и		surface+lemma
+hitopadesa-0	20	3	6	vidyA	знание	знание		surface+lemma
+hitopadesa-0	20	3	7	zaq	шесть	шесть		surface+lemma
+hitopadesa-0	20	3	8	jIvalokasya	мира живущих	мир живых		surface+lemma
+hitopadesa-0	20	3	9	suKAni	счастья	счастье		surface+lemma
+hitopadesa-0	20	3	10	rAjan	царь	царь		surface+lemma
+hitopadesa-0	21	1	0	ko	кто	что		surface+lemma
+hitopadesa-0	21	1	1	Danyo		счастлив		lemma
+hitopadesa-0	21	1	2	bahuBiH	многими	много		surface+lemma
+hitopadesa-0	21	1	3	putrEH		сын		lemma
+hitopadesa-0	21	1	4	kuSUla				none
+hitopadesa-0	21	1	5	ApUraRa	Апурана	Апурана		surface+lemma
+hitopadesa-0	21	1	6	AQakEH		адхака		lemma
+hitopadesa-0	21	2	0	varam	дар	лучший		surface+lemma
+hitopadesa-0	21	2	1	ekaH	один	один		surface+lemma
+hitopadesa-0	21	2	2	kula	род	род		surface+lemma
+hitopadesa-0	21	2	3	AlambI				none
+hitopadesa-0	21	2	4	yatra	где	где		surface+lemma
+hitopadesa-0	21	2	5	viSrUyate		прославленный	услышав	lemma+root
+hitopadesa-0	21	2	6	pitA	отец	отец		surface+lemma
+hitopadesa-0	22	1	0	fRakartA				none
+hitopadesa-0	22	1	1	pitA	отец	отец		surface+lemma
+hitopadesa-0	22	1	2	Satrur		врагов		lemma
+hitopadesa-0	22	1	3	mAtA	мать	мать		surface+lemma
+hitopadesa-0	22	1	4	ca	и	и		surface+lemma
+hitopadesa-0	22	1	5	vyaBicAriRI	изменяя	изменяя		surface+lemma
+hitopadesa-0	22	2	0	BAryA	жена	жена		surface+lemma
+hitopadesa-0	22	2	1	rUpavatI	красива	прекрасен		surface+lemma
+hitopadesa-0	22	2	2	SatruH	враг	врагов		surface+lemma
+hitopadesa-0	22	2	3	putraH	сын	сын		surface+lemma
+hitopadesa-0	22	2	4	Satrur		врагов		lemma
+hitopadesa-0	22	2	5	apaRqitaH	глупец	невежда		surface+lemma
+hitopadesa-0	23	1	0	yasya	которого	что		surface+lemma
+hitopadesa-0	23	1	1	kasya	чья	что		surface+lemma
+hitopadesa-0	23	1	2	prasUto		размножайтесь	родила	lemma+root
+hitopadesa-0	23	1	3	pi	и	также		surface+lemma
+hitopadesa-0	23	1	4	guRavAn	добродетельный	добродетельный		surface+lemma
+hitopadesa-0	23	1	5	pUjyate	почитается	почтил	почтив	surface+lemma+root
+hitopadesa-0	23	1	6	naraH	человек	человек		surface+lemma
+hitopadesa-0	23	2	0	Danus	лук	лук		surface+lemma
+hitopadesa-0	23	2	1	vaMSa	род	род		surface+lemma
+hitopadesa-0	23	2	2	viSudDaH		очищается	очищается	lemma+root
+hitopadesa-0	23	2	3	pi	и	также		surface+lemma
+hitopadesa-0	23	2	4	nirguRaH	не достоин	лишенный свойств		surface+lemma
+hitopadesa-0	23	2	5	kiM	что	что		surface+lemma
+hitopadesa-0	23	2	6	karizyati	сделает	сделал	сделал	surface+lemma+root
+hitopadesa-0	24	1	0	hA	о	оставив	оставив	surface+lemma+root
+hitopadesa-0	24	1	1	hA	о	оставив	оставив	surface+lemma+root
+hitopadesa-0	24	1	2	putraka	сынок	сынок		surface+lemma
+hitopadesa-0	24	1	3	na	не	не		surface+lemma
+hitopadesa-0	24	1	4	aDItam	изучена	изучив	молитвы	surface+lemma+root
+hitopadesa-0	24	1	5	gatAsv		отправился	пришел	lemma+root
+hitopadesa-0	24	1	6	etAsu	в этих	это		surface+lemma
+hitopadesa-0	24	1	7	rAtrizu	ночью	ночь		surface+lemma
+hitopadesa-0	24	2	0	tena	тем	он		surface+lemma
+hitopadesa-0	24	2	1	tvaM	ты	тебя		surface+lemma
+hitopadesa-0	24	2	2	viduzAM	сведущих	мудрый		surface+lemma
+hitopadesa-0	24	2	3	maDye	среди	среди		surface+lemma
+hitopadesa-0	24	2	4	paNke	в тину	грязь		surface+lemma
+hitopadesa-0	24	2	5	gOr		коров		lemma
+hitopadesa-0	24	2	6	iva	как	как		surface+lemma
+hitopadesa-0	24	2	7	sIdasi	сидишь	усаживается	уселся	surface+lemma+root
+hitopadesa-0	25	1	0	tat	то	он		surface+lemma
+hitopadesa-0	25	1	1	kaTam	как	как		surface+lemma
+hitopadesa-0	25	1	2	idAnIm	теперь	теперь		surface+lemma
+hitopadesa-0	25	1	3	ete	эти	это		surface+lemma
+hitopadesa-0	25	1	4	mama	мне	я	я	surface+lemma+root
+hitopadesa-0	25	1	5	putrA	сыновья	сын		surface+lemma
+hitopadesa-0	25	1	6	guRavantaH	благородные	добродетельный		surface+lemma
+hitopadesa-0	25	1	7	kriyantAm	раскинут	сделал	сделал	surface+lemma+root
+hitopadesa-0	25	1	8	yataH	откуда	откуда		surface+lemma
+hitopadesa-0	25	2	0	AhAra	пища	пища		surface+lemma
+hitopadesa-0	25	2	1	nidrA	сон	сон	сон	surface+lemma+root
+hitopadesa-0	25	2	2	Baya	страх	страх		surface+lemma
+hitopadesa-0	25	2	3	mETunAni				none
+hitopadesa-0	25	2	4	sAmAnyam	универсалия	общее		surface+lemma
+hitopadesa-0	25	2	5	etat	это	это		surface+lemma
+hitopadesa-0	25	2	6	paSuBir	домашними животными	скот		surface+lemma
+hitopadesa-0	25	2	7	narARAm	людей	человек		surface+lemma
+hitopadesa-0	25	3	0	jYAnaM	знание	знание		surface+lemma
+hitopadesa-0	25	3	1	narARAm	людей	человек		surface+lemma
+hitopadesa-0	25	3	2	aDiko		выше		lemma
+hitopadesa-0	25	3	3	viSezo	Различие	различие		surface+lemma
+hitopadesa-0	25	3	4	jYAnena	знанием	знание		surface+lemma
+hitopadesa-0	25	3	5	hInAH	лишенные	оставив	оставив	surface+lemma+root
+hitopadesa-0	25	3	6	paSuBiH	скотом	скот		surface+lemma
+hitopadesa-0	25	3	7	samAnAH	сообща	самана		surface+lemma
+hitopadesa-0	26	1	0	yataH	откуда	откуда		surface+lemma
+hitopadesa-0	26	2	0	Darma	дхарма	дхарма		surface+lemma
+hitopadesa-0	26	2	1	arTa	ради	ради		surface+lemma
+hitopadesa-0	26	2	2	kAma	желание	желание		surface+lemma
+hitopadesa-0	26	2	3	mokzARAm		освобождение		lemma
+hitopadesa-0	26	2	4	yasya	которого	что		surface+lemma
+hitopadesa-0	26	2	5	ekaH	один	один		surface+lemma
+hitopadesa-0	26	2	6	pi	и	также		surface+lemma
+hitopadesa-0	26	2	7	na	не	не		surface+lemma
+hitopadesa-0	26	2	8	vidyate	есть	знает	знает	surface+lemma+root
+hitopadesa-0	26	3	0	ajAgalastanasya				none
+hitopadesa-0	26	3	1	iva	как	как		surface+lemma
+hitopadesa-0	26	3	2	tasya	его	он		surface+lemma
+hitopadesa-0	26	3	3	janma	рождение	рождение		surface+lemma
+hitopadesa-0	26	3	4	nirarTakam	напрасными	тщетными		surface+lemma
+hitopadesa-0	27	1	0	yac	что	что		surface+lemma
+hitopadesa-0	27	1	1	ca	и	и		surface+lemma
+hitopadesa-0	27	1	2	ucyate	называется	сказал	сказал	surface+lemma+root
+hitopadesa-0	27	2	0	AyuH	срок жизни	срок жизни		surface+lemma
+hitopadesa-0	27	2	1	karma	деятельность	действия		surface+lemma
+hitopadesa-0	27	2	2	ca	и	и		surface+lemma
+hitopadesa-0	27	2	3	vittaM	богатство	богатство		surface+lemma
+hitopadesa-0	27	2	4	ca	и	и		surface+lemma
+hitopadesa-0	27	2	5	vidyA	знание	знание		surface+lemma
+hitopadesa-0	27	2	6	niDanam	смерть	смерть		surface+lemma
+hitopadesa-0	27	2	7	eva	именно	именно		surface+lemma
+hitopadesa-0	27	2	8	ca	и	и		surface+lemma
+hitopadesa-0	27	3	0	paYca	пять	пять		surface+lemma
+hitopadesa-0	27	3	1	etAni	эти	это		surface+lemma
+hitopadesa-0	27	3	2	hi	ведь	ведь	ведь	surface+lemma+root
+hitopadesa-0	27	3	3	sfjyante	возрождаются	сотворил	выпустил	surface+lemma+root
+hitopadesa-0	27	3	4	garBa	зародыш	зародыш		surface+lemma
+hitopadesa-0	27	3	5	sTasya		стоит		lemma
+hitopadesa-0	27	3	6	eva	именно	именно		surface+lemma
+hitopadesa-0	27	3	7	dehinaH	смертных	воплощенный		surface+lemma
+hitopadesa-0	28	1	0	kiM	что	что		surface+lemma
+hitopadesa-0	28	1	1	ca	и	и		surface+lemma
+hitopadesa-0	28	2	0	avaSyaM	непременно	непременно		surface+lemma
+hitopadesa-0	28	2	1	BAvino		будет		lemma
+hitopadesa-0	28	2	2	BAvA	становятся	бытие		surface+lemma
+hitopadesa-0	28	2	3	Bavanti	становятся	будет	будет	surface+lemma+root
+hitopadesa-0	28	2	4	mahatAm	великих	великий		surface+lemma
+hitopadesa-0	28	2	5	api	также	также		surface+lemma
+hitopadesa-0	28	3	0	nagna	нагим	нагим		surface+lemma
+hitopadesa-0	28	3	1	tvam	ты	ты		surface+lemma
+hitopadesa-0	28	3	2	nIlakaRWasya		Синегорлый		lemma
+hitopadesa-0	28	3	3	mahA	великий	великий		surface+lemma
+hitopadesa-0	28	3	4	ahi	змея	змея		surface+lemma
+hitopadesa-0	28	3	5	Sayanam	ложе	ложе		surface+lemma
+hitopadesa-0	28	3	6	hareH	Хари	Хари		surface+lemma
+hitopadesa-0	29	1	0	anyac	другой	другой		surface+lemma
+hitopadesa-0	29	1	1	ca	и	и		surface+lemma
+hitopadesa-0	29	2	0	yad	что	что		surface+lemma
+hitopadesa-0	29	2	1	aBAvi		достигают		lemma
+hitopadesa-0	29	2	2	na	не	не		surface+lemma
+hitopadesa-0	29	2	3	tad	то	он		surface+lemma
+hitopadesa-0	29	2	4	BAvi	будет	будет		surface+lemma
+hitopadesa-0	29	2	5	BAvi	будет	будет		surface+lemma
+hitopadesa-0	29	2	6	cen	если	если		surface+lemma
+hitopadesa-0	29	2	7	na	не	не		surface+lemma
+hitopadesa-0	29	2	8	tad	то	он		surface+lemma
+hitopadesa-0	29	2	9	anyaTA	иначе	иначе		surface+lemma
+hitopadesa-0	29	3	0	iti	так	так		surface+lemma
+hitopadesa-0	29	3	1	cintA	мысль	мысль		surface+lemma
+hitopadesa-0	29	3	2	viza	яд	яд		surface+lemma
+hitopadesa-0	29	3	3	GnaH		губит		lemma
+hitopadesa-0	29	3	4	yam	кого	это		surface+lemma
+hitopadesa-0	29	3	5	agadaH		здоровым		lemma
+hitopadesa-0	29	3	6	kiM	что	что		surface+lemma
+hitopadesa-0	29	3	7	na	не	не		surface+lemma
+hitopadesa-0	29	3	8	pIyate	пьют	Защищайте	Защищайте	surface+lemma+root
+hitopadesa-0	3	1	0	ajara	нестареющий	нестареющий		surface+lemma
+hitopadesa-0	3	1	1	amara	бессмертные	бессмертные		surface+lemma
+hitopadesa-0	3	1	2	vat	подобно	сказал	сказал	surface+lemma+root
+hitopadesa-0	3	1	3	prAjYo		мудрый		lemma
+hitopadesa-0	3	1	4	vidyAm	знание	знание		surface+lemma
+hitopadesa-0	3	1	5	arTam	цель	ради		surface+lemma
+hitopadesa-0	3	1	6	ca	и	и		surface+lemma
+hitopadesa-0	3	1	7	cintayet	помышляет	подумал	подумал	surface+lemma+root
+hitopadesa-0	3	2	0	gfhIta	схвачен	взяв	взяв	surface+lemma+root
+hitopadesa-0	3	2	1	iva	как	как		surface+lemma
+hitopadesa-0	3	2	2	keSezu	за волосы	волосы		surface+lemma
+hitopadesa-0	3	2	3	mftyunA	смерть	смерть		surface+lemma
+hitopadesa-0	3	2	4	Darmam	дхарму	дхарма		surface+lemma
+hitopadesa-0	3	2	5	Acaret	следует	делает	движется	surface+lemma+root
+hitopadesa-0	30	1	0	etat	это	это		surface+lemma
+hitopadesa-0	30	1	1	kArya	дело	дело		surface+lemma
+hitopadesa-0	30	1	2	akzamARAm		невыполнима		lemma
+hitopadesa-0	30	1	3	kezAMcid		никто		lemma
+hitopadesa-0	30	1	4	Alasya	лень	лень		surface+lemma
+hitopadesa-0	30	1	5	vacanam	слова	слова		surface+lemma
+hitopadesa-0	30	2	0	puruzakAra	человеческими усилиями	человеческими усилиями		surface+lemma
+hitopadesa-0	30	2	1	OtkArzyam				none
+hitopadesa-0	30	2	2	Aha	сказал	сказал	сказал	surface+lemma+root
+hitopadesa-0	30	3	0	yaTA	как	как		surface+lemma
+hitopadesa-0	30	3	1	hy	ведь	ведь	ведь	surface+lemma+root
+hitopadesa-0	30	3	2	ekena	одним	один		surface+lemma
+hitopadesa-0	30	3	3	cakreRa	диском	колесо		surface+lemma
+hitopadesa-0	30	3	4	na	не	не		surface+lemma
+hitopadesa-0	30	3	5	raTasya	колесницы	колесницу		surface+lemma
+hitopadesa-0	30	3	6	gatir	могут прийти	путь		surface+lemma
+hitopadesa-0	30	3	7	Bavet	будет	будет	будет	surface+lemma+root
+hitopadesa-0	30	4	0	taTA	так	так		surface+lemma
+hitopadesa-0	30	4	1	puruzakAreRa	усилиями	человеческими усилиями		surface+lemma
+hitopadesa-0	30	4	2	vinA	без	без		surface+lemma
+hitopadesa-0	30	4	3	dEvaM				none
+hitopadesa-0	30	4	4	na	не	не		surface+lemma
+hitopadesa-0	30	4	5	siDyati	устанавливается	устанавливается	устанавливается	surface+lemma+root
+hitopadesa-0	31	1	0	taTA	так	так		surface+lemma
+hitopadesa-0	31	1	1	ca	и	и		surface+lemma
+hitopadesa-0	31	2	0	pUrva	прежде	прежде		surface+lemma
+hitopadesa-0	31	2	1	janma	рождение	рождение		surface+lemma
+hitopadesa-0	31	2	2	kftam	сделано	сделал	сделал	surface+lemma+root
+hitopadesa-0	31	2	3	karma	деятельность	действия		surface+lemma
+hitopadesa-0	31	2	4	tad	то	он		surface+lemma
+hitopadesa-0	31	2	5	dEvam				none
+hitopadesa-0	31	2	6	iti	так	так		surface+lemma
+hitopadesa-0	31	2	7	kaTyate	зовется	рассказал	рассказал	surface+lemma+root
+hitopadesa-0	31	3	0	tasmAt	поэтому	он		surface+lemma
+hitopadesa-0	31	3	1	puruzakAreRa	усилиями	человеческими усилиями		surface+lemma
+hitopadesa-0	31	3	2	yatnaM	пытался	усилия		surface+lemma
+hitopadesa-0	31	3	3	kuryAd	выказывал	сделал	сделал	surface+lemma+root
+hitopadesa-0	31	3	4	atandritaH	усердный	неустанно		surface+lemma
+hitopadesa-0	32	1	0	na	не	не		surface+lemma
+hitopadesa-0	32	1	1	dEvam				none
+hitopadesa-0	32	1	2	api	также	также		surface+lemma
+hitopadesa-0	32	1	3	saMcintya	подумав	подумав	подумал	surface+lemma+root
+hitopadesa-0	32	1	4	tyajed		оставив	оставив	lemma+root
+hitopadesa-0	32	1	5	udyogam		в Книге о старании		lemma
+hitopadesa-0	32	1	6	AtmanaH	себя	себя		surface+lemma
+hitopadesa-0	32	2	0	anudyogena				none
+hitopadesa-0	32	2	1	tElAni				none
+hitopadesa-0	32	2	2	tileByo		сезам		lemma
+hitopadesa-0	32	2	3	na	не	не		surface+lemma
+hitopadesa-0	32	2	4	Aptum	достичь	достигает	достигает	surface+lemma+root
+hitopadesa-0	32	2	5	arhati	заслуживает	должен	должен	surface+lemma+root
+hitopadesa-0	33	1	0	anyac	другой	другой		surface+lemma
+hitopadesa-0	33	1	1	ca	и	и		surface+lemma
+hitopadesa-0	33	2	0	udyoginaM				none
+hitopadesa-0	33	2	1	puruza	человек	человек		surface+lemma
+hitopadesa-0	33	2	2	siMham	льва	лев		surface+lemma
+hitopadesa-0	33	2	3	upEti		придя	придя	lemma+root
+hitopadesa-0	33	2	4	lakzmIr	Лакшми	Лакшми		surface+lemma
+hitopadesa-0	33	2	5	dEvena				none
+hitopadesa-0	33	2	6	deyam	должна быть даваема	дает	взяв	surface+lemma+root
+hitopadesa-0	33	2	7	iti	так	так		surface+lemma
+hitopadesa-0	33	2	8	kApuruzA		трус		lemma
+hitopadesa-0	33	2	9	vadanti	говорят	говорят	говорят	surface+lemma+root
+hitopadesa-0	33	3	0	dEvaM				none
+hitopadesa-0	33	3	1	nihatya	убив	убит	убит	surface+lemma+root
+hitopadesa-0	33	3	2	kuru	куру	сделал	сделал	surface+lemma+root
+hitopadesa-0	33	3	3	pOruzam				none
+hitopadesa-0	33	3	4	Atma	себя	себя		surface+lemma
+hitopadesa-0	33	3	5	SaktyA	сил	дротик		surface+lemma
+hitopadesa-0	33	3	6	yatne	старательно	усилия		surface+lemma
+hitopadesa-0	33	3	7	kfte	ради	сделал	сделал	surface+lemma+root
+hitopadesa-0	33	3	8	yadi	если	если		surface+lemma
+hitopadesa-0	33	3	9	na	не	не		surface+lemma
+hitopadesa-0	33	3	10	siDyati	устанавливается	устанавливается	устанавливается	surface+lemma+root
+hitopadesa-0	33	3	11	ko	кто	что		surface+lemma
+hitopadesa-0	33	3	12	tra	три	здесь		surface+lemma
+hitopadesa-0	33	3	13	dozaH	ошибки	зло		surface+lemma
+hitopadesa-0	34	1	0	yaTA	как	как		surface+lemma
+hitopadesa-0	34	1	1	mfd	глины	глины	глины	surface+lemma+root
+hitopadesa-0	34	1	2	piRqAt		пинда		lemma
+hitopadesa-0	34	1	3	kartA	деятель	деятель		surface+lemma
+hitopadesa-0	34	1	4	kurute	делает	сделал	сделал	surface+lemma+root
+hitopadesa-0	34	1	5	yad	что	что		surface+lemma
+hitopadesa-0	34	1	6	yad	что	что		surface+lemma
+hitopadesa-0	34	1	7	icCati	желает	хочу	хочу	surface+lemma+root
+hitopadesa-0	34	2	0	evam	так	так		surface+lemma
+hitopadesa-0	34	2	1	Atma	себя	себя		surface+lemma
+hitopadesa-0	34	2	2	kftam	сделано	сделал	сделал	surface+lemma+root
+hitopadesa-0	34	2	3	karma	деятельность	действия		surface+lemma
+hitopadesa-0	34	2	4	mAnavaH	человек	человек		surface+lemma
+hitopadesa-0	34	2	5	pratipadyate	достигает	достигает	достигает	surface+lemma+root
+hitopadesa-0	35	1	0	kAkatAlIya				none
+hitopadesa-0	35	1	1	vat	подобно	сказал	сказал	surface+lemma+root
+hitopadesa-0	35	1	2	prAptaM	пришел	достигнув	достигает	surface+lemma+root
+hitopadesa-0	35	1	3	dfzwvA	увидев	увидев	увидев	surface+lemma+root
+hitopadesa-0	35	1	4	api	также	также		surface+lemma
+hitopadesa-0	35	1	5	niDim	сокровищницу	сокровище		surface+lemma
+hitopadesa-0	35	1	6	agrataH	впереди	перед		surface+lemma
+hitopadesa-0	35	2	0	na	не	не		surface+lemma
+hitopadesa-0	35	2	1	svayaM	сам	сам		surface+lemma
+hitopadesa-0	35	2	2	dEvam				none
+hitopadesa-0	35	2	3	Adatte	принимает	взяв	взяв	surface+lemma+root
+hitopadesa-0	35	2	4	puruza	человек	человек		surface+lemma
+hitopadesa-0	35	2	5	arTam	цель	ради		surface+lemma
+hitopadesa-0	35	2	6	apekzate	требует	зависимость	зависимость	surface+lemma+root
+hitopadesa-0	36	1	0	udyamena	напряжением сил	труд		surface+lemma
+hitopadesa-0	36	1	1	hi	ведь	ведь	ведь	surface+lemma+root
+hitopadesa-0	36	1	2	siDyanti	будут действенными	устанавливается	устанавливается	surface+lemma+root
+hitopadesa-0	36	1	3	kAryARi	дела	дело		surface+lemma
+hitopadesa-0	36	1	4	na	не	не		surface+lemma
+hitopadesa-0	36	1	5	manoraTEH		желание		lemma
+hitopadesa-0	36	2	0	nahi	не	не		surface+lemma
+hitopadesa-0	36	2	1	suptasya	уснувшего	спит	спит	surface+lemma+root
+hitopadesa-0	36	2	2	siMhasya	льва	лев		surface+lemma
+hitopadesa-0	36	2	3	praviSanti	входят	вошел	вошел	surface+lemma+root
+hitopadesa-0	36	2	4	muKe	ртом	лицо		surface+lemma
+hitopadesa-0	36	2	5	mfgAH	олени	зверей		surface+lemma
+hitopadesa-0	37	1	0	taTA	так	так		surface+lemma
+hitopadesa-0	37	1	1	ca	и	и		surface+lemma
+hitopadesa-0	37	1	2	uktam	сказано	сказал	сказал	surface+lemma+root
+hitopadesa-0	37	2	0	mAtA	мать	мать		surface+lemma
+hitopadesa-0	37	2	1	SatruH	враг	врагов		surface+lemma
+hitopadesa-0	37	2	2	pitA	отец	отец		surface+lemma
+hitopadesa-0	37	2	3	vErI				none
+hitopadesa-0	37	2	4	yena	которым	что		surface+lemma
+hitopadesa-0	37	2	5	bAlo		дети		lemma
+hitopadesa-0	37	2	6	na	не	не		surface+lemma
+hitopadesa-0	37	2	7	pAWitaH		чтения	чтения	lemma+root
+hitopadesa-0	37	3	0	na	не	не		surface+lemma
+hitopadesa-0	37	3	1	SoBate	сияет	блистал	блистал	surface+lemma+root
+hitopadesa-0	37	3	2	saBA	собрание	собрание		surface+lemma
+hitopadesa-0	37	3	3	maDye	среди	среди		surface+lemma
+hitopadesa-0	37	3	4	haMsa	гусь	гуси		surface+lemma
+hitopadesa-0	37	3	5	maDye	среди	среди		surface+lemma
+hitopadesa-0	37	3	6	bako		Бака		lemma
+hitopadesa-0	37	3	7	yaTA	как	как		surface+lemma
+hitopadesa-0	38	1	0	rUpa	образ	образ		surface+lemma
+hitopadesa-0	38	1	1	yOvana				none
+hitopadesa-0	38	1	2	sampannAH		стал	достигает	lemma+root
+hitopadesa-0	38	1	3	viSAla	обширным	обширным		surface+lemma
+hitopadesa-0	38	1	4	kula	род	род		surface+lemma
+hitopadesa-0	38	1	5	samBavAH	происхождения	рождение		surface+lemma
+hitopadesa-0	38	2	0	vidyA	знание	знание		surface+lemma
+hitopadesa-0	38	2	1	hInAH	лишенные	оставив	оставив	surface+lemma+root
+hitopadesa-0	38	2	2	na	не	не		surface+lemma
+hitopadesa-0	38	2	3	SoBante	сияли	блистал	блистал	surface+lemma+root
+hitopadesa-0	38	2	4	nirganDA				none
+hitopadesa-0	38	2	5	iva	как	как		surface+lemma
+hitopadesa-0	38	2	6	kiMSukAH	деревья киншука	Киншука		surface+lemma
+hitopadesa-0	39	1	0	aparac		другие		lemma
+hitopadesa-0	39	1	1	ca	и	и		surface+lemma
+hitopadesa-0	39	2	0	pustakezu		книга		lemma
+hitopadesa-0	39	2	1	ca	и	и		surface+lemma
+hitopadesa-0	39	2	2	na	не	не		surface+lemma
+hitopadesa-0	39	2	3	aDItam	изучена	изучив	молитвы	surface+lemma+root
+hitopadesa-0	39	2	4	na	не	не		surface+lemma
+hitopadesa-0	39	2	5	aDItam	изучена	изучив	молитвы	surface+lemma+root
+hitopadesa-0	39	2	6	guru	гуру	гуру		surface+lemma
+hitopadesa-0	39	2	7	saMniDO		присутствии		lemma
+hitopadesa-0	39	3	0	na	не	не		surface+lemma
+hitopadesa-0	39	3	1	SoBate	сияет	блистал	блистал	surface+lemma+root
+hitopadesa-0	39	3	2	saBA	собрание	собрание		surface+lemma
+hitopadesa-0	39	3	3	maDye	среди	среди		surface+lemma
+hitopadesa-0	39	3	4	jAragarBa				none
+hitopadesa-0	39	3	5	iva	как	как		surface+lemma
+hitopadesa-0	39	3	6	striyAH	жены	женщины		surface+lemma
+hitopadesa-0	4	1	0	sarva	все	все		surface+lemma
+hitopadesa-0	4	1	1	dravyezu	субстанциях	субстанция		surface+lemma
+hitopadesa-0	4	1	2	vidyA	знание	знание		surface+lemma
+hitopadesa-0	4	1	3	eva	именно	именно		surface+lemma
+hitopadesa-0	4	1	4	dravyam	субстанция	субстанция		surface+lemma
+hitopadesa-0	4	1	5	Ahur	называют	сказал	сказал	surface+lemma+root
+hitopadesa-0	4	1	6	anuttamam	несравненный	несравненный		surface+lemma
+hitopadesa-0	4	2	0	ahAryatvAd				none
+hitopadesa-0	4	2	1	anarGa				none
+hitopadesa-0	4	2	2	tvAt	поскольку	ты		surface+lemma
+hitopadesa-0	4	2	3	akzaya	нетленные	нетленные		surface+lemma
+hitopadesa-0	4	2	4	tvAt	поскольку	ты		surface+lemma
+hitopadesa-0	4	2	5	ca	и	и		surface+lemma
+hitopadesa-0	4	2	6	sarvadA	всегда	всегда		surface+lemma
+hitopadesa-0	40	1	0	etac	это	это		surface+lemma
+hitopadesa-0	40	1	1	cintayitvA	поразмыслив	подумал	подумал	surface+lemma+root
+hitopadesa-0	40	1	2	rAjA	царь	царь		surface+lemma
+hitopadesa-0	40	1	3	paRqita	мудрые	мудрые		surface+lemma
+hitopadesa-0	40	1	4	saBAm	собрание	собрание		surface+lemma
+hitopadesa-0	40	1	5	kAritavAn		побуждая	призвал	lemma+root
+hitopadesa-0	40	2	0	rAjA	царь	царь		surface+lemma
+hitopadesa-0	40	2	1	uvAca	сказал	сказал	сказал	surface+lemma+root
+hitopadesa-0	40	2	2	Bo	о	о		surface+lemma
+hitopadesa-0	40	2	3	BoH	о	о		surface+lemma
+hitopadesa-0	40	2	4	paRqitAH	мудрые	мудрые		surface+lemma
+hitopadesa-0	40	2	5	SrUyatAM	выслушайте	услышав	услышав	surface+lemma+root
+hitopadesa-0	40	2	6	mama	мне	я	я	surface+lemma+root
+hitopadesa-0	40	2	7	vacanam	слова	слова		surface+lemma
+hitopadesa-0	40	3	0	asti	есть	есть	есть	surface+lemma+root
+hitopadesa-0	40	3	1	kaScid	кто-нибудь	никто		surface+lemma
+hitopadesa-0	40	3	2	evamBUto		таким образом		lemma
+hitopadesa-0	40	3	3	vidvAn	знаток	мудрый		surface+lemma
+hitopadesa-0	40	3	4	yo	кто	что		surface+lemma
+hitopadesa-0	40	3	5	mama	мне	я	я	surface+lemma+root
+hitopadesa-0	40	3	6	putrARAM	сыновей	сын		surface+lemma
+hitopadesa-0	40	3	7	nityam	всегда	всегда		surface+lemma
+hitopadesa-0	40	3	8	unmArga				none
+hitopadesa-0	40	3	9	gAminAm		не приносящій жертвы		lemma
+hitopadesa-0	40	3	10	anaDigata	не предполагающий достаточное	не предполагающий достаточное		surface+lemma
+hitopadesa-0	40	3	11	SAstrARAm		шастры		lemma
+hitopadesa-0	40	3	12	idAnIM	теперь	теперь		surface+lemma
+hitopadesa-0	40	3	13	nIti	политика	политика		surface+lemma
+hitopadesa-0	40	3	14	SAstra	шастры	шастры		surface+lemma
+hitopadesa-0	40	3	15	upadeSena		наставление		lemma
+hitopadesa-0	40	3	16	punar	снова	снова		surface+lemma
+hitopadesa-0	40	3	17	janma	рождение	рождение		surface+lemma
+hitopadesa-0	40	3	18	kArayituM	заставить выполнять	побуждая	призвал	surface+lemma+root
+hitopadesa-0	40	3	19	samarTaH	способен	способен		surface+lemma
+hitopadesa-0	40	3	20	yataH	откуда	откуда		surface+lemma
+hitopadesa-0	40	4	0	kAcaH		стекло		lemma
+hitopadesa-0	40	4	1	kAYcana	золото	золотой		surface+lemma
+hitopadesa-0	40	4	2	saMsargAt		смешения		lemma
+hitopadesa-0	40	4	3	Datte	приобретает	дай	вера	surface+lemma+root
+hitopadesa-0	40	4	4	mArakatIr				none
+hitopadesa-0	40	4	5	dyutIH		блеск		lemma
+hitopadesa-0	40	5	0	taTA	так	так		surface+lemma
+hitopadesa-0	40	5	1	sat	сущее	есть	есть	surface+lemma+root
+hitopadesa-0	40	5	2	saMniDAnena		совокупленье		lemma
+hitopadesa-0	40	5	3	mUrKo	глупец	глупец		surface+lemma
+hitopadesa-0	40	5	4	yAti	идет	идут	идут	surface+lemma+root
+hitopadesa-0	40	5	5	pravIRatAm				none
+hitopadesa-0	41	1	0	uktaM	сказано	сказал	сказал	surface+lemma+root
+hitopadesa-0	41	1	1	ca	и	и		surface+lemma
+hitopadesa-0	41	2	0	hIyate	лишается	оставив	оставив	surface+lemma+root
+hitopadesa-0	41	2	1	hi	ведь	ведь	ведь	surface+lemma+root
+hitopadesa-0	41	2	2	matis	мысли	мысль		surface+lemma
+hitopadesa-0	41	2	3	tAta	сын мой	сын мой		surface+lemma
+hitopadesa-0	41	2	4	hInEH		оставив	оставив	lemma+root
+hitopadesa-0	41	2	5	saha	с	с		surface+lemma
+hitopadesa-0	41	2	6	samAgamAt	общения	встреча		surface+lemma
+hitopadesa-0	41	3	0	samES		равный		lemma
+hitopadesa-0	41	3	1	ca	и	и		surface+lemma
+hitopadesa-0	41	3	2	samatAm	справедливо	равенство		surface+lemma
+hitopadesa-0	41	3	3	eti	идет	идет	идет	surface+lemma+root
+hitopadesa-0	41	3	4	viSizwES		превосходит	остается	lemma+root
+hitopadesa-0	41	3	5	ca	и	и		surface+lemma
+hitopadesa-0	41	3	6	viSizwatAm				none
+hitopadesa-0	42	1	0	atra	здесь	здесь		surface+lemma
+hitopadesa-0	42	1	1	antare	между	между		surface+lemma
+hitopadesa-0	42	1	2	vizRuSarma				none
+hitopadesa-0	42	1	3	nAmA	именем	имя		surface+lemma
+hitopadesa-0	42	1	4	mahA	великий	великий		surface+lemma
+hitopadesa-0	42	1	5	paRqitaH	мудрец	мудрые		surface+lemma
+hitopadesa-0	42	1	6	sakala	все	все		surface+lemma
+hitopadesa-0	42	1	7	nIti	политика	политика		surface+lemma
+hitopadesa-0	42	1	8	SAstra	шастры	шастры		surface+lemma
+hitopadesa-0	42	1	9	tattva	истину	правду		surface+lemma
+hitopadesa-0	42	1	10	jYaH	знаешь	знаю		surface+lemma
+hitopadesa-0	42	1	11	bfhaspatir	Брихаспати	Брихаспати		surface+lemma
+hitopadesa-0	42	1	12	iva	как	как		surface+lemma
+hitopadesa-0	42	1	13	abravIt	сказал	сказал	сказал	surface+lemma+root
+hitopadesa-0	42	1	14	devEH		боги		lemma
+hitopadesa-0	42	1	15	mahA	великий	великий		surface+lemma
+hitopadesa-0	42	1	16	kula	род	род		surface+lemma
+hitopadesa-0	42	1	17	samBUtAH	возникнув	возник	будет	surface+lemma+root
+hitopadesa-0	42	1	18	ete	эти	это		surface+lemma
+hitopadesa-0	42	1	19	rAja	царя	царь		surface+lemma
+hitopadesa-0	42	1	20	putrAH	сыновья	сын		surface+lemma
+hitopadesa-0	42	2	0	tat	то	он		surface+lemma
+hitopadesa-0	42	2	1	mayA	я	я	я	surface+lemma+root
+hitopadesa-0	42	2	2	nItiM	Добродетель	политика		surface+lemma
+hitopadesa-0	42	2	3	grAhayituM		обучил	обучил	lemma+root
+hitopadesa-0	42	2	4	Sakyante	можно	способен	способен	surface+lemma+root
+hitopadesa-0	42	3	0	yataH	откуда	откуда		surface+lemma
+hitopadesa-0	42	4	0	na	не	не		surface+lemma
+hitopadesa-0	42	4	1	adravye				none
+hitopadesa-0	42	4	2	nihitA	сложены	сложенные	вера	surface+lemma+root
+hitopadesa-0	42	4	3	kAcit	какая-то	никто		surface+lemma
+hitopadesa-0	42	4	4	kriyA	обряды	обряды		surface+lemma
+hitopadesa-0	42	4	5	PalavatI	плодами	плодами		surface+lemma
+hitopadesa-0	42	4	6	Bavet	будет	будет	будет	surface+lemma+root
+hitopadesa-0	42	5	0	na	не	не		surface+lemma
+hitopadesa-0	42	5	1	vyApAra	деятельность	деятельность		surface+lemma
+hitopadesa-0	42	5	2	Satena	сотнею	сто		surface+lemma
+hitopadesa-0	42	5	3	api	также	также		surface+lemma
+hitopadesa-0	42	5	4	Suka	попугай	попугай		surface+lemma
+hitopadesa-0	42	5	5	vat	подобно	сказал	сказал	surface+lemma+root
+hitopadesa-0	42	5	6	pAWyate		чтения	чтения	lemma+root
+hitopadesa-0	42	5	7	bakaH	Баку	Бака		surface+lemma
+hitopadesa-0	43	1	0	anyac	другой	другой		surface+lemma
+hitopadesa-0	43	1	1	ca	и	и		surface+lemma
+hitopadesa-0	43	2	0	asmiMs		это		lemma
+hitopadesa-0	43	2	1	tu	же	же	же	surface+lemma+root
+hitopadesa-0	43	2	2	nirguRaM		лишенный свойств		lemma
+hitopadesa-0	43	2	3	gotre	о роде	род		surface+lemma
+hitopadesa-0	43	2	4	na	не	не		surface+lemma
+hitopadesa-0	43	2	5	apatyam	потомство	потомство		surface+lemma
+hitopadesa-0	43	2	6	upajAyate	возникает	возникает	родился	surface+lemma+root
+hitopadesa-0	43	3	0	Akare		источник		lemma
+hitopadesa-0	43	3	1	padya		Находясь у ног		lemma
+hitopadesa-0	43	3	2	rAgARAm		влечение		lemma
+hitopadesa-0	43	3	3	janma	рождение	рождение		surface+lemma
+hitopadesa-0	43	3	4	kAca	стекло	стекло		surface+lemma
+hitopadesa-0	43	3	5	maReH		амулет		lemma
+hitopadesa-0	43	3	6	kutaH	откуда	откуда		surface+lemma
+hitopadesa-0	44	1	0	ato	потому	поэтому		surface+lemma
+hitopadesa-0	44	1	1	haM		я	я	lemma+root
+hitopadesa-0	44	1	2	zaz	шесть	шесть		surface+lemma
+hitopadesa-0	44	1	3	mAsa	месяц	месяц		surface+lemma
+hitopadesa-0	44	1	4	aByantare		внутреннее		lemma
+hitopadesa-0	44	1	5	Bavat	ты	ты		surface+lemma
+hitopadesa-0	44	1	6	putrAn	сыновей	сын		surface+lemma
+hitopadesa-0	44	1	7	nIti	политика	политика		surface+lemma
+hitopadesa-0	44	1	8	SAstra	шастры	шастры		surface+lemma
+hitopadesa-0	44	1	9	aBijYAn		искусен		lemma
+hitopadesa-0	44	1	10	karizyAmi	сделаю	сделал	сделал	surface+lemma+root
+hitopadesa-0	44	2	0	rAjA	царь	царь		surface+lemma
+hitopadesa-0	44	2	1	sa	он			surface
+hitopadesa-0	44	2	2	vinayam	сурово	смиренно		surface+lemma
+hitopadesa-0	44	2	3	punar	снова	снова		surface+lemma
+hitopadesa-0	44	2	4	uvAca	сказал	сказал	сказал	surface+lemma+root
+hitopadesa-0	44	3	0	kIwo		насекомых		lemma
+hitopadesa-0	44	3	1	pi	и	также		surface+lemma
+hitopadesa-0	44	3	2	sumanas	Суманас	цветами		surface+lemma
+hitopadesa-0	44	3	3	saNgAt	из привязанности	привязанность		surface+lemma
+hitopadesa-0	44	3	4	Arohati	поднимается	взошел	взошел	surface+lemma+root
+hitopadesa-0	44	3	5	satAM	мудрых	есть	есть	surface+lemma+root
+hitopadesa-0	44	3	6	SiraH	голову	голову		surface+lemma
+hitopadesa-0	44	4	0	aSmA	камнем	камень		surface+lemma
+hitopadesa-0	44	4	1	api	также	также		surface+lemma
+hitopadesa-0	44	4	2	yAti	идет	идут	идут	surface+lemma+root
+hitopadesa-0	44	4	3	deva	боги	боги		surface+lemma
+hitopadesa-0	44	4	4	tvam	ты	ты		surface+lemma
+hitopadesa-0	44	4	5	mahadBiH	великими	великий		surface+lemma
+hitopadesa-0	44	4	6	supratizWitaH		изящно стоит		lemma
+hitopadesa-0	45	1	0	anyac	другой	другой		surface+lemma
+hitopadesa-0	45	1	1	ca	и	и		surface+lemma
+hitopadesa-0	45	2	0	yaTA	как	как		surface+lemma
+hitopadesa-0	45	2	1	udayagireH				none
+hitopadesa-0	45	2	2	dravyaM	богатство	субстанция		surface+lemma
+hitopadesa-0	45	2	3	saMnikarzeRa		контакт		lemma
+hitopadesa-0	45	2	4	dIpyate	сияет	пылающий	пылающий	surface+lemma+root
+hitopadesa-0	45	3	0	taTA	так	так		surface+lemma
+hitopadesa-0	45	3	1	sat	сущее	есть	есть	surface+lemma+root
+hitopadesa-0	45	3	2	saMniDAnena		совокупленье		lemma
+hitopadesa-0	45	3	3	hIna	лишенный	оставив	оставив	surface+lemma+root
+hitopadesa-0	45	3	4	varRaH	цвет	варн		surface+lemma
+hitopadesa-0	45	3	5	pi	и	также		surface+lemma
+hitopadesa-0	45	3	6	dIpyate	сияет	пылающий	пылающий	surface+lemma+root
+hitopadesa-0	46	1	0	guRA	гуны	гуны		surface+lemma
+hitopadesa-0	46	1	1	guRa	гуны	гуны		surface+lemma
+hitopadesa-0	46	1	2	jYezu		знаю		lemma
+hitopadesa-0	46	1	3	guRA	гуны	гуны		surface+lemma
+hitopadesa-0	46	1	4	Bavanti	становятся	будет	будет	surface+lemma+root
+hitopadesa-0	46	1	5	te	тебе	он		surface+lemma
+hitopadesa-0	46	1	6	nirguRaM		лишенный свойств		lemma
+hitopadesa-0	46	1	7	prApya	достигнув	достигнув	достигает	surface+lemma+root
+hitopadesa-0	46	1	8	Bavanti	становятся	будет	будет	surface+lemma+root
+hitopadesa-0	46	1	9	dozAH	опасностей	зло		surface+lemma
+hitopadesa-0	46	2	0	AsvAdya	Вкусив			surface
+hitopadesa-0	46	2	1	toyAH		воду		lemma
+hitopadesa-0	46	2	2	pravahanti	увозят	тяжеловозы	привези	surface+lemma+root
+hitopadesa-0	46	2	3	nadyaH	реки	реки		surface+lemma
+hitopadesa-0	46	2	4	samudram	океан	океан		surface+lemma
+hitopadesa-0	46	2	5	AsAdya	достигнув	достигнув	достигнув	surface+lemma+root
+hitopadesa-0	46	2	6	Bavanty		будет	будет	lemma+root
+hitopadesa-0	46	2	7	upeyAH		придя	придя	lemma+root
+hitopadesa-0	47	1	0	tad	то	он		surface+lemma
+hitopadesa-0	47	1	1	etezAm	этих	это		surface+lemma
+hitopadesa-0	47	1	2	asmat	от нас	я	я	surface+lemma+root
+hitopadesa-0	47	1	3	putrARAm	сыновей	сын		surface+lemma
+hitopadesa-0	47	1	4	nIti	политика	политика		surface+lemma
+hitopadesa-0	47	1	5	SAstra	шастры	шастры		surface+lemma
+hitopadesa-0	47	1	6	upadeSAya		наставление		lemma
+hitopadesa-0	47	1	7	BavantaH	вы	ты		surface+lemma
+hitopadesa-0	47	1	8	pramARam	мерилом	источник знания		surface+lemma
+hitopadesa-0	47	1	9	ity	так	так		surface+lemma
+hitopadesa-0	47	1	10	uktvA	сказав	сказал	сказал	surface+lemma+root
+hitopadesa-0	47	1	11	tasya	его	он		surface+lemma
+hitopadesa-0	47	1	12	vizRuSarmaRo				none
+hitopadesa-0	47	1	13	bahu	много	много		surface+lemma
+hitopadesa-0	47	1	14	mAna	гордость	гордость		surface+lemma
+hitopadesa-0	47	1	15	puraHsaram	спереди	предшествуемая		surface+lemma
+hitopadesa-0	47	1	16	putrAn	сыновей	сын		surface+lemma
+hitopadesa-0	47	1	17	samarpitavAn		поразил	поразил	lemma+root
+hitopadesa-0	5	1	0	saMyojayati		запряг	побуждаешь	lemma+root
+hitopadesa-0	5	1	1	vidyA	знание	знание		surface+lemma
+hitopadesa-0	5	1	2	eva	именно	именно		surface+lemma
+hitopadesa-0	5	1	3	nIcagA				none
+hitopadesa-0	5	1	4	api	также	также		surface+lemma
+hitopadesa-0	5	1	5	naraM	мужу	человек		surface+lemma
+hitopadesa-0	5	1	6	sarit	реки	реки		surface+lemma
+hitopadesa-0	5	2	0	samudram	океан	океан		surface+lemma
+hitopadesa-0	5	2	1	iva	как	как		surface+lemma
+hitopadesa-0	5	2	2	durDarzaM	несокрушимую	неодолимый		surface+lemma
+hitopadesa-0	5	2	3	nfpaM	царя	царь		surface+lemma
+hitopadesa-0	5	2	4	BAgyam	не подобает	счастье		surface+lemma
+hitopadesa-0	5	2	5	ataH	поэтому	поэтому		surface+lemma
+hitopadesa-0	5	2	6	param	высшее	высшее		surface+lemma
+hitopadesa-0	6	1	0	vidyA	знание	знание		surface+lemma
+hitopadesa-0	6	1	1	dadAti	дает	дает	взяв	surface+lemma+root
+hitopadesa-0	6	1	2	vinayaM		смиренно		lemma
+hitopadesa-0	6	1	3	vinayAd	смиренно	смиренно		surface+lemma
+hitopadesa-0	6	1	4	yAti	идет	идут	идут	surface+lemma+root
+hitopadesa-0	6	1	5	pAtra	сосуд	сосуд		surface+lemma
+hitopadesa-0	6	1	6	tAm	ее	эти		surface+lemma
+hitopadesa-0	6	2	0	pAtra	сосуд	сосуд		surface+lemma
+hitopadesa-0	6	2	1	tvAt	поскольку	ты		surface+lemma
+hitopadesa-0	6	2	2	Danam	богатство	богатство		surface+lemma
+hitopadesa-0	6	2	3	Apnoti	достигает	достигает	достигает	surface+lemma+root
+hitopadesa-0	6	2	4	DanAd	выигрыши	богатство		surface+lemma
+hitopadesa-0	6	2	5	DarmaM	дхарму	дхарма		surface+lemma
+hitopadesa-0	6	2	6	tataH	тогда	тогда		surface+lemma
+hitopadesa-0	6	2	7	suKam	счастье	счастье		surface+lemma
+hitopadesa-0	7	1	0	vidyA	знание	знание		surface+lemma
+hitopadesa-0	7	1	1	SastraM	оружия	оружие		surface+lemma
+hitopadesa-0	7	1	2	ca	и	и		surface+lemma
+hitopadesa-0	7	1	3	SAstraM	шастру	шастры		surface+lemma
+hitopadesa-0	7	1	4	ca	и	и		surface+lemma
+hitopadesa-0	7	1	5	dve	две	два		surface+lemma
+hitopadesa-0	7	1	6	vidye		знание		lemma
+hitopadesa-0	7	1	7	pratipattaye		постижение		lemma
+hitopadesa-0	7	2	0	AdyA	прекрасная	изначальный		surface+lemma
+hitopadesa-0	7	2	1	hAsyAya		шутил шутки		lemma
+hitopadesa-0	7	2	2	vfdDa	престарелый	старый		surface+lemma
+hitopadesa-0	7	2	3	tve	в тебе	ты		surface+lemma
+hitopadesa-0	7	2	4	dvitIyA	второй	второй		surface+lemma
+hitopadesa-0	7	2	5	Adriyate	пренебрег	проломитель	разрывается	surface+lemma+root
+hitopadesa-0	7	2	6	sadA	всегда	всегда		surface+lemma
+hitopadesa-0	8	1	0	yan	что	что		surface+lemma
+hitopadesa-0	8	1	1	nave	молодому	новые		surface+lemma
+hitopadesa-0	8	1	2	BAjane	сосуде	сосуды		surface+lemma
+hitopadesa-0	8	1	3	lagnaH	сжимают	будет ощутим	застрявшие	surface+lemma+root
+hitopadesa-0	8	1	4	saMskAro		санскары		lemma
+hitopadesa-0	8	1	5	na	не	не		surface+lemma
+hitopadesa-0	8	1	6	anyaTA	иначе	иначе		surface+lemma
+hitopadesa-0	8	1	7	Bavet	будет	будет	будет	surface+lemma+root
+hitopadesa-0	8	2	0	kaTA	рассказ	рассказ		surface+lemma
+hitopadesa-0	8	2	1	Calena	обмана	словесные ухищрения		surface+lemma
+hitopadesa-0	8	2	2	bAlAnAM	малых	дети		surface+lemma
+hitopadesa-0	8	2	3	nItis		политика		lemma
+hitopadesa-0	8	2	4	tad	то	он		surface+lemma
+hitopadesa-0	8	2	5	iha	здесь	здесь		surface+lemma
+hitopadesa-0	8	2	6	kaTyate	зовется	рассказал	рассказал	surface+lemma+root
+hitopadesa-0	9	1	0	mitra	Митра	Митра		surface+lemma
+hitopadesa-0	9	1	1	lABaH	блага	прибыль		surface+lemma
+hitopadesa-0	9	1	2	suhfd	друзей	друзей		surface+lemma
+hitopadesa-0	9	1	3	BedaH	разлада	различие		surface+lemma
+hitopadesa-0	9	1	4	vigrahaH	раздор	война		surface+lemma
+hitopadesa-0	9	1	5	saMDir		мир		lemma
+hitopadesa-0	9	1	6	eva	именно	именно		surface+lemma
+hitopadesa-0	9	1	7	ca	и	и		surface+lemma
+hitopadesa-0	9	2	0	paYcatantrAt				none
+hitopadesa-0	9	2	1	taTA	так	так		surface+lemma
+hitopadesa-0	9	2	2	anyasmAt	остального	другой		surface+lemma
+hitopadesa-0	9	2	3	granTAd		книги		lemma
+hitopadesa-0	9	2	4	Akfzya	вдыхай	втягивается	натянув	surface+lemma+root
+hitopadesa-0	9	2	5	liKyate		чертит	чертит	lemma+root
+kiratarjuniya-1	1	1	0	SriyaH	красоты	Шри	Шри	surface+lemma+root
+kiratarjuniya-1	1	1	1	kurURAm	кауравов	кауравов		surface+lemma
+kiratarjuniya-1	1	1	2	aDipasya		владыка		lemma
+kiratarjuniya-1	1	1	3	pAlanIM		защиту		lemma
+kiratarjuniya-1	1	1	4	prajAsu	потомством	потомство		surface+lemma
+kiratarjuniya-1	1	1	5	vfttiM	содержание	функция		surface+lemma
+kiratarjuniya-1	1	1	6	yam	кого	что		surface+lemma
+kiratarjuniya-1	1	1	7	ayuNkta		союзником	союзником	lemma+root
+kiratarjuniya-1	1	1	8	veditum	знать	знает	знает	surface+lemma+root
+kiratarjuniya-1	1	2	0	sa	он	он		surface+lemma
+kiratarjuniya-1	1	2	1	varRiliNgI				none
+kiratarjuniya-1	1	2	2	viditaH	знаю	знает	знает	surface+lemma+root
+kiratarjuniya-1	1	2	3	samAyayO		подошедшего	идут	lemma+root
+kiratarjuniya-1	1	2	4	yuDizWiraM	Юдхиштхиру	Юдхиштхира		surface+lemma
+kiratarjuniya-1	1	2	5	dvEtavane				none
+kiratarjuniya-1	1	2	6	vanecaraH	живущие в лесу	живущие в лесу		surface+lemma
+kiratarjuniya-1	10	1	0	saKIn	друзей	друг		surface+lemma
+kiratarjuniya-1	10	1	1	iva	как	как		surface+lemma
+kiratarjuniya-1	10	1	2	prIti	радость	радость		surface+lemma
+kiratarjuniya-1	10	1	3	yujaH	союзниками	союзником	союзником	surface+lemma+root
+kiratarjuniya-1	10	1	4	nujIvinaH		слуги		lemma
+kiratarjuniya-1	10	1	5	samAna	самана	самана		surface+lemma
+kiratarjuniya-1	10	1	6	mAnAn		гордость		lemma
+kiratarjuniya-1	10	1	7	suhfdaS		друзей		lemma
+kiratarjuniya-1	10	1	8	ca	и	и		surface+lemma
+kiratarjuniya-1	10	1	9	banDuBiH	родными	друг		surface+lemma
+kiratarjuniya-1	10	2	0	sa	он	он		surface+lemma
+kiratarjuniya-1	10	2	1	saMtataM		росли		lemma
+kiratarjuniya-1	10	2	2	darSayate		показал	показал	lemma+root
+kiratarjuniya-1	10	2	3	gata	ушел	отправился	пришел	surface+lemma+root
+kiratarjuniya-1	10	2	4	smayaH		гордость		lemma
+kiratarjuniya-1	10	2	5	kftA	сделал	сделал	сделал	surface+lemma+root
+kiratarjuniya-1	10	2	6	ADipatyAm		господством		lemma
+kiratarjuniya-1	10	2	7	iva	как	как		surface+lemma
+kiratarjuniya-1	10	2	8	sADu	хорошо	хорошо		surface+lemma
+kiratarjuniya-1	10	2	9	banDutAm		родство		lemma
+kiratarjuniya-1	11	1	0	a	о	о		surface+lemma
+kiratarjuniya-1	11	1	1	saktam	приверженного	привязанный	привязанный	surface+lemma+root
+kiratarjuniya-1	11	1	2	ArADayato		ублажай	ублажай	lemma+root
+kiratarjuniya-1	11	1	3	yaTAyaTaM		как положено		lemma
+kiratarjuniya-1	11	1	4	viBajya	распределив	разделенным	почитают	surface+lemma+root
+kiratarjuniya-1	11	1	5	BaktyA	с преданностью	преданность		surface+lemma
+kiratarjuniya-1	11	1	6	sama	равный	равный		surface+lemma
+kiratarjuniya-1	11	1	7	pakzapAtayA		лукавства		lemma
+kiratarjuniya-1	11	2	0	guRa	гуны	гуны		surface+lemma
+kiratarjuniya-1	11	2	1	anurAgAt	из симпатии	влечение		surface+lemma
+kiratarjuniya-1	11	2	2	iva	как	как		surface+lemma
+kiratarjuniya-1	11	2	3	saKyam	дружбы	дружбы		surface+lemma
+kiratarjuniya-1	11	2	4	IyivAn	достиг	идет	идет	surface+lemma+root
+kiratarjuniya-1	11	2	5	na	не	не		surface+lemma
+kiratarjuniya-1	11	2	6	bADate	оттесняет	оттесняет	прогони	surface+lemma+root
+kiratarjuniya-1	11	2	7	sya	этот	это		surface+lemma
+kiratarjuniya-1	11	2	8	trigaRaH				none
+kiratarjuniya-1	11	2	9	parasparam	друг друга	друг друга		surface+lemma
+kiratarjuniya-1	12	1	0	niratyayaM		безопасна		lemma
+kiratarjuniya-1	12	1	1	sAma	саман	саман		surface+lemma
+kiratarjuniya-1	12	1	2	na	не	не		surface+lemma
+kiratarjuniya-1	12	1	3	dAna	щедрость	дары		surface+lemma
+kiratarjuniya-1	12	1	4	varjitam	лишенный	избегать	избегать	surface+lemma+root
+kiratarjuniya-1	12	1	5	na	не	не		surface+lemma
+kiratarjuniya-1	12	1	6	BUri	много	много		surface+lemma
+kiratarjuniya-1	12	1	7	dAnaM	подарки	дары		surface+lemma
+kiratarjuniya-1	12	1	8	virahayya				none
+kiratarjuniya-1	12	1	9	satkriyAm	почетом	гостеприимство		surface+lemma
+kiratarjuniya-1	12	2	0	pravartate	происходит	началась	возвращаются	surface+lemma+root
+kiratarjuniya-1	12	2	1	tasya	его	он		surface+lemma
+kiratarjuniya-1	12	2	2	viSeza	различие	различие		surface+lemma
+kiratarjuniya-1	12	2	3	SAlinI	видны	веселящимся		surface+lemma
+kiratarjuniya-1	12	2	4	guRa	гуны	гуны		surface+lemma
+kiratarjuniya-1	12	2	5	anuroDena	выполняя	соблюдает		surface+lemma
+kiratarjuniya-1	12	2	6	vinA	без	без		surface+lemma
+kiratarjuniya-1	12	2	7	na	не	не		surface+lemma
+kiratarjuniya-1	12	2	8	satkriyA	гостеприимство	гостеприимство		surface+lemma
+kiratarjuniya-1	13	1	0	vasUni	блага	Васу		surface+lemma
+kiratarjuniya-1	13	1	1	vAYCan	желая	Да пожелают	Да пожелают	surface+lemma+root
+kiratarjuniya-1	13	1	2	na	не	не		surface+lemma
+kiratarjuniya-1	13	1	3	vaSI	владеющий собой	властитель		surface+lemma
+kiratarjuniya-1	13	1	4	na	не	не		surface+lemma
+kiratarjuniya-1	13	1	5	manyunA	гневом	гнев		surface+lemma
+kiratarjuniya-1	13	1	6	svaDarma	закон своей касты	свой долг		surface+lemma
+kiratarjuniya-1	13	1	7	ity	так	так		surface+lemma
+kiratarjuniya-1	13	1	8	eva	именно	именно		surface+lemma
+kiratarjuniya-1	13	1	9	nivftta	возвратились	возвращаются	возвращаются	surface+lemma+root
+kiratarjuniya-1	13	1	10	kAraRaH		причина		lemma
+kiratarjuniya-1	13	2	0	guru	гуру	гуру		surface+lemma
+kiratarjuniya-1	13	2	1	upadizwena	Указанной	наставят	стороны света	surface+lemma+root
+kiratarjuniya-1	13	2	2	ripO		врагов		lemma
+kiratarjuniya-1	13	2	3	sute	выжатого	сын		surface+lemma
+kiratarjuniya-1	13	2	4	pi	и	также		surface+lemma
+kiratarjuniya-1	13	2	5	vA	или	или	или	surface+lemma+root
+kiratarjuniya-1	13	2	6	nihanti	уничтожает	убит	убит	surface+lemma+root
+kiratarjuniya-1	13	2	7	daRqena	наказанием	штраф		surface+lemma
+kiratarjuniya-1	13	2	8	sa	он	он		surface+lemma
+kiratarjuniya-1	13	2	9	Darma	дхарма	дхарма		surface+lemma
+kiratarjuniya-1	13	2	10	viplavam				none
+kiratarjuniya-1	14	1	0	viDAya	сделав	предписывается	вера	surface+lemma+root
+kiratarjuniya-1	14	1	1	rakzAn				none
+kiratarjuniya-1	14	1	2	paritaH	вокруг	вокруг		surface+lemma
+kiratarjuniya-1	14	1	3	paretarAn				none
+kiratarjuniya-1	14	1	4	aSaNkita	непуганые	непуганые		surface+lemma
+kiratarjuniya-1	14	1	5	AkAram	имеющий вид	видом		surface+lemma
+kiratarjuniya-1	14	1	6	upEti		придя	придя	lemma+root
+kiratarjuniya-1	14	1	7	SaNkitaH		опасаясь	опасаясь	lemma+root
+kiratarjuniya-1	14	2	0	kriyA	обряды	обряды		surface+lemma
+kiratarjuniya-1	14	2	1	apavargezu		освобождение		lemma
+kiratarjuniya-1	14	2	2	anujIvisAtkftAH				none
+kiratarjuniya-1	14	2	3	kftajYa	благодарный	благодарный		surface+lemma
+kiratarjuniya-1	14	2	4	tAm	ее	эти		surface+lemma
+kiratarjuniya-1	14	2	5	asya	его	это		surface+lemma
+kiratarjuniya-1	14	2	6	vadanti	говорят	говорят	говорят	surface+lemma+root
+kiratarjuniya-1	14	2	7	sampadaH		стал	достигает	lemma+root
+kiratarjuniya-1	15	1	0	anArataM				none
+kiratarjuniya-1	15	1	1	tena	тем	он		surface+lemma
+kiratarjuniya-1	15	1	2	padezu	в трех шагах	след		surface+lemma
+kiratarjuniya-1	15	1	3	lamBitA		совершил	совершил	lemma+root
+kiratarjuniya-1	15	1	4	viBajya	распределив	разделенным	почитают	surface+lemma+root
+kiratarjuniya-1	15	1	5	samyag	ясно	должным образом		surface+lemma
+kiratarjuniya-1	15	1	6	viniyoga	веление	применение		surface+lemma
+kiratarjuniya-1	15	1	7	satkriyAm	почетом	гостеприимство		surface+lemma
+kiratarjuniya-1	15	2	0	Palanty		приносить	приносить	lemma+root
+kiratarjuniya-1	15	2	1	upAyAH		средство		lemma
+kiratarjuniya-1	15	2	2	paribfMhita	усилено	усилено	рева	surface+lemma+root
+kiratarjuniya-1	15	2	3	AyatIH	прибывающие	будущее		surface+lemma
+kiratarjuniya-1	15	2	4	upetya	придя	придя	придя	surface+lemma+root
+kiratarjuniya-1	15	2	5	saMGarzam		соперничество		lemma
+kiratarjuniya-1	15	2	6	iva	как	как		surface+lemma
+kiratarjuniya-1	15	2	7	arTa	ради	ради		surface+lemma
+kiratarjuniya-1	15	2	8	sampadaH		стал	достигает	lemma+root
+kiratarjuniya-1	16	1	0	aneka	многими	многие		surface+lemma
+kiratarjuniya-1	16	1	1	rAjanya	раджанья	раджанья		surface+lemma
+kiratarjuniya-1	16	1	2	raTa	колесницу	колесницу		surface+lemma
+kiratarjuniya-1	16	1	3	aSva	коней	коней		surface+lemma
+kiratarjuniya-1	16	1	4	saMkulam		наполнив		lemma
+kiratarjuniya-1	16	1	5	tadIyam	его	ее		surface+lemma
+kiratarjuniya-1	16	1	6	AsTAna	место остановки	место остановки		surface+lemma
+kiratarjuniya-1	16	1	7	niketana	живущих	живущих		surface+lemma
+kiratarjuniya-1	16	1	8	ajiram	проворного	Стремительные кони		surface+lemma
+kiratarjuniya-1	16	2	0	nayaty		ведут	приведи	lemma+root
+kiratarjuniya-1	16	2	1	ayugma		в нечетные		lemma
+kiratarjuniya-1	16	2	2	Cada				none
+kiratarjuniya-1	16	2	3	ganDiH		пахнущий		lemma
+kiratarjuniya-1	16	2	4	Ardra	влажной	Ардра		surface+lemma
+kiratarjuniya-1	16	2	5	tAm	ее	эти		surface+lemma
+kiratarjuniya-1	16	2	6	BfSaM	сильно	сильно		surface+lemma
+kiratarjuniya-1	16	2	7	nfpa	царь	царь		surface+lemma
+kiratarjuniya-1	16	2	8	upAyana	подарки	дары		surface+lemma
+kiratarjuniya-1	16	2	9	dantinAm	слонов	слонов		surface+lemma
+kiratarjuniya-1	16	2	10	madaH	опьянение	для опьянения		surface+lemma
+kiratarjuniya-1	17	1	0	suKena	легко	счастье		surface+lemma
+kiratarjuniya-1	17	1	1	laByA	овладеть	обретает	обретает	surface+lemma+root
+kiratarjuniya-1	17	1	2	daDataH		дай	вера	lemma+root
+kiratarjuniya-1	17	1	3	kfzIvalEr		земледельцами		lemma
+kiratarjuniya-1	17	1	4	akfzwapacyA				none
+kiratarjuniya-1	17	1	5	iva	как	как		surface+lemma
+kiratarjuniya-1	17	1	6	sasya	зерно	зерно		surface+lemma
+kiratarjuniya-1	17	1	7	sampadaH		стал	достигает	lemma+root
+kiratarjuniya-1	17	2	0	vitanvati		протянутую	протянулся	lemma+root
+kiratarjuniya-1	17	2	1	kzemam	безопасность	покой		surface+lemma
+kiratarjuniya-1	17	2	2	a	о	о		surface+lemma
+kiratarjuniya-1	17	2	3	deva	боги	боги		surface+lemma
+kiratarjuniya-1	17	2	4	mAtfkAH		матерью		lemma
+kiratarjuniya-1	17	2	5	cirAya	долго	долго		surface+lemma
+kiratarjuniya-1	17	2	6	tasmin	том	он		surface+lemma
+kiratarjuniya-1	17	2	7	kuravaS		кауравов		lemma
+kiratarjuniya-1	17	2	8	cakAsati		ехавшего	ехавшего	lemma+root
+kiratarjuniya-1	18	1	0	mahA	великий	великий		surface+lemma
+kiratarjuniya-1	18	1	1	ojasaH	от мощи	силой		surface+lemma
+kiratarjuniya-1	18	1	2	mAna	гордость	гордость		surface+lemma
+kiratarjuniya-1	18	1	3	DanAH		богатство		lemma
+kiratarjuniya-1	18	1	4	Dana	богатство	богатство		surface+lemma
+kiratarjuniya-1	18	1	5	arcitAH	довольны	почтив	почтив	surface+lemma+root
+kiratarjuniya-1	18	1	6	DanurBftaH	владеющие оружием	лучник		surface+lemma
+kiratarjuniya-1	18	1	7	saMyati	в битве	в битве	стремится	surface+lemma+root
+kiratarjuniya-1	18	1	8	labDa	получил	обретает	обретает	surface+lemma+root
+kiratarjuniya-1	18	1	9	kIrtayaH		слава		lemma
+kiratarjuniya-1	18	2	0	na	не	не		surface+lemma
+kiratarjuniya-1	18	2	1	saMhatAs		вместе	убит	lemma+root
+kiratarjuniya-1	18	2	2	tasya	его	он		surface+lemma
+kiratarjuniya-1	18	2	3	na	не	не		surface+lemma
+kiratarjuniya-1	18	2	4	Beda	различие	различие		surface+lemma
+kiratarjuniya-1	18	2	5	vfttayaH	модификаций	функция		surface+lemma
+kiratarjuniya-1	18	2	6	priyARi	приятное	приятное		surface+lemma
+kiratarjuniya-1	18	2	7	vAYCanty		Да пожелают	Да пожелают	lemma+root
+kiratarjuniya-1	18	2	8	asuBiH		жизнь		lemma
+kiratarjuniya-1	18	2	9	samIhitum	противостоять	станут	стремится	surface+lemma+root
+kiratarjuniya-1	19	1	0	udAra	благородный	дурные предзнаменования		surface+lemma
+kiratarjuniya-1	19	1	1	kIrteH		слава		lemma
+kiratarjuniya-1	19	1	2	udayaM	преуспеяние	восход		surface+lemma
+kiratarjuniya-1	19	1	3	dayAvataH		Милосердный		lemma
+kiratarjuniya-1	19	1	4	praSAnta	умиротворенный	умиротворенный	счастье	surface+lemma+root
+kiratarjuniya-1	19	1	5	bADam		обеспокоен		lemma
+kiratarjuniya-1	19	1	6	diSato		стороны	стороны света	lemma+root
+kiratarjuniya-1	19	1	7	BirakzayA				none
+kiratarjuniya-1	19	2	0	svayaM	сам	сам		surface+lemma
+kiratarjuniya-1	19	2	1	pradugDe			доится	root
+kiratarjuniya-1	19	2	2	sya	этот	это		surface+lemma
+kiratarjuniya-1	19	2	3	guREr		гуны		lemma
+kiratarjuniya-1	19	2	4	upasnutA			вершины	root
+kiratarjuniya-1	19	2	5	vasu	Васу	Васу		surface+lemma
+kiratarjuniya-1	19	2	6	upamAnasya	сравнения	сравнение		surface+lemma
+kiratarjuniya-1	19	2	7	vasUni	блага	Васу		surface+lemma
+kiratarjuniya-1	19	2	8	medinI	земля	землю		surface+lemma
+kiratarjuniya-1	2	1	0	kfta	сделано	сделал	сделал	surface+lemma+root
+kiratarjuniya-1	2	1	1	praRAmasya		поклоне		lemma
+kiratarjuniya-1	2	1	2	mahIM	землю	землю		surface+lemma
+kiratarjuniya-1	2	1	3	mahIBuje		раджей		lemma
+kiratarjuniya-1	2	1	4	jitAm		победы		lemma
+kiratarjuniya-1	2	1	5	jitAm		победить	Санджая	lemma+root
+kiratarjuniya-1	2	1	6	sapatnena	врага	соперников		surface+lemma
+kiratarjuniya-1	2	1	7	nivedayizyataH		поведал	поведал	lemma+root
+kiratarjuniya-1	2	2	0	na	не	не		surface+lemma
+kiratarjuniya-1	2	2	1	vivyaTe	дрогнул	отпрянут	отпрянут	surface+lemma+root
+kiratarjuniya-1	2	2	2	tasya	его	он		surface+lemma
+kiratarjuniya-1	2	2	3	mano	сердце	ум		surface+lemma
+kiratarjuniya-1	2	2	4	na	не	не		surface+lemma
+kiratarjuniya-1	2	2	5	hi	ведь	ведь	ведь	surface+lemma+root
+kiratarjuniya-1	2	2	6	priyaM	приятное	приятное		surface+lemma
+kiratarjuniya-1	2	2	7	pravaktum	говорить	сказал	сказал	surface+lemma+root
+kiratarjuniya-1	2	2	8	icCanti	желают	хочу	хочу	surface+lemma+root
+kiratarjuniya-1	2	2	9	mfzA	ложно	ложно		surface+lemma
+kiratarjuniya-1	2	2	10	hita	благо	благо		surface+lemma
+kiratarjuniya-1	2	2	11	eziRaH	желающие	желающая		surface+lemma
+kiratarjuniya-1	20	1	0	mahIBujAM		раджей		lemma
+kiratarjuniya-1	20	1	1	sat	сущее	добродетельных		surface+lemma
+kiratarjuniya-1	20	1	2	caritEH		деяния		lemma
+kiratarjuniya-1	20	1	3	carEH		движущееся		lemma
+kiratarjuniya-1	20	1	4	kriyAH	обряды	обряды		surface+lemma
+kiratarjuniya-1	20	1	5	sa	он	он		surface+lemma
+kiratarjuniya-1	20	1	6	veda	знает	знает	знает	surface+lemma+root
+kiratarjuniya-1	20	1	7	niHSezam		без остатка		lemma
+kiratarjuniya-1	20	1	8	aSezita				none
+kiratarjuniya-1	20	1	9	kriyaH		обряды		lemma
+kiratarjuniya-1	20	2	0	mahodayEs		Маходаю		lemma
+kiratarjuniya-1	20	2	1	tasya	его	он		surface+lemma
+kiratarjuniya-1	20	2	2	hita	благо	благо		surface+lemma
+kiratarjuniya-1	20	2	3	anubanDiBiH		связанные		lemma
+kiratarjuniya-1	20	2	4	pratIyate	выявляется	признает	признает	surface+lemma+root
+kiratarjuniya-1	20	2	5	DAtur	Дхатара	минералами		surface+lemma
+kiratarjuniya-1	20	2	6	iva	как	как		surface+lemma
+kiratarjuniya-1	20	2	7	Ihitam		доказала		lemma
+kiratarjuniya-1	20	2	8	PalEH		плод		lemma
+kiratarjuniya-1	21	1	0	na	не	не		surface+lemma
+kiratarjuniya-1	21	1	1	tena	тем	он		surface+lemma
+kiratarjuniya-1	21	1	2	sajyaM	натянул	тетиву		surface+lemma
+kiratarjuniya-1	21	1	3	kvacid	иногда	никогда		surface+lemma
+kiratarjuniya-1	21	1	4	udyataM	поднятый	подняв	подняв	surface+lemma+root
+kiratarjuniya-1	21	1	5	Danur	лук	лук		surface+lemma
+kiratarjuniya-1	21	1	6	na	не	не		surface+lemma
+kiratarjuniya-1	21	1	7	vA	или	или	или	surface+lemma+root
+kiratarjuniya-1	21	1	8	kftaM	совершен	сделал	сделал	surface+lemma+root
+kiratarjuniya-1	21	1	9	kopa	гнев	гнев		surface+lemma
+kiratarjuniya-1	21	1	10	vijihmam				none
+kiratarjuniya-1	21	1	11	Ananam	лицо	лицо		surface+lemma
+kiratarjuniya-1	21	2	0	guRa	гуны	гуны		surface+lemma
+kiratarjuniya-1	21	2	1	anurAgeRa		влечение		lemma
+kiratarjuniya-1	21	2	2	SiroBir		голову		lemma
+kiratarjuniya-1	21	2	3	uhyate	несли	везут	привези	surface+lemma+root
+kiratarjuniya-1	21	2	4	narADipEr		владыка людей		lemma
+kiratarjuniya-1	21	2	5	mAlyam	гирлянды	венки		surface+lemma
+kiratarjuniya-1	21	2	6	iva	как	как		surface+lemma
+kiratarjuniya-1	21	2	7	asya	его	это		surface+lemma
+kiratarjuniya-1	21	2	8	SAsanam	желание	повелению		surface+lemma
+kiratarjuniya-1	22	1	0	sa	он	он		surface+lemma
+kiratarjuniya-1	22	1	1	yOvarAjye				none
+kiratarjuniya-1	22	1	2	nava	девять	новые		surface+lemma
+kiratarjuniya-1	22	1	3	yOvana				none
+kiratarjuniya-1	22	1	4	udDatam	Поднимающая дыбом	Поднимающая дыбом	поднятая	surface+lemma+root
+kiratarjuniya-1	22	1	5	niDAya	Прижав	сложенные	вера	surface+lemma+root
+kiratarjuniya-1	22	1	6	duHSAsanam	Духшасану	Духшасана		surface+lemma
+kiratarjuniya-1	22	1	7	idDa	зажженный	зажигают	зажженный	surface+lemma+root
+kiratarjuniya-1	22	1	8	SAsanaH		повелению		lemma
+kiratarjuniya-1	22	2	0	maKezv		жертвоприношение		lemma
+kiratarjuniya-1	22	2	1	aKinno		неутомим		lemma
+kiratarjuniya-1	22	2	2	numataH		согласие	считаю	lemma+root
+kiratarjuniya-1	22	2	3	puroDasA	верховный жрец	жрецов		surface+lemma
+kiratarjuniya-1	22	2	4	Dinoti				none
+kiratarjuniya-1	22	2	5	havyena	жертвой	жертву		surface+lemma
+kiratarjuniya-1	22	2	6	hiraRyaretasam		обладающий вместо семени золотом		lemma
+kiratarjuniya-1	23	1	0	pralIna	исчезновении	исчезает	растворяется	surface+lemma+root
+kiratarjuniya-1	23	1	1	BUpAlam		цари		lemma
+kiratarjuniya-1	23	1	2	api	также	также		surface+lemma
+kiratarjuniya-1	23	1	3	sTirAyati				none
+kiratarjuniya-1	23	1	4	praSAsad	назначил	правь	правил	surface+lemma+root
+kiratarjuniya-1	23	1	5	maRqalaM	круг	круг		surface+lemma
+kiratarjuniya-1	23	1	6	BuvaH	бхувас	будет	будет	surface+lemma+root
+kiratarjuniya-1	23	2	0	sa	он	он		surface+lemma
+kiratarjuniya-1	23	2	1	cintayaty		подумал	подумал	lemma+root
+kiratarjuniya-1	23	2	2	eva	именно	именно		surface+lemma
+kiratarjuniya-1	23	2	3	Biyas	страха	в страхе	в страхе	surface+lemma+root
+kiratarjuniya-1	23	2	4	tvad	тебя	тебя		surface+lemma
+kiratarjuniya-1	23	2	5	ezyatIr		идет	идет	lemma+root
+kiratarjuniya-1	23	2	6	aho	увы	увы		surface+lemma
+kiratarjuniya-1	23	2	7	durantA		имеющих плохой конец		lemma
+kiratarjuniya-1	23	2	8	balavat	могучий	могучий		surface+lemma
+kiratarjuniya-1	23	2	9	viroDi				none
+kiratarjuniya-1	23	2	10	tA	эти	эти		surface+lemma
+kiratarjuniya-1	24	1	0	kaTA	рассказ	рассказ		surface+lemma
+kiratarjuniya-1	24	1	1	prasaNgeRa		привязанность		lemma
+kiratarjuniya-1	24	1	2	janEr		люди		lemma
+kiratarjuniya-1	24	1	3	udAhftAd		рассказывают	похитил	lemma+root
+kiratarjuniya-1	24	1	4	anusmfta		помня	считается	lemma+root
+kiratarjuniya-1	24	1	5	AKaRqalasUnu				none
+kiratarjuniya-1	24	1	6	vikramaH	отвага	доблесть		surface+lemma
+kiratarjuniya-1	24	2	0	te	тебе	тебя		surface+lemma
+kiratarjuniya-1	24	2	1	aBiDAnAt		зовется		lemma
+kiratarjuniya-1	24	2	2	vyaTate	колеблется	отпрянут	отпрянут	surface+lemma+root
+kiratarjuniya-1	24	2	3	nata	с железным наконечником	склоняется	склоняется	surface+lemma+root
+kiratarjuniya-1	24	2	4	AnanaH		лицо		lemma
+kiratarjuniya-1	24	2	5	sa	он	он		surface+lemma
+kiratarjuniya-1	24	2	6	duHsahAn		Духсаха		lemma
+kiratarjuniya-1	24	2	7	mantra	мантры	мантры		surface+lemma
+kiratarjuniya-1	24	2	8	padAt	шаг	след		surface+lemma
+kiratarjuniya-1	24	2	9	iva	как	как		surface+lemma
+kiratarjuniya-1	24	2	10	uragaH	змеям	змеи		surface+lemma
+kiratarjuniya-1	25	1	0	tad	то	он		surface+lemma
+kiratarjuniya-1	25	1	1	ASu	быстро	быстро		surface+lemma
+kiratarjuniya-1	25	1	2	kartuM	сделать	сделал	сделал	surface+lemma+root
+kiratarjuniya-1	25	1	3	tvayi	ты	тебя		surface+lemma
+kiratarjuniya-1	25	1	4	jihmam		лежащих наискось		lemma
+kiratarjuniya-1	25	1	5	udyate	говорится	подняв	подняв	surface+lemma+root
+kiratarjuniya-1	25	1	6	viDIyatAM	Назначь	предписывается	вера	surface+lemma+root
+kiratarjuniya-1	25	1	7	tatra	там	там		surface+lemma
+kiratarjuniya-1	25	1	8	viDeyam	поступающую как должно	предписывается	вера	surface+lemma+root
+kiratarjuniya-1	25	1	9	uttaram	ответ	ответ		surface+lemma
+kiratarjuniya-1	25	2	0	para	высший	высшее		surface+lemma
+kiratarjuniya-1	25	2	1	praRItAni		указания	указания	lemma+root
+kiratarjuniya-1	25	2	2	vacAMsi	слова	слова		surface+lemma
+kiratarjuniya-1	25	2	3	cinvatAM		решили	решив	lemma+root
+kiratarjuniya-1	25	2	4	pravftti	деятельность	деятельность		surface+lemma
+kiratarjuniya-1	25	2	5	sArAH		сущность		lemma
+kiratarjuniya-1	25	2	6	Kalu	же	же		surface+lemma
+kiratarjuniya-1	25	2	7	mAdfSAM		подобная мне		lemma
+kiratarjuniya-1	25	2	8	DiyaH	поэтические мысли	молитвы	молитвы	surface+lemma+root
+kiratarjuniya-1	26	1	0	iti	так	так		surface+lemma
+kiratarjuniya-1	26	1	1	IrayitvA		возроди	сказано	lemma+root
+kiratarjuniya-1	26	1	2	giram	слова	песни		surface+lemma
+kiratarjuniya-1	26	1	3	Atta	вооруженными	взяв	взяв	surface+lemma+root
+kiratarjuniya-1	26	1	4	satkriye		гостеприимство		lemma
+kiratarjuniya-1	26	1	5	gate	ушел	отправился	пришел	surface+lemma+root
+kiratarjuniya-1	26	1	6	Ta	тха	и		surface+lemma
+kiratarjuniya-1	26	1	7	patyO		мужа		lemma
+kiratarjuniya-1	26	1	8	vana	лес	лес		surface+lemma
+kiratarjuniya-1	26	1	9	saMnivAsinAm				none
+kiratarjuniya-1	26	2	0	praviSya	войдя	вошел	вошел	surface+lemma+root
+kiratarjuniya-1	26	2	1	kfzRA	Кришна	Кришна		surface+lemma
+kiratarjuniya-1	26	2	2	sadanaM	домой	сиденье		surface+lemma
+kiratarjuniya-1	26	2	3	mahIBujA	раджей	раджей		surface+lemma
+kiratarjuniya-1	26	2	4	tad	то	он		surface+lemma
+kiratarjuniya-1	26	2	5	Acacakze	рассказал	расскажи	расскажи	surface+lemma+root
+kiratarjuniya-1	26	2	6	anuja	младший брат	младший брат		surface+lemma
+kiratarjuniya-1	26	2	7	saMniDO		присутствии		lemma
+kiratarjuniya-1	26	2	8	vacaH	слова	слова		surface+lemma
+kiratarjuniya-1	27	1	0	niSamya	услышав	услышав	услышав	surface+lemma+root
+kiratarjuniya-1	27	1	1	sidDiM	успеха	совершенства		surface+lemma
+kiratarjuniya-1	27	1	2	dvizatAm	врагов	ненавидит	ненавидит	surface+lemma+root
+kiratarjuniya-1	27	1	3	apAkftIs		прогонять		lemma
+kiratarjuniya-1	27	1	4	tatas	тогда	тогда		surface+lemma
+kiratarjuniya-1	27	1	5	tatastyA				none
+kiratarjuniya-1	27	1	6	viniyantum	обуздать	подавив	подняв	surface+lemma+root
+kiratarjuniya-1	27	1	7	akzamA	невыполнима	невыполнима		surface+lemma
+kiratarjuniya-1	27	2	0	nfpasya	царя	царь		surface+lemma
+kiratarjuniya-1	27	2	1	manyu	гнев	гнев		surface+lemma
+kiratarjuniya-1	27	2	2	vyavasAya	решимость	решимость		surface+lemma
+kiratarjuniya-1	27	2	3	dIpinIH				none
+kiratarjuniya-1	27	2	4	udAjahAra	повторил	рассказывают	похитил	surface+lemma+root
+kiratarjuniya-1	27	2	5	drupada	Друпада	Друпада		surface+lemma
+kiratarjuniya-1	27	2	6	AtmajA	дочь	дочь		surface+lemma
+kiratarjuniya-1	27	2	7	giraH	песни	песни		surface+lemma
+kiratarjuniya-1	28	1	0	BavAdfSezu		такие, как ты		lemma
+kiratarjuniya-1	28	1	1	pramadA	женщины	женщины		surface+lemma
+kiratarjuniya-1	28	1	2	jana	люди	люди		surface+lemma
+kiratarjuniya-1	28	1	3	uditam	сказанное	говорят	говорят	surface+lemma+root
+kiratarjuniya-1	28	1	4	Bavaty		будет	будет	lemma+root
+kiratarjuniya-1	28	1	5	aDikzepa	упреки	упреки		surface+lemma
+kiratarjuniya-1	28	1	6	iva	как	как		surface+lemma
+kiratarjuniya-1	28	1	7	anuSAsanam	повелишь	наставление		surface+lemma
+kiratarjuniya-1	28	2	0	taTA	так	так		surface+lemma
+kiratarjuniya-1	28	2	1	api	также	также		surface+lemma
+kiratarjuniya-1	28	2	2	vaktuM	говорить	сказал	сказал	surface+lemma+root
+kiratarjuniya-1	28	2	3	vyavasAyayanti			совершив	root
+kiratarjuniya-1	28	2	4	mAM	меня	я	я	surface+lemma+root
+kiratarjuniya-1	28	2	5	nirasta	лишаются	изгнан	поднялся	surface+lemma+root
+kiratarjuniya-1	28	2	6	nArI	женщина	женщина		surface+lemma
+kiratarjuniya-1	28	2	7	samayAH		условие		lemma
+kiratarjuniya-1	28	2	8	durADayaH				none
+kiratarjuniya-1	29	1	0	aKaRqam		Не имеющий частей		lemma
+kiratarjuniya-1	29	1	1	AKaRqala	Акхандала	Акхандала		surface+lemma
+kiratarjuniya-1	29	1	2	tulya	равного	равный		surface+lemma
+kiratarjuniya-1	29	1	3	DAmBiH		обитель		lemma
+kiratarjuniya-1	29	1	4	ciraM	долго	долго		surface+lemma
+kiratarjuniya-1	29	1	5	DftA	удерживал	наделенный	наделенный	surface+lemma+root
+kiratarjuniya-1	29	1	6	BUpatiBiH		царь		lemma
+kiratarjuniya-1	29	1	7	sva	свой	свой		surface+lemma
+kiratarjuniya-1	29	1	8	vaMSa	род	род		surface+lemma
+kiratarjuniya-1	29	1	9	jEH		рождается		lemma
+kiratarjuniya-1	29	2	0	tvayA	ты	тебя		surface+lemma
+kiratarjuniya-1	29	2	1	sva	свой	свой		surface+lemma
+kiratarjuniya-1	29	2	2	hastena	рукой	руки		surface+lemma
+kiratarjuniya-1	29	2	3	mahI	земля	землю		surface+lemma
+kiratarjuniya-1	29	2	4	mada	опьянение	для опьянения		surface+lemma
+kiratarjuniya-1	29	2	5	cyutA	из	отпадают	отпадают	surface+lemma+root
+kiratarjuniya-1	29	2	6	mad	меня	я	я	surface+lemma+root
+kiratarjuniya-1	29	2	7	aNgajena				none
+kiratarjuniya-1	29	2	8	srag	цветочных венков	венок		surface+lemma
+kiratarjuniya-1	29	2	9	iva	как	как		surface+lemma
+kiratarjuniya-1	29	2	10	apavarjitA	исполнил	исполни	избегать	surface+lemma+root
+kiratarjuniya-1	3	1	0	dvizAM	врагов	ненавидит	ненавидит	surface+lemma+root
+kiratarjuniya-1	3	1	1	viGAtAya	рассеять	препятствие		surface+lemma
+kiratarjuniya-1	3	1	2	viDAtum		предписывается	вера	lemma+root
+kiratarjuniya-1	3	1	3	icCato		хочу	хочу	lemma+root
+kiratarjuniya-1	3	1	4	rahasy	не мог насытиться	тайно		surface+lemma
+kiratarjuniya-1	3	1	5	anujYAm	дозволение	с дозволения	зная	surface+lemma+root
+kiratarjuniya-1	3	1	6	aDigamya	получив	достигает	пришел	surface+lemma+root
+kiratarjuniya-1	3	1	7	BUBftaH		царей		lemma
+kiratarjuniya-1	3	2	0	sa	он	он		surface+lemma
+kiratarjuniya-1	3	2	1	sOzWava				none
+kiratarjuniya-1	3	2	2	OdArya				none
+kiratarjuniya-1	3	2	3	viSeza	различие	различие		surface+lemma
+kiratarjuniya-1	3	2	4	SAlinIm	Усыпанная	веселящимся		surface+lemma
+kiratarjuniya-1	3	2	5	viniScita	определено	поразмыслив	решив	surface+lemma+root
+kiratarjuniya-1	3	2	6	arTAm	выгоду	ради		surface+lemma
+kiratarjuniya-1	3	2	7	iti	так	так		surface+lemma
+kiratarjuniya-1	3	2	8	vAcam	речь	речь		surface+lemma
+kiratarjuniya-1	3	2	9	AdaDe	вложила	посвятив	вера	surface+lemma+root
+kiratarjuniya-1	30	1	0	vrajanti	избегнет	загон	загон	surface+lemma+root
+kiratarjuniya-1	30	1	1	te	тебе	он		surface+lemma
+kiratarjuniya-1	30	1	2	mUQa	глупец	глупец	глупец	surface+lemma+root
+kiratarjuniya-1	30	1	3	DiyaH	поэтические мысли	молитвы	молитвы	surface+lemma+root
+kiratarjuniya-1	30	1	4	parABavaM	унижению	поражение		surface+lemma
+kiratarjuniya-1	30	1	5	Bavanti	становятся	будет	будет	surface+lemma+root
+kiratarjuniya-1	30	1	6	mAyAvizu		обладатели колдовской силы		lemma
+kiratarjuniya-1	30	1	7	ye	которые	что		surface+lemma
+kiratarjuniya-1	30	1	8	na	не	не		surface+lemma
+kiratarjuniya-1	30	1	9	mAyinaH	колдунов	колдовского		surface+lemma
+kiratarjuniya-1	30	2	0	praviSya	войдя	вошел	вошел	surface+lemma+root
+kiratarjuniya-1	30	2	1	hi	ведь	ведь	ведь	surface+lemma+root
+kiratarjuniya-1	30	2	2	Gnanti	убивают	убит	убит	surface+lemma+root
+kiratarjuniya-1	30	2	3	SaWAs		лживый		lemma
+kiratarjuniya-1	30	2	4	taTAviDAn		такое		lemma
+kiratarjuniya-1	30	2	5	asaMvfta	голой	ничем не прикрытую		surface+lemma
+kiratarjuniya-1	30	2	6	aNgAn	тело	тело		surface+lemma
+kiratarjuniya-1	30	2	7	niSitA	жадные	острыми	острыми	surface+lemma+root
+kiratarjuniya-1	30	2	8	iva	как	как		surface+lemma
+kiratarjuniya-1	30	2	9	izavaH	стрелы	стрелами		surface+lemma
+kiratarjuniya-1	31	1	0	guRa	гуны	гуны		surface+lemma
+kiratarjuniya-1	31	1	1	anuraktAm		преданный	царь	lemma+root
+kiratarjuniya-1	31	1	2	anurakta	преданный	преданный	царь	surface+lemma+root
+kiratarjuniya-1	31	1	3	sADanaH	вызывающий	средство		surface+lemma
+kiratarjuniya-1	31	1	4	kula	род	род		surface+lemma
+kiratarjuniya-1	31	1	5	aBimAnI	тщеславный	тщеславный		surface+lemma
+kiratarjuniya-1	31	1	6	kula	род	род		surface+lemma
+kiratarjuniya-1	31	1	7	jAm		рождается		lemma
+kiratarjuniya-1	31	1	8	narADipaH	царь	владыка людей		surface+lemma
+kiratarjuniya-1	31	2	0	parEs		высшее		lemma
+kiratarjuniya-1	31	2	1	tvad	тебя	тебя		surface+lemma
+kiratarjuniya-1	31	2	2	anyaH	другой	другой		surface+lemma
+kiratarjuniya-1	31	2	3	ka	кто	что		surface+lemma
+kiratarjuniya-1	31	2	4	iva	как	как		surface+lemma
+kiratarjuniya-1	31	2	5	apahArayet		Ушедших	снарядились и приготовились	lemma+root
+kiratarjuniya-1	31	2	6	manoramAm	восхитительный	прекрасный		surface+lemma
+kiratarjuniya-1	31	2	7	Atma	себя	себя		surface+lemma
+kiratarjuniya-1	31	2	8	vaDvam	невесту	невестка		surface+lemma
+kiratarjuniya-1	31	2	9	iva	как	как		surface+lemma
+kiratarjuniya-1	31	2	10	Sriyam	Шри	Шри	Шри	surface+lemma+root
+kiratarjuniya-1	32	1	0	Bavantam	тебя	ты		surface+lemma
+kiratarjuniya-1	32	1	1	etarhi	теперь	теперь		surface+lemma
+kiratarjuniya-1	32	1	2	manasvi		мудрая		lemma
+kiratarjuniya-1	32	1	3	garhite	упрекает	порицать	порицать	surface+lemma+root
+kiratarjuniya-1	32	1	4	vivartamAnaM		относятся	возвращаются	lemma+root
+kiratarjuniya-1	32	1	5	naradeva	владыка мужей	владыка мужей		surface+lemma
+kiratarjuniya-1	32	1	6	vartmani	пути	пути		surface+lemma
+kiratarjuniya-1	32	2	0	kaTaM	как	как		surface+lemma
+kiratarjuniya-1	32	2	1	na	не	не		surface+lemma
+kiratarjuniya-1	32	2	2	manyur		гнев		lemma
+kiratarjuniya-1	32	2	3	jvalayaty			придай блеск	root
+kiratarjuniya-1	32	2	4	udIritaH	от	Гоните	сказано	surface+lemma+root
+kiratarjuniya-1	32	2	5	SamI	Шами	Шами		surface+lemma
+kiratarjuniya-1	32	2	6	tarum		деревья		lemma
+kiratarjuniya-1	32	2	7	Suzkam	сухое	засохший		surface+lemma
+kiratarjuniya-1	32	2	8	iva	как	как		surface+lemma
+kiratarjuniya-1	32	2	9	agniH	Агни	Агни		surface+lemma
+kiratarjuniya-1	32	2	10	ucCiKaH		Уччхикха		lemma
+kiratarjuniya-1	33	1	0	avanDya		Покроетъ		lemma
+kiratarjuniya-1	33	1	1	kopasya	гнева	гнев		surface+lemma
+kiratarjuniya-1	33	1	2	nihantur		истребитель		lemma
+kiratarjuniya-1	33	1	3	ApadAM		беду	достигает	lemma+root
+kiratarjuniya-1	33	1	4	Bavanti	становятся	будет	будет	surface+lemma+root
+kiratarjuniya-1	33	1	5	vaSyAH		послушным		lemma
+kiratarjuniya-1	33	1	6	svayam	сам	сам		surface+lemma
+kiratarjuniya-1	33	1	7	eva	именно	именно		surface+lemma
+kiratarjuniya-1	33	1	8	dehinaH	смертных	воплощенный		surface+lemma
+kiratarjuniya-1	33	2	0	amarza	гнев	гнев		surface+lemma
+kiratarjuniya-1	33	2	1	SUnyena	помутненным	пустой		surface+lemma
+kiratarjuniya-1	33	2	2	janasya	людей	люди		surface+lemma
+kiratarjuniya-1	33	2	3	jantunA		существа		lemma
+kiratarjuniya-1	33	2	4	na	не	не		surface+lemma
+kiratarjuniya-1	33	2	5	jAta	родился	родился	родился	surface+lemma+root
+kiratarjuniya-1	33	2	6	hArdena	сердечной привязанности	сердечной привязанности		surface+lemma
+kiratarjuniya-1	33	2	7	na	не	не		surface+lemma
+kiratarjuniya-1	33	2	8	vidviza				none
+kiratarjuniya-1	33	2	9	AdaraH	почтенье	сосредоточенно		surface+lemma
+kiratarjuniya-1	34	1	0	pariBramaMl		блуждает	блуждает	lemma+root
+kiratarjuniya-1	34	1	1	lohita	кровь	красным		surface+lemma
+kiratarjuniya-1	34	1	2	candana	сандалом	сандалом		surface+lemma
+kiratarjuniya-1	34	1	3	ucitaH	привыкли	привыкший		surface+lemma
+kiratarjuniya-1	34	1	4	padAtir		пехотинцев		lemma
+kiratarjuniya-1	34	1	5	antar	внутри	внутри		surface+lemma
+kiratarjuniya-1	34	1	6	_		песни		lemma
+kiratarjuniya-1	34	1	7	reRu	пыль	пыль		surface+lemma
+kiratarjuniya-1	34	1	8	rUzitaH	Умащенный	умащают		surface+lemma
+kiratarjuniya-1	34	2	0	mahA	великий	великий		surface+lemma
+kiratarjuniya-1	34	2	1	raTaH	колесница	колесницу		surface+lemma
+kiratarjuniya-1	34	2	2	satya	правду	правду		surface+lemma
+kiratarjuniya-1	34	2	3	Danasya	богатства	богатство		surface+lemma
+kiratarjuniya-1	34	2	4	mAnasaM	родившимся от молитвы	ум		surface+lemma
+kiratarjuniya-1	34	2	5	dunoti	терзает	терзает	знают	surface+lemma+root
+kiratarjuniya-1	34	2	6	te	тебе	тебя		surface+lemma
+kiratarjuniya-1	34	2	7	kaccid	ли	ли		surface+lemma
+kiratarjuniya-1	34	2	8	ayaM	этот	это		surface+lemma
+kiratarjuniya-1	34	2	9	vfkodaraH	Врикодара	Врикодара		surface+lemma
+kiratarjuniya-1	35	1	0	vijitya	победив	покорил	Санджая	surface+lemma+root
+kiratarjuniya-1	35	1	1	yaH	который	что		surface+lemma
+kiratarjuniya-1	35	1	2	prAjyam		Окутанные		lemma
+kiratarjuniya-1	35	1	3	ayacCad		даруй	подняв	lemma+root
+kiratarjuniya-1	35	1	4	uttarAn	Уттаракуру	ответ		surface+lemma
+kiratarjuniya-1	35	1	5	kurUn	кауравов	кауравов		surface+lemma
+kiratarjuniya-1	35	1	6	akupyaM				none
+kiratarjuniya-1	35	1	7	vasu	Васу	Васу		surface+lemma
+kiratarjuniya-1	35	1	8	vAsava	Васава	Васава		surface+lemma
+kiratarjuniya-1	35	1	9	upamaH	словно	подобный		surface+lemma
+kiratarjuniya-1	35	2	0	sa	он	он		surface+lemma
+kiratarjuniya-1	35	2	1	valka	лыком	лыком		surface+lemma
+kiratarjuniya-1	35	2	2	vAsAMsi	одежды	одежды		surface+lemma
+kiratarjuniya-1	35	2	3	te	тебе	тебя		surface+lemma
+kiratarjuniya-1	35	2	4	aDunA	теперь	теперь		surface+lemma
+kiratarjuniya-1	35	2	5	haran	валя	похитил	похитил	surface+lemma+root
+kiratarjuniya-1	35	2	6	karoti	делает	сделал	сделал	surface+lemma+root
+kiratarjuniya-1	35	2	7	manyuM	осуждай	гнев		surface+lemma
+kiratarjuniya-1	35	2	8	na	не	не		surface+lemma
+kiratarjuniya-1	35	2	9	kaTaM	как	как		surface+lemma
+kiratarjuniya-1	35	2	10	DanaMjayaH	Дхананджая	Дхананджая		surface+lemma
+kiratarjuniya-1	36	1	0	vanAnta	в лесу	в лесу		surface+lemma
+kiratarjuniya-1	36	1	1	SayyA	ложе	ложе		surface+lemma
+kiratarjuniya-1	36	1	2	kaWinIkfta			сделал	root
+kiratarjuniya-1	36	1	3	AkftI		форма		lemma
+kiratarjuniya-1	36	1	4	kaca	Кача	Кача		surface+lemma
+kiratarjuniya-1	36	1	5	AcitO		замечающих	решив	lemma+root
+kiratarjuniya-1	36	1	6	iva	как	как		surface+lemma
+kiratarjuniya-1	36	1	7	agajO				none
+kiratarjuniya-1	36	1	8	gajO		слонов		lemma
+kiratarjuniya-1	36	2	0	kaTaM	как	как		surface+lemma
+kiratarjuniya-1	36	2	1	tvam	ты	тебя		surface+lemma
+kiratarjuniya-1	36	2	2	etO		это		lemma
+kiratarjuniya-1	36	2	3	Dfti	стойкость	стойкость		surface+lemma
+kiratarjuniya-1	36	2	4	saMyamO		санъяме		lemma
+kiratarjuniya-1	36	2	5	yamO		Яма		lemma
+kiratarjuniya-1	36	2	6	vilokayann		видя	увидев	lemma+root
+kiratarjuniya-1	36	2	7	utsahase	отваживаешься	могу	могу	surface+lemma+root
+kiratarjuniya-1	36	2	8	na	не	не		surface+lemma
+kiratarjuniya-1	36	2	9	bADitum	погубить	оттесняет	прогони	surface+lemma+root
+kiratarjuniya-1	37	1	0	imAm	эту	это		surface+lemma
+kiratarjuniya-1	37	1	1	ahaM	я	я	я	surface+lemma+root
+kiratarjuniya-1	37	1	2	veda	знает	знает	знает	surface+lemma+root
+kiratarjuniya-1	37	1	3	na	не	не		surface+lemma
+kiratarjuniya-1	37	1	4	tAvakIM		твои		lemma
+kiratarjuniya-1	37	1	5	DiyaM	мысль	молитвы	молитвы	surface+lemma+root
+kiratarjuniya-1	37	1	6	vicitra	различные	различные		surface+lemma
+kiratarjuniya-1	37	1	7	rUpAH	шкуры	образ		surface+lemma
+kiratarjuniya-1	37	1	8	Kalu	же	же		surface+lemma
+kiratarjuniya-1	37	1	9	citta	ум	ум		surface+lemma
+kiratarjuniya-1	37	1	10	vfttayaH	модификаций	функция		surface+lemma
+kiratarjuniya-1	37	2	0	vicintayantyA		поразмыслив	подумал	lemma+root
+kiratarjuniya-1	37	2	1	Bavat	ты	ты		surface+lemma
+kiratarjuniya-1	37	2	2	Apadam	несчастье	беду	достигает	surface+lemma+root
+kiratarjuniya-1	37	2	3	parAM	высшего	высшее		surface+lemma
+kiratarjuniya-1	37	2	4	rujanti	разбивают	проломил	проломил	surface+lemma+root
+kiratarjuniya-1	37	2	5	cetaH	сердце	сердце		surface+lemma
+kiratarjuniya-1	37	2	6	prasaBaM	силой	силой		surface+lemma
+kiratarjuniya-1	37	2	7	mama	мне	я	я	surface+lemma+root
+kiratarjuniya-1	37	2	8	ADayaH	душевные муки	залог		surface+lemma
+kiratarjuniya-1	38	1	0	purA	некогда	некогда		surface+lemma
+kiratarjuniya-1	38	1	1	aDirUQaH	восседающий	сел	взошел	surface+lemma+root
+kiratarjuniya-1	38	1	2	SayanaM	ложе	ложе		surface+lemma
+kiratarjuniya-1	38	1	3	mahADanaM	великую ставку	громадные тучи		surface+lemma
+kiratarjuniya-1	38	1	4	viboDyase		Пробуди	разбудил	lemma+root
+kiratarjuniya-1	38	1	5	yaH	который	что		surface+lemma
+kiratarjuniya-1	38	1	6	stuti	хвалебными гимнами	хвалебными гимнами		surface+lemma
+kiratarjuniya-1	38	1	7	gIti	песнопения	песнопения		surface+lemma
+kiratarjuniya-1	38	1	8	maNgalEH		благословениями		lemma
+kiratarjuniya-1	38	2	0	adaBra	немалого	немалого		surface+lemma
+kiratarjuniya-1	38	2	1	darBAm		дарбха		lemma
+kiratarjuniya-1	38	2	2	aDiSayya		спускаются вниз	лежит	lemma+root
+kiratarjuniya-1	38	2	3	sa	он	он		surface+lemma
+kiratarjuniya-1	38	2	4	sTalIM		опушке		lemma
+kiratarjuniya-1	38	2	5	jahAsi	покинул	оставив	оставив	surface+lemma+root
+kiratarjuniya-1	38	2	6	nidrAm	сон	сон	сон	surface+lemma+root
+kiratarjuniya-1	38	2	7	aSivEH		Сулящий беду		lemma
+kiratarjuniya-1	38	2	8	SivA	шакалы			surface
+kiratarjuniya-1	38	2	9	rutEH		пение		lemma
+kiratarjuniya-1	39	1	0	purA	некогда	некогда		surface+lemma
+kiratarjuniya-1	39	1	1	upanItam	оказанные	посвятив	приведи	surface+lemma+root
+kiratarjuniya-1	39	1	2	nfpa	царь	царь		surface+lemma
+kiratarjuniya-1	39	1	3	rAmaRIyakaM		любовно		lemma
+kiratarjuniya-1	39	1	4	dvijAti	дваждырожденных	дваждырожденные		surface+lemma
+kiratarjuniya-1	39	1	5	SezeRa		остальные		lemma
+kiratarjuniya-1	39	1	6	yad	что	что		surface+lemma
+kiratarjuniya-1	39	1	7	etad	это	это		surface+lemma
+kiratarjuniya-1	39	1	8	anDasA	соком	соком		surface+lemma
+kiratarjuniya-1	39	2	0	tad	то	он		surface+lemma
+kiratarjuniya-1	39	2	1	adya	сегодня	сегодня		surface+lemma
+kiratarjuniya-1	39	2	2	te	тебе	тебя		surface+lemma
+kiratarjuniya-1	39	2	3	vanya	лесной	лесной		surface+lemma
+kiratarjuniya-1	39	2	4	Pala	плод	плод		surface+lemma
+kiratarjuniya-1	39	2	5	ASinaH		с зубами		lemma
+kiratarjuniya-1	39	2	6	paraM	но	высшее		surface+lemma
+kiratarjuniya-1	39	2	7	parEti		прошли	прошли	lemma+root
+kiratarjuniya-1	39	2	8	kArSyaM		изнурял		lemma
+kiratarjuniya-1	39	2	9	yaSasA	славой	слава		surface+lemma
+kiratarjuniya-1	39	2	10	samaM	с	равный		surface+lemma
+kiratarjuniya-1	39	2	11	vapuH	облик	тело		surface+lemma
+kiratarjuniya-1	4	1	0	kriyAsu	действует	обряды		surface+lemma
+kiratarjuniya-1	4	1	1	yuktEr		союзником	союзником	lemma+root
+kiratarjuniya-1	4	1	2	nfpa	царь	царь		surface+lemma
+kiratarjuniya-1	4	1	3	cAra	шпионов	шпионов		surface+lemma
+kiratarjuniya-1	4	1	4	cakzuzaH	глаза	глаз		surface+lemma
+kiratarjuniya-1	4	1	5	na	не	не		surface+lemma
+kiratarjuniya-1	4	1	6	vaYcanIyAH	Должны быть обмануты	Должны быть обмануты		surface+lemma
+kiratarjuniya-1	4	1	7	praBavo		владыка		lemma
+kiratarjuniya-1	4	1	8	nujIviBiH		слуги		lemma
+kiratarjuniya-1	4	2	0	ato	потому	поэтому		surface+lemma
+kiratarjuniya-1	4	2	1	rhasi		должен	должен	lemma+root
+kiratarjuniya-1	4	2	2	kzantum	простить	простить	простить	surface+lemma+root
+kiratarjuniya-1	4	2	3	asADu	дурного	дурного		surface+lemma
+kiratarjuniya-1	4	2	4	sADu	хорошо	хорошо		surface+lemma
+kiratarjuniya-1	4	2	5	vA	или	или	или	surface+lemma+root
+kiratarjuniya-1	4	2	6	hitaM	благо	благо		surface+lemma
+kiratarjuniya-1	4	2	7	manohAri	прекрасней	прекрасней		surface+lemma
+kiratarjuniya-1	4	2	8	ca	и	и		surface+lemma
+kiratarjuniya-1	4	2	9	durlaBaM	недопустим	трудно найти		surface+lemma
+kiratarjuniya-1	4	2	10	vacaH	слова	слова		surface+lemma
+kiratarjuniya-1	40	1	0	anArataM				none
+kiratarjuniya-1	40	1	1	yO		что		lemma
+kiratarjuniya-1	40	1	2	maRi	амулет	амулет		surface+lemma
+kiratarjuniya-1	40	1	3	pIWa	сидение	сидение		surface+lemma
+kiratarjuniya-1	40	1	4	SAyinaH		погрузившись		lemma
+kiratarjuniya-1	40	1	5	araYjayad		услаждает	услаждает	lemma+root
+kiratarjuniya-1	40	1	6	rAja	царя	царь		surface+lemma
+kiratarjuniya-1	40	1	7	Siras	голову	голову		surface+lemma
+kiratarjuniya-1	40	1	8	_		венок		lemma
+kiratarjuniya-1	40	1	9	rajaH	раджас	раджас		surface+lemma
+kiratarjuniya-1	40	2	0	nizIdatas		уселись	поедает	lemma+root
+kiratarjuniya-1	40	2	1	tO		он		lemma
+kiratarjuniya-1	40	2	2	caraRO		ноги		lemma
+kiratarjuniya-1	40	2	3	vanezu	в лесах	лес		surface+lemma
+kiratarjuniya-1	40	2	4	te	тебе	тебя		surface+lemma
+kiratarjuniya-1	40	2	5	mfga	зверей	зверей		surface+lemma
+kiratarjuniya-1	40	2	6	dvija	дваждырожденный	дваждырожденный		surface+lemma
+kiratarjuniya-1	40	2	7	AlUna			рассек	root
+kiratarjuniya-1	40	2	8	SiKezu		пламя		lemma
+kiratarjuniya-1	40	2	9	barhizAm		жертвенную солому		lemma
+kiratarjuniya-1	41	1	0	dvizat	врагов	ненавидит	ненавидит	surface+lemma+root
+kiratarjuniya-1	41	1	1	nimittA		причина		lemma
+kiratarjuniya-1	41	1	2	yad	что	стремится	стремится	surface+lemma+root
+kiratarjuniya-1	41	1	3	iyaM	эта	это		surface+lemma
+kiratarjuniya-1	41	1	4	daSA	состояние	состояние		surface+lemma
+kiratarjuniya-1	41	1	5	tataH	тогда	тогда		surface+lemma
+kiratarjuniya-1	41	1	6	sa	он			surface
+kiratarjuniya-1	41	1	7	mUlam	корень	корень		surface+lemma
+kiratarjuniya-1	41	1	8	unmUlayati		вырывал с корнем	искоренить	lemma+root
+kiratarjuniya-1	41	1	9	iva	как	как		surface+lemma
+kiratarjuniya-1	41	1	10	me	мне	я	я	surface+lemma+root
+kiratarjuniya-1	41	1	11	manaH	ум	ум		surface+lemma
+kiratarjuniya-1	41	2	0	parEr		высшее		lemma
+kiratarjuniya-1	41	2	1	aparyAsita				none
+kiratarjuniya-1	41	2	2	vIrya	сила	доблесть		surface+lemma
+kiratarjuniya-1	41	2	3	_		стал	достигает	lemma+root
+kiratarjuniya-1	41	2	4	parABavo		поражение		lemma
+kiratarjuniya-1	41	2	5	py		также		lemma
+kiratarjuniya-1	41	2	6	utsava	праздник	праздник		surface+lemma
+kiratarjuniya-1	41	2	7	eva	именно	именно		surface+lemma
+kiratarjuniya-1	41	2	8	mAninAm		гордый		lemma
+kiratarjuniya-1	42	1	0	vihAya	оставив	оставив	оставив	surface+lemma+root
+kiratarjuniya-1	42	1	1	SAntiM	безразличие	покой		surface+lemma
+kiratarjuniya-1	42	1	2	nfpa	царь	царь		surface+lemma
+kiratarjuniya-1	42	1	3	DAma	обитель	обитель		surface+lemma
+kiratarjuniya-1	42	1	4	tat	то	он		surface+lemma
+kiratarjuniya-1	42	1	5	punaH	снова	снова		surface+lemma
+kiratarjuniya-1	42	1	6	prasIda	смилуйся	смилуйся	уселся	surface+lemma+root
+kiratarjuniya-1	42	1	7	saMDehi	Хватай	наложил	вера	surface+lemma+root
+kiratarjuniya-1	42	1	8	vaDAya	на погибель	убить		surface+lemma
+kiratarjuniya-1	42	1	9	vidvizAm		врагов	ненавидит	lemma+root
+kiratarjuniya-1	42	2	0	vrajanti	избегнет	загон	загон	surface+lemma+root
+kiratarjuniya-1	42	2	1	SatrUn	врагов	врагов		surface+lemma
+kiratarjuniya-1	42	2	2	avaDUya	отбросив	стряхивая	дышло	surface+lemma+root
+kiratarjuniya-1	42	2	3	niHspfhAH	не прикасаются	неалчный		surface+lemma
+kiratarjuniya-1	42	2	4	Samena	спокойным нравом	мир		surface+lemma
+kiratarjuniya-1	42	2	5	sidDiM	успеха	совершенства		surface+lemma
+kiratarjuniya-1	42	2	6	munayo		мудрец		lemma
+kiratarjuniya-1	42	2	7	na	не	не		surface+lemma
+kiratarjuniya-1	42	2	8	BUBftaH		царей		lemma
+kiratarjuniya-1	43	1	0	puraHsarA	предшествуемая	предшествуемая		surface+lemma
+kiratarjuniya-1	43	1	1	DAmavatAM				none
+kiratarjuniya-1	43	1	2	yaSas	слава	слава		surface+lemma
+kiratarjuniya-1	43	1	3	DanAH		богатство		lemma
+kiratarjuniya-1	43	1	4	su	хорошенько	выжимающего	выжимающего	surface+lemma+root
+kiratarjuniya-1	43	1	5	duHsaham	Непереносимым	Духсаха		surface+lemma
+kiratarjuniya-1	43	1	6	prApya	достигнув	достигнув	достигает	surface+lemma+root
+kiratarjuniya-1	43	1	7	nikAram		оскорбления		lemma
+kiratarjuniya-1	43	1	8	IdfSam	такое	такое		surface+lemma
+kiratarjuniya-1	43	2	0	BavAdfSAS		такие, как ты		lemma
+kiratarjuniya-1	43	2	1	ced	если	если		surface+lemma
+kiratarjuniya-1	43	2	2	aDikurvate	называется	предназначенный	сделал	surface+lemma+root
+kiratarjuniya-1	43	2	3	parAn	врагов	высшее		surface+lemma
+kiratarjuniya-1	43	2	4	nirASrayA		без опоры		lemma
+kiratarjuniya-1	43	2	5	hanta	Хорошо	Хорошо		surface+lemma
+kiratarjuniya-1	43	2	6	hatA	убиты	убит	убит	surface+lemma+root
+kiratarjuniya-1	43	2	7	manasvi		мудрая		lemma
+kiratarjuniya-1	43	2	8	tA	эти	эти		surface+lemma
+kiratarjuniya-1	44	1	0	aTa	и	и		surface+lemma
+kiratarjuniya-1	44	1	1	kzamAm	терпение	терпение		surface+lemma
+kiratarjuniya-1	44	1	2	eva	именно	именно		surface+lemma
+kiratarjuniya-1	44	1	3	nirasta	лишаются	изгнан	поднялся	surface+lemma+root
+kiratarjuniya-1	44	1	4	sADanaH	вызывающий	средство		surface+lemma
+kiratarjuniya-1	44	1	5	cirAya	долго	долго		surface+lemma
+kiratarjuniya-1	44	1	6	paryezi		обладать	обладать	lemma+root
+kiratarjuniya-1	44	1	7	suKasya	блаженства	счастье		surface+lemma
+kiratarjuniya-1	44	1	8	sADanam	приводящего к цели	средство		surface+lemma
+kiratarjuniya-1	44	2	0	vihAya	оставив	оставив	оставив	surface+lemma+root
+kiratarjuniya-1	44	2	1	lakzmIpati				none
+kiratarjuniya-1	44	2	2	lakzma	знак	знак		surface+lemma
+kiratarjuniya-1	44	2	3	kArmukaM	лук	лук		surface+lemma
+kiratarjuniya-1	44	2	4	jawADaraH		волосы носил так, как носят отшельники		lemma
+kiratarjuniya-1	44	2	5	saY	всегда	есть	есть	surface+lemma+root
+kiratarjuniya-1	44	2	6	juhuDi		жертвуют	жертвуют	lemma+root
+kiratarjuniya-1	44	2	7	iha	здесь	здесь		surface+lemma
+kiratarjuniya-1	44	2	8	pAvakam	огонь	огонь		surface+lemma
+kiratarjuniya-1	45	1	0	na	не	не		surface+lemma
+kiratarjuniya-1	45	1	1	samaya	условие	условие		surface+lemma
+kiratarjuniya-1	45	1	2	parirakzaRam		защищать		lemma
+kiratarjuniya-1	45	1	3	kzamaM		благо		lemma
+kiratarjuniya-1	45	1	4	te	тебе	тебя		surface+lemma
+kiratarjuniya-1	45	1	5	nikfti	обману	обману		surface+lemma
+kiratarjuniya-1	45	1	6	parezu	среди дальних	высшее		surface+lemma
+kiratarjuniya-1	45	1	7	parezu	среди дальних	высшее		surface+lemma
+kiratarjuniya-1	45	1	8	BUri	много	много		surface+lemma
+kiratarjuniya-1	45	1	9	DAmnaH		обитель		lemma
+kiratarjuniya-1	45	2	0	arizu	в отношении врагов	врагов		surface+lemma
+kiratarjuniya-1	45	2	1	hi	ведь	ведь	ведь	surface+lemma+root
+kiratarjuniya-1	45	2	2	vijaya	победа	победа		surface+lemma
+kiratarjuniya-1	45	2	3	arTinaH	тот, кто пылает страстью	стремится		surface+lemma
+kiratarjuniya-1	45	2	4	kzitISA		властитель земли		lemma
+kiratarjuniya-1	45	2	5	vidaDati	даруют	предписывается	вера	surface+lemma+root
+kiratarjuniya-1	45	2	6	sa	он			surface
+kiratarjuniya-1	45	2	7	upaDi	обод	поверхности		surface+lemma
+kiratarjuniya-1	45	2	8	saMDi	союз	мир		surface+lemma
+kiratarjuniya-1	45	2	9	dUzaRAni		Душана		lemma
+kiratarjuniya-1	46	1	0	viDi	правило	правило		surface+lemma
+kiratarjuniya-1	46	1	1	samaya	условие	условие		surface+lemma
+kiratarjuniya-1	46	1	2	niyogAt	по приказанию	велению		surface+lemma
+kiratarjuniya-1	46	1	3	dIpti	сияние	сияние		surface+lemma
+kiratarjuniya-1	46	1	4	saMhAra	уничтожение	уничтожение		surface+lemma
+kiratarjuniya-1	46	1	5	jihmam		лежащих наискось		lemma
+kiratarjuniya-1	46	1	6	SiTila	Разодрав	дряхлую		surface+lemma
+kiratarjuniya-1	46	1	7	balam	войско	войско		surface+lemma
+kiratarjuniya-1	46	1	8	agADe	великий	бездонный		surface+lemma
+kiratarjuniya-1	46	1	9	magnam	сломленный	погруженный	погруженный	surface+lemma+root
+kiratarjuniya-1	46	1	10	Apad	беда	беду	достигает	surface+lemma+root
+kiratarjuniya-1	46	1	11	payoDO		Океан		lemma
+kiratarjuniya-1	46	2	0	ripu	враг	врагов		surface+lemma
+kiratarjuniya-1	46	2	1	timiram	тьма	тьма		surface+lemma
+kiratarjuniya-1	46	2	2	udasya			иссякают	root
+kiratarjuniya-1	46	2	3	udIyamAnam		восходит	восходит	lemma+root
+kiratarjuniya-1	46	2	4	dina	день	день		surface+lemma
+kiratarjuniya-1	46	2	5	AdO		начало		lemma
+kiratarjuniya-1	46	2	6	dinakftam				none
+kiratarjuniya-1	46	2	7	iva	как	как		surface+lemma
+kiratarjuniya-1	46	2	8	lakzmIs		Лакшми		lemma
+kiratarjuniya-1	46	2	9	tvAM	тебя	тебя		surface+lemma
+kiratarjuniya-1	46	2	10	samaByetu		Идет	в страхе	lemma+root
+kiratarjuniya-1	46	2	11	BUyaH	снова	снова		surface+lemma
+kiratarjuniya-1	5	1	0	sa	он	он		surface+lemma
+kiratarjuniya-1	5	1	1	kiMsaKA				none
+kiratarjuniya-1	5	1	2	sADu	хорошо	хорошо		surface+lemma
+kiratarjuniya-1	5	1	3	na	не	не		surface+lemma
+kiratarjuniya-1	5	1	4	SAsti	правит	научи	правил	surface+lemma+root
+kiratarjuniya-1	5	1	5	yo	кто	что		surface+lemma
+kiratarjuniya-1	5	1	6	DipaM		владыка		lemma
+kiratarjuniya-1	5	1	7	hitAn	друга	благо		surface+lemma
+kiratarjuniya-1	5	1	8	na	не	не		surface+lemma
+kiratarjuniya-1	5	1	9	yaH	который	что		surface+lemma
+kiratarjuniya-1	5	1	10	saMSfRute		услышав	услышав	lemma+root
+kiratarjuniya-1	5	1	11	sa	он	он		surface+lemma
+kiratarjuniya-1	5	1	12	kiMpraBuH				none
+kiratarjuniya-1	5	2	0	sadA	всегда	всегда		surface+lemma
+kiratarjuniya-1	5	2	1	anukUlezu		достойной		lemma
+kiratarjuniya-1	5	2	2	hi	ведь	ведь	ведь	surface+lemma+root
+kiratarjuniya-1	5	2	3	kurvate	совершают	сделал	сделал	surface+lemma+root
+kiratarjuniya-1	5	2	4	ratiM		радость		lemma
+kiratarjuniya-1	5	2	5	nfpezv		царь		lemma
+kiratarjuniya-1	5	2	6	amAtyezu		советников		lemma
+kiratarjuniya-1	5	2	7	ca	и	и		surface+lemma
+kiratarjuniya-1	5	2	8	sarva	все	все		surface+lemma
+kiratarjuniya-1	5	2	9	sampadaH		стал	достигает	lemma+root
+kiratarjuniya-1	6	1	0	nisarga	разрешение	по природе		surface+lemma
+kiratarjuniya-1	6	1	1	durboDam				none
+kiratarjuniya-1	6	1	2	aboDa	отсутствии Знания	отсутствии Знания		surface+lemma
+kiratarjuniya-1	6	1	3	viklavAH	боязливы	боязливы		surface+lemma
+kiratarjuniya-1	6	1	4	kva	где	где		surface+lemma
+kiratarjuniya-1	6	1	5	BUpatInAM		царь		lemma
+kiratarjuniya-1	6	1	6	caritaM	деяния	деяния		surface+lemma
+kiratarjuniya-1	6	1	7	kva	где	где		surface+lemma
+kiratarjuniya-1	6	1	8	jantavaH	люди	существа		surface+lemma
+kiratarjuniya-1	6	2	0	te	тебе	тебя		surface+lemma
+kiratarjuniya-1	6	2	1	anuBAvaH		духом		lemma
+kiratarjuniya-1	6	2	2	yam	кого	это		surface+lemma
+kiratarjuniya-1	6	2	3	aboDi	пробудилась	пробудился	узнай	surface+lemma+root
+kiratarjuniya-1	6	2	4	yan	что	стремится	стремится	surface+lemma+root
+kiratarjuniya-1	6	2	5	mayA	я	я	я	surface+lemma+root
+kiratarjuniya-1	6	2	6	nigUQa	скрыто	скрыто	скрытый	surface+lemma+root
+kiratarjuniya-1	6	2	7	tattvam	правду	правду		surface+lemma
+kiratarjuniya-1	6	2	8	naya	веди	довели		surface+lemma
+kiratarjuniya-1	6	2	9	vartma	путь	пути		surface+lemma
+kiratarjuniya-1	6	2	10	vidvizAm		врагов	ненавидит	lemma+root
+kiratarjuniya-1	7	1	0	viSaNkamAno		вообразив	опасаясь	lemma+root
+kiratarjuniya-1	7	1	1	BavataH	тебе	ты		surface+lemma
+kiratarjuniya-1	7	1	2	parABavaM	унижению	поражение		surface+lemma
+kiratarjuniya-1	7	1	3	nfpa	царь	царь		surface+lemma
+kiratarjuniya-1	7	1	4	Asana	сиденье	сиденье		surface+lemma
+kiratarjuniya-1	7	1	5	sTaH	находитесь	стоит		surface+lemma
+kiratarjuniya-1	7	1	6	pi	и	также		surface+lemma
+kiratarjuniya-1	7	1	7	vana	лес	лес		surface+lemma
+kiratarjuniya-1	7	1	8	aDivAsinaH				none
+kiratarjuniya-1	7	2	0	durodara	ящичком	ставку		surface+lemma
+kiratarjuniya-1	7	2	1	Cadma	обманом	обманом		surface+lemma
+kiratarjuniya-1	7	2	2	jitAm		победить	Санджая	lemma+root
+kiratarjuniya-1	7	2	3	samIhate		станут	стремится	lemma+root
+kiratarjuniya-1	7	2	4	nayena	Добродетельный	довели		surface+lemma
+kiratarjuniya-1	7	2	5	jetuM	победить	победить	Санджая	surface+lemma+root
+kiratarjuniya-1	7	2	6	jagatIM		джагати		lemma
+kiratarjuniya-1	7	2	7	suyoDanaH	Суйодхана	Суйодхана		surface+lemma
+kiratarjuniya-1	8	1	0	taTA	так	так		surface+lemma
+kiratarjuniya-1	8	1	1	api	также	также		surface+lemma
+kiratarjuniya-1	8	1	2	jihmaH	изворотливый	лежащих наискось		surface+lemma
+kiratarjuniya-1	8	1	3	sa	он	он		surface+lemma
+kiratarjuniya-1	8	1	4	Bavat	ты	ты		surface+lemma
+kiratarjuniya-1	8	1	5	jigIzayA	желая победы	чтобы мы победили		surface+lemma
+kiratarjuniya-1	8	1	6	tanoti	смирилось	протянулся	протянулся	surface+lemma+root
+kiratarjuniya-1	8	1	7	SuBraM		сверкающие		lemma
+kiratarjuniya-1	8	1	8	guRa	гуны	гуны		surface+lemma
+kiratarjuniya-1	8	1	9	saMpadA		стал	достигает	lemma+root
+kiratarjuniya-1	8	1	10	yaSaH	слава	слава		surface+lemma
+kiratarjuniya-1	8	2	0	samunnayan		когда ее, как ни старайся, не высказать	приведи	lemma+root
+kiratarjuniya-1	8	2	1	BUtim	благополучие	успех		surface+lemma
+kiratarjuniya-1	8	2	2	anArya	неблагородный	неблагородный		surface+lemma
+kiratarjuniya-1	8	2	3	saMgamAt		слияния		lemma
+kiratarjuniya-1	8	2	4	varaM	дар	лучший		surface+lemma
+kiratarjuniya-1	8	2	5	viroDo		противоречие		lemma
+kiratarjuniya-1	8	2	6	pi	и	также		surface+lemma
+kiratarjuniya-1	8	2	7	samaM	с	равный		surface+lemma
+kiratarjuniya-1	8	2	8	mahAtmaBiH	великими духом	великий духом		surface+lemma
+kiratarjuniya-1	9	1	0	kfta	сделано	сделал	сделал	surface+lemma+root
+kiratarjuniya-1	9	1	1	ari	врагов	врагов		surface+lemma
+kiratarjuniya-1	9	1	2	zaqvarga	Шесть врагов	Шесть врагов		surface+lemma
+kiratarjuniya-1	9	1	3	jayena	победы	победа		surface+lemma
+kiratarjuniya-1	9	1	4	mAnavIm		человек		lemma
+kiratarjuniya-1	9	1	5	agamya	недоступный	недоступный		surface+lemma
+kiratarjuniya-1	9	1	6	rUpAm	видениях	образ		surface+lemma
+kiratarjuniya-1	9	1	7	padavIM	путем	путь		surface+lemma
+kiratarjuniya-1	9	1	8	prapitsunA				none
+kiratarjuniya-1	9	2	0	viBajya	распределив	разделенным	почитают	surface+lemma+root
+kiratarjuniya-1	9	2	1	naktaMdinam		днем и ночью		lemma
+kiratarjuniya-1	9	2	2	astatandriRA				none
+kiratarjuniya-1	9	2	3	vitanyate		протянутую	протянулся	lemma+root
+kiratarjuniya-1	9	2	4	tena	тем	он		surface+lemma
+kiratarjuniya-1	9	2	5	nayena	Добродетельный	довели		surface+lemma
+kiratarjuniya-1	9	2	6	pOruzam				none
+nala-1	1	1	0	bfhadaSva	Брихадашва	Брихадашва		surface+lemma
+nala-1	1	1	1	uvAca	сказал	сказал	сказал	surface+lemma+root
+nala-1	1	2	0	AsId	был	есть	есть	surface+lemma+root
+nala-1	1	2	1	rAjA	царь	царь		surface+lemma
+nala-1	1	2	2	nalo	Нала	Нала		surface+lemma
+nala-1	1	2	3	nAma	имя	имя		surface+lemma
+nala-1	1	2	4	vIrasena	Вирасены	Вирасены		surface+lemma
+nala-1	1	2	5	sutaH	сын	сын		surface+lemma
+nala-1	1	2	6	balI	могучий	могучий		surface+lemma
+nala-1	1	3	0	upapanno		подобает	достигает	lemma+root
+nala-1	1	3	1	guREr		гуны		lemma
+nala-1	1	3	2	izwE		хочу	хочу	lemma+root
+nala-1	1	3	3	rUpavAn	прекрасен	прекрасен		surface+lemma
+nala-1	1	3	4	aSva	коней	коней		surface+lemma
+nala-1	1	3	5	kovidaH	сведущий	знаток		surface+lemma
+nala-1	10	1	0	damayantI	Дамаянти	Дамаянти		surface+lemma
+nala-1	10	1	1	tu	же	же	же	surface+lemma+root
+nala-1	10	1	2	rUpeRa	красотой	образ		surface+lemma
+nala-1	10	1	3	tejasA	блеском	блеск		surface+lemma
+nala-1	10	1	4	yaSasA	славой	слава		surface+lemma
+nala-1	10	1	5	SriyA	красотою	Шри	Шри	surface+lemma+root
+nala-1	10	2	0	sOBAgyena				none
+nala-1	10	2	1	ca	и	и		surface+lemma
+nala-1	10	2	2	lokezu	мирах	мир		surface+lemma
+nala-1	10	2	3	yaSaH	слава	слава		surface+lemma
+nala-1	10	2	4	prApa	достиг	достигнув	достигает	surface+lemma+root
+nala-1	10	2	5	sumaDyamA	стройная	тонкостанная		surface+lemma
+nala-1	11	1	0	aTa	и	и		surface+lemma
+nala-1	11	1	1	tAM	ее	он		surface+lemma
+nala-1	11	1	2	vayasi	возраста	птицы		surface+lemma
+nala-1	11	1	3	prApte	когда	достигнув	достигает	surface+lemma+root
+nala-1	11	1	4	dAsInAM	рабынями	рабыней		surface+lemma
+nala-1	11	1	5	samalaMkftAm	украшена	украшенную	сделал	surface+lemma+root
+nala-1	11	2	0	SataM	сто	сто		surface+lemma
+nala-1	11	2	1	saKInAM	подругам	подруга		surface+lemma
+nala-1	11	2	2	ca	и	и		surface+lemma
+nala-1	11	2	3	taTA	так	так		surface+lemma
+nala-1	11	2	4	paryupAste	прислуживали	поклоняются	почитают	surface+lemma+root
+nala-1	11	2	5	SacIm	Шачи	Шачи		surface+lemma
+nala-1	11	2	6	iva	как	как		surface+lemma
+nala-1	12	1	0	tatra	там	там		surface+lemma
+nala-1	12	1	1	sma	же	же		surface+lemma
+nala-1	12	1	2	BrAjate	сверкает	сверкающие	сверкающие	surface+lemma+root
+nala-1	12	1	3	BEmI				none
+nala-1	12	1	4	sarva	все	все		surface+lemma
+nala-1	12	1	5	ABaraRa	украшения	украшения		surface+lemma
+nala-1	12	1	6	BUzitA	убранном	украшенные	украшенные	surface+lemma+root
+nala-1	12	2	0	saKI	подруга	подруга		surface+lemma
+nala-1	12	2	1	maDye	среди	среди		surface+lemma
+nala-1	12	2	2	anavadya	безупречный	безупречный		surface+lemma
+nala-1	12	2	3	aNgA	анги	тело		surface+lemma
+nala-1	12	2	4	vidyut	молния	молнии	молнии	surface+lemma+root
+nala-1	12	2	5	sOdAmanI				none
+nala-1	12	2	6	yaTA	как	как		surface+lemma
+nala-1	12	3	0	atIva	очень	очень		surface+lemma
+nala-1	12	3	1	rUpa	образ	образ		surface+lemma
+nala-1	12	3	2	sampannA	достойная	стал	достигает	surface+lemma+root
+nala-1	12	3	3	SrIr	Богиня Царского Счастья	Шри	Шри	surface+lemma+root
+nala-1	12	3	4	iva	как	как		surface+lemma
+nala-1	12	3	5	Ayata	протянувшийся	натянув	подняв	surface+lemma+root
+nala-1	12	3	6	locanA	глазами	глазами		surface+lemma
+nala-1	13	1	0	na	не	не		surface+lemma
+nala-1	13	1	1	devezu	среди богов	боги		surface+lemma
+nala-1	13	1	2	na	не	не		surface+lemma
+nala-1	13	1	3	yakzezu		якши		lemma
+nala-1	13	1	4	tAdfg	таким	такой		surface+lemma
+nala-1	13	1	5	rUpavatI	красива	прекрасен		surface+lemma
+nala-1	13	1	6	kvacit	никогда	никогда		surface+lemma
+nala-1	13	2	0	mAnuzezv		людей		lemma
+nala-1	13	2	1	api	также	также		surface+lemma
+nala-1	13	2	2	ca	и	и		surface+lemma
+nala-1	13	2	3	anyezu	других	другой		surface+lemma
+nala-1	13	2	4	dfzwa	видел	увидев	увидев	surface+lemma+root
+nala-1	13	2	5	pUrvA	прежние	прежде		surface+lemma
+nala-1	13	2	6	na	не	не		surface+lemma
+nala-1	13	2	7	ca	и	и		surface+lemma
+nala-1	13	2	8	SrutA	слышал	услышав	услышав	surface+lemma+root
+nala-1	13	3	0	citta	ум	ум		surface+lemma
+nala-1	13	3	1	pramATinI		Праматхин		lemma
+nala-1	13	3	2	bAlA	дева	дети		surface+lemma
+nala-1	13	3	3	devAnAm	богов	боги		surface+lemma
+nala-1	13	3	4	api	также	также		surface+lemma
+nala-1	13	3	5	sundarI	Сундари	Прекрасный, как юное облако		surface+lemma
+nala-1	14	1	0	nalaS		Нала		lemma
+nala-1	14	1	1	ca	и	и		surface+lemma
+nala-1	14	1	2	nara	человек	человек		surface+lemma
+nala-1	14	1	3	SArdUlaH	тигр	тигр		surface+lemma
+nala-1	14	1	4	rUpeRa	красотой	образ		surface+lemma
+nala-1	14	1	5	apratimaH	не было равных	несравненный		surface+lemma
+nala-1	14	1	6	Buvi	на земле	будет	будет	surface+lemma+root
+nala-1	14	2	0	kandarpa	Кандарпа	Кандарпа		surface+lemma
+nala-1	14	2	1	iva	как	как		surface+lemma
+nala-1	14	2	2	rUpeRa	красотой	образ		surface+lemma
+nala-1	14	2	3	mUrtimAn	принял телесную форму	воплощенный		surface+lemma
+nala-1	14	2	4	aBavat	был	будет	будет	surface+lemma+root
+nala-1	14	2	5	svayam	сам	сам		surface+lemma
+nala-1	15	1	0	tasyAH	ее	он		surface+lemma
+nala-1	15	1	1	samIpe	вблизи	к		surface+lemma
+nala-1	15	1	2	tu	же	же	же	surface+lemma+root
+nala-1	15	1	3	nalaM	Налу	Нала		surface+lemma
+nala-1	15	1	4	praSaSaMsuH	восславили	восхваляют	скажи	surface+lemma+root
+nala-1	15	1	5	kutUhalAt	любопытством	любопытства		surface+lemma
+nala-1	15	2	0	nEzaDasya				none
+nala-1	15	2	1	samIpe	вблизи	к		surface+lemma
+nala-1	15	2	2	tu	же	же	же	surface+lemma+root
+nala-1	15	2	3	damayantIM	Дамаянти	Дамаянти		surface+lemma
+nala-1	15	2	4	punaH	снова	снова		surface+lemma
+nala-1	15	2	5	punaH	снова	снова		surface+lemma
+nala-1	16	1	0	tayor	их	он		surface+lemma
+nala-1	16	1	1	adfzwa	невидимых	невидимых		surface+lemma
+nala-1	16	1	2	kAmaH	желание	желание		surface+lemma
+nala-1	16	1	3	BUc	будет	будет	будет	surface+lemma+root
+nala-1	16	1	4	CfRvatoH		услышав	услышав	lemma+root
+nala-1	16	1	5	satataM	всегда	постоянно		surface+lemma
+nala-1	16	1	6	guRAn	гуны	гуны		surface+lemma
+nala-1	16	2	0	anyonyaM	друг друга	друг друга		surface+lemma
+nala-1	16	2	1	prati	к	к		surface+lemma
+nala-1	16	2	2	kOnteya				none
+nala-1	16	2	3	sa	он	он		surface+lemma
+nala-1	16	2	4	vyavarData	тянулся	возрастает	возрастает	surface+lemma+root
+nala-1	16	2	5	hfcCayaH		лежащее в сердце		lemma
+nala-1	17	1	0	a	о	о		surface+lemma
+nala-1	17	1	1	Saknuvan		способен	способен	lemma+root
+nala-1	17	1	2	nalaH	Нала	Нала		surface+lemma
+nala-1	17	1	3	kAmaM	желание	желание		surface+lemma
+nala-1	17	1	4	tadA	тогда	тогда		surface+lemma
+nala-1	17	1	5	DArayituM	запоминать	поддерживают	поддерживают	surface+lemma+root
+nala-1	17	1	6	hfdA	сердцем	сердце		surface+lemma
+nala-1	17	2	0	antaHpura	внутренние покои	внутренние покои		surface+lemma
+nala-1	17	2	1	samIpa	к	к		surface+lemma
+nala-1	17	2	2	sTe	противостояли	стоит		surface+lemma
+nala-1	17	2	3	vana	лес	лес		surface+lemma
+nala-1	17	2	4	Aste	пребывает	сидит	почитают	surface+lemma+root
+nala-1	17	2	5	rahas	наедине	тайно		surface+lemma
+nala-1	17	2	6	gataH	ушел	отправился	пришел	surface+lemma+root
+nala-1	18	1	0	sa	он	он		surface+lemma
+nala-1	18	1	1	dadarSa	увидел	увидев	увидев	surface+lemma+root
+nala-1	18	1	2	tadA	тогда	тогда		surface+lemma
+nala-1	18	1	3	haMsAY		гуси		lemma
+nala-1	18	1	4	jAtarUpa	золото	золото		surface+lemma
+nala-1	18	1	5	paricCadAn		одежды		lemma
+nala-1	18	2	0	vane	в лесу	лес		surface+lemma
+nala-1	18	2	1	vicaratAM	разгуливали	рыскал	движется	surface+lemma+root
+nala-1	18	2	2	tezAm	их	он		surface+lemma
+nala-1	18	2	3	ekaM	одно	один		surface+lemma
+nala-1	18	2	4	jagrAha	схватил	взяв	взяв	surface+lemma+root
+nala-1	18	2	5	pakziRam	пернатого	птиц		surface+lemma
+nala-1	19	1	0	tato	тогда	тогда		surface+lemma
+nala-1	19	1	1	antarikza	воздушное пространство	воздушное пространство		surface+lemma
+nala-1	19	1	2	gaH		коров		lemma
+nala-1	19	1	3	vAcaM	речь	речь		surface+lemma
+nala-1	19	1	4	vyAjahAra	сказал	произнося	похитил	surface+lemma+root
+nala-1	19	1	5	tadA	тогда	тогда		surface+lemma
+nala-1	19	1	6	nalam	Налу	Нала		surface+lemma
+nala-1	19	2	0	na	не	не		surface+lemma
+nala-1	19	2	1	hantavyo	должен быть убит	убит	убит	surface+lemma+root
+nala-1	19	2	2	smi		есть	есть	lemma+root
+nala-1	19	2	3	te	тебе	тебя		surface+lemma
+nala-1	19	2	4	rAjan	царь	царь		surface+lemma
+nala-1	19	2	5	karizyAmi	сделаю	сделал	сделал	surface+lemma+root
+nala-1	19	2	6	hi	ведь	ведь	ведь	surface+lemma+root
+nala-1	19	2	7	te	тебе	тебя		surface+lemma
+nala-1	19	2	8	priyam	приятное	приятное		surface+lemma
+nala-1	2	1	0	atizWan	присутствовали	пребывает	пребывает	surface+lemma+root
+nala-1	2	1	1	manuja	людей	люди		surface+lemma
+nala-1	2	1	2	indrARAm	Индры	Индра		surface+lemma
+nala-1	2	1	3	mUrDni	в голову	голову		surface+lemma
+nala-1	2	1	4	devapatir	Владыка богов	Владыка богов		surface+lemma
+nala-1	2	1	5	yaTA	как	как		surface+lemma
+nala-1	2	2	0	upary		наверху		lemma
+nala-1	2	2	1	upari	наверху	наверху		surface+lemma
+nala-1	2	2	2	sarvezAm	всех	все		surface+lemma
+nala-1	2	2	3	Aditya	солнце	солнце		surface+lemma
+nala-1	2	2	4	iva	как	как		surface+lemma
+nala-1	2	2	5	tejasA	блеском	блеск		surface+lemma
+nala-1	20	1	0	damayantI	Дамаянти	Дамаянти		surface+lemma
+nala-1	20	1	1	sakASe	в присутствии	к		surface+lemma
+nala-1	20	1	2	tvAM	тебя	тебя		surface+lemma
+nala-1	20	1	3	kaTayizyAmi	расскажу	рассказал	рассказал	surface+lemma+root
+nala-1	20	1	4	nEzaDa				none
+nala-1	20	2	0	yaTA	как	как		surface+lemma
+nala-1	20	2	1	tvad	тебя	тебя		surface+lemma
+nala-1	20	2	2	anyam	другого	другой		surface+lemma
+nala-1	20	2	3	puruzaM	мужа	человек		surface+lemma
+nala-1	20	2	4	na	не	не		surface+lemma
+nala-1	20	2	5	sA	она	он		surface+lemma
+nala-1	20	2	6	maMsyati	будет чтить	считаю	считаю	surface+lemma+root
+nala-1	20	2	7	karhicit	никогда	никогда		surface+lemma
+nala-1	21	1	0	evam	так	так		surface+lemma
+nala-1	21	1	1	uktas	попрошенный	сказал	сказал	surface+lemma+root
+nala-1	21	1	2	tato	тогда	тогда		surface+lemma
+nala-1	21	1	3	haMsam	лебедя	гуси		surface+lemma
+nala-1	21	1	4	utsasarja	выпустил	оставив	выпустил	surface+lemma+root
+nala-1	21	1	5	mahIpatiH	царь	владыка земли		surface+lemma
+nala-1	21	2	0	te	тебе	он		surface+lemma
+nala-1	21	2	1	tu	же	же	же	surface+lemma+root
+nala-1	21	2	2	haMsAH	гуси	гуси		surface+lemma
+nala-1	21	2	3	samutpatya	поднявшись	взлетел	упал	surface+lemma+root
+nala-1	21	2	4	vidarBAn	страны видарбхов	Видарбху		surface+lemma
+nala-1	21	2	5	agamaMs		отправился	пришел	lemma+root
+nala-1	21	2	6	tataH	тогда	тогда		surface+lemma
+nala-1	22	1	0	vidarBa	Видарбху	Видарбху		surface+lemma
+nala-1	22	1	1	nagarIm	город	город		surface+lemma
+nala-1	22	1	2	gatvA	отправившись	отправился	пришел	surface+lemma+root
+nala-1	22	1	3	damayantyAs		Дамаянти		lemma
+nala-1	22	1	4	tadA	тогда	тогда		surface+lemma
+nala-1	22	1	5	antike	вблизи	близко		surface+lemma
+nala-1	22	2	0	nipetus		упал	упал	lemma+root
+nala-1	22	2	1	te	тебе	он		surface+lemma
+nala-1	22	2	2	garutmantaH		Гаруда		lemma
+nala-1	22	2	3	sA	она	он		surface+lemma
+nala-1	22	2	4	dadarSa	увидел	увидев	увидев	surface+lemma+root
+nala-1	22	2	5	aTa	и	и		surface+lemma
+nala-1	22	2	6	tAn	их	он		surface+lemma
+nala-1	22	2	7	KagAn		птицы		lemma
+nala-1	23	1	0	sA	она	он		surface+lemma
+nala-1	23	1	1	tAn	их	он		surface+lemma
+nala-1	23	1	2	adButa	удивительный	удивительный		surface+lemma
+nala-1	23	1	3	rUpAn		образ		lemma
+nala-1	23	1	4	vE		понесетъ		lemma
+nala-1	23	1	5	dfzwvA	увидев	увидев	увидев	surface+lemma+root
+nala-1	23	1	6	saKI	подруга	подруга		surface+lemma
+nala-1	23	1	7	gaRa	сонмы	сонмы		surface+lemma
+nala-1	23	1	8	AvftA	покрыта	покрыто	окруженный	surface+lemma+root
+nala-1	23	2	0	hfzwA	радостно	радостно	радостно	surface+lemma+root
+nala-1	23	2	1	grahItuM	схватить	взяв	взяв	surface+lemma+root
+nala-1	23	2	2	KagamAMs		небожители		lemma
+nala-1	23	2	3	tvaramARA	быстро	поспешно	поспешно	surface+lemma+root
+nala-1	23	2	4	upacakrame	начал	начал	вышел	surface+lemma+root
+nala-1	24	1	0	aTa	и	и		surface+lemma
+nala-1	24	1	1	haMsA	гусей	гуси		surface+lemma
+nala-1	24	1	2	visasfpuH	разлетелись	ползущими	ползает	surface+lemma+root
+nala-1	24	1	3	sarvataH	со всех сторон	со всех сторон		surface+lemma
+nala-1	24	1	4	pramadA	женщины	женщины		surface+lemma
+nala-1	24	1	5	vane	в лесу	лес		surface+lemma
+nala-1	24	2	0	eka	один	один		surface+lemma
+nala-1	24	2	1	ekaSas		по одной		lemma
+nala-1	24	2	2	tataH	тогда	тогда		surface+lemma
+nala-1	24	2	3	kanyAs		дочь		lemma
+nala-1	24	2	4	tAn	их	он		surface+lemma
+nala-1	24	2	5	haMsAn	облака	гуси		surface+lemma
+nala-1	24	2	6	samupAdravan	ринулись	ринулся	ринулся	surface+lemma+root
+nala-1	25	1	0	damayantI	Дамаянти	Дамаянти		surface+lemma
+nala-1	25	1	1	tu	же	же	же	surface+lemma+root
+nala-1	25	1	2	yaM	кого	что		surface+lemma
+nala-1	25	1	3	haMsaM	лебедя	гуси		surface+lemma
+nala-1	25	1	4	samupADAvad			ринулся	root
+nala-1	25	1	5	antike	вблизи	близко		surface+lemma
+nala-1	25	2	0	sa	он	он		surface+lemma
+nala-1	25	2	1	mAnuzIM	человеческий	людей		surface+lemma
+nala-1	25	2	2	giraM	слово	песни		surface+lemma
+nala-1	25	2	3	kftvA	сделав	сделал	сделал	surface+lemma+root
+nala-1	25	2	4	damayantIm	Дамаянти	Дамаянти		surface+lemma
+nala-1	25	2	5	aTa	и	и		surface+lemma
+nala-1	25	2	6	abravIt	сказал	сказал	сказал	surface+lemma+root
+nala-1	26	1	0	damayanti	Дамаянти	Дамаянти		surface+lemma
+nala-1	26	1	1	nalo	Нала	Нала		surface+lemma
+nala-1	26	1	2	nAma	имя	имя		surface+lemma
+nala-1	26	1	3	nizaDezu	в стране нишадхов	нишадхов		surface+lemma
+nala-1	26	1	4	mahIpatiH	царь	владыка земли		surface+lemma
+nala-1	26	2	0	aSvinoH	Ашвинов	Ашвины		surface+lemma
+nala-1	26	2	1	sadfSo	равен	равного		surface+lemma
+nala-1	26	2	2	rUpe	виде	образ		surface+lemma
+nala-1	26	2	3	na	не	не		surface+lemma
+nala-1	26	2	4	samAs		равный		lemma
+nala-1	26	2	5	tasya	его	он		surface+lemma
+nala-1	26	2	6	mAnuzAH	люди	людей		surface+lemma
+nala-1	27	1	0	tasya	его	он		surface+lemma
+nala-1	27	1	1	vE		понесетъ		lemma
+nala-1	27	1	2	yadi	если	если		surface+lemma
+nala-1	27	1	3	BAryA	жена	жена		surface+lemma
+nala-1	27	1	4	tvaM	ты	тебя		surface+lemma
+nala-1	27	1	5	BaveTA	будь	будет	будет	surface+lemma+root
+nala-1	27	1	6	varavarRini	красавица	красавица		surface+lemma
+nala-1	27	2	0	saPalaM	небесплодным	приносят плоды		surface+lemma
+nala-1	27	2	1	te	тебе	тебя		surface+lemma
+nala-1	27	2	2	Bavej	может быть	будет	будет	surface+lemma+root
+nala-1	27	2	3	janma	рождение	рождение		surface+lemma
+nala-1	27	2	4	rUpaM	облик	образ		surface+lemma
+nala-1	27	2	5	ca	и	и		surface+lemma
+nala-1	27	2	6	idam	это	это		surface+lemma
+nala-1	27	2	7	sumaDyame	тонкостанная	тонкостанная		surface+lemma
+nala-1	28	1	0	vayaM	мы	я	я	surface+lemma+root
+nala-1	28	1	1	hi	ведь	ведь	ведь	surface+lemma+root
+nala-1	28	1	2	deva	боги	боги		surface+lemma
+nala-1	28	1	3	ganDarva	гандхарвы	гандхарвы		surface+lemma
+nala-1	28	1	4	manuzya	люди	люди		surface+lemma
+nala-1	28	1	5	uraga	змеи	змеи		surface+lemma
+nala-1	28	1	6	rAkzasAn	ракшасов	ракшасов		surface+lemma
+nala-1	28	2	0	dfzwavanto		увидев	увидев	lemma+root
+nala-1	28	2	1	na	не	не		surface+lemma
+nala-1	28	2	2	ca	и	и		surface+lemma
+nala-1	28	2	3	asmABiH	нами	я	я	surface+lemma+root
+nala-1	28	2	4	dfzwa	видел	увидев	увидев	surface+lemma+root
+nala-1	28	2	5	pUrvaH	прежде	прежде		surface+lemma
+nala-1	28	2	6	taTAviDaH	таков	такое		surface+lemma
+nala-1	29	1	0	tvaM	ты	тебя		surface+lemma
+nala-1	29	1	1	ca	и	и		surface+lemma
+nala-1	29	1	2	api	также	также		surface+lemma
+nala-1	29	1	3	ratnaM	сокровище	сокровище		surface+lemma
+nala-1	29	1	4	nArIRAM	женщин	женщина		surface+lemma
+nala-1	29	1	5	narezu	людей	человек		surface+lemma
+nala-1	29	1	6	ca	и	и		surface+lemma
+nala-1	29	1	7	nalo	Нала	Нала		surface+lemma
+nala-1	29	1	8	varaH	лучший	лучший		surface+lemma
+nala-1	29	2	0	viSizwAyA		превосходит	остается	lemma+root
+nala-1	29	2	1	viSizwena	отличнейшим	превосходит	остается	surface+lemma+root
+nala-1	29	2	2	saMgamo		слияния		lemma
+nala-1	29	2	3	guRavAn	добродетельный	добродетельный		surface+lemma
+nala-1	29	2	4	Bavet	будет	будет	будет	surface+lemma+root
+nala-1	3	1	0	brahmaRyo		благочестивый		lemma
+nala-1	3	1	1	veda	знает	Веды		surface+lemma
+nala-1	3	1	2	vid	знает	знает	знает	surface+lemma+root
+nala-1	3	1	3	CUro		герой		lemma
+nala-1	3	1	4	nizaDezu	в стране нишадхов	нишадхов		surface+lemma
+nala-1	3	1	5	mahIpatiH	царь	владыка земли		surface+lemma
+nala-1	3	2	0	akza	ось	кости		surface+lemma
+nala-1	3	2	1	priyaH	дорог	приятное		surface+lemma
+nala-1	3	2	2	satya	правду	правду		surface+lemma
+nala-1	3	2	3	vAdI	говорящий	говорящие		surface+lemma
+nala-1	3	2	4	mahAn	великий	великий		surface+lemma
+nala-1	3	2	5	akzOhiRI				none
+nala-1	3	2	6	patiH	муж	мужа		surface+lemma
+nala-1	30	1	0	evam	так	так		surface+lemma
+nala-1	30	1	1	uktA	сказала	сказал	сказал	surface+lemma+root
+nala-1	30	1	2	tu	же	же	же	surface+lemma+root
+nala-1	30	1	3	haMsena	гусем	гуси		surface+lemma
+nala-1	30	1	4	damayantI	Дамаянти	Дамаянти		surface+lemma
+nala-1	30	1	5	viSAM	племен	племен	вошел	surface+lemma+root
+nala-1	30	1	6	pate	владыка	мужа		surface+lemma
+nala-1	30	2	0	abravIt	сказал	сказал	сказал	surface+lemma+root
+nala-1	30	2	1	tatra	там	там		surface+lemma
+nala-1	30	2	2	taM	его	он		surface+lemma
+nala-1	30	2	3	haMsaM	лебедя	гуси		surface+lemma
+nala-1	30	2	4	tam	его	он		surface+lemma
+nala-1	30	2	5	apy	хотя	также		surface+lemma
+nala-1	30	2	6	evaM	так	так		surface+lemma
+nala-1	30	2	7	nalaM	Налу	Нала		surface+lemma
+nala-1	30	2	8	vada	скажи	говорят	говорят	surface+lemma+root
+nala-1	31	1	0	taTA	так	так		surface+lemma
+nala-1	31	1	1	iti	так	так		surface+lemma
+nala-1	31	1	2	uktvA	сказав	сказал	сказал	surface+lemma+root
+nala-1	31	1	3	aRqajaH		рожденный из яйца		lemma
+nala-1	31	1	4	kanyAM	девушку	дочь		surface+lemma
+nala-1	31	1	5	vEdarBasya				none
+nala-1	31	1	6	viSAM	племен	племен	вошел	surface+lemma+root
+nala-1	31	1	7	pate	владыка	мужа		surface+lemma
+nala-1	31	2	0	punar	снова	снова		surface+lemma
+nala-1	31	2	1	Agamya	придя	пришел	пришел	surface+lemma+root
+nala-1	31	2	2	nizaDAn		нишадхов		lemma
+nala-1	31	2	3	nale	Нала	Нала		surface+lemma
+nala-1	31	2	4	sarvaM	все	все		surface+lemma
+nala-1	31	2	5	nyavedayat	поведал	поведал	поведал	surface+lemma+root
+nala-1	4	1	0	Ipsito		взлелеяно это желание		lemma
+nala-1	4	1	1	vara	лучший	лучший		surface+lemma
+nala-1	4	1	2	nArIRAm	женщин	женщина		surface+lemma
+nala-1	4	1	3	udAraH	благородный	дурные предзнаменования		surface+lemma
+nala-1	4	1	4	saMyata	приятных	обуздав	подняв	surface+lemma+root
+nala-1	4	1	5	indriyaH	страсти	чувства		surface+lemma
+nala-1	4	2	0	rakzitA	защитник	защитник		surface+lemma
+nala-1	4	2	1	DanvinAM		лучником		lemma
+nala-1	4	2	2	SrezWaH	лучший	лучший		surface+lemma
+nala-1	4	2	3	sAkzAd	воплощенная	воочию		surface+lemma
+nala-1	4	2	4	iva	как	как		surface+lemma
+nala-1	4	2	5	manuH	Ману	Ману		surface+lemma
+nala-1	4	2	6	svayam	сам	сам		surface+lemma
+nala-1	5	1	0	taTA	так	так		surface+lemma
+nala-1	5	1	1	eva	именно	именно		surface+lemma
+nala-1	5	1	2	AsIt	был	есть	есть	surface+lemma+root
+nala-1	5	1	3	vidarBezu	в стране видарбхов	Видарбху		surface+lemma
+nala-1	5	1	4	BImo	Бхима	Бхима		surface+lemma
+nala-1	5	1	5	BIma	Бхима	Бхима		surface+lemma
+nala-1	5	1	6	parAkramaH	стремящийся к правде	доблесть		surface+lemma
+nala-1	5	2	0	SUraH	герой	герой		surface+lemma
+nala-1	5	2	1	sarva	все	все		surface+lemma
+nala-1	5	2	2	guREH		гуны		lemma
+nala-1	5	2	3	yuktaH	наделенный	союзником	союзником	surface+lemma+root
+nala-1	5	2	4	prajA	потомство	потомство		surface+lemma
+nala-1	5	2	5	kAmaH	желание	желание		surface+lemma
+nala-1	5	2	6	sa	он	он		surface+lemma
+nala-1	5	2	7	ca	и	и		surface+lemma
+nala-1	5	2	8	aprajaH	лишен потомства	бездетной		surface+lemma
+nala-1	6	1	0	sa	он	он		surface+lemma
+nala-1	6	1	1	prajA	потомство	потомство		surface+lemma
+nala-1	6	1	2	arTe	ради	ради		surface+lemma
+nala-1	6	1	3	paraM	но	высшее		surface+lemma
+nala-1	6	1	4	yatnam	старание	усилия		surface+lemma
+nala-1	6	1	5	akarot	сделал	сделал	сделал	surface+lemma+root
+nala-1	6	1	6	su	хорошенько	выжимающего	выжимающего	surface+lemma+root
+nala-1	6	1	7	samAhitaH	сосредоточенный	духовно сосредоточенный		surface+lemma
+nala-1	6	2	0	tam	его	он		surface+lemma
+nala-1	6	2	1	aByagacCad		явился	пришел	lemma+root
+nala-1	6	2	2	brahma	Брахман	Брахман		surface+lemma
+nala-1	6	2	3	fziH	риши	риши		surface+lemma
+nala-1	6	2	4	damano		Дамана		lemma
+nala-1	6	2	5	nAma	имя	имя		surface+lemma
+nala-1	6	2	6	BArata	потомок Бхараты	потомок Бхараты		surface+lemma
+nala-1	7	1	0	taM	его	он		surface+lemma
+nala-1	7	1	1	sa	он	он		surface+lemma
+nala-1	7	1	2	BImaH	Бхима	Бхима		surface+lemma
+nala-1	7	1	3	prajA	потомство	потомство		surface+lemma
+nala-1	7	1	4	kAmaH	желание	желание		surface+lemma
+nala-1	7	1	5	tozayAmAsa	удовлетворила	удовлетворила	удовлетворила	surface+lemma+root
+nala-1	7	1	6	Darma	дхарма	дхарма		surface+lemma
+nala-1	7	1	7	vid	знает	знает	знает	surface+lemma+root
+nala-1	7	2	0	mahizyA	царица	супруга		surface+lemma
+nala-1	7	2	1	saha	с	с		surface+lemma
+nala-1	7	2	2	rAja	царя	царь		surface+lemma
+nala-1	7	2	3	indrEH		Индра		lemma
+nala-1	7	2	4	satkAreRa	почетным приемом	почести		surface+lemma
+nala-1	7	2	5	su	хорошенько	выжимающего	выжимающего	surface+lemma+root
+nala-1	7	2	6	varcasam		блеск		lemma
+nala-1	8	1	0	tasmE		он		lemma
+nala-1	8	1	1	prasanno	довольный	смилуйся	уселся	surface+lemma+root
+nala-1	8	1	2	damanaH	Дамана	Дамана		surface+lemma
+nala-1	8	1	3	sa	он			surface
+nala-1	8	1	4	BAryAya		жена		lemma
+nala-1	8	1	5	varaM	дар	лучший		surface+lemma
+nala-1	8	1	6	dadO		дает	взяв	lemma+root
+nala-1	8	2	0	kanyA	дочь	дочь		surface+lemma
+nala-1	8	2	1	ratnam	сокровище	сокровище		surface+lemma
+nala-1	8	2	2	kumArAMS		царевич		lemma
+nala-1	8	2	3	ca	и	и		surface+lemma
+nala-1	8	2	4	trIn	три	три		surface+lemma
+nala-1	8	2	5	udArAn	дурные предзнаменования	дурные предзнаменования		surface+lemma
+nala-1	8	2	6	mahA	великий	великий		surface+lemma
+nala-1	8	2	7	yaSAH	славный	слава		surface+lemma
+nala-1	9	1	0	damayantIM	Дамаянти	Дамаянти		surface+lemma
+nala-1	9	1	1	damaM	штрафу	самообладание		surface+lemma
+nala-1	9	1	2	dAntaM				none
+nala-1	9	1	3	damanaM		Дамана		lemma
+nala-1	9	1	4	ca	и	и		surface+lemma
+nala-1	9	1	5	suvarcasam	могущественного	Суварчас		surface+lemma
+nala-1	9	2	0	upapannAn	наделенных	подобает	достигает	surface+lemma+root
+nala-1	9	2	1	guREH		гуны		lemma
+nala-1	9	2	2	sarvEr		все		lemma
+nala-1	9	2	3	BImAn	грозных	Бхима		surface+lemma
+nala-1	9	2	4	BIma	Бхима	Бхима		surface+lemma
+nala-1	9	2	5	parAkramAn	мощи	доблесть		surface+lemma
+nala-2	1	1	0	bfhadaSva	Брихадашва	Брихадашва		surface+lemma
+nala-2	1	1	1	uvAca	сказал	сказал	сказал	surface+lemma+root
+nala-2	1	2	0	damayantI	Дамаянти	Дамаянти		surface+lemma
+nala-2	1	2	1	tu	же	же	же	surface+lemma+root
+nala-2	1	2	2	tat	то	он		surface+lemma
+nala-2	1	2	3	SrutvA	услышав	услышав	услышав	surface+lemma+root
+nala-2	1	2	4	vaco	слово	слова		surface+lemma
+nala-2	1	2	5	haMsasya		гуси		lemma
+nala-2	1	2	6	BArata	потомок Бхараты	потомок Бхараты		surface+lemma
+nala-2	1	3	0	tadA	тогда	тогда		surface+lemma
+nala-2	1	3	1	praBfti	с	с		surface+lemma
+nala-2	1	3	2	na	не	не		surface+lemma
+nala-2	1	3	3	svasTA	спокойна	здоров		surface+lemma
+nala-2	1	3	4	nalaM	Налу	Нала		surface+lemma
+nala-2	1	3	5	prati	к	к		surface+lemma
+nala-2	1	3	6	baBUva	стал	будет	будет	surface+lemma+root
+nala-2	1	3	7	sA	она	он		surface+lemma
+nala-2	10	1	0	hasti	слонов	слонов		surface+lemma
+nala-2	10	1	1	aSva	коней	коней		surface+lemma
+nala-2	10	1	2	raTa	колесницу	колесницу		surface+lemma
+nala-2	10	1	3	GozeRa	звоном	шум		surface+lemma
+nala-2	10	1	4	nAdayanto		оглашая	оглашая	lemma+root
+nala-2	10	1	5	vasuMDarAm		земля		lemma
+nala-2	10	2	0	vicitra	различные	различные		surface+lemma
+nala-2	10	2	1	mAlya	венки	венки		surface+lemma
+nala-2	10	2	2	ABaraREH		украшения		lemma
+nala-2	10	2	3	balEr		войско		lemma
+nala-2	10	2	4	dfSyEH				none
+nala-2	10	2	5	su	хорошенько	выжимающего	выжимающего	surface+lemma+root
+nala-2	10	2	6	alaMkftEH		украшенные	сделал	lemma+root
+nala-2	11	1	0	etasminn	в это же	это		surface+lemma
+nala-2	11	1	1	eva	именно	именно		surface+lemma
+nala-2	11	1	2	kAle	время	время		surface+lemma
+nala-2	11	1	3	tu	же	же	же	surface+lemma+root
+nala-2	11	1	4	purARO		древний		lemma
+nala-2	11	1	5	fzi	риши	риши		surface+lemma
+nala-2	11	1	6	sattamO		достойнейший		lemma
+nala-2	11	2	0	awamAnO		странствующий	странствующий	lemma+root
+nala-2	11	2	1	mahAtmanO		великий духом		lemma
+nala-2	11	2	2	indra	Индра	Индра		surface+lemma
+nala-2	11	2	3	lokam	мир	мир		surface+lemma
+nala-2	11	2	4	ito	отсюда	отсюда		surface+lemma
+nala-2	11	2	5	gatO		отправился	пришел	lemma+root
+nala-2	12	1	0	nAradaH	Нарада	Нарада		surface+lemma
+nala-2	12	1	1	parvataS		горы		lemma
+nala-2	12	1	2	ca	и	и		surface+lemma
+nala-2	12	1	3	eva	именно	именно		surface+lemma
+nala-2	12	1	4	mahAtmAnO		великий духом		lemma
+nala-2	12	1	5	mahA	великий	великий		surface+lemma
+nala-2	12	1	6	vratO		обет		lemma
+nala-2	12	2	0	devarAjasya	Царя богов	царь богов		surface+lemma
+nala-2	12	2	1	BavanaM	домой	дом		surface+lemma
+nala-2	12	2	2	viviSate		племен	вошел	lemma+root
+nala-2	12	2	3	su	хорошенько	выжимающего	выжимающего	surface+lemma+root
+nala-2	12	2	4	pUjitO		почтил	почтив	lemma+root
+nala-2	13	1	0	tO		он		lemma
+nala-2	13	1	1	arcitvA	Почтив	воспоют	почтив	surface+lemma+root
+nala-2	13	1	2	sahasrAkzas		Тысячеглазый		lemma
+nala-2	13	1	3	tataH	тогда	тогда		surface+lemma
+nala-2	13	1	4	kuSalam	о здоровье	искусен		surface+lemma
+nala-2	13	1	5	avyayam	неизменный	нетленный		surface+lemma
+nala-2	13	2	0	papracCa	спросил	спросил	спросил	surface+lemma+root
+nala-2	13	2	1	anAmayam	о здоровье	безболезненные		surface+lemma
+nala-2	13	2	2	ca	и	и		surface+lemma
+nala-2	13	2	3	api	также	также		surface+lemma
+nala-2	13	2	4	tayoH	их	он		surface+lemma
+nala-2	13	2	5	sarva	все	все		surface+lemma
+nala-2	13	2	6	gatam	приходите	отправился	пришел	surface+lemma+root
+nala-2	13	2	7	viBuH	владыка	владыка		surface+lemma
+nala-2	14	1	0	nArada	Нарада	Нарада		surface+lemma
+nala-2	14	1	1	uvAca	сказал	сказал	сказал	surface+lemma+root
+nala-2	14	2	0	AvayoH	нашу	я	я	surface+lemma+root
+nala-2	14	2	1	kuSalaM	о благополучии	искусен		surface+lemma
+nala-2	14	2	2	deva	боги	боги		surface+lemma
+nala-2	14	2	3	sarvatragatam		предела		lemma
+nala-2	14	2	4	ISvara	Ишвара	владыка		surface+lemma
+nala-2	14	3	0	loke	в мире	мир		surface+lemma
+nala-2	14	3	1	ca	и	и		surface+lemma
+nala-2	14	3	2	maGavan	щедрый	щедрый		surface+lemma
+nala-2	14	3	3	kftsne	всем	весь		surface+lemma
+nala-2	14	3	4	nfpAH	цари	царь		surface+lemma
+nala-2	14	3	5	kuSalino		благополучен		lemma
+nala-2	14	3	6	viBo	владыка	владыка		surface+lemma
+nala-2	15	1	0	bfhadaSva	Брихадашва	Брихадашва		surface+lemma
+nala-2	15	1	1	uvAca	сказал	сказал	сказал	surface+lemma+root
+nala-2	15	2	0	nAradasya	Нарады	Нарада		surface+lemma
+nala-2	15	2	1	vacaH	слова	слова		surface+lemma
+nala-2	15	2	2	SrutvA	услышав	услышав	услышав	surface+lemma+root
+nala-2	15	2	3	papracCa	спросил	спросил	спросил	surface+lemma+root
+nala-2	15	2	4	bala	сила	войско		surface+lemma
+nala-2	15	2	5	vftra	Вритру	Вритру		surface+lemma
+nala-2	15	2	6	hA	о	убит	убит	surface+lemma+root
+nala-2	15	3	0	Darma	дхарма	дхарма		surface+lemma
+nala-2	15	3	1	jYAH		знаю		lemma
+nala-2	15	3	2	pfTivIpAlAs		хранитель земли		lemma
+nala-2	15	3	3	tyakta	оставленный	оставив	оставив	surface+lemma+root
+nala-2	15	3	4	jIvita	жизнь	жизнь		surface+lemma
+nala-2	15	3	5	yoDinaH	воины	сражающихся		surface+lemma
+nala-2	16	1	0	SastreRa	оружием	оружие		surface+lemma
+nala-2	16	1	1	niDanaM	смерть	смерть		surface+lemma
+nala-2	16	1	2	kAle	время	время		surface+lemma
+nala-2	16	1	3	ye	которые	что		surface+lemma
+nala-2	16	1	4	gacCanti	идут	отправился	пришел	surface+lemma+root
+nala-2	16	1	5	a	о	о		surface+lemma
+nala-2	16	1	6	parANmuKAH	отвратившись	повернули вспять		surface+lemma
+nala-2	16	2	0	ayaM	этот	это		surface+lemma
+nala-2	16	2	1	loko	мир	мир		surface+lemma
+nala-2	16	2	2	kzayas		нетленные		lemma
+nala-2	16	2	3	tezAM	их	он		surface+lemma
+nala-2	16	2	4	yaTA	как	как		surface+lemma
+nala-2	16	2	5	eva	именно	именно		surface+lemma
+nala-2	16	2	6	mama	мне	я	я	surface+lemma+root
+nala-2	16	2	7	kAmaDuk	корова желаний	корова желаний		surface+lemma
+nala-2	17	1	0	kva	где	где		surface+lemma
+nala-2	17	1	1	nu	же	же	же	surface+lemma+root
+nala-2	17	1	2	te	тебе	он		surface+lemma
+nala-2	17	1	3	kzatriyAH	кшатрии	кшатрий		surface+lemma
+nala-2	17	1	4	SUrA	герои	герой		surface+lemma
+nala-2	17	1	5	na	не	не		surface+lemma
+nala-2	17	1	6	hi	ведь	ведь	ведь	surface+lemma+root
+nala-2	17	1	7	paSyAmi	вижу	вижу	вижу	surface+lemma+root
+nala-2	17	1	8	tAn	их	он		surface+lemma
+nala-2	17	1	9	aham	я	я	я	surface+lemma+root
+nala-2	17	2	0	AgacCato		пришел	пришел	lemma+root
+nala-2	17	2	1	mahIpAlAn	царю	хранитель земли		surface+lemma
+nala-2	17	2	2	atiTIn	гостей	гость		surface+lemma
+nala-2	17	2	3	dayitAn		любимый		lemma
+nala-2	17	2	4	mama	мне	я	я	surface+lemma+root
+nala-2	18	1	0	evam	так	так		surface+lemma
+nala-2	18	1	1	uktas	попрошенный	сказал	сказал	surface+lemma+root
+nala-2	18	1	2	tu	же	же	же	surface+lemma+root
+nala-2	18	1	3	SakreRa	Шакрой	Шакра		surface+lemma
+nala-2	18	1	4	nAradaH	Нарада	Нарада		surface+lemma
+nala-2	18	1	5	pratyaBAzata	сказал	сказал	сказал	surface+lemma+root
+nala-2	18	2	0	SfRu	слушай	услышав	услышав	surface+lemma+root
+nala-2	18	2	1	me	мне	я	я	surface+lemma+root
+nala-2	18	2	2	Bagavan	владыка	почтенный		surface+lemma
+nala-2	18	2	3	yena	которым			surface
+nala-2	18	2	4	na	не	не		surface+lemma
+nala-2	18	2	5	dfSyante	видны	увидев	увидев	surface+lemma+root
+nala-2	18	2	6	mahIkzitaH	владыки земли	царей		surface+lemma
+nala-2	19	1	0	vidarBa	Видарбху	Видарбху		surface+lemma
+nala-2	19	1	1	rAja	царя	царь		surface+lemma
+nala-2	19	1	2	duhitrI		дочь		lemma
+nala-2	19	1	3	damayantI	Дамаянти	Дамаянти		surface+lemma
+nala-2	19	1	4	iti	так	так		surface+lemma
+nala-2	19	1	5	viSrutA	известна	прославленный	услышав	surface+lemma+root
+nala-2	19	2	0	rUpeRa	красотой	образ		surface+lemma
+nala-2	19	2	1	samatikrAntA	исполнен	прорвавшихся	вышел	surface+lemma+root
+nala-2	19	2	2	pfTivyAM	на земле	земля		surface+lemma
+nala-2	19	2	3	sarva	все	все		surface+lemma
+nala-2	19	2	4	yozitaH	женщины	женщины		surface+lemma
+nala-2	2	1	0	tataS	затем	тогда		surface+lemma
+nala-2	2	1	1	cintA	мысль	мысль		surface+lemma
+nala-2	2	1	2	parA	прочь	высшее		surface+lemma
+nala-2	2	1	3	dInA	удрученная	несчастный		surface+lemma
+nala-2	2	1	4	vivarRa	бледным	бледна		surface+lemma
+nala-2	2	1	5	vadanA	лицами	лицо		surface+lemma
+nala-2	2	1	6	kfSA	исхудавшую	Криша		surface+lemma
+nala-2	2	2	0	baBUva	стал	будет	будет	surface+lemma+root
+nala-2	2	2	1	damayantI	Дамаянти	Дамаянти		surface+lemma
+nala-2	2	2	2	tu	же	же	же	surface+lemma+root
+nala-2	2	2	3	niHSvAsa	вздохи	вздохи		surface+lemma
+nala-2	2	2	4	paramA	высшего	высшее		surface+lemma
+nala-2	2	2	5	tadA	тогда	тогда		surface+lemma
+nala-2	20	1	0	tasyAH	ее	он		surface+lemma
+nala-2	20	1	1	svayaMvaraH	сваямвару	сваямвара		surface+lemma
+nala-2	20	1	2	Sakra	Шакра	Шакра		surface+lemma
+nala-2	20	1	3	BavitA	будет	будет	будет	surface+lemma+root
+nala-2	20	1	4	nacirAd		скоро		lemma
+nala-2	20	1	5	iva	как	как		surface+lemma
+nala-2	20	2	0	tatra	там	там		surface+lemma
+nala-2	20	2	1	gacCanti	идут	отправился	пришел	surface+lemma+root
+nala-2	20	2	2	rAjAno	цари	царь		surface+lemma
+nala-2	20	2	3	rAja	царя	царь		surface+lemma
+nala-2	20	2	4	putrAH	сыновья	сын		surface+lemma
+nala-2	20	2	5	ca	и	и		surface+lemma
+nala-2	20	2	6	sarvaSaH	все	все		surface+lemma
+nala-2	21	1	0	tAM	ее	он		surface+lemma
+nala-2	21	1	1	ratna	сокровище	сокровище		surface+lemma
+nala-2	21	1	2	BUtAm	славы	будет	будет	surface+lemma+root
+nala-2	21	1	3	lokasya	мира	мир		surface+lemma
+nala-2	21	1	4	prArTayanto		домогаться	домогаться	lemma+root
+nala-2	21	1	5	mahIkzitaH	владыки земли	царей		surface+lemma
+nala-2	21	2	0	kANkzanti	стремятся достичь	желает	желает	surface+lemma+root
+nala-2	21	2	1	sma	же	же		surface+lemma
+nala-2	21	2	2	viSezeRa	особенно	особенно		surface+lemma
+nala-2	21	2	3	bala	сила	войско		surface+lemma
+nala-2	21	2	4	vftra	Вритру	Вритру		surface+lemma
+nala-2	21	2	5	nizUdanEH		уничтожит		lemma
+nala-2	22	1	0	etasmin	это	это		surface+lemma
+nala-2	22	1	1	kaTyamAne		рассказал	рассказал	lemma+root
+nala-2	22	1	2	tu	же	же	же	surface+lemma+root
+nala-2	22	1	3	lokapAlAS		Хранители мира		lemma
+nala-2	22	1	4	ca	и	и		surface+lemma
+nala-2	22	1	5	sa	он			surface
+nala-2	22	1	6	agnikAH				none
+nala-2	22	2	0	Ajagmur	Двинулись	пришел	пришел	surface+lemma+root
+nala-2	22	2	1	devarAjasya	Царя богов	царь богов		surface+lemma
+nala-2	22	2	2	samIpam	к	к		surface+lemma
+nala-2	22	2	3	amara	бессмертные	бессмертные		surface+lemma
+nala-2	22	2	4	uttamAH	нежные	высшее		surface+lemma
+nala-2	23	1	0	tatas	тогда	тогда		surface+lemma
+nala-2	23	1	1	tat	то	он		surface+lemma
+nala-2	23	1	2	SuSruvuH	услышали	услышав	услышав	surface+lemma+root
+nala-2	23	1	3	sarve	все	все		surface+lemma
+nala-2	23	1	4	nAradasya	Нарады	Нарада		surface+lemma
+nala-2	23	1	5	vaco	слово	слова		surface+lemma
+nala-2	23	1	6	mahat	великое	великий		surface+lemma
+nala-2	23	2	0	SrutvA	услышав	услышав	услышав	surface+lemma+root
+nala-2	23	2	1	ca	и	и		surface+lemma
+nala-2	23	2	2	eva	именно	именно		surface+lemma
+nala-2	23	2	3	abruvan	сказали	сказал	сказал	surface+lemma+root
+nala-2	23	2	4	hfzwA	радостно	радостно	радостно	surface+lemma+root
+nala-2	23	2	5	gacCAmo		отправился	пришел	lemma+root
+nala-2	23	2	6	vayam	мы	я	я	surface+lemma+root
+nala-2	23	2	7	api	также	также		surface+lemma
+nala-2	23	2	8	uta	и	и		surface+lemma
+nala-2	24	1	0	tataH	тогда	тогда		surface+lemma
+nala-2	24	1	1	sarve	все	все		surface+lemma
+nala-2	24	1	2	mahA	великий	великий		surface+lemma
+nala-2	24	1	3	rAjEH		царь		lemma
+nala-2	24	1	4	sa	он			surface
+nala-2	24	1	5	gaRAH	сонмы	сонмы		surface+lemma
+nala-2	24	1	6	saha	с	с		surface+lemma
+nala-2	24	1	7	vAhanAH	на конях	упряжных животных		surface+lemma
+nala-2	24	2	0	vidarBAn	страны видарбхов	Видарбху		surface+lemma
+nala-2	24	2	1	aBito	вокруг	вокруг	вокруг	surface+lemma+root
+nala-2	24	2	2	jagmur	шли	отправился	пришел	surface+lemma+root
+nala-2	24	2	3	yatra	где	где		surface+lemma
+nala-2	24	2	4	sarve	все	все		surface+lemma
+nala-2	24	2	5	mahIkzitaH	владыки земли	царей		surface+lemma
+nala-2	25	1	0	nalo	Нала	Нала		surface+lemma
+nala-2	25	1	1	pi	и	также		surface+lemma
+nala-2	25	1	2	rAjA	царь	царь		surface+lemma
+nala-2	25	1	3	kOnteya				none
+nala-2	25	1	4	SrutvA	услышав	услышав	услышав	surface+lemma+root
+nala-2	25	1	5	rAjYAM	царей	царь		surface+lemma
+nala-2	25	1	6	samAgamam	о встрече	встреча		surface+lemma
+nala-2	25	2	0	aByagacCad		явился	пришел	lemma+root
+nala-2	25	2	1	a	о	о		surface+lemma
+nala-2	25	2	2	dIna	несчастный	несчастный		surface+lemma
+nala-2	25	2	3	AtmA	Атман	себя		surface+lemma
+nala-2	25	2	4	damayantIm	Дамаянти	Дамаянти		surface+lemma
+nala-2	25	2	5	anuvrataH	предан	верна		surface+lemma
+nala-2	26	1	0	aTa	и	и		surface+lemma
+nala-2	26	1	1	devAH	боги	боги		surface+lemma
+nala-2	26	1	2	paTi	на пути	путь		surface+lemma
+nala-2	26	1	3	nalaM	Налу	Нала		surface+lemma
+nala-2	26	1	4	dadfSur	оглядывали	увидев	увидев	surface+lemma+root
+nala-2	26	1	5	BU	будет	будет	будет	surface+lemma+root
+nala-2	26	1	6	tale	на	на		surface+lemma
+nala-2	26	1	7	sTitam	стоящего	пребывает	пребывает	surface+lemma+root
+nala-2	26	2	0	sAkzAd	воплощенная	воочию		surface+lemma
+nala-2	26	2	1	iva	как	как		surface+lemma
+nala-2	26	2	2	sTitaM	утверждено	пребывает	пребывает	surface+lemma+root
+nala-2	26	2	3	mUrtyA		воплощение		lemma
+nala-2	26	2	4	manmaTaM		Манматха		lemma
+nala-2	26	2	5	rUpa	образ	образ		surface+lemma
+nala-2	26	2	6	saMpadA		стал	достигает	lemma+root
+nala-2	27	1	0	taM	его	он		surface+lemma
+nala-2	27	1	1	dfzwvA	увидев	увидев	увидев	surface+lemma+root
+nala-2	27	1	2	lokapAlAs		Хранители мира		lemma
+nala-2	27	1	3	te	тебе	он		surface+lemma
+nala-2	27	1	4	BrAjamAnaM	лучезарного	сверкающие	сверкающие	surface+lemma+root
+nala-2	27	1	5	yaTA	как	как		surface+lemma
+nala-2	27	1	6	ravim	солнце	солнце		surface+lemma
+nala-2	27	2	0	tasTur	следовали	пребывает	пребывает	surface+lemma+root
+nala-2	27	2	1	vigata	оставив	рассеяла	пришел	surface+lemma+root
+nala-2	27	2	2	saMkalpAH	решения	воля		surface+lemma
+nala-2	27	2	3	vismitA	изумленная	изумленные	улыбаясь	surface+lemma+root
+nala-2	27	2	4	rUpa	образ	образ		surface+lemma
+nala-2	27	2	5	saMpadA		стал	достигает	lemma+root
+nala-2	28	1	0	tato	тогда	тогда		surface+lemma
+nala-2	28	1	1	ntarikze		воздушное пространство		lemma
+nala-2	28	1	2	vizwaBya	Поддерживая	Поддерживая	Поддерживая	surface+lemma+root
+nala-2	28	1	3	vimAnAni	дворцы	колесница		surface+lemma
+nala-2	28	1	4	divOkasaH				none
+nala-2	28	2	0	abruvan	сказали	сказал	сказал	surface+lemma+root
+nala-2	28	2	1	nEzaDaM				none
+nala-2	28	2	2	rAjann	царь	царь		surface+lemma
+nala-2	28	2	3	avatIrya	сойдя	сойдя	сойдя	surface+lemma+root
+nala-2	28	2	4	naBastalAt	с небес	небосвод		surface+lemma
+nala-2	29	1	0	Bo	о	о		surface+lemma
+nala-2	29	1	1	Bo	о	о		surface+lemma
+nala-2	29	1	2	nEzaDa				none
+nala-2	29	1	3	rAja	царя	царь		surface+lemma
+nala-2	29	1	4	indrEH		Индра		lemma
+nala-2	29	1	5	nala	Нала	Нала		surface+lemma
+nala-2	29	1	6	satya	правду	правду		surface+lemma
+nala-2	29	1	7	vrataH	обету	обет		surface+lemma
+nala-2	29	1	8	BavAn	ты	ты		surface+lemma
+nala-2	29	2	0	asmAkaM	нам	я	я	surface+lemma+root
+nala-2	29	2	1	kuru	куру	сделал	сделал	surface+lemma+root
+nala-2	29	2	2	sAhAyyaM		помощь		lemma
+nala-2	29	2	3	dUto	вестником	вестник		surface+lemma
+nala-2	29	2	4	Bava	будь	будет	будет	surface+lemma+root
+nala-2	29	2	5	nara	человек	человек		surface+lemma
+nala-2	29	2	6	uttamEH		высшее		lemma
+nala-2	3	1	0	UrDva	вверх	вверх		surface+lemma
+nala-2	3	1	1	dfzwiH	взгляд	взгляд		surface+lemma
+nala-2	3	1	2	DyAna	созерцание	созерцание		surface+lemma
+nala-2	3	1	3	parA	прочь	высшее		surface+lemma
+nala-2	3	1	4	baBUva	стал	будет	будет	surface+lemma+root
+nala-2	3	1	5	unmatta	безумный	безумный	я	surface+lemma+root
+nala-2	3	1	6	darSanA	жена	видение		surface+lemma
+nala-2	3	2	0	na	не	не		surface+lemma
+nala-2	3	2	1	SayyA	ложе	ложе		surface+lemma
+nala-2	3	2	2	Asana	сиденье	сиденье		surface+lemma
+nala-2	3	2	3	Bogezu	к усладам	наслаждения		surface+lemma
+nala-2	3	2	4	ratiM		радость		lemma
+nala-2	3	2	5	vindati	обретает	знает	знает	surface+lemma+root
+nala-2	3	2	6	karhicit	никогда	никогда		surface+lemma
+nala-2	4	1	0	na	не	не		surface+lemma
+nala-2	4	1	1	naktaM	ночью	ночью		surface+lemma
+nala-2	4	1	2	na	не	не		surface+lemma
+nala-2	4	1	3	divA	днем	днем		surface+lemma
+nala-2	4	1	4	Sete	лежит	лежит	лежит	surface+lemma+root
+nala-2	4	1	5	hA	о	оставив	оставив	surface+lemma+root
+nala-2	4	1	6	hA	о	оставив	оставив	surface+lemma+root
+nala-2	4	1	7	iti	так	так		surface+lemma
+nala-2	4	1	8	vadatI	твердила	говорят	говорят	surface+lemma+root
+nala-2	4	1	9	muhuH	поминутно	то и дело		surface+lemma
+nala-2	4	2	0	tAm	ее	он		surface+lemma
+nala-2	4	2	1	asvasTAM		неспокойный		lemma
+nala-2	4	2	2	tad	то	он		surface+lemma
+nala-2	4	2	3	AkArAm	поведение	видом		surface+lemma
+nala-2	4	2	4	saKyas		подруга		lemma
+nala-2	4	2	5	tA	эти	он		surface+lemma
+nala-2	4	2	6	jajYur		родился	родился	lemma+root
+nala-2	4	2	7	iNgitEH		движениям		lemma
+nala-2	5	1	0	tato	тогда	тогда		surface+lemma
+nala-2	5	1	1	vidarBa	Видарбху	Видарбху		surface+lemma
+nala-2	5	1	2	pataye	господина	мужа		surface+lemma
+nala-2	5	1	3	damayantyAH	Дамаянти	Дамаянти		surface+lemma
+nala-2	5	1	4	saKI	подруга	подруга		surface+lemma
+nala-2	5	1	5	gaRaH	стая	сонмы		surface+lemma
+nala-2	5	2	0	nyavedayata	Рассказал	поведал	поведал	surface+lemma+root
+nala-2	5	2	1	na	не	не		surface+lemma
+nala-2	5	2	2	svasTAM		здоров		lemma
+nala-2	5	2	3	damayantIM	Дамаянти	Дамаянти		surface+lemma
+nala-2	5	2	4	nareSvara	владыка людей	владыка людей		surface+lemma
+nala-2	6	1	0	tat	то	он		surface+lemma
+nala-2	6	1	1	SrutvA	услышав	услышав	услышав	surface+lemma+root
+nala-2	6	1	2	nfpatir	царь	царь		surface+lemma
+nala-2	6	1	3	BImo	Бхима	Бхима		surface+lemma
+nala-2	6	1	4	damayantI	Дамаянти	Дамаянти		surface+lemma
+nala-2	6	1	5	saKI	подруга	подруга		surface+lemma
+nala-2	6	1	6	gaRAt		сонмы		lemma
+nala-2	6	2	0	cintayAmAsa	подумал	подумал	подумал	surface+lemma+root
+nala-2	6	2	1	tat	то	он		surface+lemma
+nala-2	6	2	2	kAryaM	дело	дело		surface+lemma
+nala-2	6	2	3	su	хорошенько	выжимающего	выжимающего	surface+lemma+root
+nala-2	6	2	4	mahat	великое	великий		surface+lemma
+nala-2	6	2	5	svAM	свою	свой		surface+lemma
+nala-2	6	2	6	sutAM	выжатым (сокам)	дочь		surface+lemma
+nala-2	6	2	7	prati	к	к		surface+lemma
+nala-2	7	1	0	sa	он	он		surface+lemma
+nala-2	7	1	1	samIkzya	увидев	увидев	увидев	surface+lemma+root
+nala-2	7	1	2	mahIpAlaH	царь	хранитель земли		surface+lemma
+nala-2	7	1	3	svAM	свою	свой		surface+lemma
+nala-2	7	1	4	sutAM	выжатым (сокам)	дочь		surface+lemma
+nala-2	7	1	5	prApta	достиг	достигнув	достигает	surface+lemma+root
+nala-2	7	1	6	yOvanAm				none
+nala-2	7	2	0	apaSyad	смотрел	вижу	вижу	surface+lemma+root
+nala-2	7	2	1	AtmanaH	себя	себя		surface+lemma
+nala-2	7	2	2	kAryaM	дело	дело		surface+lemma
+nala-2	7	2	3	damayantyAH	Дамаянти	Дамаянти		surface+lemma
+nala-2	7	2	4	svayaMvaram	сваямваре	сваямвара		surface+lemma
+nala-2	8	1	0	sa	он	он		surface+lemma
+nala-2	8	1	1	saMnipAtayAmAsa		призвал	повержен	lemma+root
+nala-2	8	1	2	mahIpAlAn	царю	хранитель земли		surface+lemma
+nala-2	8	1	3	viSAM	племен	племен	вошел	surface+lemma+root
+nala-2	8	1	4	pate	владыка	мужа		surface+lemma
+nala-2	8	2	0	anuBUyatAm	приходите	подвержено	будет	surface+lemma+root
+nala-2	8	2	1	ayaM	этот	это		surface+lemma
+nala-2	8	2	2	vIrAH	герои	герой		surface+lemma
+nala-2	8	2	3	svayaMvara	сваямвара	сваямвара		surface+lemma
+nala-2	8	2	4	iti	так	так		surface+lemma
+nala-2	8	2	5	praBo	владыка	владыка		surface+lemma
+nala-2	9	1	0	SrutvA	услышав	услышав	услышав	surface+lemma+root
+nala-2	9	1	1	tu	же	же	же	surface+lemma+root
+nala-2	9	1	2	pArTivAH	цари	царь		surface+lemma
+nala-2	9	1	3	sarve	все	все		surface+lemma
+nala-2	9	1	4	damayantyAH	Дамаянти	Дамаянти		surface+lemma
+nala-2	9	1	5	svayaMvaram	сваямваре	сваямвара		surface+lemma
+nala-2	9	2	0	aBijagmus		явился	пришел	lemma+root
+nala-2	9	2	1	tadA	тогда	тогда		surface+lemma
+nala-2	9	2	2	BImaM	Бхиму	Бхима		surface+lemma
+nala-2	9	2	3	rAjAno	цари	царь		surface+lemma
+nala-2	9	2	4	BIma	Бхима	Бхима		surface+lemma
+nala-2	9	2	5	SAsanAt	по повелению	повелению		surface+lemma
+nala-3	1	1	0	bfhadaSva	Брихадашва	Брихадашва		surface+lemma
+nala-3	1	1	1	uvAca	сказал	сказал	сказал	surface+lemma+root
+nala-3	1	2	0	teByaH	от них	он		surface+lemma
+nala-3	1	2	1	pratijYAya	обещал	обещаю	зная	surface+lemma+root
+nala-3	1	2	2	nalaH	Нала	Нала		surface+lemma
+nala-3	1	2	3	karizya	Исполню	сделал	сделал	surface+lemma+root
+nala-3	1	2	4	iti	так	так		surface+lemma
+nala-3	1	2	5	BArata	потомок Бхараты	потомок Бхараты		surface+lemma
+nala-3	1	3	0	aTa	и	и		surface+lemma
+nala-3	1	3	1	enAn	их	его		surface+lemma
+nala-3	1	3	2	paripapracCa	спросил	вопросил	спросил	surface+lemma+root
+nala-3	1	3	3	kfta	сделано	сделал	сделал	surface+lemma+root
+nala-3	1	3	4	aYjaliH	руки	руки		surface+lemma
+nala-3	1	3	5	avasTitaH	пребываю	пребывает	пребывает	surface+lemma+root
+nala-3	10	1	0	pravekzyasi	Проникнешь	вошел	вошел	surface+lemma+root
+nala-3	10	1	1	iti	так	так		surface+lemma
+nala-3	10	1	2	taM	его	он		surface+lemma
+nala-3	10	1	3	SakraH	Шакра	Шакра		surface+lemma
+nala-3	10	1	4	punar	снова	снова		surface+lemma
+nala-3	10	1	5	eva	именно	именно		surface+lemma
+nala-3	10	1	6	aByaBAzata	сказал	сказал	сказал	surface+lemma+root
+nala-3	10	2	0	jagAma	отправился	отправился	пришел	surface+lemma+root
+nala-3	10	2	1	sa	он	он		surface+lemma
+nala-3	10	2	2	taTA	так	так		surface+lemma
+nala-3	10	2	3	iti	так	так		surface+lemma
+nala-3	10	2	4	uktvA	сказав	сказал	сказал	surface+lemma+root
+nala-3	10	2	5	damayantyA	Дамаянти	Дамаянти		surface+lemma
+nala-3	10	2	6	niveSanam	во дворец	дворец		surface+lemma
+nala-3	11	1	0	dadarSa	увидел	увидев	увидев	surface+lemma+root
+nala-3	11	1	1	tatra	там	там		surface+lemma
+nala-3	11	1	2	vEdarBIM				none
+nala-3	11	1	3	saKI	подруга	подруга		surface+lemma
+nala-3	11	1	4	gaRa	сонмы	сонмы		surface+lemma
+nala-3	11	1	5	samAvftAm	разрушенный	окруженный	окруженный	surface+lemma+root
+nala-3	11	2	0	dedIpyamAnAM		блистая	блистая	lemma+root
+nala-3	11	2	1	vapuzA	красотой	тело		surface+lemma
+nala-3	11	2	2	SriyA	красотою	Шри	Шри	surface+lemma+root
+nala-3	11	2	3	ca	и	и		surface+lemma
+nala-3	11	2	4	varavarRinIm	прекрасную женщину	красавица		surface+lemma
+nala-3	12	1	0	atIva	очень	очень		surface+lemma
+nala-3	12	1	1	su	хорошенько	выжимающего	выжимающего	surface+lemma+root
+nala-3	12	1	2	kumAra	царевич	царевич		surface+lemma
+nala-3	12	1	3	aNgAm		тело		lemma
+nala-3	12	1	4	tanu	тело	тело		surface+lemma
+nala-3	12	1	5	maDyAm		среди		lemma
+nala-3	12	1	6	su	хорошенько	выжимающего	выжимающего	surface+lemma+root
+nala-3	12	1	7	locanAm	царице	глазами		surface+lemma
+nala-3	12	2	0	AkzipantIm	оттолкнула	бросил	метнул	surface+lemma+root
+nala-3	12	2	1	iva	как	как		surface+lemma
+nala-3	12	2	2	ca	и	и		surface+lemma
+nala-3	12	2	3	BAH	свет	сияет	кажется	surface+lemma+root
+nala-3	12	2	4	SaSinaH	лунного	луна		surface+lemma
+nala-3	12	2	5	svena	своим	свой		surface+lemma
+nala-3	12	2	6	tejasA	блеском	блеск		surface+lemma
+nala-3	13	1	0	tasya	его	он		surface+lemma
+nala-3	13	1	1	dfzwvA	увидев	увидев	увидев	surface+lemma+root
+nala-3	13	1	2	eva	именно	именно		surface+lemma
+nala-3	13	1	3	vavfDe	выросла	возрастает	возрастает	surface+lemma+root
+nala-3	13	1	4	kAmas	желание	желание		surface+lemma
+nala-3	13	1	5	tAM	ее	он		surface+lemma
+nala-3	13	1	6	cAru	милое	милое		surface+lemma
+nala-3	13	1	7	hAsinIm		улыбкой		lemma
+nala-3	13	2	0	satyaM	истинно	правду		surface+lemma
+nala-3	13	2	1	cikIrzamARas		желая сделать	желая сделать	lemma+root
+nala-3	13	2	2	tu	же	же	же	surface+lemma+root
+nala-3	13	2	3	DArayAmAsa	поддерживал	поддерживают	поддерживают	surface+lemma+root
+nala-3	13	2	4	hfcCayam	лежащее в сердце	лежащее в сердце		surface+lemma
+nala-3	14	1	0	tatas	тогда	тогда		surface+lemma
+nala-3	14	1	1	tA	эти	он		surface+lemma
+nala-3	14	1	2	nEzaDaM				none
+nala-3	14	1	3	dfzwvA	увидев	увидев	увидев	surface+lemma+root
+nala-3	14	1	4	saMBrAntAH		охвачена ужасом	блуждает	lemma+root
+nala-3	14	1	5	parama	высший	высшее		surface+lemma
+nala-3	14	1	6	aNganAH	девы	женщина		surface+lemma
+nala-3	14	2	0	AsaneByaH	с сидений	сиденье		surface+lemma
+nala-3	14	2	1	samutpetus		взлетел	упал	lemma+root
+nala-3	14	2	2	tejasA	блеском	блеск		surface+lemma
+nala-3	14	2	3	tasya	его	он		surface+lemma
+nala-3	14	2	4	DarzitAH		похитить	похитить	lemma+root
+nala-3	15	1	0	praSaSaMsuS		восхваляют	скажи	lemma+root
+nala-3	15	1	1	ca	и	и		surface+lemma
+nala-3	15	1	2	su	хорошенько	выжимающего	выжимающего	surface+lemma+root
+nala-3	15	1	3	prItAH	довольные	доволен	доволен	surface+lemma+root
+nala-3	15	1	4	nalaM	Налу	Нала		surface+lemma
+nala-3	15	1	5	tA	эти	он		surface+lemma
+nala-3	15	1	6	vismaya	изумление	изумление		surface+lemma
+nala-3	15	1	7	anvitAH	наделенные	исполненные		surface+lemma
+nala-3	15	2	0	na	не	не		surface+lemma
+nala-3	15	2	1	ca	и	и		surface+lemma
+nala-3	15	2	2	enam	его	его		surface+lemma
+nala-3	15	2	3	aByaBAzanta	заговорить	сказал	сказал	surface+lemma+root
+nala-3	15	2	4	manoBiH	умом	ум		surface+lemma
+nala-3	15	2	5	tu	же	же	же	surface+lemma+root
+nala-3	15	2	6	aByacintayan	гадали	Не посчитаюсь	подумал	surface+lemma+root
+nala-3	16	1	0	aho	увы	увы		surface+lemma
+nala-3	16	1	1	rUpam	образ	образ		surface+lemma
+nala-3	16	1	2	aho	увы	увы		surface+lemma
+nala-3	16	1	3	kAntir	красота	красотой		surface+lemma
+nala-3	16	1	4	aho	увы	увы		surface+lemma
+nala-3	16	1	5	DEryaM				none
+nala-3	16	1	6	mahAtmanaH	великого духом	великий духом		surface+lemma
+nala-3	16	2	0	ko	кто	что		surface+lemma
+nala-3	16	2	1	yaM	кого	это		surface+lemma
+nala-3	16	2	2	devo	бог	боги		surface+lemma
+nala-3	16	2	3	nu	же	же	же	surface+lemma+root
+nala-3	16	2	4	yakzo		якши		lemma
+nala-3	16	2	5	nu	же	же	же	surface+lemma+root
+nala-3	16	2	6	ganDarvo	Гандхарва	гандхарвы		surface+lemma
+nala-3	16	2	7	nu	же	же	же	surface+lemma+root
+nala-3	16	2	8	Bavizyati	будет	будет	будет	surface+lemma+root
+nala-3	17	1	0	na	не	не		surface+lemma
+nala-3	17	1	1	tu	же	же	же	surface+lemma+root
+nala-3	17	1	2	enam	его	его		surface+lemma
+nala-3	17	1	3	Saknuvanti	могут	способен	способен	surface+lemma+root
+nala-3	17	1	4	sma	же	же		surface+lemma
+nala-3	17	1	5	vyAhartum	говорить	произнося	похитил	surface+lemma+root
+nala-3	17	1	6	api	также	также		surface+lemma
+nala-3	17	1	7	kiMcana	ничего	никто		surface+lemma
+nala-3	17	2	0	tejasA	блеском	блеск		surface+lemma
+nala-3	17	2	1	DarzitAH		похитить	похитить	lemma+root
+nala-3	17	2	2	sarvA	все	все		surface+lemma
+nala-3	17	2	3	lajjAvatyo		стыдливые		lemma
+nala-3	17	2	4	vara	лучший	лучший		surface+lemma
+nala-3	17	2	5	aNganAH	девы	женщина		surface+lemma
+nala-3	18	1	0	aTa	и	и		surface+lemma
+nala-3	18	1	1	enam	его	его		surface+lemma
+nala-3	18	1	2	smayamAnA	улыбаться	улыбаясь	улыбаясь	surface+lemma+root
+nala-3	18	1	3	iva	как	как		surface+lemma
+nala-3	18	1	4	smita	улыбка	улыбка		surface+lemma
+nala-3	18	1	5	pUrva	прежде	прежде		surface+lemma
+nala-3	18	1	6	aBiBAziRI				none
+nala-3	18	2	0	damayantI	Дамаянти	Дамаянти		surface+lemma
+nala-3	18	2	1	nalaM	Налу	Нала		surface+lemma
+nala-3	18	2	2	vIram	героя	герой		surface+lemma
+nala-3	18	2	3	aByaBAzata	сказал	сказал	сказал	surface+lemma+root
+nala-3	18	2	4	vismitA	изумленная	изумленные	улыбаясь	surface+lemma+root
+nala-3	19	1	0	kaH	кто	что		surface+lemma
+nala-3	19	1	1	tvam	ты	тебя		surface+lemma
+nala-3	19	1	2	sarva	все	все		surface+lemma
+nala-3	19	1	3	anavadya	безупречный	безупречный		surface+lemma
+nala-3	19	1	4	aNgEH		тело		lemma
+nala-3	19	1	5	mama	мне	я	я	surface+lemma+root
+nala-3	19	1	6	hfcCaya	влюбился	лежащее в сердце		surface+lemma
+nala-3	19	1	7	varDanEH		подкрепление		lemma
+nala-3	19	2	0	prApto	пришел	достигнув	достигает	surface+lemma+root
+nala-3	19	2	1	asi	ты	есть	есть	surface+lemma+root
+nala-3	19	2	2	amara	бессмертные	бессмертные		surface+lemma
+nala-3	19	2	3	vat	подобно	сказал	сказал	surface+lemma+root
+nala-3	19	2	4	vIra	герой	герой		surface+lemma
+nala-3	19	2	5	jYAtum	знать	зная	зная	surface+lemma+root
+nala-3	19	2	6	icCAmi	хочу	хочу	хочу	surface+lemma+root
+nala-3	19	2	7	te	тебе	тебя		surface+lemma
+nala-3	19	2	8	naGa		безупречный		lemma
+nala-3	2	1	0	ke	кто	что		surface+lemma
+nala-3	2	1	1	vE		понесетъ		lemma
+nala-3	2	1	2	BavantaH	вы	ты		surface+lemma
+nala-3	2	1	3	kaH	кто	что		surface+lemma
+nala-3	2	1	4	ca	и	и		surface+lemma
+nala-3	2	1	5	asO		эти		lemma
+nala-3	2	1	6	yasya	которого	что		surface+lemma
+nala-3	2	1	7	aham	я	я	я	surface+lemma+root
+nala-3	2	1	8	dUta	вестник	вестник		surface+lemma
+nala-3	2	1	9	IpsitaH	мечтали	желанный	желанный	surface+lemma+root
+nala-3	2	2	0	kiM	что	что		surface+lemma
+nala-3	2	2	1	ca	и	и		surface+lemma
+nala-3	2	2	2	tatra	там	там		surface+lemma
+nala-3	2	2	3	mayA	я	я	я	surface+lemma+root
+nala-3	2	2	4	kAryaM	дело	сделал	сделал	surface+lemma+root
+nala-3	2	2	5	kaTayaDvaM	Объясните	рассказал	рассказал	surface+lemma+root
+nala-3	2	2	6	yaTAtaTam	как оно есть	как оно есть		surface+lemma
+nala-3	20	1	0	kaTam	как	как		surface+lemma
+nala-3	20	1	1	AgamanaM	придет	возвращения		surface+lemma
+nala-3	20	1	2	ca	и	и		surface+lemma
+nala-3	20	1	3	iha	здесь	здесь		surface+lemma
+nala-3	20	1	4	kaTaM	как	как		surface+lemma
+nala-3	20	1	5	ca	и	и		surface+lemma
+nala-3	20	1	6	asi	ты	есть	есть	surface+lemma+root
+nala-3	20	1	7	na	не	не		surface+lemma
+nala-3	20	1	8	lakzitaH	высказаного	заметил	увидев	surface+lemma+root
+nala-3	20	2	0	su	хорошенько	выжимающего	выжимающего	surface+lemma+root
+nala-3	20	2	1	rakzitam	охраняемый	охраняет	охраняет	surface+lemma+root
+nala-3	20	2	2	hi	ведь	ведь	ведь	surface+lemma+root
+nala-3	20	2	3	me	мне	я	я	surface+lemma+root
+nala-3	20	2	4	veSma	дворец	дворец		surface+lemma
+nala-3	20	2	5	rAjA	царь	царь		surface+lemma
+nala-3	20	2	6	ca	и	и		surface+lemma
+nala-3	20	2	7	eva	именно	именно		surface+lemma
+nala-3	20	2	8	ugra	грозный	грозный		surface+lemma
+nala-3	20	2	9	SAsanaH		повелению		lemma
+nala-3	21	1	0	evam	так	так		surface+lemma
+nala-3	21	1	1	uktaH	сказано	сказал	сказал	surface+lemma+root
+nala-3	21	1	2	tu	же	же	же	surface+lemma+root
+nala-3	21	1	3	vEdarByA				none
+nala-3	21	1	4	nalas		Нала		lemma
+nala-3	21	1	5	tAM	ее	он		surface+lemma
+nala-3	21	1	6	pratyuvAca	ответил	ответил	сказал	surface+lemma+root
+nala-3	21	1	7	ha	же	же		surface+lemma
+nala-3	21	2	0	nalaM	Налу	Нала		surface+lemma
+nala-3	21	2	1	mAM	меня	я	я	surface+lemma+root
+nala-3	21	2	2	vidDi	знай	знает	знает	surface+lemma+root
+nala-3	21	2	3	kalyARi	прекрасная	прекрасная		surface+lemma
+nala-3	21	2	4	deva	боги	боги		surface+lemma
+nala-3	21	2	5	dUtam	вестником	вестник		surface+lemma
+nala-3	21	2	6	iha	здесь	здесь		surface+lemma
+nala-3	21	2	7	Agatam	пришел	пришел	пришел	surface+lemma+root
+nala-3	22	1	0	devAH	боги	боги		surface+lemma
+nala-3	22	1	1	tvA	тебя	тебя		surface+lemma
+nala-3	22	1	2	prAptum	достичь	достигнув	достигает	surface+lemma+root
+nala-3	22	1	3	icCanti	желают	хочу	хочу	surface+lemma+root
+nala-3	22	1	4	Sakro	Шакра	Шакра		surface+lemma
+nala-3	22	1	5	gnir		Агни		lemma
+nala-3	22	1	6	varuRo	Варуна	Варуна		surface+lemma
+nala-3	22	1	7	yamaH	Яма	Яма		surface+lemma
+nala-3	22	2	0	tezAm	их	он		surface+lemma
+nala-3	22	2	1	anyatamaM		одного		lemma
+nala-3	22	2	2	devaM	бога	боги		surface+lemma
+nala-3	22	2	3	patiM	мужа	мужа		surface+lemma
+nala-3	22	2	4	varaya	выбирай	выбирай	выбирай	surface+lemma+root
+nala-3	22	2	5	SoBane	прекрасная	прекрасная		surface+lemma
+nala-3	23	1	0	tezAm	их	он		surface+lemma
+nala-3	23	1	1	eva	именно	именно		surface+lemma
+nala-3	23	1	2	praBAvena	в силу	мощь		surface+lemma
+nala-3	23	1	3	pravizwo	проник	вошел	вошел	surface+lemma+root
+nala-3	23	1	4	ham		я	я	lemma+root
+nala-3	23	1	5	a	о	о		surface+lemma
+nala-3	23	1	6	lakzitaH	высказаного	заметил	увидев	surface+lemma+root
+nala-3	23	2	0	praviSantaM		вошел	вошел	lemma+root
+nala-3	23	2	1	hi	ведь	ведь	ведь	surface+lemma+root
+nala-3	23	2	2	mAM	меня	я	я	surface+lemma+root
+nala-3	23	2	3	kaScid	кто-нибудь	никто		surface+lemma
+nala-3	23	2	4	na	не	не		surface+lemma
+nala-3	23	2	5	apaSyat	увидел	вижу	вижу	surface+lemma+root
+nala-3	23	2	6	na	не	не		surface+lemma
+nala-3	23	2	7	api	также	также		surface+lemma
+nala-3	23	2	8	avArayat	сдерживал	сдерживал	окружили	surface+lemma+root
+nala-3	24	1	0	etad	это	это		surface+lemma
+nala-3	24	1	1	arTam	цель	ради		surface+lemma
+nala-3	24	1	2	ahaM	я	я	я	surface+lemma+root
+nala-3	24	1	3	Badre	милая	благо		surface+lemma
+nala-3	24	1	4	prezitaH	послан	послал	послал	surface+lemma+root
+nala-3	24	1	5	sura	боги	боги		surface+lemma
+nala-3	24	1	6	sattamEH		достойнейший		lemma
+nala-3	24	2	0	etat	это	это		surface+lemma
+nala-3	24	2	1	SrutvA	услышав	услышав	услышав	surface+lemma+root
+nala-3	24	2	2	SuBe	для блеска	прекрасная		surface+lemma
+nala-3	24	2	3	budDiM	разум	разум		surface+lemma
+nala-3	24	2	4	prakuruzva	возведи	издавали	сделал	surface+lemma+root
+nala-3	24	2	5	yaTA	как	как		surface+lemma
+nala-3	24	2	6	icCasi	хочешь	хочу	хочу	surface+lemma+root
+nala-3	3	1	0	evam	так	так		surface+lemma
+nala-3	3	1	1	ukte	сказано	сказал	сказал	surface+lemma+root
+nala-3	3	1	2	nEzaDena				none
+nala-3	3	1	3	maGavAn	Магхаван	щедрый		surface+lemma
+nala-3	3	1	4	pratyaBAzata	сказал	сказал	сказал	surface+lemma+root
+nala-3	3	2	0	amarAn	бессмертных	бессмертные		surface+lemma
+nala-3	3	2	1	vE		понесетъ		lemma
+nala-3	3	2	2	niboDa	узнай	узнай	узнай	surface+lemma+root
+nala-3	3	2	3	asmAn	нас	я	я	surface+lemma+root
+nala-3	3	2	4	damayantI	Дамаянти	Дамаянти		surface+lemma
+nala-3	3	2	5	arTam	цель	ради		surface+lemma
+nala-3	3	2	6	AgatAn	пришедших	пришел	пришел	surface+lemma+root
+nala-3	4	1	0	aham	я	я	я	surface+lemma+root
+nala-3	4	1	1	indro	Индра	Индра		surface+lemma
+nala-3	4	1	2	yam	кого	это		surface+lemma
+nala-3	4	1	3	agniS	Агни	Агни		surface+lemma
+nala-3	4	1	4	ca	и	и		surface+lemma
+nala-3	4	1	5	taTA	так	так		surface+lemma
+nala-3	4	1	6	eva	именно	именно		surface+lemma
+nala-3	4	1	7	ayam	этот	это		surface+lemma
+nala-3	4	1	8	apAmpatiH	Владыка вод	Владыка вод		surface+lemma
+nala-3	4	2	0	SarIra	тело	тело		surface+lemma
+nala-3	4	2	1	anta	конец	конец		surface+lemma
+nala-3	4	2	2	karaH	положит	руки		surface+lemma
+nala-3	4	2	3	nFRAM	человеческое	мужей		surface+lemma
+nala-3	4	2	4	yamo	Яма	Яма		surface+lemma
+nala-3	4	2	5	yam	кого	это		surface+lemma
+nala-3	4	2	6	api	также	также		surface+lemma
+nala-3	4	2	7	pArTiva	царь	царь		surface+lemma
+nala-3	5	1	0	sa	он	он		surface+lemma
+nala-3	5	1	1	vE		понесетъ		lemma
+nala-3	5	1	2	tvam	ты	тебя		surface+lemma
+nala-3	5	1	3	AgatAn	пришедших	пришел	пришел	surface+lemma+root
+nala-3	5	1	4	asmAn	нас	я	я	surface+lemma+root
+nala-3	5	1	5	damayantyE		Дамаянти		lemma
+nala-3	5	1	6	nivedaya	поведай	поведал	поведал	surface+lemma+root
+nala-3	5	2	0	lokapAlAH	Хранители мира	Хранители мира		surface+lemma
+nala-3	5	2	1	saha	с	с		surface+lemma
+nala-3	5	2	2	indrAH		Индра		lemma
+nala-3	5	2	3	tvA	тебя	тебя		surface+lemma
+nala-3	5	2	4	samAyAnti	пришли	подошедшего	идут	surface+lemma+root
+nala-3	5	2	5	didfkzavaH	чтобы наблюдать	желая увидеть		surface+lemma
+nala-3	6	1	0	prAptum	достичь	достигнув	достигает	surface+lemma+root
+nala-3	6	1	1	icCanti	желают	хочу	хочу	surface+lemma+root
+nala-3	6	1	2	devAs	боги	боги		surface+lemma
+nala-3	6	1	3	tvAM	тебя	тебя		surface+lemma
+nala-3	6	1	4	Sakro	Шакра	Шакра		surface+lemma
+nala-3	6	1	5	gnir		Агни		lemma
+nala-3	6	1	6	varuRo	Варуна	Варуна		surface+lemma
+nala-3	6	1	7	yamaH	Яма	Яма		surface+lemma
+nala-3	6	2	0	tezAm	их	он		surface+lemma
+nala-3	6	2	1	anyatamaM		одного		lemma
+nala-3	6	2	2	devaM	бога	боги		surface+lemma
+nala-3	6	2	3	pati	муж	мужа		surface+lemma
+nala-3	6	2	4	tve	в тебе	ты		surface+lemma
+nala-3	6	2	5	varayasva	выбирай	выбирай	выбирай	surface+lemma+root
+nala-3	6	2	6	ha	же	же		surface+lemma
+nala-3	7	1	0	evam	так	так		surface+lemma
+nala-3	7	1	1	uktaH	сказано	сказал	сказал	surface+lemma+root
+nala-3	7	1	2	sa	он	он		surface+lemma
+nala-3	7	1	3	SakreRa	Шакрой	Шакра		surface+lemma
+nala-3	7	1	4	nalaH	Нала	Нала		surface+lemma
+nala-3	7	1	5	prAYjalir	сложив почтительно руки	сложив ладони		surface+lemma
+nala-3	7	1	6	abravIt	сказал	сказал	сказал	surface+lemma+root
+nala-3	7	2	0	eka	один	один		surface+lemma
+nala-3	7	2	1	arTa	ради	ради		surface+lemma
+nala-3	7	2	2	samavetam		собравшихся	знай	lemma+root
+nala-3	7	2	3	mAM	меня	я	я	surface+lemma+root
+nala-3	7	2	4	na	не	не		surface+lemma
+nala-3	7	2	5	prezayitum	отсылать	послал	послал	surface+lemma+root
+nala-3	7	2	6	arhaTa	должны	должен	должен	surface+lemma+root
+nala-3	8	1	0	devA	боги	боги		surface+lemma
+nala-3	8	1	1	UcuH	сказали	сказал	сказал	surface+lemma+root
+nala-3	8	2	0	karizya	Исполню	сделал	сделал	surface+lemma+root
+nala-3	8	2	1	iti	так	так		surface+lemma
+nala-3	8	2	2	saMSrutya	услышав	услышав	услышав	surface+lemma+root
+nala-3	8	2	3	pUrvam	прежде	прежде		surface+lemma
+nala-3	8	2	4	asmAsu	нас	я	я	surface+lemma+root
+nala-3	8	2	5	nEzaDa				none
+nala-3	8	3	0	na	не	не		surface+lemma
+nala-3	8	3	1	karizyasi	сделаешь	сделал	сделал	surface+lemma+root
+nala-3	8	3	2	kasmAt	почему	почему		surface+lemma
+nala-3	8	3	3	tvaM	ты	тебя		surface+lemma
+nala-3	8	3	4	vraja	загон	загон	загон	surface+lemma+root
+nala-3	8	3	5	nEzaDa				none
+nala-3	8	3	6	mAciram	немедля	немедля		surface+lemma
+nala-3	9	1	0	bfhadaSva	Брихадашва	Брихадашва		surface+lemma
+nala-3	9	1	1	uvAca	сказал	сказал	сказал	surface+lemma+root
+nala-3	9	2	0	evam	так	так		surface+lemma
+nala-3	9	2	1	uktaH	сказано	сказал	сказал	surface+lemma+root
+nala-3	9	2	2	sa	он	он		surface+lemma
+nala-3	9	2	3	devEs		боги		lemma
+nala-3	9	2	4	tEr		он		lemma
+nala-3	9	2	5	nEzaDaH				none
+nala-3	9	2	6	punar	снова	снова		surface+lemma
+nala-3	9	2	7	abravIt	сказал	сказал	сказал	surface+lemma+root
+nala-3	9	3	0	su	хорошенько	выжимающего	выжимающего	surface+lemma+root
+nala-3	9	3	1	rakzitAni		охраняет	охраняет	lemma+root
+nala-3	9	3	2	veSmAni	жилища	дворец		surface+lemma
+nala-3	9	3	3	pravezwuM	войти	вошел	вошел	surface+lemma+root
+nala-3	9	3	4	kaTam	как	как		surface+lemma
+nala-3	9	3	5	utsahe	могу	могу	могу	surface+lemma+root
