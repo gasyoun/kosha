@@ -26,6 +26,32 @@ sense citations pin to `data_version`, not to repo tags.
   ([H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md), queued);
   roadmap/plan/verification docs extended with the wave, decisions 13–14 (RU wave + rights gate) recorded.
 
+## [0.64.0] - 2026-07-19
+
+### Added
+
+- `scripts/migrate_manifest_schema.py` + `scripts/cut_data_v020.py` — **D8 manifest
+  schema hardening** (Concordance-Q3 W1c,
+  [H1264](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1264-Sonnet_kosha_manifest_schema_hardening_data_v020_18.07.26.md)):
+  `in_release` migrated to a closed vocabulary (`"<release-tag>"` · `"unreleased"` ·
+  `"not-applicable"`) across all 78 manifest rows — the undefined `null`/`"unreleased"`
+  ambiguity that let a 33-row unreleased backlog accumulate unnoticed. `release_asset`
+  now required on every `tier: public` row naming a release tag; schema validation added
+  to `tests/test_directory.py` (fails CI on a broken row — proven red then restored).
+  `docs/publish-safety-checks/data-v0.2.0_19.07.26.md` (GO) and
+  `docs/data-statements/data-v0.2.0-batch.meta.md` record the release's safety gate and
+  provenance/licence summary.
+- **D7 rolling-cadence rule** in
+  [DATA_HUB_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md):
+  every wave adding a `tier: public` manifest row cuts a `data-vX.Y.Z` release in the
+  same pass, closing the gap D8 found.
+
+### Fixed
+
+- `data-v0.2.0` catch-up release clears the 33-row `"unreleased"` backlog (32 pre-existing
+  + `morphology-attestation-audit`, new since H1262). `heritage-forms-crosswalk-extras`
+  verified still `tier: restricted` (LGPLLR, D10) and untouched by this release.
+
 ## [0.61.0] - 2026-07-18
 
 ### Added
