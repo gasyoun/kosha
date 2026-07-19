@@ -5,7 +5,7 @@
   "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
   "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
   "canonical_base_future": "https://samskrtam.ru/kosha/data/",
-  "interim_release": "https://github.com/gasyoun/kosha/releases/tag/data-v0.1.0",
+  "interim_release": "https://github.com/gasyoun/kosha/releases/tag/data-v0.2.0",
   "note_for_agents": "This is the ONE machine-readable list of canonical derived Sanskrit datasets across the ~85 repos. Before deriving an alignment/frequency/headword/crosswalk asset, check here. tier=public assets are downloadable from the interim_release URL; tier=restricted assets exist but are not published (rights-encumbered or unbackuped local-only) — consult their source repo; tier=intermediate is raw/working data that feeds another registered dataset — not standalone-citable, not rights-gated, just not a finished asset in its own right (excluded from the public directory page). A session that creates or changes a derived dataset MUST add/update its row here in the same pass.",
   "datasets": [
     {
@@ -156,7 +156,7 @@
       "id": "corpus-lexicon",
       "title": "Sa→Ru word-aligned corpus lexicon",
       "tier": "restricted",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "jsonl",
       "rows": 1093391,
       "size_bytes": 290543363,
@@ -177,7 +177,7 @@
       "id": "sa-ru-glossary",
       "title": "Ranked Sa→Ru glossary (surface/lemma/root layers)",
       "tier": "restricted",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "jsonl",
       "rows": 233229,
       "size_bytes": 154140672,
@@ -200,7 +200,7 @@
       "id": "kosha-db",
       "title": "kosha unified lookup database",
       "tier": "restricted",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "sqlite",
       "rows": 444773,
       "size_bytes": 1673854976,
@@ -221,7 +221,7 @@
       "id": "dcs-full-sqlite",
       "title": "DCS 2026 full corpus database",
       "tier": "restricted",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "sqlite",
       "rows": 5688416,
       "size_bytes": 920883200,
@@ -243,7 +243,7 @@
       "id": "samudra-corpus-db",
       "title": "SamudraManthanam Sa↔Ru verse-parallel corpus",
       "tier": "restricted",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "sqlite",
       "rows": 580552,
       "size_bytes": 655200256,
@@ -265,7 +265,7 @@
       "id": "heritage-mirror",
       "title": "Sanskrit Heritage (INRIA) local mirror",
       "tier": "restricted",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "mixed (DICO hypertext, TSV, OCaml banks)",
       "rows": null,
       "size_bytes": null,
@@ -283,7 +283,7 @@
       "id": "indische-sprueche",
       "title": "Böhtlingk Indische Sprüche subhāṣitas",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "jsonl",
       "rows": 7537,
       "size_bytes": 7185142,
@@ -300,7 +300,7 @@
       "id": "dcs-grapheme-frequency",
       "title": "DCS akshara/varṇa/ligature frequency tables",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "csv",
       "rows": 8394,
       "size_bytes": 932021,
@@ -317,7 +317,7 @@
       "id": "varga-series-diachrony",
       "title": "Consonant series (varga) by DCS period + Cramér's V",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "csv",
       "rows": 5,
       "size_bytes": 7750,
@@ -334,7 +334,7 @@
       "id": "dcs-sintagmatic-appendix7",
       "title": "DCS syntagmatic table — all corpus lemmas (Приложение 7)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "csv",
       "rows": 82799,
       "size_bytes": 26970441,
@@ -349,7 +349,7 @@
       "id": "dcs-parallel-passages-full",
       "title": "DCS parallel-passage alignments, full-size export (PARA/Polnorazmernye)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "csv",
       "rows": 506787,
       "size_bytes": 58908613,
@@ -364,7 +364,7 @@
       "id": "dcs-verb-roots-by-class",
       "title": "DCS verb roots grouped by class (with attested forms)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "csv",
       "rows": 463,
       "size_bytes": 4472,
@@ -379,7 +379,7 @@
       "id": "dcs-verb-class-prefix-frequency",
       "title": "DCS verb-form frequency by class, with prefixed forms",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "csv",
       "rows": 8454,
       "size_bytes": 112649,
@@ -394,7 +394,7 @@
       "id": "dcs-sintagmatic-appendix6-periods",
       "title": "DCS syntagmatic tables of frequent lexical cores, by historical period (Приложение 6)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "csv",
       "rows": 19076,
       "size_bytes": 24014592,
@@ -409,7 +409,7 @@
       "id": "stopovye-parallel-passages",
       "title": "DCS parallel-passage alignments, 'stop-word' variant export (PARA/Stopovye)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "csv",
       "rows": null,
       "size_bytes": 1438635418,
@@ -424,7 +424,7 @@
       "id": "russiantranslation-src-raw-ingests",
       "title": "RussianTranslation raw/working translation-source ingests (all *.jsonl except corpus_lexicon)",
       "tier": "intermediate",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "jsonl",
       "rows": 3120777,
       "size_bytes": 2451270843,
@@ -441,7 +441,7 @@
       "id": "dcs-verb-example-ids",
       "title": "DCS verb-form example-ID lookup table",
       "tier": "intermediate",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "csv",
       "rows": 55031,
       "size_bytes": 5432711,
@@ -458,7 +458,7 @@
       "id": "heritage-forms-crosswalk-extras",
       "title": "Heritage (INRIA) form-level crosswalk extras (gloss, disagreements, forms-only)",
       "tier": "restricted",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "tsv",
       "rows": 1037239,
       "size_bytes": 480132723,
@@ -476,7 +476,7 @@
       "id": "dcs-verb-form-frequency-prelim",
       "title": "DCS verb-form frequency in corpus (preliminary)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "csv",
       "rows": 106,
       "size_bytes": 8192,
@@ -491,7 +491,7 @@
       "id": "dcs-compound-dictionary",
       "title": "DCS compound (samāsa) dictionary derivation",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "csv",
       "rows": 613758,
       "size_bytes": 169292036,
@@ -506,7 +506,7 @@
       "id": "dcs-stem-cooccurrence-full",
       "title": "Sanskrit-stem co-occurrence table (full)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "csv",
       "rows": 353351,
       "size_bytes": 36304300,
@@ -521,7 +521,7 @@
       "id": "which-dictionary-routing-benchmark",
       "title": "Which-dictionary routing shared-task benchmark (v1.0)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "json",
       "rows": 24,
       "size_bytes": 5581,
@@ -538,7 +538,7 @@
       "id": "correction-loci",
       "title": "Correction loci — locus-resolved correction records across all csl-corrections change files (v1.0)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "tsv",
       "rows": 39540,
       "size_bytes": 9640333,
@@ -556,7 +556,7 @@
       "id": "dict-corpus-concordance",
       "title": "CDSL headword ↔ DCS corpus concordance (B1, concordance core)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "dict_corpus_concordance.tsv",
       "format": "tsv",
       "rows": 74520,
@@ -569,13 +569,14 @@
         "concordance/dict/ static viewer",
         "Q2-Q4 concordance program"
       ],
-      "notes": "Q1 of CONCORDANCE_ROADMAP.md (concordance core: schema + tiered matcher + citable loci, reused Q2-Q4). Coverage sidecar dict_corpus_coverage.tsv (323425 rows): every union headword attested (66,257 = 20.5%) or classed absence — the 20.5% is the honest Zipf reality of a 5.7M-token corpus vs a 323k-headword union. Inputs consumed, never re-derived: dcs-cdsl-xref, union-headwords, dcs-full-sqlite. Citable loci are host-independent dcs:<sent_id> IDs (RISKS R5). DCS is CC BY 4.0; this derivative ships BY-SA with the public tier."
+      "notes": "Q1 of CONCORDANCE_ROADMAP.md (concordance core: schema + tiered matcher + citable loci, reused Q2-Q4). Coverage sidecar dict_corpus_coverage.tsv (323425 rows): every union headword attested (66,257 = 20.5%) or classed absence — the 20.5% is the honest Zipf reality of a 5.7M-token corpus vs a 323k-headword union. Inputs consumed, never re-derived: dcs-cdsl-xref, union-headwords, dcs-full-sqlite. Citable loci are host-independent dcs:<sent_id> IDs (RISKS R5). DCS is CC BY 4.0; this derivative ships BY-SA with the public tier.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "parallel-passage-concordance",
       "title": "Bloomfield-style parallel-passage concordance across the DCS corpus (B3)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "parallel_passage_concordance.tsv",
       "format": "tsv",
       "rows": 153045,
@@ -588,13 +589,14 @@
         "concordance/parallels/ static viewer",
         "Q3-Q4 concordance program"
       ],
-      "notes": "Q2 (B3) of CONCORDANCE_ROADMAP.md. Per-verse coverage sidecar parallel_passage_verses.tsv (501,231 rows, one per source verse incl. 0-parallel): 15,164 (3.0%) carry >=1 parallel occurrence; RV-subset rows (13,581) now also carry a `bloomfield_pratika` column (H896 follow-up, see bloomfield-rv-citations row below) — 85% validated against Bloomfield's 1906 concordance. Input: VisualDCS/derived-data/Paralleli-v-tekstah-korpusa-SRC/PARA/Polnorazmernye/ (245 CSV files, the 2026 corrected/regenerated full-text-match pass) — consumed, never re-derived. One open @DECIDE remains, surfaced to a human, not self-ruled (R-C2): which of three parallel-passage export variants (Polnorazmernye/ used here per the folder's own README default vs Polnorazmernye-2022-archive/ vs the differently-scoped Stopovye/) is the released canonical. The sibling @DECIDE (which Bloomfield digitization to key the RV subset against) is RESOLVED — see bloomfield-rv-citations. The roadmap's prior '506,787 alignments' estimate (itself sourced from an admittedly-unverified README note) does not match this build's directly-parsed counts (501,231 verses / 153,045 links) — flagged, not silently reconciled. DCS-derived; ships BY-SA with the public tier pending the DCS-license composition @DECIDE already open on the roadmap."
+      "notes": "Q2 (B3) of CONCORDANCE_ROADMAP.md. Per-verse coverage sidecar parallel_passage_verses.tsv (501,231 rows, one per source verse incl. 0-parallel): 15,164 (3.0%) carry >=1 parallel occurrence; RV-subset rows (13,581) now also carry a `bloomfield_pratika` column (H896 follow-up, see bloomfield-rv-citations row below) — 85% validated against Bloomfield's 1906 concordance. Input: VisualDCS/derived-data/Paralleli-v-tekstah-korpusa-SRC/PARA/Polnorazmernye/ (245 CSV files, the 2026 corrected/regenerated full-text-match pass) — consumed, never re-derived. One open @DECIDE remains, surfaced to a human, not self-ruled (R-C2): which of three parallel-passage export variants (Polnorazmernye/ used here per the folder's own README default vs Polnorazmernye-2022-archive/ vs the differently-scoped Stopovye/) is the released canonical. The sibling @DECIDE (which Bloomfield digitization to key the RV subset against) is RESOLVED — see bloomfield-rv-citations. The roadmap's prior '506,787 alignments' estimate (itself sourced from an admittedly-unverified README note) does not match this build's directly-parsed counts (501,231 verses / 153,045 links) — flagged, not silently reconciled. DCS-derived; ships BY-SA with the public tier pending the DCS-license composition @DECIDE already open on the roadmap.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "bloomfield-rv-citations",
       "title": "Bloomfield 1906 Vedic Concordance — direct Ṛgveda citations (pratīka index)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "bloomfield_rv_citations.tsv",
       "format": "tsv",
       "rows": 36680,
@@ -607,13 +609,14 @@
         "parallel_passage_verses.tsv bloomfield_pratika column",
         "concordance/parallels/ static viewer"
       ],
-      "notes": "Every direct RV.<mandala>.<sukta>.<verse><pada-letter> citation extracted from Marco Franceschini's digital edition of Maurice Bloomfield's A Vedic Concordance (Harvard Oriental Series 9, 1906) — 88,835 total concordance entries scanned (the concordance indexes the WHOLE Vedic corpus, not just RV), 10,374 distinct RV (mandala,sukta,verse) keys cited. Used to populate parallel_passage_verses.tsv's bloomfield_pratika column for the RV subset (13,581 rows): 11,522 (85%) validated by substring-matching the Bloomfield pratika (parenthetical variant-reading asides stripped, form_key()-normalized, final character dropped to tolerate the pausa-vs-sandhi boundary mismatch) against the row's own recorded source_text — NOT positionally assumed (the row-pair layout is a printed first-half/second-half split, which does not line up 1:1 with Bloomfield's grammatical a/b/c/d pada lettering for 4-pada meters; naive positional mapping would have silently mismatched). Remaining 15% residue is genuine orthographic variance between the two independently-produced digitizations (anusvara-vs-homorganic-nasal spelling, consonant-doubling variants), documented not chased further — full method + counts in data/concordance/BLOOMFIELD_RV_CROSSREF_REPORT.md. RIGHTS: public tier by direct written permission from Marco Franceschini (University of Bologna), non-exclusive/worldwide/perpetual, covering all current and future kosha versions — see data/manifest/rights/franceschini_hos9_permission_2026-07-13.md and LICENSE-DATA.md. Required citation: \"Digitization by Marco Franceschini (University of Bologna), of Maurice Bloomfield's A Vedic Concordance (Harvard Oriental Series 9, 1906). Used with permission.\""
+      "notes": "Every direct RV.<mandala>.<sukta>.<verse><pada-letter> citation extracted from Marco Franceschini's digital edition of Maurice Bloomfield's A Vedic Concordance (Harvard Oriental Series 9, 1906) — 88,835 total concordance entries scanned (the concordance indexes the WHOLE Vedic corpus, not just RV), 10,374 distinct RV (mandala,sukta,verse) keys cited. Used to populate parallel_passage_verses.tsv's bloomfield_pratika column for the RV subset (13,581 rows): 11,522 (85%) validated by substring-matching the Bloomfield pratika (parenthetical variant-reading asides stripped, form_key()-normalized, final character dropped to tolerate the pausa-vs-sandhi boundary mismatch) against the row's own recorded source_text — NOT positionally assumed (the row-pair layout is a printed first-half/second-half split, which does not line up 1:1 with Bloomfield's grammatical a/b/c/d pada lettering for 4-pada meters; naive positional mapping would have silently mismatched). Remaining 15% residue is genuine orthographic variance between the two independently-produced digitizations (anusvara-vs-homorganic-nasal spelling, consonant-doubling variants), documented not chased further — full method + counts in data/concordance/BLOOMFIELD_RV_CROSSREF_REPORT.md. RIGHTS: public tier by direct written permission from Marco Franceschini (University of Bologna), non-exclusive/worldwide/perpetual, covering all current and future kosha versions — see data/manifest/rights/franceschini_hos9_permission_2026-07-13.md and LICENSE-DATA.md. Required citation: \"Digitization by Marco Franceschini (University of Bologna), of Maurice Bloomfield's A Vedic Concordance (Harvard Oriental Series 9, 1906). Used with permission.\"",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "sundarakanda-two-tier-apparatus",
       "title": "Sundarakāṇḍa two-tier commentary apparatus (Leonov LP volume)",
       "tier": "restricted",
-      "in_release": null,
+      "in_release": "not-applicable",
       "release_asset": null,
       "format": "json",
       "rows": 1955,
@@ -632,7 +635,7 @@
       "id": "markup-tag-census",
       "title": "Markup-tag frequency census (44 Cologne v02 dicts)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "tsv",
       "rows": 671,
       "size_bytes": 18492,
@@ -651,7 +654,7 @@
       "id": "dcs-lsc-pilot",
       "title": "Sanskrit lexical semantic change scores (PPMI-cosine, DCS 5-slot chronology)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "tsv",
       "rows": 3049,
       "size_bytes": 290373,
@@ -668,7 +671,7 @@
       "id": "archive-stopword-sqlite",
       "title": "DCS parallel-passage stop-word run, queryable DB (M9 D2)",
       "tier": "restricted",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "sqlite",
       "rows": 40573260,
       "size_bytes": 11039064064,
@@ -686,7 +689,7 @@
       "id": "samudra-offline-packs",
       "title": "SamudraManthanam offline app packs (base + dict)",
       "tier": "restricted",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "sqlite",
       "rows": 574939,
       "size_bytes": 308195328,
@@ -709,7 +712,7 @@
       "id": "kosha-raw-sqlite",
       "title": "kosha raw per-dict SQLite inputs (mw, pwg, ap90)",
       "tier": "intermediate",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "sqlite",
       "rows": 444773,
       "size_bytes": 185856000,
@@ -733,7 +736,7 @@
       "id": "correction-events-log",
       "title": "Correction-event log, full trio (all/typed/final)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "csv",
       "rows": 52498,
       "size_bytes": 178001455,
@@ -752,7 +755,7 @@
       "id": "kompozity-names-compound-splits",
       "title": "DCS proper-name compound splits with frequency vectors (Kompozity names.csv)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "csv",
       "rows": 168879,
       "size_bytes": 90664029,
@@ -771,7 +774,7 @@
       "id": "cdsl-headword-ngram-oracle",
       "title": "Pan-CDSL headword character-n-gram oracle (allngramtxt.txt)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "txt",
       "rows": 6656616,
       "size_bytes": 82268027,
@@ -790,7 +793,7 @@
       "id": "headword-overlap-matrix",
       "title": "Headword pairwise-overlap matrix (15-dict union)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "tsv",
       "rows": 105,
       "size_bytes": 2897,
@@ -809,7 +812,7 @@
       "id": "mdf-pilot-cdsl",
       "title": "CDSL MDF pilot export (50-case neutral-model slice, MW-focused)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "mdf (SFM, one record per file)",
       "rows": 250,
       "size_bytes": 90237,
@@ -827,7 +830,7 @@
       "id": "lift-pilot-cdsl",
       "title": "CDSL LIFT pilot export (fourth serialization, H721)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "lift (XML)",
       "rows": 250,
       "size_bytes": 309950,
@@ -844,7 +847,7 @@
       "id": "pwg-ru-mdf-export",
       "title": "PWG->RU translation cards as MDF (bilingual \\de RU / \\ge EN records)",
       "tier": "restricted",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "mdf (SFM, blank-line-delimited records, single file)",
       "rows": 2350,
       "size_bytes": 3931822,
@@ -862,7 +865,7 @@
       "id": "semdom-amarakosha-crosswalk",
       "title": "semdom <-> Amarakosha crosswalk (SIL semantic domains <-> AK vargas + synsets, ID pairs)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "not-applicable",
       "format": "csv (Level A varga map) + tsv (Level B candidates, gold, annotator passes)",
       "rows": 5898,
       "size_bytes": 418000,
@@ -880,7 +883,7 @@
       "id": "mw-defgen-eval-sample",
       "title": "MW definition-generation eval — frozen 500-headword sample + attestations + scored baseline outputs (H730)",
       "tier": "public",
-      "in_release": null,
+      "in_release": "data-v0.2.0",
       "format": "tsv+jsonl",
       "rows": 500,
       "size_bytes": 1315248,
@@ -891,13 +894,15 @@
       "consumers": [
         "H730 protocol doc docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md (eLex/EURALEX/IJL paper candidate)"
       ],
-      "notes": "H730 (11-07-2026, Fable 5 claude-fable-5): first CDSL-side definition-modeling eval; joins A3 mw_en_tm x E26 lemma_frequency x C15 dcs_cdsl_xref x DCS 2026 sentences (CC BY 4.0, Hellwig). MW gloss text public domain. Judge scores gated (JUDGE-BENCH); WSD track is agreement-only pending DCS m_wordsem inventory recovery. H752 (11-07-2026): SHA-256 input digests added to frozen_sample.meta.json; this 500-headword seed-730 sample declared the single canonical frozen set (the parked rival lane's 520-headword sample was never scored and its branch deleted). H972 (15-07-2026, Fable 5 claude-fable-5): F1_fable_ctx arm added - in-session Claude generation over the gold-free inputs projection (scripts/defgen_fable_arm.py), scored + judged; leads all arms (chrF 24.35, token-F1 0.340, judge 4.60)."
+      "notes": "H730 (11-07-2026, Fable 5 claude-fable-5): first CDSL-side definition-modeling eval; joins A3 mw_en_tm x E26 lemma_frequency x C15 dcs_cdsl_xref x DCS 2026 sentences (CC BY 4.0, Hellwig). MW gloss text public domain. Judge scores gated (JUDGE-BENCH); WSD track is agreement-only pending DCS m_wordsem inventory recovery. H752 (11-07-2026): SHA-256 input digests added to frozen_sample.meta.json; this 500-headword seed-730 sample declared the single canonical frozen set (the parked rival lane's 520-headword sample was never scored and its branch deleted). H972 (15-07-2026, Fable 5 claude-fable-5): F1_fable_ctx arm added - in-session Claude generation over the gold-free inputs projection (scripts/defgen_fable_arm.py), scored + judged; leads all arms (chrF 24.35, token-F1 0.340, judge 4.60).",
+      "release_asset": "data/eval/defgen/frozen_sample.tsv",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "dcs-reading-pack-nala-1",
       "title": "DCS reading pack — Nala 1 (Nalopākhyāna, Mahābhārata 3.50)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "reading/data/nala-1.json",
       "format": "json",
       "rows": 65,
@@ -909,13 +914,14 @@
       "consumers": [
         "reading/ static viewer"
       ],
-      "notes": "P5 UI step 6b. Sibling Gitā 1 pack PARKED: the Bhagavadgita is absent from the DCS corpus (MBh book 6 omits adhyayas 23-40, the 18 Gita chapters); needs an external lemmatised source. Real DCS DB is VisualDCS/src/DCS-data-2026/dcs_full.sqlite (the 0-byte src/dcs_full.sqlite is a decoy)."
+      "notes": "P5 UI step 6b. Sibling Gitā 1 pack PARKED: the Bhagavadgita is absent from the DCS corpus (MBh book 6 omits adhyayas 23-40, the 18 Gita chapters); needs an external lemmatised source. Real DCS DB is VisualDCS/src/DCS-data-2026/dcs_full.sqlite (the 0-byte src/dcs_full.sqlite is a decoy).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "kosha-srs-deck-b1-demo",
       "title": "SRS deck — Rung B1 demo (Nala 1 content vocabulary, frequency-ordered)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/srs/srs-deck-b1-demo.json",
       "format": "json",
       "rows": 164,
@@ -927,13 +933,14 @@
       "consumers": [
         "Systema-Sanscriticum Saraswati SRS (Wave-2 importer, flag-gated)"
       ],
-      "notes": "Rung B1 one-verse-set proof of the kosha->Systema last-mile pipeline (SanskritGrammar docs/LAST_MILE_PIPELINE_SPEC.md, H916). Derived from the existing dcs-reading-pack-nala-1 (no new segmentation), joined to lemma_frequency.tsv core_rank, function words (grammar_all in ind/pron) stripped per the wave-1a finding. 439 tokens -> 164 unique content-word cards (108 dup, 136 function-word, 26 no-core-rank, 5 no-slp1 — full accounting in the file's stats block). Deliberately scoped to ONE reading pack, NOT the general vocabulary curriculum (that is H947's separate, in-flight scope) — avoids duplicating queued work."
+      "notes": "Rung B1 one-verse-set proof of the kosha->Systema last-mile pipeline (SanskritGrammar docs/LAST_MILE_PIPELINE_SPEC.md, H916). Derived from the existing dcs-reading-pack-nala-1 (no new segmentation), joined to lemma_frequency.tsv core_rank, function words (grammar_all in ind/pron) stripped per the wave-1a finding. 439 tokens -> 164 unique content-word cards (108 dup, 136 function-word, 26 no-core-rank, 5 no-slp1 — full accounting in the file's stats block). Deliberately scoped to ONE reading pack, NOT the general vocabulary curriculum (that is H947's separate, in-flight scope) — avoids duplicating queued work.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "gita-gold-master",
       "title": "Bhagavadgita gold word-by-word analysis (all 18 adhyayas)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/gita/gita_gold_master.tsv",
       "format": "tsv",
       "rows": 9092,
@@ -947,13 +954,14 @@
         "gita sandhi/morphology/root-preverb datasets (W2/W3/W6)",
         "E1 inflection-engine QA (W4)"
       ],
-      "notes": "H848 roadmap W0 — the canonical master every Gita-gold workstream derives from. License MIT; public; author Dr. Marcis Gasuns (co-authors TBC). Data statement: docs/data-statements/gita-gold.meta.md. Upstream Gita.xlsm is local-only (not git-committed). Method is a template for other texts (MG ruling). See ROADMAP_GITA_GOLD_EXTRACTION_2026.md."
+      "notes": "H848 roadmap W0 — the canonical master every Gita-gold workstream derives from. License MIT; public; author Dr. Marcis Gasuns (co-authors TBC). Data statement: docs/data-statements/gita-gold.meta.md. Upstream Gita.xlsm is local-only (not git-committed). Method is a template for other texts (MG ruling). See ROADMAP_GITA_GOLD_EXTRACTION_2026.md.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "gita-morphology-gold",
       "title": "Bhagavadgita gold morphology + compound dataset",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/gita/gita_morphology_gold.tsv",
       "format": "tsv",
       "rows": 9091,
@@ -965,13 +973,14 @@
       "consumers": [
         "E1 inflection-engine QA (W4 / H874)"
       ],
-      "notes": "H848 roadmap W3. Decoder legend embedded in the extractor (from the Abbreviations sheet). License MIT; public; credit Dr. Marcis Gasuns. Data statement docs/data-statements/gita-morphology.meta.md. Feeds the W4 attested-corpus inflection-engine QA (H874)."
+      "notes": "H848 roadmap W3. Decoder legend embedded in the extractor (from the Abbreviations sheet). License MIT; public; credit Dr. Marcis Gasuns. Data statement docs/data-statements/gita-morphology.meta.md. Feeds the W4 attested-corpus inflection-engine QA (H874).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "gita-inflection-qa",
       "title": "Gita inflection-engine QA — divergence ledger (E1 attested-corpus check)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/gita/gita_inflection_divergences.tsv",
       "format": "tsv",
       "rows": 1279,
@@ -983,13 +992,14 @@
       "consumers": [
         "E1 hybrid forms layer — candidate disputed/gap-fill corrections (human @DO)"
       ],
-      "notes": "H848 roadmap W4. Report GITA_MORPHOLOGY_QA_REPORT.md — 93.0% agreement on nominals present in kosha (4,779/5,139). Divergences are candidate corrections, NOT auto-applied. Public/MIT."
+      "notes": "H848 roadmap W4. Report GITA_MORPHOLOGY_QA_REPORT.md — 93.0% agreement on nominals present in kosha (4,779/5,139). Divergences are candidate corrections, NOT auto-applied. Public/MIT.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "gita-reading-pack",
       "title": "Bhagavadgita reading packs — all 18 adhyayas (gold)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "reading/data/gita-1.js … gita-18.js",
       "format": "js",
       "rows": 701,
@@ -1001,13 +1011,14 @@
       "consumers": [
         "reading/ static viewer"
       ],
-      "notes": "H848 roadmap W1. Supersedes the chapter-1-only gita-reading-pack-1 (built from a separate ch-1 TSV; now unified on the master). Public/MIT, credit Dr. Marcis Gasuns. Sibling of dcs-reading-pack-nala-1."
+      "notes": "H848 roadmap W1. Supersedes the chapter-1-only gita-reading-pack-1 (built from a separate ch-1 TSV; now unified on the master). Public/MIT, credit Dr. Marcis Gasuns. Sibling of dcs-reading-pack-nala-1.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "gita-sandhi",
       "title": "Bhagavadgita sandhi — frequency-ranked rules",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/gita/gita_sandhi.tsv",
       "format": "tsv",
       "rows": 161,
@@ -1020,13 +1031,14 @@
         "reading/ viewer (per-word sandhi hover)",
         "reading/sandhi/ page"
       ],
-      "notes": "H848 roadmap W2. Public/MIT, credit Dr. Marcis Gasuns. The first corpus-attested, frequency-ranked sandhi table in the ecosystem (categories: anusvara/nasal 1172, visarga 1163, vowel 813, consonant 264)."
+      "notes": "H848 roadmap W2. Public/MIT, credit Dr. Marcis Gasuns. The first corpus-attested, frequency-ranked sandhi table in the ecosystem (categories: anusvara/nasal 1172, visarga 1163, vowel 813, consonant 264).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "sandhi-curriculum",
       "title": "Graded sandhi curriculum — ordered teaching syllabus",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/sandhi/sandhi_curriculum.tsv",
       "format": "tsv",
       "rows": 2181,
@@ -1039,13 +1051,14 @@
         "reading/sandhi/curriculum/ page",
         "graded sandhi teaching (Phase 4)"
       ],
-      "notes": "H902 roadmap Phase 4 (surface 2/4: graded curriculum). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Derived from the corpus-sandhi dataset; weighting is human-tunable per the MG ruling."
+      "notes": "H902 roadmap Phase 4 (surface 2/4: graded curriculum). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Derived from the corpus-sandhi dataset; weighting is human-tunable per the MG ruling.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "vocab-curriculum",
       "title": "Frequency-graded vocabulary curriculum — ordered teaching syllabus",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/frequency/vocab_curriculum.tsv",
       "format": "tsv",
       "rows": 6667,
@@ -1058,13 +1071,14 @@
         "reading/vocabulary/curriculum/ page",
         "vocab-drills dataset"
       ],
-      "notes": "H947 Wave-1 pedagogy build (W1b). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Applies the sandhi-curriculum method to words; gloss is the lemma's own dictionary card teaser (MW preferred), not DCS's lemma.meanings (only ~23% coverage on this lemma set, rejected as primary source)."
+      "notes": "H947 Wave-1 pedagogy build (W1b). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Applies the sandhi-curriculum method to words; gloss is the lemma's own dictionary card teaser (MW preferred), not DCS's lemma.meanings (only ~23% coverage on this lemma set, rejected as primary source).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "vocab-drills",
       "title": "Vocabulary drills — recognition/recall practice items",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/frequency/vocab_drills.json",
       "format": "json",
       "rows": 13334,
@@ -1077,13 +1091,14 @@
         "vocab_curriculum.apkg (Anki deck)",
         "Systema/csl-guides quiz component (future, via the shared item schema)"
       ],
-      "notes": "H947 Wave-1 pedagogy build (W1b). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. No SRS scheduling here (deck items only, per the fence in H947 — Systema \"Saraswati\" owns scheduling)."
+      "notes": "H947 Wave-1 pedagogy build (W1b). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. No SRS scheduling here (deck items only, per the fence in H947 — Systema \"Saraswati\" owns scheduling).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "morphology-curriculum",
       "title": "Graded morphology curriculum — corpus-attested paradigms, ordered teaching syllabus",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/morphology/morphology_curriculum.tsv",
       "format": "tsv",
       "rows": 7134,
@@ -1096,13 +1111,14 @@
         "reading/morphology/curriculum/ page",
         "morphology-drills dataset"
       ],
-      "notes": "H946 Wave-1 pedagogy build (W1a). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Drills only forms the corpus actually attests (field RQ1: 'stop drilling forms that never appear') — 38,782/254,805 candidate cells (15.2%) survived the DCS attestation join over the core-vocabulary lemma set; the rest are dropped by default (--include-generated keeps them, flagged attested:false). DCS aggregates by lemma TEXT not lemma_id, so a handful of homonym-shared lemma spellings pool their attestation counts (same simplification H950 already accepted). Verb voice (active/middle) is not part of the attestation match key — DCS's feat_voice marks only passive, an honest upstream tagging limitation."
+      "notes": "H946 Wave-1 pedagogy build (W1a). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Drills only forms the corpus actually attests (field RQ1: 'stop drilling forms that never appear') — 38,782/254,805 candidate cells (15.2%) survived the DCS attestation join over the core-vocabulary lemma set; the rest are dropped by default (--include-generated keeps them, flagged attested:false). DCS aggregates by lemma TEXT not lemma_id, so a handful of homonym-shared lemma spellings pool their attestation counts (same simplification H950 already accepted). Verb voice (active/middle) is not part of the attestation match key — DCS's feat_voice marks only passive, an honest upstream tagging limitation.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "morphology-drills",
       "title": "Morphology drills — fill/match practice items, evidence-linked to a DCS corpus locus",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/morphology/drills.json",
       "format": "json",
       "rows": 12000,
@@ -1116,13 +1132,14 @@
         "morphology_drills.apkg (Anki deck)",
         "Systema/csl-guides quiz component (future, via the shared item schema)"
       ],
-      "notes": "H946 Wave-1 pedagogy build (W1a). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Deterministic build (seeded RNG, seed 20260715) so choice ordering/distractors are reproducible across rebuilds. No fabricated forms: answer is verified (a real DCS-attested cell) or the item is dropped, per the shared item schema's 'no evidence, no item' rule."
+      "notes": "H946 Wave-1 pedagogy build (W1a). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Deterministic build (seeded RNG, seed 20260715) so choice ordering/distractors are reproducible across rebuilds. No fabricated forms: answer is verified (a real DCS-attested cell) or the item is dropped, per the shared item schema's 'no evidence, no item' rule.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "sandhi-drills",
       "title": "Sandhi drills — join/split/identify practice items",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/sandhi/sandhi_drills.json",
       "format": "json",
       "rows": 396,
@@ -1136,13 +1153,14 @@
         "sandhi_drills.apkg (Anki deck)",
         "graded sandhi teaching (Phase 4, surface 4b)"
       ],
-      "notes": "H918 roadmap Phase 4 (surface 4b: drills/flashcards, the last core-programme surface — sibling surface 4a is the SanskritGrammar reader-hover, H917). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Deterministic build (seeded RNG, seed 20260714) so choice ordering/distractors are reproducible across rebuilds."
+      "notes": "H918 roadmap Phase 4 (surface 4b: drills/flashcards, the last core-programme surface — sibling surface 4a is the SanskritGrammar reader-hover, H917). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Deterministic build (seeded RNG, seed 20260714) so choice ordering/distractors are reproducible across rebuilds.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "corpus-sandhi",
       "title": "Corpus sandhi — frequency-ranked rules across 17 texts",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/sandhi/corpus_sandhi.tsv",
       "format": "tsv",
       "rows": 9840,
@@ -1155,13 +1173,14 @@
         "reading/sandhi/ pages (planned)",
         "graded sandhi curriculum (planned)"
       ],
-      "notes": "H900 roadmap Phase 2, broadened by H901 Phase 2b (14-07-2026). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS). Texts swept (difficulty order): Hitopadesa, Vetalapancavimsatika, Sukasaptati, Amarusataka, Astavakragita, Gitagovinda, Kathasaritsagara, Buddhacarita, Kumarasambhava, Kiratarjuniya, Meghaduta, Dasakumaracarita, Bharatamanjari, Satakatraya, Bhallatasataka, Ramayana, Mahabharata (full -- replaces H900's Bhagavadgita-only glob; the Gita's 18 chapters are already inside the full-Mahabharata sweep, so the narrow row was retired rather than double-counted). Per-text tables also shipped as data/sandhi/<id>_sandhi.tsv. H901 finding: the handoff's scale worry for the full Mahabharata (~2,000 files, 'gate/sample by parvan') did not materialize -- measured at ~10 files/s, the full corpus ran directly in a few minutes, no sampling gate needed. Top-N-for-80% moved 69->83 rules (slightly above the handoff's ~60-80 expectation, plausibly kavya's more varied sandhi spreading the frequency mass -- reported, not smoothed over). Extends the Gita-only gita-sandhi dataset corpus-wide."
+      "notes": "H900 roadmap Phase 2, broadened by H901 Phase 2b (14-07-2026). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS). Texts swept (difficulty order): Hitopadesa, Vetalapancavimsatika, Sukasaptati, Amarusataka, Astavakragita, Gitagovinda, Kathasaritsagara, Buddhacarita, Kumarasambhava, Kiratarjuniya, Meghaduta, Dasakumaracarita, Bharatamanjari, Satakatraya, Bhallatasataka, Ramayana, Mahabharata (full -- replaces H900's Bhagavadgita-only glob; the Gita's 18 chapters are already inside the full-Mahabharata sweep, so the narrow row was retired rather than double-counted). Per-text tables also shipped as data/sandhi/<id>_sandhi.tsv. H901 finding: the handoff's scale worry for the full Mahabharata (~2,000 files, 'gate/sample by parvan') did not materialize -- measured at ~10 files/s, the full corpus ran directly in a few minutes, no sampling gate needed. Top-N-for-80% moved 69->83 rules (slightly above the handoff's ~60-80 expectation, plausibly kavya's more varied sandhi spreading the frequency mass -- reported, not smoothed over). Extends the Gita-only gita-sandhi dataset corpus-wide.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "roots-frequency-curriculum",
       "title": "Roots frequency + attestation curriculum (W2b)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/roots/roots_frequency.tsv",
       "format": "tsv",
       "rows": 629,
@@ -1174,13 +1193,14 @@
         "WhitneyRoots (a 'learn roots in this order' layer to import instead of re-deriving its own ranking)",
         "Systema (future roots drill ordering)"
       ],
-      "notes": "H950 roadmap Wave 2 W2b. Stops at stage 6 (data + export) per the pedagogy-surface architecture's integration-surface rule -- no kosha roots UI shipped; WhitneyRoots owns the 935-root explorer. Coverage headline: learn top 25 roots -> 58.7% of verb-token occurrences; top 50 -> 71.7%; top 100 -> 85.4%; top 200 -> 95.3% (549,549 total attested-lemma tokens, DCS 2026 CoNLL-U snapshot). 181 Whitney-hub roots have no DCS attestation at all and are excluded (grammarian/lexical roots, not corpus-absent by data error). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY 4.0 (Oliver Hellwig / DCS)."
+      "notes": "H950 roadmap Wave 2 W2b. Stops at stage 6 (data + export) per the pedagogy-surface architecture's integration-surface rule -- no kosha roots UI shipped; WhitneyRoots owns the 935-root explorer. Coverage headline: learn top 25 roots -> 58.7% of verb-token occurrences; top 50 -> 71.7%; top 100 -> 85.4%; top 200 -> 95.3% (549,549 total attested-lemma tokens, DCS 2026 CoNLL-U snapshot). 181 Whitney-hub roots have no DCS attestation at all and are excluded (grammarian/lexical roots, not corpus-absent by data error). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY 4.0 (Oliver Hellwig / DCS).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "gita-etymology",
       "title": "Bhagavadgita etymology notes",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/gita/gita_etymology.tsv",
       "format": "tsv",
       "rows": 101,
@@ -1192,13 +1212,14 @@
       "consumers": [
         "Gita reader / lexical enrichment"
       ],
-      "notes": "H848 roadmap W5. Public/MIT, credit Dr. Marcis Gasuns. Data statement docs/data-statements/gita-etymology.meta.md. Companion to the Russian gloss layer (master gloss_ru, now toggleable EN/Русский in the reader)."
+      "notes": "H848 roadmap W5. Public/MIT, credit Dr. Marcis Gasuns. Data statement docs/data-statements/gita-etymology.meta.md. Companion to the Russian gloss layer (master gloss_ru, now toggleable EN/Русский in the reader).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "sanskrit-upasarga-semantics",
       "title": "Sanskrit root x preverb (upasarga) semantics",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/gita/upasarga_semantics.tsv",
       "format": "tsv",
       "rows": 214,
@@ -1211,13 +1232,14 @@
         "reading/upasarga/ page",
         "/w/ root-card upasarga panel (app/word_page.py)"
       ],
-      "notes": "H848 roadmap W6 (final workstream). Public/MIT, credit Dr. Marcis Gasuns. Data statement docs/data-statements/upasarga-semantics.meta.md. Surfaced on /w/ root cards (app/word_page.py _upasarga_block) + the reading/upasarga/ page."
+      "notes": "H848 roadmap W6 (final workstream). Public/MIT, credit Dr. Marcis Gasuns. Data statement docs/data-statements/upasarga-semantics.meta.md. Surfaced on /w/ root cards (app/word_page.py _upasarga_block) + the reading/upasarga/ page.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "pronoun-corrections",
       "title": "Curated pronoun-paradigm corrections (E1/W4 fix)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/gita/pronoun_corrections.tsv",
       "format": "tsv",
       "rows": 208,
@@ -1230,13 +1252,14 @@
         "kosha inflections layer (source=curated-gita-pronoun)",
         "E1 hybrid forms"
       ],
-      "notes": "W4 QA follow-up (H874), MG «do correction». Report PRONOUN_CORRECTION_REPORT.md. Public/MIT, credit Dr. Marcis Gasuns. Attested-forms correction (full-paradigm generation is a further step). Phase 2 flags 73 wrong Cologne pronoun rows disputed=1 (untagged or case/number contradicting the gold; 9 already E1-flagged; 79 gold-consistent untouched) — a review flag, non-destructive."
+      "notes": "W4 QA follow-up (H874), MG «do correction». Report PRONOUN_CORRECTION_REPORT.md. Public/MIT, credit Dr. Marcis Gasuns. Attested-forms correction (full-paradigm generation is a further step). Phase 2 flags 73 wrong Cologne pronoun rows disputed=1 (untagged or case/number contradicting the gold; 9 already E1-flagged; 79 gold-consistent untouched) — a review flag, non-destructive.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "samasa-trainer",
       "title": "Samasa (compound) analysis trainer",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/samasa/samasa_curriculum.tsv",
       "format": "tsv",
       "rows": 759,
@@ -1251,13 +1274,14 @@
         "csl-guides samasa-quiz (cross-linked, not duplicated)",
         "graded compound-analysis teaching (pedagogy Wave 1, W1c)"
       ],
-      "notes": "H948 kosha pedagogy Wave 1 (docs/IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE1.md §W1c). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS). Type distribution is honestly skewed, not balanced: TP=458, BV=298, DV=2, KD=1 gold examples -- dvandva and karmadharaya are severely underrepresented in the Gita gold set and corpus-derived items cannot fill the gap (no verified type). 9 gold rows (lexicalized bahuvrihis like \"govinda\") carry no hyphen-segmented lemma and are identify-only, excluded from split."
+      "notes": "H948 kosha pedagogy Wave 1 (docs/IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE1.md §W1c). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS). Type distribution is honestly skewed, not balanced: TP=458, BV=298, DV=2, KD=1 gold examples -- dvandva and karmadharaya are severely underrepresented in the Gita gold set and corpus-derived items cannot fill the gap (no verified type). 9 gold rows (lexicalized bahuvrihis like \"govinda\") carry no hyphen-segmented lemma and are identify-only, excluded from split.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "reading-pack-difficulty",
       "title": "Reading-pack difficulty scores + graded ordering (W2a)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/difficulty/reading_pack_difficulty.tsv",
       "format": "tsv",
       "rows": 5,
@@ -1271,13 +1295,14 @@
         "graded-reader auto-levelling (W2a join point, ARCHITECTURE data-flow)",
         "W3a metre-in-reading (H951, consumes the ordered packs)"
       ],
-      "notes": "H949 kosha pedagogy Wave 2 (W2a), the difficulty spine. ONE estimator, not 'the' difficulty (R5): four corpus-grounded axes -- vocab-frequency x sandhi-density x morphology-rarity x compound-load -- documented in METHODS.md and honestly limited (frequency != learnability, R6; sandhi is a boundary-fusion proxy). Scores only packs carrying UD morphology; the 18 Gita packs (built by build_reading_pack_gita.py from a non-UD source) get a SEPARATE reduced 3-axis ordering instead -- see gita-reading-pack-difficulty (H977) -- never fabricated into this 4-axis score. Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY 4.0 (Oliver Hellwig / DCS)."
+      "notes": "H949 kosha pedagogy Wave 2 (W2a), the difficulty spine. ONE estimator, not 'the' difficulty (R5): four corpus-grounded axes -- vocab-frequency x sandhi-density x morphology-rarity x compound-load -- documented in METHODS.md and honestly limited (frequency != learnability, R6; sandhi is a boundary-fusion proxy). Scores only packs carrying UD morphology; the 18 Gita packs (built by build_reading_pack_gita.py from a non-UD source) get a SEPARATE reduced 3-axis ordering instead -- see gita-reading-pack-difficulty (H977) -- never fabricated into this 4-axis score. Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY 4.0 (Oliver Hellwig / DCS).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "gita-reading-pack-difficulty",
       "title": "Gita reading-pack difficulty -- reduced 3-axis ordering (W2a follow-up)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/difficulty/gita_reading_pack_difficulty.tsv",
       "format": "tsv",
       "rows": 18,
@@ -1290,13 +1315,14 @@
         "reading/difficulty/ page (Gita section)",
         "graded-reader auto-levelling within the Gita (once UD morphology is added, these fold into the 4-axis score)"
       ],
-      "notes": "H977 kosha pedagogy Wave 2 (W2a follow-up), closing the '18 Gita packs unscored' gap H949 flagged. **NOT comparable to reading-pack-difficulty** (4-axis): different axis set AND a different sandhi definition -- this ranks the Gita chapters among THEMSELVES only. Honest ONE-estimator framing carries over (R5/R6). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY 4.0 (Oliver Hellwig / DCS)."
+      "notes": "H977 kosha pedagogy Wave 2 (W2a follow-up), closing the '18 Gita packs unscored' gap H949 flagged. **NOT comparable to reading-pack-difficulty** (4-axis): different axis set AND a different sandhi definition -- this ranks the Gita chapters among THEMSELVES only. Honest ONE-estimator framing carries over (R5/R6). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY 4.0 (Oliver Hellwig / DCS).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "reading-pack-metre",
       "title": "Reading-pack per-verse metre annotation (W3a)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/metre/reading_pack_metre.tsv",
       "format": "tsv",
       "rows": 1095,
@@ -1309,13 +1335,14 @@
         "SanskritKaraoke (metre trainer UI -- the consuming surface; kosha emits the data layer only)",
         "reading packs (per-verse metre for graded reading, field 3.9)"
       ],
-      "notes": "H951 kosha pedagogy Wave 3 (W3a). REUSE/INTEGRATE, not greenfield: NO metre trainer/UI shipped in kosha -- SanskritKaraoke owns that (scope re-checked 15-07, unchanged). Coverage: 12% strict vrtta (high, validated -- Kiratarjuniya-1 scans 92/92 vamsastha, correct for Bharavi's canto 1), 77% anustubh (medium heuristic), 11% unresolved (honest, mostly prose/speaker-tags). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; metre engine vidyut (MIT, Arun Prasad); source DCS is CC BY 4.0 (Oliver Hellwig / DCS)."
+      "notes": "H951 kosha pedagogy Wave 3 (W3a). REUSE/INTEGRATE, not greenfield: NO metre trainer/UI shipped in kosha -- SanskritKaraoke owns that (scope re-checked 15-07, unchanged). Coverage: 12% strict vrtta (high, validated -- Kiratarjuniya-1 scans 92/92 vamsastha, correct for Bharavi's canto 1), 77% anustubh (medium heuristic), 11% unresolved (honest, mostly prose/speaker-tags). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; metre engine vidyut (MIT, Arun Prasad); source DCS is CC BY 4.0 (Oliver Hellwig / DCS).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "vidyut-chandas-meters",
       "title": "vidyut-chandas metre definitions (vendored)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/vidyut/chandas/meters.tsv",
       "format": "tsv",
       "rows": 144,
@@ -1327,13 +1354,14 @@
       "consumers": [
         "scripts/build_reading_pack_metre.py (reading-pack-metre)"
       ],
-      "notes": "H951. Upstream: vidyut-data (MIT, Arun Prasad / ambuda-org). Vendored copy pinned; re-sync from vidyut-data if upstream meters change."
+      "notes": "H951. Upstream: vidyut-data (MIT, Arun Prasad / ambuda-org). Vendored copy pinned; re-sync from vidyut-data if upstream meters change.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "morph-signature-freq",
       "title": "DCS morphological-form frequency table (difficulty-scorer signal)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "data/difficulty/morph_signature_freq.tsv",
       "format": "tsv",
       "rows": 840,
@@ -1345,13 +1373,14 @@
       "consumers": [
         "scripts/build_difficulty_scorer.py (morphology axis)"
       ],
-      "notes": "H949 kosha pedagogy Wave 2 (W2a). Derived once from the DCS full sqlite so the scorer needs no heavy DB at score time (the source->derive->consume split the sandhi programme uses). Source DCS is CC BY 4.0 (Oliver Hellwig / DCS)."
+      "notes": "H949 kosha pedagogy Wave 2 (W2a). Derived once from the DCS full sqlite so the scorer needs no heavy DB at score time (the source->derive->consume split the sandhi programme uses). Source DCS is CC BY 4.0 (Oliver Hellwig / DCS).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "dcs-reading-pack-nala-2",
       "title": "DCS reading pack — Nala 2 (Nalopakhyana, Mahabharata 3.51)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "reading/data/nala-2.json",
       "format": "json",
       "rows": 61,
@@ -1364,13 +1393,14 @@
         "reading/ static viewer",
         "reading-pack-difficulty (W2a scorer)"
       ],
-      "notes": "H949 Wave-2 W2a: new graded reading pack beyond Nala 1. DCS is CC BY 4.0; derivative ships BY-SA with the public tier."
+      "notes": "H949 Wave-2 W2a: new graded reading pack beyond Nala 1. DCS is CC BY 4.0; derivative ships BY-SA with the public tier.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "dcs-reading-pack-nala-3",
       "title": "DCS reading pack — Nala 3 (Nalopakhyana, Mahabharata 3.52)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "reading/data/nala-3.json",
       "format": "json",
       "rows": 51,
@@ -1383,13 +1413,14 @@
         "reading/ static viewer",
         "reading-pack-difficulty (W2a scorer)"
       ],
-      "notes": "H949 Wave-2 W2a: new graded reading pack beyond Nala 1. DCS is CC BY 4.0; derivative ships BY-SA with the public tier."
+      "notes": "H949 Wave-2 W2a: new graded reading pack beyond Nala 1. DCS is CC BY 4.0; derivative ships BY-SA with the public tier.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "dcs-reading-pack-hitopadesa-0",
       "title": "DCS reading pack — Hitopadesa, Prastavika (opening)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "reading/data/hitopadesa-0.json",
       "format": "json",
       "rows": 125,
@@ -1402,13 +1433,14 @@
         "reading/ static viewer",
         "reading-pack-difficulty (W2a scorer)"
       ],
-      "notes": "H949 Wave-2 W2a: new graded reading pack (didactic prose+verse) for difficulty spread. DCS is CC BY 4.0; derivative ships BY-SA with the public tier."
+      "notes": "H949 Wave-2 W2a: new graded reading pack (didactic prose+verse) for difficulty spread. DCS is CC BY 4.0; derivative ships BY-SA with the public tier.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "dcs-reading-pack-kiratarjuniya-1",
       "title": "DCS reading pack — Kiratarjuniya 1 (Bharavi)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "reading/data/kiratarjuniya-1.json",
       "format": "json",
       "rows": 92,
@@ -1421,13 +1453,14 @@
         "reading/ static viewer",
         "reading-pack-difficulty (W2a scorer)"
       ],
-      "notes": "H949 Wave-2 W2a: new graded reading pack (classical kavya, the hardest of the scored set at difficulty 0.389) chosen to test the scorer's spread. DCS is CC BY 4.0; derivative ships BY-SA with the public tier."
+      "notes": "H949 Wave-2 W2a: new graded reading pack (classical kavya, the hardest of the scored set at difficulty 0.389) chosen to test the scorer's spread. DCS is CC BY 4.0; derivative ships BY-SA with the public tier.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
       "id": "handoff-lifecycle-gold",
       "title": "Handoff lifecycle gold standard (170 adversarially-verified verdicts)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "not-applicable",
       "format": "jsonl",
       "rows": 170,
       "size_bytes": 318777,
@@ -1445,7 +1478,7 @@
       "id": "morphology-attestation-audit",
       "title": "Generated↔attested morphology audit (A3, W1b)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.2.0",
       "release_asset": "morph_attest_AG.tsv",
       "format": "tsv",
       "rows": 401368,
@@ -1457,7 +1490,8 @@
       "consumers": [
         "A4 derivation capture (W2a)"
       ],
-      "notes": "A3 = the artefact A4 cannot start without (D12). Sidecars in data/concordance/: morph_attest_GnA.tsv (over-generation), morph_attest_AnG.tsv (engine gap), MORPHOLOGY_ATTESTATION_BUILD_REPORT.md. CIRCULARITY: 93.30% of the generated side is itself source='dcs' (ingested DCS surface tokens), so its AG is a 99.99% round-trip; the research-meaningful figure is the vidyut-engine subtotal — AG 3,550 / 28,567 = 12.43% attested, 25,017 over-generated. Consequently A¬G is degenerate (=2: oṃ + one OCR token) and CANNOT measure engine gaps here — reported as the finding, not hidden (genuine_engine_gap=0, nothing routed to the csl-inflect give-back). CONTRADICTION surfaced (STOP-AND-SURFACE, not resolved): the plan set's 6.9M generated figure is `inflections` (6,917,018 rows), not `forms` (1,378,401) — built on forms per the deliverable text; A4's generated-side table is a human call. Read-only build. PUBLICATION GATED on the W1a rights record (H1263 / D2): unreleased until the DCS BY-SA/BY-4.0 licence contradiction is settled."
+      "notes": "A3 = the artefact A4 cannot start without (D12). Sidecars in data/concordance/: morph_attest_GnA.tsv (over-generation), morph_attest_AnG.tsv (engine gap), MORPHOLOGY_ATTESTATION_BUILD_REPORT.md. CIRCULARITY: 93.30% of the generated side is itself source='dcs' (ingested DCS surface tokens), so its AG is a 99.99% round-trip; the research-meaningful figure is the vidyut-engine subtotal — AG 3,550 / 28,567 = 12.43% attested, 25,017 over-generated. Consequently A¬G is degenerate (=2: oṃ + one OCR token) and CANNOT measure engine gaps here — reported as the finding, not hidden (genuine_engine_gap=0, nothing routed to the csl-inflect give-back). CONTRADICTION surfaced (STOP-AND-SURFACE, not resolved): the plan set's 6.9M generated figure is `inflections` (6,917,018 rows), not `forms` (1,378,401) — built on forms per the deliverable text; A4's generated-side table is a human call. Read-only build. PUBLICATION GATED on the W1a rights record (H1263 / D2): unreleased until the DCS BY-SA/BY-4.0 licence contradiction is settled.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     }
   ]
 }
