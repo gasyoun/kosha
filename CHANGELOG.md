@@ -14,6 +14,12 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.67.0] - 2026-07-19
+### Added (samāsa trainer — MW final-member drills, a third source)
+- **[`scripts/build_samasa_trainer.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_samasa_trainer.py) gains a third source with a third role.** Gold gives verified *type*, DCS/Kompozity gives corpus *frequency*; neither answers **which words are productive as a compound's final member**. MW's own compound markup does — inverted to an uttarapada index in [MWderivations `issue15/`](https://github.com/gasyoun/MWderivations/blob/master/issue15/README.md) (19,435 distinct final members from 87,188 pairs). New flags `--mw-rev` / `--mw-cap` (default 150) / `--mw-min-left` (default 20); the source is **optional** — if the file is absent the builder logs it and the deck stays valid.
+- **Two new item types** the other two sources cannot support: `member_side` ("does MW attest this word as a first member, a second member, or both?" — compound position is a real structural fact learners get wrong) and `member_recall` ("these are attested first members sharing one final member — name it", testing productive-member recognition rather than one-off memorisation). Deck 3,565 → **3,865 items** (+150 of each).
+- **Taddhita suffixes are excluded at load, deliberately.** The MW index's raw head is dominated by bound morphemes (`-tva` 1246, `-vat` 1136, `-tā` 1058) which are **not** compound members; drilling them would teach a falsehood. Only the classifier's `UTTARAPADA` + `KRT_STEM_MEMBER` rows are loaded — the latter kept because an upapada-tatpuruṣa's final stem (`-kāra`, `-ja`) is a genuine member. 733 members clear the ≥20-first-member bar; the 150 most productive are drilled and the remainder is reported, not silently dropped.
+
 ## [0.66.0] - 2026-07-19
 
 ### Added

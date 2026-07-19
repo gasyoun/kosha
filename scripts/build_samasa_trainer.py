@@ -56,6 +56,7 @@ GH = ROOT.parent if (ROOT.parent / "VisualDCS").exists() else ROOT.parent.parent
 CMPS = GH / "VisualDCS" / "derived-data" / "Kompozity" / "cmps.csv"
 NAMES = GH / "VisualDCS" / "derived-data" / "Kompozity" / "names.csv"
 GOLD = ROOT / "data" / "gita" / "gita_morphology_gold.tsv"
+MWREV = GH / "MWderivations" / "issue15" / "compounds_reverse_classified.tsv"
 WEIGHTS = ROOT / "data" / "samasa" / "drill_weights.json"
 
 OUT_CURRICULUM_TSV = ROOT / "data" / "samasa" / "samasa_curriculum.tsv"
@@ -167,6 +168,97 @@ def rank_corpus_items(cmps_by_surface, names_freq, gold_surfaces, min_freq):
         pool.append((surface, members, freq))
     pool.sort(key=lambda t: -t[2])
     return pool
+
+
+def load_mw_uttarapada(path, min_left):
+    """MW's own compound markup, inverted and classified (MWderivations
+    issue15/). Third source, third role: neither gold-typed nor corpus-frequent,
+    but the only one that answers "which words are PRODUCTIVE as a final member".
+
+    Only genuine members are loaded: the classifier's TADDHITA_SUFFIX rows are
+    bound morphemes, not compound members, and shipping them as compound drills
+    would teach a falsehood (-tva heads 1246 "compounds" that are not compounds).
+    KRT_STEM_MEMBER rows ARE kept -- an upapada-tatpurusa's final stem is a real
+    member. Returns [] if the file is absent, so this source is optional.
+    """
+    path = Path(path)
+    if not path.exists():
+        return []
+    rows = []
+    with open(path, encoding="utf-8") as f:
+        r = csv.reader(f, delimiter="	")
+        next(r, None)
+        for rec in r:
+            if len(rec) < 4:
+                continue
+            token, n, cls, lefts = rec[0], int(rec[1]), rec[2], rec[3].split()
+            if cls not in ("UTTARAPADA", "KRT_STEM_MEMBER"):
+                continue
+            if n < min_left:
+                continue
+            rows.append({"member": token, "n": n, "lefts": lefts, "cls": cls})
+    rows.sort(key=lambda d: -d["n"])
+    return rows
+
+
+def build_member_items(mw_rows, mw_cap, seed, start_idx):
+    """Two item types the other two sources cannot support.
+
+    `member_side` -- is this word attested as a FIRST member, a SECOND member,
+    or both? Compound position is a real structural fact learners routinely get
+    wrong, and MW's markup answers it directly.
+
+    `member_recall` -- given four attested first members, name the shared final
+    member. Tests productive-member recognition rather than one-off memorisation.
+    """
+    rng = random.Random(seed)
+    items = []
+    idx = start_idx
+    pool = mw_rows[:mw_cap]
+    if not pool:
+        return items, 0
+
+    left_universe = set()
+    for row in mw_rows:
+        left_universe.update(row["lefts"])
+    right_universe = {row["member"] for row in mw_rows}
+
+    all_members = [row["member"] for row in pool]
+    for row in pool:
+        member = row["member"]
+        idx += 1
+        both = member in left_universe
+        answer = "both sides" if both else "second member only"
+        items.append({
+            "id": "SM-%04d" % idx, "type": "member_side", "provenance": "dictionary",
+            "aspect": "samasa",
+            "prompt": "In MW's compounds, does “%s” occur as a first member, a second member, or both?" % member,
+            "answer": answer,
+            "choices": ["first member only", "second member only", "both sides"],
+            "rank": None,
+            "evidence": "MW compound markup: %d distinct first members attested before “%s”%s"
+                        % (row["n"], member,
+                           "; also attested as a first member itself" if both else
+                           "; not attested as a first member"),
+            "source_dataset": "mw-derivations-uttarapada",
+        })
+
+        idx += 1
+        shown = rng.sample(row["lefts"], min(4, len(row["lefts"])))
+        distractors = [m for m in rng.sample(all_members, min(8, len(all_members))) if m != member][:3]
+        choices = [member] + distractors
+        rng.shuffle(choices)
+        items.append({
+            "id": "SM-%04d" % idx, "type": "member_recall", "provenance": "dictionary",
+            "aspect": "samasa",
+            "prompt": "These are all attested first members of compounds sharing one final member: %s. Which is it?"
+                      % ", ".join("“%s”" % w for w in shown),
+            "answer": member, "choices": choices, "rank": None,
+            "evidence": "MW compound markup: “%s” is the final member of %d distinct compounds (%s)"
+                        % (member, row["n"], row["cls"]),
+            "source_dataset": "mw-derivations-uttarapada",
+        })
+    return items, len(pool)
 
 
 def build_curriculum(gold_identify, type_order):
@@ -293,12 +385,18 @@ def write_drills_json(items, corpus_universe, corpus_used_n, corpus_cap):
                       "inline, to keep the page a reasonable size." % (
                           corpus_universe, corpus_universe if corpus_universe else 0,
                           corpus_used_n, corpus_cap),
+            "dictionary": "MWderivations issue15/compounds_reverse_classified.tsv — MW's own compound "
+                          "markup inverted to a final-member (uttarapada) index and classified; only "
+                          "UTTARAPADA + KRT_STEM_MEMBER rows are drilled, taddhita suffixes are excluded "
+                          "because they are bound morphemes, not compound members.",
             "builder": "scripts/build_samasa_trainer.py",
             "license": "public/MIT; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS)",
         },
         "item_types": {
             "identify": "Given a compound (gold-verified only), choose its class (KD/TP/BV/DV).",
             "split": "Given a compound, give its member breakdown (gold: verified; corpus: DCS-supplied, unverified type).",
+            "member_side": "Given a word, say whether MW attests it as a first member, a second member, or both.",
+            "member_recall": "Given several attested first members, name the final member they share.",
         },
         "items": items,
     }
@@ -602,6 +700,12 @@ def main():
     ap.add_argument("--cmps", default=str(CMPS))
     ap.add_argument("--names", default=str(NAMES))
     ap.add_argument("--gold", default=str(GOLD))
+    ap.add_argument("--mw-rev", default=str(MWREV),
+                     help="MWderivations issue15 classified reverse index (optional third source)")
+    ap.add_argument("--mw-cap", type=int, default=150,
+                     help="how many most-productive final members to drill (0 disables)")
+    ap.add_argument("--mw-min-left", type=int, default=20,
+                     help="minimum distinct first members for a final member to be drillable")
     ap.add_argument("--weights", default=str(WEIGHTS))
     ap.add_argument("--skip-apkg", action="store_true", help="skip genanki export (if not installed)")
     args = ap.parse_args()
@@ -641,6 +745,18 @@ def main():
     reference_rows = build_reference(by_type, type_order)
     items, corpus_used_n = build_drill_items(gold_identify, gold_split, corpus_pool, corpus_cap, args.seed)
 
+    print("loading MW reverse (uttarapada) index ...")
+    mw_rows = load_mw_uttarapada(args.mw_rev, args.mw_min_left) if args.mw_cap else []
+    if mw_rows:
+        print("  %d genuine final members with >= %d distinct first members "
+              "(taddhita suffixes excluded by the classifier)" % (len(mw_rows), args.mw_min_left))
+        mw_items, mw_used_n = build_member_items(mw_rows, args.mw_cap, args.seed, len(items))
+        items.extend(mw_items)
+        print("  %d drilled (--mw-cap %d) -> %d items" % (mw_used_n, args.mw_cap, len(mw_items)))
+    else:
+        mw_used_n = 0
+        print("  absent or empty (%s) -- member drills skipped, deck still valid" % args.mw_rev)
+
     write_curriculum_tsv(curriculum_rows)
     write_reference_tsv(reference_rows)
     write_drills_json(items, len(corpus_pool), corpus_used_n, corpus_cap)
@@ -657,8 +773,10 @@ def main():
         print("type %s (%s): %d gold-verified example%s" % (t, TYPE_NAME[t], n, "" if n == 1 else "s"))
     print("wrote %s (%d rows, %d lessons)" % (OUT_CURRICULUM_TSV, len(curriculum_rows), len(type_order)))
     print("wrote %s (%d rows)" % (OUT_REFERENCE_TSV, len(reference_rows)))
-    print("wrote %s (%d items: %d identify, %d split-gold, %d split-corpus)"
-          % (OUT_DRILLS_JSON, len(items), len(gold_identify), len(gold_split), corpus_used_n))
+    print("wrote %s (%d items: %d identify, %d split-gold, %d split-corpus, "
+          "%d member-side + %d member-recall from MW)"
+          % (OUT_DRILLS_JSON, len(items), len(gold_identify), len(gold_split), corpus_used_n,
+             mw_used_n, mw_used_n))
     print("wrote %s, %s, %s" % (OUT_HTML_CURRICULUM, OUT_HTML_DRILLS, OUT_HTML_REFERENCE))
 
 
