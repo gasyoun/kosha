@@ -14,6 +14,28 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+
+- **W-RU-b beginner subhāṣita reader shipped** ([H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md),
+  Fable 5 `claude-fable-5`): all 7,537 Indische Sprüche
+  ([SanskritLexicography F33](https://github.com/gasyoun/SanskritLexicography/blob/master/FEATURES_INDEX.md), public domain)
+  difficulty-graded with a documented W2a-reduced 2-axis scorer
+  ([`data/subhashita/subhashita_difficulty.tsv`](https://github.com/gasyoun/kosha/blob/main/data/subhashita/subhashita_difficulty.tsv),
+  byte-stable, regression-pinned on 10 hand-checked sayings by
+  [`scripts/test_subhashita_difficulty.py`](https://github.com/gasyoun/kosha/blob/main/scripts/test_subhashita_difficulty.py));
+  a 106-saying beginner band curated with a full auditable reject log
+  ([`data/subhashita/CURATION_NOTES.md`](https://github.com/gasyoun/kosha/blob/main/data/subhashita/CURATION_NOTES.md) —
+  106 accepts, 144 coded rejects, no unlogged picks; the 50 R1 rows double as an
+  IndischeSprueche OCR to-fix list); the pack sandhi-split (validated DharmaMitra
+  `unsandhied`, committed cache, vidyut-cheda fallback), junction-labelled against
+  [`data/sandhi/corpus_sandhi.tsv`](https://github.com/gasyoun/kosha/blob/main/data/sandhi/corpus_sandhi.tsv)
+  with attestation counts, metre-tagged (W3a two-tier method);
+  reader page [`reading/subhashita/`](https://github.com/gasyoun/kosha/blob/main/reading/subhashita/index.html) +
+  Anki deck [`subhashita_beginner_anki.apkg`](https://github.com/gasyoun/kosha/blob/main/data/subhashita/subhashita_beginner_anki.apkg);
+  manifest row `subhashita-reader-pack` + data statement. `gloss.ru` absent — W-RU-a
+  ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md))
+  unshipped at build time; re-run TODO logged in the pack meta, not silent.
+
 ## [0.62.0] - 2026-07-19
 
 ### Added
