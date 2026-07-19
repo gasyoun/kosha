@@ -14,6 +14,35 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+
+- **W-RU-a gloss.ru re-run over the subhāṣita pack**
+  ([H1312](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1312-Sonnet_kosha_subhashita-pack-ru-gloss-rerun_19.07.26.md),
+  Sonnet 5 `claude-sonnet-5`). H1279 shipped the beginner subhāṣita reader
+  ([`subhashita_beginner_pack.json`](https://github.com/gasyoun/kosha/blob/main/data/subhashita/subhashita_beginner_pack.json))
+  without `gloss.ru` — the W-RU-a layer
+  ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md))
+  landed mid-flight and its joiner keys on lemma+surface, but the pack's tokens are
+  unsandhied IAST surface forms with no lemma. `scripts/build_subhashita_pack.py` now
+  attaches a per-token SLP1 lemma (vidyut-cheda: the same run's `.lemma` when the
+  accepted split came from cheda, else cheda re-run on each already-clean unsandhied
+  token in isolation — honest null when neither yields one, never guessed) and joins
+  `gloss_ru` from
+  [`build_ru_gloss_layer.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_ru_gloss_layer.py)'s
+  `RuGlosser` (public site-tier only, same Wave-RU rights gate). **85.3%** of the
+  pack's 1,510 tokens carry a lemma-layer RU gloss (89.1% carry a resolved lemma at
+  all); folded into
+  [`reading/RU_GLOSS_COVERAGE.md`](https://github.com/gasyoun/kosha/blob/main/reading/RU_GLOSS_COVERAGE.md)
+  alongside the 5 DCS reading packs (all-pack total now 92.1% over 4,468 tokens) via a
+  new `build_ru_gloss_layer.compute_family_coverage()` reused, not re-derived, by the
+  subhāṣita builder. The reader page
+  ([`reading/subhashita/`](https://github.com/gasyoun/kosha/blob/main/reading/subhashita/index.html))
+  gains a "show Russian gloss" toggle rendering the gloss under each token
+  (lemma tier preferred, surface/root fallback); the Anki deck gains a `GlossRu` back
+  field. The sandhi split / difficulty grading are byte-unchanged
+  (`scripts/test_subhashita_difficulty.py` still green — `subhashita_difficulty.tsv`
+  untouched); manifest row `subhashita-reader-pack` + data statement updated.
+
 ## [0.65.0] - 2026-07-19
 
 ### Added
