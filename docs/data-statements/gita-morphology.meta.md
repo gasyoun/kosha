@@ -30,7 +30,7 @@ author's; co-authors TBC).
 ([`ROADMAP_GITA_GOLD_EXTRACTION_2026.md`](https://github.com/gasyoun/kosha/blob/main/ROADMAP_GITA_GOLD_EXTRACTION_2026.md)).
 
 **Consumer.** The inflection-engine QA workstream **W4**
-([H874](https://github.com/gasyoun/Uprava/blob/main/handoffs/H874-Opus_kosha_gita_inflection_engine_qa_13.07.26.md))
+([H874](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H874-Opus_kosha_gita_inflection_engine_qa_13.07.26.md))
 — the gold case·number·gender here is cross-checked against kosha's Cologne+vidyut
 hybrid `inflections`/`forms` as the first attested-corpus test of the E1 layer.
 

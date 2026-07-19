@@ -13,7 +13,7 @@ a nice-to-have.
 ## 1. Context
 
 The Bhagavadgītā is absent from the DCS gold corpus, so kosha's Gītā reading
-pack ([H848](https://github.com/gasyoun/Uprava/blob/main/handoffs/H848-Sonnet_kosha_dcs_reading_packs_nala_gita_13.07.26.md),
+pack ([H848](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H848-Sonnet_kosha_dcs_reading_packs_nala_gita_13.07.26.md),
 [v0.25.0](https://github.com/gasyoun/kosha/releases/tag/v0.25.0)) was rebuilt
 GOLD from **`SanskritGrammar/Concordance/Gita.xlsm`** — a hand-curated,
 word-by-word analysis of the **whole Gītā**. Only chapter 1 (569 words) and only

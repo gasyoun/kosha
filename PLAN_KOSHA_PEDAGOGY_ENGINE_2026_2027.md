@@ -13,7 +13,7 @@ produces (see [`SANSKRIT_HUB_LEARNER_PROGRESSION_A0_C2.md`](https://github.com/g
 
 Authored via [`/ask`](https://github.com/gasyoun/claude-config/blob/main/commands/ask.md)
 (front-loaded interview → layered plan) by Opus 4.8 (`claude-opus-4-8`), 14-07-2026,
-under handoff [H945](https://github.com/gasyoun/Uprava/blob/main/handoffs/H945-Opus_kosha_pedagogy-engine-room-build-plan_14.07.26.md).
+under handoff [H945](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H945-Opus_kosha_pedagogy-engine-room-build-plan_14.07.26.md).
 
 **This is NOT a second field metadoc.** Per the field doc's own §8 ("do not spawn a
 parallel pedagogy doc — this is the single org-wide one"), this plan is a *repo build
@@ -74,12 +74,12 @@ already ruled.
 | Aspect | Field §3.x | Verdict | Handoff |
 |---|---|---|---|
 | **Sandhi** | [§3.1](https://github.com/gasyoun/SanskritGrammar/blob/main/DIGITAL_SANSKRIT_PEDAGOGY_FIELD_2026.md) | ✅ **SHIPPED** — the reference implementation of the whole pattern | H882–H918 (done) |
-| **Morphology drills** | §3.2 | 🟢 **BUILD** — graded drill + answer-key surface over the shipped paradigm engine | [H946](https://github.com/gasyoun/Uprava/blob/main/handoffs/H946-Sonnet_kosha_pedagogy-w1-morphology-drills_14.07.26.md) |
-| **Vocabulary curriculum** | §3.3 | 🟢 **BUILD** — frequency-graded syllabus (the sandhi-curriculum method on words) | [H947](https://github.com/gasyoun/Uprava/blob/main/handoffs/H947-Sonnet_kosha_pedagogy-w1-vocabulary-frequency-curriculum_14.07.26.md) |
-| **Samāsa trainer** | §3.10 | 🟢 **BUILD** — compound-analysis surface over compound data + Gītā gold | [H948](https://github.com/gasyoun/Uprava/blob/main/handoffs/H948-Sonnet_kosha_pedagogy-w1-samasa-compound-trainer_14.07.26.md) |
-| **Graded reader + difficulty scorer** | §3.4 | 🟢 **BUILD** — the difficulty scorer (named gap) + scale reading packs | [H949](https://github.com/gasyoun/Uprava/blob/main/handoffs/H949-Opus_kosha_pedagogy-w2-graded-reader-difficulty-scorer_14.07.26.md) |
-| **Roots (dhātu)** | §3.2 | 🟡 **REUSE/INTEGRATE** — [WhitneyRoots](https://github.com/gasyoun/WhitneyRoots) owns the 935-root app; kosha adds frequency-rank + corpus attestation | [H950](https://github.com/gasyoun/Uprava/blob/main/handoffs/H950-Sonnet_kosha_pedagogy-w2-roots-frequency-corpus-integration_14.07.26.md) |
-| **Metre (chandas)** | §3.9 | 🟡 **REUSE/INTEGRATE** — [SanskritKaraoke](https://github.com/gasyoun/SanskritKaraoke) owns the trainer; kosha wires metre-ID into reading | [H951](https://github.com/gasyoun/Uprava/blob/main/handoffs/H951-Sonnet_kosha_pedagogy-w3-metre-in-reading-integration_14.07.26.md) |
+| **Morphology drills** | §3.2 | 🟢 **BUILD** — graded drill + answer-key surface over the shipped paradigm engine | [H946](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H946-Sonnet_kosha_pedagogy-w1-morphology-drills_14.07.26.md) |
+| **Vocabulary curriculum** | §3.3 | 🟢 **BUILD** — frequency-graded syllabus (the sandhi-curriculum method on words) | [H947](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H947-Sonnet_kosha_pedagogy-w1-vocabulary-frequency-curriculum_14.07.26.md) |
+| **Samāsa trainer** | §3.10 | 🟢 **BUILD** — compound-analysis surface over compound data + Gītā gold | [H948](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H948-Sonnet_kosha_pedagogy-w1-samasa-compound-trainer_14.07.26.md) |
+| **Graded reader + difficulty scorer** | §3.4 | 🟢 **BUILD** — the difficulty scorer (named gap) + scale reading packs | [H949](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H949-Opus_kosha_pedagogy-w2-graded-reader-difficulty-scorer_14.07.26.md) |
+| **Roots (dhātu)** | §3.2 | 🟡 **REUSE/INTEGRATE** — [WhitneyRoots](https://github.com/gasyoun/WhitneyRoots) owns the 935-root app; kosha adds frequency-rank + corpus attestation | [H950](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H950-Sonnet_kosha_pedagogy-w2-roots-frequency-corpus-integration_14.07.26.md) |
+| **Metre (chandas)** | §3.9 | 🟡 **REUSE/INTEGRATE** — [SanskritKaraoke](https://github.com/gasyoun/SanskritKaraoke) owns the trainer; kosha wires metre-ID into reading | [H951](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H951-Sonnet_kosha_pedagogy-w3-metre-in-reading-integration_14.07.26.md) |
 | **Script / Devanāgarī** | §3.8 | ⚪ **REUSE** — [csl-guides](https://github.com/sanskrit-lexicon/csl-guides) owns the quizzes; kosha role deferred (roadmap only) | — |
 | **Audio / recitation** | §3.7 | ⬜ **AGENDA** — external-content-gated; no kosha build this plan | — |
 | **RU gloss layer (Wave RU)** | §3.4 | 🟢 **BUILD** — additive Russian gloss language over reading packs; no sibling owns an RU reading surface (added 19-07-2026) | [H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md) |
@@ -91,13 +91,13 @@ already ruled.
 
 | Handoff | Wave | Build | Executor |
 |---|---|---|---|
-| [H945](https://github.com/gasyoun/Uprava/blob/main/handoffs/H945-Opus_kosha_pedagogy-engine-room-build-plan_14.07.26.md) | — | Parent — this plan (done) | Opus 4.8 |
-| [H946](https://github.com/gasyoun/Uprava/blob/main/handoffs/H946-Sonnet_kosha_pedagogy-w1-morphology-drills_14.07.26.md) | W1a | Morphology drills over the paradigm engine | Sonnet 5 |
-| [H947](https://github.com/gasyoun/Uprava/blob/main/handoffs/H947-Sonnet_kosha_pedagogy-w1-vocabulary-frequency-curriculum_14.07.26.md) | W1b | Frequency-graded vocabulary curriculum | Sonnet 5 |
-| [H948](https://github.com/gasyoun/Uprava/blob/main/handoffs/H948-Sonnet_kosha_pedagogy-w1-samasa-compound-trainer_14.07.26.md) | W1c | Samāsa (compound) analysis trainer | Sonnet 5 |
-| [H949](https://github.com/gasyoun/Uprava/blob/main/handoffs/H949-Opus_kosha_pedagogy-w2-graded-reader-difficulty-scorer_14.07.26.md) | W2a | Graded-reader expansion + difficulty scorer | Opus 4.8 |
-| [H950](https://github.com/gasyoun/Uprava/blob/main/handoffs/H950-Sonnet_kosha_pedagogy-w2-roots-frequency-corpus-integration_14.07.26.md) | W2b | Roots frequency + corpus attestation (integrate WhitneyRoots) | Sonnet 5 |
-| [H951](https://github.com/gasyoun/Uprava/blob/main/handoffs/H951-Sonnet_kosha_pedagogy-w3-metre-in-reading-integration_14.07.26.md) | W3a | Metre-ID wired into reading (integrate SanskritKaraoke) | Sonnet 5 |
+| [H945](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H945-Opus_kosha_pedagogy-engine-room-build-plan_14.07.26.md) | — | Parent — this plan (done) | Opus 4.8 |
+| [H946](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H946-Sonnet_kosha_pedagogy-w1-morphology-drills_14.07.26.md) | W1a | Morphology drills over the paradigm engine | Sonnet 5 |
+| [H947](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H947-Sonnet_kosha_pedagogy-w1-vocabulary-frequency-curriculum_14.07.26.md) | W1b | Frequency-graded vocabulary curriculum | Sonnet 5 |
+| [H948](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H948-Sonnet_kosha_pedagogy-w1-samasa-compound-trainer_14.07.26.md) | W1c | Samāsa (compound) analysis trainer | Sonnet 5 |
+| [H949](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H949-Opus_kosha_pedagogy-w2-graded-reader-difficulty-scorer_14.07.26.md) | W2a | Graded-reader expansion + difficulty scorer | Opus 4.8 |
+| [H950](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H950-Sonnet_kosha_pedagogy-w2-roots-frequency-corpus-integration_14.07.26.md) | W2b | Roots frequency + corpus attestation (integrate WhitneyRoots) | Sonnet 5 |
+| [H951](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H951-Sonnet_kosha_pedagogy-w3-metre-in-reading-integration_14.07.26.md) | W3a | Metre-ID wired into reading (integrate SanskritKaraoke) | Sonnet 5 |
 | [H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md) | W-RU-a | Inline Sa→Ru gloss layer in reading packs (minted 19-07-2026, queued) | Opus 4.8 |
 | [H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md) | W-RU-b | Graded beginner subhāṣita reader, Indische Sprüche (minted 19-07-2026, queued) | Fable 5 |
 

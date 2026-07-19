@@ -2,7 +2,7 @@
 
 _Created: 18-07-2026 · Last updated: 18-07-2026_
 
-This record **gates every A4 publication** (plan D2, wave W1a / [H1263](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1263-Opus_kosha_vidyut_derivation_metadata_rights_record_18.07.26.md)).
+This record **gates every A4 publication** (plan D2, wave W1a / [H1263](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1263-Opus_kosha_vidyut_derivation_metadata_rights_record_18.07.26.md)).
 No A4 dataset ships until it exists. It answers two rights questions in one file:
 the licence of the **vidyut derivation metadata** kosha embeds in the Pāṇinian
 concordance, and the **DCS licence contradiction** kosha's own manifests carried.

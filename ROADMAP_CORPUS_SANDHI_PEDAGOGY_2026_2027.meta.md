@@ -14,7 +14,7 @@ Engineering sessions (Sonnet+) picking up any phase; a human owner ruling on the
 curriculum difficulty metric and GRETIL license scope.
 
 ## Provenance
-- Minted: [H882](https://github.com/gasyoun/Uprava/blob/main/handoffs/H882-Opus_kosha_corpus-sandhi-pedagogy-roadmap_13.07.26.md), 13-07-2026.
+- Minted: [H882](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H882-Opus_kosha_corpus-sandhi-pedagogy-roadmap_13.07.26.md), 13-07-2026.
 - Author model: Opus 4.8 (`claude-opus-4-8[1m]`).
 - Decisions locked with a human 13-07-2026 (DCS-first · A/B/C bake-off · both
   outputs · all four deliverables · pedagogical-difficulty order).
