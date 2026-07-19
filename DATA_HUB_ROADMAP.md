@@ -52,6 +52,7 @@ index — it is a **hub that hosts the bytes**.
 |---|---|---|
 | **P-D0** | Roadmap + locked decisions (this file) + machine-readable manifest [`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) + spine/hub registration (PROJECT_INTERLINKS row, GTD wiring) | ✅ 06-07-2026 |
 | **P-D1** | First public data release `data-v0.1.0`: mw_roots · mw_etymology · dcs_cdsl_xref · union_headwords · mw_heritage_crosswalk · lemma_frequency · headword_index (all already public in their source repos; CC BY-SA 4.0 per [`LICENSE-DATA.md`](https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)) | ✅ 06-07-2026 |
+| **P-D1a** | Manifest schema hardened (D8): `in_release` closed vocabulary (`"<tag>"` / `"unreleased"` / `"not-applicable"`), `release_asset` required on every public released row, schema test failing CI on violation. Catch-up release [`data-v0.2.0`](https://github.com/gasyoun/kosha/releases/tag/data-v0.2.0) clears the 33-row backlog that an optional field let accumulate unnoticed. | ✅ 19-07-2026 (H1264) |
 | **P-D2** | Restricted-tier backup of the 19.2 GB local-only census giants (private storage; the 11 GB `archive_stopword.sqlite` needs split-or-exclude ruling) — kills the single-copy risk | 🟡 H233 |
 | **P-D3** | Public **Sanskrit NLP data + tools directory** page on the kosha site (our datasets + external stacks), from FEATURES_INDEX/REUSE_INDEX/SAMSAADHANII_INDEX content | ✅ 06-07-2026 (H236) — [`directory/`](https://gasyoun.github.io/kosha/directory/), rendered by [`scripts/build_directory.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_directory.py) from [`datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) + [`external_tools.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/external_tools.json); schema.org `Dataset` JSON-LD per public asset |
 | **P-D4** | samskrtam.ru canonical hosting: upload public-tier files, manifest URLs flip from GitHub Releases to server; restricted tier gets a non-public server path | ⛔ MG deploy gate (GTD @DO) |
@@ -67,6 +68,10 @@ index — it is a **hub that hosts the bytes**.
   restricted-tier, no exceptions (D-HUB-6).
 - **Release tags are `data-vX.Y.Z`**, separate from kosha code versions; data license
   is CC BY-SA 4.0 (`LICENSE-DATA.md`), never the code license.
+- **D7 — rolling release cadence.** Every wave that adds a new `tier: public` manifest
+  row cuts a `data-vX.Y.Z` release **in the same pass** — a row left at
+  `in_release: "unreleased"` past the wave that created it is how the 33-row D8 backlog
+  accumulated silently. "Add the row" and "release it" are one step, not two.
 - Citation durability rule (RISKS.md R1/R5) applies: manifest `canonical_url`s may point
   at samskrtam.ru, but citation/DOI-facing URLs must survive a server move — DOIs (P-D4+)
   attach to versioned releases, not to the live server.
