@@ -104,6 +104,9 @@ def main():
     ap.add_argument("--title", default="Nala 1 — Nalopākhyāna (Mahābhārata 3.50)")
     ap.add_argument("--text-id", type=int, default=154)
     ap.add_argument("--built", default="2026-07-13", help="YYYY-MM-DD build stamp")
+    ap.add_argument("--gloss-lang", choices=["none", "ru"], default="none",
+                    help="ru = inline the additive Sa->Ru gloss layer (W-RU-a/H1278) into "
+                         "each token's gloss_ru; English gloss is untouched")
     args = ap.parse_args()
 
     if not DCS.exists():
@@ -199,6 +202,16 @@ def main():
         },
         "sentences": out_sents,
     }
+
+    # W-RU-a (H1278): optional additive Sa->Ru gloss layer. Runs BEFORE the write so the
+    # pack is emitted once, with gloss_ru already inlined; the English gloss is untouched.
+    if args.gloss_lang == "ru":
+        from build_ru_gloss_layer import RuGlosser, inline_token_ru  # noqa: E402
+        glosser = RuGlosser()
+        for sent in payload["sentences"]:
+            for tok in sent["tokens"]:
+                inline_token_ru(tok, glosser)
+        payload["gloss_langs"] = sorted(set((payload.get("gloss_langs") or []) + ["ru"]))
 
     read_dir = ROOT / "reading" / "data"
     read_dir.mkdir(parents=True, exist_ok=True)
