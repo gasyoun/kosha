@@ -112,5 +112,6 @@ W3a next).
 | 15-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | Added the three template-v2 sections (Intended use / known misuse · Maintenance & sunset plan · Deprecation status) so the metadoc registers 3/3 in the org census. |
 | 15-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | Backlog item 3 (18 Gītā packs unscored) closed via H977 — reduced 3-axis Gītā ordering (v0.57.0). |
 | 15-07-2026 | Opus 4.8 `claude-opus-4-8[1m]` | W3a metre-in-reading shipped (H951, v0.59.0) — status table + backlog item 1 flipped; **kosha build programme complete** (W3b reuse-only, W4 external-gated remain). |
+| 19-07-2026 | Fable 5 `claude-fable-5` | Wave RU appended (queued, H1278/H1279): inline Sa→Ru gloss layer + beginner subhāṣita reader; implementation doc `IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE_RU.md` authored; rights gate recorded. |
 
 _Dr. Mārcis Gasūns_
