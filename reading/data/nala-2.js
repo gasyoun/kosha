@@ -33,7 +33,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of a Gandharva; name of various men; name of a Ṛṣi; name of a son of Anaraṇya",
      "slp1": "bfhadaSva",
      "href": "../w/bfhada_53va.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Брихадашва",
+      "lemma": "Брихадашва"
+     }
     },
     {
      "form": "uvāca",
@@ -43,7 +47,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to speak; to say; to tell; to declare; to proclaim; to recite; verk￼nden; to speak ill of",
      "slp1": "vac",
      "href": "../w/vac.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сказал",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     }
    ]
   },
@@ -62,7 +71,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of Nala's wife (daughter of Bhīma king of Vidarbha); a kind of jasmine",
      "slp1": "damayantI",
      "href": "../w/damayant_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Дамаянти",
+      "lemma": "Дамаянти"
+     }
     },
     {
      "form": "tu",
@@ -72,7 +85,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "do; now; then; but; and; or; name of the river Śatadru",
      "slp1": "tu",
      "href": "../w/tu.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "же",
+      "lemma": "же",
+      "root": "же"
+     }
     },
     {
      "form": "tat",
@@ -82,7 +100,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "то",
+      "lemma": "он"
+     }
     },
     {
      "form": "śrutvā",
@@ -92,7 +114,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to hear; to listen to; to study",
      "slp1": "Sru",
      "href": "../w/_53ru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "услышав",
+      "lemma": "услышав",
+      "root": "услышав"
+     }
     },
     {
      "form": "vaco",
@@ -102,7 +129,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "speech; voice; word; singing; song (of birds); advice; direction; command; an oracular ut…",
      "slp1": "vacas",
      "href": "../w/vacas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "слово",
+      "lemma": "слова"
+     }
     },
     {
      "form": "haṃsasya",
@@ -112,7 +143,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a goose; gander; swan; flamingo (or other aquatic bird); the soul or spirit (typified by…",
      "slp1": "haMsa",
      "href": "../w/ha_4dsa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "гуси"
+     }
     },
     {
      "form": "bhārata",
@@ -122,7 +156,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "actor; fire; a descendant of Bharata; name of the author of RV, V. 27; name of the sun sh…",
      "slp1": "BArata",
      "href": "../w/_42_41rata.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "потомок Бхараты",
+      "lemma": "потомок Бхараты"
+     }
     }
    ]
   },
@@ -141,7 +179,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "at that time; then; in that case (often used redundantly)",
      "slp1": "tadA",
      "href": "../w/tad_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "тогда",
+      "lemma": "тогда"
+     }
     },
     {
      "form": "prabhṛti",
@@ -151,7 +193,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "seit",
      "slp1": "praBfti",
      "href": "../w/pra_42fti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "с",
+      "lemma": "с"
+     }
     },
     {
      "form": "na",
@@ -161,7 +207,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "svasthā",
@@ -171,7 +221,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "self-abiding; being in one's natural state; unmolested; sound well; healthy; at ease; con…",
      "slp1": "svasTa",
      "href": "../w/svas_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "спокойна",
+      "lemma": "здоров"
+     }
     },
     {
      "form": "nalaṃ",
@@ -181,7 +235,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a species of reed; Amphidonax Karka (8-12 feet high); a measure of length; a particular f…",
      "slp1": "nala",
      "href": "../w/nala.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Налу",
+      "lemma": "Нала"
+     }
     },
     {
      "form": "prati",
@@ -191,7 +249,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "near to; against; in opposition to; back; again; in return; down upon; upon; on; towards;…",
      "slp1": "prati",
      "href": "../w/prati.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "к",
+      "lemma": "к"
+     }
     },
     {
      "form": "babhūva",
@@ -201,7 +263,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "стал",
+      "lemma": "будет",
+      "root": "будет"
+     }
     },
     {
      "form": "sā",
@@ -211,7 +278,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "она",
+      "lemma": "он"
+     }
     }
    ]
   },
@@ -230,7 +301,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "an elephant (four kinds of elephant are enumerated); the chief or best of its kind; a kin…",
      "slp1": "hastin",
      "href": "../w/hastin.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "слонов",
+      "lemma": "слонов"
+     }
     },
     {
      "form": "aśva",
@@ -240,7 +315,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "stallion; horse (in the game of chess); the number \"seven\" (that being the number of the…",
      "slp1": "aSva",
      "href": "../w/a_53va.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "коней",
+      "lemma": "коней"
+     }
     },
     {
      "form": "ratha",
@@ -250,7 +329,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a chariot; car; esp. a two-wheeled war-chariot (lighter and swifter than the anas); any v…",
      "slp1": "raTa",
      "href": "../w/ra_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "колесницу",
+      "lemma": "колесницу"
+     }
     },
     {
      "form": "ghoṣeṇa",
@@ -260,7 +343,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "indistinct noise; tumult; confused cries of a multitude; battle-cry; cries of victory; cr…",
      "slp1": "Goza",
      "href": "../w/_47oza.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "звоном",
+      "lemma": "шум"
+     }
     },
     {
      "form": "nādayanto",
@@ -268,7 +355,11 @@ window.READING_DATA["nala-2"] = {
      "upos": "VERB",
      "morph": "Nom Plur Masc Pres",
      "gloss": "to make resonant; to fill wish noises or cries",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "lemma": "оглашая",
+      "root": "оглашая"
+     }
     },
     {
      "form": "vasuṃdharām",
@@ -278,7 +369,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "the earth; a country; kingdom; the soil; the ground; name of a minute portion of Prakṛti;…",
      "slp1": "vasuMDarA",
      "href": "../w/vasu_4d_44ar_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "земля"
+     }
     }
    ]
   },
@@ -297,7 +391,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "amusing; beautiful; charming; manifold; diverse; many-colored; painted; strange; surprisi…",
      "slp1": "vicitra",
      "href": "../w/vicitra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "различные",
+      "lemma": "различные"
+     }
     },
     {
      "form": "mālya",
@@ -307,7 +405,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a wreath; garland; chaplet; a flower",
      "slp1": "mAlya",
      "href": "../w/m_41lya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "венки",
+      "lemma": "венки"
+     }
     },
     {
      "form": "ābharaṇaiḥ",
@@ -317,7 +419,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "decorating; ornament; decoration (as jewels etc.); name of several works (especially ifc.)",
      "slp1": "ABaraRa",
      "href": "../w/_41_42ara_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "украшения"
+     }
     },
     {
      "form": "balair",
@@ -327,7 +432,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "power; strength; might; vigour; force; expertness in; stoutness; troops; an army; semen;…",
      "slp1": "bala",
      "href": "../w/bala.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "войско"
+     }
     },
     {
      "form": "dṛśyaiḥ",
@@ -347,7 +455,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "[ibc.] good-; [ibc.] very; quite; fein",
      "slp1": "su",
      "href": "../w/su.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "хорошенько",
+      "lemma": "выжимающего",
+      "root": "выжимающего"
+     }
     },
     {
      "form": "alaṃkṛtaiḥ",
@@ -357,7 +470,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to make ready; to prepare; to decorate; to ornament; to impede; to check; to violate (wit…",
      "slp1": "alaMkf",
      "href": "../w/ala_4dkf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "украшенные",
+      "root": "сделал"
+     }
     }
    ]
   },
@@ -376,7 +493,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; [gramm.] the pronoun etad; auf diese Weise",
      "slp1": "etad",
      "href": "../w/etad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "в это же",
+      "lemma": "это"
+     }
     },
     {
      "form": "eva",
@@ -386,7 +507,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "so; just so; exactly so (in the sense of the later evam); indeed; truly; really (often at…",
      "slp1": "eva",
      "href": "../w/eva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "именно",
+      "lemma": "именно"
+     }
     },
     {
      "form": "kāle",
@@ -396,7 +521,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "time; the proper time or season for; eine Essenszeit; a spot; tense",
      "slp1": "kAla",
      "href": "../w/k_41la.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "время",
+      "lemma": "время"
+     }
     },
     {
      "form": "tu",
@@ -406,7 +535,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "do; now; then; but; and; or; name of the river Śatadru",
      "slp1": "tu",
      "href": "../w/tu.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "же",
+      "lemma": "же",
+      "root": "же"
+     }
     },
     {
      "form": "purāṇau",
@@ -416,7 +550,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "ancient; old; traditional",
      "slp1": "purARa",
      "href": "../w/pur_41_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "древний"
+     }
     },
     {
      "form": "ṛṣi",
@@ -426,7 +563,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a singer of sacred hymns; an inspired poet or sage; any person who alone or with others i…",
      "slp1": "fzi",
      "href": "../w/fzi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "риши",
+      "lemma": "риши"
+     }
     },
     {
      "form": "sattamau",
@@ -436,7 +577,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "very good or right; the best; first; chief of; most virtuous; very venerable or respectab…",
      "slp1": "sattama",
      "href": "../w/sattama.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "достойнейший"
+     }
     }
    ]
   },
@@ -455,7 +599,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to roam; to wander about",
      "slp1": "aw",
      "href": "../w/aw.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "странствующий",
+      "root": "странствующий"
+     }
     },
     {
      "form": "mahātmanau",
@@ -465,7 +613,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "magnanimous; having a great or noble nature; high-minded; noble; highly gifted; exceeding…",
      "slp1": "mahAtman",
      "href": "../w/mah_41tman.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "великий духом"
+     }
     },
     {
      "form": "indra",
@@ -475,7 +626,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "the god of the atmosphere and sky; the Indian Jupiter Pluvius or lord of rain (who in Ved…",
      "slp1": "indra",
      "href": "../w/indra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Индра",
+      "lemma": "Индра"
+     }
     },
     {
      "form": "lokam",
@@ -485,7 +640,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "free or open space; room; place; scope; free motion; intermediate space; a tract; region;…",
      "slp1": "loka",
      "href": "../w/loka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мир",
+      "lemma": "мир"
+     }
     },
     {
      "form": "ito",
@@ -495,7 +654,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "from hence; hence; here",
      "slp1": "itas",
      "href": "../w/itas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "отсюда",
+      "lemma": "отсюда"
+     }
     },
     {
      "form": "gatau",
@@ -505,7 +668,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to go; to move; to approach; to understand; to reside (as a disease); to elapse (of time)",
      "slp1": "gam",
      "href": "../w/gam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "отправился",
+      "root": "пришел"
+     }
     }
    ]
   },
@@ -524,7 +691,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of a Rishi; name of a son of Viśvāmitra; name of one of the 24 mythic. Buddhas; name…",
      "slp1": "nArada",
      "href": "../w/n_41rada.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Нарада",
+      "lemma": "Нарада"
+     }
     },
     {
      "form": "parvataś",
@@ -534,7 +705,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a mountain; mountain-range; height; hill; rock (often personified); an artificial mound o…",
      "slp1": "parvata",
      "href": "../w/parvata.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "горы"
+     }
     },
     {
      "form": "ca",
@@ -544,7 +718,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "eva",
@@ -554,7 +732,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "so; just so; exactly so (in the sense of the later evam); indeed; truly; really (often at…",
      "slp1": "eva",
      "href": "../w/eva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "именно",
+      "lemma": "именно"
+     }
     },
     {
      "form": "mahātmānau",
@@ -564,7 +746,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "magnanimous; having a great or noble nature; high-minded; noble; highly gifted; exceeding…",
      "slp1": "mahAtman",
      "href": "../w/mah_41tman.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "великий духом"
+     }
     },
     {
      "form": "mahā",
@@ -574,7 +759,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "great; large; big; huge; ample; extensive; long; abundant; numerous; considerable; import…",
      "slp1": "mahat",
      "href": "../w/mahat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "великий",
+      "lemma": "великий"
+     }
     },
     {
      "form": "vratau",
@@ -584,7 +773,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "will; command; law; ordinance; rule; obedience; service; dominion; realm; sphere of actio…",
      "slp1": "vrata",
      "href": "../w/vrata.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "обет"
+     }
     }
    ]
   },
@@ -603,7 +795,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of Indra; name of a king; name of a Ṛṣi; name of a Buddha; the father of Śārṅgadhara",
      "slp1": "devarAja",
      "href": "../w/devar_41ja.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Царя богов",
+      "lemma": "царь богов"
+     }
     },
     {
      "form": "bhavanaṃ",
@@ -613,7 +809,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a place of abode; mansion; home; house; palace; dwelling; horoscope; natal star; coming i…",
      "slp1": "Bavana",
      "href": "../w/_42avana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "домой",
+      "lemma": "дом"
+     }
     },
     {
      "form": "viviśate",
@@ -623,7 +823,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to enter; to enter in or settle down on; to go into; to pervade; to enter (a house etc.);…",
      "slp1": "viS",
      "href": "../w/vi_53.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "племен",
+      "root": "вошел"
+     }
     },
     {
      "form": "su",
@@ -633,7 +837,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "[ibc.] good-; [ibc.] very; quite; fein",
      "slp1": "su",
      "href": "../w/su.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "хорошенько",
+      "lemma": "выжимающего",
+      "root": "выжимающего"
+     }
     },
     {
      "form": "pūjitau",
@@ -641,7 +850,11 @@ window.READING_DATA["nala-2"] = {
      "upos": "VERB",
      "morph": "Nom Dual Masc",
      "gloss": "to honour; to worship; to revere; to respect; to regard; to honour or present with (instr…",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "lemma": "почтил",
+      "root": "почтив"
+     }
     }
    ]
   },
@@ -660,7 +873,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "он"
+     }
     },
     {
      "form": "arcitvā",
@@ -670,7 +886,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to shine; to praise; to sing (dat.); to recommend; to honour or treat with respect; to ad…",
      "slp1": "arc",
      "href": "../w/arc.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Почтив",
+      "lemma": "воспоют",
+      "root": "почтив"
+     }
     },
     {
      "form": "sahasrākṣas",
@@ -680,7 +901,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of Indra (so called from the curse of Gautama who detecting Indra in a desire to sed…",
      "slp1": "sahasrAkza",
      "href": "../w/sahasr_41kza.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "Тысячеглазый"
+     }
     },
     {
      "form": "tataḥ",
@@ -690,7 +914,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "from that; in consequence of that; for that reason; consequently; then; after that",
      "slp1": "tatas",
      "href": "../w/tatas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "тогда",
+      "lemma": "тогда"
+     }
     },
     {
      "form": "kuśalam",
@@ -700,7 +928,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "welfare; well-being; prosperous condition; happiness",
      "slp1": "kuSala",
      "href": "../w/ku_53ala.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о здоровье",
+      "lemma": "искусен"
+     }
     },
     {
      "form": "avyayam",
@@ -710,7 +942,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "not liable to change; imperishable; undecaying; parsimonious",
      "slp1": "avyaya",
      "href": "../w/avyaya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "неизменный",
+      "lemma": "нетленный"
+     }
     }
    ]
   },
@@ -729,7 +965,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to question; to interrogate (acc.); to ask after inquire about (acc.); to ask or interrog…",
      "slp1": "pracC",
      "href": "../w/prac_43.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "спросил",
+      "lemma": "спросил",
+      "root": "спросил"
+     }
     },
     {
      "form": "anāmayam",
@@ -739,7 +980,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "health; [rel.] final emancipation",
      "slp1": "anAmaya",
      "href": "../w/an_41maya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о здоровье",
+      "lemma": "безболезненные"
+     }
     },
     {
      "form": "ca",
@@ -749,7 +994,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "api",
@@ -759,7 +1008,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "также",
+      "lemma": "также"
+     }
     },
     {
      "form": "tayoḥ",
@@ -769,7 +1022,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "их",
+      "lemma": "он"
+     }
     },
     {
      "form": "sarva",
@@ -779,7 +1036,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "whole; entire; all; every; of all sorts; manifold; various; different; completely",
      "slp1": "sarva",
      "href": "../w/sarva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "все",
+      "lemma": "все"
+     }
     },
     {
      "form": "gatam",
@@ -789,7 +1050,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to go; to move; to approach; to understand; to reside (as a disease); to elapse (of time)",
      "slp1": "gam",
      "href": "../w/gam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "приходите",
+      "lemma": "отправился",
+      "root": "пришел"
+     }
     },
     {
      "form": "vibhuḥ",
@@ -799,7 +1065,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "bestowing richly; liberal; mighty",
      "slp1": "viBu",
      "href": "../w/vi_42u.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "владыка",
+      "lemma": "владыка"
+     }
     }
    ]
   },
@@ -818,7 +1088,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of a Rishi; name of a son of Viśvāmitra; name of one of the 24 mythic. Buddhas; name…",
      "slp1": "nArada",
      "href": "../w/n_41rada.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Нарада",
+      "lemma": "Нарада"
+     }
     },
     {
      "form": "uvāca",
@@ -828,7 +1102,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to speak; to say; to tell; to declare; to proclaim; to recite; verk￼nden; to speak ill of",
      "slp1": "vac",
      "href": "../w/vac.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сказал",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     }
    ]
   },
@@ -847,7 +1126,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "I; we",
      "slp1": "mad",
      "href": "../w/mad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "нашу",
+      "lemma": "я",
+      "root": "я"
+     }
     },
     {
      "form": "kuśalaṃ",
@@ -857,7 +1141,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "welfare; well-being; prosperous condition; happiness",
      "slp1": "kuSala",
      "href": "../w/ku_53ala.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о благополучии",
+      "lemma": "искусен"
+     }
     },
     {
      "form": "deva",
@@ -867,7 +1155,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a deity; god; (rarely applied to) evil demons; the gods as the heavenly or shining ones;…",
      "slp1": "deva",
      "href": "../w/deva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "боги",
+      "lemma": "боги"
+     }
     },
     {
      "form": "sarvatragatam",
@@ -877,7 +1169,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "extending to everything; universal; a perfect",
      "slp1": "sarvatragata",
      "href": "../w/sarvatragata.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "предела"
+     }
     },
     {
      "form": "īśvara",
@@ -887,7 +1182,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a husband; God; the Supreme Being; king; master; prince; name of Kubera; the number eleve…",
      "slp1": "ISvara",
      "href": "../w/_49_53vara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Ишвара",
+      "lemma": "владыка"
+     }
     }
    ]
   },
@@ -906,7 +1205,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "free or open space; room; place; scope; free motion; intermediate space; a tract; region;…",
      "slp1": "loka",
      "href": "../w/loka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "в мире",
+      "lemma": "мир"
+     }
     },
     {
      "form": "ca",
@@ -916,7 +1219,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "maghavan",
@@ -926,7 +1233,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of Indra",
      "slp1": "maGavan",
      "href": "../w/ma_47avan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "щедрый",
+      "lemma": "щедрый"
+     }
     },
     {
      "form": "kṛtsne",
@@ -936,7 +1247,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "all; whole; entire",
      "slp1": "kftsna",
      "href": "../w/kftsna.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "всем",
+      "lemma": "весь"
+     }
     },
     {
      "form": "nṛpāḥ",
@@ -946,7 +1261,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "protector of men; prince; king; sovereign; (in music) a kind of measure; name of the nume…",
      "slp1": "nfpa",
      "href": "../w/nfpa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "цари",
+      "lemma": "царь"
+     }
     },
     {
      "form": "kuśalino",
@@ -956,7 +1275,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "healthy; well; prosperous; auspicious; favourable; clever; virtuous",
      "slp1": "kuSalin",
      "href": "../w/ku_53alin.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "благополучен"
+     }
     },
     {
      "form": "vibho",
@@ -966,7 +1288,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "bestowing richly; liberal; mighty",
      "slp1": "viBu",
      "href": "../w/vi_42u.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "владыка",
+      "lemma": "владыка"
+     }
     }
    ]
   },
@@ -985,7 +1311,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of a Gandharva; name of various men; name of a Ṛṣi; name of a son of Anaraṇya",
      "slp1": "bfhadaSva",
      "href": "../w/bfhada_53va.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Брихадашва",
+      "lemma": "Брихадашва"
+     }
     },
     {
      "form": "uvāca",
@@ -995,7 +1325,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to speak; to say; to tell; to declare; to proclaim; to recite; verk￼nden; to speak ill of",
      "slp1": "vac",
      "href": "../w/vac.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сказал",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     }
    ]
   },
@@ -1014,7 +1349,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of a Rishi; name of a son of Viśvāmitra; name of one of the 24 mythic. Buddhas; name…",
      "slp1": "nArada",
      "href": "../w/n_41rada.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Нарады",
+      "lemma": "Нарада"
+     }
     },
     {
      "form": "vacaḥ",
@@ -1024,7 +1363,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "speech; voice; word; singing; song (of birds); advice; direction; command; an oracular ut…",
      "slp1": "vacas",
      "href": "../w/vacas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "слова",
+      "lemma": "слова"
+     }
     },
     {
      "form": "śrutvā",
@@ -1034,7 +1377,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to hear; to listen to; to study",
      "slp1": "Sru",
      "href": "../w/_53ru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "услышав",
+      "lemma": "услышав",
+      "root": "услышав"
+     }
     },
     {
      "form": "papraccha",
@@ -1044,7 +1392,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to question; to interrogate (acc.); to ask after inquire about (acc.); to ask or interrog…",
      "slp1": "pracC",
      "href": "../w/prac_43.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "спросил",
+      "lemma": "спросил",
+      "root": "спросил"
+     }
     },
     {
      "form": "bala",
@@ -1054,7 +1407,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "power; strength; might; vigour; force; expertness in; stoutness; troops; an army; semen;…",
      "slp1": "bala",
      "href": "../w/bala.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сила",
+      "lemma": "войско"
+     }
     },
     {
      "form": "vṛtra",
@@ -1064,7 +1421,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of the Vedic personification of an imaginary malignant influence or demon of darknes…",
      "slp1": "vftra",
      "href": "../w/vftra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Вритру",
+      "lemma": "Вритру"
+     }
     },
     {
      "form": "hā",
@@ -1074,7 +1435,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "killing; destroying",
      "slp1": "han",
      "href": "../w/han.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о",
+      "lemma": "убит",
+      "root": "убит"
+     }
     }
    ]
   },
@@ -1093,7 +1459,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "that which is established or firm; steadfast decree; statute; ordinance; law; usage; prac…",
      "slp1": "Darma",
      "href": "../w/_44arma.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дхарма",
+      "lemma": "дхарма"
+     }
     },
     {
      "form": "jñāḥ",
@@ -1103,7 +1473,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "knowing; familiar with (chiefly in comp.); intelligent; having a soul; wise",
      "slp1": "jYa",
      "href": "../w/j_59a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "знаю"
+     }
     },
     {
      "form": "pṛthivīpālās",
@@ -1113,7 +1486,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king",
      "slp1": "pfTivIpAla",
      "href": "../w/pf_54iv_49p_41la.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "хранитель земли"
+     }
     },
     {
      "form": "tyakta",
@@ -1123,7 +1499,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to leave; to abandon; to quit; to leave a place; to go away from; to let go; to dismiss;…",
      "slp1": "tyaj",
      "href": "../w/tyaj.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "оставленный",
+      "lemma": "оставив",
+      "root": "оставив"
+     }
     },
     {
      "form": "jīvita",
@@ -1133,7 +1514,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a living being; life; duration of life; livelihood",
      "slp1": "jIvita",
      "href": "../w/j_49vita.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "жизнь",
+      "lemma": "жизнь"
+     }
     },
     {
      "form": "yodhinaḥ",
@@ -1143,7 +1528,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "fighting; combating",
      "slp1": "yoDin",
      "href": "../w/yo_44in.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "воины",
+      "lemma": "сражающихся"
+     }
     }
    ]
   },
@@ -1162,7 +1551,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "an instrument for cutting or wounding; knife; sword; dagger; any weapon (even applied to…",
      "slp1": "Sastra",
      "href": "../w/_53astra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "оружием",
+      "lemma": "оружие"
+     }
     },
     {
      "form": "nidhanaṃ",
@@ -1172,7 +1565,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "settling down; residence or place of residence; domicile; receptacle; conclusion; end; de…",
      "slp1": "niDana",
      "href": "../w/ni_44ana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "смерть",
+      "lemma": "смерть"
+     }
     },
     {
      "form": "kāle",
@@ -1182,7 +1579,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "time; the proper time or season for; eine Essenszeit; a spot; tense",
      "slp1": "kAla",
      "href": "../w/k_41la.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "время",
+      "lemma": "время"
+     }
     },
     {
      "form": "ye",
@@ -1192,7 +1593,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "которые",
+      "lemma": "что"
+     }
     },
     {
      "form": "gacchanti",
@@ -1202,7 +1607,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to go; to move; to approach; to understand; to reside (as a disease); to elapse (of time)",
      "slp1": "gam",
      "href": "../w/gam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "идут",
+      "lemma": "отправился",
+      "root": "пришел"
+     }
     },
     {
      "form": "a",
@@ -1212,7 +1622,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "[gramm.] the sound a; eh bien!; (ibc., negating particle); [gramm.] the root han; [gramm.…",
      "slp1": "a",
      "href": "../w/a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о",
+      "lemma": "о"
+     }
     },
     {
      "form": "parāṅmukhāḥ",
@@ -1222,7 +1636,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "having the face turned away or averted; turning the back upon; flying from; averse from;…",
      "slp1": "parANmuKa",
      "href": "../w/par_41_4emu_4ba.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "отвратившись",
+      "lemma": "повернули вспять"
+     }
     }
    ]
   },
@@ -1241,7 +1659,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; (near deictic pronoun in Vedic)",
      "slp1": "idam",
      "href": "../w/idam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "этот",
+      "lemma": "это"
+     }
     },
     {
      "form": "loko",
@@ -1251,7 +1673,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "free or open space; room; place; scope; free motion; intermediate space; a tract; region;…",
      "slp1": "loka",
      "href": "../w/loka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мир",
+      "lemma": "мир"
+     }
     },
     {
      "form": "'kṣayas",
@@ -1261,7 +1687,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "exempt from decay; undecaying; [alchemy] undiminished, i.e. merury undergoes no eliminati…",
      "slp1": "akzaya",
      "href": "../w/akzaya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "нетленные"
+     }
     },
     {
      "form": "teṣāṃ",
@@ -1271,7 +1700,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "их",
+      "lemma": "он"
+     }
     },
     {
      "form": "yathā",
@@ -1281,7 +1714,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "according; as; like; as",
      "slp1": "yaTA",
      "href": "../w/ya_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     },
     {
      "form": "eva",
@@ -1291,7 +1728,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "so; just so; exactly so (in the sense of the later evam); indeed; truly; really (often at…",
      "slp1": "eva",
      "href": "../w/eva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "именно",
+      "lemma": "именно"
+     }
     },
     {
      "form": "mama",
@@ -1301,7 +1742,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "I; we",
      "slp1": "mad",
      "href": "../w/mad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мне",
+      "lemma": "я",
+      "root": "я"
+     }
     },
     {
      "form": "kāmadhuk",
@@ -1311,7 +1757,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "the cow of plenty",
      "slp1": "kAmaduh",
      "href": "../w/k_41maduh.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "корова желаний",
+      "lemma": "корова желаний"
+     }
     }
    ]
   },
@@ -1330,7 +1780,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "where? in what place? whither?(sometimes connected with particles ﾮMDBOﾯ~ṝha); how is it…",
      "slp1": "kva",
      "href": "../w/kva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "где",
+      "lemma": "где"
+     }
     },
     {
      "form": "nu",
@@ -1340,7 +1794,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "now",
      "slp1": "nu",
      "href": "../w/nu.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "же",
+      "lemma": "же",
+      "root": "же"
+     }
     },
     {
      "form": "te",
@@ -1350,7 +1809,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "тебе",
+      "lemma": "он"
+     }
     },
     {
      "form": "kṣatriyāḥ",
@@ -1360,7 +1823,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a member of the military or reigning order; a red horse; name of a people",
      "slp1": "kzatriya",
      "href": "../w/kzatriya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "кшатрии",
+      "lemma": "кшатрий"
+     }
     },
     {
      "form": "śūrā",
@@ -1370,7 +1837,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a strong or mighty or valiant man; warrior; champion; hero; one who acts heroically towar…",
      "slp1": "SUra",
      "href": "../w/_53_55ra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "герои",
+      "lemma": "герой"
+     }
     },
     {
      "form": "na",
@@ -1380,7 +1851,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "hi",
@@ -1390,7 +1865,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "for; because; on account of",
      "slp1": "hi",
      "href": "../w/hi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ведь",
+      "lemma": "ведь",
+      "root": "ведь"
+     }
     },
     {
      "form": "paśyāmi",
@@ -1400,7 +1880,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to see; to see with the spiritual eye; to compose; to consider; to examine; to foresee",
      "slp1": "paS",
      "href": "../w/pa_53.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "вижу",
+      "lemma": "вижу",
+      "root": "вижу"
+     }
     },
     {
      "form": "tān",
@@ -1410,7 +1895,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "их",
+      "lemma": "он"
+     }
     },
     {
      "form": "aham",
@@ -1420,7 +1909,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "I; we",
      "slp1": "mad",
      "href": "../w/mad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "я",
+      "lemma": "я",
+      "root": "я"
+     }
     }
    ]
   },
@@ -1439,7 +1933,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to come; to make one's appearance; to come near from (abl.) or to (acc. or loc.); to arri…",
      "slp1": "Agam",
      "href": "../w/_41gam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "пришел",
+      "root": "пришел"
+     }
     },
     {
      "form": "mahīpālān",
@@ -1449,7 +1947,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king; name of various princes",
      "slp1": "mahIpAla",
      "href": "../w/mah_49p_41la.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царю",
+      "lemma": "хранитель земли"
+     }
     },
     {
      "form": "atithīn",
@@ -1459,7 +1961,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a guest; a person entitled to hospitality; name of Agni; name of an attendant on Soma; na…",
      "slp1": "atiTi",
      "href": "../w/ati_54i.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "гостей",
+      "lemma": "гость"
+     }
     },
     {
      "form": "dayitān",
@@ -1469,7 +1975,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "cherished; beloved; dear; protected",
      "slp1": "dayita",
      "href": "../w/dayita.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "любимый"
+     }
     },
     {
      "form": "mama",
@@ -1479,7 +1988,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "I; we",
      "slp1": "mad",
      "href": "../w/mad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мне",
+      "lemma": "я",
+      "root": "я"
+     }
     }
    ]
   },
@@ -1498,7 +2012,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "thus; in this way; in such a manner; such",
      "slp1": "evam",
      "href": "../w/evam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "uktas",
@@ -1508,7 +2026,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to speak; to say; to tell; to declare; to proclaim; to recite; verk￼nden; to speak ill of",
      "slp1": "vac",
      "href": "../w/vac.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "попрошенный",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     },
     {
      "form": "tu",
@@ -1518,7 +2041,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "do; now; then; but; and; or; name of the river Śatadru",
      "slp1": "tu",
      "href": "../w/tu.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "же",
+      "lemma": "же",
+      "root": "же"
+     }
     },
     {
      "form": "śakreṇa",
@@ -1528,7 +2056,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of an Āditya; name of the number 14; Wrightia Antidysenterica; Terminalia Arjuna; na…",
      "slp1": "Sakra",
      "href": "../w/_53akra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Шакрой",
+      "lemma": "Шакра"
+     }
     },
     {
      "form": "nāradaḥ",
@@ -1538,7 +2070,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of a Rishi; name of a son of Viśvāmitra; name of one of the 24 mythic. Buddhas; name…",
      "slp1": "nArada",
      "href": "../w/n_41rada.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Нарада",
+      "lemma": "Нарада"
+     }
     },
     {
      "form": "pratyabhāṣata",
@@ -1548,7 +2084,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to speak in return or to (acc.); to answer; to relate; to tell; to call; to name (2 acc.)",
      "slp1": "pratiBAz",
      "href": "../w/prati_42_41z.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сказал",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     }
    ]
   },
@@ -1567,7 +2108,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to hear; to listen to; to study",
      "slp1": "Sru",
      "href": "../w/_53ru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "слушай",
+      "lemma": "услышав",
+      "root": "услышав"
+     }
     },
     {
      "form": "me",
@@ -1577,7 +2123,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "I; we",
      "slp1": "mad",
      "href": "../w/mad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мне",
+      "lemma": "я",
+      "root": "я"
+     }
     },
     {
      "form": "bhagavan",
@@ -1587,7 +2138,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "possessing fortune; fortunate; prosperous; happy; glorious; illustrious; divine; adorable…",
      "slp1": "Bagavat",
      "href": "../w/_42agavat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "владыка",
+      "lemma": "почтенный"
+     }
     },
     {
      "form": "yena",
@@ -1597,7 +2152,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "because; where; how",
      "slp1": "yena",
      "href": "../w/yena.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "которым"
+     }
     },
     {
      "form": "na",
@@ -1607,7 +2165,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "dṛśyante",
@@ -1617,7 +2179,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to behold; to look at; to regard; to consider; to see; to wait on; to visit; to see with…",
      "slp1": "dfS",
      "href": "../w/df_53.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "видны",
+      "lemma": "увидев",
+      "root": "увидев"
+     }
     },
     {
      "form": "mahīkṣitaḥ",
@@ -1627,7 +2194,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king; prince",
      "slp1": "mahIkzit",
      "href": "../w/mah_49kzit.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "владыки земли",
+      "lemma": "царей"
+     }
     }
    ]
   },
@@ -1646,7 +2217,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of a country south of the Vindhya hills (now called Berar); a king of Vidarbha; a pa…",
      "slp1": "vidarBa",
      "href": "../w/vidar_42a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Видарбху",
+      "lemma": "Видарбху"
+     }
     },
     {
      "form": "rāja",
@@ -1656,7 +2231,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king; sovereign; prince; chief (often applied to gods); a man of the royal tribe or the…",
      "slp1": "rAjan",
      "href": "../w/r_41jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царя",
+      "lemma": "царь"
+     }
     },
     {
      "form": "duhitrī",
@@ -1666,7 +2245,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a daughter (the milker or drawing milk from her mother); [gramm.] the word 'duhitṛ'",
      "slp1": "duhitf",
      "href": "../w/duhitf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "дочь"
+     }
     },
     {
      "form": "damayantī",
@@ -1676,7 +2258,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of Nala's wife (daughter of Bhīma king of Vidarbha); a kind of jasmine",
      "slp1": "damayantI",
      "href": "../w/damayant_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Дамаянти",
+      "lemma": "Дамаянти"
+     }
     },
     {
      "form": "iti",
@@ -1686,7 +2272,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "in this manner; thus (in its original signification iti refers to something that has been…",
      "slp1": "iti",
      "href": "../w/iti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "viśrutā",
@@ -1696,7 +2286,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to hear distinctly; to be heard or be heard of far and wide; to become known or famous",
      "slp1": "viSru",
      "href": "../w/vi_53ru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "известна",
+      "lemma": "прославленный",
+      "root": "услышав"
+     }
     }
    ]
   },
@@ -1715,7 +2310,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "any outward appearance or phenomenon or colour (often pl.); form; shape; phantom shapes;…",
      "slp1": "rUpa",
      "href": "../w/r_55pa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "красотой",
+      "lemma": "образ"
+     }
     },
     {
      "form": "samatikrāntā",
@@ -1725,7 +2324,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to go or pass by entirely; to cross or step over; to step out of (abl.); to transgress; t…",
      "slp1": "samatikram",
      "href": "../w/samatikram.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "исполнен",
+      "lemma": "прорвавшихся",
+      "root": "вышел"
+     }
     },
     {
      "form": "pṛthivyāṃ",
@@ -1735,7 +2339,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "the earth or wide world; land; ground; soil; earth regarded as one of the elements",
      "slp1": "pfTivI",
      "href": "../w/pf_54iv_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "на земле",
+      "lemma": "земля"
+     }
     },
     {
      "form": "sarva",
@@ -1745,7 +2353,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "whole; entire; all; every; of all sorts; manifold; various; different; completely",
      "slp1": "sarva",
      "href": "../w/sarva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "все",
+      "lemma": "все"
+     }
     },
     {
      "form": "yoṣitaḥ",
@@ -1755,7 +2367,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "woman; girl; wife; maiden",
      "slp1": "yozit",
      "href": "../w/yozit.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "женщины",
+      "lemma": "женщины"
+     }
     }
    ]
   },
@@ -1774,7 +2390,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "from that; in consequence of that; for that reason; consequently; then; after that",
      "slp1": "tatas",
      "href": "../w/tatas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "затем",
+      "lemma": "тогда"
+     }
     },
     {
      "form": "cintā",
@@ -1784,7 +2404,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "thought; care; anxiety; anxious thought about; consideration; name of a woman",
      "slp1": "cintA",
      "href": "../w/cint_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мысль",
+      "lemma": "мысль"
+     }
     },
     {
      "form": "parā",
@@ -1794,7 +2418,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "far; remote; opposite; previous; ancient; following; final; exceeding; better or worse th…",
      "slp1": "para",
      "href": "../w/para.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "прочь",
+      "lemma": "высшее"
+     }
     },
     {
      "form": "dīnā",
@@ -1804,7 +2432,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "scarce; scanty; depressed; afflicted; timid; sad; miserable; wretched; seicht (Wasser)",
      "slp1": "dIna",
      "href": "../w/d_49na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "удрученная",
+      "lemma": "несчастный"
+     }
     },
     {
      "form": "vivarṇa",
@@ -1814,7 +2446,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "colourless; pale; wan; low; vile; belonging to a mixed caste; stupid",
      "slp1": "vivarRa",
      "href": "../w/vivar_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "бледным",
+      "lemma": "бледна"
+     }
     },
     {
      "form": "vadanā",
@@ -1824,7 +2460,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "the act of speaking; talking; sounding; the mouth; face; countenance; the front; point; (…",
      "slp1": "vadana",
      "href": "../w/vadana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "лицами",
+      "lemma": "лицо"
+     }
     },
     {
      "form": "kṛśā",
@@ -1834,7 +2474,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "lean; emaciated; thin; spare; weak; feeble; small; little; minute; insignificant; few",
      "slp1": "kfSa",
      "href": "../w/kf_53a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "исхудавшую",
+      "lemma": "Криша"
+     }
     }
    ]
   },
@@ -1853,7 +2497,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "стал",
+      "lemma": "будет",
+      "root": "будет"
+     }
     },
     {
      "form": "damayantī",
@@ -1863,7 +2512,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of Nala's wife (daughter of Bhīma king of Vidarbha); a kind of jasmine",
      "slp1": "damayantI",
      "href": "../w/damayant_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Дамаянти",
+      "lemma": "Дамаянти"
+     }
     },
     {
      "form": "tu",
@@ -1873,7 +2526,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "do; now; then; but; and; or; name of the river Śatadru",
      "slp1": "tu",
      "href": "../w/tu.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "же",
+      "lemma": "же",
+      "root": "же"
+     }
     },
     {
      "form": "niḥśvāsa",
@@ -1883,7 +2541,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "breath; sigh",
      "slp1": "niHSvAsa",
      "href": "../w/ni_48_53v_41sa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "вздохи",
+      "lemma": "вздохи"
+     }
     },
     {
      "form": "paramā",
@@ -1893,7 +2555,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "remotest; extreme; last; chief; highest; primary; most prominent or conspicuous; best; mo…",
      "slp1": "parama",
      "href": "../w/parama.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "высшего",
+      "lemma": "высшее"
+     }
     },
     {
      "form": "tadā",
@@ -1903,7 +2569,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "at that time; then; in that case (often used redundantly)",
      "slp1": "tadA",
      "href": "../w/tad_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "тогда",
+      "lemma": "тогда"
+     }
     }
    ]
   },
@@ -1922,7 +2592,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ее",
+      "lemma": "он"
+     }
     },
     {
      "form": "svayaṃvaraḥ",
@@ -1932,7 +2606,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "the election of a husband by a princess or daughter of a Kṣatriya; self-choice",
      "slp1": "svayaMvara",
      "href": "../w/svaya_4dvara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сваямвару",
+      "lemma": "сваямвара"
+     }
     },
     {
      "form": "śakra",
@@ -1942,7 +2620,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of an Āditya; name of the number 14; Wrightia Antidysenterica; Terminalia Arjuna; na…",
      "slp1": "Sakra",
      "href": "../w/_53akra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Шакра",
+      "lemma": "Шакра"
+     }
     },
     {
      "form": "bhavitā",
@@ -1952,7 +2634,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "будет",
+      "lemma": "будет",
+      "root": "будет"
+     }
     },
     {
      "form": "nacirād",
@@ -1962,7 +2649,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "soon",
      "slp1": "nacirAt",
      "href": "../w/nacir_41t.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "скоро"
+     }
     },
     {
      "form": "iva",
@@ -1972,7 +2662,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "like; in the same manner as (in this sense = yathā); as it were; as if; in a certain mann…",
      "slp1": "iva",
      "href": "../w/iva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     }
    ]
   },
@@ -1991,7 +2685,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "in that place; there (in comp.); thither; to that place; in that; therein; in that case;…",
      "slp1": "tatra",
      "href": "../w/tatra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "там",
+      "lemma": "там"
+     }
     },
     {
      "form": "gacchanti",
@@ -2001,7 +2699,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to go; to move; to approach; to understand; to reside (as a disease); to elapse (of time)",
      "slp1": "gam",
      "href": "../w/gam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "идут",
+      "lemma": "отправился",
+      "root": "пришел"
+     }
     },
     {
      "form": "rājāno",
@@ -2011,7 +2714,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king; sovereign; prince; chief (often applied to gods); a man of the royal tribe or the…",
      "slp1": "rAjan",
      "href": "../w/r_41jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "цари",
+      "lemma": "царь"
+     }
     },
     {
      "form": "rāja",
@@ -2021,7 +2728,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king; sovereign; prince; chief (often applied to gods); a man of the royal tribe or the…",
      "slp1": "rAjan",
      "href": "../w/r_41jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царя",
+      "lemma": "царь"
+     }
     },
     {
      "form": "putrāḥ",
@@ -2031,7 +2742,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a son; child; a species of small venomous animal; (in astrol.) name of the fifth house; n…",
      "slp1": "putra",
      "href": "../w/putra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сыновья",
+      "lemma": "сын"
+     }
     },
     {
      "form": "ca",
@@ -2041,7 +2756,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "sarvaśaḥ",
@@ -2051,7 +2770,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "wholly; completely; entirely; thoroughly; collectively; altogether; in general; universal…",
      "slp1": "sarvaSas",
      "href": "../w/sarva_53as.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "все",
+      "lemma": "все"
+     }
     }
    ]
   },
@@ -2070,7 +2793,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ее",
+      "lemma": "он"
+     }
     },
     {
      "form": "ratna",
@@ -2080,7 +2807,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a gift; present; goods; wealth; riches; a jewel; gem; treasure; precious stone; anything…",
      "slp1": "ratna",
      "href": "../w/ratna.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сокровище",
+      "lemma": "сокровище"
+     }
     },
     {
      "form": "bhūtām",
@@ -2090,7 +2821,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "славы",
+      "lemma": "будет",
+      "root": "будет"
+     }
     },
     {
      "form": "lokasya",
@@ -2100,7 +2836,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "free or open space; room; place; scope; free motion; intermediate space; a tract; region;…",
      "slp1": "loka",
      "href": "../w/loka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мира",
+      "lemma": "мир"
+     }
     },
     {
      "form": "prārthayanto",
@@ -2108,7 +2848,11 @@ window.READING_DATA["nala-2"] = {
      "upos": "VERB",
      "morph": "Nom Plur Masc Pres",
      "gloss": "to wish or long for; to desire (acc.); to ask a person (acc.) for (acc. or loc.) or ask a…",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "lemma": "домогаться",
+      "root": "домогаться"
+     }
     },
     {
      "form": "mahīkṣitaḥ",
@@ -2118,7 +2862,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king; prince",
      "slp1": "mahIkzit",
      "href": "../w/mah_49kzit.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "владыки земли",
+      "lemma": "царей"
+     }
     }
    ]
   },
@@ -2137,7 +2885,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to wish; to desire; to long for; to hope for (with acc.); to expect; to wait for await (w…",
      "slp1": "kANkz",
      "href": "../w/k_41_4ekz.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "стремятся достичь",
+      "lemma": "желает",
+      "root": "желает"
+     }
     },
     {
      "form": "sma",
@@ -2147,7 +2900,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "ever; always; indeed; certainly",
      "slp1": "sma",
      "href": "../w/sma.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "же",
+      "lemma": "же"
+     }
     },
     {
      "form": "viśeṣeṇa",
@@ -2157,7 +2914,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "especially",
      "slp1": "viSezeRa",
      "href": "../w/vi_53eze_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "особенно",
+      "lemma": "особенно"
+     }
     },
     {
      "form": "bala",
@@ -2167,7 +2928,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "power; strength; might; vigour; force; expertness in; stoutness; troops; an army; semen;…",
      "slp1": "bala",
      "href": "../w/bala.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сила",
+      "lemma": "войско"
+     }
     },
     {
      "form": "vṛtra",
@@ -2177,7 +2942,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of the Vedic personification of an imaginary malignant influence or demon of darknes…",
      "slp1": "vftra",
      "href": "../w/vftra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Вритру",
+      "lemma": "Вритру"
+     }
     },
     {
      "form": "niṣūdanaiḥ",
@@ -2187,7 +2956,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "destroyer; removing; destroying",
      "slp1": "nizUdana",
      "href": "../w/niz_55dana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "уничтожит"
+     }
     }
    ]
   },
@@ -2206,7 +2978,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; [gramm.] the pronoun etad; auf diese Weise",
      "slp1": "etad",
      "href": "../w/etad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "это",
+      "lemma": "это"
+     }
     },
     {
      "form": "kathyamāne",
@@ -2216,7 +2992,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to call; to name; to tell; to designate",
      "slp1": "kaTay",
      "href": "../w/ka_54ay.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "рассказал",
+      "root": "рассказал"
+     }
     },
     {
      "form": "tu",
@@ -2226,7 +3006,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "do; now; then; but; and; or; name of the river Śatadru",
      "slp1": "tu",
      "href": "../w/tu.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "же",
+      "lemma": "же",
+      "root": "же"
+     }
     },
     {
      "form": "lokapālāś",
@@ -2236,7 +3021,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a world-protector; guardian of the world; regent of a quarter of the world; a protector o…",
      "slp1": "lokapAla",
      "href": "../w/lokap_41la.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "Хранители мира"
+     }
     },
     {
      "form": "ca",
@@ -2246,7 +3034,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "sa",
@@ -2256,7 +3048,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "(ibc.) with",
      "slp1": "sa",
      "href": "../w/sa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "он"
+     }
     },
     {
      "form": "agnikāḥ",
@@ -2285,7 +3080,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to come; to make one's appearance; to come near from (abl.) or to (acc. or loc.); to arri…",
      "slp1": "Agam",
      "href": "../w/_41gam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Двинулись",
+      "lemma": "пришел",
+      "root": "пришел"
+     }
     },
     {
      "form": "devarājasya",
@@ -2295,7 +3095,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of Indra; name of a king; name of a Ṛṣi; name of a Buddha; the father of Śārṅgadhara",
      "slp1": "devarAja",
      "href": "../w/devar_41ja.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Царя богов",
+      "lemma": "царь богов"
+     }
     },
     {
      "form": "samīpam",
@@ -2305,7 +3109,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "nearness; proximity; vicinity; presence; imminence",
      "slp1": "samIpa",
      "href": "../w/sam_49pa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "к",
+      "lemma": "к"
+     }
     },
     {
      "form": "amara",
@@ -2315,7 +3123,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a deity; (in arithm.) the number 33; name of a Marut; the plant Euphorbia Tirucalli; the…",
      "slp1": "amara",
      "href": "../w/amara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "бессмертные",
+      "lemma": "бессмертные"
+     }
     },
     {
      "form": "uttamāḥ",
@@ -2325,7 +3137,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "uppermost; highest; chief; most elevated; principal; best; excellent; first; greatest; th…",
      "slp1": "uttama",
      "href": "../w/uttama.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "нежные",
+      "lemma": "высшее"
+     }
     }
    ]
   },
@@ -2344,7 +3160,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "from that; in consequence of that; for that reason; consequently; then; after that",
      "slp1": "tatas",
      "href": "../w/tatas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "тогда",
+      "lemma": "тогда"
+     }
     },
     {
      "form": "tat",
@@ -2354,7 +3174,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "то",
+      "lemma": "он"
+     }
     },
     {
      "form": "śuśruvuḥ",
@@ -2364,7 +3188,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to hear; to listen to; to study",
      "slp1": "Sru",
      "href": "../w/_53ru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "услышали",
+      "lemma": "услышав",
+      "root": "услышав"
+     }
     },
     {
      "form": "sarve",
@@ -2374,7 +3203,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "whole; entire; all; every; of all sorts; manifold; various; different; completely",
      "slp1": "sarva",
      "href": "../w/sarva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "все",
+      "lemma": "все"
+     }
     },
     {
      "form": "nāradasya",
@@ -2384,7 +3217,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of a Rishi; name of a son of Viśvāmitra; name of one of the 24 mythic. Buddhas; name…",
      "slp1": "nArada",
      "href": "../w/n_41rada.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Нарады",
+      "lemma": "Нарада"
+     }
     },
     {
      "form": "vaco",
@@ -2394,7 +3231,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "speech; voice; word; singing; song (of birds); advice; direction; command; an oracular ut…",
      "slp1": "vacas",
      "href": "../w/vacas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "слово",
+      "lemma": "слова"
+     }
     },
     {
      "form": "mahat",
@@ -2404,7 +3245,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "great; large; big; huge; ample; extensive; long; abundant; numerous; considerable; import…",
      "slp1": "mahat",
      "href": "../w/mahat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "великое",
+      "lemma": "великий"
+     }
     }
    ]
   },
@@ -2423,7 +3268,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to hear; to listen to; to study",
      "slp1": "Sru",
      "href": "../w/_53ru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "услышав",
+      "lemma": "услышав",
+      "root": "услышав"
+     }
     },
     {
      "form": "ca",
@@ -2433,7 +3283,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "eva",
@@ -2443,7 +3297,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "so; just so; exactly so (in the sense of the later evam); indeed; truly; really (often at…",
      "slp1": "eva",
      "href": "../w/eva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "именно",
+      "lemma": "именно"
+     }
     },
     {
      "form": "abruvan",
@@ -2453,7 +3311,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to speak; to say; to tell; to speak about any person or thing (acc. with or without prati…",
      "slp1": "brU",
      "href": "../w/br_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сказали",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     },
     {
      "form": "hṛṣṭā",
@@ -2463,7 +3326,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to thrill with rapture; to rejoice; to exult; to be glad or pleased; to become sexually e…",
      "slp1": "hfz",
      "href": "../w/hfz.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "радостно",
+      "lemma": "радостно",
+      "root": "радостно"
+     }
     },
     {
      "form": "gacchāmo",
@@ -2473,7 +3341,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to go; to move; to approach; to understand; to reside (as a disease); to elapse (of time)",
      "slp1": "gam",
      "href": "../w/gam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "отправился",
+      "root": "пришел"
+     }
     },
     {
      "form": "vayam",
@@ -2483,7 +3355,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "I; we",
      "slp1": "mad",
      "href": "../w/mad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мы",
+      "lemma": "я",
+      "root": "я"
+     }
     },
     {
      "form": "api",
@@ -2493,7 +3370,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "также",
+      "lemma": "также"
+     }
     },
     {
      "form": "uta",
@@ -2503,7 +3384,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "and; also; even; or",
      "slp1": "uta",
      "href": "../w/uta.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -2522,7 +3407,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "from that; in consequence of that; for that reason; consequently; then; after that",
      "slp1": "tatas",
      "href": "../w/tatas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "тогда",
+      "lemma": "тогда"
+     }
     },
     {
      "form": "sarve",
@@ -2532,7 +3421,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "whole; entire; all; every; of all sorts; manifold; various; different; completely",
      "slp1": "sarva",
      "href": "../w/sarva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "все",
+      "lemma": "все"
+     }
     },
     {
      "form": "mahā",
@@ -2542,7 +3435,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "great; large; big; huge; ample; extensive; long; abundant; numerous; considerable; import…",
      "slp1": "mahat",
      "href": "../w/mahat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "великий",
+      "lemma": "великий"
+     }
     },
     {
      "form": "rājaiḥ",
@@ -2552,7 +3449,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "= 1. rājan; a king; sovereign; chief or best of its kind",
      "slp1": "rAja",
      "href": "../w/r_41ja.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "царь"
+     }
     },
     {
      "form": "sa",
@@ -2562,7 +3462,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "(ibc.) with",
      "slp1": "sa",
      "href": "../w/sa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "он"
+     }
     },
     {
      "form": "gaṇāḥ",
@@ -2572,7 +3475,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a flock; troop; multitude; number; tribe; series; class (of animate or inanimate beings);…",
      "slp1": "gaRa",
      "href": "../w/ga_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сонмы",
+      "lemma": "сонмы"
+     }
     },
     {
      "form": "saha",
@@ -2582,7 +3489,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "together with; along with; with",
      "slp1": "saha",
      "href": "../w/saha.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "с",
+      "lemma": "с"
+     }
     },
     {
      "form": "vāhanāḥ",
@@ -2592,7 +3503,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "the act of drawing; bearing; carrying; conveying; driving; riding; guiding (horses); any…",
      "slp1": "vAhana",
      "href": "../w/v_41hana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "на конях",
+      "lemma": "упряжных животных"
+     }
     }
    ]
   },
@@ -2611,7 +3526,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of a country south of the Vindhya hills (now called Berar); a king of Vidarbha; a pa…",
      "slp1": "vidarBa",
      "href": "../w/vidar_42a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "страны видарбхов",
+      "lemma": "Видарбху"
+     }
     },
     {
      "form": "abhito",
@@ -2621,7 +3540,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "near to; towards; near; in the proximity or presence of (gen.); (with acc.) on both sides…",
      "slp1": "aBitas",
      "href": "../w/a_42itas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "вокруг",
+      "lemma": "вокруг",
+      "root": "вокруг"
+     }
     },
     {
      "form": "jagmur",
@@ -2631,7 +3555,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to go; to move; to approach; to understand; to reside (as a disease); to elapse (of time)",
      "slp1": "gam",
      "href": "../w/gam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "шли",
+      "lemma": "отправился",
+      "root": "пришел"
+     }
     },
     {
      "form": "yatra",
@@ -2641,7 +3570,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "where; wherein; wherever; whither",
      "slp1": "yatra",
      "href": "../w/yatra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "где",
+      "lemma": "где"
+     }
     },
     {
      "form": "sarve",
@@ -2651,7 +3584,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "whole; entire; all; every; of all sorts; manifold; various; different; completely",
      "slp1": "sarva",
      "href": "../w/sarva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "все",
+      "lemma": "все"
+     }
     },
     {
      "form": "mahīkṣitaḥ",
@@ -2661,7 +3598,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king; prince",
      "slp1": "mahIkzit",
      "href": "../w/mah_49kzit.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "владыки земли",
+      "lemma": "царей"
+     }
     }
    ]
   },
@@ -2680,7 +3621,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a species of reed; Amphidonax Karka (8-12 feet high); a measure of length; a particular f…",
      "slp1": "nala",
      "href": "../w/nala.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Нала",
+      "lemma": "Нала"
+     }
     },
     {
      "form": "'pi",
@@ -2690,7 +3635,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "также"
+     }
     },
     {
      "form": "rājā",
@@ -2700,7 +3649,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king; sovereign; prince; chief (often applied to gods); a man of the royal tribe or the…",
      "slp1": "rAjan",
      "href": "../w/r_41jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царь",
+      "lemma": "царь"
+     }
     },
     {
      "form": "kaunteya",
@@ -2720,7 +3673,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to hear; to listen to; to study",
      "slp1": "Sru",
      "href": "../w/_53ru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "услышав",
+      "lemma": "услышав",
+      "root": "услышав"
+     }
     },
     {
      "form": "rājñāṃ",
@@ -2730,7 +3688,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king; sovereign; prince; chief (often applied to gods); a man of the royal tribe or the…",
      "slp1": "rAjan",
      "href": "../w/r_41jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царей",
+      "lemma": "царь"
+     }
     },
     {
      "form": "samāgamam",
@@ -2740,7 +3702,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "coming together (either in a hostile or friendly manner); union; junction; encounter or m…",
      "slp1": "samAgama",
      "href": "../w/sam_41gama.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о встрече",
+      "lemma": "встреча"
+     }
     }
    ]
   },
@@ -2759,7 +3725,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to go near to; to approach; to follow; to cohabit; to undertake; to obtain",
      "slp1": "aBigam",
      "href": "../w/a_42igam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "явился",
+      "root": "пришел"
+     }
     },
     {
      "form": "a",
@@ -2769,7 +3739,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "[gramm.] the sound a; eh bien!; (ibc., negating particle); [gramm.] the root han; [gramm.…",
      "slp1": "a",
      "href": "../w/a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о",
+      "lemma": "о"
+     }
     },
     {
      "form": "dīna",
@@ -2779,7 +3753,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "scarce; scanty; depressed; afflicted; timid; sad; miserable; wretched; seicht (Wasser)",
      "slp1": "dIna",
      "href": "../w/d_49na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "несчастный",
+      "lemma": "несчастный"
+     }
     },
     {
      "form": "ātmā",
@@ -2789,7 +3767,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "the breath; the soul; principle of life and sensation; the individual soul; self; abstrac…",
      "slp1": "Atman",
      "href": "../w/_41tman.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Атман",
+      "lemma": "себя"
+     }
     },
     {
      "form": "damayantīm",
@@ -2799,7 +3781,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of Nala's wife (daughter of Bhīma king of Vidarbha); a kind of jasmine",
      "slp1": "damayantI",
      "href": "../w/damayant_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Дамаянти",
+      "lemma": "Дамаянти"
+     }
     },
     {
      "form": "anuvrataḥ",
@@ -2809,7 +3795,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "devoted to; faithful to; ardently attached to (with gen. or acc.)",
      "slp1": "anuvrata",
      "href": "../w/anuvrata.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "предан",
+      "lemma": "верна"
+     }
     }
    ]
   },
@@ -2828,7 +3818,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "an auspicious and inceptive particle (not easily expressed in English); now; then; moreov…",
      "slp1": "aTa",
      "href": "../w/a_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "devāḥ",
@@ -2838,7 +3832,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a deity; god; (rarely applied to) evil demons; the gods as the heavenly or shining ones;…",
      "slp1": "deva",
      "href": "../w/deva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "боги",
+      "lemma": "боги"
+     }
     },
     {
      "form": "pathi",
@@ -2848,7 +3846,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a road; a way",
      "slp1": "paTin",
      "href": "../w/pa_54in.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "на пути",
+      "lemma": "путь"
+     }
     },
     {
      "form": "nalaṃ",
@@ -2858,7 +3860,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a species of reed; Amphidonax Karka (8-12 feet high); a measure of length; a particular f…",
      "slp1": "nala",
      "href": "../w/nala.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Налу",
+      "lemma": "Нала"
+     }
     },
     {
      "form": "dadṛśur",
@@ -2868,7 +3874,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to behold; to look at; to regard; to consider; to see; to wait on; to visit; to see with…",
      "slp1": "dfS",
      "href": "../w/df_53.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "оглядывали",
+      "lemma": "увидев",
+      "root": "увидев"
+     }
     },
     {
      "form": "bhū",
@@ -2878,7 +3889,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "будет",
+      "lemma": "будет",
+      "root": "будет"
+     }
     },
     {
      "form": "tale",
@@ -2888,7 +3904,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "surface; level; flat roof (of a house); the part underneath; lower part; base; bottom; th…",
      "slp1": "tala",
      "href": "../w/tala.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "на",
+      "lemma": "на"
+     }
     },
     {
      "form": "sthitam",
@@ -2898,7 +3918,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to stand; to station one's self; to get upon; to stay; to remain; to be intent upon; to k…",
      "slp1": "sTA",
      "href": "../w/s_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "стоящего",
+      "lemma": "пребывает",
+      "root": "пребывает"
+     }
     }
    ]
   },
@@ -2917,7 +3942,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "with the eyes; with one's own eyes; before one's eyes; evidently; clearly; openly; manife…",
      "slp1": "sAkzAt",
      "href": "../w/s_41kz_41t.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "воплощенная",
+      "lemma": "воочию"
+     }
     },
     {
      "form": "iva",
@@ -2927,7 +3956,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "like; in the same manner as (in this sense = yathā); as it were; as if; in a certain mann…",
      "slp1": "iva",
      "href": "../w/iva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     },
     {
      "form": "sthitaṃ",
@@ -2937,7 +3970,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to stand; to station one's self; to get upon; to stay; to remain; to be intent upon; to k…",
      "slp1": "sTA",
      "href": "../w/s_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "утверждено",
+      "lemma": "пребывает",
+      "root": "пребывает"
+     }
     },
     {
      "form": "mūrtyā",
@@ -2947,7 +3985,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "any solid body or material form; embodiment; manifestation; incarnation; personification…",
      "slp1": "mUrti",
      "href": "../w/m_55rti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "воплощение"
+     }
     },
     {
      "form": "manmathaṃ",
@@ -2957,7 +3998,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "love or the god of love; amorous passion or desire; Feronia Elephantum; the 29th (3rd) ye…",
      "slp1": "manmaTa",
      "href": "../w/manma_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "Манматха"
+     }
     },
     {
      "form": "rūpa",
@@ -2967,7 +4011,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "any outward appearance or phenomenon or colour (often pl.); form; shape; phantom shapes;…",
      "slp1": "rUpa",
      "href": "../w/r_55pa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "образ",
+      "lemma": "образ"
+     }
     },
     {
      "form": "saṃpadā",
@@ -2977,7 +4025,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "success; accomplishment; completion; fulfilment; perfection; a condition or requisite of…",
      "slp1": "sampad",
      "href": "../w/sampad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "стал",
+      "root": "достигает"
+     }
     }
    ]
   },
@@ -2996,7 +4048,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "его",
+      "lemma": "он"
+     }
     },
     {
      "form": "dṛṣṭvā",
@@ -3006,7 +4062,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to behold; to look at; to regard; to consider; to see; to wait on; to visit; to see with…",
      "slp1": "dfS",
      "href": "../w/df_53.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "увидев",
+      "lemma": "увидев",
+      "root": "увидев"
+     }
     },
     {
      "form": "lokapālās",
@@ -3016,7 +4077,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a world-protector; guardian of the world; regent of a quarter of the world; a protector o…",
      "slp1": "lokapAla",
      "href": "../w/lokap_41la.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "Хранители мира"
+     }
     },
     {
      "form": "te",
@@ -3026,7 +4090,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "тебе",
+      "lemma": "он"
+     }
     },
     {
      "form": "bhrājamānaṃ",
@@ -3036,7 +4104,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to shine; to beam; to sparkle; to glitter; to be of no account",
      "slp1": "BrAj",
      "href": "../w/_42r_41j.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "лучезарного",
+      "lemma": "сверкающие",
+      "root": "сверкающие"
+     }
     },
     {
      "form": "yathā",
@@ -3046,7 +4119,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "according; as; like; as",
      "slp1": "yaTA",
      "href": "../w/ya_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     },
     {
      "form": "ravim",
@@ -3056,7 +4133,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a particular form of the sun (sometimes regarded as one of the 12 Ādityas); the sun (in g…",
      "slp1": "ravi",
      "href": "../w/ravi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "солнце",
+      "lemma": "солнце"
+     }
     }
    ]
   },
@@ -3075,7 +4156,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to stand; to station one's self; to get upon; to stay; to remain; to be intent upon; to k…",
      "slp1": "sTA",
      "href": "../w/s_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "следовали",
+      "lemma": "пребывает",
+      "root": "пребывает"
+     }
     },
     {
      "form": "vigata",
@@ -3085,7 +4171,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to go asunder; to sever; to separate; to go away; to depart; to disappear; to cease; to d…",
      "slp1": "vigam",
      "href": "../w/vigam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "оставив",
+      "lemma": "рассеяла",
+      "root": "пришел"
+     }
     },
     {
      "form": "saṃkalpāḥ",
@@ -3095,7 +4186,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "conception or idea or notion formed in the mind or heart; will; volition; desire; purpose…",
      "slp1": "saMkalpa",
      "href": "../w/sa_4dkalpa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "решения",
+      "lemma": "воля"
+     }
     },
     {
      "form": "vismitā",
@@ -3105,7 +4200,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to wonder; to be surprised or astonished at (instr); to be proud of (instr.); to astonish…",
      "slp1": "vismi",
      "href": "../w/vismi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "изумленная",
+      "lemma": "изумленные",
+      "root": "улыбаясь"
+     }
     },
     {
      "form": "rūpa",
@@ -3115,7 +4215,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "any outward appearance or phenomenon or colour (often pl.); form; shape; phantom shapes;…",
      "slp1": "rUpa",
      "href": "../w/r_55pa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "образ",
+      "lemma": "образ"
+     }
     },
     {
      "form": "saṃpadā",
@@ -3125,7 +4229,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "success; accomplishment; completion; fulfilment; perfection; a condition or requisite of…",
      "slp1": "sampad",
      "href": "../w/sampad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "стал",
+      "root": "достигает"
+     }
     }
    ]
   },
@@ -3144,7 +4252,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "from that; in consequence of that; for that reason; consequently; then; after that",
      "slp1": "tatas",
      "href": "../w/tatas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "тогда",
+      "lemma": "тогда"
+     }
     },
     {
      "form": "'ntarikṣe",
@@ -3154,7 +4266,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "the intermediate space between heaven and earth; (in the Veda) the middle of the three sp…",
      "slp1": "antarikza",
      "href": "../w/antarikza.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "воздушное пространство"
+     }
     },
     {
      "form": "viṣṭabhya",
@@ -3164,7 +4279,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to fix asunder; to hold or keep apart; to prop; to fix; to fasten; to support; to strengt…",
      "slp1": "vizwamB",
      "href": "../w/vizwam_42.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Поддерживая",
+      "lemma": "Поддерживая",
+      "root": "Поддерживая"
+     }
     },
     {
      "form": "vimānāni",
@@ -3174,7 +4294,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a car or chariot of the gods; any mythical self-moving aerial car; any car or vehicle (es…",
      "slp1": "vimAna",
      "href": "../w/vim_41na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дворцы",
+      "lemma": "колесница"
+     }
     },
     {
      "form": "divaukasaḥ",
@@ -3203,7 +4327,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to speak; to say; to tell; to speak about any person or thing (acc. with or without prati…",
      "slp1": "brU",
      "href": "../w/br_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сказали",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     },
     {
      "form": "naiṣadhaṃ",
@@ -3223,7 +4352,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king; sovereign; prince; chief (often applied to gods); a man of the royal tribe or the…",
      "slp1": "rAjan",
      "href": "../w/r_41jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царь",
+      "lemma": "царь"
+     }
     },
     {
      "form": "avatīrya",
@@ -3231,7 +4364,12 @@ window.READING_DATA["nala-2"] = {
      "upos": "VERB",
      "morph": "",
      "gloss": "to overcome; to overpower; to descend into; to alight from; to descend in becoming incarn…",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "surface": "сойдя",
+      "lemma": "сойдя",
+      "root": "сойдя"
+     }
     },
     {
      "form": "nabhastalāt",
@@ -3241,7 +4379,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "firmament; name of the 10th solar mansion",
      "slp1": "naBastala",
      "href": "../w/na_42astala.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "с небес",
+      "lemma": "небосвод"
+     }
     }
    ]
   },
@@ -3260,7 +4402,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "hoiho!!; sir!",
      "slp1": "Bo",
      "href": "../w/_42o.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о",
+      "lemma": "о"
+     }
     },
     {
      "form": "bho",
@@ -3270,7 +4416,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "hoiho!!; sir!",
      "slp1": "Bo",
      "href": "../w/_42o.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о",
+      "lemma": "о"
+     }
     },
     {
      "form": "naiṣadha",
@@ -3290,7 +4440,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king; sovereign; prince; chief (often applied to gods); a man of the royal tribe or the…",
      "slp1": "rAjan",
      "href": "../w/r_41jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царя",
+      "lemma": "царь"
+     }
     },
     {
      "form": "indraiḥ",
@@ -3300,7 +4454,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "the god of the atmosphere and sky; the Indian Jupiter Pluvius or lord of rain (who in Ved…",
      "slp1": "indra",
      "href": "../w/indra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "Индра"
+     }
     },
     {
      "form": "nala",
@@ -3310,7 +4467,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a species of reed; Amphidonax Karka (8-12 feet high); a measure of length; a particular f…",
      "slp1": "nala",
      "href": "../w/nala.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Нала",
+      "lemma": "Нала"
+     }
     },
     {
      "form": "satya",
@@ -3320,7 +4481,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "true; real; actual; genuine; sincere; honest; truthful; faithful; pure; virtuous; good; e…",
      "slp1": "satya",
      "href": "../w/satya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "правду",
+      "lemma": "правду"
+     }
     },
     {
      "form": "vrataḥ",
@@ -3330,7 +4495,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "will; command; law; ordinance; rule; obedience; service; dominion; realm; sphere of actio…",
      "slp1": "vrata",
      "href": "../w/vrata.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "обету",
+      "lemma": "обет"
+     }
     },
     {
      "form": "bhavān",
@@ -3340,7 +4509,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "your honour; your worship; your lordship or ladyship; you (lit. \"the gentleman or lady pr…",
      "slp1": "Bavat",
      "href": "../w/_42avat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ты",
+      "lemma": "ты"
+     }
     }
    ]
   },
@@ -3359,7 +4532,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "I; we",
      "slp1": "mad",
      "href": "../w/mad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "нам",
+      "lemma": "я",
+      "root": "я"
+     }
     },
     {
      "form": "kuru",
@@ -3369,7 +4547,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to make like or similar; to consider equivalent; to reduce anything to; to cause to becom…",
      "slp1": "kf",
      "href": "../w/kf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "куру",
+      "lemma": "сделал",
+      "root": "сделал"
+     }
     },
     {
      "form": "sāhāyyaṃ",
@@ -3379,7 +4562,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "help; succour; friendship; fellowship; alliance; (in dram.) helping another in danger",
      "slp1": "sAhAyya",
      "href": "../w/s_41h_41yya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "помощь"
+     }
     },
     {
      "form": "dūto",
@@ -3389,7 +4575,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a messenger; envoy; ambassador",
      "slp1": "dUta",
      "href": "../w/d_55ta.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "вестником",
+      "lemma": "вестник"
+     }
     },
     {
      "form": "bhava",
@@ -3399,7 +4589,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "будь",
+      "lemma": "будет",
+      "root": "будет"
+     }
     },
     {
      "form": "nara",
@@ -3409,7 +4604,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a man; a male; a person; husband; hero; a man or piece at chess or draughts; the pin or g…",
      "slp1": "nara",
      "href": "../w/nara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "человек",
+      "lemma": "человек"
+     }
     },
     {
      "form": "uttamaiḥ",
@@ -3419,7 +4618,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "uppermost; highest; chief; most elevated; principal; best; excellent; first; greatest; th…",
      "slp1": "uttama",
      "href": "../w/uttama.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "высшее"
+     }
     }
    ]
   },
@@ -3438,7 +4640,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "rising or tending upwards; raised; elevated; erected; erect; upright; high; above",
      "slp1": "UrDva",
      "href": "../w/_55r_44va.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "вверх",
+      "lemma": "вверх"
+     }
     },
     {
      "form": "dṛṣṭiḥ",
@@ -3448,7 +4654,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "seeing; viewing; beholding; sight; the faculty of seeing; the mind's eye; wisdom; intelli…",
      "slp1": "dfzwi",
      "href": "../w/dfzwi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "взгляд",
+      "lemma": "взгляд"
+     }
     },
     {
      "form": "dhyāna",
@@ -3458,7 +4668,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "meditation; thought; reflection; profound and abstract religious meditation; [medic.] Gef…",
      "slp1": "DyAna",
      "href": "../w/_44y_41na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "созерцание",
+      "lemma": "созерцание"
+     }
     },
     {
      "form": "parā",
@@ -3468,7 +4682,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "far; remote; opposite; previous; ancient; following; final; exceeding; better or worse th…",
      "slp1": "para",
      "href": "../w/para.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "прочь",
+      "lemma": "высшее"
+     }
     },
     {
      "form": "babhūva",
@@ -3478,7 +4696,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "стал",
+      "lemma": "будет",
+      "root": "будет"
+     }
     },
     {
      "form": "unmatta",
@@ -3488,7 +4711,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to become disordered in intellect or distracted; to be or become mad or furious; to rut",
      "slp1": "unmad",
      "href": "../w/unmad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "безумный",
+      "lemma": "безумный",
+      "root": "я"
+     }
     },
     {
      "form": "darśanā",
@@ -3498,7 +4726,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "seeing; observing; looking; noticing; observation; perception; ocular perception; the eye…",
      "slp1": "darSana",
      "href": "../w/dar_53ana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "жена",
+      "lemma": "видение"
+     }
     }
    ]
   },
@@ -3517,7 +4749,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "śayyā",
@@ -3527,7 +4763,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a bed; couch; sofa; lying; reposing; sleeping; resort; refuge; stringing together (esp. o…",
      "slp1": "SayyA",
      "href": "../w/_53ayy_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ложе",
+      "lemma": "ложе"
+     }
     },
     {
      "form": "āsana",
@@ -3537,7 +4777,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "sitting; sitting down; sitting in peculiar posture according to the custom of devotees; h…",
      "slp1": "Asana",
      "href": "../w/_41sana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сиденье",
+      "lemma": "сиденье"
+     }
     },
     {
      "form": "bhogeṣu",
@@ -3547,7 +4791,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "enjoyment; eating; feeding on; possession; use; benefit",
      "slp1": "Boga",
      "href": "../w/_42oga.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "к усладам",
+      "lemma": "наслаждения"
+     }
     },
     {
      "form": "ratiṃ",
@@ -3557,7 +4805,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "rest; repose; pleasure; enjoyment; delight in; fondness for; the pleasure of love; sexual…",
      "slp1": "rati",
      "href": "../w/rati.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "радость"
+     }
     },
     {
      "form": "vindati",
@@ -3567,7 +4818,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to find; to discover; to meet or fall in with; to obtain; to get; to acquire; to partake…",
      "slp1": "vid",
      "href": "../w/vid.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "обретает",
+      "lemma": "знает",
+      "root": "знает"
+     }
     },
     {
      "form": "karhicit",
@@ -3577,7 +4833,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "at any time",
      "slp1": "karhicit",
      "href": "../w/karhicit.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "никогда",
+      "lemma": "никогда"
+     }
     }
    ]
   },
@@ -3596,7 +4856,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "naktaṃ",
@@ -3606,7 +4870,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "night; eating only at night (as a sort of penance)",
      "slp1": "nakta",
      "href": "../w/nakta.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ночью",
+      "lemma": "ночью"
+     }
     },
     {
      "form": "na",
@@ -3616,7 +4884,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "divā",
@@ -3626,7 +4898,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "by day (often opposed to naktam)",
      "slp1": "divA",
      "href": "../w/div_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "днем",
+      "lemma": "днем"
+     }
     },
     {
      "form": "śete",
@@ -3636,7 +4912,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to lay down; to fall asleep",
      "slp1": "SI",
      "href": "../w/_53_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "лежит",
+      "lemma": "лежит",
+      "root": "лежит"
+     }
     },
     {
      "form": "hā",
@@ -3646,7 +4927,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a kind of bīja; a kind of exclamation (au wacker)",
      "slp1": "hA",
      "href": "../w/h_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о",
+      "lemma": "оставив",
+      "root": "оставив"
+     }
     },
     {
      "form": "hā",
@@ -3656,7 +4942,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a kind of bīja; a kind of exclamation (au wacker)",
      "slp1": "hA",
      "href": "../w/h_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о",
+      "lemma": "оставив",
+      "root": "оставив"
+     }
     },
     {
      "form": "iti",
@@ -3666,7 +4957,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "in this manner; thus (in its original signification iti refers to something that has been…",
      "slp1": "iti",
      "href": "../w/iti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "vadatī",
@@ -3676,7 +4971,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to speak; to say; to tell; to talk with; to address; to recommend; to adjudge; to designa…",
      "slp1": "vad",
      "href": "../w/vad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "твердила",
+      "lemma": "говорят",
+      "root": "говорят"
+     }
     },
     {
      "form": "muhuḥ",
@@ -3686,7 +4986,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "suddenly; at once; in a moment (often with a following \u0013); for a moment; a while; at ever…",
      "slp1": "muhur",
      "href": "../w/muhur.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "поминутно",
+      "lemma": "то и дело"
+     }
     }
    ]
   },
@@ -3705,7 +5009,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ее",
+      "lemma": "он"
+     }
     },
     {
      "form": "asvasthāṃ",
@@ -3715,7 +5023,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "sick; feeling uneasy; not being firm in itself",
      "slp1": "asvasTa",
      "href": "../w/asvas_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "неспокойный"
+     }
     },
     {
      "form": "tad",
@@ -3725,7 +5036,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "то",
+      "lemma": "он"
+     }
     },
     {
      "form": "ākārām",
@@ -3735,7 +5050,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "form; figure; shape; stature; appearance; external gesture or aspect of the body; express…",
      "slp1": "AkAra",
      "href": "../w/_41k_41ra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "поведение",
+      "lemma": "видом"
+     }
     },
     {
      "form": "sakhyas",
@@ -3745,7 +5064,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a female friend or companion; a woman's confidante; a mistress; a woman who shares in or…",
      "slp1": "saKI",
      "href": "../w/sa_4b_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "подруга"
+     }
     },
     {
      "form": "tā",
@@ -3755,7 +5077,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "эти",
+      "lemma": "он"
+     }
     },
     {
      "form": "jajñur",
@@ -3765,7 +5091,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to come into existence; to grow (as plants); to be born as; to be by birth or nature; to…",
      "slp1": "jan",
      "href": "../w/jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "родился",
+      "root": "родился"
+     }
     },
     {
      "form": "iṅgitaiḥ",
@@ -3775,7 +5105,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "palpitation; change of the voice; internal motion; motion of various parts of the body as…",
      "slp1": "iNgita",
      "href": "../w/i_4egita.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "движениям"
+     }
     }
    ]
   },
@@ -3794,7 +5127,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "from that; in consequence of that; for that reason; consequently; then; after that",
      "slp1": "tatas",
      "href": "../w/tatas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "тогда",
+      "lemma": "тогда"
+     }
     },
     {
      "form": "vidarbha",
@@ -3804,7 +5141,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of a country south of the Vindhya hills (now called Berar); a king of Vidarbha; a pa…",
      "slp1": "vidarBa",
      "href": "../w/vidar_42a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Видарбху",
+      "lemma": "Видарбху"
+     }
     },
     {
      "form": "pataye",
@@ -3814,7 +5155,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "husband; master; lord; ruler; [medic.] = adhipa; a marman on the top of the head; [gramm.…",
      "slp1": "pati",
      "href": "../w/pati.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "господина",
+      "lemma": "мужа"
+     }
     },
     {
      "form": "damayantyāḥ",
@@ -3824,7 +5169,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of Nala's wife (daughter of Bhīma king of Vidarbha); a kind of jasmine",
      "slp1": "damayantI",
      "href": "../w/damayant_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Дамаянти",
+      "lemma": "Дамаянти"
+     }
     },
     {
      "form": "sakhī",
@@ -3834,7 +5183,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a female friend or companion; a woman's confidante; a mistress; a woman who shares in or…",
      "slp1": "saKI",
      "href": "../w/sa_4b_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "подруга",
+      "lemma": "подруга"
+     }
     },
     {
      "form": "gaṇaḥ",
@@ -3844,7 +5197,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a flock; troop; multitude; number; tribe; series; class (of animate or inanimate beings);…",
      "slp1": "gaRa",
      "href": "../w/ga_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "стая",
+      "lemma": "сонмы"
+     }
     }
    ]
   },
@@ -3861,7 +5218,12 @@ window.READING_DATA["nala-2"] = {
      "upos": "VERB",
      "morph": "Sing p3 Impf Ind",
      "gloss": "to offer; to present; to give; to introduce one's self; to signify; to teach; to notify s…",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "surface": "Рассказал",
+      "lemma": "поведал",
+      "root": "поведал"
+     }
     },
     {
      "form": "na",
@@ -3871,7 +5233,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "svasthāṃ",
@@ -3881,7 +5247,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "self-abiding; being in one's natural state; unmolested; sound well; healthy; at ease; con…",
      "slp1": "svasTa",
      "href": "../w/svas_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "здоров"
+     }
     },
     {
      "form": "damayantīṃ",
@@ -3891,7 +5260,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of Nala's wife (daughter of Bhīma king of Vidarbha); a kind of jasmine",
      "slp1": "damayantI",
      "href": "../w/damayant_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Дамаянти",
+      "lemma": "Дамаянти"
+     }
     },
     {
      "form": "nareśvara",
@@ -3901,7 +5274,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king; name of an author",
      "slp1": "nareSvara",
      "href": "../w/nare_53vara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "владыка людей",
+      "lemma": "владыка людей"
+     }
     }
    ]
   },
@@ -3920,7 +5297,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "то",
+      "lemma": "он"
+     }
     },
     {
      "form": "śrutvā",
@@ -3930,7 +5311,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to hear; to listen to; to study",
      "slp1": "Sru",
      "href": "../w/_53ru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "услышав",
+      "lemma": "услышав",
+      "root": "услышав"
+     }
     },
     {
      "form": "nṛpatir",
@@ -3940,7 +5326,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "king; prince; sovereign; name of Kubera",
      "slp1": "nfpati",
      "href": "../w/nfpati.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царь",
+      "lemma": "царь"
+     }
     },
     {
      "form": "bhīmo",
@@ -3950,7 +5340,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "Rumex Vesicarius; name of Rudra-Śiva; name of one of the 8 forms of Śiva; name of one of…",
      "slp1": "BIma",
      "href": "../w/_42_49ma.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Бхима",
+      "lemma": "Бхима"
+     }
     },
     {
      "form": "damayantī",
@@ -3960,7 +5354,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of Nala's wife (daughter of Bhīma king of Vidarbha); a kind of jasmine",
      "slp1": "damayantI",
      "href": "../w/damayant_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Дамаянти",
+      "lemma": "Дамаянти"
+     }
     },
     {
      "form": "sakhī",
@@ -3970,7 +5368,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a female friend or companion; a woman's confidante; a mistress; a woman who shares in or…",
      "slp1": "saKI",
      "href": "../w/sa_4b_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "подруга",
+      "lemma": "подруга"
+     }
     },
     {
      "form": "gaṇāt",
@@ -3980,7 +5382,10 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a flock; troop; multitude; number; tribe; series; class (of animate or inanimate beings);…",
      "slp1": "gaRa",
      "href": "../w/ga_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "сонмы"
+     }
     }
    ]
   },
@@ -3997,7 +5402,12 @@ window.READING_DATA["nala-2"] = {
      "upos": "VERB",
      "morph": "Sing p3 Past Ind",
      "gloss": "to think; to have a thought or idea; to reflect; to consider; to think about; to reflect…",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "surface": "подумал",
+      "lemma": "подумал",
+      "root": "подумал"
+     }
     },
     {
      "form": "tat",
@@ -4007,7 +5417,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "то",
+      "lemma": "он"
+     }
     },
     {
      "form": "kāryaṃ",
@@ -4017,7 +5431,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "work or business to be done; duty; affair; a religious action or performance; occupation;…",
      "slp1": "kArya",
      "href": "../w/k_41rya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дело",
+      "lemma": "дело"
+     }
     },
     {
      "form": "su",
@@ -4027,7 +5445,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "[ibc.] good-; [ibc.] very; quite; fein",
      "slp1": "su",
      "href": "../w/su.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "хорошенько",
+      "lemma": "выжимающего",
+      "root": "выжимающего"
+     }
     },
     {
      "form": "mahat",
@@ -4037,7 +5460,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "great; large; big; huge; ample; extensive; long; abundant; numerous; considerable; import…",
      "slp1": "mahat",
      "href": "../w/mahat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "великое",
+      "lemma": "великий"
+     }
     },
     {
      "form": "svāṃ",
@@ -4047,7 +5474,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "own; one's own; related; akin",
      "slp1": "sva",
      "href": "../w/sva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "свою",
+      "lemma": "свой"
+     }
     },
     {
      "form": "sutāṃ",
@@ -4057,7 +5488,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a daughter; the plant Alhagi Maurorum",
      "slp1": "sutA",
      "href": "../w/sut_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "выжатым (сокам)",
+      "lemma": "дочь"
+     }
     },
     {
      "form": "prati",
@@ -4067,7 +5502,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "near to; against; in opposition to; back; again; in return; down upon; upon; on; towards;…",
      "slp1": "prati",
      "href": "../w/prati.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "к",
+      "lemma": "к"
+     }
     }
    ]
   },
@@ -4086,7 +5525,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "он",
+      "lemma": "он"
+     }
     },
     {
      "form": "samīkṣya",
@@ -4096,7 +5539,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to look at or inspect thoroughly; to investigate closely; to view; to perceive; to become…",
      "slp1": "samIkz",
      "href": "../w/sam_49kz.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "увидев",
+      "lemma": "увидев",
+      "root": "увидев"
+     }
     },
     {
      "form": "mahīpālaḥ",
@@ -4106,7 +5554,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king; name of various princes",
      "slp1": "mahIpAla",
      "href": "../w/mah_49p_41la.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царь",
+      "lemma": "хранитель земли"
+     }
     },
     {
      "form": "svāṃ",
@@ -4116,7 +5568,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "own; one's own; related; akin",
      "slp1": "sva",
      "href": "../w/sva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "свою",
+      "lemma": "свой"
+     }
     },
     {
      "form": "sutāṃ",
@@ -4126,7 +5582,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a daughter; the plant Alhagi Maurorum",
      "slp1": "sutA",
      "href": "../w/sut_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "выжатым (сокам)",
+      "lemma": "дочь"
+     }
     },
     {
      "form": "prāpta",
@@ -4136,7 +5596,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to attain to; to reach; to arrive at; to meet with; to find; to obtain; to receive; to in…",
      "slp1": "prAp",
      "href": "../w/pr_41p.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "достиг",
+      "lemma": "достигнув",
+      "root": "достигает"
+     }
     },
     {
      "form": "yauvanām",
@@ -4165,7 +5630,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to see; to see with the spiritual eye; to compose; to consider; to examine; to foresee",
      "slp1": "paS",
      "href": "../w/pa_53.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "смотрел",
+      "lemma": "вижу",
+      "root": "вижу"
+     }
     },
     {
      "form": "ātmanaḥ",
@@ -4175,7 +5645,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "the breath; the soul; principle of life and sensation; the individual soul; self; abstrac…",
      "slp1": "Atman",
      "href": "../w/_41tman.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "себя",
+      "lemma": "себя"
+     }
     },
     {
      "form": "kāryaṃ",
@@ -4185,7 +5659,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "work or business to be done; duty; affair; a religious action or performance; occupation;…",
      "slp1": "kArya",
      "href": "../w/k_41rya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дело",
+      "lemma": "дело"
+     }
     },
     {
      "form": "damayantyāḥ",
@@ -4195,7 +5673,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of Nala's wife (daughter of Bhīma king of Vidarbha); a kind of jasmine",
      "slp1": "damayantI",
      "href": "../w/damayant_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Дамаянти",
+      "lemma": "Дамаянти"
+     }
     },
     {
      "form": "svayaṃvaram",
@@ -4205,7 +5687,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "the election of a husband by a princess or daughter of a Kṣatriya; self-choice",
      "slp1": "svayaMvara",
      "href": "../w/svaya_4dvara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сваямваре",
+      "lemma": "сваямвара"
+     }
     }
    ]
   },
@@ -4224,7 +5710,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "он",
+      "lemma": "он"
+     }
     },
     {
      "form": "saṃnipātayāmāsa",
@@ -4232,7 +5722,11 @@ window.READING_DATA["nala-2"] = {
      "upos": "VERB",
      "morph": "Sing p3 Past Ind",
      "gloss": "to cause to come together; to join; to unite; to assemble; to convoke; to stretch out (a…",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "lemma": "призвал",
+      "root": "повержен"
+     }
     },
     {
      "form": "mahīpālān",
@@ -4242,7 +5736,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king; name of various princes",
      "slp1": "mahIpAla",
      "href": "../w/mah_49p_41la.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царю",
+      "lemma": "хранитель земли"
+     }
     },
     {
      "form": "viśāṃ",
@@ -4252,7 +5750,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to enter; to enter in or settle down on; to go into; to pervade; to enter (a house etc.);…",
      "slp1": "viS",
      "href": "../w/vi_53.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "племен",
+      "lemma": "племен",
+      "root": "вошел"
+     }
     },
     {
      "form": "pate",
@@ -4262,7 +5765,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "husband; master; lord; ruler; [medic.] = adhipa; a marman on the top of the head; [gramm.…",
      "slp1": "pati",
      "href": "../w/pati.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "владыка",
+      "lemma": "мужа"
+     }
     }
    ]
   },
@@ -4281,7 +5788,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to enclose; to embrace; to be after; to attain; to equal; to be useful; to help; to turn…",
      "slp1": "anuBU",
      "href": "../w/anu_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "приходите",
+      "lemma": "подвержено",
+      "root": "будет"
+     }
     },
     {
      "form": "ayaṃ",
@@ -4291,7 +5803,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "this; (near deictic pronoun in Vedic)",
      "slp1": "idam",
      "href": "../w/idam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "этот",
+      "lemma": "это"
+     }
     },
     {
      "form": "vīrāḥ",
@@ -4301,7 +5817,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "man; hero; chief; mankind; son; the male of an animal; an adept; Terminalia Arunja; Neriu…",
      "slp1": "vIra",
      "href": "../w/v_49ra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "герои",
+      "lemma": "герой"
+     }
     },
     {
      "form": "svayaṃvara",
@@ -4311,7 +5831,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "the election of a husband by a princess or daughter of a Kṣatriya; self-choice",
      "slp1": "svayaMvara",
      "href": "../w/svaya_4dvara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сваямвара",
+      "lemma": "сваямвара"
+     }
     },
     {
      "form": "iti",
@@ -4321,7 +5845,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "in this manner; thus (in its original signification iti refers to something that has been…",
      "slp1": "iti",
      "href": "../w/iti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "prabho",
@@ -4331,7 +5859,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "excelling; mighty; powerful; rich; abundant; more powerful than (abl.); having power over…",
      "slp1": "praBu",
      "href": "../w/pra_42u.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "владыка",
+      "lemma": "владыка"
+     }
     }
    ]
   },
@@ -4350,7 +5882,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to hear; to listen to; to study",
      "slp1": "Sru",
      "href": "../w/_53ru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "услышав",
+      "lemma": "услышав",
+      "root": "услышав"
+     }
     },
     {
      "form": "tu",
@@ -4360,7 +5897,12 @@ window.READING_DATA["nala-2"] = {
      "gloss": "do; now; then; but; and; or; name of the river Śatadru",
      "slp1": "tu",
      "href": "../w/tu.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "же",
+      "lemma": "же",
+      "root": "же"
+     }
     },
     {
      "form": "pārthivāḥ",
@@ -4370,7 +5912,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "an inhabitant of the earth; a lord of the earth; king; prince; warrior; an earthen vessel…",
      "slp1": "pArTiva",
      "href": "../w/p_41r_54iva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "цари",
+      "lemma": "царь"
+     }
     },
     {
      "form": "sarve",
@@ -4380,7 +5926,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "whole; entire; all; every; of all sorts; manifold; various; different; completely",
      "slp1": "sarva",
      "href": "../w/sarva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "все",
+      "lemma": "все"
+     }
     },
     {
      "form": "damayantyāḥ",
@@ -4390,7 +5940,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "name of Nala's wife (daughter of Bhīma king of Vidarbha); a kind of jasmine",
      "slp1": "damayantI",
      "href": "../w/damayant_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Дамаянти",
+      "lemma": "Дамаянти"
+     }
     },
     {
      "form": "svayaṃvaram",
@@ -4400,7 +5954,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "the election of a husband by a princess or daughter of a Kṣatriya; self-choice",
      "slp1": "svayaMvara",
      "href": "../w/svaya_4dvara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сваямваре",
+      "lemma": "сваямвара"
+     }
     }
    ]
   },
@@ -4419,7 +5977,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "to go near to; to approach; to follow; to cohabit; to undertake; to obtain",
      "slp1": "aBigam",
      "href": "../w/a_42igam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "явился",
+      "root": "пришел"
+     }
     },
     {
      "form": "tadā",
@@ -4429,7 +5991,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "at that time; then; in that case (often used redundantly)",
      "slp1": "tadA",
      "href": "../w/tad_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "тогда",
+      "lemma": "тогда"
+     }
     },
     {
      "form": "bhīmaṃ",
@@ -4439,7 +6005,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "Rumex Vesicarius; name of Rudra-Śiva; name of one of the 8 forms of Śiva; name of one of…",
      "slp1": "BIma",
      "href": "../w/_42_49ma.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Бхиму",
+      "lemma": "Бхима"
+     }
     },
     {
      "form": "rājāno",
@@ -4449,7 +6019,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "a king; sovereign; prince; chief (often applied to gods); a man of the royal tribe or the…",
      "slp1": "rAjan",
      "href": "../w/r_41jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "цари",
+      "lemma": "царь"
+     }
     },
     {
      "form": "bhīma",
@@ -4459,7 +6033,11 @@ window.READING_DATA["nala-2"] = {
      "gloss": "Rumex Vesicarius; name of Rudra-Śiva; name of one of the 8 forms of Śiva; name of one of…",
      "slp1": "BIma",
      "href": "../w/_42_49ma.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Бхима",
+      "lemma": "Бхима"
+     }
     },
     {
      "form": "śāsanāt",
@@ -4469,9 +6047,16 @@ window.READING_DATA["nala-2"] = {
      "gloss": "punishment; chastisement; correction; government; dominion; rule over (comp.); an order;…",
      "slp1": "SAsana",
      "href": "../w/_53_41sana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "по повелению",
+      "lemma": "повелению"
+     }
     }
    ]
   }
+ ],
+ "gloss_langs": [
+  "ru"
  ]
 };
