@@ -99,7 +99,10 @@
 <script>
 (function(){
   var DATA = window.READING_DATA || {};
-  var lang = "en"; var current = null;
+  // W-RU-a (H1278): default the gloss language to Russian when the browser locale is
+  // Russian; the toggle still lets either audience switch. Falls back to English.
+  var lang = /^ru\b/i.test(navigator.language || navigator.userLanguage || "") ? "ru" : "en";
+  var current = null;
   function sortkey(s){
     if(s.indexOf("nala")===0) return [0, parseInt(s.split("-")[1])||0];
     if(s.indexOf("gita")===0) return [1, parseInt(s.split("-")[1])||0];
@@ -134,9 +137,20 @@
         "Lemmas are auto-segmented and may be wrong; verify before citing.");
       ban.hidden = false;
     } else { ban.hidden = true; }
+    // W-RU-a (H1278): gloss_ru is a {surface,lemma,root} triple. Show its DISTINCT
+    // values, lemma first (the word's dictionary sense), deduped — surface/lemma/root
+    // frequently coincide. A legacy string gloss_ru is passed through unchanged.
+    function ruStr(gr){
+      if(!gr) return "";
+      if(typeof gr === "string") return gr;
+      var parts=[], seen={};
+      ["lemma","surface","root"].forEach(function(k){
+        var v=gr[k]; if(v && !seen[v]){ seen[v]=1; parts.push(v); } });
+      return parts.join(" · ");
+    }
     var pas = d.sentences.map(function(s){
       var toks = s.tokens.map(function(t){
-        var g = (lang==="ru" && t.gloss_ru) ? t.gloss_ru : t.gloss;
+        var g = (lang==="ru" && t.gloss_ru) ? ruStr(t.gloss_ru) : t.gloss;
         var meta = esc(t.lemma) + (t.morph? " · "+esc(t.morph):"") + (g? " · "+esc(g):"")
                  + (t.sandhi? " · sandhi: "+esc(t.sandhi):"");
         if(t.href){
@@ -176,6 +190,9 @@
   }
   document.getElementById("lang-en").onclick = function(){ setLang("en"); };
   document.getElementById("lang-ru").onclick = function(){ setLang("ru"); };
+  // Reflect the locale-derived default in the toggle before first render.
+  document.getElementById("lang-en").classList.toggle("on", lang==="en");
+  document.getElementById("lang-ru").classList.toggle("on", lang==="ru");
 
   var first = (location.hash||"").replace("#","");
   if(!DATA[first]) first = PACKS.find(function(p){return DATA[p.slug];}).slug;

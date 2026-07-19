@@ -33,7 +33,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "accomplishment; performance; fulfilment; complete attainment (of any object); success; th…",
      "slp1": "sidDi",
      "href": "../w/sid_44i.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "успех",
+      "lemma": "совершенства"
+     }
     },
     {
      "form": "sādhye",
@@ -43,7 +47,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "accomplishment; perfection; an object to be accomplished; thing to be proved or establish…",
      "slp1": "sADya",
      "href": "../w/s_41_44ya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "предмете обоснования",
+      "lemma": "садхьи"
+     }
     },
     {
      "form": "satām",
@@ -53,7 +61,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to live; to exist; to be present; to take place; to happen; to abide; to dwell; to…",
      "slp1": "as",
      "href": "../w/as.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "добродетельных",
+      "lemma": "есть",
+      "root": "есть"
+     }
     },
     {
      "form": "astu",
@@ -63,7 +76,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to live; to exist; to be present; to take place; to happen; to abide; to dwell; to…",
      "slp1": "as",
      "href": "../w/as.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "да будет",
+      "lemma": "есть",
+      "root": "есть"
+     }
     },
     {
      "form": "prasādāt",
@@ -73,7 +91,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "clearness; brightness; pellucidnees; purity; clearness of style; perspicuity; brightness…",
      "slp1": "prasAda",
      "href": "../w/pras_41da.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "милостью",
+      "lemma": "милость"
+     }
     },
     {
      "form": "tasya",
@@ -83,7 +105,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "его",
+      "lemma": "он"
+     }
     },
     {
      "form": "dhūrjaṭeḥ",
@@ -93,7 +119,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "name of Rudra-Śiva; name of a poet",
      "slp1": "DUrjawi",
      "href": "../w/_44_55rjawi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "Дхурджати"
+     }
     }
    ]
   },
@@ -112,7 +141,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the Gaṅgā",
      "slp1": "jAhnavI",
      "href": "../w/j_41hnav_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Джахнави",
+      "lemma": "Джахнави"
+     }
     },
     {
      "form": "phena",
@@ -122,7 +155,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "foam; froth; scum; moisture of the lips; saliva; the bone of the cuttle-fish; a kind of p…",
      "slp1": "Pena",
      "href": "../w/_50ena.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "пеной",
+      "lemma": "пену"
+     }
     },
     {
      "form": "lekhā",
@@ -132,7 +169,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a scratch; streak; line; stroke; stripe; furrow; the pale or faintly discernible streak o…",
      "slp1": "leKA",
      "href": "../w/le_4b_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "линия",
+      "lemma": "линия"
+     }
     },
     {
      "form": "iva",
@@ -142,7 +183,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "like; in the same manner as (in this sense = yathā); as it were; as if; in a certain mann…",
      "slp1": "iva",
      "href": "../w/iva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     },
     {
      "form": "yad",
@@ -152,7 +197,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "что",
+      "lemma": "что"
+     }
     },
     {
      "form": "mūrdhani",
@@ -162,7 +211,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the forehead; head in general; skull; (fig.) the highest or first part of anything; top;…",
      "slp1": "mUrDan",
      "href": "../w/m_55r_44an.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "голову",
+      "lemma": "голову"
+     }
     },
     {
      "form": "śaśinaḥ",
@@ -172,7 +225,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the moon; name of the number one; camphor; a kind of metre; name of a man; the emblem of…",
      "slp1": "SaSin",
      "href": "../w/_53a_53in.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "лунного",
+      "lemma": "луна"
+     }
     },
     {
      "form": "kalā",
@@ -182,7 +239,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a small part of anything; any single part or portion of a whole; a sixteenth part; a digi…",
      "slp1": "kalA",
      "href": "../w/kal_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "часть",
+      "lemma": "часть"
+     }
     }
    ]
   },
@@ -201,7 +262,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an auspicious and inceptive particle (not easily expressed in English); now; then; moreov…",
      "slp1": "aTa",
      "href": "../w/a_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "kathāmukham",
@@ -230,7 +295,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to live; to exist; to be present; to take place; to happen; to abide; to dwell; to…",
      "slp1": "as",
      "href": "../w/as.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "есть",
+      "lemma": "есть",
+      "root": "есть"
+     }
     },
     {
      "form": "bhāgīrathī",
@@ -240,7 +310,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "name of the Ganges (or of one of the 3 main streams or branches of it)",
      "slp1": "BAgIraTI",
      "href": "../w/_42_41g_49ra_54_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Бхагиратхи",
+      "lemma": "Бхагиратхи"
+     }
     },
     {
      "form": "tīre",
@@ -250,7 +324,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a shore; bank; the brim of a vessel",
      "slp1": "tIra",
      "href": "../w/t_49ra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "берегу",
+      "lemma": "берегу"
+     }
     },
     {
      "form": "pāṭaliputra",
@@ -270,7 +348,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a name; title; appellation; the ceremony of giving a name to a child",
      "slp1": "nAmaDeya",
      "href": "../w/n_41ma_44eya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "имя",
+      "lemma": "имя"
+     }
     },
     {
      "form": "nagaram",
@@ -280,7 +362,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a town; city; name of several cities; name of a son of Bharadvāja",
      "slp1": "nagara",
      "href": "../w/nagara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "город",
+      "lemma": "город"
+     }
     }
    ]
   },
@@ -299,7 +385,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in that place; there (in comp.); thither; to that place; in that; therein; in that case;…",
      "slp1": "tatra",
      "href": "../w/tatra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "там",
+      "lemma": "там"
+     }
     },
     {
      "form": "sarva",
@@ -309,7 +399,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "whole; entire; all; every; of all sorts; manifold; various; different; completely",
      "slp1": "sarva",
      "href": "../w/sarva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "все",
+      "lemma": "все"
+     }
     },
     {
      "form": "svāmi",
@@ -319,7 +413,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an owner; proprietor; master; lord or owner of; a chief; commander (of an army); a husban…",
      "slp1": "svAmin",
      "href": "../w/sv_41min.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "господина",
+      "lemma": "хозяин"
+     }
     },
     {
      "form": "guṇa",
@@ -329,7 +427,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a single thread or strand of a cord or twine; string or thread; rope; a garland; an auxil…",
      "slp1": "guRa",
      "href": "../w/gu_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "гуны",
+      "lemma": "гуны"
+     }
     },
     {
      "form": "upetaḥ",
@@ -339,7 +441,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "one who has come near or approached; one who has betaken himself to; approached; arrived…",
      "slp1": "upeta",
      "href": "../w/upeta.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "имѣлъ",
+      "lemma": "отстранен от зла, связан с благими качествами"
+     }
     },
     {
      "form": "sudarśano",
@@ -349,7 +455,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a vulture; a fish; (in music) a kind of composition; name of Śiva; name of a son of Agni…",
      "slp1": "sudarSana",
      "href": "../w/sudar_53ana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "Сударшана"
+     }
     },
     {
      "form": "nāma",
@@ -359,7 +468,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "by name i.e. named; called; indeed; certainly; really; of course; quasi; only in appearan…",
      "slp1": "nAma",
      "href": "../w/n_41ma.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "имя",
+      "lemma": "имя"
+     }
     },
     {
      "form": "narapatir",
@@ -369,7 +482,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a king; name of one of the 4 myth. kings of Jambudvīpa; name of an author",
      "slp1": "narapati",
      "href": "../w/narapati.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царь",
+      "lemma": "царь"
+     }
     },
     {
      "form": "āsīt",
@@ -379,7 +496,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to live; to exist; to be present; to take place; to happen; to abide; to dwell; to…",
      "slp1": "as",
      "href": "../w/as.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "был",
+      "lemma": "есть",
+      "root": "есть"
+     }
     }
    ]
   },
@@ -398,7 +520,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "он",
+      "lemma": "он"
+     }
     },
     {
      "form": "bhūpatir",
@@ -408,7 +534,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "name of Rudra; name of Indra; name of Baṭukabhairava; name of one of the Viśveḍevāḥ; a ki…",
      "slp1": "BUpati",
      "href": "../w/_42_55pati.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "царь"
+     }
     },
     {
      "form": "ekadā",
@@ -418,7 +547,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "at the same time; at once; sometimes; once; one time; some time ago",
      "slp1": "ekadA",
      "href": "../w/ekad_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "однажды",
+      "lemma": "однажды"
+     }
     },
     {
      "form": "kena",
@@ -428,7 +561,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "who?; what?",
      "slp1": "ka",
      "href": "../w/ka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "кем",
+      "lemma": "что"
+     }
     },
     {
      "form": "api",
@@ -438,7 +575,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "также",
+      "lemma": "также"
+     }
     },
     {
      "form": "pāṭhyamānaṃ",
@@ -446,7 +587,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "upos": "VERB",
      "morph": "Acc Sing Neut Pres Pass",
      "gloss": "to teach; to instruct; to read; to recite",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "lemma": "чтения",
+      "root": "чтения"
+     }
     },
     {
      "form": "śloka",
@@ -456,7 +601,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "sound; noise (as of the wheels of a carriage or the grinding of stones etc.); a call or v…",
      "slp1": "Sloka",
      "href": "../w/_53loka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "стих",
+      "lemma": "стих"
+     }
     },
     {
      "form": "dvayam",
@@ -466,7 +615,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "twofold; double; two things; both; twofold nature; falsehood; the masc. and fem. gender",
      "slp1": "dvaya",
      "href": "../w/dvaya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "двойное",
+      "lemma": "два"
+     }
     },
     {
      "form": "śuśrāva",
@@ -476,7 +629,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to hear; to listen to; to study",
      "slp1": "Sru",
      "href": "../w/_53ru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "услышал",
+      "lemma": "услышав",
+      "root": "услышав"
+     }
     }
    ]
   },
@@ -495,7 +653,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not one; many; much; separated",
      "slp1": "aneka",
      "href": "../w/aneka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "многими",
+      "lemma": "многие"
+     }
     },
     {
      "form": "saṃśaya",
@@ -505,7 +667,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "lying down to rest or sleep; uncertainty; irresolution; hesitation",
      "slp1": "saMSaya",
      "href": "../w/sa_4d_53aya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сомнения",
+      "lemma": "сомнения"
+     }
     },
     {
      "form": "ucchedi",
@@ -525,7 +691,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "invisible; unknown; past; mystical; cryptic",
      "slp1": "parokza",
      "href": "../w/parokza.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "втайне",
+      "lemma": "втайне"
+     }
     },
     {
      "form": "arthasya",
@@ -535,7 +705,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "aim; purpose; cause; motive; reason; advantage; use; utility (generally named with kāma a…",
      "slp1": "arTa",
      "href": "../w/ar_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "расчета",
+      "lemma": "ради"
+     }
     },
     {
      "form": "darśakam",
@@ -545,7 +719,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "seeing (with gen.); looking at (acc.); ifc. looking for; showing; pointing out; examining",
      "slp1": "darSaka",
      "href": "../w/dar_53aka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "вызвавший появление"
+     }
     }
    ]
   },
@@ -564,7 +741,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "whole; entire; all; every; of all sorts; manifold; various; different; completely",
      "slp1": "sarva",
      "href": "../w/sarva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "всего",
+      "lemma": "все"
+     }
     },
     {
      "form": "locanaṃ",
@@ -574,7 +755,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the eye; name of a work; two; a kind of plant; cumin",
      "slp1": "locana",
      "href": "../w/locana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "глаз",
+      "lemma": "глазами"
+     }
     },
     {
      "form": "śāstraṃ",
@@ -584,7 +769,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an order; command; precept; rule; teaching; instruction; direction; advice; good counsel;…",
      "slp1": "SAstra",
      "href": "../w/_53_41stra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "шастру",
+      "lemma": "шастры"
+     }
     },
     {
      "form": "yasya",
@@ -594,7 +783,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "которого",
+      "lemma": "что"
+     }
     },
     {
      "form": "na",
@@ -604,7 +797,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "asti",
@@ -614,7 +811,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to live; to exist; to be present; to take place; to happen; to abide; to dwell; to…",
      "slp1": "as",
      "href": "../w/as.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "есть",
+      "lemma": "есть",
+      "root": "есть"
+     }
     },
     {
      "form": "andha",
@@ -624,7 +826,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "blind; dark",
      "slp1": "anDa",
      "href": "../w/an_44a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "слепой",
+      "lemma": "слепой"
+     }
     },
     {
      "form": "eva",
@@ -634,7 +840,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "so; just so; exactly so (in the sense of the later evam); indeed; truly; really (often at…",
      "slp1": "eva",
      "href": "../w/eva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "именно",
+      "lemma": "именно"
+     }
     },
     {
      "form": "saḥ",
@@ -644,7 +854,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "он",
+      "lemma": "он"
+     }
     }
    ]
   },
@@ -673,7 +887,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the prize of a contest or the contest itself (lit. a running match); the thing raced for;…",
      "slp1": "Dana",
      "href": "../w/_44ana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "богатство",
+      "lemma": "богатство"
+     }
     },
     {
      "form": "sampattiḥ",
@@ -683,7 +901,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "prosperity; welfare; good fortune; success; accomplishment; fulfilment; turning out well…",
      "slp1": "sampatti",
      "href": "../w/sampatti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "процветание"
+     }
     },
     {
      "form": "prabhu",
@@ -693,7 +914,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "excelling; mighty; powerful; rich; abundant; more powerful than (abl.); having power over…",
      "slp1": "praBu",
      "href": "../w/pra_42u.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "владыка",
+      "lemma": "владыка"
+     }
     },
     {
      "form": "tvam",
@@ -703,7 +928,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "(suffix creating abstract nouns)",
      "slp1": "tva",
      "href": "../w/tva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ты",
+      "lemma": "ты"
+     }
     },
     {
      "form": "a",
@@ -713,7 +942,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "[gramm.] the sound a; eh bien!; (ibc., negating particle); [gramm.] the root han; [gramm.…",
      "slp1": "a",
      "href": "../w/a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о",
+      "lemma": "о"
+     }
     },
     {
      "form": "viveki",
@@ -723,7 +956,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "discriminating; distinguishing; separated; kept asunder; examining; investigating; discri…",
      "slp1": "vivekin",
      "href": "../w/vivekin.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "отличен"
+     }
     },
     {
      "form": "tā",
@@ -733,7 +969,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "ifc. abstracta; name of Lakṣmī",
      "slp1": "tA",
      "href": "../w/t_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "эти",
+      "lemma": "эти"
+     }
     }
    ]
   },
@@ -762,7 +1002,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "хотя",
+      "lemma": "также"
+     }
     },
     {
      "form": "anarthāya",
@@ -772,7 +1016,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "non-value; a worthless or useless object; disappointing occurrence; reverse; evil; nonsen…",
      "slp1": "anarTa",
      "href": "../w/anar_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "горе",
+      "lemma": "не-артха"
+     }
     },
     {
      "form": "kim",
@@ -782,7 +1030,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "who?; what?",
      "slp1": "ka",
      "href": "../w/ka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "что",
+      "lemma": "что"
+     }
     },
     {
      "form": "u",
@@ -792,7 +1044,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "[gramm.] the sound or letter u; a particle; [gramm.] a kṛt affix; also; further; on the o…",
      "slp1": "u",
      "href": "../w/u.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "же",
+      "lemma": "и",
+      "root": "и"
+     }
     },
     {
      "form": "yatra",
@@ -802,7 +1059,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "where; wherein; wherever; whither",
      "slp1": "yatra",
      "href": "../w/yatra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "где",
+      "lemma": "где"
+     }
     },
     {
      "form": "catuṣṭayam",
@@ -812,7 +1073,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "four",
      "slp1": "catuzwaya",
      "href": "../w/catuzwaya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "четыре",
+      "lemma": "четыре"
+     }
     }
    ]
   },
@@ -831,7 +1096,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in this manner; thus (in its original signification iti refers to something that has been…",
      "slp1": "iti",
      "href": "../w/iti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "ākarṇya",
@@ -841,7 +1110,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to give ear to; to listen to; to hear",
      "slp1": "AkarRay",
      "href": "../w/_41kar_52ay.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Услышав",
+      "lemma": "Услышав",
+      "root": "Услышав"
+     }
     },
     {
      "form": "ātmanaḥ",
@@ -851,7 +1125,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the breath; the soul; principle of life and sensation; the individual soul; self; abstrac…",
      "slp1": "Atman",
      "href": "../w/_41tman.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "себя",
+      "lemma": "себя"
+     }
     },
     {
      "form": "putrāṇām",
@@ -861,7 +1139,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a son; child; a species of small venomous animal; (in astrol.) name of the fifth house; n…",
      "slp1": "putra",
      "href": "../w/putra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сыновей",
+      "lemma": "сын"
+     }
     },
     {
      "form": "anadhigata",
@@ -871,7 +1153,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not obtained; not acquired; not studied",
      "slp1": "anaDigata",
      "href": "../w/ana_44igata.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не предполагающий достаточное",
+      "lemma": "не предполагающий достаточное"
+     }
     },
     {
      "form": "śāstrāṇām",
@@ -881,7 +1167,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an order; command; precept; rule; teaching; instruction; direction; advice; good counsel;…",
      "slp1": "SAstra",
      "href": "../w/_53_41stra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "шастры"
+     }
     },
     {
      "form": "nityam",
@@ -891,7 +1180,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "always",
      "slp1": "nityam",
      "href": "../w/nityam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "всегда",
+      "lemma": "всегда"
+     }
     },
     {
      "form": "unmārga",
@@ -911,7 +1204,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "going anywhere",
      "slp1": "gAmin",
      "href": "../w/g_41min.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "не приносящій жертвы"
+     }
     },
     {
      "form": "śāstra",
@@ -921,7 +1217,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an order; command; precept; rule; teaching; instruction; direction; advice; good counsel;…",
      "slp1": "SAstra",
      "href": "../w/_53_41stra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "шастры",
+      "lemma": "шастры"
+     }
     },
     {
      "form": "ananuṣṭhānena",
@@ -931,7 +1231,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "non-observance; neglect; impropriety",
      "slp1": "ananuzWAna",
      "href": "../w/ananuz_57_41na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "невыполнение"
+     }
     },
     {
      "form": "udvigna",
@@ -941,7 +1244,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to gush or spring upwards; to be agitated; to grieved or afflicted; to shudder; to trembl…",
      "slp1": "udvij",
      "href": "../w/udvij.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "взволнованный",
+      "lemma": "страшится",
+      "root": "страшится"
+     }
     },
     {
      "form": "manāḥ",
@@ -951,7 +1259,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "mind (in its widest sense as applied to all the mental powers); intellect; intelligence;…",
      "slp1": "manas",
      "href": "../w/manas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "ум"
+     }
     },
     {
      "form": "sa",
@@ -961,7 +1272,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "он",
+      "lemma": "он"
+     }
     },
     {
      "form": "rājā",
@@ -971,7 +1286,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a king; sovereign; prince; chief (often applied to gods); a man of the royal tribe or the…",
      "slp1": "rAjan",
      "href": "../w/r_41jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царь",
+      "lemma": "царь"
+     }
     },
     {
      "form": "cintayāmāsa",
@@ -979,7 +1298,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "upos": "VERB",
      "morph": "Sing p3 Past Ind",
      "gloss": "to think; to have a thought or idea; to reflect; to consider; to think about; to reflect…",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "surface": "подумал",
+      "lemma": "подумал",
+      "root": "подумал"
+     }
     }
    ]
   },
@@ -998,7 +1322,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "who?; what?",
      "slp1": "ka",
      "href": "../w/ka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "кто",
+      "lemma": "что"
+     }
     },
     {
      "form": "'rthaḥ",
@@ -1008,7 +1336,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "aim; purpose; cause; motive; reason; advantage; use; utility (generally named with kāma a…",
      "slp1": "arTa",
      "href": "../w/ar_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "ради"
+     }
     },
     {
      "form": "putreṇa",
@@ -1018,7 +1349,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a son; child; a species of small venomous animal; (in astrol.) name of the fifth house; n…",
      "slp1": "putra",
      "href": "../w/putra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сыном",
+      "lemma": "сын"
+     }
     },
     {
      "form": "jātena",
@@ -1028,7 +1363,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to come into existence; to grow (as plants); to be born as; to be by birth or nature; to…",
      "slp1": "jan",
      "href": "../w/jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "в рожденном",
+      "lemma": "родился",
+      "root": "родился"
+     }
     },
     {
      "form": "yo",
@@ -1038,7 +1378,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "кто",
+      "lemma": "что"
+     }
     },
     {
      "form": "na",
@@ -1048,7 +1392,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "vidvān",
@@ -1058,7 +1406,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "one who knows; knowing; learned; wise; familiar with; skilled in",
      "slp1": "vidvas",
      "href": "../w/vidvas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знаток",
+      "lemma": "мудрый"
+     }
     },
     {
      "form": "na",
@@ -1068,7 +1420,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "dhārmikaḥ",
@@ -1078,7 +1434,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "righteous; virtuous; pious; just; resting on right; conformable to justice (mind)",
      "slp1": "DArmika",
      "href": "../w/_44_41rmika.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "добродетельный",
+      "lemma": "добродетельный"
+     }
     }
    ]
   },
@@ -1097,7 +1457,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "one-eyed; pierced; perforated",
      "slp1": "kARa",
      "href": "../w/k_41_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "одноглазый"
+     }
     },
     {
      "form": "cakṣuṣā",
@@ -1107,7 +1470,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "faculty of seeing; sight; a look; the eye; aspect",
      "slp1": "cakzus",
      "href": "../w/cakzus.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "глазом",
+      "lemma": "глаз"
+     }
     },
     {
      "form": "kiṃ",
@@ -1117,7 +1484,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "who?; what?",
      "slp1": "ka",
      "href": "../w/ka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "что",
+      "lemma": "что"
+     }
     },
     {
      "form": "vā",
@@ -1127,7 +1498,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "either - or; on the one side - on the other side; optionally",
      "slp1": "vA",
      "href": "../w/v_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "или",
+      "lemma": "или",
+      "root": "или"
+     }
     },
     {
      "form": "cakṣuḥ",
@@ -1137,7 +1513,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "faculty of seeing; sight; a look; the eye; aspect",
      "slp1": "cakzus",
      "href": "../w/cakzus.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "глаз",
+      "lemma": "глаз"
+     }
     },
     {
      "form": "pīḍā",
@@ -1147,7 +1527,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "pain; suffering; annoyance; harm; injury; violation; devastation; restriction; limitation…",
      "slp1": "pIqA",
      "href": "../w/p_49q_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "самоистязанием",
+      "lemma": "самоистязанием"
+     }
     },
     {
      "form": "eva",
@@ -1157,7 +1541,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "so; just so; exactly so (in the sense of the later evam); indeed; truly; really (often at…",
      "slp1": "eva",
      "href": "../w/eva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "именно",
+      "lemma": "именно"
+     }
     },
     {
      "form": "kevalam",
@@ -1167,7 +1555,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "alone; only; mere; sole; excluding others; isolated; absolute; pure; entire; whole; selfi…",
      "slp1": "kevala",
      "href": "../w/kevala.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "только",
+      "lemma": "только"
+     }
     }
    ]
   },
@@ -1186,7 +1578,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "unborn; not yet born; not yet developed",
      "slp1": "ajAta",
      "href": "../w/aj_41ta.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не родился",
+      "lemma": "неродившихся"
+     }
     },
     {
      "form": "mṛta",
@@ -1196,7 +1592,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to die; to decease; to calcine",
      "slp1": "mf",
      "href": "../w/mf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "умершего",
+      "lemma": "умирает",
+      "root": "умирает"
+     }
     },
     {
      "form": "mūrkhānām",
@@ -1206,7 +1607,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "stupid; foolish; dull; inexperienced",
      "slp1": "mUrKa",
      "href": "../w/m_55r_4ba.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "глупец"
+     }
     },
     {
      "form": "varam",
@@ -1216,7 +1620,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "choicest; valuable; precious; best; most excellent or eminent among; royal; princely; bet…",
      "slp1": "vara",
      "href": "../w/vara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дар",
+      "lemma": "лучший"
+     }
     },
     {
      "form": "ādyau",
@@ -1226,7 +1634,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "immediately preceding (e.g. ekādaśādya); earlier; older; being at the head; unparalleled;…",
      "slp1": "Adya",
      "href": "../w/_41dya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "изначальный"
+     }
     },
     {
      "form": "na",
@@ -1236,7 +1647,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "ca",
@@ -1246,7 +1661,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "antimaḥ",
@@ -1256,7 +1675,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "final; ultimate; last",
      "slp1": "antima",
      "href": "../w/antima.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "последней"
+     }
     }
    ]
   },
@@ -1275,7 +1697,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "at once; suddenly; forthwith; immediately; once; formerly; ever; once for all; for ever;…",
      "slp1": "sakft",
      "href": "../w/sakft.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "однажды",
+      "lemma": "однажды"
+     }
     },
     {
      "form": "duḥkha",
@@ -1285,7 +1711,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "uneasiness; pain; sorrow; trouble; difficulty (personified as the son of Naraka and Vedan…",
      "slp1": "duHKa",
      "href": "../w/du_48_4ba.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "страдание",
+      "lemma": "горе"
+     }
     },
     {
      "form": "karau",
@@ -1295,7 +1725,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "producing; causing; making; helping",
      "slp1": "kara",
      "href": "../w/kara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "руки"
+     }
     },
     {
      "form": "ādyāv",
@@ -1305,7 +1738,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "immediately preceding (e.g. ekādaśādya); earlier; older; being at the head; unparalleled;…",
      "slp1": "Adya",
      "href": "../w/_41dya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "изначальный"
+     }
     },
     {
      "form": "antimas",
@@ -1315,7 +1751,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "final; ultimate; last",
      "slp1": "antima",
      "href": "../w/antima.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "последней"
+     }
     },
     {
      "form": "tu",
@@ -1325,7 +1764,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "do; now; then; but; and; or; name of the river Śatadru",
      "slp1": "tu",
      "href": "../w/tu.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "же",
+      "lemma": "же",
+      "root": "же"
+     }
     },
     {
      "form": "pade",
@@ -1335,7 +1779,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a step; pace; stride; a footstep; trace; vestige; mark; a sign; token; characteristic; a…",
      "slp1": "pada",
      "href": "../w/pada.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "месте",
+      "lemma": "след"
+     }
     },
     {
      "form": "pade",
@@ -1345,7 +1793,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a step; pace; stride; a footstep; trace; vestige; mark; a sign; token; characteristic; a…",
      "slp1": "pada",
      "href": "../w/pada.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "месте",
+      "lemma": "след"
+     }
     }
    ]
   },
@@ -1364,7 +1816,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "who?; what?",
      "slp1": "ka",
      "href": "../w/ka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "что",
+      "lemma": "что"
+     }
     },
     {
      "form": "ca",
@@ -1374,7 +1830,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -1393,7 +1853,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "choicest; valuable; precious; best; most excellent or eminent among; royal; princely; bet…",
      "slp1": "vara",
      "href": "../w/vara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дар",
+      "lemma": "лучший"
+     }
     },
     {
      "form": "garbhasrāvo",
@@ -1403,7 +1867,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "",
      "slp1": "garBasrAva",
      "href": "../w/gar_42asr_41va.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "выкидыше"
+     }
     },
     {
      "form": "varam",
@@ -1413,7 +1880,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "choicest; valuable; precious; best; most excellent or eminent among; royal; princely; bet…",
      "slp1": "vara",
      "href": "../w/vara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дар",
+      "lemma": "лучший"
+     }
     },
     {
      "form": "api",
@@ -1423,7 +1894,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "также",
+      "lemma": "также"
+     }
     },
     {
      "form": "ca",
@@ -1433,7 +1908,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "na",
@@ -1443,7 +1922,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "eva",
@@ -1453,7 +1936,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "so; just so; exactly so (in the sense of the later evam); indeed; truly; really (often at…",
      "slp1": "eva",
      "href": "../w/eva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "именно",
+      "lemma": "именно"
+     }
     },
     {
      "form": "abhigamanam",
@@ -1463,7 +1950,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "Hingehen; Verkehr mit; Ankunft",
      "slp1": "aBigamana",
      "href": "../w/a_42igamana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "связь",
+      "lemma": "сближении"
+     }
     },
     {
      "form": "varaṃ",
@@ -1473,7 +1964,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "choicest; valuable; precious; best; most excellent or eminent among; royal; princely; bet…",
      "slp1": "vara",
      "href": "../w/vara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дар",
+      "lemma": "лучший"
+     }
     },
     {
      "form": "jātaḥ",
@@ -1483,7 +1978,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to come into existence; to grow (as plants); to be born as; to be by birth or nature; to…",
      "slp1": "jan",
      "href": "../w/jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "родился",
+      "lemma": "родился",
+      "root": "родился"
+     }
     },
     {
      "form": "preto",
@@ -1493,7 +1993,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to come forth; to appear; to begin; to go on; to proceed; to advance (esp. as a sacrifice…",
      "slp1": "pre",
      "href": "../w/pre.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "отсюда",
+      "lemma": "после смерти",
+      "root": "после смерти"
+     }
     },
     {
      "form": "varam",
@@ -1503,7 +2008,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "choicest; valuable; precious; best; most excellent or eminent among; royal; princely; bet…",
      "slp1": "vara",
      "href": "../w/vara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дар",
+      "lemma": "лучший"
+     }
     },
     {
      "form": "api",
@@ -1513,7 +2022,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "также",
+      "lemma": "также"
+     }
     },
     {
      "form": "ca",
@@ -1523,7 +2036,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -1542,7 +2059,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "choicest; valuable; precious; best; most excellent or eminent among; royal; princely; bet…",
      "slp1": "vara",
      "href": "../w/vara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дар",
+      "lemma": "лучший"
+     }
     },
     {
      "form": "vandhyā",
@@ -1552,7 +2073,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a barren or childless woman; a barren cow; a particular fragrant substance",
      "slp1": "vanDyA",
      "href": "../w/van_44y_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "бесплодная",
+      "lemma": "бесплодная"
+     }
     },
     {
      "form": "bhāryā",
@@ -1562,7 +2087,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a wife (or the female of an animal)",
      "slp1": "BAryA",
      "href": "../w/_42_41ry_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "жена",
+      "lemma": "жена"
+     }
     },
     {
      "form": "varam",
@@ -1572,7 +2101,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "choicest; valuable; precious; best; most excellent or eminent among; royal; princely; bet…",
      "slp1": "vara",
      "href": "../w/vara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дар",
+      "lemma": "лучший"
+     }
     },
     {
      "form": "api",
@@ -1582,7 +2115,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "также",
+      "lemma": "также"
+     }
     },
     {
      "form": "ca",
@@ -1592,7 +2129,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "garbheṣu",
@@ -1602,7 +2143,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the womb; the inside; middle; interior of anything; calyx (as of a lotus); an inner apart…",
      "slp1": "garBa",
      "href": "../w/gar_42a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "во чрева",
+      "lemma": "зародыш"
+     }
     },
     {
      "form": "vasatir",
@@ -1612,7 +2157,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "staying (esp. \"overnight\"); dwelling; abiding; sojourn; a nest; a dwelling-place; house;…",
      "slp1": "vasati",
      "href": "../w/vasati.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "ночи"
+     }
     },
     {
      "form": "na",
@@ -1622,7 +2170,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "vā",
@@ -1632,7 +2184,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "either - or; on the one side - on the other side; optionally",
      "slp1": "vA",
      "href": "../w/v_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "или",
+      "lemma": "или",
+      "root": "или"
+     }
     },
     {
      "form": "a",
@@ -1642,7 +2199,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "[gramm.] the sound a; eh bien!; (ibc., negating particle); [gramm.] the root han; [gramm.…",
      "slp1": "a",
      "href": "../w/a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о",
+      "lemma": "о"
+     }
     },
     {
      "form": "vidvān",
@@ -1652,7 +2213,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to know; to understand; to learn; to be conscious of; to take for; to mind; to notice; to…",
      "slp1": "vid",
      "href": "../w/vid.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знаток",
+      "lemma": "знает",
+      "root": "знает"
+     }
     },
     {
      "form": "rūpa",
@@ -1662,7 +2228,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "any outward appearance or phenomenon or colour (often pl.); form; shape; phantom shapes;…",
      "slp1": "rUpa",
      "href": "../w/r_55pa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "образ",
+      "lemma": "образ"
+     }
     },
     {
      "form": "draviṇa",
@@ -1672,7 +2242,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "movable property (as opp. to house and field); substance; goods; wealth; money; essence;…",
      "slp1": "draviRa",
      "href": "../w/dravi_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "богатство",
+      "lemma": "богатство"
+     }
     },
     {
      "form": "guṇa",
@@ -1682,7 +2256,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a single thread or strand of a cord or twine; string or thread; rope; a garland; an auxil…",
      "slp1": "guRa",
      "href": "../w/gu_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "гуны",
+      "lemma": "гуны"
+     }
     },
     {
      "form": "yuktaḥ",
@@ -1692,7 +2270,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to yoke or join or fasten or harness (horses or a chariot); to make ready; to prepare; to…",
      "slp1": "yuj",
      "href": "../w/yuj.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "наделенный",
+      "lemma": "союзником",
+      "root": "союзником"
+     }
     },
     {
      "form": "'pi",
@@ -1702,7 +2285,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "также"
+     }
     },
     {
      "form": "tanayaḥ",
@@ -1712,7 +2299,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a son; name of a people",
      "slp1": "tanaya",
      "href": "../w/tanaya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сын",
+      "lemma": "сын"
+     }
     }
    ]
   },
@@ -1731,7 +2322,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "он",
+      "lemma": "он"
+     }
     },
     {
      "form": "jāto",
@@ -1741,7 +2336,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to come into existence; to grow (as plants); to be born as; to be by birth or nature; to…",
      "slp1": "jan",
      "href": "../w/jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "рожденный",
+      "lemma": "родился",
+      "root": "родился"
+     }
     },
     {
      "form": "yena",
@@ -1751,7 +2351,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "которым",
+      "lemma": "что"
+     }
     },
     {
      "form": "jātena",
@@ -1761,7 +2365,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to come into existence; to grow (as plants); to be born as; to be by birth or nature; to…",
      "slp1": "jan",
      "href": "../w/jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "в рожденном",
+      "lemma": "родился",
+      "root": "родился"
+     }
     },
     {
      "form": "yāti",
@@ -1771,7 +2380,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to go; to move; to set out; to travel; to withdraw; to flee; to go to for any purpose (in…",
      "slp1": "yA",
      "href": "../w/y_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "идет",
+      "lemma": "идут",
+      "root": "идут"
+     }
     },
     {
      "form": "vaṃśaḥ",
@@ -1781,7 +2395,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the bamboo cane or any cane (also \"sugarcane\" and \"Shorea Robusta\"); the upper timbers or…",
      "slp1": "vaMSa",
      "href": "../w/va_4d_53a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "род",
+      "lemma": "род"
+     }
     },
     {
      "form": "samunnatim",
@@ -1810,7 +2428,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "moving round; revolving; ever-recurring; changing; passing into; being or remaining or st…",
      "slp1": "parivartin",
      "href": "../w/parivartin.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "неусыпной"
+     }
     },
     {
      "form": "saṃsāre",
@@ -1820,7 +2441,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "going or wandering through; undergoing transmigration; course; passage; passing through a…",
      "slp1": "saMsAra",
      "href": "../w/sa_4ds_41ra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "в сансаре",
+      "lemma": "сансары"
+     }
     },
     {
      "form": "mṛtaḥ",
@@ -1830,7 +2455,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to die; to decease; to calcine",
      "slp1": "mf",
      "href": "../w/mf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "умер",
+      "lemma": "умирает",
+      "root": "умирает"
+     }
     },
     {
      "form": "ko",
@@ -1840,7 +2470,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "who?; what?",
      "slp1": "ka",
      "href": "../w/ka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "кто",
+      "lemma": "что"
+     }
     },
     {
      "form": "vā",
@@ -1850,7 +2484,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "either - or; on the one side - on the other side; optionally",
      "slp1": "vA",
      "href": "../w/v_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "или",
+      "lemma": "или",
+      "root": "или"
+     }
     },
     {
      "form": "na",
@@ -1860,7 +2499,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "jāyate",
@@ -1870,7 +2513,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to come into existence; to grow (as plants); to be born as; to be by birth or nature; to…",
      "slp1": "jan",
      "href": "../w/jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "рождается",
+      "lemma": "родился",
+      "root": "родился"
+     }
     }
    ]
   },
@@ -1889,7 +2537,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "other; another",
      "slp1": "anya",
      "href": "../w/anya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "другой",
+      "lemma": "другой"
+     }
     },
     {
      "form": "ca",
@@ -1899,7 +2551,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -1918,7 +2574,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "containing parts; cosisisting of parts; endowed with good qualities or merits; auspicious…",
      "slp1": "guRin",
      "href": "../w/gu_52in.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "элементов"
+     }
     },
     {
      "form": "gaṇa",
@@ -1928,7 +2587,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a flock; troop; multitude; number; tribe; series; class (of animate or inanimate beings);…",
      "slp1": "gaRa",
      "href": "../w/ga_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сонмы",
+      "lemma": "сонмы"
+     }
     },
     {
      "form": "gaṇanā",
@@ -1938,7 +2601,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "calculation; the being enumerated among (in comp.); considering; supposing; regarding; ta…",
      "slp1": "gaRanA",
      "href": "../w/ga_52an_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "счете",
+      "lemma": "счете"
+     }
     },
     {
      "form": "ārambhe",
@@ -1948,7 +2615,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "undertaking; beginning; a thing begun; beginning; origin; commencement; (in dram.) the co…",
      "slp1": "AramBa",
      "href": "../w/_41ram_42a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "начало"
+     }
     },
     {
      "form": "na",
@@ -1958,7 +2628,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "patati",
@@ -1968,7 +2642,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to fly; to soar; to rush on; to fall down; to descend",
      "slp1": "pat",
      "href": "../w/pat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "падает",
+      "lemma": "упал",
+      "root": "упал"
+     }
     },
     {
      "form": "kaṭhinī",
@@ -1988,7 +2667,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "(ibc.) with",
      "slp1": "sa",
      "href": "../w/sa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "он"
+     }
     },
     {
      "form": "sambhramāt",
@@ -1998,7 +2680,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "whirling round; haste; hurry; flurry; confusion; agitation; bustling; activity; eagerness…",
      "slp1": "samBrama",
      "href": "../w/sam_42rama.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "смущенная",
+      "lemma": "рвение"
+     }
     },
     {
      "form": "yasya",
@@ -2008,7 +2694,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "которого",
+      "lemma": "что"
+     }
     }
    ]
   },
@@ -2027,7 +2717,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "тем",
+      "lemma": "он"
+     }
     },
     {
      "form": "ambā",
@@ -2037,7 +2731,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a mother; good woman (as a title of respect); name of a plant; name of Durgā (the wife of…",
      "slp1": "ambA",
      "href": "../w/amb_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Амба",
+      "lemma": "мать"
+     }
     },
     {
      "form": "yadi",
@@ -2047,7 +2745,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in case that; if; whether",
      "slp1": "yadi",
      "href": "../w/yadi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "если",
+      "lemma": "если"
+     }
     },
     {
      "form": "sutinī",
@@ -2067,7 +2769,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to speak; to say; to tell; to talk with; to address; to recommend; to adjudge; to designa…",
      "slp1": "vad",
      "href": "../w/vad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "скажи",
+      "lemma": "говорят",
+      "root": "говорят"
+     }
     },
     {
      "form": "vandhyā",
@@ -2077,7 +2784,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a barren or childless woman; a barren cow; a particular fragrant substance",
      "slp1": "vanDyA",
      "href": "../w/van_44y_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "бесплодная",
+      "lemma": "бесплодная"
+     }
     },
     {
      "form": "kīdṛśī",
@@ -2087,7 +2798,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "of what use? i.e. useless; of what kind? what like?",
      "slp1": "kIdfSa",
      "href": "../w/k_49df_53a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "чему подобно",
+      "lemma": "какова"
+     }
     },
     {
      "form": "bhavati",
@@ -2097,7 +2812,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "становится",
+      "lemma": "будет",
+      "root": "будет"
+     }
     }
    ]
   },
@@ -2116,7 +2836,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "также",
+      "lemma": "также"
+     }
     },
     {
      "form": "ca",
@@ -2126,7 +2850,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -2145,7 +2873,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the act of giving; giving in marriage; giving up; communicating; imparting; teaching; pay…",
      "slp1": "dAna",
      "href": "../w/d_41na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "щедрости",
+      "lemma": "дары"
+     }
     },
     {
      "form": "tapasi",
@@ -2155,7 +2887,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "warmth; heat; pain; suffering; religious austerity; bodily mortification; penance; severe…",
      "slp1": "tapas",
      "href": "../w/tapas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "подвижничеству",
+      "lemma": "подвижничество"
+     }
     },
     {
      "form": "śaurye",
@@ -2175,7 +2911,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "yasya",
@@ -2185,7 +2925,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "которого",
+      "lemma": "что"
+     }
     },
     {
      "form": "na",
@@ -2195,7 +2939,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "prathitaṃ",
@@ -2205,7 +2953,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to spread; to extend; to become larger or wider; to increase; to spread abroad (as a name…",
      "slp1": "praT",
      "href": "../w/pra_54.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "прославленной",
+      "lemma": "прославленный",
+      "root": "прославленный"
+     }
     },
     {
      "form": "manaḥ",
@@ -2215,7 +2968,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "mind (in its widest sense as applied to all the mental powers); intellect; intelligence;…",
      "slp1": "manas",
      "href": "../w/manas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ум",
+      "lemma": "ум"
+     }
     }
    ]
   },
@@ -2234,7 +2991,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowledge; science; learning; scholarship; philosophy; a spell; incantation; magical skil…",
      "slp1": "vidyA",
      "href": "../w/vidy_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "знание"
+     }
     },
     {
      "form": "artha",
@@ -2244,7 +3004,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "aim; purpose; cause; motive; reason; advantage; use; utility (generally named with kāma a…",
      "slp1": "arTa",
      "href": "../w/ar_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ради",
+      "lemma": "ради"
+     }
     },
     {
      "form": "lābhe",
@@ -2254,7 +3018,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "meeting with; finding; obtaining; getting; attaining; acquisition; gain; profit; capture;…",
      "slp1": "lABa",
      "href": "../w/l_41_42a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "из-за нее",
+      "lemma": "прибыль"
+     }
     },
     {
      "form": "ca",
@@ -2264,7 +3032,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "mātur",
@@ -2274,7 +3046,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a mother; any mother (applicable to animals); father and mother; parents; the earth (heav…",
      "slp1": "mAtf",
      "href": "../w/m_41tf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "матери",
+      "lemma": "мать"
+     }
     },
     {
      "form": "uccāra",
@@ -2284,7 +3060,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "feces; excrement; discharge; pronunciation; utterance; upward movement of phonic energy",
      "slp1": "uccAra",
      "href": "../w/ucc_41ra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "испражняться",
+      "lemma": "испражняться"
+     }
     },
     {
      "form": "eva",
@@ -2294,7 +3074,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "so; just so; exactly so (in the sense of the later evam); indeed; truly; really (often at…",
      "slp1": "eva",
      "href": "../w/eva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "именно",
+      "lemma": "именно"
+     }
     },
     {
      "form": "saḥ",
@@ -2304,7 +3088,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "он",
+      "lemma": "он"
+     }
     }
    ]
   },
@@ -2323,7 +3111,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the other; another; future; next; western",
      "slp1": "apara",
      "href": "../w/apara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "последующего",
+      "lemma": "другие"
+     }
     },
     {
      "form": "ca",
@@ -2333,7 +3125,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -2352,7 +3148,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "choicest; valuable; precious; best; most excellent or eminent among; royal; princely; bet…",
      "slp1": "vara",
      "href": "../w/vara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дар",
+      "lemma": "лучший"
+     }
     },
     {
      "form": "eko",
@@ -2362,7 +3162,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "one; alone; happening only once; single of its kind; excellent; sincere; little; isolated…",
      "slp1": "eka",
      "href": "../w/eka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "один",
+      "lemma": "один"
+     }
     },
     {
      "form": "guṇī",
@@ -2372,7 +3176,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "containing parts; cosisisting of parts; endowed with good qualities or merits; auspicious…",
      "slp1": "guRin",
      "href": "../w/gu_52in.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "элементов"
+     }
     },
     {
      "form": "putro",
@@ -2382,7 +3189,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a son; child; a species of small venomous animal; (in astrol.) name of the fifth house; n…",
      "slp1": "putra",
      "href": "../w/putra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сын",
+      "lemma": "сын"
+     }
     },
     {
      "form": "na",
@@ -2392,7 +3203,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "ca",
@@ -2402,7 +3217,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "mūrkha",
@@ -2412,7 +3231,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "stupid; foolish; dull; inexperienced",
      "slp1": "mUrKa",
      "href": "../w/m_55r_4ba.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "глупец",
+      "lemma": "глупец"
+     }
     },
     {
      "form": "śataiḥ",
@@ -2422,7 +3245,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a hundred; any very large number; name of a measure",
      "slp1": "Sata",
      "href": "../w/_53ata.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "сто"
+     }
     },
     {
      "form": "api",
@@ -2432,7 +3258,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "также",
+      "lemma": "также"
+     }
     }
    ]
   },
@@ -2451,7 +3281,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "one; alone; happening only once; single of its kind; excellent; sincere; little; isolated…",
      "slp1": "eka",
      "href": "../w/eka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "один"
+     }
     },
     {
      "form": "candramās",
@@ -2461,7 +3294,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the moon; the deity of the moon; name of a hero; a kind of Soma",
      "slp1": "candramas",
      "href": "../w/candramas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Чандрамас",
+      "lemma": "луна"
+     }
     },
     {
      "form": "tamo",
@@ -2471,7 +3308,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "darkness; gloom; the darkness of hell; hell or a particular division of hell; the obscura…",
      "slp1": "tamas",
      "href": "../w/tamas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мрак",
+      "lemma": "мрак"
+     }
     },
     {
      "form": "hanti",
@@ -2481,7 +3322,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to strike; to beat; to pound; to hammer; to strike upon; to smite; to slay; to hit; to ki…",
      "slp1": "han",
      "href": "../w/han.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "убивает",
+      "lemma": "убит",
+      "root": "убит"
+     }
     },
     {
      "form": "na",
@@ -2491,7 +3337,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "ca",
@@ -2501,7 +3351,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "tārā",
@@ -2511,7 +3365,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a fixed star; asterism; the pupil of the eye (chiefly ifc.); a kind of meteor; (in Sāṃkhy…",
      "slp1": "tArA",
      "href": "../w/t_41r_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "звезды",
+      "lemma": "звезды"
+     }
     },
     {
      "form": "gaṇaiḥ",
@@ -2521,7 +3379,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a flock; troop; multitude; number; tribe; series; class (of animate or inanimate beings);…",
      "slp1": "gaRa",
      "href": "../w/ga_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "сонмы"
+     }
     },
     {
      "form": "api",
@@ -2531,7 +3392,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "также",
+      "lemma": "также"
+     }
     }
    ]
   },
@@ -2550,7 +3415,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "auspicious; propitious; fair; pleasant; good; right; virtuous; meritorious; pure; holy; s…",
      "slp1": "puRya",
      "href": "../w/pu_52ya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "святые",
+      "lemma": "святая"
+     }
     },
     {
      "form": "tīrthe",
@@ -2560,7 +3429,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a passage; way; road; ford; stairs for landing or for descent into a river; bathing-place…",
      "slp1": "tIrTa",
      "href": "../w/t_49r_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "тиртхе",
+      "lemma": "тиртхе"
+     }
     },
     {
      "form": "kṛtaṃ",
@@ -2570,7 +3443,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to make like or similar; to consider equivalent; to reduce anything to; to cause to becom…",
      "slp1": "kf",
      "href": "../w/kf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "совершен",
+      "lemma": "сделал",
+      "root": "сделал"
+     }
     },
     {
      "form": "yena",
@@ -2580,7 +3458,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "которым",
+      "lemma": "что"
+     }
     },
     {
      "form": "tapaḥ",
@@ -2590,7 +3472,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "warmth; heat; pain; suffering; religious austerity; bodily mortification; penance; severe…",
      "slp1": "tapas",
      "href": "../w/tapas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "подвижничество",
+      "lemma": "подвижничество"
+     }
     },
     {
      "form": "kvāpy",
@@ -2600,7 +3486,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "anywhere",
      "slp1": "kvApi",
      "href": "../w/kv_41pi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "где-либо"
+     }
     },
     {
      "form": "atiduṣkaram",
@@ -2610,7 +3499,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "very difficult",
      "slp1": "atiduzkara",
      "href": "../w/atiduzkara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "труднее"
+     }
     }
    ]
   },
@@ -2629,7 +3521,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "его",
+      "lemma": "он"
+     }
     },
     {
      "form": "putro",
@@ -2639,7 +3535,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a son; child; a species of small venomous animal; (in astrol.) name of the fifth house; n…",
      "slp1": "putra",
      "href": "../w/putra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сын",
+      "lemma": "сын"
+     }
     },
     {
      "form": "bhaved",
@@ -2649,7 +3549,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "да проявят",
+      "lemma": "будет",
+      "root": "будет"
+     }
     },
     {
      "form": "vaśyaḥ",
@@ -2659,7 +3564,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be subjected; subdued; tamed; humbled; being under control; obedient to another's will…",
      "slp1": "vaSya",
      "href": "../w/va_53ya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "во власти",
+      "lemma": "послушным"
+     }
     },
     {
      "form": "samṛddho",
@@ -2669,7 +3578,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to succeed well; to prosper; to flourish; to increase or grow greatly; to share in abunda…",
      "slp1": "samfD",
      "href": "../w/samf_44.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "процветающим",
+      "root": "врагов"
+     }
     },
     {
      "form": "dhārmikaḥ",
@@ -2679,7 +3592,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "righteous; virtuous; pious; just; resting on right; conformable to justice (mind)",
      "slp1": "DArmika",
      "href": "../w/_44_41rmika.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "добродетельный",
+      "lemma": "добродетельный"
+     }
     },
     {
      "form": "sudhīḥ",
@@ -2689,7 +3606,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "intelligent; wise",
      "slp1": "suDI",
      "href": "../w/su_44_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мудрый",
+      "lemma": "мудрый"
+     }
     }
    ]
   },
@@ -2708,7 +3629,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to hear; to listen to; to study",
      "slp1": "Sru",
      "href": "../w/_53ru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знаменит",
+      "lemma": "услышав",
+      "root": "услышав"
+     }
     },
     {
      "form": "hitopadeśo",
@@ -2728,7 +3654,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; (near deictic pronoun in Vedic)",
      "slp1": "idam",
      "href": "../w/idam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "кого",
+      "lemma": "это"
+     }
     },
     {
      "form": "pāṭavaṃ",
@@ -2738,7 +3668,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "sharpness; intensity; skill; cleverness in; quickness; precipitation in (comp.); health",
      "slp1": "pAwava",
      "href": "../w/p_41wava.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "искусство",
+      "lemma": "Ваджроли"
+     }
     },
     {
      "form": "saṃskṛta",
@@ -2748,7 +3682,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "making ready; preparation or a prepared place; sacrifice; a sacred usage or custom; the S…",
      "slp1": "saMskfta",
      "href": "../w/sa_4dskfta.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "освященное"
+     }
     },
     {
      "form": "uktiṣu",
@@ -2758,7 +3695,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "sentence; proclamation; speech; expression; word; a worthy speech or word",
      "slp1": "ukti",
      "href": "../w/ukti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "говорится"
+     }
     }
    ]
   },
@@ -2777,7 +3717,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "speech; voice; talk; language; sound; a word; saying; phrase; sentence; statement; asseve…",
      "slp1": "vAc",
      "href": "../w/v_41c.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "речь"
+     }
     },
     {
      "form": "sarvatra",
@@ -2787,7 +3730,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "everywhere; in every case; always; at all times",
      "slp1": "sarvatra",
      "href": "../w/sarvatra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "везде",
+      "lemma": "везде"
+     }
     },
     {
      "form": "vaicitryaṃ",
@@ -2807,7 +3754,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "leading or bringing; guidance; management; conduct; (esp.) right or wise or moral conduct…",
      "slp1": "nIti",
      "href": "../w/n_49ti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "политика",
+      "lemma": "политика"
+     }
     },
     {
      "form": "vidyām",
@@ -2817,7 +3768,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowledge; science; learning; scholarship; philosophy; a spell; incantation; magical skil…",
      "slp1": "vidyA",
      "href": "../w/vidy_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знание",
+      "lemma": "знание"
+     }
     },
     {
      "form": "dadāti",
@@ -2827,7 +3782,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to give; to offer to; to yield; to give (a daughter) in marriage; to pay; to give up; to…",
      "slp1": "dA",
      "href": "../w/d_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дает",
+      "lemma": "дает",
+      "root": "взяв"
+     }
     },
     {
      "form": "ca",
@@ -2837,7 +3797,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -2856,7 +3820,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in that manner; so; thus; yes; so be it; so it shall be (particle of assent); so also; in…",
      "slp1": "taTA",
      "href": "../w/ta_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "ca",
@@ -2866,7 +3834,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "uktam",
@@ -2876,7 +3848,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to speak; to say; to tell; to declare; to proclaim; to recite; verk￼nden; to speak ill of",
      "slp1": "vac",
      "href": "../w/vac.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сказано",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     }
    ]
   },
@@ -2895,7 +3872,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "aim; purpose; cause; motive; reason; advantage; use; utility (generally named with kāma a…",
      "slp1": "arTa",
      "href": "../w/ar_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ради",
+      "lemma": "ради"
+     }
     },
     {
      "form": "āgamaḥ",
@@ -2905,7 +3886,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "arrival; coming; approach; origin; appearance or reappearance; course (of a fluid); issue…",
      "slp1": "Agama",
      "href": "../w/_41gama.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "приход",
+      "lemma": "пришел"
+     }
     },
     {
      "form": "nityam",
@@ -2915,7 +3900,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "always",
      "slp1": "nityam",
      "href": "../w/nityam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "всегда",
+      "lemma": "всегда"
+     }
     },
     {
      "form": "a",
@@ -2925,7 +3914,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "[gramm.] the sound a; eh bien!; (ibc., negating particle); [gramm.] the root han; [gramm.…",
      "slp1": "a",
      "href": "../w/a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о",
+      "lemma": "о"
+     }
     },
     {
      "form": "rogi",
@@ -2935,7 +3928,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "sick; diseased; ill",
      "slp1": "rogin",
      "href": "../w/rogin.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "больной"
+     }
     },
     {
      "form": "tā",
@@ -2945,7 +3941,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "ifc. abstracta; name of Lakṣmī",
      "slp1": "tA",
      "href": "../w/t_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "эти",
+      "lemma": "эти"
+     }
     },
     {
      "form": "ca",
@@ -2955,7 +3955,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "priyā",
@@ -2965,7 +3969,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "beloved; dear to; liked; favourite; wanted; own",
      "slp1": "priya",
      "href": "../w/priya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "любимая",
+      "lemma": "приятное"
+     }
     },
     {
      "form": "ca",
@@ -2975,7 +3983,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "bhāryā",
@@ -2985,7 +3997,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a wife (or the female of an animal)",
      "slp1": "BAryA",
      "href": "../w/_42_41ry_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "жена",
+      "lemma": "жена"
+     }
     },
     {
      "form": "priya",
@@ -2995,7 +4011,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "beloved; dear to; liked; favourite; wanted; own",
      "slp1": "priya",
      "href": "../w/priya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дорог",
+      "lemma": "приятное"
+     }
     },
     {
      "form": "vādinī",
@@ -3005,7 +4025,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "saying; discoursing; speaking; talking; speaking or talking about (often ifc. or sometime…",
      "slp1": "vAdin",
      "href": "../w/v_41din.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "говорящая",
+      "lemma": "говорящие"
+     }
     },
     {
      "form": "ca",
@@ -3015,7 +4039,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -3034,7 +4062,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be subjected; subdued; tamed; humbled; being under control; obedient to another's will…",
      "slp1": "vaSya",
      "href": "../w/va_53ya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "послушным"
+     }
     },
     {
      "form": "ca",
@@ -3044,7 +4075,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "putro",
@@ -3054,7 +4089,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a son; child; a species of small venomous animal; (in astrol.) name of the fifth house; n…",
      "slp1": "putra",
      "href": "../w/putra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сын",
+      "lemma": "сын"
+     }
     },
     {
      "form": "artha",
@@ -3064,7 +4103,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "aim; purpose; cause; motive; reason; advantage; use; utility (generally named with kāma a…",
      "slp1": "arTa",
      "href": "../w/ar_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ради",
+      "lemma": "ради"
+     }
     },
     {
      "form": "karī",
@@ -3074,7 +4117,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "doing; effecting",
      "slp1": "karin",
      "href": "../w/karin.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "слон",
+      "lemma": "слон"
+     }
     },
     {
      "form": "ca",
@@ -3084,7 +4131,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "vidyā",
@@ -3094,7 +4145,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowledge; science; learning; scholarship; philosophy; a spell; incantation; magical skil…",
      "slp1": "vidyA",
      "href": "../w/vidy_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знание",
+      "lemma": "знание"
+     }
     },
     {
      "form": "ṣaḍ",
@@ -3104,7 +4159,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "six; (in gram) a tech. name for numerals ending in ṣ and n and words like kati",
      "slp1": "zaz",
      "href": "../w/zaz.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "шесть",
+      "lemma": "шесть"
+     }
     },
     {
      "form": "jīvalokasya",
@@ -3114,7 +4173,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the world of living beings (opposed to that of the deceased); living beings; mankind",
      "slp1": "jIvaloka",
      "href": "../w/j_49valoka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мира живущих",
+      "lemma": "мир живых"
+     }
     },
     {
      "form": "sukhāni",
@@ -3124,7 +4187,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "ease; easiness; comfort; prosperity; pleasure; joy; delight in; the sky; heaven; atmosphe…",
      "slp1": "suKa",
      "href": "../w/su_4ba.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "счастья",
+      "lemma": "счастье"
+     }
     },
     {
      "form": "rājan",
@@ -3134,7 +4201,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a king; sovereign; prince; chief (often applied to gods); a man of the royal tribe or the…",
      "slp1": "rAjan",
      "href": "../w/r_41jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царь",
+      "lemma": "царь"
+     }
     }
    ]
   },
@@ -3153,7 +4224,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "who?; what?",
      "slp1": "ka",
      "href": "../w/ka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "кто",
+      "lemma": "что"
+     }
     },
     {
      "form": "dhanyo",
@@ -3163,7 +4238,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "bringing or bestowing wealth; opulent; rich; fortunate; happy; auspicious; good; virtuous…",
      "slp1": "Danya",
      "href": "../w/_44anya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "счастлив"
+     }
     },
     {
      "form": "bahubhiḥ",
@@ -3173,7 +4251,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "much; many; abundant; great in quantity",
      "slp1": "bahu",
      "href": "../w/bahu.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "многими",
+      "lemma": "много"
+     }
     },
     {
      "form": "putraiḥ",
@@ -3183,7 +4265,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a son; child; a species of small venomous animal; (in astrol.) name of the fifth house; n…",
      "slp1": "putra",
      "href": "../w/putra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "сын"
+     }
     },
     {
      "form": "kuśūla",
@@ -3203,7 +4288,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "filling; making full; satiating; drawing a bow; flooding",
      "slp1": "ApUraRa",
      "href": "../w/_41p_55ra_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Апурана",
+      "lemma": "Апурана"
+     }
     },
     {
      "form": "āḍhakaiḥ",
@@ -3213,7 +4302,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a measure of grain (= 1/4 droṇa = 4 prasthas = 16 kudavas = 64 palas = 256 karshas = 4096…",
      "slp1": "AQaka",
      "href": "../w/_41_51aka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "адхака"
+     }
     }
    ]
   },
@@ -3232,7 +4324,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "choicest; valuable; precious; best; most excellent or eminent among; royal; princely; bet…",
      "slp1": "vara",
      "href": "../w/vara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дар",
+      "lemma": "лучший"
+     }
     },
     {
      "form": "ekaḥ",
@@ -3242,7 +4338,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "one; alone; happening only once; single of its kind; excellent; sincere; little; isolated…",
      "slp1": "eka",
      "href": "../w/eka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "один",
+      "lemma": "один"
+     }
     },
     {
      "form": "kula",
@@ -3252,7 +4352,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a herd; troop; flock; assemblage; multitude; number; a race; family; community; tribe; ca…",
      "slp1": "kula",
      "href": "../w/kula.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "род",
+      "lemma": "род"
+     }
     },
     {
      "form": "ālambī",
@@ -3272,7 +4376,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "where; wherein; wherever; whither",
      "slp1": "yatra",
      "href": "../w/yatra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "где",
+      "lemma": "где"
+     }
     },
     {
      "form": "viśrūyate",
@@ -3282,7 +4390,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to hear distinctly; to be heard or be heard of far and wide; to become known or famous",
      "slp1": "viSru",
      "href": "../w/vi_53ru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "прославленный",
+      "root": "услышав"
+     }
     },
     {
      "form": "pitā",
@@ -3292,7 +4404,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a father; parents; the fathers; forefathers; ancestors; (esp.) the Pitṛs or deceased ance…",
      "slp1": "pitf",
      "href": "../w/pitf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "отец",
+      "lemma": "отец"
+     }
     }
    ]
   },
@@ -3321,7 +4437,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a father; parents; the fathers; forefathers; ancestors; (esp.) the Pitṛs or deceased ance…",
      "slp1": "pitf",
      "href": "../w/pitf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "отец",
+      "lemma": "отец"
+     }
     },
     {
      "form": "śatrur",
@@ -3331,7 +4451,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an enemy; foe; rival; a hostile king (esp. a neighbouring king as a natural enemy); the 6…",
      "slp1": "Satru",
      "href": "../w/_53atru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "врагов"
+     }
     },
     {
      "form": "mātā",
@@ -3341,7 +4464,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a mother; any mother (applicable to animals); father and mother; parents; the earth (heav…",
      "slp1": "mAtf",
      "href": "../w/m_41tf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мать",
+      "lemma": "мать"
+     }
     },
     {
      "form": "ca",
@@ -3351,7 +4478,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "vyabhicāriṇī",
@@ -3361,7 +4492,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "going astray; straying or deviating or diverging from (abl.); following bad courses; doin…",
      "slp1": "vyaBicArin",
      "href": "../w/vya_42ic_41rin.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "изменяя",
+      "lemma": "изменяя"
+     }
     }
    ]
   },
@@ -3380,7 +4515,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a wife (or the female of an animal)",
      "slp1": "BAryA",
      "href": "../w/_42_41ry_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "жена",
+      "lemma": "жена"
+     }
     },
     {
      "form": "rūpavatī",
@@ -3390,7 +4529,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "having form or colour; formed; embodied; corporeal; having a beautiful form or colour; ha…",
      "slp1": "rUpavat",
      "href": "../w/r_55pavat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "красива",
+      "lemma": "прекрасен"
+     }
     },
     {
      "form": "śatruḥ",
@@ -3400,7 +4543,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an enemy; foe; rival; a hostile king (esp. a neighbouring king as a natural enemy); the 6…",
      "slp1": "Satru",
      "href": "../w/_53atru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "враг",
+      "lemma": "врагов"
+     }
     },
     {
      "form": "putraḥ",
@@ -3410,7 +4557,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a son; child; a species of small venomous animal; (in astrol.) name of the fifth house; n…",
      "slp1": "putra",
      "href": "../w/putra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сын",
+      "lemma": "сын"
+     }
     },
     {
      "form": "śatrur",
@@ -3420,7 +4571,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an enemy; foe; rival; a hostile king (esp. a neighbouring king as a natural enemy); the 6…",
      "slp1": "Satru",
      "href": "../w/_53atru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "врагов"
+     }
     },
     {
      "form": "apaṇḍitaḥ",
@@ -3430,7 +4584,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "unlearned; illiterate",
      "slp1": "apaRqita",
      "href": "../w/apa_52qita.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "глупец",
+      "lemma": "невежда"
+     }
     }
    ]
   },
@@ -3449,7 +4607,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "которого",
+      "lemma": "что"
+     }
     },
     {
      "form": "kasya",
@@ -3459,7 +4621,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "who?; what?",
      "slp1": "ka",
      "href": "../w/ka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "чья",
+      "lemma": "что"
+     }
     },
     {
      "form": "prasūto",
@@ -3469,7 +4635,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to set in motion; to rouse to activity; to urge; to incite; to impel; to bid; to command;…",
      "slp1": "prasU",
      "href": "../w/pras_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "размножайтесь",
+      "root": "родила"
+     }
     },
     {
      "form": "'pi",
@@ -3479,7 +4649,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "также"
+     }
     },
     {
      "form": "guṇavān",
@@ -3489,7 +4663,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "endowed with the five qualities or attributes of elements; endowed with good qualities or…",
      "slp1": "guRavat",
      "href": "../w/gu_52avat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "добродетельный",
+      "lemma": "добродетельный"
+     }
     },
     {
      "form": "pūjyate",
@@ -3497,7 +4675,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "upos": "VERB",
      "morph": "Sing p3 Pres Ind Pass",
      "gloss": "to honour; to worship; to revere; to respect; to regard; to honour or present with (instr…",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "surface": "почитается",
+      "lemma": "почтил",
+      "root": "почтив"
+     }
     },
     {
      "form": "naraḥ",
@@ -3507,7 +4690,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a man; a male; a person; husband; hero; a man or piece at chess or draughts; the pin or g…",
      "slp1": "nara",
      "href": "../w/nara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "человек",
+      "lemma": "человек"
+     }
     }
    ]
   },
@@ -3526,7 +4713,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a bow; a measure of length = 4 Hastas or 1/2000 Gavyūti; (geom.) an Arc or past of a circ…",
      "slp1": "Danus",
      "href": "../w/_44anus.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "лук",
+      "lemma": "лук"
+     }
     },
     {
      "form": "vaṃśa",
@@ -3536,7 +4727,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the bamboo cane or any cane (also \"sugarcane\" and \"Shorea Robusta\"); the upper timbers or…",
      "slp1": "vaMSa",
      "href": "../w/va_4d_53a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "род",
+      "lemma": "род"
+     }
     },
     {
      "form": "viśuddhaḥ",
@@ -3546,7 +4741,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to become perfectly pure (esp. in ritual sense); to become clear (said of the senses); (i…",
      "slp1": "viSuD",
      "href": "../w/vi_53u_44.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "очищается",
+      "root": "очищается"
+     }
     },
     {
      "form": "'pi",
@@ -3556,7 +4755,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "также"
+     }
     },
     {
      "form": "nirguṇaḥ",
@@ -3566,7 +4769,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "having no qualities; having no cord; bad; vicious; having no epithet",
      "slp1": "nirguRa",
      "href": "../w/nirgu_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не достоин",
+      "lemma": "лишенный свойств"
+     }
     },
     {
      "form": "kiṃ",
@@ -3576,7 +4783,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "who?; what?",
      "slp1": "ka",
      "href": "../w/ka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "что",
+      "lemma": "что"
+     }
     },
     {
      "form": "kariṣyati",
@@ -3586,7 +4797,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to make like or similar; to consider equivalent; to reduce anything to; to cause to becom…",
      "slp1": "kf",
      "href": "../w/kf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сделает",
+      "lemma": "сделал",
+      "root": "сделал"
+     }
     }
    ]
   },
@@ -3605,7 +4821,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a kind of bīja; a kind of exclamation (au wacker)",
      "slp1": "hA",
      "href": "../w/h_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о",
+      "lemma": "оставив",
+      "root": "оставив"
+     }
     },
     {
      "form": "hā",
@@ -3615,7 +4836,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a kind of bīja; a kind of exclamation (au wacker)",
      "slp1": "hA",
      "href": "../w/h_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о",
+      "lemma": "оставив",
+      "root": "оставив"
+     }
     },
     {
      "form": "putraka",
@@ -3625,7 +4851,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a little son; boy; child (often used as a term of endearment); a puppet; doll; figure of…",
      "slp1": "putraka",
      "href": "../w/putraka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сынок",
+      "lemma": "сынок"
+     }
     },
     {
      "form": "na",
@@ -3635,7 +4865,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "adhītam",
@@ -3645,7 +4879,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to turn the mind towards; to observe; to understand; to study; to learn by heart; to read…",
      "slp1": "aDI",
      "href": "../w/a_44_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "изучена",
+      "lemma": "изучив",
+      "root": "молитвы"
+     }
     },
     {
      "form": "gatāsv",
@@ -3655,7 +4894,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to go; to move; to approach; to understand; to reside (as a disease); to elapse (of time)",
      "slp1": "gam",
      "href": "../w/gam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "отправился",
+      "root": "пришел"
+     }
     },
     {
      "form": "etāsu",
@@ -3665,7 +4908,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; [gramm.] the pronoun etad; auf diese Weise",
      "slp1": "etad",
      "href": "../w/etad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "в этих",
+      "lemma": "это"
+     }
     },
     {
      "form": "rātriṣu",
@@ -3675,7 +4922,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "night; the darkness or stillness of night (often personified); turmeric; name of a river…",
      "slp1": "rAtri",
      "href": "../w/r_41tri.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ночью",
+      "lemma": "ночь"
+     }
     }
    ]
   },
@@ -3694,7 +4945,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "тем",
+      "lemma": "он"
+     }
     },
     {
      "form": "tvaṃ",
@@ -3704,7 +4959,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "you",
      "slp1": "tvad",
      "href": "../w/tvad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ты",
+      "lemma": "тебя"
+     }
     },
     {
      "form": "viduṣāṃ",
@@ -3714,7 +4973,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "one who knows; knowing; learned; wise; familiar with; skilled in",
      "slp1": "vidvas",
      "href": "../w/vidvas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сведущих",
+      "lemma": "мудрый"
+     }
     },
     {
      "form": "madhye",
@@ -3724,7 +4987,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the middle; midst; centre; inside; interior; the middle of the sky; space between; midday…",
      "slp1": "maDya",
      "href": "../w/ma_44ya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "среди",
+      "lemma": "среди"
+     }
     },
     {
      "form": "paṅke",
@@ -3734,7 +5001,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "mud; mire; dirt; clay; ointment; unguent; moral impurity; sin",
      "slp1": "paNka",
      "href": "../w/pa_4eka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "в тину",
+      "lemma": "грязь"
+     }
     },
     {
      "form": "gaur",
@@ -3744,7 +5015,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an ox; cattle; a herd of cattle; milk; flesh; skin; hide; leather; bow-string; sinew; the…",
      "slp1": "go",
      "href": "../w/go.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "коров"
+     }
     },
     {
      "form": "iva",
@@ -3754,7 +5028,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "like; in the same manner as (in this sense = yathā); as it were; as if; in a certain mann…",
      "slp1": "iva",
      "href": "../w/iva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     },
     {
      "form": "sīdasi",
@@ -3764,7 +5042,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to sit down (esp. at a sacrifice); to sit upon or in or at (acc. or loc.); to sit down be…",
      "slp1": "sad",
      "href": "../w/sad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сидишь",
+      "lemma": "усаживается",
+      "root": "уселся"
+     }
     }
    ]
   },
@@ -3783,7 +5066,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "то",
+      "lemma": "он"
+     }
     },
     {
      "form": "katham",
@@ -3793,7 +5080,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "how?",
      "slp1": "kaTam",
      "href": "../w/ka_54am.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     },
     {
      "form": "idānīm",
@@ -3803,7 +5094,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "now; at this moment; in this case; just; even",
      "slp1": "idAnIm",
      "href": "../w/id_41n_49m.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "теперь",
+      "lemma": "теперь"
+     }
     },
     {
      "form": "ete",
@@ -3813,7 +5108,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; [gramm.] the pronoun etad; auf diese Weise",
      "slp1": "etad",
      "href": "../w/etad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "эти",
+      "lemma": "это"
+     }
     },
     {
      "form": "mama",
@@ -3823,7 +5122,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "I; we",
      "slp1": "mad",
      "href": "../w/mad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мне",
+      "lemma": "я",
+      "root": "я"
+     }
     },
     {
      "form": "putrā",
@@ -3833,7 +5137,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a son; child; a species of small venomous animal; (in astrol.) name of the fifth house; n…",
      "slp1": "putra",
      "href": "../w/putra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сыновья",
+      "lemma": "сын"
+     }
     },
     {
      "form": "guṇavantaḥ",
@@ -3843,7 +5151,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "endowed with the five qualities or attributes of elements; endowed with good qualities or…",
      "slp1": "guRavat",
      "href": "../w/gu_52avat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "благородные",
+      "lemma": "добродетельный"
+     }
     },
     {
      "form": "kriyantām",
@@ -3853,7 +5165,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to make like or similar; to consider equivalent; to reduce anything to; to cause to becom…",
      "slp1": "kf",
      "href": "../w/kf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "раскинут",
+      "lemma": "сделал",
+      "root": "сделал"
+     }
     },
     {
      "form": "yataḥ",
@@ -3863,7 +5180,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "from which or what; whence; whereof; wherefrom; where; in what place; whither; wherefore;…",
      "slp1": "yatas",
      "href": "../w/yatas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "откуда",
+      "lemma": "откуда"
+     }
     }
    ]
   },
@@ -3882,7 +5203,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "taking; fetching; bringing near; employing; use; taking food; food; livelihood; performan…",
      "slp1": "AhAra",
      "href": "../w/_41h_41ra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "пища",
+      "lemma": "пища"
+     }
     },
     {
      "form": "nidrā",
@@ -3892,7 +5217,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "sleep; slumber; sleepiness; sloth; the budding state of a flower; a mystic. name of the l…",
      "slp1": "nidrA",
      "href": "../w/nidr_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сон",
+      "lemma": "сон",
+      "root": "сон"
+     }
     },
     {
      "form": "bhaya",
@@ -3902,7 +5232,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "fear; alarm; fear of; terror; dismay; danger; peril; distress; danger from (abl. or comp.…",
      "slp1": "Baya",
      "href": "../w/_42aya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "страх",
+      "lemma": "страх"
+     }
     },
     {
      "form": "maithunāni",
@@ -3922,7 +5256,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "equal; alike; similar; shared by others; joint; common to (instr with and without saha);…",
      "slp1": "sAmAnya",
      "href": "../w/s_41m_41nya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "универсалия",
+      "lemma": "общее"
+     }
     },
     {
      "form": "etat",
@@ -3932,7 +5270,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; [gramm.] the pronoun etad; auf diese Weise",
      "slp1": "etad",
      "href": "../w/etad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "это",
+      "lemma": "это"
+     }
     },
     {
      "form": "paśubhir",
@@ -3942,7 +5284,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "cattle; kine; a domestic animal (as opp. to mṛga); a mere animal in sacred things i.e. an…",
      "slp1": "paSu",
      "href": "../w/pa_53u.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "домашними животными",
+      "lemma": "скот"
+     }
     },
     {
      "form": "narāṇām",
@@ -3952,7 +5298,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a man; a male; a person; husband; hero; a man or piece at chess or draughts; the pin or g…",
      "slp1": "nara",
      "href": "../w/nara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "людей",
+      "lemma": "человек"
+     }
     }
    ]
   },
@@ -3971,7 +5321,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowing; becoming acquainted with; knowledge; (esp.) the higher knowledge (derived from m…",
      "slp1": "jYAna",
      "href": "../w/j_59_41na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знание",
+      "lemma": "знание"
+     }
     },
     {
      "form": "narāṇām",
@@ -3981,7 +5335,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a man; a male; a person; husband; hero; a man or piece at chess or draughts; the pin or g…",
      "slp1": "nara",
      "href": "../w/nara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "людей",
+      "lemma": "человек"
+     }
     },
     {
      "form": "adhiko",
@@ -3991,7 +5349,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "additional; subsequent; later; surpassing (in number or quantity or quality); superior; m…",
      "slp1": "aDika",
      "href": "../w/a_44ika.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "выше"
+     }
     },
     {
      "form": "viśeṣo",
@@ -4001,7 +5362,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "difference between; characteristic difference; peculiar mark; special property; specialit…",
      "slp1": "viSeza",
      "href": "../w/vi_53eza.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Различие",
+      "lemma": "различие"
+     }
     },
     {
      "form": "jñānena",
@@ -4011,7 +5376,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowing; becoming acquainted with; knowledge; (esp.) the higher knowledge (derived from m…",
      "slp1": "jYAna",
      "href": "../w/j_59_41na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знанием",
+      "lemma": "знание"
+     }
     },
     {
      "form": "hīnāḥ",
@@ -4021,7 +5390,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a kind of bīja; a kind of exclamation (au wacker)",
      "slp1": "hA",
      "href": "../w/h_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "лишенные",
+      "lemma": "оставив",
+      "root": "оставив"
+     }
     },
     {
      "form": "paśubhiḥ",
@@ -4031,7 +5405,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "cattle; kine; a domestic animal (as opp. to mṛga); a mere animal in sacred things i.e. an…",
      "slp1": "paSu",
      "href": "../w/pa_53u.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "скотом",
+      "lemma": "скот"
+     }
     },
     {
      "form": "samānāḥ",
@@ -4041,7 +5419,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "same; identical; alike; equal; zusammen; unanimous",
      "slp1": "samAna",
      "href": "../w/sam_41na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сообща",
+      "lemma": "самана"
+     }
     }
    ]
   },
@@ -4060,7 +5442,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "from which or what; whence; whereof; wherefrom; where; in what place; whither; wherefore;…",
      "slp1": "yatas",
      "href": "../w/yatas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "откуда",
+      "lemma": "откуда"
+     }
     }
    ]
   },
@@ -4079,7 +5465,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "that which is established or firm; steadfast decree; statute; ordinance; law; usage; prac…",
      "slp1": "Darma",
      "href": "../w/_44arma.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дхарма",
+      "lemma": "дхарма"
+     }
     },
     {
      "form": "artha",
@@ -4089,7 +5479,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "aim; purpose; cause; motive; reason; advantage; use; utility (generally named with kāma a…",
      "slp1": "arTa",
      "href": "../w/ar_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ради",
+      "lemma": "ради"
+     }
     },
     {
      "form": "kāma",
@@ -4099,7 +5493,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "wish; desire; longing; desire for; longing after; love; affection; object of desire or of…",
      "slp1": "kAma",
      "href": "../w/k_41ma.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "желание",
+      "lemma": "желание"
+     }
     },
     {
      "form": "mokṣāṇām",
@@ -4109,7 +5507,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "emancipation; liberation; release from; release from worldly existence or transmigration;…",
      "slp1": "mokza",
      "href": "../w/mokza.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "освобождение"
+     }
     },
     {
      "form": "yasya",
@@ -4119,7 +5520,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "которого",
+      "lemma": "что"
+     }
     },
     {
      "form": "ekaḥ",
@@ -4129,7 +5534,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "one; alone; happening only once; single of its kind; excellent; sincere; little; isolated…",
      "slp1": "eka",
      "href": "../w/eka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "один",
+      "lemma": "один"
+     }
     },
     {
      "form": "'pi",
@@ -4139,7 +5548,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "также"
+     }
     },
     {
      "form": "na",
@@ -4149,7 +5562,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "vidyate",
@@ -4159,7 +5576,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to know; to understand; to learn; to be conscious of; to take for; to mind; to notice; to…",
      "slp1": "vid",
      "href": "../w/vid.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "есть",
+      "lemma": "знает",
+      "root": "знает"
+     }
     }
    ]
   },
@@ -4188,7 +5610,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "like; in the same manner as (in this sense = yathā); as it were; as if; in a certain mann…",
      "slp1": "iva",
      "href": "../w/iva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     },
     {
      "form": "tasya",
@@ -4198,7 +5624,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "его",
+      "lemma": "он"
+     }
     },
     {
      "form": "janma",
@@ -4208,7 +5638,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "birth; origin; existence; life; nativity; re-birth; birthplace; home; a progenitor; fathe…",
      "slp1": "janman",
      "href": "../w/janman.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "рождение",
+      "lemma": "рождение"
+     }
     },
     {
      "form": "nirarthakam",
@@ -4218,7 +5652,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "useless; vain; unsuccessful; nonsensical",
      "slp1": "nirarTaka",
      "href": "../w/nirar_54aka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "напрасными",
+      "lemma": "тщетными"
+     }
     }
    ]
   },
@@ -4237,7 +5675,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "что",
+      "lemma": "что"
+     }
     },
     {
      "form": "ca",
@@ -4247,7 +5689,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "ucyate",
@@ -4257,7 +5703,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to speak; to say; to tell; to declare; to proclaim; to recite; verk￼nden; to speak ill of",
      "slp1": "vac",
      "href": "../w/vac.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "называется",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     }
    ]
   },
@@ -4276,7 +5727,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "life; vital power; vigour; health; duration of life; long life; active power; efficacy; t…",
      "slp1": "Ayus",
      "href": "../w/_41yus.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "срок жизни",
+      "lemma": "срок жизни"
+     }
     },
     {
      "form": "karma",
@@ -4286,7 +5741,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "act; action; performance; business; name office; special duty; occupation; obligation; an…",
      "slp1": "karman",
      "href": "../w/karman.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "деятельность",
+      "lemma": "действия"
+     }
     },
     {
      "form": "ca",
@@ -4296,7 +5755,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "vittaṃ",
@@ -4306,7 +5769,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "anything found; a find; (in later language also pl.) acquisition; wealth; property; goods…",
      "slp1": "vitta",
      "href": "../w/vitta.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "богатство",
+      "lemma": "богатство"
+     }
     },
     {
      "form": "ca",
@@ -4316,7 +5783,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "vidyā",
@@ -4326,7 +5797,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowledge; science; learning; scholarship; philosophy; a spell; incantation; magical skil…",
      "slp1": "vidyA",
      "href": "../w/vidy_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знание",
+      "lemma": "знание"
+     }
     },
     {
      "form": "nidhanam",
@@ -4336,7 +5811,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "settling down; residence or place of residence; domicile; receptacle; conclusion; end; de…",
      "slp1": "niDana",
      "href": "../w/ni_44ana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "смерть",
+      "lemma": "смерть"
+     }
     },
     {
      "form": "eva",
@@ -4346,7 +5825,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "so; just so; exactly so (in the sense of the later evam); indeed; truly; really (often at…",
      "slp1": "eva",
      "href": "../w/eva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "именно",
+      "lemma": "именно"
+     }
     },
     {
      "form": "ca",
@@ -4356,7 +5839,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -4375,7 +5862,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "five",
      "slp1": "paYcan",
      "href": "../w/pa_59can.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "пять",
+      "lemma": "пять"
+     }
     },
     {
      "form": "etāni",
@@ -4385,7 +5876,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; [gramm.] the pronoun etad; auf diese Weise",
      "slp1": "etad",
      "href": "../w/etad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "эти",
+      "lemma": "это"
+     }
     },
     {
      "form": "hi",
@@ -4395,7 +5890,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "for; because; on account of",
      "slp1": "hi",
      "href": "../w/hi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ведь",
+      "lemma": "ведь",
+      "root": "ведь"
+     }
     },
     {
      "form": "sṛjyante",
@@ -4405,7 +5905,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to let go or fly; to discharge; to throw; to cast; to hurl at (acc. or dat.); to cast or…",
      "slp1": "sfj",
      "href": "../w/sfj.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "возрождаются",
+      "lemma": "сотворил",
+      "root": "выпустил"
+     }
     },
     {
      "form": "garbha",
@@ -4415,7 +5920,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the womb; the inside; middle; interior of anything; calyx (as of a lotus); an inner apart…",
      "slp1": "garBa",
      "href": "../w/gar_42a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "зародыш",
+      "lemma": "зародыш"
+     }
     },
     {
      "form": "sthasya",
@@ -4425,7 +5934,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "standing; staying; abiding; being situated in; existing or being in or on or among; occup…",
      "slp1": "sTa",
      "href": "../w/s_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "стоит"
+     }
     },
     {
      "form": "eva",
@@ -4435,7 +5947,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "so; just so; exactly so (in the sense of the later evam); indeed; truly; really (often at…",
      "slp1": "eva",
      "href": "../w/eva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "именно",
+      "lemma": "именно"
+     }
     },
     {
      "form": "dehinaḥ",
@@ -4445,7 +5961,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a living creature; man; the spirit; soul (enveloped in the body)",
      "slp1": "dehin",
      "href": "../w/dehin.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "смертных",
+      "lemma": "воплощенный"
+     }
     }
    ]
   },
@@ -4464,7 +5984,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "who?; what?",
      "slp1": "ka",
      "href": "../w/ka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "что",
+      "lemma": "что"
+     }
     },
     {
      "form": "ca",
@@ -4474,7 +5998,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -4493,7 +6021,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "necessarily; inevitably; certainly; at all events; by all means",
      "slp1": "avaSyam",
      "href": "../w/ava_53yam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "непременно",
+      "lemma": "непременно"
+     }
     },
     {
      "form": "bhāvino",
@@ -4503,7 +6035,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "becoming; being; existing; wont to be (often ifc.); about to be; future; imminent; predes…",
      "slp1": "BAvin",
      "href": "../w/_42_41vin.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "будет"
+     }
     },
     {
      "form": "bhāvā",
@@ -4513,7 +6048,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "becoming; being; existing; occurring; appearance; turning or transition into; continuance…",
      "slp1": "BAva",
      "href": "../w/_42_41va.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "становятся",
+      "lemma": "бытие"
+     }
     },
     {
      "form": "bhavanti",
@@ -4523,7 +6062,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "становятся",
+      "lemma": "будет",
+      "root": "будет"
+     }
     },
     {
      "form": "mahatām",
@@ -4533,7 +6077,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "great; large; big; huge; ample; extensive; long; abundant; numerous; considerable; import…",
      "slp1": "mahat",
      "href": "../w/mahat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "великих",
+      "lemma": "великий"
+     }
     },
     {
      "form": "api",
@@ -4543,7 +6091,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "также",
+      "lemma": "также"
+     }
     }
    ]
   },
@@ -4562,7 +6114,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "naked; new; bare; desolate; desert",
      "slp1": "nagna",
      "href": "../w/nagna.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "нагим",
+      "lemma": "нагим"
+     }
     },
     {
      "form": "tvam",
@@ -4572,7 +6128,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "(suffix creating abstract nouns)",
      "slp1": "tva",
      "href": "../w/tva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ты",
+      "lemma": "ты"
+     }
     },
     {
      "form": "nīlakaṇṭhasya",
@@ -4582,7 +6142,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a peacock; a wagtail; a sparrow; the blue-necked jay; Ardea Sibirica; a species of plant;…",
      "slp1": "nIlakaRWa",
      "href": "../w/n_49laka_52_57a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "Синегорлый"
+     }
     },
     {
      "form": "mahā",
@@ -4592,7 +6155,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "great; large; big; huge; ample; extensive; long; abundant; numerous; considerable; import…",
      "slp1": "mahat",
      "href": "../w/mahat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "великий",
+      "lemma": "великий"
+     }
     },
     {
      "form": "ahi",
@@ -4602,7 +6169,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a snake; the serpent of the sky; the demon Vṛtra; cloud; water; the sun; a name of Rāhu;…",
      "slp1": "ahi",
      "href": "../w/ahi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "змея",
+      "lemma": "змея"
+     }
     },
     {
      "form": "śayanam",
@@ -4612,7 +6183,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the act of lying down or sleeping; rest; repose; sleep; a bed; couch; sleeping-place; cop…",
      "slp1": "Sayana",
      "href": "../w/_53ayana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ложе",
+      "lemma": "ложе"
+     }
     },
     {
      "form": "hareḥ",
@@ -4622,7 +6197,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "yellow or reddish brown or green (the colour); a horse; steed (esp. of Indra); a lion; th…",
      "slp1": "hari",
      "href": "../w/hari.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Хари",
+      "lemma": "Хари"
+     }
     }
    ]
   },
@@ -4641,7 +6220,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "other; another",
      "slp1": "anya",
      "href": "../w/anya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "другой",
+      "lemma": "другой"
+     }
     },
     {
      "form": "ca",
@@ -4651,7 +6234,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -4670,7 +6257,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "что",
+      "lemma": "что"
+     }
     },
     {
      "form": "abhāvi",
@@ -4680,7 +6271,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what is not to be or will not be; not destined to be",
      "slp1": "aBAvin",
      "href": "../w/a_42_41vin.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "достигают"
+     }
     },
     {
      "form": "na",
@@ -4690,7 +6284,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "tad",
@@ -4700,7 +6298,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "то",
+      "lemma": "он"
+     }
     },
     {
      "form": "bhāvi",
@@ -4710,7 +6312,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "becoming; being; existing; wont to be (often ifc.); about to be; future; imminent; predes…",
      "slp1": "BAvin",
      "href": "../w/_42_41vin.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "будет",
+      "lemma": "будет"
+     }
     },
     {
      "form": "bhāvi",
@@ -4720,7 +6326,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "becoming; being; existing; wont to be (often ifc.); about to be; future; imminent; predes…",
      "slp1": "BAvin",
      "href": "../w/_42_41vin.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "будет",
+      "lemma": "будет"
+     }
     },
     {
      "form": "cen",
@@ -4730,7 +6340,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "(never found at the beginning of a sentence or verse) = ca; when",
      "slp1": "ced",
      "href": "../w/ced.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "если",
+      "lemma": "если"
+     }
     },
     {
      "form": "na",
@@ -4740,7 +6354,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "tad",
@@ -4750,7 +6368,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "то",
+      "lemma": "он"
+     }
     },
     {
      "form": "anyathā",
@@ -4760,7 +6382,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "otherwise; in a different manner; inaccurately; untruly; falsely; erroneously; from anoth…",
      "slp1": "anyaTA",
      "href": "../w/anya_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "иначе",
+      "lemma": "иначе"
+     }
     }
    ]
   },
@@ -4779,7 +6405,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in this manner; thus (in its original signification iti refers to something that has been…",
      "slp1": "iti",
      "href": "../w/iti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "cintā",
@@ -4789,7 +6419,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "thought; care; anxiety; anxious thought about; consideration; name of a woman",
      "slp1": "cintA",
      "href": "../w/cint_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мысль",
+      "lemma": "мысль"
+     }
     },
     {
      "form": "viṣa",
@@ -4799,7 +6433,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "poison; bane; anything actively pernicious; a particular vegetable poison; water; a mysti…",
      "slp1": "viza",
      "href": "../w/viza.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "яд",
+      "lemma": "яд"
+     }
     },
     {
      "form": "ghnaḥ",
@@ -4809,7 +6447,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "striking with; killing; killer; murderer; destroying; removing; multiplied by",
      "slp1": "Gna",
      "href": "../w/_47na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "губит"
+     }
     },
     {
      "form": "'yam",
@@ -4819,7 +6460,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; (near deictic pronoun in Vedic)",
      "slp1": "idam",
      "href": "../w/idam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "кого",
+      "lemma": "это"
+     }
     },
     {
      "form": "agadaḥ",
@@ -4829,7 +6474,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "freedom from disease; a medicine; drug; antidote; Costus Speciosus",
      "slp1": "agada",
      "href": "../w/agada.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "здоровым"
+     }
     },
     {
      "form": "kiṃ",
@@ -4839,7 +6487,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "who?; what?",
      "slp1": "ka",
      "href": "../w/ka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "что",
+      "lemma": "что"
+     }
     },
     {
      "form": "na",
@@ -4849,7 +6501,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "pīyate",
@@ -4859,7 +6515,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to drink; to quaff; to suck; to swallow",
      "slp1": "pA",
      "href": "../w/p_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "пьют",
+      "lemma": "Защищайте",
+      "root": "Защищайте"
+     }
     }
    ]
   },
@@ -4878,7 +6539,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not subject to old age; undecaying; ever young",
      "slp1": "ajara",
      "href": "../w/ajara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "нестареющий",
+      "lemma": "нестареющий"
+     }
     },
     {
      "form": "amara",
@@ -4888,7 +6553,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a deity; (in arithm.) the number 33; name of a Marut; the plant Euphorbia Tirucalli; the…",
      "slp1": "amara",
      "href": "../w/amara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "бессмертные",
+      "lemma": "бессмертные"
+     }
     },
     {
      "form": "vat",
@@ -4898,7 +6567,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "(Vergleichspartikel)",
      "slp1": "vat",
      "href": "../w/vat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "подобно",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     },
     {
      "form": "prājño",
@@ -4908,7 +6582,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "intellectual; intelligent",
      "slp1": "prAjYa",
      "href": "../w/pr_41j_59a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "мудрый"
+     }
     },
     {
      "form": "vidyām",
@@ -4918,7 +6595,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowledge; science; learning; scholarship; philosophy; a spell; incantation; magical skil…",
      "slp1": "vidyA",
      "href": "../w/vidy_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знание",
+      "lemma": "знание"
+     }
     },
     {
      "form": "artham",
@@ -4928,7 +6609,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "aim; purpose; cause; motive; reason; advantage; use; utility (generally named with kāma a…",
      "slp1": "arTa",
      "href": "../w/ar_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "цель",
+      "lemma": "ради"
+     }
     },
     {
      "form": "ca",
@@ -4938,7 +6623,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "cintayet",
@@ -4946,7 +6635,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "upos": "VERB",
      "morph": "Sing p3 Pres Opt",
      "gloss": "to think; to have a thought or idea; to reflect; to consider; to think about; to reflect…",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "surface": "помышляет",
+      "lemma": "подумал",
+      "root": "подумал"
+     }
     }
    ]
   },
@@ -4965,7 +6659,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to seize; to take (by the hand); to grasp; to lay hold of; to arrest; to stop; to catch;…",
      "slp1": "grah",
      "href": "../w/grah.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "схвачен",
+      "lemma": "взяв",
+      "root": "взяв"
+     }
     },
     {
      "form": "iva",
@@ -4975,7 +6674,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "like; in the same manner as (in this sense = yathā); as it were; as if; in a certain mann…",
      "slp1": "iva",
      "href": "../w/iva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     },
     {
      "form": "keśeṣu",
@@ -4985,7 +6688,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the hair of the head; the mane (of a horse or lion); a kind of perfume; name of a mineral…",
      "slp1": "keSa",
      "href": "../w/ke_53a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "за волосы",
+      "lemma": "волосы"
+     }
     },
     {
      "form": "mṛtyunā",
@@ -4995,7 +6702,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "death; dying; Death personified; the god of disease (sometimes identified with Yama or wi…",
      "slp1": "mftyu",
      "href": "../w/mftyu.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "смерть",
+      "lemma": "смерть"
+     }
     },
     {
      "form": "dharmam",
@@ -5005,7 +6716,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "that which is established or firm; steadfast decree; statute; ordinance; law; usage; prac…",
      "slp1": "Darma",
      "href": "../w/_44arma.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дхарму",
+      "lemma": "дхарма"
+     }
     },
     {
      "form": "ācaret",
@@ -5015,7 +6730,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to come near to (acc.); to approach; to lead hither (as a path); to address; to apply to…",
      "slp1": "Acar",
      "href": "../w/_41car.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "следует",
+      "lemma": "делает",
+      "root": "движется"
+     }
     }
    ]
   },
@@ -5034,7 +6754,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; [gramm.] the pronoun etad; auf diese Weise",
      "slp1": "etad",
      "href": "../w/etad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "это",
+      "lemma": "это"
+     }
     },
     {
      "form": "kārya",
@@ -5044,7 +6768,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "work or business to be done; duty; affair; a religious action or performance; occupation;…",
      "slp1": "kArya",
      "href": "../w/k_41rya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дело",
+      "lemma": "дело"
+     }
     },
     {
      "form": "akṣamāṇām",
@@ -5054,7 +6782,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "unable to endure; impatient; incompetent",
      "slp1": "akzama",
      "href": "../w/akzama.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "невыполнима"
+     }
     },
     {
      "form": "keṣāṃcid",
@@ -5064,7 +6795,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "someone; something; any",
      "slp1": "kaScit",
      "href": "../w/ka_53cit.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "никто"
+     }
     },
     {
      "form": "ālasya",
@@ -5074,7 +6808,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "idleness; sloth; want of energy",
      "slp1": "Alasya",
      "href": "../w/_41lasya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "лень",
+      "lemma": "лень"
+     }
     },
     {
      "form": "vacanam",
@@ -5084,7 +6822,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the act of speaking; utterance; pronunciation; statement; declaration; express mention; s…",
      "slp1": "vacana",
      "href": "../w/vacana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "слова",
+      "lemma": "слова"
+     }
     }
    ]
   },
@@ -5103,7 +6845,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "human effort (opp. to daiva); manly act; virility; heroism; haughtiness; pride; name of a…",
      "slp1": "puruzakAra",
      "href": "../w/puruzak_41ra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "человеческими усилиями",
+      "lemma": "человеческими усилиями"
+     }
     },
     {
      "form": "autkārṣyam",
@@ -5121,7 +6867,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to say; to call; to consider; to declare; to acknowledge; to state; to adjugde anything",
      "slp1": "ah",
      "href": "../w/ah.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сказал",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     }
    ]
   },
@@ -5140,7 +6891,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "according; as; like; as",
      "slp1": "yaTA",
      "href": "../w/ya_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     },
     {
      "form": "hy",
@@ -5150,7 +6905,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "for; because; on account of",
      "slp1": "hi",
      "href": "../w/hi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ведь",
+      "lemma": "ведь",
+      "root": "ведь"
+     }
     },
     {
      "form": "ekena",
@@ -5160,7 +6920,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "one; alone; happening only once; single of its kind; excellent; sincere; little; isolated…",
      "slp1": "eka",
      "href": "../w/eka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "одним",
+      "lemma": "один"
+     }
     },
     {
      "form": "cakreṇa",
@@ -5170,7 +6934,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a wheel; a potter's wheel; a discus; an oil-mill; an astronomical circle; a diagram; a cy…",
      "slp1": "cakra",
      "href": "../w/cakra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "диском",
+      "lemma": "колесо"
+     }
     },
     {
      "form": "na",
@@ -5180,7 +6948,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "rathasya",
@@ -5190,7 +6962,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a chariot; car; esp. a two-wheeled war-chariot (lighter and swifter than the anas); any v…",
      "slp1": "raTa",
      "href": "../w/ra_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "колесницы",
+      "lemma": "колесницу"
+     }
     },
     {
      "form": "gatir",
@@ -5200,7 +6976,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "going; moving; gait; deportment; motion in general; manner or power of going; going away;…",
      "slp1": "gati",
      "href": "../w/gati.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "могут прийти",
+      "lemma": "путь"
+     }
     },
     {
      "form": "bhavet",
@@ -5210,7 +6990,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "будет",
+      "lemma": "будет",
+      "root": "будет"
+     }
     }
    ]
   },
@@ -5229,7 +7014,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in that manner; so; thus; yes; so be it; so it shall be (particle of assent); so also; in…",
      "slp1": "taTA",
      "href": "../w/ta_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "puruṣakāreṇa",
@@ -5239,7 +7028,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "human effort (opp. to daiva); manly act; virility; heroism; haughtiness; pride; name of a…",
      "slp1": "puruzakAra",
      "href": "../w/puruzak_41ra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "усилиями",
+      "lemma": "человеческими усилиями"
+     }
     },
     {
      "form": "vinā",
@@ -5249,7 +7042,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "without; except; short or exclusive of",
      "slp1": "vinA",
      "href": "../w/vin_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "без",
+      "lemma": "без"
+     }
     },
     {
      "form": "daivaṃ",
@@ -5269,7 +7066,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "sidhyati",
@@ -5279,7 +7080,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be accomplished or fulfilled or effected or settled; to be successful; to succeed; to…",
      "slp1": "siD",
      "href": "../w/si_44.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "устанавливается",
+      "lemma": "устанавливается",
+      "root": "устанавливается"
+     }
     }
    ]
   },
@@ -5298,7 +7104,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in that manner; so; thus; yes; so be it; so it shall be (particle of assent); so also; in…",
      "slp1": "taTA",
      "href": "../w/ta_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "ca",
@@ -5308,7 +7118,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -5327,7 +7141,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "being before or in front fore; first; eastern; to the east of (abl.); former; prior; prec…",
      "slp1": "pUrva",
      "href": "../w/p_55rva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "прежде",
+      "lemma": "прежде"
+     }
     },
     {
      "form": "janma",
@@ -5337,7 +7155,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "birth; origin; existence; life; nativity; re-birth; birthplace; home; a progenitor; fathe…",
      "slp1": "janman",
      "href": "../w/janman.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "рождение",
+      "lemma": "рождение"
+     }
     },
     {
      "form": "kṛtam",
@@ -5347,7 +7169,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to make like or similar; to consider equivalent; to reduce anything to; to cause to becom…",
      "slp1": "kf",
      "href": "../w/kf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сделано",
+      "lemma": "сделал",
+      "root": "сделал"
+     }
     },
     {
      "form": "karma",
@@ -5357,7 +7184,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "act; action; performance; business; name office; special duty; occupation; obligation; an…",
      "slp1": "karman",
      "href": "../w/karman.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "деятельность",
+      "lemma": "действия"
+     }
     },
     {
      "form": "tad",
@@ -5367,7 +7198,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "то",
+      "lemma": "он"
+     }
     },
     {
      "form": "daivam",
@@ -5387,7 +7222,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in this manner; thus (in its original signification iti refers to something that has been…",
      "slp1": "iti",
      "href": "../w/iti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "kathyate",
@@ -5397,7 +7236,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to call; to name; to tell; to designate",
      "slp1": "kaTay",
      "href": "../w/ka_54ay.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "зовется",
+      "lemma": "рассказал",
+      "root": "рассказал"
+     }
     }
    ]
   },
@@ -5416,7 +7260,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "поэтому",
+      "lemma": "он"
+     }
     },
     {
      "form": "puruṣakāreṇa",
@@ -5426,7 +7274,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "human effort (opp. to daiva); manly act; virility; heroism; haughtiness; pride; name of a…",
      "slp1": "puruzakAra",
      "href": "../w/puruzak_41ra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "усилиями",
+      "lemma": "человеческими усилиями"
+     }
     },
     {
      "form": "yatnaṃ",
@@ -5436,7 +7288,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "activity of will; volition; aspiring after; performance; work; effort; exertion; energy;…",
      "slp1": "yatna",
      "href": "../w/yatna.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "пытался",
+      "lemma": "усилия"
+     }
     },
     {
      "form": "kuryād",
@@ -5446,7 +7302,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to make like or similar; to consider equivalent; to reduce anything to; to cause to becom…",
      "slp1": "kf",
      "href": "../w/kf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "выказывал",
+      "lemma": "сделал",
+      "root": "сделал"
+     }
     },
     {
      "form": "atandritaḥ",
@@ -5456,7 +7317,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "unwearied",
      "slp1": "atandrita",
      "href": "../w/atandrita.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "усердный",
+      "lemma": "неустанно"
+     }
     }
    ]
   },
@@ -5475,7 +7340,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "daivam",
@@ -5495,7 +7364,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "также",
+      "lemma": "также"
+     }
     },
     {
      "form": "saṃcintya",
@@ -5503,7 +7376,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "upos": "VERB",
      "morph": "",
      "gloss": "to think about; to think over; to consider carefully; to reflect about (acc.); to design;…",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "surface": "подумав",
+      "lemma": "подумав",
+      "root": "подумал"
+     }
     },
     {
      "form": "tyajed",
@@ -5513,7 +7391,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to leave; to abandon; to quit; to leave a place; to go away from; to let go; to dismiss;…",
      "slp1": "tyaj",
      "href": "../w/tyaj.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "оставив",
+      "root": "оставив"
+     }
     },
     {
      "form": "udyogam",
@@ -5523,7 +7405,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the act of undertaking anything; exertion; perseverance; strenuous and continuous endeavo…",
      "slp1": "udyoga",
      "href": "../w/udyoga.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "в Книге о старании"
+     }
     },
     {
      "form": "ātmanaḥ",
@@ -5533,7 +7418,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the breath; the soul; principle of life and sensation; the individual soul; self; abstrac…",
      "slp1": "Atman",
      "href": "../w/_41tman.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "себя",
+      "lemma": "себя"
+     }
     }
    ]
   },
@@ -5572,7 +7461,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "Sesamum indicum DC. (its blossom is compared to the nose); sesamum seed (much used in coo…",
      "slp1": "tila",
      "href": "../w/tila.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "сезам"
+     }
     },
     {
      "form": "na",
@@ -5582,7 +7474,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "āptum",
@@ -5592,7 +7488,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to reach; to overtake; to meet with; to fall upon; to obtain; to gain; to take possession…",
      "slp1": "Ap",
      "href": "../w/_41p.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "достичь",
+      "lemma": "достигает",
+      "root": "достигает"
+     }
     },
     {
      "form": "arhati",
@@ -5602,7 +7503,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to deserve; to merit; to be worthy of; to be allowed to; to be able; to counterbalance",
      "slp1": "arh",
      "href": "../w/arh.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "заслуживает",
+      "lemma": "должен",
+      "root": "должен"
+     }
     }
    ]
   },
@@ -5621,7 +7527,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "other; another",
      "slp1": "anya",
      "href": "../w/anya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "другой",
+      "lemma": "другой"
+     }
     },
     {
      "form": "ca",
@@ -5631,7 +7541,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -5660,7 +7574,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a man; male; human being (people); a person; an officer; a servant; a friend; a member of…",
      "slp1": "puruza",
      "href": "../w/puruza.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "человек",
+      "lemma": "человек"
+     }
     },
     {
      "form": "siṃham",
@@ -5670,7 +7588,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a lion; the zodiacal sign Leo or its Lagna; a hero or eminent person; a particular form o…",
      "slp1": "siMha",
      "href": "../w/si_4dha.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "льва",
+      "lemma": "лев"
+     }
     },
     {
      "form": "upaiti",
@@ -5680,7 +7602,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to go or come or step near; to approach; to betake one's self to; to arrive at; to meet w…",
      "slp1": "upe",
      "href": "../w/upe.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "придя",
+      "root": "придя"
+     }
     },
     {
      "form": "lakṣmīr",
@@ -5690,7 +7616,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a mark; sign; token; a bad sign; impending misfortune; a good sign; good fortune; prosper…",
      "slp1": "lakzmI",
      "href": "../w/lakzm_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Лакшми",
+      "lemma": "Лакшми"
+     }
     },
     {
      "form": "daivena",
@@ -5710,7 +7640,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to give; to offer to; to yield; to give (a daughter) in marriage; to pay; to give up; to…",
      "slp1": "dA",
      "href": "../w/d_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "должна быть даваема",
+      "lemma": "дает",
+      "root": "взяв"
+     }
     },
     {
      "form": "iti",
@@ -5720,7 +7655,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in this manner; thus (in its original signification iti refers to something that has been…",
      "slp1": "iti",
      "href": "../w/iti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "kāpuruṣā",
@@ -5730,7 +7669,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a contemptible man; coward",
      "slp1": "kApuruza",
      "href": "../w/k_41puruza.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "трус"
+     }
     },
     {
      "form": "vadanti",
@@ -5740,7 +7682,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to speak; to say; to tell; to talk with; to address; to recommend; to adjudge; to designa…",
      "slp1": "vad",
      "href": "../w/vad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "говорят",
+      "lemma": "говорят",
+      "root": "говорят"
+     }
     }
    ]
   },
@@ -5769,7 +7716,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to strike or fix in; to hurl in or upon or against; to make an attempt upon; to attack; t…",
      "slp1": "nihan",
      "href": "../w/nihan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "убив",
+      "lemma": "убит",
+      "root": "убит"
+     }
     },
     {
      "form": "kuru",
@@ -5779,7 +7731,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to make like or similar; to consider equivalent; to reduce anything to; to cause to becom…",
      "slp1": "kf",
      "href": "../w/kf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "куру",
+      "lemma": "сделал",
+      "root": "сделал"
+     }
     },
     {
      "form": "pauruṣam",
@@ -5799,7 +7756,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the breath; the soul; principle of life and sensation; the individual soul; self; abstrac…",
      "slp1": "Atman",
      "href": "../w/_41tman.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "себя",
+      "lemma": "себя"
+     }
     },
     {
      "form": "śaktyā",
@@ -5809,7 +7770,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "power; ability; strength; might; effort; energy; capability; faculty; skill; capacity for…",
      "slp1": "Sakti",
      "href": "../w/_53akti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сил",
+      "lemma": "дротик"
+     }
     },
     {
      "form": "yatne",
@@ -5819,7 +7784,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "activity of will; volition; aspiring after; performance; work; effort; exertion; energy;…",
      "slp1": "yatna",
      "href": "../w/yatna.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "старательно",
+      "lemma": "усилия"
+     }
     },
     {
      "form": "kṛte",
@@ -5829,7 +7798,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to make like or similar; to consider equivalent; to reduce anything to; to cause to becom…",
      "slp1": "kf",
      "href": "../w/kf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ради",
+      "lemma": "сделал",
+      "root": "сделал"
+     }
     },
     {
      "form": "yadi",
@@ -5839,7 +7813,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in case that; if; whether",
      "slp1": "yadi",
      "href": "../w/yadi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "если",
+      "lemma": "если"
+     }
     },
     {
      "form": "na",
@@ -5849,7 +7827,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "sidhyati",
@@ -5859,7 +7841,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be accomplished or fulfilled or effected or settled; to be successful; to succeed; to…",
      "slp1": "siD",
      "href": "../w/si_44.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "устанавливается",
+      "lemma": "устанавливается",
+      "root": "устанавливается"
+     }
     },
     {
      "form": "ko",
@@ -5869,7 +7856,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "who?; what?",
      "slp1": "ka",
      "href": "../w/ka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "кто",
+      "lemma": "что"
+     }
     },
     {
      "form": "'tra",
@@ -5879,7 +7870,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in this matter; in this respect; in this place; here; there; then; at this time",
      "slp1": "atra",
      "href": "../w/atra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "три",
+      "lemma": "здесь"
+     }
     },
     {
      "form": "doṣaḥ",
@@ -5889,7 +7884,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "fault; vice; deficiency; want; inconvenience; disadvantage; badness; wickedness; sinfulne…",
      "slp1": "doza",
      "href": "../w/doza.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ошибки",
+      "lemma": "зло"
+     }
     }
    ]
   },
@@ -5908,7 +7907,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "according; as; like; as",
      "slp1": "yaTA",
      "href": "../w/ya_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     },
     {
      "form": "mṛd",
@@ -5918,7 +7921,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "earth; soil; clay; loam; [min.] = saurāṣṭrā",
      "slp1": "mfd",
      "href": "../w/mfd.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "глины",
+      "lemma": "глины",
+      "root": "глины"
+     }
     },
     {
      "form": "piṇḍāt",
@@ -5928,7 +7936,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "any round or roundish mass or heap; a ball; globe; knob; button; clod; lump; piece; a rou…",
      "slp1": "piRqa",
      "href": "../w/pi_52qa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "пинда"
+     }
     },
     {
      "form": "kartā",
@@ -5938,7 +7949,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the creator of the world; name of Viṣṇu; name of Brahman; name of Śiva; (in Gr.) the agen…",
      "slp1": "kartf",
      "href": "../w/kartf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "деятель",
+      "lemma": "деятель"
+     }
     },
     {
      "form": "kurute",
@@ -5948,7 +7963,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to make like or similar; to consider equivalent; to reduce anything to; to cause to becom…",
      "slp1": "kf",
      "href": "../w/kf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "делает",
+      "lemma": "сделал",
+      "root": "сделал"
+     }
     },
     {
      "form": "yad",
@@ -5958,7 +7978,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "что",
+      "lemma": "что"
+     }
     },
     {
      "form": "yad",
@@ -5968,7 +7992,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "что",
+      "lemma": "что"
+     }
     },
     {
      "form": "icchati",
@@ -5978,7 +8006,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to seek for; to desire; to intend; to assent; to concede; to choose",
      "slp1": "iz",
      "href": "../w/iz.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "желает",
+      "lemma": "хочу",
+      "root": "хочу"
+     }
     }
    ]
   },
@@ -5997,7 +8030,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "thus; in this way; in such a manner; such",
      "slp1": "evam",
      "href": "../w/evam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "ātma",
@@ -6007,7 +8044,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the breath; the soul; principle of life and sensation; the individual soul; self; abstrac…",
      "slp1": "Atman",
      "href": "../w/_41tman.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "себя",
+      "lemma": "себя"
+     }
     },
     {
      "form": "kṛtam",
@@ -6017,7 +8058,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to make like or similar; to consider equivalent; to reduce anything to; to cause to becom…",
      "slp1": "kf",
      "href": "../w/kf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сделано",
+      "lemma": "сделал",
+      "root": "сделал"
+     }
     },
     {
      "form": "karma",
@@ -6027,7 +8073,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "act; action; performance; business; name office; special duty; occupation; obligation; an…",
      "slp1": "karman",
      "href": "../w/karman.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "деятельность",
+      "lemma": "действия"
+     }
     },
     {
      "form": "mānavaḥ",
@@ -6037,7 +8087,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "man; patr. from manu (name of Nābhānediṣṭha); name of a cosmic period; the children of me…",
      "slp1": "mAnava",
      "href": "../w/m_41nava.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "человек",
+      "lemma": "человек"
+     }
     },
     {
      "form": "pratipadyate",
@@ -6047,7 +8101,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to set foot upon; to enter; to go or resort to; to arrive at; to resch; to attain; to wal…",
      "slp1": "pratipad",
      "href": "../w/pratipad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "достигает",
+      "lemma": "достигает",
+      "root": "достигает"
+     }
     }
    ]
   },
@@ -6076,7 +8135,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "(Vergleichspartikel)",
      "slp1": "vat",
      "href": "../w/vat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "подобно",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     },
     {
      "form": "prāptaṃ",
@@ -6086,7 +8150,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to attain to; to reach; to arrive at; to meet with; to find; to obtain; to receive; to in…",
      "slp1": "prAp",
      "href": "../w/pr_41p.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "пришел",
+      "lemma": "достигнув",
+      "root": "достигает"
+     }
     },
     {
      "form": "dṛṣṭvā",
@@ -6096,7 +8165,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to behold; to look at; to regard; to consider; to see; to wait on; to visit; to see with…",
      "slp1": "dfS",
      "href": "../w/df_53.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "увидев",
+      "lemma": "увидев",
+      "root": "увидев"
+     }
     },
     {
      "form": "api",
@@ -6106,7 +8180,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "также",
+      "lemma": "также"
+     }
     },
     {
      "form": "nidhim",
@@ -6116,7 +8194,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "setting down or serving up (food etc.); the bottom of the Ukhā; a receptacle; a store; ho…",
      "slp1": "niDi",
      "href": "../w/ni_44i.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сокровищницу",
+      "lemma": "сокровище"
+     }
     },
     {
      "form": "agrataḥ",
@@ -6126,7 +8208,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in front; before; in the beginning; first; (with gen.) before; in presence of",
      "slp1": "agratas",
      "href": "../w/agratas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "впереди",
+      "lemma": "перед"
+     }
     }
    ]
   },
@@ -6145,7 +8231,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "svayaṃ",
@@ -6155,7 +8245,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "self; one's self (applicable to all persons); of or by one's self spontaneously; voluntar…",
      "slp1": "svayam",
      "href": "../w/svayam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сам",
+      "lemma": "сам"
+     }
     },
     {
      "form": "daivam",
@@ -6175,7 +8269,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to take; to accept; to receive from; to seize; to take away; to carry off; to rob; to tak…",
      "slp1": "AdA",
      "href": "../w/_41d_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "принимает",
+      "lemma": "взяв",
+      "root": "взяв"
+     }
     },
     {
      "form": "puruṣa",
@@ -6185,7 +8284,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a man; male; human being (people); a person; an officer; a servant; a friend; a member of…",
      "slp1": "puruza",
      "href": "../w/puruza.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "человек",
+      "lemma": "человек"
+     }
     },
     {
      "form": "artham",
@@ -6195,7 +8298,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "aim; purpose; cause; motive; reason; advantage; use; utility (generally named with kāma a…",
      "slp1": "arTa",
      "href": "../w/ar_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "цель",
+      "lemma": "ради"
+     }
     },
     {
      "form": "apekṣate",
@@ -6205,7 +8312,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to look away; to look round; to have some design; to have regard to; to respect; to look…",
      "slp1": "apekz",
      "href": "../w/apekz.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "требует",
+      "lemma": "зависимость",
+      "root": "зависимость"
+     }
     }
    ]
   },
@@ -6224,7 +8336,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the act of raising or lifting up; elevation; undertaking; beginning; the act of striving…",
      "slp1": "udyama",
      "href": "../w/udyama.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "напряжением сил",
+      "lemma": "труд"
+     }
     },
     {
      "form": "hi",
@@ -6234,7 +8350,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "for; because; on account of",
      "slp1": "hi",
      "href": "../w/hi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ведь",
+      "lemma": "ведь",
+      "root": "ведь"
+     }
     },
     {
      "form": "sidhyanti",
@@ -6244,7 +8365,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be accomplished or fulfilled or effected or settled; to be successful; to succeed; to…",
      "slp1": "siD",
      "href": "../w/si_44.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "будут действенными",
+      "lemma": "устанавливается",
+      "root": "устанавливается"
+     }
     },
     {
      "form": "kāryāṇi",
@@ -6254,7 +8380,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "work or business to be done; duty; affair; a religious action or performance; occupation;…",
      "slp1": "kArya",
      "href": "../w/k_41rya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дела",
+      "lemma": "дело"
+     }
     },
     {
      "form": "na",
@@ -6264,7 +8394,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "manorathaiḥ",
@@ -6274,7 +8408,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a wish; desire; fancy; illusion; (in dram.) a wish expressed in an indirect manner; hint;…",
      "slp1": "manoraTa",
      "href": "../w/manora_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "желание"
+     }
     }
    ]
   },
@@ -6293,7 +8430,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "for not; surely not; by no means; not at all (often strengthened by other particles)",
      "slp1": "nahi",
      "href": "../w/nahi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "suptasya",
@@ -6303,7 +8444,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to sleep; to rest",
      "slp1": "svap",
      "href": "../w/svap.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "уснувшего",
+      "lemma": "спит",
+      "root": "спит"
+     }
     },
     {
      "form": "siṃhasya",
@@ -6313,7 +8459,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a lion; the zodiacal sign Leo or its Lagna; a hero or eminent person; a particular form o…",
      "slp1": "siMha",
      "href": "../w/si_4dha.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "льва",
+      "lemma": "лев"
+     }
     },
     {
      "form": "praviśanti",
@@ -6323,7 +8473,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to enter; to go into; to resort to (acc. or loc.); to marry; to lay or store up; to depos…",
      "slp1": "praviS",
      "href": "../w/pravi_53.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "входят",
+      "lemma": "вошел",
+      "root": "вошел"
+     }
     },
     {
      "form": "mukhe",
@@ -6333,7 +8488,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the mouth; face; countenance; the beak of a bird; snout or muzzle of an animal; a directi…",
      "slp1": "muKa",
      "href": "../w/mu_4ba.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ртом",
+      "lemma": "лицо"
+     }
     },
     {
      "form": "mṛgāḥ",
@@ -6343,7 +8502,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a forest animal or wild beast; game of any kind; a deer; fawn; antelope; stag; musk-deer;…",
      "slp1": "mfga",
      "href": "../w/mfga.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "олени",
+      "lemma": "зверей"
+     }
     }
    ]
   },
@@ -6362,7 +8525,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in that manner; so; thus; yes; so be it; so it shall be (particle of assent); so also; in…",
      "slp1": "taTA",
      "href": "../w/ta_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "ca",
@@ -6372,7 +8539,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "uktam",
@@ -6382,7 +8553,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to speak; to say; to tell; to declare; to proclaim; to recite; verk￼nden; to speak ill of",
      "slp1": "vac",
      "href": "../w/vac.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сказано",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     }
    ]
   },
@@ -6401,7 +8577,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a mother; any mother (applicable to animals); father and mother; parents; the earth (heav…",
      "slp1": "mAtf",
      "href": "../w/m_41tf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мать",
+      "lemma": "мать"
+     }
     },
     {
      "form": "śatruḥ",
@@ -6411,7 +8591,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an enemy; foe; rival; a hostile king (esp. a neighbouring king as a natural enemy); the 6…",
      "slp1": "Satru",
      "href": "../w/_53atru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "враг",
+      "lemma": "врагов"
+     }
     },
     {
      "form": "pitā",
@@ -6421,7 +8605,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a father; parents; the fathers; forefathers; ancestors; (esp.) the Pitṛs or deceased ance…",
      "slp1": "pitf",
      "href": "../w/pitf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "отец",
+      "lemma": "отец"
+     }
     },
     {
      "form": "vairī",
@@ -6441,7 +8629,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "которым",
+      "lemma": "что"
+     }
     },
     {
      "form": "bālo",
@@ -6451,7 +8643,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a child; boy (esp. one under 5 years); (in law) a minor; a fool; simpleton; any young ani…",
      "slp1": "bAla",
      "href": "../w/b_41la.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "дети"
+     }
     },
     {
      "form": "na",
@@ -6461,7 +8656,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "pāṭhitaḥ",
@@ -6469,7 +8668,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "upos": "VERB",
      "morph": "Nom Sing Masc",
      "gloss": "to teach; to instruct; to read; to recite",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "lemma": "чтения",
+      "root": "чтения"
+     }
     }
    ]
   },
@@ -6488,7 +8691,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "śobhate",
@@ -6498,7 +8705,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to beautify; to embellish; to adorn; to beautify one's self; to shine; to be bright or sp…",
      "slp1": "SuB",
      "href": "../w/_53u_42.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сияет",
+      "lemma": "блистал",
+      "root": "блистал"
+     }
     },
     {
      "form": "sabhā",
@@ -6508,7 +8720,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an assembly; congregation; meeting; council; public audience; social party; society; good…",
      "slp1": "saBA",
      "href": "../w/sa_42_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "собрание",
+      "lemma": "собрание"
+     }
     },
     {
      "form": "madhye",
@@ -6518,7 +8734,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the middle; midst; centre; inside; interior; the middle of the sky; space between; midday…",
      "slp1": "maDya",
      "href": "../w/ma_44ya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "среди",
+      "lemma": "среди"
+     }
     },
     {
      "form": "haṃsa",
@@ -6528,7 +8748,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a goose; gander; swan; flamingo (or other aquatic bird); the soul or spirit (typified by…",
      "slp1": "haMsa",
      "href": "../w/ha_4dsa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "гусь",
+      "lemma": "гуси"
+     }
     },
     {
      "form": "madhye",
@@ -6538,7 +8762,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the middle; midst; centre; inside; interior; the middle of the sky; space between; midday…",
      "slp1": "maDya",
      "href": "../w/ma_44ya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "среди",
+      "lemma": "среди"
+     }
     },
     {
      "form": "bako",
@@ -6548,7 +8776,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a kind of heron or crane; Ardea Nivea (often fig. = a hypocrite); cheat; rogue; Sesbana G…",
      "slp1": "baka",
      "href": "../w/baka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "Бака"
+     }
     },
     {
      "form": "yathā",
@@ -6558,7 +8789,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "according; as; like; as",
      "slp1": "yaTA",
      "href": "../w/ya_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     }
    ]
   },
@@ -6577,7 +8812,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "any outward appearance or phenomenon or colour (often pl.); form; shape; phantom shapes;…",
      "slp1": "rUpa",
      "href": "../w/r_55pa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "образ",
+      "lemma": "образ"
+     }
     },
     {
      "form": "yauvana",
@@ -6597,7 +8836,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to turn out well; to accrue to; to amount to; to meet with; to obtain; to be absorbed in;…",
      "slp1": "sampad",
      "href": "../w/sampad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "стал",
+      "root": "достигает"
+     }
     },
     {
      "form": "viśāla",
@@ -6607,7 +8850,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "spacious; broad; wide; great; important; powerful; abundant in; full of; eminent",
      "slp1": "viSAla",
      "href": "../w/vi_53_41la.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "обширным",
+      "lemma": "обширным"
+     }
     },
     {
      "form": "kula",
@@ -6617,7 +8864,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a herd; troop; flock; assemblage; multitude; number; a race; family; community; tribe; ca…",
      "slp1": "kula",
      "href": "../w/kula.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "род",
+      "lemma": "род"
+     }
     },
     {
      "form": "sambhavāḥ",
@@ -6627,7 +8878,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "being or coming together; meeting; union; intercourse (esp. sexual intercourse); finding…",
      "slp1": "samBava",
      "href": "../w/sam_42ava.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "происхождения",
+      "lemma": "рождение"
+     }
     }
    ]
   },
@@ -6646,7 +8901,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowledge; science; learning; scholarship; philosophy; a spell; incantation; magical skil…",
      "slp1": "vidyA",
      "href": "../w/vidy_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знание",
+      "lemma": "знание"
+     }
     },
     {
      "form": "hīnāḥ",
@@ -6656,7 +8915,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a kind of bīja; a kind of exclamation (au wacker)",
      "slp1": "hA",
      "href": "../w/h_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "лишенные",
+      "lemma": "оставив",
+      "root": "оставив"
+     }
     },
     {
      "form": "na",
@@ -6666,7 +8930,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "śobhante",
@@ -6676,7 +8944,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to beautify; to embellish; to adorn; to beautify one's self; to shine; to be bright or sp…",
      "slp1": "SuB",
      "href": "../w/_53u_42.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сияли",
+      "lemma": "блистал",
+      "root": "блистал"
+     }
     },
     {
      "form": "nirgandhā",
@@ -6696,7 +8969,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "like; in the same manner as (in this sense = yathā); as it were; as if; in a certain mann…",
      "slp1": "iva",
      "href": "../w/iva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     },
     {
      "form": "kiṃśukāḥ",
@@ -6706,7 +8983,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "Butea frondosa Roxb. [a tree bearing beautiful blossoms]",
      "slp1": "kiMSuka",
      "href": "../w/ki_4d_53uka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "деревья киншука",
+      "lemma": "Киншука"
+     }
     }
    ]
   },
@@ -6725,7 +9006,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the other; another; future; next; western",
      "slp1": "apara",
      "href": "../w/apara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "другие"
+     }
     },
     {
      "form": "ca",
@@ -6735,7 +9019,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -6754,7 +9042,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a protuberant ornament; boss; a manuscript; book; booklet",
      "slp1": "pustaka",
      "href": "../w/pustaka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "книга"
+     }
     },
     {
      "form": "ca",
@@ -6764,7 +9055,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "na",
@@ -6774,7 +9069,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "adhītam",
@@ -6784,7 +9083,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to turn the mind towards; to observe; to understand; to study; to learn by heart; to read…",
      "slp1": "aDI",
      "href": "../w/a_44_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "изучена",
+      "lemma": "изучив",
+      "root": "молитвы"
+     }
     },
     {
      "form": "na",
@@ -6794,7 +9098,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "adhītam",
@@ -6804,7 +9112,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to turn the mind towards; to observe; to understand; to study; to learn by heart; to read…",
      "slp1": "aDI",
      "href": "../w/a_44_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "изучена",
+      "lemma": "изучив",
+      "root": "молитвы"
+     }
     },
     {
      "form": "guru",
@@ -6814,7 +9127,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "any venerable or respectable person; a spiritual parent or preceptor (from whom a youth r…",
      "slp1": "guru",
      "href": "../w/guru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "гуру",
+      "lemma": "гуру"
+     }
     },
     {
      "form": "saṃnidhau",
@@ -6824,7 +9141,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "depositing together or near; juxtaposition; nearness; vicinity; presence",
      "slp1": "saMniDi",
      "href": "../w/sa_4dni_44i.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "присутствии"
+     }
     }
    ]
   },
@@ -6843,7 +9163,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "śobhate",
@@ -6853,7 +9177,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to beautify; to embellish; to adorn; to beautify one's self; to shine; to be bright or sp…",
      "slp1": "SuB",
      "href": "../w/_53u_42.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сияет",
+      "lemma": "блистал",
+      "root": "блистал"
+     }
     },
     {
      "form": "sabhā",
@@ -6863,7 +9192,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an assembly; congregation; meeting; council; public audience; social party; society; good…",
      "slp1": "saBA",
      "href": "../w/sa_42_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "собрание",
+      "lemma": "собрание"
+     }
     },
     {
      "form": "madhye",
@@ -6873,7 +9206,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the middle; midst; centre; inside; interior; the middle of the sky; space between; midday…",
      "slp1": "maDya",
      "href": "../w/ma_44ya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "среди",
+      "lemma": "среди"
+     }
     },
     {
      "form": "jāragarbha",
@@ -6893,7 +9230,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "like; in the same manner as (in this sense = yathā); as it were; as if; in a certain mann…",
      "slp1": "iva",
      "href": "../w/iva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     },
     {
      "form": "striyāḥ",
@@ -6903,7 +9244,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a woman; female; wife; the female of any animal; a white ant; the Priyaṅgu plant; (in gra…",
      "slp1": "strI",
      "href": "../w/str_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "жены",
+      "lemma": "женщины"
+     }
     }
    ]
   },
@@ -6922,7 +9267,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "whole; entire; all; every; of all sorts; manifold; various; different; completely",
      "slp1": "sarva",
      "href": "../w/sarva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "все",
+      "lemma": "все"
+     }
     },
     {
      "form": "dravyeṣu",
@@ -6932,7 +9281,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a substance; thing; object; the ingredients or materials of anything; medicinal substance…",
      "slp1": "dravya",
      "href": "../w/dravya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "субстанциях",
+      "lemma": "субстанция"
+     }
     },
     {
      "form": "vidyā",
@@ -6942,7 +9295,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowledge; science; learning; scholarship; philosophy; a spell; incantation; magical skil…",
      "slp1": "vidyA",
      "href": "../w/vidy_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знание",
+      "lemma": "знание"
+     }
     },
     {
      "form": "eva",
@@ -6952,7 +9309,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "so; just so; exactly so (in the sense of the later evam); indeed; truly; really (often at…",
      "slp1": "eva",
      "href": "../w/eva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "именно",
+      "lemma": "именно"
+     }
     },
     {
      "form": "dravyam",
@@ -6962,7 +9323,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a substance; thing; object; the ingredients or materials of anything; medicinal substance…",
      "slp1": "dravya",
      "href": "../w/dravya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "субстанция",
+      "lemma": "субстанция"
+     }
     },
     {
      "form": "āhur",
@@ -6972,7 +9337,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to say; to call; to consider; to declare; to acknowledge; to state; to adjugde anything",
      "slp1": "ah",
      "href": "../w/ah.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "называют",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     },
     {
      "form": "anuttamam",
@@ -6982,7 +9352,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "unsurpassed; incomparably the best or chief; excellent; excessive; not the best; (in Gr.)…",
      "slp1": "anuttama",
      "href": "../w/anuttama.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "несравненный",
+      "lemma": "несравненный"
+     }
     }
    ]
   },
@@ -7021,7 +9395,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "(suffix creating abstract nouns)",
      "slp1": "tva",
      "href": "../w/tva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "поскольку",
+      "lemma": "ты"
+     }
     },
     {
      "form": "akṣaya",
@@ -7031,7 +9409,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "exempt from decay; undecaying; [alchemy] undiminished, i.e. merury undergoes no eliminati…",
      "slp1": "akzaya",
      "href": "../w/akzaya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "нетленные",
+      "lemma": "нетленные"
+     }
     },
     {
      "form": "tvāt",
@@ -7041,7 +9423,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "(suffix creating abstract nouns)",
      "slp1": "tva",
      "href": "../w/tva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "поскольку",
+      "lemma": "ты"
+     }
     },
     {
      "form": "ca",
@@ -7051,7 +9437,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "sarvadā",
@@ -7061,7 +9451,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "always; at all times (often joined with sarvatra and sarvathā)",
      "slp1": "sarvadA",
      "href": "../w/sarvad_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "всегда",
+      "lemma": "всегда"
+     }
     }
    ]
   },
@@ -7080,7 +9474,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; [gramm.] the pronoun etad; auf diese Weise",
      "slp1": "etad",
      "href": "../w/etad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "это",
+      "lemma": "это"
+     }
     },
     {
      "form": "cintayitvā",
@@ -7088,7 +9486,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "upos": "VERB",
      "morph": "",
      "gloss": "to think; to have a thought or idea; to reflect; to consider; to think about; to reflect…",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "surface": "поразмыслив",
+      "lemma": "подумал",
+      "root": "подумал"
+     }
     },
     {
      "form": "rājā",
@@ -7098,7 +9501,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a king; sovereign; prince; chief (often applied to gods); a man of the royal tribe or the…",
      "slp1": "rAjan",
      "href": "../w/r_41jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царь",
+      "lemma": "царь"
+     }
     },
     {
      "form": "paṇḍita",
@@ -7108,7 +9515,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a scholar; a learned man; teacher; philosopher; a Pandit; name of a man; name of a Brāhma…",
      "slp1": "paRqita",
      "href": "../w/pa_52qita.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мудрые",
+      "lemma": "мудрые"
+     }
     },
     {
      "form": "sabhām",
@@ -7118,7 +9529,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an assembly; congregation; meeting; council; public audience; social party; society; good…",
      "slp1": "saBA",
      "href": "../w/sa_42_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "собрание",
+      "lemma": "собрание"
+     }
     },
     {
      "form": "kāritavān",
@@ -7126,7 +9541,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "upos": "VERB",
      "morph": "Nom Sing Masc",
      "gloss": "to make someone do something; to put; schlachten lassen",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "lemma": "побуждая",
+      "root": "призвал"
+     }
     }
    ]
   },
@@ -7145,7 +9564,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a king; sovereign; prince; chief (often applied to gods); a man of the royal tribe or the…",
      "slp1": "rAjan",
      "href": "../w/r_41jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царь",
+      "lemma": "царь"
+     }
     },
     {
      "form": "uvāca",
@@ -7155,7 +9578,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to speak; to say; to tell; to declare; to proclaim; to recite; verk￼nden; to speak ill of",
      "slp1": "vac",
      "href": "../w/vac.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сказал",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     },
     {
      "form": "bho",
@@ -7165,7 +9593,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "hoiho!!; sir!",
      "slp1": "Bo",
      "href": "../w/_42o.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о",
+      "lemma": "о"
+     }
     },
     {
      "form": "bhoḥ",
@@ -7175,7 +9607,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "hoiho!!",
      "slp1": "BoH",
      "href": "../w/_42o_48.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о",
+      "lemma": "о"
+     }
     },
     {
      "form": "paṇḍitāḥ",
@@ -7185,7 +9621,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a scholar; a learned man; teacher; philosopher; a Pandit; name of a man; name of a Brāhma…",
      "slp1": "paRqita",
      "href": "../w/pa_52qita.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мудрые",
+      "lemma": "мудрые"
+     }
     },
     {
      "form": "śrūyatāṃ",
@@ -7195,7 +9635,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to hear; to listen to; to study",
      "slp1": "Sru",
      "href": "../w/_53ru.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "выслушайте",
+      "lemma": "услышав",
+      "root": "услышав"
+     }
     },
     {
      "form": "mama",
@@ -7205,7 +9650,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "I; we",
      "slp1": "mad",
      "href": "../w/mad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мне",
+      "lemma": "я",
+      "root": "я"
+     }
     },
     {
      "form": "vacanam",
@@ -7215,7 +9665,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the act of speaking; utterance; pronunciation; statement; declaration; express mention; s…",
      "slp1": "vacana",
      "href": "../w/vacana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "слова",
+      "lemma": "слова"
+     }
     }
    ]
   },
@@ -7234,7 +9688,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to live; to exist; to be present; to take place; to happen; to abide; to dwell; to…",
      "slp1": "as",
      "href": "../w/as.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "есть",
+      "lemma": "есть",
+      "root": "есть"
+     }
     },
     {
      "form": "kaścid",
@@ -7244,7 +9703,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "someone; something; any",
      "slp1": "kaScit",
      "href": "../w/ka_53cit.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "кто-нибудь",
+      "lemma": "никто"
+     }
     },
     {
      "form": "evambhūto",
@@ -7254,7 +9717,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "of such a quality or nature; such",
      "slp1": "evamBUta",
      "href": "../w/evam_42_55ta.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "таким образом"
+     }
     },
     {
      "form": "vidvān",
@@ -7264,7 +9730,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "one who knows; knowing; learned; wise; familiar with; skilled in",
      "slp1": "vidvas",
      "href": "../w/vidvas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знаток",
+      "lemma": "мудрый"
+     }
     },
     {
      "form": "yo",
@@ -7274,7 +9744,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "кто",
+      "lemma": "что"
+     }
     },
     {
      "form": "mama",
@@ -7284,7 +9758,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "I; we",
      "slp1": "mad",
      "href": "../w/mad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мне",
+      "lemma": "я",
+      "root": "я"
+     }
     },
     {
      "form": "putrāṇāṃ",
@@ -7294,7 +9773,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a son; child; a species of small venomous animal; (in astrol.) name of the fifth house; n…",
      "slp1": "putra",
      "href": "../w/putra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сыновей",
+      "lemma": "сын"
+     }
     },
     {
      "form": "nityam",
@@ -7304,7 +9787,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "always",
      "slp1": "nityam",
      "href": "../w/nityam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "всегда",
+      "lemma": "всегда"
+     }
     },
     {
      "form": "unmārga",
@@ -7324,7 +9811,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "going anywhere",
      "slp1": "gAmin",
      "href": "../w/g_41min.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "не приносящій жертвы"
+     }
     },
     {
      "form": "anadhigata",
@@ -7334,7 +9824,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not obtained; not acquired; not studied",
      "slp1": "anaDigata",
      "href": "../w/ana_44igata.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не предполагающий достаточное",
+      "lemma": "не предполагающий достаточное"
+     }
     },
     {
      "form": "śāstrāṇām",
@@ -7344,7 +9838,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an order; command; precept; rule; teaching; instruction; direction; advice; good counsel;…",
      "slp1": "SAstra",
      "href": "../w/_53_41stra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "шастры"
+     }
     },
     {
      "form": "idānīṃ",
@@ -7354,7 +9851,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "now; at this moment; in this case; just; even",
      "slp1": "idAnIm",
      "href": "../w/id_41n_49m.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "теперь",
+      "lemma": "теперь"
+     }
     },
     {
      "form": "nīti",
@@ -7364,7 +9865,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "leading or bringing; guidance; management; conduct; (esp.) right or wise or moral conduct…",
      "slp1": "nIti",
      "href": "../w/n_49ti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "политика",
+      "lemma": "политика"
+     }
     },
     {
      "form": "śāstra",
@@ -7374,7 +9879,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an order; command; precept; rule; teaching; instruction; direction; advice; good counsel;…",
      "slp1": "SAstra",
      "href": "../w/_53_41stra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "шастры",
+      "lemma": "шастры"
+     }
     },
     {
      "form": "upadeśena",
@@ -7384,7 +9893,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "pointing out to; reference to; specification; instruction; teaching; information; advice;…",
      "slp1": "upadeSa",
      "href": "../w/upade_53a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "наставление"
+     }
     },
     {
      "form": "punar",
@@ -7394,7 +9906,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "back; home; in an opposite direction; again and again; repeatedly; further; moreover; bes…",
      "slp1": "punar",
      "href": "../w/punar.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "снова",
+      "lemma": "снова"
+     }
     },
     {
      "form": "janma",
@@ -7404,7 +9920,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "birth; origin; existence; life; nativity; re-birth; birthplace; home; a progenitor; fathe…",
      "slp1": "janman",
      "href": "../w/janman.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "рождение",
+      "lemma": "рождение"
+     }
     },
     {
      "form": "kārayituṃ",
@@ -7412,7 +9932,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "upos": "VERB",
      "morph": "",
      "gloss": "to make someone do something; to put; schlachten lassen",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "surface": "заставить выполнять",
+      "lemma": "побуждая",
+      "root": "призвал"
+     }
     },
     {
      "form": "samarthaḥ",
@@ -7422,7 +9947,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "having a similar or suitable aim or object; well answering to; suitable for; very strong;…",
      "slp1": "samarTa",
      "href": "../w/samar_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "способен",
+      "lemma": "способен"
+     }
     },
     {
      "form": "yataḥ",
@@ -7432,7 +9961,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "from which or what; whence; whereof; wherefrom; where; in what place; whither; wherefore;…",
      "slp1": "yatas",
      "href": "../w/yatas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "откуда",
+      "lemma": "откуда"
+     }
     }
    ]
   },
@@ -7451,7 +9984,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "glass; crystal or quartz (used as an ornament); alkaline ashes; any salt of potash or sod…",
      "slp1": "kAca",
      "href": "../w/k_41ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "стекло"
+     }
     },
     {
      "form": "kāñcana",
@@ -7461,7 +9997,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "gold; money; wealth; property; the filament of the lotus",
      "slp1": "kAYcana",
      "href": "../w/k_41_59cana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "золото",
+      "lemma": "золотой"
+     }
     },
     {
      "form": "saṃsargāt",
@@ -7471,7 +10011,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "mixture or union together; commixture; blending; conjunction; connection; contact; associ…",
      "slp1": "saMsarga",
      "href": "../w/sa_4dsarga.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "смешения"
+     }
     },
     {
      "form": "dhatte",
@@ -7481,7 +10024,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to put; to place; to hold; to put on (clothes); to accept; to conceive; to take; verleihe…",
      "slp1": "DA",
      "href": "../w/_44_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "приобретает",
+      "lemma": "дай",
+      "root": "вера"
+     }
     },
     {
      "form": "mārakatīr",
@@ -7501,7 +10049,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "splendour (as a goddess); brightness; lustre; majesty; dignity; (dram.) a threatening att…",
      "slp1": "dyuti",
      "href": "../w/dyuti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "блеск"
+     }
     }
    ]
   },
@@ -7520,7 +10071,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in that manner; so; thus; yes; so be it; so it shall be (particle of assent); so also; in…",
      "slp1": "taTA",
      "href": "../w/ta_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "sat",
@@ -7530,7 +10085,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to live; to exist; to be present; to take place; to happen; to abide; to dwell; to…",
      "slp1": "as",
      "href": "../w/as.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сущее",
+      "lemma": "есть",
+      "root": "есть"
+     }
     },
     {
      "form": "saṃnidhānena",
@@ -7540,7 +10100,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "juxtaposition; nearness; vicinity; presence; presence = existence; placingdown; depositin…",
      "slp1": "saMniDAna",
      "href": "../w/sa_4dni_44_41na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "совокупленье"
+     }
     },
     {
      "form": "mūrkho",
@@ -7550,7 +10113,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "stupid; foolish; dull; inexperienced",
      "slp1": "mUrKa",
      "href": "../w/m_55r_4ba.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "глупец",
+      "lemma": "глупец"
+     }
     },
     {
      "form": "yāti",
@@ -7560,7 +10127,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to go; to move; to set out; to travel; to withdraw; to flee; to go to for any purpose (in…",
      "slp1": "yA",
      "href": "../w/y_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "идет",
+      "lemma": "идут",
+      "root": "идут"
+     }
     },
     {
      "form": "pravīṇatām",
@@ -7589,7 +10161,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to speak; to say; to tell; to declare; to proclaim; to recite; verk￼nden; to speak ill of",
      "slp1": "vac",
      "href": "../w/vac.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сказано",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     },
     {
      "form": "ca",
@@ -7599,7 +10176,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -7618,7 +10199,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a kind of bīja; a kind of exclamation (au wacker)",
      "slp1": "hA",
      "href": "../w/h_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "лишается",
+      "lemma": "оставив",
+      "root": "оставив"
+     }
     },
     {
      "form": "hi",
@@ -7628,7 +10214,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "for; because; on account of",
      "slp1": "hi",
      "href": "../w/hi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ведь",
+      "lemma": "ведь",
+      "root": "ведь"
+     }
     },
     {
      "form": "matis",
@@ -7638,7 +10229,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "devotion; prayer; worship; hymn; sacred utterance; thought; design; intention; resolution…",
      "slp1": "mati",
      "href": "../w/mati.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мысли",
+      "lemma": "мысль"
+     }
     },
     {
      "form": "tāta",
@@ -7648,7 +10243,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a father",
      "slp1": "tAta",
      "href": "../w/t_41ta.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сын мой",
+      "lemma": "сын мой"
+     }
     },
     {
      "form": "hīnaiḥ",
@@ -7658,7 +10257,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a kind of bīja; a kind of exclamation (au wacker)",
      "slp1": "hA",
      "href": "../w/h_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "оставив",
+      "root": "оставив"
+     }
     },
     {
      "form": "saha",
@@ -7668,7 +10271,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "together with; along with; with",
      "slp1": "saha",
      "href": "../w/saha.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "с",
+      "lemma": "с"
+     }
     },
     {
      "form": "samāgamāt",
@@ -7678,7 +10285,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "coming together (either in a hostile or friendly manner); union; junction; encounter or m…",
      "slp1": "samAgama",
      "href": "../w/sam_41gama.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "общения",
+      "lemma": "встреча"
+     }
     }
    ]
   },
@@ -7697,7 +10308,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "even; flat; level; parallel; same; similar; like; equivalent; fair; constant; ordinary; c…",
      "slp1": "sama",
      "href": "../w/sama.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "равный"
+     }
     },
     {
      "form": "ca",
@@ -7707,7 +10321,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "samatām",
@@ -7717,7 +10335,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "sameness of level; equality; sameness; identity with; fairness; impartiality towards; equ…",
      "slp1": "samatA",
      "href": "../w/samat_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "справедливо",
+      "lemma": "равенство"
+     }
     },
     {
      "form": "eti",
@@ -7727,7 +10349,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to go; to walk; to flow; to blow; to advance; to spread; to get about; to go to or toward…",
      "slp1": "i",
      "href": "../w/i.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "идет",
+      "lemma": "идет",
+      "root": "идет"
+     }
     },
     {
      "form": "viśiṣṭaiś",
@@ -7737,7 +10364,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to distinguish; to make distinct or different; to particularize; to specify; to define; t…",
      "slp1": "viSiz",
      "href": "../w/vi_53iz.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "превосходит",
+      "root": "остается"
+     }
     },
     {
      "form": "ca",
@@ -7747,7 +10378,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "viśiṣṭatām",
@@ -7776,7 +10411,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in this matter; in this respect; in this place; here; there; then; at this time",
      "slp1": "atra",
      "href": "../w/atra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "здесь",
+      "lemma": "здесь"
+     }
     },
     {
      "form": "antare",
@@ -7786,7 +10425,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the interior; a hole; opening; the interior part of a thing; the contents; soul; heart; s…",
      "slp1": "antara",
      "href": "../w/antara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "между",
+      "lemma": "между"
+     }
     },
     {
      "form": "viṣṇuśarma",
@@ -7806,7 +10449,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a characteristic mark or sign; form; nature; kind; manner; name; appellation; personal na…",
      "slp1": "nAman",
      "href": "../w/n_41man.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "именем",
+      "lemma": "имя"
+     }
     },
     {
      "form": "mahā",
@@ -7816,7 +10463,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "great; large; big; huge; ample; extensive; long; abundant; numerous; considerable; import…",
      "slp1": "mahat",
      "href": "../w/mahat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "великий",
+      "lemma": "великий"
+     }
     },
     {
      "form": "paṇḍitaḥ",
@@ -7826,7 +10477,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a scholar; a learned man; teacher; philosopher; a Pandit; name of a man; name of a Brāhma…",
      "slp1": "paRqita",
      "href": "../w/pa_52qita.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мудрец",
+      "lemma": "мудрые"
+     }
     },
     {
      "form": "sakala",
@@ -7836,7 +10491,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "consisting of parts; divisible; material; possessing all its component parts; complete; e…",
      "slp1": "sakala",
      "href": "../w/sakala.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "все",
+      "lemma": "все"
+     }
     },
     {
      "form": "nīti",
@@ -7846,7 +10505,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "leading or bringing; guidance; management; conduct; (esp.) right or wise or moral conduct…",
      "slp1": "nIti",
      "href": "../w/n_49ti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "политика",
+      "lemma": "политика"
+     }
     },
     {
      "form": "śāstra",
@@ -7856,7 +10519,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an order; command; precept; rule; teaching; instruction; direction; advice; good counsel;…",
      "slp1": "SAstra",
      "href": "../w/_53_41stra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "шастры",
+      "lemma": "шастры"
+     }
     },
     {
      "form": "tattva",
@@ -7866,7 +10533,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "true or real state; truth; reality; (in phil.) a true principle; the number 24; the numbe…",
      "slp1": "tattva",
      "href": "../w/tattva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "истину",
+      "lemma": "правду"
+     }
     },
     {
      "form": "jñaḥ",
@@ -7876,7 +10547,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowing; familiar with (chiefly in comp.); intelligent; having a soul; wise",
      "slp1": "jYa",
      "href": "../w/j_59a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знаешь",
+      "lemma": "знаю"
+     }
     },
     {
      "form": "bṛhaspatir",
@@ -7886,7 +10561,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "name of a deity; the planet Jupiter; name of the author of a Dharma text",
      "slp1": "bfhaspati",
      "href": "../w/bfhaspati.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Брихаспати",
+      "lemma": "Брихаспати"
+     }
     },
     {
      "form": "iva",
@@ -7896,7 +10575,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "like; in the same manner as (in this sense = yathā); as it were; as if; in a certain mann…",
      "slp1": "iva",
      "href": "../w/iva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     },
     {
      "form": "abravīt",
@@ -7906,7 +10589,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to speak; to say; to tell; to speak about any person or thing (acc. with or without prati…",
      "slp1": "brU",
      "href": "../w/br_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сказал",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     },
     {
      "form": "devaiḥ",
@@ -7916,7 +10604,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a deity; god; (rarely applied to) evil demons; the gods as the heavenly or shining ones;…",
      "slp1": "deva",
      "href": "../w/deva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "боги"
+     }
     },
     {
      "form": "mahā",
@@ -7926,7 +10617,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "great; large; big; huge; ample; extensive; long; abundant; numerous; considerable; import…",
      "slp1": "mahat",
      "href": "../w/mahat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "великий",
+      "lemma": "великий"
+     }
     },
     {
      "form": "kula",
@@ -7936,7 +10631,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a herd; troop; flock; assemblage; multitude; number; a race; family; community; tribe; ca…",
      "slp1": "kula",
      "href": "../w/kula.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "род",
+      "lemma": "род"
+     }
     },
     {
      "form": "sambhūtāḥ",
@@ -7946,7 +10645,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be or come together; to assemble; to meet; to be joined or united with (instr. with or…",
      "slp1": "samBU",
      "href": "../w/sam_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "возникнув",
+      "lemma": "возник",
+      "root": "будет"
+     }
     },
     {
      "form": "ete",
@@ -7956,7 +10660,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; [gramm.] the pronoun etad; auf diese Weise",
      "slp1": "etad",
      "href": "../w/etad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "эти",
+      "lemma": "это"
+     }
     },
     {
      "form": "rāja",
@@ -7966,7 +10674,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a king; sovereign; prince; chief (often applied to gods); a man of the royal tribe or the…",
      "slp1": "rAjan",
      "href": "../w/r_41jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царя",
+      "lemma": "царь"
+     }
     },
     {
      "form": "putrāḥ",
@@ -7976,7 +10688,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a son; child; a species of small venomous animal; (in astrol.) name of the fifth house; n…",
      "slp1": "putra",
      "href": "../w/putra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сыновья",
+      "lemma": "сын"
+     }
     }
    ]
   },
@@ -7995,7 +10711,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "то",
+      "lemma": "он"
+     }
     },
     {
      "form": "mayā",
@@ -8005,7 +10725,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "I; we",
      "slp1": "mad",
      "href": "../w/mad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "я",
+      "lemma": "я",
+      "root": "я"
+     }
     },
     {
      "form": "nītiṃ",
@@ -8015,7 +10740,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "leading or bringing; guidance; management; conduct; (esp.) right or wise or moral conduct…",
      "slp1": "nIti",
      "href": "../w/n_49ti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Добродетель",
+      "lemma": "политика"
+     }
     },
     {
      "form": "grāhayituṃ",
@@ -8023,7 +10752,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "upos": "VERB",
      "morph": "",
      "gloss": "to cause to take or seize or lay hold of; to cause to marry; to make acquainted with; to…",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "lemma": "обучил",
+      "root": "обучил"
+     }
     },
     {
      "form": "śakyante",
@@ -8033,7 +10766,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be strong or powerful; to be able to or capable of or competent for; to be overcome or…",
      "slp1": "Sak",
      "href": "../w/_53ak.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "можно",
+      "lemma": "способен",
+      "root": "способен"
+     }
     }
    ]
   },
@@ -8052,7 +10790,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "from which or what; whence; whereof; wherefrom; where; in what place; whither; wherefore;…",
      "slp1": "yatas",
      "href": "../w/yatas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "откуда",
+      "lemma": "откуда"
+     }
     }
    ]
   },
@@ -8071,7 +10813,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "adravye",
@@ -8091,7 +10837,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to put or lay down; to deposit; to lay up; to preserve; to intrust; to commit; to present…",
      "slp1": "niDA",
      "href": "../w/ni_44_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сложены",
+      "lemma": "сложенные",
+      "root": "вера"
+     }
     },
     {
      "form": "kācit",
@@ -8101,7 +10852,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "someone; something; any",
      "slp1": "kaScit",
      "href": "../w/ka_53cit.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "какая-то",
+      "lemma": "никто"
+     }
     },
     {
      "form": "kriyā",
@@ -8111,7 +10866,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "doing; performing; performance; occupation with (in comp.); business; act; action; undert…",
      "slp1": "kriyA",
      "href": "../w/kriy_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "обряды",
+      "lemma": "обряды"
+     }
     },
     {
      "form": "phalavatī",
@@ -8121,7 +10880,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "fruit-bearing; fructiferous; covered or laden with fruits; yielding results; successful;…",
      "slp1": "Palavat",
      "href": "../w/_50alavat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "плодами",
+      "lemma": "плодами"
+     }
     },
     {
      "form": "bhavet",
@@ -8131,7 +10894,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "будет",
+      "lemma": "будет",
+      "root": "будет"
+     }
     }
    ]
   },
@@ -8150,7 +10918,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "vyāpāra",
@@ -8160,7 +10932,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "occupation; employment; business; profession; function; doing; performance; action; opera…",
      "slp1": "vyApAra",
      "href": "../w/vy_41p_41ra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "деятельность",
+      "lemma": "деятельность"
+     }
     },
     {
      "form": "śatena",
@@ -8170,7 +10946,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a hundred; any very large number; name of a measure",
      "slp1": "Sata",
      "href": "../w/_53ata.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сотнею",
+      "lemma": "сто"
+     }
     },
     {
      "form": "api",
@@ -8180,7 +10960,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "также",
+      "lemma": "также"
+     }
     },
     {
      "form": "śuka",
@@ -8190,7 +10974,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a parrot; Acacia Sirissa; Zizyphus Scandens; name of a son of Vyāsa; narrator of the Bhāg…",
      "slp1": "Suka",
      "href": "../w/_53uka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "попугай",
+      "lemma": "попугай"
+     }
     },
     {
      "form": "vat",
@@ -8200,7 +10988,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "(Vergleichspartikel)",
      "slp1": "vat",
      "href": "../w/vat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "подобно",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     },
     {
      "form": "pāṭhyate",
@@ -8208,7 +11001,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "upos": "VERB",
      "morph": "Sing p3 Pres Ind Pass",
      "gloss": "to teach; to instruct; to read; to recite",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "lemma": "чтения",
+      "root": "чтения"
+     }
     },
     {
      "form": "bakaḥ",
@@ -8218,7 +11015,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a kind of heron or crane; Ardea Nivea (often fig. = a hypocrite); cheat; rogue; Sesbana G…",
      "slp1": "baka",
      "href": "../w/baka.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Баку",
+      "lemma": "Бака"
+     }
     }
    ]
   },
@@ -8237,7 +11038,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "other; another",
      "slp1": "anya",
      "href": "../w/anya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "другой",
+      "lemma": "другой"
+     }
     },
     {
      "form": "ca",
@@ -8247,7 +11052,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -8266,7 +11075,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; (near deictic pronoun in Vedic)",
      "slp1": "idam",
      "href": "../w/idam.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "это"
+     }
     },
     {
      "form": "tu",
@@ -8276,7 +11088,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "do; now; then; but; and; or; name of the river Śatadru",
      "slp1": "tu",
      "href": "../w/tu.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "же",
+      "lemma": "же",
+      "root": "же"
+     }
     },
     {
      "form": "nirguṇaṃ",
@@ -8286,7 +11103,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "having no qualities; having no cord; bad; vicious; having no epithet",
      "slp1": "nirguRa",
      "href": "../w/nirgu_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "лишенный свойств"
+     }
     },
     {
      "form": "gotre",
@@ -8296,7 +11116,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "protection or shelter for cows; cow-pen; cow-shed; stable for cattle; stable (in general)…",
      "slp1": "gotra",
      "href": "../w/gotra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "о роде",
+      "lemma": "род"
+     }
     },
     {
      "form": "na",
@@ -8306,7 +11130,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "apatyam",
@@ -8316,7 +11144,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "offspring; child; descendant; a patronymical affix",
      "slp1": "apatya",
      "href": "../w/apatya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "потомство",
+      "lemma": "потомство"
+     }
     },
     {
      "form": "upajāyate",
@@ -8326,7 +11158,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be produced or originate in addition; to be added or put to; to follow (as a consequen…",
      "slp1": "upajan",
      "href": "../w/upajan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "возникает",
+      "lemma": "возникает",
+      "root": "родился"
+     }
     }
    ]
   },
@@ -8345,7 +11182,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "one who scatters; one who distributes abundantly; accumulation; plenty; multitude; a mine…",
      "slp1": "Akara",
      "href": "../w/_41kara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "источник"
+     }
     },
     {
      "form": "padya",
@@ -8355,7 +11195,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a verse; metre; poetry; name of several hymns",
      "slp1": "padya",
      "href": "../w/padya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "Находясь у ног"
+     }
     },
     {
      "form": "rāgāṇām",
@@ -8365,7 +11208,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the act of colouring or dyeing; colour; hue; tint; dye; red colour; redness; inflammation…",
      "slp1": "rAga",
      "href": "../w/r_41ga.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "влечение"
+     }
     },
     {
      "form": "janma",
@@ -8375,7 +11221,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "birth; origin; existence; life; nativity; re-birth; birthplace; home; a progenitor; fathe…",
      "slp1": "janman",
      "href": "../w/janman.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "рождение",
+      "lemma": "рождение"
+     }
     },
     {
      "form": "kāca",
@@ -8385,7 +11235,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "glass; crystal or quartz (used as an ornament); alkaline ashes; any salt of potash or sod…",
      "slp1": "kAca",
      "href": "../w/k_41ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "стекло",
+      "lemma": "стекло"
+     }
     },
     {
      "form": "maṇeḥ",
@@ -8395,7 +11249,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a jewel; gem; pearl; any ornament or amulet; globule; crystal; a magnet; loadstone; glans…",
      "slp1": "maRi",
      "href": "../w/ma_52i.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "амулет"
+     }
     },
     {
      "form": "kutaḥ",
@@ -8405,7 +11262,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "from whom?; from where? whence?; whereto? in which direction?; where?; wherefore? why? fr…",
      "slp1": "kutas",
      "href": "../w/kutas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "откуда",
+      "lemma": "откуда"
+     }
     }
    ]
   },
@@ -8424,7 +11285,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "from this; than this; hence; henceforth; from that time; from this or that cause or reason",
      "slp1": "atas",
      "href": "../w/atas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "потому",
+      "lemma": "поэтому"
+     }
     },
     {
      "form": "'haṃ",
@@ -8434,7 +11299,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "I; we",
      "slp1": "mad",
      "href": "../w/mad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "я",
+      "root": "я"
+     }
     },
     {
      "form": "ṣaṣ",
@@ -8444,7 +11313,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "six; (in gram) a tech. name for numerals ending in ṣ and n and words like kati",
      "slp1": "zaz",
      "href": "../w/zaz.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "шесть",
+      "lemma": "шесть"
+     }
     },
     {
      "form": "māsa",
@@ -8454,7 +11327,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the moon; a month or the 12th part of the Hindū year",
      "slp1": "mAsa",
      "href": "../w/m_41sa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "месяц",
+      "lemma": "месяц"
+     }
     },
     {
      "form": "abhyantare",
@@ -8464,7 +11341,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "inner part; interior; inside; middle; interval; space of time",
      "slp1": "aByantara",
      "href": "../w/a_42yantara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "внутреннее"
+     }
     },
     {
      "form": "bhavat",
@@ -8474,7 +11354,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "your honour; your worship; your lordship or ladyship; you (lit. \"the gentleman or lady pr…",
      "slp1": "Bavat",
      "href": "../w/_42avat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ты",
+      "lemma": "ты"
+     }
     },
     {
      "form": "putrān",
@@ -8484,7 +11368,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a son; child; a species of small venomous animal; (in astrol.) name of the fifth house; n…",
      "slp1": "putra",
      "href": "../w/putra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сыновей",
+      "lemma": "сын"
+     }
     },
     {
      "form": "nīti",
@@ -8494,7 +11382,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "leading or bringing; guidance; management; conduct; (esp.) right or wise or moral conduct…",
      "slp1": "nIti",
      "href": "../w/n_49ti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "политика",
+      "lemma": "политика"
+     }
     },
     {
      "form": "śāstra",
@@ -8504,7 +11396,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an order; command; precept; rule; teaching; instruction; direction; advice; good counsel;…",
      "slp1": "SAstra",
      "href": "../w/_53_41stra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "шастры",
+      "lemma": "шастры"
+     }
     },
     {
      "form": "abhijñān",
@@ -8514,7 +11410,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowing; skilful; clever; understanding; conversant with (gen. or ifc.)",
      "slp1": "aBijYa",
      "href": "../w/a_42ij_59a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "искусен"
+     }
     },
     {
      "form": "kariṣyāmi",
@@ -8524,7 +11423,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to make like or similar; to consider equivalent; to reduce anything to; to cause to becom…",
      "slp1": "kf",
      "href": "../w/kf.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сделаю",
+      "lemma": "сделал",
+      "root": "сделал"
+     }
     }
    ]
   },
@@ -8543,7 +11447,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a king; sovereign; prince; chief (often applied to gods); a man of the royal tribe or the…",
      "slp1": "rAjan",
      "href": "../w/r_41jan.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царь",
+      "lemma": "царь"
+     }
     },
     {
      "form": "sa",
@@ -8553,7 +11461,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "(ibc.) with",
      "slp1": "sa",
      "href": "../w/sa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "он"
+     }
     },
     {
      "form": "vinayam",
@@ -8563,7 +11474,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "taking away; removal; withdrawal; leading; guidance; training (esp. moral training); educ…",
      "slp1": "vinaya",
      "href": "../w/vinaya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сурово",
+      "lemma": "смиренно"
+     }
     },
     {
      "form": "punar",
@@ -8573,7 +11488,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "back; home; in an opposite direction; again and again; repeatedly; further; moreover; bes…",
      "slp1": "punar",
      "href": "../w/punar.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "снова",
+      "lemma": "снова"
+     }
     },
     {
      "form": "uvāca",
@@ -8583,7 +11502,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to speak; to say; to tell; to declare; to proclaim; to recite; verk￼nden; to speak ill of",
      "slp1": "vac",
      "href": "../w/vac.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сказал",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     }
    ]
   },
@@ -8602,7 +11526,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a worm; insect; the scorpion in the zodiac; an expression of contempt; Laus",
      "slp1": "kIwa",
      "href": "../w/k_49wa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "насекомых"
+     }
     },
     {
      "form": "'pi",
@@ -8612,7 +11539,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "также"
+     }
     },
     {
      "form": "sumanas",
@@ -8622,7 +11553,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a flower",
      "slp1": "sumanas",
      "href": "../w/sumanas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Суманас",
+      "lemma": "цветами"
+     }
     },
     {
      "form": "saṅgāt",
@@ -8632,7 +11567,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "sticking; clinging to; touch; contact with; relation to; association or intercourse with;…",
      "slp1": "saNga",
      "href": "../w/sa_4ega.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "из привязанности",
+      "lemma": "привязанность"
+     }
     },
     {
      "form": "ārohati",
@@ -8642,7 +11581,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to ascend; to mount; to bestride; to rise up; to arise; to come off; to result; to ventur…",
      "slp1": "Aruh",
      "href": "../w/_41ruh.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "поднимается",
+      "lemma": "взошел",
+      "root": "взошел"
+     }
     },
     {
      "form": "satāṃ",
@@ -8652,7 +11596,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to live; to exist; to be present; to take place; to happen; to abide; to dwell; to…",
      "slp1": "as",
      "href": "../w/as.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мудрых",
+      "lemma": "есть",
+      "root": "есть"
+     }
     },
     {
      "form": "śiraḥ",
@@ -8662,7 +11611,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the head; skull; the upper end or highest part of anything; top; peak; summit; pinnacle;…",
      "slp1": "Siras",
      "href": "../w/_53iras.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "голову",
+      "lemma": "голову"
+     }
     }
    ]
   },
@@ -8681,7 +11634,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a stone; rock; a precious stone; any instrument made of stone (as a hammer etc.); thunder…",
      "slp1": "aSman",
      "href": "../w/a_53man.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "камнем",
+      "lemma": "камень"
+     }
     },
     {
      "form": "api",
@@ -8691,7 +11648,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "также",
+      "lemma": "также"
+     }
     },
     {
      "form": "yāti",
@@ -8701,7 +11662,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to go; to move; to set out; to travel; to withdraw; to flee; to go to for any purpose (in…",
      "slp1": "yA",
      "href": "../w/y_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "идет",
+      "lemma": "идут",
+      "root": "идут"
+     }
     },
     {
      "form": "deva",
@@ -8711,7 +11677,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a deity; god; (rarely applied to) evil demons; the gods as the heavenly or shining ones;…",
      "slp1": "deva",
      "href": "../w/deva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "боги",
+      "lemma": "боги"
+     }
     },
     {
      "form": "tvam",
@@ -8721,7 +11691,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "(suffix creating abstract nouns)",
      "slp1": "tva",
      "href": "../w/tva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ты",
+      "lemma": "ты"
+     }
     },
     {
      "form": "mahadbhiḥ",
@@ -8731,7 +11705,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "great; large; big; huge; ample; extensive; long; abundant; numerous; considerable; import…",
      "slp1": "mahat",
      "href": "../w/mahat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "великими",
+      "lemma": "великий"
+     }
     },
     {
      "form": "supratiṣṭhitaḥ",
@@ -8741,7 +11719,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "standing firm; properly set up or established; thoroughly implanted in; well consecrated;…",
      "slp1": "supratizWita",
      "href": "../w/supratiz_57ita.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "изящно стоит"
+     }
     }
    ]
   },
@@ -8760,7 +11741,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "other; another",
      "slp1": "anya",
      "href": "../w/anya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "другой",
+      "lemma": "другой"
+     }
     },
     {
      "form": "ca",
@@ -8770,7 +11755,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -8789,7 +11778,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "according; as; like; as",
      "slp1": "yaTA",
      "href": "../w/ya_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     },
     {
      "form": "udayagireḥ",
@@ -8809,7 +11802,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a substance; thing; object; the ingredients or materials of anything; medicinal substance…",
      "slp1": "dravya",
      "href": "../w/dravya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "богатство",
+      "lemma": "субстанция"
+     }
     },
     {
      "form": "saṃnikarṣeṇa",
@@ -8819,7 +11816,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "drawing near or together; approximation; close contact; nearness; neighbourhood; proximit…",
      "slp1": "saMnikarza",
      "href": "../w/sa_4dnikarza.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "контакт"
+     }
     },
     {
      "form": "dīpyate",
@@ -8829,7 +11829,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to blaze; to flare; to shine; to be luminous or illustrious; to glow; to burn",
      "slp1": "dIp",
      "href": "../w/d_49p.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сияет",
+      "lemma": "пылающий",
+      "root": "пылающий"
+     }
     }
    ]
   },
@@ -8848,7 +11853,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in that manner; so; thus; yes; so be it; so it shall be (particle of assent); so also; in…",
      "slp1": "taTA",
      "href": "../w/ta_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "sat",
@@ -8858,7 +11867,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to live; to exist; to be present; to take place; to happen; to abide; to dwell; to…",
      "slp1": "as",
      "href": "../w/as.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сущее",
+      "lemma": "есть",
+      "root": "есть"
+     }
     },
     {
      "form": "saṃnidhānena",
@@ -8868,7 +11882,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "juxtaposition; nearness; vicinity; presence; presence = existence; placingdown; depositin…",
      "slp1": "saMniDAna",
      "href": "../w/sa_4dni_44_41na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "совокупленье"
+     }
     },
     {
      "form": "hīna",
@@ -8878,7 +11895,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a kind of bīja; a kind of exclamation (au wacker)",
      "slp1": "hA",
      "href": "../w/h_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "лишенный",
+      "lemma": "оставив",
+      "root": "оставив"
+     }
     },
     {
      "form": "varṇaḥ",
@@ -8888,7 +11910,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a covering; cloak; mantle; a cover; lid; outward appearance; exterior; form; figure; shap…",
      "slp1": "varRa",
      "href": "../w/var_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "цвет",
+      "lemma": "варн"
+     }
     },
     {
      "form": "'pi",
@@ -8898,7 +11924,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "также"
+     }
     },
     {
      "form": "dīpyate",
@@ -8908,7 +11938,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to blaze; to flare; to shine; to be luminous or illustrious; to glow; to burn",
      "slp1": "dIp",
      "href": "../w/d_49p.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сияет",
+      "lemma": "пылающий",
+      "root": "пылающий"
+     }
     }
    ]
   },
@@ -8927,7 +11962,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a single thread or strand of a cord or twine; string or thread; rope; a garland; an auxil…",
      "slp1": "guRa",
      "href": "../w/gu_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "гуны",
+      "lemma": "гуны"
+     }
     },
     {
      "form": "guṇa",
@@ -8937,7 +11976,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a single thread or strand of a cord or twine; string or thread; rope; a garland; an auxil…",
      "slp1": "guRa",
      "href": "../w/gu_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "гуны",
+      "lemma": "гуны"
+     }
     },
     {
      "form": "jñeṣu",
@@ -8947,7 +11990,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowing; familiar with (chiefly in comp.); intelligent; having a soul; wise",
      "slp1": "jYa",
      "href": "../w/j_59a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "знаю"
+     }
     },
     {
      "form": "guṇā",
@@ -8957,7 +12003,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a single thread or strand of a cord or twine; string or thread; rope; a garland; an auxil…",
      "slp1": "guRa",
      "href": "../w/gu_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "гуны",
+      "lemma": "гуны"
+     }
     },
     {
      "form": "bhavanti",
@@ -8967,7 +12017,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "становятся",
+      "lemma": "будет",
+      "root": "будет"
+     }
     },
     {
      "form": "te",
@@ -8977,7 +12032,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "тебе",
+      "lemma": "он"
+     }
     },
     {
      "form": "nirguṇaṃ",
@@ -8987,7 +12046,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "having no qualities; having no cord; bad; vicious; having no epithet",
      "slp1": "nirguRa",
      "href": "../w/nirgu_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "лишенный свойств"
+     }
     },
     {
      "form": "prāpya",
@@ -8997,7 +12059,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to attain to; to reach; to arrive at; to meet with; to find; to obtain; to receive; to in…",
      "slp1": "prAp",
      "href": "../w/pr_41p.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "достигнув",
+      "lemma": "достигнув",
+      "root": "достигает"
+     }
     },
     {
      "form": "bhavanti",
@@ -9007,7 +12074,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "становятся",
+      "lemma": "будет",
+      "root": "будет"
+     }
     },
     {
      "form": "doṣāḥ",
@@ -9017,7 +12089,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "fault; vice; deficiency; want; inconvenience; disadvantage; badness; wickedness; sinfulne…",
      "slp1": "doza",
      "href": "../w/doza.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "опасностей",
+      "lemma": "зло"
+     }
     }
    ]
   },
@@ -9036,7 +12112,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be eaten; to be tasted or enjoyed; having a good taste; palatable; delicious",
      "slp1": "AsvAdya",
      "href": "../w/_41sv_41dya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Вкусив"
+     }
     },
     {
      "form": "toyāḥ",
@@ -9046,7 +12125,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "water; [min.] !!",
      "slp1": "toya",
      "href": "../w/toya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "воду"
+     }
     },
     {
      "form": "pravahanti",
@@ -9056,7 +12138,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to carry forwards; to draw or drag on wards; to carry off in flowing; to wash away; to le…",
      "slp1": "pravah",
      "href": "../w/pravah.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "увозят",
+      "lemma": "тяжеловозы",
+      "root": "привези"
+     }
     },
     {
      "form": "nadyaḥ",
@@ -9066,7 +12153,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "flowing water; a river (commonly personified as a female); name of 2 kinds of metre; name…",
      "slp1": "nadI",
      "href": "../w/nad_49.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "реки",
+      "lemma": "реки"
+     }
     },
     {
      "form": "samudram",
@@ -9076,7 +12167,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the sea; ocean (in Veda also \"the aerial waters\"); name of the number four; a large Soma…",
      "slp1": "samudra",
      "href": "../w/samudra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "океан",
+      "lemma": "океан"
+     }
     },
     {
      "form": "āsādya",
@@ -9084,7 +12179,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "upos": "VERB",
      "morph": "",
      "gloss": "to cause to sit down; to set down; to put down; to place; to cause; to effect; to approac…",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "surface": "достигнув",
+      "lemma": "достигнув",
+      "root": "достигнув"
+     }
     },
     {
      "form": "bhavanty",
@@ -9094,7 +12194,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "будет",
+      "root": "будет"
+     }
     },
     {
      "form": "upeyāḥ",
@@ -9104,7 +12208,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to go or come or step near; to approach; to betake one's self to; to arrive at; to meet w…",
      "slp1": "upe",
      "href": "../w/upe.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "придя",
+      "root": "придя"
+     }
     }
    ]
   },
@@ -9123,7 +12231,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "то",
+      "lemma": "он"
+     }
     },
     {
      "form": "eteṣām",
@@ -9133,7 +12245,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; [gramm.] the pronoun etad; auf diese Weise",
      "slp1": "etad",
      "href": "../w/etad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "этих",
+      "lemma": "это"
+     }
     },
     {
      "form": "asmat",
@@ -9143,7 +12259,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "I; we",
      "slp1": "mad",
      "href": "../w/mad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "от нас",
+      "lemma": "я",
+      "root": "я"
+     }
     },
     {
      "form": "putrāṇām",
@@ -9153,7 +12274,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a son; child; a species of small venomous animal; (in astrol.) name of the fifth house; n…",
      "slp1": "putra",
      "href": "../w/putra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сыновей",
+      "lemma": "сын"
+     }
     },
     {
      "form": "nīti",
@@ -9163,7 +12288,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "leading or bringing; guidance; management; conduct; (esp.) right or wise or moral conduct…",
      "slp1": "nIti",
      "href": "../w/n_49ti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "политика",
+      "lemma": "политика"
+     }
     },
     {
      "form": "śāstra",
@@ -9173,7 +12302,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an order; command; precept; rule; teaching; instruction; direction; advice; good counsel;…",
      "slp1": "SAstra",
      "href": "../w/_53_41stra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "шастры",
+      "lemma": "шастры"
+     }
     },
     {
      "form": "upadeśāya",
@@ -9183,7 +12316,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "pointing out to; reference to; specification; instruction; teaching; information; advice;…",
      "slp1": "upadeSa",
      "href": "../w/upade_53a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "наставление"
+     }
     },
     {
      "form": "bhavantaḥ",
@@ -9193,7 +12329,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "your honour; your worship; your lordship or ladyship; you (lit. \"the gentleman or lady pr…",
      "slp1": "Bavat",
      "href": "../w/_42avat.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "вы",
+      "lemma": "ты"
+     }
     },
     {
      "form": "pramāṇam",
@@ -9203,7 +12343,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "measure; scale; standard; measure of any kind (as size); prosodical length (of a vowel);…",
      "slp1": "pramARa",
      "href": "../w/pram_41_52a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мерилом",
+      "lemma": "источник знания"
+     }
     },
     {
      "form": "ity",
@@ -9213,7 +12357,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in this manner; thus (in its original signification iti refers to something that has been…",
      "slp1": "iti",
      "href": "../w/iti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "uktvā",
@@ -9223,7 +12371,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to speak; to say; to tell; to declare; to proclaim; to recite; verk￼nden; to speak ill of",
      "slp1": "vac",
      "href": "../w/vac.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сказав",
+      "lemma": "сказал",
+      "root": "сказал"
+     }
     },
     {
      "form": "tasya",
@@ -9233,7 +12386,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "его",
+      "lemma": "он"
+     }
     },
     {
      "form": "viṣṇuśarmaṇo",
@@ -9253,7 +12410,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "much; many; abundant; great in quantity",
      "slp1": "bahu",
      "href": "../w/bahu.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "много",
+      "lemma": "много"
+     }
     },
     {
      "form": "māna",
@@ -9263,7 +12424,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "measuring; measure; measuring-cord; standard; dimension; height; length (in space and tim…",
      "slp1": "mAna",
      "href": "../w/m_41na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "гордость",
+      "lemma": "гордость"
+     }
     },
     {
      "form": "puraḥsaram",
@@ -9273,7 +12438,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "going before or in advance",
      "slp1": "puraHsara",
      "href": "../w/pura_48sara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "спереди",
+      "lemma": "предшествуемая"
+     }
     },
     {
      "form": "putrān",
@@ -9283,7 +12452,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a son; child; a species of small venomous animal; (in astrol.) name of the fifth house; n…",
      "slp1": "putra",
      "href": "../w/putra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сыновей",
+      "lemma": "сын"
+     }
     },
     {
      "form": "samarpitavān",
@@ -9291,7 +12464,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "upos": "VERB",
      "morph": "Nom Sing Masc",
      "gloss": "to stretch out from; to put into; to shoot (a missile); to deliver; to give; to hand over",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "lemma": "поразил",
+      "root": "поразил"
+     }
     }
    ]
   },
@@ -9308,7 +12485,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "upos": "VERB",
      "morph": "Sing p3 Pres Ind",
      "gloss": "to cause to join together; to bring together; to unite; to put to (horses); to yoke; to h…",
-     "resolved": false
+     "resolved": false,
+     "gloss_ru": {
+      "lemma": "запряг",
+      "root": "побуждаешь"
+     }
     },
     {
      "form": "vidyā",
@@ -9318,7 +12499,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowledge; science; learning; scholarship; philosophy; a spell; incantation; magical skil…",
      "slp1": "vidyA",
      "href": "../w/vidy_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знание",
+      "lemma": "знание"
+     }
     },
     {
      "form": "eva",
@@ -9328,7 +12513,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "so; just so; exactly so (in the sense of the later evam); indeed; truly; really (often at…",
      "slp1": "eva",
      "href": "../w/eva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "именно",
+      "lemma": "именно"
+     }
     },
     {
      "form": "nīcagā",
@@ -9348,7 +12537,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "also; moreover; besides; assuredly; surely",
      "slp1": "api",
      "href": "../w/api.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "также",
+      "lemma": "также"
+     }
     },
     {
      "form": "naraṃ",
@@ -9358,7 +12551,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a man; a male; a person; husband; hero; a man or piece at chess or draughts; the pin or g…",
      "slp1": "nara",
      "href": "../w/nara.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "мужу",
+      "lemma": "человек"
+     }
     },
     {
      "form": "sarit",
@@ -9368,7 +12565,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a river; stream; an expression for the number \"four\"; a metre of 72 syllables; a thread;…",
      "slp1": "sarit",
      "href": "../w/sarit.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "реки",
+      "lemma": "реки"
+     }
     }
    ]
   },
@@ -9387,7 +12588,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the sea; ocean (in Veda also \"the aerial waters\"); name of the number four; a large Soma…",
      "slp1": "samudra",
      "href": "../w/samudra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "океан",
+      "lemma": "океан"
+     }
     },
     {
      "form": "iva",
@@ -9397,7 +12602,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "like; in the same manner as (in this sense = yathā); as it were; as if; in a certain mann…",
      "slp1": "iva",
      "href": "../w/iva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "как",
+      "lemma": "как"
+     }
     },
     {
      "form": "durdharṣaṃ",
@@ -9407,7 +12616,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "difficult to be assaulted or laid hold of; inviolable; inaccessible; unconquerable; dange…",
      "slp1": "durDarza",
      "href": "../w/dur_44arza.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "несокрушимую",
+      "lemma": "неодолимый"
+     }
     },
     {
      "form": "nṛpaṃ",
@@ -9417,7 +12630,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "protector of men; prince; king; sovereign; (in music) a kind of measure; name of the nume…",
      "slp1": "nfpa",
      "href": "../w/nfpa.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "царя",
+      "lemma": "царь"
+     }
     },
     {
      "form": "bhāgyam",
@@ -9427,7 +12644,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "fate; destiny (resulting from merit or demerit in former existences); fortune; (esp.) goo…",
      "slp1": "BAgya",
      "href": "../w/_42_41gya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не подобает",
+      "lemma": "счастье"
+     }
     },
     {
      "form": "ataḥ",
@@ -9437,7 +12658,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "from this; than this; hence; henceforth; from that time; from this or that cause or reason",
      "slp1": "atas",
      "href": "../w/atas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "поэтому",
+      "lemma": "поэтому"
+     }
     },
     {
      "form": "param",
@@ -9447,7 +12672,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "far; remote; opposite; previous; ancient; following; final; exceeding; better or worse th…",
      "slp1": "para",
      "href": "../w/para.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "высшее",
+      "lemma": "высшее"
+     }
     }
    ]
   },
@@ -9466,7 +12695,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowledge; science; learning; scholarship; philosophy; a spell; incantation; magical skil…",
      "slp1": "vidyA",
      "href": "../w/vidy_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знание",
+      "lemma": "знание"
+     }
     },
     {
      "form": "dadāti",
@@ -9476,7 +12709,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to give; to offer to; to yield; to give (a daughter) in marriage; to pay; to give up; to…",
      "slp1": "dA",
      "href": "../w/d_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дает",
+      "lemma": "дает",
+      "root": "взяв"
+     }
     },
     {
      "form": "vinayaṃ",
@@ -9486,7 +12724,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "taking away; removal; withdrawal; leading; guidance; training (esp. moral training); educ…",
      "slp1": "vinaya",
      "href": "../w/vinaya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "смиренно"
+     }
     },
     {
      "form": "vinayād",
@@ -9496,7 +12737,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "taking away; removal; withdrawal; leading; guidance; training (esp. moral training); educ…",
      "slp1": "vinaya",
      "href": "../w/vinaya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "смиренно",
+      "lemma": "смиренно"
+     }
     },
     {
      "form": "yāti",
@@ -9506,7 +12751,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to go; to move; to set out; to travel; to withdraw; to flee; to go to for any purpose (in…",
      "slp1": "yA",
      "href": "../w/y_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "идет",
+      "lemma": "идут",
+      "root": "идут"
+     }
     },
     {
      "form": "pātra",
@@ -9516,7 +12766,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a drinking-vessel; goblet; bowl; cup; dish; pot; plate; utensil; any vessel or receptacle…",
      "slp1": "pAtra",
      "href": "../w/p_41tra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сосуд",
+      "lemma": "сосуд"
+     }
     },
     {
      "form": "tām",
@@ -9526,7 +12780,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "ifc. abstracta; name of Lakṣmī",
      "slp1": "tA",
      "href": "../w/t_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "ее",
+      "lemma": "эти"
+     }
     }
    ]
   },
@@ -9545,7 +12803,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a drinking-vessel; goblet; bowl; cup; dish; pot; plate; utensil; any vessel or receptacle…",
      "slp1": "pAtra",
      "href": "../w/p_41tra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сосуд",
+      "lemma": "сосуд"
+     }
     },
     {
      "form": "tvāt",
@@ -9555,7 +12817,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "(suffix creating abstract nouns)",
      "slp1": "tva",
      "href": "../w/tva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "поскольку",
+      "lemma": "ты"
+     }
     },
     {
      "form": "dhanam",
@@ -9565,7 +12831,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the prize of a contest or the contest itself (lit. a running match); the thing raced for;…",
      "slp1": "Dana",
      "href": "../w/_44ana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "богатство",
+      "lemma": "богатство"
+     }
     },
     {
      "form": "āpnoti",
@@ -9575,7 +12845,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to reach; to overtake; to meet with; to fall upon; to obtain; to gain; to take possession…",
      "slp1": "Ap",
      "href": "../w/_41p.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "достигает",
+      "lemma": "достигает",
+      "root": "достигает"
+     }
     },
     {
      "form": "dhanād",
@@ -9585,7 +12860,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "the prize of a contest or the contest itself (lit. a running match); the thing raced for;…",
      "slp1": "Dana",
      "href": "../w/_44ana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "выигрыши",
+      "lemma": "богатство"
+     }
     },
     {
      "form": "dharmaṃ",
@@ -9595,7 +12874,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "that which is established or firm; steadfast decree; statute; ordinance; law; usage; prac…",
      "slp1": "Darma",
      "href": "../w/_44arma.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "дхарму",
+      "lemma": "дхарма"
+     }
     },
     {
      "form": "tataḥ",
@@ -9605,7 +12888,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "from that; in consequence of that; for that reason; consequently; then; after that",
      "slp1": "tatas",
      "href": "../w/tatas.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "тогда",
+      "lemma": "тогда"
+     }
     },
     {
      "form": "sukham",
@@ -9615,7 +12902,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "ease; easiness; comfort; prosperity; pleasure; joy; delight in; the sky; heaven; atmosphe…",
      "slp1": "suKa",
      "href": "../w/su_4ba.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "счастье",
+      "lemma": "счастье"
+     }
     }
    ]
   },
@@ -9634,7 +12925,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowledge; science; learning; scholarship; philosophy; a spell; incantation; magical skil…",
      "slp1": "vidyA",
      "href": "../w/vidy_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "знание",
+      "lemma": "знание"
+     }
     },
     {
      "form": "śastraṃ",
@@ -9644,7 +12939,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an instrument for cutting or wounding; knife; sword; dagger; any weapon (even applied to…",
      "slp1": "Sastra",
      "href": "../w/_53astra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "оружия",
+      "lemma": "оружие"
+     }
     },
     {
      "form": "ca",
@@ -9654,7 +12953,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "śāstraṃ",
@@ -9664,7 +12967,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "an order; command; precept; rule; teaching; instruction; direction; advice; good counsel;…",
      "slp1": "SAstra",
      "href": "../w/_53_41stra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "шастру",
+      "lemma": "шастры"
+     }
     },
     {
      "form": "ca",
@@ -9674,7 +12981,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     },
     {
      "form": "dve",
@@ -9684,7 +12995,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "two",
      "slp1": "dvi",
      "href": "../w/dvi.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "две",
+      "lemma": "два"
+     }
     },
     {
      "form": "vidye",
@@ -9694,7 +13009,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "knowledge; science; learning; scholarship; philosophy; a spell; incantation; magical skil…",
      "slp1": "vidyA",
      "href": "../w/vidy_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "знание"
+     }
     },
     {
      "form": "pratipattaye",
@@ -9704,7 +13022,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "gaining; obtaining; acquiring; perception; observation; ascertainment; knowledge; intelle…",
      "slp1": "pratipatti",
      "href": "../w/pratipatti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "постижение"
+     }
     }
    ]
   },
@@ -9723,7 +13044,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "immediately preceding (e.g. ekādaśādya); earlier; older; being at the head; unparalleled;…",
      "slp1": "Adya",
      "href": "../w/_41dya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "прекрасная",
+      "lemma": "изначальный"
+     }
     },
     {
      "form": "hāsyāya",
@@ -9733,7 +13058,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be laughed at; laughable; ridiculous; funny; comical; laughing; laughter; mirth (in rh…",
      "slp1": "hAsya",
      "href": "../w/h_41sya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "шутил шутки"
+     }
     },
     {
      "form": "vṛddha",
@@ -9743,7 +13071,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "grown; become larger or longer or stronger; increased; augmented; great; large; grown up;…",
      "slp1": "vfdDa",
      "href": "../w/vfd_44a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "престарелый",
+      "lemma": "старый"
+     }
     },
     {
      "form": "tve",
@@ -9753,7 +13085,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "(suffix creating abstract nouns)",
      "slp1": "tva",
      "href": "../w/tva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "в тебе",
+      "lemma": "ты"
+     }
     },
     {
      "form": "dvitīyā",
@@ -9763,7 +13099,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "forming the 2nd part or half of anything; second",
      "slp1": "dvitIya",
      "href": "../w/dvit_49ya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "второй",
+      "lemma": "второй"
+     }
     },
     {
      "form": "ādriyate",
@@ -9773,7 +13113,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to respect; to honour; to reverence; to regard with attention; (an einer Handlung) festha…",
      "slp1": "Adf",
      "href": "../w/_41df.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "пренебрег",
+      "lemma": "проломитель",
+      "root": "разрывается"
+     }
     },
     {
      "form": "sadā",
@@ -9783,7 +13128,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "always; ever; every time; continually; perpetually",
      "slp1": "sadA",
      "href": "../w/sad_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "всегда",
+      "lemma": "всегда"
+     }
     }
    ]
   },
@@ -9802,7 +13151,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "what; which; who",
      "slp1": "yad",
      "href": "../w/yad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "что",
+      "lemma": "что"
+     }
     },
     {
      "form": "nave",
@@ -9812,7 +13165,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "new; fresh; recent; young; modern",
      "slp1": "nava",
      "href": "../w/nava.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "молодому",
+      "lemma": "новые"
+     }
     },
     {
      "form": "bhājane",
@@ -9822,7 +13179,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a recipient; receptacle; a vessel; pot; plate; cup; a place or person in which anything i…",
      "slp1": "BAjana",
      "href": "../w/_42_41jana.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сосуде",
+      "lemma": "сосуды"
+     }
     },
     {
      "form": "lagnaḥ",
@@ -9832,7 +13193,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to stick; to cling or attach one's self to; to adhere; to take effect upon; to meet; to p…",
      "slp1": "lag",
      "href": "../w/lag.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "сжимают",
+      "lemma": "будет ощутим",
+      "root": "застрявшие"
+     }
     },
     {
      "form": "saṃskāro",
@@ -9842,7 +13208,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "putting together; forming well; making perfect; accomplishment; embellishment adornment;…",
      "slp1": "saMskAra",
      "href": "../w/sa_4dsk_41ra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "санскары"
+     }
     },
     {
      "form": "na",
@@ -9852,7 +13221,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "not; no; nor; neither; like",
      "slp1": "na",
      "href": "../w/na.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "не",
+      "lemma": "не"
+     }
     },
     {
      "form": "anyathā",
@@ -9862,7 +13235,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "otherwise; in a different manner; inaccurately; untruly; falsely; erroneously; from anoth…",
      "slp1": "anyaTA",
      "href": "../w/anya_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "иначе",
+      "lemma": "иначе"
+     }
     },
     {
      "form": "bhavet",
@@ -9872,7 +13249,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to be; to become; to come into being; to happen; to occur; to make up; gedeihen",
      "slp1": "BU",
      "href": "../w/_42_55.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "будет",
+      "lemma": "будет",
+      "root": "будет"
+     }
     }
    ]
   },
@@ -9891,7 +13273,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "conversation; speech; talking together; talk; mention; story; tale; fable; feigned story;…",
      "slp1": "kaTA",
      "href": "../w/ka_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "рассказ",
+      "lemma": "рассказ"
+     }
     },
     {
      "form": "chalena",
@@ -9901,7 +13287,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "fraud; deceit; sham; guise; pretence; delusion; semblance; fiction; feint; trick; fallacy…",
      "slp1": "Cala",
      "href": "../w/_43ala.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "обмана",
+      "lemma": "словесные ухищрения"
+     }
     },
     {
      "form": "bālānāṃ",
@@ -9911,7 +13301,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a child; boy (esp. one under 5 years); (in law) a minor; a fool; simpleton; any young ani…",
      "slp1": "bAla",
      "href": "../w/b_41la.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "малых",
+      "lemma": "дети"
+     }
     },
     {
      "form": "nītis",
@@ -9921,7 +13315,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "leading or bringing; guidance; management; conduct; (esp.) right or wise or moral conduct…",
      "slp1": "nIti",
      "href": "../w/n_49ti.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "политика"
+     }
     },
     {
      "form": "tad",
@@ -9931,7 +13328,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "this; gleicher",
      "slp1": "tad",
      "href": "../w/tad.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "то",
+      "lemma": "он"
+     }
     },
     {
      "form": "iha",
@@ -9941,7 +13342,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in this place; here; to this place; in this world; in this book or system; in this case;…",
      "slp1": "iha",
      "href": "../w/iha.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "здесь",
+      "lemma": "здесь"
+     }
     },
     {
      "form": "kathyate",
@@ -9951,7 +13356,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to call; to name; to tell; to designate",
      "slp1": "kaTay",
      "href": "../w/ka_54ay.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "зовется",
+      "lemma": "рассказал",
+      "root": "рассказал"
+     }
     }
    ]
   },
@@ -9970,7 +13380,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a friend; companion; name of an Āditya (generally invoked together with Varuṇa); the sun;…",
      "slp1": "mitra",
      "href": "../w/mitra.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "Митра",
+      "lemma": "Митра"
+     }
     },
     {
      "form": "lābhaḥ",
@@ -9980,7 +13394,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "meeting with; finding; obtaining; getting; attaining; acquisition; gain; profit; capture;…",
      "slp1": "lABa",
      "href": "../w/l_41_42a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "блага",
+      "lemma": "прибыль"
+     }
     },
     {
      "form": "suhṛd",
@@ -9990,7 +13408,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "a friend; ally; name of the fourth astrol. mansion",
      "slp1": "suhfd",
      "href": "../w/suhfd.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "друзей",
+      "lemma": "друзей"
+     }
     },
     {
      "form": "bhedaḥ",
@@ -10000,7 +13422,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "breaking; splitting; cleaving; rending; tearing; piercing; breaking open; disclosing; div…",
      "slp1": "Beda",
      "href": "../w/_42eda.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "разлада",
+      "lemma": "различие"
+     }
     },
     {
      "form": "vigrahaḥ",
@@ -10010,7 +13436,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "keeping apart or asunder; isolation; division; distribution (esp. of fluids); (in gram.)…",
      "slp1": "vigraha",
      "href": "../w/vigraha.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "раздор",
+      "lemma": "война"
+     }
     },
     {
      "form": "saṃdhir",
@@ -10020,7 +13450,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "junction; connection; combination; union with (instr.); association; intercourse with (in…",
      "slp1": "saMDi",
      "href": "../w/sa_4d_44i.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "мир"
+     }
     },
     {
      "form": "eva",
@@ -10030,7 +13463,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "so; just so; exactly so (in the sense of the later evam); indeed; truly; really (often at…",
      "slp1": "eva",
      "href": "../w/eva.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "именно",
+      "lemma": "именно"
+     }
     },
     {
      "form": "ca",
@@ -10040,7 +13477,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "and; both; also; moreover; as well as",
      "slp1": "ca",
      "href": "../w/ca.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "и",
+      "lemma": "и"
+     }
     }
    ]
   },
@@ -10069,7 +13510,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "in that manner; so; thus; yes; so be it; so it shall be (particle of assent); so also; in…",
      "slp1": "taTA",
      "href": "../w/ta_54_41.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "так",
+      "lemma": "так"
+     }
     },
     {
      "form": "anyasmāt",
@@ -10079,7 +13524,11 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "other; another",
      "slp1": "anya",
      "href": "../w/anya.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "остального",
+      "lemma": "другой"
+     }
     },
     {
      "form": "granthād",
@@ -10089,7 +13538,10 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "tying; binding; stringing together; = granthﾡ; a knot; verse; composition; treatise; lite…",
      "slp1": "granTa",
      "href": "../w/gran_54a.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "книги"
+     }
     },
     {
      "form": "ākṛṣya",
@@ -10099,7 +13551,12 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to draw towards one's self; to attract; to draw (a sword); to bend (a bow); to draw out",
      "slp1": "Akfz",
      "href": "../w/_41kfz.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "surface": "вдыхай",
+      "lemma": "втягивается",
+      "root": "натянув"
+     }
     },
     {
      "form": "likhyate",
@@ -10109,9 +13566,16 @@ window.READING_DATA["hitopadesa-0"] = {
      "gloss": "to scratch; to scrape; to furrow; to tear up (the ground); to pick; to peck (said of bird…",
      "slp1": "liK",
      "href": "../w/li_4b.html",
-     "tier": "exact"
+     "tier": "exact",
+     "gloss_ru": {
+      "lemma": "чертит",
+      "root": "чертит"
+     }
     }
    ]
   }
+ ],
+ "gloss_langs": [
+  "ru"
  ]
 };
