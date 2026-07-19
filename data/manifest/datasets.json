@@ -1515,23 +1515,23 @@
     },
     {
       "id": "subhashita-reader-pack",
-      "title": "Beginner subhāṣita reader pack — graded Indische Sprüche band (W-RU-b)",
+      "title": "Beginner subhāṣita reader pack — graded Indische Sprüche band (W-RU-b + gloss.ru)",
       "tier": "public",
       "in_release": "not-applicable",
       "release_asset": "data/subhashita/subhashita_beginner_pack.json",
       "format": "json",
       "rows": 106,
-      "size_bytes": 294301,
-      "keying": "one object per curated saying, ordered by difficulty ascending: num/saying_id (Indische Sprüche numbering), deva, iast, translation_de, source_attribution, difficulty (W2a-reduced 2-axis composite in [0,1]), metre + metre_method + syllables (vidyut-chandas strict vṛtta else anuṣṭubh syllable heuristic), lines[].chunks[] with per-chunk sandhi-split tokens and per-seam X Y → Z junction rules (corpus-attested, data/sandhi/corpus_sandhi.tsv), cross-boundary rules in lines[].xj, gloss_ru (null in this build). Grading spine: data/subhashita/subhashita_difficulty.tsv (all 7,537 sayings, full score decomposition). Curation: beginner_band.tsv + CURATION_NOTES.md (criteria + full reject log, no unlogged picks).",
+      "size_bytes": 546518,
+      "keying": "one object per curated saying, ordered by difficulty ascending: num/saying_id (Indische Sprüche numbering), deva, iast, translation_de, source_attribution, difficulty (W2a-reduced 2-axis composite in [0,1]), metre + metre_method + syllables (vidyut-chandas strict vṛtta else anuṣṭubh syllable heuristic), lines[].chunks[] with per-chunk sandhi-split tokens (t), per-seam X Y → Z junction rules (j, corpus-attested, data/sandhi/corpus_sandhi.tsv), per-token SLP1 lemma (lemma_slp1, H1312 — vidyut-cheda, honest null when unresolved) and per-token gloss_ru {surface,lemma,root} triple (H1312, null where uncovered), cross-boundary rules in lines[].xj. Grading spine: data/subhashita/subhashita_difficulty.tsv (all 7,537 sayings, full score decomposition). Curation: beginner_band.tsv + CURATION_NOTES.md (criteria + full reject log, no unlogged picks).",
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "data/subhashita/subhashita_beginner_pack.json",
-      "builder": "scripts/build_subhashita_difficulty.py (grading, W2a-reduced) + scripts/build_subhashita_pack.py (splits via cached DharmaMitra unsandhied, vidyut-cheda fallback, junction labels vs corpus_sandhi.tsv, metre via vidyut-chandas); regression scripts/test_subhashita_difficulty.py (10 hand-checked sayings)",
+      "builder": "scripts/build_subhashita_difficulty.py (grading, W2a-reduced) + scripts/build_subhashita_pack.py (splits via cached DharmaMitra unsandhied, vidyut-cheda fallback + lemma, junction labels vs corpus_sandhi.tsv, metre via vidyut-chandas, gloss.ru via build_ru_gloss_layer.RuGlosser); regression scripts/test_subhashita_difficulty.py (10 hand-checked sayings)",
       "consumers": [
-        "reading/subhashita/ page (graded beginner reader, difficulty-ordered)",
-        "data/subhashita/subhashita_beginner_anki.apkg (Anki export of the band)",
-        "W-RU-a re-run join point: gloss.ru inlining now that H1278 has shipped (logged re-run TODO)"
+        "reading/subhashita/ page (graded beginner reader, difficulty-ordered, RU-gloss toggle)",
+        "data/subhashita/subhashita_beginner_anki.apkg (Anki export of the band, GlossRu back field)",
+        "reading/RU_GLOSS_COVERAGE.md (this pack's row, folded in alongside the 5 DCS reading packs)"
       ],
-      "notes": "H1279 kosha pedagogy Wave RU (W-RU-b), the first non-DCS reading-pack family. Base text public domain (Böhtlingk, Indische Sprüche 1870-73, SanskritLexicography F33, consumed in place — never copied wholesale). Splits shown only where they rebuild the surface via corpus-attested rules (no fabricated signal; 56/1,263 chunks honestly unsplit). gloss.ru ABSENT this build — W-RU-a (H1278) unshipped at build time (it landed while this PR was in flight), re-run logged in pack meta. No SanskritRussian material included, so the Wave-RU rights gate is not triggered. Curation by Fable 5 (claude-fable-5), auditable in CURATION_NOTES.md; its 50 R1 rejects double as an OCR to-fix list for IndischeSprueche.",
+      "notes": "H1279 kosha pedagogy Wave RU (W-RU-b), the first non-DCS reading-pack family; H1312 re-ran the build with the gloss.ru join once W-RU-a (H1278) had shipped. Base text public domain (Böhtlingk, Indische Sprüche 1870-73, SanskritLexicography F33, consumed in place — never copied wholesale). Splits shown only where they rebuild the surface via corpus-attested rules (no fabricated signal; 56/1,263 chunks honestly unsplit) — the split/grading TSVs are byte-unchanged from H1279 (test_subhashita_difficulty.py green). gloss.ru now PRESENT: 85.3% of the pack's 1,510 tokens carry a lemma-layer RU gloss (89.1% carry a resolved SLP1 lemma at all) — the residual gap is mostly cheda lemmatization misses on rare/compound-internal forms, not a rights gap (still the SanskritRussian **public site-tier** subset only; corpus_lexicon never read). Curation by Fable 5 (claude-fable-5), auditable in CURATION_NOTES.md; its 50 R1 rejects double as an OCR to-fix list for IndischeSprueche.",
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/subhashita-reader-pack.meta.md"
     }
   ]

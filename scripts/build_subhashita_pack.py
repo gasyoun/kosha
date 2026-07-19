@@ -1,11 +1,12 @@
 #!/usr/bin/env python
-"""Beginner subhāṣita reading pack — pedagogy Wave RU, surface W-RU-b (H1279).
+"""Beginner subhāṣita reading pack — pedagogy Wave RU, surface W-RU-b (H1279),
+re-run with the gloss.ru join — H1312.
 
 Builds the graded beginner reading pack from the curated band
 (data/subhashita/beginner_band.tsv — see CURATION_NOTES.md for the criteria and
 the full reject log): each selected Indische-Sprüche saying is sandhi-split,
-junction-labelled against the corpus rule table, metre-tagged, and shipped as
-a JSON dataset + a self-contained viewer shard + an Anki deck.
+junction-labelled against the corpus rule table, metre-tagged, lemma-tagged, and
+shipped as a JSON dataset + a self-contained viewer shard + an Anki deck.
 
 Pipeline (consumes shipped layers, derives nothing new):
   * split      DharmaMitra `unsandhied` neural segmentation per whitespace
@@ -29,20 +30,37 @@ Pipeline (consumes shipped layers, derives nothing new):
   * metre      read from data/subhashita/subhashita_difficulty.tsv (W2a-r
                scorer output; every band member has a resolved metre —
                curation criterion C4).
-  * gloss.ru   NOT populated: the W-RU-a layer (H1278) has not shipped.
-               The absence is recorded in the pack meta (`gloss_ru_status`)
-               and is a logged re-run TODO, not a silent gap.
+  * lemma      a per-token SLP1 lemma, needed because the W-RU-a joiner keys
+               on lemma+surface but this pack's tokens are unsandhied IAST
+               surface forms with no lemma (DharmaMitra `unsandhied` mode
+               emits none). Where the accepted segmentation came from
+               vidyut-cheda (the primary fallback split), the SAME cheda run's
+               `.lemma` is kept per token (already SLP1, no re-parse). Where
+               it came from DharmaMitra or the raw-surface fallback,
+               vidyut-cheda is run again on each already-clean unsandhied
+               token in isolation (cheda lemmatizes single clean words well);
+               a token stays lemma-less when that run returns anything other
+               than exactly one token for it (honest null, never guessed) —
+               H1312.
+  * gloss.ru   joined per token from the W-RU-a public site-tier layers
+               (scripts/build_ru_gloss_layer.py's RuGlosser, lemma tier
+               preferred, surface/root fallback) now that H1278 has shipped —
+               re-run of the H1279 gap, H1312. Coverage is folded into
+               reading/RU_GLOSS_COVERAGE.md alongside the DCS reading packs.
 
 Outputs:
   data/subhashita/subhashita_beginner_pack.json   the dataset (byte-stable)
   reading/subhashita/data.js                      window.SUBHASHITA_DATA shard
   data/subhashita/subhashita_beginner_anki.apkg   Anki deck (genanki; NOT
         byte-stable — sqlite timestamps — same caveat as the other decks)
+  reading/RU_GLOSS_COVERAGE.md                    RU-gloss coverage, this pack
+        folded in alongside the 5 DCS reading packs (H1312)
 
 Usage:
   python scripts/build_subhashita_pack.py [--allow-network] [--built YYYY-MM-DD]
 """
 import argparse
+import collections
 import csv
 import json
 import sys
@@ -64,6 +82,8 @@ OUT_APKG = ROOT / "data" / "subhashita" / "subhashita_beginner_anki.apkg"
 
 sys.path.insert(0, str(ROOT / "scripts"))
 from dcs_sandhi_induce import induce_rule, nfc  # noqa: E402
+from build_ru_gloss_layer import RuGlosser, _dekey  # noqa: E402 -- reuse W-RU-a join primitives (H1312)
+from concordance_core import to_slp1  # noqa: E402
 
 DM_API = "https://dharmamitra.org/api/tagging/"
 DM_BATCH = 32
@@ -232,23 +252,61 @@ def accept_seg(under, toks, by_edge):
 _chedaka = None
 
 
-def cheda_fallback(chunk):
-    """Offline vidyut-cheda (split-method B) for chunks whose DharmaMitra
-    result failed validation; surface itself if cheda has nothing either."""
+def _cheda_run(text_iast):
+    """Offline vidyut-cheda over an IAST string; returns the raw Chedaka
+    tokens (text=SLP1 surface, lemma=SLP1 lemma) or [] on any failure."""
     global _chedaka
     from vidyut.lipi import Scheme, transliterate
     if _chedaka is None:
         from vidyut.cheda import Chedaka
         _chedaka = Chedaka(str(GH / "vidyut-data"))
-    slp = transliterate(chunk, Scheme.Iast, Scheme.Slp1)
+    slp = transliterate(text_iast, Scheme.Iast, Scheme.Slp1)
     try:
-        toks = [transliterate(t.text, Scheme.Slp1, Scheme.Iast) for t in _chedaka.run(slp)]
+        return _chedaka.run(slp)
     except Exception:
-        toks = []
-    return [nfc(t) for t in toks]
+        return []
 
 
-def build_saying(rec, diff, seg_cache, by_rule, by_edge, seg_src_stats):
+def cheda_tokens_with_lemma(chunk):
+    """Split-method B (vidyut-cheda) fallback for chunks whose DharmaMitra
+    result failed validation; surface itself if cheda has nothing either.
+    Returns (texts_iast, lemmas_slp1) aligned by position — the lemma list is
+    H1312's addition, taken from the SAME cheda run rather than re-parsing."""
+    from vidyut.lipi import Scheme, transliterate
+    run = _cheda_run(chunk)
+    texts = [nfc(transliterate(t.text, Scheme.Slp1, Scheme.Iast)) for t in run]
+    lemmas = [t.lemma if t.lemma else None for t in run]
+    return texts, lemmas
+
+
+def lemma_display(lemma_slp1):
+    """SLP1 lemma -> IAST, for the RU_GLOSS_COVERAGE.md uncovered-lemma table (which
+    is IAST-first, matching the DCS reading-pack family's display convention)."""
+    from vidyut.lipi import Scheme, transliterate
+    return nfc(transliterate(lemma_slp1, Scheme.Slp1, Scheme.Iast))
+
+
+def surface_slp1_key(token_iast):
+    """Fallback uncovered-table key when a token has no lemma at all: the token's
+    OWN surface SLP1, de-keyed the same way compute_family_coverage's keys are."""
+    return _dekey(to_slp1(token_iast))
+
+
+def lemma_for_single_token(token_iast):
+    """H1312: lemmatize ONE already-segmented, clean unsandhied token (a
+    DharmaMitra output word, or a whole chunk that fell through to the raw-
+    surface fallback) via vidyut-cheda run in isolation. Cheda lemmatizes
+    single clean words well, but if it decides the "single" word is itself
+    still further-splittable (0 or >1 output tokens), there is no principled
+    way to pick which piece is the head lemma — stay lemma-less rather than
+    guess."""
+    run = _cheda_run(token_iast)
+    if len(run) == 1 and run[0].lemma:
+        return run[0].lemma
+    return None
+
+
+def build_saying(rec, diff, seg_cache, by_rule, by_edge, seg_src_stats, glosser, ru_stats):
     lines = []
     for raw_line in rec["iast"].replace("||", "|").split("/"):
         line = raw_line.strip().strip("|").strip()
@@ -262,15 +320,42 @@ def build_saying(rec, diff, seg_cache, by_rule, by_edge, seg_src_stats):
             got = accept_seg(under, seg_cache.get(under) or [], by_edge)
             if got:
                 seg_src_stats["dm"] += 1
+                toks, seams = got
+                lemmas = [lemma_for_single_token(t) for t in toks]
             else:
-                got = accept_seg(under, cheda_fallback(under), by_edge)
+                cheda_texts, cheda_lemmas = cheda_tokens_with_lemma(under)
+                got = accept_seg(under, cheda_texts, by_edge)
                 if got:
                     seg_src_stats["cheda"] += 1
+                    toks, seams = got
+                    lemmas = cheda_lemmas
                 else:
-                    got = ([under], [])
+                    toks, seams = [under], []
                     seg_src_stats["surface"] += 1
-            toks, seams = got
-            chunks.append({"s": c, "t": toks, "j": seams})
+                    lemmas = [lemma_for_single_token(under)]
+            gloss_ru = []
+            for tok, lem in zip(toks, lemmas):
+                rg = glosser.gloss(tok, lemma_slp1=lem)
+                obj = {}
+                if rg["surface_ru"]:
+                    obj["surface"] = rg["surface_ru"]
+                if rg["lemma_ru"]:
+                    obj["lemma"] = rg["lemma_ru"]
+                if rg["root_ru"]:
+                    obj["root"] = rg["root_ru"]
+                gloss_ru.append(obj or None)
+                ru_stats["tokens"] += 1
+                if lem:
+                    ru_stats["lemmas"] += 1
+                if rg["lemma_ru"]:
+                    ru_stats["lemma_hit"] += 1
+                else:
+                    # match compute_family_coverage's uncovered key shape (display
+                    # lemma-or-surface, slp1 key) so the two Counters merge cleanly
+                    disp = lemma_display(lem) if lem else tok
+                    ru_stats["uncovered"][(disp, lem or surface_slp1_key(tok))] += 1
+            chunks.append({"s": c, "t": toks, "j": seams,
+                           "lemma_slp1": lemmas, "gloss_ru": gloss_ru})
         cross = []
         for a, b in zip(chunks, chunks[1:]):
             rule = None
@@ -302,7 +387,6 @@ def build_saying(rec, diff, seg_cache, by_rule, by_edge, seg_src_stats):
         "lines": lines,
         "n_junctions": n_seams,
         "n_junctions_labelled": n_labelled,
-        "gloss_ru": None,
     }
 
 
@@ -330,12 +414,29 @@ def render_split(saying, by_rule):
     return out_lines, tagged
 
 
+def render_ru_gloss(saying):
+    """H1312: token -> RU gloss pairs for the Anki back (lemma tier
+    preferred, surface then root fallback); "" when the saying has no
+    RU-gloss coverage at all."""
+    parts = []
+    for ln in saying["lines"]:
+        for ch in ln["chunks"]:
+            for tok, rg in zip(ch["t"], ch["gloss_ru"]):
+                if not rg:
+                    continue
+                ru = rg.get("lemma") or rg.get("surface") or rg.get("root")
+                if ru:
+                    parts.append(f"{tok} — {ru}")
+    return " · ".join(parts)
+
+
 def write_apkg(pack, by_rule):
     import genanki
     model = genanki.Model(
-        ANKI_MODEL_ID, "Subhāṣita beginner (H1279)",
+        ANKI_MODEL_ID, "Subhāṣita beginner (H1279/H1312)",
         fields=[{"name": "Deva"}, {"name": "Iast"}, {"name": "Split"}, {"name": "Rules"},
-                {"name": "Metre"}, {"name": "TranslationDE"}, {"name": "Source"}, {"name": "Num"}],
+                {"name": "Metre"}, {"name": "TranslationDE"}, {"name": "Source"},
+                {"name": "Num"}, {"name": "GlossRu"}],
         templates=[{
             "name": "Card 1",
             "qfmt": "<div class=\"deva\">{{Deva}}</div><div class=\"iast\">{{Iast}}</div>",
@@ -343,6 +444,7 @@ def write_apkg(pack, by_rule):
                     "<div class=\"split\">{{Split}}</div>"
                     "<div class=\"rules\">{{Rules}}</div>"
                     "<div class=\"metre\">{{Metre}}</div>"
+                    "{{#GlossRu}}<div class=\"glossru\">{{GlossRu}}</div>{{/GlossRu}}"
                     "<div class=\"tr\">{{TranslationDE}}</div>"
                     "<div class=\"src\">Indische Sprüche {{Num}} &middot; {{Source}}</div>",
         }],
@@ -351,6 +453,7 @@ def write_apkg(pack, by_rule):
             ".deva{font-size:1.25em;margin-bottom:.2em}.iast{color:#6b6660;font-size:.85em}"
             ".split{font-weight:600;color:#7a4f2b;margin:.3em 0}"
             ".rules{color:#6b6660;font-size:.72em}.metre{color:#2a6f4e;font-size:.8em;margin:.2em 0}"
+            ".glossru{color:#8a531f;font-size:.72em;margin:.2em 0}"
             ".tr{font-size:.8em;margin-top:.35em}.src{color:#9c948a;font-size:.65em;margin-top:.4em}",
     )
     deck = genanki.Deck(ANKI_DECK_ID, "Sanskrit subhāṣita — beginner band (kosha, H1279)")
@@ -361,7 +464,8 @@ def write_apkg(pack, by_rule):
             fields=[s["deva"].replace("/", " "), s["iast"].replace("/", " "),
                     "<br>".join(split_lines), " &middot; ".join(rules),
                     f"{s['metre']} ({s['syllables']} syllables)",
-                    s["translation_de"], s["source_attribution"][:120], str(s["num"])],
+                    s["translation_de"], s["source_attribution"][:120], str(s["num"]),
+                    render_ru_gloss(s)],
             tags=[f"metre::{s['metre'].replace(' ', '-')}", "kosha-subhashita-beginner"],
         ))
     genanki.Package(deck).write_to_file(str(OUT_APKG))
@@ -404,8 +508,14 @@ def main():
                     all_chunks.append(restore_avagraha(cc))
     seg_cache = dm_segment(all_chunks, args.allow_network)
 
+    glosser = RuGlosser()
+    print(f"RU layers: surface={len(glosser.surface)} lemma={len(glosser.lemma)} "
+          f"root={len(glosser.root)} lemma2root={len(glosser.lemma2root)}")
+
     seg_src_stats = {"dm": 0, "cheda": 0, "surface": 0}
-    sayings = [build_saying(recs[n], diffs[n], seg_cache, by_rule, by_edge, seg_src_stats)
+    ru_stats = {"tokens": 0, "lemmas": 0, "lemma_hit": 0, "uncovered": collections.Counter()}
+    sayings = [build_saying(recs[n], diffs[n], seg_cache, by_rule, by_edge, seg_src_stats,
+                            glosser, ru_stats)
                for n in band]
     sayings.sort(key=lambda s: (s["difficulty"], s["num"]))
     for i, s in enumerate(sayings, 1):
@@ -417,6 +527,8 @@ def main():
     n_cross = sum(1 for s in sayings for ln in s["lines"] for j in ln["xj"] if j)
     n_seams = sum(s["n_junctions"] for s in sayings)
     n_lab = sum(s["n_junctions_labelled"] for s in sayings)
+    ru_cov_pct = round(100.0 * ru_stats["lemma_hit"] / ru_stats["tokens"], 1) if ru_stats["tokens"] else 0.0
+    lemma_cov_pct = round(100.0 * ru_stats["lemmas"] / ru_stats["tokens"], 1) if ru_stats["tokens"] else 0.0
     pack = {
         "slug": "subhashita-beginner",
         "title": "Subhāṣita — beginner band (Indische Sprüche, graded)",
@@ -424,9 +536,10 @@ def main():
                   "SanskritLexicography F33 indische_sprueche.jsonl",
         "built": args.built,
         "curation": "data/subhashita/CURATION_NOTES.md",
-        "gloss_ru_status": "absent — W-RU-a (H1278) had not shipped at build time; "
-                           "re-run build_subhashita_pack.py with the ru_gloss layer "
-                           "once it lands (logged re-run TODO, not a silent gap)",
+        "gloss_ru_status": "present — H1312 re-run joined the W-RU-a public site-tier "
+                           "layers (surface/lemma/root) once a per-token SLP1 lemma was "
+                           "added (vidyut-cheda); %.1f%% of tokens carry a lemma-layer "
+                           "RU gloss, see reading/RU_GLOSS_COVERAGE.md." % ru_cov_pct,
         "stats": {
             "sayings": len(sayings),
             "difficulty_min": min(s["difficulty"] for s in sayings),
@@ -438,6 +551,11 @@ def main():
             "cross_boundary_rules": n_cross,
             "seg_source_chunks": seg_src_stats,
             "metres": sorted({s["metre"] for s in sayings}),
+            "gloss_ru_tokens": ru_stats["tokens"],
+            "gloss_ru_lemma_tagged": ru_stats["lemmas"],
+            "gloss_ru_lemma_hit": ru_stats["lemma_hit"],
+            "gloss_ru_lemma_tag_coverage_pct": lemma_cov_pct,
+            "gloss_ru_coverage_pct": ru_cov_pct,
         },
         "sayings": sayings,
     }
@@ -451,7 +569,19 @@ def main():
 
     print(f"pack: {len(sayings)} sayings; internal seams resolved {n_internal_res}/{n_internal}; "
           f"cross-boundary rules {n_cross}; seg sources {seg_src_stats}")
+    print(f"  gloss.ru: {ru_stats['tokens']} tokens, {ru_stats['lemmas']} lemma-tagged "
+          f"({lemma_cov_pct}%), {ru_stats['lemma_hit']} lemma-RU hits ({ru_cov_pct}%)")
     print(f"  -> {OUT_JSON}\n  -> {OUT_JS}\n  -> {OUT_APKG}")
+
+    # H1312: fold this pack's coverage into the shared RU_GLOSS_COVERAGE.md alongside
+    # the DCS reading-pack family (reuses build_ru_gloss_layer's join + writer, never
+    # re-derives them).
+    import build_ru_gloss_layer as rgl
+    family_per_pack, family_uncovered = rgl.compute_family_coverage(glosser)
+    merged_per_pack = dict(family_per_pack)
+    merged_per_pack["subhashita-beginner"] = (ru_stats["tokens"], ru_stats["lemma_hit"])
+    merged_uncovered = family_uncovered + ru_stats["uncovered"]
+    rgl.write_coverage_report(merged_per_pack, merged_uncovered)
 
 
 if __name__ == "__main__":

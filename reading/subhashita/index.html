@@ -39,9 +39,12 @@
   .deva{font-size:1.28rem;margin:.3rem 0 .05rem;color:var(--fg)}
   .iast{font-size:.95rem;margin:0 0 .55rem;color:var(--muted);font-style:italic}
   .splitline{display:flex;flex-wrap:wrap;gap:.28rem;margin:.15rem 0}
-  .tok{display:inline-block;padding:.1rem .48rem;border-radius:.5rem;background:var(--chip);
-    color:var(--link);font-size:.95rem;border:1px solid transparent}
-  .tok.fused{border-color:var(--accent)}
+  .tokgrp{display:inline-flex;align-items:baseline;gap:.15rem;padding:.1rem .3rem;
+    border-radius:.5rem;background:var(--chip);border:1px solid transparent}
+  .tokgrp.fused{border-color:var(--accent)}
+  .tok{display:inline-block;color:var(--link);font-size:.95rem}
+  .tok small{display:block;font-size:.66rem;color:var(--muted);line-height:1.25;margin-top:1px}
+  .dot{color:var(--un);font-size:.85rem}
   .jr{display:inline-block;padding:.1rem .35rem;border-radius:.4rem;background:var(--chip-un);
     color:var(--un);font-size:.72rem;align-self:center}
   .jr b{color:var(--metre);font-weight:600}
@@ -62,14 +65,16 @@
     <p class="stats" id="stats"></p>
     <div class="controls" id="controls">
       <button class="pk on" id="btn-split">show split</button>
+      <button class="pk on" id="btn-ru">show Russian gloss</button>
       <button class="pk" id="btn-de">show German</button>
       <span class="sub" id="metrefilters"></span>
     </div>
   </header>
-  <div class="banner">Russian glosses (<b>gloss.ru</b>) are not in this build — the W-RU-a
-    inline-gloss layer (H1278) had not shipped when the pack was generated; the pack is
-    scheduled for a re-run once it lands. Sandhi junctions show their corpus rule and how
-    often that rule is attested across 17 DCS texts.</div>
+  <div class="banner">Russian glosses (<b>gloss.ru</b>) joined from the W-RU-a public
+    site-tier layer once a per-token SLP1 lemma was added (H1312) —
+    <span id="rucov"></span> of tokens carry one (hover a word, or toggle the label
+    under it). Sandhi junctions show their corpus rule and how often that rule is
+    attested across 17 DCS texts.</div>
   <main id="list"></main>
   <footer>
     Source: Indische Sprüche (SanskritLexicography F33) · grading:
@@ -77,23 +82,35 @@
     curation: <a href="https://github.com/gasyoun/kosha/blob/main/data/subhashita/CURATION_NOTES.md">CURATION_NOTES.md</a> ·
     splits: DharmaMitra <code>unsandhied</code> · junction rules:
     <a href="https://github.com/gasyoun/kosha/blob/main/data/sandhi/corpus_sandhi.tsv">corpus_sandhi.tsv</a> ·
+    Russian gloss coverage: <a href="https://github.com/gasyoun/kosha/blob/main/reading/RU_GLOSS_COVERAGE.md">RU_GLOSS_COVERAGE.md</a> ·
     Anki deck: <a href="https://github.com/gasyoun/kosha/blob/main/data/subhashita/subhashita_beginner_anki.apkg">subhashita_beginner_anki.apkg</a> ·
-    build: <a href="https://github.com/gasyoun/kosha/blob/main/scripts/build_subhashita_pack.py">build_subhashita_pack.py</a> (H1279)
+    build: <a href="https://github.com/gasyoun/kosha/blob/main/scripts/build_subhashita_pack.py">build_subhashita_pack.py</a> (H1279/H1312)
   </footer>
 </div>
 <script src="data.js"></script>
 <script>
 (function(){
   var P = window.SUBHASHITA_DATA;
-  var showSplit = true, showDe = false, metreFilter = null;
+  var showSplit = true, showRu = true, showDe = false, metreFilter = null;
   function esc(s){return (s==null?"":String(s)).replace(/[&<>"]/g,function(c){
     return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  // H1312: gloss_ru is a {surface,lemma,root} triple (or absent). Show its DISTINCT
+  // values, lemma first (the word's dictionary sense), deduped — same convention as
+  // reading/index.html's ruStr().
+  function ruStr(gr){
+    if(!gr) return "";
+    var parts=[], seen={};
+    ["lemma","surface","root"].forEach(function(k){
+      var v=gr[k]; if(v && !seen[v]){ seen[v]=1; parts.push(v); } });
+    return parts.join(" · ");
+  }
 
   document.getElementById("stats").innerHTML =
     "<b>" + P.stats.sayings + "</b> sayings · difficulty " +
     P.stats.difficulty_min.toFixed(3) + "–" + P.stats.difficulty_max.toFixed(3) +
     " (of 7,537 scored) · <b>" + P.stats.internal_seams_resolved + "</b> fused seams resolved · <b>" +
     P.stats.cross_boundary_rules + "</b> cross-word rules · metres: " + P.stats.metres.join(", ");
+  document.getElementById("rucov").textContent = P.stats.gloss_ru_coverage_pct + "%";
 
   var mf = document.getElementById("metrefilters");
   var counts = {};
@@ -117,8 +134,14 @@
       h += "<div class=\"splitline\">";
       ln.chunks.forEach(function(ch, ci){
         var fused = ch.t.length > 1;
-        h += "<span class=\"tok" + (fused?" fused":"") + "\" title=\"" + esc(ch.s) + "\">" +
-             esc(ch.t.join(" · ")) + "</span>";
+        h += "<span class=\"tokgrp" + (fused?" fused":"") + "\" title=\"" + esc(ch.s) + "\">";
+        ch.t.forEach(function(tok, ti){
+          var ru = showRu ? ruStr(ch.gloss_ru && ch.gloss_ru[ti]) : "";
+          if(ti > 0) h += "<span class=\"dot\">·</span>";
+          h += "<span class=\"tok\">" + esc(tok) +
+               (ru ? "<small>" + esc(ru) + "</small>" : "") + "</span>";
+        });
+        h += "</span>";
         ch.j.forEach(function(r){ if(r && r!=="+") h += junctionChip(r); });
         var xr = ln.xj[ci];
         if(xr) h += junctionChip(xr);
@@ -148,6 +171,8 @@
   }
   document.getElementById("btn-split").onclick = function(){
     showSplit = !showSplit; this.classList.toggle("on", showSplit); render(); };
+  document.getElementById("btn-ru").onclick = function(){
+    showRu = !showRu; this.classList.toggle("on", showRu); render(); };
   document.getElementById("btn-de").onclick = function(){
     showDe = !showDe; this.classList.toggle("on", showDe); render(); };
   render();
