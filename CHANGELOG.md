@@ -14,6 +14,9 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Fixed
+- **W1e — link-rot repaired (20 archived handoffs, 50 occurrences across 18 files)** ([H1266](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1266-Sonnet_kosha_handoff_link_rot_mover_fix_catchup_18.07.26.md), Sonnet 5 `claude-sonnet-5`). Root cause: `Uprava/tools/handoff_archive.py`'s cross-reference repoint pass only ever scans its OWN repo (Uprava's root `*.md` + its `handoffs/` folder) — a full blob-URL reference in a sibling repo's markdown, like this repo's own `PLAN_KOSHA_PEDAGOGY_ENGINE_2026_2027.md`, was structurally invisible to it (SCOPE, not a timing/audit-cadence gap — confirmed by reading `find_cross_references` itself). Fixed at the source: the mover now appends an `(old_url, new_url)` row to `Uprava/handoffs/ARCHIVE_MOVE_MANIFEST.jsonl` per archived handoff, and `Uprava/tools/link_audit_fix.py` (already an org-wide scanner) consults it before falling back to its old main/master-swap-only guess. Backfilled the manifest for every already-archived handoff this repo still referenced by the pre-archive path (not just the 7 named in the original brief) and repointed all 20/50 in one pass — including 3 (`H093`/`H094`/`H111`) whose references used never-correct shorthand filenames predating the current naming convention, a related but distinct historical casualty resolved via the same manifest mechanism. 27 other broken links in this repo (missing `KOSHA_*.md` docs, `master`→`main` drift, wrong-org citations) are unrelated pre-existing breakage, out of scope for this fix.
+
 ## [0.67.0] - 2026-07-19
 ### Added (samāsa trainer — MW final-member drills, a third source)
 - **[`scripts/build_samasa_trainer.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_samasa_trainer.py) gains a third source with a third role.** Gold gives verified *type*, DCS/Kompozity gives corpus *frequency*; neither answers **which words are productive as a compound's final member**. MW's own compound markup does — inverted to an uttarapada index in [MWderivations `issue15/`](https://github.com/gasyoun/MWderivations/blob/master/issue15/README.md) (19,435 distinct final members from 87,188 pairs). New flags `--mw-rev` / `--mw-cap` (default 150) / `--mw-min-left` (default 20); the source is **optional** — if the file is absent the builder logs it and the deck stays valid.
@@ -141,7 +144,7 @@ sense citations pin to `data_version`, not to repo tags.
 ### Added
 
 - `data/manifest/rights/vidyut_prakriya_derivation_2026-07.md` — the A4-gating rights record
-  (W1a / [H1263](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1263-Opus_kosha_vidyut_derivation_metadata_rights_record_18.07.26.md)):
+  (W1a / [H1263](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1263-Opus_kosha_vidyut_derivation_metadata_rights_record_18.07.26.md)):
   vidyut **code** licence (MIT, from the installed `LICENSE.md`) and vidyut **derivation-data**
   licence (MIT, from `vidyut-prakriya/data/README.md` via ashtadhyayi.com; source sūtra/dhātu
   texts public domain) stated **separately**, each with its source file; the composition ruling
@@ -149,7 +152,7 @@ sense citations pin to `data_version`, not to repo tags.
   triggered — both licences compose cleanly into BY-SA.
 - `scripts/build_morphology_attestation_audit.py` + `data/concordance/morph_attest_{AG,GnA,AnG}.tsv`
   + `data/concordance/MORPHOLOGY_ATTESTATION_BUILD_REPORT.md` — **A3, the generated-vs-attested
-  morphology audit** (Concordance-Q3 W1b, [H1262](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1262-Opus_kosha_a3_attested_form_join_morphology_audit_18.07.26.md)).
+  morphology audit** (Concordance-Q3 W1b, [H1262](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1262-Opus_kosha_a3_attested_form_join_morphology_audit_18.07.26.md)).
   Joins `kosha.db` `forms` (non-heritage, 426,410 rows) against DCS attested surface forms (381,413
   distinct) on `form_key()` equality (length-preserving floor tier; no NFD+strip path): **AG 401,368
   / G¬A 25,042 / A¬G 2**, both denominators reconciled. Manifest row `morphology-attestation-audit`

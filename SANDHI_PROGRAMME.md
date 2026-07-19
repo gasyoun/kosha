@@ -56,7 +56,7 @@ a *hand-annotated* column.
 | **2** — corpus sweep | per-text + merged `corpus_sandhi.tsv` | ✅ v0.42.0 (H900) |
 | **2b** — broaden | grown to 17 texts (Rāmāyaṇa, full Mahābhārata, kāvya) | ✅ v0.43.0 (H901) |
 | **A/B/C** — splitters | method B (vidyut) + method C (DharmaMitra) bake-off | ✅ v0.43.0 / v0.44.0 (H903, H908) |
-| **4** — pedagogy | **all four surfaces shipped** — graded curriculum + per-class reference ([H902](https://github.com/gasyoun/Uprava/blob/main/handoffs/H902-Opus_kosha_sandhi-phase4-pedagogy-surfaces_14.07.26.md)) · reader hover ([H917](https://github.com/gasyoun/Uprava/blob/main/handoffs/H917-Opus_SanskritGrammar_sandhi-reader-hover-collider_14.07.26.md), in SanskritGrammar) · drills/flashcards ([H918](https://github.com/gasyoun/Uprava/blob/main/handoffs/H918-Sonnet_kosha_sandhi-drills-flashcards-anki-quiz_14.07.26.md)) | ✅ v0.45.0 / v0.46.0 / v0.48.0 |
+| **4** — pedagogy | **all four surfaces shipped** — graded curriculum + per-class reference ([H902](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H902-Opus_kosha_sandhi-phase4-pedagogy-surfaces_14.07.26.md)) · reader hover ([H917](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H917-Opus_SanskritGrammar_sandhi-reader-hover-collider_14.07.26.md), in SanskritGrammar) · drills/flashcards ([H918](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H918-Sonnet_kosha_sandhi-drills-flashcards-anki-quiz_14.07.26.md)) | ✅ v0.45.0 / v0.46.0 / v0.48.0 |
 | **3** — GRETIL | extend beyond DCS using method C | planned |
 
 ---
@@ -128,7 +128,7 @@ python scripts/score_gita_gold.py            # re-measure inducer accuracy
 The data is meant to be consumed elsewhere; see
 [Uprava/PROJECT_INTERLINKS.md](https://github.com/gasyoun/Uprava/blob/main/PROJECT_INTERLINKS.md):
 
-- **SanskritGrammar** — the [`SandhiCollider.jsx`](https://github.com/gasyoun/SanskritGrammar/blob/main/src/components/talmud/SandhiCollider.jsx) teaching widget + Talmud grammar sandhi chapter → the **reader-hover** surface ✅ shipped: hovering the collided result shows the induced rule + corpus frequency + a "#N most common sandhi" badge, data-driven from `corpus_sandhi.tsv` ([H917](https://github.com/gasyoun/Uprava/blob/main/handoffs/H917-Opus_SanskritGrammar_sandhi-reader-hover-collider_14.07.26.md), [PR #183](https://github.com/gasyoun/SanskritGrammar/pull/183)).
+- **SanskritGrammar** — the [`SandhiCollider.jsx`](https://github.com/gasyoun/SanskritGrammar/blob/main/src/components/talmud/SandhiCollider.jsx) teaching widget + Talmud grammar sandhi chapter → the **reader-hover** surface ✅ shipped: hovering the collided result shows the induced rule + corpus frequency + a "#N most common sandhi" badge, data-driven from `corpus_sandhi.tsv` ([H917](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H917-Opus_SanskritGrammar_sandhi-reader-hover-collider_14.07.26.md), [PR #183](https://github.com/gasyoun/SanskritGrammar/pull/183)).
 - **csl-guides** — hosts the sandhi-quiz; natural consumer of the curriculum + drills + reference.
 - **VisualDCS / SamudraManthanam** — share the DCS source; a sandhi layer now exists over the same corpus.
 
@@ -138,10 +138,10 @@ The data is meant to be consumed elsewhere; see
 
 **Phase 4 is complete — all four teaching surfaces are shipped.** The last two landed
 14-07-2026: reader hover in SanskritGrammar (`SandhiCollider.jsx`, data-driven from
-`corpus_sandhi.tsv` — [H917](https://github.com/gasyoun/Uprava/blob/main/handoffs/H917-Opus_SanskritGrammar_sandhi-reader-hover-collider_14.07.26.md),
+`corpus_sandhi.tsv` — [H917](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H917-Opus_SanskritGrammar_sandhi-reader-hover-collider_14.07.26.md),
 [PR #183](https://github.com/gasyoun/SanskritGrammar/pull/183)) and drills/flashcards here
 (396 items over the 132 curriculum rules, JSON/TSV + Anki + web quiz —
-[H918](https://github.com/gasyoun/Uprava/blob/main/handoffs/H918-Sonnet_kosha_sandhi-drills-flashcards-anki-quiz_14.07.26.md),
+[H918](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H918-Sonnet_kosha_sandhi-drills-flashcards-anki-quiz_14.07.26.md),
 [PR #102](https://github.com/gasyoun/kosha/pull/102)).
 
 The open direction is now **Phase 3 (GRETIL)** — extend coverage beyond DCS using method C.

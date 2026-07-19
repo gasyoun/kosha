@@ -25,7 +25,7 @@ should build next in pedagogy. Not a learner-facing doc.
 - **Method:** [`/ask`](https://github.com/gasyoun/claude-config/blob/main/commands/ask.md) — front-loaded interview (scope/home/thesis/dimensions/output over 3 rounds) then the layered plan. The interview surfaced a **prior-art collision**: the org-wide field metadoc + research plan already existed (H912, shipped the same day). The user chose "kosha build-plan (engine room)" — build the layer H912 deferred, do not duplicate the field definition.
 - **Model:** Opus 4.8 (`claude-opus-4-8`), 14-07-2026.
 - **Audit basis:** kosha internal sweep (paradigm/frequency/compound/reading/concordance assets) + a cross-repo pedagogy-asset inventory (Systema, SanskritGrammar, csl-guides, SanskritKaraoke, WhitneyRoots, VisualDCS) grounding the build-vs-reuse verdicts.
-- **Handoffs:** parent [H945](https://github.com/gasyoun/Uprava/blob/main/handoffs/H945-Opus_kosha_pedagogy-engine-room-build-plan_14.07.26.md); waves H946–H951 (`mint_handoff.py --batch`).
+- **Handoffs:** parent [H945](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H945-Opus_kosha_pedagogy-engine-room-build-plan_14.07.26.md); waves H946–H951 (`mint_handoff.py --batch`).
 
 ## Ranked improvement backlog
 

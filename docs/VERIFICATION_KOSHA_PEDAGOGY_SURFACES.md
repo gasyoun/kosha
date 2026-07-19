@@ -10,7 +10,7 @@ Steps: [`docs/IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE1.md`](https://github.com/gasyou
 A build is **done** when all of its rows below pass — mirroring how the sandhi programme
 defined done (dataset + page + manifest + tests + a coverage headline).
 
-### W1a — Morphology drills ([H946](https://github.com/gasyoun/Uprava/blob/main/handoffs/H946-Sonnet_kosha_pedagogy-w1-morphology-drills_14.07.26.md))
+### W1a — Morphology drills ([H946](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H946-Sonnet_kosha_pedagogy-w1-morphology-drills_14.07.26.md))
 
 | Check | Pass condition |
 |---|---|
@@ -20,7 +20,7 @@ defined done (dataset + page + manifest + tests + a coverage headline).
 | Page renders | `reading/morphology/curriculum/index.html` loads self-contained, theme-aware, Devanāgarī + IAST/SLP1 toggle work |
 | Manifest + release | `morphology-drills` row in `datasets.json`; `CHANGELOG.md` bumped + `/cut-release` |
 
-### W1b — Vocabulary curriculum ([H947](https://github.com/gasyoun/Uprava/blob/main/handoffs/H947-Sonnet_kosha_pedagogy-w1-vocabulary-frequency-curriculum_14.07.26.md))
+### W1b — Vocabulary curriculum ([H947](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H947-Sonnet_kosha_pedagogy-w1-vocabulary-frequency-curriculum_14.07.26.md))
 
 | Check | Pass condition |
 |---|---|
@@ -30,7 +30,7 @@ defined done (dataset + page + manifest + tests + a coverage headline).
 | Page + export | `reading/vocabulary/curriculum/index.html` renders; Anki `.apkg` exports and re-imports |
 | Manifest + release | `vocab-curriculum` row; changelog + release |
 
-### W1c — Samāsa trainer ([H948](https://github.com/gasyoun/Uprava/blob/main/handoffs/H948-Sonnet_kosha_pedagogy-w1-samasa-compound-trainer_14.07.26.md))
+### W1c — Samāsa trainer ([H948](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H948-Sonnet_kosha_pedagogy-w1-samasa-compound-trainer_14.07.26.md))
 
 | Check | Pass condition |
 |---|---|

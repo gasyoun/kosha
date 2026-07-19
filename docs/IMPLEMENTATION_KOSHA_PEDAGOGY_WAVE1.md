@@ -14,7 +14,7 @@ barrier) and follows the six-stage contract. Every build: author in a `git workt
 
 ---
 
-## W1a — Morphology drills ([H946](https://github.com/gasyoun/Uprava/blob/main/handoffs/H946-Sonnet_kosha_pedagogy-w1-morphology-drills_14.07.26.md), Sonnet 5)
+## W1a — Morphology drills ([H946](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H946-Sonnet_kosha_pedagogy-w1-morphology-drills_14.07.26.md), Sonnet 5)
 
 **Idea:** the paradigm engine already generates the tables; this build turns them into
 *graded, frequency-filtered, answer-keyed* drills. The novel move is stage ② — **drill only
@@ -55,7 +55,7 @@ widgets (AblautMachine/SetTree) — link to them from the page instead.
 
 ---
 
-## W1b — Vocabulary frequency curriculum ([H947](https://github.com/gasyoun/Uprava/blob/main/handoffs/H947-Sonnet_kosha_pedagogy-w1-vocabulary-frequency-curriculum_14.07.26.md), Sonnet 5)
+## W1b — Vocabulary frequency curriculum ([H947](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H947-Sonnet_kosha_pedagogy-w1-vocabulary-frequency-curriculum_14.07.26.md), Sonnet 5)
 
 **Idea:** the sandhi curriculum's exact method, applied to words. The frequency layer already
 carries `core_rank` + `coverage_pct`; this build is mostly stages ③–⑥.
@@ -81,7 +81,7 @@ scheduler (Systema "Saraswati" owns scheduling) — emit deck items only.
 
 ---
 
-## W1c — Samāsa (compound) trainer ([H948](https://github.com/gasyoun/Uprava/blob/main/handoffs/H948-Sonnet_kosha_pedagogy-w1-samasa-compound-trainer_14.07.26.md), Sonnet 5)
+## W1c — Samāsa (compound) trainer ([H948](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H948-Sonnet_kosha_pedagogy-w1-samasa-compound-trainer_14.07.26.md), Sonnet 5)
 
 **Idea:** teach compound analysis (tatpuruṣa / bahuvrīhi / dvandva / karmadhāraya) from the
 compound data that already exists. "Data ready to be integrated" (MG).
