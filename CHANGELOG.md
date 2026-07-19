@@ -14,6 +14,16 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+
+- **Wave RU staged in the pedagogy plan** ([`docs/IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE_RU.md`](https://github.com/gasyoun/kosha/blob/main/docs/IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE_RU.md),
+  via [`/ask-batch`](https://github.com/gasyoun/claude-config/blob/main/commands/ask-batch.md), Fable 5 `claude-fable-5`):
+  W-RU-a inline Sa→Ru gloss layer over reading packs
+  ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md), queued)
+  and W-RU-b graded beginner subhāṣita reader from Indische Sprüche
+  ([H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md), queued);
+  roadmap/plan/verification docs extended with the wave, decisions 13–14 (RU wave + rights gate) recorded.
+
 ## [0.61.0] - 2026-07-18
 
 ### Added
