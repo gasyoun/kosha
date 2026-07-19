@@ -41,7 +41,7 @@ standing "one metadoc per important document" convention (`~/.claude/CLAUDE.md`)
 
 ## Known limitations / caveats
 - The roadmap's §3 Wave U2 status (probe-PR outcome) is not visible from this file alone —
-  a fresh session must check [H093](https://github.com/gasyoun/Uprava/blob/main/handoffs/H093_cslinflect_upstream_probe.md)
+  a fresh session must check [H093](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H093-Sonnet_csl-inflect_cslinflect_upstream_probe_03.07.26.md)
   or the live csl-inflect PR history before assuming the probe result.
 - E1's 90.5% cell-agreement figure is over nominal stems only (240k cells / 10k stems);
   it does not yet cover verb conjugations — do not generalize the agreement rate to verbs

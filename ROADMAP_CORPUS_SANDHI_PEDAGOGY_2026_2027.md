@@ -5,7 +5,7 @@ _Created: 13-07-2026 · Last updated: 14-07-2026 (Phase 2b broadened corpus swee
 Scale the Bhagavadgītā sandhi layer (H872) from **one hand-annotated text** to
 **every DCS text, then GRETIL** — producing corpus-attested, frequency-ranked
 sandhi data reusable across four pedagogy surfaces. Grounded in a working Phase-0
-proof (this handoff, [H882](https://github.com/gasyoun/Uprava/blob/main/handoffs/H882-Opus_kosha_corpus-sandhi-pedagogy-roadmap_13.07.26.md)).
+proof (this handoff, [H882](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H882-Opus_kosha_corpus-sandhi-pedagogy-roadmap_13.07.26.md)).
 
 Roadmap decisions locked with a human 13-07-2026: **DCS-first** (GRETIL phase-3);
 **A/B/C split-method bake-off** (compare all three, don't pick blind); **both**
