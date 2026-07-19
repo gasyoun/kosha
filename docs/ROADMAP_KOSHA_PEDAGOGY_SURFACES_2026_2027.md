@@ -1,4 +1,4 @@
-_Created: 14-07-2026 · Last updated: 15-07-2026_
+_Created: 14-07-2026 · Last updated: 19-07-2026_
 
 # Roadmap — kosha pedagogy surfaces (2026–2027)
 
@@ -45,6 +45,24 @@ It **is** the template — Wave 1 copies its scripts' shape. *Unblocked by:* not
 |---|---|---|---|
 | **W3a — Metre-ID wired into reading.** Do **not** rebuild a metre trainer — [SanskritKaraoke](https://github.com/gasyoun/SanskritKaraoke) owns it (wave notation + quizzes + Apte prosody). kosha's contribution: annotate the reading packs with per-verse metre (the field §3.9 gap: "metre-ID as a graded drill wired into reading") using vidyut-chandas `meters.tsv` | ✅ SHIPPED v0.59.0 (reuse/integrate) | `data/vidyut/chandas/meters.tsv` + reading packs (W2a) | [H951](https://github.com/gasyoun/Uprava/blob/main/handoffs/H951-Sonnet_kosha_pedagogy-w3-metre-in-reading-integration_14.07.26.md) |
 | **W3b — Script / Devanāgarī** | ⚪ REUSE (roadmap only) | [csl-guides](https://github.com/sanskrit-lexicon/csl-guides) already owns the devanāgarī/transliteration quizzes + "name-in-devanāgarī" tool; kosha adds no surface. Revisit only if a kosha-specific onboarding need appears | — |
+
+## Wave RU — Russian-learner reading surfaces (2026 H2) 🟡 (queued 19-07-2026)
+
+Staged via [`/ask-batch`](https://github.com/gasyoun/claude-config/blob/main/commands/ask-batch.md)
+(interview rulings in
+[`ASK_BATCH_STAGING_PEDAGOGY_2026-07.md`](https://github.com/gasyoun/Uprava/blob/main/ASK_BATCH_STAGING_PEDAGOGY_2026-07.md)).
+The engine's shipped surfaces gloss in English where they gloss at all; the org's
+Russian-facing lexical assets (SanskritRussian three-layer glossary, WhitneyRoots RU
+glosses) are consumed by search sites but by **no reading surface**. Wave RU closes that
+— under the standing rights gate: published RU glosses come only from the **public
+site-tier subset** of [SanskritRussian](https://github.com/gasyoun/SanskritRussian);
+restricted bulk layers stay local-only inputs. File-level steps:
+[`docs/IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE_RU.md`](https://github.com/gasyoun/kosha/blob/main/docs/IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE_RU.md).
+
+| Deliverable | Verdict | Unblocked by | Handoff |
+|---|---|---|---|
+| **W-RU-a — Inline Sa→Ru gloss layer.** Join the SanskritRussian public three-layer glossary (surface/lemma/root) to reading-pack tokens; hover shows the RU triple; per-pack RU coverage % reported | 🟢 BUILD (queued) | reading packs (H871/W2a) + sandhi hover pattern (H917) + SanskritRussian public layers (all exist) | [H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md) |
+| **W-RU-b — Beginner subhāṣita reader.** New pack family from Böhtlingk's Indische Sprüche (7,537 public-domain sayings, F33): difficulty-scored (W2a scorer), beginner band curated, sandhi-split + metre-tagged + RU-glossed | 🟢 BUILD (queued) | difficulty scorer (W2a) + corpus sandhi (W0) + metre path (W3a) + F33 JSONL (all exist); RU glosses soft-depend on W-RU-a | [H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md) |
 
 ## Wave 4 — audio (2028, external-gated agenda)
 

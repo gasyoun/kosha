@@ -52,6 +52,7 @@ should build next in pedagogy. Not a learner-facing doc.
 | Date | Change | Model |
 |---|---|---|
 | 14-07-2026 | Created — kosha pedagogy build plan; 4 build waves + 2 integrate + 1 agenda; wave handoffs H946–H951 minted | Opus 4.8 (`claude-opus-4-8`) |
+| 19-07-2026 | Wave RU added (`/ask-batch` interview): decisions 13–14 (RU wave, rights gate), build-vs-reuse rows, handoffs H1278–H1279 minted queued | Fable 5 (`claude-fable-5`) |
 
 ---
 
