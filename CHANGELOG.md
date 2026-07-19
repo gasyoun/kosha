@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.62.0] - 2026-07-19
+
 ### Added
 
 - **Wave RU staged in the pedagogy plan** ([`docs/IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE_RU.md`](https://github.com/gasyoun/kosha/blob/main/docs/IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE_RU.md),
