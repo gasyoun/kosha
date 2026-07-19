@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.66.0] - 2026-07-19
+
 ### Added
 
 - **W-RU-a gloss.ru re-run over the subhāṣita pack**
