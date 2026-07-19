@@ -61,10 +61,10 @@ Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://
   build the local PR queue (mobile-responsive CSS; Devanagari input option;
   help-page worked examples; output polish), send ONE probe PR
   (mobile-responsive CSS — smallest, most obviously mergeable). Handoff:
-  [H093](https://github.com/gasyoun/Uprava/blob/main/handoffs/H093_cslinflect_upstream_probe.md).
+  [H093](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H093-Sonnet_csl-inflect_cslinflect_upstream_probe_03.07.26.md).
 - **Wave U1 — question-issue research give-back.** Research all open
   csl-inflect issues and post structured findings per issue (D6). Handoff:
-  [H094](https://github.com/gasyoun/Uprava/blob/main/handoffs/H094_cslinflect_question_research.md).
+  [H094](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H094-Fable_csl-inflect_cslinflect_question_research_03.07.26.md).
   Runs parallel to U0.
 - **Wave U2 — drip the queue** *(conditional: probe merged ≤ ~1 month)*.
   Open the remaining prepared PRs one at a time, each waiting for the

@@ -290,7 +290,7 @@ than trusting this projection.
 | vidyut code | **MIT** (per [external_tools.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/external_tools.json)) | derivation engine |
 | vidyut **bundled data** (dhātupāṭha, rule tables) | **MIT** — resolved W1a/H1263 (`vidyut-prakriya/data/README.md`, via ashtadhyayi.com); source texts public domain | derivation metadata |
 
-> **Resolved 18-07-2026 (W1a / [H1263](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1263-Opus_kosha_vidyut_derivation_metadata_rights_record_18.07.26.md)).** Both the DCS contradiction and the vidyut-data unknown below are settled in [data/manifest/rights/vidyut_prakriya_derivation_2026-07.md](https://github.com/gasyoun/kosha/blob/main/data/manifest/rights/vidyut_prakriya_derivation_2026-07.md): DCS = CC BY 4.0, vidyut code + data = MIT. No `@DECIDE` triggered. The two subsections that follow record the open-question framing as it stood before W1a ran.
+> **Resolved 18-07-2026 (W1a / [H1263](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1263-Opus_kosha_vidyut_derivation_metadata_rights_record_18.07.26.md)).** Both the DCS contradiction and the vidyut-data unknown below are settled in [data/manifest/rights/vidyut_prakriya_derivation_2026-07.md](https://github.com/gasyoun/kosha/blob/main/data/manifest/rights/vidyut_prakriya_derivation_2026-07.md): DCS = CC BY 4.0, vidyut code + data = MIT. No `@DECIDE` triggered. The two subsections that follow record the open-question framing as it stood before W1a ran.
 
 **Expected ruling:** output is **CC BY-SA 4.0**, vidyut attributed. MIT is
 permissive and composes into a ShareAlike work without conflict; BY-SA is
