@@ -21,6 +21,7 @@ via the `data_statement` field.
 | MW ↔ Heritage crosswalk | 185,803 | [mw-heritage-crosswalk.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-heritage-crosswalk.meta.md) |
 | DCS lemma frequency sidecar | 83,277 | [kosha-lemma-frequency.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/kosha-lemma-frequency.meta.md) |
 | Zaliznyak grammar-token index | 98,639 | [zaliznyak-grammar-index.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-grammar-index.meta.md) |
+| Sa→Ru inline gloss layer (reading packs) | 2,958 | [ru-gloss-layer.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/ru-gloss-layer.meta.md) |
 
 ## Out of scope this pass (queued backlog)
 

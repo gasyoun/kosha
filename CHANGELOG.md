@@ -36,6 +36,29 @@ sense citations pin to `data_version`, not to repo tags.
   ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md))
   unshipped at build time; re-run TODO logged in the pack meta, not silent.
 
+## [0.63.0] - 2026-07-19
+
+### Added
+
+- **W-RU-a — inline Sanskrit→Russian gloss layer in reading packs**
+  ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md),
+  Opus 4.8 `claude-opus-4-8`). A Russian-speaking learner hovers a token and reads its meaning.
+  [`scripts/build_ru_gloss_layer.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_ru_gloss_layer.py)
+  joins every reading-pack token to the three **public site-tier** SanskritRussian layers
+  (surface/lemma/root) → [`data/ru_gloss/ru_gloss_layer.tsv`](https://github.com/gasyoun/kosha/blob/main/data/ru_gloss/ru_gloss_layer.tsv)
+  (2,958 rows) and inlines an additive `gloss_ru` triple into each pack token (the English
+  `gloss` is untouched). `build_reading_pack.py` gains `--gloss-lang ru`; the reader
+  ([`reading/index.html`](https://github.com/gasyoun/kosha/blob/main/reading/index.html)) renders
+  the RU triple and defaults to Russian on a Russian browser locale. Manifest row `ru-gloss-layer`
+  + [data statement](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/ru-gloss-layer.meta.md);
+  joiner unit-tested (8 checks).
+- **Measured coverage: 95.6%** of pack tokens carry a lemma-layer RU gloss
+  ([`reading/RU_GLOSS_COVERAGE.md`](https://github.com/gasyoun/kosha/blob/main/reading/RU_GLOSS_COVERAGE.md)) —
+  the public subset suffices, no rights unlock needed. **Rights gate (PLAN decision 14):** only
+  SanskritRussian's public GitHub-Pages tier is read; the restricted `corpus_lexicon` stays a
+  local-only input. Applies to the 5 built packs (nala 1–3, hitopadeśa, kirātārjunīya); the Gītā
+  packs remain parked (BhG absent from the DCS corpus).
+
 ## [0.62.0] - 2026-07-19
 
 ### Added

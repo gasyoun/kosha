@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="65 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="66 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="65 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="66 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -1842,8 +1842,36 @@
     },
     {
       "@type": "Dataset",
+      "name": "Inline Sanskrit→Russian gloss layer (reading packs, W-RU-a)",
+      "description": "RIGHTS GATE (PLAN decision 14): RU glosses come ONLY from SanskritRussian's public, GitHub-Pages-served surface/lemma/root glossaries; the restricted upstream RussianTranslation/src/corpus_lexicon.jsonl is never read. Additive: the English token `gloss` is untouched; RU lives under token.gloss_ru {surface,lemma,root}. Coverage report: reading/RU_GLOSS_COVERAGE.md — the measured 95.6% shows the public subset suffices (no rights unlock needed). Gītā packs are PARKED (the Bhagavadgītā is absent from the DCS full corpus), so the layer applies to the 5 built packs (nala 1-3, hitopadeśa, kirātārjunīya).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "ru-gloss-layer"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/ru_gloss_layer.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
       "name": "Beginner subhāṣita reader pack — graded Indische Sprüche band (W-RU-b)",
-      "description": "H1279 kosha pedagogy Wave RU (W-RU-b), the first non-DCS reading-pack family. Base text public domain (Böhtlingk, Indische Sprüche 1870-73, SanskritLexicography F33, consumed in place — never copied wholesale). Splits shown only where they rebuild the surface via corpus-attested rules (no fabricated signal; 56/1,263 chunks honestly unsplit). gloss.ru ABSENT this build — W-RU-a (H1278) unshipped at build time, re-run logged in pack meta. No SanskritRussian material included, so the Wave-RU rights gate is not triggered. Curation by Fable 5 (claude-fable-5), auditable in CURATION_NOTES.md; its 50 R1 rejects double as an OCR to-fix list for IndischeSprueche.",
+      "description": "H1279 kosha pedagogy Wave RU (W-RU-b), the first non-DCS reading-pack family. Base text public domain (Böhtlingk, Indische Sprüche 1870-73, SanskritLexicography F33, consumed in place — never copied wholesale). Splits shown only where they rebuild the surface via corpus-attested rules (no fabricated signal; 56/1,263 chunks honestly unsplit). gloss.ru ABSENT this build — W-RU-a (H1278) unshipped at build time (it landed while this PR was in flight), re-run logged in pack meta. No SanskritRussian material included, so the Wave-RU rights gate is not triggered. Curation by Fable 5 (claude-fable-5), auditable in CURATION_NOTES.md; its 50 R1 rejects double as an OCR to-fix list for IndischeSprueche.",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
       "isAccessibleForFree": true,
       "creator": {
@@ -1937,7 +1965,7 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>65</b><span>public datasets</span></div>
+      <div class="tally"><b>66</b><span>public datasets</span></div>
       <div class="tally"><b>11</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
@@ -2597,12 +2625,22 @@
     </article>
     <article class="card">
       <div class="card-h">
+        <h3>Inline Sanskrit→Russian gloss layer (reading packs, W-RU-a)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per (reading pack, sentence, token index); joins each pack token to the three SanskritRussian PUBLIC site-tier layers — surface (token slp1 → surface_glossary), lemma (lemma slp1 → lemma_glossary), root (lemma → dcs_lemma2root → root_glossary) — emitting surface_ru/lemma_ru/root_ru + a layer_hit provenance column. 95.6% of tokens carry a lemma-layer RU gloss.</p>
+      <p class="meta">2,958 rows · 190.0 KB · TSV</p>
+      <div class="chips"><span class="chip">reading/data/*.json reading packs (additive token.gloss_ru)</span><span class="chip">reading/index.html Russian gloss toggle</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/ru_gloss_layer.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
         <h3>Beginner subhāṣita reader pack — graded Indische Sprüche band (W-RU-b)</h3>
         <span class="badge pub">public</span>
       </div>
       <p class="key">one object per curated saying, ordered by difficulty ascending: num/saying_id (Indische Sprüche numbering), deva, iast, translation_de, source_attribution, difficulty (W2a-reduced 2-axis composite in [0,1]), metre + metre_method + syllables (vidyut-chandas strict vṛtta else anuṣṭubh syllable heuristic), lines[].chunks[] with per-chunk sandhi-split tokens and per-seam X Y → Z junction rules (corpus-attested, data/sandhi/corpus_sandhi.tsv), cross-boundary rules in lines[].xj, gloss_ru (null in this build). Grading spine: data/subhashita/subhashita_difficulty.tsv (all 7,537 sayings, full score decomposition). Curation: beginner_band.tsv + CURATION_NOTES.md (criteria + full reject log, no unlogged picks).</p>
       <p class="meta">106 rows · 287.4 KB · JSON</p>
-      <div class="chips"><span class="chip">reading/subhashita/ page (graded beginner reader, difficulty-ordered)</span><span class="chip">data/subhashita/subhashita_beginner_anki.apkg (Anki export of the band)</span><span class="chip">W-RU-a re-run join point: gloss.ru inlining once H1278 ships (logged re-run TODO)</span></div>
+      <div class="chips"><span class="chip">reading/subhashita/ page (graded beginner reader, difficulty-ordered)</span><span class="chip">data/subhashita/subhashita_beginner_anki.apkg (Anki export of the band)</span><span class="chip">W-RU-a re-run join point: gloss.ru inlining now that H1278 has shipped (logged re-run TODO)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/data/subhashita/subhashita_beginner_pack.json">Download ↓</a></div>
     </article>
     </div>
