@@ -64,6 +64,74 @@ def test_page_renders(page):
     assert "<title>" in page and "Sanskrit NLP Data" in page
 
 
+# --- D8: in_release closed vocabulary + release_asset schema (H1264) ---------
+
+RELEASE_TAG_RE = re.compile(r"^data-v\d+\.\d+\.\d+$")
+
+
+def _in_release_is_valid(value) -> bool:
+    if value in ("unreleased", "not-applicable"):
+        return True
+    return isinstance(value, str) and bool(RELEASE_TAG_RE.match(value))
+
+
+def test_in_release_closed_vocabulary(datasets):
+    """Every row's in_release is 'unreleased', 'not-applicable', or a release tag.
+
+    Falsified by any row missing in_release, carrying None, or using a free-form
+    value outside the closed vocabulary -- the exact drift (undisciplined
+    null/"unreleased" usage) that let a 32-row unreleased backlog accumulate
+    unnoticed (see docs/PLAN_KOSHA_CONCORDANCE_Q3_2026H2.md D8).
+    """
+    bad = [d["id"] for d in datasets if not _in_release_is_valid(d.get("in_release"))]
+    assert not bad, f"rows with in_release outside the closed vocabulary: {bad}"
+
+
+def test_public_released_rows_require_release_asset(datasets):
+    """Every public row naming a release tag has a non-empty release_asset.
+
+    Falsified by any released public row lacking one -- checked by *value*,
+    not merely by key presence (a row can carry `"release_asset": null`).
+    """
+    bad = [
+        d["id"]
+        for d in datasets
+        if d.get("tier") == "public"
+        and isinstance(d.get("in_release"), str)
+        and RELEASE_TAG_RE.match(d["in_release"])
+        and not d.get("release_asset")
+    ]
+    assert not bad, f"released public rows missing release_asset: {bad}"
+
+
+def test_schema_check_fails_on_broken_row(datasets):
+    """Prove the two checks above actually fail on bad input (D8/1c-3).
+
+    A copy of the live manifest is deliberately corrupted -- a null in_release,
+    and a released-but-assetless public row -- and both invariants above must
+    reject it. A validator that only ever sees clean fixtures is not a test.
+    """
+    broken = [dict(d) for d in datasets]
+    broken[0] = dict(broken[0], in_release=None)
+    assert not all(_in_release_is_valid(d.get("in_release")) for d in broken)
+
+    public_tag_row = next(
+        (d for d in broken if d.get("tier") == "public" and isinstance(d.get("in_release"), str)
+         and RELEASE_TAG_RE.match(d["in_release"])),
+        None,
+    )
+    assert public_tag_row is not None, "fixture assumption: at least one public released row exists"
+    public_tag_row["release_asset"] = None
+    still_ok = all(
+        d.get("release_asset")
+        for d in broken
+        if d.get("tier") == "public"
+        and isinstance(d.get("in_release"), str)
+        and RELEASE_TAG_RE.match(d["in_release"])
+    )
+    assert not still_ok
+
+
 def test_one_dataset_node_per_public_dataset(page, datasets):
     doc = _jsonld(page)
     ld_datasets = [n for n in doc["@graph"] if n.get("@type") == "Dataset"]
