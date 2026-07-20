@@ -14,6 +14,12 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **Manifest row `uttarapada-dict-vs-corpus`** ([H1398](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1398-Sonnet_kosha_uttarapada-dict-vs-corpus-manifest-trainer-ranking_20.07.26.md), Sonnet 5 `claude-sonnet-5`). Registers VisualDCS H1328's `derived-data/Kompozity/uttarapada_dict_vs_corpus.tsv` (19,177 rows) — the join of MW's uttarapada (compound final-member) dictionary index against DCS Kompozity corpus attestation, `corpus_status` ∈ {final 6,249 / form_variant 1,289 / nonfinal_only 1,252 / absent 10,387} — as a pointer dataset (`in_release: not-applicable`, source stays in gasyoun/VisualDCS, sibling of `dcs-compound-dictionary`). No data copied into kosha.
+
+### Changed
+- **Samāsa trainer member-drill ranking — corpus attestation, not dictionary type-count** ([H1398](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1398-Sonnet_kosha_uttarapada-dict-vs-corpus-manifest-trainer-ranking_20.07.26.md), Sonnet 5 `claude-sonnet-5`). `scripts/build_samasa_trainer.py`'s member_side/member_recall drill pool previously ranked compound final members (uttarapadas) by MW dictionary distinct-first-member TYPE count (`mw_first_members`), which VisualDCS H1328 showed diverges sharply from real corpus usage (median Jaccard 0.00 between MW and DCS first-member sets). New `load_corpus_attestation()` loader joins the `uttarapada-dict-vs-corpus` TSV onto each MW uttarapada row (keyed on the already orthography-folded `final_member`), and a new `--mw-rank {dict,corpus}` flag (default `corpus`, set in `data/samasa/drill_weights.json`) switches the sort key to `-corpus_tokens`, restricts the pool to `corpus_status == "final"`, and applies the H1328-report-mandated stoplist (particles ca/eva/pronoun stems, bare verb roots, -tva/-tā taddhita suffixes) that token-count ranking alone does not drop. Evidence strings and `source["dictionary"]` provenance text updated to cite corpus_tokens/corpus_compounds. New regression test `tests/test_samasa_trainer.py::test_member_drill_ranked_by_corpus_tokens`.
+
 ## [0.73.0] - 2026-07-20
 
 ### Added

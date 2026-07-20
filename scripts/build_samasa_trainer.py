@@ -57,6 +57,7 @@ CMPS = GH / "VisualDCS" / "derived-data" / "Kompozity" / "cmps.csv"
 NAMES = GH / "VisualDCS" / "derived-data" / "Kompozity" / "names.csv"
 GOLD = ROOT / "data" / "gita" / "gita_morphology_gold.tsv"
 MWREV = GH / "MWderivations" / "issue15" / "compounds_reverse_classified.tsv"
+MWCORPUS = GH / "VisualDCS" / "derived-data" / "Kompozity" / "uttarapada_dict_vs_corpus.tsv"
 WEIGHTS = ROOT / "data" / "samasa" / "drill_weights.json"
 
 OUT_CURRICULUM_TSV = ROOT / "data" / "samasa" / "samasa_curriculum.tsv"
@@ -170,7 +171,7 @@ def rank_corpus_items(cmps_by_surface, names_freq, gold_surfaces, min_freq):
     return pool
 
 
-def load_mw_uttarapada(path, min_left):
+def load_mw_uttarapada(path, min_left, stoplist=frozenset()):
     """MW's own compound markup, inverted and classified (MWderivations
     issue15/). Third source, third role: neither gold-typed nor corpus-frequent,
     but the only one that answers "which words are PRODUCTIVE as a final member".
@@ -179,7 +180,18 @@ def load_mw_uttarapada(path, min_left):
     bound morphemes, not compound members, and shipping them as compound drills
     would teach a falsehood (-tva heads 1246 "compounds" that are not compounds).
     KRT_STEM_MEMBER rows ARE kept -- an upapada-tatpurusa's final stem is a real
-    member. Returns [] if the file is absent, so this source is optional.
+    member. `stoplist` drops explicit non-compound junk the class filter alone
+    does not catch (particles, pronoun stems, bare verb roots -- H1398, see
+    data/samasa/drill_weights.json member_stoplist). Returns [] if the file is
+    absent, so this source is optional.
+
+    min_left=None returns every genuine (stoplist-filtered) row, UNSORTED --
+    used by the corpus-attestation ranking path (rank_by_corpus_attestation),
+    which applies its own floor+sort after joining VisualDCS H1328 corpus data
+    so that final members thin in MW's own type-count (e.g. "ādi", "indra")
+    are not excluded before they get a chance to rank on real usage.
+    min_left=<int> keeps the legacy dictionary-type-count floor+sort
+    (--mw-rank dict).
     """
     path = Path(path)
     if not path.exists():
@@ -194,14 +206,72 @@ def load_mw_uttarapada(path, min_left):
             token, n, cls, lefts = rec[0], int(rec[1]), rec[2], rec[3].split()
             if cls not in ("UTTARAPADA", "KRT_STEM_MEMBER"):
                 continue
-            if n < min_left:
+            if token in stoplist:
+                continue
+            if min_left is not None and n < min_left:
                 continue
             rows.append({"member": token, "n": n, "lefts": lefts, "cls": cls})
-    rows.sort(key=lambda d: -d["n"])
+    if min_left is not None:
+        rows.sort(key=lambda d: -d["n"])
     return rows
 
 
-def build_member_items(mw_rows, mw_cap, seed, start_idx):
+def load_corpus_attestation(path):
+    """Corpus-attestation side of the MW uttarapada index (VisualDCS H1328,
+    kosha manifest id "uttarapada-dict-vs-corpus") -- final_member ->
+    {corpus_tokens, corpus_compounds, corpus_status}. Keyed on the same
+    orthography-folded final_member the MW reverse-classified index already
+    uses; verified empirically (H1398): 723/733 of the mw_min_left>=20
+    UTTARAPADA/KRT_STEM_MEMBER rows join cleanly (the ~10 misses are markup
+    artifacts like "sū@kta"/"ṃ-gama" on the MW side). Returns {} if the file
+    is absent, so corpus ranking degrades to an empty pool rather than
+    crashing -- callers should fall back to --mw-rank dict in that case.
+    """
+    path = Path(path)
+    if not path.exists():
+        return {}
+    out = {}
+    with open(path, encoding="utf-8") as f:
+        for row in csv.DictReader(f, delimiter="	"):
+            out[row["final_member"]] = {
+                "corpus_tokens": int(row["corpus_tokens"]),
+                "corpus_compounds": int(row["corpus_compounds"]),
+                "corpus_status": row["corpus_status"],
+            }
+    return out
+
+
+def rank_by_corpus_attestation(mw_rows, corpus_attestation, min_tokens):
+    """Join VisualDCS H1328's uttarapada_dict_vs_corpus.tsv onto the MW
+    uttarapada rows and rank final members by real corpus usage
+    (corpus_tokens, summed DCS frequency) instead of MW dictionary
+    type-count -- H1328's report measured median Jaccard 0.00 between the
+    two rankings' first-member sets, so ranking by dictionary type-count
+    alone teaches drills nobody will meet in real text.
+
+    Only corpus_status=="final" rows are kept (the genuinely
+    corpus-attested-as-final stratum; form_variant/nonfinal_only/absent are
+    not drillable as finals). A corpus_tokens floor (min_tokens) stands in
+    for the dictionary mw_first_members floor that load_mw_uttarapada would
+    otherwise have applied.
+    """
+    ranked = []
+    for row in mw_rows:
+        c = corpus_attestation.get(row["member"])
+        if not c or c["corpus_status"] != "final":
+            continue
+        if c["corpus_tokens"] < min_tokens:
+            continue
+        row = dict(row)
+        row["corpus_tokens"] = c["corpus_tokens"]
+        row["corpus_compounds"] = c["corpus_compounds"]
+        row["corpus_status"] = c["corpus_status"]
+        ranked.append(row)
+    ranked.sort(key=lambda d: -d["corpus_tokens"])
+    return ranked
+
+
+def build_member_items(mw_rows, mw_cap, seed, start_idx, rank_mode="dict"):
     """Two item types the other two sources cannot support.
 
     `member_side` -- is this word attested as a FIRST member, a SECOND member,
@@ -210,6 +280,13 @@ def build_member_items(mw_rows, mw_cap, seed, start_idx):
 
     `member_recall` -- given four attested first members, name the shared final
     member. Tests productive-member recognition rather than one-off memorisation.
+
+    `rank_mode` only affects evidence/provenance text and source_dataset --
+    which final members are IN mw_rows and their order is decided upstream
+    (load_mw_uttarapada for "dict", rank_by_corpus_attestation for "corpus",
+    H1398). When rank_mode=="corpus" each row additionally carries
+    corpus_tokens/corpus_compounds (attached by rank_by_corpus_attestation)
+    and the evidence strings cite those, matching the ranking basis.
     """
     rng = random.Random(seed)
     items = []
@@ -223,9 +300,13 @@ def build_member_items(mw_rows, mw_cap, seed, start_idx):
         left_universe.update(row["lefts"])
     right_universe = {row["member"] for row in mw_rows}
 
+    source_dataset = "uttarapada-dict-vs-corpus" if rank_mode == "corpus" else "mw-derivations-uttarapada"
+
     all_members = [row["member"] for row in pool]
     for row in pool:
         member = row["member"]
+        corpus_note = ("; corpus-attested %d tokens across %d attested compounds (DCS)"
+                        % (row["corpus_tokens"], row["corpus_compounds"])) if rank_mode == "corpus" else ""
         idx += 1
         both = member in left_universe
         answer = "both sides" if both else "second member only"
@@ -236,11 +317,12 @@ def build_member_items(mw_rows, mw_cap, seed, start_idx):
             "answer": answer,
             "choices": ["first member only", "second member only", "both sides"],
             "rank": None,
-            "evidence": "MW compound markup: %d distinct first members attested before “%s”%s"
+            "evidence": "MW compound markup: %d distinct first members attested before “%s”%s%s"
                         % (row["n"], member,
                            "; also attested as a first member itself" if both else
-                           "; not attested as a first member"),
-            "source_dataset": "mw-derivations-uttarapada",
+                           "; not attested as a first member",
+                           corpus_note),
+            "source_dataset": source_dataset,
         })
 
         idx += 1
@@ -254,9 +336,9 @@ def build_member_items(mw_rows, mw_cap, seed, start_idx):
             "prompt": "These are all attested first members of compounds sharing one final member: %s. Which is it?"
                       % ", ".join("“%s”" % w for w in shown),
             "answer": member, "choices": choices, "rank": None,
-            "evidence": "MW compound markup: “%s” is the final member of %d distinct compounds (%s)"
-                        % (member, row["n"], row["cls"]),
-            "source_dataset": "mw-derivations-uttarapada",
+            "evidence": "MW compound markup: “%s” is the final member of %d distinct compounds (%s)%s"
+                        % (member, row["n"], row["cls"], corpus_note),
+            "source_dataset": source_dataset,
         })
     return items, len(pool)
 
@@ -371,7 +453,27 @@ def write_reference_tsv(rows):
                         r["compound"], r["verse"], r["corpus_freq"]])
 
 
-def write_drills_json(items, corpus_universe, corpus_used_n, corpus_cap):
+def write_drills_json(items, corpus_universe, corpus_used_n, corpus_cap,
+                       mw_rank="dict", mw_used_n=0, mw_corpus_min_tokens=None):
+    if mw_rank == "corpus":
+        dictionary_note = (
+            "MWderivations issue15/compounds_reverse_classified.tsv joined against VisualDCS H1328 "
+            "derived-data/Kompozity/uttarapada_dict_vs_corpus.tsv (kosha manifest id "
+            "uttarapada-dict-vs-corpus) — %d final members ranked by REAL corpus attestation "
+            "(corpus_tokens, summed DCS frequency; corpus_status=\"final\" only; floor >=%s tokens), "
+            "not MW dictionary type-count (median Jaccard between the two rankings was 0.00, H1328 "
+            "report). Particles/pronoun-stems/bare-roots/-tva/-tā taddhita suffixes are stoplisted "
+            "(data/samasa/drill_weights.json member_stoplist) because corpus_tokens ranking alone "
+            "does not reliably drop them." % (mw_used_n, mw_corpus_min_tokens)
+        )
+    else:
+        dictionary_note = (
+            "MWderivations issue15/compounds_reverse_classified.tsv — MW's own compound "
+            "markup inverted to a final-member (uttarapada) index and classified; only "
+            "UTTARAPADA + KRT_STEM_MEMBER rows are drilled, taddhita suffixes are excluded "
+            "because they are bound morphemes, not compound members. Ranked by MW dictionary "
+            "type-count (--mw-rank dict; default is corpus attestation, see --mw-rank)."
+        )
     out = {
         "title": "Sanskrit samāsa (compound) drills",
         "description": "Compound-analysis practice items (identify class / split into members), "
@@ -385,10 +487,7 @@ def write_drills_json(items, corpus_universe, corpus_used_n, corpus_cap):
                       "inline, to keep the page a reasonable size." % (
                           corpus_universe, corpus_universe if corpus_universe else 0,
                           corpus_used_n, corpus_cap),
-            "dictionary": "MWderivations issue15/compounds_reverse_classified.tsv — MW's own compound "
-                          "markup inverted to a final-member (uttarapada) index and classified; only "
-                          "UTTARAPADA + KRT_STEM_MEMBER rows are drilled, taddhita suffixes are excluded "
-                          "because they are bound morphemes, not compound members.",
+            "dictionary": dictionary_note,
             "builder": "scripts/build_samasa_trainer.py",
             "license": "public/MIT; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS)",
         },
@@ -705,7 +804,17 @@ def main():
     ap.add_argument("--mw-cap", type=int, default=150,
                      help="how many most-productive final members to drill (0 disables)")
     ap.add_argument("--mw-min-left", type=int, default=20,
-                     help="minimum distinct first members for a final member to be drillable")
+                     help="minimum distinct first members for a final member to be drillable "
+                          "(--mw-rank dict only)")
+    ap.add_argument("--mw-rank", choices=["dict", "corpus"], default=None,
+                     help="rank member drills by MW dictionary type-count (dict) or real DCS "
+                          "corpus attestation (corpus, H1398); default from drill_weights.json mw_rank")
+    ap.add_argument("--mw-corpus", default=str(MWCORPUS),
+                     help="VisualDCS H1328 uttarapada_dict_vs_corpus.tsv (corpus-attestation join, "
+                          "kosha manifest id uttarapada-dict-vs-corpus)")
+    ap.add_argument("--mw-corpus-min-tokens", type=int, default=None,
+                     help="minimum summed DCS frequency for a final member to be corpus-drillable "
+                          "(--mw-rank corpus only); default from drill_weights.json mw_corpus_min_tokens")
     ap.add_argument("--weights", default=str(WEIGHTS))
     ap.add_argument("--skip-apkg", action="store_true", help="skip genanki export (if not installed)")
     args = ap.parse_args()
@@ -714,6 +823,10 @@ def main():
     type_order = weights["type_teaching_order"]
     min_freq = weights["min_corpus_freq"]
     corpus_cap = args.corpus_cap if args.corpus_cap is not None else weights["corpus_drill_cap"]
+    mw_rank = args.mw_rank or weights.get("mw_rank", "dict")
+    mw_corpus_min_tokens = (args.mw_corpus_min_tokens if args.mw_corpus_min_tokens is not None
+                             else weights.get("mw_corpus_min_tokens", 50))
+    member_stoplist = set(weights.get("member_stoplist", []))
 
     print("loading names.csv frequency vector ...")
     names_freq = load_names_freq(args.names)
@@ -745,12 +858,30 @@ def main():
     reference_rows = build_reference(by_type, type_order)
     items, corpus_used_n = build_drill_items(gold_identify, gold_split, corpus_pool, corpus_cap, args.seed)
 
-    print("loading MW reverse (uttarapada) index ...")
-    mw_rows = load_mw_uttarapada(args.mw_rev, args.mw_min_left) if args.mw_cap else []
+    print("loading MW reverse (uttarapada) index (--mw-rank %s) ..." % mw_rank)
+    if args.mw_cap and mw_rank == "corpus":
+        mw_rows_all = load_mw_uttarapada(args.mw_rev, None, member_stoplist)
+        print("  %d genuine final members in MW's classified index (stoplist-filtered)" % len(mw_rows_all))
+        corpus_attestation = load_corpus_attestation(args.mw_corpus)
+        print("  %d final members with corpus attestation (%s)" % (len(corpus_attestation), args.mw_corpus))
+        mw_rows = rank_by_corpus_attestation(mw_rows_all, corpus_attestation, mw_corpus_min_tokens)
+        print("  %d corpus_status=final, corpus_tokens >= %d, ranked by real usage"
+              % (len(mw_rows), mw_corpus_min_tokens))
+        if not mw_rows and mw_rows_all:
+            print("  WARNING: 0 corpus-ranked candidates -- falling back to --mw-rank dict")
+            mw_rank = "dict"
+            mw_rows = load_mw_uttarapada(args.mw_rev, args.mw_min_left, member_stoplist)
+    elif args.mw_cap:
+        mw_rows = load_mw_uttarapada(args.mw_rev, args.mw_min_left, member_stoplist)
+        if mw_rows:
+            print("  %d genuine final members with >= %d distinct first members "
+                  "(taddhita suffixes excluded by the classifier, stoplist applied)"
+                  % (len(mw_rows), args.mw_min_left))
+    else:
+        mw_rows = []
+
     if mw_rows:
-        print("  %d genuine final members with >= %d distinct first members "
-              "(taddhita suffixes excluded by the classifier)" % (len(mw_rows), args.mw_min_left))
-        mw_items, mw_used_n = build_member_items(mw_rows, args.mw_cap, args.seed, len(items))
+        mw_items, mw_used_n = build_member_items(mw_rows, args.mw_cap, args.seed, len(items), mw_rank)
         items.extend(mw_items)
         print("  %d drilled (--mw-cap %d) -> %d items" % (mw_used_n, args.mw_cap, len(mw_items)))
     else:
@@ -759,7 +890,8 @@ def main():
 
     write_curriculum_tsv(curriculum_rows)
     write_reference_tsv(reference_rows)
-    write_drills_json(items, len(corpus_pool), corpus_used_n, corpus_cap)
+    write_drills_json(items, len(corpus_pool), corpus_used_n, corpus_cap,
+                       mw_rank, mw_used_n, mw_corpus_min_tokens)
     write_drills_tsv(items)
     if not args.skip_apkg:
         write_apkg(items)
