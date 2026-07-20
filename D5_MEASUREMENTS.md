@@ -92,6 +92,18 @@ must be ruled — see **D5-4** (compress the restricted-tier backup asset; split
 the queryable DB into ATTACH-able core + inflections layers for P-D5). The
 static Pages tier (§5) is sized separately below.
 
+**Latency SLO not stale despite the 5.8× growth (re-verified 20-07-2026).** The
+worry that motivated the re-measure — "if the size figure is this stale, the
+same-day §3 latency figures may be too" — is closed by checking the guardrail
+the D5-1 SLO rests on: the covering index `entries_dict_key ON entries(dict,
+slp1_key, L)` is **present**, and `EXPLAIN QUERY PLAN` on the lemma lookup still
+shows `SEARCH entries USING INDEX entries_dict_key (dict=? AND slp1_key=?)` — no
+table scan, no sort. All 5.8× of the growth is in *new* layers (`inflections`,
+`heritage_anchor`, and the heritage `forms` ingest), **none of which touch the
+`entries`/`forms`/`lemmas`/`senses` read paths** the §3 latency numbers and the
+D5-1 percentile SLO (p50<20 ms · p95<100 ms · p99<250 ms) are measured against.
+So the SLO figures stand; the DB got bigger, not slower on the served paths.
+
 **Historical baseline — 03-07-2026 (276.4 MiB):**
 
 > | Metric | Value |
