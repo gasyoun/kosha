@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.74.0] - 2026-07-20
+
 ### Added
 - **Manifest row `uttarapada-dict-vs-corpus`** ([H1398](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1398-Sonnet_kosha_uttarapada-dict-vs-corpus-manifest-trainer-ranking_20.07.26.md), Sonnet 5 `claude-sonnet-5`). Registers VisualDCS H1328's `derived-data/Kompozity/uttarapada_dict_vs_corpus.tsv` (19,177 rows) — the join of MW's uttarapada (compound final-member) dictionary index against DCS Kompozity corpus attestation, `corpus_status` ∈ {final 6,249 / form_variant 1,289 / nonfinal_only 1,252 / absent 10,387} — as a pointer dataset (`in_release: not-applicable`, source stays in gasyoun/VisualDCS, sibling of `dcs-compound-dictionary`). No data copied into kosha.
 
