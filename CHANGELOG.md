@@ -14,6 +14,11 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.72.0] - 2026-07-20
+
+### Fixed
+- **Salt-facade `restful/entries` `query_type=prefix` -- H838 range-seek fix ported + LIKE-prefix sweep** ([H1369](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1369-Sonnet_kosha_salt-endpoint-prefix-range-seek-port-and-like-scan-sweep_20.07.26.md), Sonnet 5 `claude-sonnet-5`). [`app/main.py`](https://github.com/gasyoun/kosha/blob/main/app/main.py)'s `salt_entries` handler (`/dicts/{dict_id}/restful/entries`) still had the exact bug H838 fixed in `/api/v1/search`: `slp1_key LIKE q||'%'` is case-insensitive by default, and SLP1 is case-significant (`k`=ka vs `K`=kha). Measured against `kosha.db`: a `query=ka&query_type=prefix` Salt lookup on `mw` matched 6,818 keys under the old LIKE, 835 of them `K`-prefixed (kha) false positives, vs 3,769 correct under the fix -- and because `entries_dict_key`'s BINARY collation sorts `K...` before `k...`, the **entire default-`size=25` first page was 100% kha leakage** (zero real `ka` entries reachable without paging past it). Rewritten to the same half-open range seek as H838's `_prefix_range_bound` (`slp1_key >= q AND slp1_key < bound`), reusing the existing helper -- `EXPLAIN QUERY PLAN` confirms the range now binds directly into the `entries_dict_key` index seek. Swept the rest of the codebase for remaining LIKE-prefix scans: none -- the only other `LIKE` site (`/api/v1/search` `mode=fuzzy`, substring `%q%`) is not a prefix pattern and cannot be range-seeked. New regression test `tests/test_api.py::test_salt_entries_prefix_case_significant_excludes_kha`.
+
 ## [0.71.0] - 2026-07-20
 
 ### Added

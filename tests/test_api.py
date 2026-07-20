@@ -165,6 +165,23 @@ def test_salt_unknown_dict():
     assert "error" in r.json()
 
 
+def test_salt_entries_prefix_case_significant_excludes_kha():
+    # H838 fix ported to the Salt facade (H1369): the same LIKE 'q%' scan
+    # H838 replaced in /api/v1/search also lived here as query_type=prefix,
+    # unfixed. SLP1 is case-significant ('k'=ka, 'K'=kha); the entries table
+    # sorts 'K...' (kha) before 'k...' (ka) in BINARY collation, so under the
+    # old case-insensitive LIKE the default size=25 first page was 100% kha
+    # leakage -- a 'ka'-prefix Salt query returned zero real 'ka' entries.
+    r = client.get("/dicts/mw/restful/entries?query=ka&query_type=prefix&size=25")
+    assert r.status_code == 200
+    entries = r.json()["data"]["entries"]
+    assert len(entries) > 0
+    ids = {e["id"] for e in entries}
+    # Every returned Salt id must be minted from a 'ka'-prefixed (not 'Ka') key.
+    assert all(i.startswith("lemma-ka") for i in ids), ids
+    assert not any(i.startswith("lemma-Ka") for i in ids), ids
+
+
 # ---------------------------------------------------------------------------
 # Print co-location — /api/v1/page + /api/v1/neighbors (app/neighbors.py)
 # ---------------------------------------------------------------------------
