@@ -2,7 +2,7 @@
 
 _Created: 19-07-2026 · Last updated: 19-07-2026_
 
-Curated by Fable 5 (`claude-fable-5`) — the judgment step of [H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md). Every pick and every rejection below is logged: **no unlogged picks** (acceptance bar of [VERIFICATION_KOSHA_PEDAGOGY_SURFACES.md](https://github.com/gasyoun/kosha/blob/main/docs/VERIFICATION_KOSHA_PEDAGOGY_SURFACES.md) § W-RU-b).
+Curated by Fable 5 (`claude-fable-5`) — the judgment step of [H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md). Every pick and every rejection below is logged: **no unlogged picks** (acceptance bar of [VERIFICATION_KOSHA_PEDAGOGY_SURFACES.md](https://github.com/gasyoun/kosha/blob/main/docs/VERIFICATION_KOSHA_PEDAGOGY_SURFACES.md) § W-RU-b).
 
 ## Candidate pool
 
