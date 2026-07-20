@@ -1,6 +1,6 @@
 # Plan — kosha Concordance Q3: Pāṇinian sūtra ↔ corpus (2026 H2)
 
-_Created: 18-07-2026 · Last updated: 18-07-2026_
+_Created: 18-07-2026 · Last updated: 20-07-2026_
 
 The index doc for kosha's next programme. It records **what was decided and by
 whom**, states the **autonomy contract** an agent operates under, and links the
@@ -68,6 +68,17 @@ the two places where a ruling **overturned** the batch recommendation.
 | D10 | DICO French-gloss layer = **manifest dataset row only, no UI** | Default applied, **blocked on evidence** | Cannot execute as written — the row already exists and is rights-blocked. See §3 |
 | D11 | Handoff/link hygiene = **fix the mover, not the symptoms**, plus a one-time catch-up | Default applied | 7 handoffs moved to `archive/` in one sweep → **14 dead link occurrences** in [PLAN_KOSHA_PEDAGOGY_ENGINE_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/PLAN_KOSHA_PEDAGOGY_ENGINE_2026_2027.md) (7 unique targets × 2 occurrences each — verified exactly) |
 | D12 | A3 (generated-vs-attested join) is **absorbed into A4 wave 1** as a prerequisite, not skipped | Derived from D1 | See §1. Without it A4 has no attested-form input |
+
+> **One decision is NOT in this settled table — it is parked for a human ruling.**
+> Which generated table A4/W2a treats as canonical (`forms` vs `inflections`) was
+> surfaced by W1b as a STOP-AND-SURFACE block with "no standing to settle it", and
+> H1366 was scoped to **brief, not rule**. The ruling-ready decide brief — options,
+> a **`forms` recommendation at high confidence**, and the measured evidence — is
+> parked at
+> [DECIDE_H1366_GENERATED_SIDE_FORMS_VS_INFLECTIONS.md](https://github.com/gasyoun/kosha/blob/main/docs/DECIDE_H1366_GENERATED_SIDE_FORMS_VS_INFLECTIONS.md)
+> and mirrored to [Uprava GTD `@DECIDE`](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md).
+> It becomes a settled `D13` row here only once a human accepts (or overrides) it.
+> **W2a must not start until this is ruled** — its denominator depends on it.
 
 ---
 
