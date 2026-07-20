@@ -1572,6 +1572,24 @@
       ],
       "notes": "All 1168 Scherzl case-government relations adjudicated against the DCS dependency treebank: 693 CONFIRMED / 1 CONTRADICTED (hand-adjudicated to a non-defect) / 288 UNATTESTED-INSUFFICIENT / 186 NOT-ADJUDICABLE. Only ~3.9% of DCS sentences carry dependency arcs, so CONFIRMED is a lower bound and a zero dep-count never disconfirms. Already tracked+public in SanskritGrammar; listed for discovery, not re-released.",
       "data_statement": "Aggregate government-relation verdicts + per-verb governed-case counts. Source corpus: Digital Corpus of Sanskrit (DCS), Oliver Hellwig, CC BY 4.0 (via dcs-conllu) — attribution required; counts are facts extracted from the corpus, not DCS text. Government catalogue: V. I. Scherzl's 19th-c. index (public domain)."
+    },
+    {
+      "id": "pd-dcs-coverage",
+      "title": "Poona Dictionary × DCS corpus coverage crosswalk (H1336)",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "format": "tsv",
+      "rows": 118,
+      "size_bytes": 6690,
+      "keying": "PD work (normalised siglum-family -> IAST title) -> DCS 2021/2026 text; match_type in {complete, partial, absent}, DCS-anchored on the bounded 276-text inventory",
+      "source_repo": "https://github.com/sanskrit-lexicon/csl-atlas",
+      "source_path": "data/pd/pd_dcs_text_crosswalk.tsv (+ pd_siglum_families.tsv, pd_dcs_metrics.json)",
+      "builder": "scripts/pd_extract_sigla.py + scripts/pd_dcs_crosswalk.py",
+      "consumers": [
+        "csl-atlas /tools/pd-dcs-coverage Observable page",
+        "reports/PD_DCS_CORPUS_COVERAGE_2026.md"
+      ],
+      "notes": "H1336 (20-07-2026): first measurement of DCS's coverage of PD's cited canon. DCS is 25.2% PD-citation-weighted but 77.9% DCS-token-weighted -- holds the Vedic/epic core, misses puranic/lexicographic/kavya breadth (residue = 75% of PD's primary citation mass). Scope: PD letter a- only (published a- ~ apaca-). MahaBha. != MahaBh. (Mahabharata vs Mahabhasya) deliberately not merged. PR: https://github.com/sanskrit-lexicon/csl-atlas/pull/276"
     }
   ]
 }
