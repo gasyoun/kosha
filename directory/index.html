@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="66 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="67 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="66 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="67 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -1870,8 +1870,8 @@
     },
     {
       "@type": "Dataset",
-      "name": "Beginner subhāṣita reader pack — graded Indische Sprüche band (W-RU-b)",
-      "description": "H1279 kosha pedagogy Wave RU (W-RU-b), the first non-DCS reading-pack family. Base text public domain (Böhtlingk, Indische Sprüche 1870-73, SanskritLexicography F33, consumed in place — never copied wholesale). Splits shown only where they rebuild the surface via corpus-attested rules (no fabricated signal; 56/1,263 chunks honestly unsplit). gloss.ru ABSENT this build — W-RU-a (H1278) unshipped at build time (it landed while this PR was in flight), re-run logged in pack meta. No SanskritRussian material included, so the Wave-RU rights gate is not triggered. Curation by Fable 5 (claude-fable-5), auditable in CURATION_NOTES.md; its 50 R1 rejects double as an OCR to-fix list for IndischeSprueche.",
+      "name": "Beginner subhāṣita reader pack — graded Indische Sprüche band (W-RU-b + gloss.ru)",
+      "description": "H1279 kosha pedagogy Wave RU (W-RU-b), the first non-DCS reading-pack family; H1312 re-ran the build with the gloss.ru join once W-RU-a (H1278) had shipped. Base text public domain (Böhtlingk, Indische Sprüche 1870-73, SanskritLexicography F33, consumed in place — never copied wholesale). Splits shown only where they rebuild the surface via corpus-attested rules (no fabricated signal; 56/1,263 chunks honestly unsplit) — the split/grading TSVs are byte-unchanged from H1279 (test_subhashita_difficulty.py green). gloss.ru now PRESENT: 85.3% of the pack's 1,510 tokens carry a lemma-layer RU gloss (89.1% carry a resolved SLP1 lemma at all) — the residual gap is mostly cheda lemmatization misses on rare/compound-internal forms, not a rights gap (still the SanskritRussian **public site-tier** subset only; corpus_lexicon never read). Curation by Fable 5 (claude-fable-5), auditable in CURATION_NOTES.md; its 50 R1 rejects double as an OCR to-fix list for IndischeSprueche.",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
       "isAccessibleForFree": true,
       "creator": {
@@ -1894,6 +1894,34 @@
         "@type": "DataDownload",
         "encodingFormat": "json",
         "contentUrl": "https://github.com/gasyoun/kosha/releases/download/not-applicable/data/subhashita/subhashita_beginner_pack.json"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Scherzl case-government relations × DCS-treebank adjudication",
+      "description": "All 1168 Scherzl case-government relations adjudicated against the DCS dependency treebank: 693 CONFIRMED / 1 CONTRADICTED (hand-adjudicated to a non-defect) / 288 UNATTESTED-INSUFFICIENT / 186 NOT-ADJUDICABLE. Only ~3.9% of DCS sentences carry dependency arcs, so CONFIRMED is a lower bound and a zero dep-count never disconfirms. Already tracked+public in SanskritGrammar; listed for discovery, not re-released.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "scherzl-government-dcs-adjudication"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/SanskritGrammar"
       }
     }
   ]
@@ -1965,7 +1993,7 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>66</b><span>public datasets</span></div>
+      <div class="tally"><b>67</b><span>public datasets</span></div>
       <div class="tally"><b>11</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
@@ -2635,13 +2663,23 @@
     </article>
     <article class="card">
       <div class="card-h">
-        <h3>Beginner subhāṣita reader pack — graded Indische Sprüche band (W-RU-b)</h3>
+        <h3>Beginner subhāṣita reader pack — graded Indische Sprüche band (W-RU-b + gloss.ru)</h3>
         <span class="badge pub">public</span>
       </div>
-      <p class="key">one object per curated saying, ordered by difficulty ascending: num/saying_id (Indische Sprüche numbering), deva, iast, translation_de, source_attribution, difficulty (W2a-reduced 2-axis composite in [0,1]), metre + metre_method + syllables (vidyut-chandas strict vṛtta else anuṣṭubh syllable heuristic), lines[].chunks[] with per-chunk sandhi-split tokens and per-seam X Y → Z junction rules (corpus-attested, data/sandhi/corpus_sandhi.tsv), cross-boundary rules in lines[].xj, gloss_ru (null in this build). Grading spine: data/subhashita/subhashita_difficulty.tsv (all 7,537 sayings, full score decomposition). Curation: beginner_band.tsv + CURATION_NOTES.md (criteria + full reject log, no unlogged picks).</p>
-      <p class="meta">106 rows · 287.4 KB · JSON</p>
-      <div class="chips"><span class="chip">reading/subhashita/ page (graded beginner reader, difficulty-ordered)</span><span class="chip">data/subhashita/subhashita_beginner_anki.apkg (Anki export of the band)</span><span class="chip">W-RU-a re-run join point: gloss.ru inlining now that H1278 has shipped (logged re-run TODO)</span></div>
+      <p class="key">one object per curated saying, ordered by difficulty ascending: num/saying_id (Indische Sprüche numbering), deva, iast, translation_de, source_attribution, difficulty (W2a-reduced 2-axis composite in [0,1]), metre + metre_method + syllables (vidyut-chandas strict vṛtta else anuṣṭubh syllable heuristic), lines[].chunks[] with per-chunk sandhi-split tokens (t), per-seam X Y → Z junction rules (j, corpus-attested, data/sandhi/corpus_sandhi.tsv), per-token SLP1 lemma (lemma_slp1, H1312 — vidyut-cheda, honest null when unresolved) and per-token gloss_ru {surface,lemma,root} triple (H1312, null where uncovered), cross-boundary rules in lines[].xj. Grading spine: data/subhashita/subhashita_difficulty.tsv (all 7,537 sayings, full score decomposition). Curation: beginner_band.tsv + CURATION_NOTES.md (criteria + full reject log, no unlogged picks).</p>
+      <p class="meta">106 rows · 533.7 KB · JSON</p>
+      <div class="chips"><span class="chip">reading/subhashita/ page (graded beginner reader, difficulty-ordered, RU-gloss toggle)</span><span class="chip">data/subhashita/subhashita_beginner_anki.apkg (Anki export of the band, GlossRu back field)</span><span class="chip">reading/RU_GLOSS_COVERAGE.md (this pack&#x27;s row, folded in alongside the 5 DCS reading packs)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/data/subhashita/subhashita_beginner_pack.json">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Scherzl case-government relations × DCS-treebank adjudication</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per Scherzl government relation (root/stem × case), verdict + evidence</p>
+      <p class="meta">1,168 rows · 88.5 KB · TSV</p>
+      <div class="chips"><span class="chip">Sanskrit parser / valence-frame stack</span><span class="chip">BuhlerLeitfaden_1923 government_lexicon (corpus-confirmation layer)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritGrammar">In source repo ↗</a></div>
     </article>
     </div>
     <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>
@@ -2672,7 +2710,7 @@
         <h3>kosha unified lookup database</h3>
         <span class="badge res">restricted</span>
       </div>
-      <p class="key">10 tables: 444,773 entries · 323,425 lemmas · 692,403 senses · 1,378,401 forms · 6,916,865 inflections · 185,803 heritage_anchor rows (24,549 anchor-resolved) (+ meta, sources, stem_bridge)</p>
+      <p class="key">10 tables: 444,773 entries · 323,425 lemmas · 692,403 senses · 1,378,401 forms · 6,917,018 inflections · 185,803 heritage_anchor rows (24,549 anchor-resolved) · 760 stem_bridge (+ meta, sources)</p>
       <p class="meta">444,773 rows · 1.6 GB · SQLITE</p>
       <div class="chips"><span class="chip">kosha API</span><span class="chip">P2 static cache</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>

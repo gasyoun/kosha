@@ -1533,6 +1533,25 @@
       ],
       "notes": "H1279 kosha pedagogy Wave RU (W-RU-b), the first non-DCS reading-pack family; H1312 re-ran the build with the gloss.ru join once W-RU-a (H1278) had shipped. Base text public domain (Böhtlingk, Indische Sprüche 1870-73, SanskritLexicography F33, consumed in place — never copied wholesale). Splits shown only where they rebuild the surface via corpus-attested rules (no fabricated signal; 56/1,263 chunks honestly unsplit) — the split/grading TSVs are byte-unchanged from H1279 (test_subhashita_difficulty.py green). gloss.ru now PRESENT: 85.3% of the pack's 1,510 tokens carry a lemma-layer RU gloss (89.1% carry a resolved SLP1 lemma at all) — the residual gap is mostly cheda lemmatization misses on rare/compound-internal forms, not a rights gap (still the SanskritRussian **public site-tier** subset only; corpus_lexicon never read). Curation by Fable 5 (claude-fable-5), auditable in CURATION_NOTES.md; its 50 R1 rejects double as an OCR to-fix list for IndischeSprueche.",
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/subhashita-reader-pack.meta.md"
+    },
+    {
+      "id": "scherzl-government-dcs-adjudication",
+      "title": "Scherzl case-government relations × DCS-treebank adjudication",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "format": "tsv",
+      "rows": 1168,
+      "size_bytes": 90596,
+      "keying": "one row per Scherzl government relation (root/stem × case), verdict + evidence",
+      "source_repo": "https://github.com/gasyoun/SanskritGrammar",
+      "source_path": "BuhlerLeitfaden_1923/government_class_index/government_corpus_verdicts.tsv (tracked; richer .jsonl + per-verb dcs_verb_government_profiles.json beside it)",
+      "builder": "adjudicate_government_vs_dcs.py + aggregate_dcs_gov.py (H1372)",
+      "consumers": [
+        "Sanskrit parser / valence-frame stack",
+        "BuhlerLeitfaden_1923 government_lexicon (corpus-confirmation layer)"
+      ],
+      "notes": "All 1168 Scherzl case-government relations adjudicated against the DCS dependency treebank: 693 CONFIRMED / 1 CONTRADICTED (hand-adjudicated to a non-defect) / 288 UNATTESTED-INSUFFICIENT / 186 NOT-ADJUDICABLE. Only ~3.9% of DCS sentences carry dependency arcs, so CONFIRMED is a lower bound and a zero dep-count never disconfirms. Already tracked+public in SanskritGrammar; listed for discovery, not re-released.",
+      "data_statement": "Aggregate government-relation verdicts + per-verb governed-case counts. Source corpus: Digital Corpus of Sanskrit (DCS), Oliver Hellwig, CC BY 4.0 (via dcs-conllu) — attribution required; counts are facts extracted from the corpus, not DCS text. Government catalogue: V. I. Scherzl's 19th-c. index (public domain)."
     }
   ]
 }

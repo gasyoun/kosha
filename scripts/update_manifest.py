@@ -44,6 +44,7 @@ REPO_URL_TO_LOCAL = {
     "https://github.com/sanskrit-lexicon/csl-orig": GITHUB_ROOT / "csl-orig",
     "https://github.com/sanskrit-lexicon/csl-apidev": GITHUB_ROOT / "csl-apidev",
     "https://github.com/gasyoun/SanskritLexicography": GITHUB_ROOT / "SanskritLexicography",
+    "https://github.com/gasyoun/SanskritGrammar": GITHUB_ROOT / "SanskritGrammar",
     "https://github.com/gasyoun/kosha": REPO,
     "https://github.com/gasyoun/SanskritRussian": GITHUB_ROOT / "SanskritRussian",
     "https://github.com/gasyoun/VisualDCS": GITHUB_ROOT / "VisualDCS",
