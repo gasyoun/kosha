@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kosha — Pāṇinian sūtra ↔ corpus concordance (A4)</title>
+<style>
+:root { --ink:#222; --mut:#667; --line:#ddd; --bg:#faf9f6; --card:#fff;
+        --exact:#1a6fb0; --floor:#a05a00; --amb:#a02020; --lit:#0a7a2f; }
+* { box-sizing:border-box; }
+body { margin:0; font:15px/1.5 Georgia,'Times New Roman',serif; color:var(--ink); background:var(--bg); }
+header { background:#2b3a4a; color:#fff; padding:14px 20px; }
+header h1 { margin:0; font-size:18px; font-weight:normal; }
+header .sub { font-size:12.5px; opacity:.75; margin-top:3px; }
+main { max-width:920px; margin:0 auto; padding:16px 20px 60px; }
+#q { width:100%; font-size:18px; padding:9px 12px; border:1px solid var(--line); border-radius:6px;
+     font-family:inherit; }
+#hint { font-size:12.5px; color:var(--mut); margin:6px 2px 14px; }
+#adhyayas { margin:8px 0 16px; }
+#adhyayas button { font-size:13.5px; padding:5px 12px; margin:0 6px 6px 0; border:1px solid var(--line);
+     border-radius:14px; background:var(--card); cursor:pointer; font-family:inherit; }
+#adhyayas button.active { background:#2b3a4a; color:#fff; border-color:#2b3a4a; }
+#matches { margin:8px 0; }
+#matches a { display:inline-block; margin:2px 8px 2px 0; font-size:14px; font-family:Consolas,monospace; }
+.entry { background:var(--card); border:1px solid var(--line); border-radius:8px;
+         padding:14px 18px; margin:14px 0; }
+.hw { font-size:22px; font-family:Consolas,monospace; }
+.hw .status { font-size:11px; color:#fff; background:var(--lit); border-radius:8px; padding:1px 8px;
+     margin-left:9px; vertical-align:middle; }
+.stats { margin:6px 0 2px; font-size:13px; color:var(--mut); }
+.stats b { color:var(--ink); }
+.amb-bar { display:inline-block; width:120px; height:8px; background:#eee; border-radius:4px;
+     overflow:hidden; vertical-align:middle; margin:0 6px; }
+.amb-bar i { display:block; height:100%; background:var(--amb); }
+.form { border-top:1px solid #eee; margin-top:11px; padding-top:9px; }
+.form .head { font-size:16px; }
+.tier { font-size:10.5px; color:#fff; border-radius:8px; padding:1px 7px; vertical-align:middle; margin-left:7px; }
+.form .loc { color:var(--mut); font-size:12px; margin-left:6px; }
+.form .caveat { color:#a05a00; font-size:11.5px; margin-left:6px; }
+.chain-toggle { font-size:12px; color:var(--exact); cursor:pointer; margin-left:8px; text-decoration:underline; }
+.chain { margin:6px 0 2px 14px; font-size:12.5px; display:none; }
+.chain.open { display:block; }
+.chain ol { margin:4px 0; padding-left:22px; }
+.chain li { font-family:Consolas,monospace; }
+#trust { border-top:2px solid var(--line); margin-top:34px; padding-top:12px;
+         font-size:12.5px; color:var(--mut); }
+#trust table { border-collapse:collapse; margin:6px 0; }
+#trust td, #trust th { border:1px solid var(--line); padding:2px 9px; font-size:12px; }
+.none { color:var(--mut); font-style:italic; }
+a { color:#1a6fb0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Pāṇinian sūtra ↔ corpus concordance <span style="opacity:.6">· A4 · kosha concordance program</span></h1>
+  <div class="sub">Every DCS-attested form's Aṣṭādhyāyī derivation, inverted to sūtra → attested exemplars.
+  221 sūtras with corpus exemplars · 893,482 (sūtra, form, locus) rows · 72,764 uniquely-derived forms.</div>
+</header>
+<main>
+  <input id="q" placeholder="Type a sūtra code (e.g. 1.2.45) or an adhyāya number (1–8) …" autocomplete="off">
+  <div id="hint">Click an adhyāya to browse its sūtras, or type a full sūtra code to jump straight to it.
+  Only sūtras with ≥1 corpus exemplar appear here (the "lit" class) — the full dark/lit/gap
+  sūtra-coverage map is <b>W3a, not yet built</b>; this page previews the lit side only.</div>
+  <div id="adhyayas"></div>
+  <div id="matches"></div>
+  <div id="out"></div>
+
+  <div id="trust">
+    <b>Trust block.</b> Source dataset:
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/paninian_concordance.tsv">paninian_concordance.tsv</a>
+    (893,482 rows, built 20-07-2026 by
+    <a href="https://github.com/gasyoun/kosha/blob/main/scripts/build_panini_concordance.py">build_panini_concordance.py</a>,
+    H1390) inverting W2a's
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/derivation_status.tsv">derivation_status.tsv</a>
+    (vidyut-prakriya derivation harness, H1368) over the W1b AG bucket. Full build detail
+    (row counts, chain-length distribution, ambiguity rate per sūtra, caveated subtotals):
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/PANINI_BUILD_REPORT.md">PANINI_BUILD_REPORT.md</a>.
+    Match tiers:
+    <table><tr><th>tier</th><th>meaning</th></tr>
+    <tr><td><span class="tier" style="background:var(--exact)">exact</span></td><td>byte-identical SLP1 (confidence 0.95)</td></tr>
+    <tr><td><span class="tier" style="background:var(--floor)">floor</span></td><td>length-preserving form_key fold (confidence 0.85)</td></tr></table>
+    <b>Ambiguity rate</b> shown per sūtra is <i>lemma-attributed</i>, not per-form: among the lemmas with
+    ≥1 confirmed derivation touching this sūtra, the share of their own attested forms that could not be
+    uniquely resolved (>1 distinct chain matched). Full per-sūtra table:
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/panini_ambiguity_by_sutra.tsv">panini_ambiguity_by_sutra.tsv</a>.
+    Citable locus IDs are host-independent (<code>dcs:&lt;sent_id&gt;</code>). CSV fallback: the dataset TSV above.
+  </div>
+</main>
+<script>
+window.CONC_DATA = {};
+window.CONC_CHAINS = {};
+var ADHYAYAS = [1,2,3,4,5,6,7,8];
+var loaded = {};
+function ensureShard(adhy, cb){
+  if (loaded[adhy]) return cb();
+  var s = document.createElement("script");
+  s.src = "data/kwic_" + adhy + ".js";
+  s.onload = function(){ loaded[adhy]=1; cb(); };
+  s.onerror = function(){ loaded[adhy]=1; cb(); };  // adhyaya may have 0 exemplar sutras (e.g. 5)
+  document.head.appendChild(s);
+}
+function esc(t){ var d=document.createElement("div"); d.textContent=t||""; return d.innerHTML; }
+var TIER_C = {exact:"var(--exact)",floor:"var(--floor)"};
+var chainCounter = 0;
+function renderChain(chainId){
+  var seq = window.CONC_CHAINS[chainId] || [];
+  if (!seq.length) return '<span class="none">chain not in this shard\'s sample set</span>';
+  return '<ol>' + seq.map(function(sc){ return '<li>' + esc(sc) + '</li>'; }).join('') + '</ol>';
+}
+function renderEntry(sutraCode, e){
+  var h = '<div class="entry"><div class="hw">' + esc(sutraCode) +
+    '<span class="status">' + esc(e.status) + '</span></div>' +
+    '<div class="stats"><b>' + e.n_forms + '</b> exemplar forms · <b>' + e.n_loci +
+    '</b> distinct corpus loci · <b>' + e.n_lemmas + '</b> lemmas · ambiguity ' +
+    '<span class="amb-bar"><i style="width:' + Math.round(e.ambiguity_rate*100) +
+    '%"></i></span> ' + (e.ambiguity_rate*100).toFixed(1) + '% (lemma-attributed)</div>';
+  (e.forms||[]).forEach(function(fm){
+    var cid = "c" + (chainCounter++);
+    h += '<div class="form"><span class="head">' + esc(fm.form) + '</span>' +
+      '<span class="tier" style="background:' + (TIER_C[fm.tier]||"#888") + '">' + esc(fm.tier) + '</span>' +
+      '<span class="loc">lemma <i>' + esc(fm.lemma) + '</i> · ' + esc(fm.cite) + ' · chain ' + esc(fm.chain_id) +
+      ' (' + fm.len + ' sūtras)</span>' +
+      (fm.caveat ? '<span class="caveat">⚠ tense_caveat</span>' : '') +
+      '<span class="chain-toggle" data-chain="' + esc(fm.chain_id) + '" data-target="' + cid + '">view chain</span>' +
+      '<div class="chain" id="' + cid + '"></div></div>';
+  });
+  return h + "</div>";
+}
+var q = document.getElementById("q"), out = document.getElementById("out"),
+    matches = document.getElementById("matches"), adhyDiv = document.getElementById("adhyayas");
+
+function renderAdhyayaButtons(active){
+  adhyDiv.innerHTML = ADHYAYAS.map(function(a){
+    return '<button data-a="' + a + '"' + (a===active?' class="active"':'') + '>adhyāya ' + a + '</button>';
+  }).join('');
+  adhyDiv.querySelectorAll("button").forEach(function(b){
+    b.onclick = function(){ browseAdhyaya(parseInt(b.dataset.a,10)); };
+  });
+}
+renderAdhyayaButtons(null);
+
+function browseAdhyaya(a){
+  renderAdhyayaButtons(a);
+  out.innerHTML = ""; matches.innerHTML = "";
+  ensureShard(a, function(){
+    var shard = window.CONC_DATA[String(a)] || {};
+    var codes = Object.keys(shard).sort(function(x,y){
+      return shard[y].n_forms - shard[x].n_forms;
+    });
+    if (!codes.length){
+      out.innerHTML = '<p class="none">Adhyāya ' + a + ' has no sūtras with a corpus exemplar in this build (a "dark" adhyāya for A4 — the full dark-class breakdown is W3a).</p>';
+      return;
+    }
+    matches.innerHTML = codes.map(function(c){
+      return '<a href="#'+esc(c)+'" data-c="'+esc(c)+'">'+esc(c)+' ('+shard[c].n_forms+')</a>';
+    }).join("");
+    matches.querySelectorAll("a").forEach(function(link){
+      link.onclick = function(ev){ ev.preventDefault(); showSutra(a, link.dataset.c); };
+    });
+    // auto-show the top sutra
+    showSutra(a, codes[0]);
+  });
+}
+
+function showSutra(a, code){
+  var shard = window.CONC_DATA[String(a)] || {};
+  if (!shard[code]) { out.innerHTML = '<p class="none">Sūtra ' + esc(code) + ' not found in adhyāya ' + a + '.</p>'; return; }
+  out.innerHTML = renderEntry(code, shard[code]);
+  out.querySelectorAll(".chain-toggle").forEach(function(t){
+    t.onclick = function(){
+      var target = document.getElementById(t.dataset.target);
+      if (!target.classList.contains("open")) {
+        target.innerHTML = renderChain(t.dataset.chain);
+        target.classList.add("open");
+      } else {
+        target.classList.remove("open");
+      }
+    };
+  });
+  history.replaceState(null, "", "#" + encodeURIComponent(code));
+}
+
+function lookup(){
+  var raw = q.value.trim();
+  if (!raw) return;
+  var m = raw.match(/^(\d+)$/);
+  if (m) { browseAdhyaya(parseInt(m[1], 10)); return; }
+  var sm = raw.match(/^(\d+)\.(\d+)\.(\d+)$/);
+  if (sm) {
+    var a = parseInt(sm[1], 10);
+    renderAdhyayaButtons(a);
+    ensureShard(a, function(){ showSutra(a, raw); });
+    return;
+  }
+  out.innerHTML = '<p class="none">Type an adhyāya number (1–8) or a full sūtra code (a.p.s, e.g. 1.2.45).</p>';
+}
+q.addEventListener("change", lookup);
+q.addEventListener("keydown", function(ev){ if (ev.key === "Enter") lookup(); });
+
+var hashHandled = false;
+if (location.hash.length > 1) {
+  var h = decodeURIComponent(location.hash.slice(1));
+  var sm2 = h.match(/^(\d+)\.(\d+)\.(\d+)$/);
+  if (sm2) { q.value = h; lookup(); hashHandled = true; }
+}
+if (!hashHandled) { browseAdhyaya(1); }
+</script>
+</body>
+</html>

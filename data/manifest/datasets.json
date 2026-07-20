@@ -1507,11 +1507,31 @@
       "source_path": "data/concordance/derivation_status.tsv",
       "builder": "scripts/build_panini_derivations.py (concordance_core.py, H1368 / Concordance-Q3 W2a)",
       "consumers": [
-        "A4 sūtra->corpus inversion (W2b, not yet built)",
+        "A4 sūtra->corpus inversion (W2b DONE, H1390 — data/concordance/paninian_concordance.tsv)",
         "W3a sūtra-coverage map (dark-sūtra classification, not yet built)"
       ],
       "notes": "Full run over all 401,368 AG rows (883.8s, 454.1 forms/s, cached per-lemma vidyut derivation — 90,690 distinct lemmas). Status distribution: ok 72,764 (18.13%) · no-derivation 237,447 (59.16%) · ambiguous 86,857 (21.64%) · engine-error 4,300 (1.07%) — all four buckets always reported (2a-4), never only successes. 2,815 distinct sūtra chains recorded; chain length min 6 / median 12 / max 37 among ok rows. R-C3: engine-error is dominated by the verbal dhātu+gaṇa+lakāra mapping (new work here; the nominal mapping is E1-proven). R-C4: 256 ok rows are verb-derived AND carry tense_caveat=1 (DCS Tense=Past conflates aorist/perfect) — sūtra attribution for tense-specific rules on those rows may be off, flagged not silently counted. Full detail + 30-example sampled human-verification section: data/concordance/DERIVATION_HARNESS_BUILD_REPORT.md. Deliberately excludes W2b's sūtra->form inversion and the /concordance/panini/ web page — out of scope for this handoff.",
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/data/concordance/DERIVATION_HARNESS_BUILD_REPORT.md"
+    },
+    {
+      "id": "paninian-corpus-concordance",
+      "title": "Pāṇinian sūtra ↔ DCS corpus concordance (A4, W2b)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "paninian_concordance.tsv",
+      "format": "tsv",
+      "rows": 893482,
+      "size_bytes": 85974404,
+      "keying": "Inverts W2a's derivation_status.tsv (ok-status forms only — see notes) into one row per (sūtra, form, locus) triple: for every ok-status AG-bucket form, walks its ordered Ashtadhyayi-only sūtra chain (chain_id -> derivation_chains.tsv) and emits a concordance row per chain step. Canonical concordance-core schema (anchor_type=panini-sutra, anchor_id=sutra:<a.p.n>, anchor_key_slp1 empty, target_locus=dcs:<sent_id>[_<sub>], source_dataset=dcs, match_method in {exact,floor}, confidence from TIER_CONFIDENCE, evidence_count=1) + form_key_slp1, dcs_text, chain_position, chain_length, chain_id, derivation_status, tense_caveat.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/concordance/paninian_concordance.tsv",
+      "builder": "scripts/build_panini_concordance.py (concordance_core.py, H1390 / Concordance-Q3 W2b)",
+      "consumers": [
+        "concordance/panini/index.html web viewer (kwic_<adhyaya>.js shards)",
+        "W3a sūtra-coverage map (dark-sūtra classification, not yet built)"
+      ],
+      "notes": "893,482 rows from 72,764 ok-status forms across 221 distinct sūtras (of ~4,000 in the Aṣṭādhyāyī) spanning 7/8 adhyāyas (adhyāya 5: no exemplar in this build). Chain length (Ashtadhyayi-only steps) min 6 / median 12 / max 36. Per-sūtra ambiguity rate (2b-6, lemma-attributed — data/concordance/panini_ambiguity_by_sutra.tsv, 221 rows): median 27.1%, range 0.0-69.2%. tense_caveat=1 on 466 of the inverted ok forms, propagated verbatim (2b-5). PARKED GAP (documented, not hidden): exit-check 2b-1 asks for `ok`/`ambiguous` forms both inverted; W2a's shipped derivation_status.tsv carries an EMPTY chain_id for all 86,857 ambiguous rows (verified exhaustively — 0 exceptions), diverging from ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md §4's stated 'records all of them' design. Re-deriving with vidyut to recover ambiguous-form chains was out of scope (W2a's output is this build's entire input per H1390). Follow-up: extend build_panini_derivations.py to record the tied candidate chain_id set for ambiguous rows so a future W2b re-run can invert them too. 165 of 52,025 derivation_chains.tsv steps (Dhatupatha/Varttika/Kaumudi, 0.32%) are excluded from the inversion — not Pāṇini's own Ashtadhyayi sūtras, don't fit anchor_id's regex. Full detail: data/concordance/PANINI_BUILD_REPORT.md.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/data/concordance/PANINI_BUILD_REPORT.md"
     },
     {
       "id": "ru-gloss-layer",
