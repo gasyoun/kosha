@@ -131,11 +131,54 @@ def test_curriculum_page_crosslinks_hosted_quiz():
 
 
 def test_provenance_flag_present_and_split_from_correct_source():
+    # NOTE: "dictionary" (MW uttarapada member_side/member_recall items,
+    # PR #144) was added to this three-way split without updating this
+    # assertion -- fixed here as a drive-by (H1398) rather than left red.
     items = _load_json()["items"]
     for it in items:
-        assert it["provenance"] in ("gold", "corpus")
+        assert it["provenance"] in ("gold", "corpus", "dictionary")
         if it["provenance"] == "corpus":
             assert it["type"] == "split"  # corpus items never carry a verified type
             assert it["source_dataset"] == "dcs-compound-dictionary"
+        elif it["provenance"] == "dictionary":
+            assert it["type"] in ("member_side", "member_recall")
+            assert it["source_dataset"] in ("mw-derivations-uttarapada", "uttarapada-dict-vs-corpus")
         else:
             assert it["source_dataset"] == "gita-morphology-gold"
+
+
+def test_member_drill_ranked_by_corpus_tokens():
+    """H1398: member_side/member_recall drills rank compound final members
+    (uttarapadas) by real DCS corpus attestation (corpus_tokens), not MW
+    dictionary type-count -- H1328's report measured median Jaccard 0.00
+    between the two rankings' first-member sets. The H1328-report-mandated
+    junk stoplist (data/samasa/drill_weights.json member_stoplist) must keep
+    particles/pronoun-stems/bare-roots/-tva/-tā out of the drilled pool,
+    since ranking by corpus_tokens alone does not reliably drop them.
+    """
+    items = _load_json()["items"]
+    member_recall = [i for i in items if i["type"] == "member_recall"]
+    assert member_recall
+
+    # every member_recall item's evidence embeds the corpus_tokens figure
+    # it was ranked by -- extract and check the pool is sorted descending.
+    import re
+    tokens = []
+    for it in member_recall:
+        m = re.search(r"corpus-attested (\d+) tokens", it["evidence"])
+        assert m, it["evidence"]
+        tokens.append(int(m.group(1)))
+    assert tokens == sorted(tokens, reverse=True), "member drill pool is not ranked by corpus_tokens"
+
+    answers = {it["answer"] for it in member_recall}
+    junk = {"ca", "eva", "vā", "tu", "hi", "api", "iva",
+            "idam", "tad", "etad", "yad", "kim", "adas", "sva",
+            "kṛ", "as", "bhū", "gam", "i", "dā", "dhā", "sthā", "han", "nī", "pā", "yā",
+            "tva", "tā"}
+    assert not (answers & junk), "stoplisted junk leaked into the drill pool: %s" % (answers & junk)
+
+    # corpus-dominant, MW-dictionary-thin heads (H1328 report) should be
+    # drillable now that the dictionary type-count floor no longer gates them.
+    expected_corpus_dominant = {"ādi", "indra", "ātman", "ṛṣi"}
+    missing = expected_corpus_dominant - answers
+    assert not missing, "expected corpus-dominant heads missing from the ranked pool: %s" % missing
