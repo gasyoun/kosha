@@ -1,6 +1,14 @@
 {
-  "_doc": "Samasa (compound) trainer weights (H948). MG ruling 14-07-2026: teach the transparent types (karmadharaya, tatpurusa) before the harder ones (bahuvrihi, dvandva) -- this ORDER, not just a formula, must live here, visibly tunable, NOT hard-coded in Python. build_samasa_trainer.py reads this file (override with --weights <file>).",
+  "_doc": "Samasa (compound) trainer weights (H948). MG ruling 14-07-2026: teach the transparent types (karmadharaya, tatpurusa) before the harder ones (bahuvrihi, dvandva) -- this ORDER, not just a formula, must live here, visibly tunable, NOT hard-coded in Python. build_samasa_trainer.py reads this file (override with --weights <file>). H1398 (20-07-2026): member_side/member_recall drills now default to ranking compound final members (uttarapadas) by REAL DCS corpus attestation (mw_rank=corpus, VisualDCS H1328 derived-data/Kompozity/uttarapada_dict_vs_corpus.tsv, kosha manifest id uttarapada-dict-vs-corpus) instead of MW dictionary type-count -- H1328's report measured median Jaccard 0.00 between the two rankings' first-member sets, so type-count ranking taught drills nobody meets in real text. mw_corpus_min_tokens is the corpus_tokens floor (corpus_status must also be \"final\"); member_stoplist drops particles/pronoun-stems/bare verb roots/-tva/-tā taddhita suffixes that corpus_tokens ranking alone does not reliably suppress (the -tva/-tā suffixes are additionally already excluded by the MW classifier's TADDHITA_SUFFIX tag -- listed here too for defence-in-depth and visibility). --mw-rank dict restores the legacy MW-type-count ranking + --mw-min-left floor.",
   "type_teaching_order": ["KD", "TP", "BV", "DV"],
   "min_corpus_freq": 1,
-  "corpus_drill_cap": 2000
+  "corpus_drill_cap": 2000,
+  "mw_rank": "corpus",
+  "mw_corpus_min_tokens": 50,
+  "member_stoplist": [
+    "ca", "eva", "vā", "tu", "hi", "api", "iva",
+    "idam", "tad", "etad", "yad", "kim", "adas", "sva",
+    "kṛ", "as", "bhū", "gam", "i", "dā", "dhā", "sthā", "han", "nī", "pā", "yā",
+    "tva", "tā"
+  ]
 }
