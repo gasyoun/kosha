@@ -1572,6 +1572,25 @@
       ],
       "notes": "All 1168 Scherzl case-government relations adjudicated against the DCS dependency treebank: 693 CONFIRMED / 1 CONTRADICTED (hand-adjudicated to a non-defect) / 288 UNATTESTED-INSUFFICIENT / 186 NOT-ADJUDICABLE. Only ~3.9% of DCS sentences carry dependency arcs, so CONFIRMED is a lower bound and a zero dep-count never disconfirms. Already tracked+public in SanskritGrammar; listed for discovery, not re-released.",
       "data_statement": "Aggregate government-relation verdicts + per-verb governed-case counts. Source corpus: Digital Corpus of Sanskrit (DCS), Oliver Hellwig, CC BY 4.0 (via dcs-conllu) — attribution required; counts are facts extracted from the corpus, not DCS text. Government catalogue: V. I. Scherzl's 19th-c. index (public domain)."
+    },
+    {
+      "id": "pd-dcs-corpus-coverage",
+      "title": "Poona Dictionary × DCS corpus-coverage crosswalk",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "format": "tsv",
+      "rows": 118,
+      "size_bytes": 6690,
+      "keying": "one row per DCS text the Poona Dictionary cites (PD letter a-): DCS title, PD sigla, PD citation count, DCS 2021/2026 tokens, DCS chapters, coverage grade",
+      "source_repo": "https://github.com/sanskrit-lexicon/csl-atlas",
+      "source_path": "data/pd/pd_dcs_text_crosswalk.tsv (beside pd_siglum_families.tsv — every PD siglum with match_type — and pd_dcs_metrics.json)",
+      "builder": "scripts/pd_extract_sigla.py + scripts/pd_dcs_crosswalk.py (H1336, csl-atlas PR #276)",
+      "consumers": [
+        "csl-atlas /tools/pd-dcs-coverage page",
+        "corpus-representativeness / digitisation-gap prioritisation (which PD-cited texts DCS still lacks)"
+      ],
+      "notes": "First measurement of how much of PD's cited source canon DCS holds (PD a- volumes: 398,359 citation occurrences). PD-citation-weighted coverage 25.2%, DCS-token-weighted 77.9% (2026) / 74.1% (2021), title-level ~2.4-4.8% (118 of ~2,445 works). DCS holds the classical/Vedic core but not PD's encyclopedic breadth (puranas, kosas, classical kavya; residue = 75% of PD primary citation mass). Already tracked+public in csl-atlas; listed for discovery, not re-released. Scope: PD published a-~apaca- only.",
+      "data_statement": "Aggregate coverage crosswalk. PD source: An Encyclopaedic Dictionary of Sanskrit on Historical Principles (Deccan College), via drdhaval2785/SanskritSpellCheck pd.txt (external, read-only). DCS token counts: Digital Corpus of Sanskrit, Oliver Hellwig, CC BY 4.0 (via gasyoun/VisualDCS Corpus-Delta 2021-2026) — attribution required; counts are facts extracted from the corpus, not DCS text."
     }
   ]
 }
