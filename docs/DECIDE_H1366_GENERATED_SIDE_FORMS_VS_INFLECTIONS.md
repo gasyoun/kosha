@@ -2,13 +2,14 @@
 
 _Created: 20-07-2026 · Last updated: 20-07-2026_
 
-**Status: 🟡 OPEN — parked for a human ruling. This brief does NOT rule.**
-Recommendation below is `forms` at **high confidence**; a human accepts or
-overrides it, at which point it becomes kosha PLAN `D13` and
-[CONTRADICTIONS §6](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md)
-graduates to a ✅ tombstone.
+**Status: ✅ RULED 20-07-2026 — `forms` is canonical (accepted by MG).**
+The recommendation below was accepted; the decision is recorded as kosha PLAN
+[§2 `D13` + §3a](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_CONCORDANCE_Q3_2026H2.md)
+and [CONTRADICTIONS §3](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md)
+has graduated to a ✅ tombstone. **W2a is unblocked to consume `forms`.** This file
+is retained as the reasoned brief behind the ruling.
 
-> **Why this is parked and not decided by the agent.** W1b/A3
+> **Why the agent briefed rather than ruled (pre-acceptance context).** W1b/A3
 > ([H1262](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1262-Opus_kosha_a3_attested_form_join_morphology_audit_18.07.26.md))
 > surfaced this as an explicit STOP-AND-SURFACE block and declared it had "no
 > standing to settle it"; [H1366](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1366-Opus_kosha_generated-side-forms-vs-inflections-canonical-ruling_20.07.26.md)
@@ -96,13 +97,12 @@ asset (the MW full-paradigm morphology table), available to A4 as the Option-A
 cross-check and as its own future data-hub layer, never as the A4 generated
 denominator.
 
-## If the recommendation is accepted
+## Accepted — done (20-07-2026)
 
-1. Record it as kosha PLAN §2 **`D13`** (settled), and flip this file's status to
-   ✅ (pointer to the D13 row).
-2. Graduate [CONTRADICTIONS §6](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md)
-   to a ✅ tombstone.
-3. W2a proceeds on the 426,410-row non-heritage `forms` AG set.
+1. ✅ Recorded as kosha PLAN §2 **`D13`** (settled) + §3a; this file flipped to ✅.
+2. ✅ [CONTRADICTIONS §3](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md)
+   graduated to a ✅ tombstone.
+3. ✅ W2a unblocked — proceeds on the 426,410-row non-heritage `forms` AG set.
 
 ## Reproduce
 
