@@ -1,6 +1,6 @@
 # D5 — measurements, then the decisions they inform
 
-_Created: 03-07-2026 · Last updated: 13-07-2026_
+_Created: 03-07-2026 · Last updated: 20-07-2026_
 
 Phase 1 D5 ([PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md)):
 **measure the real system, then settle the SLO items
@@ -39,22 +39,74 @@ anti-gaming rules:
 
 ## 1. Database size on disk (RISKS.md R11)
 
+> **Re-measured 20-07-2026 (Opus 4.8, `claude-opus-4-8`, H1367) — the file grew
+> ~5.8× (276 MiB → 1.674 GB) and now sits at 84% of the 2 GB release-asset
+> ceiling.** The original 03-07 measurement is kept below the current one as the
+> historical baseline. The re-measurement triggered the **distribution-strategy
+> ruling D5-4** in
+> [KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md).
+
+**Current — 20-07-2026 (`data_version` `0.1.0-dev`):**
+
 | Metric | Value |
 |---|---|
-| `kosha.db` file | **289,820,672 B = 276.4 MiB** (289.8 MB decimal) |
-| SQLite pages | 70,757 × 4,096 B |
-| Rows | entries 444,773 · forms 426,410 · lemmas 323,425 · senses 692,403 · sources 3 |
-| vs GitHub **100 MB per-file** limit | **2.9× over** → ships as a **release asset**, never in-repo (R11 confirmed) |
-| vs **2 GB release-asset** ceiling | 14.5% — ample headroom for growth |
+| `kosha.db` file | **1,673,854,976 B = 1,596.3 MiB = 1,673.9 MB decimal (1.559 GiB)** |
+| SQLite pages | 408,656 × 4,096 B · freelist 0 (already `VACUUM`-tight) |
+| Rows | entries 444,773 · forms 1,378,401 · lemmas 323,425 · senses 692,403 · **inflections 6,917,018** · heritage_anchor 185,803 · stem_bridge 760 · sources 3 |
+| vs GitHub **100 MB per-file** limit | **16.7× over** → release asset only, never in-repo (R11) |
+| vs **2 GB decimal** ceiling | **83.7%** — the number the org quotes as "84%" |
+| vs true **2 GiB** GitHub per-asset limit (2,147,483,648 B) | **77.9%** — **452 MiB (474 MB) real headroom** |
 
-The 276.4 MiB reflects the D5 index change (§3: +3.4 MiB for the covering
-index + ANALYZE stats vs the pre-D5 273.0 MiB). `dbstat` is not compiled into
-this SQLite build, so a per-object page breakdown was unavailable; the logical
-driver is `entries.body` (verbatim csl-orig markup, A1) at 444,773 records.
+**What grew, and by how much.** `dbstat` is still not compiled into this SQLite
+build, so exact per-object pages remain unavailable; a per-table logical-size
+estimate (`SUM(length())` over row data, plus index-key accounting) attributes
+the file as follows:
 
-**Decision input:** R11's "data via release assets only" is not optional — the
-file is unconditionally over the in-repo limit. The static Pages tier (§5) is
-sized separately below.
+| Table | rows | est. row-data | + its indexes | est. layer total | share of file |
+|---|---:|---:|---:|---:|---:|
+| **inflections** | 6,917,018 | ~477 MB | PK+form+lemma ≈ ~610 MB | **~1.09 GB** | **~65%** |
+| entries (incl. `body`) | 444,773 | ~165 MB | ~40 MB | ~205 MB | ~12% |
+| forms | 1,378,401 | ~41 MB | ~70 MB | ~110 MB | ~7% |
+| lemmas | 323,425 | ~18 MB | ~20 MB | ~38 MB | ~2% |
+| senses | 692,403 | ~11 MB | ~15 MB | ~26 MB | ~2% |
+| heritage_anchor | 185,803 | ~3 MB | ~3 MB | ~6 MB | ~0.4% |
+
+Index + B-tree overhead is ~57% of the whole file (row-data sums to ~715 MB /
+43%), concentrated in the three `inflections` indexes over 6.9M rows. **The
+single dominant driver is the `inflections` paradigm layer** (H-series
+paradigm/`cologne_mwinflect` expansion) at ~two-thirds of the file — and it is
+*derived, regenerable* data, not primary lexical text. Everything **except**
+inflections is a ~0.5–0.6 GB "core lexical DB". (Index-footprint figures are
+estimates, labelled as such per the EVAL_PLAN anti-gaming rule; the row-data
+column is exact.)
+
+**Compressibility (measured 20-07-2026).** `gzip -1` (fastest/worst level) →
+**458 MB = 27.4% of original, 3.65×**; `xz`/`zstd -19` reach ~5× (~330 MB). The
+uncompressed file is text-heavy repetitive SLP1, so it compresses hard — the
+lever the D5-4 ruling leans on.
+
+**Decision input:** the "ample headroom" of 03-07 is gone. R11's "data via
+release assets only" is still not optional (16.7× over the in-repo limit), but
+the file is now close enough to the single-asset ceiling that *how* it ships
+must be ruled — see **D5-4** (compress the restricted-tier backup asset; split
+the queryable DB into ATTACH-able core + inflections layers for P-D5). The
+static Pages tier (§5) is sized separately below.
+
+**Historical baseline — 03-07-2026 (276.4 MiB):**
+
+> | Metric | Value |
+> |---|---|
+> | `kosha.db` file | **289,820,672 B = 276.4 MiB** (289.8 MB decimal) |
+> | SQLite pages | 70,757 × 4,096 B |
+> | Rows | entries 444,773 · forms 426,410 · lemmas 323,425 · senses 692,403 · sources 3 |
+> | vs GitHub **100 MB per-file** limit | **2.9× over** → ships as a **release asset**, never in-repo (R11 confirmed) |
+> | vs **2 GB release-asset** ceiling | 14.5% — ample headroom for growth |
+>
+> The 276.4 MiB reflected the D5 index change (§3: +3.4 MiB for the covering
+> index + ANALYZE stats vs the pre-D5 273.0 MiB). At that point `forms` held only
+> 426,410 rows and there was **no `inflections` table at all** — the 5.8× growth
+> since is the heritage forms ingest (H111: 426k → 1.38M forms) and, dominating
+> everything, the 6.9M-row `inflections` paradigm layer.
 
 ## 2. Row / coverage facts
 

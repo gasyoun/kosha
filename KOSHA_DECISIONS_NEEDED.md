@@ -1,6 +1,6 @@
 # kosha — D5 decisions record
 
-_Created: 03-07-2026 · Last updated: 11-07-2026_
+_Created: 03-07-2026 · Last updated: 20-07-2026_
 
 The three items
 [ARCHITECTURE.md](https://github.com/gasyoun/kosha/blob/main/ARCHITECTURE.md)
@@ -154,13 +154,74 @@ and the disagreement pool remain external validation artifacts.
 
 ---
 
+## D5-4 — Distribution strategy for the oversize `kosha.db` (decided 20-07-2026)
+
+**Trigger.** The D5 re-measurement
+([D5_MEASUREMENTS.md §1](https://github.com/gasyoun/kosha/blob/main/D5_MEASUREMENTS.md),
+Opus 4.8 `claude-opus-4-8`, H1367) found `kosha.db` grown from 276 MiB (03-07)
+to **1.674 GB — 83.7% of the 2 GB-decimal release-asset ceiling** (77.9% of the
+true 2 GiB GitHub per-asset limit; ~452 MiB real headroom). The 03-07 "ample
+headroom" input is stale. This is a judgment-tier engineering decision settled
+from data (like D5-1/2/3), **not** an MG-gated `@DECIDE`.
+
+**Facts the ruling stands on.**
+- The **`inflections` paradigm layer** (6.92M rows) is ~65% of the file
+  (~1.09 GB, table + its 3 indexes) and is *derived/regenerable*
+  (`cologne_mwinflect` expansion), not primary lexical data. `kosha.db` **minus**
+  inflections is a ~0.5–0.6 GB "core lexical DB".
+- `kosha.db` is `tier: restricted`, `in_release: "not-applicable"` in
+  [datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) —
+  it is **not, and will not be, a public release asset** (regenerable + oversize
+  single-copy). Its only distribution channels are (a) restricted-tier **backup**
+  (private-repo release / private storage, per
+  [DATA_HUB_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md)
+  architecture) and (b) **local agent-queryable** use (P-D5).
+- It **compresses to ≤27%** (`gzip -1` floor = 458 MB / 3.65×; `xz`/`zstd -19`
+  ~5× / ~330 MB) — text-heavy repetitive SLP1.
+
+**Decision.** The 2 GB alarm is real for an *uncompressed single-file* channel
+and **moot for the channels kosha.db actually uses** — because neither should
+ever carry the raw 1.674 GB file:
+
+1. **Backup asset ships compressed, never raw.** The restricted-tier backup is
+   `kosha.db.zst` (or `.xz`), decompressed on fetch. At the measured ~27% floor
+   this keeps the asset <500 MB and defers the 2 GB ceiling past **~6 GB** of raw
+   DB growth. This alone dissolves the "84%" alarm for the backup channel. Record
+   the compressed asset name + `sha256` in the manifest row.
+2. **P-D5 agent-queryable distribution splits into ATTACH-able layers, not one
+   monolith.** Ship `kosha_core.db` (entries/forms/lemmas/senses/heritage_anchor
+   ≈ 0.5–0.6 GB) + `kosha_inflections.db` (the paradigm layer ≈ 1.1 GB) as
+   separate files `ATTACH`-ed at query time — the exact "attached layers" pattern
+   P-D5 already names. Each stays well under 2 GB and grows independently; the
+   fast-growing purely-derived inflections layer can be regenerated/re-shipped
+   without touching the stable core, and a consumer who doesn't need 6.9M inflected
+   forms skips 1.1 GB. (This mirrors the P-D2 precedent that oversize single-copy
+   DBs get a **split-or-exclude** ruling, e.g. the 11 GB `archive_stopword.sqlite`.)
+3. **Governance — add a size tripwire to the release/eval gate.** R11's "2 GB
+   ceiling — ample" is corrected (see RISKS.md). Add a **G-SIZE** check to
+   [`scripts/measure_d5.py`](https://github.com/gasyoun/kosha/blob/main/scripts/measure_d5.py) /
+   the release gate: **FAIL** if any single *uncompressed* file intended to ship
+   as one asset exceeds ~1.8 GB, **WARN** at 1.5 GB — so the ceiling fails CI, not
+   a broken upload. (Implementation queued, not landed in H1367 — this handoff
+   rules the strategy and re-measures; the tripwire + the actual `.zst`/split
+   plumbing are follow-on work.)
+
+**What this handoff did / did not do.** H1367 **re-measured** §1 and **ruled**
+the strategy (this record). It did **not** yet compress an asset, split the DB,
+or wire G-SIZE — those are follow-on (the DB is regenerable and privately backed
+up, so nothing is at risk in the interim; the ruling is what was owed now).
+
+---
+
 ## Status
 
-All three D5-parked items **resolved** and reflected in
+The three original D5-parked items (D5-1/2/3) are **resolved** and reflected in
 [ARCHITECTURE.md](https://github.com/gasyoun/kosha/blob/main/ARCHITECTURE.md)
 (parked table) and
 [PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md)
 (D5 check). Phase 1 is complete; P2 (public alpha, MG deploys) can start against
-these fixed targets.
+these fixed targets. **D5-4** (20-07-2026) rules the distribution strategy after
+the DB grew to 84% of the 2 GB ceiling; its follow-on plumbing (compress backup,
+split for P-D5, G-SIZE tripwire) is queued.
 
 _Dr. Mārcis Gasūns_
