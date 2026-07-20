@@ -131,6 +131,7 @@ shared core), then the greenfield grammar work.
 - **Build:** for each attested form, run the vidyut derivation, capture the sūtra sequence, invert to `sūtra → {attested forms exemplifying it}`. A concordance keyed by sūtra number — **unpublished territory: no corpus-grounded Pāṇinian concordance exists.**
 - **Deliverables:** dataset `paninian-corpus-concordance` (manifest row + release) · web page `/concordance/panini/` (click a sūtra → its attested corpus exemplars, scan-anchored).
 - **Exit checks:** a sūtra-coverage map (which of ~4,000 sūtras have real corpus exemplars, which are "dark"); sampled human verification that the derivation chain is correct for N forms; derivation-metadata license settled (see @DECIDE).
+- **W2a (derivation harness) DONE 20-07-2026 (Sonnet 5 `claude-sonnet-5`, H1368).** [`scripts/build_panini_derivations.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_panini_derivations.py) ran the FULL 401,368-row W1b AG bucket (pilot 10k reported first per exit-check 2a-1, then the full run — 883.8s, 454.1 forms/s, well under the 40-min scaling cap): `ok` 72,764 (18.13%) · `no-derivation` 237,447 (59.16%) · `ambiguous` 86,857 (21.64%) · `engine-error` 4,300 (1.07%); 2,815 distinct sūtra chains, length min 6 / median 12 / max 37. Full detail + 30-example sampled human-verification section: [`data/concordance/DERIVATION_HARNESS_BUILD_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/DERIVATION_HARNESS_BUILD_REPORT.md). **W2b (invert to the sūtra concordance) is next, not yet built.**
 
 ---
 
