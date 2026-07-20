@@ -3,7 +3,7 @@
 _Created: 02-07-2026 · Last updated: 02-07-2026_
 
 Replaces the original "2 weeks to extract + index dicts" plan
-([KOSHA_IMPLEMENTATION_PLAN.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_IMPLEMENTATION_PLAN.md),
+(`KOSHA_IMPLEMENTATION_PLAN.md`,
 now banner-flagged): with the union index, glossary, and scan resolver
 consumed instead of rebuilt, Phase 1 is **day-scale glue**. Genuinely new code
 is marked **NEW**; everything else is import/port.
@@ -63,7 +63,7 @@ exists and its check passes — that is the lesson of the 02-07-2026 audit.
 
 - Implement `/api/lemma/{key}`, `/api/lemma/form/{form}`, `/api/search`,
   `/health` per the corrected contract in
-  [KOSHA_DEPLOYMENT.md Appendix A](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_DEPLOYMENT.md)
+  `KOSHA_DEPLOYMENT.md Appendix A`
   (SLP1 keys are SLP1 — `banD`, not `bandh`; MW responses carry page+column,
   never "volume").
 - Transliteration via sanskrit-util; `encoding=` query param.

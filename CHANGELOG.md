@@ -35,7 +35,7 @@ sense citations pin to `data_version`, not to repo tags.
 - **D5 re-measured + distribution strategy ruled — `kosha.db` is at 84% of the 2 GB release-asset ceiling** ([H1367](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1367-Opus_kosha_d5-remeasure-and-release-asset-ceiling-distribution-ruling_20.07.26.md), Opus 4.8 `claude-opus-4-8`). The DB grew ~5.8× since the 03-07 D5 baseline (276 MiB → **1,673,854,976 B = 1.674 GB**, 83.7% of 2 GB decimal / 77.9% of the true 2 GiB GitHub per-asset limit, ~452 MiB real headroom). A per-table breakdown (`dbstat` still absent; row-data exact, index footprint estimated) attributes ~65% of the file to the new **`inflections` paradigm layer** (6.92M rows, table + 3 indexes ≈ 1.09 GB) — *derived/regenerable*, not primary lexical data; everything else is a ~0.5–0.6 GB "core lexical DB". The file compresses to **≤27%** (`gzip -1` floor 458 MB / 3.65×; `xz`/`zstd -19` ~5× / ~330 MB). **Ruling D5-4** ([KOSHA_DECISIONS_NEEDED.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md)): the alarm is real for an uncompressed single-file channel but moot for the channels `kosha.db` actually uses (`tier: restricted`, never a public asset) — (1) the restricted-tier backup ships **compressed**, never raw (defers the ceiling past ~6 GB of growth); (2) P-D5 agent-queryable distribution **splits** into ATTACH-able `kosha_core.db` + `kosha_inflections.db`; (3) a **G-SIZE** tripwire (FAIL >1.8 GB uncompressed single asset) is added to the release gate so the ceiling fails CI, not an upload. Updated [`D5_MEASUREMENTS.md §1`](https://github.com/gasyoun/kosha/blob/main/D5_MEASUREMENTS.md), [`RISKS.md R11`](https://github.com/gasyoun/kosha/blob/main/RISKS.md) (the "ample" language was stale), and the `kosha-db` manifest row. The compress/split/G-SIZE plumbing is queued follow-on; the DB is regenerable and privately backed up, so nothing is at risk in the interim.
 
 ### Fixed
-- **W1e — link-rot repaired (20 archived handoffs, 50 occurrences across 18 files)** ([H1266](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1266-Sonnet_kosha_handoff_link_rot_mover_fix_catchup_18.07.26.md), Sonnet 5 `claude-sonnet-5`). Root cause: `Uprava/tools/handoff_archive.py`'s cross-reference repoint pass only ever scans its OWN repo (Uprava's root `*.md` + its `handoffs/` folder) — a full blob-URL reference in a sibling repo's markdown, like this repo's own `PLAN_KOSHA_PEDAGOGY_ENGINE_2026_2027.md`, was structurally invisible to it (SCOPE, not a timing/audit-cadence gap — confirmed by reading `find_cross_references` itself). Fixed at the source: the mover now appends an `(old_url, new_url)` row to `Uprava/handoffs/ARCHIVE_MOVE_MANIFEST.jsonl` per archived handoff, and `Uprava/tools/link_audit_fix.py` (already an org-wide scanner) consults it before falling back to its old main/master-swap-only guess. Backfilled the manifest for every already-archived handoff this repo still referenced by the pre-archive path (not just the 7 named in the original brief) and repointed all 20/50 in one pass — including 3 (`H093`/`H094`/`H111`) whose references used never-correct shorthand filenames predating the current naming convention, a related but distinct historical casualty resolved via the same manifest mechanism. 27 other broken links in this repo (missing `KOSHA_*.md` docs, `master`→`main` drift, wrong-org citations) are unrelated pre-existing breakage, out of scope for this fix.
+- **W1e — link-rot repaired (20 archived handoffs, 50 occurrences across 18 files)** ([H1266](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1266-Sonnet_kosha_handoff_link_rot_mover_fix_catchup_18.07.26.md), Sonnet 5 `claude-sonnet-5`). Root cause: `Uprava/tools/handoff_archive.py`'s cross-reference repoint pass only ever scans its OWN repo (Uprava's root `*.md` + its `handoffs/` folder) — a full blob-URL reference in a sibling repo's markdown, like this repo's own `PLAN_KOSHA_PEDAGOGY_ENGINE_2026_2027.md`, was structurally invisible to it (SCOPE, not a timing/audit-cadence gap — confirmed by reading `find_cross_references` itself). Fixed at the source: the mover now appends an `(old_url, new_url)` row to `Uprava/handoffs/ARCHIVE_MOVE_MANIFEST.jsonl` per archived handoff, and `Uprava/tools/link_audit_fix.py` (already an org-wide scanner) consults it before falling back to its old main/master-swap-only guess. Backfilled the manifest for every already-archived handoff this repo still referenced by the pre-archive path (not just the 7 named in the original brief) and repointed all 20/50 in one pass — including 3 (`H093`/`H094`/`H111`) whose references used never-correct shorthand filenames predating the current naming convention, a related but distinct historical casualty resolved via the same manifest mechanism. 27 other broken links in this repo (missing `KOSHA_*.md` docs, `master`→`main` drift, wrong-org citations) are unrelated pre-existing breakage, out of scope for this fix.
 
 ## [0.67.0] - 2026-07-19
 ### Added (samāsa trainer — MW final-member drills, a third source)
@@ -48,11 +48,11 @@ sense citations pin to `data_version`, not to repo tags.
 ### Added
 
 - **W-RU-a gloss.ru re-run over the subhāṣita pack**
-  ([H1312](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1312-Sonnet_kosha_subhashita-pack-ru-gloss-rerun_19.07.26.md),
+  ([H1312](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1312-Sonnet_kosha_subhashita-pack-ru-gloss-rerun_19.07.26.md),
   Sonnet 5 `claude-sonnet-5`). H1279 shipped the beginner subhāṣita reader
   ([`subhashita_beginner_pack.json`](https://github.com/gasyoun/kosha/blob/main/data/subhashita/subhashita_beginner_pack.json))
   without `gloss.ru` — the W-RU-a layer
-  ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md))
+  ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md))
   landed mid-flight and its joiner keys on lemma+surface, but the pack's tokens are
   unsandhied IAST surface forms with no lemma. `scripts/build_subhashita_pack.py` now
   attaches a per-token SLP1 lemma (vidyut-cheda: the same run's `.lemma` when the
@@ -78,7 +78,7 @@ sense citations pin to `data_version`, not to repo tags.
 
 ### Added
 
-- **W-RU-b beginner subhāṣita reader shipped** ([H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md),
+- **W-RU-b beginner subhāṣita reader shipped** ([H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md),
   Fable 5 `claude-fable-5`): all 7,537 Indische Sprüche
   ([SanskritLexicography F33](https://github.com/gasyoun/SanskritLexicography/blob/master/FEATURES_INDEX.md), public domain)
   difficulty-graded with a documented W2a-reduced 2-axis scorer
@@ -95,7 +95,7 @@ sense citations pin to `data_version`, not to repo tags.
   reader page [`reading/subhashita/`](https://github.com/gasyoun/kosha/blob/main/reading/subhashita/index.html) +
   Anki deck [`subhashita_beginner_anki.apkg`](https://github.com/gasyoun/kosha/blob/main/data/subhashita/subhashita_beginner_anki.apkg);
   manifest row `subhashita-reader-pack` + data statement. `gloss.ru` absent — W-RU-a
-  ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md))
+  ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md))
   unshipped at build time; re-run TODO logged in the pack meta, not silent.
 
 ## [0.63.0] - 2026-07-19
@@ -103,7 +103,7 @@ sense citations pin to `data_version`, not to repo tags.
 ### Added
 
 - **W-RU-a — inline Sanskrit→Russian gloss layer in reading packs**
-  ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md),
+  ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md),
   Opus 4.8 `claude-opus-4-8`). A Russian-speaking learner hovers a token and reads its meaning.
   [`scripts/build_ru_gloss_layer.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_ru_gloss_layer.py)
   joins every reading-pack token to the three **public site-tier** SanskritRussian layers
@@ -128,9 +128,9 @@ sense citations pin to `data_version`, not to repo tags.
 - **Wave RU staged in the pedagogy plan** ([`docs/IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE_RU.md`](https://github.com/gasyoun/kosha/blob/main/docs/IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE_RU.md),
   via [`/ask-batch`](https://github.com/gasyoun/claude-config/blob/main/commands/ask-batch.md), Fable 5 `claude-fable-5`):
   W-RU-a inline Sa→Ru gloss layer over reading packs
-  ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md), queued)
+  ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md), queued)
   and W-RU-b graded beginner subhāṣita reader from Indische Sprüche
-  ([H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md), queued);
+  ([H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md), queued);
   roadmap/plan/verification docs extended with the wave, decisions 13–14 (RU wave + rights gate) recorded.
 
 ## [0.64.0] - 2026-07-19
@@ -139,7 +139,7 @@ sense citations pin to `data_version`, not to repo tags.
 
 - `scripts/migrate_manifest_schema.py` + `scripts/cut_data_v020.py` — **D8 manifest
   schema hardening** (Concordance-Q3 W1c,
-  [H1264](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1264-Sonnet_kosha_manifest_schema_hardening_data_v020_18.07.26.md)):
+  [H1264](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1264-Sonnet_kosha_manifest_schema_hardening_data_v020_18.07.26.md)):
   `in_release` migrated to a closed vocabulary (`"<release-tag>"` · `"unreleased"` ·
   `"not-applicable"`) across all 78 manifest rows — the undefined `null`/`"unreleased"`
   ambiguity that let a 33-row unreleased backlog accumulate unnoticed. `release_asset`
@@ -952,8 +952,8 @@ sense citations pin to `data_version`, not to repo tags.
   (GRETIL + vidyut-cheda) build is replaced by a hand-curated word-by-word
   source — `SanskritGrammar/Concordance/Gita.xlsm` (`Grammar` sheet: lemma,
   root, morphology, English + Russian gloss), vendored via
-  [`scripts/extract_gita_gold.py`](https://github.com/gasyoun/kosha/blob/main/scripts/extract_gita_gold.py)
-  to [`reading/data/sources/gita-1_gold_sanskritgrammar.tsv`](https://github.com/gasyoun/kosha/blob/main/reading/data/sources/gita-1_gold_sanskritgrammar.tsv)
+  ``scripts/extract_gita_gold.py``
+  to ``reading/data/sources/gita-1_gold_sanskritgrammar.tsv``
   (569 words / **47** verses — the full vulgate chapter). Rebuilt by
   [`scripts/build_reading_pack_gita.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_reading_pack_gita.py):
   **567/569 (99.6%) linked** to `/w/` cards (curated lemma 513 · root 46 ·
@@ -1001,14 +1001,14 @@ sense citations pin to `data_version`, not to repo tags.
 - **H848: Gītā 1 reading pack (EXPERIMENTAL, machine-segmented).** Since the
   Bhagavadgītā is absent from the DCS gold corpus (MBh book 6 omits adhyāyas
   23–40), this pack takes its mūla from GRETIL (vendored public-domain text,
-  [`reading/data/sources/gita-1_mula_gretil.tsv`](https://github.com/gasyoun/kosha/blob/main/reading/data/sources/gita-1_mula_gretil.tsv),
+  ``reading/data/sources/gita-1_mula_gretil.tsv``,
   46 verses) and lemmatises it by machine via
   [`scripts/build_reading_pack_gita.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_reading_pack_gita.py)
   — kosha's `forms`-table reverse-lookup (549 tokens) with a vidyut-cheda
   fallback (16). **565/597 tokens (94.6%) linked** to `/w/` cards. Unlike the
   gold Nala pack, lemmas are auto-derived and some are wrong (long samāsa
   compounds, a few names/participles); the viewer shows an **experimental
-  banner** and [`reading/BUILD_REPORT_GITA.md`](https://github.com/gasyoun/kosha/blob/main/reading/BUILD_REPORT_GITA.md)
+  banner** and ``reading/BUILD_REPORT_GITA.md``
   lists the residue. Dataset `gita-reading-pack-1-experimental`; the `reading/`
   viewer now offers both Nala 1 (gold) and Gītā 1 (experimental).
 
@@ -1560,7 +1560,7 @@ flight, not caused by this release).
   ranked lemmas already cover 95.4% of corpus token mass — full reasoning in
   the module docstring) and **one corpus example per lemma** (Sanskrit
   citation + aligned Russian, joined from the sibling
-  [`SanskritLexicography/RussianTranslation/src/corpus_lexicon.jsonl`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/corpus_lexicon.jsonl)
+  ``SanskritLexicography/RussianTranslation/src/corpus_lexicon.jsonl``
   (1,091,528 rows) via the existing `forms.form_slp1 -> lemma_slp1` join —
   examples ship **per lemma, not per sense**: the corpus feed has no
   sense-level tagging, stated explicitly rather than silently downgraded.

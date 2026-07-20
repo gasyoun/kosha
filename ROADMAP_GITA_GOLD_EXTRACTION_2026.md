@@ -62,7 +62,7 @@ registered public/MIT in the manifest + data statement
 Everything below reads this file. _Original plan:_ extract the **full `Combined` sheet** (9,091 words × 18 adhyāyas × 24 fields,
 + the `Grammar` etymology-notes column) into a committed kosha dataset
 `data/gita/gita_gold.tsv` (+ per-chapter JSON), generalising the ch-1 pilot
-[`scripts/extract_gita_gold.py`](https://github.com/gasyoun/kosha/blob/main/scripts/extract_gita_gold.py)
+``scripts/extract_gita_gold.py``
 (add `--sheet Combined --all-chapters`). Register it as a **citable dataset**:
 kosha [`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
 row + a `docs/data-statements/gita-gold.meta.md` crediting the author +

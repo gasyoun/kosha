@@ -82,8 +82,8 @@ already ruled.
 | **Metre (chandas)** | §3.9 | 🟡 **REUSE/INTEGRATE** — [SanskritKaraoke](https://github.com/gasyoun/SanskritKaraoke) owns the trainer; kosha wires metre-ID into reading | [H951](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H951-Sonnet_kosha_pedagogy-w3-metre-in-reading-integration_14.07.26.md) |
 | **Script / Devanāgarī** | §3.8 | ⚪ **REUSE** — [csl-guides](https://github.com/sanskrit-lexicon/csl-guides) owns the quizzes; kosha role deferred (roadmap only) | — |
 | **Audio / recitation** | §3.7 | ⬜ **AGENDA** — external-content-gated; no kosha build this plan | — |
-| **RU gloss layer (Wave RU)** | §3.4 | 🟢 **BUILD** — additive Russian gloss language over reading packs; no sibling owns an RU reading surface (added 19-07-2026) | [H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md) |
-| **Subhāṣita beginner reader (Wave RU)** | §3.4 | 🟢 **BUILD** — new pack family over public-domain Indische Sprüche (F33); subhāṣitas currently feed only PWG citations (added 19-07-2026) | [H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md) |
+| **RU gloss layer (Wave RU)** | §3.4 | 🟢 **BUILD** — additive Russian gloss language over reading packs; no sibling owns an RU reading surface (added 19-07-2026) | [H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md) |
+| **Subhāṣita beginner reader (Wave RU)** | §3.4 | 🟢 **BUILD** — new pack family over public-domain Indische Sprüche (F33); subhāṣitas currently feed only PWG citations (added 19-07-2026) | [H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md) |
 
 ---
 
@@ -98,8 +98,8 @@ already ruled.
 | [H949](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H949-Opus_kosha_pedagogy-w2-graded-reader-difficulty-scorer_14.07.26.md) | W2a | Graded-reader expansion + difficulty scorer | Opus 4.8 |
 | [H950](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H950-Sonnet_kosha_pedagogy-w2-roots-frequency-corpus-integration_14.07.26.md) | W2b | Roots frequency + corpus attestation (integrate WhitneyRoots) | Sonnet 5 |
 | [H951](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H951-Sonnet_kosha_pedagogy-w3-metre-in-reading-integration_14.07.26.md) | W3a | Metre-ID wired into reading (integrate SanskritKaraoke) | Sonnet 5 |
-| [H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md) | W-RU-a | Inline Sa→Ru gloss layer in reading packs (minted 19-07-2026, queued) | Opus 4.8 |
-| [H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md) | W-RU-b | Graded beginner subhāṣita reader, Indische Sprüche (minted 19-07-2026, queued) | Fable 5 |
+| [H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md) | W-RU-a | Inline Sa→Ru gloss layer in reading packs (minted 19-07-2026, queued) | Opus 4.8 |
+| [H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md) | W-RU-b | Graded beginner subhāṣita reader, Indische Sprüche (minted 19-07-2026, queued) | Fable 5 |
 
 ---
 

@@ -42,7 +42,7 @@ defined done (dataset + page + manifest + tests + a coverage headline).
 
 ## Acceptance criteria per Wave-RU build (added 19-07-2026)
 
-### W-RU-a — Inline Sa→Ru gloss layer ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md))
+### W-RU-a — Inline Sa→Ru gloss layer ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md))
 
 | Check | Pass condition |
 |---|---|
@@ -52,7 +52,7 @@ defined done (dataset + page + manifest + tests + a coverage headline).
 | Join correctness | 50-token fixture test: every expected hit/miss exact |
 | Manifest + release | `ru-gloss-layer` row + data statement; changelog + release |
 
-### W-RU-b — Beginner subhāṣita reader ([H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md))
+### W-RU-b — Beginner subhāṣita reader ([H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md))
 
 | Check | Pass condition |
 |---|---|

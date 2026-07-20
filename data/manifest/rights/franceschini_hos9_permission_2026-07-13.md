@@ -4,7 +4,7 @@ _Created: 13-07-2026 · Last updated: 13-07-2026_
 
 ## What this covers
 
-[`SanskritLexicography/review/HOS9-Bloomfield-VedConcord1906/`](https://github.com/gasyoun/SanskritLexicography/tree/master/review/HOS9-Bloomfield-VedConcord1906)
+``SanskritLexicography/review/HOS9-Bloomfield-VedConcord1906/``
 — the electronic edition (UTF-16, `concordance.txt` + `abbreviations.txt` +
 `introduction.txt` + `copyright.txt`) of Maurice Bloomfield's *A Vedic
 Concordance* (Baltimore, Harvard Oriental Series vol. 9, 1906), digitally

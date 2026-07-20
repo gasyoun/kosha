@@ -49,7 +49,7 @@ and SLO + cadence decided in
   measurements.
 - Minimal lookup page (`docs/index.html` + vanilla JS): autocomplete box,
   cache-first / API-fallback (pattern in
-  [KOSHA_DEPLOYMENT.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_DEPLOYMENT.md)),
+  `KOSHA_DEPLOYMENT.md`),
   service worker for offline (the PWA is this tier plus a manifest).
 - Server-rendered permalink pages for SEO/archivability come with P5; the
   alpha is JS-first and honest about it.
