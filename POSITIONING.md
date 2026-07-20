@@ -88,7 +88,7 @@ Ranked by leverage, what would change kosha's league:
    in the Rigveda, mostly epic" on every headword. No Sanskrit dictionary
    interface does this; it is also the direct delivery vehicle for the
    evidence-graded-lexicography research program
-   ([ROADMAP_2026_2027.md](https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_2026_2027.md)).
+   (`ROADMAP_2026_2027.md`).
 2. **Paste-anything lookup.** Students meet *sandhied, compounded, inflected*
    text, not citation forms. Query pipeline: try form→lemma glossary → try
    segmentation (vidyut / Heritage) → offer splits. This single feature is the

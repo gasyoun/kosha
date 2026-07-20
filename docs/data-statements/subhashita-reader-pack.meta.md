@@ -23,7 +23,7 @@ Regenerate: `python scripts/build_subhashita_difficulty.py` then
 is present); regression: `python scripts/test_subhashita_difficulty.py`.
 
 **What it is.** A new reading-pack *family* (kosha pedagogy Wave RU, surface W-RU-b,
-[H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md)):
+[H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md)):
 the 106 easiest, quotable, textually sound sayings of Böhtlingk's *Indische Sprüche*
 (7,537 public-domain sayings, SanskritLexicography
 [F33](https://github.com/gasyoun/SanskritLexicography/blob/master/FEATURES_INDEX.md)),
@@ -33,9 +33,9 @@ fallback), per-junction `X Y → Z` rules with corpus attestation counts from
 [`data/sandhi/corpus_sandhi.tsv`](https://github.com/gasyoun/kosha/blob/main/data/sandhi/corpus_sandhi.tsv),
 metre tag (vidyut-chandas strict vṛtta, else the anuṣṭubh syllable heuristic — the W3a
 two-tier method), Böhtlingk's German translation, and source attribution.
-[H1312](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1312-Sonnet_kosha_subhashita-pack-ru-gloss-rerun_19.07.26.md)
+[H1312](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1312-Sonnet_kosha_subhashita-pack-ru-gloss-rerun_19.07.26.md)
 (Sonnet 5 `claude-sonnet-5`) re-ran the build once the W-RU-a inline-gloss layer
-([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md))
+([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md))
 had shipped, adding a per-token SLP1 lemma (vidyut-cheda — needed because the W-RU-a
 joiner keys on lemma+surface and this pack's tokens are unsandhied IAST surface forms
 only) and joining `gloss_ru` from

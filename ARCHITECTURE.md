@@ -4,7 +4,7 @@ _Created: 02-07-2026 · Last updated: 11-07-2026_
 
 The engineering contract for Phase 1, locking the four decisions M.G. took on
 02-07-2026 (A1–A4 below) on top of the product meta-decisions M1–M4
-([KOSHA_FOLDER_SETUP.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_FOLDER_SETUP.md)).
+(`KOSHA_FOLDER_SETUP.md`).
 An execution session (Sonnet 5 `claude-sonnet-5` / Opus 4.8 `claude-opus-4-8`)
 implements [PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md)
 against this document; deviations get recorded here first.
@@ -15,7 +15,7 @@ against this document; deviations get recorded here first.
 |---|---|
 | A1 | **Storage = raw csl-orig markup, verbatim; display = ported transforms.** Entry bodies stored exactly as in csl-orig (provenance-perfect); rendering is a pure Python function ported from csl-websanlexicon's `basicadjust.php`/`basicdisplay.php` (SHARED_CODE family #5 — port from the makotemplates *template*, not a per-dict copy). Rendering bugs are fixed in code, never by rebuilding data |
 | A2 | **Sense IDs = `{dict}.{L}.{senseN}` + data-release version**, e.g. cite form `mw.142512.3@v0.2.0`. Anchored on Cologne's stable per-entry L-numbers; sense counter minted within the entry; the `@version` suffix makes citations survive Cologne corrections (old versions stay downloadable as release assets) |
-| A3 | **Local-first; M.G. deploys manually.** Agents develop and test everything locally (SQLite + uvicorn + pytest). Server deployment to samskrtam.ru is M.G. running the documented steps in [KOSHA_DEPLOYMENT.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_DEPLOYMENT.md). No agent holds SSH, ever |
+| A3 | **Local-first; M.G. deploys manually.** Agents develop and test everything locally (SQLite + uvicorn + pytest). Server deployment to samskrtam.ru is M.G. running the documented steps in `KOSHA_DEPLOYMENT.md`. No agent holds SSH, ever |
 | A4 | **Execution queued to Sonnet/Opus.** This contract is the judgment-tier deliverable; D1–D4 run in a cheaper session; D5's measurement-based decisions return to a judgment tier |
 
 ## Data model (SQLite, single file `kosha.db`)
