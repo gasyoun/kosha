@@ -1494,6 +1494,26 @@
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
+      "id": "panini-derivation-status",
+      "title": "vidyut-prakriya derivation harness over the AG bucket (A4, W2a)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "derivation_status.tsv",
+      "format": "tsv",
+      "rows": 401368,
+      "size_bytes": 27135881,
+      "keying": "For every W1b AG-bucket row (lemma_slp1 + attested_form), resolves candidate grammatical cells from kosha.db inflections (nominal: gender/gcase/number where person IS NULL; verbal: model/tense/voice/person/number where person IS NOT NULL, v_p passive borrowing gaṇa from the same root's v_<gana> model per H855), derives every candidate cell with vidyut.prakriya (local library, no network — R12), and classifies the form: ok (exactly one distinct ordered-sūtra chain form_key-matches, exact 0.95 outranks floor 0.85 — TIER_CONFIDENCE, never a literal/1.0) · ambiguous (>1 distinct chain matches) · engine-error (candidate cells existed, none derivable) · no-derivation (no cell exists, or cells ran but none matched). derivation_chains.tsv is the (chain_id, step_index)->(source, sutra_code, step_result) sidecar the chain_id in derivation_status.tsv points into.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/concordance/derivation_status.tsv",
+      "builder": "scripts/build_panini_derivations.py (concordance_core.py, H1368 / Concordance-Q3 W2a)",
+      "consumers": [
+        "A4 sūtra->corpus inversion (W2b, not yet built)",
+        "W3a sūtra-coverage map (dark-sūtra classification, not yet built)"
+      ],
+      "notes": "Full run over all 401,368 AG rows (883.8s, 454.1 forms/s, cached per-lemma vidyut derivation — 90,690 distinct lemmas). Status distribution: ok 72,764 (18.13%) · no-derivation 237,447 (59.16%) · ambiguous 86,857 (21.64%) · engine-error 4,300 (1.07%) — all four buckets always reported (2a-4), never only successes. 2,815 distinct sūtra chains recorded; chain length min 6 / median 12 / max 37 among ok rows. R-C3: engine-error is dominated by the verbal dhātu+gaṇa+lakāra mapping (new work here; the nominal mapping is E1-proven). R-C4: 256 ok rows are verb-derived AND carry tense_caveat=1 (DCS Tense=Past conflates aorist/perfect) — sūtra attribution for tense-specific rules on those rows may be off, flagged not silently counted. Full detail + 30-example sampled human-verification section: data/concordance/DERIVATION_HARNESS_BUILD_REPORT.md. Deliberately excludes W2b's sūtra->form inversion and the /concordance/panini/ web page — out of scope for this handoff.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/data/concordance/DERIVATION_HARNESS_BUILD_REPORT.md"
+    },
+    {
       "id": "ru-gloss-layer",
       "title": "Inline Sanskrit→Russian gloss layer (reading packs, W-RU-a)",
       "tier": "public",
