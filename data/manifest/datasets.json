@@ -204,7 +204,7 @@
       "format": "sqlite",
       "rows": 444773,
       "size_bytes": 1673854976,
-      "keying": "10 tables: 444,773 entries · 323,425 lemmas · 692,403 senses · 1,378,401 forms · 6,916,865 inflections · 185,803 heritage_anchor rows (24,549 anchor-resolved) (+ meta, sources, stem_bridge)",
+      "keying": "10 tables: 444,773 entries · 323,425 lemmas · 692,403 senses · 1,378,401 forms · 6,917,018 inflections · 185,803 heritage_anchor rows (24,549 anchor-resolved) · 760 stem_bridge (+ meta, sources)",
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "data/db/kosha.db (GITIGNORED — regenerable via scripts/build_db.py chain, but hours of compute)",
       "builder": "scripts/build_db.py (crosswalk → entries → forms → db)",
@@ -212,7 +212,7 @@
         "kosha API",
         "P2 static cache"
       ],
-      "notes": "Regenerable but expensive; backup = cheap insurance. Candidate single queryable DB for P-D5. H837 (13-07-2026, Sonnet 5 claude-sonnet-5): re-ran the H345 `--stage heritage` ingest on the live DB, fixing the H691-flagged regression — heritage_anchor table now present (185,803 rows, 24,549 anchor-resolved, matching H345's original counts exactly) and `/api/v1/lemma` verified live to return the `heritage` witness (spot-checked key `akAra`). Completeness-audited 11-07-2026 (H687): loaded dicts mw/pwg/ap90 match live csl-orig <L> counts exactly (0.000% drift); 41/44 csl-orig dicts not full-text-loaded (union lemmas layer spans 15 codes) — see docs/KOSHA_DB_COMPLETENESS_AUDIT.md. inflections row count drifted slightly (6,916,522 → 6,916,865) between the 05-07 and 12-07 live-DB rebuilds prior to this pass — not re-audited here, out of this handoff's scope.",
+      "notes": "Regenerable but expensive; backup = cheap insurance. Candidate single queryable DB for P-D5. H837 (13-07-2026, Sonnet 5 claude-sonnet-5): re-ran the H345 `--stage heritage` ingest on the live DB, fixing the H691-flagged regression — heritage_anchor table now present (185,803 rows, 24,549 anchor-resolved, matching H345's original counts exactly) and `/api/v1/lemma` verified live to return the `heritage` witness (spot-checked key `akAra`). Completeness-audited 11-07-2026 (H687): loaded dicts mw/pwg/ap90 match live csl-orig <L> counts exactly (0.000% drift); 41/44 csl-orig dicts not full-text-loaded (union lemmas layer spans 15 codes) — see docs/KOSHA_DB_COMPLETENESS_AUDIT.md. inflections row count drifted slightly (6,916,522 → 6,916,865) between the 05-07 and 12-07 live-DB rebuilds prior to this pass — not re-audited here, out of this handoff's scope. DISTRIBUTION (H1367, 20-07-2026, Opus 4.8 claude-opus-4-8): re-measured at 1,673,854,976 B = 84% of the 2 GB release-asset ceiling (inflections layer ~65% of the file); the sha256 below predates the current rebuild (inflections now 6,917,018). Per D5-4 ruling (KOSHA_DECISIONS_NEEDED.md) the restricted-tier backup ships COMPRESSED (gzip-1 floor 458 MB / 27%, xz/zstd-19 ~330 MB), never the raw .db, and P-D5 splits into ATTACH-able kosha_core.db (~0.5-0.6 GB) + kosha_inflections.db (~1.1 GB). Backup-compress/split/G-SIZE plumbing is queued follow-on, not landed in H1367.",
       "sha256": "9e634b13380ff80d27934241c6b196a2579f21eed94b6f3bb4bc41f429c32391",
       "provenance_verified": "2026-07-13 (H837, Sonnet 5 claude-sonnet-5)",
       "rebuild": "Regenerable (hours): scripts/build_crosswalk.py → build_entries.py → build_forms.py → build_db.py; raw inputs auto-downloaded (see kosha-raw-sqlite row)."

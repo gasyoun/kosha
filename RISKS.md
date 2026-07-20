@@ -219,8 +219,15 @@ vidyut is MIT (compatible as a consumed library). Two live edges:
   claims are dated.
 - **R11 size limits:** GitHub blocks files >100 MB in-repo; `mw.sqlite`-scale
   data flirts with that. Data ships as **release assets only** (2 GB/file
-  ceiling — ample); the Pages static cache is sized in D5 *before* Pages is
-  enabled, not after it 404s.
+  ceiling). **The "ample" headroom is stale (20-07-2026, H1367):** `kosha.db`
+  grew 276 MiB → **1.674 GB = 84% of the 2 GB ceiling** (the `inflections`
+  paradigm layer is ~two-thirds of it). Ruling in
+  [KOSHA_DECISIONS_NEEDED.md D5-4](https://github.com/gasyoun/kosha/blob/main/KOSHA_DECISIONS_NEEDED.md):
+  compress the restricted-tier backup asset (≤27% → <500 MB, defers the ceiling
+  past ~6 GB), split the queryable DB into ATTACH-able core + inflections layers
+  for P-D5, and add a **G-SIZE** tripwire (FAIL >1.8 GB uncompressed single
+  asset) so the ceiling fails CI, not an upload. The Pages static cache is sized
+  in D5 *before* Pages is enabled, not after it 404s.
 - **R12 upstream availability rot:** verified live today — Inria bot-walled
   (use the UoHyd mirror), DCS HTTP-only, VedaWeb mid-migration. Rule:
   **builds never call live third-party services**; every input (csl-sqlite
