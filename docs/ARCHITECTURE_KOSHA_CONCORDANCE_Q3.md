@@ -42,11 +42,12 @@ research output and are reported, not discarded.
 > 168,034 of 426,410 non-heritage `(form, lemma)` pairs, and `inflections` holds
 > 3,246,914 pairs `forms` never has.
 >
-> **Which table W2a treats as canonical is an OPEN decision, parked for a human
-> ruling** ([decide brief H1366](https://github.com/gasyoun/kosha/blob/main/docs/DECIDE_H1366_GENERATED_SIDE_FORMS_VS_INFLECTIONS.md),
-> recommendation: `forms`, high confidence; [CONTRADICTIONS §6](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md)).
-> This diagram uses `forms` because A3/W1b already did; W2a must not start until the
-> decision is ruled.
+> **✅ Ruled 20-07-2026 (H1366, accepted by MG): `forms` is canonical** for W2a —
+> [PLAN §2 D13 + §3a](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_CONCORDANCE_Q3_2026H2.md),
+> [decide brief](https://github.com/gasyoun/kosha/blob/main/docs/DECIDE_H1366_GENERATED_SIDE_FORMS_VS_INFLECTIONS.md),
+> [CONTRADICTIONS §3](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md) (✅ tombstone).
+> `inflections` is a distinct secondary asset (an optional cross-check on the
+> overlap), never the denominator. **W2a is unblocked to consume `forms`.**
 
 **Reuse, don't rebuild.** Per the repo's maximum-reuse rule, this design adds
 exactly one new capability — capturing and inverting the sūtra chain. Everything
