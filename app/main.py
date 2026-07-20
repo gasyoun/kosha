@@ -534,7 +534,14 @@ def salt_entries(dict_id: str, field: str = "headword_slp1", query: str = "",
     if query_type == "term":
         where, params = "slp1_key = ?", (slp1_q,)
     elif query_type == "prefix":
-        where, params = "slp1_key LIKE ?", (slp1_q + "%",)
+        # H838 fix ported here (H1369): LIKE q||"%" forced a full scan of
+        # entries_dict_key AND is case-insensitive by default, letting a
+        # case-significant SLP1 prefix like "ka" (ka) wrongly match "Ka"
+        # (kha) rows. Same half-open range seek as /api/v1/search mode=prefix.
+        if slp1_q:
+            where, params = "slp1_key >= ? AND slp1_key < ?", (slp1_q, _prefix_range_bound(slp1_q))
+        else:
+            where, params = "1=1", ()
     else:
         return {"error": f"unsupported query_type '{query_type}' (Phase 1: term/prefix)"}
     keys = con.execute(
