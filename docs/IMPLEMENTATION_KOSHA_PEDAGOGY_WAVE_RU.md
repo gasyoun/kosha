@@ -28,7 +28,7 @@ deploy from this wave.
 
 ---
 
-## W-RU-a — Inline Sa→Ru gloss layer in reading packs ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md), Opus)
+## W-RU-a — Inline Sa→Ru gloss layer in reading packs ([H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md), Opus)
 
 **What ships:** every token in a kosha reading pack can carry a Russian gloss triple
 (surface rendering · lemma gloss · root gloss), so a Russian-speaking learner hovers a
@@ -65,7 +65,7 @@ is untouched — this is an additive layer keyed by gloss language.
    [`docs/data-statements/`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/README.md);
    joiner unit-tested on a 50-token fixture with known expected hits/misses.
 
-## W-RU-b — Graded beginner subhāṣita reader ([H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md), Fable)
+## W-RU-b — Graded beginner subhāṣita reader ([H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md), Fable)
 
 **What ships:** a new reading-pack *family* built from Böhtlingk's Indische Sprüche —
 short, famous, self-contained sayings — difficulty-graded so an absolute beginner meets

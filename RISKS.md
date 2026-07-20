@@ -140,7 +140,7 @@ single-maintainer project — the differentiator list is only credible if it
 doubles as the anti-rot checklist:
 
 - **Everything public and rebuildable:** open code, versioned open data,
-  deploy runbook ([KOSHA_DEPLOYMENT.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_DEPLOYMENT.md)),
+  deploy runbook (`KOSHA_DEPLOYMENT.md`),
   boring stack (SQLite + FastAPI + vanilla JS). **T-UC11** (clean-machine
   rebuild from release assets) is the rot test — run at P7 and at every
   major release after.

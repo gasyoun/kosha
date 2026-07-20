@@ -273,7 +273,7 @@ permission.
 Yes — the architecture is local-first by contract (everything builds and runs
 on one machine; deployment is a copy step). The server reference
 (systemd/nginx/cron) is
-[KOSHA_DEPLOYMENT.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_DEPLOYMENT.md).
+`KOSHA_DEPLOYMENT.md`.
 
 ## For contributors & agents
 
@@ -361,9 +361,9 @@ volume-page, hyphen, 7 volumes · AP90 `0001-a` = page-column-letter.
 
 | In [SanskritLexicography](https://github.com/gasyoun/SanskritLexicography) | What it holds |
 |---|---|
-| [KOSHA_FOLDER_SETUP.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_FOLDER_SETUP.md) | post-audit truth doc, meta-decisions M1–M4 |
-| [KOSHA_REFERENCE_ANALYSIS.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_REFERENCE_ANALYSIS.md) | feature-by-feature reference-site analysis |
-| [KOSHA_DEPLOYMENT.md](https://github.com/gasyoun/SanskritLexicography/blob/master/KOSHA_DEPLOYMENT.md) | samskrtam.ru deployment reference (systemd/nginx/cron) |
+| `KOSHA_FOLDER_SETUP.md` | post-audit truth doc, meta-decisions M1–M4 |
+| `KOSHA_REFERENCE_ANALYSIS.md` | feature-by-feature reference-site analysis |
+| `KOSHA_DEPLOYMENT.md` | samskrtam.ru deployment reference (systemd/nginx/cron) |
 
 > The application deliberately lives outside SanskritLexicography (a
 > data/research workspace whose charter forbids source code — meta-decision

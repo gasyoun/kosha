@@ -6,7 +6,7 @@ Built by [scripts/build_bloomfield_rv_crossref.py](https://github.com/gasyoun/ko
 
 ## Source
 
-Marco Franceschini's digital edition of Bloomfield's *A Vedic Concordance* (Harvard Oriental Series 9, 1906) — [SanskritLexicography/review/HOS9-Bloomfield-VedConcord1906/](https://github.com/gasyoun/SanskritLexicography/tree/master/review/HOS9-Bloomfield-VedConcord1906) (UTF-16, 88835 concordance entries, alphabetically pratīka-keyed, covers the whole Vedic corpus not just RV).
+Marco Franceschini's digital edition of Bloomfield's *A Vedic Concordance* (Harvard Oriental Series 9, 1906) — `SanskritLexicography/review/HOS9-Bloomfield-VedConcord1906/` (UTF-16, 88835 concordance entries, alphabetically pratīka-keyed, covers the whole Vedic corpus not just RV).
 
 ## Counts
 

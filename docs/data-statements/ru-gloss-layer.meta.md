@@ -7,7 +7,7 @@ Manifest row:
 [data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json).
 Built by
 [scripts/build_ru_gloss_layer.py](https://github.com/gasyoun/kosha/blob/main/scripts/build_ru_gloss_layer.py)
-(W-RU-a / [H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md)).
+(W-RU-a / [H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md)).
 
 ## Composition & counts
 
@@ -42,7 +42,7 @@ Pages site, plus its public `dcs_lemma2root.tsv` map.
 
 **Rights gate (PLAN decision 14).** Only that public subset is read. The restricted
 upstream alignment it derives from —
-[`RussianTranslation/src/corpus_lexicon.jsonl`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/corpus_lexicon.jsonl)
+``RussianTranslation/src/corpus_lexicon.jsonl``
 (1,091,528 word-aligned tokens) — is **not** an input here and stays local-only.
 Run [/publish-safety-check](https://github.com/gasyoun/claude-config/blob/main/commands/publish-safety-check.md)
 before any site deploy.
