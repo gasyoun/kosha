@@ -503,6 +503,23 @@
       "notes": "H291 Step 4: bundle of all *.csv in derived-data/Kompozity/ (the dir also holds non-csv working files — .xlsx/.doc/.ods/.7z — out of scope for this manifest, which tracks the csv exports)."
     },
     {
+      "id": "uttarapada-dict-vs-corpus",
+      "title": "MW uttarapada index × DCS Kompozity — dictionary productivity vs corpus attestation",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "format": "tsv",
+      "rows": 19177,
+      "size_bytes": 865276,
+      "keying": "final_member (MW uttarapada, orthography-folded: anusvāra ṃ/ṁ, avagraha, @/- markup) -> dictionary side (mw_class ∈ UTTARAPADA/KRT_STEM_MEMBER, mw_first_members = distinct-first-member TYPE count) vs corpus side (corpus_compounds = distinct attested word-forms, corpus_tokens = summed DCS frequency, corpus_first_members) + divergence cols (overlap_first, mw_only_first, corpus_only_first) + corpus_status ∈ {final 6249, form_variant 1289, nonfinal_only 1252, absent 10387}",
+      "source_repo": "https://github.com/gasyoun/VisualDCS",
+      "source_path": "derived-data/Kompozity/uttarapada_dict_vs_corpus.tsv (tracked); divergence report reports/uttarapada_dict_vs_corpus_divergence.md",
+      "builder": "derived-data/Kompozity/build_uttarapada_dict_vs_corpus.py (H1328; joins MWderivations issue15/compounds_reverse_classified.tsv × Kompozity cmps.csv/names.csv)",
+      "consumers": [
+        "kosha samāsa trainer member_side/member_recall drill ranking (scripts/build_samasa_trainer.py, --mw-rank corpus, default since H1398 20-07-2026)"
+      ],
+      "notes": "H1328 (20-07-2026, Opus 4.8 claude-opus-4-8). Corpus side is the sibling of dcs-compound-dictionary (same Kompozity cmps.csv/names.csv), joined against the MW dictionary side (MWderivations issue15 reverse-classified index, master branch). corpus_tokens (summed DCS frequency) and corpus_compounds (distinct attested forms) are the corpus-attestation ranking signal for compound final members; corpus_status=final (6,249) is the drillable stratum, absent (10,387) is a lower bound on real absence, not a ghost-word verdict. Corpus head carries its own junk (ca/eva/pronoun-stems/bare-roots/-tva/-tā) that ranking by tokens alone does not drop — an explicit stoplist is required (report § \"corpus's own junk head\"). DCS is CC BY 4.0; MW public domain; ships BY-SA with the public tier. H1398 (20-07-2026, Sonnet 5 claude-sonnet-5): kosha's samāsa trainer now consumes this dataset by default (member_stoplist applied per the report's finding above)."
+    },
+    {
       "id": "dcs-stem-cooccurrence-full",
       "title": "Sanskrit-stem co-occurrence table (full)",
       "tier": "public",
