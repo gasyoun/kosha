@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.70.0] - 2026-07-20
+
 ### Changed
 - **Concordance-Q3 D13 RULED — `forms` is the canonical A4/W2a generated side (accepted by MG)** ([H1366](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1366-Opus_kosha_generated-side-forms-vs-inflections-canonical-ruling_20.07.26.md), Opus 4.8 `claude-opus-4-8`). MG accepted the v0.69.0 decide brief: the A3→A4/W2a generated side is **`forms`**, not `inflections`. Recorded as [PLAN §2 `D13` + §3a](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_CONCORDANCE_Q3_2026H2.md) (settled); the [decide brief](https://github.com/gasyoun/kosha/blob/main/docs/DECIDE_H1366_GENERATED_SIDE_FORMS_VS_INFLECTIONS.md) and [ARCHITECTURE §1](https://github.com/gasyoun/kosha/blob/main/docs/ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md) note flipped to ✅; [CONTRADICTIONS §3](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md) graduated to a ✅ tombstone and FINDINGS §94 flipped to ruled. `inflections` (the 6.92M-row `cologne_mwinflect` paradigm layer) is reclassified as a distinct secondary asset / optional cross-check, never the generated denominator. **W2a is unblocked to consume the 426,410-row non-heritage `forms` AG set.**
 
