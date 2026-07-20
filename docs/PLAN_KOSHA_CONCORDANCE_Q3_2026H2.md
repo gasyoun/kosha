@@ -1,6 +1,6 @@
 # Plan — kosha Concordance Q3: Pāṇinian sūtra ↔ corpus (2026 H2)
 
-_Created: 18-07-2026 · Last updated: 18-07-2026_
+_Created: 18-07-2026 · Last updated: 20-07-2026_
 
 The index doc for kosha's next programme. It records **what was decided and by
 whom**, states the **autonomy contract** an agent operates under, and links the
@@ -68,6 +68,53 @@ the two places where a ruling **overturned** the batch recommendation.
 | D10 | DICO French-gloss layer = **manifest dataset row only, no UI** | Default applied, **blocked on evidence** | Cannot execute as written — the row already exists and is rights-blocked. See §3 |
 | D11 | Handoff/link hygiene = **fix the mover, not the symptoms**, plus a one-time catch-up | Default applied | 7 handoffs moved to `archive/` in one sweep → **14 dead link occurrences** in [PLAN_KOSHA_PEDAGOGY_ENGINE_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/PLAN_KOSHA_PEDAGOGY_ENGINE_2026_2027.md) (7 unique targets × 2 occurrences each — verified exactly) |
 | D12 | A3 (generated-vs-attested join) is **absorbed into A4 wave 1** as a prerequisite, not skipped | Derived from D1 | See §1. Without it A4 has no attested-form input |
+| D13 | The A3→A4/W2a **generated side is `forms`** (1,378,401 rows / 426,410 non-heritage), **not `inflections`** (6,917,018) | Ruling 20-07-2026 (H1366, Opus 4.8 `claude-opus-4-8`), **accepted by MG** | Resolves [CONTRADICTIONS §3](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md). See §3a. `inflections` is a distinct single-engine (`cologne_mwinflect`) paradigm asset — an optional cross-check, never the denominator. **W2a is unblocked to consume `forms`** |
+
+---
+
+## 3a. D13 — which generated table is canonical (`forms`, ruled)
+
+CONTRADICTIONS §3 stood 🟡 provisional: the Concordance-Q3 plan set named two
+different kosha tables as the generated inflection side, "5× apart" — `forms`
+(1,378,401) in the W1b deliverable text vs `inflections` (6,917,018) in the §1
+diagram. **Ruled 20-07-2026 (H1366, accepted by MG): `forms` is canonical**, and
+the "5× apart, same side" framing was itself a conflation — the two tables are
+different data products, not two cardinalities of one.
+
+Measured 20-07-2026 (Opus 4.8 `claude-opus-4-8`) directly against
+[`kosha.db`](https://github.com/gasyoun/kosha/blob/main/data/db/kosha.db):
+
+| | `forms` | `inflections` |
+|---|---|---|
+| rows | **1,378,401** | 6,917,018 |
+| columns | `form_slp1, lemma_slp1, source, category` | `form, lemma, model, gender, gcase, number, person, tense, voice, refs, source, disputed` |
+| morphology (case/gender/number) | **none** | model 100%, case/gender/number ~99% |
+| `source` split | **heritage 951,991 · dcs 397,843 · vidyut 28,567** | 99.99% `cologne_mwinflect` (+ 496 curated) |
+| relationship | shares **only 168,034 of 426,410** non-heritage `(form, lemma)` pairs with `inflections` | holds **3,246,914** `(form, lemma)` pairs absent from `forms` |
+
+**Why `forms`, on three independent grounds:**
+
+1. **Pipeline continuity.** W2a's declared input is "each attested form **from
+   W1b**" ([roadmap W2a](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP_KOSHA_2026H2.md)),
+   and W1b/A3 is defined over `forms` non-heritage (426,410 — the AG denominator).
+   Switching to `inflections` mid-pipeline orphans A3 and makes A4 coverage
+   incommensurable with it.
+2. **Trust axis.** Only `forms` carries the `source` column
+   (`dcs > vidyut > heritage`, `include_heritage=False`) the H696 discipline
+   requires. `inflections` is ~100% one engine with no heritage/attestation split
+   and cannot express it.
+3. **Engine separation.** W2a *generates* morphology + the sūtra chain via
+   `vidyut.prakriya`; it must not silently inherit `cologne_mwinflect`'s morphology
+   from `inflections`. The overlap (168,034 pairs) is a legitimate **cross-check**
+   (does vidyut-derived `model`/`case` agree with `cologne_mwinflect`?), not a
+   denominator.
+
+**`inflections` reclassified:** the MW full-paradigm morphology table
+(`cologne_mwinflect`), a distinct secondary asset — not the A4 generated side.
+The §1 diagram's former "6.9M generated" label was a documentation bug (corrected
+in [ARCHITECTURE §1](https://github.com/gasyoun/kosha/blob/main/docs/ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md)).
+Full brief + options A/B/C:
+[DECIDE_H1366_GENERATED_SIDE_FORMS_VS_INFLECTIONS.md](https://github.com/gasyoun/kosha/blob/main/docs/DECIDE_H1366_GENERATED_SIDE_FORMS_VS_INFLECTIONS.md).
 
 ---
 

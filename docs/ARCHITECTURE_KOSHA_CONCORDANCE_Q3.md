@@ -1,6 +1,6 @@
 # Architecture — kosha Concordance Q3 (Pāṇinian sūtra ↔ corpus)
 
-_Created: 18-07-2026 · Last updated: 18-07-2026_
+_Created: 18-07-2026 · Last updated: 20-07-2026_
 
 Design for the A4 Pāṇinian concordance and the A3 join it stands on. Rulings are
 in [PLAN_KOSHA_CONCORDANCE_Q3_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_CONCORDANCE_Q3_2026H2.md);
@@ -15,7 +15,7 @@ committed artefact:
 
 ```mermaid
 graph LR
-  A[kosha.db forms<br/>6.9M generated] --> C{A3 join<br/>form_key}
+  A[kosha.db forms<br/>1.38M generated<br/>426k non-heritage] --> C{A3 join<br/>form_key}
   B[dcs_full.sqlite<br/>5.7M attested] --> C
   C --> D[attested AND generated]
   C --> E[generated, never attested]
@@ -29,6 +29,25 @@ Only the **attested ∧ generated** bucket feeds the derivation harness — a fo
 that is not attested has no corpus locus to cite, and a form the engine cannot
 generate has no derivation to capture. The other two buckets are A3's own
 research output and are reported, not discarded.
+
+> **Node-label fix (H1366, 20-07-2026): this node names `forms`, so it carries the
+> `forms` count.** An earlier revision read "6.9M generated" — that is the cardinality
+> of a **different** table, `inflections` (6,917,018 rows, ~100% single-engine
+> `cologne_mwinflect`, no `source`/heritage trust split), so the node mixed the
+> `forms` name with the `inflections` count. The A3/W1b generated side is
+> [`kosha.db` `forms`](https://github.com/gasyoun/kosha/blob/main/data/db/kosha.db):
+> 1,378,401 rows, **426,410 non-heritage** (the AG denominator), carrying the
+> `source` column (`dcs`/`vidyut`/`heritage`) the H696 trust discipline requires.
+> `forms` and `inflections` are **not two counts of one dataset** — they share only
+> 168,034 of 426,410 non-heritage `(form, lemma)` pairs, and `inflections` holds
+> 3,246,914 pairs `forms` never has.
+>
+> **✅ Ruled 20-07-2026 (H1366, accepted by MG): `forms` is canonical** for W2a —
+> [PLAN §2 D13 + §3a](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_CONCORDANCE_Q3_2026H2.md),
+> [decide brief](https://github.com/gasyoun/kosha/blob/main/docs/DECIDE_H1366_GENERATED_SIDE_FORMS_VS_INFLECTIONS.md),
+> [CONTRADICTIONS §3](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md) (✅ tombstone).
+> `inflections` is a distinct secondary asset (an optional cross-check on the
+> overlap), never the denominator. **W2a is unblocked to consume `forms`.**
 
 **Reuse, don't rebuild.** Per the repo's maximum-reuse rule, this design adds
 exactly one new capability — capturing and inverting the sūtra chain. Everything
