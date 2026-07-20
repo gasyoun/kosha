@@ -91,3 +91,12 @@ No `.github/workflows/` exist yet — there is no CI in this repo currently.
   gitignored, regenerable or fetched separately.
 - `data/d5_run*.log`, `data/d5_profile.log`, `data/d5_measurements.json` —
   machine-specific measurement outputs from `scripts/measure_d5.py`.
+
+## Operational hazard notes
+
+Destructive-risk facts for this repo (do-not-rerun scripts, decoys, traps) are
+registered centrally in an org-private hub
+([Uprava DANGER_FACTS.md](https://github.com/gasyoun/Uprava/blob/main/DANGER_FACTS.md),
+org members only); the public-safe subset is mirrored in the generated block of
+[AGENTS.md](https://github.com/gasyoun/kosha/blob/main/AGENTS.md). Check them
+before running anything that writes.
