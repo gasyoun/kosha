@@ -1627,6 +1627,24 @@
         "reports/PD_DCS_CORPUS_COVERAGE_2026.md"
       ],
       "notes": "H1336 (20-07-2026): first measurement of DCS's coverage of PD's cited canon. DCS is 25.2% PD-citation-weighted but 77.9% DCS-token-weighted -- holds the Vedic/epic core, misses puranic/lexicographic/kavya breadth (residue = 75% of PD's primary citation mass). Scope: PD letter a- only (published a- ~ apaca-). MahaBha. != MahaBh. (Mahabharata vs Mahabhasya) deliberately not merged. PR: https://github.com/sanskrit-lexicon/csl-atlas/pull/276"
+    },
+    {
+      "id": "handoff-lifecycle-gold",
+      "title": "Handoff lifecycle gold standard verdict set (H1251)",
+      "tier": "intermediate",
+      "in_release": "not-applicable",
+      "format": "jsonl",
+      "rows": 170,
+      "size_bytes": 512847,
+      "keying": "one record per active handoff (H001–H170); verdict (RUNNABLE_NOW, RERUN_NEEDED, GENUINELY_BLOCKED, ARCHIVE_AS_DONE, RETIRE_AS_DEAD, NEEDS_STUB_FILL, UNCLEAR)",
+      "source_repo": "https://github.com/gasyoun/Uprava",
+      "source_path": "data/handoff_lifecycle_gold.jsonl",
+      "builder": "build_handoff_gold_set.py (35 batch classifiers on Opus 4.8, per-verdict adversarial verifier)",
+      "consumers": [
+        "gold_agreement.py (sweep validation tool)",
+        "handoff lifecycle recovery workflow (H1247-H1252)"
+      ],
+      "notes": "18-07-2026 audit: 91 verdicts upheld by verifier, 15 refuted (swept to corrected verdict), 64 uncontested. The gold set is a BASELINE, not scripture — legitimate corrections with evidence update this in a later handoff. Verifier corrections: H003/H004 → RERUN_NEEDED (surveyed artifact evidence found post-audit); H066 → NEEDS_STUB_FILL; remaining refutations retracted (evidence re-checked, classifier was right). Tool validation: gold_agreement.py --self-test == 1.0000 (21-07-2026)."
     }
   ]
 }
