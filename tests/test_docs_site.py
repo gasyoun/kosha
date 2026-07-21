@@ -12,15 +12,15 @@ sys.path.insert(0, str(REPO / "scripts"))
 
 zk = pytest.importorskip("zettelkastenwiki")
 
-from build_docs_site import CONFIG  # noqa: E402
+from build_docs_site import CONFIG, build_docs_site  # noqa: E402
 
-from zettelkastenwiki import publish, testing  # noqa: E402
+from zettelkastenwiki import testing  # noqa: E402
 
 
 @pytest.fixture(scope="module")
 def site(tmp_path_factory):
     out = tmp_path_factory.mktemp("docs_site")
-    publish(CONFIG, out)
+    build_docs_site(out)
     return out
 
 
@@ -34,6 +34,7 @@ def test_expected_pages_exist(site):
         "docs/what-is-kosha/index.html",
         "docs/positioning/index.html",
         "docs/roadmap/index.html",
+        "docs/roadmap-meta/index.html",
         "faq/what-works-today/index.html",
         "faq/data-licensing/index.html",
     ):
@@ -53,3 +54,9 @@ def test_committed_output_is_current(site):
         a = (site / rel).read_text(encoding="utf-8")
         b = (committed / rel).read_text(encoding="utf-8")
         assert a == b, f"docs-site/{rel} stale — rerun scripts/build_docs_site.py"
+
+
+def test_generated_html_has_no_trailing_whitespace(site):
+    for page in site.rglob("*.html"):
+        for lineno, line in enumerate(page.read_text(encoding="utf-8").splitlines(), 1):
+            assert line == line.rstrip(), f"{page}:{lineno} has trailing whitespace"
