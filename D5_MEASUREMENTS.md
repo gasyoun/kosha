@@ -197,6 +197,20 @@ proves a `ka`-prefix search excludes every `Ka`-initial (kha) lemma (it fails
 against the old `LIKE` query, which leaked 15 kha lemmas into just the
 first ranked page).
 
+**Salt facade `restful/entries` fixed too (H1369, 20-07-2026):** the same bug
+lived a second time in `salt_entries`' `query_type=prefix` branch — `slp1_key
+LIKE q||'%'` on the `entries` table, same case-insensitivity, same
+over-match (a `query=ka` Salt lookup on `mw` returned 835 `K`-initial (kha)
+false positives out of 6,818 hits; because `entries_dict_key`'s BINARY
+collation sorts `K...` before `k...`, the entire default `size=25` first page
+was 100% kha leakage). Ported to the identical half-open range seek via the
+existing `_prefix_range_bound` helper. Regression test
+[`tests/test_api.py::test_salt_entries_prefix_case_significant_excludes_kha`](https://github.com/gasyoun/kosha/blob/main/tests/test_api.py).
+Swept the rest of `app/main.py` for remaining `LIKE`-prefix scans: none
+remain — the only other `LIKE` site is `search()` `mode=fuzzy` (substring
+`%q%`), which cannot be range-seeked and is not a prefix pattern. **This known
+headroom-eater is now closed on both endpoints.**
+
 Re-measured 13-07-2026 (Sonnet 5, `claude-sonnet-5`), same harness
 ([`scripts/measure_d5.py`](https://github.com/gasyoun/kosha/blob/main/scripts/measure_d5.py),
 which also needed a small unrelated fix: its direct `search()` handler call
