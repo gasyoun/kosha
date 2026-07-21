@@ -35,7 +35,7 @@ research output and are reported, not discarded.
 > of a **different** table, `inflections` (6,917,018 rows, ~100% single-engine
 > `cologne_mwinflect`, no `source`/heritage trust split), so the node mixed the
 > `forms` name with the `inflections` count. The A3/W1b generated side is
-> [`kosha.db` `forms`](https://github.com/gasyoun/kosha/blob/main/data/db/kosha.db):
+> `kosha.db` `forms` (gitignored local data file, not on GitHub):
 > 1,378,401 rows, **426,410 non-heritage** (the AG denominator), carrying the
 > `source` column (`dcs`/`vidyut`/`heritage`) the H696 trust discipline requires.
 > `forms` and `inflections` are **not two counts of one dataset** — they share only
