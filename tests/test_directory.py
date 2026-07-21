@@ -178,3 +178,66 @@ def test_external_tools_rendered(page):
     tools = json.loads((MANIFEST / "external_tools.json").read_text(encoding="utf-8"))["tools"]
     for t in tools:
         assert t["name"] in page
+
+
+# --- W1d: Invariant test for README dataset counts (H1265) ---
+
+def test_readme_dataset_counts_match_manifest():
+    """README dataset counts MUST match the manifest.
+
+    This invariant test FAILS when the manifest changes and the README is not
+    updated, catching drift that hand-copying would otherwise hide. The test is
+    falsified by any mismatch in the computed counts.
+
+    Deliberately prove the test fails by drifting the manifest, not just assert
+    success on correct input.
+    """
+    readme_path = REPO / "README.md"
+    readme_text = readme_path.read_text(encoding="utf-8")
+
+    # Parse README counts from the marked region
+    m = re.search(
+        r'<!-- dataset_count_start -->\*\*(\d+) datasets\*\* \((\d+) public · (\d+) restricted · (\d+) intermediate\)<!-- dataset_count_end -->',
+        readme_text
+    )
+    assert m, "Dataset count markers not found or format incorrect in README"
+    readme_total = int(m.group(1))
+    readme_public = int(m.group(2))
+    readme_restricted = int(m.group(3))
+    readme_intermediate = int(m.group(4))
+
+    # Compute counts from manifest
+    datasets = json.loads((MANIFEST / "datasets.json").read_text(encoding="utf-8"))["datasets"]
+    manifest_public = len([d for d in datasets if d.get("tier") == "public"])
+    manifest_restricted = len([d for d in datasets if d.get("tier") not in ("public", "intermediate")])
+    manifest_intermediate = len([d for d in datasets if d.get("tier") == "intermediate"])
+    manifest_total = manifest_public + manifest_restricted + manifest_intermediate
+
+    assert readme_total == manifest_total, f"Total count mismatch: README={readme_total}, manifest={manifest_total}"
+    assert readme_public == manifest_public, f"Public count mismatch: README={readme_public}, manifest={manifest_public}"
+    assert readme_restricted == manifest_restricted, f"Restricted count mismatch: README={readme_restricted}, manifest={manifest_restricted}"
+    assert readme_intermediate == manifest_intermediate, f"Intermediate count mismatch: README={readme_intermediate}, manifest={manifest_intermediate}"
+
+
+def test_readme_external_tools_count_matches_manifest():
+    """README external tools count MUST match the manifest.
+
+    Like the dataset-count test, this FAILS when the external_tools.json changes
+    and the README is not updated.
+    """
+    readme_path = REPO / "README.md"
+    readme_text = readme_path.read_text(encoding="utf-8")
+
+    # Parse README external tools count from the marked region
+    m = re.search(
+        r'<!-- external_tools_count_start -->\*\*(\d+) external stacks\*\*<!-- external_tools_count_end -->',
+        readme_text
+    )
+    assert m, "External tools count markers not found or format incorrect in README"
+    readme_tools = int(m.group(1))
+
+    # Compute count from manifest
+    tools = json.loads((MANIFEST / "external_tools.json").read_text(encoding="utf-8"))["tools"]
+    manifest_tools = len(tools)
+
+    assert readme_tools == manifest_tools, f"External tools count mismatch: README={readme_tools}, manifest={manifest_tools}"

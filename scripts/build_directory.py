@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import html
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -354,11 +355,58 @@ def build(out_dir: Path) -> Path:
     return out
 
 
+def update_readme() -> Path:
+    """Update README.md with computed dataset and tool counts from manifests.
+
+    Rewrites the dataset-count and external-tools-count regions between stable
+    marker comments, deriving every number from datasets.json + external_tools.json.
+    Returns the path to the updated README.
+    """
+    datasets = json.loads((MANIFEST_DIR / "datasets.json").read_text(encoding="utf-8"))["datasets"]
+    tools = json.loads((MANIFEST_DIR / "external_tools.json").read_text(encoding="utf-8"))["tools"]
+
+    # Compute counts by tier
+    public = [d for d in datasets if d.get("tier") == "public"]
+    restricted = [d for d in datasets if d.get("tier") not in ("public", "intermediate")]
+    intermediate = [d for d in datasets if d.get("tier") == "intermediate"]
+    total = len(public) + len(restricted) + len(intermediate)
+    n_tools = len(tools)
+
+    readme_path = REPO / "README.md"
+    readme_text = readme_path.read_text(encoding="utf-8")
+
+    # Replace dataset counts region
+    dataset_count_text = f"**{total} datasets** ({len(public)} public · {len(restricted)} restricted · {len(intermediate)} intermediate)"
+    readme_text = re.sub(
+        r'<!-- dataset_count_start -->.*?<!-- dataset_count_end -->',
+        f'<!-- dataset_count_start -->{dataset_count_text}<!-- dataset_count_end -->',
+        readme_text,
+        flags=re.DOTALL
+    )
+
+    # Replace external tools count region
+    external_tools_text = f"**{n_tools} external stacks**"
+    readme_text = re.sub(
+        r'<!-- external_tools_count_start -->.*?<!-- external_tools_count_end -->',
+        f'<!-- external_tools_count_start -->{external_tools_text}<!-- external_tools_count_end -->',
+        readme_text,
+        flags=re.DOTALL
+    )
+
+    readme_path.write_text(readme_text, encoding="utf-8")
+    return readme_path
+
+
 if __name__ == "__main__":
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     if hasattr(sys.stderr, "reconfigure"):
         sys.stderr.reconfigure(encoding="utf-8")
-    out_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else REPO / "directory"
-    written = build(out_dir)
-    print(f"Directory page built at {written}")
+
+    if len(sys.argv) > 1 and sys.argv[1] == "--update-readme":
+        updated = update_readme()
+        print(f"README updated at {updated}")
+    else:
+        out_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else REPO / "directory"
+        written = build(out_dir)
+        print(f"Directory page built at {written}")

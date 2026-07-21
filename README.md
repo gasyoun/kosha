@@ -50,13 +50,13 @@ It is a **two-tier** store:
 
 Every canonical dataset in **either** tier has one machine-readable row in
 [data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
-— currently **57 datasets** (43 public · 11 restricted · 3 intermediate) — the
+— currently <!-- dataset_count_start -->**85 datasets** (71 public · 11 restricted · 3 intermediate)<!-- dataset_count_end --> — the
 single source agents read to discover and fetch data; a new or changed derived
 dataset ends its session with a manifest row or it does not exist for reuse.
 
 **Sanskrit NLP data & tools directory** — the public face of that manifest and
 the project's entry point for Sanskrit computational linguistics: our
-downloadable datasets plus the **8 external stacks** it builds on (vidyut,
+downloadable datasets plus the <!-- external_tools_count_start -->**8 external stacks**<!-- external_tools_count_end --> it builds on (vidyut,
 Heritage, DCS, SCL/Samsaadhanii, DharmaMitra…), each with what-each-does /
 how-to-call / license. Live at
 [gasyoun.github.io/kosha/directory](https://gasyoun.github.io/kosha/directory/),
