@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.75.0] - 2026-07-21
+
 ### Fixed
 - **H1370 — repaired the 27 residual broken links H1266 left out of scope, plus 6 new archive-move link-rot and a 4th class (`kosha.db` blob links to a gitignored file)** ([H1370](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1370-Sonnet_kosha_link-repair-27-residue-and-ai-state-truth-pass_20.07.26.md), Sonnet 5 `claude-sonnet-5`). Missing `KOSHA_*.md` docs and `master`→`main` drift downgraded/repointed by an interrupted prior session, recovered and completed here: 6 links to now-archived H1262/H1366/H1367 handoffs repointed to `handoffs/archive/`, and 4 `kosha.db` blob links (a gitignored file that never exists on GitHub — always a dead link by construction) downgraded to plain backtick paths across `ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md`, `DECIDE_H1366_GENERATED_SIDE_FORMS_VS_INFLECTIONS.md`, and `PLAN_KOSHA_CONCORDANCE_Q3_2026H2.md`. The 3 remaining `link_audit_fix.py` "wrong org" flags on `OliverHellwig/sanskrit` links are a tool false positive (basename collision with the unrelated local `gasyoun/sanskrit` fork of `shreevatsa/sanskrit`) — both URLs verified `200 OK`, left unchanged. `kosha`'s `.ai_state.md` H901/H902/H903 resume-point block (all three ✅ done 14-07-2026, archived) flipped from stale starter lines to `🔴 EXECUTED` lines (H919 failure-class prevention). GitHub issue #134 (deliverable shipped in PR #137, v0.64.0 + data-v0.2.0) closed as stale-open.
 
