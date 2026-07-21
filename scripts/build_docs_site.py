@@ -48,9 +48,20 @@ CONFIG = SiteConfig(
 )
 
 
+def build_docs_site(out: Path) -> None:
+    """Publish the site and normalize generated HTML for clean diffs."""
+    publish(CONFIG, out)
+    for page in out.rglob("*.html"):
+        source = page.read_text(encoding="utf-8")
+        normalized = "\n".join(line.rstrip() for line in source.splitlines())
+        if source.endswith("\n"):
+            normalized += "\n"
+        page.write_text(normalized, encoding="utf-8")
+
+
 if __name__ == "__main__":
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     out = Path(sys.argv[1]) if len(sys.argv) > 1 else REPO / "docs-site"
-    publish(CONFIG, out)
+    build_docs_site(out)
     print(f"Docs site built at {out}")
