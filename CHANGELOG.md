@@ -14,6 +14,9 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **Concordance-Q3 W1d — Computed README dataset count + invariant test** ([H1265](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1265-Haiku_kosha_computed_readme_dataset_count_invariant_18.07.26.md), Haiku 4.5 `claude-haiku-4-5-20251001`). Add `--update-readme` mode to `scripts/build_directory.py` that derives dataset counts (total · public · restricted · intermediate) and external-tools count from the manifests and updates README.md between stable HTML comment markers, eliminating hand-copied drift (README claimed 57 datasets, manifest had 85). Add two invariant tests to `tests/test_directory.py` — `test_readme_dataset_counts_match_manifest` and `test_readme_external_tools_count_matches_manifest` — that FAIL when the manifest drifts without README update (proven by deliberate manifest modification + dummy dataset). Prove idempotence: second `--update-readme` run produces identical output. All 12 tests in test_directory.py pass ([PR #161](https://github.com/gasyoun/kosha/pull/161)).
+
 ## [0.75.0] - 2026-07-21
 
 ### Fixed
