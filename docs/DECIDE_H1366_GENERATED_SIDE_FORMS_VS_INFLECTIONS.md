@@ -10,9 +10,9 @@ has graduated to a ✅ tombstone. **W2a is unblocked to consume `forms`.** This 
 is retained as the reasoned brief behind the ruling.
 
 > **Why the agent briefed rather than ruled (pre-acceptance context).** W1b/A3
-> ([H1262](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1262-Opus_kosha_a3_attested_form_join_morphology_audit_18.07.26.md))
+> ([H1262](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1262-Opus_kosha_a3_attested_form_join_morphology_audit_18.07.26.md))
 > surfaced this as an explicit STOP-AND-SURFACE block and declared it had "no
-> standing to settle it"; [H1366](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1366-Opus_kosha_generated-side-forms-vs-inflections-canonical-ruling_20.07.26.md)
+> standing to settle it"; [H1366](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1366-Opus_kosha_generated-side-forms-vs-inflections-canonical-ruling_20.07.26.md)
 > was scoped to **register + correct the mislabel + brief the choice**, not to rule.
 
 ---
@@ -33,7 +33,7 @@ wrong.
 ## What the two tables actually are (measured 20-07-2026, Opus 4.8 `claude-opus-4-8`)
 
 Queried directly against
-[`kosha.db`](https://github.com/gasyoun/kosha/blob/main/data/db/kosha.db)
+`kosha.db` (gitignored local data file, not on GitHub)
 (1.674 GB, gitignored; the canonical main clone's copy):
 
 | | `forms` | `inflections` |
@@ -107,7 +107,7 @@ denominator.
 ## Reproduce
 
 Every figure re-derives from two `SELECT`s over
-[`kosha.db`](https://github.com/gasyoun/kosha/blob/main/data/db/kosha.db)
+`kosha.db` (gitignored local data file, not on GitHub)
 `forms` and `inflections` (schema, `source` `GROUP BY`, and an `INTERSECT`/`EXCEPT`
 on `(form_slp1, lemma_slp1)`); no writeback, read-only.
 

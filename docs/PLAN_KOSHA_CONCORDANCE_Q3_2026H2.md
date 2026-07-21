@@ -82,7 +82,7 @@ the "5× apart, same side" framing was itself a conflation — the two tables ar
 different data products, not two cardinalities of one.
 
 Measured 20-07-2026 (Opus 4.8 `claude-opus-4-8`) directly against
-[`kosha.db`](https://github.com/gasyoun/kosha/blob/main/data/db/kosha.db):
+`kosha.db` (gitignored local data file, not on GitHub):
 
 | | `forms` | `inflections` |
 |---|---|---|
