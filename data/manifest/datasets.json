@@ -1133,6 +1133,46 @@
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
+      "id": "thematic-vocabulary",
+      "title": "Thematic vocabulary axis — corpus vocabulary grouped by Amarakosa varga",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "release_asset": "data/frequency/thematic_vocabulary.tsv",
+      "format": "tsv",
+      "rows": 2961,
+      "size_bytes": 604415,
+      "keying": "one row per (varga, lemma): varga_id, kanda, theme_iast, theme_slp1, semdom_keywords (A58 crosswalk cross-reference, up to 3 closest SIL semdom domain names, orientation only), lemma_slp1, deva, iast, gloss, core_rank, card_href. Sorted by varga file-order then core_rank (most frequent first) within each theme. 2,961 of 8,353 Amarakosa (varga, lemma) pairs across the 20 genuinely thematic vargas (the 4 grammatical/misc annexes excluded) kept -- the rest had no committed H947 vocab_curriculum.tsv row (no dead /w/ links).",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/frequency/thematic_vocabulary.tsv",
+      "builder": "scripts/build_thematic_vocabulary.py over ../AMAR/amar.txt (varga->eid->lemmas, parser ported from SanskritLexicography/data/semdom_ak_bridge.py) + ../SanskritLexicography/data/semdom_varga_crosswalk.csv (A58, keyword tags only) + vocab_curriculum.tsv (H947, real-card filter)",
+      "consumers": [
+        "reading/vocabulary/thematic/ page",
+        "thematic-vocab-drills dataset"
+      ],
+      "notes": "H1462 L4 surface. Alternative browsing/study axis to H947's frequency curriculum: groups vocabulary by classical Amarakosa thematic section (varga) instead of by corpus rank. The varga's own Sanskrit name is the theme label; semdom names are secondary cross-reference tags, not the primary label (A58's crosswalk is many-to-many at the varga level). Public/MIT, credit Dr. Marcis Gasuns.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
+    },
+    {
+      "id": "thematic-vocab-drills",
+      "title": "Thematic vocabulary drills — recognition/recall items grouped by Amarakosa theme",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "release_asset": "data/frequency/thematic_vocab_drills.json",
+      "format": "json",
+      "rows": 5922,
+      "size_bytes": 3670074,
+      "keying": "one item per row: aspect=vocabulary-thematic, type (recognition: word->gloss / recall: gloss->word), prompt, answer, distractors (SAME-theme lemmas, not same-frequency-band), theme, varga_id, rank (core_rank), evidence (vocab_curriculum.tsv card_href), source_dataset=thematic-vocabulary (ARCHITECTURE shared item schema). 2 items per kept lemma (2,961 x 2 = 5,922). Also shipped as data/frequency/thematic_vocabulary.apkg (Anki deck, genanki, one sub-deck per theme).",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/frequency/thematic_vocab_drills.json",
+      "builder": "scripts/build_thematic_vocabulary.py over thematic-vocabulary",
+      "consumers": [
+        "thematic_vocabulary.apkg (Anki deck)",
+        "Systema/csl-guides quiz component (future, via the shared item schema)"
+      ],
+      "notes": "H1462 L4 surface. Same-theme distractors are the deliberate difference from H947's vocab-drills (same-frequency-band distractors) -- a thematic axis is only pedagogically useful if its confusion set is thematically related. No SRS scheduling (deck items only, same fence as H947).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
+    },
+    {
       "id": "morphology-curriculum",
       "title": "Graded morphology curriculum — corpus-attested paradigms, ordered teaching syllabus",
       "tier": "public",

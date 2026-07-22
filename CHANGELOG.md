@@ -14,6 +14,11 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.81.0] - 2026-07-22
+
+### Added
+- **H1462 — thematic vocabulary axis (L4 surface)** (Sonnet 5 `claude-sonnet-5`). A new browsing/study axis alongside H947's frequency-graded curriculum: corpus vocabulary grouped by classical **Amarakosa varga** (thematic section — sky, earth, humans, animals, ...) instead of by corpus rank. [`scripts/build_thematic_vocabulary.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_thematic_vocabulary.py) joins three already-committed assets, none rebuilt: `../AMAR/amar.txt` (varga→eid→lemmas; parser ported from `SanskritLexicography/data/semdom_ak_bridge.py`, same org, public/MIT), `../SanskritLexicography/data/semdom_varga_crosswalk.csv` (A58 crosswalk, used only as secondary cross-reference "keyword" tags — the varga's own Sanskrit name is the theme's primary label, since A58 is many-to-many at the varga level), and `data/frequency/vocab_curriculum.tsv` (H947, the real-card filter — a lemma with no committed dictionary card is dropped, never a dead link). Output: [`data/frequency/thematic_vocabulary.tsv`](https://github.com/gasyoun/kosha/blob/main/data/frequency/thematic_vocabulary.tsv) (2,961 rows across all 20 genuinely thematic vargas; the 4 grammatical/misc annexes excluded), [`thematic_vocab_drills.json`](https://github.com/gasyoun/kosha/blob/main/data/frequency/thematic_vocab_drills.json) (5,922 recognition/recall items — distractors drawn from the **same theme**, not the same frequency band, the deliberate difference from H947's drill bank), `thematic_vocabulary.apkg` (Anki, one sub-deck per theme), and a browsable [`reading/vocabulary/thematic/`](https://github.com/gasyoun/kosha/blob/main/reading/vocabulary/thematic/index.html) page. 8 new tests in `tests/test_thematic_vocabulary.py`. Manifest rows `thematic-vocabulary` + `thematic-vocab-drills`.
+
 ## [0.80.0] - 2026-07-22
 
 ### Changed

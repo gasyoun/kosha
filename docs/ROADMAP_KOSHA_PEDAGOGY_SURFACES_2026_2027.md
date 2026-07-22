@@ -1,4 +1,4 @@
-_Created: 14-07-2026 · Last updated: 19-07-2026_
+_Created: 14-07-2026 · Last updated: 22-07-2026_
 
 # Roadmap — kosha pedagogy surfaces (2026–2027)
 
@@ -63,6 +63,12 @@ restricted bulk layers stay local-only inputs. File-level steps:
 |---|---|---|---|
 | **W-RU-a — Inline Sa→Ru gloss layer.** Join the SanskritRussian public three-layer glossary (surface/lemma/root) to reading-pack tokens; hover shows the RU triple; per-pack RU coverage % reported | 🟢 BUILD (queued) | reading packs (H871/W2a) + sandhi hover pattern (H917) + SanskritRussian public layers (all exist) | [H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md) |
 | **W-RU-b — Beginner subhāṣita reader.** New pack family from Böhtlingk's Indische Sprüche (7,537 public-domain sayings, F33): difficulty-scored (W2a scorer), beginner band curated, sandhi-split + metre-tagged + RU-glossed | 🟢 BUILD (queued) | difficulty scorer (W2a) + corpus sandhi (W0) + metre path (W3a) + F33 JSONL (all exist); RU glosses soft-depend on W-RU-a | [H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md) |
+
+## Wave T — thematic vocabulary axis (2026 H2) ✅ (shipped)
+
+| Deliverable | Verdict | Unblocked by | Handoff |
+|---|---|---|---|
+| **WT — Thematic (Amarakosa varga) vocabulary axis.** A second browsing/study axis alongside W1b's frequency curriculum: group corpus vocabulary by classical Amarakosa thematic section instead of by rank; drill distractors drawn from the same theme (harder, more meaningful than same-frequency-band) | ✅ SHIPPED v0.81.0 (build; A58 crosswalk reused as cross-reference tags only) | `vocab_curriculum.tsv` (W1b, real-card filter) + `../AMAR/amar.txt` + A58 `semdom_varga_crosswalk.csv` (all exist) | [H1462](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1462-Sonnet_kosha_semdom-thematic-vocab-axis_22.07.26.md) |
 
 ## Wave 4 — audio (2028, external-gated agenda)
 
