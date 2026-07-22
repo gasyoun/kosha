@@ -1666,6 +1666,25 @@
         "handoff lifecycle recovery workflow (H1247-H1252)"
       ],
       "notes": "18-07-2026 audit: 91 verdicts upheld by verifier, 15 refuted (swept to corrected verdict), 64 uncontested. The gold set is a BASELINE, not scripture — legitimate corrections with evidence update this in a later handoff. Verifier corrections: H003/H004 → RERUN_NEEDED (surveyed artifact evidence found post-audit); H066 → NEEDS_STUB_FILL; remaining refutations retracted (evidence re-checked, classifier was right). Tool validation: gold_agreement.py --self-test == 1.0000 (21-07-2026)."
+    },
+    {
+      "id": "sense-corpus-concordance",
+      "title": "Per-sense corpus attestation (नागदन्त layer, H1455 wave-1)",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "release_asset": "sense_corpus_concordance.tsv",
+      "format": "tsv",
+      "rows": 87134,
+      "size_bytes": 15289331,
+      "keying": "one row per (headword slp1, numbered PWG sense_id, attestation); columns slp1/hom/sense_id/lemma/locus/cite/conf/method/rights/source/gloss/sent. Method tiers: ls 85,472 (PWG's own <ls> under the sense, conf 0.99, guaranteed-correct witness) · locus 7 (DCS attestation whose verse-locus EQUALS a sense's <ls>, conf 0.90 — canonically-numbered Vedic texts only) · overlap 1,655 (shared proper-noun/Latin-binomial/digit gloss tokens across the DE/EN gap, conf 0.50–0.70). confidence<0.60 + unassigned residue (897 rows) parked in sense_review_queue.tsv, never dropped. A2 acceptance: <ls>-locus-resolution rate 99.3% on the 500-headword pilot.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/concordance/sense_corpus_concordance.tsv",
+      "builder": "scripts/build_sense_corpus_concordance.py (sense_loci_core.py + concordance_core.py, H1455)",
+      "consumers": [
+        "concordance/senses/ static viewer (sense-sharded KWIC)",
+        "kosha-sense-frequency (H1453) — shared attestation→sense assignment, two witnesses"
+      ],
+      "notes": "Wave-1 of PLAN_KOSHA_SENSE_RECONCILIATION_2026H2 (H1455). The middle arrow headword→SENSE→attestation, a SIDECAR left-joined at build time — MW/kosha `senses` are byte-unchanged. Inputs consumed, never re-derived: the H1456 PWG per-sense <ls> export (RussianTranslation microstructure.py), the reused dict-corpus-concordance, DCS 2026 (CC BY 4.0), and pwg_sources.py (pwgbib abbrev resolver). The passage-level DCS locus tier is a weak signal BY CONSTRUCTION (DCS uses critical-edition references; PWG cites Böhtlingk-Roth editions; Pañcatantra/Kathāsaritsāgara absent from DCS) — the load-bearing sense↔passage witness is PWG's own <ls>. Rights: all rows public (PWG <ls> = pre-1900 editions; DCS = CC BY 4.0); the evidence-only class is wired but unused in wave-1 (no modern-copyright gloss consumed). Build report: data/concordance/SENSE_CONCORDANCE_BUILD_REPORT.md."
     }
   ]
 }
