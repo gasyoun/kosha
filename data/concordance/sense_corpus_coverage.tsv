@@ -1,5 +1,5 @@
 slp1	hom	sense_id	n_ls	n_ls_resolved	n_dcs_assigned	variant_of	gloss
-nAgadanta		1a	3	3	0		Elephantenzahn, Elfenbein H. an. 4,111 . MED. t. 203 . MBH. 12,3630
+nAgadanta		1a	3	3	1		Elephantenzahn, Elfenbein H. an. 4,111 . MED. t. 203 . MBH. 12,3630
 nAgadanta		1b	6	6	0		Pflock in der Wand zum Anhängen von Sachen H. 1011 . H. an. MED. PAÑCAT. 116,19 . 252,10 / b〉 KATHĀS. 76,24
 nAgadanta		2	1	1	0		f. ( adj. comp. ) N. pr. einer Apsaras R. 2,91,17
 nAgadanta		3a	8	8	0		N. einer Pflanze, Tiaridium indicum Lehm. H. an. MED. RATNAM. 35 . SUŚR. 1,138,12 . 2,62,6 . 102,9 . 284,8 . 387,16
@@ -1194,9 +1194,9 @@ kfta		1e	4	4	0		am Ende eines comp. in Verbindung mit u. s. w. , welche als Prä
 kfta		1f	4	4	0		am Ende eines comp. in Verbindung mit dem obj. , also in verstellter Ordnung: = M. 2,70 . KULLŪKA verweist auf den gaṇa 
 kfta		1g	5	5	0		gut gethan, recht, gut: so wird es gut gethan sein, so werden wir unser Ziel erreichen MBH. 1,1615 . gut so v. a. ich da
 kfta		1h	10	10	0		( nom. neutr. ) mit oder mit einem blossen instr. abgethan damit d. i. dessen bedarf es nicht, genug des AK. 3,4,14,79 .
-kfta		2a	1	1	0		eines der Viśve Devāḥ MBH. 13,4356
+kfta		2a	1	1	1		eines der Viśve Devāḥ MBH. 13,4356
 kfta		2b	1	1	0		eines Sohnes von Vasudeva BHĀG. P. 9,24,45
-kfta		2c	3	3	1		eines Sohnes des Saṃnati ( Saṃnatimant ) und Schülers von Hiraṇyanābha HARIV. 1080 . VP. 453 . Vgl / c〉 BHĀG. P. 12,6,80
+kfta		2c	3	3	0		eines Sohnes des Saṃnati ( Saṃnatimant ) und Schülers von Hiraṇyanābha HARIV. 1080 . VP. 453 . Vgl / c〉 BHĀG. P. 12,6,80
 kfta		2d	1	1	0		eines Sohnes des Kṛtaratha und Vaters des Vibudha VP. 390
 kfta		2e	1	1	0		eines Sohnes des Jaya und Vaters des Haryavana BHĀG. P. 9,17,17
 kfta		2f	5	5	0		eines Sohnes des Cyavana und Vaters des Uparicara ( vgl. ) VĀYU-P. _in_ VP. 455, N. 56 / f〉 als Bez. der Zahl vier ( vgl
@@ -1317,12 +1317,12 @@ sarasvant		3o	1	1	0		abgekürzter Titel einer Grammatik Verz. d. Oxf. H. 110,b,1
 sOmya		1a	36	36	2		dem Soma gehörig, ihm geweiht, von ihm handelnd, damit verbunden, dessen Eigenschaften habend AK. 3,4,24,163 . H. an. 2,
 sOmya		1b	13	13	0		heiss trocken und kühl wässrig bezeichnen in der Naturlehre einen alle Stoffe durchdringenden Gegensatz, der schon in de
 sOmya		1c	10	10	0		nördlich: HARIV. 14106 . Verz. d. Oxf. 17,b, No. 63, Śl. 1 . VARĀH. BṚH. S. 9,9 . 11,21 . 24,24 . 54,30 . 60,1 . 95,23 .
-sOmya		1d	58	57	0		(wie der Mond) durch ein mildes Wesen wohlthuend auf die Sinne oder das Gemüth einwirkend, ansprechend; = AK. H. 1445 . 
+sOmya		1d	58	57	1		(wie der Mond) durch ein mildes Wesen wohlthuend auf die Sinne oder das Gemüth einwirkend, ansprechend; = AK. H. 1445 . 
 sOmya		1e	35	35	0		in der Anrede so v. a. mein Lieber, mein Theurer (auch höher Stehende so angeredet) ŚAT. BR. 14,6,1,3 . 2,13 . CHĀND. UP
 sOmya		1f	22	22	0		Glück bringend, — verheissend faustus; von Planeten u. s. w. ; = H. an. MED. — VARĀH. BṚH. S. 3,8 . 28,1 . 40,2 . 9 . 13
 sOmya		2a	1	1	0		pl. die Leute des Soma ŚĀṄKH. GṚHY. 2,14
 sOmya		2b	3	3	0		pl. eine best. Klasse von Manen M. 3,199 . VP. 239 . BHĀG. P. 4,1,62
-sOmya		2c	18	18	1		patron. : Budha ʼs ṚV. ANUKR. VS. LIV. als Planet Mercur AK. 1,1,2,27 . H. 117 . H. an. MED. HALĀY. 1,46 . VARĀH. BṚH. S
+sOmya		2c	18	18	0		patron. : Budha ʼs ṚV. ANUKR. VS. LIV. als Planet Mercur AK. 1,1,2,27 . H. 117 . H. an. MED. HALĀY. 1,46 . VARĀH. BṚH. S
 sOmya		2d	3	3	0		Anhänger, Verehrer BHĀG. P. 2,4,24 . ein Brahmane ŚABDAM. _im_ ŚKDR
 sOmya		2e	1	1	0		Ficus glomerata RĀJAN. 11,130
 sOmya		2f	5	5	0		N. pr. eines Dvīpa in Bhārata ŚABDAM. _im_ ŚKDR. VP. 2,3,7 . MĀRK. P. 57,6 . neutr. GOLĀDHY. BHUVANAK. 41
@@ -1527,9 +1527,9 @@ kamala	1	5e	1	1	0		N. pr. einer der Mütter im Gefolge Skanda ʼs MBH. 9,2627
 pAvana		1	40	40	0		adj. f. reinigend, entsündigend, heiligend; rein, heilig H. 1435 . 3,390. fg. HALĀY. 1,132 . M. 2,26 . YĀJÑ. 3,307 . MBH
 pAvana		2a	5	5	0		Feuer H. an. MED. ein best. Feuer HĀRĪTA _bei_ KULL. _zu_ M. 3,185 . Schol
 pAvana		2b	2	2	0		Weihrauch VIŚVA _im_ ŚKDR
-pAvana		2c	2	2	1		eine gelb blühende Verbesina ( ) RĀJAN. _im_ ŚKDR
+pAvana		2c	2	2	0		eine gelb blühende Verbesina ( ) RĀJAN. _im_ ŚKDR
 pAvana		2d	1	1	0		ein Siddha H. an
-pAvana		2e	1	1	0		N. pr. eines der Viśve Devāḥ MBH. 13,4355
+pAvana		2e	1	1	1		N. pr. eines der Viśve Devāḥ MBH. 13,4355
 pAvana		2f	2	2	0		Bein. Vyāsa ʼs H. an. MED
 pAvana		3a	3	3	0		Terminalia Chebula Roxb. H. an. VIŚVA _im_ ŚKDR
 pAvana		3b	0	0	0		Basilienkraut
@@ -1617,15 +1617,15 @@ daRqa		11	0	0	0		eine ununterbrochen fortlaufende Reihe, Zeile; vgl. und 3
 daRqa		12	25	25	0		m. der Stock als Symbol der Gewalt und Herrschaft; offene Gewalt, thätlicher Angriff: mit erhobenem Stock d. i. bereit G
 daRqa		13	14	14	0		m. Heer (die physische Gewalt in concreto) TRIK. 3,3,113 . H. 746 . H. an. MED. M. 7,65 . 157 . RAGH. 17,62 . Schatz und
 daRqa		14	75	75	0		m. der Stock als Symbol der richterlichen Gewalt und Strafe; Strafe überh. , sowohl körperliche als auch Zurechtweisung 
-daRqa		15	7	7	1		m. die personif. Strafe ist ein Sohn Dharma ʼs von der Kriyā VP. 55 . MĀRK. P. 50,26 . = Yama H. an. MED. VAIJ. = Śiva M
+daRqa		15	7	7	0		m. die personif. Strafe ist ein Sohn Dharma ʼs von der Kriyā VP. 55 . MĀRK. P. 50,26 . = Yama H. an. MED. VAIJ. = Śiva M
 daRqa		16	7	7	0		m. N. pr. eines Wesens im Gefolge des Sonnengottes MBH. 3,198 . AK. 1,1,2,33 . TRIK. 3,3,113 . H. an. MED. VYĀḌI beim Sc
-daRqa		17	14	14	1		m. N. pr. eines Mannes gaṇa zu P. 4,1,112 . gaṇa zu P. 4,3,106 . eines von Arjuna erschlagenen Fürsten (eines Bruders de
+daRqa		17	14	14	2		m. N. pr. eines Mannes gaṇa zu P. 4,1,112 . gaṇa zu P. 4,3,106 . eines von Arjuna erschlagenen Fürsten (eines Bruders de
 daRqa		18	0	0	0		m. Hochmuth, Dünkel und
 daRqa		19	0	0	0		m. Pferd
 daRqa		20	1	1	0		f. Hedysarum lagopodioides ( ) NIGH. PR. — Vgl
 daRqa		21	1	1	0		Bez. einer best. Art des Sitzens Verz. d. Oxf. H. 11,a, N. 1
 daRqa		22	0	0	0		=
-SfNga		1a	69	69	1		Horn AK. 2,9,100 . 3,4,13,58 . H. 1264 . an. 2,50 . MED. g. 25. fg. HALĀY. 2,112 . 123 . 4,79 . 5,69 . am Ende eines adj
+SfNga		1a	69	69	2		Horn AK. 2,9,100 . 3,4,13,58 . H. 1264 . an. 2,50 . MED. g. 25. fg. HALĀY. 2,112 . 123 . 4,79 . 5,69 . am Ende eines adj
 SfNga		1b	3	3	1		= KUSUM. 25,8 / b〉 N. pr. eines Muni ŚABDAR. _im_ ŚKDR
 SfNga		1c	2	2	0		Hauzahn des Elephanten R. 5,11,7 . KĀM. NĪTIS. 14,34
 SfNga		1d	7	7	0		Spritze, = H. an. MED. VIŚVA _bei_ UJJVAL. _zu_ UṆĀDIS. = UTPALINĪ ebend. RAGH. 16,70
@@ -1645,7 +1645,7 @@ SfNga		2a	5	5	0		eine best. Pflanze, = AK. 2,4,5,8 . H. an. MED. VIŚVA a. a. O.
 SfNga		3a	8	8	0		ein best. Fisch H. an. MED. HALĀY. 3,37 . VIŚVA und UTPALINĪ a. a. O. = AK. 1,2,3,25 . H. 1347 . = HĀR. 186
 SfNga		3b	14	14	0		Bez. verschiedener Pflanzen: = AK. 2,4,3,18 . H. an. MED. Trapa bispinosa VIŚVA a. a. O. = AK. 2,4,4,4 . H. an. MED. VIŚ
 SfNga		3c	5	5	0		zu Schmucksachen dienendes Gold ( vgl. ) H. an. MED. VIŚVA und UTPALINĪ a. a. O. Hierher vielleicht Verz. d. Oxf. H. 87,
-DAraRa		1	14	13	1		adj. f. tragend, erhaltend, aufrechterhaltend, bewahrend: TAITT. ĀR. 10,1,8 . MBH. 12,12751 . SUŚR. 1,169,9 . MBH. 1,727
+DAraRa		1	14	13	2		adj. f. tragend, erhaltend, aufrechterhaltend, bewahrend: TAITT. ĀR. 10,1,8 . MBH. 12,12751 . SUŚR. 1,169,9 . MBH. 1,727
 DAraRa		2a	1	1	0		du. die weiblichen Brüste H. ś. 124
 DAraRa		2b	2	2	0		N. pr. eines Sohnes des Kaśyapa MBH. 5,3632 . eines Fürsten der Candravatsa 2732
 DAraRa		3a	6	6	0		das Tragen: MBH. 7,1912 . 3853 . 3859 . das Erhalten, Aufrechterhalten, Unterstützen, Helfen: R. GORR. 2,109,25 . das Fe
@@ -1751,12 +1751,12 @@ lohita		2a	1	1	0		eine best. Krankheit der Augenlider ŚĀRṄG. SAṂH. 1,7,87
 lohita		2b	1	1	0		ein best. Edelstein (nicht Rubin) Spr. 2693
 lohita		2c	3	3	0		eine Reisart RĀJAN. _im_ ŚKDR. SUŚR. 1,228,10
 lohita		2d	2	2	0		Linsen ŚABDAC. _im_ ŚKDR
-lohita		2e	2	2	1		Dioscorea purpurea RĀJAN. _im_ ŚKDR
+lohita		2e	2	2	0		Dioscorea purpurea RĀJAN. _im_ ŚKDR
 lohita		2f	0	0	0		ein best. Fisch, Cyprinus Rohita Ham
 lohita		2g	3	3	0		eine best. Hirschart TRIK. ŚABDAR. _im_ ŚKDR
 lohita		2h	2	2	0		Schlange DHAR. _im_ ŚKDR
 lohita		2i	5	5	0		der Planet Mars H. an. MED. VIŚVA a. a. O. VARĀH. BṚH. S. 6,8 . Ind. St. 2,261
-lohita		2k	22	22	0		N. pr. α〉 eines Nāga MBH. 2,360 . — β〉 pl. einer Klasse von Göttern unter dem 12ten Manu VP. 268 . = DHAR. _im_ ŚKDR. — 
+lohita		2k	22	22	1		N. pr. α〉 eines Nāga MBH. 2,360 . — β〉 pl. einer Klasse von Göttern unter dem 12ten Manu VP. 268 . = DHAR. _im_ ŚKDR. — 
 lohita		3a	1	1	0		Bez. einer der sieben Zungen des Agni GṚHYASAṂGR. 1,14
 lohita		3b	2	2	0		Bez. zweier Pflanzen: = und RĀJAN. _im_ ŚKDR
 lohita		4	3	3	0		f. eine Frau von röthlicher Hautfarbe HALĀY. 4,53 . JAṬĀDH. _im_ ŚKDR
@@ -2112,12 +2112,12 @@ ma	2	2h	6	6	0		Lakṣmī AK. 1,1,1,23 . TRIK. 1,1,41 . H. 226 . H. an. MED. HAL�
 ma	2	3a	2	2	0		Glück, Wohlfahrt EKĀKṢARAK. _bei_ WILS
 ma	2	3b	2	2	0		Wasser ŚABDĀRTHAK. _bei_ WILSON
 satya		1	99	99	0		adj. wirklich, wahr, ächt; wahrhaft, ernstlich; zuverlässig, treu ( Gegens. u. s. w. ) AK. 1,1,5,22 . 3,4,16,86 . H. 264
-satya		2a	2	2	1		Ficus religiosa Lin. RĀJAN. _im_ ŚKDR
+satya		2a	2	2	0		Ficus religiosa Lin. RĀJAN. _im_ ŚKDR
 satya		2b	3	3	0		N. der höchstgelegenen unter den sieben Welten H. an. VIŚVA _im_ ŚKDR. ; vgl / b〉 und
 satya		4f	6	6	0		/ f〉 N. der höchst gelegenen unter den sieben Welten VEDĀNTAS. (Allah.) No. 70 . VP. 2,7,19 . BHĀG. P. 3,13,25 . 43 . MĀ
 satya		4c	52	52	0		N. des 9ten Kalpa ; s. u / c〉 Gelöbniss, Versprechen, Eid, Schwur AK. 3,4,25,156 . H. an. MED. AV. 2,36,2 . M. 8,88 . MB
 satya		2d	3	3	0		/ d〉 ein N. Kṛṣṇa ʼs: MBH. 5,2571 . Rāma ʼs ŚABDAR. _im_ ŚKDR
-satya		2e	25	25	0		N. pr. eines best. göttlichen Wesens VARĀH. BṚH. S. 53,43 . 52 . eines zu den Viśve Devāḥ gezählten Wesens JAṬĀDH. _in_ 
+satya		2e	25	25	1		N. pr. eines best. göttlichen Wesens VARĀH. BṚH. S. 53,43 . 52 . eines zu den Viśve Devāḥ gezählten Wesens JAṬĀDH. _in_ 
 satya		2f	7	7	0		N. pr. eines Astronomen, des Verfassers des Horāśāstra , VARĀH. BṚH. 2,17 . 7,3 . 9 . 13 . 20,10 . 21,3 . Ind. St. 2,251
 satya		3a	2	2	0		Bez. einer Śakti WEBER, RĀMAT. UP. 326 . PAÑCAR. 3,2,30
 satya		3b	15	14	0		Bein. der Sītā ŚABDAR. _im_ ŚKDR. = ebend. = MBH. 3,14723 . HARIV. 7138 . BHĀG. P. 1,14,37 . Verz. d. Oxf. H. 15,b, No. 
@@ -2188,7 +2188,7 @@ sTira		1b	42	42	0		fest so v. a. unbeweglich AK. 3,6,1,5 . H. an. 2,467 . MED. r
 sTira		1c	120	120	0		fest so v. a. keinem Wandel —, keinen Schwankungen unterworfen, dauerhaft, anhaltend, ausdauernd, bleibend: Indra ṚV. 3,
 sTira		1d	7	6	0		feststehend so v. a. sicher, keinem Zweifel unterworfen: (so ed. Bomb. ) MBH. 4,309 . KATHĀS. 18,137 . so v. a. mit Sich
 sTira		2a	3	3	0		Baum TRIK. 2,4,2 . ŚABDAR. _im_ ŚKDR
-sTira		2b	2	2	1		Grislea tomentosa Roxb. BHĀVAPR. _im_ ŚKDR
+sTira		2b	2	2	0		Grislea tomentosa Roxb. BHĀVAPR. _im_ ŚKDR
 sTira		2c	2	2	0		Berg ŚABDAR. _im_ ŚKDR
 sTira		2d	1	1	0		Stier RĀJAN. 19,23
 sTira		2e	2	2	0		ein Gott ŚABDAR. _im_ ŚKDR
@@ -2197,7 +2197,7 @@ sTira		2g	3	3	0		ein N. Viṣṇu ʼs H. ś. 73 . Kārttikeya ʼs ŚABDAR. _im_ 
 sTira		2h	1	1	0		ein best. über Waffen gesprochener Zauberspruch R. GORR. 1,31,8
 sTira		2i	1	1	0		ein best. Metrum: 4 Mal ⏑ – Ind. St. 8,331
 sTira		2k	2	2	0		die letzte Befreiung der Seele H. an. MED
-sTira		2l	1	1	0		neben N. pr. eines Wesens im Gefolge Skanda ʼs MBH. 9,2550
+sTira		2l	1	1	1		neben N. pr. eines Wesens im Gefolge Skanda ʼs MBH. 9,2550
 sTira		3a	6	6	0		die Erde AK. 2,1,2 . TRIK. 3,3,377 . H. 937 . H. an. MED. HALĀY. 2,1
 sTira		3b	16	16	0		Desmodium gangeticum Dec. AK. 2,4,4,3 . TRIK. H. an. MED. RATNAM. 9 . SUŚR. 2,101,10 . 223,7 . 256,10 . 280,5 . 341,8 . 
 sTira		3c	1	1	0		Bez. des Buchstabens WEBER, RĀMAT. UP. 318 . — Vgl. und
@@ -2220,13 +2220,13 @@ Suci		1m	1	0	0		ein N. Śiva ʼs ebend
 Suci		1n	20	20	0		N. pr. α〉 eines Sohnes des Bhṛgu MBH. 13,4145 . — β〉 eines Sohnes des Gada HARIV. 9193 . — γ〉 eines Sohnes des 3ten Manu
 Suci		3	2	2	1		f. N. pr. einer Tochter Kaśyapa ʼs von der Tāmrā und Urmutter der Wasservögel HARIV. 222. fg. VP. 148. fg. — Vgl
 bfhant		1a	12	12	0		dick, dicht; breit, massenhaft: ṚV. 2,27,7 . 5,1,10 . AV. 8,5,19 . ṚV. 4,56,4 . 8,18,20 ; vgl. ṚV. 8,77,3 . AV. 9,4,5 . 
-bfhant		1b	101	101	0		gross, eigentlich und uneigentlich, in den verschiedenen Bedeutungen des Wortes; weit, ausgebreitet; reichlich; gewaltig
+bfhant		1b	101	101	1		gross, eigentlich und uneigentlich, in den verschiedenen Bedeutungen des Wortes; weit, ausgebreitet; reichlich; gewaltig
 bfhant		1c	14	14	0		hoch: ṚV. 4,30,14 . 54,5 . 5,1 . (oder zu b.) 1,17 . 7,86,1 . 99,2 . so v. a. VS. 14,13 . AV. 13,2,42 . TS. 5,5,10,2 . s
 bfhant		1d	5	5	0		von Tönen hoch, hell, laut: ṚV. 3,51,1 . 10,5 . VS. 5,22 . ṚV. 7,33,4 . PAÑCAT. 229,19
 bfhant		2	17	17	0		adv. weit, breit, hoch: ṚV. 8,20,6 . 9,5,5 . 10,21,8 . 35,6 . laut 5,25,7 . 36,4 . 10,94,4 . 1,46,1 . 8,55,1 . Hierher e
 bfhant		3a	1	1	1		N. pr. eines Marut HARIV. 11547
 bfhant		3b	2	2	0		N. pr. eines Fürsten MBH. 1,2691 . eines Sohnes des Suhotra und Vaters des Ajamiḍha HARIV. 1754 (wo für zu lesen ist). V
-bfhant		4a	31	31	1		N. eines best. Metrums von 36 Silben (8 + 8 + 12 + / a〉 (mit oder ohne ) Bez. eines Sāman , welches die metrische Form d
+bfhant		4a	31	31	0		N. eines best. Metrums von 36 Silben (8 + 8 + 12 + / a〉 (mit oder ohne ) Bez. eines Sāman , welches die metrische Form d
 bfhant		8b	20	20	0		Eierpflanze, vulgo , Solanum indicum L. oder Sol. Melongena L. ; auch Sol. Jacquini Willd. AK. 2,4,3,12 . 3,4,14,77 . H.
 bfhant		8c	4	4	0		ein Körpertheil an den Seiten zwischen Brust und Wirbelsäule: SUŚR. 1,350,10 . 345,16 . 346,9 . ( Berl. Mpt ) 356,15
 bfhant		8d	2	2	0		Ueberwurf, Mantel ( vgl. ) H. an. MED
@@ -2309,7 +2309,7 @@ SiKin		2n	0	0	0		Baum diess
 SiKin		2o	17	14	0		N. pr. α〉 eines Schlangendämons MBH. 5,3628 . — β〉 des Indra unter Manu Tāmasa VP. 3,1,17 . MĀRK. P. WILSON , VP. — γ〉 d
 SiKin		3a	1	1	0		Pfauhenne R. 3,79,14
 SiKin		3b	2	2	0		eine best. Staude, = RĀJAN. _im_ ŚKDR. — Vgl
-kUwa	1	2	3	3	0		Scheitel: MBH. 16,110 . BHĀG. P. 3,13,29 . BURNOUF : Les flancs déchirés par lʼimpetuosité de la chute de ce corps sembl
+kUwa	1	2	3	3	1		Scheitel: MBH. 16,110 . BHĀG. P. 3,13,29 . BURNOUF : Les flancs déchirés par lʼimpetuosité de la chute de ce corps sembl
 kUwa	1	3	32	32	0		vorspringende Erhöhung überh. , Kuppe, Spitze ( m. n. Berggipfel AK. 2,3,4 . 3,4,9,139 . H. 1032 . an. 2,85 . MED. ṭ. 8 
 kUwa	1	4	1	1	0		Spitze, Haupt so v. a. der Oberste, Vornehmste, Erste: ( voc. ) BHĀG. P. 2,9,19
 kUwa	1	5	17	17	0		Haufe, Menge AK. 2,5,42 . 3,4,9,39 . H. 1411 . H. an. MED. R. 1,13,15 . 6,3,2 . MBH. 3,14749 . BHĀG. P. 3,1,38 . 8,11,24
@@ -2318,7 +2318,7 @@ kUwa	1	7	6	6	0		ein eiserner Hammer AK. 3,4,9,39 . H. 920 . H. an. MED. BHĀG. P
 kUwa	1	8	3	3	0		ein best. Theil des Pfluges AK. 3,4,9,39 . H. an. MED
 kUwa	1	9	10	10	0		Falle, Fallstrick AK. H. an. MED. R. 4,17,16 . PAÑCAT. 143,12 . Auch in übertr. Bed. : MBH. 1,377 . die Würfel als Falle
 kUwa	1	10	22	22	0		Täuschung, Trug, Unwahrheit, = AK. H. 378 . H. an. MED. der Rede Trug, die räthselhaften Worte BHĀG. P. 6,5,10 . 29 . de
-kUwa	1	11	5	5	1		Unbewegliches ( ) AK. H. an. MED. uniform substance (as the etherial element, etc. ) COLEBR. _zu_ AK. Wohl aus geschloss
+kUwa	1	11	5	5	0		Unbewegliches ( ) AK. H. an. MED. uniform substance (as the etherial element, etc. ) COLEBR. _zu_ AK. Wohl aus geschloss
 kUwa	1	12	0	0	0		Wasserkrug ( vgl. )
 kUwa	1	13	2	2	0		eine best. Pflanze COLEBR. _zu_ AK. 3,4,9,39
 kUwa	1	14	2	2	0		m. f. Haus ( vgl. ) ŚABDAR. _im_ ŚKDR
@@ -2369,7 +2369,7 @@ BAvana	1	1c	1	1	0		sich einbildend, vorstellend: AṢṬĀV. 14,1
 BAvana	1	1d	1	1	0		lehrend: MBH. 14,949 . Vgl
 BAvana	1	2	0	0	0		m. N. des 22ten Kalpa ; s. u. 2,d
 BAvana	1	3a	8	8	0		das Bewirken, in-die-Erscheinung-Bringen; n. NIR. 7,25 . ist ein , insofern aus Erde Bilder von Brahman geformt werden, 
-BAvana	1	3b	1	1	0		das Fördern: [Page5-0262] (= Schol. ) MBH. 12,3587
+BAvana	1	3b	1	1	1		das Fördern: [Page5-0262] (= Schol. ) MBH. 12,3587
 BAvana	1	3c	41	41	0		Vergegenwärtigung, Einbildung, Vorstellung; Voraussetzung, Vermuthung; = H. 1373 . = H. an. 3,396 . = MED. n. 101 . n. N
 BAvana	1	3d	2	2	0		das Feststellen, Erweisen: wenn Theilung geleugnet wird, so soll man sich von ihr überzeugen durch Verwandte u. s. w. ( 
 BAvana	1	3e	2	2	0		in der Math. f. the accomplishing a thing by combination HAUGHT. composition WILS / e〉 das Finden; vgl. und
@@ -2379,7 +2379,7 @@ BAvana	1	3h	1	1	0		= ( vgl. ) MED
 BAvana	1	4a	1	1	0		Titel einer Upaniṣad Ind. St. 3,326
 BAvana	1	4b	0	0	0		Krähe ( )
 BAvana	1	4c	1	1	0		Wasser ( ) H. an
-BAvana	1	5a	2	2	1		= die Frucht der Dillenia speciosa RĀJAN. _im_ ŚKDR
+BAvana	1	5a	2	2	0		= die Frucht der Dillenia speciosa RĀJAN. _im_ ŚKDR
 BAvana	1	5b	1	1	0		N. pr. eines Waldes ( viell. in [ ] + zu zerlegen; vgl. 2. ) HARIV. 8955
 SaNku		2	2	2	0		Haken zur Extraction eines todten Fötus SUŚR. 1,92,21 . VĀGBH. 25,32
 SaNku		3	8	8	0		Stecken: HARIV. 11206 . Stakete, Pfahl, Balken; = AK. 2,4,1,8 . H. 1122 . VIŚVA a. a. O. MBH. 3,16325 . AK. 3,4,26,205 .
@@ -2523,7 +2523,7 @@ vftti		17	3	3	0		Wortart, Wortform: NIR. 2,1 . P. 2,1,3 , Schol. Verz. d. Oxf. H
 vftti		18	16	15	0		Commentar (zu einem Sūtra ) AK. 3,4,1,15 . TRIK. ( zu lesen). H. 257. fg. H. an. MED. VAIJ. a. a. O. gaṇa zu P. 4,2,60 .
 BUta		1a	35	35	0		geworden so v. a. gewesen, vergangen; n. das Vergangene, Vergangenheit; = AK. 3,4,14,80 . H. an. 2,183 . = (lies ) MED. 
 BUta		1b	8	8	0		wirklich geschehen; n. Thatsache: KĀM. NĪTIS. 13,48 . Spr. 4671 . YĀJÑ. 3,285 . 2,19 . an dem keine Schuld in Wirklichke
-BUta		1c	70	70	0		geworden, seiend, in comp. mit seinem Prädicate, insbes. mit einem subst. , wodurch mit ihrem subst. in Geschlecht und Z
+BUta		1c	70	70	1		geworden, seiend, in comp. mit seinem Prädicate, insbes. mit einem subst. , wodurch mit ihrem subst. in Geschlecht und Z
 BUta		1d	1	1	0		eingeweicht in ( vgl. das caus. von 1. ): SUŚR. 2,72,15
 BUta		1e	4	4	0		= erlangt AK. 3,2,54 . H. 1490 . H. an. MED
 BUta		1f	5	5	0		passend, schicklich; = AK. H. an. MED. Statt VAIJ. a. a. O. ist wohl zu lesen / f〉 füge 3,4,14,80 nach AK. hinzu
@@ -2556,7 +2556,7 @@ pada		16	1	1	0		N. eines Sāman Ind. St. 3,233
 pada		17	3	3	0		Schutz, = AK. 3,4,16,96 . H. an. MED. — Vgl. ( gehört zu 2. ), u. s. w
 pada		18	4	4	0		gemeinschaftlicher Name des Parasmaipada und Ātmanepada : Verz. d. Oxf. H. 163,a, No. 358 . 164,b, No. 363 . 165,b, No. 
 Sukra		1a	25	25	0		klar, licht, hell; von Sonne, Feuer u. s. w. ṚV. 3,1,5 . 8 . 14 . 6,16,34 . 1,45,4 . 3,6,3 . 7,4,1 . 66,16 . AV. 13,2,1 
-Sukra		1b	17	17	1		klar, lauter; m. der lautere Soma ṚV. 1,84,4 . 137,1 . 2,41,2 . 3 . 7,64,5 . 4,27,5 . 8,2,10 . VĀLAKH. 4,10 . AV. 6,53,1
+Sukra		1b	17	17	0		klar, lauter; m. der lautere Soma ṚV. 1,84,4 . 137,1 . 2,41,2 . 3 . 7,64,5 . 4,27,5 . 8,2,10 . VĀLAKH. 4,10 . AV. 6,53,1
 Sukra		1c	9	9	0		hellfarbig, weisslich, weiss: ṚV. 2,34,2 . 6,2,6 . 1,160,3 . 9,19,5 . 62,28 . 10,85,10 . AV. 8,7,1 . 12,1,13 . ŚĀṄKH. BR
 Sukra		1d	4	4	0		übertr. hell, rein, fleckenlos: ṚV. 2,9,4 . 7,34,1 . PAÑCAV. BR. 1,2,9 . ŚAT. BR. 11,6,2,6
 Sukra		2a	5	5	0		Feuer AK. 1,1,1,51 . TRIK. 3,3,375 . H. 1098 . an. 2,463 . MED. r. 93
@@ -2565,7 +2565,7 @@ Sukra		2c	52	52	0		der Planet Venus ( personif. als Sohn Bhṛgu ʼs und Lehrer 
 Sukra		2d	11	11	0		der Śukragraha (auch mit Beisatz von ) VS. 7,13 . 13,56 . ŚAT. BR. 4,2,1,1 . 5,4,4,20 . 3,3,2,7 . 4,3,1,26 . 3,17 . 5,9,
 Sukra		1e	2	2	0		N. eines Yoga ( ) KOṢṬHĪPR. _im_ ŚKDR
 Sukra		1f	7	7	1		N. pr. ein Sohn Bhava ʼs VP. 1,8,11 . ein Marutvant HARIV. 11546 . ein Sohn Vasiṣṭha ʼs ( vgl. ) 492 . VP. 83 . der 3te 
-Sukra		3a	14	14	0		Helle, Klarheit, Licht; auch pl. ṚV. 1,135,2 . 140,11 . 3,8,9 . 44,5 . VS. 40,8 . TBR. 1,5,1,1 . KAṬHOP. 5,8 . MAITRYUP.
+Sukra		3a	14	14	1		Helle, Klarheit, Licht; auch pl. ṚV. 1,135,2 . 140,11 . 3,8,9 . 44,5 . VS. 40,8 . TBR. 1,5,1,1 . KAṬHOP. 5,8 . MAITRYUP.
 Sukra		3b	5	5	0		Klares so v. a. klare Flüssigkeit, Wasser, Soma NAIGH. 1,12 . VS. 19,5 . 8,48 . ṚV. 5,43,3 . 4
 Sukra		3c	5	5	0		Saft, Seim: AIT. BR. 5,32 . ŚAT. BR. 11,5,8,4 . 12,4,2,10 . 7,1,6 . ŚĀṄKH. ŚR. 4,8,2
 Sukra		3d	40	40	0		Same AK. 2,6,2,13 . 3,4,31,236 . TRIK. 3,3,375 . H. 619 . 629 . H. an. MED. HALĀY. 3,16 . 5,67 . SIDDH. K. 249,b,3 . 4 .
@@ -2851,7 +2851,7 @@ rohita		2f	3	3	0		eine best. unvollkommene Form eines Regenbogens VARĀH. BṚH.
 rohita		4a	6	6	0		/ a〉 eine best. unvollkommene Form eines Regenbogens AK. 1,1,2,12 . H. 179 . an. 3,289 . MED. t. 146 . HALĀY. 1,57 . VAR
 rohita		4g	13	12	0		N. pr. α〉 eines Sohnes des Hariścandra AIT. BR. 7,14 . ŚĀṄKH. ŚR. 15,18,8 . HARIV. 756 . BHĀG. P. 9,7,8. fgg. PRAVARĀDHY
 rohita		3a	25	25	0		proparox. eine röthliche Kuh (im Veda vielleicht auch eine röthliche Stute) ṚV. 8,82,13 . 90,13 (wo wir vermuthen). AV. 
-rohita		3b	75	75	0		proparox. im AV. , sonst oxyt. N. eines Nakṣatra (und des damit verbundenen lunaren Tages); personif. eine Tochter Dakṣa
+rohita		3b	75	75	1		proparox. im AV. , sonst oxyt. N. eines Nakṣatra (und des damit verbundenen lunaren Tages); personif. eine Tochter Dakṣa
 rohita		3c	1	1	0		Blitz MED
 rohita		3d	3	3	0		ein junges Mädchen, das eben die Regeln bekommen hat, Spr. 282 . GṚHYASAṂGR. 2,28 . ein neunjähriges Mädchen 29
 rohita		3e	10	10	0		Halsentzündung in verschiedenen Formen H. 467 . H. an. MED. WISE 310 . SUŚR. 1,32,1 . 92,13 . 306,14 . 20 . 2,130,14 . Ś
@@ -3579,7 +3579,7 @@ fta		2	16	16	0		adv. gaṇa zu P. 1,4,57 . recht, richtig; gehörig, nachdrückl
 fta		3	4	4	0		m. als Personification NAIGH. 5,4 . NIR. 10,40 . N. pr. eines Rudra MBH. 13,7090 . eines Fürsten VP. 390
 fta		4a	11	11	0		feste Ordnung, Bestimmung, Entscheidung: ṚV. 2,28,4 . 3,54,3 . 5,68,4 . in Form [Page1-1047] und Regel, auf entscheidend
 fta		4b	152	152	0		die Ordnung in heiligen Dingen: heiliger Brauch, Satzung, frommes Werk; göttliches Gesetz, Glaube als Inbegriff der reli
-fta		4c	65	65	0		das Rechte, Wahre; Recht, Wahrheit, besonders die religiöse Wahrheit, = NAIGH. 3,10 . AK. 1,1,5,22 . 3,4,14,80 . TRIK. 3
+fta		4c	65	65	1		das Rechte, Wahre; Recht, Wahrheit, besonders die religiöse Wahrheit, = NAIGH. 3,10 . AK. 1,1,5,22 . 3,4,14,80 . TRIK. 3
 fta		4d	4	4	0		Nach NAIGH. 1,12 . H. an. und MED. = Wasser; ebenso im NIR. und bei den Commentatoren sehr häufig, auch in den compp. mi
 fta		4e	8	8	0		= NAIGH. 2,10 nur in der einen Recension. — Auffallenderweise wird unter den Bezeichnungen für NAIGH. 3,17 nicht aufgezä
 fta		5a	14	14	1		nach der Ordnung, gehörig, richtig; regelmässig, rite: AV. 3,12,6 . 6,47,3 . ṚV. 3,31,21 . 58,2 . 1,133,1 . [Page1-1049]
@@ -3647,7 +3647,7 @@ sidDi		15	3	3	0		eine best. Heilpflanze, = AK. 2,4,3,31 . MED. RĀJAN. 5,28
 sidDi		16	14	14	0		der Erfolg personificirt als göttliches Wesen MBH. 1,2794 . VARĀH. BṚH. S. 48,56 . Verz. d. Oxf. H. 78,b,32. fg. ( ). un
 dakziRa		1a	3	3	0		tüchtig, geschickt ( vgl. ) H. an. 3,206 . (nicht ) P. 1,1,34 . ŚATR. 14,56 . Vgl. unerfahren, einfältig
 dakziRa		1b	24	24	1		recht, auf der rechten Seite befindlich; im Gegens. zu AK. 3,2,34 . H. 1466 . H. an. MED. ṇ. 51 (wohl st. zu lesen). Urs
-dakziRa		1c	32	32	0		südlich, im Süden befindlich, nach Süden gerichtet; f. (mit Ergänzung von ) Süden (Süden liegt dem nach der aufgehenden 
+dakziRa		1c	32	32	1		südlich, im Süden befindlich, nach Süden gerichtet; f. (mit Ergänzung von ) Süden (Süden liegt dem nach der aufgehenden 
 dakziRa		1d	23	23	0		gerade, rechtschaffen; liebenswürdig, gefällig, zuvorkommend; = AK. 3,1,8 . TRIK. 3,3,131 . H. 376 . H. an. MED. = (dahe
 dakziRa		1e	3	1	1		der südliche heilige Text, neben und , Bezeichnung eines der heiligen Texte der Tāntrika Verz. d. Oxf. H. 91,a, N. 3 . n
 dakziRa		2	6	6	0		m. die Rechte (der rechte Arm, die rechte Hand): ṚV. 8,23,3 . 70,1 . 6 . 10,180,1 . 1,100,9 / 2〉 TS. 5,3,3,3
@@ -3735,11 +3735,11 @@ deva	1	8a	2	2	0		ein best. Vogel ( s. ) RĀJAN. _im_ ŚKDR. (Suppl.)
 deva	1	8b	8	8	0		N. verschiedener Pflanzen: Sanseviera Roxburghiana Schult. AK. 2,4,3,2 . H. an. MED. Medicago esculenta Rottl. Roxb. ( T
 deva	1	9	9	9	0		n. Sinnesorgan ( vgl. oben u. 1. ) H. an. MED. MUṆḌ. UP. 3,1,8 . Auch wohl masc. ; vgl. Ind. St. 1,407 . 449 . = 449 . —
 deva	1	8c	1	1	0		Bez. einer best. übernatürlichen Macht, = Verz. d. Oxf. H. 235,a,27
-BArata		1a	9	9	1		Bez. des Agni , vielleicht so v. a. kriegerisch; nach SĀY. der von Ṛtvij ( Bharata ) stammende oder Träger (des Opfers).
+BArata		1a	9	9	0		Bez. des Agni , vielleicht so v. a. kriegerisch; nach SĀY. der von Ṛtvij ( Bharata ) stammende oder Träger (des Opfers).
 BArata		1b	26	26	1		von Bharata stammend: . MBH. 1,371 . 3122 . HARIV. 3040 . 4035 . VP. _bei_ MUIR, ST. I, 187 . 5 . ṚV. 3,53,12 . so heiss
 BArata		1c	6	6	0		den Bharata gehörig, ihnen zukommend . MBH. 1,534 . 3,1930 . 4,1241 . 6,4548 . 7,28 . 1,3122
 BArata		1d	8	8	0		der Kampf —, die Schlacht der Bharata ʼs P. 4,2,56 . Sch. ( oxyt. ). MBH. 6,5769 . HARIV. 9800 . Z. d. d. m. G. 8,537 . 
-BArata		1e	25	24	0		und subst. n. die Erzählung von den Bharata ʼs, von ihrem Kampfe: MBH. 1,2233 . Spr. 340 . MBH. 1,19 . 18,210 (wo mit de
+BArata		1e	25	24	1		und subst. n. die Erzählung von den Bharata ʼs, von ihrem Kampfe: MBH. 1,2233 . Spr. 340 . MBH. 1,19 . 18,210 (wo mit de
 BArata		1f	1	1	0		N. pr. eines Sees ŚATR. 1,60
 BArata		1g	25	25	0		oder n. mit Ergänzung desselben: Bharata ʼs Varṣa d. i. Indien AK. 2,1,6 . TRIK. 2,1,2 . 3,3,175. fg. H. 691 . 947 , Sch
 BArata		1h	2	2	0		Bhāratavarṣa bewohnend: BHĀG. P. 5,19,10 . 17
@@ -3998,8 +3998,8 @@ SudDa		1e	5	5	0		einfach, bloss: einfaches Waschen (ohne Salbung u. s. w. ) MEGH
 SudDa		1f	2	1	0		ganz, vollständig, abgeschlossen: RĀJA-TAR. 4,46 . 49. BURNOUF, Intr. 633
 SudDa		1g	1	1	0		geprüft, untersucht: KĀM. NĪTIS. 10,23
 SudDa		2a	1	1	0		= die lichte Hälfte eines Monats, die Zeit des zunehmenden Mondes: Inschr. in Journ. of the Am. Or. S. 7,13,7
-SudDa		2b	1	1	0		pl. Bez. einer Klasse von Göttern MBH. 13,1372
-SudDa		2c	1	1	1		N. pr. eines der sieben Weisen unter dem 14ten Manu BHĀG. P. 8,13,35
+SudDa		2b	1	1	1		pl. Bez. einer Klasse von Göttern MBH. 13,1372
+SudDa		2c	1	1	0		N. pr. eines der sieben Weisen unter dem 14ten Manu BHĀG. P. 8,13,35
 SudDa		2d	1	1	0		N. pr. eines Sohnes des Anenas BHĀG. P. 9,17,11
 SudDa		2e	1	1	0		N. pr. eines Vogels HARIV. 1216
 SudDa		3	1	1	0		f. N. pr. einer Tochter Siṃhahanu ʼs LIA. 2, Anh. II
@@ -4423,9 +4423,9 @@ SAnti		1e	1	1	0		= BHĀG. P. 12,7,4
 SAnti		1f	7	7	1		die Seelenruhe u. s. w. personif. HARIV. 14036 . eine Tochter der Śraddhā PRAB. 17,13 . 43,3. fgg. Gattin Atharvan ʼs BH
 SAnti		2a	1	1	0		eines Sohnes des Indra MBH. 1,7304
 SAnti		2b	2	2	0		Indra ʼs im 10ten Manvantara VP. 3,2,25 . MĀRK. P. 94,13
-SAnti		2c	1	1	1		eines Tuṣita , Sohnes des Viṣṇu von der Dakṣiṇā , BHĀG. P. 4,1,7
+SAnti		2c	1	1	0		eines Tuṣita , Sohnes des Viṣṇu von der Dakṣiṇā , BHĀG. P. 4,1,7
 SAnti		2d	1	1	0		eines Sohnes des Kṛṣṇa von der Kālindī BHĀG. P. 10,61,14
-SAnti		2e	3	3	0		eines Ṛṣi MBH. 12,12759 . eines Sohnes des Aṅgiras 13,4147 . eines Schülers des Bhūti MĀRK. P. 99,11
+SAnti		2e	3	3	1		eines Ṛṣi MBH. 12,12759 . eines Sohnes des Aṅgiras 13,4147 . eines Schülers des Bhūti MĀRK. P. 99,11
 SAnti		2f	2	2	0		eines Sohnes des Nīla und Vaters des Suśānti VP. 453 . BHĀG. P. 9,21,30. fg
 SAnti		2g	5	5	0		des 16ten Arhant ʼs der gegenwärtigen Avasarpiṇī und 5ten Cakravartin in Bhārata H. 28 . 693 . H. an. ŚATR. 1,2 . 382 ; 
 SAnti		2h	6	6	0		eines Lehrers (mit vollem Namen ) TĀRAN. 234 . 239 . 243 . 325 . 328 . — Vgl. ( VARĀH. BṚH. S. 46,81 . )
@@ -4763,7 +4763,7 @@ utTAna		1i	0	0	0		Heer
 utTAna		1k	0	0	0		=
 utTAna		1l	1	1	0		= H. an
 utTAna		1m	2	2	0		= MED. — AK. 3,4,120 : ; die beiden letzten locc. haben zu jenen verschiedenen Deutungen mit Anlass gegeben
-utTAna		2	1	1	0		adj. mit caus. Bed. der ausgehen —, entstehen lässt: MBH. 13,1242
+utTAna		2	1	1	1		adj. mit caus. Bed. der ausgehen —, entstehen lässt: MBH. 13,1242
 utTAna		1n	1	1	0		Bez. eines best. Processes, der mit Mineralien vorgenommen wird, Verz. d. Oxf. H. 320,a,9
 gokarRa		1	2	2	0		adj. Kuhohren habend, von Menschen VYUTP. 205 . von Dämonen WOLLHEIM, Myth. 138
 gokarRa		2a	1	1	0		Kuhohr: KATHĀS. 6,57
@@ -4964,7 +4964,7 @@ nI	1	2a	34	34	0		im acc. : SIDDH. K. _zu_ P. 1,4,51 . VOP. 5,6 . VS. 6,16 . AV. 
 nI	1	2b	11	11	0		im dat. : MBH. 2,2480 = 7,6310 . [Page4-0266] ŚAT. BR. 3,8,1 . 10 . BṚH. ĀR. 5,15 . AV. 2,28,15 . 5,14,6 . ŚAT. BR. 3,6,
 nI	1	2c	10	10	0		im loc. : R. 5,58,21 . BHARTṚ. 2,6 . VET. in LA. 22,19 . 27,5 . 37,3 . BHĀG. P. 2,2,20 . HIT. 21,9 . 26,22 . VID. 200 . 
 nI	1	3	176	175	0		med. mit sich führen, mit sich nehmen (als Sieger, Eigenthümer, Machthaber): AV. 1,8,3 . TAITT. ĀR. 6,5,3 . R. 1,61,20 (
-nI	1	4	89	89	0		Jmd oder Etwas in ein Verhältniss, eine Lage, einen Zustand ( acc. ) bringen, — versetzen: in seine Gewalt bringen: AV. 
+nI	1	4	89	89	1		Jmd oder Etwas in ein Verhältniss, eine Lage, einen Zustand ( acc. ) bringen, — versetzen: in seine Gewalt bringen: AV. 
 nI	1	5	60	59	0		den Stock führen, — tragen so v. a. Strafe verhängen: M. 7,30 . YĀJÑ. 1,354 . Spr. 473 / 5〉 herauszubringen versuchen, n
 nI	1	6	79	77	0		hintragen, wegtragen, forttragen, hintragen zu MBH. 3,11008 . R. GORR. 2,83,22 . 5,35,35 . 40. MBH. 1,5966 . VID. 280 . 
 nI	1	7	130	130	0		führen so v. a. ziehen (eine Linie u. s. w. ): ŚĀṄKH. ŚR. 2,6,12 . SŪRYAS. 6,10 . 10,12 / 7〉 ausnehmen, ausschliessen (a
@@ -5236,11 +5236,11 @@ kaTam		7c	4	4	0		ein wenig, nur obenhin, etwas: ŚĀK. 73 . KATHĀS. 4,31 . auch
 viBUti		1a	1	1	0		durchdringend: zur Erklärung von NIR. 11,9
 viBUti		1b	2	2	0		reichlich: ṚV. 1,30,5 . 6,21,1
 viBUti		1c	5	5	0		mächtig, wirksam: ṚV. 1,8,9 . die Marut 166,11 . Indra 6,17,4 . VĀLAKH. 1,6 . verfügend über ( gen. ): VĀLAKH. 2,6
-viBUti		2a	1	1	1		eines Sādhya HARIV. 11537
-viBUti		2b	1	1	0		eines Sohnes des Viśvāmitra MBH. 13,256
+viBUti		2a	1	1	0		eines Sādhya HARIV. 11537
+viBUti		2b	1	1	1		eines Sohnes des Viśvāmitra MBH. 13,256
 viBUti		3a	7	7	0		Entfaltung, Vervielfältigung, reiche Fülle: RAGH. 4,19 . KUMĀRAS. 2,61 . ŚAṂK. _zu_ BṚH. ĀR. UP. S. 237 . KATHĀS. 45,337
-viBUti		3b	55	54	1		Manifestation einer Kraft, Machtäusserung NIR. 4,23 . BHAG. 10,7. fg. 16 . 18. fg. 40 . BHĀG. P. 2,7,51 . 9,13 . 3,7,23 
-viBUti		3c	4	4	0		ein glücklicher Erfolg: MBH. 1,411 . 441 . 2,1937 . R. 7,65,8
+viBUti		3b	55	54	0		Manifestation einer Kraft, Machtäusserung NIR. 4,23 . BHAG. 10,7. fg. 16 . 18. fg. 40 . BHĀG. P. 2,7,51 . 9,13 . 3,7,23 
+viBUti		3c	4	4	1		ein glücklicher Erfolg: MBH. 1,411 . 441 . 2,1937 . R. 7,65,8
 viBUti		3d	5	5	0		Herrlichkeit, Pracht: HARIV. 7707 . RAGH. 8,36 . VARĀH. BṚH. S. 12,10 . 104,42 . RĀJA-TAR. 8,2429
 viBUti		3e	14	14	0		Wohlfahrt, Wohlergehen, Glück H. 357 . PRAŚNOP. 5,4 . MBH. 3,2700 . 8312 . R. 5,89,31 . KĀM. NĪTIS. 1,67 . Spr. 1490 . 5
 viBUti		3f	23	23	0		Glücksgüter, Reichthum KĀM. NĪTIS. 4,13 . 14,67 . RAGH. 6,76 . 15,29 . Spr. (II) 855 . 2205 . 2270 . (I) 1193 . 2584 . K
@@ -5445,11 +5445,11 @@ lakzya		1a	2	2	0		zu definiren H. 1525 . Schol. zu KAP. 1,92
 lakzya		1b	4	4	0		was angedeutet —, mittelbar bezeichnet oder ausgedrückt wird: SĀH. D. 10. fg. VEDĀNTAS. (Allah.) No. 96 . 99 . SĀH. D. 1
 lakzya		1c	1	1	0		zu halten für, anzusehen als: Spr. 481
 lakzya		1d	6	6	0		worauf man sein Augenmerk richtet, was man im Auge hat AK. 3,4,3,26 . 6,3,25 . P. 1,1,57 , Sch. worauf man sein Augenmer
-lakzya		1e	7	7	1		zu erkennen, erkennbar an ( instr. oder im comp. vorangehend) MEGH. 73 . RAGH. 7,57 . 4,5 . KUMĀRAS. 5,74 . VIKR. 37 . D
+lakzya		1e	7	7	0		zu erkennen, erkennbar an ( instr. oder im comp. vorangehend) MEGH. 73 . RAGH. 7,57 . 4,5 . KUMĀRAS. 5,74 . VIKR. 37 . D
 lakzya		1f	18	18	0		sichtbar, wahrnehmbar MBH. 13,2631 . KUMĀRAS. 5,81 . ŚĀK. 142 , v. l. MĀLAV. 31 . SĀH. D. 228 . 254 . DAŚAK. 91,1 . ( s.
 lakzya		2	1	1	0		m. und Bezz. bestimmter über Waffen gesprochener Zaubersprüche R. 1,30,5
 lakzya		3a	8	8	0		= ein ausgesetzter Preis: das Davontragen des Preises MBH. 1,4979 . wenn wir hier den Preis davontragen so v. a. wenn wi
-lakzya		3b	36	36	0		= Ziel AK. 2,8,2,54 . H. 777 . MED. y. 52 . HALĀY. 2,313 . AK. 2,8,2,36 . H. 772 . HALĀY. 2,316 . MUṆḌ. UP. 2,2,3 . 4 . 
+lakzya		3b	36	36	1		= Ziel AK. 2,8,2,54 . H. 777 . MED. y. 52 . HALĀY. 2,313 . AK. 2,8,2,36 . H. 772 . HALĀY. 2,316 . MUṆḌ. UP. 2,2,3 . 4 . 
 lakzya		3c	2	2	0		= hunderttausend RĀJA-TAR. 1,86 . 104
 lakzya		3d	7	7	0		= Schein, Verstellung AK. 1,1,7,33 . MED. RAGH. 6,81 . KĀM. NĪTIS. 5,45 . so v. a. sich schlafend stellend MṚCCH. 48,20 
 lakzya		3e	1	1	0		Merkmal Ind. St. 8,303,16 fehlerhaft für
@@ -5598,7 +5598,7 @@ kola		4a	17	17	0		Brustbeere (vom Zizyphus Jujuba ) AK. 2,4,2,17 . TRIK. H. an. 
 kola		4b	4	4	0		schwarzer Pfeffer RĀJAN. _im_ ŚKDR. Piper Chaba Hunt. VAIDY. _im_ ŚKDR
 kola		4c	4	4	0		ein best. Gewicht ( ) VAIDYAKAPARIBHĀṢĀ _im_ ŚKDR / c〉 = 2 Śāṇa Verz. d. Oxf. H. 307,b,3 . masc. = 2 Taṅka = ¹⁄₂ Karṣa Ś
 rEvata		1a	1	1	0		(von ) oxyt. aus wohlhabendem Hause stammend, reich: ṚV. 5,60,4
-rEvata		1b	2	2	2		zum Manu Raivata in Beziehung stehend: Raivata ʼs Manvantara BHĀG. P. 8,5,1 . MĀRK. P. 100,36
+rEvata		1b	2	2	1		zum Manu Raivata in Beziehung stehend: Raivata ʼs Manvantara BHĀG. P. 8,5,1 . MĀRK. P. 100,36
 rEvata		1c	5	5	0		oxyt. zum Sāman Raivata gehörig u. s. w. : Indra TS. 2,3,7,3 . Savitar VS. 29,60 . PAÑCAV. BR. 13,10,10 . LĀṬY. 6,10,2 .
 rEvata		2a	1	1	0		oxyt. Wolke NAIGH. 1,10
 rEvata		2b	5	5	0		eine (imaginäre) Art von Soma SUŚR. 2,164 . 18 . ein best. Knollengewächs, = TRIK. 3,3,181 . MED. t. 145 . = und H. an. 
@@ -5607,7 +5607,7 @@ rEvata		2d	4	4	0		N. einer der 11 Rudra HARIV. 166 . VP. 121 . BHĀG. P. 6,6,17 
 rEvata		2e	4	4	0		Bein. Śiva ʼs TRIK. 1,1,45 . 3,3,181 . H. an. MED
 rEvata		2f	9	9	0		N. des 5ten Manu M. 1,62 . HARIV. 409 . 434 . VP. 262. fg. BHĀG. P. 5,1,28 . 8,5,2 . MĀRK. P. 53,7. fgg. 75,1. fgg. 68
 rEvata		2g	2	2	0		N. pr. eines Daitya DHAR. _im_ ŚKDR
-rEvata		2h	14	12	0		N. pr. eines Ṛṣi MBH. 2,145 ( ed. Bomb. ). eines Brahmarṣi LALIT. ed. Calc. 295,3 . eines Fürsten MBH. 5,3788 . 13,5665 
+rEvata		2h	14	12	1		N. pr. eines Ṛṣi MBH. 2,145 ( ed. Bomb. ). eines Brahmarṣi LALIT. ed. Calc. 295,3 . eines Fürsten MBH. 5,3788 . 13,5665 
 rEvata		2i	18	17	0		N. pr. eines Gebirges bei Kuśasthalī (= ) TRIK. 3,3,181 . H. an. MED. MBH. 1,7936 . 2,614 . HARIV. 5249 . 6265 . VP. 180
 rEvata		4e	1	1	0		Ind. St. 3,232,a
 malla		1a	19	18	0		pl. N. pr. eines Volkes MBH. 2,1077 . 1086 ( ). 4,12 . 6,354 ( VP. 188 ). HARIV. 12832 ( ed. Calc. ). VARĀH. BṚH. S. 5,3
@@ -5766,7 +5766,7 @@ Arya		1c	1	1	0		HALĀY. 2,415
 Arya		1f	1	1	0		N. pr. eines Mannes Verz. d. Oxf. H. 371,b, No. 248
 Arya		1g	1	1	0		ein Wächter im Gynaeceum HALĀY. 5,28
 Arya		3d	2	2	0		Titel zweier im Āryā -Metrum verfasster Schriftchen HALL 146 . 151
-Badraka		1a	4	4	0	Badra	gut: KATHĀS. 32,30 . M. 9,226 . MBH. 12,3316 . voc. DAŚAK. 84,14 / a〉 Z. 2 lies 9,226 st. 12,226
+Badraka		1a	4	4	1	Badra	gut: KATHĀS. 32,30 . M. 9,226 . MBH. 12,3316 . voc. DAŚAK. 84,14 / a〉 Z. 2 lies 9,226 st. 12,226
 Badraka		1b	1	1	0	Badra	schön TRIK. 3,1,13
 Badraka		2a	1	1	0	Badra	eine Art Bohne (nach dem Schol. ) R. 2,32,20
 Badraka		2b	1	1	1	Badra	wohl Cyperus pertenuis SAṂSK. K. 4,b,1
@@ -5781,7 +5781,7 @@ Badraka		5b	1	1	0	Badra	= eine best. Art zu sitzen Verz. d. Oxf. H. 94,a, N. 2
 Badraka		5c	2	2	0	Badra	ein best. Metrum, 4 Mal – ⏑ ⏑ – ⏑ – ⏑ ⏑ ⏑ –, ⏑ – ⏑ ⏑ ⏑ – ⏑ – ⏑ ⏑ ⏑ – COLEBR. Misc. Ess. II, 163 ( XVII, 1 ). — Vgl
 padmAvatI		2	2	2	0		ein best. Prākrit -Metrum COLEBR. Misc. Ess. II, 156 ( III, 19 )
 padmAvatI		3	1	1	0		Bein. der Lakṣmī GĪT. 1,2
-padmAvatI		4	1	1	0		N. pr. einer der Mütter im Gefolge des Skanda MBH. 9,2627
+padmAvatI		4	1	1	1		N. pr. einer der Mütter im Gefolge des Skanda MBH. 9,2627
 padmAvatI		5	3	2	0		Bein. der Göttin ŚABDAR. _im_ ŚKDR. der Gemahl der P. , Bein. des Königs Jaratkāru dies. ebend
 padmAvatI		6	1	1	0		N. pr. einer Göttin, die die Befehle des 23sten Arhant ʼs der gegenwärtigen Avasarpiṇī ausführt, H. 46
 padmAvatI		7	1	1	0		N. pr. einer Gemahlin des Königs Śṛgāla HARIV. 5701
@@ -5789,7 +5789,7 @@ padmAvatI		8	1	1	0		N. pr. einer Gemahlin Yudhiṣṭhira ʼs, Königs von Kāś
 padmAvatI		9	2	2	0		N. pr. der Gemahlin Jayadeva ʼs GĪT. 10,9 . 11,21
 padmAvatI		10	1	1	0		[Page4-0462] N. pr. einer Dichterin Journ. of the Am. Or. S. 6,524
 padmAvatI		11	4	3	0		N. pr. einer Gemahlin des Fürsten Virabāhu VET. _in_ Verz. d. Oxf. H. 152,b,27 . des Fürsten Nayapāla ebend. 36 ; vgl. V
-padmAvatI		12	3	3	1		N. pr. einer Stadt VP. 479 ; vgl. N. 70 / 12〉 N. der Stadt Ujjayinī im Kṛtayuga KATHĀS. 83,6
+padmAvatI		12	3	3	0		N. pr. einer Stadt VP. 479 ; vgl. N. 70 / 12〉 N. der Stadt Ujjayinī im Kṛtayuga KATHĀS. 83,6
 padmAvatI		13	2	2	0		N. pr. eines Flusses ŚABDAR. _im_ ŚKDR
 padmAvatI		14	1	1	0		N. des 17ten Lambaka im Kathāsaritsāgara KATHĀS. 1,9
 kAhala		1a	0	0	0		trocken
@@ -5956,7 +5956,7 @@ Sruti	1	3	3	3	0		Hypotenuse, Diagonale (wie alle Wörter für Ohr) COLEBR. Alg. 
 Sruti	1	4	14	14	0		Laut, Klang, Geräusch ṚV. 8,85,3 . AV. 11,7,20 . CHĀND. UP. 3,13,8 . ṚV. PRĀT. 3,3 . 6,5 . 9 . 13,4 . 16 . AV. PRĀT. 3,7
 Sruti	1	5	12	12	0		in der Musik ein Viertelton oder Intervall (deren 22 angenommen werden) H. an. As. Res. 3,69 . 9,461 (nach HAUGHTON ). V
 Sruti	1	6	3	3	0		Lautcomplex (ohne Rücksicht darauf, ob es ein Wort für sich oder nur einen Bestandtheil desselben bildet) TS. PRĀT. 4,35
-Sruti	1	7	16	16	0		Kunde, Nachricht, Gerücht, Sage; = TRIK. H. an. MED. R. 3,63,25 . so v. a. kennt man nur von Hörensagen RAGH. 1,27 . R. 
+Sruti	1	7	16	16	1		Kunde, Nachricht, Gerücht, Sage; = TRIK. H. an. MED. R. 3,63,25 . so v. a. kennt man nur von Hörensagen RAGH. 1,27 . R. 
 Sruti	1	8	98	98	0		Ausspruch: MBH. 1,7067 . 8344 ( zu ergänzen). 14,524 . R. 2,29,17 . 106,12 ( 113,7 GORR. ). 107,11 . Spr. 3039 . (II) 41
 Sruti	1	9	1	1	0		Benennung, Titel: KĀVYĀD. 2,331
 Sruti	1	10	2	2	0		Gelehrsamkeit (wohl nur fehlerhaft für ): ( v. l. ) ŚĀK. 194 . ( v. l. ) VARĀH. BṚH. S. 32,18
@@ -6200,7 +6200,7 @@ pramARa		7	1	1	0		Kapital ( Gegens. Zinsen) COLEBR. Alg. 39
 pramARa		8	2	2	0		= Einheit H. an. MED
 pramARa		9	2	2	0		n. = beständig H. an. MED
 pramARa		10a	0	0	0		Norm, Richtschnur, Autorität; s. u. 2
-pramARa		10b	1	1	0		N. eines grossen Feigenbaumes an der Gaṅgā MBH. 3,41
+pramARa		10b	1	1	1		N. eines grossen Feigenbaumes an der Gaṅgā MBH. 3,41
 pramARa		11a	0	0	0		Norm, Richtschnur, Autorität; s. u. 2
 pramARa		11b	5	5	0		ein best. Metrum COLEBR. Misc. Ess. II, 74 . 118 . Ind. St. 8,222. fg. 329. fg. 468 ( vgl. den Index). — Vgl
 badara		1a	2	2	1		Zizyphus Jujuba , Judendorn ( vgl. ) RĀJAN. _im_ ŚKDR
@@ -6215,8 +6215,8 @@ badara		3d	20	20	0		N. pr. einer der Gangā -Quellen ( LIA. I, 547 ) und einer d
 badara		4a	32	32	0		proparox. die essbare Frucht des Judendorns, Brustbeeren P. 4,3,163 , Sch. AK. 2,4,2,17 . H. an. MED. VS. 19,22 . 90 . 2
 badara		4b	1	1	0		die Frucht der Baumwollenstaude MED
 badara		4c	2	2	0		= RĀJAN. _im_ ŚKDR. — Vgl
-vESvadeva		1	33	33	1		adj. ( f. ) allen Göttern oder den sogenannten Viśve Devāḥ geweiht u. s. w. : das dritte Savana VS. 19,26 . MBH. 13,3060
-vESvadeva		2a	6	6	1		ein best. Graha VS. 18,20 . ŚAT. BR. 4,3,1,26 . 4,1,8 . KĀTY. ŚR. 9,5,23 . 12,8 . 14,1
+vESvadeva		1	33	33	2		adj. ( f. ) allen Göttern oder den sogenannten Viśve Devāḥ geweiht u. s. w. : das dritte Savana VS. 19,26 . MBH. 13,3060
+vESvadeva		2a	6	6	0		ein best. Graha VS. 18,20 . ŚAT. BR. 4,3,1,26 . 4,1,8 . KĀTY. ŚR. 9,5,23 . 12,8 . 14,1
 vESvadeva		2b	3	3	0		ein dem Vaiśvadeva Parvan ähnlicher Ekāha ŚĀṄKH. ŚR. 14,6,1 . 7,1 . 9,8
 vESvadeva		3a	4	4	0		Bez. gewisser Iṣṭakā der zweiten Citi ŚAT. BR. 8,2,2,1 . 10,4,3,15 . TS. 7,2,5,5 . KĀTY. ŚR. 17,8,7
 vESvadeva		3b	2	2	0		ein best. Festtag am 8ten Tage in der zweiten Hälfte des Māgha As. Res. 3,274 nach HAUGHTON
@@ -6254,9 +6254,9 @@ asita	2	2d	1	1	0		ein best. zu den Mäusen gerechnetes giftiges Thier Verz. d. O
 ErAvata		1a	14	14	0		m. patron. des Dhṛtarāṣṭra , eines fabelhaften Schlangenwesens ( ) AV. 8,10,29 . PAÑCAV. BR. _in_ Ind. St. 1,35 . MBH. 1
 ErAvata		1b	31	31	0		m. N. pr. des bei der Quirlung des Oceans hervorgekommenen Prototyps der Elephanten (auch das appell. bezeichnet sowohl 
 ErAvata		1c	16	16	0		m.n. eine besondere Art Regenbogen, gedacht als Indra ʼs gerader und langer Bogen, H. 180 . an. 4,104 . MED. t. 193 . MB
-ErAvata		1d	8	8	2		m. Orangenbaum (ein anderer Name des Baumes steht gleichfalls mit in Verbindung) AK. 2,4,2,18 . TRIK. 3,3,153 . H. an. M
+ErAvata		1d	8	8	1		m. Orangenbaum (ein anderer Name des Baumes steht gleichfalls mit in Verbindung) AK. 2,4,2,18 . TRIK. 3,3,153 . H. an. M
 ErAvata		1e	1	1	0		m. oder n. eine wüste, wasserlose Gegend (das Gegentheil würde man eher erwartet haben) oder N. einer best. wüsten Gegen
-ErAvata		1f	2	2	0		n. pl. N. eines Varṣa H. 946 . Sch / f〉 MBH. 6,232
+ErAvata		1f	2	2	1		n. pl. N. eines Varṣa H. 946 . Sch / f〉 MBH. 6,232
 ErAvata		1g	3	3	0		N. des nördlichen Theils der Mondbahn VP. 226, N. 21 . MBH. 3,11836 / g〉 umfasst Punarvasu , Puṣya und Āśleṣā VARĀH. BṚH
 ErAvata		2a	3	3	0		N. pr. des Weibchens von Indra ʼs Elephanten SVĀMIN _zu_ AK. ŚKDR
 ErAvata		2b	0	0	0		Blitz s. u. 1,c
@@ -6443,14 +6443,14 @@ vAsava		3a	7	7	0		patron. der Mutter Vyāsa ʼs, die nach dem MBH. von der Apsar
 vAsava		3b	1	1	0		Vāsava ʼs Energie Verz. d. Oxf. H. 81,a,42
 vAsava		4	4	4	1		m.n. das unter den Vasu stehende Nakṣatra Dhaniṣṭhā SŪRYAS. 9,18 . VARĀH. BṚH. S. 71,11 . WEBER, Nax. 2,354. fg. JYOT. 3
 vAsava		5	1	1	0		N. eines Sāman CHĀND. UP. 2,24,3
-SiKaRqin		1	13	13	1		adj. einen Haarbusch tragend, cirratus: Gandharva AV. 4,37,7 . Rudra-Śiva 11,2,12 . MUIR, ST. 4,305,6 . 7 . MBH. 13,1145
+SiKaRqin		1	13	13	0		adj. einen Haarbusch tragend, cirratus: Gandharva AV. 4,37,7 . Rudra-Śiva 11,2,12 . MUIR, ST. 4,305,6 . 7 . MBH. 13,1145
 SiKaRqin		2a	1	1	0		ein Name Śiva ʼs und als solcher Bez. best. erlöster Seelen (bei den Śaiva ) SARVADARŚANAS. 86,2
 SiKaRqin		2b	18	18	0		Pfau TRIK. 3,3,265 . H. an. 3,426 (wenn man st. liest). MED. n. 213 . HALĀY. 2,86 . YĀJÑ. 3,272 . MṚCCH. 84,21 . Spr. (I
 SiKaRqin		2c	2	2	0		Pfauenschwanz H. an. MED
 SiKaRqin		2d	1	1	0		Hahn H. an
 SiKaRqin		2e	1	1	0		Pfeil H. an
 SiKaRqin		2f	2	2	0		Abrus precatorius Lin. und gelber Jasmin RĀJAN. _im_ ŚKDR
-SiKaRqin		2g	19	19	0		N. pr. eines Mannes mit dem patron. Yājñasena KAUṢ. BR. 7,4 _in_ Ind. St. 2,308 . [Page7-0178] ein Ṛṣi H. an. (wenn man 
+SiKaRqin		2g	19	19	1		N. pr. eines Mannes mit dem patron. Yājñasena KAUṢ. BR. 7,4 _in_ Ind. St. 2,308 . [Page7-0178] ein Ṛṣi H. an. (wenn man 
 SiKaRqin		2h	1	1	0		N. pr. eines Berges Verz. d. Oxf. H. 53,a,18
 SiKaRqin		3a	1	1	0		Pfauhenne MBH. 3,11583
 SiKaRqin		3b	4	4	0		Abrus precatorius Lin. MED. RATNAM. 33 . Jasminum auriculatum MED. RATNAM. 174
@@ -6539,7 +6539,7 @@ tUla		7b	2	2	0		Docht ŚABDAR. _im_ ŚKDR
 tUla		7c	5	5	0		Pinsel ( vgl. ) UJJVAL. _zu_ UṆĀDIS. 4,119 . BHAR. _zu_ AK. ŚKDR
 tUla		7d	1	1	0		die Indigopflanze ŚABDAR. — Vgl
 tUla		7e	2	2	0		eine mit Baumwolle gefüllte Matratze: WEBER, RĀMAT. UP. 323,2 . 3 . — Vgl
-banDura		1a	15	15	0		reizend, lieblich, schön TRIK. 3,1,13 . 3,364 . H. 1444 . an. 3,580 . MED. r. 190 . RANTIDEVA _bei_ UJJVAL. a. a. O. VYU
+banDura		1a	15	15	1		reizend, lieblich, schön TRIK. 3,1,13 . 3,364 . H. 1444 . an. 3,580 . MED. r. 190 . RANTIDEVA _bei_ UJJVAL. a. a. O. VYU
 banDura		1b	11	11	0		geneigt, gesenkt TRIK. 3,3,364 . H. an. MED. HALĀY. 4,75 . RANTID. KUMĀRAS. 1,43 . DAŚAK. _in_ BENF. Chr. 198,23 . PAÑCA
 banDura		1c	2	2	0		= wellenförmig AK. 3,2,19 . H. 1468 . Möglicher Weise sind zwei Bedd. gemeint: (= der anderen Lexicogrr. ) und (= der An
 banDura		1d	1	1	0		taub MED
@@ -6915,11 +6915,11 @@ samyaYc		3b	3	3	0		in einer Linie ( Gegens. schräge) ŚAT. BR. 3,5,4,14 . 8,3,2
 samyaYc		3c	125	125	0		richtig, recht, genau, auf die gehörige Weise, wahrhaft (dem dazu gehörigen Worte unmittelbar vorangehend oder folgend, 
 samyaYc		3d	6	6	0		vollständig, durchaus: M. 9,21 . Spr. (II) 1648 . 5367 . durchaus nicht M. 1,103 . N. ed. BRUCE 23,3 . KATHĀS. 32,134 . 
 mAnasa	1	1	69	69	0		adj. f. ( MBH. 14,442 ) dem Sinn —, dem Geist entsprungen, — angehörig, geistig ( Gegens. ) VS. 13,55 . ŚAT. BR. 14,5,5,
-mAnasa	1	2a	1	1	1		eine Form Viṣṇu ʼs VP. 265
+mAnasa	1	2a	1	1	0		eine Form Viṣṇu ʼs VP. 265
 mAnasa	1	2b	2	2	0		N. pr. eines Schlangendämons MBH. 1,2146 . 2157
 mAnasa	1	2c	1	1	0		pl. eine best. Klasse von Manen (als Söhne Vasiṣṭha ʼs angesehen) Verz. d. Oxf. H. 39,b,42
 mAnasa	1	2d	1	1	0		Bez. einer Art von Asketen: WEBER, RĀMAT. UP. 362 . könnte übrigens auch als adj. zu gehören; vgl. 2
-mAnasa	1	2e	6	6	0		pl. Bez. der Vaiśya in Śākadvīpa MBH. 6,436 . 438 . VP. 200 ( MUIR, ST. 1,193 ). Verz. d. Oxf. H. 33,a,14 . 15
+mAnasa	1	2e	6	6	1		pl. Bez. der Vaiśya in Śākadvīpa MBH. 6,436 . 438 . VP. 200 ( MUIR, ST. 1,193 ). Verz. d. Oxf. H. 33,a,14 . 15
 mAnasa	1	2f	1	1	0		N. pr. eines Sohnes des Vapuṣmant MĀRK. P. 53,27
 mAnasa	1	3	1	1	0		f. N. pr. einer der 16 Vidyādevī H. 240 . Vgl
 mAnasa	1	4a	50	50	0		= das geistige Vermögen, Sinn, Geist, Gemüth, Herz gaṇa zu P. 5,4,38 . AK. 1,1,4,9 . TRIK. 3,3,447 . H. 1369 . an. 3,753
@@ -7035,7 +7035,7 @@ vfdDa	1	3a	1	1	0		ein Bettelmönch unter den Śaiva VARĀH. BṚH. 15,1 ; vgl
 vfdDa	1	2b	2	2	0		= RĀJAN. _im_ ŚKDR
 vfdDa	1	4	1	1	0		f. N. pr. eines Weibes VET. in LA. (III) 7,5
 vfdDa	1	5	3	3	0		n. Benzoe AK. 2,4,1,10 . H. an. MED. — Vgl
-vara	4	1a	99	99	0		(erwünscht) der vorzüglichste, beste, schönste AK. 3,4,25,173 . 175 . 30,237 . H. 1439 . 2,450. fg. MED. r. 63 . HALĀY. 
+vara	4	1a	99	99	1		(erwünscht) der vorzüglichste, beste, schönste AK. 3,4,25,173 . 175 . 30,237 . H. 1439 . 2,450. fg. MED. r. 63 . HALĀY. 
 vara	4	1b	10	10	0		vorzüglicher, besser: M. 3,12 . mit einem abl. : YĀJÑ. 1,351 . MBH. 1,4030 . 13,1441 . R. GORR. 2,80,10 . Spr. 3397 . 42
 vara	4	2a	1	1	1		eine best. Körnerfrucht, = Schol. zu KĀTY. ŚR. 102,17
 vara	4	2b	2	2	0		Bdellion ŚABDAR. _im_ ŚKDR
@@ -7179,11 +7179,11 @@ nizWa		2e	4	4	0		vollkommenes Wissen, Gewissheit MBH. 14,626 . 665. fg. CHĀND. 
 nizWa		2g	2	2	0		das Bitten H. an. MED
 nizWa		2h	3	3	0		Leiden, Beschwerden H. an. HALĀY. — Nicht deutlich ist die Bed. des Wortes PAÑCAT. I, 74
 nArAyaRa		1	44	44	1		oxyt. (von ) patron. gaṇa zu P. 4,1,99 . Menschensohn, patron. des personif. Puruṣa , Verfassers des Puruṣa Liedes ṚV. 1
-nArAyaRa		2	4	4	1		m. oxyt. das von Nārāyaṇa verfasste Puruṣa -Lied ṚV. 10,90 . — ŚAT. BR. 13,6,2,12 . 20 . ŚĀṄKH. ŚR. 16,13,1
+nArAyaRa		2	4	4	0		m. oxyt. das von Nārāyaṇa verfasste Puruṣa -Lied ṚV. 10,90 . — ŚAT. BR. 13,6,2,12 . 20 . ŚĀṄKH. ŚR. 16,13,1
 nArAyaRa		3	1	1	1		m. als Synonym von Viṣṇu N. des 2ten Monats (wenn mit Mārgaśīrṣa begonnen wird) VARĀH. BṚH. S. 105,14
 nArAyaRa		4	22	22	0		m. N. pr. verschiedener Männer: ein Sohn Ajāmila ʼs BHĀG. P. 6,1,24. fgg. Bhūmimitra ʼs VP. 471 . LIA. II, 351 . Narahar
 nArAyaRa		5	1	1	0		myst. Bez. des Buchstabens Ind. St. 2,316
-nArAyaRa		6	19	19	0		adj. zu Nārāyaṇa in Beziehung stehend, von ihm kommend, zu ihm gehörend u. s. w. : MBH. 1,537 . 6,8965 . 9010 . 13,854 .
+nArAyaRa		6	19	19	1		adj. zu Nārāyaṇa in Beziehung stehend, von ihm kommend, zu ihm gehörend u. s. w. : MBH. 1,537 . 6,8965 . 9010 . 13,854 .
 nArAyaRa		7a	1	1	0		Bein. der Lakṣmī , der Gemahlin Viṣṇu ʼs, H. an
 nArAyaRa		7b	7	7	0		Bein. der Durgā H. an. H. ś. 55 . MED. HARIV. 3268 . 10275 . 10278 . Verz. d. Oxf. H. 25,a. 39,b,9
 nArAyaRa		7c	3	3	0		patron. der Indrasenā , der Gemahlin Mudgala ʼs, MBH. 3,10093 . 4,651 . HARIV. 6713
@@ -7332,7 +7332,7 @@ pawala		9	3	3	0		n. ein zur Zierde oder als Sectenzeichen mit Farbe aufgetragene
 pawala		10	1	1	0		m. N. einer der sieben Sonnen am Ende der Welt ( vgl. ) VP. 632, N. 6
 pawala		11	2	2	0		m. f. = Baum ( v. l. Blatt-, Fruchtstiel) ŚABDAR. _im_ ŚKDR
 pawala		12	3	3	0		the filing of suits HALL _in_ Journ. of the Am. Or. S. 7,41 . — Vgl. (auch RĀJA-TAR. 6,287 )
-keSa		1a	66	66	0		Haupthaar (neben pilus und Bart) AK. 2,6,2,46 . TRIK. 3,3,426 . H. 567 . an. 2,546 . MED. ś. 4 . AV. 6,136,3 . VS. 19,92
+keSa		1a	66	66	1		Haupthaar (neben pilus und Bart) AK. 2,6,2,46 . TRIK. 3,3,426 . H. 567 . an. 2,546 . MED. ś. 4 . AV. 6,136,3 . VS. 19,92
 keSa		1b	2	2	0		Mähne: Cit. beim Schol. zu ŚĀK. 6,5 . mit salbenglatter Mähne MBH. 1,8008 / b〉 Z. 3 lies und schwarzer st. salbenglatter
 keSa		1c	3	3	0		ein best. Parfum ( s. ) AK. 2,4,4,10 . H. an. MED
 keSa		1d	3	3	0		ein Bein. Varuṇa ʼs TRIK. 3,3,426 . H. an. (lies: st. ). MED
@@ -7464,13 +7464,13 @@ vinAyaka		1h	1	1	0		= (?) TRIK
 vinAyaka		1i	9	9	0		N. pr. verschiedener Männer COLEBR. Misc. Ess. II, 174 . Verz. d. B. H. No. 53 (S. . 109 . Verz. d. Oxf. H. 150,b, No. 3
 vinAyaka		1k	1	1	0		N. pr. einer Oertlichkeit Verz. d. Oxf. H. 39,b,17
 vinAyaka		2	2	2	0		f. Gaṇeśa ʼs Gattin ŚABDAM. _im_ ŚKDR. — Vgl
-viraja		1a	40	39	0		frei von Staub, rein ( eig. und übertr. , auch in der Bed. frei von Leidenschaft): MBH. 1,3678 nach der Lesart der ed. B
+viraja		1a	40	39	2		frei von Staub, rein ( eig. und übertr. , auch in der Bed. frei von Leidenschaft): MBH. 1,3678 nach der Lesart der ed. B
 viraja		1b	2	2	0		f. nicht mehr menstruirend JAṬĀDH. _im_ ŚKDR
 viraja		2a	1	1	0		eines Marutvant HARIV. 11546
 viraja		2b	2	2	0		eines Sohnes des Tvaṣṭar VP. 165 . BHĀG. P. 5,15,13. fg
 viraja		2c	1	1	0		eines Sohnes der Pūrṇiman , Tochter Kardama ʼs, BHĀG. P. 4,1,14
 viraja		2d	1	1	0		eines Schülers des Jātūkarṇya BHĀG. P. 12,6,58
-viraja		2e	1	1	1		pl. einer Klasse von Göttern unter Manu Sāvarṇi BHĀG. P. 8,13,12
+viraja		2e	1	1	0		pl. einer Klasse von Göttern unter Manu Sāvarṇi BHĀG. P. 8,13,12
 viraja		2f	1	1	0		der Welt des Buddha Padmaprabha Lot. de la b. l. 42
 viraja		3a	4	4	0		ein best. Hirsengras, [Page6-1149] Panicum Dactylon ( ) HĀR. 93 . MBH. 13,6243 . = RĀJAN. _im_ ŚKDR
 viraja		3b	16	16	0		N. pr. α〉 einer geistigen Tochter der Manen Susvadha ( Svasvadha ) und Gattin Nahuṣa ʼs HARIV. 995. fg. 1599 . Verz. d. 
@@ -7585,10 +7585,10 @@ surasa		5a	1	1	0		Herz H. 623
 surasa		5b	3	3	0		Basilienkraut MED. ( m. n. und m. f. in einigen Hdschrr. nach ŚKDR. ). = RĀJAN. 10,151
 surasa		5c	1	1	1		Cassia-Rinde RĀJAN. 6,172
 surasa		5d	1	1	0		Myrrhe RĀJAN. 6,116 . — Vgl. und
-daRqaka		1	5	5	0	daRqa	Stock, Stiel u. s. w. : TRIK. 2,8,32 . Deichsel am Pfluge TRIK. 3,3,426 . In den folgenden Stellen wohl Fahnenstock (auf
+daRqaka		1	5	5	1	daRqa	Stock, Stiel u. s. w. : TRIK. 2,8,32 . Deichsel am Pfluge TRIK. 3,3,426 . In den folgenden Stellen wohl Fahnenstock (auf
 daRqaka		2	2	2	0	daRqa	eine best. Pflanze ( mahr. : ) NIGH. PR. SUŚR. 2,284,8
 daRqaka		3	3	3	0	daRqa	eine ununterbrochen fortlaufende Reihe, Zeile: … Schol. zu ŚĀṄKH. ŚR. 6,6,39 . 1,7,6 . 9,1 u. s. w
-daRqaka		4	10	10	1	daRqa	eine Gattung von Metren (von 27×4 bis 999×4 Silben) COLEBR. Misc. Ess. II, 164 . 130 . 140 . 144 . m.n. SĀRAS. _zu_ AK. 
+daRqaka		4	10	10	0	daRqa	eine Gattung von Metren (von 27×4 bis 999×4 Silben) COLEBR. Misc. Ess. II, 164 . 130 . 140 . 144 . m.n. SĀRAS. _zu_ AK. 
 daRqaka		5	28	28	0	daRqa	N. pr. einer Gegend im Dekhan , die zu Rāma ʼs Zeiten einen grossen Wald bildete, einer geheiligten Wallfahrtsstätte: (s
 daRqaka		6	5	5	1	daRqa	m. N. pr. eines Fürsten (eines Sohnes des Ikṣvāku ), der zu dem so eben genannten Walde in Beziehung gesetzt wird, HARIV
 daRqaka		7a	2	2	0	daRqa	Stock, Stab: als Erkl. von KULL. _zu_ M. 5,99

@@ -51,3 +51,6 @@ data/hybrid/
 
 # H1455 sense-reconciliation input (regenerable via RussianTranslation microstructure.py export_sense_loci; owned by H1456)
 data/concordance/pwg_sense_loci.tsv
+
+# H1455 wave-1.5 MBh crosswalk (consumed from csl-atlas f8_mbh_resolve.py / mbh_citation_census; regenerable)
+data/concordance/mbh_vulgate_concordance.csv

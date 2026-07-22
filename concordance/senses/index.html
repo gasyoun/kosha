@@ -117,7 +117,8 @@ function renderEntry(key, e){
         S.ls.map(function(x){
           var loc = x.abbrev + (x.locus ? " "+x.locus : "");
           var src = x.source ? ' <span class="src" title="'+esc(x.source)+'">('+esc(x.source.split(",")[0].slice(0,32))+')</span>' : '';
-          return '<b>'+esc(loc)+'</b>'+src;
+          var vg = x.vulgate ? ' <span class="src" title="Nīlakaṇṭha-vulgate address (csl-atlas f8 crosswalk)">→ vulg '+esc(x.vulgate)+'</span>' : '';
+          return '<b>'+esc(loc)+'</b>'+vg+src;
         }).join(" · ")+'</div>';
     }
     (S.dcs||[]).forEach(function(d){
