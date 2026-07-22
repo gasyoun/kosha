@@ -132,6 +132,27 @@
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/kosha-lemma-frequency.meta.md"
     },
     {
+      "id": "kosha-sense-frequency",
+      "title": "DCS per-sense frequency sidecar (3-layer: WN synset / MW sense / semdom, WordSem gold)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "sense_frequency.tsv",
+      "format": "tsv",
+      "rows": 103079,
+      "size_bytes": 9530400,
+      "keying": "SLP1 lemma x layer(wn|mw|semdom) x sense_id; count_all + sense_rank + lemma_share; provenance=attested",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/frequency/sense_frequency.tsv",
+      "builder": "H1453 wave-1: build_wordsem_inventory.py -> build_wn_mw_map.py -> build_sense_frequency_layer.py (DCS WordSem gold, 219/270 texts; decode from CoNLL-U lookup/word-senses.csv; MW senses from kosha.db by gloss-overlap)",
+      "consumers": [
+        "kosha cards (N in this sense / M for the lemma)",
+        "RussianTranslation mfs_baseline.py (corpus MFS)",
+        "semdom-amarakosha-crosswalk A58"
+      ],
+      "notes": "LEFT-JOIN sidecar — never overwrites kosha senses. Wave-1 counts on WordSem gold only (no accuracy claim, it IS the gold); full-corpus WSD estimated rows are wave-2. Companions: wordsem_inventory.tsv (synset->gloss decode), wn_to_mw_map.tsv (synset->MW sense), dcs_mw_sense_order_delta.md (M01 Ch6 finding). ⚠ 9.3% token coverage; periods vector empty in wave-1.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/kosha-sense-frequency.meta.md"
+    },
+    {
       "id": "zaliznyak-grammar-index",
       "title": "Zaliznyak-style compact grammar-token index over all PWG",
       "tier": "public",
