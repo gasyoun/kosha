@@ -54,10 +54,10 @@ _UPASARGA = _load_upasarga()
 
 
 def _load_sense_freq():
-    """{lemma_slp1: [(sense_gloss, count, share), …]} from the committed MW layer of
-    data/frequency/sense_frequency.tsv (H1453), most-frequent sense first. Loaded once;
-    a pure function of the committed file, so prerender ∥ SSR stay byte-identical (the
-    P5-4 parity contract, exactly like _UPASARGA). Empty if the sidecar is absent."""
+    """{lemma_slp1: [{gloss, count, share, top_genre, top_share, nonsastra}, …]} from the
+    committed MW layer of data/frequency/sense_frequency.tsv (H1453 + wave-2 genre columns),
+    most-frequent sense first. Loaded once; a pure function of the committed file, so
+    prerender ∥ SSR stay byte-identical (the P5-4 parity contract, like _UPASARGA)."""
     import csv
     d = {}
     p = Path(__file__).resolve().parent.parent / "data" / "frequency" / "sense_frequency.tsv"
@@ -72,14 +72,27 @@ def _load_sense_freq():
                 share = float(r["lemma_share"])
             except (ValueError, KeyError):
                 continue
-            d.setdefault(r["lemma_slp1"], []).append((r["sense_gloss"], cnt, share))
+            d.setdefault(r["lemma_slp1"], []).append({
+                "gloss": r["sense_gloss"], "count": cnt, "share": share,
+                "top_genre": r.get("top_genre", ""),
+                "top_share": float(r.get("top_genre_share") or 0),
+                "nonsastra": int(r.get("count_nonsastra") or 0),
+            })
     for lemma in d:
-        d[lemma].sort(key=lambda x: (-x[1], x[0]))
+        d[lemma].sort(key=lambda x: (-x["count"], x["gloss"]))
     return d
 
 
 _SENSE_FREQ = _load_sense_freq()
 _SENSE_FREQ_CAP = 8  # senses shown per card; the rest fold into a "+N more" note
+_GENRE_LABEL = {  # Renou genre key (dcs_text_genre.tsv) -> display label
+    "rasasastra": "rasaśāstra", "ayurveda": "āyurveda", "jyotisa": "jyotiṣa",
+    "arthasastra": "artha/kāma-śāstra", "veda": "Veda", "epic": "epic",
+    "purana": "Purāṇa", "kavya": "kāvya", "katha": "narrative", "nataka": "drama",
+    "dharmasastra": "dharmaśāstra", "darsana": "darśana", "vyakarana": "grammar",
+    "kosa": "lexicon", "alamkara": "poetics", "tantra_yoga": "tantra/yoga",
+    "stotra_bhakti": "stotra",
+}
 
 # Fixed presentation order (P5-1). RU is intentionally absent until the P6 gates
 # (G5 review + Kochergina rights) clear — see IMPLEMENTATION_PLAN.md §P6 and
@@ -266,17 +279,29 @@ def _sense_frequency_block(slp1):
     if not senses:
         return ""
     esc = html.escape
-    total = sum(c for _g, c, _s in senses)
+    total = sum(s["count"] for s in senses)
     items = []
-    for gloss, cnt, share in senses[:_SENSE_FREQ_CAP]:
+    for s in senses[:_SENSE_FREQ_CAP]:
+        cnt, share = s["count"], s["share"]
         pct = round(share * 100)
+        # wave-2 genre flags: expose corpus-composition bias in the DOM.
+        flag = ""
+        if cnt > 0 and s["nonsastra"] == 0:                       # sense never attested outside śāstra
+            flag = ('<span class="chip warn" title="never attested outside technical śāstra '
+                    '(alchemy/medicine/…) — a corpus-composition artefact, not general usage">'
+                    'śāstra-only</span>')
+        elif s["top_share"] >= 0.5 and s["top_genre"]:            # concentrated in one genre
+            g = _GENRE_LABEL.get(s["top_genre"], s["top_genre"])
+            flag = (f'<span class="chip genre" title="most tokens of this sense come from one '
+                    f'genre — read the count as genre-relative">{round(s["top_share"]*100)}% {esc(g)}</span>')
         items.append(
             '<li class="sf-item">'
-            f'<span class="sf-gloss">{esc(gloss)}</span>'
+            f'<span class="sf-gloss">{esc(s["gloss"])}</span>'
             f'<span class="sf-bar" aria-hidden="true"><span class="sf-fill" style="width:{pct}%"></span></span>'
             '<span class="sf-nums">'
             f'<span class="chip att"><b>{cnt}</b> in this sense</span>'
             '<span class="chip est" title="WSD estimate — wave-2 (not yet computed)"></span>'
+            f'{flag}'
             f'<span class="sf-share">{pct}%</span>'
             '</span></li>'
         )
@@ -289,7 +314,10 @@ def _sense_frequency_block(slp1):
         f'<p class="sf-head"><b>{total}</b> for the lemma · attested in DCS WordSem gold '
         '<span class="sf-legend"><span class="chip att">attested</span>'
         '<span class="chip est" title="WSD estimate — wave-2"></span> estimated</span></p>'
-        f'<ul class="sf-list">{"".join(items)}{more_html}</ul></details>'
+        f'<ul class="sf-list">{"".join(items)}{more_html}</ul>'
+        '<p class="sf-foot">DCS over-samples technical śāstra (alchemy/medicine); '
+        'a <span class="chip warn">śāstra-only</span> or genre chip marks a count that reflects '
+        'corpus composition, not general Sanskrit.</p></details>'
     )
 
 
@@ -360,6 +388,10 @@ background:var(--hit-bg);font-size:1.05rem}
 .chip.att{background:var(--tag-bg);color:var(--tag-fg)}
 .chip.att b{color:var(--tag-fg)}
 .chip.est{background:transparent;border:1px dashed var(--border);color:var(--muted);min-width:1.6rem}
+.chip.genre{background:transparent;border:1px solid var(--b2);color:var(--b2)}
+.chip.warn{background:var(--b1);color:#fff;font-weight:600}
+.sf-foot{margin:.5rem 0 .2rem;font-size:.72rem;color:var(--muted);line-height:1.4}
+.sf-foot .chip.warn{font-size:.66rem}
 .wp-foot{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--border);
 font-size:.78rem;color:var(--muted)}
 .wp-foot a{color:var(--accent)}

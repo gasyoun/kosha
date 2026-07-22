@@ -32,6 +32,12 @@ texts corpus-wide; 531,747 sense-tagged tokens = 9.3% of the corpus). TSV, UTF-8
 | `largest_text_share` | fraction of the sense's tokens in its single biggest text (burstiness diagnostic) |
 | `count_adj` | dispersion-adjusted count = `count_all` × (1 − `dispersion_dp`) — discounts genre-concentrated senses |
 | `sense_rank_adj` | dense rank within lemma+layer by `count_adj` (the de-biased sense order) |
+| `count_bal_uniform` | wave-2: post-stratified count — each Renou genre the lemma appears in weighted **equally** ("Sanskrit generally, genre-balanced") |
+| `sense_rank_bal` | dense rank by `count_bal_uniform` |
+| `count_nonsastra` | wave-2: token count restricted to **non-śāstra** (literary/vedic) texts ("Sanskrit non-śāstra") |
+| `sense_rank_nonsastra` | dense rank by `count_nonsastra` |
+| `top_genre` | the single Renou genre contributing the most tokens to this sense |
+| `top_genre_share` | fraction of the sense's tokens from `top_genre` (concentration flag) |
 | `periods` | per-period vector — **empty in wave-1** (see limitations) |
 | `provenance` | `attested` (WordSem gold) on every wave-1 row; `estimated` is reserved for wave-2 WSD |
 | `confidence` | null for `attested`; wave-2 fills it for `estimated` rows |
@@ -139,9 +145,28 @@ hand-verified gold label. No LLM-generated sense labels are in the table.
   (`p_balanced(s) = Σ_g w_g · P(s|g)` with a target `w_g`, not count-proportional — Little,
   *Post-Stratification*, JASA 1993; Biber, *Representativeness in Corpus Design*, 1993) plus
   Chan & Ng EM sense-prior re-estimation (*Estimating Class Priors in Domain Adaptation for
-  WSD*, COLING-ACL 2006, [P06-1012](https://aclanthology.org/P06-1012/)). **Keep both
-  numbers:** `count_all` is right for a reader *in* that genre (mercury really is dominant
-  in rasaśāstra); `count_adj` for "Sanskrit generally".
+  WSD*, COLING-ACL 2006, [P06-1012](https://aclanthology.org/P06-1012/)).
+- **Wave-2 — the Renou genre-stratified correction (the full fix).** Genre source: **Renou**'s
+  classification of Sanskrit literature (*L'Inde classique* / *Histoire de la littérature
+  sanskrite*); the text→genre map is
+  [`dcs_text_genre.tsv`](https://github.com/gasyoun/kosha/blob/main/data/frequency/dcs_text_genre.tsv)
+  (219 texts, curated). The map exposes how skewed the sense-tagged subset is: **50.7% of its
+  token mass is technical śāstra** (rasaśāstra 31.9% + āyurveda 18.4% + jyotiṣa/artha) vs only
+  42.5% literary/vedic. Four columns give the reader the population they want:
+  `count_bal_uniform` (each genre weighted equally — post-stratification, Little 1993/Biber
+  1993), `count_nonsastra` (literary/vedic texts only), and the `top_genre`/`top_genre_share`
+  diagnostics. The correction is decisive where wave-1.5 was conservative: **`rasa` "mercury"
+  = 0 in the non-śāstra view** (89% of its tokens are rasaśāstra), so non-śāstra `rasa` reads
+  juice > liquid > taste; even the genre-balanced view puts juice above mercury.
+- **Four views, none silently replacing another** — pick the population: `count_all` (in-genre;
+  right for a rasaśāstra reader), `count_adj` (dispersion-adjusted), `count_bal_uniform`
+  ("Sanskrit generally"), `count_nonsastra` ("Sanskrit non-śāstra"). The kosha card marks a
+  `count_nonsastra=0` sense as **śāstra-only** and a genre-concentrated one with a
+  `top_genre_share` chip, so a learner sees when a count reflects corpus composition, not usage.
+- Genre-map limits: Renou genres are assigned by title/author (curated by Opus 4.8
+  `claude-opus-4-8`), coarse (one genre per text; a composite text is flattened), and the
+  `is_technical_sastra` flag is the robust part (every Rasa*/medical text carries it regardless
+  of fine bucket). Wave-3 lever: Chan & Ng EM sense-prior re-estimation.
 
 ## Intended use / known misuse
 

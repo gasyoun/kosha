@@ -14,6 +14,11 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.78.0] - 2026-07-22
+
+### Added
+- **Sense-frequency wave-2 — Renou genre-stratified de-biasing** ([H1459](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1459-Opus_kosha_sense-frequency-wave2-genre-stratification_22.07.26.md), Opus 4.8 `claude-opus-4-8`). The full fix for the corpus-composition bias wave-1.5 only partly corrected. Genre source: **Renou**'s classification of Sanskrit literature (MG-decided). New [`dcs_text_genre.tsv`](https://github.com/gasyoun/kosha/blob/main/data/frequency/dcs_text_genre.tsv) buckets the 219 WordSem-tagged texts into Renou genres — revealing that **50.7% of the sense-tagged corpus is technical śāstra** (rasaśāstra 31.9% + āyurveda 18.4%) vs 42.5% literary/vedic, the direct cause of `rasa`=mercury. [`sense_frequency.tsv`](https://github.com/gasyoun/kosha/blob/main/data/frequency/sense_frequency.tsv) gains six columns: `count_bal_uniform` (post-stratified, each genre weighted equally — Little 1993/Biber 1993), `count_nonsastra` (literary/vedic texts only), `sense_rank_bal`, `sense_rank_nonsastra`, `top_genre`, `top_genre_share`. **Decisive result: `rasa` "mercury" = 0 in the non-śāstra view** (89% of its tokens are rasaśāstra) — non-śāstra `rasa` reads juice > liquid > taste; even the genre-balanced view puts juice above mercury. Four views now ship (`count_all` in-genre · `count_adj` dispersion · `count_bal_uniform` "Sanskrit generally" · `count_nonsastra` "Sanskrit non-śāstra"), none silently replacing another. The kosha card marks a `count_nonsastra=0` sense **śāstra-only** (red chip) and genre-concentrated senses with a `top_genre` chip, so a learner sees when a count reflects corpus composition. Grounded in the domain-relativity-of-predominant-sense literature (McCarthy/Koeling ACL 2004 [P04-1036](https://aclanthology.org/P04-1036/) / HLT-EMNLP 2005 [H05-1053](https://aclanthology.org/H05-1053/)); wave-3 lever = Chan & Ng EM ([P06-1012](https://aclanthology.org/P06-1012/)).
+
 ## [0.77.0] - 2026-07-22
 
 ### Added
