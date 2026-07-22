@@ -1,0 +1,110 @@
+{
+  "generator": "build_sense_frequency_layer.py",
+  "handoff": "H1453",
+  "model": "Opus 4.8 (claude-opus-4-8)",
+  "sources": {
+    "attestation": "VisualDCS/src/DCS-data-2026/dcs_full.sqlite token.m_wordsem (canonical CoNLL-U ingest; 219/270 texts sense-tagged)",
+    "decode": "wordsem_inventory.tsv (CoNLL-U lookup/word-senses.csv)",
+    "wn_to_mw": "wn_to_mw_map.tsv (English gloss-overlap adjudication)"
+  },
+  "join_key": "lemma_slp1 (SLP1, sanskrit-util normalised) — LEFT-JOIN onto kosha lemmas",
+  "layers": {
+    "wn": "native Sanskrit-WordNet synset (lossless gold)",
+    "mw": "MW numbered sense (projection; sense_id=<lemma>#<mw_ord>)",
+    "semdom": "WordNet lexicographer supersense (best-effort semantic domain)"
+  },
+  "rows": 103079,
+  "rows_by_layer": {
+    "wn": 57143,
+    "mw": 23088,
+    "semdom": 22848
+  },
+  "attested_pairs": 57143,
+  "wordsem_tokens_total": 531747,
+  "coverage_tokens": {
+    "wn": 531747,
+    "mw_resolved": 365700,
+    "mw_exact": 249885,
+    "mw_overlap": 115815,
+    "mw_unresolved": 166047,
+    "semdom_resolved": 272447,
+    "semdom_unresolved": 259300
+  },
+  "ac3_containment": {
+    "rule": "per-lemma Σ(wn count_all) ≤ lemma_frequency.count_all",
+    "lemmas_checked": 24169,
+    "violations": 18,
+    "lemmas_without_lemma_freq_count": 3172,
+    "violation_rate": 0.0007,
+    "worst_examples": [
+      {
+        "lemma": "vfTak",
+        "wn_sum": 15,
+        "lemma_count_all": 2,
+        "excess": 13
+      },
+      {
+        "lemma": "GuRa",
+        "wn_sum": 13,
+        "lemma_count_all": 10,
+        "excess": 3
+      },
+      {
+        "lemma": "sadAnvA",
+        "wn_sum": 10,
+        "lemma_count_all": 8,
+        "excess": 2
+      },
+      {
+        "lemma": "tryuzaRa",
+        "wn_sum": 2,
+        "lemma_count_all": 1,
+        "excess": 1
+      },
+      {
+        "lemma": "SIvan",
+        "wn_sum": 4,
+        "lemma_count_all": 3,
+        "excess": 1
+      },
+      {
+        "lemma": "qu",
+        "wn_sum": 3,
+        "lemma_count_all": 2,
+        "excess": 1
+      },
+      {
+        "lemma": "izWan",
+        "wn_sum": 3,
+        "lemma_count_all": 2,
+        "excess": 1
+      },
+      {
+        "lemma": "ruja",
+        "wn_sum": 2,
+        "lemma_count_all": 1,
+        "excess": 1
+      },
+      {
+        "lemma": "Acita",
+        "wn_sum": 3,
+        "lemma_count_all": 2,
+        "excess": 1
+      },
+      {
+        "lemma": "saMraYjana",
+        "wn_sum": 4,
+        "lemma_count_all": 3,
+        "excess": 1
+      }
+    ],
+    "note": "Any residual excess is a DCS-vintage mismatch between the dcs_full token count and the Leonchenko lemma_frequency sheet, not senses out-counting the lemma; reported, never hidden."
+  },
+  "caveats": [
+    "provenance=attested on every wave-1 row — it IS the WordSem gold; no accuracy claim.",
+    "WordSem coverage is 219/270 texts (9.3% of corpus tokens); the 51 untagged texts incl. the 2026 Vedic wave carry zero WordSem (SL FINDINGS §11 addendum).",
+    "periods vector is EMPTY in wave-1: no clean per-token text→DCS-period map ships in the CoNLL-U release; the wave-2 path is conllu/lookup/chapter-info.xml `era`.",
+    "Upstream UD Tense=Past conflates aorist/perfect (inherited lemma_frequency caveat).",
+    "Layer-3 = WordNet supersense (native to the WordSem id-space), not the SIL-semdom A58 crosswalk (keyed by Amarakosha eid / Princeton WN — different id-space). SIL-semdom projection deferred to a follow-on."
+  ]
+}
