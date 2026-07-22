@@ -14,6 +14,11 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.77.0] - 2026-07-22
+
+### Added
+- **Sense-frequency wave-1.5 — dispersion / burstiness de-biasing columns** (Opus 4.8 `claude-opus-4-8`). Addresses a real sampling bias: DCS is not a balanced sample of Sanskrit — its WordSem-tagged subset over-represents rasaśāstra/āyurveda (Hellwig's research focus), so raw token frequency inflates genre-concentrated senses (`rasa` reads 51% "mercury"). This is the *domain-relativity of the predominant sense* (McCarthy, Koeling, Weeds & Carroll, ACL 2004 [P04-1036](https://aclanthology.org/P04-1036/); Koeling, McCarthy & Carroll, HLT/EMNLP 2005 [H05-1053](https://aclanthology.org/H05-1053/)). [`sense_frequency.tsv`](https://github.com/gasyoun/kosha/blob/main/data/frequency/sense_frequency.tsv) gains five genre-label-free columns: `n_texts` (document frequency), `dispersion_dp` (Gries's Deviation of Proportions, IJCL 2008), `largest_text_share` (burstiness), `count_adj = count_all × (1 − dispersion_dp)`, and `sense_rank_adj`. Effect: down-weights bursty senses (`rasa` mercury/juice gap narrows 1.74× → 1.47×; `artha` "sense" — attested in only 3 texts, one holding 97% — is crushed to adj-rank tail). Honest limit: DP is corpus-size-relative, so it under-penalises concentration in *large* rasaśāstra texts; the fuller fix is wave-2 genre-stratified post-stratification (Little 1993; Biber 1993) + Chan & Ng EM sense-prior re-estimation (COLING-ACL 2006 [P06-1012](https://aclanthology.org/P06-1012/)). Both `count_all` and `count_adj` ship — the raw number is right for a reader *in* that genre, the adjusted one for "Sanskrit generally". [Data-statement](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/kosha-sense-frequency.meta.md) bias section + manifest keying updated.
+
 ## [0.76.0] - 2026-07-22
 
 ### Added
