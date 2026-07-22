@@ -1,5 +1,4 @@
 slp1	hom	sense_id	lemma	locus	cite	conf	method	rights	source	gloss	reason
-nAgadanta		?	nāgadanta	lemma:33045		0.0	unassigned	public	DCS	elephant's tusk or ivory; a peg in the wall to hang things upon; name of a son o	no locus/overlap candidate — residue for LLM/human pass
 nAgadantaka		?	nāgadantaka	lemma:211639		0.0	unassigned	public	DCS	= nāgadanta	no locus/overlap candidate — residue for LLM/human pass
 sTA	1	15	sthā	Vaikhānasadharmasūtra, VaikhDhS, 1, 3, 3	dcs:100010	0.5	overlap	public	DCS	to stand; to station one's self; to get upon; to stay; to remain; to be intent u	confidence<tau
 sTA	1	15	sthā	Vaikhānasadharmasūtra, VaikhDhS, 1, 3, 5	dcs:100012	0.5	overlap	public	DCS	to stand; to station one's self; to get upon; to stay; to remain; to be intent u	confidence<tau
@@ -142,8 +141,6 @@ SfNga		1a	śṛṅga	Suśrutasaṃhitā, Su, Sū., 5, 6	dcs:1003	0.5	overlap	pub
 SfNga		1b	śṛṅga	Rāmāyaṇa, Rām, Ki, 25, 31	dcs:128242	0.5	overlap	public	DCS	a kind of medicinal or poisonous plant; name of a Muni	confidence<tau
 SfNga		1b	śṛṅga	Rasaratnasamuccaya, RRS, 1, 6	dcs:153243	0.5	overlap	public	DCS	a kind of medicinal or poisonous plant; name of a Muni	confidence<tau
 SfNga		1b	śṛṅga	Bhāvaprakāśa, BhPr, 6, 2, 124	dcs:330517	0.5	overlap	public	DCS	a kind of medicinal or poisonous plant; name of a Muni	confidence<tau
-SfNga		?	śṛṅga	lemma:208266		0.0	unassigned	public	DCS	(ifc.) having ... horns	no locus/overlap candidate — residue for LLM/human pass
-DAraRa		?	dhāraṇa	lemma:42502		0.0	unassigned	public	DCS	holding; bearing; keeping (in remembrance); retention; preserving; protecting; m	no locus/overlap candidate — residue for LLM/human pass
 DAraRa		?	dhāraṇa	lemma:42504		0.0	unassigned	public	DCS	the act of holding; bearing; wearing; suffering; enduring; keeping in remembranc	no locus/overlap candidate — residue for LLM/human pass
 aruRa		?	aruṇa	lemma:32763		0.0	unassigned	public	DCS	reddish-brown; tawny; red; ruddy (the colour of the morning opposed to the darkn	no locus/overlap candidate — residue for LLM/human pass
 aruRa		?	aruṇa	lemma:32767		0.0	unassigned	public	DCS	red colour; a ruby; saffron; [min.] = sindūra	no locus/overlap candidate — residue for LLM/human pass
@@ -191,9 +188,6 @@ sTira		?	sthira	lemma:103003		0.0	unassigned	public	DCS	firm; hard; solid; compa
 bfhant		3a	bṛhant	Mahābhārata, MBh, 1, 61, 53	dcs:164041	0.5	overlap	public	DCS	name of a prince; name of a Marut	confidence<tau
 bfhant		3a	bṛhant	Matsyapurāṇa, MPur, 171, 54	dcs:350659	0.5	overlap	public	DCS	name of a prince; name of a Marut	confidence<tau
 bfhant		3a	bṛhant	Harivaṃśa, HV, 23, 73	dcs:760236	0.5	overlap	public	DCS	name of a prince; name of a Marut	confidence<tau
-bfhant		4a	bṛhant	Vārāhagṛhyasūtra, VārGS, 14, 13	dcs:102674	0.5	overlap	public	DCS	height (also= heaven); name of various Sāmans composed in the metrical form; nam	confidence<tau
-bfhant		4a	bṛhant	Mahābhārata, MBh, 3, 163, 28	dcs:200794	0.5	overlap	public	DCS	height (also= heaven); name of various Sāmans composed in the metrical form; nam	confidence<tau
-bfhant		4a	bṛhant	Mahābhārata, MBh, 12, 47, 26	dcs:278928	0.5	overlap	public	DCS	height (also= heaven); name of various Sāmans composed in the metrical form; nam	confidence<tau
 mfga		1a	mṛga	Vaikhānasadharmasūtra, VaikhDhS, 3, 13, 2	dcs:100366	0.5	overlap	public	DCS	a forest animal or wild beast; game of any kind; a deer; fawn; antelope; stag; m	confidence<tau
 mfga		1a	mṛga	Vaikhānasadharmasūtra, VaikhDhS, 3, 14, 2	dcs:100378	0.5	overlap	public	DCS	a forest animal or wild beast; game of any kind; a deer; fawn; antelope; stag; m	confidence<tau
 mfga		1a	mṛga	Rasādhyāya, RAdhy, 1, 203	dcs:100818	0.5	overlap	public	DCS	a forest animal or wild beast; game of any kind; a deer; fawn; antelope; stag; m	confidence<tau
@@ -218,11 +212,7 @@ sADu		?	sādhu	lemma:112171		0.0	unassigned	public	DCS	straight; right; leading 
 sADu		?	sādhu	lemma:112172		0.0	unassigned	public	DCS	a holyman; saint; sage; seer; a good or virtuous or honest man; [bot.] = dama	no locus/overlap candidate — residue for LLM/human pass
 yadi		?	yadi	lemma:73699		0.0	unassigned	public	DCS	in case that; if; whether	no locus/overlap candidate — residue for LLM/human pass
 yadi		?	yadi	lemma:215616		0.0	unassigned	public	DCS	[gramm.] the word 'yadi'	no locus/overlap candidate — residue for LLM/human pass
-BUta		?	bhūta	lemma:25204		0.0	unassigned	public	DCS	become; been; gone; past (n. the past); actually happened; true; real (n. an act	no locus/overlap candidate — residue for LLM/human pass
 pada		?	pada	lemma:215050		0.0	unassigned	public	DCS	[gramm.] root pad	no locus/overlap candidate — residue for LLM/human pass
-Sukra		1b	śukra	Gobhilagṛhyasūtra, GobhGS, 3, 8, 5	dcs:103774	0.5	overlap	public	DCS	bright; clear; pure; white; light-coloured; spotless; gekl￤rt (Soma)	confidence<tau
-Sukra		1b	śukra	Mahābhārata, MBh, 1, 3, 61	dcs:158871	0.5	overlap	public	DCS	bright; clear; pure; white; light-coloured; spotless; gekl￤rt (Soma)	confidence<tau
-Sukra		1b	śukra	Mahābhārata, MBh, 5, 45, 1	dcs:219306	0.5	overlap	public	DCS	bright; clear; pure; white; light-coloured; spotless; gekl￤rt (Soma)	confidence<tau
 Sukra		?	śukra	lemma:163313		0.0	unassigned	public	DCS	brightness; light; juice; any clear liquid; sperm; a morbid affection of the iri	no locus/overlap candidate — residue for LLM/human pass
 manda		?	manda	lemma:36632		0.0	unassigned	public	DCS	slow; tardy; moving slowly or softly; loitering; idle; sluggish in; apathetic; p	no locus/overlap candidate — residue for LLM/human pass
 Sveta		?	śveta	lemma:41440		0.0	unassigned	public	DCS	white; dressed in white; bright; gelblichwei￟	no locus/overlap candidate — residue for LLM/human pass
@@ -253,7 +243,6 @@ yam		?	yam	lemma:157296		0.0	unassigned	public	DCS	to sustain; to hold; to suppo
 maDu		?	madhu	lemma:35440		0.0	unassigned	public	DCS	sweet; delicious; pleasant; charming; delightful; bitter or pungent	no locus/overlap candidate — residue for LLM/human pass
 maDu		?	madhu	lemma:35442		0.0	unassigned	public	DCS	a particular plant	no locus/overlap candidate — residue for LLM/human pass
 maRqala		?	maṇḍala	lemma:27078		0.0	unassigned	public	DCS	circular; round	no locus/overlap candidate — residue for LLM/human pass
-rohita		?	rohita	lemma:80124		0.0	unassigned	public	DCS	red; reddish; ruddy	no locus/overlap candidate — residue for LLM/human pass
 guru		?	guru	lemma:124568		0.0	unassigned	public	DCS	heavy; weighty; heavy in the stomach (food); (in prosody) long; vehement; diffic	no locus/overlap candidate — residue for LLM/human pass
 guru		?	guru	lemma:207265		0.0	unassigned	public	DCS	lead	no locus/overlap candidate — residue for LLM/human pass
 vIra		?	vīra	lemma:166143		0.0	unassigned	public	DCS	man; hero; chief; mankind; son; the male of an animal; an adept; Terminalia Arun	no locus/overlap candidate — residue for LLM/human pass
@@ -347,7 +336,6 @@ rUpa		1a	rūpa	Vaikhānasadharmasūtra, VaikhDhS, 1, 11, 7	dcs:100073	0.5	overla
 rUpa		1a	rūpa	Vaikhānasadharmasūtra, VaikhDhS, 3, 9, 4	dcs:100327	0.5	overlap	public	DCS	any outward appearance or phenomenon or colour (often pl.); form; shape; phantom	confidence<tau
 rUpa		1a	rūpa	Rasādhyāya, RAdhy, 1, 15	dcs:100436	0.5	overlap	public	DCS	any outward appearance or phenomenon or colour (often pl.); form; shape; phantom	confidence<tau
 rUpa		?	rūpa	lemma:71931		0.0	unassigned	public	DCS	name of a place	no locus/overlap candidate — residue for LLM/human pass
-fta		?	ṛta	lemma:38664		0.0	unassigned	public	DCS	met with; afflicted by; proper; right; fit; able; honest; worshipped	no locus/overlap candidate — residue for LLM/human pass
 fta		?	ṛta	lemma:175580		0.0	unassigned	public	DCS	name of a Manu; name of a son of Ambarīṣa; name of a son of Vijaya	no locus/overlap candidate — residue for LLM/human pass
 varRa		6	varṇa	Vaikhānasadharmasūtra, VaikhDhS, 1, 9, 7	dcs:100050	0.5	overlap	public	DCS	a covering; cloak; mantle; a cover; lid; outward appearance; exterior; form; fig	confidence<tau
 varRa		6	varṇa	Rasādhyāya, RAdhy, 1, 16	dcs:100437	0.5	overlap	public	DCS	a covering; cloak; mantle; a cover; lid; outward appearance; exterior; form; fig	confidence<tau
@@ -361,7 +349,6 @@ dakziRa		1e	dakṣiṇa	Vaikhānasadharmasūtra, VaikhDhS, 2, 9, 2	dcs:100151	0.
 dakziRa		1b	dakṣiṇa	Skandapurāṇa, SkPur, 25, 10	dcs:107286	0.5	overlap	public	DCS	the right (hand or arm); the horse on the right side of the pole of a carriage; 	confidence<tau
 dakziRa		1b	dakṣiṇa	Ṛgveda, ṚV, 10, 164, None	dcs:612593_2	0.5	overlap	public	DCS	the right (hand or arm); the horse on the right side of the pole of a carriage; 	confidence<tau
 dakziRa		1b	dakṣiṇa	Bodhicaryāvatāra, BoCA, 5, 94	dcs:98712	0.5	overlap	public	DCS	the right (hand or arm); the horse on the right side of the pole of a carriage; 	confidence<tau
-dakziRa		?	dakṣiṇa	lemma:100607		0.0	unassigned	public	DCS	the south; = dakṣiṇā; a mode of fighting	no locus/overlap candidate — residue for LLM/human pass
 muKa		?	mukha	lemma:176937		0.0	unassigned	public	DCS	having a ... face	no locus/overlap candidate — residue for LLM/human pass
 sma	1	?	sma	lemma:113917		0.0	unassigned	public	DCS	ever; always; indeed; certainly	no locus/overlap candidate — residue for LLM/human pass
 sma	1	?	sma	lemma:215475		0.0	unassigned	public	DCS	[gramm.] the particle 'sma'	no locus/overlap candidate — residue for LLM/human pass
@@ -388,9 +375,6 @@ vAma	1	?	vāma	lemma:76820		0.0	unassigned	public	DCS	adversity; misfortune; the
 jIva		?	jīva	lemma:89209		0.0	unassigned	public	DCS	living; alive; healthy; vivifying; germinant	no locus/overlap candidate — residue for LLM/human pass
 jIva		?	jīva	lemma:89210		0.0	unassigned	public	DCS	anything living; life; existence; any living being	no locus/overlap candidate — residue for LLM/human pass
 viSAKa		?	viśākha	lemma:47627		0.0	unassigned	public	DCS	a fork; ramification; fourche en haut de l'audumbarī	no locus/overlap candidate — residue for LLM/human pass
-SudDa		2c	śuddha	Mahābhārata, MBh, 13, 17, 77	dcs:305424	0.5	overlap	public	DCS	the bright fortnight (in which the moon increases); name of Śiva; name of one of	confidence<tau
-SudDa		2c	śuddha	Mahābhārata, MBh, 13, 18, 51	dcs:305734	0.5	overlap	public	DCS	the bright fortnight (in which the moon increases); name of Śiva; name of one of	confidence<tau
-SudDa		2c	śuddha	Matsyapurāṇa, MPur, 20, 18	dcs:334641	0.5	overlap	public	DCS	the bright fortnight (in which the moon increases); name of Śiva; name of one of	confidence<tau
 SudDa		?	śuddha	lemma:126333		0.0	unassigned	public	DCS	cleansed; cleared; clean; pure; clear; free from; pure; unmodified (as a vowel n	no locus/overlap candidate — residue for LLM/human pass
 SudDa		?	śuddha	lemma:126336		0.0	unassigned	public	DCS	anything pure; pure spirit; rock-salt; black pepper; silver; [min.] = saindhava	no locus/overlap candidate — residue for LLM/human pass
 SItala		?	śītala	lemma:126171		0.0	unassigned	public	DCS	cold; cool; cooling; shivering; frosty; cold i.e. free from passion; calm; gentl	no locus/overlap candidate — residue for LLM/human pass
@@ -402,9 +386,6 @@ caraRa		?	caraṇa	lemma:164451		0.0	unassigned	public	DCS	a foot; the venerable
 caraRa		?	caraṇa	lemma:164453		0.0	unassigned	public	DCS	going round or about; motion; course; acting; dealing; managing; (liturgical) pe	no locus/overlap candidate — residue for LLM/human pass
 gotra		?	gotra	lemma:125334		0.0	unassigned	public	DCS	protection or shelter for cows; cow-pen; cow-shed; stable for cattle; stable (in	no locus/overlap candidate — residue for LLM/human pass
 jIvana		?	jīvana	lemma:89347		0.0	unassigned	public	DCS	vivifying; giving life; enlivening	no locus/overlap candidate — residue for LLM/human pass
-paYcama		2a	pañcama	Mahābhārata, MBh, 12, 177, 36	dcs:289398	0.5	overlap	public	DCS	(in music) a note of the gamut	confidence<tau
-paYcama		2a	pañcama	Mahābhārata, MBh, 14, 49, 52	dcs:320412	0.5	overlap	public	DCS	(in music) a note of the gamut	confidence<tau
-paYcama		2a	pañcama	Nāṭyaśāstra, NāṭŚ, 6, 27	dcs:467596	0.5	overlap	public	DCS	(in music) a note of the gamut	confidence<tau
 paYcama		?	pañcama	lemma:15172		0.0	unassigned	public	DCS	the fifth; forming the 5th part	no locus/overlap candidate — residue for LLM/human pass
 paYcama		?	pañcama	lemma:15173		0.0	unassigned	public	DCS	the fifth part; copulation (as the 5th of the Tattvas of the Tāntrikas)	no locus/overlap candidate — residue for LLM/human pass
 tapana		?	tapana	lemma:96375		0.0	unassigned	public	DCS	warming; burning; shining (the sun); causing pain or distress	no locus/overlap candidate — residue for LLM/human pass
@@ -487,7 +468,6 @@ nala		1a	nala	Rasārṇava, RArṇ, 14, 172	dcs:110668	0.5	overlap	public	DCS	a 
 nala		1a	nala	Suśrutasaṃhitā, Su, Utt., 26, 13	dcs:13147	0.5	overlap	public	DCS	a species of reed; Arundo Tibialis; name of a prince with the patr.; name of a N	confidence<tau
 tArkzya		?	tārkṣya	lemma:97454		0.0	unassigned	public	DCS	= tāpya; [min.] = rasāñjana	no locus/overlap candidate — residue for LLM/human pass
 gaRqa		?	gaṇḍa	lemma:129365		0.0	unassigned	public	DCS	the abrupt interchange of question and answer (one of the characteristics of the	no locus/overlap candidate — residue for LLM/human pass
-utTAna		?	utthāna	lemma:55874		0.0	unassigned	public	DCS	causing to arise or originate	no locus/overlap candidate — residue for LLM/human pass
 gola		?	gola	lemma:125488		0.0	unassigned	public	DCS	a circle; a sphere; a large globular water-jar	no locus/overlap candidate — residue for LLM/human pass
 svastika		2	svastika	Skandapurāṇa, SkPur, 23, 20	dcs:107165	0.5	overlap	public	DCS	a kind of bard (who utters words of welcome or eulogy); any lucky or auspicious 	confidence<tau
 svastika		2	svastika	Suśrutasaṃhitā, Su, Ka., 4, 22	dcs:10943	0.5	overlap	public	DCS	a kind of bard (who utters words of welcome or eulogy); any lucky or auspicious 	confidence<tau
@@ -517,7 +497,6 @@ nI	1	?	nī	lemma:157259		0.0	unassigned	public	DCS	to lead; to guide; to conduct
 nI	1	?	nī	lemma:161554		0.0	unassigned	public	DCS	to go into; to enter; to come or fall into; to incur (acc.); to under go the nat	no locus/overlap candidate — residue for LLM/human pass
 nI	1	?	nī	lemma:213451		0.0	unassigned	public	DCS	[gramm.] the root nī	no locus/overlap candidate — residue for LLM/human pass
 nI	1	?	ṅī	lemma:213580		0.0	unassigned	public	DCS	[gramm.] das Femininsuffix ī nach Abwerfung der stummen Laute	no locus/overlap candidate — residue for LLM/human pass
-nI	1	?	nī	lemma:223708		0.0	unassigned	public	DCS	leading	no locus/overlap candidate — residue for LLM/human pass
 ruh	1	?	ruh	lemma:157299		0.0	unassigned	public	DCS	to ascend; to mount; to climb; to reach to; to attain (a desire); to rise; to sp	no locus/overlap candidate — residue for LLM/human pass
 ruh	1	?	ruh	lemma:214941		0.0	unassigned	public	DCS	[gramm.] root ruh	no locus/overlap candidate — residue for LLM/human pass
 ruh	1	?	ruh	lemma:219015		0.0	unassigned	public	DCS	Spross; Zweig; ascent	no locus/overlap candidate — residue for LLM/human pass
@@ -584,9 +563,6 @@ pAta	2	4	pāta	Rasādhyāya, RAdhy, 1, 112	dcs:100631	0.5	overlap	public	DCS	fly
 pAta	2	4	pāta	Śāktavijñāna, ŚāktaVij, 1, 24	dcs:102113	0.5	overlap	public	DCS	flying; mode of flying; flight; throwing one's self or falling into or from (abl	confidence<tau
 pAta	2	4	pāta	Gobhilagṛhyasūtra, GobhGS, 3, 3, None	dcs:103639_1	0.5	overlap	public	DCS	flying; mode of flying; flight; throwing one's self or falling into or from (abl	confidence<tau
 madana		?	madana	lemma:27398		0.0	unassigned	public	DCS	the act of intoxicating or exhilarating; name of a mythical weapon; bees-wax	no locus/overlap candidate — residue for LLM/human pass
-lakzya		1e	lakṣya	Rasārṇava, RArṇ, 18, 136	dcs:111923	0.5	overlap	public	DCS	to be marked or characterized or defined; to be indicated; indirectly denoted or	confidence<tau
-lakzya		1e	lakṣya	Rāmāyaṇa, Rām, Ār, 19, 19	dcs:123617	0.5	overlap	public	DCS	to be marked or characterized or defined; to be indicated; indirectly denoted or	confidence<tau
-lakzya		1e	lakṣya	Mahābhārata, MBh, 1, 1, 103	dcs:157442	0.5	overlap	public	DCS	to be marked or characterized or defined; to be indicated; indirectly denoted or	confidence<tau
 lakzya		?	lakṣya	lemma:80425		0.0	unassigned	public	DCS	an object aimed at; prize; an aim; butt; mark; goal; the thing defined (opp. to 	no locus/overlap candidate — residue for LLM/human pass
 saha	2	?	saha	lemma:105689		0.0	unassigned	public	DCS	powerful; mighty; overcoming; vanquishing; bearing; enduring; withstanding; defy	no locus/overlap candidate — residue for LLM/human pass
 saha	2	?	saha	lemma:105774		0.0	unassigned	public	DCS	together with; along with; with	no locus/overlap candidate — residue for LLM/human pass
@@ -604,9 +580,6 @@ pippala		?	pippala	lemma:95146		0.0	unassigned	public	DCS	a berry (esp. of the P
 tarala		?	tarala	lemma:96685		0.0	unassigned	public	DCS	moving to and fro; trembling; tremulous; glittering; unsteady; vain; libidinous;	no locus/overlap candidate — residue for LLM/human pass
 tarala		?	tarala	lemma:96686		0.0	unassigned	public	DCS	a wave; the central gem of a necklace; a necklace; a ruby; iron; the thorn-apple	no locus/overlap candidate — residue for LLM/human pass
 SiKarin		?	śikharin	lemma:132570		0.0	unassigned	public	DCS	pointed; peaked; crested; tufted; resembling the buds of the Arabian jasmine	no locus/overlap candidate — residue for LLM/human pass
-rEvata		1b	raivata	Mahābhārata, MBh, 1, 212, 6	dcs:181576	0.5	overlap	public	DCS	cloud; a kind of Soma; a species of tuberous vegetable; name of Śiva; name of a 	confidence<tau
-rEvata		1b	raivata	Mahābhārata, MBh, 2, 5, 3	dcs:183446	0.5	overlap	public	DCS	cloud; a kind of Soma; a species of tuberous vegetable; name of Śiva; name of a 	confidence<tau
-rEvata		1b	raivata	Mahābhārata, MBh, 2, 13, 49	dcs:184547	0.5	overlap	public	DCS	cloud; a kind of Soma; a species of tuberous vegetable; name of Śiva; name of a 	confidence<tau
 rEvata		?	raivata	lemma:79799		0.0	unassigned	public	DCS	name of various Sāmans; a kind of plant	no locus/overlap candidate — residue for LLM/human pass
 padya		1d	padya	Vārāhagṛhyasūtra, VārGS, 11, 13	dcs:102586	0.5	overlap	public	DCS	relating or belonging to a foot; hurting or coming in contact with the feet; mar	confidence<tau
 padya		1d	padya	Gobhilagṛhyasūtra, GobhGS, 4, 10, None	dcs:104125_1	0.5	overlap	public	DCS	relating or belonging to a foot; hurting or coming in contact with the feet; mar	confidence<tau
@@ -630,7 +603,6 @@ divya		?	divya	lemma:147119		0.0	unassigned	public	DCS	the divine world or anyth
 grAhin		?	grāhin	lemma:156942		0.0	unassigned	public	DCS	ifc. seizing; taking; holding; laying hold of	no locus/overlap candidate — residue for LLM/human pass
 nandaka		?	nandaka	lemma:43954		0.0	unassigned	public	DCS	delighting in (comp.); rejoicing; gladdening; making happy (esp. a family)	no locus/overlap candidate — residue for LLM/human pass
 Arya		?	ārya	lemma:59604		0.0	unassigned	public	DCS	behaving like an Āryan; honourable; respectable; noble; of a good family; excell	no locus/overlap candidate — residue for LLM/human pass
-Badraka		?	bhadraka	lemma:48880		0.0	unassigned	public	DCS	good; brave; handsome	no locus/overlap candidate — residue for LLM/human pass
 kAhala		?	kāhala	lemma:23235		0.0	unassigned	public	DCS	speaking unbecomingly; speaking indistinctly; mischievous; large; excessive; dry	no locus/overlap candidate — residue for LLM/human pass
 kAhala		?	kāhala	lemma:23236		0.0	unassigned	public	DCS	a large drum; a sound; a cat; a cock; name of an author	no locus/overlap candidate — residue for LLM/human pass
 granTila		?	granthila	lemma:125569		0.0	unassigned	public	DCS	knotted; knotty	no locus/overlap candidate — residue for LLM/human pass
@@ -651,7 +623,6 @@ muh	1	?	muh	lemma:220948		0.0	unassigned	public	DCS	perplexing; a confounder	no 
 viDi	1	?	vidhi	lemma:122846		0.0	unassigned	public	DCS	a rule; formula; injunction; ordinance; statute; precept; law; direction (esp. f	no locus/overlap candidate — residue for LLM/human pass
 laGu		?	laghu	lemma:80490		0.0	unassigned	public	DCS	light; swift; active; nimble; easy; easily digested; easy in mind; causing relie	no locus/overlap candidate — residue for LLM/human pass
 Sruti	1	?	śruti	lemma:139787		0.0	unassigned	public	DCS	an answer; a promise; assent; = next	no locus/overlap candidate — residue for LLM/human pass
-Sruti	1	?	śruti	lemma:199773		0.0	unassigned	public	DCS	name of a king	no locus/overlap candidate — residue for LLM/human pass
 suBaga		?	subhaga	lemma:108189		0.0	unassigned	public	DCS	possessing good fortune; very fortunate or prosperous; lucky; happy; blessed; hi	no locus/overlap candidate — residue for LLM/human pass
 suBaga		?	subhaga	lemma:108192		0.0	unassigned	public	DCS	good fortune; bitumen	no locus/overlap candidate — residue for LLM/human pass
 SaNKa		?	śaṅkha	lemma:116387		0.0	unassigned	public	DCS	a shell; the conch-shell (used for making libations of water or as an ornament f	no locus/overlap candidate — residue for LLM/human pass
@@ -683,11 +654,7 @@ SoBana		?	śobhana	lemma:127826		0.0	unassigned	public	DCS	brilliant; beautiful;
 BErava	1	?	bhairava	lemma:25983		0.0	unassigned	public	DCS	terror or the property of exciting terror	no locus/overlap candidate — residue for LLM/human pass
 BErava	1	?	bhairava	lemma:25984		0.0	unassigned	public	DCS	terrible; horrible	no locus/overlap candidate — residue for LLM/human pass
 pramARa		?	pramāṇa	lemma:141016		0.0	unassigned	public	DCS	measure; scale; standard; measure of any kind (as size); prosodical length (of a	no locus/overlap candidate — residue for LLM/human pass
-pramARa		?	pramāṇa	lemma:141017		0.0	unassigned	public	DCS	name of a large fig-tree on the bank of the Ganges	no locus/overlap candidate — residue for LLM/human pass
 badara		?	badara	lemma:154202		0.0	unassigned	public	DCS	the edible fruit of the jujube; the berry or fruit of the cotton shrub	no locus/overlap candidate — residue for LLM/human pass
-vESvadeva		2a	vaiśvadeva	Vārāhagṛhyasūtra, VārGS, 17, None	dcs:102819_1	0.5	overlap	public	DCS	a particular Graha or Soma-vessel; a particular Ekāha	confidence<tau
-vESvadeva		2a	vaiśvadeva	Vārāhagṛhyasūtra, VārGS, 17, 3	dcs:102821	0.5	overlap	public	DCS	a particular Graha or Soma-vessel; a particular Ekāha	confidence<tau
-vESvadeva		2a	vaiśvadeva	Mahābhārata, MBh, 14, 10, 29	dcs:318120	0.5	overlap	public	DCS	a particular Graha or Soma-vessel; a particular Ekāha	confidence<tau
 asita	2	?	asita	lemma:60998		0.0	unassigned	public	DCS	unbound	no locus/overlap candidate — residue for LLM/human pass
 asita	2	?	asita	lemma:60999		0.0	unassigned	public	DCS	dark-coloured; black; dusky	no locus/overlap candidate — residue for LLM/human pass
 ErAvata		?	airāvata	lemma:39985		0.0	unassigned	public	DCS	a kind of rainbow	no locus/overlap candidate — residue for LLM/human pass
@@ -737,7 +704,6 @@ banDura		2a	bandhura	Rājanighaṇṭu, RājNigh, Parp., 15	dcs:18809	0.5	overla
 banDura		2a	bandhura	Mahābhārata, MBh, 9, 61, 14	dcs:272169	0.5	overlap	public	DCS	a bird; a goose; Ardea Nivea; Pentapetes Phoenicea; Embelia Ribes; a particular 	confidence<tau
 banDura		2a	bandhura	Liṅgapurāṇa, LiPur, 1, 72, 8	dcs:376590	0.5	overlap	public	DCS	a bird; a goose; Ardea Nivea; Pentapetes Phoenicea; Embelia Ribes; a particular 	confidence<tau
 banDura		?	bandhura	lemma:153674		0.0	unassigned	public	DCS		no locus/overlap candidate — residue for LLM/human pass
-banDura		?	bandhura	lemma:154248		0.0	unassigned	public	DCS	bent; inclined; curved; rounded; pleasant; beautiful; charming; adorned with; un	no locus/overlap candidate — residue for LLM/human pass
 aja	2	?	aja	lemma:6484		0.0	unassigned	public	DCS	not born; existing from all eternity	no locus/overlap candidate — residue for LLM/human pass
 balin		?	balin	lemma:154363		0.0	unassigned	public	DCS	powerful; strong; mighty; stout; robust	no locus/overlap candidate — residue for LLM/human pass
 dIpana		?	dīpana	lemma:84718		0.0	unassigned	public	DCS	kindling; inflaming; setting on fire; digestive; stimulating	no locus/overlap candidate — residue for LLM/human pass
@@ -816,7 +782,6 @@ vara	4	2a	vara	Rasādhyāya, RAdhy, 1, 142	dcs:100693	0.5	overlap	public	DCS	cho
 vara	4	2a	vara	Suśrutasaṃhitā, Su, Cik., 38, 32	dcs:10167	0.5	overlap	public	DCS	choicest; valuable; precious; best; most excellent or eminent among; royal; prin	confidence<tau
 vara	4	?	vara	lemma:69020		0.0	unassigned	public	DCS	circumference; space; room; stopping; checking; circle (of people)	no locus/overlap candidate — residue for LLM/human pass
 vara	4	?	vara	lemma:69150		0.0	unassigned	public	DCS	election; wish; request; boon; gift; reward; benefit; blessing; favour; a benefi	no locus/overlap candidate — residue for LLM/human pass
-vara	4	?	vara	lemma:69151		0.0	unassigned	public	DCS	a kind of grain; bdellium; a sparrow; name of a son of Śvaphalka; suitor; lover;	no locus/overlap candidate — residue for LLM/human pass
 vara	4	?	vara	lemma:69154		0.0	unassigned	public	DCS	saffron; green ginger; [min.] = srotoñjana; [min.] = saindhava	no locus/overlap candidate — residue for LLM/human pass
 karman		?	karman	lemma:12243		0.0	unassigned	public	DCS	act; action; performance; business; name office; special duty; occupation; oblig	no locus/overlap candidate — residue for LLM/human pass
 harita		5a	harita	Rasārṇava, RArṇ, 12, 240	dcs:109972	0.5	overlap	public	DCS	a yellowish or greenish substance; gold; greens; vegetables; a kind of fragrant 	confidence<tau
@@ -862,7 +827,6 @@ SiKara		?	śikhara	lemma:132569		0.0	unassigned	public	DCS	cloves	no locus/overl
 pOruza		?	pauruṣa	lemma:151051		0.0	unassigned	public	DCS	a weight or load which can be carried by one man; name of a Rākṣasa	no locus/overlap candidate — residue for LLM/human pass
 pawala		?	paṭala	lemma:15253		0.0	unassigned	public	DCS	a roof; thatch; a veil; cover; a basket; chest; box; a heap; mass; multitude (es	no locus/overlap candidate — residue for LLM/human pass
 pawala		?	paṭala	lemma:15254		0.0	unassigned	public	DCS	an enclosing or surrounding skin or membrane (esp. of the eyes); a film over the	no locus/overlap candidate — residue for LLM/human pass
-keSa		?	keśa	lemma:208280		0.0	unassigned	public	DCS	having ... hair	no locus/overlap candidate — residue for LLM/human pass
 vyAla		?	vyāla	lemma:169469		0.0	unassigned	public	DCS	extravagant; wicked; vicious	no locus/overlap candidate — residue for LLM/human pass
 kzetra		2	kṣetra	Vaikhānasadharmasūtra, VaikhDhS, 2, 1, 3	dcs:100095	0.5	overlap	public	DCS	landed property; land; soil; name of a kind of tutelary deity; a Buddha; a field	confidence<tau
 kzetra		2	kṣetra	Vaikhānasadharmasūtra, VaikhDhS, 3, 2, 14	dcs:100253	0.5	overlap	public	DCS	landed property; land; soil; name of a kind of tutelary deity; a Buddha; a field	confidence<tau
@@ -873,7 +837,6 @@ DizaRa		?	dhiṣaṇa	lemma:42643		0.0	unassigned	public	DCS	intelligent; wise	n
 makara		?	makara	lemma:166215		0.0	unassigned	public	DCS	[Yoga] a kind of āsana	no locus/overlap candidate — residue for LLM/human pass
 pARqu		?	pāṇḍu	lemma:93361		0.0	unassigned	public	DCS	yellowish white; white; pale; [medic.] suffering from pāṇḍu	no locus/overlap candidate — residue for LLM/human pass
 vinAyaka		?	vināyaka	lemma:122934		0.0	unassigned	public	DCS	taking away; removing; without a leader	no locus/overlap candidate — residue for LLM/human pass
-viraja		?	viraja	lemma:123172		0.0	unassigned	public	DCS	free from dust; clean; pure; free from the menstrual excretion	no locus/overlap candidate — residue for LLM/human pass
 viraja		?	viraja	lemma:123175		0.0	unassigned	public	DCS	name of a place of pilgrimage; name of a Buddhakṣetra	no locus/overlap candidate — residue for LLM/human pass
 giri		?	giri	lemma:123970		0.0	unassigned	public	DCS	coming from the mountains; venerable	no locus/overlap candidate — residue for LLM/human pass
 Asura		2a	āsura	Kātyāyanasmṛti, KātySmṛ, 1, 923	dcs:531665	0.5	overlap	public	DCS	an Asura or demon; a form of marriage (in which the bridegroom purchases the bri	confidence<tau
