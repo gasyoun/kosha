@@ -48,3 +48,6 @@ data/d5_measurements.json
 data/e1/e1_*
 # E1 hybridize pass measurement outputs (regenerable via scripts/build_hybrid_forms.py).
 data/hybrid/
+
+# H1455 sense-reconciliation input (regenerable via RussianTranslation microstructure.py export_sense_loci; owned by H1456)
+data/concordance/pwg_sense_loci.tsv
