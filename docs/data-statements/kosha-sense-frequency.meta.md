@@ -27,6 +27,11 @@ texts corpus-wide; 531,747 sense-tagged tokens = 9.3% of the corpus). TSV, UTF-8
 | `count_all` | whole-corpus attested token count for this sense |
 | `sense_rank` | dense rank of the sense within its lemma+layer, by `count_all` desc (1 = dominant) |
 | `lemma_share` | `count_all` ÷ Σ over the lemma's senses in this layer (the dominance ratio) |
+| `n_texts` | document frequency — distinct DCS texts attesting this (lemma, sense) |
+| `dispersion_dp` | Gries Deviation of Proportions over texts (0 = even, →1 = bursty/concentrated) |
+| `largest_text_share` | fraction of the sense's tokens in its single biggest text (burstiness diagnostic) |
+| `count_adj` | dispersion-adjusted count = `count_all` × (1 − `dispersion_dp`) — discounts genre-concentrated senses |
+| `sense_rank_adj` | dense rank within lemma+layer by `count_adj` (the de-biased sense order) |
 | `periods` | per-period vector — **empty in wave-1** (see limitations) |
 | `provenance` | `attested` (WordSem gold) on every wave-1 row; `estimated` is reserved for wave-2 WSD |
 | `confidence` | null for `attested`; wave-2 fills it for `estimated` rows |
@@ -115,6 +120,28 @@ hand-verified gold label. No LLM-generated sense labels are in the table.
   excesses are DCS-vintage mismatches between the `dcs_full` token count and the
   Leonchenko lemma-frequency sheet, not senses out-counting the lemma.
 - Upstream UD `Tense=Past` conflates aorist/perfect (inherited).
+- **Corpus-composition bias — the load-bearing caveat, and the wave-1.5 partial
+  correction.** DCS is *not* a balanced sample of Sanskrit: the WordSem-tagged subset
+  over-represents rasaśāstra/āyurveda, so raw token frequency inflates genre-concentrated
+  senses (`rasa` reads 51% "mercury"). This is the classic *domain-relativity of the
+  predominant sense* — a word's most-frequent sense flips by corpus (McCarthy, Koeling,
+  Weeds & Carroll, *Finding Predominant Word Senses in Untagged Text*, ACL 2004,
+  [P04-1036](https://aclanthology.org/P04-1036/); Koeling, McCarthy & Carroll,
+  *Domain-Specific Sense Distributions and Predominant Sense Acquisition*, HLT/EMNLP 2005,
+  [H05-1053](https://aclanthology.org/H05-1053/)). **Wave-1.5** ships a genre-label-free
+  partial correction as extra columns: `dispersion_dp` (Gries's Deviation of Proportions,
+  *Dispersions and adjusted frequencies in corpora*, IJCL 13(4):403–437, 2008),
+  `n_texts`, `largest_text_share`, and `count_adj = count_all × (1 − dispersion_dp)` with
+  its own `sense_rank_adj`. This down-weights bursty senses (`rasa` mercury/juice gap
+  narrows 1.74× → 1.47×; single-text artefacts like `artha` "sense" in 3 texts are crushed)
+  but is **corpus-size-relative**, so it under-penalises concentration in *large*
+  rasaśāstra texts. The fuller fix is **wave-2 genre-stratified post-stratification**
+  (`p_balanced(s) = Σ_g w_g · P(s|g)` with a target `w_g`, not count-proportional — Little,
+  *Post-Stratification*, JASA 1993; Biber, *Representativeness in Corpus Design*, 1993) plus
+  Chan & Ng EM sense-prior re-estimation (*Estimating Class Priors in Domain Adaptation for
+  WSD*, COLING-ACL 2006, [P06-1012](https://aclanthology.org/P06-1012/)). **Keep both
+  numbers:** `count_all` is right for a reader *in* that genre (mercury really is dominant
+  in rasaśāstra); `count_adj` for "Sanskrit generally".
 
 ## Intended use / known misuse
 
