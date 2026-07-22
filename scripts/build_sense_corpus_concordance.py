@@ -56,6 +56,7 @@ from pathlib import Path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sense_loci_core as slc  # noqa: E402
 from concordance_core import citable_locus  # noqa: E402  (REUSE the host-independent DCS cite)
+from mbh_vulgate import MBhVulgate  # noqa: E402  (REUSE csl-atlas f8 PWG→vulgate crosswalk)
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -72,7 +73,11 @@ OUT_WEB = ROOT / "concordance" / "senses" / "data"
 TAU = 0.60           # marked default (IMPLEMENTATION step 5); logged in the report
 KWIC_PER = 3         # samples per DCS attestation shown per sense (stated cap)
 SENT_TRUNC = 160
-CONF = {"ls": 0.99, "locus": 0.90, "overlap_strong": 0.70, "overlap_weak": 0.50, "llm": 0.0}
+CONF = {"ls": 0.99, "locus": 0.90, "overlap_strong": 0.70, "overlap_weak": 0.50, "llm": 0.0,
+        # MBh via the csl-atlas f8 vulgate crosswalk (PWG→Nīlakaṇṭha-vulgate is
+        # SOLVED; the DCS side is BORI-critical, so matching is adhyāya-level
+        # corroboration with ~±1 vulgate↔critical drift — never exact identity).
+        "locus_mbh_exact": 0.80, "locus_mbh_adj": 0.65}
 
 # PWG <ls> source abbrev -> DCS text name, for the (rare, honest) locus tier.
 # Only the texts DCS actually carries AND whose reference scheme could align.
@@ -252,6 +257,9 @@ def main():
     groups = slc.load_pwg_senses(args.input)
     print("  %d PWG (slp1,hom) groups loaded" % len(groups), file=sys.stderr)
 
+    mbh = MBhVulgate()   # REUSE csl-atlas f8 PWG→vulgate crosswalk (may be absent → tier off)
+    print("  MBh vulgate crosswalk: %s (%d parvans)" % (mbh.ok, len(mbh._by_parvan)), file=sys.stderr)
+
     dict_links = load_dict_links(pilot_slp1)
     all_lemma_ids = {lid for v in dict_links.values() for _i, lid, _e, _t, _n in v}
     print("  %d pilot headwords DCS-attested, %d distinct DCS lemmas" % (len(dict_links), len(all_lemma_ids)), file=sys.stderr)
@@ -268,6 +276,7 @@ def main():
     viewer = collections.OrderedDict()   # slp1 -> entry for the viewer
 
     ls_total = ls_resolved = 0           # A2 metric accumulators (pilot leaf senses)
+    mbh_ls_total = mbh_ls_resolved = 0   # MBh <ls> resolved to a vulgate address (wave-1.5)
     method_counts = collections.Counter()
     n_dcs_links = n_dcs_assigned = n_locus_hits = 0
 
@@ -282,6 +291,7 @@ def main():
         sense_view = []
         sense_tokens = []
         sense_resolved_loci = []   # per sense: set of (dcs_text_name, numeric_tuple) from resolved <ls>
+        sense_mbh_adh = []         # per sense: set of (parvan, adhyaya) resolved via the MBh vulgate crosswalk
         for s in senses:
             gloss = s.gloss_clean()
             # overlap keys on the GLOSS only — proper names / Latin binomials /
@@ -290,6 +300,7 @@ def main():
             sense_tokens.append(slc.content_tokens(gloss))
             ls_items = []
             rloci = set()
+            madh = set()
             for raw in s.ls_raw:
                 r = slc.resolve_ls(raw)
                 ls_total += 1
@@ -299,6 +310,17 @@ def main():
                 locus_disp = (r["source_name"].split(",")[0][:40] if r["source_name"] else r["source_abbrev"])
                 if r["locus"]:
                     locus_disp = (locus_disp + " " + r["locus"]).strip()
+                # MBh: resolve PWG continuous verse -> Nīlakaṇṭha vulgate (csl-atlas f8).
+                vulg = None
+                if mbh.ok and (r["source_abbrev"] or "").upper().strip().rstrip(".") == "MBH":
+                    nums = parse_ref_nums(r["locus"])
+                    if len(nums) >= 2:
+                        mbh_ls_total += 1
+                        vulg = mbh.resolve(nums[0], nums[1])
+                        if vulg:
+                            mbh_ls_resolved += 1
+                            madh.add((nums[0], vulg["adhyaya"]))
+                            locus_disp += " → vulg %s" % vulg["vulgate"]
                 conc_rows.append({
                     "slp1": slp1, "hom": hom, "sense_id": s.sense_id, "lemma": slp1,
                     "locus": locus_disp, "cite": "pwgls:%s|%s" % (r["source_abbrev"], r["locus"]),
@@ -313,12 +335,14 @@ def main():
                 if r["source_name"]:
                     short_src = r["source_name"].split("(")[0].split(",")[0].strip()[:48]
                 ls_items.append({"raw": raw, "abbrev": r["source_abbrev"], "locus": r["locus"],
-                                 "source": short_src, "resolved": r["resolved"], "rights": rights})
+                                 "source": short_src, "resolved": r["resolved"], "rights": rights,
+                                 "vulgate": vulg["vulgate"] if vulg else None})
                 # for the locus tier: map resolved abbrev -> DCS text + numeric
                 dcs_text = PWG_TO_DCS_TEXT.get((r["source_abbrev"] or "").upper().strip().rstrip("."))
                 if dcs_text:
                     rloci.add((dcs_text, parse_ref_nums(r["locus"])))
             sense_resolved_loci.append(rloci)
+            sense_mbh_adh.append(madh)
             sense_view.append({
                 "sense_id": s.sense_id, "gloss": gloss[:200],
                 "ls": ls_items, "dcs": [],
@@ -359,12 +383,40 @@ def main():
                 n_locus_hits += 1
                 samples = matched_passages[: args.kwic_per] or samples
             else:
-                # (ii) gloss-overlap (proper-noun / binomial / digit tokens)
-                bi, strength, shared = overlap_assign(meanings.get(lemma_id, ""), sense_tokens)
-                if bi is not None:
-                    si = bi
-                    method = "overlap"
-                    conf = CONF["overlap_strong"] if strength == 2 else CONF["overlap_weak"]
+                # (ii) MBh via the csl-atlas f8 vulgate crosswalk. DCS Mahābhārata
+                # is the BORI critical edition, so a DCS (parvan, adhyāya) matches
+                # a sense's <ls>-resolved vulgate adhyāya at ±1 (the vulgate↔critical
+                # drift) — an adhyāya-level CORROBORATION, never exact identity.
+                mbh_hits = {}   # sense_i -> (min_delta, [matching passages])
+                for kw in passages:
+                    if not (kw["source_text"] or "").startswith("Mahābhārata"):
+                        continue
+                    pn = parse_ref_nums(kw["ref"])          # (parvan, adhyaya)
+                    if len(pn) < 2:
+                        continue
+                    for pi, madh in enumerate(sense_mbh_adh):
+                        for (p_v, a_v) in madh:
+                            if p_v == pn[0] and abs(a_v - pn[1]) <= 1:
+                                d = abs(a_v - pn[1])
+                                cur = mbh_hits.get(pi)
+                                if cur is None or d < cur[0]:
+                                    mbh_hits[pi] = (d, [kw])
+                                elif d == cur[0]:
+                                    cur[1].append(kw)
+                if mbh_hits:
+                    si = min(mbh_hits, key=lambda k: mbh_hits[k][0])
+                    d, hitpass = mbh_hits[si]
+                    method = "locus-mbh"
+                    conf = CONF["locus_mbh_exact"] if d == 0 else CONF["locus_mbh_adj"]
+                    samples = hitpass[: args.kwic_per]
+                    n_locus_hits += 1
+                else:
+                    # (iii) gloss-overlap (proper-noun / binomial / digit tokens)
+                    bi, strength, shared = overlap_assign(meanings.get(lemma_id, ""), sense_tokens)
+                    if bi is not None:
+                        si = bi
+                        method = "overlap"
+                        conf = CONF["overlap_strong"] if strength == 2 else CONF["overlap_weak"]
             if si is None:
                 unassigned.append((lemma_iast, lemma_id, ev, n_txt))
                 continue
@@ -472,12 +524,15 @@ def main():
         n_dcs_assigned=n_dcs_assigned, n_locus_hits=n_locus_hits,
         n_conc=len(conc_rows), n_review=len(review_rows), tau=tau,
         n_public=n_public_rows, n_evidence_only=n_evidence_only,
+        mbh_ls_total=mbh_ls_total, mbh_ls_resolved=mbh_ls_resolved, mbh_ok=mbh.ok,
         viewer=args.viewer,
     ), viewer)
 
     print("LOG: ls_total=%d ls_resolved=%d rate=%.1f%% (A2 floor 60%%) tau=%.2f" % (ls_total, ls_resolved, rate, tau), file=sys.stderr)
-    print("LOG: dcs_links=%d assigned=%d (locus=%d overlap=%d) review=%d" % (
-        n_dcs_links, n_dcs_assigned, n_locus_hits,
+    print("LOG: MBh <ls> resolved to vulgate: %d/%d (csl-atlas f8 crosswalk, ok=%s)" % (
+        mbh_ls_resolved, mbh_ls_total, mbh.ok), file=sys.stderr)
+    print("LOG: dcs_links=%d assigned=%d (locus=%d locus-mbh=%d overlap=%d) review=%d" % (
+        n_dcs_links, n_dcs_assigned, method_counts["locus"], method_counts["locus-mbh"],
         method_counts["overlap"], len(review_rows)), file=sys.stderr)
     print("dataset: %s (%d rows)" % (ds, len(conc_rows)), file=sys.stderr)
 
@@ -499,22 +554,34 @@ def write_report(path, m, viewer):
         f.write("| **resolution rate** | **%.1f%%** (floor 60%%) |\n\n" % m["rate"])
         f.write("Resolution reuses the canonical `RussianTranslation/src/pwg_sources.py` "
                 "(pwgbib.txt) — the abbrev table is consumed, never re-derived.\n\n")
+        f.write("## MBh vulgate resolution (wave-1.5 — reused prior art)\n\n")
+        f.write("PWG's continuous Böhtlingk–Roth Mahābhārata numbering IS resolvable to a Nīlakaṇṭha-vulgate "
+                "address — the csl-atlas **f8 fitted-index crosswalk** (H610/H761, all 18 parvans, held-out MW "
+                "55.2%% within ±3; [DEAD_ENDS §8b retracted](https://github.com/gasyoun/SanskritLexicography/blob/master/DEAD_ENDS.md)). "
+                "This layer now **consumes** it (`mbh_vulgate.py` → `mbh_vulgate_concordance.csv`): **%d/%d** MBh "
+                "`<ls>` loci on pilot senses resolved to a vulgate `parvan.adhyāya.śloka` (crosswalk present: %s). "
+                "Example: `MBH. 12,3630` → **vulgate 12.98.19**.\n\n"
+                % (m["mbh_ls_resolved"], m["mbh_ls_total"], m["mbh_ok"]))
         f.write("## Per-tier attestation rows\n\n")
         f.write("| tier | confidence | rows | meaning |\n|---|---|---|---|\n")
-        f.write("| ls | 0.99 | %d | PWG's OWN `<ls>` under the sense — guaranteed-correct witness |\n" % m["method_counts"]["ls"])
-        f.write("| locus | 0.90 | %d | DCS attestation locus-matched to a sense's `<ls>` set |\n" % m["method_counts"]["locus"])
+        f.write("| ls | 0.99 | %d | PWG's OWN `<ls>` under the sense — guaranteed-correct witness (MBh loci carry their resolved vulgate address) |\n" % m["method_counts"]["ls"])
+        f.write("| locus | 0.90 | %d | DCS attestation verse-equal to a sense's `<ls>` (canonically-numbered Vedic texts) |\n" % m["method_counts"]["locus"])
+        f.write("| locus-mbh | 0.65–0.80 | %d | DCS Mahābhārata attestation whose (parvan, adhyāya) matches a sense's `<ls>`-resolved vulgate adhyāya (±1, vulgate↔critical drift) |\n" % m["method_counts"]["locus-mbh"])
         f.write("| overlap | 0.50–0.70 | %d | shared proper-noun/binomial/digit gloss tokens |\n" % m["method_counts"]["overlap"])
         f.write("| **review queue** | <%.2f | %d | conf<τ + unassigned residue (kept, never dropped) |\n\n" % (m["tau"], m["n_review"]))
         f.write("DCS side: **%d** headword↔DCS-lemma links over the pilot; **%d** assigned to a sense "
-                "(%d by locus, %d by gloss-overlap); the rest parked to `sense_review_queue.tsv`.\n\n"
-                % (m["n_dcs_links"], m["n_dcs_assigned"], m["n_locus_hits"], m["method_counts"]["overlap"]))
-        f.write("**Honest note on the locus tier (VERIFICATION risk 1, confirmed by spike):** DCS uses "
-                "critical-edition references (`MBh, 12, <adhyāya>` + śloka) while PWG cites Böhtlingk–Roth "
-                "editions (continuous verse, e.g. `MBH 12,3630`); several PWG-cited texts (Pañcatantra, "
-                "Kathāsaritsāgara) are absent from DCS entirely. So the passage-level locus tier is a weak "
-                "signal by construction — the **load-bearing sense↔passage witness is PWG's own `<ls>`** "
-                "(the `ls` tier), and A2's `<ls>`-resolution rate is the honest acceptance gate, exactly as "
-                "the risk register anticipated.\n\n")
+                "(%d by verse-locus, %d by MBh-vulgate-adhyāya, %d by gloss-overlap); the rest parked to "
+                "`sense_review_queue.tsv`.\n\n"
+                % (m["n_dcs_links"], m["n_dcs_assigned"], m["method_counts"]["locus"],
+                   m["method_counts"]["locus-mbh"], m["method_counts"]["overlap"]))
+        f.write("**Honest note — corrected (wave-1.5).** An earlier draft of this report called PWG↔DCS "
+                "Mahābhārata locus-matching *infeasible*. That over-claimed: PWG-continuous → **vulgate** is a "
+                "SOLVED problem (csl-atlas f8), and it is now consumed. The residual is narrower and specific — "
+                "DCS's Mahābhārata is the **BORI critical edition**, whose adhyāya/śloka numbering drifts ~±1 "
+                "adhyāya from the vulgate — so a DCS match through the crosswalk is an adhyāya-level "
+                "**corroboration** (`locus-mbh`, conf ≤ 0.80), not exact-verse identity. Texts DCS lacks entirely "
+                "(Pañcatantra, Kathāsaritsāgara) still cannot be DCS-matched. The `ls` tier (PWG's own `<ls>`, "
+                "now carrying resolved vulgate addresses) remains the load-bearing witness.\n\n")
         f.write("## Rights (A7)\n\n")
         f.write("Every row carries `rights ∈ {public, evidence-only}`; the public viewer filters to `public`. "
                 "PWG `<ls>` sources are pre-1900 editions (public); DCS is CC BY 4.0 (public). "
