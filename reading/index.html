@@ -67,6 +67,10 @@
     <p class="sub"><b>Subhāṣita (beginner):</b> <a class="src" href="subhashita/">graded
       beginner subhāṣita reader →</a> — the 106 easiest of Böhtlingk's 7,537 Indische
       Sprüche, difficulty-ordered, sandhi-split, metre-tagged (H1279).</p>
+    <p class="sub"><b>Drill trainers:</b>
+      <a class="src" href="morphology/drills/">morphology drills →</a> ·
+      <a class="src" href="vocabulary/curriculum/">vocabulary curriculum →</a> ·
+      <a class="src" href="samasa/drills/">samāsa drills →</a></p>
   </header>
   <div class="banner" id="banner" hidden></div>
   <main id="passage"></main>
@@ -81,6 +85,10 @@
 
 <!-- data shards: each sets window.READING_DATA[slug] -->
 <script src="data/nala-1.js"></script>
+<script src="data/nala-2.js"></script>
+<script src="data/nala-3.js"></script>
+<script src="data/hitopadesa-0.js"></script>
+<script src="data/kiratarjuniya-1.js"></script>
 <script src="data/gita-1.js"></script>
 <script src="data/gita-2.js"></script>
 <script src="data/gita-3.js"></script>
@@ -108,15 +116,18 @@
   var current = null;
   function sortkey(s){
     if(s.indexOf("nala")===0) return [0, parseInt(s.split("-")[1])||0];
-    if(s.indexOf("gita")===0) return [1, parseInt(s.split("-")[1])||0];
-    return [2,0];
+    if(s==="hitopadesa-0") return [1, 0];
+    if(s==="kiratarjuniya-1") return [1, 1];
+    if(s.indexOf("gita")===0) return [2, parseInt(s.split("-")[1])||0];
+    return [3,0];
   }
   var PACKS = Object.keys(DATA).sort(function(a,b){
     var ka=sortkey(a), kb=sortkey(b); return ka[0]-kb[0] || ka[1]-kb[1];
   }).map(function(slug){
     var d=DATA[slug];
     var label = slug.indexOf("gita")===0 ? ("Gītā "+(d.chapter||slug.split("-")[1]))
-              : slug.indexOf("nala")===0 ? ("Nala "+slug.split("-")[1]) : slug;
+              : slug.indexOf("nala")===0 ? ("Nala "+slug.split("-")[1])
+              : (d.title||slug).split(" — ")[0].replace(/\s*\([^)]*\)\s*$/,"");
     return {slug:slug, label:label};
   });
   function esc(s){return (s==null?"":String(s)).replace(/[&<>"]/g,function(c){
