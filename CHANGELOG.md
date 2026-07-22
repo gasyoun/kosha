@@ -14,6 +14,9 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Changed
+- **Concordance Q2 exit — relaxed tier dropped, strict-tier-only** ([H1267](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1267-Haiku_kosha_relaxed_tier_dead_end_record_18.07.26.md), Haiku 4.5 `claude-haiku-4-5-20251001`). Decision D6 (18-07-2026): the relaxed concordance matching tier, designed to fold vowel length and sibilants (ṣ/ś/s) for fuzzy linking, scored **0/3 correct on a 14-item golden sample**, while the three asserted tiers (xref/exact/floor) scored **11/11**. The 2,171 relaxed-tier candidates generated remain quarantined in [`dict_corpus_relaxed_candidates.tsv`](https://github.com/gasyoun/kosha/blob/main/data/concordance/dict_corpus_relaxed_candidates.tsv) as a historical record; the Q2 exit ships strict-tier-only (xref 12,836 + exact 61,373 + floor 311) with the 18.6% unfilled residue reported honestly. See [Uprava DEAD_ENDS §7](https://github.com/gasyoun/Uprava/blob/main/DEAD_ENDS.md) and [`GOLDEN_SAMPLE.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/GOLDEN_SAMPLE.md) for the minimal pairs and evidence.
+
 ## [0.78.0] - 2026-07-22
 
 ### Added
