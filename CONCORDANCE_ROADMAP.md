@@ -31,7 +31,7 @@ front (Q1) and instantiates it four times.
 | `anchor_key_slp1` | length-preserving `form_key()` (never NFD+strip — per [`/crosswalk-build`](https://github.com/gasyoun/kosha/blob/main/CLAUDE.md) discipline) |
 | `corpus_locus` | DCS sentence/token id |
 | `corpus_text_id` | which of the 270 DCS texts |
-| `match_method` | `exact` / `floor` / `relaxed` / `fuzzy` (tiered, per-tier counts reported) |
+| `match_method` | `exact` / `floor` / `xref` (strict tiers only; relaxed & fuzzy dropped D6) |
 | `confidence` | tier-derived score |
 | `evidence_count` | attestation count backing the link |
 
@@ -78,7 +78,7 @@ shared core), then the greenfield grammar work.
 ### Q1 (months 1–3) — B1 · Dictionary ↔ corpus, pan-corpus  ·  *+ the shared core*
 
 - **Inputs:** [`dcs-cdsl-xref`](https://github.com/sanskrit-lexicon/csl-apidev) (81.4% linked), `union-headwords`, `dcs-full-sqlite`, kosha rendered entries.
-- **Build:** generalize the GRA `id_gra` exact-match to CDSL headword → DCS lemma across MW/PWG/AP90; fill the 18.6% residue with the tiered `floor/relaxed/fuzzy` matcher (per-tier counts reported, honest residue caveats). **Build the concordance core here** (schema, `form_key()` join, scan anchoring, the reusable web viewer).
+- **Build:** generalize the GRA `id_gra` exact-match to CDSL headword → DCS lemma across MW/PWG/AP90 with strict tiers only (`xref`, `exact`, `floor`); the 18.6% residue unfilled per decision D6 (relaxed tier scored 0/3 on golden sample, dropped). **Build the concordance core here** (schema, `form_key()` join, scan anchoring, the reusable web viewer).
 - **Deliverables:** dataset `dict-corpus-concordance` (manifest row + public-tier release) · web page `/concordance/dict/`.
 - **Exit checks:** ≥90% of CDSL headwords carry ≥1 DCS attestation *or* an explained absence; a golden sample is human-verified ([`/spot-check-sample`](https://github.com/gasyoun/kosha/blob/main/CLAUDE.md)); every citation resolves scan-anchored and host-independent (RISKS R1/R5).
 
@@ -144,7 +144,7 @@ rule, running a later stage against a stale earlier one produces silently wrong
 output, not an error.
 
 **Risks:**
-- **R-C1** Pan-corpus matching noise (B1's 18.6% residue) — mitigated by tiered matching + honest per-tier reporting, never a silent fuzzy blur.
+- **R-C1** Pan-corpus matching noise (B1's 18.6% residue) — accepted as unfilled per D6 (strict-tier-only, no relaxed/fuzzy); reported honestly in build report and manifest, never silent.
 - **R-C2** B3's three parallel-passage variants are not yet content-diffed — Q2 must resolve which is canonical before surfacing.
 - **R-C3** vidyut derivation coverage/failures (A4) — some attested forms won't derive; report the dark set, don't hide it.
 - **R-C4** DCS `Tense=Past` conflates aorist/perfect — affects A3 verb buckets and A4 sūtra attribution; carry the caveat through.
