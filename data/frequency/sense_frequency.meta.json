@@ -24,6 +24,20 @@
     },
     "caveat": "DP is CORPUS-SIZE-relative, not genre-relative: it needs no genre labels (none ship in the local DCS data) but under-penalises a sense concentrated in a few LARGE texts. The fuller fix is wave-2 genre-stratified post-stratification: p_balanced(s)=Σ_g w_g·P(s|g) with target (uniform/reference) w_g, not count-proportional (Little 1993 JASA; Biber 1993); and Chan & Ng 2006 (COLING-ACL P06-1012) EM sense-prior re-estimation. Keep BOTH count_all and count_adj — the raw number is right for a reader IN that genre; the adjusted one for \"Sanskrit generally\"."
   },
+  "genre_stratification_wave2": {
+    "genre_source": "Renou (L'Inde classique / Histoire de la littérature sanskrite) genre taxonomy — MG-decided 22-07-2026; text→genre map in dcs_text_genre.tsv (219 texts, curated).",
+    "why": "The sense-tagged subset is 50.7% TECHNICAL śāstra by token mass (rasaśāstra 31.9% + āyurveda 18.4% + jyotiṣa/artha) vs 42.5% literary/vedic — the direct cause of rasa=mercury dominance.",
+    "columns": {
+      "count_bal_uniform": "post-stratified count — each Renou genre the lemma appears in weighted EQUALLY (p_bal=mean_g share(s|g), scaled to the lemma total). The \"Sanskrit generally, genre-balanced\" view.",
+      "sense_rank_bal": "dense rank within lemma+layer by count_bal_uniform",
+      "count_nonsastra": "token count restricted to NON-śāstra (literary/vedic) texts — the \"Sanskrit non-śāstra\" view.",
+      "sense_rank_nonsastra": "dense rank within lemma+layer by count_nonsastra",
+      "top_genre": "the single Renou genre contributing the most tokens to this sense",
+      "top_genre_share": "fraction of the sense's tokens from top_genre (concentration flag)"
+    },
+    "four_views": "count_all (in-genre, right for a rasaśāstra reader) · count_adj (dispersion-adjusted) · count_bal_uniform (genre-balanced, \"Sanskrit generally\") · count_nonsastra (\"Sanskrit non-śāstra\"). None silently replaces another — the reader picks the population.",
+    "method_note": "post-stratification / inverse-genre-size weighting (Little 1993 JASA; Biber 1993). Predominant-sense domain-relativity: McCarthy/Koeling ACL 2004 P04-1036, HLT-EMNLP 2005 H05-1053. Wave-3 lever: Chan & Ng EM sense-prior re-estimation (COLING-ACL 2006 P06-1012)."
+  },
   "rows": 103079,
   "rows_by_layer": {
     "wn": 57143,

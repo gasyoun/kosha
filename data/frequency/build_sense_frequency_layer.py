@@ -47,7 +47,11 @@ OUT_META = os.path.join(HERE, 'sense_frequency.meta.json')
 COLUMNS = ['lemma_slp1', 'layer', 'sense_id', 'sense_gloss', 'count_all',
            'sense_rank', 'lemma_share', 'n_texts', 'dispersion_dp',
            'largest_text_share', 'count_adj', 'sense_rank_adj',
+           # wave-2 (H1459) — Renou genre-stratified de-biasing:
+           'count_bal_uniform', 'sense_rank_bal', 'count_nonsastra',
+           'sense_rank_nonsastra', 'top_genre', 'top_genre_share',
            'periods', 'provenance', 'confidence']
+GENRE_TSV = os.path.join(HERE, 'dcs_text_genre.tsv')
 GLOSS_CAP = 100
 CSN = "claude-opus-4-8"  # provenance: model tier + exact version (H1453 executor)
 
@@ -150,9 +154,19 @@ def main():
             pair[(slp1, s)] += c
             pair_text[(slp1, s)][tid] += c
             text_ws_total[tid] += c
+    # wave-2 (H1459): text_id -> Renou genre + is_sastra flag, for the genre-stratified views.
+    text_genre, text_is_sastra = {}, {}
+    if os.path.exists(GENRE_TSV):
+        gmap = {r['text_name']: (r['genre'], r['is_sastra'] == '1') for r in load_tsv(GENRE_TSV)}
+        for tid, name in dcs.execute("SELECT text_id, name FROM text"):
+            g = gmap.get(name)
+            if g:
+                text_genre[tid] = g[0]
+                text_is_sastra[tid] = g[1]
     dcs.close()
     grand_total = sum(text_ws_total.values()) or 1
     text_share = {t: n / grand_total for t, n in text_ws_total.items()}  # s_i (corpus part size)
+    have_genre = bool(text_genre)
 
     # Three layer aggregations: {(lemma, layer, sense_id): [count, gloss]}
     agg = collections.defaultdict(lambda: [0, ''])
@@ -201,19 +215,46 @@ def main():
     rows = []
     for (lemma, layer), senses in by_ll.items():
         total = sum(c for _, c, _, _ in senses)
-        # precompute per-sense dispersion + adjusted count
+        # per-sense per-genre counts + the lemma's per-genre totals (wave-2, Renou).
+        sense_gc = {}                     # sid -> {genre: n}
+        lg = collections.Counter()        # genre -> lemma total (this layer)
+        for sid, c, gloss, tc in senses:
+            gc = collections.Counter()
+            for tid, n in tc.items():
+                gc[text_genre.get(tid, 'uncertain')] += n
+            sense_gc[sid] = gc
+            lg.update(gc)
+        genres_present = [g for g, n in lg.items() if n > 0]
+        n_genres = len(genres_present) or 1
         enriched = []
         for sid, c, gloss, tc in senses:
             dp = gries_dp(tc, text_share)
             n_texts = len(tc)
             largest = (max(tc.values()) / c) if c and tc else 0.0
             c_adj = c * (1.0 - dp)
-            enriched.append((sid, c, gloss, n_texts, dp, largest, c_adj))
-        # dense rank by raw count desc (sense_rank) and by adjusted count desc (sense_rank_adj)
+            gc = sense_gc[sid]
+            # count_nonsastra: tokens attested in NON-śāstra (literary/vedic) texts only.
+            c_ns = sum(n for tid, n in tc.items()
+                       if not text_is_sastra.get(tid, False)) if have_genre else 0
+            # count_bal_uniform: post-stratified so each genre the lemma appears in counts
+            # equally (Little 1993/Biber 1993). p_bal(s)=mean_g share(s|g); scaled back to total.
+            if have_genre and total:
+                c_bal = total * sum(gc.get(g, 0) / lg[g] for g in genres_present) / n_genres
+            else:
+                c_bal = 0.0
+            if have_genre and gc:
+                top_g, top_n = max(gc.items(), key=lambda x: (x[1], x[0]))
+                top_share = top_n / c if c else 0.0
+            else:
+                top_g, top_share = '', 0.0
+            enriched.append((sid, c, gloss, n_texts, dp, largest, c_adj,
+                             c_bal, c_ns, top_g, top_share))
         raw_rank = _dense_rank(enriched, key=lambda e: e[1])
         adj_rank = _dense_rank(enriched, key=lambda e: e[6])
+        bal_rank = _dense_rank(enriched, key=lambda e: e[7])
+        ns_rank = _dense_rank(enriched, key=lambda e: e[8])
         for e in enriched:
-            sid, c, gloss, n_texts, dp, largest, c_adj = e
+            sid, c, gloss, n_texts, dp, largest, c_adj, c_bal, c_ns, top_g, top_share = e
             rows.append({
                 'lemma_slp1': lemma, 'layer': layer, 'sense_id': sid,
                 'sense_gloss': gloss, 'count_all': c, 'sense_rank': raw_rank[sid],
@@ -221,6 +262,9 @@ def main():
                 'n_texts': n_texts, 'dispersion_dp': round(dp, 4),
                 'largest_text_share': round(largest, 4), 'count_adj': round(c_adj, 2),
                 'sense_rank_adj': adj_rank[sid],
+                'count_bal_uniform': round(c_bal, 2), 'sense_rank_bal': bal_rank[sid],
+                'count_nonsastra': c_ns, 'sense_rank_nonsastra': ns_rank[sid],
+                'top_genre': top_g, 'top_genre_share': round(top_share, 4),
                 'periods': '', 'provenance': 'attested', 'confidence': '',
             })
     rows.sort(key=lambda r: (r['lemma_slp1'], r['layer'], r['sense_rank'], r['sense_id']))
@@ -295,6 +339,33 @@ def main():
                       'Chan & Ng 2006 (COLING-ACL P06-1012) EM sense-prior re-estimation. Keep '
                       'BOTH count_all and count_adj — the raw number is right for a reader IN that '
                       'genre; the adjusted one for "Sanskrit generally".',
+        },
+        'genre_stratification_wave2': {
+            'genre_source': 'Renou (L\'Inde classique / Histoire de la littérature sanskrite) '
+                            'genre taxonomy — MG-decided 22-07-2026; text→genre map in '
+                            'dcs_text_genre.tsv (219 texts, curated).',
+            'why': 'The sense-tagged subset is 50.7% TECHNICAL śāstra by token mass '
+                   '(rasaśāstra 31.9% + āyurveda 18.4% + jyotiṣa/artha) vs 42.5% literary/vedic — '
+                   'the direct cause of rasa=mercury dominance.',
+            'columns': {
+                'count_bal_uniform': 'post-stratified count — each Renou genre the lemma appears '
+                                     'in weighted EQUALLY (p_bal=mean_g share(s|g), scaled to the '
+                                     'lemma total). The "Sanskrit generally, genre-balanced" view.',
+                'sense_rank_bal': 'dense rank within lemma+layer by count_bal_uniform',
+                'count_nonsastra': 'token count restricted to NON-śāstra (literary/vedic) texts — '
+                                   'the "Sanskrit non-śāstra" view.',
+                'sense_rank_nonsastra': 'dense rank within lemma+layer by count_nonsastra',
+                'top_genre': 'the single Renou genre contributing the most tokens to this sense',
+                'top_genre_share': 'fraction of the sense\'s tokens from top_genre (concentration flag)',
+            },
+            'four_views': 'count_all (in-genre, right for a rasaśāstra reader) · count_adj '
+                          '(dispersion-adjusted) · count_bal_uniform (genre-balanced, "Sanskrit '
+                          'generally") · count_nonsastra ("Sanskrit non-śāstra"). None silently '
+                          'replaces another — the reader picks the population.',
+            'method_note': 'post-stratification / inverse-genre-size weighting (Little 1993 JASA; '
+                           'Biber 1993). Predominant-sense domain-relativity: McCarthy/Koeling '
+                           'ACL 2004 P04-1036, HLT-EMNLP 2005 H05-1053. Wave-3 lever: Chan & Ng '
+                           'EM sense-prior re-estimation (COLING-ACL 2006 P06-1012).',
         },
         'rows': len(rows), 'rows_by_layer': n_layers,
         'attested_pairs': len(pair),
