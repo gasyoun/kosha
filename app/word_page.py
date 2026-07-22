@@ -52,6 +52,35 @@ def _load_upasarga():
 
 _UPASARGA = _load_upasarga()
 
+
+def _load_sense_freq():
+    """{lemma_slp1: [(sense_gloss, count, share), …]} from the committed MW layer of
+    data/frequency/sense_frequency.tsv (H1453), most-frequent sense first. Loaded once;
+    a pure function of the committed file, so prerender ∥ SSR stay byte-identical (the
+    P5-4 parity contract, exactly like _UPASARGA). Empty if the sidecar is absent."""
+    import csv
+    d = {}
+    p = Path(__file__).resolve().parent.parent / "data" / "frequency" / "sense_frequency.tsv"
+    if not p.exists():
+        return d
+    with p.open(encoding="utf-8", newline="") as f:
+        for r in csv.DictReader(f, delimiter="\t"):
+            if r["layer"] != "mw":
+                continue
+            try:
+                cnt = int(r["count_all"])
+                share = float(r["lemma_share"])
+            except (ValueError, KeyError):
+                continue
+            d.setdefault(r["lemma_slp1"], []).append((r["sense_gloss"], cnt, share))
+    for lemma in d:
+        d[lemma].sort(key=lambda x: (-x[1], x[0]))
+    return d
+
+
+_SENSE_FREQ = _load_sense_freq()
+_SENSE_FREQ_CAP = 8  # senses shown per card; the rest fold into a "+N more" note
+
 # Fixed presentation order (P5-1). RU is intentionally absent until the P6 gates
 # (G5 review + Kochergina rights) clear — see IMPLEMENTATION_PLAN.md §P6 and
 # P5_ADVANCED_UI_DESIGN.md §8; cards carry no `ru` dict, so this is also a data
@@ -225,6 +254,45 @@ def _upasarga_block(slp1):
     )
 
 
+def _sense_frequency_block(slp1):
+    """H1453: "N in this sense · M for the lemma" — per-MW-sense attested frequency from
+    the WordSem-gold sidecar (data/frequency/sense_frequency.tsv, mw layer), LEFT-JOINed by
+    lemma. A pure function of slp1 + the committed TSV, so prerender ∥ SSR are byte-identical
+    and the page stays crawlable (a static <details>, no host, no JS). Returns '' for a lemma
+    with no sense-frequency row (the LEFT-JOIN never drops such a lemma — it just omits the
+    block). Two-tier badge per sense: an `attested` chip (populated on WordSem gold) and an
+    `estimated` chip (empty in wave-1; wave-2 WSD lights it) — the two are never blended."""
+    senses = _SENSE_FREQ.get(slp1)
+    if not senses:
+        return ""
+    esc = html.escape
+    total = sum(c for _g, c, _s in senses)
+    items = []
+    for gloss, cnt, share in senses[:_SENSE_FREQ_CAP]:
+        pct = round(share * 100)
+        items.append(
+            '<li class="sf-item">'
+            f'<span class="sf-gloss">{esc(gloss)}</span>'
+            f'<span class="sf-bar" aria-hidden="true"><span class="sf-fill" style="width:{pct}%"></span></span>'
+            '<span class="sf-nums">'
+            f'<span class="chip att"><b>{cnt}</b> in this sense</span>'
+            '<span class="chip est" title="WSD estimate — wave-2 (not yet computed)"></span>'
+            f'<span class="sf-share">{pct}%</span>'
+            '</span></li>'
+        )
+    more = len(senses) - _SENSE_FREQ_CAP
+    more_html = (f'<li class="sf-more">+{more} more attested sense'
+                 f'{"s" if more != 1 else ""}</li>') if more > 0 else ""
+    return (
+        '<details class="disclosure sense-freq">'
+        '<summary>Sense frequency</summary>'
+        f'<p class="sf-head"><b>{total}</b> for the lemma · attested in DCS WordSem gold '
+        '<span class="sf-legend"><span class="chip att">attested</span>'
+        '<span class="chip est" title="WSD estimate — wave-2"></span> estimated</span></p>'
+        f'<ul class="sf-list">{"".join(items)}{more_html}</ul></details>'
+    )
+
+
 PAGE_CSS = """
 :root{--fg:#1a1a1a;--muted:#6b7280;--border:#d7d7db;--accent:#7b2d26;
 --card-bg:#fafafa;--head-bg:#f0f0f2;--hit-bg:#fdf3e7;--tag-bg:#ece7e0;
@@ -277,6 +345,21 @@ background:var(--card-bg);padding:.3rem .8rem}
 .ev-list{margin:.2rem 0 .4rem;padding-left:1.1rem;font-size:.9rem}
 .example{margin:.3rem 0;padding:.4rem .7rem;border-left:3px solid var(--accent);
 background:var(--hit-bg);font-size:1.05rem}
+.sf-head{margin:.2rem 0 .5rem;font-size:.85rem;color:var(--muted)}
+.sf-head b{color:var(--fg)}
+.sf-legend{margin-left:.5rem;font-size:.72rem}
+.sf-list{list-style:none;margin:.2rem 0 .3rem;padding:0}
+.sf-item{margin:.35rem 0}
+.sf-gloss{display:block;font-size:.9rem;margin-bottom:.15rem}
+.sf-bar{display:block;height:.5rem;background:var(--tag-bg);border-radius:3px;overflow:hidden}
+.sf-fill{display:block;height:100%;background:var(--accent);border-radius:3px}
+.sf-nums{display:flex;align-items:center;gap:.4rem;margin-top:.15rem;font-size:.8rem;flex-wrap:wrap}
+.sf-share{color:var(--muted)}
+.sf-more{font-size:.8rem;color:var(--muted);margin-top:.3rem;list-style:none}
+.chip{display:inline-block;font-size:.7rem;padding:.05rem .4rem;border-radius:4px;line-height:1.5}
+.chip.att{background:var(--tag-bg);color:var(--tag-fg)}
+.chip.att b{color:var(--tag-fg)}
+.chip.est{background:transparent;border:1px dashed var(--border);color:var(--muted);min-width:1.6rem}
 .wp-foot{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--border);
 font-size:.78rem;color:var(--muted)}
 .wp-foot a{color:var(--accent)}
@@ -348,6 +431,7 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
         + tabbar
         + panels
         + _evidence_block(ev)
+        + _sense_frequency_block(slp1)
         + _paradigm_block(slp1, base)
         + _upasarga_block(slp1)
         + '<footer class="wp-foot">Gasuns Sanskrit Dictionary · '
