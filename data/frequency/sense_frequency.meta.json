@@ -13,6 +13,17 @@
     "mw": "MW numbered sense (projection; sense_id=<lemma>#<mw_ord>)",
     "semdom": "WordNet lexicographer supersense (best-effort semantic domain)"
   },
+  "dispersion_debiasing_wave15": {
+    "why": "DCS is not a balanced sample of Sanskrit — the WordSem-tagged subset over-represents rasaśāstra/āyurveda (Hellwig's research focus), so raw token frequency inflates genre-concentrated senses (rasa=mercury). Predominant sense is domain-relative (McCarthy, Koeling, Weeds, Carroll, ACL 2004 P04-1036; Koeling, McCarthy, Carroll, HLT/EMNLP 2005 H05-1053).",
+    "columns": {
+      "n_texts": "document frequency — distinct DCS texts attesting this (lemma, sense)",
+      "dispersion_dp": "Gries Deviation of Proportions over texts (0=even, →1=bursty); Gries 2008 IJCL 13(4):403–437",
+      "largest_text_share": "fraction of the sense's tokens in its single biggest text (burstiness diagnostic)",
+      "count_adj": "dispersion-adjusted count = count_all × (1 − dispersion_dp) — discounts genre-concentrated senses",
+      "sense_rank_adj": "dense rank within lemma+layer by count_adj (the de-biased order)"
+    },
+    "caveat": "DP is CORPUS-SIZE-relative, not genre-relative: it needs no genre labels (none ship in the local DCS data) but under-penalises a sense concentrated in a few LARGE texts. The fuller fix is wave-2 genre-stratified post-stratification: p_balanced(s)=Σ_g w_g·P(s|g) with target (uniform/reference) w_g, not count-proportional (Little 1993 JASA; Biber 1993); and Chan & Ng 2006 (COLING-ACL P06-1012) EM sense-prior re-estimation. Keep BOTH count_all and count_adj — the raw number is right for a reader IN that genre; the adjusted one for \"Sanskrit generally\"."
+  },
   "rows": 103079,
   "rows_by_layer": {
     "wn": 57143,
