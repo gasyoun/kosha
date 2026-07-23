@@ -14,6 +14,9 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H1460 — in-browser vocabulary drills page (L4 surface)** ([H1460](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1460-Sonnet_kosha_vocab-drills-inbrowser-page_22.07.26.md), Sonnet 5 `claude-sonnet-5`). The frequency-graded vocabulary drill bank ([`data/frequency/vocab_drills.json`](https://github.com/gasyoun/kosha/blob/main/data/frequency/vocab_drills.json), 13,334 items, H947) shipped only as an Anki `.apkg` deck plus a read-only curriculum table — no learner-facing quiz page existed. New standalone generator [`scripts/build_vocab_drills_page.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_vocab_drills_page.py) reads the committed JSON directly (never `docs/cards/`, gitignored/absent in a fresh worktree) and writes [`reading/vocabulary/drills/index.html`](https://github.com/gasyoun/kosha/blob/main/reading/vocabulary/drills/index.html) (~5 MB, all 13,334 items inlined) — recognition/recall + rank-band (≤200/≤500/≤1000/all) filters, MCQ scoring. Every user-facing string is HTML-escaped at DOM insertion (vocab gloss text carries literal `&`/`<`/`>`/quotes, unlike the clean sandhi/morphology shells it otherwise copies). `reading/index.html` "Drill trainers" nav extended with the new link. Tests added to `tests/test_vocab_curriculum.py` (page existence/size, choice-builder answer-inclusion + no-empty-choice invariants).
+
 ## [0.81.0] - 2026-07-22
 
 ### Added
