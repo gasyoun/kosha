@@ -99,3 +99,48 @@ def test_drills_every_item_has_answer_and_evidence():
 def test_apkg_written():
     assert APKG.exists()
     assert APKG.stat().st_size > 0
+
+
+DRILLS_HTML = ROOT / "reading" / "vocabulary" / "drills" / "index.html"
+
+pytestmark_drills_page = pytest.mark.skipif(
+    not DRILLS_HTML.exists(), reason="vocabulary drills page not built")
+
+
+@pytestmark_drills_page
+def test_drills_page_built_and_sized():
+    assert DRILLS_HTML.stat().st_size > 4 * 1024 * 1024
+
+
+@pytestmark_drills_page
+def test_drills_page_contains_all_items():
+    html = DRILLS_HTML.read_text(encoding="utf-8")
+    assert "VC-00001" in html
+    assert "13334" in html or "VC-13334" in html
+
+
+def test_mcq_choices_includes_answer_and_no_empty_choice():
+    import sys as _sys
+    _sys.path.insert(0, str(ROOT / "scripts"))
+    import build_vocab_drills_page as bvdp
+    import random
+
+    rng = random.Random(20260714)
+    choices = bvdp.mcq_choices(rng, "answer", ["a", "", "b", "answer", None])
+    assert "answer" in choices
+    assert "" not in choices
+    assert None not in choices
+    assert choices.count("answer") == 1
+
+
+def test_build_payload_choices_always_include_answer():
+    import sys as _sys
+    _sys.path.insert(0, str(ROOT / "scripts"))
+    import build_vocab_drills_page as bvdp
+
+    data = json.loads(DRILLS.read_text(encoding="utf-8"))
+    payload = bvdp.build_payload(data["items"], seed=20260714)
+    assert len(payload) == len(data["items"])
+    for it in payload:
+        assert it["answer"] in it["choices"]
+        assert "" not in it["choices"]
