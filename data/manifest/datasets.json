@@ -1,6 +1,6 @@
 {
   "manifest_version": "0.1.0",
-  "generated": "2026-07-13",
+  "generated": "2026-07-23",
   "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
   "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
   "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
@@ -1725,6 +1725,26 @@
         "kosha-sense-frequency (H1453) — shared attestation→sense assignment, two witnesses"
       ],
       "notes": "Wave-1 of PLAN_KOSHA_SENSE_RECONCILIATION_2026H2 (H1455). The middle arrow headword→SENSE→attestation, a SIDECAR left-joined at build time — MW/kosha `senses` are byte-unchanged. Inputs consumed, never re-derived: the H1456 PWG per-sense <ls> export (RussianTranslation microstructure.py), the reused dict-corpus-concordance, DCS 2026 (CC BY 4.0), pwg_sources.py (pwgbib abbrev resolver), and (wave-1.5) the csl-atlas f8 MBh vulgate crosswalk (mbh_vulgate_concordance.csv, H610/H761 — PWG-continuous → Nīlakaṇṭha-vulgate, all 18 parvans). Correction (wave-1.5): PWG↔MBh locus resolution is NOT infeasible — PWG-continuous → vulgate is solved and consumed (96% of pilot MBh <ls> resolved to a vulgate address). The residual is narrower: DCS's Mahābhārata is the BORI critical edition whose numbering drifts ~±1 adhyāya from the vulgate, so a DCS Mahābhārata match is an adhyāya-level corroboration (locus-mbh), not exact identity; texts DCS lacks (Pañcatantra, Kathāsaritsāgara) still cannot be DCS-matched. The load-bearing sense↔passage witness remains PWG's own <ls>, now carrying resolved vulgate addresses. Rights: all rows public (PWG <ls> = pre-1900 editions; DCS = CC BY 4.0); the evidence-only class is wired but unused in wave-1 (no modern-copyright gloss consumed). Build report: data/concordance/SENSE_CONCORDANCE_BUILD_REPORT.md."
+    },
+    {
+      "id": "zaliznyak-drills",
+      "title": "Zaliznyak declension-class drills — classify a headword or spot the odd one out",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "release_asset": "zaliznyak_drills.json",
+      "format": "json",
+      "rows": 3434,
+      "size_bytes": 1844646,
+      "keying": "one item per row: id, type (classify: headword->declension-class token / odd-one-out: 4 headwords, pick the one whose class differs), question, answer, choices (4-way MCQ), index_token, gender, stem_class, member_count, tags (ARCHITECTURE shared item schema). 3,434 items over 332 declension-class tokens (indeclinables excluded), member-count-descending sampled so high-yield paradigms dominate (PER_TOKEN_CAP=15 classify / 8 odd-one-out groups per token). Also shipped as data/zaliznyak/zaliznyak_drills.apkg (Anki deck, genanki) and data/zaliznyak/zaliznyak_paradigm_classes.tsv (slim committed class index: token/gender/stem_class/member_count/representative). Web quiz reading/zaliznyak/drills/index.html (self-contained MCQ, theme-aware, type/gender filter).",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/zaliznyak/zaliznyak_drills.json",
+      "builder": "scripts/build_zaliznyak_drills.py, reading E31 (SanskritLexicography/RussianTranslation/src/headword_index.tsv + reverse_paradigm_index.json) at build time",
+      "consumers": [
+        "reading/zaliznyak/drills/ page (web quiz)",
+        "zaliznyak_drills.apkg (Anki deck)"
+      ],
+      "notes": "H1461 (L4 surface, delta vs H1296). Different asset/repo/question than SanskritGrammar/sangram H1296 (corpus-ATTESTED-CELL drills, “is this cell attested?”) and kosha’s own H946 morphology drills (attested FORM of a specific lemma cell): this drills PARADIGM-CLASS MEMBERSHIP of a PWG headword (“which declension class, and which other words share it”) over the Zaliznyak-style class index, no corpus-attestation join. index_token grammar is <gender>·<section>[+N]; the +N compound-arity suffix does not change the declension pattern (e.g. m·1 and m·1+2 share stem_class=a-stem), so distractor bucketing keys on stem_class, verified empirically against headword_index.tsv. ind·* (indeclinable) tokens are excluded, no declension class to drill. Deterministic build (seeded RNG, seed 20260722).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-drills.meta.md"
     }
   ]
 }
