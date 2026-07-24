@@ -66,7 +66,7 @@ outputs (`docs/js/data/`, `docs/cards/`) are deployed **out-of-band by M.G.**
 
 ## 2. The DB build (monthly rebuild, or after any upstream feed moves)
 
-One script, seven stages, dependency-ordered. **No flag runs all stages in
+One script, eight stages, dependency-ordered. **No flag runs all stages in
 order** — the safe default after any upstream change:
 
 ```sh
@@ -84,10 +84,46 @@ Individual stages (`--stage`), in their canonical order:
 | 5 | `inflections` | csl-inflect case/number/gender tables (MWinflect `calc_tables.txt`) | MWinflect update |
 | 6 | `stem_bridge` | strong/weak-stem crosswalk unifying `forms` ↔ `inflections` lemmas | after 3+5 |
 | 7 | `heritage` | Heritage anchor/coverage witness (H345) | Heritage TSV regen |
+| 8 | `layers` | **P-D5 public join layers** — `sense_frequency`, `roots_frequency`, `dict_corpus_coverage` (+ optional `mw_roots` / `mw_etymology` from sibling csl-orig) | new sense-freq / roots / coverage / mw_roots drop |
 
 ```sh
 python scripts/build_db.py --stage entries --dicts mw,pwg,ap90
+python scripts/build_db.py --stage layers     # P-D5 only (additive; safe re-run)
+python scripts/check_g_size.py                # D5-4 G-SIZE tripwire (FAIL >1.8 GB)
 ```
+
+### P-D5 query surface (agent SQL)
+
+After `--stage layers`, an agent opens `data/db/kosha.db` and can join:
+
+```sql
+-- sense frequency for dharma (SLP1 Darma)
+SELECT layer, sense_id, sense_rank, count_all, provenance
+FROM sense_frequency WHERE lemma_slp1 = 'Darma' ORDER BY layer, sense_rank;
+
+-- corpus attestation of a union headword
+SELECT status, best_tier, evidence_count
+FROM dict_corpus_coverage WHERE slp1 = 'nAga';
+
+-- root curriculum rank for kṛ
+SELECT rank, attested_count, coverage_pct
+FROM roots_frequency WHERE dcs_lemma = 'kṛ';
+
+-- cross-asset: lemmas × coverage × sense-freq
+SELECT l.slp1, l.rank_all, c.status, c.evidence_count,
+       COUNT(s.sense_id) AS n_sense_rows
+FROM lemmas l
+LEFT JOIN dict_corpus_coverage c ON c.slp1 = l.slp1
+LEFT JOIN sense_frequency s ON s.lemma_slp1 = l.slp1 AND s.layer = 'mw'
+WHERE l.slp1 IN ('Darma', 'nAga', 'kf')
+GROUP BY l.slp1;
+```
+
+**Not loaded (by design):** restricted-tier assets (`corpus-lexicon`,
+`sa-ru-glossary`, …); full locus dumps (`dict_corpus_concordance`,
+`paninian_concordance`) — use the **coverage summary** tables instead (R-N7).
+No new public API routes expose these tables; agent/SQL only until a rights-
+cleared endpoint is designed.
 
 **Verify after a full build:**
 
