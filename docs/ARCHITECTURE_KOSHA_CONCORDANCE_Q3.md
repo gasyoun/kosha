@@ -297,6 +297,15 @@ should overwrite the other.
 Roughly 40% of the cap stays free. W4b re-measures with A4 pages included rather
 than trusting this projection.
 
+### W4b re-measure log (append-only)
+
+| Date | Cards | Concordance (all) | of which panini/ | Reading | docs/js | Word head N=11,148 @ 9.7 KB | Projected total | % of 1,024 MB | Notes |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| 18-07-2026 | 402 MB | budgeted ≤100 MB | — | — | — | 105.6 MB | 507.6 MB (cards+head only) | 50% | Pre-A4 projection; cards figure from D5-3 |
+| **24-07-2026** | **289.7 MB** | **68.4 MB** | **0.84 MB** | **22.4 MB** | **13.3 MB** | **105.6 MB** (unchanged basis) | **499.4 MB** | **48.8%** | H1586 W4b: measured on worktree after W3b `data-v0.3.0` + W4a coverage.js. Cards on-disk now lower than 402 MB inherited figure (likely pruned/gzip-tier drift — re-use measured 289.7). A4 panini surface well under 100 MB budget. Head still controlled by D4; room ~51% of cap. Grok 4.5 (`grok-4.5`). |
+
+**W4b conclusion (24-07-2026):** with A4 pages included, the static-head projection stays **well under** the ~90% soft-cap warning threshold. D4 head bound N=11,148 remains the control; no need to re-open N. Live Pages may differ from worktree if deploy omits some of `reading/` or `docs/js` — re-measure on the deploy branch before W5 ships the head.
+
 ---
 
 ## 7. Licence composition
