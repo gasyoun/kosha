@@ -14,6 +14,11 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.94.0] - 2026-07-24
+
+### Added
+- **H1493 — Gītā interlinear prose reading view** ([H1493](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1493-Sonnet_kosha_kosha-gita-prose-reading-view_22.07.26.md), Grok 4.5 `grok-4.5` on Sonnet-lock override). Vendors the `Gita.xlsm` **Prose** sheet via [`scripts/extract_gita_prose.py`](https://github.com/gasyoun/kosha/blob/main/scripts/extract_gita_prose.py) → [`data/gita/gita_prose.tsv`](https://github.com/gasyoun/kosha/blob/main/data/gita/gita_prose.tsv) (**653** blocks / **703** verse keys) + [`reading/data/gita_prose.js`](https://github.com/gasyoun/kosha/blob/main/reading/data/gita_prose.js). [`reading/index.html`](https://github.com/gasyoun/kosha/blob/main/reading/index.html) gains a **Word-by-word / Prose** toggle on Gītā packs (default unchanged). Manifest `gita-prose` + data-statement. Tests: `tests/test_gita_prose.py`.
+
 ## [0.93.0] - 2026-07-24
 
 ### Changed
