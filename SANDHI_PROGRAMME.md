@@ -1,4 +1,4 @@
-_Created: 14-07-2026 · Last updated: 14-07-2026_
+_Created: 14-07-2026 · Last updated: 24-07-2026_
 
 # The sandhi programme — corpus-attested sandhi for Sanskrit pedagogy
 
@@ -18,7 +18,7 @@ This is the **"what exists & how to use it"** companion to the plan,
 DCS CoNLL-U (gold Unsandhied)  ──▶  junction-rule inducer (method A)
                                         │  reproduces the hand notation:  aḥ a → o ',  m p → ṃ p,  a a → ā
                                         ▼
-                              per-text sandhi tables  ──▶  merged corpus_sandhi.tsv (17 texts)
+                              per-text sandhi tables  ──▶  merged corpus_sandhi.tsv (41 texts)
                                         │
               ┌───────────────┬─────────┴────────┬────────────────┐
               ▼               ▼                  ▼                ▼
@@ -39,7 +39,7 @@ a *hand-annotated* column.
 | Measure | Value |
 |---|---|
 | Inducer accuracy (Gītā-gold frequency-mass coverage, method A) | **96.3 %** |
-| Corpus | **17 texts · ~580,000 sandhi junctions · ~9,840 distinct rules** |
+| Corpus | **41 texts · ~708,000 sandhi junctions · ~13,012 distinct rules** |
 | Graded-curriculum reach | **learn 23 rules → read 50 %; 79 → 80 %; 132 → 90 %** of all corpus sandhi |
 | Splitter bake-off (for GRETIL, no gold) | **method C ≫ B** — neural (DharmaMitra) F1 **0.795** vs vidyut-cheda **0.282** |
 
@@ -55,6 +55,7 @@ a *hand-annotated* column.
 | **1.2** — notation | spaced-notation fix → **96.3 %** Gītā-gold | ✅ v0.41.0 (H897) |
 | **2** — corpus sweep | per-text + merged `corpus_sandhi.tsv` | ✅ v0.42.0 (H900) |
 | **2b** — broaden | grown to 17 texts (Rāmāyaṇa, full Mahābhārata, kāvya) | ✅ v0.43.0 (H901) |
+| **2c** — śāstra/commentary | +24 pedagogical texts → **41** (707,936 events · 13,012 rules) | ✅ H1492 |
 | **A/B/C** — splitters | method B (vidyut) + method C (DharmaMitra) bake-off | ✅ v0.43.0 / v0.44.0 (H903, H908) |
 | **4** — pedagogy | **all four surfaces shipped** — graded curriculum + per-class reference ([H902](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H902-Opus_kosha_sandhi-phase4-pedagogy-surfaces_14.07.26.md)) · reader hover ([H917](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H917-Opus_SanskritGrammar_sandhi-reader-hover-collider_14.07.26.md), in SanskritGrammar) · drills/flashcards ([H918](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H918-Sonnet_kosha_sandhi-drills-flashcards-anki-quiz_14.07.26.md)) | ✅ v0.45.0 / v0.46.0 / v0.48.0 |
 | **3** — GRETIL | extend beyond DCS using method C | planned |
@@ -84,9 +85,9 @@ Registered in [`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/b
 | id | file | what |
 |---|---|---|
 | `gita-sandhi` | [`data/gita/gita_sandhi.tsv`](https://github.com/gasyoun/kosha/blob/main/data/gita/gita_sandhi.tsv) | Bhagavadgītā, 161 hand rules (the validation gold) |
-| `corpus-sandhi` | [`data/sandhi/corpus_sandhi.tsv`](https://github.com/gasyoun/kosha/blob/main/data/sandhi/corpus_sandhi.tsv) | merged, 17 texts, global frequency ranks |
+| `corpus-sandhi` | [`data/sandhi/corpus_sandhi.tsv`](https://github.com/gasyoun/kosha/blob/main/data/sandhi/corpus_sandhi.tsv) | merged, 41 texts, global frequency ranks |
 | `sandhi-curriculum` | [`data/sandhi/sandhi_curriculum.tsv`](https://github.com/gasyoun/kosha/blob/main/data/sandhi/sandhi_curriculum.tsv) | graded syllabus (2,181 rules, 10 lessons) |
-| per-text | `data/sandhi/<id>_sandhi.tsv` | one table per swept text (17) |
+| per-text | `data/sandhi/<id>_sandhi.tsv` | one table per swept text (41) |
 | weights | [`data/sandhi/difficulty_weights.json`](https://github.com/gasyoun/kosha/blob/main/data/sandhi/difficulty_weights.json) | tunable curriculum weights (MG ruling 14-07-2026) |
 
 ---

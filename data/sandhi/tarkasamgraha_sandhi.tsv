@@ -1,0 +1,142 @@
+rule	category	count	pct	examples
+a a → ā	vowel coalescence	66	10.54	utkṣepaṇāvakṣepaṇākuñcanaprasāraṇagamanāni pañca karmāṇi utkṣepaṇa+avakṣepaṇa→utkṣepaṇāvakṣepaṇākuñcanaprasāraṇagamanāni · sā dvividhā nityānityā ca nitya+anityā→nityānityā · śarīrāntaḥsaṃcārī vāyuḥ prāṇaḥ śarīra+antar→śarīrāntaḥsaṃcārī · sa caiko 'py upādhibhedāt prāṇāpānādisaṃjñā labhate prāṇa+apāna→prāṇāpānādisaṃjñā
+m p → ṃ p	anusvāra / nasal	39	6.23	nityaṃ paramāṇurūpam nityaṃ+paramāṇu · tac ca pratyātmaniyatatvād anantaṃ paramāṇurūpaṃ nityaṃ ca anantaṃ+paramāṇu · tac ca śuklanīlapītaraktaharitakapiśacitrabhedāt saptavidhaṃ pṛthivījalatejovṛtti saptavidhaṃ+pṛthivī · rūpādicatuṣṭayaṃ pṛthivyāṃ pākajam anityaṃ ca pṛthivyāṃ+pāka
+m s → ṃ s	anusvāra / nasal	30	4.79	bālānāṃ sukhabodhāya kriyate tarkasaṃgrahaḥ bālānāṃ+sukha · param aparaṃ ceti dvividhaṃ sāmānyam dvividhaṃ+sāmānyam · bhuktasya pariṇāmahetur audaryam ākarajaṃ suvarṇādi jam→ākarajaṃ +suvarṇa · indriyaṃ sparśagrāhakaṃ tvaksarvaśarīravarti indriyaṃ+sparśa
+a ā → ā	vowel coalescence	20	3.19	bhuktasya pariṇāmahetur audaryam ākarajaṃ suvarṇādi suvarṇa+ādi→suvarṇādi · viṣayo vṛkṣādikampanahetuḥ vṛkṣa+ādi→vṛkṣādikampanahetuḥ · atītādivyavahārahetuḥ kālaḥ atīta+ādi→atītādivyavahārahetuḥ · sukhādyupalabdhisādhanam indriyaṃ manaḥ sukha+ādi→sukhādyupalabdhisādhanam
+ḥ c → ś c	visarga	19	3.04	rūparasagandhasparśasaṃkhyāparimāṇapṛthaktvasaṃyogavibhāgaparatvāparatvagurutvadravatvasnehaśabdabuddhisukhaduḥkhecchādveṣaprayatnadharmādharmasaṃskārāś caturviṃśatiguṇāḥ saṃskārāḥ→rūparasagandhasparśasaṃkhyāparimāṇapṛthaktvasaṃyogavibhāgaparatvāparatvagurutvadravatvasnehaśabdabuddhisukhaduḥkhecchādveṣaprayatnadharmādharmasaṃskārāś +caturviṃśati · abhāvaś caturvidhaḥ abhāvaś+caturvidhaḥ · tā dvividhāḥ nityā anityāś ca anityāś+ca · viṣayaś caturvidhaḥ viṣayaś+caturvidhaḥ
+a i → e	vowel coalescence	18	2.88	param aparaṃ ceti dvividhaṃ sāmānyam ca+iti→ceti · prāgabhāvaḥ pradhvaṃsābhāvo 'tyantābhāvo 'nyonyābhāvaś ceti ca+iti→ceti · punas trividhā śarīrendriyaviṣayabhedāt śarīra+indriya→śarīrendriyaviṣayabhedāt · punas trividhāḥ śarīrendriyaviṣayabhedāt śarīra+indriya→śarīrendriyaviṣayabhedāt
+aḥ v → o v	visarga	18	2.88	nityadravyavṛttayo viśeṣās tv anantā eva vṛttayaḥ→nityadravyavṛttayo +viśeṣās · viṣayo vṛkṣādikampanahetuḥ viṣayo+vṛkṣa · sa caiko vibhur nityaś ca ekaḥ→caiko +vibhur · jīvātmā pratiśarīraṃ bhinno vibhur nityaś ca bhinno+vibhur
+ḥ t → s t	visarga	17	2.72	nityadravyavṛttayo viśeṣās tv anantā eva viśeṣās+tv · samavāyas tv eka eva samavāyas+tv · uṣṇas tejasi uṣṇas+tejasi · yatra yatra dhūmas tatrāgnir iti sāhacaryaniyamo vyāptiḥ dhūmas+tatra
+t i → d i	consonant / other	15	2.4	abhāvapratyakṣe viśeṣaṇaviśeṣyabhāvaḥ sannikarṣo ghaṭābhāvavad bhṛtalam ity atra cakṣuḥsaṃyukte bhūtale ghaṭābhāvasya viśeṣaṇatvāt abhāvavat→ghaṭābhāvavad +ity · tasmād indriyaṃ pratyakṣapramāṇam iti siddham tasmād+indriyaṃ · dhūmavattvād iti hetuḥ tvāt→dhūmavattvād +iti · yad itarebhyo na bhidyate na tad gandhavat yad+itarebhyo
+m c → ṃ c	anusvāra / nasal	13	2.08	param aparaṃ ceti dvividhaṃ sāmānyam aparaṃ+ca · tad dvividhaṃ nityam anityaṃ ca anityaṃ+ca · indriyaṃ rūpagrāhakaṃ cakṣuḥ kṛṣṇatārāgravarti grāhakam→rūpagrāhakaṃ +cakṣuḥ · tac caikaṃ vibhu nityaṃ ca nityaṃ+ca
+m v → ṃ v	anusvāra / nasal	11	1.76	nidhāya hṛdi viśveśaṃ vidhāya guruvandanam viśveśaṃ+vidhāya · śarīraṃ varuṇaloke śarīraṃ+varuṇa · bhaumaṃ vahnyādikam bhaumaṃ+vahni · abindhanaṃ divyaṃ vidyudādi divyaṃ+vidyut
+m n → ṃ n	anusvāra / nasal	11	1.76	indriyaṃ gandhagrāhakaṃ ghrāṇaṃ nāsāgravarti ghrāṇaṃ+nāsā · tad dvividhaṃ nityam anityaṃ ca dvividhaṃ+nityam · tac ca pratyātmaniyatatvād anantaṃ paramāṇurūpaṃ nityaṃ ca rūpam→paramāṇurūpaṃ +nityaṃ · anyatrāpākajaṃ nityam antyaṃ ca apākajam→anyatrāpākajaṃ +nityam
+m k → ṃ k	anusvāra / nasal	11	1.76	anityaṃ kāryarūpam anityaṃ+kārya · asādhāraṇam kāraṇaṃ karaṇam kāraṇaṃ+karaṇam · yat samavetaṃ kāryam utpadyate tat samavāyikāraṇam samavetaṃ+kāryam · tadubhayabhinnaṃ kāraṇaṃ nimittakāraṇam bhinnam→tadubhayabhinnaṃ +kāraṇaṃ
+m t → ṃ t	anusvāra / nasal	11	1.76	indriyaṃ sparśagrāhakaṃ tvaksarvaśarīravarti grāhakam→sparśagrāhakaṃ +tvac · bhāsvaraśuklaṃ tejasi śuklam→bhāsvaraśuklaṃ +tejasi · dvitvādikaṃ tu sarvatrānityam eva ādikam→dvitvādikaṃ +tu · kāraṇaṃ trividhaṃ samavāyyasamavāyinimittabhedāt kāraṇaṃ+trividhaṃ
+m j → ṃ j	anusvāra / nasal	10	1.6	indriyaṃ rasagrāhakaṃ rasanaṃ jihvāgravarti rasanaṃ+jihvā · abhāsvaraśuklaṃ jale śuklam→abhāsvaraśuklaṃ +jale · sāṃsiddhikaṃ jale naimittikaṃ pṛthivītejasoḥ sāṃsiddhikaṃ+jale · saṃskāramātrajanyaṃ jñānaṃ smṛtiḥ janyam→saṃskāramātrajanyaṃ +jñānaṃ
+aḥ n → o n	visarga	10	1.6	sa dvividho nityo 'nityaś ca dvividho+nityo · yad itarebhyo na bhidyate na tad gandhavat itarebhyo+na · tasmān na tatheti atra yad gandhavat tad itarabhinnam ity anvayadṛṣṭānto nāsti pṛthivīmātrasya pakṣatvāt dṛṣṭāntaḥ→anvayadṛṣṭānto +na · yathā śabdo nityaḥ śabdatvād iti śabdo+nityaḥ
+i a → y a	vowel coalescence	10	1.6	kāraṇaṃ trividhaṃ samavāyyasamavāyinimittabhedāt samavāyi+asamavāyi→samavāyyasamavāyinimittabhedāt · abhāvapratyakṣe viśeṣaṇaviśeṣyabhāvaḥ sannikarṣo ghaṭābhāvavad bhṛtalam ity atra cakṣuḥsaṃyukte bhūtale ghaṭābhāvasya viśeṣaṇatvāt ity+atra · anena pratipāditālliṅgāt paro'py agniṃ pratipadyate api→paro'py +agniṃ · yatra dhūmas tatrāgnir yathā mahānasa ity anvayavyāptiḥ ity+anvayavyāptiḥ
+aḥ a → o a	visarga	9	1.44	prāgabhāvaḥ pradhvaṃsābhāvo 'tyantābhāvo 'nyonyābhāvaś ceti abhāvaḥ→pradhvaṃsābhāvo +'tyantābhāvo · sa caiko 'py upādhibhedāt prāṇāpānādisaṃjñā labhate ekaḥ→caiko +'py · tadvati tatprakārako 'nubhavo yathārthaḥ prakārakaḥ→tatprakārako +'nubhavo · tadabhāvavati tatprakārako 'nubhavo 'yathārthaḥ prakārakaḥ→tatprakārako +'nubhavo
+t a → d a	consonant / other	9	1.44	tac ca pratyātmaniyatatvād anantaṃ paramāṇurūpaṃ nityaṃ ca tvāt→pratyātmaniyatatvād +anantaṃ · kāryeṇa kāraṇena vā sahaikasminn arthe samavetatve sati yat kāraṇaṃ tad asamavāyikāraṇam tad+asamavāyi · tad etattrividhakāraṇamadhye yad asādhāraṇaṃ kāraṇaṃ tad eva karaṇam yad+asādhāraṇaṃ · yat tu svayaṃ dhūmād agnim anumāya parapratipattyarthaṃ pañcāvayavavākyaṃ prayukte tat parārthānumānam dhūmād+agnim
+aḥ g → o g	visarga	9	1.44	cakṣurmātragrāhyo guṇo rūpam grāhyaḥ→cakṣurmātragrāhyo +guṇo · rasanagrāhyo guṇo rasaḥ grāhyaḥ→rasanagrāhyo +guṇo · ghrāṇagrāhyo guṇo gandhaḥ guṇo+gandhaḥ · ghrāṇagrāhyo guṇo gandhaḥ grāhyaḥ→ghrāṇagrāhyo +guṇo
+ḥ a → r a	visarga	8	1.28	bhuktasya pariṇāmahetur audaryam ākarajaṃ suvarṇādi hetuḥ→pariṇāmahetur +audaryam · sa ca dvividhaḥ surabhirasurabhiś ca surabhiḥ+asurabhiḥ→surabhirasurabhiś · sā dvividhā smṛtiranubhavaś ca smṛtiḥ+anubhavaḥ→smṛtiranubhavaś · yathā vahnir anuṣṇo dravyatvād iti vahnir+anuṣṇo
+ḥ i → Ø i	visarga	8	1.28	yathā vahnivyāpyadhūmavān ayaṃ parvata iti jñānaṃ parāmarśaḥ parvata+iti · tadantaraṃ vahnivyāpyadhūmavān ayaṃ parvata iti jñānam utpadyate parvata+iti · ayam eva liṅgaparāmarśa ity ucyate liṅgaparāmarśa+ity · yatra dhūmas tatrārdrendhanasaṃyoga iti sādhyavyāpakatā saṃyogaḥ→tatrārdrendhanasaṃyoga +iti
+a e → ai	vowel coalescence	7	1.12	tatra dravyāṇi pṛthivyaptejovāyvākāśakāladigātmamanāṃsi navaiva nava+eva→navaiva · tac caikaṃ vibhu nityaṃ ca ca+ekam→caikaṃ · sā caikā vibhvī nityā ca ca+ekā→caikā · kāryeṇa kāraṇena vā sahaikasminn arthe samavetatve sati yat kāraṇaṃ tad asamavāyikāraṇam saha+ekasmin→sahaikasminn
+ḥ e → Ø e	visarga	6	0.96	nityadravyavṛttayo viśeṣās tv anantā eva anantā+eva · samavāyas tv eka eva eka+eva · tatreśvaraḥ sarvajñaḥ paramātmaika eva ekaḥ→paramātmaika +eva · jale madhura eva madhura+eva
+ḥ d → Ø d	visarga	6	0.96	tā dvividhāḥ nityā anityāś ca tā+dvividhāḥ · sa dvividho nityo 'nityaś ca sa+dvividho · sa dvividhaḥ paramātmā jīvātmā ca sa+dvividhaḥ · sa dvividho dvanyātmako varṇātmakaś ceti sa+dvividho
+m r → ṃ r	anusvāra / nasal	6	0.96	indriyaṃ rasagrāhakaṃ rasanaṃ jihvāgravarti indriyaṃ+rasa · indriyaṃ rasagrāhakaṃ rasanaṃ jihvāgravarti grāhakam→rasagrāhakaṃ +rasanaṃ · indriyaṃ rūpagrāhakaṃ cakṣuḥ kṛṣṇatārāgravarti indriyaṃ+rūpa · yathā rajata idaṃ rajatam iti jñānam idaṃ+rajatam
+t d → d d	consonant / other	6	0.96	tad dvividhaṃ nityam anityaṃ ca tad+dvividhaṃ · aṇu mahad dīrghaṃ hrasvaṃ ceti mahad+dīrghaṃ · tad dvividhaṃ sāṃsiddhikaṃ naimittikaṃ ca tad+dvividhaṃ · tad dvividhaṃ nirvikalpakaṃ savikalpakaṃ ceti tad+dvividhaṃ
+m ś → ṃ ś	anusvāra / nasal	6	0.96	punas trividhaṃ śarīrendriyaviṣayabhedāt trividhaṃ+śarīra · śabdatvaṃ sarvebhyo nityebhyo'ntyebhyaś ca vyāvṛttaṃ śabdamātravṛtti vyāvṛttaṃ+śabda · atra cākṣuṣatvaṃ śabde nāsti śabdasya śrāvaṇatvāt tvam→cākṣuṣatvaṃ +śabde · āptavākyaṃ śabdaḥ vākyam→āptavākyaṃ +śabdaḥ
+ḥ c → Ø c	visarga	6	0.96	sa caiko 'py upādhibhedāt prāṇāpānādisaṃjñā labhate sa+ca · sa caiko vibhur nityaś ca sa+ca · sa ca madhurāmlalavaṇakaṭukaṣāyatiktabhedāt ṣaḍvidhaḥ sa+ca · sa ca dvividhaḥ surabhirasurabhiś ca sa+ca
+aḥ y → o y	visarga	6	0.96	sa dvividho yathārtho 'yathārthaś ca dvividho+yathārtho · yo yo dhūmavān sa vahnimān yathā mahānasaḥ yo+yo · yo yo dhūmavān sa so'gnimān yathā mahānasa ity udāharaṇam yo+yo · āśrayāsiddho yathā gaganāravindaṃ surabhy aravindatvāt sarojāravindavat siddhaḥ→āśrayāsiddho +yathā
+ā i → e	vowel coalescence	6	0.96	sa eva pramety ucyate pramā+iti→pramety · tatra nirvikalpakaṃ jñānaṃ nirvikalpakaṃ yathedaṃ kiṃcit yathā+idam→yathedaṃ · tasmāt tatheti tathā+iti→tatheti · tasmāt tatheti nigamanam tathā+iti→tatheti
+r t → s t	consonant / other	5	0.8	punas trividhā śarīrendriyaviṣayabhedāt punas+trividhā · punas trividhāḥ śarīrendriyaviṣayabhedāt punas+trividhāḥ · punas trividhaṃ śarīrendriyaviṣayabhedāt punas+trividhaṃ · punas trividhaḥ śarīrendriyaviṣayabhedāt punas+trividhaḥ
+m g → ṃ g	anusvāra / nasal	5	0.8	indriyaṃ gandhagrāhakaṃ ghrāṇaṃ nāsāgravarti indriyaṃ+gandha · tathā hi svayam eva bhūyo darśanena yatra dhūmas tatra agnir iti mahānasādau vyāptiṃ gṛhītvā parvatasamīpaṃ gatas tadgate cāgnau saṃdihānaḥ parvate dhūmaṃ paśyan vyāptiṃ smarati yatra dhūmas tatrāgnir iti vyāptiṃ+gṛhītvā · tathā hi svayam eva bhūyo darśanena yatra dhūmas tatra agnir iti mahānasādau vyāptiṃ gṛhītvā parvatasamīpaṃ gatas tadgate cāgnau saṃdihānaḥ parvate dhūmaṃ paśyan vyāptiṃ smarati yatra dhūmas tatrāgnir iti samīpam→parvatasamīpaṃ +gatas · tathā hi kaścid gavayaśabdārtham ajānan kutaścid āraṇyakapuruṣād gosadṛśo gavaya iti śrutvā vanaṃ gato vākyārthaṃ smaran gosadṛśaṃ piṇḍaṃ paśyati vanaṃ+gato
+m d → ṃ d	anusvāra / nasal	5	0.8	abindhanaṃ divyaṃ vidyudādi indhanam→abindhanaṃ +divyaṃ · anumānaṃ dvividhaṃ svārthaṃ parārthaṃ ca anumānaṃ+dvividhaṃ · vākyaṃ dvividham vākyaṃ+dvividham · sarveṣāṃ pratikūlatayā vedanīyaṃ duḥkham vedanīyaṃ+duḥkham
+t c → c c	consonant / other	5	0.8	tac caikaṃ vibhu nityaṃ ca tac+ca · tac ca pratyātmaniyatatvād anantaṃ paramāṇurūpaṃ nityaṃ ca tac+ca · tac ca śuklanīlapītaraktaharitakapiśacitrabhedāt saptavidhaṃ pṛthivījalatejovṛtti tac+ca · tac caturvidham tac+caturvidham
+ḥ n → r n	visarga	5	0.8	sa caiko vibhur nityaś ca vibhur+nityaś · jīvātmā pratiśarīraṃ bhinno vibhur nityaś ca vibhur+nityaś · yatra vahnir nāsti tatra dhūmo'pi nāsti yathā mahāhrada iti vyatirekavyāptiḥ vahnir+na · atra prameyatvābhidhyatvayor vyatirekavyāptir nāsti sarvasyāpi prameyatvād abhidheyatvāc ca vyāptiḥ→vyatirekavyāptir +na
+ī ā → y ā	vowel coalescence	5	0.8	prācyādivyavahārahetur dik prācī+ādi→prācyādivyavahārahetur · pṛthivyādicatuṣṭayamanovṛttīti pṛthivī+ādi→pṛthivyādicatuṣṭayamanovṛttīti · dvanyātmako bheryādau bherī+ādau→bheryādau · vegaḥ pṛthivyādicatuṣṭayamanovṛttiḥ pṛthivī+ādi→pṛthivyādicatuṣṭayamanovṛttiḥ
+e i → a i	vowel coalescence	5	0.8	yathā rajata idaṃ rajatam iti jñānam rajata+idaṃ · yo yo dhūmavān sa so'gnimān yathā mahānasa ity udāharaṇam mahānasa+ity · yatra dhūmas tatrāgnir yathā mahānasa ity anvayavyāptiḥ mahānasa+ity · yatra vahnir nāsti tatra dhūmo'pi nāsti yathā mahāhrada iti vyatirekavyāptiḥ hrade→mahāhrada +iti
+ḥ a → ḥ '	visarga	5	0.8	savyabhicāro 'naikāntikaḥ vyabhicāraḥ+'naikāntikaḥ · sarvasapakṣavipakṣavyāvṛtto 'sādhāraṇaḥ vyāvṛttaḥ+'sādhāraṇaḥ · anvayavyatirekadṛṣṭāntarahito 'nupasaṃhārī rahitaḥ+'nupasaṃhārī · traikālikasaṃsargāvacchinnapratiyogitāko 'tyantābhāvaḥ pratiyogitākaḥ+'tyantābhāvaḥ
+u a → v a	vowel coalescence	4	0.64	nityadravyavṛttayo viśeṣās tv anantā eva tv+anantā · yasya sādhyabhāvasādhakaṃ hetvantaraṃ vidyate sa satpratipakṣaḥ hetu+antaram→hetvantaraṃ · niṣiddhakarmajanyas tv adharmaḥ tv+adharmaḥ · sarveṣāṃ padārthānāṃ yathāyatham ukteṣv antarbhāvāt saptaiva padārthā iti siddham ukteṣv+antarbhāvāt
+a u → o	vowel coalescence	4	0.64	sa ca trividhaḥ śītoṣṇānuṣṇāśītabhedāt śīta+uṣṇa→śītoṣṇānuṣṇāśītabhedāt · sopādhikatvād vahnimattvaṃ vyāpyatvāsiddham sa+upādhika→sopādhikatvād · vaidikam īśvaroktatvāt sarvam eva pramāṇam īśvara+ukta→īśvaroktatvāt · laukikaṃ tv āptoktaṃ pramāṇam āpta+uktam→āptoktaṃ
+i u → y u	vowel coalescence	4	0.64	sa eva pramety ucyate iti→pramety +ucyate · ayam eva liṅgaparāmarśa ity ucyate ity+ucyate · yo yo dhūmavān sa so'gnimān yathā mahānasa ity udāharaṇam ity+udāharaṇam · tadanantaram asau gavayaśabdavācya ity upamitir utpadyate ity+upamitir
+d k → t k	consonant / other	4	0.64	tatkaraṇam api caturvidhaṃ pratyakṣānumānopamānaśabdabhedāt tad+karaṇam→tatkaraṇam · tatkaraṇam indriyam tad+karaṇam→tatkaraṇam · tatkaraṇaṃ sādṛśyajñānam tad+karaṇam→tatkaraṇaṃ · tatkaraṇaṃ śabdaḥ tad+karaṇam→tatkaraṇaṃ
+m y → ṃ y	anusvāra / nasal	4	0.64	tatra nirvikalpakaṃ jñānaṃ nirvikalpakaṃ yathedaṃ kiṃcit nirvikalpakaṃ+yathā · saparakārakaṃ jñānaṃ savikalpakaṃ yathā ḍittho'yam brahmaṇo 'yaṃ śyāmo'yam iti vikalpakam→savikalpakaṃ +yathā · agninā siñced iti na pramāṇaṃ yogyatāvirahāt pramāṇaṃ+yogya · sarveṣāṃ padārthānāṃ yathāyatham ukteṣv antarbhāvāt saptaiva padārthā iti siddham padārthānāṃ+yathāyatham
+ḥ i → r i	visarga	4	0.64	pratyakṣajñānahetur indriyārthasannikarṣaḥ ṣaḍvidhaḥ hetuḥ→pratyakṣajñānahetur +indriya · yatra yatra dhūmas tatrāgnir iti sāhacaryaniyamo vyāptiḥ agniḥ→tatrāgnir +iti · tathā hi svayam eva bhūyo darśanena yatra dhūmas tatra agnir iti mahānasādau vyāptiṃ gṛhītvā parvatasamīpaṃ gatas tadgate cāgnau saṃdihānaḥ parvate dhūmaṃ paśyan vyāptiṃ smarati yatra dhūmas tatrāgnir iti agnir+iti · tathā hi svayam eva bhūyo darśanena yatra dhūmas tatra agnir iti mahānasādau vyāptiṃ gṛhītvā parvatasamīpaṃ gatas tadgate cāgnau saṃdihānaḥ parvate dhūmaṃ paśyan vyāptiṃ smarati yatra dhūmas tatrāgnir iti agniḥ→tatrāgnir +iti
+aḥ dh → o dh	visarga	4	0.64	yo yo dhūmavān sa vahnimān yathā mahānasaḥ yo+dhūmavān · yo yo dhūmavān sa so'gnimān yathā mahānasa ity udāharaṇam yo+dhūmavān · parvato dhūmavān vahnimattvād ity atrārdrendhanasaṃyoga upādhiḥ parvato+dhūmavān · vihitakarmajanyo dharmaḥ janyaḥ→vihitakarmajanyo +dharmaḥ
+ḥ u → Ø u	visarga	4	0.64	sādhyavyāpakatve sati sādhanāvyāpaka upādhiḥ vyāpakaḥ→sādhanāvyāpaka +upādhiḥ · parvato dhūmavān vahnimattvād ity atrārdrendhanasaṃyoga upādhiḥ saṃyogaḥ→atrārdrendhanasaṃyoga +upādhiḥ · evaṃ sādhyavyāpakatve sati sādhanāvyāpakatvād ārdrendhanasaṃyoga upādhiḥ saṃyogaḥ→ārdrendhanasaṃyoga +upādhiḥ · atrānuṣṇatvaṃ sādhyaṃ tadabhāva uṣṇatvaṃ spārśanapratyakṣeṇa gṛhyata iti bādhitatvam abhāvaḥ→tadabhāva +uṣṇa
+ī a → y a	vowel coalescence	3	0.48	tatra dravyāṇi pṛthivyaptejovāyvākāśakāladigātmamanāṃsi navaiva pṛthivī+ap→pṛthivyaptejovāyvākāśakāladigātmamanāṃsi · pṛthivyaptejovāyuvṛttiḥ pṛthivī+ap→pṛthivyaptejovāyuvṛttiḥ · ādyasyandanāsamavāyikāraṇaṃ dravatvaṃ pṛthivyaptejovṛtti pṛthivī+ap→pṛthivyaptejovṛtti
+ā a → ā	vowel coalescence	3	0.48	indriyaṃ gandhagrāhakaṃ ghrāṇaṃ nāsāgravarti nāsā+agra→nāsāgravarti · indriyaṃ rasagrāhakaṃ rasanaṃ jihvāgravarti jihvā+agra→jihvāgravarti · yathāvayavāvayavinau guṇaguṇinau kriyākriyāvantau jātivyaktī viśeṣanityadravye ceti yathā+avayava→yathāvayavāvayavinau
+ḥ a → Ø a	visarga	3	0.48	śītasparśavatya āpaḥ sparśavatyaḥ→śītasparśavatya +āpaḥ · tā dvividhāḥ nityā anityāś ca nityā+anityāś · nityā anityāś ca nityā+anityāś
+m h → ṃ h	anusvāra / nasal	3	0.48	aṇu mahad dīrghaṃ hrasvaṃ ceti dīrghaṃ+hrasvaṃ · kṛtakatvaṃ hi nityatvābhāvenānityatvena vyāptam tvam→kṛtakatvaṃ +hi · yasya sādhyabhāvasādhakaṃ hetvantaraṃ vidyate sa satpratipakṣaḥ sādhakam→sādhyabhāvasādhakaṃ +hetu
+ś k → k k	consonant / other	3	0.48	te dvividhe dikkṛte kālakṛte ca diś+kṛte→dikkṛte · dūrasthe dikkṛtaṃ paratvam diś+kṛtam→dikkṛtaṃ · samīpasthe dikkṛtam aparatvam diś+kṛtam→dikkṛtam
+t e → d e	consonant / other	3	0.48	tad etattrividhakāraṇamadhye yad asādhāraṇaṃ kāraṇaṃ tad eva karaṇam tad+etad · tad etattrividhakāraṇamadhye yad asādhāraṇaṃ kāraṇaṃ tad eva karaṇam tad+eva · tad etat svārthānumānam tad+etat
+s s → ḥ s	consonant / other	3	0.48	ghaṭarūpapratyakṣajanane saṃyuktasamavāyaḥ sannikarṣaḥ cakṣuḥsaṃyukte ghaṭe rūpasya samavāyāt cakṣus+saṃyukte→cakṣuḥsaṃyukte · rūpatvasāmānyapratyakṣe saṃyuktasamavetasamavāyaḥ sannikarṣaḥ cakṣuḥsaṃyukte ghaṭe rūpaṃ samavetaṃ tatra rūpatvasya samavāyāt cakṣus+saṃyukte→cakṣuḥsaṃyukte · abhāvapratyakṣe viśeṣaṇaviśeṣyabhāvaḥ sannikarṣo ghaṭābhāvavad bhṛtalam ity atra cakṣuḥsaṃyukte bhūtale ghaṭābhāvasya viśeṣaṇatvāt cakṣus+saṃyukte→cakṣuḥsaṃyukte
+ḥ u → r u	visarga	3	0.48	tasmāt parvato vahnimān iti jñānam anumitir utpadyate anumitir+utpadyate · tadanantaram asau gavayaśabdavācya ity upamitir utpadyate upamitir+utpadyate · ūrdhvadeśasaṃyogahetur utkṣepaṇam hetuḥ→ūrdhvadeśasaṃyogahetur +utkṣepaṇam
+ḥ v → r v	visarga	3	0.48	atra prameyatvābhidhyatvayor vyatirekavyāptir nāsti sarvasyāpi prameyatvād abhidheyatvāc ca tvayoḥ→prameyatvābhidhyatvayor +vyatireka · sādhyābhāvavyāpto hetur viruddhaḥ hetur+viruddhaḥ · yathā sthāṇur vā puruṣo veti sthāṇur+vā
+t g → d g	consonant / other	3	0.48	yad itarebhyo na bhidyate na tad gandhavat tad+gandhavat · tasmān na tatheti atra yad gandhavat tad itarabhinnam ity anvayadṛṣṭānto nāsti pṛthivīmātrasya pakṣatvāt yad+gandhavat · tathā hi kaścid gavayaśabdārtham ajānan kutaścid āraṇyakapuruṣād gosadṛśo gavaya iti śrutvā vanaṃ gato vākyārthaṃ smaran gosadṛśaṃ piṇḍaṃ paśyati puruṣāt→āraṇyakapuruṣād +go
+m gh → ṃ gh	anusvāra / nasal	2	0.32	indriyaṃ gandhagrāhakaṃ ghrāṇaṃ nāsāgravarti grāhakam→gandhagrāhakaṃ +ghrāṇaṃ · pṛthivyāṃ ghṛtādāvagnisaṃyogajanyaṃ daravatvam pṛthivyāṃ+ghṛta
+t ā → d ā	consonant / other	2	0.32	abindhanaṃ divyaṃ vidyudādi vidyut+ādi→vidyudādi · evaṃ sādhyavyāpakatve sati sādhanāvyāpakatvād ārdrendhanasaṃyoga upādhiḥ tvāt→sādhanāvyāpakatvād +ārdra
+aḥ r → o r	visarga	2	0.32	cakṣurmātragrāhyo guṇo rūpam guṇo+rūpam · rasanagrāhyo guṇo rasaḥ guṇo+rasaḥ
+ḥ anubhavaḥ → ḥ 'nubhavo	visarga	2	0.32	tadvati tatprakārako 'nubhavo yathārthaḥ prakārakaḥ+'nubhavo · tadabhāvavati tatprakārako 'nubhavo 'yathārthaḥ prakārakaḥ+'nubhavo
+au i → āv i	vowel coalescence	2	0.32	yathā śuktāv idaṃ rajatam iti jñānam śuktāv+idaṃ · yathā śuktāv idaṃ rajatam iti śuktāv+idaṃ
+ḥ v → Ø v	visarga	2	0.32	yo yo dhūmavān sa vahnimān yathā mahānasaḥ sa+vahnimān · nityadravyavṛttayo vyāvartakā viśeṣāḥ vyāvartakā+viśeṣāḥ
+t l → l l	consonant / other	2	0.32	anena pratipāditālliṅgāt paro'py agniṃ pratipadyate pratipāditāt+liṅgāt→pratipāditālliṅgāt · tasmāl liṅgaparāmarśānumānam tasmāl+liṅgaparāmarśa
+ḥ s → Ø s	visarga	2	0.32	yo yo dhūmavān sa so'gnimān yathā mahānasa ity udāharaṇam sa+saḥ · yasya sādhyabhāvasādhakaṃ hetvantaraṃ vidyate sa satpratipakṣaḥ sa+sat
+aḥ bh → o bh	visarga	2	0.32	vyatirekamātravyāptikaṃ kevalavyatireki yathā pṛthivī tarebhyo bhidyate gandhavattvāt tarebhyo+bhidyate · vego bhāvanā sthitisthāpakaś ceti vego+bhāvanā
+aḥ h → o h	visarga	2	0.32	sādhyābhāvavyāpto hetur viruddhaḥ vyāptaḥ→sādhyābhāvavyāpto +hetur · yathā gaur aśvaḥ puruṣo hastīti na pramāṇam ākāṅkṣāvirahāt puruṣo+hastī
+aḥ d → o d	visarga	2	0.32	yathā vahnir anuṣṇo dravyatvād iti anuṣṇo+dravya · krodho dveṣaḥ krodho+dveṣaḥ
+ā ā → ā	vowel coalescence	2	0.32	ākāṅkṣādirahitaṃ vākyam apramāṇam ākāṅkṣā+ādi→ākāṅkṣādirahitaṃ · anubhavajanyā smṛtihetur bhāvanātmamātravṛttiḥ bhāvanā+ātma→bhāvanātmamātravṛttiḥ
+i i → ī	vowel coalescence	2	0.32	buddhīcchāprayatnā dvividhāḥ buddhi+icchā→buddhīcchāprayatnā · tādātmyasaṃbandhāvacchinnapratiyogitāko 'nyonyābhāvaḥ yathā ghaṭaḥ paṭo na bhavatīti bhavati+iti→bhavatīti
+u e → v e	vowel coalescence	1	0.16	samavāyas tv eka eva tv+eka
+ḥ atyantābhāvaḥ → ḥ 'tyantābhāvo	visarga	1	0.16	prāgabhāvaḥ pradhvaṃsābhāvo 'tyantābhāvo 'nyonyābhāvaś ceti abhāvaḥ+'tyantābhāvo
+atyantābhāvaḥ anyonyābhāvaḥ → 'tyantābhāvo 'nyonyābhāvaś	visarga	1	0.16	prāgabhāvaḥ pradhvaṃsābhāvo 'tyantābhāvo 'nyonyābhāvaś ceti 'tyantābhāvo+'nyonyābhāvaś
+anyonyābhāvaḥ c → 'nyonyābhāvaś c	visarga	1	0.16	prāgabhāvaḥ pradhvaṃsābhāvo 'tyantābhāvo 'nyonyābhāvaś ceti 'nyonyābhāvaś+ca
+c → nityā c	consonant / other	1	0.16	sā dvividhā nityānityā ca anityā→nityānityā +ca
+aḥ m → o m	visarga	1	0.16	viṣayo mṛtpāṣāṇādiḥ viṣayo+mṛd
+d p → t p	consonant / other	1	0.16	viṣayo mṛtpāṣāṇādiḥ mṛd+pāṣāṇa→mṛtpāṣāṇādiḥ
+ḥ a → ḥ ā	visarga	1	0.16	śītasparśavatya āpaḥ sparśavatyaḥ+āpaḥ
+i ā → y ā	vowel coalescence	1	0.16	bhaumaṃ vahnyādikam vahni+ādikam→vahnyādikam
+p i → b i	consonant / other	1	0.16	abindhanaṃ divyaṃ vidyudādi ap+indhanam→abindhanaṃ
+aḥ anityaḥ → o 'nityaś	visarga	1	0.16	sa dvividho nityo 'nityaś ca nityo+'nityaś
+anityaḥ c → 'nityaś c	visarga	1	0.16	sa dvividho nityo 'nityaś ca 'nityaś+ca
+c s → k s	consonant / other	1	0.16	indriyaṃ sparśagrāhakaṃ tvaksarvaśarīravarti tvac+sarva→tvaksarvaśarīravarti
+ḥ api → ḥ 'py	visarga	1	0.16	sa caiko 'py upādhibhedāt prāṇāpānādisaṃjñā labhate ekaḥ+'py
+api u → 'py u	consonant / other	1	0.16	sa caiko 'py upādhibhedāt prāṇāpānādisaṃjñā labhate 'py+upādhi
+ḥ l → Ø l	visarga	1	0.16	sa caiko 'py upādhibhedāt prāṇāpānādisaṃjñā labhate saṃjñāḥ→prāṇāpānādisaṃjñā +labhate
+ḥ d → r d	visarga	1	0.16	prācyādivyavahārahetur dik hetuḥ→prācyādivyavahārahetur +dik
+uḥ n → vī n	visarga	1	0.16	sā caikā vibhvī nityā ca vibhvī+nityā
+a ī → e	vowel coalescence	1	0.16	tatreśvaraḥ sarvajñaḥ paramātmaika eva tatra+īśvaraḥ→tatreśvaraḥ
+ā e → ai	vowel coalescence	1	0.16	tatreśvaraḥ sarvajñaḥ paramātmaika eva paramātmā+ekaḥ→paramātmaika
+m bh → ṃ bh	anusvāra / nasal	1	0.16	jīvātmā pratiśarīraṃ bhinno vibhur nityaś ca pratiśarīraṃ+bhinno
+m m → ṃ m	anusvāra / nasal	1	0.16	sukhādyupalabdhisādhanam indriyaṃ manaḥ indriyaṃ+manaḥ
+s m → r m	consonant / other	1	0.16	cakṣurmātragrāhyo guṇo rūpam cakṣus+mātra→cakṣurmātragrāhyo
+m ṣ → ṃ ṣ	anusvāra / nasal	1	0.16	pṛthivyāṃ ṣaḍvidhaḥ pṛthivyāṃ+ṣaḍvidhaḥ
+c i → g i	consonant / other	1	0.16	tvagindriyamātragrāhyo guṇaḥ sparśaḥ tvac+indriya→tvagindriyamātragrāhyo
+aḥ j → o j	visarga	1	0.16	tatra śīto jale śīto+jale
+ḥ e → r e	visarga	1	0.16	navadravyavṛttir ekatvādiparārdhaparyantā vṛttiḥ→navadravyavṛttir +eka
+k v → g v	consonant / other	1	0.16	pṛthagvyavahārakāraṇaṃ pṛthaktvam pṛthak+vyavahāra→pṛthagvyavahārakāraṇaṃ
+ḥ g → r g	visarga	1	0.16	cūrṇādipiṇḍībhāvahetur guṇaḥ snehaḥ hetuḥ→cūrṇādipiṇḍībhāvahetur +guṇaḥ
+ḥ j → r j	visarga	1	0.16	sarvavyavahārahetur buddhir jñānam buddhir+jñānam
+ḥ b → r b	visarga	1	0.16	sarvavyavahārahetur buddhir jñānam hetuḥ→sarvavyavahārahetur +buddhir
+aḥ ayathārthaḥ → o 'yathārthaś	visarga	1	0.16	sa dvividho yathārtho 'yathārthaś ca yathārtho+'yathārthaś
+ayathārthaḥ c → 'yathārthaś c	visarga	1	0.16	sa dvividho yathārtho 'yathārthaś ca 'yathārthaś+ca
+anubhavaḥ y → 'nubhavo y	visarga	1	0.16	tadvati tatprakārako 'nubhavo yathārthaḥ 'nubhavo+yathārthaḥ
+anubhavaḥ a → 'nubhavo '	visarga	1	0.16	tadabhāvavati tatprakārako 'nubhavo 'yathārthaḥ 'nubhavo+'yathārthaḥ
+a → n a	vowel coalescence	1	0.16	kāryeṇa kāraṇena vā sahaikasminn arthe samavetatve sati yat kāraṇaṃ tad asamavāyikāraṇam ekasmin→sahaikasminn +arthe
+d t → t t	consonant / other	1	0.16	tad etattrividhakāraṇamadhye yad asādhāraṇaṃ kāraṇaṃ tad eva karaṇam etad+trividha→etattrividhakāraṇamadhye
+m ayam → m 'yaṃ	anusvāra / nasal	1	0.16	saparakārakaṃ jñānaṃ savikalpakaṃ yathā ḍittho'yam brahmaṇo 'yaṃ śyāmo'yam iti ayam+'yaṃ
+ayam ś → 'yaṃ ś	anusvāra / nasal	1	0.16	saparakārakaṃ jñānaṃ savikalpakaṃ yathā ḍittho'yam brahmaṇo 'yaṃ śyāmo'yam iti 'yaṃ+śyāmaḥ
+ṃnikarṣaḥ gh → nnikarṣo gh	visarga	1	0.16	abhāvapratyakṣe viśeṣaṇaviśeṣyabhāvaḥ sannikarṣo ghaṭābhāvavad bhṛtalam ity atra cakṣuḥsaṃyukte bhūtale ghaṭābhāvasya viśeṣaṇatvāt sannikarṣo+ghaṭa
+t j → j j	consonant / other	1	0.16	taj janyaṃ parvato vahnimān iti jñānam anumitiḥ taj+janyaṃ
+as d → o d	consonant / other	1	0.16	tathā hi svayam eva bhūyo darśanena yatra dhūmas tatra agnir iti mahānasādau vyāptiṃ gṛhītvā parvatasamīpaṃ gatas tadgate cāgnau saṃdihānaḥ parvate dhūmaṃ paśyan vyāptiṃ smarati yatra dhūmas tatrāgnir iti bhūyo+darśanena
+m dh → ṃ dh	anusvāra / nasal	1	0.16	yat tu svayaṃ dhūmād agnim anumāya parapratipattyarthaṃ pañcāvayavavākyaṃ prayukte tat parārthānumānam svayaṃ+dhūmād
+ḥ l → r l	visarga	1	0.16	svārthānumitiparārthānumityor liṅgaparāmarśa eva karaṇam anumitiyoḥ→svārthānumitiparārthānumityor +liṅgaparāmarśa
+ḥ y → r y	visarga	1	0.16	yatra dhūmas tatrāgnir yathā mahānasa ity anvayavyāptiḥ agniḥ→tatrāgnir +yathā
+t n → n n	consonant / other	1	0.16	tasmān na tatheti atra yad gandhavat tad itarabhinnam ity anvayadṛṣṭānto nāsti pṛthivīmātrasya pakṣatvāt tasmān+na
+ḥ t → Ø t	visarga	1	0.16	sa trividhaḥ sa+trividhaḥ
+aḥ a → o '	visarga	1	0.16	tatra sādhyābhāvavadvṛttiḥ sādhāraṇo 'naikāntikaḥ sādhāraṇo+'naikāntikaḥ
+t ś → c ś	consonant / other	1	0.16	yathā śabdo nityaḥ śrāvaṇatvāc chabdatvavad iti tvāt→śrāvaṇatvāc +śabda
+t i → vad i	consonant / other	1	0.16	yathā śabdo nityaḥ śrāvaṇatvāc chabdatvavad iti vat→chabdatvavad +iti
+t gh → d gh	consonant / other	1	0.16	śabdo'nityaḥ kāryatvād ghaṭavad iti tvāt→kāryatvād +ghaṭa
+i e → y e	vowel coalescence	1	0.16	sa ca nāsty eva asti→nāsty +eva
+t v → d v	consonant / other	1	0.16	sopādhikatvād vahnimattvaṃ vyāpyatvāsiddham tvāt→sopādhikatvād +vahnimat
+ḥ b → Ø b	visarga	1	0.16	yasya sādhyābhāvaḥ pramāṇāntareṇa niścitaḥ sa bādhitaḥ sa+bādhitaḥ
+aḥ b → o b	visarga	1	0.16	asmāt padād ayam artho boddhavya itīśvarasaṃketaḥ śaktiḥ artho+boddhavya
+i ī → ī	vowel coalescence	1	0.16	asmāt padād ayam artho boddhavya itīśvarasaṃketaḥ śaktiḥ iti+īśvara→itīśvarasaṃketaḥ
+ī i → ī	vowel coalescence	1	0.16	yathā gaur aśvaḥ puruṣo hastīti na pramāṇam ākāṅkṣāvirahāt hastī+iti→hastīti
+m l → ṃ l	anusvāra / nasal	1	0.16	vaidikaṃ laukikaṃ ca vaidikaṃ+laukikaṃ
+u ā → v ā	vowel coalescence	1	0.16	laukikaṃ tv āptoktaṃ pramāṇam tv+āpta
+c → yathārthā c	consonant / other	1	0.16	yathārthāyathārthā ca pramājanyā yathārthā ayathārthā→yathārthāyathārthā +ca
+a ā → āv ā	vowel coalescence	1	0.16	buddhyādayo'ṣṭāv ātmamātraviśeṣaguṇāḥ aṣṭa→buddhyādayo'ṣṭāv +ātma
+ḥ ī → Ø ī	visarga	1	0.16	nityā īśvarasya nityā+īśvarasya
+ḥ j → Ø j	visarga	1	0.16	anityā jīvasya anityā+jīvasya
+ḥ bh → r bh	visarga	1	0.16	anubhavajanyā smṛtihetur bhāvanātmamātravṛttiḥ hetuḥ→smṛtihetur +bhāvanā
+ḥ ā → r ā	visarga	1	0.16	śarīrasaṃnikṛṣṭasaṃyogahetur ākuñcanam hetuḥ→śarīrasaṃnikṛṣṭasaṃyogahetur +ākuñcanam
+_ d → yayor d	consonant / other	1	0.16	yayor dvayor madhya ekam avinaśyadaparāśritam evāvatiṣṭhate tāv ayutasiddhau yayor+dvayor
+ḥ m → r m	visarga	1	0.16	yayor dvayor madhya ekam avinaśyadaparāśritam evāvatiṣṭhate tāv ayutasiddhau dvayor+madhya
+e e → a e	vowel coalescence	1	0.16	yayor dvayor madhya ekam avinaśyadaparāśritam evāvatiṣṭhate tāv ayutasiddhau madhya+ekam
+au a → āv a	vowel coalescence	1	0.16	yayor dvayor madhya ekam avinaśyadaparāśritam evāvatiṣṭhate tāv ayutasiddhau tāv+ayutasiddhau
+ḥ g → u g	visarga	1	0.16	yathāvayavāvayavinau guṇaguṇinau kriyākriyāvantau jātivyaktī viśeṣanityadravye ceti avayavinaḥ→yathāvayavāvayavinau +guṇa
+ḥ k → u k	visarga	1	0.16	yathāvayavāvayavinau guṇaguṇinau kriyākriyāvantau jātivyaktī viśeṣanityadravye ceti guṇinaḥ→guṇaguṇinau +kriyā

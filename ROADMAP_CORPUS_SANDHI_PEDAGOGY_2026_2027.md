@@ -1,4 +1,4 @@
-_Created: 13-07-2026 · Last updated: 14-07-2026 (Phase 2b broadened corpus sweep, H901; Method B vidyut-cheda bake-off, H903; MG difficulty-metric ruling recorded, §5; Method C DharmaMitra neural bake-off, H908 — C ≫ B)_
+_Created: 13-07-2026 · Last updated: 24-07-2026 (Phase 2c Śāstra/commentary sweep, H1492; prior: Phase 2b H901; Method B H903; Method C H908)_
 
 # Corpus-wide sandhi extraction for Sanskrit pedagogy — roadmap (2026–2027)
 
@@ -200,7 +200,7 @@ Remaining process order (learner path, not corpus size):
 2. **Gītā-family** — ✅ Aṣṭāvakragīta, Bhagavadgītā (inside the full Mahābhārata sweep), Gītagovinda.
 3. **Epic** — ✅ Rāmāyaṇa, Mahābhārata (full — stabilised global frequency).
 4. **Kāvya** — ✅ Buddhacarita, Kumārasaṃbhava, Kirātārjunīya, Meghadūta, Amaruśataka. Raghuvaṃśa/Bhaṭṭikāvya/Śakuntalā not in the DCS export.
-5. **Śāstra / commentary** — dense sandhi, last (not yet swept).
+5. **Śāstra / commentary** — ✅ DONE (H1492, 24-07-2026). Curated 24-text pedagogical core: darśana (Yogasūtra + bhāṣya, Nyāyasūtra + bhāṣya, Sāṃkhyakārikā + Tattvakaumudī, Vaiśeṣikasūtra, Mīmāṃsāsūtrabhāṣya, Tarkasaṃgraha, Sarvadarśanasaṃgraha), dharma/artha/kāma (Manusmṛti, Yājñavalkyasmṛti, Arthaśāstra, Kāmasūtra), vyākaraṇa/nirukta/kośa (Aṣṭādhyāyī, Kāśikāvṛtti, Nirukta, Amarakośa), alaṅkāra (Nāṭyaśāstra, Kāvyādarśa), medical saṃhitā pair (Caraka, Suśruta), Buddhist commentary witnesses (Abhidharmakośabhāṣya, Prasannapadā). Deliberately skips the rasaśāstra / āyurveda-dīpikā flood. Merged corpus now **41 texts · 707,936 events · 13,012 rules**; top 82 rules cover 80 %.
 
 **Outputs (both, per the decision):**
 - Per-text: `data/sandhi/<id>_sandhi.tsv` (Gītā schema).

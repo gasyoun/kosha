@@ -1,4 +1,4 @@
-_Created: 13-07-2026 · Last updated: 14-07-2026_
+_Created: 13-07-2026 · Last updated: 24-07-2026_
 
 # Metadoc — Corpus-wide sandhi extraction roadmap
 
@@ -30,12 +30,14 @@ curriculum difficulty metric and GRETIL license scope.
    see §5's ruling note. Still open until H902 actually ships it.
 2. ~~Fill concrete DCS text names for each Phase-2 tier (currently exemplary, not
    exhaustive) — derive from `dcs-conllu/files/` + a difficulty proxy.~~ **DONE
-   (H901, 14-07-2026):** all four Phase-2 tiers now name concrete texts —
-   easy readers, Gītā-family, epic (Rāmāyaṇa + full Mahābhārata), kāvya
-   (Buddhacarita/Kumārasaṃbhava/Kirātārjunīya/Meghadūta) — cross-checked
-   against `dcs-conllu/files/` for actual presence (Raghuvaṃśa/Bhaṭṭikāvya/
-   Śakuntalā/Pañcatantra confirmed absent from the DCS export, not silently
-   dropped). Śāstra/commentary tier remains unswept.
+   (H901, 14-07-2026 + H1492, 24-07-2026):** all five Phase-2 tiers now name
+   concrete texts — easy readers, Gītā-family, epic (Rāmāyaṇa + full
+   Mahābhārata), kāvya (Buddhacarita/Kumārasaṃbhava/Kirātārjunīya/Meghadūta),
+   and Śāstra/commentary (24 curated texts: darśana cores + bhāṣyas,
+   dharma/artha/kāma, vyākaraṇa/nirukta/kośa, alaṅkāra, Caraka/Suśruta,
+   Abhidharmakośabhāṣya/Prasannapadā) — cross-checked against
+   `dcs-conllu/files/` for actual presence. Rasaśāstra / āyurveda-dīpikā
+   flood deliberately out of the pedagogical core (not silently dropped).
 3. ✅ DONE (H903) — `no-gold` recovery numbers measured: 0 % no-gold mode-1
    junctions found on Hitopadeśa/Amaruśataka + a 15-dir DCS sample; the
    roadmap's ~27 % planning estimate was NOT reproduced (§2 item 4). Remaining:
@@ -65,5 +67,6 @@ curriculum difficulty metric and GRETIL license scope.
 | 14-07-2026 | Sonnet 5 `claude-sonnet-5` | Phase 2b (H901): broadened the corpus sweep 8→17 texts (+Rāmāyaṇa, full Mahābhārata, kāvya, more readers, śataka/nīti); ticked backlog item 2. |
 | 14-07-2026 | Sonnet 5 `claude-sonnet-5` | H903 — method B (vidyut-cheda) implemented + scored on 2 texts; "27 % no gold split" risk claim measured and not reproduced. |
 | 14-07-2026 | Sonnet 5 `claude-sonnet-5` | Recorded MG's difficulty-metric ruling (confirmed, weights must be exposed in a README/config for later tuning) — §5 + backlog item 1. |
+| 24-07-2026 | Grok 4.5 `grok-4.5` (Sonnet-lock override) | Phase 2c (H1492): Śāstra/commentary tier swept — +24 texts → 41 total; 707,936 events / 13,012 rules; backlog item 2 fully closed. |
 
 _Dr. Mārcis Gasūns_

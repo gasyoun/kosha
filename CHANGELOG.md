@@ -14,6 +14,11 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.88.0] - 2026-07-24
+
+### Added
+- **H1492 — Phase 2c Śāstra/commentary sandhi sweep** ([H1492](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1492-Sonnet_kosha_kosha-sandhi-sastra-commentary-sweep_22.07.26.md), Grok 4.5 `grok-4.5` on Sonnet-lock override). Extends [`scripts/build_corpus_sandhi.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_corpus_sandhi.py) with a curated **24-text** śāstra/commentary tier (darśana cores + bhāṣyas, dharma/artha/kāma, vyākaraṇa/nirukta/kośa, alaṅkāra, Caraka/Suśruta, Abhidharmakośabhāṣya/Prasannapadā — deliberately skips the rasaśāstra/āyurveda-dīpikā flood). Merged [`data/sandhi/corpus_sandhi.tsv`](https://github.com/gasyoun/kosha/blob/main/data/sandhi/corpus_sandhi.tsv): **17 → 41 texts**, **580,230 → 707,936** events, **9,840 → 13,012** rules; top-N-for-80% stable at **82**. 24 new per-text `data/sandhi/<id>_sandhi.tsv`. Manifest `corpus-sandhi` row + roadmap §3 item 5 + `SANDHI_PROGRAMME.md` updated.
+
 ## [0.87.0] - 2026-07-24
 
 ### Added
