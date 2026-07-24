@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.82.0] - 2026-07-24
+
 ### Fixed
 - **H1265 close-out — README dataset counts resynced from manifests** ([H1265](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1265-Haiku_kosha_computed_readme_dataset_count_invariant_18.07.26.md); W1d machinery landed as [#161](https://github.com/gasyoun/kosha/pull/161) on 21-07-2026). Post-merge dataset adds left README at **87** (72·11·4) while `datasets.json` held **90** (75·11·4). Ran `python scripts/build_directory.py --update-readme` (idempotent second run); `tests/test_directory.py` 12/12 green. Acceptance re-proved: invariant **fails** on deliberate README drift (91 vs 90) and on the pre-fix stale state (87 vs 90). External stacks remain computed at **8**. Grok 4.5 (`grok-4.5`), Haiku-lock override.
 
