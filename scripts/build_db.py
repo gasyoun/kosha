@@ -8,6 +8,7 @@ each stage's tables.
     python scripts/build_db.py --stage lemmas
     python scripts/build_db.py --stage entries --dicts mw,pwg,ap90
     python scripts/build_db.py --stage forms
+    python scripts/build_db.py --stage layers   # P-D5 public join layers
     python scripts/build_db.py            # all stages, in order
 """
 import argparse
@@ -336,7 +337,22 @@ STAGES = {"lemmas": build_lemmas}
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--stage", choices=list(STAGES) + ["entries", "forms", "evidence", "inflections", "hybrid", "pronoun", "stem_bridge", "heritage"], default=None)
+    ap.add_argument(
+        "--stage",
+        choices=list(STAGES)
+        + [
+            "entries",
+            "forms",
+            "evidence",
+            "inflections",
+            "hybrid",
+            "pronoun",
+            "stem_bridge",
+            "heritage",
+            "layers",
+        ],
+        default=None,
+    )
     ap.add_argument("--dicts", default="mw,pwg,ap90")
     args = ap.parse_args()
 
@@ -389,6 +405,13 @@ def main():
         # before the first full build on a fresh DB.
         from build_evidence import build_evidence  # noqa: E402
         build_evidence(con)
+    if args.stage in (None, "layers"):
+        # P-D5 (H1589): public join-table layers (sense/roots frequency,
+        # dict-corpus coverage summary, optional mw_roots/etymology). Additive
+        # only — never mutates core entries/forms/lemmas/senses. Sibling
+        # csl-orig feeds are optional (skipped with a log line if absent).
+        from build_db_layers import build_layers  # noqa: E402
+        build_layers(con)
     # data_version (A2): NOT a citable release yet — Phase 1 D1-D4 local dev
     # build. First real data_version bump happens at the first GitHub release
     # per ARCHITECTURE.md (P2, D5-gated). "0.1.0-dev" marks this explicitly.
