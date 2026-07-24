@@ -14,6 +14,9 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H1589 — P-D5 queryable kosha.db layers** ([H1589](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1589-Opus_kosha_data-hub-pd5-queryable-db-layers_24.07.26.md), Grok 4.5 `grok-4.5` on Opus-lock override). New stage [`scripts/build_db_layers.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_db_layers.py) wired as `python scripts/build_db.py --stage layers`: additive public tables `sense_frequency` · `roots_frequency` · `dict_corpus_coverage` (+ optional sibling `mw_roots` / `mw_etymology` from csl-orig). Smoke joins on `Darma` / `nAga` / `kf`. D5-4 **G-SIZE** tripwire [`scripts/check_g_size.py`](https://github.com/gasyoun/kosha/blob/main/scripts/check_g_size.py) (WARN ≥1.5 GB, FAIL >1.8 GB). Operator query surface in [`docs/PIPELINE_OPERATOR_RUNBOOK.md`](https://github.com/gasyoun/kosha/blob/main/docs/PIPELINE_OPERATOR_RUNBOOK.md); [`DATA_HUB_ROADMAP.md`](https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md) P-D5 ✅. Tests: `tests/test_db_layers.py`. Restricted-tier data not loaded; no new public API routes.
+
 ## [0.91.0] - 2026-07-24
 
 ### Added
