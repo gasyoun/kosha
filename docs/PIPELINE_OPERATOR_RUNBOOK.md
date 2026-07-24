@@ -1,6 +1,6 @@
 # kosha — pipeline operator runbook
 
-_Created: 10-07-2026 · Last updated: 10-07-2026_
+_Created: 10-07-2026 · Last updated: 24-07-2026_
 
 The one document that says what to run, in what order, how to know each stage
 worked, and what breaking looks like — for the whole chain: **DB build → API →
@@ -136,12 +136,19 @@ Commit the regenerated output with the change that caused it; merging = deployin
 
 ```sh
 python scripts/build_static_cache.py      # → docs/js/data/{lemmas,attested_keys}.json + docs/cards/*.json
+# P5 static word-page head (D4 / H1590) — after cards exist; gitignored docs/w/ + docs/browse/
+python scripts/build_word_pages.py --coverage 0.95 --force
+# optional pin after re-measure:  python scripts/build_word_pages.py --head 11148 --force
 ```
 
 ~50,355 attested per-lemma cards, sharded one-file-per-lemma (a single bundle
 would cross GitHub's 100 MB file cap), generated in frequency-rank order so an
 interrupted run front-loads the highest-value cards and resumes without
-redoing work.
+redoing work. Word pages (H1590) take the **D4 static head** only — N measured
+at ~95% corpus token mass from `lemma_frequency.tsv` (today N=11,148; only
+lemmas with cards are prerendered). The SSR route `GET /w/{slp1}` covers the
+long tail. Exit packet:
+[docs/P5_WORD_PAGE_EXIT_PACKET.md](https://github.com/gasyoun/kosha/blob/main/docs/P5_WORD_PAGE_EXIT_PACKET.md).
 
 ## 5. Release rituals (citability — RISKS R1)
 
