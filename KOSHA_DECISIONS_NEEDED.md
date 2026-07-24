@@ -1,6 +1,6 @@
 # kosha — D5 decisions record
 
-_Created: 03-07-2026 · Last updated: 20-07-2026_
+_Created: 03-07-2026 · Last updated: 24-07-2026_
 
 The three items
 [ARCHITECTURE.md](https://github.com/gasyoun/kosha/blob/main/ARCHITECTURE.md)
@@ -211,6 +211,12 @@ the strategy (this record). It did **not** yet compress an asset, split the DB,
 or wire G-SIZE — those are follow-on (the DB is regenerable and privately backed
 up, so nothing is at risk in the interim; the ruling is what was owed now).
 
+**Follow-on status (H1589, 24-07-2026, Grok 4.5 `grok-4.5`).**
+- ✅ **G-SIZE tripwire landed** — [`scripts/check_g_size.py`](https://github.com/gasyoun/kosha/blob/main/scripts/check_g_size.py) (WARN ≥1.5 GB, FAIL >1.8 GB).
+- ✅ **P-D5 queryable public layers landed** — [`scripts/build_db_layers.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_db_layers.py) / `build_db.py --stage layers` (`sense_frequency` · `roots_frequency` · `dict_corpus_coverage` · optional `mw_roots` / `mw_etymology`).
+- 🟡 **Compressed restricted-tier backup** — still open (private storage path; pairs with P-D2 upload @DO).
+- 🟡 **core + inflections ATTACH split** — still open (optional; the layers stage keeps join tables additive without splitting the monolith).
+
 ---
 
 ## Status
@@ -221,7 +227,7 @@ The three original D5-parked items (D5-1/2/3) are **resolved** and reflected in
 [PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md)
 (D5 check). Phase 1 is complete; P2 (public alpha, MG deploys) can start against
 these fixed targets. **D5-4** (20-07-2026) rules the distribution strategy after
-the DB grew to 84% of the 2 GB ceiling; its follow-on plumbing (compress backup,
-split for P-D5, G-SIZE tripwire) is queued.
+the DB grew to 84% of the 2 GB ceiling; **G-SIZE + P-D5 public layers landed
+under H1589**; compress-backup + core/inflections ATTACH split remain queued.
 
 _Dr. Mārcis Gasūns_
