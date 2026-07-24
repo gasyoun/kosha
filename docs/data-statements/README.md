@@ -1,6 +1,6 @@
 # Data statements — kosha public-tier datasets
 
-_Created: 11-07-2026 · Last updated: 11-07-2026_
+_Created: 11-07-2026 · Last updated: 24-07-2026_
 
 One data statement (Bender & Friedman 2018 data-statement / Gebru et al. 2021
 datasheet form, extended with the org metadoc-v2 fields: intended use & known
@@ -22,6 +22,16 @@ via the `data_statement` field.
 | DCS lemma frequency sidecar | 83,277 | [kosha-lemma-frequency.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/kosha-lemma-frequency.meta.md) |
 | Zaliznyak grammar-token index | 98,639 | [zaliznyak-grammar-index.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-grammar-index.meta.md) |
 | Sa→Ru inline gloss layer (reading packs) | 2,958 | [ru-gloss-layer.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/ru-gloss-layer.meta.md) |
+
+## Covered (release data-v0.3.0 — A4 / Concordance-Q3 W2a–W3b)
+
+| Dataset | Rows | Statement |
+|---|---|---|
+| vidyut derivation harness (AG bucket) | 401,368 | [panini-derivation-status.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/panini-derivation-status.meta.md) |
+| Pāṇinian sūtra ↔ DCS concordance | 893,482 | [paninian-corpus-concordance.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/paninian-corpus-concordance.meta.md) |
+| Aṣṭādhyāyī sūtra-coverage / dark-class map | 3,983 | [paninian-sutra-coverage-map.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/paninian-sutra-coverage-map.meta.md) |
+
+Also shipped in the same cut (secondary assets): derivation_chains.tsv, panini_ambiguity_by_sutra.tsv, sutra_fire_set.tsv, build reports under data/concordance/.
 
 ## Out of scope this pass (queued backlog)
 
