@@ -1788,6 +1788,26 @@
       ],
       "notes": "Wave-2 of PLAN_KOSHA_SENSE_RECONCILIATION / PLAN_KOSHA_NEXT_PROGRAMME. SIDECAR only — MW/kosha senses never mutated. MW/Apte glosses sliced read-only from kosha.db; Apte nulls are honest gaps (273/500 have ap90 rows). nAgadanta smoke: PWG 1a/1b/2/3a/3b present. Full inventory deferred.",
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/sense-crossdict-pilot.meta.md"
+    },
+    {
+      "id": "gita-prose",
+      "title": "Bhagavadgita interlinear prose paraphrase (Prose sheet)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "data/gita/gita_prose.tsv",
+      "format": "tsv",
+      "rows": 653,
+      "size_bytes": 228110,
+      "keying": "one row per prose block (verse_label may be single 1.12 or range 1.4-6); verse_keys expands ranges; text = joined interlinear form+(gloss) lines from Gita.xlsm Prose sheet",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/gita/gita_prose.tsv",
+      "builder": "scripts/extract_gita_prose.py (H1493; Gita.xlsm Prose sheet, local-only xlsm)",
+      "consumers": [
+        "reading/index.html Prose toggle",
+        "reading/data/gita_prose.js"
+      ],
+      "notes": "SIDECAR to word-by-word gita-gold-master — alternate display mode only. MIT/public same as gita-gold. Credit Dr. Marcis Gasuns (Gita.xlsm author).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/gita-prose.meta.md"
     }
   ]
 }
