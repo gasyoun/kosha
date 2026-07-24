@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Corpus-wide sandhi sweep — roadmap Phase 2 (H899).
+"""Corpus-wide sandhi sweep — roadmap Phase 2 (H899 / H901 / H1492).
 
 Runs the validated DCS sandhi inducer (method A, 96.3 % Gītā-gold frequency-mass
 coverage — see scripts/score_gita_gold.py) across a curated pedagogical text set,
@@ -46,6 +46,13 @@ OUT = ROOT / "data" / "sandhi"
 # per the roadmap but are not present in this DCS export -- omitted, not
 # silently skipped.
 #
+# Phase 2c (H1492) closes the last process-order tier: Śāstra / commentary.
+# Curated pedagogical core (not the full rasaśāstra/āyurveda-dipikā flood
+# in dcs-conllu): six darśana cores + major bhāṣyas, dharma/artha/kāma
+# śāstra, vyākaraṇa + Nirukta + Amarakośa, alaṅkāra (Nāṭyaśāstra,
+# Kāvyādarśa), two medical saṃhitās, and two Buddhist commentary witnesses.
+# Directory names match dcs-conllu/files/ exactly (Unicode).
+#
 # Scale note: the handoff worried the full Mahābhārata (~2,000 files) would
 # need a parvan/`--limit` sample gate. Measured directly instead of assumed:
 # 300 MBh files induced in ~30 s (~10 files/s) -- the full ~1,995-file corpus
@@ -53,6 +60,7 @@ OUT = ROOT / "data" / "sandhi"
 # sampling gate was needed; if this script's runtime becomes a real problem
 # later, add one then.
 TEXTS = [
+    # --- H900 / H901 base (17) ---
     ("Hitopadeśa", "*.conllu", "hitopadesa", "Hitopadeśa"),
     ("Vetālapañcaviṃśatikā", "*.conllu", "vetalapancavimsatika", "Vetālapañcaviṃśatikā"),
     ("Śukasaptati", "*.conllu", "sukasaptati", "Śukasaptati"),
@@ -70,6 +78,37 @@ TEXTS = [
     ("Bhallaṭaśataka", "*.conllu", "bhallatasataka", "Bhallaṭaśataka"),
     ("Rāmāyaṇa", "*.conllu", "ramayana", "Rāmāyaṇa"),
     ("Mahābhārata", "*.conllu", "mahabharata", "Mahābhārata (full, incl. Bhagavadgītā)"),
+    # --- H1492 Phase 2c: Śāstra / commentary (24) ---
+    # darśana cores + bhāṣyas
+    ("Yogasūtra", "*.conllu", "yogasutra", "Yogasūtra"),
+    ("Yogasūtrabhāṣya", "*.conllu", "yogasutrabhasya", "Yogasūtrabhāṣya"),
+    ("Nyāyasūtra", "*.conllu", "nyayasutra", "Nyāyasūtra"),
+    ("Nyāyabhāṣya", "*.conllu", "nyayabhasya", "Nyāyabhāṣya"),
+    ("Sāṃkhyakārikā", "*.conllu", "samkhyakarika", "Sāṃkhyakārikā"),
+    ("Sāṃkhyatattvakaumudī", "*.conllu", "samkhyatattvakaumudi", "Sāṃkhyatattvakaumudī"),
+    ("Vaiśeṣikasūtra", "*.conllu", "vaisesikasutra", "Vaiśeṣikasūtra"),
+    ("Mīmāṃsāsūtrabhāṣya", "*.conllu", "mimamsasutrabhasya", "Mīmāṃsāsūtrabhāṣya"),
+    ("Tarkasaṃgraha", "*.conllu", "tarkasamgraha", "Tarkasaṃgraha"),
+    ("Sarvadarśanasaṃgraha", "*.conllu", "sarvadarsanasamgraha", "Sarvadarśanasaṃgraha"),
+    # dharma / artha / kāma
+    ("Manusmṛti", "*.conllu", "manusmrti", "Manusmṛti"),
+    ("Yājñavalkyasmṛti", "*.conllu", "yajnavalkyasmrti", "Yājñavalkyasmṛti"),
+    ("Arthaśāstra", "*.conllu", "arthasastra", "Arthaśāstra"),
+    ("Kāmasūtra", "*.conllu", "kamasutra", "Kāmasūtra"),
+    # vyākaraṇa / nirukta / kośa
+    ("Aṣṭādhyāyī", "*.conllu", "astadhyayi", "Aṣṭādhyāyī"),
+    ("Kāśikāvṛtti", "*.conllu", "kasikavrtti", "Kāśikāvṛtti"),
+    ("Nirukta", "*.conllu", "nirukta", "Nirukta"),
+    ("Amarakośa", "*.conllu", "amarakosa", "Amarakośa"),
+    # alaṅkāra
+    ("Nāṭyaśāstra", "*.conllu", "natyasastra", "Nāṭyaśāstra"),
+    ("Kāvyādarśa", "*.conllu", "kavyadarsa", "Kāvyādarśa"),
+    # medical saṃhitā (canonical pair; skips the rasaśāstra flood)
+    ("Carakasaṃhitā", "*.conllu", "carakasamhita", "Carakasaṃhitā"),
+    ("Suśrutasaṃhitā", "*.conllu", "susrutasamhita", "Suśrutasaṃhitā"),
+    # Buddhist commentary witnesses
+    ("Abhidharmakośabhāṣya", "*.conllu", "abhidharmakosabhasya", "Abhidharmakośabhāṣya"),
+    ("Prasannapadā", "*.conllu", "prasannapada", "Prasannapadā"),
 ]
 
 

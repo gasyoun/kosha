@@ -1,0 +1,53 @@
+rule	category	count	pct	examples
+a a → ā	vowel coalescence	10	9.9	ye cānye purojātasahajātapaścājjātādayasta eteṣvevāntarbhūtāḥ ca+anye→cānye · ata evāvadhārayati pratyayo nāsti pañcama iti eva+avadhārayati→evāvadhārayati · ata evāvadhārayati pratyayo nāsti pañcama iti na+asti→nāsti · tasmānna cāsti bhāvānāṃ pratyayādiṣu svabhāvaḥ ca+asti→cāsti
+a ā → ā	vowel coalescence	8	7.92	utpadyamāno dharmo yenālambanenotpadyate sa tasyālambanapratyayaḥ yena+ālambanena→yenālambanenotpadyate · utpadyamāno dharmo yenālambanenotpadyate sa tasyālambanapratyayaḥ tasya+ālambana→tasyālambanapratyayaḥ · īśvarādayastu pratyayā eva na sambhavantīti īśvara+ādayaḥ→īśvarādayastu · tasmānna cāsti bhāvānāṃ pratyayādiṣu svabhāvaḥ pratyaya+ādiṣu→pratyayādiṣu
+m p → ṃ p	anusvāra / nasal	7	6.93	atrocyate naiva hi bhāvānāṃ parabhūtebhyaḥ pratyayebhya utpattiriti bhāvānāṃ+para · tasmānna cāsti bhāvānāṃ pratyayādiṣu svabhāvaḥ bhāvānāṃ+pratyaya · tatkimapekṣaṃ paratvaṃ pratyayādīnām paratvaṃ+pratyaya · tatkimapekṣaṃ paratvaṃ pratyayādīnām apekṣam→tatkimapekṣaṃ +paratvaṃ
+ḥ u → Ø u	visarga	6	5.94	atrocyate naiva hi bhāvānāṃ parabhūtebhyaḥ pratyayebhya utpattiriti pratyayebhya+utpattiḥ · yadi hi hetvādiṣu parabhūteṣu pratyayeṣu samasteṣu vyasteṣu vyastasamasteṣu hetupratyayasāmagryā anyatra vā kvacid bhāvānāṃ kāryāṇāmutpādātpūrvaṃ sattvaṃ syāt syāttebhya utpādaḥ tebhyaḥ→syāttebhya +utpādaḥ · bhavanaṃ bhāva utpādaḥ bhāva+utpādaḥ · parebhya utpādaḥ parabhāvaḥ parebhya+utpādaḥ
+aḥ n → o n	visarga	4	3.96	kāraṇasyānantaro nirodhaḥ kāryasyotpattipratyayaḥ anantaraḥ→kāraṇasyānantaro +nirodhaḥ · tadyathā bījasyānantaro nirodho 'ṅkurasyotpādapratyayaḥ anantaraḥ→bījasyānantaro +nirodho · ata evāvadhārayati pratyayo nāsti pañcama iti pratyayo+na · athavā bhāvānāṃ kāryāṇām aṅkurādīnāṃ bījādiṣu pratyayeṣu satsvavikṛtarūpeṣu nāsti svabhāvo nirhetukatvaprasaṅgāt svabhāvo+nirhetuka
+a u → o	vowel coalescence	4	3.96	kāraṇasyānantaro nirodhaḥ kāryasyotpattipratyayaḥ kāryasya+utpatti→kāryasyotpattipratyayaḥ · atrocyate naiva hi bhāvānāṃ parabhūtebhyaḥ pratyayebhya utpattiriti atra+ucyate→atrocyate · yadi syād gṛhyeta cotpādavaiyarthyaṃ ca syāt ca+utpāda→cotpādavaiyarthyaṃ · vidyamānayoreva hi maitropagrāhakayoḥ parasparāpekṣaṃ paratvam maitra+upagrāhakayoḥ→maitropagrāhakayoḥ
+ḥ i → r i	visarga	3	2.97	tatra nirvartako heturiti lakṣaṇāt yo hi yasya nirvartako bījabhāvenāvasthitaḥ sa tasya hetupratyayaḥ hetuḥ+iti→heturiti · tasmādebhyaḥ parabhūtebhyo bhāvānāmutpattirasti parata utpattiriti utpattiḥ+iti→utpattiriti · atrocyate naiva hi bhāvānāṃ parabhūtebhyaḥ pratyayebhya utpattiriti utpattiḥ+iti→utpattiriti
+a e → ai	vowel coalescence	3	2.97	atrocyate naiva hi bhāvānāṃ parabhūtebhyaḥ pratyayebhya utpattiriti na+eva→naiva · na caivaṃ yadutpādātpūrvaṃ saṃbhavaḥ syāt ca+evam→caivaṃ · na caivaṃ bījāṅkurayoryaugapadyam ca+evam→caivaṃ
+m s → ṃ s	anusvāra / nasal	3	2.97	yadi hi hetvādiṣu parabhūteṣu pratyayeṣu samasteṣu vyasteṣu vyastasamasteṣu hetupratyayasāmagryā anyatra vā kvacid bhāvānāṃ kāryāṇāmutpādātpūrvaṃ sattvaṃ syāt syāttebhya utpādaḥ sattvaṃ+syāt · yadi hi hetvādiṣu parabhūteṣu pratyayeṣu samasteṣu vyasteṣu vyastasamasteṣu hetupratyayasāmagryā anyatra vā kvacid bhāvānāṃ kāryāṇāmutpādātpūrvaṃ sattvaṃ syāt syāttebhya utpādaḥ pūrvam→kāryāṇāmutpādātpūrvaṃ +sattvaṃ · na caivaṃ yadutpādātpūrvaṃ saṃbhavaḥ syāt pūrvam→yadutpādātpūrvaṃ +saṃbhavaḥ
+m b → ṃ b	anusvāra / nasal	3	2.97	athavā bhāvānāṃ kāryāṇām aṅkurādīnāṃ bījādiṣu pratyayeṣu satsvavikṛtarūpeṣu nāsti svabhāvo nirhetukatvaprasaṅgāt ādīnām→aṅkurādīnāṃ +bīja · na caivaṃ bījāṅkurayoryaugapadyam evam→caivaṃ +bīja · tasmād avidyamāne svabhāve kāryāṇāṃ parabhāvaḥ paratvaṃ bījādīnāṃ nāstīti paravyapadeśābhāvādeva na parata utpāda iti paratvaṃ+bīja
+aḥ h → o h	visarga	2	1.98	tatra nirvartako heturiti lakṣaṇāt yo hi yasya nirvartako bījabhāvenāvasthitaḥ sa tasya hetupratyayaḥ nirvartako+hetuḥ · tatra nirvartako heturiti lakṣaṇāt yo hi yasya nirvartako bījabhāvenāvasthitaḥ sa tasya hetupratyayaḥ yo+hi
+ḥ t → Ø t	visarga	2	1.98	tatra nirvartako heturiti lakṣaṇāt yo hi yasya nirvartako bījabhāvenāvasthitaḥ sa tasya hetupratyayaḥ sa+tasya · utpadyamāno dharmo yenālambanenotpadyate sa tasyālambanapratyayaḥ sa+tasya
+ḥ i → Ø i	visarga	2	1.98	ata evāvadhārayati pratyayo nāsti pañcama iti pañcama+iti · tasmād avidyamāne svabhāve kāryāṇāṃ parabhāvaḥ paratvaṃ bījādīnāṃ nāstīti paravyapadeśābhāvādeva na parata utpāda iti utpāda+iti
+s u → Ø u	consonant / other	2	1.98	tasmādebhyaḥ parabhūtebhyo bhāvānāmutpattirasti parata utpattiriti parata+utpattiḥ · tasmād avidyamāne svabhāve kāryāṇāṃ parabhāvaḥ paratvaṃ bījādīnāṃ nāstīti paravyapadeśābhāvādeva na parata utpāda iti parata+utpāda
+aḥ bh → o bh	visarga	2	1.98	tasmādebhyaḥ parabhūtebhyo bhāvānāmutpattirasti parata utpattiriti bhūtebhyaḥ→parabhūtebhyo +bhāvānām · tasmādayuktametat parabhūtebhyo bhāvānāmutpattiriti bhūtebhyaḥ→parabhūtebhyo +bhāvānām
+m k → ṃ k	anusvāra / nasal	2	1.98	yadi hi hetvādiṣu parabhūteṣu pratyayeṣu samasteṣu vyasteṣu vyastasamasteṣu hetupratyayasāmagryā anyatra vā kvacid bhāvānāṃ kāryāṇāmutpādātpūrvaṃ sattvaṃ syāt syāttebhya utpādaḥ bhāvānāṃ+kāryāṇām · athavā bhāvānāṃ kāryāṇām aṅkurādīnāṃ bījādiṣu pratyayeṣu satsvavikṛtarūpeṣu nāsti svabhāvo nirhetukatvaprasaṅgāt bhāvānāṃ+kāryāṇām
+t a → d a	consonant / other	2	1.98	tasmādayuktametat parabhūtebhyo bhāvānāmutpattiriti tasmāt+ayuktam→tasmādayuktametat · tasmād avidyamāne svabhāve kāryāṇāṃ parabhāvaḥ paratvaṃ bījādīnāṃ nāstīti paravyapadeśābhāvādeva na parata utpāda iti tasmād+a
+m j → ṃ j	anusvāra / nasal	2	1.98	na cakṣūrūpādayaḥ pratyayāḥ sākṣādvijñānaṃ janayanti vijñānam→sākṣādvijñānaṃ +janayanti · sā ca kriyā vijñānaṃ janayati vijñānaṃ+janayati
+aḥ b → o b	visarga	1	0.99	tatra nirvartako heturiti lakṣaṇāt yo hi yasya nirvartako bījabhāvenāvasthitaḥ sa tasya hetupratyayaḥ nirvartako+bīja
+aḥ dh → o dh	visarga	1	0.99	utpadyamāno dharmo yenālambanenotpadyate sa tasyālambanapratyayaḥ utpadyamāno+dharmo
+aḥ y → o y	visarga	1	0.99	utpadyamāno dharmo yenālambanenotpadyate sa tasyālambanapratyayaḥ dharmo+yena
+aḥ a → o a	visarga	1	0.99	tadyathā bījasyānantaro nirodho 'ṅkurasyotpādapratyayaḥ nirodho+aṅkurasya
+t y → d y	consonant / other	1	0.99	tadyathā bījasyānantaro nirodho 'ṅkurasyotpādapratyayaḥ tat+yathā→tadyathā
+e e → a e	vowel coalescence	1	0.99	yasmin sati yadbhavati tattasyādhipateyamiti ta ete catvāraḥ pratyayāḥ ta+ete
+t bh → d bh	consonant / other	1	0.99	yasmin sati yadbhavati tattasyādhipateyamiti ta ete catvāraḥ pratyayāḥ yat+bhavati→yadbhavati
+e e → asahajātapaścājjātādayasta e	vowel coalescence	1	0.99	ye cānye purojātasahajātapaścājjātādayasta eteṣvevāntarbhūtāḥ te→purojātasahajātapaścājjātādayasta +eteṣu
+u e → v e	vowel coalescence	1	0.99	ye cānye purojātasahajātapaścājjātādayasta eteṣvevāntarbhūtāḥ eteṣu+eva→eteṣvevāntarbhūtāḥ
+ḥ e → Ø e	visarga	1	0.99	īśvarādayastu pratyayā eva na sambhavantīti pratyayā+eva
+i i → ī	vowel coalescence	1	0.99	īśvarādayastu pratyayā eva na sambhavantīti sambhavanti+iti→sambhavantīti
+s e → Ø e	consonant / other	1	0.99	ata evāvadhārayati pratyayo nāsti pañcama iti ata+eva
+_ p → tasmādebhyaḥ p	consonant / other	1	0.99	tasmādebhyaḥ parabhūtebhyo bhāvānāmutpattirasti parata utpattiriti _→tasmādebhyaḥ +para
+u ā → v ā	vowel coalescence	1	0.99	yadi hi hetvādiṣu parabhūteṣu pratyayeṣu samasteṣu vyasteṣu vyastasamasteṣu hetupratyayasāmagryā anyatra vā kvacid bhāvānāṃ kāryāṇāmutpādātpūrvaṃ sattvaṃ syāt syāttebhya utpādaḥ hetu+ādiṣu→hetvādiṣu
+ḥ a → Ø a	visarga	1	0.99	yadi hi hetvādiṣu parabhūteṣu pratyayeṣu samasteṣu vyasteṣu vyastasamasteṣu hetupratyayasāmagryā anyatra vā kvacid bhāvānāṃ kāryāṇāmutpādātpūrvaṃ sattvaṃ syāt syāttebhya utpādaḥ sāmagryāḥ→hetupratyayasāmagryā +anyatra
+m y → ṃ y	anusvāra / nasal	1	0.99	na caivaṃ yadutpādātpūrvaṃ saṃbhavaḥ syāt evam→caivaṃ +yat
+t u → d u	consonant / other	1	0.99	na caivaṃ yadutpādātpūrvaṃ saṃbhavaḥ syāt yat+utpādāt→yadutpādātpūrvaṃ
+t g → d g	consonant / other	1	0.99	yadi syād gṛhyeta cotpādavaiyarthyaṃ ca syāt syād+gṛhyeta
+m c → ṃ c	anusvāra / nasal	1	0.99	yadi syād gṛhyeta cotpādavaiyarthyaṃ ca syāt vaiyarthyam→cotpādavaiyarthyaṃ +ca
+t n → n n	consonant / other	1	0.99	tasmānna cāsti bhāvānāṃ pratyayādiṣu svabhāvaḥ tasmāt+na→tasmānna
+m bh → ṃ bh	anusvāra / nasal	1	0.99	bhavanaṃ bhāva utpādaḥ bhavanaṃ+bhāva
+ḥ n → Ø n	visarga	1	0.99	sa na vidyate sa+na
+u a → v a	vowel coalescence	1	0.99	athavā bhāvānāṃ kāryāṇām aṅkurādīnāṃ bījādiṣu pratyayeṣu satsvavikṛtarūpeṣu nāsti svabhāvo nirhetukatvaprasaṅgāt satsu+avikṛta→satsvavikṛtarūpeṣu
+ḥ e → r e	visarga	1	0.99	vidyamānayoreva hi maitropagrāhakayoḥ parasparāpekṣaṃ paratvam vidyamānayoḥ+eva→vidyamānayoreva
+m n → ṃ n	anusvāra / nasal	1	0.99	tasmād avidyamāne svabhāve kāryāṇāṃ parabhāvaḥ paratvaṃ bījādīnāṃ nāstīti paravyapadeśābhāvādeva na parata utpāda iti ādīnām→bījādīnāṃ +na
+t ā → d ā	consonant / other	1	0.99	tasmādāgamābhiprāyān abhijñataiva parasya tasmāt+āgama→tasmādāgamābhiprāyān
+ḥ y → Ø y	visarga	1	0.99	na hi tathāgatā yuktiviruddhaṃ vākyamudāharanti tathāgatā+yukti
+m v → ṃ v	anusvāra / nasal	1	0.99	na hi tathāgatā yuktiviruddhaṃ vākyamudāharanti viruddham→yuktiviruddhaṃ +vākyam
+k e → g e	consonant / other	1	0.99	āgamasya cābhiprāyaḥ prāgevopavarṇitaḥ prāk+eva→prāgevopavarṇitaḥ
+yāḥ u → ta u	visarga	1	0.99	tadevaṃ pratyayebhya utpādavādini pratiṣiddhe kriyāta utpādavādī manyate kriyāta+utpāda
+t e → d e	consonant / other	1	0.99	tadevaṃ pratyayebhya utpādavādini pratiṣiddhe kriyāta utpādavādī manyate tat+evam→tadevaṃ
+u ū → ū	vowel coalescence	1	0.99	na cakṣūrūpādayaḥ pratyayāḥ sākṣādvijñānaṃ janayanti cakṣu+ūru→cakṣūrūpādayaḥ
+t v → d v	consonant / other	1	0.99	na cakṣūrūpādayaḥ pratyayāḥ sākṣādvijñānaṃ janayanti sākṣāt+vijñānam→sākṣādvijñānaṃ
+a i → e	vowel coalescence	1	0.99	yathā parikriyā odanasyeti odanasya+iti→odanasyeti
