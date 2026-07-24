@@ -14,6 +14,11 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.86.0] - 2026-07-24
+
+### Added
+- **H1461 — Zaliznyak paradigm-class declension drills (L4)** ([H1461](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1461-Sonnet_kosha_zaliznyak-declension-drill-surface_22.07.26.md), Grok 4.5 `grok-4.5` on Sonnet-lock override). New builder [`scripts/build_zaliznyak_drills.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_zaliznyak_drills.py) reads sibling E31 (`SanskritLexicography/RussianTranslation` reverse paradigm index) at build time and emits **3,434** MCQ items (`classify` + `odd-one-out`) under [`data/zaliznyak/`](https://github.com/gasyoun/kosha/tree/main/data/zaliznyak) + Anki deck + [`reading/zaliznyak/drills/index.html`](https://github.com/gasyoun/kosha/blob/main/reading/zaliznyak/drills/index.html). Nav "declension classes →" on reading hub. Manifest row `zaliznyak-drills` + data-statement. Tests: `tests/test_zaliznyak_drills.py` (9 green).
+
 ## [0.85.0] - 2026-07-24
 
 ### Added
