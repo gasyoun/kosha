@@ -2,6 +2,8 @@
 
 _Created: 24-07-2026 · Last updated: 24-07-2026_
 
+Companion metadoc: [P5_WORD_PAGE_EXIT_PACKET.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/P5_WORD_PAGE_EXIT_PACKET.meta.md).
+
 **Handoff:** [H1590](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1590-Opus_kosha_p5-ssr-static-head-exit-packet_24.07.26.md)
 (W5 of [PLAN_KOSHA_NEXT_PROGRAMME_2026H2](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_NEXT_PROGRAMME_2026H2.md);
 builds on H537 P5 surface + H1586 D4 budget re-measure).
