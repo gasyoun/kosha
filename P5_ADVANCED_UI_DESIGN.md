@@ -1,6 +1,6 @@
 # P5 — Advanced UI design spec (the word page, MG's own way)
 
-_Created: 10-07-2026 · Last updated: 10-07-2026_
+_Created: 10-07-2026 · Last updated: 24-07-2026_
 
 The wireframe-locking design session that
 [IMPLEMENTATION_PLAN.md](https://github.com/gasyoun/kosha/blob/main/IMPLEMENTATION_PLAN.md)
@@ -146,6 +146,14 @@ Svelte `ui/` app and `datasource.js` "both" shim — extend, don't fork.
    packs generated from DCS lemmatization.
 7. **Exit checks** (from the plan, unchanged): MG sign-off on live staging;
    Lighthouse mobile ≥90; paste a Gītā verse → read every word end-to-end.
+
+> **Status 24-07-2026 (H1590).** Agent half of §7 is closed: D4 static head
+> measured + built (`build_word_pages.py --coverage 0.95`, N=11,148 → 10,370
+> pages / 184.9 MB), SSR parity green, packet at
+> [docs/P5_WORD_PAGE_EXIT_PACKET.md](https://github.com/gasyoun/kosha/blob/main/docs/P5_WORD_PAGE_EXIT_PACKET.md).
+> Live Lighthouse / walkthrough / MG staging remain **human deploy-gated** —
+> where that packet and this design disagree on ship state, the exit packet wins
+> (it holds measured numbers + honest ⛔ rows).
 
 ## 7. Reuse ledger (check-prior-art, don't rebuild)
 
