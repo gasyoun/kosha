@@ -1,6 +1,6 @@
 # Data statement — DCS per-sense frequency sidecar (`kosha-sense-frequency`)
 
-_Created: 22-07-2026 · Last updated: 22-07-2026_
+_Created: 22-07-2026 · Last updated: 24-07-2026_
 
 Data statement for the `kosha-sense-frequency` dataset served by the kosha
 data-hub. Manifest row:
@@ -13,10 +13,14 @@ actually attested.
 
 ## Composition & counts
 
-103,079 rows, long format, one per `(lemma_slp1, layer, sense_id)`, counted on
-the DCS **WordSem** annotation (Sanskrit-WordNet synset gold, present on 219/270
-texts corpus-wide; 531,747 sense-tagged tokens = 9.3% of the corpus). TSV, UTF-8,
-10 columns:
+**116,788** rows (24-07-2026 / H1588), long format, one per `(lemma_slp1, layer,
+sense_id, provenance)`. **Attested** slice (103,079 rows) is counted on the DCS
+**WordSem** annotation (Sanskrit-WordNet synset gold, present on 219/270 texts
+corpus-wide; 531,747 sense-tagged tokens = 9.3% of the corpus). **Estimated**
+slice (13,709 `layer=mw` rows, H1588) assigns untagged DCS tokens (4,506,310) to
+the most-frequent attested MW sense for that lemma after a held-out gate of
+**83.96%** accuracy (threshold 70%; SCL witness fail-closed on H057 rights).
+TSV, UTF-8, columns:
 
 | Column | Content |
 |---|---|
@@ -39,8 +43,8 @@ texts corpus-wide; 531,747 sense-tagged tokens = 9.3% of the corpus). TSV, UTF-8
 | `top_genre` | the single Renou genre contributing the most tokens to this sense |
 | `top_genre_share` | fraction of the sense's tokens from `top_genre` (concentration flag) |
 | `periods` | per-period vector — **empty in wave-1** (see limitations) |
-| `provenance` | `attested` (WordSem gold) on every wave-1 row; `estimated` is reserved for wave-2 WSD |
-| `confidence` | null for `attested`; wave-2 fills it for `estimated` rows |
+| `provenance` | `attested` (WordSem gold) or `estimated` (H1588 MFS WSD on untagged tokens) |
+| `confidence` | empty for `attested`; for `estimated` = attested MFS `lemma_share` (dominance prior) |
 
 Rows by layer: `wn` 57,143 · `mw` 23,088 · `semdom` 22,848. The native `wn`
 layer is lossless; the `mw` and `semdom` layers are projections whose coverage is

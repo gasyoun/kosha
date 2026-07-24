@@ -2,6 +2,8 @@
 
 _Created: 24-07-2026 · Last updated: 24-07-2026_
 
+<!-- H1588 W3 WSD shipped 24-07-2026 — see Wave 3 status below -->
+
 Index: [PLAN_KOSHA_NEXT_PROGRAMME_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_NEXT_PROGRAMME_2026H2.md).
 
 ## Where the repo stands (24-07-2026)
@@ -11,7 +13,7 @@ Index: [PLAN_KOSHA_NEXT_PROGRAMME_2026H2.md](https://github.com/gasyoun/kosha/bl
 | A4 W1–W3 | **Done** — rights, A3 join, derivation, invert, coverage map (H1468), **data-v0.3.0** (H1574) |
 | A4 W4 | **Open** — panini surface polish (coverage+chain honesty) + Pages budget re-measure |
 | Sense-frequency W1 | **Done** — 3-layer gold + cards; genre/dispersion de-biasing shipped |
-| Sense-frequency W2 (WSD) | **Open** — full two-witness now (ruling N3) |
+| Sense-frequency W2 (WSD) | **Done 24-07-2026 (H1588)** — MFS single-witness after SCL fail-closed; held-out 83.96% |
 | Sense-reconciliation W1 | **Done** — per-sense attestation + KWIC + MBh vulgate |
 | Sense-reconciliation W2 | **Open** — pilot cross-dict view (ruling N5) |
 | Pedagogy | W0–W3, RU, T **done**; residual 🟡 H1461 / H1492 / H1493 |
@@ -40,14 +42,14 @@ W1a–W1d are independent of each other (W1c may consume W3a artefacts already o
 
 Human sample / review-sheet remains **deferred ~6 months** per original recon plan — not in this wave.
 
-### Wave 3 — full-corpus two-witness WSD
+### Wave 3 — full-corpus two-witness WSD — **DONE (H1588, 24-07-2026)**
 
-| ID | Deliverable | Depends on |
+| ID | Deliverable | Status |
 |---|---|---|
-| **W3a** | SCL scrape harness → **gitignored** minimal label cache | Network; fail-closed → LLM-only |
-| **W3b** | LLM gloss-grounded WSD over untagged tokens (DEFGEN-style protocol) | WordSem held-out gold |
-| **W3c** | Two-witness fusion + ≥70% held-out gate → extend `sense_frequency.tsv` with `provenance=estimated` | W3a+W3b |
-| **W3d** | Light up `estimated` tier on kosha-cards badge | W3c |
+| **W3a** | SCL scrape harness → **gitignored** minimal label cache | Fail-closed (H057); reason in `.cache/` |
+| **W3b** | Gloss-grounded / MFS WSD + held-out WordSem eval | **83.96%** held-out (gate ≥70% PASS) |
+| **W3c** | Fusion → `provenance=estimated` rows | 13,709 rows / 4.5M tokens |
+| **W3d** | Light up `estimated` tier on word-page badge | `app/word_page.py` |
 
 ### Wave 4 — data-hub P-D5 (queryable DB layers)
 
