@@ -54,12 +54,18 @@ _UPASARGA = _load_upasarga()
 
 
 def _load_sense_freq():
-    """{lemma_slp1: [{gloss, count, share, top_genre, top_share, nonsastra}, …]} from the
-    committed MW layer of data/frequency/sense_frequency.tsv (H1453 + wave-2 genre columns),
-    most-frequent sense first. Loaded once; a pure function of the committed file, so
-    prerender ∥ SSR stay byte-identical (the P5-4 parity contract, like _UPASARGA)."""
+    """{lemma_slp1: [{gloss, count, share, top_genre, top_share, nonsastra, est_count, …}]}
+    from the committed MW layer of data/frequency/sense_frequency.tsv
+    (H1453 + H1459 genre columns + H1588 estimated tier).
+
+    Attested rows (provenance=attested / empty) drive the bar + share.
+    Estimated rows (provenance=estimated) attach to the same sense_id/gloss as a
+    separate count — never blended into the attested number (W3d / decision #8).
+    Loaded once; pure function of the committed file so prerender ∥ SSR stay
+    byte-identical (P5-4 parity, like _UPASARGA)."""
     import csv
     d = {}
+    est = {}  # lemma -> sense_id|gloss -> estimated count
     p = Path(__file__).resolve().parent.parent / "data" / "frequency" / "sense_frequency.tsv"
     if not p.exists():
         return d
@@ -67,19 +73,47 @@ def _load_sense_freq():
         for r in csv.DictReader(f, delimiter="\t"):
             if r["layer"] != "mw":
                 continue
+            prov = (r.get("provenance") or "attested").strip() or "attested"
             try:
-                cnt = int(r["count_all"])
-                share = float(r["lemma_share"])
+                cnt = int(r["count_all"] or 0)
             except (ValueError, KeyError):
                 continue
-            d.setdefault(r["lemma_slp1"], []).append({
+            lemma = r["lemma_slp1"]
+            if prov == "estimated":
+                key = r.get("sense_id") or r.get("sense_gloss") or ""
+                est.setdefault(lemma, {})[key] = (
+                    est.get(lemma, {}).get(key, 0) + cnt
+                )
+                continue
+            try:
+                share = float(r["lemma_share"] or 0)
+            except (ValueError, KeyError):
+                share = 0.0
+            d.setdefault(lemma, []).append({
+                "sense_id": r.get("sense_id") or "",
                 "gloss": r["sense_gloss"], "count": cnt, "share": share,
                 "top_genre": r.get("top_genre", ""),
                 "top_share": float(r.get("top_genre_share") or 0),
                 "nonsastra": int(r.get("count_nonsastra") or 0),
+                "est_count": 0,
             })
-    for lemma in d:
-        d[lemma].sort(key=lambda x: (-x["count"], x["gloss"]))
+    for lemma, senses in d.items():
+        e_map = est.get(lemma) or {}
+        for s in senses:
+            s["est_count"] = (
+                e_map.get(s["sense_id"], 0) or e_map.get(s["gloss"], 0)
+            )
+        senses.sort(key=lambda x: (-x["count"], x["gloss"]))
+    # Lemmas with only estimated rows (no attested MW projection) — still show
+    # estimated chips alone so the tier is not silently dropped.
+    for lemma, e_map in est.items():
+        if lemma in d:
+            continue
+        d[lemma] = [{
+            "sense_id": sid, "gloss": sid, "count": 0, "share": 0.0,
+            "top_genre": "", "top_share": 0.0, "nonsastra": 0,
+            "est_count": n,
+        } for sid, n in sorted(e_map.items(), key=lambda x: (-x[1], x[0]))]
     return d
 
 
@@ -280,9 +314,11 @@ def _sense_frequency_block(slp1):
         return ""
     esc = html.escape
     total = sum(s["count"] for s in senses)
+    total_est = sum(int(s.get("est_count") or 0) for s in senses)
     items = []
     for s in senses[:_SENSE_FREQ_CAP]:
         cnt, share = s["count"], s["share"]
+        est = int(s.get("est_count") or 0)
         pct = round(share * 100)
         # wave-2 genre flags: expose corpus-composition bias in the DOM.
         flag = ""
@@ -294,13 +330,23 @@ def _sense_frequency_block(slp1):
             g = _GENRE_LABEL.get(s["top_genre"], s["top_genre"])
             flag = (f'<span class="chip genre" title="most tokens of this sense come from one '
                     f'genre — read the count as genre-relative">{round(s["top_share"]*100)}% {esc(g)}</span>')
+        # H1588 W3d: light estimated chip only when mass exists; never add into attested.
+        if est > 0:
+            est_chip = (
+                f'<span class="chip est" title="WSD estimate (MFS on untagged DCS tokens; '
+                f'not blended with attested)"><b>{est}</b> estimated</span>'
+            )
+        else:
+            est_chip = (
+                '<span class="chip est" title="no WSD estimate for this sense"></span>'
+            )
         items.append(
             '<li class="sf-item">'
             f'<span class="sf-gloss">{esc(s["gloss"])}</span>'
             f'<span class="sf-bar" aria-hidden="true"><span class="sf-fill" style="width:{pct}%"></span></span>'
             '<span class="sf-nums">'
             f'<span class="chip att"><b>{cnt}</b> in this sense</span>'
-            '<span class="chip est" title="WSD estimate — wave-2 (not yet computed)"></span>'
+            f'{est_chip}'
             f'{flag}'
             f'<span class="sf-share">{pct}%</span>'
             '</span></li>'
@@ -308,16 +354,22 @@ def _sense_frequency_block(slp1):
     more = len(senses) - _SENSE_FREQ_CAP
     more_html = (f'<li class="sf-more">+{more} more attested sense'
                  f'{"s" if more != 1 else ""}</li>') if more > 0 else ""
+    est_head = (
+        f' · <b>{total_est}</b> estimated (untagged MFS)' if total_est else ""
+    )
     return (
         '<details class="disclosure sense-freq">'
         '<summary>Sense frequency</summary>'
-        f'<p class="sf-head"><b>{total}</b> for the lemma · attested in DCS WordSem gold '
+        f'<p class="sf-head"><b>{total}</b> for the lemma · attested in DCS WordSem gold'
+        f'{est_head} '
         '<span class="sf-legend"><span class="chip att">attested</span>'
-        '<span class="chip est" title="WSD estimate — wave-2"></span> estimated</span></p>'
+        '<span class="chip est" title="WSD estimate — H1588">estimated</span></span></p>'
         f'<ul class="sf-list">{"".join(items)}{more_html}</ul>'
         '<p class="sf-foot">DCS over-samples technical śāstra (alchemy/medicine); '
         'a <span class="chip warn">śāstra-only</span> or genre chip marks a count that reflects '
-        'corpus composition, not general Sanskrit.</p></details>'
+        'corpus composition, not general Sanskrit. '
+        'Estimated counts cover untagged DCS tokens via most-frequent-sense WSD '
+        'and are never added into the attested figure.</p></details>'
     )
 
 

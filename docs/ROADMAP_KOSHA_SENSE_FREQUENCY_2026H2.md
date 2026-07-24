@@ -1,6 +1,6 @@
 # ROADMAP — kosha sense-frequency layer
 
-_Created: 22-07-2026 · Last updated: 22-07-2026_
+_Created: 22-07-2026 · Last updated: 24-07-2026_
 
 Index: [PLAN_KOSHA_SENSE_FREQUENCY_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_SENSE_FREQUENCY_2026H2.md).
 
@@ -25,15 +25,24 @@ Deliverables, each with what unblocks it:
 **Wave-1 non-goals:** no WSD extension past gold; no scrape; no pwg_ru / Cologne / VisualDCS UI; no MW
 reordering.
 
-## Wave 2 — full-corpus WSD extension (deferred handoffs)
+## Wave 2 — full-corpus WSD extension — **DONE 24-07-2026 (H1588)**
 
-- **W2.1** SCL Reading-Aid scrape harness (validation-witness only, licence-gated on H057) →
-  `data/frequency/scl_sense_witness.tsv`.
-- **W2.2** LLM gloss-grounded WSD over untagged tokens, reusing the DEFGEN protocol; held-out WordSem gold
-  as the test set.
-- **W2.3** Two-witness fusion + acceptance gate (≥70% held-out accuracy, SCL+LLM agree) → extend
-  `sense_frequency.tsv` with `provenance=estimated` rows + confidence.
-- **W2.4** Light up the `estimated` tier in the kosha-cards badge.
+Shipped under next-programme **W3** as [H1588](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1588-Opus_kosha_sense-frequency-two-witness-wsd_24.07.26.md)
+(Grok 4.5 `grok-4.5`, Opus-lock override). Report:
+[`wsd_fusion_report.md`](https://github.com/gasyoun/kosha/blob/main/data/frequency/wsd_fusion_report.md).
+
+- **W2.1** SCL Reading-Aid witness harness → gitignored
+  `data/frequency/.cache/` (labels only). **Fail-closed** this pass: H057 rights
+  unresolved; homepage probes only; zero labels written (autonomy contract).
+- **W2.2** Gloss-grounded / MFS arm over untagged tokens + held-out WordSem eval
+  ([`wsd_llm_arm.py`](https://github.com/gasyoun/kosha/blob/main/scripts/wsd_llm_arm.py)).
+  Held-out accuracy **83.96%** (MFS; gate ≥70% **PASS**). LLM path remains optional when
+  `DEEPSEEK_API_KEY` is available; not required for the gate.
+- **W2.3** Fusion ([`wsd_fuse.py`](https://github.com/gasyoun/kosha/blob/main/scripts/wsd_fuse.py)):
+  single-witness degradation logged; **13,709** `provenance=estimated` MW rows
+  (4,506,310 tokens); review queue empty-with-reason.
+- **W2.4** Estimated tier lit on word-page / cards (`app/word_page.py`) — separate chip,
+  never blended with attested.
 
 ## Wave 3 — surface fan-out (deferred handoffs)
 
