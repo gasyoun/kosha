@@ -14,6 +14,11 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.93.0] - 2026-07-24
+
+### Changed
+- **H1590 `/artifact-propagate`** — README P5 phase row, CLAUDE D4 head sync rule, `.ai_state` W5 done, P5 design status pointer, exit-packet metadoc. (No product code change.)
+
 ## [0.92.0] - 2026-07-24
 
 ### Added
