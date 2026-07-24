@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kosha — pilot cross-dict sense view (PWG · MW · Apte)</title>
+<style>
+:root { --ink:#222; --mut:#667; --line:#ddd; --bg:#faf9f6; --card:#fff;
+        --pwg:#0a7a2f; --mw:#1a6fb0; --apte:#a05a00; }
+* { box-sizing:border-box; }
+body { margin:0; font:15px/1.5 Georgia,'Times New Roman',serif; color:var(--ink); background:var(--bg); }
+header { background:#2b3a4a; color:#fff; padding:14px 20px; }
+header h1 { margin:0; font-size:18px; font-weight:normal; }
+header .sub { font-size:12.5px; opacity:.78; margin-top:3px; }
+main { max-width:1100px; margin:0 auto; padding:16px 20px 60px; }
+#q { width:100%; font-size:18px; padding:9px 12px; border:1px solid var(--line); border-radius:6px; font-family:inherit; }
+#hint { font-size:12.5px; color:var(--mut); margin:6px 2px 14px; }
+#matches a { display:inline-block; margin:2px 8px 2px 0; font-size:14px; font-family:Consolas,monospace; }
+.entry { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:14px 16px; margin:14px 0; }
+.hw { font-size:22px; font-family:Consolas,monospace; }
+.cols { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-top:12px; }
+@media (max-width:800px){ .cols { grid-template-columns:1fr; } }
+.col { border:1px solid var(--line); border-radius:8px; padding:10px 12px; background:#fff; }
+.col h3 { margin:0 0 8px; font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:#fff;
+  border-radius:6px; padding:3px 8px; display:inline-block; font-weight:normal; }
+.col.pwg h3 { background:var(--pwg); }
+.col.mw h3 { background:var(--mw); }
+.col.apte h3 { background:var(--apte); }
+.sense { border-top:1px solid #eee; margin-top:8px; padding-top:7px; font-size:13.5px; }
+.sid { font-family:Consolas,monospace; font-size:11.5px; color:var(--mut); margin-right:6px; }
+.null { color:var(--mut); font-style:italic; font-size:13px; }
+.loci { font-size:12px; color:var(--mut); margin-top:3px; }
+#trust { border-top:2px solid var(--line); margin-top:34px; padding-top:12px; font-size:12.5px; color:var(--mut); }
+.none { color:var(--mut); font-style:italic; }
+a { color:#1a6fb0; }
+.banner { background:#fff6e0; border:1px solid #e8d5a0; border-radius:8px; padding:8px 12px;
+  font-size:13px; margin:0 0 14px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Pilot cross-dict sense view <span style="opacity:.6">· W2 · kosha</span></h1>
+  <div class="sub">Side-by-side PWG · MW · Apte sense columns for the <b>500-headword pilot only</b>
+  (sense-reconciliation wave-2). Not a full inventory; MW order is never rewritten.</div>
+</header>
+<main>
+  <div class="banner"><b>Pilot scope.</b> Full-inventory reconciliation is deferred. Human sample / review-sheet
+  remains ~6 months out. Null Apte/MW columns are honest gaps, not errors.</div>
+  <input id="q" placeholder="Type a pilot headword (SLP1), e.g. nAgadanta …" autocomplete="off">
+  <div id="hint">Source: H1455 pilot list · PWG from sense_corpus_concordance · MW/Apte glosses from kosha.db (read-only).</div>
+  <div id="matches"></div>
+  <div id="out"></div>
+  <div id="trust">
+    <b>Trust block.</b> Pilot n = <span id="n">?</span> · build <span id="bd">?</span>.
+    Artefacts:
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/sense_crossdict_pilot.tsv">sense_crossdict_pilot.tsv</a>
+    (CSV download) ·
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/sense_pilot_headwords.tsv">sense_pilot_headwords.tsv</a> ·
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/sense_corpus_concordance.tsv">sense_corpus_concordance.tsv</a>.
+    Sibling PWG-only KWIC: <a href="./">concordance/senses/</a>. Fence: MW/kosha <code>senses</code> bytes unchanged.
+  </div>
+</main>
+<script src="data/crossdict_pilot.js"></script>
+<script>
+function esc(t){ var d=document.createElement('div'); d.textContent=t||''; return d.innerHTML; }
+function renderSenses(list, kind){
+  if(!list || !list.length) return '<p class="null">null — no '+esc(kind)+' senses for this pilot lemma in the joined store</p>';
+  return list.map(function(s){
+    var h = '<div class="sense"><span class="sid">'+esc(s.sense_id||s.sense_n||'')+'</span>'+esc(s.gloss||'');
+    if(s.loci && s.loci.length){
+      h += '<div class="loci">'+s.loci.map(function(L){
+        return esc(L.method||'')+': '+esc(L.locus||'')+(L.cite?' ('+esc(L.cite)+')':'');
+      }).join(' · ')+'</div>';
+    }
+    return h+'</div>';
+  }).join('');
+}
+function show(key){
+  var e = (window.CROSSDICT||{})[key];
+  var out = document.getElementById('out');
+  if(!e){ out.innerHTML = '<p class="none">Not in pilot: '+esc(key)+'</p>'; return; }
+  out.innerHTML = '<div class="entry"><div class="hw">'+esc(key)+
+    (e.hom?' <span style="color:var(--mut);font-size:14px">hom '+esc(e.hom)+'</span>':'')+
+    '</div><div class="cols">'+
+    '<div class="col pwg"><h3>PWG</h3>'+renderSenses(e.pwg,'PWG')+'</div>'+
+    '<div class="col mw"><h3>MW</h3>'+renderSenses(e.mw,'MW')+'</div>'+
+    '<div class="col apte"><h3>Apte (ap90)</h3>'+renderSenses(e.apte,'Apte')+'</div>'+
+    '</div></div>';
+  history.replaceState(null,'','#'+encodeURIComponent(key));
+}
+function browse(prefix){
+  var keys = Object.keys(window.CROSSDICT||{}).filter(function(k){
+    return !prefix || k.indexOf(prefix)===0;
+  }).sort();
+  var m = document.getElementById('matches');
+  m.innerHTML = keys.slice(0,80).map(function(k){
+    return '<a href="#'+esc(k)+'" data-k="'+esc(k)+'">'+esc(k)+'</a>';
+  }).join(' ');
+  m.querySelectorAll('a').forEach(function(a){
+    a.onclick=function(ev){ ev.preventDefault(); show(a.dataset.k); };
+  });
+  if(keys.length) show(keys[0]);
+  else document.getElementById('out').innerHTML='<p class="none">No pilot match for prefix.</p>';
+}
+var q = document.getElementById('q');
+q.addEventListener('change', function(){ browse(q.value.trim()); });
+q.addEventListener('keydown', function(ev){ if(ev.key==='Enter') browse(q.value.trim()); });
+if(window.CROSSDICT_STATS){
+  document.getElementById('n').textContent = window.CROSSDICT_STATS.n_pilot;
+  document.getElementById('bd').textContent = window.CROSSDICT_STATS.build_date;
+}
+if(location.hash.length>1){
+  var h = decodeURIComponent(location.hash.slice(1));
+  q.value = h; show(h);
+} else {
+  browse('nAga'); // includes nAgadanta smoke
+}
+</script>
+</body>
+</html>
