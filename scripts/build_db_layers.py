@@ -98,6 +98,8 @@ def ensure_layer_schema(con: sqlite3.Connection) -> None:
         DROP TABLE IF EXISTS mw_roots;
         DROP TABLE IF EXISTS mw_etymology;
 
+        -- PK includes provenance so H1588 estimated rows coexist with
+        -- attested WordSem-gold rows for the same (lemma, layer, sense_id).
         CREATE TABLE sense_frequency (
             lemma_slp1 TEXT NOT NULL,
             layer TEXT NOT NULL,
@@ -118,9 +120,9 @@ def ensure_layer_schema(con: sqlite3.Connection) -> None:
             top_genre TEXT,
             top_genre_share REAL,
             periods TEXT,
-            provenance TEXT,
+            provenance TEXT NOT NULL DEFAULT 'attested',
             confidence REAL,
-            PRIMARY KEY (lemma_slp1, layer, sense_id)
+            PRIMARY KEY (lemma_slp1, layer, sense_id, provenance)
         );
         CREATE INDEX sense_frequency_lemma ON sense_frequency(lemma_slp1);
         CREATE INDEX sense_frequency_layer ON sense_frequency(layer, lemma_slp1);
@@ -212,12 +214,12 @@ def load_sense_frequency(con: sqlite3.Connection, path: Path = SENSE_FREQ_TSV) -
                     r.get("top_genre") or None,
                     _float_or_none(r.get("top_genre_share")),
                     r.get("periods") or None,
-                    r.get("provenance") or None,
+                    r.get("provenance") or "attested",
                     _float_or_none(r.get("confidence")),
                 )
             )
     con.executemany(
-        "INSERT INTO sense_frequency ("
+        "INSERT OR REPLACE INTO sense_frequency ("
         "lemma_slp1, layer, sense_id, sense_gloss, count_all, sense_rank, "
         "lemma_share, n_texts, dispersion_dp, largest_text_share, count_adj, "
         "sense_rank_adj, count_bal_uniform, sense_rank_bal, count_nonsastra, "

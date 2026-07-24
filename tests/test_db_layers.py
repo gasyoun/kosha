@@ -51,7 +51,8 @@ def test_required_feeds_exist():
 
 def test_layer_tables_populated(layers_db):
     con, summary = layers_db
-    assert summary["sense_frequency"] > 50_000
+    # H1588 estimated rows raise the TSV above the pure-attested 103k floor.
+    assert summary["sense_frequency"] > 100_000
     assert summary["roots_frequency"] > 100
     assert summary["dict_corpus_coverage"] > 100_000
     for table in ("sense_frequency", "roots_frequency", "dict_corpus_coverage"):
@@ -188,9 +189,12 @@ def test_live_kosha_db_join_if_present():
             ).fetchone()[0]
             assert n == 1, f"expected lemma {slp1} in live kosha.db"
         if "sense_frequency" in tables:
+            total = con.execute("SELECT COUNT(*) FROM sense_frequency").fetchone()[0]
+            if total == 0:
+                pytest.skip("sense_frequency present but empty — run --stage layers")
             n = con.execute(
                 "SELECT COUNT(*) FROM sense_frequency WHERE lemma_slp1='Darma'"
             ).fetchone()[0]
-            assert n > 0
+            assert n > 0, "expected Darma rows after --stage layers"
     finally:
         con.close()
