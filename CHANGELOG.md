@@ -14,6 +14,11 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.84.0] - 2026-07-24
+
+### Added
+- **H1574 — Concordance-Q3 W3b: A4 public data release data-v0.3.0** ([H1574](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1574-Sonnet_kosha_w3b-paninian-concordance-data-release_24.07.26.md), Grok 4.5 grok-4.5 on Sonnet-lock override). W1a rights gate verified ([vidyut_prakriya_derivation_2026-07.md](https://github.com/gasyoun/kosha/blob/main/data/manifest/rights/vidyut_prakriya_derivation_2026-07.md) — A4 output CC BY-SA 4.0, vidyut attributed). Data statements: [panini-derivation-status](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/panini-derivation-status.meta.md), [paninian-corpus-concordance](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/paninian-corpus-concordance.meta.md), [paninian-sutra-coverage-map](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/paninian-sutra-coverage-map.meta.md). Manifest: three public rows in_release=data-v0.3.0 (W2a 401,368 + W2b 893,482 + W3a 3,983); new coverage-map row (91 datasets). Release assets: derivation_status/chains, paninian_concordance, panini_ambiguity_by_sutra, sutra_coverage_map, sutra_fire_set, datasets.json. Publish-safety GO (public repo, W1a composition, committed TSVs, no secrets/PII). DOI: pending Zenodo (human @DO).
+
 ## [0.83.0] - 2026-07-24
 
 ### Added
