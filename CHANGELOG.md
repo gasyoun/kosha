@@ -14,6 +14,9 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **Next-programme layered plan (post-A4 / post-sense-W1)** — `/ask-batch` re-batch 24-07-2026 (Grok 4.5 `grok-4.5`). Index [`docs/PLAN_KOSHA_NEXT_PROGRAMME_2026H2.md`](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_NEXT_PROGRAMME_2026H2.md) + ROADMAP / ARCHITECTURE / IMPLEMENTATION / VERIFICATION + metadoc. Waves: residual 🟡 + panini W4a/W4b → pilot cross-dict sense view → two-witness WSD (SCL cache gitignored) → P-D5 DB layers → P5 SSR static head N=11,148 + exit. Staging: [ASK_BATCH_STAGING_KOSHA_2026-07-24.md](https://github.com/gasyoun/Uprava/blob/main/ASK_BATCH_STAGING_KOSHA_2026-07-24.md).
+
 ## [0.84.0] - 2026-07-24
 
 ### Added
