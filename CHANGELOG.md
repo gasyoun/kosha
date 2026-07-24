@@ -14,6 +14,11 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.89.0] - 2026-07-24
+
+### Added
+- **H1586 close-out — D4 standing rule in root ARCHITECTURE + budget re-sample** ([H1586](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1586-Haiku_kosha_w4b-pages-budget-remeasure-a4_24.07.26.md), Grok 4.5 `grok-4.5`). VERIFICATION 4b-8: D4 static-head/SSR-tail rule recorded in [`ARCHITECTURE.md`](https://github.com/gasyoun/kosha/blob/main/ARCHITECTURE.md). Append-only W4b log row in [`docs/ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md`](https://github.com/gasyoun/kosha/blob/main/docs/ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md) §6: N re-measured still **11,148** / 95.00%; word-page sample mean **11.95 KB** → head **130.1 MiB**; projected web tier **523.3 MiB / 51.1%** of 1 GB (still under 75%/90% gates). Core W4b measure already shipped in [0.85.0](#0850---2026-07-24) / [#185](https://github.com/gasyoun/kosha/pull/185).
+
 ## [0.88.0] - 2026-07-24
 
 ### Added

@@ -1,6 +1,6 @@
 # Architecture contract — Gasuns Sanskrit Dictionary (kosha)
 
-_Created: 02-07-2026 · Last updated: 11-07-2026_
+_Created: 02-07-2026 · Last updated: 24-07-2026_
 
 The engineering contract for Phase 1, locking the four decisions M.G. took on
 02-07-2026 (A1–A4 below) on top of the product meta-decisions M1–M4
@@ -176,6 +176,26 @@ Salt equivalent, so v1 is its own contract.
   artifacts and instructions; they never touch the server.
 - **Static tier (Phase 2):** generated into `docs/` from the same DB; size
   measured against the GitHub 100 MB file limit in D5 before enabling Pages.
+
+## Standing rule — Pages static head (D4, Concordance-Q3 / H1586)
+
+> **Standing rule (D4).** Any static Pages tier in kosha ships a **head chosen by
+> measured corpus token coverage (~95%)** with the tail served by SSR at
+> `/w/{slp1}`. The head size **N is measured from the current frequency data at
+> build time**, never carried forward as a constant and never rounded to a
+> pleasing number. The build logs N, the coverage it achieves, the byte total,
+> and the resulting share of the Pages soft cap (~1 GB).
+
+**Today's re-measure (24-07-2026, H1586):** from
+[`data/frequency/lemma_frequency.tsv`](https://github.com/gasyoun/kosha/blob/main/data/frequency/lemma_frequency.tsv)
+(`count_all` > 0): **59,282** lemmas · **4,550,704** tokens → **N = 11,148** at
+**95.00%** coverage. Append-only budget log:
+[`docs/ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md`](https://github.com/gasyoun/kosha/blob/main/docs/ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md) §6
+(W4b table). Full rationale and the Zipf curve:
+[`docs/ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md`](https://github.com/gasyoun/kosha/blob/main/docs/ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md) §6
+(D4 standing rule). Do **not** overwrite the historical **~60% headroom** note for
+the card-only deployed tier (402 MB / 39% of 1,024 MB on 03-07-2026) — append
+later measurements beside it, labelled by tier and date.
 
 ## Explicitly still open (parked, with owner)
 
