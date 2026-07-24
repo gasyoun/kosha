@@ -1,11 +1,11 @@
 {
   "manifest_version": "0.1.0",
-  "generated": "2026-07-13",
+  "generated": "2026-07-24",
   "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
   "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
   "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
   "canonical_base_future": "https://samskrtam.ru/kosha/data/",
-  "interim_release": "https://github.com/gasyoun/kosha/releases/tag/data-v0.2.0",
+  "interim_release": "https://github.com/gasyoun/kosha/releases/tag/data-v0.3.0",
   "note_for_agents": "This is the ONE machine-readable list of canonical derived Sanskrit datasets across the ~85 repos. Before deriving an alignment/frequency/headword/crosswalk asset, check here. tier=public assets are downloadable from the interim_release URL; tier=restricted assets exist but are not published (rights-encumbered or unbackuped local-only) — consult their source repo; tier=intermediate is raw/working data that feeds another registered dataset — not standalone-citable, not rights-gated, just not a finished asset in its own right (excluded from the public directory page). A session that creates or changes a derived dataset MUST add/update its row here in the same pass.",
   "datasets": [
     {
@@ -1575,7 +1575,7 @@
       "id": "panini-derivation-status",
       "title": "vidyut-prakriya derivation harness over the AG bucket (A4, W2a)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.3.0",
       "release_asset": "derivation_status.tsv",
       "format": "tsv",
       "rows": 401368,
@@ -1586,30 +1586,32 @@
       "builder": "scripts/build_panini_derivations.py (concordance_core.py, H1368 / Concordance-Q3 W2a)",
       "consumers": [
         "A4 sūtra->corpus inversion (W2b DONE, H1390 — data/concordance/paninian_concordance.tsv)",
-        "W3a sūtra-coverage map (dark-sūtra classification, not yet built)"
+        "W3a sūtra-coverage map (H1468 DONE — data/concordance/sutra_coverage_map.tsv)",
+        "data-v0.3.0 release asset"
       ],
-      "notes": "Full run over all 401,368 AG rows (883.8s, 454.1 forms/s, cached per-lemma vidyut derivation — 90,690 distinct lemmas). Status distribution: ok 72,764 (18.13%) · no-derivation 237,447 (59.16%) · ambiguous 86,857 (21.64%) · engine-error 4,300 (1.07%) — all four buckets always reported (2a-4), never only successes. 2,815 distinct sūtra chains recorded; chain length min 6 / median 12 / max 37 among ok rows. R-C3: engine-error is dominated by the verbal dhātu+gaṇa+lakāra mapping (new work here; the nominal mapping is E1-proven). R-C4: 256 ok rows are verb-derived AND carry tense_caveat=1 (DCS Tense=Past conflates aorist/perfect) — sūtra attribution for tense-specific rules on those rows may be off, flagged not silently counted. Full detail + 30-example sampled human-verification section: data/concordance/DERIVATION_HARNESS_BUILD_REPORT.md. Deliberately excludes W2b's sūtra->form inversion and the /concordance/panini/ web page — out of scope for this handoff.",
-      "data_statement": "https://github.com/gasyoun/kosha/blob/main/data/concordance/DERIVATION_HARNESS_BUILD_REPORT.md"
+      "notes": "Full run over all 401,368 AG rows (883.8s, 454.1 forms/s, cached per-lemma vidyut derivation — 90,690 distinct lemmas). Status distribution: ok 72,764 (18.13%) · no-derivation 237,447 (59.16%) · ambiguous 86,857 (21.64%) · engine-error 4,300 (1.07%) — all four buckets always reported (2a-4), never only successes. 2,815 distinct sūtra chains recorded; chain length min 6 / median 12 / max 37 among ok rows. R-C3: engine-error is dominated by the verbal dhātu+gaṇa+lakāra mapping (new work here; the nominal mapping is E1-proven). R-C4: 256 ok rows are verb-derived AND carry tense_caveat=1 (DCS Tense=Past conflates aorist/perfect) — sūtra attribution for tense-specific rules on those rows may be off, flagged not silently counted. Full detail + 30-example sampled human-verification section: data/concordance/DERIVATION_HARNESS_BUILD_REPORT.md. Deliberately excludes W2b's sūtra->form inversion and the /concordance/panini/ web page — out of scope for this handoff. Released data-v0.3.0 (H1574 / W3b).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/panini-derivation-status.meta.md"
     },
     {
       "id": "paninian-corpus-concordance",
       "title": "Pāṇinian sūtra ↔ DCS corpus concordance (A4, W2b)",
       "tier": "public",
-      "in_release": "unreleased",
+      "in_release": "data-v0.3.0",
       "release_asset": "paninian_concordance.tsv",
       "format": "tsv",
       "rows": 893482,
-      "size_bytes": 85974404,
+      "size_bytes": 86867887,
       "keying": "Inverts W2a's derivation_status.tsv (ok-status forms only — see notes) into one row per (sūtra, form, locus) triple: for every ok-status AG-bucket form, walks its ordered Ashtadhyayi-only sūtra chain (chain_id -> derivation_chains.tsv) and emits a concordance row per chain step. Canonical concordance-core schema (anchor_type=panini-sutra, anchor_id=sutra:<a.p.n>, anchor_key_slp1 empty, target_locus=dcs:<sent_id>[_<sub>], source_dataset=dcs, match_method in {exact,floor}, confidence from TIER_CONFIDENCE, evidence_count=1) + form_key_slp1, dcs_text, chain_position, chain_length, chain_id, derivation_status, tense_caveat.",
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "data/concordance/paninian_concordance.tsv",
       "builder": "scripts/build_panini_concordance.py (concordance_core.py, H1390 / Concordance-Q3 W2b)",
       "consumers": [
         "concordance/panini/index.html web viewer (kwic_<adhyaya>.js shards)",
-        "W3a sūtra-coverage map (dark-sūtra classification, not yet built)"
+        "W3a sūtra-coverage map (H1468 DONE)",
+        "data-v0.3.0 release asset"
       ],
-      "notes": "893,482 rows from 72,764 ok-status forms across 221 distinct sūtras (of ~4,000 in the Aṣṭādhyāyī) spanning 7/8 adhyāyas (adhyāya 5: no exemplar in this build). Chain length (Ashtadhyayi-only steps) min 6 / median 12 / max 36. Per-sūtra ambiguity rate (2b-6, lemma-attributed — data/concordance/panini_ambiguity_by_sutra.tsv, 221 rows): median 27.1%, range 0.0-69.2%. tense_caveat=1 on 466 of the inverted ok forms, propagated verbatim (2b-5). PARKED GAP (documented, not hidden): exit-check 2b-1 asks for `ok`/`ambiguous` forms both inverted; W2a's shipped derivation_status.tsv carries an EMPTY chain_id for all 86,857 ambiguous rows (verified exhaustively — 0 exceptions), diverging from ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md §4's stated 'records all of them' design. Re-deriving with vidyut to recover ambiguous-form chains was out of scope (W2a's output is this build's entire input per H1390). Follow-up: extend build_panini_derivations.py to record the tied candidate chain_id set for ambiguous rows so a future W2b re-run can invert them too. 165 of 52,025 derivation_chains.tsv steps (Dhatupatha/Varttika/Kaumudi, 0.32%) are excluded from the inversion — not Pāṇini's own Ashtadhyayi sūtras, don't fit anchor_id's regex. Full detail: data/concordance/PANINI_BUILD_REPORT.md.",
-      "data_statement": "https://github.com/gasyoun/kosha/blob/main/data/concordance/PANINI_BUILD_REPORT.md"
+      "notes": "893,482 rows from 72,764 ok-status forms across 221 distinct sūtras (of the named 3983-sūtra vidyut enumeration (W3a)) spanning 7/8 adhyāyas (adhyāya 5: no exemplar in this build). Chain length (Ashtadhyayi-only steps) min 6 / median 12 / max 36. Per-sūtra ambiguity rate (2b-6, lemma-attributed — data/concordance/panini_ambiguity_by_sutra.tsv, 221 rows): median 27.1%, range 0.0-69.2%. tense_caveat=1 on 466 of the inverted ok forms, propagated verbatim (2b-5). PARKED GAP (documented, not hidden): exit-check 2b-1 asks for `ok`/`ambiguous` forms both inverted; W2a's shipped derivation_status.tsv carries an EMPTY chain_id for all 86,857 ambiguous rows (verified exhaustively — 0 exceptions), diverging from ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md §4's stated 'records all of them' design. Re-deriving with vidyut to recover ambiguous-form chains was out of scope (W2a's output is this build's entire input per H1390). Follow-up: extend build_panini_derivations.py to record the tied candidate chain_id set for ambiguous rows so a future W2b re-run can invert them too. 165 of 52,025 derivation_chains.tsv steps (Dhatupatha/Varttika/Kaumudi, 0.32%) are excluded from the inversion — not Pāṇini's own Ashtadhyayi sūtras, don't fit anchor_id's regex. Full detail: data/concordance/PANINI_BUILD_REPORT.md. Released data-v0.3.0 (H1574 / W3b).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/paninian-corpus-concordance.meta.md"
     },
     {
       "id": "ru-gloss-layer",
@@ -1725,6 +1727,27 @@
         "kosha-sense-frequency (H1453) — shared attestation→sense assignment, two witnesses"
       ],
       "notes": "Wave-1 of PLAN_KOSHA_SENSE_RECONCILIATION_2026H2 (H1455). The middle arrow headword→SENSE→attestation, a SIDECAR left-joined at build time — MW/kosha `senses` are byte-unchanged. Inputs consumed, never re-derived: the H1456 PWG per-sense <ls> export (RussianTranslation microstructure.py), the reused dict-corpus-concordance, DCS 2026 (CC BY 4.0), pwg_sources.py (pwgbib abbrev resolver), and (wave-1.5) the csl-atlas f8 MBh vulgate crosswalk (mbh_vulgate_concordance.csv, H610/H761 — PWG-continuous → Nīlakaṇṭha-vulgate, all 18 parvans). Correction (wave-1.5): PWG↔MBh locus resolution is NOT infeasible — PWG-continuous → vulgate is solved and consumed (96% of pilot MBh <ls> resolved to a vulgate address). The residual is narrower: DCS's Mahābhārata is the BORI critical edition whose numbering drifts ~±1 adhyāya from the vulgate, so a DCS Mahābhārata match is an adhyāya-level corroboration (locus-mbh), not exact identity; texts DCS lacks (Pañcatantra, Kathāsaritsāgara) still cannot be DCS-matched. The load-bearing sense↔passage witness remains PWG's own <ls>, now carrying resolved vulgate addresses. Rights: all rows public (PWG <ls> = pre-1900 editions; DCS = CC BY 4.0); the evidence-only class is wired but unused in wave-1 (no modern-copyright gloss consumed). Build report: data/concordance/SENSE_CONCORDANCE_BUILD_REPORT.md."
+    },
+    {
+      "id": "paninian-sutra-coverage-map",
+      "title": "Aṣṭādhyāyī sūtra-coverage / dark-class map (A4, W3a)",
+      "tier": "public",
+      "in_release": "data-v0.3.0",
+      "release_asset": "sutra_coverage_map.tsv",
+      "format": "tsv",
+      "rows": 3983,
+      "size_bytes": 1062544,
+      "keying": "One row per sūtra in the named vidyut-0.4.0 Ashtadhyayi enumeration (Data.load_sutras / sutrapatha.tsv, n=3983 exact). Columns: sutra_id, sutra_text_slp1, exemplar_forms, exemplar_loci, texts, mean_chain_position, status in {lit, dark-unattested, dark-out-of-scope, dark-engine-gap}, scope_justification. Ratio 221:55:3707:0 — three dark classes never collapsed (ARCHITECTURE §5, VERIFICATION 3a-3/3a-8).",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/concordance/sutra_coverage_map.tsv",
+      "builder": "scripts/build_sutra_coverage_map.py (H1468 / Concordance-Q3 W3a)",
+      "consumers": [
+        "A4 exit check / research reports",
+        "concordance/panini coverage view (W4a)",
+        "data-v0.3.0 release asset"
+      ],
+      "notes": "Fire-set harvested over 91,027 AG lemmas (276 codes that fire). dark-engine-gap=0 not measurable from W2a empty engine-error chains (reported empty, not inflated). Full report: data/concordance/SUTRA_COVERAGE_BUILD_REPORT.md. Released data-v0.3.0 (H1574 / W3b).",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/paninian-sutra-coverage-map.meta.md"
     }
   ]
 }
