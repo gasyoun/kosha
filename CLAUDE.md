@@ -30,6 +30,7 @@ python scripts/build_crosswalk.py             # build the union headword crosswa
 python scripts/build_entries.py               # build rendered entries
 python scripts/build_forms.py                 # build inflected-form index
 python scripts/build_static_cache.py          # generate the P2 static-cache JSON (Pages deploy input)
+python scripts/build_word_pages.py --coverage 0.95 --force  # P5 D4 static head (H1590); gitignored docs/w/ + docs/browse/
 python scripts/build_docs_site.py             # build the docs-site (ZettelkastenWiki Wave-3 pilot)
 python scripts/gen_golden.py                  # regenerate golden render fixtures for test_render_golden.py
 python scripts/measure_d5.py                  # D5 latency/perf measurement run
@@ -76,6 +77,15 @@ No `.github/workflows/` exist yet — there is no CI in this repo currently.
 - **Data build order matters**: crosswalk → entries → forms → db → static
   cache, per `scripts/`' naming; running a later stage against a stale earlier
   one produces silently wrong output, not an error.
+- **P5 static head (D4 / H1590):** after cards exist, regenerate word pages with
+  `python scripts/build_word_pages.py --coverage 0.95` (or `--head N` after
+  re-measure). N is measured at build time from `lemma_frequency.tsv` — never
+  hardcode 11,148 without re-measuring. Output `docs/w/` + `docs/browse/` is
+  **gitignored** (like cards); MG deploys out-of-band. Exit packet / live-check
+  residual:
+  [docs/P5_WORD_PAGE_EXIT_PACKET.md](docs/P5_WORD_PAGE_EXIT_PACKET.md). Changing
+  the head selector or page template ⇒ re-run head build + refresh the budget
+  log row in `docs/ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md` §6 in the same PR.
 - Windows encoding convention (`sys.stdout.reconfigure(encoding='utf-8')`,
   `sys.stderr.reconfigure(...)`) is already applied in `app/main.py` — follow
   it in any new script per the org-wide `../CLAUDE.md` convention.
