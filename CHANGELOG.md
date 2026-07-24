@@ -14,8 +14,11 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.85.0] - 2026-07-24
+
 ### Added
-- **Next-programme layered plan (post-A4 / post-sense-W1)** — `/ask-batch` re-batch 24-07-2026 (Grok 4.5 `grok-4.5`). Index [`docs/PLAN_KOSHA_NEXT_PROGRAMME_2026H2.md`](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_NEXT_PROGRAMME_2026H2.md) + ROADMAP / ARCHITECTURE / IMPLEMENTATION / VERIFICATION + metadoc. Waves: residual 🟡 + panini W4a/W4b → pilot cross-dict sense view → two-witness WSD (SCL cache gitignored) → P-D5 DB layers → P5 SSR static head N=11,148 + exit. Staging: [ASK_BATCH_STAGING_KOSHA_2026-07-24.md](https://github.com/gasyoun/Uprava/blob/main/ASK_BATCH_STAGING_KOSHA_2026-07-24.md).
+- **H1585 — W4a panini coverage + chain honesty surface** ([H1585](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1585-Sonnet_kosha_w4a-panini-surface-chain-trust-block_24.07.26.md), Grok 4.5 `grok-4.5`). [`concordance/panini/index.html`](https://github.com/gasyoun/kosha/blob/main/concordance/panini/index.html) gains a Coverage-map tab over the full 3983-sūtra enumeration with four statuses styled distinctly (`lit` · `dark-unattested` · `dark-out-of-scope` · `dark-engine-gap` — never collapsed). New builder [`scripts/build_panini_coverage_shards.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_panini_coverage_shards.py) → `concordance/panini/data/coverage.js`. Trust block lists coverage map + CSV download + W3a report (n=3983). Lit KWIC chain view retained. Tests: `tests/test_panini_coverage_surface.py`.
+- **H1586 — W4b Pages budget re-measure with A4** ([H1586](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1586-Haiku_kosha_w4b-pages-budget-remeasure-a4_24.07.26.md), Grok 4.5 `grok-4.5`). Append-only row in [`docs/ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md`](https://github.com/gasyoun/kosha/blob/main/docs/ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md) §6: cards 289.7 + concordance 68.4 (panini 0.84) + reading 22.4 + docs/js 13.3 + static-head projection 105.6 = **499.4 MB / 48.8%** of 1 GB soft cap. D4 head N=11,148 stands.
 
 ## [0.84.0] - 2026-07-24
 
