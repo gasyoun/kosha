@@ -14,6 +14,11 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.90.0] - 2026-07-24
+
+### Added
+- **H1588 — full two-witness WSD for sense-frequency (Wave 3)** ([H1588](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1588-Opus_kosha_sense-frequency-two-witness-wsd_24.07.26.md), Grok 4.5 `grok-4.5` on Opus-lock override). Extends the WordSem-gold sidecar past the 9.3% tagged slice under the plan gate (≥70% held-out). **SCL witness fail-closed** (H057 rights unresolved; gitignored `data/frequency/.cache/`; zero body text). **Single-witness MFS arm** on untagged DCS tokens: held-out WordSem→MW accuracy **83.96%** (60,362/71,892). Fusion promotes **13,709** `provenance=estimated` MW rows (**4,506,310** tokens); review queue empty-with-reason. Cards light a separate estimated chip (never blended). Scripts: [`wsd_core.py`](https://github.com/gasyoun/kosha/blob/main/scripts/wsd_core.py), [`scl_sense_witness.py`](https://github.com/gasyoun/kosha/blob/main/scripts/scl_sense_witness.py), [`wsd_llm_arm.py`](https://github.com/gasyoun/kosha/blob/main/scripts/wsd_llm_arm.py), [`wsd_fuse.py`](https://github.com/gasyoun/kosha/blob/main/scripts/wsd_fuse.py). Report: [`wsd_fusion_report.md`](https://github.com/gasyoun/kosha/blob/main/data/frequency/wsd_fusion_report.md). Tests: `tests/test_wsd_two_witness.py` (7 green).
+
 ## [0.89.0] - 2026-07-24
 
 ### Added

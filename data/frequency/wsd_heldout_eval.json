@@ -1,0 +1,76 @@
+{
+  "handoff": "H1588",
+  "model": "Grok 4.5 (grok-4.5)",
+  "ts": "2026-07-24T15:35:33Z",
+  "method": "mfs",
+  "degradation": "single-witness MFS (SCL fail-closed; LLM optional path not invoked)",
+  "eval": {
+    "method": "mfs",
+    "n_raw_wordsem_scanned": 531747,
+    "n_mapped_exact_overlap": 363694,
+    "n_test_scored": 71892,
+    "n_test_skipped_no_train": 1136,
+    "n_test_monosemous": 19197,
+    "n_correct": 60362,
+    "accuracy": 0.839621,
+    "gate_threshold": 0.7,
+    "gate_pass": true,
+    "top_confusions": [
+      {
+        "gold": "rasa#1",
+        "pred": "rasa#11",
+        "n": 185
+      },
+      {
+        "gold": "kf#38",
+        "pred": "kf#49",
+        "n": 119
+      },
+      {
+        "gold": "gam#18",
+        "pred": "gam#3",
+        "n": 80
+      },
+      {
+        "gold": "jan#13",
+        "pred": "jan#8",
+        "n": 77
+      },
+      {
+        "gold": "dA#22",
+        "pred": "dA#13",
+        "n": 72
+      },
+      {
+        "gold": "pattra#5",
+        "pred": "pattra#10",
+        "n": 60
+      },
+      {
+        "gold": "BU#14",
+        "pred": "BU#3",
+        "n": 60
+      },
+      {
+        "gold": "rasa#28",
+        "pred": "rasa#11",
+        "n": 58
+      },
+      {
+        "gold": "as#3",
+        "pred": "as#11",
+        "n": 58
+      },
+      {
+        "gold": "api#10",
+        "pred": "api#4",
+        "n": 57
+      }
+    ]
+  },
+  "untagged": {
+    "lemmas": 13709,
+    "tokens_estimated": 4506310
+  },
+  "elapsed_s": 101.46
+}
