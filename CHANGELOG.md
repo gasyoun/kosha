@@ -14,6 +14,11 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.87.0] - 2026-07-24
+
+### Added
+- **H1587 — pilot cross-dict sense view (W2)** ([H1587](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1587-Opus_kosha_sense-recon-pilot-crossdict-view_24.07.26.md), Grok 4.5 `grok-4.5`). Side-by-side PWG · MW · Apte columns for the **500-headword pilot only**: builder [`scripts/build_sense_crossdict_pilot.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_sense_crossdict_pilot.py) → [`sense_crossdict_pilot.tsv`](https://github.com/gasyoun/kosha/blob/main/data/concordance/sense_crossdict_pilot.tsv) (7,359 rows) + [`concordance/senses/crossdict.html`](https://github.com/gasyoun/kosha/blob/main/concordance/senses/crossdict.html). MW 497/500 · Apte 273/500 (honest nulls). `nAgadanta` PWG 1a/1b present. Fence: no MW sense bytes rewritten. Manifest `sense-crossdict-pilot`.
+
 ## [0.86.0] - 2026-07-24
 
 ### Added
