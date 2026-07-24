@@ -14,6 +14,11 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.91.0] - 2026-07-24
+
+### Added
+- **H1590 — P5 SSR long-tail + D4 static head N=11,148 + exit packet** ([H1590](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1590-Opus_kosha_p5-ssr-static-head-exit-packet_24.07.26.md), Grok 4.5 `grok-4.5` on Opus-lock override). [`scripts/build_word_pages.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_word_pages.py) gains `--coverage` / `--head` (measure N from `lemma_frequency.tsv` at build time; default deploy path `--coverage 0.95`). Full head build: **N=11,148 / 95.00%** → **10,370** pages (778 head lemmas without cards → SSR), **184.9 MB** @ mean **17.4 KB/page**, **18.1%** of 1 GB soft cap; projected web tier **578.1 MB / 56.5%**. SSR byte-parity **4/4** green (`GET /w/{slp1}`). Exit packet [`docs/P5_WORD_PAGE_EXIT_PACKET.md`](https://github.com/gasyoun/kosha/blob/main/docs/P5_WORD_PAGE_EXIT_PACKET.md) with honest ⛔ blocked live checks (Lighthouse · Gītā walkthrough · MG staging). Operator note in pipeline runbook; W4b budget log append-only W5 row. Tests: `tests/test_build_word_pages_head.py`.
+
 ## [0.90.0] - 2026-07-24
 
 ### Added
