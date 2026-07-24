@@ -38,7 +38,7 @@
     "four_views": "count_all (in-genre, right for a rasaśāstra reader) · count_adj (dispersion-adjusted) · count_bal_uniform (genre-balanced, \"Sanskrit generally\") · count_nonsastra (\"Sanskrit non-śāstra\"). None silently replaces another — the reader picks the population.",
     "method_note": "post-stratification / inverse-genre-size weighting (Little 1993 JASA; Biber 1993). Predominant-sense domain-relativity: McCarthy/Koeling ACL 2004 P04-1036, HLT-EMNLP 2005 H05-1053. Wave-3 lever: Chan & Ng EM sense-prior re-estimation (COLING-ACL 2006 P06-1012)."
   },
-  "rows": 103079,
+  "rows": 116788,
   "rows_by_layer": {
     "wn": 57143,
     "mw": 23088,
@@ -131,5 +131,15 @@
     "periods vector is EMPTY in wave-1: no clean per-token text→DCS-period map ships in the CoNLL-U release; the wave-2 path is conllu/lookup/chapter-info.xml `era`.",
     "Upstream UD Tense=Past conflates aorist/perfect (inherited lemma_frequency caveat).",
     "Layer-3 = WordNet supersense (native to the WordSem id-space), not the SIL-semdom A58 crosswalk (keyed by Amarakosha eid / Princeton WN — different id-space). SIL-semdom projection deferred to a follow-on."
-  ]
+  ],
+  "wsd_wave3_h1588": {
+    "model": "Grok 4.5 (grok-4.5)",
+    "gate_pass": true,
+    "accuracy": 0.839621,
+    "degradation": "single-witness MFS (SCL cache empty / H057 rights fail-closed)",
+    "estimated_rows": 13709,
+    "estimated_tokens": 4506310,
+    "review_rows": 0,
+    "ts": "2026-07-24T15:35:55Z"
+  }
 }
