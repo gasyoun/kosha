@@ -54,3 +54,7 @@ data/concordance/pwg_sense_loci.tsv
 
 # H1455 wave-1.5 MBh crosswalk (consumed from csl-atlas f8_mbh_resolve.py / mbh_citation_census; regenerable)
 data/concordance/mbh_vulgate_concordance.csv
+
+# H1588 W3a — SCL Reading-Aid minimal sense-label cache (rights-gated, H057).
+# Labels only; never commit SCL/GPL body text, HTML, or gloss dumps (ruling N4).
+data/frequency/.cache/
