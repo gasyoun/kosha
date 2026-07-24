@@ -29,10 +29,15 @@
     background:var(--card);color:var(--fg);cursor:pointer;font-size:.9rem}
   .pk[aria-selected="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
   .pk[disabled]{opacity:.5;cursor:not-allowed}
-  .langtoggle{font-size:.85rem;color:var(--muted);margin:.1rem 0 .5rem}
-  .lg{border:1px solid var(--line);background:var(--card);color:var(--fg);padding:.2rem .7rem;cursor:pointer;font-size:.85rem}
-  .lg:first-of-type{border-radius:.4rem 0 0 .4rem} .lg:last-of-type{border-radius:0 .4rem .4rem 0;border-left:0}
-  .lg.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .langtoggle,.modetoggle{font-size:.85rem;color:var(--muted);margin:.1rem 0 .5rem}
+  .lg,.md{border:1px solid var(--line);background:var(--card);color:var(--fg);padding:.2rem .7rem;cursor:pointer;font-size:.85rem}
+  .lg:first-of-type,.md:first-of-type{border-radius:.4rem 0 0 .4rem}
+  .lg:last-of-type,.md:last-of-type{border-radius:0 .4rem .4rem 0;border-left:0}
+  .lg.on,.md.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .prose{margin:.45rem 0 .2rem;padding:.55rem .7rem;border-left:3px solid var(--accent);
+    background:var(--chip);border-radius:0 .4rem .4rem 0;font-size:.95rem;line-height:1.55;color:var(--fg)}
+  .prose .plabel{display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.04em;
+    color:var(--muted);margin:0 0 .25rem}
   .sent{border-top:1px solid var(--line);padding:1rem 0 .4rem}
   .locus{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
   .deva{font-size:1.3rem;margin:.25rem 0 .1rem;color:var(--fg)}
@@ -62,6 +67,9 @@
     <p class="stats" id="stats"></p>
     <div class="langtoggle" id="langtoggle" style="display:none">gloss:
       <button class="lg on" id="lang-en">English</button><button class="lg" id="lang-ru">Русский</button>
+    </div>
+    <div class="modetoggle" id="modetoggle" style="display:none" title="Gītā only — interlinear paraphrase from Gita.xlsm Prose sheet (H1493)">view:
+      <button class="md on" id="mode-words" type="button">Word-by-word</button><button class="md" id="mode-prose" type="button">Prose</button>
     </div>
     <div class="picker" id="picker" role="tablist"></div>
     <p class="sub"><b>Subhāṣita (beginner):</b> <a class="src" href="subhashita/">graded
@@ -109,12 +117,16 @@
 <script src="data/gita-16.js"></script>
 <script src="data/gita-17.js"></script>
 <script src="data/gita-18.js"></script>
+<script src="data/gita_prose.js"></script>
 <script>
 (function(){
   var DATA = window.READING_DATA || {};
+  var PROSE = window.GITA_PROSE || {};
   // W-RU-a (H1278): default the gloss language to Russian when the browser locale is
   // Russian; the toggle still lets either audience switch. Falls back to English.
   var lang = /^ru\b/i.test(navigator.language || navigator.userLanguage || "") ? "ru" : "en";
+  // H1493: word-by-word (default) vs interlinear prose paraphrase for Gītā packs.
+  var mode = "words";
   var current = null;
   function sortkey(s){
     if(s.indexOf("nala")===0) return [0, parseInt(s.split("-")[1])||0];
@@ -135,12 +147,31 @@
   function esc(s){return (s==null?"":String(s)).replace(/[&<>"]/g,function(c){
     return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
 
+  function verseKey(s){
+    // "Bhagavadgītā 1.1" / sentence.n already normalized "1.1"
+    if(s.n) return String(s.n);
+    var m = String(s.locus||"").match(/(\d+\.\d+)\s*$/);
+    return m ? m[1] : "";
+  }
+  function proseFor(s){
+    var k = verseKey(s);
+    return (k && PROSE[k]) ? PROSE[k] : "";
+  }
+  function packHasProse(d){
+    if(!d || String(d.slug||"").indexOf("gita")!==0) return false;
+    return (d.sentences||[]).some(function(s){ return !!proseFor(s); });
+  }
   function render(slug){
     var d = DATA[slug];
     if(!d) return;
     current = slug;
     var hasRU = (d.sentences[0].tokens||[]).some(function(t){return t.gloss_ru;});
     document.getElementById("langtoggle").style.display = hasRU ? "" : "none";
+    var hasProse = packHasProse(d);
+    document.getElementById("modetoggle").style.display = hasProse ? "" : "none";
+    if(!hasProse) mode = "words";
+    document.getElementById("mode-words").classList.toggle("on", mode==="words");
+    document.getElementById("mode-prose").classList.toggle("on", mode==="prose");
     document.getElementById("title").textContent = d.title;
     document.getElementById("sub").textContent = d.ref + " · " + d.text_name + " · " + d.source;
     var st = d.stats;
@@ -164,7 +195,22 @@
         var v=gr[k]; if(v && !seen[v]){ seen[v]=1; parts.push(v); } });
       return parts.join(" · ");
     }
+    var seenProse = {}; // avoid repeating range blocks for every verse in 1.4-6
     var pas = d.sentences.map(function(s){
+      var head = s.deva
+        ? '<div class="deva">'+esc(s.deva)+'</div><div class="iast">'+esc(s.text)+'</div>'
+        : '<div class="deva">'+esc(s.text)+'</div>';
+      var ptxt = proseFor(s);
+      var pblock = "";
+      if(ptxt && !seenProse[ptxt]){
+        seenProse[ptxt] = 1;
+        pblock = '<div class="prose"><span class="plabel">Interlinear prose</span>'+esc(ptxt)+'</div>';
+      }
+      if(mode === "prose"){
+        return '<div class="sent"><div class="locus">'+esc(s.locus)+'</div>'+
+               head+(pblock || '<div class="prose"><span class="plabel">Interlinear prose</span><em>no prose for this verse</em></div>')+
+               '</div>';
+      }
       var toks = s.tokens.map(function(t){
         var g = (lang==="ru" && t.gloss_ru) ? ruStr(t.gloss_ru) : t.gloss;
         var meta = esc(t.lemma) + (t.morph? " · "+esc(t.morph):"") + (g? " · "+esc(g):"")
@@ -176,9 +222,6 @@
         return '<span class="tok un" title="'+meta+' (no card)">'+esc(t.form)+
                '<small>'+esc(t.lemma)+'</small></span>';
       }).join("");
-      var head = s.deva
-        ? '<div class="deva">'+esc(s.deva)+'</div><div class="iast">'+esc(s.text)+'</div>'
-        : '<div class="deva">'+esc(s.text)+'</div>';
       return '<div class="sent"><div class="locus">'+esc(s.locus)+'</div>'+
              head+'<div class="toks">'+toks+'</div></div>';
     }).join("");
@@ -209,6 +252,15 @@
   // Reflect the locale-derived default in the toggle before first render.
   document.getElementById("lang-en").classList.toggle("on", lang==="en");
   document.getElementById("lang-ru").classList.toggle("on", lang==="ru");
+
+  function setMode(m){
+    mode = m;
+    document.getElementById("mode-words").classList.toggle("on", m==="words");
+    document.getElementById("mode-prose").classList.toggle("on", m==="prose");
+    if(current) render(current);
+  }
+  document.getElementById("mode-words").onclick = function(){ setMode("words"); };
+  document.getElementById("mode-prose").onclick = function(){ setMode("prose"); };
 
   var first = (location.hash||"").replace("#","");
   if(!DATA[first]) first = PACKS.find(function(p){return DATA[p.slug];}).slug;
