@@ -6,27 +6,41 @@
 <title>kosha — Pāṇinian sūtra ↔ corpus concordance (A4)</title>
 <style>
 :root { --ink:#222; --mut:#667; --line:#ddd; --bg:#faf9f6; --card:#fff;
-        --exact:#1a6fb0; --floor:#a05a00; --amb:#a02020; --lit:#0a7a2f; }
+        --exact:#1a6fb0; --floor:#a05a00; --amb:#a02020;
+        --lit:#0a7a2f; --du:#6b3fa0; --do:#555e6e; --deg:#a02020; }
 * { box-sizing:border-box; }
 body { margin:0; font:15px/1.5 Georgia,'Times New Roman',serif; color:var(--ink); background:var(--bg); }
 header { background:#2b3a4a; color:#fff; padding:14px 20px; }
 header h1 { margin:0; font-size:18px; font-weight:normal; }
 header .sub { font-size:12.5px; opacity:.75; margin-top:3px; }
-main { max-width:920px; margin:0 auto; padding:16px 20px 60px; }
+main { max-width:960px; margin:0 auto; padding:16px 20px 60px; }
+.tabs { display:flex; gap:8px; margin:0 0 14px; flex-wrap:wrap; }
+.tabs button { font-size:13.5px; padding:6px 14px; border:1px solid var(--line);
+  border-radius:16px; background:var(--card); cursor:pointer; font-family:inherit; }
+.tabs button.active { background:#2b3a4a; color:#fff; border-color:#2b3a4a; }
 #q { width:100%; font-size:18px; padding:9px 12px; border:1px solid var(--line); border-radius:6px;
      font-family:inherit; }
 #hint { font-size:12.5px; color:var(--mut); margin:6px 2px 14px; }
 #adhyayas { margin:8px 0 16px; }
-#adhyayas button { font-size:13.5px; padding:5px 12px; margin:0 6px 6px 0; border:1px solid var(--line);
+#adhyayas button, .filter-row button { font-size:13px; padding:5px 12px; margin:0 6px 6px 0; border:1px solid var(--line);
      border-radius:14px; background:var(--card); cursor:pointer; font-family:inherit; }
-#adhyayas button.active { background:#2b3a4a; color:#fff; border-color:#2b3a4a; }
+#adhyayas button.active, .filter-row button.active { background:#2b3a4a; color:#fff; border-color:#2b3a4a; }
+.filter-row { margin:4px 0 12px; }
+.filter-row button.st-lit.active { background:var(--lit); border-color:var(--lit); }
+.filter-row button.st-dark-unattested.active { background:var(--du); border-color:var(--du); }
+.filter-row button.st-dark-out-of-scope.active { background:var(--do); border-color:var(--do); }
+.filter-row button.st-dark-engine-gap.active { background:var(--deg); border-color:var(--deg); }
 #matches { margin:8px 0; }
-#matches a { display:inline-block; margin:2px 8px 2px 0; font-size:14px; font-family:Consolas,monospace; }
+#matches a { display:inline-block; margin:2px 8px 2px 0; font-size:13.5px; font-family:Consolas,monospace; }
 .entry { background:var(--card); border:1px solid var(--line); border-radius:8px;
          padding:14px 18px; margin:14px 0; }
 .hw { font-size:22px; font-family:Consolas,monospace; }
-.hw .status { font-size:11px; color:#fff; background:var(--lit); border-radius:8px; padding:1px 8px;
+.badge { font-size:11px; color:#fff; border-radius:8px; padding:1px 8px;
      margin-left:9px; vertical-align:middle; }
+.badge-lit { background:var(--lit); }
+.badge-dark-unattested { background:var(--du); }
+.badge-dark-out-of-scope { background:var(--do); }
+.badge-dark-engine-gap { background:var(--deg); }
 .stats { margin:6px 0 2px; font-size:13px; color:var(--mut); }
 .stats b { color:var(--ink); }
 .amb-bar { display:inline-block; width:120px; height:8px; background:#eee; border-radius:4px;
@@ -42,61 +56,104 @@ main { max-width:920px; margin:0 auto; padding:16px 20px 60px; }
 .chain.open { display:block; }
 .chain ol { margin:4px 0; padding-left:22px; }
 .chain li { font-family:Consolas,monospace; }
+#legend { font-size:12.5px; color:var(--mut); margin:0 0 12px; line-height:1.7; }
+#legend span { color:#fff; border-radius:6px; padding:1px 7px; font-size:11px; margin-right:4px; }
+#cov-summary { font-size:13.5px; margin:0 0 12px; }
+#cov-list { font-size:13px; max-height:420px; overflow:auto; border:1px solid var(--line);
+  border-radius:8px; background:var(--card); }
+#cov-list table { width:100%; border-collapse:collapse; }
+#cov-list th, #cov-list td { text-align:left; padding:5px 8px; border-bottom:1px solid #eee;
+  font-family:Consolas,monospace; font-size:12.5px; }
+#cov-list th { position:sticky; top:0; background:#f0efe9; font-family:Georgia,serif; font-weight:normal; color:var(--mut); }
+#cov-list tr:hover { background:#f6f5f0; cursor:pointer; }
 #trust { border-top:2px solid var(--line); margin-top:34px; padding-top:12px;
          font-size:12.5px; color:var(--mut); }
 #trust table { border-collapse:collapse; margin:6px 0; }
 #trust td, #trust th { border:1px solid var(--line); padding:2px 9px; font-size:12px; }
 .none { color:var(--mut); font-style:italic; }
 a { color:#1a6fb0; }
+.panel { display:none; }
+.panel.active { display:block; }
 </style>
 </head>
 <body>
 <header>
   <h1>Pāṇinian sūtra ↔ corpus concordance <span style="opacity:.6">· A4 · kosha concordance program</span></h1>
   <div class="sub">Every DCS-attested form's Aṣṭādhyāyī derivation, inverted to sūtra → attested exemplars.
-  221 sūtras with corpus exemplars · 893,482 (sūtra, form, locus) rows · 72,764 uniquely-derived forms.</div>
+  Coverage map over the full 3983-sūtra Ashtadhyayi enumeration (W3a) · lit KWIC from W2b.</div>
 </header>
 <main>
-  <input id="q" placeholder="Type a sūtra code (e.g. 1.2.45) or an adhyāya number (1–8) …" autocomplete="off">
-  <div id="hint">Click an adhyāya to browse its sūtras, or type a full sūtra code to jump straight to it.
-  Only sūtras with ≥1 corpus exemplar appear here (the "lit" class) — the full dark/lit/gap
-  sūtra-coverage map is <b>W3a, not yet built</b>; this page previews the lit side only.</div>
-  <div id="adhyayas"></div>
-  <div id="matches"></div>
-  <div id="out"></div>
+  <div class="tabs" id="tabs">
+    <button type="button" data-mode="coverage" class="active">Coverage map</button>
+    <button type="button" data-mode="kwic">Lit KWIC</button>
+  </div>
+
+  <div id="panel-coverage" class="panel active">
+    <div id="hint">Full sūtra-coverage map (W3a/H1468). Four statuses are <b>never collapsed</b> into one
+    "dark" bucket: <code>lit</code> · <code>dark-unattested</code> · <code>dark-out-of-scope</code> ·
+    <code>dark-engine-gap</code>. Filter by status and adhyāya; click a lit row to open its KWIC exemplars.</div>
+    <div id="legend">
+      <span class="badge-lit">lit</span> ≥1 corpus exemplar ·
+      <span class="badge-dark-unattested">dark-unattested</span> fires in engine, no AG match ·
+      <span class="badge-dark-out-of-scope">dark-out-of-scope</span> never fires on AG cells ·
+      <span class="badge-dark-engine-gap">dark-engine-gap</span> engine-error trace (may be 0)
+    </div>
+    <div id="cov-summary" class="none">Loading coverage map…</div>
+    <div class="filter-row" id="status-filters"></div>
+    <div id="adhyayas-cov"></div>
+    <div id="cov-list"></div>
+  </div>
+
+  <div id="panel-kwic" class="panel">
+    <input id="q" placeholder="Type a sūtra code (e.g. 1.2.45) or an adhyāya number (1–8) …" autocomplete="off">
+    <div id="hint-kwic" style="font-size:12.5px;color:var(--mut);margin:6px 2px 14px">
+      Lit-side KWIC only (sūtras with ≥1 corpus exemplar). Use the <b>Coverage map</b> tab for the full
+      3983-row status inventory including all three dark classes.
+    </div>
+    <div id="adhyayas"></div>
+    <div id="matches"></div>
+    <div id="out"></div>
+  </div>
 
   <div id="trust">
-    <b>Trust block.</b> Source dataset:
-    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/paninian_concordance.tsv">paninian_concordance.tsv</a>
-    (893,482 rows, built 20-07-2026 by
-    <a href="https://github.com/gasyoun/kosha/blob/main/scripts/build_panini_concordance.py">build_panini_concordance.py</a>,
-    H1390) inverting W2a's
-    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/derivation_status.tsv">derivation_status.tsv</a>
-    (vidyut-prakriya derivation harness, H1368) over the W1b AG bucket. Full build detail
-    (row counts, chain-length distribution, ambiguity rate per sūtra, caveated subtotals):
-    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/PANINI_BUILD_REPORT.md">PANINI_BUILD_REPORT.md</a>.
-    Match tiers:
+    <b>Trust block.</b>
+    <table>
+      <tr><th>artefact</th><th>n / note</th></tr>
+      <tr><td><a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/sutra_coverage_map.tsv">sutra_coverage_map.tsv</a>
+        · <a href="https://raw.githubusercontent.com/gasyoun/kosha/main/data/concordance/sutra_coverage_map.tsv" download="sutra_coverage_map.tsv">CSV download</a></td>
+        <td><b>3983</b> rows — full Ashtadhyayi enumeration (vidyut 0.4.0 <code>Source.Ashtadhyayi</code>)</td></tr>
+      <tr><td><a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/SUTRA_COVERAGE_BUILD_REPORT.md">SUTRA_COVERAGE_BUILD_REPORT.md</a></td>
+        <td>W3a build report (H1468) — lit 221 · dark-unattested 55 · dark-out-of-scope 3707 · dark-engine-gap 0</td></tr>
+      <tr><td><a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/paninian_concordance.tsv">paninian_concordance.tsv</a></td>
+        <td>893,482 (sūtra, form, locus) rows — lit KWIC source (H1390)</td></tr>
+      <tr><td><a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/derivation_status.tsv">derivation_status.tsv</a>
+        · <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/PANINI_BUILD_REPORT.md">PANINI_BUILD_REPORT.md</a></td>
+        <td>W2a ok chains inverted by <a href="https://github.com/gasyoun/kosha/blob/main/scripts/build_panini_concordance.py">build_panini_concordance.py</a></td></tr>
+    </table>
+    Match tiers (KWIC):
     <table><tr><th>tier</th><th>meaning</th></tr>
     <tr><td><span class="tier" style="background:var(--exact)">exact</span></td><td>byte-identical SLP1 (confidence 0.95)</td></tr>
     <tr><td><span class="tier" style="background:var(--floor)">floor</span></td><td>length-preserving form_key fold (confidence 0.85)</td></tr></table>
-    <b>Ambiguity rate</b> shown per sūtra is <i>lemma-attributed</i>, not per-form: among the lemmas with
-    ≥1 confirmed derivation touching this sūtra, the share of their own attested forms that could not be
-    uniquely resolved (>1 distinct chain matched). Full per-sūtra table:
-    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/panini_ambiguity_by_sutra.tsv">panini_ambiguity_by_sutra.tsv</a>.
-    Citable locus IDs are host-independent (<code>dcs:&lt;sent_id&gt;</code>). CSV fallback: the dataset TSV above.
+    Surface built W4a (H1585). Citable locus IDs are host-independent (<code>dcs:&lt;sent_id&gt;</code>).
+    Build date of the coverage shard is in <code>window.COVERAGE_STATS.build_date</code>.
   </div>
 </main>
+<script src="data/coverage.js"></script>
 <script>
 window.CONC_DATA = {};
 window.CONC_CHAINS = {};
 var ADHYAYAS = [1,2,3,4,5,6,7,8];
+var STATUSES = ["lit","dark-unattested","dark-out-of-scope","dark-engine-gap"];
 var loaded = {};
+var activeStatus = {lit:1, "dark-unattested":1, "dark-out-of-scope":0, "dark-engine-gap":1};
+var activeAdhyCov = null;
+
 function ensureShard(adhy, cb){
   if (loaded[adhy]) return cb();
   var s = document.createElement("script");
   s.src = "data/kwic_" + adhy + ".js";
   s.onload = function(){ loaded[adhy]=1; cb(); };
-  s.onerror = function(){ loaded[adhy]=1; cb(); };  // adhyaya may have 0 exemplar sutras (e.g. 5)
+  s.onerror = function(){ loaded[adhy]=1; cb(); };
   document.head.appendChild(s);
 }
 function esc(t){ var d=document.createElement("div"); d.textContent=t||""; return d.innerHTML; }
@@ -109,7 +166,7 @@ function renderChain(chainId){
 }
 function renderEntry(sutraCode, e){
   var h = '<div class="entry"><div class="hw">' + esc(sutraCode) +
-    '<span class="status">' + esc(e.status) + '</span></div>' +
+    '<span class="badge badge-lit">' + esc(e.status || "lit") + '</span></div>' +
     '<div class="stats"><b>' + e.n_forms + '</b> exemplar forms · <b>' + e.n_loci +
     '</b> distinct corpus loci · <b>' + e.n_lemmas + '</b> lemmas · ambiguity ' +
     '<span class="amb-bar"><i style="width:' + Math.round(e.ambiguity_rate*100) +
@@ -129,6 +186,112 @@ function renderEntry(sutraCode, e){
 var q = document.getElementById("q"), out = document.getElementById("out"),
     matches = document.getElementById("matches"), adhyDiv = document.getElementById("adhyayas");
 
+function setMode(mode){
+  document.querySelectorAll(".tabs button").forEach(function(b){
+    b.classList.toggle("active", b.dataset.mode === mode);
+  });
+  document.getElementById("panel-coverage").classList.toggle("active", mode === "coverage");
+  document.getElementById("panel-kwic").classList.toggle("active", mode === "kwic");
+}
+document.getElementById("tabs").querySelectorAll("button").forEach(function(b){
+  b.onclick = function(){ setMode(b.dataset.mode); };
+});
+
+/* ---------- Coverage map panel ---------- */
+function initCoverage(){
+  var stats = window.COVERAGE_STATS;
+  var map = window.COVERAGE_MAP;
+  var sum = document.getElementById("cov-summary");
+  if (!stats || !map) {
+    sum.innerHTML = '<span class="none">coverage.js missing — run <code>python scripts/build_panini_coverage_shards.py</code>.</span>';
+    return;
+  }
+  var c = stats.counts || {};
+  sum.innerHTML = '<b>n = ' + esc(String(stats.n)) + '</b> sūtras · build ' + esc(stats.build_date || "?") +
+    ' · ' + STATUSES.map(function(s){
+      return '<span class="badge badge-' + s + '">' + s + '</span> ' + (c[s] || 0);
+    }).join(' · ');
+
+  var sf = document.getElementById("status-filters");
+  sf.innerHTML = STATUSES.map(function(s){
+    return '<button type="button" class="st-' + s + (activeStatus[s]?' active':'') +
+      '" data-s="' + s + '">' + s + ' (' + (c[s]||0) + ')</button>';
+  }).join('');
+  sf.querySelectorAll("button").forEach(function(b){
+    b.onclick = function(){
+      var s = b.dataset.s;
+      activeStatus[s] = activeStatus[s] ? 0 : 1;
+      b.classList.toggle("active", !!activeStatus[s]);
+      renderCovList();
+    };
+  });
+
+  var ad = document.getElementById("adhyayas-cov");
+  ad.innerHTML = '<button type="button" data-a="all" class="active">all adhyāyas</button>' +
+    ADHYAYAS.map(function(a){ return '<button type="button" data-a="'+a+'">adhyāya '+a+'</button>'; }).join('');
+  ad.querySelectorAll("button").forEach(function(b){
+    b.onclick = function(){
+      activeAdhyCov = b.dataset.a === "all" ? null : parseInt(b.dataset.a, 10);
+      ad.querySelectorAll("button").forEach(function(x){ x.classList.remove("active"); });
+      b.classList.add("active");
+      renderCovList();
+    };
+  });
+  renderCovList();
+}
+
+function renderCovList(){
+  var map = window.COVERAGE_MAP || {};
+  var rows = [];
+  ADHYAYAS.forEach(function(a){
+    if (activeAdhyCov && activeAdhyCov !== a) return;
+    (map[String(a)] || []).forEach(function(r){
+      if (!activeStatus[r.status]) return;
+      rows.push(r);
+    });
+  });
+  // lit first by forms, then by id
+  rows.sort(function(x,y){
+    if (x.status === "lit" && y.status !== "lit") return -1;
+    if (y.status === "lit" && x.status !== "lit") return 1;
+    if ((y.forms||0) !== (x.forms||0)) return (y.forms||0) - (x.forms||0);
+    return x.id < y.id ? -1 : 1;
+  });
+  var box = document.getElementById("cov-list");
+  if (!rows.length) {
+    box.innerHTML = '<p class="none" style="padding:12px">No rows match the current status/adhyāya filters. ' +
+      'Tip: dark-out-of-scope is off by default (3707 rows) — toggle it on to browse.</p>';
+    return;
+  }
+  var lim = Math.min(rows.length, 500);
+  var html = '<table><thead><tr><th>sūtra</th><th>status</th><th>forms</th><th>loci</th><th>texts</th><th>text (SLP1)</th></tr></thead><tbody>';
+  for (var i=0; i<lim; i++){
+    var r = rows[i];
+    html += '<tr data-id="'+esc(r.id)+'" data-status="'+esc(r.status)+'">' +
+      '<td>'+esc(r.id)+'</td>' +
+      '<td><span class="badge badge-'+esc(r.status)+'">'+esc(r.status)+'</span></td>' +
+      '<td>'+(r.forms||0)+'</td><td>'+(r.loci||0)+'</td><td>'+(r.texts||0)+'</td>' +
+      '<td>'+esc(r.text||'')+'</td></tr>';
+  }
+  html += '</tbody></table>';
+  if (rows.length > lim) {
+    html += '<p class="none" style="padding:8px">Showing first '+lim+' of '+rows.length+
+      ' — narrow status/adhyāya filters to browse the rest.</p>';
+  }
+  box.innerHTML = html;
+  box.querySelectorAll("tr[data-id]").forEach(function(tr){
+    tr.onclick = function(){
+      var id = tr.dataset.id;
+      if (tr.dataset.status === "lit") {
+        setMode("kwic");
+        q.value = id;
+        lookup();
+      }
+    };
+  });
+}
+
+/* ---------- Lit KWIC panel ---------- */
 function renderAdhyayaButtons(active){
   adhyDiv.innerHTML = ADHYAYAS.map(function(a){
     return '<button data-a="' + a + '"' + (a===active?' class="active"':'') + '>adhyāya ' + a + '</button>';
@@ -148,7 +311,7 @@ function browseAdhyaya(a){
       return shard[y].n_forms - shard[x].n_forms;
     });
     if (!codes.length){
-      out.innerHTML = '<p class="none">Adhyāya ' + a + ' has no sūtras with a corpus exemplar in this build (a "dark" adhyāya for A4 — the full dark-class breakdown is W3a).</p>';
+      out.innerHTML = '<p class="none">Adhyāya ' + a + ' has no lit sūtras in this KWIC build. See the Coverage map tab for dark classes.</p>';
       return;
     }
     matches.innerHTML = codes.map(function(c){
@@ -157,14 +320,13 @@ function browseAdhyaya(a){
     matches.querySelectorAll("a").forEach(function(link){
       link.onclick = function(ev){ ev.preventDefault(); showSutra(a, link.dataset.c); };
     });
-    // auto-show the top sutra
     showSutra(a, codes[0]);
   });
 }
 
 function showSutra(a, code){
   var shard = window.CONC_DATA[String(a)] || {};
-  if (!shard[code]) { out.innerHTML = '<p class="none">Sūtra ' + esc(code) + ' not found in adhyāya ' + a + '.</p>'; return; }
+  if (!shard[code]) { out.innerHTML = '<p class="none">Sūtra ' + esc(code) + ' not found in adhyāya ' + a + ' KWIC shard.</p>'; return; }
   out.innerHTML = renderEntry(code, shard[code]);
   out.querySelectorAll(".chain-toggle").forEach(function(t){
     t.onclick = function(){
@@ -197,13 +359,18 @@ function lookup(){
 q.addEventListener("change", lookup);
 q.addEventListener("keydown", function(ev){ if (ev.key === "Enter") lookup(); });
 
+initCoverage();
+
 var hashHandled = false;
 if (location.hash.length > 1) {
   var h = decodeURIComponent(location.hash.slice(1));
   var sm2 = h.match(/^(\d+)\.(\d+)\.(\d+)$/);
-  if (sm2) { q.value = h; lookup(); hashHandled = true; }
+  if (sm2) { setMode("kwic"); q.value = h; lookup(); hashHandled = true; }
 }
-if (!hashHandled) { browseAdhyaya(1); }
+if (!hashHandled) {
+  // default = coverage map (honesty surface); KWIC still one click away
+  setMode("coverage");
+}
 </script>
 </body>
 </html>
