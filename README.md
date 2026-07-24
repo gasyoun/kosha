@@ -1,6 +1,6 @@
 # Gasuns Sanskrit Dictionary
 
-_Created: 02-07-2026 · Last updated: 13-07-2026_
+_Created: 02-07-2026 · Last updated: 24-07-2026_
 
 > **Status: pre-alpha — the lookup API + UI run locally and the public
 > dictionary URL is not deployed yet, but the data-hub tier already is live.**
@@ -136,7 +136,7 @@ scenarios it must serve:
 | **P2** Public alpha | first live URLs: static lookup on GitHub Pages + API on samskrtam.ru | **generator built** ([v0.5.0](https://github.com/gasyoun/kosha/releases/tag/v0.5.0)) — **next: MG deploy** |
 | **P3** Evidence layer | DCS frequency badges, corpus example per lemma | **done** ([v0.7.0](https://github.com/gasyoun/kosha/releases/tag/v0.7.0)) |
 | **P4** Forms & grammar | paste-anything segmentation, paradigm tables, grammar token | **Waves K1–K2 + E1 done** — nominal + verb inflection ingest, reverse-lookup cascade, inflection UI, and the vidyut⇄Cologne divergence comparison (90.5% agreement); K3 folded into K2b ([v0.9.0](https://github.com/gasyoun/kosha/releases/tag/v0.9.0)/[v0.10.0](https://github.com/gasyoun/kosha/releases/tag/v0.10.0), [ROADMAP_INFLECT_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_INFLECT_2026_2027.md)); E1 hybridize remainder + verb comparison queued |
-| **P5** Advanced UI | the project's own UI at samskrtam.ru/kosha | **word page built** — crawlable SSR + prerender + Svelte SPA with `root:`/`sandhi:` operators and CSV/Anki export ([v0.16.0](https://github.com/gasyoun/kosha/releases/tag/v0.16.0)); public URL + reading packs gated on P2 deploy / DCS corpus data |
+| **P5** Advanced UI | the project's own UI at samskrtam.ru/kosha | **word page + D4 static head shipped** — crawlable SSR + prerender + Svelte SPA ([v0.16.0](https://github.com/gasyoun/kosha/releases/tag/v0.16.0)); **H1590** D4 head N=11,148 (10,370 pages / 184.9 MB) via `build_word_pages.py --coverage 0.95`, exit packet [docs/P5_WORD_PAGE_EXIT_PACKET.md](https://github.com/gasyoun/kosha/blob/main/docs/P5_WORD_PAGE_EXIT_PACKET.md) ([v0.91.0](https://github.com/gasyoun/kosha/releases/tag/v0.91.0)). Public URL + live Lighthouse/walkthrough still **MG deploy-gated** |
 | **P6** Trilingual RU | Russian gloss layer beside DE/EN | gated on human review + rights |
 | **P7** v1.0 citable | DOI'd data release, dumps, "Cite" everywhere | gated on P2+P3 |
 
