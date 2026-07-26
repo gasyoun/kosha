@@ -53,7 +53,13 @@ def main():
     ap.add_argument("--input", default=None, help="pwg_sense_loci.tsv (default: data/concordance or sample)")
     ap.add_argument("--size", type=int, default=500, help="target pilot size (marked default 500)")
     ap.add_argument("--min-loci-senses", type=int, default=2, help="min leaf senses carrying >=1 <ls>")
+    # H1670: the SAME selection query at a larger size, written elsewhere, so the
+    # frozen 500 frame stays byte-stable while a wider frame is built beside it.
+    # Widening N while holding the criteria fixed is what isolates the aligner
+    # REACH lever from a change of selection rule.
+    ap.add_argument("--out", default=None, help="output path (default: the frozen pilot frame)")
     args = ap.parse_args()
+    out_path = Path(args.out) if args.out else OUT
 
     groups = slc.load_pwg_senses(args.input)
     attested = load_attested()
@@ -96,9 +102,9 @@ def main():
     if missing:
         print("LOG: WARNING forced smoke-test headwords not in candidate set: %s" % missing, file=sys.stderr)
 
-    OUT.parent.mkdir(parents=True, exist_ok=True)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     cols = ["slp1", "hom", "n_leaf_senses", "n_loci_senses", "n_ls", "dcs_evidence", "dcs_attested"]
-    with open(OUT, "w", encoding="utf-8", newline="\n") as f:
+    with open(out_path, "w", encoding="utf-8", newline="\n") as f:
         f.write("\t".join(cols) + "\n")
         for slp1, hom, nl, nls_s, nls, ev, att in chosen:
             f.write("%s\t%s\t%d\t%d\t%d\t%d\t%s\n" % (slp1, hom, nl, nls_s, nls, ev, "1" if att else "0"))
@@ -107,7 +113,7 @@ def main():
     print("LOG: selection query = {>=2 leaf senses} AND {>=%d leaf senses with >=1 <ls>} "
           "AND rank[DCS-attested, n_senses, n_ls]; size=%d" % (args.min_loci_senses, len(chosen)), file=sys.stderr)
     print("pilot: %d headwords (%d DCS-attested, %d unattested), smoke-pair forced=%s -> %s"
-          % (len(chosen), n_att, len(chosen) - n_att, [k[0] for k in FORCE], OUT), file=sys.stderr)
+          % (len(chosen), n_att, len(chosen) - n_att, [k[0] for k in FORCE], out_path), file=sys.stderr)
 
 
 if __name__ == "__main__":
