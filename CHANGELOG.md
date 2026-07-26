@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.96.0] - 2026-07-26
+
 ### Added
 - **H1691 — 12 further cited texts crosswalked to DCS; grounded PWG leaf senses 7,372 → 8,208
   (+11.3%)** ([H1691](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1691-Opus_kosha_pwg-dcs-text-crosswalk-beyond-five_26.07.26.md),
