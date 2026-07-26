@@ -14,6 +14,34 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Fixed
+- **H1670 — the sense-corpus aligner was measuring its own viewer sample, not the corpus**
+  ([H1670](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1670-Opus_SanskritLexicography_pwg-dcs-sense-grounding-scale-levers_26.07.26.md),
+  Opus 5 `claude-opus-5[1m]`). Three defects in
+  [`build_sense_corpus_concordance.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_sense_corpus_concordance.py):
+  (1) the `locus` tiers tested each sense's `<ls>` against only the `--kwic-per` (3) passages
+  `dcs_kwic()` samples for the viewer — **0.299%** of the passages available under the wave-1
+  frame, so the exact-verse test measured the sample rather than the corpus; (2)
+  `parse_ref_nums()` dropped DCS's *named* books, so `Rām, Bā, 6` and `Rām, Utt, 6` collapsed
+  to the same tuple and one PWG citation "matched" up to seven Rāmāyaṇa books at once (same
+  for Suśruta, and the 18 `MBh, 6, BhaGī n` chapters read as parvan 6); (3)
+  `PWG_TO_DCS_TEXT` keyed the Ṛgveda as ASCII `"RV"` while PWG's abbrev is `ṚV`, hiding
+  **50,972 citations — 6.89% of PWG's `<ls>` mass, second only to the Mahābhārata**.
+  A new `numeric_address()` abstains whenever an address component is non-numeric, and
+  hymn-level matches now land in their own `locus-chapter` tier (conf 0.70) instead of
+  passing as exact-verse. Re-running wave-1's configuration reproduces its three committed
+  artifacts with **zero differing lines** — the matcher itself is unchanged.
+
+### Added
+- **H1670 — aligner scale knobs.** `--pilot` (run over any frame), `--out-dir`,
+  `--locus-scan full` (test against every DCS passage at an address the frame cites, same
+  predicate), `--no-ls-rows`; plus `select_sense_pilot.py --out`. Four verified texts added
+  to `PWG_TO_DCS_TEXT` (Vājasaneyisaṃhitā, Yājñavalkyasmṛti, Kumārasaṃbhava,
+  Bhāgavatapurāṇa), each checked against its `pwgbib` entry — four look-alike candidates
+  (`VP`, `KĀTY. ŚR`, `KAUŚ`, `KATHĀS`) were **rejected** and the reasons recorded in the
+  map so nobody re-litigates them. Grounded PWG leaf senses **52 → 7,372** (0.67% → 12.25%)
+  on a 32× wider frame, with no criterion relaxed.
+
 ## [0.94.0] - 2026-07-24
 
 ### Added
