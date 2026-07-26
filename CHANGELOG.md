@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.95.0] - 2026-07-26
+
 ### Fixed
 - **H1670 — the sense-corpus aligner was measuring its own viewer sample, not the corpus**
   ([H1670](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1670-Opus_SanskritLexicography_pwg-dcs-sense-grounding-scale-levers_26.07.26.md),
