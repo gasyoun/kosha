@@ -43,6 +43,23 @@ Inputs (consume, never re-derive):
   data/concordance/dict_corpus_concordance.tsv  headword<->DCS-lemma (H380)
   VisualDCS .../dcs_full.sqlite               DCS 2026 (CC BY 4.0)
   RussianTranslation/src/pwg_sources.py       <ls> abbrev resolver (pwgbib)
+
+H1670 — SCALE (--pilot / --out-dir / --locus-scan full). Two independent limits
+capped wave-1's reach, and they must be kept apart:
+
+  * FRAME WIDTH — the build only ever ran over its own 500-headword frame, so
+    every other PWG headword is `grounding_not_computed`, not ungrounded.
+    `--pilot PATH` runs the identical build over a wider frame.
+  * PASSAGE DEPTH — `dcs_kwic()` samples `--kwic-per` (3) passages per DCS lemma
+    for the VIEWER, and the locus tier then tested each sense's <ls> against only
+    those 3. On the wave-1 frame that is 3,435 of 1,148,630 available passages:
+    the exact-verse test ran through a 0.299% keyhole, so its yield measured the
+    sample, not the corpus. `--locus-scan full` pre-computes the addresses the
+    frame's senses actually cite, pulls exactly the DCS passages sitting at those
+    addresses, and feeds them to the SAME verse_equal()/MBh-adhyāya predicates.
+    No criterion is relaxed, no tier added, no heuristic substituted — the
+    matcher is unchanged and merely stops being blindfolded. `kwic` (the default)
+    keeps wave-1's output byte-identical.
 """
 import argparse
 import collections
@@ -74,6 +91,10 @@ TAU = 0.60           # marked default (IMPLEMENTATION step 5); logged in the rep
 KWIC_PER = 3         # samples per DCS attestation shown per sense (stated cap)
 SENT_TRUNC = 160
 CONF = {"ls": 0.99, "locus": 0.90, "overlap_strong": 0.70, "overlap_weak": 0.50, "llm": 0.0,
+        # H1670: the DCS passage's address stops at the chapter/hymn (no
+        # sent_counter), so the match is hymn-level corroboration — reported as
+        # its own tier so no headline reads it as exact-verse identity.
+        "locus_chapter": 0.70,
         # MBh via the csl-atlas f8 vulgate crosswalk (PWG→Nīlakaṇṭha-vulgate is
         # SOLVED; the DCS side is BORI-critical, so matching is adhyāya-level
         # corroboration with ~±1 vulgate↔critical drift — never exact identity).
@@ -82,10 +103,33 @@ CONF = {"ls": 0.99, "locus": 0.90, "overlap_strong": 0.70, "overlap_weak": 0.50,
 # PWG <ls> source abbrev -> DCS text name, for the (rare, honest) locus tier.
 # Only the texts DCS actually carries AND whose reference scheme could align.
 PWG_TO_DCS_TEXT = {
-    "RV": "Ṛgveda", "AV": "Atharvaveda (Śaunaka)", "ŚAT. BR": "Śatapathabrāhmaṇa",
+    # ⚠️ Keys are the abbrev as `sense_loci_core.split_ls()` yields it, upper-cased
+    # and stripped of a trailing '.' — so they carry PWG's DIACRITICS. "RV" (ASCII)
+    # never matched anything: PWG's Ṛgveda abbrev is "ṚV", and that one dead key
+    # made the single most canonically-numbered text in the corpus — 32,075 <ls>
+    # citations, 6.78% of the frame's total, more than any source but MBh —
+    # permanently invisible to the locus tier. Fixed in H1670; keep the ASCII form
+    # as an alias so an ASCII-folded input still resolves.
+    "ṚV": "Ṛgveda", "RV": "Ṛgveda",
+    "AV": "Atharvaveda (Śaunaka)", "ŚAT. BR": "Śatapathabrāhmaṇa",
     "AIT. BR": "Aitareyabrāhmaṇa", "TS": "Taittirīyasaṃhitā", "R": "Rāmāyaṇa",
     "MBH": "Mahābhārata", "SUŚR": "Suśrutasaṃhitā", "HARIV": "Harivaṃśa",
     "CHĀND. UP": "Chāndogyopaniṣad", "NIR": "Nirukta",
+    # H1670 additions — texts DCS carries whose PWG citation scheme is verse-
+    # structural and provably parallel to DCS's chapter/counter address. Each was
+    # checked against its pwgbib entry, NOT against a name resemblance:
+    "VS": "Vājasaneyisaṃhitā (Mādhyandina)",   # adhyāya, mantra
+    "YĀJÑ": "Yājñavalkyasmṛti",                # adhyāya, śloka
+    "KUMĀRAS": "Kumārasaṃbhava",               # sarga, śloka
+    "BHĀG. P": "Bhāgavatapurāṇa",              # skandha, adhyāya, śloka
+    # DELIBERATELY NOT MAPPED although DCS carries a same-sounding text — the
+    # citation schemes do not correspond, and a name match is not a crosswalk:
+    #   VP        PWG cites WILSON'S TRANSLATION by page, not the Sanskrit verse
+    #   KĀTY. ŚR  Kātyāyana's ŚrautasūtrāṆi ≠ DCS's Kātyāyana*smṛti* (other work)
+    #   KAUŚ      PWG numbers the kaṇḍikās continuously; DCS numbers per adhyāya
+    #   KATHĀS    Brockhaus numbers 124 taraṅgas; DCS's KSS has 44 chapters
+    #   AK/TRIK/HIT  kośa/anthology numbering not verified against DCS's
+    # These stay in the residue and are listed as a ranked crosswalk backlog.
 }
 
 # Modern-copyright sources whose gloss text may NOT be published in bulk
@@ -100,12 +144,13 @@ def rights_for(source_abbrev):
     return "evidence-only" if key in MODERN_SOURCES else "public"
 
 
-def load_pilot():
+def load_pilot(path=None):
     """-> ordered list of (slp1, hom) in the pilot, plus the raw set."""
     order, seen = [], set()
-    if not PILOT.exists():
+    path = Path(path) if path else PILOT
+    if not path.exists():
         return order, seen
-    with open(PILOT, encoding="utf-8") as f:
+    with open(path, encoding="utf-8") as f:
         header = f.readline().rstrip("\n").split("\t")
         idx = {c: i for i, c in enumerate(header)}
         for line in f:
@@ -197,6 +242,43 @@ def parse_ref_nums(s):
     return tuple(int(x) for x in re.findall(r"\d+", s or ""))
 
 
+def numeric_address(ref, cnt):
+    """-> (numeric_tuple, level) for a DCS passage, or None if its address is NOT
+    tuple-comparable and the locus tiers must therefore ABSTAIN.
+
+    H1670. `parse_ref_nums` keeps only the digits, so a DCS ref that encodes a
+    book/section as a NAME had that name silently dropped — collapsing distinct
+    passages into one numbering space:
+
+      'Rām, Bā, 6'  and  'Rām, Utt, 6'   both -> (6, …)
+      'Su, Cik., 29' and 'Su, Sū., 29'   both -> (29, …)
+      'MBh, 6, BhaGī 1'                       -> (6, 1), i.e. read as parvan 6
+                                                 adhyāya 1, which is NOT where
+                                                 the Bhagavadgītā sits (6.25 ff.)
+
+    A shared (sarga, verse) pair then "matched" in up to 7 different Rāmāyaṇa
+    books at once — a false positive that the wave-1 3-passage sample was simply
+    too thin to expose. The rule: every component after the siglum must be a
+    plain integer, else the address carries information the tuple cannot, and we
+    abstain rather than guess. Same discipline as verse_equal() abstaining for
+    edition-numbered texts.
+
+    `level` distinguishes an address that reaches the verse (`sent_counter`
+    present) from one that stops at the chapter/hymn — 20.9% of DCS's Ṛgveda and
+    24.1% of its Atharvaveda sentences carry no counter, so a match there is
+    hymn-level corroboration and must not be reported as exact-verse identity.
+    """
+    parts = [p.strip() for p in (ref or "").split(",")]
+    for p in parts[1:]:                       # parts[0] is the text siglum
+        if not p.isdigit():
+            return None
+    nums = [int(p) for p in parts[1:]]
+    c = str(cnt).strip() if cnt is not None else ""
+    if c.isdigit():
+        return tuple(nums + [int(c)]), "verse"
+    return tuple(nums), "chapter"
+
+
 def verse_equal(pwg_nums, dcs_nums):
     """A real verse-level locus match: the full numeric tuples are EQUAL and
     carry >=2 components (so a shared book/page number alone never matches).
@@ -204,6 +286,98 @@ def verse_equal(pwg_nums, dcs_nums):
     verse stable across editions); abstains for edition-numbered texts whose
     Böhtlingk-Roth numbering differs from DCS's critical edition."""
     return len(pwg_nums) >= 2 and tuple(pwg_nums) == tuple(dcs_nums)
+
+
+# --------------------------------------------------------------------------- #
+# H1670 — targeted locus scan (--locus-scan full)                             #
+# --------------------------------------------------------------------------- #
+def wanted_addresses(pilot_order, groups, mbh):
+    """Pre-pass: every DCS address the FRAME's senses actually cite.
+
+    Uses `slc.split_ls` only — the cheap string split that yields (abbrev,
+    locus). The expensive `pwg_sources.resolve()` bibliography lookup is NOT
+    needed to know which address a citation points at, and is left to the main
+    pass, so this costs one extra string split per <ls>, not a second resolve.
+
+    -> (addr, mbh_adh)
+       addr    : {(dcs_text_name, numeric_tuple)}    for the exact-verse tier
+       mbh_adh : {(parvan, adhyaya)}                  for the MBh corroboration
+                 tier, ALREADY EXPANDED by the ±1 vulgate↔critical drift the
+                 tier tolerates, so lookup is a plain set membership test.
+    """
+    addr, mbh_adh = set(), set()
+    for key in pilot_order:
+        for s in slc.leaves(groups.get(key, [])):
+            for raw in s.ls_raw:
+                abbrev, locus = slc.split_ls(raw)
+                ab = (abbrev or "").upper().strip().rstrip(".")
+                dcs_text = PWG_TO_DCS_TEXT.get(ab)
+                if dcs_text:
+                    addr.add((dcs_text, parse_ref_nums(locus)))
+                if mbh.ok and ab == "MBH":
+                    nums = parse_ref_nums(locus)
+                    if len(nums) >= 2:
+                        vulg = mbh.resolve(nums[0], nums[1])
+                        if vulg:
+                            for d in (-1, 0, 1):
+                                mbh_adh.add((nums[0], vulg["adhyaya"] + d))
+    return addr, mbh_adh
+
+
+def dcs_passages_at(con, lemma_ids, addr, mbh_adh, per):
+    """The DCS passages that sit at an address the frame cites — lemma_id ->
+    [passage dict], same shape `dcs_kwic` returns so the matcher is untouched.
+
+    One streaming pass over the mapped texts only (~2.15 M of DCS's tokens).
+    Rows are kept ONLY when the passage's address is one the frame's <ls> point
+    at, so memory stays proportional to the CANDIDATE set, not to the corpus.
+    This is a retrieval change; the accept/reject decision remains entirely in
+    verse_equal() and the MBh ±1 test downstream.
+    """
+    out = collections.defaultdict(list)
+    seen = collections.Counter()
+    texts = sorted(set(PWG_TO_DCS_TEXT.values()) | {"Mahābhārata"})
+    q = """
+    SELECT x.name, c.ref, s.sent_counter, s.sent_subcounter, s.sent_id,
+           s.text_sandhied, t.lemma_id, t.form
+    FROM token t
+    JOIN sentence s ON s.id = t.sentence_id
+    JOIN chapter  c ON c.chapter_id = s.chapter_id
+    JOIN text     x ON x.text_id = c.text_id
+    WHERE x.name IN (%s)
+    """ % ",".join("?" * len(texts))
+    n_scanned = n_kept = 0
+    for (name, ref, cnt, sub, sid, sent, lid, form) in con.execute(q, texts):
+        n_scanned += 1
+        if lid not in lemma_ids:
+            continue
+        a = numeric_address(ref, cnt)
+        if a is None:                    # not tuple-comparable → never a candidate
+            continue
+        nums = a[0]
+        hit = (name, nums) in addr
+        if not hit and name.startswith("Mahābhārata"):
+            pn = numeric_address(ref, None)[0]
+            hit = len(pn) >= 2 and (pn[0], pn[1]) in mbh_adh
+        if not hit:
+            continue
+        k = (lid, name, nums)
+        if seen[k] >= per:
+            continue
+        seen[k] += 1
+        n_kept += 1
+        stext = (sent or "").strip()
+        if len(stext) > SENT_TRUNC:
+            stext = stext[:SENT_TRUNC] + "…"
+        out[lid].append({
+            "form": form or "", "cite": citable_locus(sid),
+            "locus": "%s, %s, %s" % (name, ref, cnt),
+            "source_text": name, "ref": ref, "cnt": cnt, "sent": stext,
+        })
+    print("  locus-scan full: %s token rows scanned in the mapped texts, "
+          "%s kept as address candidates (%d lemmas)"
+          % (format(n_scanned, ","), format(n_kept, ","), len(out)), file=sys.stderr)
+    return out
 
 
 def overlap_assign(dcs_meaning, sense_tokens_list):
@@ -246,11 +420,24 @@ def main():
     ap.add_argument("--kwic-per", type=int, default=KWIC_PER)
     ap.add_argument("--viewer", action="store_true", help="also (re)build concordance/senses/ shards")
     ap.add_argument("--run-llm", action="store_true", help="dispatch the residue Workflow (bounded, paid) — off by default")
+    # --- H1670 scale knobs (all default to wave-1 behaviour) ------------------
+    ap.add_argument("--pilot", default=None, help="frame file (default: the frozen 500)")
+    ap.add_argument("--out-dir", default=None, help="output dir (default: data/concordance)")
+    ap.add_argument("--locus-scan", choices=("kwic", "full"), default="kwic",
+                    help="kwic = test <ls> against the --kwic-per viewer sample "
+                         "(wave-1, byte-identical); full = against every DCS "
+                         "passage at an address the frame cites (same predicate)")
+    ap.add_argument("--no-ls-rows", action="store_true",
+                    help="omit the method=ls self-witness rows from the bulk TSV. "
+                         "They are PWG citing itself, are excluded from every "
+                         "headline, and at scale are ~99.9%% of the file; the "
+                         "per-sense n_ls/n_ls_resolved counts are unaffected.")
     args = ap.parse_args()
     tau = args.tau
+    out_data = Path(args.out_dir) if args.out_dir else OUT_DATA
 
     print("loading pilot headwords ...", file=sys.stderr)
-    pilot_order, pilot_set = load_pilot()
+    pilot_order, pilot_set = load_pilot(args.pilot)
     pilot_slp1 = {s for s, _h in pilot_set}
     print("  %d pilot (slp1,hom) groups, %d distinct slp1" % (len(pilot_set), len(pilot_slp1)), file=sys.stderr)
 
@@ -267,6 +454,14 @@ def main():
     con = sqlite3.connect(str(DCS))
     meanings = dcs_meanings(con, all_lemma_ids)
     kwic = dcs_kwic(con, all_lemma_ids, args.kwic_per)
+    # H1670: candidates for the locus tiers. In `kwic` mode this stays empty and
+    # the tiers see only the viewer sample, exactly as in wave-1.
+    cand = {}
+    if args.locus_scan == "full":
+        w_addr, w_mbh = wanted_addresses(pilot_order, groups, mbh)
+        print("  frame cites %s distinct DCS-mappable addresses, %s MBh adhyāyas (±1)"
+              % (format(len(w_addr), ","), format(len(w_mbh), ",")), file=sys.stderr)
+        cand = dcs_passages_at(con, all_lemma_ids, w_addr, w_mbh, args.kwic_per)
     con.close()
 
     # ---- per-pilot-group build ------------------------------------------------
@@ -321,12 +516,13 @@ def main():
                             mbh_ls_resolved += 1
                             madh.add((nums[0], vulg["adhyaya"]))
                             locus_disp += " → vulg %s" % vulg["vulgate"]
-                conc_rows.append({
-                    "slp1": slp1, "hom": hom, "sense_id": s.sense_id, "lemma": slp1,
-                    "locus": locus_disp, "cite": "pwgls:%s|%s" % (r["source_abbrev"], r["locus"]),
-                    "conf": CONF["ls"], "method": "ls", "rights": rights,
-                    "source": r["source_abbrev"], "gloss": gloss[:80], "sent": "",
-                })
+                if not args.no_ls_rows:
+                    conc_rows.append({
+                        "slp1": slp1, "hom": hom, "sense_id": s.sense_id, "lemma": slp1,
+                        "locus": locus_disp, "cite": "pwgls:%s|%s" % (r["source_abbrev"], r["locus"]),
+                        "conf": CONF["ls"], "method": "ls", "rights": rights,
+                        "source": r["source_abbrev"], "gloss": gloss[:80], "sent": "",
+                    })
                 method_counts["ls"] += 1
                 # short source name for the viewer (pwgbib expansions are full
                 # German bibliography paragraphs — keep only the leading title,
@@ -352,7 +548,12 @@ def main():
         unassigned = []
         for (lemma_iast, lemma_id, ev, tier, n_txt) in dict_links.get(slp1, []):
             n_dcs_links += 1
-            passages = kwic.get(lemma_id, [])
+            # Address-targeted candidates FIRST (H1670 --locus-scan full), then
+            # the viewer sample. The sample stays in the list so an unmatched
+            # link still has passages to display and the overlap tier is
+            # unaffected; ordering only decides which equal-scoring passage is
+            # shown, never whether a match is accepted.
+            passages = cand.get(lemma_id, []) + kwic.get(lemma_id, [])
             # (i) locus-match — REAL verse-level equality only. The DCS passage
             # tuple is (text, ref-nums + sent-counter); it must equal a sense's
             # resolved <ls> numeric tuple for the same text. This fires for
@@ -362,15 +563,22 @@ def main():
             # critical-edition adhyāya.śloka), per the spike. A shared book number
             # is NOT a match (a book has thousands of verses).
             matched_i = None
+            matched_level = None
             matched_passages = []
             for pi, sr in enumerate(sense_resolved_loci):
                 for kw in passages:
-                    kwtuple = parse_ref_nums("%s %s" % (kw["ref"], kw.get("cnt") or ""))
+                    # ABSTAIN when the DCS address is not tuple-comparable (a
+                    # named book/section the tuple would silently drop) — H1670.
+                    addr = numeric_address(kw["ref"], kw.get("cnt"))
+                    if addr is None:
+                        continue
+                    kwtuple, level = addr
                     for (dt, nums) in sr:
                         if not nums or kw["source_text"] != dt:
                             continue
                         if verse_equal(nums, kwtuple):
                             matched_i = pi
+                            matched_level = level
                             matched_passages.append(kw)
                             break
                 if matched_i is not None:
@@ -379,7 +587,11 @@ def main():
             si = None
             samples = passages[: args.kwic_per]
             if matched_i is not None:
-                si, method, conf = matched_i, "locus", CONF["locus"]
+                si = matched_i
+                if matched_level == "verse":
+                    method, conf = "locus", CONF["locus"]
+                else:
+                    method, conf = "locus-chapter", CONF["locus_chapter"]
                 n_locus_hits += 1
                 samples = matched_passages[: args.kwic_per] or samples
             else:
@@ -391,7 +603,12 @@ def main():
                 for kw in passages:
                     if not (kw["source_text"] or "").startswith("Mahābhārata"):
                         continue
-                    pn = parse_ref_nums(kw["ref"])          # (parvan, adhyaya)
+                    # (parvan, adhyāya) — abstain on 'MBh, 6, BhaGī n', whose
+                    # digits would otherwise read as parvan 6 adhyāya n (H1670).
+                    a_mbh = numeric_address(kw["ref"], None)
+                    if a_mbh is None:
+                        continue
+                    pn = a_mbh[0]
                     if len(pn) < 2:
                         continue
                     for pi, madh in enumerate(sense_mbh_adh):
@@ -459,12 +676,17 @@ def main():
                 "gloss": s.gloss_clean()[:120],
             })
 
-        viewer[slp1] = {
-            "slp1": slp1, "hom": hom, "variant_of": variant_of or "",
-            "senses": sense_view, "n_unassigned": len(unassigned),
-        }
+        # At scale the viewer payload (every <ls> item of every sense) is the
+        # dominant memory cost and is only ever consumed by --viewer / the
+        # nāgadanta worked example, so keep it only when it is wanted.
+        if args.viewer or slp1 == "nAgadanta":
+            viewer[slp1] = {
+                "slp1": slp1, "hom": hom, "variant_of": variant_of or "",
+                "senses": sense_view, "n_unassigned": len(unassigned),
+            }
 
     # ---- write datasets -------------------------------------------------------
+    OUT_DATA = out_data          # local rebind; --out-dir defaults to the global
     OUT_DATA.mkdir(parents=True, exist_ok=True)
     conc_cols = ["slp1", "hom", "sense_id", "lemma", "locus", "cite", "conf", "method", "rights", "source", "gloss", "sent"]
     ds = OUT_DATA / "sense_corpus_concordance.tsv"
@@ -526,14 +748,20 @@ def main():
         n_public=n_public_rows, n_evidence_only=n_evidence_only,
         mbh_ls_total=mbh_ls_total, mbh_ls_resolved=mbh_ls_resolved, mbh_ok=mbh.ok,
         viewer=args.viewer,
+        locus_scan=args.locus_scan, no_ls_rows=args.no_ls_rows,
+        pilot_path=str(Path(args.pilot) if args.pilot else PILOT),
+        n_grounded_senses=len({(r["slp1"], r["hom"], r["sense_id"]) for r in conc_rows
+                               if r["method"] in ("locus", "locus-mbh", "locus-chapter")}),
+        n_grounded_senses_verse=len({(r["slp1"], r["hom"], r["sense_id"]) for r in conc_rows
+                                     if r["method"] == "locus"}),
     ), viewer)
 
     print("LOG: ls_total=%d ls_resolved=%d rate=%.1f%% (A2 floor 60%%) tau=%.2f" % (ls_total, ls_resolved, rate, tau), file=sys.stderr)
     print("LOG: MBh <ls> resolved to vulgate: %d/%d (csl-atlas f8 crosswalk, ok=%s)" % (
         mbh_ls_resolved, mbh_ls_total, mbh.ok), file=sys.stderr)
-    print("LOG: dcs_links=%d assigned=%d (locus=%d locus-mbh=%d overlap=%d) review=%d" % (
-        n_dcs_links, n_dcs_assigned, method_counts["locus"], method_counts["locus-mbh"],
-        method_counts["overlap"], len(review_rows)), file=sys.stderr)
+    print("LOG: dcs_links=%d assigned=%d (locus=%d locus-chapter=%d locus-mbh=%d overlap=%d) review=%d" % (
+        n_dcs_links, n_dcs_assigned, method_counts["locus"], method_counts["locus-chapter"],
+        method_counts["locus-mbh"], method_counts["overlap"], len(review_rows)), file=sys.stderr)
     print("dataset: %s (%d rows)" % (ds, len(conc_rows)), file=sys.stderr)
 
 
@@ -546,6 +774,21 @@ def write_report(path, m, viewer):
         f.write("Built by [scripts/build_sense_corpus_concordance.py]"
                 "(https://github.com/gasyoun/kosha/blob/main/scripts/build_sense_corpus_concordance.py) "
                 "(H1455, Opus 4.8 `claude-opus-4-8`), consuming the H1456 PWG per-sense `<ls>` export.\n\n")
+        f.write("## Run configuration (H1670)\n\n")
+        f.write("| knob | value |\n|---|---|\n")
+        f.write("| frame | `%s` (%d groups) |\n" % (m.get("pilot_path", ""), m["n_pilot"]))
+        scan_gloss = ("every DCS passage at an address the frame cites"
+                      if m.get("locus_scan") == "full"
+                      else "the viewer sample per DCS lemma only (wave-1 default)")
+        f.write("| `--locus-scan` | `%s` — %s |\n"
+                % (m.get("locus_scan", "kwic"), scan_gloss))
+        f.write("| `method=ls` rows in the bulk TSV | %s |\n"
+                % ("omitted (`--no-ls-rows`); counts below are unaffected"
+                   if m.get("no_ls_rows") else "included"))
+        f.write("| PWG leaf senses grounded — exact verse only (`locus`) | **%d** |\n"
+                % m.get("n_grounded_senses_verse", 0))
+        f.write("| PWG leaf senses grounded — incl. adhyāya/hymn corroboration | **%d** |\n\n"
+                % m.get("n_grounded_senses", 0))
         f.write("## A2 — `<ls>`-locus-resolution rate (THE wave-1 acceptance metric)\n\n")
         f.write("| metric | value |\n|---|---|\n")
         f.write("| pilot (slp1,hom) groups | %d |\n" % m["n_pilot"])
@@ -566,6 +809,7 @@ def write_report(path, m, viewer):
         f.write("| tier | confidence | rows | meaning |\n|---|---|---|---|\n")
         f.write("| ls | 0.99 | %d | PWG's OWN `<ls>` under the sense — guaranteed-correct witness (MBh loci carry their resolved vulgate address) |\n" % m["method_counts"]["ls"])
         f.write("| locus | 0.90 | %d | DCS attestation verse-equal to a sense's `<ls>` (canonically-numbered Vedic texts) |\n" % m["method_counts"]["locus"])
+        f.write("| locus-chapter | 0.70 | %d | verse-equal to a sense's `<ls>`, but the DCS address stops at the chapter/hymn (no `sent_counter`) — hymn-level corroboration, NOT exact-verse identity |\n" % m["method_counts"]["locus-chapter"])
         f.write("| locus-mbh | 0.65–0.80 | %d | DCS Mahābhārata attestation whose (parvan, adhyāya) matches a sense's `<ls>`-resolved vulgate adhyāya (±1, vulgate↔critical drift) |\n" % m["method_counts"]["locus-mbh"])
         f.write("| overlap | 0.50–0.70 | %d | shared proper-noun/binomial/digit gloss tokens |\n" % m["method_counts"]["overlap"])
         f.write("| **review queue** | <%.2f | %d | conf<τ + unassigned residue (kept, never dropped) |\n\n" % (m["tau"], m["n_review"]))
