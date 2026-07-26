@@ -122,13 +122,50 @@ PWG_TO_DCS_TEXT = {
     "YĀJÑ": "Yājñavalkyasmṛti",                # adhyāya, śloka
     "KUMĀRAS": "Kumārasaṃbhava",               # sarga, śloka
     "BHĀG. P": "Bhāgavatapurāṇa",              # skandha, adhyāya, śloka
+    # H1691 additions — every DCS-HAS-UNMAPPED abbrev above 0.05% citation mass
+    # was adjudicated against BOTH its pwgbib entry and its real <ls> strings,
+    # then screened on whether PWG's tuples land on that text's addresses at all
+    # and, decisively, on whether the candidate OUTRANKS the other 269 DCS texts
+    # on those same tuples (a plain hit rate is confounded by address-space size:
+    # a 2-tuple exists in almost any large text). Verified band 25-98%; rejected
+    # band 0.0-1.4%. Per-abbrev verdicts, evidence and reasons:
+    # SanskritLexicography/RussianTranslation/research/pwg_ls_dcs_scheme_verdicts.tsv
+    #
+    # ⚠️ Two of these were classed DCS-LACKS — "a genuine corpus gap no crosswalk
+    # can close" — by the H1670 backlog. That class is NOT trustworthy: its
+    # candidate generator matches on the GERMAN pwgbib prose, and PWG names
+    # Pāṇini and Manu by author and language ("PĀṆINI'S acht Bücher
+    # grammatischer Regeln"), never by Sanskrit title. The two largest crosswalk
+    # wins in the dictionary were hiding in the class labelled untouchable.
+    "P": "Aṣṭādhyāyī",                         # adhyāya, pāda, sūtra
+    "M": "Manusmṛti",                          # adhyāya, śloka
+    "KĀTY. ŚR": "Kātyāyanaśrautasūtra",        # adhyāya, kaṇḍikā, sūtra
+    "ŚĀṄKH. ŚR": "Śāṅkhāyanaśrautasūtra",      # adhyāya, kaṇḍikā, sūtra
+    "PAÑCAV. BR": "Pañcaviṃśabrāhmaṇa",        # prapāṭhaka, khaṇḍa, verse
+    "ĀŚV. GṚHY": "Āśvalāyanagṛhyasūtra",       # adhyāya, kaṇḍikā, sūtra
+    "GOBH": "Gobhilagṛhyasūtra",               # prapāṭhaka, khaṇḍa, sūtra
+    "BṚH. ĀR. UP": "Bṛhadāraṇyakopaniṣad",     # adhyāya, brāhmaṇa, verse
+    "KIR": "Kirātārjunīya",                    # sarga, śloka
+    "GĪT": "Gītagovinda",                      # sarga, verse
+    "KAṬHOP": "Kaṭhopaniṣad",                  # vallī, verse
+    "BHARTṚ": "Śatakatraya",                   # śataka, verse
     # DELIBERATELY NOT MAPPED although DCS carries a same-sounding text — the
     # citation schemes do not correspond, and a name match is not a crosswalk:
     #   VP        PWG cites WILSON'S TRANSLATION by page, not the Sanskrit verse
-    #   KĀTY. ŚR  Kātyāyana's ŚrautasūtrāṆi ≠ DCS's Kātyāyana*smṛti* (other work)
     #   KAUŚ      PWG numbers the kaṇḍikās continuously; DCS numbers per adhyāya
     #   KATHĀS    Brockhaus numbers 124 taraṅgas; DCS's KSS has 44 chapters
-    #   AK/TRIK/HIT  kośa/anthology numbering not verified against DCS's
+    #   AK/TRIK   kośa numbering (kāṇḍa, varga, śloka) vs DCS's single counter
+    #   HIT/DAŚAK pwgbib says the two numbers are PAGE and LINE, not book and verse
+    #   KĀṬH      right work, but PWG stops at the anuvāka where DCS reaches the
+    #             mantra — a 2-tuple can never equal a 3-tuple. Same for PĀR. GṚHY
+    #   TBR       right work (NOT the Taittirīya*saṃhitā* the backlog offered),
+    #             but the Yajurveda prose texts cross-hit: Maitrāyaṇīsaṃhitā
+    #             scores 43% against TB's 15.4%, so the pairing is unverifiable
+    #   ŚĀṄKH. BR / ŚĀṄKH. GṚHY / ĀŚV. ŚR / TAITT. ĀR / TAITT. UP
+    #             all five are the WRONG work in the backlog's candidate column;
+    #             DCS carries the right one in every case, and none corresponds
+    #   AMAR/CAURAP/SĀṂKHYAK/MEGH  1-component loci; verse_equal() needs >=2
+    #   KĀŚ/NIGH. PR/BHĀVAPR       the citations carry no address at all
     # These stay in the residue and are listed as a ranked crosswalk backlog.
 }
 
@@ -579,21 +616,41 @@ def main():
                         if verse_equal(nums, kwtuple):
                             matched_i = pi
                             matched_level = level
-                            matched_passages.append(kw)
+                            # H1691: keep each passage's OWN level. A sense can
+                            # match several passages at once whose addresses
+                            # bottom out differently — one at the verse, another
+                            # only at the chapter — and stamping them all with a
+                            # single sense-level label put 507 of H1670's 12,280
+                            # `locus` rows (4.13%, 504 of them Aitareyabrāhmaṇa)
+                            # in the exact-verse tier at conf 0.90 on a
+                            # chapter-level address. That is defect 2 of the
+                            # H1670 report reappearing one level down: the fix
+                            # separated the TIERS but still chose the tier once
+                            # per sense. Level travels with the row now.
+                            matched_passages.append((kw, level))
                             break
                 if matched_i is not None:
                     break
             method = conf = None
             si = None
             samples = passages[: args.kwic_per]
+            sample_levels = []          # H1691: per-row locus level, when known
             if matched_i is not None:
                 si = matched_i
+                # the sense-level tier is the STRONGEST level it achieved, so the
+                # LOG counters keep meaning "this sense is grounded at a verse";
+                # individual rows are stamped from their own level below.
+                if any(lv == "verse" for _kw, lv in matched_passages):
+                    matched_level = "verse"
                 if matched_level == "verse":
                     method, conf = "locus", CONF["locus"]
                 else:
                     method, conf = "locus-chapter", CONF["locus_chapter"]
                 n_locus_hits += 1
-                samples = matched_passages[: args.kwic_per] or samples
+                if matched_passages:
+                    chosen = matched_passages[: args.kwic_per]
+                    samples = [kw for kw, _lv in chosen]
+                    sample_levels = [lv for _kw, lv in chosen]
             else:
                 # (ii) MBh via the csl-atlas f8 vulgate crosswalk. DCS Mahābhārata
                 # is the BORI critical edition, so a DCS (parvan, adhyāya) matches
@@ -644,15 +701,24 @@ def main():
                 "lemma": lemma_iast, "conf": conf, "method": method,
                 "tok": ev, "texts": n_txt, "kwic": samples,
             })
-            for kw in samples:
+            for ri, kw in enumerate(samples):
+                # H1691 — a row is stamped from ITS OWN address level, not from
+                # the tier the sense as a whole reached. Only the locus tier
+                # carries per-row levels; every other method is uniform.
+                r_method, r_conf = method, conf
+                if ri < len(sample_levels) and method in ("locus", "locus-chapter"):
+                    if sample_levels[ri] == "verse":
+                        r_method, r_conf = "locus", CONF["locus"]
+                    else:
+                        r_method, r_conf = "locus-chapter", CONF["locus_chapter"]
                 row = {
                     "slp1": slp1, "hom": hom, "sense_id": s.sense_id, "lemma": lemma_iast,
-                    "locus": kw["locus"], "cite": kw["cite"], "conf": conf,
-                    "method": method, "rights": "public", "source": "DCS",
+                    "locus": kw["locus"], "cite": kw["cite"], "conf": r_conf,
+                    "method": r_method, "rights": "public", "source": "DCS",
                     "gloss": (meanings.get(lemma_id, "") or "")[:80], "sent": kw["sent"],
                 }
                 conc_rows.append(row)
-                if conf < tau:
+                if r_conf < tau:
                     review_rows.append({**row, "reason": "confidence<tau"})
 
         # residue -> review queue (never dropped, A5)
