@@ -14,6 +14,30 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H1691 — 12 further cited texts crosswalked to DCS; grounded PWG leaf senses 7,372 → 8,208
+  (+11.3%)** ([H1691](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1691-Opus_kosha_pwg-dcs-text-crosswalk-beyond-five_26.07.26.md),
+  Opus 5 `claude-opus-5[1m]`). `PWG_TO_DCS_TEXT` in
+  [`build_sense_corpus_concordance.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_sense_corpus_concordance.py)
+  gains Aṣṭādhyāyī, Manusmṛti, Kātyāyanaśrautasūtra, Pañcaviṃśabrāhmaṇa, Kirātārjunīya,
+  Āśvalāyanagṛhyasūtra, Śāṅkhāyanaśrautasūtra, Bṛhadāraṇyakopaniṣad, Gītagovinda,
+  Kaṭhopaniṣad, Gobhilagṛhyasūtra and Śatakatraya — 61,192 `<ls>` citations, taking `MAPPED`
+  from 36.4% to **44.7%** of the dictionary's citation mass. Every one of the 52 adjudicated
+  abbreviations carries a recorded verdict and reason; each mapped text was hand-checked at
+  ≥10 rows (120/120 confirmed). Nothing was mapped on a name resemblance — the 38 rejections
+  (`KATHĀS`, `AK`, `HIT`, `KAUŚ`, `DAŚAK`, …) are committed alongside so they are not
+  re-litigated. Report:
+  [`PWG_DCS_TEXT_CROSSWALK_H1691.md`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/research/PWG_DCS_TEXT_CROSSWALK_H1691.md).
+
+### Fixed
+- **The `locus` tier was chosen once per sense and then stamped on passages whose addresses
+  bottomed out differently, inflating the exact-verse tier by 4.13%** — 507 of H1670's 12,280
+  `locus` rows carried a chapter-level address at confidence 0.90, 504 of them
+  Aitareyabrāhmaṇa. The level now travels with the row. Grounded-sense counts are unchanged
+  (the fix relabels within the locus family rather than adding or removing groundings) and
+  wave-1 is provably unaffected — 0 such rows in its run. See
+  [SL FINDINGS §472](https://github.com/gasyoun/SanskritLexicography/blob/master/FINDINGS.md).
+
 ## [0.95.0] - 2026-07-26
 
 ### Fixed
