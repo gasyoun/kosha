@@ -1808,6 +1808,26 @@
       ],
       "notes": "SIDECAR to word-by-word gita-gold-master — alternate display mode only. MIT/public same as gita-gold. Credit Dr. Marcis Gasuns (Gita.xlsm author).",
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/gita-prose.meta.md"
+    },
+    {
+      "id": "pwg-scan-index-campaign",
+      "title": "PWG literary-source scan-indexing campaign registry (2025-2026)",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "format": "tsv",
+      "rows": 82,
+      "size_bytes": 35402,
+      "keying": "one row per tracked PWG/PWK literary source, keyed on ls_code (the abbreviation, presentation marks stripped). 34 columns: status + status_gloss, citation_count, total_pages, volunteer, started/finished/index_posted/public_link dates, coordinating issue repo+number+URL, scan_dir + canonical spelling + Pages URL + repo size, and the cross-validation set (in_pwgbib, dict_citations, count_ratio, ru_subset_refs, scan_wired). book_no is NOT unique - do not key on it.",
+      "source_repo": "https://github.com/sanskrit-lexicon/csl-observatory",
+      "source_path": "data/pwg_scan_index_tracker/pwg_scan_index.tsv",
+      "builder": "csl-observatory scripts/pwg_scan_index.py (H1706; stdlib-only offline from the committed 4-tab snapshot, --fetch re-snapshots the upstream Google Sheet)",
+      "consumers": [
+        "csl-observatory reports/pwg_scan_index.md",
+        "csl-observatory /scan-index dashboard page",
+        "data/pwg_scan_index_tracker/pwg_etext_candidate_queue.tsv (e-text extraction ranking, H1715)",
+        "data/pwg_scan_index_tracker/scan_target_audit.tsv (resolver wiring, H1714)"
+      ],
+      "notes": "H1706, csl-observatory PR #107, v1.5.0. Sidecars in the same directory: the verbatim 4-tab snapshot, the ranked e-text candidate queue, and a dated audit of all 37 sanskrit-lexicon-scans directories. CAVEAT 1 - the citation_count column is transcribed from a maintainer-kept sheet and its provenance is UNRESOLVED (1.2x to 433x against the full-dictionary <ls> extraction); use it to rank works, never as a numerator over a dictionary-wide denominator. CAVEAT 2 - multi-volume works carry their count once, on volume 1, so per-volume mass is a floor. CAVEAT 3 - the snapshot's Team tab has the volunteers' real-name column REDACTED at fetch time; handles are public on every coordinating issue, the name-to-handle linkage is not, and publishing it is a human decision (open MG @DECIDE in GTD)."
     }
   ]
 }
