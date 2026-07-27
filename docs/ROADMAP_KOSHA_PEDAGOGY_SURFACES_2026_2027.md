@@ -88,4 +88,10 @@ only to align it to the reading packs. Left as an agenda pointer, not a wave.
 
 ---
 
+## Related documents (awareness weave H1728)
+
+- Sandhi: [SANDHI_PROGRAMME.md](https://github.com/gasyoun/kosha/blob/main/SANDHI_PROGRAMME.md) · [ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md)
+- SanskritGrammar ACL/corpus pedagogy: [ROADMAP_GRAMMAR_CORPUS_ACL_2026_2027.md](https://github.com/gasyoun/SanskritGrammar/blob/main/ROADMAP_GRAMMAR_CORPUS_ACL_2026_2027.md)
+
+
 _Dr. Mārcis Gasūns_
