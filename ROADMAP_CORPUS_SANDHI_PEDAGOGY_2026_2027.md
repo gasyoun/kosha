@@ -295,4 +295,10 @@ sandhi), each class ranked by frequency with an attested example, at
 
 ---
 
+## Related documents (awareness weave H1728)
+
+- Programme hub (junction rules, corpus_sandhi.tsv): [SANDHI_PROGRAMME.md](https://github.com/gasyoun/kosha/blob/main/SANDHI_PROGRAMME.md)
+- Grammar pedagogy consumer: [ROADMAP_GRAMMAR_CORPUS_ACL_2026_2027.md](https://github.com/gasyoun/SanskritGrammar/blob/main/ROADMAP_GRAMMAR_CORPUS_ACL_2026_2027.md)
+
+
 _Dr. Mārcis Gasūns_

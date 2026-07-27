@@ -163,4 +163,12 @@ gets its own `H###` handoff minted at kickoff; this doc is the parent.
 
 ---
 
+## Related documents (awareness weave H1728)
+
+**Name collision — different programme.** Uprava grammar/non-grammar concordance is *not* this file:
+
+- Uprava: [CONCORDANCE_ROADMAP_GRAMMAR_NONGRAMMAR_2026_2027.md](https://github.com/gasyoun/Uprava/blob/main/CONCORDANCE_ROADMAP_GRAMMAR_NONGRAMMAR_2026_2027.md) — VedaWeb/Type-D grammar join
+- This kosha file — pedagogical/corpus concordance surfaces over DCS/lemma data
+
+
 _Dr. Mārcis Gasūns_
