@@ -336,6 +336,24 @@
       "notes": "Already tracked+public; listed for discovery."
     },
     {
+      "id": "dcs-nominal-paradigm-grid",
+      "title": "DCS nominal paradigm — case × number grid per declension class",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "format": "json",
+      "rows": 14,
+      "size_bytes": 634880,
+      "keying": "declension class (14, lemma-final heuristic) × token gender (Masc|Fem|Neut|?) × 24 case.number cells; each cell carries token count, distinct lemma_ids, segmentable count, top-8 attested unsandhied forms, top-6 surface endings, up to 3 corpus examples (sentence + text + ref)",
+      "source_repo": "https://github.com/gasyoun/VisualDCS",
+      "source_path": "visual/paradigm_nominal.json (tracked; .js twin for file:// pages)",
+      "builder": "src/DCS-data-2026/gen_paradigm_nominal.py (H1472), over the pinned dcs_full.sqlite",
+      "consumers": [
+        "VisualDCS sanskrit_nominal_dashboard.html"
+      ],
+      "notes": "H1472 (27-07-2026, Opus 5 claude-opus-5[1m]). The nominal counterpart of the verbal paradigm layer; FEATURES_INDEX E50. Universe: upos IN ('NOUN','ADJ') with one of the 8 real cases and a number, keyed by lemma_id — 2,263,192 of 2,996,410 NOUN/ADJ tokens. THREE TRAPS travel with it: (1) feat_case='Cpd' is NOT a ninth case — 724,676 compound-member tokens carry no case, are excluded from the grid and counted separately, and grid+Cpd+untagged is asserted to equal the universe at build time; (2) declension class is NOT a DCS tag — it is a citation-form heuristic reusing SanskritGrammar Sangram G2's tag list (H1048), reconciled exactly against it (57,144 lemma_ids, 0 disagreements) and extended only by -ant (279 lemma_ids); (3) the gender axis is the TOKEN's tagged gender, so feminine tokens of -a-cited adjectives inflect as ā-/ī-stems inside the -a class. Endings are surface residues after stripping the class-marked stem; stem-alternating tokens (rājan -> rājñā) are counted as not segmentable rather than force-split. Forms shown are DCS's unsandhied analysis, reconstructed for 68.0% of grid tokens. DCS is CC BY 4.0; this derivative ships BY-SA with the public tier.",
+      "rebuild": "python src/DCS-data-2026/gen_paradigm_nominal.py (needs the pinned dcs_full.sqlite; refuses a master with no provenance pin, emits a real SHA-256)."
+    },
+    {
       "id": "varga-series-diachrony",
       "title": "Consonant series (varga) by DCS period + Cramér's V",
       "tier": "public",
