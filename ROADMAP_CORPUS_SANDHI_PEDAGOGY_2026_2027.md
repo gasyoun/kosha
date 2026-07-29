@@ -1,4 +1,4 @@
-_Created: 13-07-2026 · Last updated: 24-07-2026 (Phase 2c Śāstra/commentary sweep, H1492; prior: Phase 2b H901; Method B H903; Method C H908)_
+_Created: 13-07-2026 · Last updated: 30-07-2026 (§5 stale Phase-4 line struck, H1878; prior: Phase 2c Śāstra/commentary sweep, H1492; Phase 2b H901; Method B H903; Method C H908)_
 
 # Corpus-wide sandhi extraction for Sanskrit pedagogy — roadmap (2026–2027)
 
@@ -261,7 +261,7 @@ emits a look-up companion to the curriculum: every corpus rule grouped by class
 sandhi), each class ranked by frequency with an attested example, at
 [`reading/sandhi/reference/`](https://github.com/gasyoun/kosha/blob/main/reading/sandhi/reference/index.html)
 (top 50 per class; the 3,794-rule consonant tail is summarised, not dumped).
-**Remaining Phase-4 surfaces: reader hover, drills/flashcards.**
+~~**Remaining Phase-4 surfaces: reader hover, drills/flashcards.**~~ **Stale — all four Phase-4 surfaces are shipped (H902, 14-07-2026):** reader hover (surface 1 of 4) and drills/flashcards (surface 4 of 4) landed alongside the graded curriculum and reference pages above — [kosha PR #98](https://github.com/gasyoun/kosha/pull/98)/[#99](https://github.com/gasyoun/kosha/pull/99)/[#102](https://github.com/gasyoun/kosha/pull/102), [v0.45.0](https://github.com/gasyoun/kosha/releases/tag/v0.45.0)–[v0.48.0](https://github.com/gasyoun/kosha/releases/tag/v0.48.0). This line just never got struck after that.
 
 ---
 
