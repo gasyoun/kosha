@@ -1,6 +1,11 @@
 # Roadmap — kosha next programme (2026 H2)
 
-_Created: 24-07-2026 · Last updated: 24-07-2026_
+_Created: 24-07-2026 · Last updated: 30-07-2026_
+
+**🔒 SUPERSEDED 30-07-2026 (H1943):** the portfolio-status roadmap role is now
+[docs/ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP.md)
+→ [docs/ROADMAP_KOSHA_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP_KOSHA_2026_2027.md).
+Preserved in place as immutable historical evidence; not current status.
 
 <!-- H1588 W3 WSD shipped 24-07-2026 — see Wave 3 status below -->
 
