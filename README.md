@@ -343,6 +343,8 @@ volume-page, hyphen, 7 volumes · AP90 `0001-a` = page-column-letter.
 | In this repo | What it holds |
 |---|---|
 | [ARCHITECTURE.md](https://github.com/gasyoun/kosha/blob/main/ARCHITECTURE.md) | A1–A4 contract, SQLite DDL, API v1, Salt max-reuse rules |
+| [docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md) | 2026–2027 architecture/roadmap plan of record: 23 rulings, W0 freeze, Claude-only execution, and autonomy contract |
+| [docs/ROADMAP_KOSHA_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP_KOSHA_2026_2027.md) · [docs/ARCHITECTURE_KOSHA_PLATFORM.md](https://github.com/gasyoun/kosha/blob/main/docs/ARCHITECTURE_KOSHA_PLATFORM.md) | Twelve-month W0–W4 portfolio and modular target architecture |
 | [PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md) | D1–D5 work order — **the next thing to execute** |
 | [IMPLEMENTATION_PLAN.md](https://github.com/gasyoun/kosha/blob/main/IMPLEMENTATION_PLAN.md) | P1–P7 full plan with exit checks |
 | [EVAL_PLAN.md](https://github.com/gasyoun/kosha/blob/main/EVAL_PLAN.md) | quality gates, anti-gaming rules, T-UC1…T-UC13 acceptance tests |
