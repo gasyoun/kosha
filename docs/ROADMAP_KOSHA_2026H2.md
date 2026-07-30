@@ -1,6 +1,12 @@
 # Roadmap — kosha, 2026 H2
 
-_Created: 18-07-2026 · Last updated: 18-07-2026_
+_Created: 18-07-2026 · Last updated: 30-07-2026_
+
+**🔒 SUPERSEDED 30-07-2026 (H1943):** the portfolio-status roadmap role is now
+[docs/ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP.md)
+→ [docs/ROADMAP_KOSHA_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP_KOSHA_2026_2027.md).
+This document is preserved in place as immutable historical evidence of the
+2026 H2 wave order; do not treat it as current status.
 
 The wave order for kosha's second half of 2026, under the rulings recorded in
 [PLAN_KOSHA_CONCORDANCE_Q3_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_CONCORDANCE_Q3_2026H2.md).
