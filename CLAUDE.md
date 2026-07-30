@@ -9,11 +9,17 @@ Sanskrit dictionary web service: fast lookup over the Cologne Digital Sanskrit
 Dictionaries (MW, PWG, AP90 first), collapsing every dictionary's entry for a
 headword onto one page, scan-anchored to the printed source, with citable
 sense-level IDs. FastAPI backend + a static docs/cache site. **Status:
-pre-alpha** — this is currently a locked, gated engineering plan (`v0.2.x`)
-plus an honest FastAPI stub; coding starts with
-[`PHASE1_PLAN.md`](PHASE1_PLAN.md). No lookup functionality works yet — don't
-assume any endpoint returns real data until `PHASE1_PLAN.md`'s exit checks
-say so.
+pre-alpha** — corrected 30-07-2026 (H1943; this line was stale since
+24-07-2026 and understated real progress). The lookup API + UI run locally
+against real MW/PWG/AP90 data (Phase 1 complete), the static-cache/data-hub
+tier is live on GitHub Pages, and the current release is
+[v0.96.0](https://github.com/gasyoun/kosha/releases/tag/v0.96.0) — but the
+public `samskrtam.ru` dictionary URL is not yet deployed (MG deploy-gated),
+and W0 (see [`docs/ROADMAP.md`](docs/ROADMAP.md)) is a hard feature freeze
+until the reproducible-substrate and contract/trust-boundary work lands. See
+[README.md](README.md)'s status banner and
+[`.ai_state.md`](.ai_state.md) for the exact current state; don't assume any
+endpoint behavior beyond what the live tests in `tests/` verify.
 
 ## Common commands
 
@@ -55,7 +61,10 @@ Copy `.env.example` → `.env` before running the API — sets `DATABASE_PATH`,
 | `RISKS.md` | R1–R12 pre-mortem, incl. the citability commitments (citation URLs must never depend on the `samskrtam.ru` server host) |
 | `KOSHA_DECISIONS_NEEDED.md` | Open @DECIDE items — check before assuming a design choice is settled |
 
-No `.github/workflows/` exist yet — there is no CI in this repo currently.
+**CI (corrected 30-07-2026, H1943):** `.github/workflows/` now exists —
+`changelog-lint.yml` (duplicate-entry guard) and `dependabot-auto-merge.yml`.
+Neither runs the Python/UI test suite yet; required Python/UI CI is H1944
+scope (W0B), not yet shipped.
 
 ## Conventions
 

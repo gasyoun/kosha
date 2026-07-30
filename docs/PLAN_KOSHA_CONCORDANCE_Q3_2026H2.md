@@ -1,6 +1,12 @@
 # Plan — kosha Concordance Q3: Pāṇinian sūtra ↔ corpus (2026 H2)
 
-_Created: 18-07-2026 · Last updated: 20-07-2026_
+_Created: 18-07-2026 · Last updated: 30-07-2026_
+
+**🔒 SUPERSEDED 30-07-2026 (H1943) as the portfolio governing plan:** the plan
+of record for kosha overall is now
+[docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md).
+This document remains the decision record for the Q3 Pāṇinian concordance
+programme specifically and is preserved in place, not moved.
 
 The index doc for kosha's next programme. It records **what was decided and by
 whom**, states the **autonomy contract** an agent operates under, and links the

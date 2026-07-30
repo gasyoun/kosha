@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="80 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="81 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="80 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="81 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -1087,7 +1087,7 @@
     {
       "@type": "Dataset",
       "name": "DCS reading pack — Nala 1 (Nalopākhyāna, Mahābhārata 3.50)",
-      "description": "P5 UI step 6b. Sibling Gitā 1 pack PARKED: the Bhagavadgita is absent from the DCS corpus (MBh book 6 omits adhyayas 23-40, the 18 Gita chapters); needs an external lemmatised source. Real DCS DB is VisualDCS/src/DCS-data-2026/dcs_full.sqlite (the 0-byte src/dcs_full.sqlite is a decoy).",
+      "description": "P5 UI step 6b. CORRECTED 30-07-2026 (#198): the Bhagavadgita is NOT absent from the DCS corpus — MBh book 6's 18 Gita adhyayas are present, relabeled as chapter.ref 'MBh, 6, BhaGī 1'..'BhaGī 18' (10,547 tokens; verified twice, H1407 adversarial pass), not omitted. The kosha Gita reading pack is instead built from the hand-curated Gita gold master (see gita-gold-master row below), not DCS. Real DCS DB is VisualDCS/src/DCS-data-2026/dcs_full.sqlite (the 0-byte src/dcs_full.sqlite is a decoy).",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
       "isAccessibleForFree": true,
       "creator": {
@@ -2039,7 +2039,7 @@
     {
       "@type": "Dataset",
       "name": "Inline Sanskrit→Russian gloss layer (reading packs, W-RU-a)",
-      "description": "RIGHTS GATE (PLAN decision 14): RU glosses come ONLY from SanskritRussian's public, GitHub-Pages-served surface/lemma/root glossaries; the restricted upstream RussianTranslation/src/corpus_lexicon.jsonl is never read. Additive: the English token `gloss` is untouched; RU lives under token.gloss_ru {surface,lemma,root}. Coverage report: reading/RU_GLOSS_COVERAGE.md — the measured 95.6% shows the public subset suffices (no rights unlock needed). Gītā packs are PARKED (the Bhagavadgītā is absent from the DCS full corpus), so the layer applies to the 5 built packs (nala 1-3, hitopadeśa, kirātārjunīya).",
+      "description": "RIGHTS GATE (PLAN decision 14): RU glosses come ONLY from SanskritRussian's public, GitHub-Pages-served surface/lemma/root glossaries; the restricted upstream RussianTranslation/src/corpus_lexicon.jsonl is never read. Additive: the English token `gloss` is untouched; RU lives under token.gloss_ru {surface,lemma,root}. Coverage report: reading/RU_GLOSS_COVERAGE.md — the measured 95.6% shows the public subset suffices (no rights unlock needed). CORRECTED 30-07-2026 (#198): the layer applies to the 5 DCS-sourced packs (nala 1-3, hitopadeśa, kirātārjunīya) because the Gītā packs are built and already carry their own hand-curated gloss_ru from gita-gold-master, not because the Gītā is absent from DCS (it is present, see the gita-reading-pack note).",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
       "isAccessibleForFree": true,
       "creator": {
@@ -2287,6 +2287,34 @@
         "encodingFormat": "tsv",
         "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/data/gita/gita_prose.tsv"
       }
+    },
+    {
+      "@type": "Dataset",
+      "name": "PWG literary-source scan-indexing campaign registry (2025-2026)",
+      "description": "H1706, csl-observatory PR #107, v1.5.0. Sidecars in the same directory: the verbatim 4-tab snapshot, the ranked e-text candidate queue, and a dated audit of all 37 sanskrit-lexicon-scans directories. CAVEAT 1 - the citation_count column is transcribed from a maintainer-kept sheet and its provenance is UNRESOLVED (1.2x to 433x against the full-dictionary <ls> extraction); use it to rank works, never as a numerator over a dictionary-wide denominator. CAVEAT 2 - multi-volume works carry their count once, on volume 1, so per-volume mass is a floor. CAVEAT 3 - the snapshot's Team tab has the volunteers' real-name column REDACTED at fetch time; handles are public on every coordinating issue, the name-to-handle linkage is not, and publishing it is a human decision (open MG @DECIDE in GTD).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "pwg-scan-index-campaign"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory"
+      }
     }
   ]
 }
@@ -2357,7 +2385,7 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>80</b><span>public datasets</span></div>
+      <div class="tally"><b>81</b><span>public datasets</span></div>
       <div class="tally"><b>11</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
@@ -3174,6 +3202,16 @@
       <p class="meta">653 rows · 222.8 KB · TSV</p>
       <div class="chips"><span class="chip">reading/index.html Prose toggle</span><span class="chip">reading/data/gita_prose.js</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/data/gita/gita_prose.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>PWG literary-source scan-indexing campaign registry (2025-2026)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per tracked PWG/PWK literary source, keyed on ls_code (the abbreviation, presentation marks stripped). 34 columns: status + status_gloss, citation_count, total_pages, volunteer, started/finished/index_posted/public_link dates, coordinating issue repo+number+URL, scan_dir + canonical spelling + Pages URL + repo size, and the cross-validation set (in_pwgbib, dict_citations, count_ratio, ru_subset_refs, scan_wired). book_no is NOT unique - do not key on it.</p>
+      <p class="meta">82 rows · 34.6 KB · TSV</p>
+      <div class="chips"><span class="chip">csl-observatory reports/pwg_scan_index.md</span><span class="chip">csl-observatory /scan-index dashboard page</span><span class="chip">data/pwg_scan_index_tracker/pwg_etext_candidate_queue.tsv (e-text extraction ranking, H1715)</span><span class="chip">data/pwg_scan_index_tracker/scan_target_audit.tsv (resolver wiring, H1714)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/sanskrit-lexicon/csl-observatory">In source repo ↗</a></div>
     </article>
     </div>
     <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>

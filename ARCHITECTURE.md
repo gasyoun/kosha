@@ -1,6 +1,6 @@
 # Architecture contract — Gasuns Sanskrit Dictionary (kosha)
 
-_Created: 02-07-2026 · Last updated: 24-07-2026_
+_Created: 02-07-2026 · Last updated: 30-07-2026_
 
 The engineering contract for Phase 1, locking the four decisions M.G. took on
 02-07-2026 (A1–A4 below) on top of the product meta-decisions M1–M4
@@ -8,6 +8,17 @@ The engineering contract for Phase 1, locking the four decisions M.G. took on
 An execution session (Sonnet 5 `claude-sonnet-5` / Opus 4.8 `claude-opus-4-8`)
 implements [PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md)
 against this document; deviations get recorded here first.
+
+**Integrated platform contract (30-07-2026):** the twelve-month W0–W4
+programme supersedes this document as the current target-architecture index —
+see
+[docs/ARCHITECTURE_KOSHA_PLATFORM.md](https://github.com/gasyoun/kosha/blob/main/docs/ARCHITECTURE_KOSHA_PLATFORM.md)
+for the modular target architecture and
+[docs/ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP.md)
+for the live roadmap. A1–A4 below remain the historical Phase-1 decisions of
+record and are preserved in place, not moved — sense-ID citation format (A2)
+and the local-first deploy rule (A3) remain load-bearing and are carried
+forward unchanged into the platform contract.
 
 ## Locked decisions (A1–A4, M.G. 02-07-2026)
 

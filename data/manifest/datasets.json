@@ -971,7 +971,7 @@
       "consumers": [
         "reading/ static viewer"
       ],
-      "notes": "P5 UI step 6b. Sibling Gitā 1 pack PARKED: the Bhagavadgita is absent from the DCS corpus (MBh book 6 omits adhyayas 23-40, the 18 Gita chapters); needs an external lemmatised source. Real DCS DB is VisualDCS/src/DCS-data-2026/dcs_full.sqlite (the 0-byte src/dcs_full.sqlite is a decoy).",
+      "notes": "P5 UI step 6b. CORRECTED 30-07-2026 (#198): the Bhagavadgita is NOT absent from the DCS corpus — MBh book 6's 18 Gita adhyayas are present, relabeled as chapter.ref 'MBh, 6, BhaGī 1'..'BhaGī 18' (10,547 tokens; verified twice, H1407 adversarial pass), not omitted. The kosha Gita reading pack is instead built from the hand-curated Gita gold master (see gita-gold-master row below), not DCS. Real DCS DB is VisualDCS/src/DCS-data-2026/dcs_full.sqlite (the 0-byte src/dcs_full.sqlite is a decoy).",
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md"
     },
     {
@@ -1649,7 +1649,7 @@
         "reading/data/*.json reading packs (additive token.gloss_ru)",
         "reading/index.html Russian gloss toggle"
       ],
-      "notes": "RIGHTS GATE (PLAN decision 14): RU glosses come ONLY from SanskritRussian's public, GitHub-Pages-served surface/lemma/root glossaries; the restricted upstream RussianTranslation/src/corpus_lexicon.jsonl is never read. Additive: the English token `gloss` is untouched; RU lives under token.gloss_ru {surface,lemma,root}. Coverage report: reading/RU_GLOSS_COVERAGE.md — the measured 95.6% shows the public subset suffices (no rights unlock needed). Gītā packs are PARKED (the Bhagavadgītā is absent from the DCS full corpus), so the layer applies to the 5 built packs (nala 1-3, hitopadeśa, kirātārjunīya).",
+      "notes": "RIGHTS GATE (PLAN decision 14): RU glosses come ONLY from SanskritRussian's public, GitHub-Pages-served surface/lemma/root glossaries; the restricted upstream RussianTranslation/src/corpus_lexicon.jsonl is never read. Additive: the English token `gloss` is untouched; RU lives under token.gloss_ru {surface,lemma,root}. Coverage report: reading/RU_GLOSS_COVERAGE.md — the measured 95.6% shows the public subset suffices (no rights unlock needed). CORRECTED 30-07-2026 (#198): the layer applies to the 5 DCS-sourced packs (nala 1-3, hitopadeśa, kirātārjunīya) because the Gītā packs are built and already carry their own hand-curated gloss_ru from gita-gold-master, not because the Gītā is absent from DCS (it is present, see the gita-reading-pack note).",
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/ru-gloss-layer.meta.md"
     },
     {
