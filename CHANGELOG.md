@@ -14,6 +14,27 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.96.1] - 2026-07-31
+
+### Fixed
+- **H1943 — governance/integrity truth reset.** Corrected the two `#198` false
+  "Bhagavadgita absent from DCS" mirrors in
+  [`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
+  (the Gita's 18 adhyayas are present in DCS as `MBh, 6, BhaGī 1..18`, relabeled
+  not omitted — the kosha Gita pack instead derives from the hand-curated gold
+  master); regenerated `directory/index.html` + README dataset counts (94→96)
+  from the manifest via the committed builder; established
+  [`docs/ROADMAP.md`](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP.md)
+  as the sole live roadmap; pointed root `ARCHITECTURE.md` at the platform
+  contract while preserving A1–A4; bannered 4 superseded portfolio-level
+  plan/roadmap docs `SUPERSEDED` in place; corrected stale pre-alpha/no-CI/
+  no-lookup claims in `CLAUDE.md`; added fail-fast truth tests
+  (`tests/test_truth_gates.py`) for version claims, active-queue completed
+  markers, and required plan banners. The
+  [0.62.0](#0620---2026-07-19) entry below is left as the historical record of
+  what was believed true at the time (`CHANGELOG.md` is append-only); this
+  entry is the correction of record.
+
 ## [0.96.0] - 2026-07-26
 
 ### Added

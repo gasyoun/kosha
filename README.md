@@ -1,6 +1,6 @@
 # Gasuns Sanskrit Dictionary
 
-_Created: 02-07-2026 · Last updated: 24-07-2026_
+_Created: 02-07-2026 · Last updated: 30-07-2026_
 
 > **Status: pre-alpha — the lookup API + UI run locally and the public
 > dictionary URL is not deployed yet, but the data-hub tier already is live.**
@@ -50,7 +50,7 @@ It is a **two-tier** store:
 
 Every canonical dataset in **either** tier has one machine-readable row in
 [data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
-— currently <!-- dataset_count_start -->**94 datasets** (79 public · 11 restricted · 4 intermediate)<!-- dataset_count_end --> — the
+— currently <!-- dataset_count_start -->**96 datasets** (81 public · 11 restricted · 4 intermediate)<!-- dataset_count_end --> — the
 single source agents read to discover and fetch data; a new or changed derived
 dataset ends its session with a manifest row or it does not exist for reuse.
 
@@ -124,6 +124,13 @@ Logeion's sidebar + Cologne's corrections loop + the trilingual DE/EN/RU
 layer.** No existing project occupies that intersection.
 
 ## Roadmap
+
+**Live status roadmap:** [docs/ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP.md)
+(W0 stabilization freeze active, per the
+[2026–2027 plan of record](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md)).
+The P1–P7 table below is **COMPLETED/SUPERSEDED historical evidence** of the
+build phases that got kosha to its current pre-alpha state — kept for the
+record, not the current plan.
 
 Full plan with exit checks:
 [IMPLEMENTATION_PLAN.md](https://github.com/gasyoun/kosha/blob/main/IMPLEMENTATION_PLAN.md) ·
@@ -342,7 +349,8 @@ volume-page, hyphen, 7 volumes · AP90 `0001-a` = page-column-letter.
 
 | In this repo | What it holds |
 |---|---|
-| [ARCHITECTURE.md](https://github.com/gasyoun/kosha/blob/main/ARCHITECTURE.md) | A1–A4 contract, SQLite DDL, API v1, Salt max-reuse rules |
+| [docs/ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP.md) | **the sole live roadmap** — thin pointer to the twelve-month portfolio below |
+| [ARCHITECTURE.md](https://github.com/gasyoun/kosha/blob/main/ARCHITECTURE.md) | A1–A4 contract, SQLite DDL, API v1, Salt max-reuse rules; points to the integrated platform architecture below |
 | [docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md) | 2026–2027 architecture/roadmap plan of record: 23 rulings, W0 freeze, Claude-only execution, and autonomy contract |
 | [docs/ROADMAP_KOSHA_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP_KOSHA_2026_2027.md) · [docs/ARCHITECTURE_KOSHA_PLATFORM.md](https://github.com/gasyoun/kosha/blob/main/docs/ARCHITECTURE_KOSHA_PLATFORM.md) | Twelve-month W0–W4 portfolio and modular target architecture |
 | [PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md) | D1–D5 work order — **the next thing to execute** |

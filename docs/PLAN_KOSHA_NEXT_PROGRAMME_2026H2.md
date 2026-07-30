@@ -1,6 +1,12 @@
 # Plan — kosha next programme (post-A4 / post-sense-W1), 2026 H2
 
-_Created: 24-07-2026 · Last updated: 24-07-2026_
+_Created: 24-07-2026 · Last updated: 30-07-2026_
+
+**🔒 SUPERSEDED 30-07-2026 (H1943) as the portfolio governing plan:** the plan
+of record for kosha overall is now
+[docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md).
+This document remains the decision record for the programme it indexes and is
+preserved in place, not moved.
 
 The index for kosha's **next multi-wave programme** after Concordance A4 W3b
 (`data-v0.3.0`) and the sense-frequency / sense-reconciliation wave-1 ships.
