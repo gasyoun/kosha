@@ -14,6 +14,11 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.98.1] - 2026-07-31
+### Fixed
+
+- **`main` branch protection enabled + #223 gap closed** (31-07-2026): H1945 found `main` unprotected while `VERIFICATION_KOSHA_ARCHITECTURE.md` asserted it required both status checks by name. Protection now enabled on human instruction: both CI workflows required, `enforce_admins` true, no review requirement, force-push and deletion refused — records the configuration and reasoning per setting, including that `enforce_admins` now routes release commits through a PR.
+
 ## [0.98.0] - 2026-07-31
 
 ### Added
