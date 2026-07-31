@@ -14,6 +14,54 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H1944 — W0B reproducible substrate.** Installable package (`pyproject.toml`
+  + `src/kosha/`, console script `kosha-build`) with a committed
+  [`requirements.lock.txt`](https://github.com/gasyoun/kosha/blob/main/requirements.lock.txt)
+  and its generator; typed settings
+  ([`src/kosha/settings.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/settings.py))
+  covering the D7 stores, the citation base, and the D10 flags, with
+  `DATABASE_PATH` kept as a deprecated core-DB alias whose *conflicting* use is
+  a hard error; a compact committed fixture source pack
+  ([`tests/fixtures/build/sources/`](https://github.com/gasyoun/kosha/tree/main/tests/fixtures/build/sources),
+  seven lemmas, no restricted bytes) that builds the whole graph in ~2 s;
+  required Python and UI CI workflows.
+- **Encrypted backup transport**
+  ([`src/kosha/backup/transport.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/backup/transport.py)):
+  explicit TLS control *and* data channels, upload under a temporary remote
+  name, mandatory server-side sha256 verification, atomic rename on success.
+  Fails closed when the server proves no digest; `scripts/deploy_guhya.py` now
+  defaults to a dry run and needs `--upload` to transfer anything.
+
+### Fixed
+- **[#210](https://github.com/gasyoun/kosha/issues/210) — no-flag build silently
+  omitted declared stages.** `scripts/build_db.py` dispatched on
+  `if args.stage in (None, "x")` and only five of the ten stages carried the
+  `None` case, so a default build skipped `entries`, `forms`, `inflections`,
+  `hybrid`, and `stem_bridge` without a word. Order now lives in a declarative
+  registry
+  ([`src/kosha/build/stages.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/build/stages.py))
+  expanded topologically by
+  [`src/kosha/build/dag.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/build/dag.py),
+  with prerequisite checks before the first write, per-stage postconditions, a
+  temporary build target promoted atomically only after `PRAGMA
+  foreign_key_check`, an immutable source lock (`<target>.lock.json` + a
+  `meta.build_stage_manifest` row), and a release mode that refuses the mutable
+  `latest` csl-sqlite alias. Skipped optional stages are logged with a reason
+  instead of vanishing.
+
+### Changed
+- **History, magic-link auth, and analytics are off by default (D10).** The
+  router is no longer mounted unless `KOSHA_HISTORY_ENABLED` is truthy, so those
+  paths 404 and are absent from the OpenAPI schema; with history off,
+  `/api/v1/search` also mints no visitor cookie and writes no event.
+- **Two-tier test suite (D14).** A new
+  [`tests/conftest.py`](https://github.com/gasyoun/kosha/blob/main/tests/conftest.py)
+  skips the eight full-data modules when the core DB is absent, instead of
+  failing 92 tests on a fresh checkout — which is what made CI possible at all.
+- `.env.example` corrected: its `DATABASE_PATH=./unified_dict.db` never matched
+  the path the code opened.
+
 ## [0.96.1] - 2026-07-31
 
 ### Fixed

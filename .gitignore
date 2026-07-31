@@ -12,6 +12,12 @@ review/
 data/raw/
 data/raw_sqlite/
 data/releases/
+# Built stores + their DAG sidecars: *.db is already ignored, but the build
+# writes <target>.lock.json and a .build/ scratch dir next to it (H1944).
+data/db/
+# csl-sqlite-shaped cache materialized from the committed fixture pack by
+# `kosha.build.fixtures` — regenerable, deterministic, never committed.
+data/.fixture-cache/
 # vidyut-cheda linguistic data (P4 K2a segmentation fallback) — vendored once
 # via `python -c "import vidyut; vidyut.download_data('data/vidyut')"`, ~sizeable
 # binary model + FSTs, regenerable; never committed (RISKS.md R12: local data,
