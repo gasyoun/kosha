@@ -78,6 +78,98 @@ ENVIRONMENT_REQUIREMENTS = {
 }
 
 
+#: The compact DB `python scripts/build_db.py --profile fixture` promotes, and
+#: the one CI builds twice on every PR.
+FIXTURE_DB = ROOT / "data" / "db" / "kosha_fixture.db"
+
+
+def _require_fixture_db():
+    import pytest as _pytest
+
+    if not FIXTURE_DB.is_file():
+        _pytest.skip(
+            "fixture DB absent — build it with "
+            "`python scripts/build_db.py --profile fixture`",
+            allow_module_level=False,
+        )
+    return FIXTURE_DB
+
+
+@pytest.fixture()
+def fixture_con():
+    """A read-only connection to the fixture DB.
+
+    W0C (H1945) added this because the contract work it introduced — Salt
+    parity, the sanitizer, error shapes, citation resolution — has to be
+    verified on the tier CI actually runs. The pre-existing API tests are
+    pinned to full-data counts and skip in CI, so a gate written against them
+    would have proved nothing on any pull request.
+    """
+    import sqlite3
+
+    path = _require_fixture_db()
+    con = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
+    con.row_factory = sqlite3.Row
+    try:
+        yield con
+    finally:
+        con.close()
+
+
+@pytest.fixture()
+def fixture_client():
+    """A `TestClient` whose routes read the fixture DB.
+
+    The store is injected through FastAPI's dependency override rather than by
+    re-pointing settings: `app/db.py` resolves `DB_PATH` at import, and pytest
+    imports `app.main` once per session, so an environment variable set in a
+    test would arrive too late — the same reason `mount_history` exists.
+
+    The override opens a *fresh* connection per request, exactly as `get_db`
+    does in production. Handing every request one shared connection would fail
+    outright (`TestClient` dispatches routes on a worker thread and SQLite
+    objects are thread-bound) and, worse, would test a concurrency shape the
+    service never runs.
+    """
+    import sqlite3
+
+    from fastapi.testclient import TestClient
+
+    from app.main import app
+    from db import get_db
+
+    path = _require_fixture_db()
+
+    def _fixture_db():
+        con = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
+        con.row_factory = sqlite3.Row
+        try:
+            yield con
+        finally:
+            con.close()
+
+    app.dependency_overrides[get_db] = _fixture_db
+    try:
+        # `raise_server_exceptions=False` so the installed error handlers are
+        # what the test observes — otherwise TestClient re-raises and the
+        # response shape under test never gets built.
+        yield TestClient(app, raise_server_exceptions=False)
+    finally:
+        app.dependency_overrides.pop(get_db, None)
+
+
+@pytest.fixture()
+def fixture_lemma(fixture_con):
+    """An SLP1 headword that exists in the fixture pack, in every dictionary
+    the pack covers. Discovered, not hardcoded: the pack is seven lemmas and
+    may be regenerated."""
+    row = fixture_con.execute(
+        "SELECT slp1_key, COUNT(DISTINCT dict) AS n FROM entries "
+        "GROUP BY slp1_key ORDER BY n DESC, slp1_key LIMIT 1"
+    ).fetchone()
+    return row["slp1_key"]
+
+
 def pytest_collection_modifyitems(config, items):
     full_data_skip = None
     if not _core_db_present():

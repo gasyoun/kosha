@@ -35,9 +35,12 @@ from pydantic import BaseModel, ConfigDict, field_validator
 ROOT = Path(__file__).resolve().parents[2]
 
 #: `.env` keys that were read directly before W0B, mapped to their typed name.
-#: Only `DATABASE_PATH` is a genuine rename; the rest already carried a
-#: `KOSHA_`/domain prefix and are listed for documentation.
-DEPRECATED_ALIASES = {"DATABASE_PATH": "KOSHA_CORE_DB_PATH"}
+#: `DATABASE_PATH` is a genuine rename; `KOSHA_RELEASES_DIR` is the citation
+#: archive's pre-W0C name (see `archive_dir` below).
+DEPRECATED_ALIASES = {
+    "DATABASE_PATH": "KOSHA_CORE_DB_PATH",
+    "KOSHA_RELEASES_DIR": "KOSHA_ARCHIVE_DIR",
+}
 
 _TRUE = {"1", "true", "yes", "on"}
 _FALSE = {"0", "false", "no", "off", ""}
@@ -79,6 +82,15 @@ class Settings(BaseModel):
     history_db: Path
     #: Immutable citation archive mount (D9). Absence is not an error here —
     #: the release gate checks it, not the runtime.
+    #:
+    #: W0C (H1945) made this the *only* name for that mount. W0B introduced
+    #: `archive_dir` (default `data/archive`) while `app/versions.py` went on
+    #: reading its own `KOSHA_RELEASES_DIR` (default `data/releases`) — two
+    #: settings for one directory, defaulting to two different places, so
+    #: pointing the documented knob at a mounted release archive moved nothing
+    #: and every citation kept resolving against the old path. The default is
+    #: now `data/releases`, the directory the mechanism actually reads, and the
+    #: old name is accepted as a deprecated alias.
     archive_dir: Path
 
     # --- public surface -----------------------------------------------------
@@ -145,16 +157,42 @@ class Settings(BaseModel):
                 if env.get("HISTORY_DB_PATH")
                 else data_db / "kosha_history.db"
             ),
-            archive_dir=(
-                _norm(env["KOSHA_ARCHIVE_DIR"], root)
-                if env.get("KOSHA_ARCHIVE_DIR")
-                else root / "data" / "archive"
-            ),
+            archive_dir=_resolve_archive_dir(env, root),
             public_base=env.get("KOSHA_PUBLIC_BASE", "http://localhost:8000"),
             enable_history=_as_bool(
                 env.get("KOSHA_HISTORY_ENABLED"), key="KOSHA_HISTORY_ENABLED"
             ),
         )
+
+
+def _resolve_archive_dir(env: Mapping[str, str], root: Path) -> Path:
+    """The citation-archive mount, from either name (W0C, H1945).
+
+    Same contract as the `DATABASE_PATH` alias above: the deprecated name still
+    works and warns, but a *contradicting* pair is a hard error rather than a
+    silent winner — a deployment that mounts release assets at one path and
+    resolves citations from another would answer "not archived" for citations
+    it is in fact serving, and nothing would say why.
+    """
+    typed = env.get("KOSHA_ARCHIVE_DIR")
+    legacy = env.get("KOSHA_RELEASES_DIR")
+    if legacy is not None:
+        warnings.warn(
+            "KOSHA_RELEASES_DIR is deprecated; use KOSHA_ARCHIVE_DIR "
+            "(it names the immutable citation archive mount, D9).",
+            DeprecationWarning,
+            stacklevel=3,
+        )
+        if typed is not None and _norm(typed, root) != _norm(legacy, root):
+            raise SettingsError(
+                "conflicting citation-archive configuration: "
+                f"KOSHA_ARCHIVE_DIR={typed!r} and KOSHA_RELEASES_DIR={legacy!r} "
+                "resolve to different directories. Remove KOSHA_RELEASES_DIR."
+            )
+        typed = typed if typed is not None else legacy
+    if typed:
+        return _norm(typed, root)
+    return root / "data" / "releases"
 
 
 def _norm(value: str | Path, root: Path) -> Path:
