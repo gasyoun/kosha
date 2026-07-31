@@ -54,14 +54,15 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "app"))
+sys.path.insert(0, str(ROOT / "src"))
 
-from render import render            # noqa: E402
-from scan_resolver import scan_url   # noqa: E402
-from transliterate import from_slp1_out  # noqa: E402
-from evidence import build_evidence  # noqa: E402
+from kosha.api import repository, serializer  # noqa: E402
+from kosha.scan_resolver import scan_url   # noqa: E402
+from kosha.settings import get_settings  # noqa: E402
+from kosha.transliterate import from_slp1_out  # noqa: E402
 
 DEFAULT_DB = ROOT / "data" / "db" / "kosha.db"
-ALL_DICTS = ("mw", "pwg", "ap90")
+ALL_DICTS = repository.ALL_DICTS
 
 # H345: mirror of app/main.py's HERITAGE_BASE — same default, same env var.
 HERITAGE_BASE = os.getenv("HERITAGE_DICO_BASE", "https://sanskrit.inria.fr/")
@@ -107,59 +108,40 @@ def data_version(con: sqlite3.Connection) -> str:
 
 
 def entry_payload(con, row, dv, out="iast", raw=False):
-    """Mirror of app/main.py::_entry_payload — keep the two in lockstep."""
-    payload = {
-        "dict": row["dict"], "L": row["L"], "sense_ids": [],
-        "scan_url": scan_url(row["dict"], row["page"], row["vol"]),
-        "headword": from_slp1_out(row["slp1_key"], out),
-        "rendered_html": render(row["dict"], row["body"]),
-    }
-    if raw:
-        payload["raw"] = row["body"]
-    senses = con.execute(
-        "SELECT sense_n FROM senses WHERE entry_id=? ORDER BY sense_n", (row["id"],)
-    ).fetchall()
-    payload["sense_ids"] = [f"{row['dict']}.{row['L']}.{s['sense_n']}@{dv}" for s in senses]
-    # P3 evidence layer -- mirror app/main.py::_entry_payload's lemma_row join.
-    lemma_row = con.execute(
-        "SELECT * FROM lemmas WHERE slp1=?", (row["slp1_key"],)
-    ).fetchone()
-    payload["evidence"] = build_evidence(lemma_row)
-    # H345: Heritage coverage witness -- mirror app/main.py::_entry_payload verbatim.
-    try:
-        her = con.execute(
-            "SELECT covered, anchor FROM heritage_anchor WHERE mw_key1=?",
-            (row["slp1_key"],),
-        ).fetchone()
-    except sqlite3.OperationalError:
-        payload["heritage"] = None
-    else:
-        if her is None or not her["covered"]:
-            payload["heritage"] = {"covered": False}
-        else:
-            anchor = her["anchor"]
-            payload["heritage"] = {
-                "covered": True,
-                "anchor": anchor,
-                "heritage_lemma": anchor.split("#", 1)[1] if anchor else None,
-                "url": HERITAGE_BASE + anchor if anchor else None,
-            }
-    return payload
+    """One entry, through the shared serializer (W0C item 4, H1945).
+
+    This function used to be a hand-maintained *copy* of
+    `app/main.py::_entry_payload`, carrying the instruction "keep the two in
+    lockstep" — which is not a mechanism. They had already drifted (this copy
+    never implemented the `raw` branch it accepted a flag for). Now both call
+    `kosha.api.serializer`, and `tests/test_contract_parity.py` asserts the
+    card equals the API response rather than asking a reader to.
+    """
+    hom_rows = repository.entries_for_key(con, row["dict"], row["slp1_key"])
+    return serializer.entry_dict(serializer.serialize_entry(
+        con, row,
+        hom_count=len(hom_rows),
+        data_version=dv,
+        public_base=get_settings().public_base,
+        out=out,
+        include_raw=raw,
+        heritage_base=HERITAGE_BASE,
+    ))
 
 
 def lemma_card(con, slp1, dv, out="iast"):
     """Byte-identical to GET /api/v1/lemma/<slp1>?in=slp1&out=<out>."""
-    results = []
-    for d in ALL_DICTS:
-        rows = con.execute(
-            "SELECT * FROM entries WHERE dict=? AND slp1_key=? ORDER BY L", (d, slp1)
-        ).fetchall()
-        for r in rows:
-            results.append(entry_payload(con, r, dv, out))
     return {
         "data_version": dv,
         "query": {"key": slp1, "in": "slp1", "out": out, "dicts": list(ALL_DICTS)},
-        "results": results,
+        "results": [
+            serializer.entry_dict(entry)
+            for entry in serializer.serialize_lemma_card(
+                con, slp1, data_version=dv,
+                public_base=get_settings().public_base,
+                out=out, dicts=ALL_DICTS, heritage_base=HERITAGE_BASE,
+            )
+        ],
     }
 
 

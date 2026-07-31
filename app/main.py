@@ -20,17 +20,22 @@ sys.stderr.reconfigure(encoding="utf-8")
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
+from kosha.api import repository, serializer  # noqa: E402
+from kosha.api.errors import install_error_handlers, raise_error  # noqa: E402
+from kosha.api.models import (  # noqa: E402
+    IMPLEMENTED_FIELDS,
+    IMPLEMENTED_QUERY_TYPES,
+    SaltQueryType,
+)
 from kosha.feature_gates import history_enabled  # noqa: E402
+from kosha.api.serializer import render_sanitized  # noqa: E402
+from kosha.scan_resolver import scan_url  # noqa: E402
 from kosha.settings import get_settings  # noqa: E402
+from kosha.transliterate import to_slp1_auto, from_slp1_out  # noqa: E402
+from kosha.cite import cite_object  # noqa: E402
 
 from db import get_db, data_version  # noqa: E402
-from render import render  # noqa: E402
-from salt import entries_for_key, salt_entry, mint_salt_id  # noqa: E402
-from scan_resolver import scan_url  # noqa: E402
-from transliterate import to_slp1_auto, from_slp1_out  # noqa: E402
 from versions import parse_sense_id, has_archive, resolve_sense  # noqa: E402
-from cite import cite_object  # noqa: E402
-from evidence import build_evidence  # noqa: E402
 from reverse_lookup import analyze as reverse_analyze  # noqa: E402
 from neighbors import (  # noqa: E402
     entry_location, column_entries, physical_page_entries, group_label,
@@ -89,15 +94,21 @@ app.add_middleware(
 if history_enabled():
     app.include_router(history_router)
 
+# W0C item 5 (H1945): one documented error shape leaves `/api/v1`
+# (`{"error": {code, message, suggestions}}`, top level — not nested inside
+# FastAPI's `detail`), and the C-SALT string form leaves `/dicts/*`. This also
+# catches request-validation failures and unhandled exceptions, which used to
+# escape in two further shapes of their own.
+install_error_handlers(app)
+
 
 def envelope(con, query: dict, results):
     return {"data_version": data_version(con), "query": query, "results": results}
 
 
 def error(code: str, message: str, status: int, suggestions=None):
-    raise HTTPException(status_code=status, detail={
-        "error": {"code": code, "message": message, "suggestions": suggestions or []}
-    })
+    """Kept as the route-level spelling; the shape is owned by `kosha.api.errors`."""
+    raise_error(code, message, status, suggestions)
 
 
 @app.get("/")
@@ -114,77 +125,46 @@ def health():
 # kosha API v1 (ARCHITECTURE.md)
 # ---------------------------------------------------------------------------
 
-ALL_DICTS = ("mw", "pwg", "ap90")
+ALL_DICTS = repository.ALL_DICTS
 
 
-def _entry_payload(con, row, out: str, raw: bool):
-    payload = {
-        "dict": row["dict"], "L": row["L"], "sense_ids": [],
-        "scan_url": scan_url(row["dict"], row["page"], row["vol"]),
-        "headword": from_slp1_out(row["slp1_key"], out),
-        "rendered_html": render(row["dict"], row["body"]),
-    }
-    if raw:
-        payload["raw"] = row["body"]
-    senses = con.execute(
-        "SELECT sense_n FROM senses WHERE entry_id=? ORDER BY sense_n", (row["id"],)
-    ).fetchall()
-    dv = data_version(con)
-    payload["sense_ids"] = [f"{row['dict']}.{row['L']}.{s['sense_n']}@{dv}" for s in senses]
-    # P3 evidence layer (IMPLEMENTATION_PLAN.md P3 / EVAL_PLAN.md T-UC4):
-    # band + attestation count + first era + one corpus example, each badge
-    # carrying its own provenance source. Keyed off the entry's own
-    # slp1_key, not the input query key, so homonym-suffixed entries under
-    # the same headword still resolve the right lemma row.
-    lemma_row = con.execute(
-        "SELECT * FROM lemmas WHERE slp1=?", (row["slp1_key"],)
-    ).fetchone()
-    payload["evidence"] = build_evidence(lemma_row)
-    # H345: Heritage (INRIA) coverage witness — is this headword in Heritage's
-    # hand-built lexicon? Third witness alongside the DCS frequency layer,
-    # joined like it (keyed off the entry's own slp1_key = MW key1). A
-    # coverage/link-out signal only — NOT the forms.source='heritage'
-    # rule-generated paradigm layer (H111, lowest-trust; see build_db.py).
-    # try/except so a pre-H345 kosha.db (no heritage_anchor table yet, ro
-    # connection can't migrate) degrades to null instead of erroring.
-    try:
-        her = con.execute(
-            "SELECT covered, anchor FROM heritage_anchor WHERE mw_key1=?",
-            (row["slp1_key"],),
-        ).fetchone()
-    except sqlite3.OperationalError:
-        her = None
-        payload["heritage"] = None
-    else:
-        if her is None or not her["covered"]:
-            payload["heritage"] = {"covered": False}
-        else:
-            anchor = her["anchor"]
-            payload["heritage"] = {
-                "covered": True,
-                "anchor": anchor,
-                # DICO key after the page fragment = Heritage's own lemma
-                # spelling (Velthuis-style, homonym suffix kept, e.g.
-                # "a.mzaka#1"); None on the ~2.3% unresolved-anchor tier.
-                "heritage_lemma": anchor.split("#", 1)[1] if anchor else None,
-                "url": HERITAGE_BASE + anchor if anchor else None,
-            }
-    return payload
+def _lemma_entries(con, slp1_key: str, out: str, raw: bool, dicts=ALL_DICTS):
+    """The lemma card, through the one shared serializer (W0C item 2).
+
+    This function is deliberately thin. Everything that used to live inline
+    here — the per-dict query, the sense-id minting, the evidence join, the
+    Heritage witness, the render — moved into `kosha.api.serializer`, which the
+    static-card builder and the SSR route call too. That is what makes
+    `tests/test_contract_parity.py` able to assert the three surfaces are
+    equal rather than merely similar.
+    """
+    return [
+        serializer.entry_dict(entry)
+        for entry in serializer.serialize_lemma_card(
+            con,
+            slp1_key,
+            data_version=data_version(con),
+            public_base=PUBLIC_BASE,
+            out=out,
+            dicts=dicts,
+            include_raw=raw,
+            heritage_base=HERITAGE_BASE,
+        )
+    ]
 
 
 @app.get("/api/v1/lemma/{key}")
 def get_lemma(key: str, in_: str = Query("auto", alias="in"), out: str = "iast",
               dicts: str = ",".join(ALL_DICTS), raw: int = 0,
               con: sqlite3.Connection = Depends(get_db)):
+    """D6: results are Salt-profile entries with kosha's own fields under
+    `kosha`. Pre-public breaking change — the flat `{dict, L, headword,
+    rendered_html, …}` object this route returned through v0.97 is now the
+    `kosha` block of a Salt entry, and the golden fixtures in
+    `tests/golden/contract/` freeze both sides of the cut."""
     slp1_key = to_slp1_auto(key, in_)
     dict_list = [d.strip() for d in dicts.split(",") if d.strip() in ALL_DICTS]
-    results = []
-    for d in dict_list:
-        rows = con.execute(
-            "SELECT * FROM entries WHERE dict=? AND slp1_key=? ORDER BY L", (d, slp1_key)
-        ).fetchall()
-        for r in rows:
-            results.append(_entry_payload(con, r, out, bool(raw)))
+    results = _lemma_entries(con, slp1_key, out, bool(raw), dict_list)
     if not results:
         lemma = con.execute("SELECT slp1 FROM lemmas WHERE slp1=?", (slp1_key,)).fetchone()
         error("lemma_not_found", f"no entries for '{key}' (slp1={slp1_key})", 404,
@@ -202,13 +182,7 @@ def word_page(slp1: str, con: sqlite3.Connection = Depends(get_db)):
     SLP1 key, the canonical addressing scheme (P5_ADVANCED_UI_DESIGN.md §3).
     """
     slp1_key = to_slp1_auto(slp1, "slp1")
-    results = []
-    for d in ALL_DICTS:
-        rows = con.execute(
-            "SELECT * FROM entries WHERE dict=? AND slp1_key=? ORDER BY L", (d, slp1_key)
-        ).fetchall()
-        for r in rows:
-            results.append(_entry_payload(con, r, "iast", False))
+    results = _lemma_entries(con, slp1_key, "iast", False)
     dv = data_version(con)
     if not results:
         # Crawlable, honest 404 — still links the browse spine, no fabricated body.
@@ -371,17 +345,10 @@ def get_paradigm(lemma: str, in_: str = Query("auto", alias="in"),
     return envelope(con, {"lemma": lemma, "in": in_, "lemma_slp1": canonical}, [result])
 
 
-def _prefix_range_bound(prefix: str) -> str:
-    """Exclusive upper bound for a half-open range seek over `prefix`
-    (D5_MEASUREMENTS.md §3 / H838): the smallest string that sorts after
-    every string starting with `prefix`, found by incrementing the last
-    character's codepoint. `slp1 >= prefix AND slp1 < bound` hits the
-    `slp1`/`slp1_key` index as a seek (BINARY collation, the SQLite
-    default, so this is case-sensitive) instead of `LIKE prefix||'%'`,
-    which forces a full scan AND is case-insensitive by default -- letting
-    a case-significant SLP1 prefix like 'ka' (ka) wrongly match 'KA' (kha).
-    """
-    return prefix[:-1] + chr(ord(prefix[-1]) + 1)
+#: W0C: the prefix-seek bound had a copy here and another in the Salt face.
+#: Both now call the one in `kosha.api.repository` — the same de-duplication
+#: the entry serializer got, applied to the query helper it sits next to.
+_prefix_range_bound = repository.prefix_range_bound
 
 
 def _log_search_background(anon_id: str, ts: str, query_raw: str, query_slp1: str,
@@ -483,7 +450,10 @@ def get_sense(sense_id: str, v: str = Query(None),
         result = {
             "sense_id": f"{dict_code}.{L}.{sense_n}@{want_version}",
             "dict": dict_code, "L": L, "sense_n": sense_n, "resolved_from": "archive",
-            "text_raw": arch["text_raw"], "text_rendered": render(dict_code, arch["text_raw"]),
+            "text_raw": arch["text_raw"],
+            # Sanitized like every other served render (W0C item 6): an
+            # archived body is the OLDER markup, not the safer one.
+            "text_rendered": render_sanitized(dict_code, arch["text_raw"]),
             "entry": {"dict": dict_code, "L": L, "headword": arch["headword"]},
             "scan_url": None,
             "cite": cite_object(dict_code, L, sense_n, want_version, PUBLIC_BASE, arch["headword"]),
@@ -505,7 +475,8 @@ def get_sense(sense_id: str, v: str = Query(None),
     result = {
         "sense_id": f"{dict_code}.{L}.{sense_n}@{dv}", "dict": dict_code, "L": L,
         "sense_n": sense_n, "resolved_from": "live",
-        "text_raw": body_span, "text_rendered": render(dict_code, body_span),
+        "text_raw": body_span,
+        "text_rendered": render_sanitized(dict_code, body_span),
         "entry": {"dict": dict_code, "L": L, "headword": headword},
         "scan_url": scan_url(dict_code, row["page"], row["vol"]),
         "cite": cite_object(dict_code, L, sense_n, dv, PUBLIC_BASE, headword),
@@ -538,49 +509,75 @@ def meta(con: sqlite3.Connection = Depends(get_db)):
 # Salt facade REST faces (ARCHITECTURE.md "Maximum-reuse rules" point 4)
 # ---------------------------------------------------------------------------
 
+def _salt_entries_for_keys(con, dict_code: str, keys, dv: str) -> list[dict]:
+    """Shared by both Salt faces — the same serializer `/api/v1` uses.
+
+    An id's homonym suffix is only correct relative to the whole group, so the
+    group is read even when one row is wanted.
+    """
+    entries = []
+    for key in keys:
+        rows = repository.entries_for_key(con, dict_code, key)
+        for row in rows:
+            entries.append(serializer.entry_dict(serializer.serialize_entry(
+                con, row, hom_count=len(rows), data_version=dv,
+                public_base=PUBLIC_BASE, heritage_base=HERITAGE_BASE,
+            )))
+    return entries
+
+
 @app.get("/dicts/{dict_id}/restful/entries")
 def salt_entries(dict_id: str, field: str = "headword_slp1", query: str = "",
                   query_type: str = "term", size: int = 25, input: str = "slp1",
                   output: str = "deva", con: sqlite3.Connection = Depends(get_db)):
+    """Salt profile §3. Errors here keep C-SALT's bare-string form and, since
+    W0C, C-SALT's status codes: the profile says a missing or invalid parameter
+    MUST be HTTP 400, and these routes used to answer 200 with an error body —
+    a client checking the status would have read a failure as success."""
     dict_code = dict_id.lower()
     if dict_code not in ALL_DICTS:
-        return {"error": f"unknown dict '{dict_id}'"}
-    if field != "headword_slp1":
-        return {"error": f"unsupported field '{field}' (Phase 1: headword_slp1 only)"}
+        error("unknown_dict", f"unknown dict '{dict_id}'", 400)
+    if field not in IMPLEMENTED_FIELDS:
+        # §4: an unimplemented search surface MUST 400, never return empty.
+        error("unsupported_field",
+              f"Missing or invalid parameter: 'field' — '{field}' is not indexed "
+              f"(implemented: {sorted(IMPLEMENTED_FIELDS)})", 400)
+    if query_type not in IMPLEMENTED_QUERY_TYPES:
+        known = set(SaltQueryType.__args__)
+        detail = ("not indexed yet" if query_type in known
+                  else "not a Salt query_type")
+        error("unsupported_query_type",
+              f"Missing or invalid parameter: 'query_type' — '{query_type}' is "
+              f"{detail} (implemented: {sorted(IMPLEMENTED_QUERY_TYPES)})", 400)
     slp1_q = to_slp1_auto(query, "slp1" if input == "slp1" else input) if query else ""
     if query_type == "term":
         where, params = "slp1_key = ?", (slp1_q,)
-    elif query_type == "prefix":
-        # H838 fix ported here (H1369): LIKE q||"%" forced a full scan of
-        # entries_dict_key AND is case-insensitive by default, letting a
-        # case-significant SLP1 prefix like "ka" (ka) wrongly match "Ka"
-        # (kha) rows. Same half-open range seek as /api/v1/search mode=prefix.
+    else:  # prefix — H838/H1369 half-open range seek, not a case-folding LIKE
         if slp1_q:
-            where, params = "slp1_key >= ? AND slp1_key < ?", (slp1_q, _prefix_range_bound(slp1_q))
+            where, params = ("slp1_key >= ? AND slp1_key < ?",
+                             (slp1_q, repository.prefix_range_bound(slp1_q)))
         else:
             where, params = "1=1", ()
-    else:
-        return {"error": f"unsupported query_type '{query_type}' (Phase 1: term/prefix)"}
-    keys = con.execute(
-        f"SELECT DISTINCT slp1_key FROM entries WHERE dict=? AND {where} LIMIT ?",
-        (dict_code, *params, size),
-    ).fetchall()
-    dv = data_version(con)
-    entries = []
-    for k in keys:
-        rows = entries_for_key(con, dict_code, k["slp1_key"])
-        for r in rows:
-            entries.append(salt_entry(con, r, len(rows), dv))
-    return {"data": {"entries": entries}}
+    keys = repository.distinct_keys(con, dict_code, where, params, size)
+    return {"data": {"entries": _salt_entries_for_keys(
+        con, dict_code, keys, data_version(con))}}
 
 
 @app.get("/dicts/{dict_id}/restful/ids")
 def salt_ids(dict_id: str, ids: list[str] = Query(default=[]),
              con: sqlite3.Connection = Depends(get_db)):
+    """Salt profile §5 — get-by-id, not a search."""
     dict_code = dict_id.lower()
     if dict_code not in ALL_DICTS:
-        return {"error": f"unknown dict '{dict_id}'"}
+        error("unknown_dict", f"unknown dict '{dict_id}'", 400)
     dv = data_version(con)
+
+    def serialize(row, hom_count):
+        return serializer.entry_dict(serializer.serialize_entry(
+            con, row, hom_count=hom_count, data_version=dv,
+            public_base=PUBLIC_BASE, heritage_base=HERITAGE_BASE,
+        ))
+
     out_entries = []
     for req_id in ids:
         body_id = req_id[len("lemma-"):] if req_id.startswith("lemma-") else req_id
@@ -588,23 +585,24 @@ def salt_ids(dict_id: str, ids: list[str] = Query(default=[]),
         m_n = body_id.rsplit("-", 1)
         if len(m_l) == 2 and m_l[1].replace(".", "").isdigit():
             key, lnum = m_l[0], m_l[1]
-            row = con.execute("SELECT * FROM entries WHERE dict=? AND slp1_key=? AND L=?",
-                               (dict_code, key, lnum)).fetchone()
-            if row:
-                hom_rows = entries_for_key(con, dict_code, key)
-                out_entries.append(salt_entry(con, row, len(hom_rows), dv))
+            row = repository.entry_by_lnum(con, dict_code, lnum)
+            if row is not None and row["slp1_key"] == key:
+                hom_rows = repository.entries_for_key(con, dict_code, key)
+                out_entries.append(serialize(row, len(hom_rows)))
             continue
         if len(m_n) == 2 and m_n[1].isdigit():
-            key, hui = m_n[0], m_n[1]
-            hom_rows = entries_for_key(con, dict_code, key)
+            key = m_n[0]
+            hom_rows = repository.entries_for_key(con, dict_code, key)
             for r in hom_rows:
-                if mint_salt_id(dict_code, r["slp1_key"], r["L"], r["body"], len(hom_rows)) == req_id:
-                    out_entries.append(salt_entry(con, r, len(hom_rows), dv))
+                minted = serializer.mint_salt_id(
+                    r["slp1_key"], r["L"], r["body"], len(hom_rows))
+                if minted == req_id:
+                    out_entries.append(serialize(r, len(hom_rows)))
             continue
         # bare "lemma-{key}" — all records for that key
-        hom_rows = entries_for_key(con, dict_code, body_id)
+        hom_rows = repository.entries_for_key(con, dict_code, body_id)
         for r in hom_rows:
-            out_entries.append(salt_entry(con, r, len(hom_rows), dv))
+            out_entries.append(serialize(r, len(hom_rows)))
     return {"data": {"ids": out_entries}}
 
 

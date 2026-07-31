@@ -14,6 +14,73 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **W0C — contract and trust boundaries (H1945).** The typed API layer
+  [`src/kosha/api/`](https://github.com/gasyoun/kosha/tree/main/src/kosha/api):
+  canonical Pydantic Salt entry/envelope/error models (D6/D13), one entry
+  serializer, one entry-reading query layer, the rendered-HTML allowlist
+  sanitizer, and top-level error normalization.
+- **The rendered-entry trust boundary.** Entry HTML is `{@html}`-bound in the
+  UI and interpolated unescaped into SSR pages, while `app/render.py` — a
+  faithful port of Cologne's `basicdisplay.php` — passes unrecognised elements
+  straight through with their attributes and interpolates source `n=` values
+  into `title='…'` unescaped. All rendered output now crosses an
+  [nh3](https://pypi.org/project/nh3/) allowlist
+  ([`kosha/api/sanitize.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/sanitize.py)),
+  with an adversarial suite (active content, event handlers, `javascript:`/
+  `data:` URLs, CSS `url()`/`expression()`, attribute-injection through a
+  source `title`) and a golden-corpus non-destruction gate: every element in
+  the real rendered corpus survives except `<pb>`, Cologne page-break metadata
+  kosha already surfaces structurally as `csl.page`/`csl.scanUrl`.
+- **Citation-archive validation**
+  ([`kosha/api/archive.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/archive.py)):
+  mount path, release metadata, sha256 of the dump against the declared digest,
+  openability, release-asset URL form, and the R5 rule that a citation host is
+  never the deployment host — previously a comment in three files, now a check.
+- **Fixture-tier contract gates.** `test_contract_parity`, `test_sanitizer`,
+  `test_salt_profile`, `test_api_errors`, `test_citation_archive` — all on the
+  tier CI runs on every PR, not the full-data tier that skips there.
+
+### Changed
+- **BREAKING (pre-public): `/api/v1/lemma` and `/w/{slp1}` now return
+  Salt-profile entries.** Per D6 each result is a Salt entry — `id`,
+  `headword_slp1`, `sense`, `re_headwords_slp1`, `created`, `xml` — with
+  Cologne provenance under `csl` and every kosha-only field (`dict`, `L`,
+  `headword`, `scan_url`, `sense_ids`, `rendered_html`, `evidence`,
+  `heritage`, `cite`, `raw`) under `kosha`. The flat object v0.97 returned is
+  now that `kosha` block. The `{data_version, query, results}` envelope is
+  unchanged. `sense[]`, hardcoded `[]` before, now carries real glosses.
+- **One serializer replaces three.** `app/main.py::_entry_payload`,
+  `scripts/build_static_cache.py::entry_payload` (a hand-maintained copy marked
+  "keep the two in lockstep", which had already drifted — it never implemented
+  the `raw` branch it accepted a flag for) and `app/salt.py::salt_entry` (which
+  emitted `sense: []` and `evidence: []` unconditionally) all now call
+  `kosha.api.serializer`. Parity is a test, not a comment.
+- `render`, `cite`, `scan_resolver`, `evidence` and `transliterate` moved from
+  `app/` into the installed package; `app/` keeps re-export shims (D11). Their
+  `sys.path` inserts into a sibling `sanskrit-util` checkout are gone.
+- Salt faces now answer a bad parameter with **HTTP 400** and the C-SALT
+  string form, per profile §3.2 — they returned **200** with an error body, so
+  a client checking the status read a failure as success. Unimplemented
+  `query_type`s (`wildcard`, `regexp`, `fuzzy`, `match`, `match_phrase`) 400
+  explicitly instead of returning an empty result set, per profile §4.
+
+### Fixed
+- **Two settings named one directory and defaulted to different places.** W0B
+  added `Settings.archive_dir` (`data/archive`) while `app/versions.py` kept
+  reading its own `KOSHA_RELEASES_DIR` (`data/releases`), so pointing the
+  documented knob at a mounted release archive moved nothing and citations
+  went on resolving from the old path. `KOSHA_ARCHIVE_DIR` is now the single
+  name, defaulting to the directory the mechanism reads; `KOSHA_RELEASES_DIR`
+  is a deprecated alias, and a contradicting pair is a hard error.
+- **`/api/v1/sense` bypassed the sanitizer entirely**, on both its live and its
+  archived branch — and an archived body is the older, less-scrutinized markup
+  of the two. Both now render through `serializer.render_sanitized`.
+- **Starlette's own 404/405 escaped error normalization.** Handlers registered
+  on FastAPI's `HTTPException` never see the base class the router raises, so
+  an unknown path returned `{"detail": "Not Found"}` while every deliberate
+  error was normalized. Registered on the base class.
+
 ## [0.97.1] - 2026-07-31
 
 ### Fixed

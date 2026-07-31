@@ -33,19 +33,34 @@ handoff explicitly classifies them as known noncritical residue.
 
 ## Required checks (branch protection)
 
-W0B (H1944) shipped the two workflows this gate runs in CI. The protected
-`main` branch requires both status checks by name:
+W0B (H1944) shipped the two workflows this gate runs in CI.
+
+> **Correction, 31-07-2026 (H1945).** This section previously read "The
+> protected `main` branch requires both status checks by name". It is not.
+> `GET /repos/gasyoun/kosha/branches/main` returns `"protected": false` and
+> `GET …/rulesets` returns `[]` — `main` has never carried branch protection or
+> a ruleset, so **no status check is required on it**, both workflows are
+> advisory, and a red CI run does not block a merge. The workflows exist and
+> run; the *enforcement* this paragraph asserted does not. Enabling it is a
+> repository-settings change outside H1945's scope, tracked as
+> [#223](https://github.com/gasyoun/kosha/issues/223) and held open in the
+> [W0 freeze-exit verdict](https://github.com/gasyoun/kosha/blob/main/docs/VERDICT_KOSHA_W0_FREEZE_EXIT_2026.md).
+
+The two workflows, and what each proves when it runs:
 
 | Check | Workflow | What it proves |
 |---|---|---|
 | `Fixture build + tests` | [python-ci.yml](https://github.com/gasyoun/kosha/blob/main/.github/workflows/python-ci.yml) | the declared DAG plans, builds from zero **twice**, and the fixture-tier suite passes |
 | `vitest + vite build` | [ui-ci.yml](https://github.com/gasyoun/kosha/blob/main/.github/workflows/ui-ci.yml) | the Svelte UI tests pass and the bundle still builds |
 
-Dependency auto-merge cannot bypass them:
+Dependency auto-merge is gated on them *by the workflow itself*:
 [dependabot-auto-merge.yml](https://github.com/gasyoun/kosha/blob/main/.github/workflows/dependabot-auto-merge.yml)
-is triggered by `workflow_run` on those two workflows, refuses to act unless
-the run concluded `success`, and only ever enables GitHub's *queued*
-auto-merge, which itself waits on branch protection.
+is triggered by `workflow_run` on those two workflows and refuses to act unless
+the run concluded `success`. It then enables GitHub's *queued* auto-merge —
+which waits on branch protection, and therefore, while `main` is unprotected,
+waits on nothing. The `workflow_run` condition is real and is currently the
+only barrier; the second, independent barrier this paragraph used to claim is
+not in place.
 
 The fixture tier is deliberately not the whole suite. Eight test modules are
 pinned to full-data counts (323,425 lemmas and similar) and skip themselves

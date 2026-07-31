@@ -1,92 +1,36 @@
-"""kosha D4 — Salt-profile entry serialization (ARCHITECTURE.md
-"Maximum-reuse rules"): per-dictionary entries inside /api/v1 responses,
-and the two Salt facade REST faces, share ONE Salt-profile entry shape.
+"""Compatibility shim (D11) — Salt serialization moved into the package.
 
-Ported from csl-apidev's real logic (api1/salt_common.php — read directly,
-csl-apidev has no importable Python module), not re-derived:
+W0C (H1945) replaced this module's hand-built entry dict with the single
+serializer in
+[`src/kosha/api/serializer.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/serializer.py),
+which `/api/v1`, the `/dicts/*` faces, the static cards and SSR now all share.
+What used to live here — the `salt_common.php` id-minting port and the entry
+shape — lives there; this file keeps the old import surface working.
 
-    id construction (salt_common.php ~L168-181):
-        homCount = # of entries.body sharing this dict+slp1_key
-        if homCount > 1:
-            suffix = "-{hom}" if a <hom> tag is present in this entry's body
-                     else "-L{lnum}"
-        else:
-            suffix = ""
-        id = f"lemma-{slp1_key}{suffix}"
-
-kosha extends the Salt entry with namespaced kosha.* fields (kosha.sense_ids,
-kosha.rendered_html, kosha.evidence, kosha.cite) per ARCHITECTURE §Maximum-
-reuse-rules point 1 — same object, no translation layer.
+The one behavioural change worth naming: `salt_entry` used to emit `sense: []`
+and `evidence: []` unconditionally, because it had no access to the sense spans
+or the lemma spine. The shared serializer fills both.
 """
-import os
-import re
 
-from cite import cite_object
-from render import render
-from scan_resolver import scan_url
-
-_PUBLIC_BASE = os.getenv("KOSHA_PUBLIC_BASE", "http://localhost:8000")
-
-_RE_KEY2 = re.compile(r"<key2>(.*?)</key2>", re.S)
-_RE_REFS = re.compile(r"<ls>(.*?)</ls>", re.S)
-# The homonym marker is the <info hui="N"/> ATTRIBUTE on this entry's own tail
-# <info> element — not a bare <hom>N</hom> text tag, which also appears deep
-# inside cross-reference prose (e.g. MW L41336.1/.3 quote another headword's
-# homonym number in running text) and would false-positive if matched naively.
-_RE_HUI = re.compile(r'<info\b[^>]*\bhui="([^"]*)"[^>]*/?>')
+from kosha.api.repository import entries_for_key  # noqa: F401
+from kosha.api.serializer import entry_dict, mint_salt_id as _mint, serialize_entry
 
 
 def mint_salt_id(dict_code: str, slp1_key: str, lnum: str, body: str, hom_count: int) -> str:
-    if hom_count <= 1:
-        return f"lemma-{slp1_key}"
-    hui_m = _RE_HUI.search(body)
-    if hui_m:
-        return f"lemma-{slp1_key}-{hui_m.group(1)}"
-    return f"lemma-{slp1_key}-L{lnum}"
-
-
-def entries_for_key(con, dict_code: str, slp1_key: str):
-    """All entry rows sharing (dict, slp1_key) — the homonym group Salt ids
-    are minted against."""
-    return con.execute(
-        "SELECT id, dict, L, slp1_key, k2, pc_raw, vol, page, col, body "
-        "FROM entries WHERE dict=? AND slp1_key=? ORDER BY L",
-        (dict_code, slp1_key),
-    ).fetchall()
+    """Pre-W0C signature (it took an unused `dict_code`), kept for callers."""
+    return _mint(slp1_key, lnum, body, hom_count)
 
 
 def salt_entry(con, row, hom_count: int, data_version_str: str) -> dict:
-    """Row -> Salt-profile entry object, extended with kosha.* fields."""
-    body = row["body"]
-    salt_id = mint_salt_id(row["dict"], row["slp1_key"], row["L"], body, hom_count)
-    refs = _RE_REFS.findall(body)
-    refs = [re.sub("<[^>]+>", "", r) for r in refs]
+    """Row → Salt entry dict, via the shared serializer."""
+    from kosha.settings import get_settings
 
-    senses = con.execute(
-        "SELECT sense_n FROM senses WHERE entry_id=? ORDER BY sense_n", (row["id"],)
-    ).fetchall()
-    sense_ids = [f"{row['dict']}.{row['L']}.{s['sense_n']}@{data_version_str}" for s in senses]
-
-    return {
-        "id": salt_id,
-        "headword_slp1": row["slp1_key"],
-        "sense": [],
-        "re_headwords_slp1": [],
-        "created": None,
-        "xml": None,
-        "csl": {
-            "lnum": str(row["L"]),
-            "page": str(row["page"]) if row["page"] is not None else None,
-            "column": str(row["col"]) if row["col"] is not None else None,
-            "scanUrl": scan_url(row["dict"], row["page"], row["vol"]),
-            "references": refs,
-            "accentedKey": row["k2"],
-        },
-        "kosha": {
-            "sense_ids": sense_ids,
-            "rendered_html": render(row["dict"], body),
-            "evidence": [],
-            "cite": cite_object(row["dict"], row["L"], 1, data_version_str,
-                                _PUBLIC_BASE, row["slp1_key"]),
-        },
-    }
+    return entry_dict(
+        serialize_entry(
+            con,
+            row,
+            hom_count=hom_count,
+            data_version=data_version_str,
+            public_base=get_settings().public_base,
+        )
+    )

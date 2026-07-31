@@ -13,7 +13,12 @@ def test_defaults_land_inside_the_repo():
     assert settings.core_db.parent.name == "db"
     assert settings.inflections_db.name == "kosha_inflections.db"
     assert settings.layers_db.name == "kosha_layers.db"
-    assert settings.archive_dir.name == "archive"
+    # `releases`, not `archive`, since W0C (H1945): W0B named this setting
+    # `archive_dir` and defaulted it to `data/archive`, while `app/versions.py`
+    # went on reading its own `KOSHA_RELEASES_DIR` at `data/releases`. The
+    # default now points at the directory the citation mechanism actually
+    # reads — see `tests/test_citation_archive.py` for the contradiction.
+    assert settings.archive_dir.name == "releases"
     assert settings.public_base == "http://localhost:8000"
 
 

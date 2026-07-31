@@ -26,7 +26,16 @@ dependencies = [
   "uvicorn[standard]>=0.51.0",
   "pydantic>=2.13.4",
   "python-dotenv>=1.2.2",
+  # W0C (H1945): the rendered-entry allowlist sanitizer. A runtime dependency,
+  # not a dev one — no entry HTML reaches a client without crossing it.
+  "nh3>=0.3.0",
 ]
+# NB `sanskrit-util` is a genuine runtime import of `kosha.render` /
+# `kosha.transliterate` but is deliberately NOT listed above: the org build
+# (0.4.x) is only published as the immutable git pin in requirements.txt, while
+# PyPI's `sanskrit-util` stops at an unrelated 0.1.2. A version floor here
+# resolves against PyPI and fails the lock outright, so requirements.txt stays
+# the single supplier — the same arrangement H1944 landed.
 
 [project.optional-dependencies]
 test = ["pytest>=9.1.1", "httpx>=0.28.1"]
