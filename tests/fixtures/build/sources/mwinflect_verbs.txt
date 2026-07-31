@@ -1,0 +1,8 @@
+; kosha fixture verb paradigm table (W0B, H1944).
+; Shape matches MWinflect's generated verbs/calc_tables.txt exactly:
+;   gana,voice,tense <TAB> root- <TAB> refs <TAB> base <TAB> 9 slots
+; Slots are person-major [3rd,2nd,1st] x [sg,du,pl]; voice codes a/m/p.
+; Hand-written present-system forms for two roots.
+1,a,present	BU-	fixture:BU	Bav	Bavati:BavataH:Bavanti:Bavasi:BavaTaH:BavaTa:BavAmi:BavAvaH:BavAmaH
+1,a,imperfect	BU-	fixture:BU	aBav	aBavat:aBavatAm:aBavan:aBavaH:aBavatam:aBavata:aBavam:aBavAva:aBavAma
+2,a,present	as-	fixture:as	as	asti:staH:santi:asi:sTaH:sTa:asmi:svaH:smaH

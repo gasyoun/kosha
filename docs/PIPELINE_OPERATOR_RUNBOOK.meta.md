@@ -1,6 +1,6 @@
 # PIPELINE_OPERATOR_RUNBOOK.md — metadoc
 
-_Created: 10-07-2026 · Last updated: 10-07-2026_
+_Created: 10-07-2026 · Last updated: 31-07-2026_
 
 Companion record for
 [docs/PIPELINE_OPERATOR_RUNBOOK.md](https://github.com/gasyoun/kosha/blob/main/docs/PIPELINE_OPERATOR_RUNBOOK.md).
@@ -61,5 +61,6 @@ conventions; links here) ·
 | Date | Change | By |
 |---|---|---|
 | 10-07-2026 | Initial version (PR #39) + this metadoc & README link (follow-up PR) | Fable 5 (`claude-fable-5`), H501 |
+| 31-07-2026 | §2 rewritten for the declarative build DAG: ten stages with their `reads` column, the #210 correction note, prerequisite/atomic-promotion/source-lock behaviour, and the new `--profile fixture` tier | Opus 5 1M (`claude-opus-5[1m]`), H1944 |
 
 _Dr. Mārcis Gasūns_

@@ -1,10 +1,21 @@
 """kosha — shared SQLite connection helper. Local-first (A3): no pooling,
 no server process; uvicorn opens one read-only connection per request-scope
-dependency, closed by FastAPI's dependency teardown."""
+dependency, closed by FastAPI's dependency teardown.
+
+W0B (H1944): the location comes from typed settings instead of a hard-coded
+literal, so `KOSHA_CORE_DB_PATH` — or the deprecated `DATABASE_PATH` alias that
+`.env.example` has shipped since Phase 1 — selects the store. `DB_PATH` stays
+a module attribute because tests and scripts import it directly.
+"""
 import sqlite3
+import sys
 from pathlib import Path
 
-DB_PATH = Path(__file__).resolve().parent.parent / "data" / "db" / "kosha.db"
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+
+from kosha.settings import get_settings  # noqa: E402
+
+DB_PATH = get_settings().core_db
 
 
 def get_db():

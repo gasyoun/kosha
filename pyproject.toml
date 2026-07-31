@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kosha"
+version = "0.96.1"
+description = "Gasuns Sanskrit Dictionary — translator-first lookup over the Cologne Digital Sanskrit Dictionaries"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "CC-BY-NC-4.0"
+license-files = ["LICENSE.md", "LICENSE-DATA.md"]
+authors = [{ name = "Mārcis Gasūns" }]
+keywords = ["sanskrit", "dictionary", "lexicography", "cologne"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Text Processing :: Linguistic",
+  "Intended Audience :: Science/Research",
+]
+
+# Runtime closure of the API + build chain. Kept in lockstep with
+# requirements.txt, which stays as the pip-only entry point D11 preserves;
+# requirements.lock.txt pins the resolved versions (D12).
+dependencies = [
+  "fastapi>=0.140.0",
+  "uvicorn[standard]>=0.51.0",
+  "pydantic>=2.13.4",
+  "python-dotenv>=1.2.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=9.1.1", "httpx>=0.28.1"]
+# Optional, machine-specific extras. `vidyut` powers the hybrid stage and the
+# metre layer; the DAG skips those stages with a logged reason when it is
+# absent, so a plain install stays light.
+morphology = ["vidyut>=0.4.0"]
+
+[project.scripts]
+kosha-build = "kosha.build.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/gasyoun/kosha"
+Changelog = "https://github.com/gasyoun/kosha/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# `scripts/` and `app/` are import roots for the compatibility shims (D11):
+# existing tests do `sys.path.insert(ROOT)` and import `app.main`, and the
+# build modules import each other by bare name.
+pythonpath = ["src", ".", "app", "scripts"]
+markers = [
+  "full_data: needs the full-data core DB; skipped on the fixture CI tier (D14)",
+]

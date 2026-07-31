@@ -1,0 +1,12 @@
+; kosha fixture nominal paradigm table (W0B, H1944).
+; Shape matches MWinflect's generated calc_tables.txt exactly:
+;   model <TAB> stem- <TAB> refs <TAB> 24 colon-separated case-major slots
+; (nom/acc/instr/dat/abl/gen/loc/voc x sg/du/pl), '/'-separated variants.
+; Hand-written from standard paradigms for six fixture lemmas — no MWinflect
+; bytes are copied here, so the pack carries no upstream licence question.
+m_a	deva-	fixture:deva	devaH:devO:devAH:devam:devO:devAn:devena:devAByAm:devEH:devAya:devAByAm:deveByaH:devAt:devAByAm:deveByaH:devasya:devayoH:devAnAm:deve:devayoH:devezu:deva:devO:devAH
+m_a	rAma-	fixture:rAma	rAmaH:rAmO:rAmAH:rAmam:rAmO:rAmAn:rAmeRa:rAmAByAm:rAmEH:rAmAya:rAmAByAm:rAmeByaH:rAmAt:rAmAByAm:rAmeByaH:rAmasya:rAmayoH:rAmARAm:rAme:rAmayoH:rAmezu:rAma:rAmO:rAmAH
+m_i	agni-	fixture:agni	agniH:agnI:agnayaH:agnim:agnI:agnIn:agninA:agniByAm:agniBiH:agnaye:agniByAm:agniByaH:agneH:agniByAm:agniByaH:agneH:agnyoH:agnInAm:agnO:agnyoH:agnizu:agne:agnI:agnayaH
+m_a	indra-	fixture:indra	indraH:indrO:indrAH:indram:indrO:indrAn:indreRa:indrAByAm:indrEH:indrAya:indrAByAm:indreByaH:indrAt:indrAByAm:indreByaH:indrasya:indrayoH:indrARAm:indre:indrayoH:indrezu:indra:indrO:indrAH
+m_nt	Bagavant-	fixture:Bagavant	BagavAn:BagavantO:BagavantaH:Bagavantam:BagavantO:BagavataH:BagavatA:BagavadByAm:BagavadBiH:Bagavate:BagavadByAm:BagavadByaH:BagavataH:BagavadByAm:BagavadByaH:BagavataH:BagavatoH:BagavatAm:Bagavati:BagavatoH:Bagavatsu:Bagavan:BagavantO:BagavantaH
+ind	iti-	fixture:iti	iti

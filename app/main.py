@@ -18,6 +18,10 @@ from fastapi.responses import HTMLResponse
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+
+from kosha.feature_gates import history_enabled  # noqa: E402
+from kosha.settings import get_settings  # noqa: E402
 
 from db import get_db, data_version  # noqa: E402
 from render import render  # noqa: E402
@@ -43,7 +47,7 @@ load_dotenv()
 # Public base for browser-resolvable citation URLs (RISKS.md R1 Commitment 1).
 # NOT the samskrtam.ru server (R5: citations never depend on the server host);
 # defaults to the local dev API. In production this is the durable API mirror.
-PUBLIC_BASE = os.getenv("KOSHA_PUBLIC_BASE", "http://localhost:8000")
+PUBLIC_BASE = get_settings().public_base
 
 # H345: link-out base for Heritage (INRIA) DICO anchors. heritage_anchor.anchor
 # is a site-relative path ("DICO/<n>.html#<key>") so the target host stays
@@ -76,7 +80,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(history_router)
+# D10 — history, magic-link auth, and analytics are OFF for public v1. The
+# router is mounted only when `KOSHA_HISTORY_ENABLED` is explicitly truthy, so
+# with the default configuration `/api/v1/history`, `/api/v1/auth/*`, and
+# `/api/v1/stats/*` are absent from the app and from the OpenAPI schema — a
+# real 404, not a disabled handler. Tests that need the surface mount it at
+# runtime via `kosha.feature_gates.mount_history`.
+if history_enabled():
+    app.include_router(history_router)
 
 
 def envelope(con, query: dict, results):
@@ -426,11 +437,17 @@ def search(q: str, request: Request, response: Response, background_tasks: Backg
                 "rank_all": r["rank_all"]} for r in rows]
     # Log after results are computed, via BackgroundTasks so this never adds
     # latency to the D5-1 search SLO (KOSHA_DECISIONS_NEEDED.md D5-1).
-    anon_id = resolve_anon_id(request, response)
-    background_tasks.add_task(
-        _log_search_background, anon_id, datetime.now(timezone.utc).isoformat(),
-        q, slp1_q, mode, total, hash_ip(request),
-    )
+    #
+    # D10 gate (H1944): with history off — the public-v1 default — no visitor
+    # identity cookie is minted, no IP hash is computed, and nothing is
+    # written to the history store. Mounting the read routes and silently
+    # collecting anyway would be the worst of both worlds.
+    if history_enabled():
+        anon_id = resolve_anon_id(request, response)
+        background_tasks.add_task(
+            _log_search_background, anon_id, datetime.now(timezone.utc).isoformat(),
+            q, slp1_q, mode, total, hash_ip(request),
+        )
     return {"data_version": data_version(con),
             "query": {"q": q, "mode": mode, "limit": limit, "offset": offset, "total": total},
             "results": results}

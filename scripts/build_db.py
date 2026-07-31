@@ -1,17 +1,23 @@
 """kosha — build kosha.db from source feeds.
 
 Phase 1 (PHASE1_PLAN.md D1-D3): vendor the lemma spine, load per-dict
-entries, import the forms layer. Run stages independently via --stage,
-or all in order with no flag. Idempotent: re-running drops and rebuilds
-each stage's tables.
+entries, import the forms layer. Stage order and prerequisites are declared in
+[`kosha.build.stages`](https://github.com/gasyoun/kosha/blob/main/src/kosha/build/stages.py);
+this file keeps the stage *bodies* for lemmas/heritage and the schema, and
+delegates orchestration to
+[`kosha.build.dag`](https://github.com/gasyoun/kosha/blob/main/src/kosha/build/dag.py).
 
-    python scripts/build_db.py --stage lemmas
-    python scripts/build_db.py --stage entries --dicts mw,pwg,ap90
-    python scripts/build_db.py --stage forms
-    python scripts/build_db.py --stage layers   # P-D5 public join layers
-    python scripts/build_db.py            # all stages, in order
+    python scripts/build_db.py                       # full declared DAG
+    python scripts/build_db.py --stage lemmas        # one stage + its prerequisites
+    python scripts/build_db.py --plan                # print the order, build nothing
+    python scripts/build_db.py --profile fixture     # compact public fixture build
+
+No-flag means *every declared stage*, not the four that used to have an
+`if args.stage in (None, ...)` test — see
+[integrity issue #210](https://github.com/gasyoun/kosha/issues/210).
+Idempotent: each stage drops and rebuilds its own tables, and the DAG builds
+into a temporary target that is promoted only after its postconditions pass.
 """
-import argparse
 import csv
 import json
 import sqlite3
@@ -211,9 +217,17 @@ CREATE TABLE IF NOT EXISTS heritage_anchor (
 """
 
 
-def connect():
-    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    con = sqlite3.connect(DB_PATH)
+def connect(db_path=None):
+    """Open (and migrate) a build target.
+
+    W0B (H1944): the target is a parameter so the DAG can build into a
+    temporary file and promote it atomically. Called with no argument it still
+    opens the canonical `data/db/kosha.db`, which is what the standalone
+    `--stage` entry point and every existing caller expect.
+    """
+    db_path = Path(db_path) if db_path is not None else DB_PATH
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    con = sqlite3.connect(db_path)
     con.row_factory = sqlite3.Row
     con.executescript(SCHEMA)
     # H111 migration: CREATE TABLE IF NOT EXISTS above is a no-op against a
@@ -332,101 +346,27 @@ def build_heritage(con):
     return total, covered, anchored, joined
 
 
-STAGES = {"lemmas": build_lemmas}
+def main(argv=None):
+    """Thin CLI over the declarative DAG.
 
+    W0B (H1944) moved the decision of *what runs* out of this function. It
+    used to be a chain of `if args.stage in (None, "x")` tests in which five of
+    the ten stages were reachable only by explicit flag, so the no-flag build
+    silently produced a database missing entries, forms, inflections, hybrid,
+    and stem_bridge — [integrity issue #210](https://github.com/gasyoun/kosha/issues/210).
+    The order now lives in
+    [`kosha.build.stages`](https://github.com/gasyoun/kosha/blob/main/src/kosha/build/stages.py)
+    and cannot omit a stage by forgetting an `if`.
+    """
+    src = str(ROOT / "src")
+    if src not in sys.path:
+        # Compatibility shim (D11/D12): works whether or not the package has
+        # been `pip install -e .`-ed. The installed import wins when present.
+        sys.path.insert(0, src)
+    from kosha.build import cli  # noqa: E402
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument(
-        "--stage",
-        choices=list(STAGES)
-        + [
-            "entries",
-            "forms",
-            "evidence",
-            "inflections",
-            "hybrid",
-            "pronoun",
-            "stem_bridge",
-            "heritage",
-            "layers",
-        ],
-        default=None,
-    )
-    ap.add_argument("--dicts", default="mw,pwg,ap90")
-    args = ap.parse_args()
-
-    con = connect()
-    if args.stage in (None, "lemmas"):
-        build_lemmas(con)
-    if args.stage == "entries":
-        from build_entries import build_entries  # noqa: E402
-        build_entries(con, args.dicts.split(","))
-    if args.stage == "forms":
-        from build_forms import build_forms  # noqa: E402
-        build_forms(con)
-    if args.stage == "inflections":
-        # P4 Wave K1: opt-in like `forms` (requires the sibling MWinflect
-        # checkout's generated calc_tables.txt, not present on every dev
-        # machine) -- not part of the default no-flag build.
-        from build_inflections import build_inflections  # noqa: E402
-        build_inflections(con)
-    if args.stage == "hybrid":
-        # P4 Wave E1 hybridize (H185): layer vidyut-prakriya over the Cologne
-        # `inflections` base -- auto-fix the ṇatva bug, gap-fill VIDYUT_ONLY
-        # cells, flag pronominal/feminine forks `disputed`. Run AFTER
-        # `--stage inflections` (which DELETEs+repopulates the table, wiping any
-        # prior hybrid rows); idempotent on its own re-runs.
-        from build_hybrid_forms import build_hybrid_forms  # noqa: E402
-        build_hybrid_forms(con)
-    if args.stage in (None, "pronoun"):
-        # Curated pronoun-paradigm correction (W4 QA follow-up): the gold Gītā
-        # attested pronoun analyses fill the sarvanāman gaps E1 flagged. Runs
-        # AFTER inflections/hybrid (adds `source='curated-gita-pronoun'` rows);
-        # idempotent (deletes its own prior rows first). Must be a stage so a
-        # rebuild re-applies it — else it regresses like the H345 heritage table.
-        from build_pronoun_corrections import apply_pronoun_corrections  # noqa: E402
-        apply_pronoun_corrections(con)
-    if args.stage == "stem_bridge":
-        # K2a (H181): stem-normalization crosswalk between `inflections` and
-        # `forms`. Requires both to be populated first.
-        from build_stem_bridge import build_stem_bridge  # noqa: E402
-        build_stem_bridge(con)
-    if args.stage in (None, "heritage"):
-        # H345: Heritage coverage witness. Part of the default build (same
-        # sibling checkout the lemmas stage already requires); joined-entry
-        # count in its summary line is 0 until `--stage entries` has run.
-        build_heritage(con)
-    if args.stage in (None, "evidence"):
-        # P3 evidence layer: runs after lemmas + forms are populated (band
-        # needs lemmas.rank_all; examples need the forms.form_slp1->lemma_slp1
-        # join). When args.stage is None (full build), forms must already be
-        # built for examples to resolve -- run `--stage forms` at least once
-        # before the first full build on a fresh DB.
-        from build_evidence import build_evidence  # noqa: E402
-        build_evidence(con)
-    if args.stage in (None, "layers"):
-        # P-D5 (H1589): public join-table layers (sense/roots frequency,
-        # dict-corpus coverage summary, optional mw_roots/etymology). Additive
-        # only — never mutates core entries/forms/lemmas/senses. Sibling
-        # csl-orig feeds are optional (skipped with a log line if absent).
-        from build_db_layers import build_layers  # noqa: E402
-        build_layers(con)
-    # data_version (A2): NOT a citable release yet — Phase 1 D1-D4 local dev
-    # build. First real data_version bump happens at the first GitHub release
-    # per ARCHITECTURE.md (P2, D5-gated). "0.1.0-dev" marks this explicitly.
-    con.execute(
-        "INSERT INTO meta (key, value) VALUES ('data_version','0.1.0-dev') "
-        "ON CONFLICT(key) DO UPDATE SET value=excluded.value"
-    )
-    con.commit()
-    # Refresh planner statistics so index selectivity is known (cheap ~5 s;
-    # the entries_dict_key covering index is chosen even without stats, but
-    # ANALYZE keeps the search/forms plans optimal too). D5.
-    con.execute("ANALYZE")
-    con.commit()
-    con.close()
+    return cli.main(argv)
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

@@ -61,10 +61,23 @@ Copy `.env.example` → `.env` before running the API — sets `DATABASE_PATH`,
 | `RISKS.md` | R1–R12 pre-mortem, incl. the citability commitments (citation URLs must never depend on the `samskrtam.ru` server host) |
 | `KOSHA_DECISIONS_NEEDED.md` | Open @DECIDE items — check before assuming a design choice is settled |
 
-**CI (corrected 30-07-2026, H1943):** `.github/workflows/` now exists —
-`changelog-lint.yml` (duplicate-entry guard) and `dependabot-auto-merge.yml`.
-Neither runs the Python/UI test suite yet; required Python/UI CI is H1944
-scope (W0B), not yet shipped.
+**CI (updated 31-07-2026, H1944):** `.github/workflows/` carries
+`python-ci.yml` (fixture build from zero, twice, then the fixture-tier test
+suite), `ui-ci.yml` (vitest + vite build), `changelog-lint.yml`, and
+`dependabot-auto-merge.yml` — the last now gated on a successful `workflow_run`
+of both CI workflows and restricted to GitHub's queued auto-merge, so a
+dependency bump cannot bypass the required checks.
+
+**Build (H1944):** stage order is declared in
+[`src/kosha/build/stages.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/build/stages.py),
+not in an `if` chain.
+`python scripts/build_db.py` with no flag runs **all ten** stages
+(`lemmas → entries → forms → inflections → hybrid → pronoun → stem_bridge →
+heritage → evidence → layers`); `--plan` prints the order without building;
+`--profile fixture` builds the whole graph from the committed public pack in
+seconds. Prerequisites are checked before the first write, the target is
+promoted atomically, and `<target>.lock.json` records the sha256 of every
+input. Do not add a stage by editing the CLI — add it to the registry.
 
 ## Conventions
 
