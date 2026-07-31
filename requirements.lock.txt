@@ -1,0 +1,39 @@
+# kosha dependency lock — GENERATED, do not hand-edit.
+# Regenerate: python scripts/gen_requirements_lock.py
+#
+# Closure of the runtime + test dependencies declared in pyproject.toml,
+# resolved on:
+#   python   3.14.4
+#   platform Windows AMD64
+#
+# Cross-platform note: environment markers are evaluated for the interpreter
+# above, so a Linux runner may legitimately need extra wheels (uvloop and
+# friends). CI installs requirements.txt and treats a difference here as
+# information, not a failure.
+annotated-doc==0.0.4
+annotated-types==0.7.0
+anyio==4.13.0
+certifi==2026.4.22
+click==8.4.2
+colorama==0.4.6
+fastapi==0.136.1
+h11==0.16.0
+httpcore==1.0.9
+httptools==0.8.0
+httpx==0.28.1
+idna==3.13
+iniconfig==2.3.0
+packaging==26.2
+pluggy==1.6.0
+pydantic==2.13.4
+pydantic-core==2.46.4
+pygments==2.20.0
+pytest==9.0.3
+python-dotenv==1.2.2
+pyyaml==6.0.3
+starlette==1.0.0
+typing-extensions==4.15.0
+typing-inspection==0.4.2
+uvicorn==0.46.0
+watchfiles==1.2.0
+websockets==16.0

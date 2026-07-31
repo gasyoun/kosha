@@ -1,0 +1,42 @@
+name: UI CI
+
+# W0B (H1944) — the second half of the required gate. `ui/` is the P4 Wave K2b
+# Svelte inflection UI that builds into docs/inflect/; until now nothing ran
+# its vitest suite or proved it still builds.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ui-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: vitest + vite build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ui
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: ui/package-lock.json
+
+      - name: Install
+        run: npm ci
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build

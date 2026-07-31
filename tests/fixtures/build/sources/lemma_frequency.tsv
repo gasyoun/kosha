@@ -1,0 +1,8 @@
+lemma_slp1	count_all	grammar_all	rank_all	periods	periods_sum	coverage_pct	core_rank
+agni	9412	m	18	vedic:5100;epic:3200;classical:1112	9412	0.42	12
+indra	7233	m	31	vedic:6000;epic:1000;classical:233	7233	0.33	20
+deva	15877	m	7	vedic:4000;epic:8000;classical:3877	15877	0.71	5
+rAma	4310	m	88	epic:4000;classical:310	4310	0.19	61
+Bagavat	2044	m	204	epic:1800;classical:244	2044	0.09	150
+ka	18220	prn	4	vedic:6000;epic:7000;classical:5220	18220	0.82	3
+iti	52901	ind	1	vedic:12000;epic:22000;classical:18901	52901	2.38	1

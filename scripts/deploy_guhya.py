@@ -1,25 +1,33 @@
 """
-Restricted-tier backup deploy: uploads the local-only census giants to
-samskrtam.ru/guhya via FTP (private path, not linked from any public page).
+Restricted-tier backup deploy: mirrors the local-only census giants to
+samskrtam.ru/guhya (private path, not linked from any public page).
 
-Reads credentials from .env.deploy in the repo root (gitignored) — same
-FTP account as ORS-FAQ/SamudraManthanam, different FTP_PATH.
+W0B (H1944) replaced the plaintext `ftplib.FTP` path this script used to
+carry. Every transfer now goes over explicit TLS, lands under a temporary
+remote name, is verified against a server-computed sha256, and is only then
+renamed into place — see
+[`kosha.backup.transport`](https://github.com/gasyoun/kosha/blob/main/src/kosha/backup/transport.py).
+If the server cannot prove a digest the upload **fails closed** and nothing is
+promoted; that is the required treatment, not a bug to work around.
 
-Covers all H235 primary targets: corpus_lexicon.jsonl, kosha.db, dcs_full.sqlite,
-corpus.db, the Sa-Ru glossary bulk layer, and the 25 production Renou-layer
-card-set files (dev/test artifact variants excluded — see MANIFEST comment).
-archive_stopword.sqlite (11 GB, exceeds no per-file limit here but is huge) is
-NOT included — see the GTD @DECIDE row before adding it.
+Credentials come from `.env.deploy` in the repo root (gitignored) — same FTP
+account as ORS-FAQ/SamudraManthanam, different FTP_PATH. This script never
+runs in CI and no test in this repo contacts a live server.
+
+Covers all H235 primary targets: corpus_lexicon.jsonl, kosha.db,
+dcs_full.sqlite, corpus.db, the Sa-Ru glossary bulk layer, and the 25
+production Renou-layer card-set files (dev/test artifact variants excluded —
+see MANIFEST comment). archive_stopword.sqlite (11 GB) is NOT included — see
+the GTD @DECIDE row before adding it.
 
 Usage:
-    python scripts/deploy_guhya.py                # upload the standard manifest
-    python scripts/deploy_guhya.py --file PATH --remote-name NAME   # one extra file
-    python scripts/deploy_guhya.py --verify-only   # only recompute/check sha256, no upload
+    python scripts/deploy_guhya.py                 # DRY RUN: digest + plan only
+    python scripts/deploy_guhya.py --upload        # verified encrypted upload
+    python scripts/deploy_guhya.py --file PATH --remote-name NAME --upload
+    python scripts/deploy_guhya.py --verify-only   # write sha256 sidecars only
 """
 
 import argparse
-import ftplib
-import hashlib
 import json
 import sys
 from pathlib import Path
@@ -29,6 +37,11 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 REPO_ROOT = Path(__file__).parent.parent
 GITHUB_ROOT = REPO_ROOT.parent
+sys.path.insert(0, str(REPO_ROOT / "src"))
+
+from kosha.backup.transport import (  # noqa: E402
+    BackupError, FTPSTransport, sha256_of, upload,
+)
 
 # (local path relative to GitHub/, remote filename under FTP_PATH)
 MANIFEST = [
@@ -70,81 +83,36 @@ def load_env(path: Path) -> dict:
     return env
 
 
-def sha256_of(path: Path) -> str:
-    h = hashlib.sha256()
-    with open(path, "rb") as f:
-        for chunk in iter(lambda: f.read(1024 * 1024 * 8), b""):
-            h.update(chunk)
-    return h.hexdigest()
+def resolve(rel: str) -> Path:
+    local = Path(rel)
+    return local if local.is_absolute() else GITHUB_ROOT / rel
 
 
-def ensure_remote_dir(ftp: ftplib.FTP, remote_path: str) -> None:
-    parts = [p for p in remote_path.replace("\\", "/").split("/") if p]
-    ftp.cwd("/")
-    for part in parts:
-        try:
-            ftp.mkd(part)
-        except ftplib.error_perm:
-            pass
-        ftp.cwd(part)
-
-
-def remote_size(ftp: ftplib.FTP, remote_dir: str, name: str) -> int:
-    ftp.cwd("/")
-    ensure_remote_dir(ftp, remote_dir)
-    try:
-        return ftp.size(name)
-    except ftplib.all_errors:
-        return -1
-
-
-def upload_file(ftp: ftplib.FTP, local: Path, remote_dir: str, name: str) -> None:
-    size = local.stat().st_size
-    existing = remote_size(ftp, remote_dir, name)
-    if existing == size:
-        print(f"  SKIP  {name} (already {size} bytes on server)")
-        return
-
-    rest = existing if 0 < existing < size else None
-    mode = "ab" if rest else "wb"
-    print(f"  {'RESUME' if rest else 'UPLOAD'} {name} ({size:,} bytes){' from ' + str(rest) if rest else ''}")
-
-    ftp.cwd("/")
-    ensure_remote_dir(ftp, remote_dir)
-    with open(local, "rb") as f:
-        if rest:
-            f.seek(rest)
-        sent = [rest or 0]
-
-        def progress(_block):
-            sent[0] += len(_block)
-            if sent[0] % (256 * 1024 * 1024) < 8 * 1024 * 1024:
-                print(f"    ... {sent[0]:,}/{size:,} bytes ({100 * sent[0] / size:.1f}%)")
-
-        try:
-            ftp.storbinary(f"STOR {name}", f, blocksize=8 * 1024 * 1024, callback=progress, rest=rest)
-        except ftplib.all_errors as e:
-            print(f"  ERROR {name}: {e}", file=sys.stderr)
-            raise
+def split_remote(remote_name: str, base_dir: str) -> tuple[str, str]:
+    """Manifest names may carry a subdirectory (`renou/x.jsonl`)."""
+    if "/" in remote_name:
+        head, _, tail = remote_name.rpartition("/")
+        return f"{base_dir}/{head}", tail
+    return base_dir, remote_name
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser()
+    ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--file", help="extra local file (absolute or relative to GitHub/) to upload")
     ap.add_argument("--remote-name", help="remote filename for --file")
-    ap.add_argument("--verify-only", action="store_true", help="only compute/write sha256 sidecars, no FTP")
+    ap.add_argument("--verify-only", action="store_true",
+                    help="only compute/write sha256 sidecars, no transport at all")
+    ap.add_argument("--upload", action="store_true",
+                    help="actually transfer (default is a dry run that uploads nothing)")
     args = ap.parse_args()
 
     manifest = list(MANIFEST)
     if args.file:
-        remote_name = args.remote_name or Path(args.file).name
-        manifest.append((args.file, remote_name))
+        manifest.append((args.file, args.remote_name or Path(args.file).name))
 
     results = {}
     for rel, remote_name in manifest:
-        local = Path(rel)
-        if not local.is_absolute():
-            local = GITHUB_ROOT / rel
+        local = resolve(rel)
         if not local.exists():
             print(f"  MISSING {local}", file=sys.stderr)
             continue
@@ -152,12 +120,20 @@ def main() -> None:
         digest = sha256_of(local)
         sidecar = local.with_suffix(local.suffix + ".sha256")
         sidecar.write_text(f"{digest}  {local.name}\n", encoding="utf-8")
-        results[remote_name] = {"sha256": digest, "bytes": local.stat().st_size, "local": str(local)}
+        results[remote_name] = {
+            "sha256": digest, "bytes": local.stat().st_size, "local": str(local),
+        }
         print(f"  {digest}")
 
     print(json.dumps(results, indent=2))
 
     if args.verify_only:
+        return
+    if not args.upload:
+        print(
+            "\nDRY RUN — nothing was transferred. Re-run with --upload to send "
+            f"{len(results)} file(s) over TLS with remote digest verification."
+        )
         return
 
     env_file = REPO_ROOT / ".env.deploy"
@@ -167,31 +143,36 @@ def main() -> None:
             "Copy .env.deploy.example to .env.deploy and fill in your FTP credentials."
         )
     cfg = load_env(env_file)
-    host = cfg.get("FTP_HOST", "")
-    user = cfg.get("FTP_USER", "")
-    passwd = cfg.get("FTP_PASS", "")
+    host, user, passwd = cfg.get("FTP_HOST", ""), cfg.get("FTP_USER", ""), cfg.get("FTP_PASS", "")
     remote_dir = cfg.get("FTP_PATH", "guhya").strip("/")
     port = int(cfg.get("FTP_PORT", "21"))
-
     if not all([host, user, passwd]):
         sys.exit("Incomplete credentials in .env.deploy (need FTP_HOST, FTP_USER, FTP_PASS).")
 
-    print(f"\nConnecting to {host}:{port} ...")
-    with ftplib.FTP() as ftp:
-        ftp.connect(host, port, timeout=60)
-        ftp.login(user, passwd)
-        ftp.set_pasv(True)
+    print(f"\nConnecting to {host}:{port} over explicit TLS ...")
+    failures = []
+    with FTPSTransport(host, user, passwd, port=port) as transport:
         for rel, remote_name in manifest:
-            local = Path(rel)
-            if not local.is_absolute():
-                local = GITHUB_ROOT / rel
+            local = resolve(rel)
             if not local.exists():
                 continue
-            upload_file(ftp, local, remote_dir, remote_name)
-            sidecar_name = remote_name + ".sha256"
+            target_dir, name = split_remote(remote_name, remote_dir)
+            try:
+                outcome = upload(transport, local, target_dir, name)
+                print(f"  OK    {remote_name} ({outcome.bytes:,} bytes, digest verified)")
+            except BackupError as error:
+                print(f"  FAIL  {error}", file=sys.stderr)
+                failures.append(remote_name)
+                continue
             sidecar_local = local.with_suffix(local.suffix + ".sha256")
-            upload_file(ftp, sidecar_local, remote_dir, sidecar_name)
+            try:
+                upload(transport, sidecar_local, target_dir, name + ".sha256")
+            except BackupError as error:
+                print(f"  FAIL  sidecar {error}", file=sys.stderr)
+                failures.append(remote_name + ".sha256")
 
+    if failures:
+        sys.exit(f"\n{len(failures)} file(s) were NOT promoted: {', '.join(failures)}")
     print("\nDone.")
 
 

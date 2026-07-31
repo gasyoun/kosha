@@ -1,0 +1,59 @@
+name: Python CI
+
+# W0B (H1944) — the fixture tier of D14's two-tier CI. Every PR proves that
+# the declared build DAG runs end to end from an empty target against the
+# committed public fixture pack, twice, and that the fixture-tier test suite
+# passes. The full-data tier (real sibling feeds, ~4 GB) stays a workstation
+# and release-gate concern; tests pinned to full-data counts skip themselves
+# here via tests/conftest.py.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: python-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Fixture build + tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e .
+
+      - name: Declared stage order
+        # The #210 regression guard, run before anything is built: the no-flag
+        # plan must list every declared stage.
+        run: python scripts/build_db.py --profile fixture --plan
+
+      - name: Fixture build from zero
+        run: python scripts/build_db.py --profile fixture
+
+      - name: Fixture build again (idempotence + source lock)
+        # A second run over unchanged sources must satisfy the lock written by
+        # the first, and must not need --relock to do it.
+        run: python scripts/build_db.py --profile fixture
+
+      - name: Tests
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -m pytest -q -p no:cacheprovider
+
+      - name: Dependency lock is present and parseable
+        run: python -c "import pathlib,sys; t=pathlib.Path('requirements.lock.txt').read_text(encoding='utf-8'); sys.exit(0 if '==' in t else 'lock file has no pins')"

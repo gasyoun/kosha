@@ -1,10 +1,27 @@
 name: Dependabot auto-merge
 
-# Hands-off merge of Dependabot pull requests. GitHub merges the PR after the
-# repo's required checks pass; major version bumps stay open for human review.
-# Deployed by /cologne-dependabot-automerge-all.
+# Hands-off merge of Dependabot pull requests. Major version bumps stay open
+# for human review. Deployed by /cologne-dependabot-automerge-all.
+#
+# W0B (H1944) — auto-merge must NOT be able to bypass the required gate:
+#
+# 1. This workflow only ever enables GitHub's *auto-merge* (`gh pr merge
+#    --auto`), which queues the merge behind branch protection. It never calls
+#    a direct `gh pr merge` that would land the PR immediately.
+# 2. `workflow_run` gating: the job runs after Python CI and UI CI have
+#    completed and refuses to proceed unless both concluded `success`. That
+#    keeps the guarantee even on a fork or a clone where branch protection has
+#    not been configured yet — protection is the primary control, this is the
+#    belt to its braces.
+#
+# The matching branch-protection rule (required checks: "Fixture build +
+# tests", "vitest + vite build") is recorded in
+# [docs/VERIFICATION_KOSHA_ARCHITECTURE.md](https://github.com/gasyoun/kosha/blob/main/docs/VERIFICATION_KOSHA_ARCHITECTURE.md).
 
-on: pull_request
+on:
+  workflow_run:
+    workflows: ["Python CI", "UI CI"]
+    types: [completed]
 
 permissions:
   contents: write
@@ -14,24 +31,50 @@ jobs:
   dependabot:
     name: Auto-merge Dependabot PRs
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    # Both conditions matter: the triggering run must be a Dependabot PR AND
+    # the CI run that just finished must have passed.
+    if: >-
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.actor.login == 'dependabot[bot]'
     steps:
+      - name: Resolve the pull request
+        id: pr
+        run: |
+          number=$(gh api "repos/$GITHUB_REPOSITORY/commits/$SHA/pulls" \
+            --jq '.[0].number // empty')
+          if [ -z "$number" ]; then
+            echo "no open PR for $SHA — nothing to merge"
+            exit 0
+          fi
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+        env:
+          SHA: ${{ github.event.workflow_run.head_sha }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Fetch Dependabot metadata
         id: meta
+        if: steps.pr.outputs.number != ''
         uses: dependabot/fetch-metadata@v3
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Approve the PR
-        if: ${{ steps.meta.outputs.update-type != 'version-update:semver-major' }}
-        run: gh pr review --approve "$PR_URL" || true
+        if: >-
+          steps.pr.outputs.number != '' &&
+          steps.meta.outputs.update-type != 'version-update:semver-major'
+        run: gh pr review --approve "$NUMBER" --repo "$GITHUB_REPOSITORY" || true
         env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
+          NUMBER: ${{ steps.pr.outputs.number }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Enable auto-merge
-        if: ${{ steps.meta.outputs.update-type != 'version-update:semver-major' }}
-        run: gh pr merge --auto --squash "$PR_URL"
+        # `--auto` queues behind branch protection; it cannot merge a PR whose
+        # required checks are missing or failing.
+        if: >-
+          steps.pr.outputs.number != '' &&
+          steps.meta.outputs.update-type != 'version-update:semver-major'
+        run: gh pr merge --auto --squash "$NUMBER" --repo "$GITHUB_REPOSITORY"
         env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
+          NUMBER: ${{ steps.pr.outputs.number }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,4 @@
+L_id	headword	headword_slp1	root	root_slp1	root_via	root_class	root_canonical	prefixes	affix	affix_slp1	group
+101	agni	agni	ag	ag	mw-paren	1	ag		ni	ni	nominal
+310	deva	deva	div	div	mw-paren	4	div		a	a	nominal
+518	bhagavat	Bagavat	bhaj	Baj	mw-paren	1	Baj		vat	vat	possessive

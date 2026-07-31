@@ -1,6 +1,6 @@
 # kosha — pipeline operator runbook
 
-_Created: 10-07-2026 · Last updated: 24-07-2026_
+_Created: 10-07-2026 · Last updated: 31-07-2026_
 
 The one document that says what to run, in what order, how to know each stage
 worked, and what breaking looks like — for the whole chain: **DB build → API →
@@ -66,31 +66,80 @@ outputs (`docs/js/data/`, `docs/cards/`) are deployed **out-of-band by M.G.**
 
 ## 2. The DB build (monthly rebuild, or after any upstream feed moves)
 
-One script, eight stages, dependency-ordered. **No flag runs all stages in
+One script, ten stages, dependency-ordered. **No flag runs all stages in
 order** — the safe default after any upstream change:
 
 ```sh
 python scripts/build_db.py                # everything, in order → data/db/kosha.db
+python scripts/build_db.py --plan         # print the order, build nothing
 ```
 
-Individual stages (`--stage`), in their canonical order:
+> **This line was aspirational until 31-07-2026.** The pre-W0B script
+> dispatched on `if args.stage in (None, "x")`, and only `lemmas`, `pronoun`,
+> `heritage`, `evidence`, and `layers` carried the `None` case — a no-flag
+> build silently skipped `entries`, `forms`, `inflections`, `hybrid`, and
+> `stem_bridge`, producing a plausible-looking database missing most of its
+> content ([integrity issue #210](https://github.com/gasyoun/kosha/issues/210)).
+> H1944 replaced the dispatch chain with the declared graph in
+> [`src/kosha/build/stages.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/build/stages.py):
+> the default build is now the topological expansion of the whole registry, a
+> stage cannot be omitted by forgetting an `if`, and the finished database
+> records which stages ran in `meta.build_stage_manifest`.
+
+What the DAG adds beyond ordering:
+
+- **Prerequisites are checked before the first write.** A missing feed fails
+  the *plan*; it can no longer abort a half-built database.
+- **Temporary target + atomic promotion.** Stages build into
+  `data/db/.build/…`; the real path is replaced only after every
+  postcondition and `PRAGMA foreign_key_check` pass. A failed build leaves
+  the previous database untouched.
+- **Immutable source lock.** `data/db/kosha.db.lock.json` records the sha256
+  of every input, the executed order, and the resolved csl-sqlite release tag.
+  A later build whose sources changed underneath refuses to run until you
+  pass `--relock`.
+- **`--release` refuses `latest`.** A release build needs a pinned csl-sqlite
+  tag, otherwise the lock would not identify the bytes it was built from.
+- **Skips are recorded, never silent.** An optional stage whose feed or local
+  library is absent (`inflections` without MWinflect, `hybrid` without
+  `vidyut`) is logged as skipped, with the reason, in both the run output and
+  the lock.
+
+Individual stages (`--stage`, repeatable — prerequisites are pulled in
+automatically), in their canonical order:
 
 | # | Stage | What it loads | Typical rerun trigger |
 |---|---|---|---|
-| 1 | `lemmas` | the lemma spine + DCS frequency columns | new VisualDCS/frequency drop |
-| 2 | `entries` | per-dict csl-orig records from csl-sqlite zips (`--dicts mw,pwg,ap90`) | new csl-sqlite release / new dict |
-| 3 | `forms` | form→lemma TSVs (dcs 408,660 · vidyut 28,567 · heritage 992,194) from the glossary pipeline | glossary regen |
-| 4 | `evidence` | frequency band (1–5) + one corpus example per lemma | after 1 |
-| 5 | `inflections` | csl-inflect case/number/gender tables (MWinflect `calc_tables.txt`) | MWinflect update |
-| 6 | `stem_bridge` | strong/weak-stem crosswalk unifying `forms` ↔ `inflections` lemmas | after 3+5 |
-| 7 | `heritage` | Heritage anchor/coverage witness (H345) | Heritage TSV regen |
-| 8 | `layers` | **P-D5 public join layers** — `sense_frequency`, `roots_frequency`, `dict_corpus_coverage` (+ optional `mw_roots` / `mw_etymology` from sibling csl-orig) | new sense-freq / roots / coverage / mw_roots drop |
+| # | Stage | Reads | What it loads | Typical rerun trigger |
+|---|---|---|---|---|
+| 1 | `lemmas` | — | the lemma spine + DCS frequency columns | new VisualDCS/frequency drop |
+| 2 | `entries` | `lemmas` | per-dict csl-orig records from csl-sqlite zips (`--dicts mw,pwg,ap90`) | new csl-sqlite release / new dict |
+| 3 | `forms` | `lemmas` | form→lemma TSVs (dcs 408,660 · vidyut 28,567 · heritage 992,194) from the glossary pipeline | glossary regen |
+| 4 | `inflections` | `lemmas` | csl-inflect case/number/gender tables (MWinflect `calc_tables.txt`) | MWinflect update |
+| 5 | `hybrid` | `inflections` | vidyut-prakriya overlay: ṇatva auto-fix, gap-fill, disputed flags (E1/H185) | vidyut update |
+| 6 | `pronoun` | `inflections` | curated Gītā pronoun paradigm corrections (W4 QA) | gold regen |
+| 7 | `stem_bridge` | `inflections`, `forms` | strong/weak-stem crosswalk unifying `forms` ↔ `inflections` lemmas | after 3+4 |
+| 8 | `heritage` | `entries` | Heritage anchor/coverage witness (H345) | Heritage TSV regen |
+| 9 | `evidence` | `lemmas`, `forms` | frequency band (1–5) + one corpus example per lemma | after 1+3 |
+| 10 | `layers` | `entries` | **P-D5 public join layers** — `sense_frequency`, `roots_frequency`, `dict_corpus_coverage` (+ optional `mw_roots` / `mw_etymology` from sibling csl-orig) | new sense-freq / roots / coverage / mw_roots drop |
 
 ```sh
 python scripts/build_db.py --stage entries --dicts mw,pwg,ap90
 python scripts/build_db.py --stage layers     # P-D5 only (additive; safe re-run)
 python scripts/check_g_size.py                # D5-4 G-SIZE tripwire (FAIL >1.8 GB)
 ```
+
+### The fixture profile (seconds, no sibling repos, no network)
+
+```sh
+python scripts/build_db.py --profile fixture  # → data/db/kosha_fixture.db
+```
+
+Builds the same ten stages against the committed pack in
+[`tests/fixtures/build/sources/`](https://github.com/gasyoun/kosha/tree/main/tests/fixtures/build/sources)
+— seven lemmas, three dictionaries, hand-written paradigm tables. This is what
+Python CI runs on every PR, and it is the fastest way to check a change to the
+graph without a full-data workstation. It carries no restricted bytes.
 
 ### P-D5 query surface (agent SQL)
 

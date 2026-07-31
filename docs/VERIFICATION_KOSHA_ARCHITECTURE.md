@@ -31,6 +31,28 @@ W0 adds commands for:
 Every required command must exit zero. Warnings are accepted only when the
 handoff explicitly classifies them as known noncritical residue.
 
+## Required checks (branch protection)
+
+W0B (H1944) shipped the two workflows this gate runs in CI. The protected
+`main` branch requires both status checks by name:
+
+| Check | Workflow | What it proves |
+|---|---|---|
+| `Fixture build + tests` | [python-ci.yml](https://github.com/gasyoun/kosha/blob/main/.github/workflows/python-ci.yml) | the declared DAG plans, builds from zero **twice**, and the fixture-tier suite passes |
+| `vitest + vite build` | [ui-ci.yml](https://github.com/gasyoun/kosha/blob/main/.github/workflows/ui-ci.yml) | the Svelte UI tests pass and the bundle still builds |
+
+Dependency auto-merge cannot bypass them:
+[dependabot-auto-merge.yml](https://github.com/gasyoun/kosha/blob/main/.github/workflows/dependabot-auto-merge.yml)
+is triggered by `workflow_run` on those two workflows, refuses to act unless
+the run concluded `success`, and only ever enables GitHub's *queued*
+auto-merge, which itself waits on branch protection.
+
+The fixture tier is deliberately not the whole suite. Eight test modules are
+pinned to full-data counts (323,425 lemmas and similar) and skip themselves
+when the core DB is absent — see
+[tests/conftest.py](https://github.com/gasyoun/kosha/blob/main/tests/conftest.py).
+Running those remains a workstation and full-data-release-gate duty.
+
 ## Full-data release gate
 
 1. Resolve only immutable source tags/commits/checksums.
