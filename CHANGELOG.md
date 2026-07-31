@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.97.1] - 2026-07-31
+
 ### Fixed
 - **The committed dependency lock contradicted `pyproject.toml`, and no check
   could see it.** `requirements.lock.txt` was generated from the installed
