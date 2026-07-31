@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.97.0] - 2026-07-31
+
 ### Added
 - **H1944 — W0B reproducible substrate.** Installable package (`pyproject.toml`
   + `src/kosha/`, console script `kosha-build`) with a committed
