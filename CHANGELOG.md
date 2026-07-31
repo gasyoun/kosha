@@ -14,6 +14,8 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.98.0] - 2026-07-31
+
 ### Added
 - **W0C — contract and trust boundaries (H1945).** The typed API layer
   [`src/kosha/api/`](https://github.com/gasyoun/kosha/tree/main/src/kosha/api):
