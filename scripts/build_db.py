@@ -9,9 +9,22 @@ each stage's tables.
     python scripts/build_db.py --stage entries --dicts mw,pwg,ap90
     python scripts/build_db.py --stage forms
     python scripts/build_db.py --stage layers   # P-D5 public join layers
-    python scripts/build_db.py            # all stages, in order
+    python scripts/build_db.py            # ALL stages, in the declared order
+    python scripts/build_db.py --plan     # show the plan without building
+
+**W0B (H1944) — what changed and why.** Dispatch used to be a ladder of
+`if args.stage in (None, "x")` conditionals, and five of the ten stages were
+written `if args.stage == "x"` instead. A no-flag build therefore skipped
+`entries`, `forms`, `inflections`, `hybrid` and `stem_bridge` **without a word**
+and still stamped `data_version` and exited 0 — the build reported success it
+had not earned ([issue #210](https://github.com/gasyoun/kosha/issues/210)).
+
+The stage list now lives in `kosha.build.stages` as data: dependencies, source
+feeds, and a postcondition per stage. This module keeps the two stage
+implementations that were always defined here (`build_lemmas`, `build_heritage`)
+plus the schema, and hands argument parsing and orchestration to
+`kosha.build.cli`. The CLI surface above is unchanged.
 """
-import argparse
 import csv
 import json
 import sqlite3
@@ -22,7 +35,17 @@ sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
-DB_PATH = ROOT / "data" / "db" / "kosha.db"
+
+_SRC = ROOT / "src"
+if (_SRC / "kosha" / "__init__.py").is_file() and str(_SRC) not in sys.path:
+    sys.path.insert(0, str(_SRC))
+
+from kosha.settings import get_settings  # noqa: E402
+
+# Back-compat constant: the default target. The build addresses its target
+# through `kosha.settings` now, so `KOSHA_CORE_DB` (or a `--db` argument)
+# genuinely redirects it.
+DB_PATH = get_settings().core_db
 
 
 def _find_github_root(start: Path) -> Path:
@@ -211,9 +234,15 @@ CREATE TABLE IF NOT EXISTS heritage_anchor (
 """
 
 
-def connect():
-    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    con = sqlite3.connect(DB_PATH)
+def connect(db_path=None):
+    """Open (creating) a kosha database with the canonical schema + migrations.
+
+    `db_path` defaults to the configured core DB. The runner passes an explicit
+    temporary target here so a full build can be promoted atomically.
+    """
+    db_path = Path(db_path) if db_path is not None else get_settings().core_db
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    con = sqlite3.connect(db_path)
     con.row_factory = sqlite3.Row
     con.executescript(SCHEMA)
     # H111 migration: CREATE TABLE IF NOT EXISTS above is a no-op against a
@@ -332,101 +361,23 @@ def build_heritage(con):
     return total, covered, anchored, joined
 
 
-STAGES = {"lemmas": build_lemmas}
+# The stage registry moved to `kosha.build.stages`, where dependencies, source
+# feeds and postconditions are declared alongside each entry point. This name is
+# kept because it was public; it now reports what the registry says rather than
+# being a second, divergent list.
+def stage_names():
+    from kosha.build.stages import STAGE_NAMES
+
+    return list(STAGE_NAMES)
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument(
-        "--stage",
-        choices=list(STAGES)
-        + [
-            "entries",
-            "forms",
-            "evidence",
-            "inflections",
-            "hybrid",
-            "pronoun",
-            "stem_bridge",
-            "heritage",
-            "layers",
-        ],
-        default=None,
-    )
-    ap.add_argument("--dicts", default="mw,pwg,ap90")
-    args = ap.parse_args()
+def main(argv=None):
+    """Delegate to the shared CLI so `python scripts/build_db.py` and the
+    installed `kosha-build-db` console script cannot drift apart."""
+    from kosha.build.cli import main as cli_main
 
-    con = connect()
-    if args.stage in (None, "lemmas"):
-        build_lemmas(con)
-    if args.stage == "entries":
-        from build_entries import build_entries  # noqa: E402
-        build_entries(con, args.dicts.split(","))
-    if args.stage == "forms":
-        from build_forms import build_forms  # noqa: E402
-        build_forms(con)
-    if args.stage == "inflections":
-        # P4 Wave K1: opt-in like `forms` (requires the sibling MWinflect
-        # checkout's generated calc_tables.txt, not present on every dev
-        # machine) -- not part of the default no-flag build.
-        from build_inflections import build_inflections  # noqa: E402
-        build_inflections(con)
-    if args.stage == "hybrid":
-        # P4 Wave E1 hybridize (H185): layer vidyut-prakriya over the Cologne
-        # `inflections` base -- auto-fix the ṇatva bug, gap-fill VIDYUT_ONLY
-        # cells, flag pronominal/feminine forks `disputed`. Run AFTER
-        # `--stage inflections` (which DELETEs+repopulates the table, wiping any
-        # prior hybrid rows); idempotent on its own re-runs.
-        from build_hybrid_forms import build_hybrid_forms  # noqa: E402
-        build_hybrid_forms(con)
-    if args.stage in (None, "pronoun"):
-        # Curated pronoun-paradigm correction (W4 QA follow-up): the gold Gītā
-        # attested pronoun analyses fill the sarvanāman gaps E1 flagged. Runs
-        # AFTER inflections/hybrid (adds `source='curated-gita-pronoun'` rows);
-        # idempotent (deletes its own prior rows first). Must be a stage so a
-        # rebuild re-applies it — else it regresses like the H345 heritage table.
-        from build_pronoun_corrections import apply_pronoun_corrections  # noqa: E402
-        apply_pronoun_corrections(con)
-    if args.stage == "stem_bridge":
-        # K2a (H181): stem-normalization crosswalk between `inflections` and
-        # `forms`. Requires both to be populated first.
-        from build_stem_bridge import build_stem_bridge  # noqa: E402
-        build_stem_bridge(con)
-    if args.stage in (None, "heritage"):
-        # H345: Heritage coverage witness. Part of the default build (same
-        # sibling checkout the lemmas stage already requires); joined-entry
-        # count in its summary line is 0 until `--stage entries` has run.
-        build_heritage(con)
-    if args.stage in (None, "evidence"):
-        # P3 evidence layer: runs after lemmas + forms are populated (band
-        # needs lemmas.rank_all; examples need the forms.form_slp1->lemma_slp1
-        # join). When args.stage is None (full build), forms must already be
-        # built for examples to resolve -- run `--stage forms` at least once
-        # before the first full build on a fresh DB.
-        from build_evidence import build_evidence  # noqa: E402
-        build_evidence(con)
-    if args.stage in (None, "layers"):
-        # P-D5 (H1589): public join-table layers (sense/roots frequency,
-        # dict-corpus coverage summary, optional mw_roots/etymology). Additive
-        # only — never mutates core entries/forms/lemmas/senses. Sibling
-        # csl-orig feeds are optional (skipped with a log line if absent).
-        from build_db_layers import build_layers  # noqa: E402
-        build_layers(con)
-    # data_version (A2): NOT a citable release yet — Phase 1 D1-D4 local dev
-    # build. First real data_version bump happens at the first GitHub release
-    # per ARCHITECTURE.md (P2, D5-gated). "0.1.0-dev" marks this explicitly.
-    con.execute(
-        "INSERT INTO meta (key, value) VALUES ('data_version','0.1.0-dev') "
-        "ON CONFLICT(key) DO UPDATE SET value=excluded.value"
-    )
-    con.commit()
-    # Refresh planner statistics so index selectivity is known (cheap ~5 s;
-    # the entries_dict_key covering index is chosen even without stats, but
-    # ANALYZE keeps the search/forms plans optimal too). D5.
-    con.execute("ANALYZE")
-    con.commit()
-    con.close()
+    return cli_main(argv)
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

@@ -1,0 +1,55 @@
+name: Python CI
+
+# W0B (H1944). Before this the repo had CI workflows but none of them ran a
+# test: `changelog-lint.yml` guarded duplicate changelog bullets and
+# `dependabot-auto-merge.yml` merged dependency bumps — against nothing.
+#
+# What this runs is deliberately the `fixture` subset, not `pytest`. Most of the
+# suite needs the local 1.7 GB `data/db/kosha.db`, which cannot exist on a
+# runner. The `fixture` tests run against the committed fixture pack
+# (tests/fixtures/pack), including a full from-zero build of every declared
+# stage — the proof that used to be missing entirely (issue #210).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: python-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: pytest (fixture pack)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          # Single version on purpose: the point of this job is that the
+          # committed lock installs and the fixture build reproduces, not
+          # interpreter-matrix coverage. `requires-python` is >=3.11.
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.lock
+
+      - name: Install the locked dependency set
+        # The lock is the artifact under test as much as the code is: if it no
+        # longer resolves, the build is not reproducible and this job says so.
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.lock
+
+      - name: Install kosha itself (no deps — the lock already provided them)
+        run: pip install -e . --no-deps
+
+      - name: The declared build plan resolves
+        run: python scripts/build_db.py --plan
+
+      - name: Fixture-pack tests, including the from-zero build of every stage
+        run: python -m pytest -m fixture -q

@@ -4,13 +4,20 @@ dictionary-rebuild pipeline (scripts/build_db.py) must never touch it, and the
 existing read-only `get_db()` dependency must stay untouched. Still local-first
 (A3): one file, no server process, no external service.
 """
-import os
 import sqlite3
+import sys
 from pathlib import Path
 
-HISTORY_DB_PATH = Path(
-    os.getenv("HISTORY_DB_PATH", str(Path(__file__).resolve().parent.parent / "data" / "db" / "kosha_history.db"))
-)
+_SRC = Path(__file__).resolve().parent.parent / "src"
+if (_SRC / "kosha" / "__init__.py").is_file() and str(_SRC) not in sys.path:
+    sys.path.insert(0, str(_SRC))
+
+from kosha.settings import get_settings  # noqa: E402
+
+# `KOSHA_HISTORY_DB`, or the original `HISTORY_DB_PATH` spelling. Still a
+# module attribute rather than a settings lookup at use time, because
+# tests/test_history.py monkeypatches THIS name to redirect the store.
+HISTORY_DB_PATH = get_settings().history_db
 
 _SCHEMA = """
 CREATE TABLE IF NOT EXISTS visitors (

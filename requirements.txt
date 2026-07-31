@@ -9,3 +9,8 @@ httpx>=0.28.1
 zettelkastenwiki @ git+https://github.com/gasyoun/ZettelkastenWiki@6b3eb831ce252ac8585ba507940b8c8271a4983f
 
 vidyut>=0.4.0  # metre classification (vidyut.chandas) — W3a reading-pack metre layer (H951)
+
+# Data-build chain: scripts/build_pronoun_corrections.py imports sanskrit_util.
+# Declared since W0B (H1944) — it used to be satisfied only by a sibling
+# checkout, which made the `pronoun` build stage silently unbuildable elsewhere.
+sanskrit-util @ git+https://github.com/sanskrit-lexicon/sanskrit-util@9ac617a2b802293f66793bd3f20eb1da179e1b2f#subdirectory=py

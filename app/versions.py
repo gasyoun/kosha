@@ -18,13 +18,19 @@ one dump, two uses: browser resolution here, and the sense_crosswalk diff
 as release assets, not in-repo). The mechanism and its tests live in git; the
 dumps do not.
 """
-import os
 import re
 import sqlite3
+import sys
 from pathlib import Path
 
 _APP = Path(__file__).resolve().parent
 _ROOT = _APP.parent
+
+_SRC = _ROOT / "src"
+if (_SRC / "kosha" / "__init__.py").is_file() and str(_SRC) not in sys.path:
+    sys.path.insert(0, str(_SRC))
+
+from kosha.settings import KoshaSettings  # noqa: E402
 
 # dict.L.n where L may itself contain dots (suffixed L-numbers, e.g. ap90 455.2)
 # and n is the final dotted segment. The @version is split off FIRST so a
@@ -33,7 +39,15 @@ _RE_SENSE_BASE = re.compile(r"^(?P<dict>[^.]+)\.(?P<L>.+)\.(?P<n>\d+)$")
 
 
 def releases_dir() -> Path:
-    return Path(os.getenv("KOSHA_RELEASES_DIR", str(_ROOT / "data" / "releases")))
+    """The archive root — `KOSHA_ARCHIVE_DIR`, or its long-standing
+    `KOSHA_RELEASES_DIR` spelling, else `data/releases/`.
+
+    Deliberately resolved per call off the *live* environment rather than the
+    cached process settings: tests point this at a tmp_path with
+    `monkeypatch.setenv` after import, and the citation-resolution path must
+    observe that immediately.
+    """
+    return KoshaSettings.from_env().archive_dir
 
 
 def parse_sense_id(sense_id: str):
