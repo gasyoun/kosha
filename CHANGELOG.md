@@ -14,6 +14,28 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Fixed
+- **The committed dependency lock contradicted `pyproject.toml`, and no check
+  could see it.** `requirements.lock.txt` was generated from the installed
+  closure of a workstation that lagged the declared floors, so it pinned
+  `fastapi==0.136.1` under `>=0.140.0`, `uvicorn==0.46.0` under `>=0.51.0` and
+  `pytest==9.0.3` under `>=9.1.1`; installing it produced a set the project's
+  own metadata rejects, and a following `pip install -e .` upgraded past it, so
+  the lock did not hold. CI's check on it was `'==' in requirements.lock.txt`.
+  [`scripts/gen_requirements_lock.py`](https://github.com/gasyoun/kosha/blob/main/scripts/gen_requirements_lock.py)
+  now **refuses** to write a contradictory lock, resolves with pip by default
+  (so a stale workstation is no longer a reason to ship one, `--from-installed`
+  keeps the old behaviour), and gains `--audit` — the platform-independent
+  invariants (every declared root pinned, no pin below its floor) that CI now
+  runs instead. Lock regenerated: 27 pins, audit clean.
+- **A `HASH` reply's digest is not its last token.** `FTPSTransport.remote_sha256`
+  read `reply.split()[-1]`, which for `213 SHA-256 0-<len> <digest> <file>` is
+  the *filename* — so the method returned `None`, and `upload()` reads `None` as
+  "the server proved nothing" and refuses to promote. On a server offering
+  `HASH` but not the older `XSHA256`, every backup upload was rejected. It now
+  scans for the first 64-hex token; four reply-shape tests pin it, one of which
+  fails against the previous parse.
+
 ## [0.97.0] - 2026-07-31
 
 ### Added

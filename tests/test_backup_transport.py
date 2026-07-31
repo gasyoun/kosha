@@ -5,10 +5,13 @@ live server, uploads a byte, or reads a credential — the handoff's fence says
 so, and the fake is what makes the fail-closed paths testable at all.
 """
 
+import ftplib
+
 import pytest
 
 from kosha.backup.transport import (
-    DigestMismatch, DigestUnsupported, FakeTransport, sha256_of, temp_name, upload,
+    DigestMismatch, DigestUnsupported, FTPSTransport, FakeTransport, sha256_of,
+    temp_name, upload,
 )
 
 
@@ -91,3 +94,62 @@ def test_remote_subdirectories_are_split_off_the_manifest_name():
 
     assert deploy_guhya.split_remote("renou/mw.jsonl", "guhya") == ("guhya/renou", "mw.jsonl")
     assert deploy_guhya.split_remote("kosha.db", "guhya") == ("guhya", "kosha.db")
+
+
+# --- reply parsing: the two digest commands answer in different shapes --------
+
+DIGEST = "a" * 64
+
+
+class _ReplyFTP:
+    """Just enough of an ftplib connection to answer one digest command."""
+
+    def __init__(self, replies):
+        self.replies = replies
+
+    def cwd(self, path):
+        return None
+
+    def mkd(self, name):
+        return None
+
+    def sendcmd(self, command):
+        verb = command.split(" ", 1)[0]
+        if verb not in self.replies:
+            raise ftplib.error_perm("500 unknown command")
+        return self.replies[verb]
+
+
+def _transport_answering(replies):
+    # `_ftp` is the backing field; the `ftp` property guards against use
+    # outside the `with` block, which is not what these tests are about.
+    return FTPSTransport(host="example.invalid", user="u", password="p",
+                         _ftp=_ReplyFTP(replies))
+
+
+def test_xsha256_reply_is_parsed():
+    transport = _transport_answering({"XSHA256": f"213 {DIGEST}"})
+    assert transport.remote_sha256("guhya", "kosha.db") == DIGEST
+
+
+def test_hash_reply_is_parsed_even_though_the_digest_is_not_last():
+    """`HASH` answers `213 SHA-256 <range> <digest> <filename>`.
+
+    Reading the last token returns the *filename*, which is not 64 hex chars,
+    so the method returned None — and `upload()` reads None as "the server
+    proved nothing" and refuses to promote. A server offering `HASH` but not
+    the older `XSHA256` therefore rejected every backup upload.
+    """
+    transport = _transport_answering(
+        {"HASH": f"213 SHA-256 0-1048576 {DIGEST} kosha.db"})
+    assert transport.remote_sha256("guhya", "kosha.db") == DIGEST
+
+
+def test_a_server_answering_neither_still_reports_none():
+    transport = _transport_answering({})
+    assert transport.remote_sha256("guhya", "kosha.db") is None
+
+
+def test_a_reply_with_no_digest_is_not_mistaken_for_one():
+    transport = _transport_answering({"HASH": "213 SHA-256 0-1048576 kosha.db"})
+    assert transport.remote_sha256("guhya", "kosha.db") is None
