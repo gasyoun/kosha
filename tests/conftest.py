@@ -45,13 +45,56 @@ def _core_db_present() -> bool:
     return get_settings().core_db.is_file()
 
 
+def _amar_checkout() -> bool:
+    """The Amarakośa text is a sibling repo, not a Python dependency."""
+    for candidate in (ROOT.parent, ROOT.parent.parent):
+        if (candidate / "AMAR" / "amar.txt").is_file():
+            return True
+    return False
+
+
+def _importable(module: str) -> bool:
+    import importlib.util
+
+    try:
+        return importlib.util.find_spec(module) is not None
+    except (ImportError, ValueError):
+        return False
+
+
+#: Modules that need something this environment may simply not have — a sibling
+#: checkout, or a library outside `requirements.txt`. Distinct from the
+#: full-data tier: those need *data*, these need *the environment*.
+ENVIRONMENT_REQUIREMENTS = {
+    "test_thematic_vocabulary": (
+        _amar_checkout,
+        "needs the sibling AMAR checkout (../AMAR/amar.txt)",
+    ),
+    "test_wsd_two_witness": (
+        lambda: _importable("indic_transliteration"),
+        "needs indic_transliteration (used by scripts/wsd_core.py, not a "
+        "declared kosha dependency)",
+    ),
+}
+
+
 def pytest_collection_modifyitems(config, items):
-    if _core_db_present():
-        return
-    skip = pytest.mark.skip(
-        reason="full-data tier: core DB absent (build it with "
-               "`python scripts/build_db.py`, or run the fixture tier)"
-    )
+    full_data_skip = None
+    if not _core_db_present():
+        full_data_skip = pytest.mark.skip(
+            reason="full-data tier: core DB absent (build it with "
+                   "`python scripts/build_db.py`, or run the fixture tier)"
+        )
+
+    unmet = {
+        module: reason
+        for module, (probe, reason) in ENVIRONMENT_REQUIREMENTS.items()
+        if not probe()
+    }
+
     for item in items:
-        if item.module.__name__.split(".")[-1] in FULL_DATA_MODULES:
-            item.add_marker(skip)
+        module = item.module.__name__.split(".")[-1]
+        if full_data_skip is not None and module in FULL_DATA_MODULES:
+            item.add_marker(full_data_skip)
+        if module in unmet:
+            item.add_marker(pytest.mark.skip(reason=unmet[module]))

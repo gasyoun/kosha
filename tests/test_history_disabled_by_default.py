@@ -51,12 +51,31 @@ def test_ungated_paths_still_answer():
     assert client.get("/health").status_code == 200
 
 
+def _mounted_paths() -> set[str]:
+    """Route paths, tolerating FastAPI's `_IncludedRouter` wrapper.
+
+    Newer FastAPI wraps an included router in an object with no `.path`, so
+    introspecting `route.path` directly works on some versions and raises on
+    others — the CI runner caught exactly that.
+    """
+    paths = set()
+    for route in app.routes:
+        path = getattr(route, "path", None)
+        if path:
+            paths.add(path)
+        for nested in getattr(getattr(route, "router", None), "routes", ()):
+            nested_path = getattr(nested, "path", None)
+            if nested_path:
+                paths.add(nested_path)
+    return paths
+
+
 def test_mounting_history_makes_the_routes_reachable_again():
     """The gate is a mount decision, not a missing implementation."""
     with mount_history(app):
-        paths = {route.path for route in app.routes}
+        paths = _mounted_paths()
         assert "/api/v1/history" in paths
         assert "/api/v1/stats/summary" in paths
     # …and unmounting restores the default surface for every later test.
-    assert "/api/v1/history" not in {route.path for route in app.routes}
+    assert "/api/v1/history" not in _mounted_paths()
     assert client.get("/api/v1/history").status_code == 404
