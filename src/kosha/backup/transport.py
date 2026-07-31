@@ -130,16 +130,31 @@ class FTPSTransport:
             self.ftp.storbinary(f"STOR {name}", handle, blocksize=CHUNK)
 
     def remote_sha256(self, remote_dir: str, name: str) -> str | None:
-        """Ask the server to hash the uploaded file. `None` ⇒ unsupported."""
+        """Ask the server to hash the uploaded file. `None` ⇒ unsupported.
+
+        The two commands answer in different shapes, and only one of them puts
+        the digest last:
+
+            XSHA256 f.bin  ->  213 <digest>
+            HASH    f.bin  ->  213 SHA-256 0-1048576 <digest> f.bin
+
+        Reading `split()[-1]` therefore returns the *filename* for a `HASH`
+        reply, which is not 64 hex characters, so the method fell through to
+        `None` — and `upload()` treats `None` as "this server proved nothing"
+        and refuses to promote. On a server offering `HASH` but not the older
+        `XSHA256`, every backup upload was rejected. Scan for the first 64-hex
+        token instead of assuming a position.
+        """
         self.ensure_dir(remote_dir)
         for command in (f"XSHA256 {name}", f"HASH {name}"):
             try:
                 reply = self.ftp.sendcmd(command)
             except ftplib.all_errors:
                 continue
-            token = reply.strip().split()[-1].lower()
-            if len(token) == 64 and all(c in "0123456789abcdef" for c in token):
-                return token
+            for raw in reply.strip().split():
+                token = raw.split("=")[-1].strip().lower()
+                if len(token) == 64 and all(c in "0123456789abcdef" for c in token):
+                    return token
         return None
 
     def rename(self, remote_dir: str, source: str, target: str) -> None:
