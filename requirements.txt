@@ -8,4 +8,12 @@ httpx>=0.28.1
 # Docs site (ZettelkastenWiki Wave-3 pilot, built by scripts/build_docs_site.py)
 zettelkastenwiki @ git+https://github.com/gasyoun/ZettelkastenWiki@6b3eb831ce252ac8585ba507940b8c8271a4983f
 
+# Canonical transliteration helpers (SHARED_CODE.md: consume, don't rebuild).
+# `app/word_page.py` and several build scripts import `sanskrit_util`; before
+# H1944 the only way to satisfy that was a sibling checkout reached through a
+# `sys.path` insert, which meant those 20 test modules could not even be
+# COLLECTED anywhere but a full workstation. Pinned to an immutable commit for
+# the same reason the build locks its sources.
+sanskrit-util @ git+https://github.com/sanskrit-lexicon/sanskrit-util@9ac617a2b802293f66793bd3f20eb1da179e1b2f#subdirectory=py
+
 vidyut>=0.4.0  # metre classification (vidyut.chandas) — W3a reading-pack metre layer (H951)

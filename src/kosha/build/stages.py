@@ -244,14 +244,24 @@ def _importable(module: str, note: str):
 
 
 def _sanskrit_util_available() -> tuple[bool, str]:
-    """`build_pronoun_corrections` imports `sanskrit_util` from a sibling repo
-    at module import time, so probe the checkout rather than the import path."""
+    """Can `build_pronoun_corrections` import `sanskrit_util`?
+
+    Two ways to satisfy it, and both count: the pinned wheel from
+    `requirements.txt` (how CI gets it), or the sibling checkout the module's
+    own `sys.path` insert reaches for (how a workstation usually has it).
+    """
+    import importlib.util
     from pathlib import Path as _Path
 
+    try:
+        if importlib.util.find_spec("sanskrit_util") is not None:
+            return True, ""
+    except (ImportError, ValueError):
+        pass
     for candidate in (ROOT.parent, ROOT.parent.parent):
         if (_Path(candidate) / "sanskrit-util" / "py" / "sanskrit_util").exists():
             return True, ""
-    return False, "sibling sanskrit-util checkout absent"
+    return False, "sanskrit_util neither installed nor present as a sibling checkout"
 
 
 #: The declared graph. Order in this dict is the declared order; the DAG still
