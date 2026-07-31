@@ -33,34 +33,50 @@ handoff explicitly classifies them as known noncritical residue.
 
 ## Required checks (branch protection)
 
-W0B (H1944) shipped the two workflows this gate runs in CI.
+W0B (H1944) shipped the two workflows this gate runs in CI. The protected
+`main` branch requires both status checks by name.
 
-> **Correction, 31-07-2026 (H1945).** This section previously read "The
-> protected `main` branch requires both status checks by name". It is not.
-> `GET /repos/gasyoun/kosha/branches/main` returns `"protected": false` and
-> `GET …/rulesets` returns `[]` — `main` has never carried branch protection or
-> a ruleset, so **no status check is required on it**, both workflows are
-> advisory, and a red CI run does not block a merge. The workflows exist and
-> run; the *enforcement* this paragraph asserted does not. Enabling it is a
-> repository-settings change outside H1945's scope, tracked as
-> [#223](https://github.com/gasyoun/kosha/issues/223) and held open in the
-> [W0 freeze-exit verdict](https://github.com/gasyoun/kosha/blob/main/docs/VERDICT_KOSHA_W0_FREEZE_EXIT_2026.md).
+> **History, 31-07-2026 (H1945).** That sentence was in this file before the
+> control behind it existed. H1945 checked it against the API and found
+> `branches/main` returning `"protected": false` and `rulesets` returning `[]`
+> — `main` had never carried protection, so no check was *required*, both
+> workflows were advisory, and a red CI run did not block a merge
+> ([#223](https://github.com/gasyoun/kosha/issues/223)). Protection was enabled
+> the same day, on human instruction, with the exact configuration recorded
+> below. Kept as a note rather than deleted because the gap is the reason every
+> "CI enforces X" claim in the W0 documents is now stated with its
+> configuration attached.
 
-The two workflows, and what each proves when it runs:
+**Configuration as enabled (31-07-2026).** Readable at any time with
+`gh api repos/gasyoun/kosha/branches/main/protection`:
+
+| Setting | Value | Why |
+|---|---|---|
+| `required_status_checks.contexts` | `Fixture build + tests`, `vitest + vite build` | the two workflows below, by job name |
+| `required_status_checks.strict` | `false` | a branch need not be rebased onto the latest `main` to merge; the gate is correctness, not freshness, and `strict` would force a re-run of every open PR on each merge |
+| `enforce_admins` | `true` | without it an admin — which is everyone who can merge here — could merge past a red run, i.e. the exact gap #223 recorded. **Consequence: direct pushes to `main` are refused for everyone, including release commits. Cut releases through a PR** (as [#225](https://github.com/gasyoun/kosha/pull/225) did) |
+| `required_pull_request_reviews` | `null` | a solo maintainer and an agent workflow cannot supply a second approver; requiring one would block every merge rather than gate it |
+| `allow_force_pushes` · `allow_deletions` | `false` | `main` is the branch every citation and release tag is cut from |
+
+`Changelog — no duplicated entries` runs on pull requests and is deliberately
+**not** required: it is a hygiene check, and this table lists what the freeze-exit
+checklist names. Adding it is one API call if that changes.
+
+The two required workflows, and what each proves:
 
 | Check | Workflow | What it proves |
 |---|---|---|
 | `Fixture build + tests` | [python-ci.yml](https://github.com/gasyoun/kosha/blob/main/.github/workflows/python-ci.yml) | the declared DAG plans, builds from zero **twice**, and the fixture-tier suite passes |
 | `vitest + vite build` | [ui-ci.yml](https://github.com/gasyoun/kosha/blob/main/.github/workflows/ui-ci.yml) | the Svelte UI tests pass and the bundle still builds |
 
-Dependency auto-merge is gated on them *by the workflow itself*:
+Dependency auto-merge cannot bypass them, and since 31-07-2026 that is true of
+both barriers rather than one:
 [dependabot-auto-merge.yml](https://github.com/gasyoun/kosha/blob/main/.github/workflows/dependabot-auto-merge.yml)
 is triggered by `workflow_run` on those two workflows and refuses to act unless
-the run concluded `success`. It then enables GitHub's *queued* auto-merge —
-which waits on branch protection, and therefore, while `main` is unprotected,
-waits on nothing. The `workflow_run` condition is real and is currently the
-only barrier; the second, independent barrier this paragraph used to claim is
-not in place.
+the run concluded `success`; it then enables GitHub's *queued* auto-merge,
+which waits on branch protection — which now exists. Until protection was
+enabled the second barrier waited on nothing, and the `workflow_run` condition
+was carrying the whole guarantee alone.
 
 The fixture tier is deliberately not the whole suite. Eight test modules are
 pinned to full-data counts (323,425 lemmas and similar) and skip themselves
