@@ -13,7 +13,7 @@ pre-alpha** — corrected 30-07-2026 (H1943; this line was stale since
 24-07-2026 and understated real progress). The lookup API + UI run locally
 against real MW/PWG/AP90 data (Phase 1 complete), the static-cache/data-hub
 tier is live on GitHub Pages, and the current release is
-[v0.96.0](https://github.com/gasyoun/kosha/releases/tag/v0.96.0) — but the
+[v0.97.0](https://github.com/gasyoun/kosha/releases/tag/v0.97.0) — but the
 public `samskrtam.ru` dictionary URL is not yet deployed (MG deploy-gated),
 and W0 (see [`docs/ROADMAP.md`](docs/ROADMAP.md)) is a hard feature freeze
 until the reproducible-substrate and contract/trust-boundary work lands. See
