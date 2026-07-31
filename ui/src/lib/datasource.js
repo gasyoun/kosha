@@ -86,18 +86,35 @@ export async function loadLemmaIndex() {
   return _lemmaIndex;
 }
 
+// W0C (H1945): `/api/v1/lemma` results are now Salt-profile entries, with
+// kosha's own fields namespaced under `kosha` (D6). Components read
+// `e.rendered_html` / `e.dict` / `e.evidence`, so the unwrap happens here —
+// once, at the data boundary — rather than in every binding.
+//
+// `salt_id` and `sense` are carried across so the Salt-defined half of the
+// entry is not simply discarded by the UI adapter.
+//
+// The `kosha` block may be absent: the static tier is deployed out of band, so
+// a card generated before the cut can still be live when a new bundle ships.
+// Both shapes are accepted, which is the same tolerance `app/word_page.py`'s
+// `entry_fields()` applies server-side.
+export function entryFields(entry) {
+  if (!entry || typeof entry !== 'object' || !entry.kosha) return entry;
+  return { ...entry.kosha, salt_id: entry.id, sense: entry.sense };
+}
+
 // A lemma's dictionary entries (the K3-folded cross-link target), rendered
 // in-app. Both the static card (docs/cards/<token>.json) and the live
-// /api/v1/lemma response share the {results:[{dict,L,headword,rendered_html,
-// scan_url,...}]} shape, so one unwrap serves both. Returns [] when the lemma
-// has no entry (e.g. an attested stem with no dict headword) instead of throwing.
+// /api/v1/lemma response share the {results:[…]} envelope, so one unwrap
+// serves both. Returns [] when the lemma has no entry (e.g. an attested stem
+// with no dict headword) instead of throwing.
 export async function getEntry(slp1Lemma) {
   const url = API
     ? `${API}/api/v1/lemma/${encodeURIComponent(slp1Lemma)}?in=slp1`
     : `${SITE_ROOT}cards/${cardToken(slp1Lemma)}.json`;
   try {
     const j = await getJson(url);
-    return j.results || [];
+    return (j.results || []).map(entryFields);
   } catch (e) {
     if (e.status === 404) return [];
     throw e;

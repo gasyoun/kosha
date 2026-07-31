@@ -18,10 +18,11 @@ one dump, two uses: browser resolution here, and the sense_crosswalk diff
 as release assets, not in-repo). The mechanism and its tests live in git; the
 dumps do not.
 """
-import os
 import re
 import sqlite3
 from pathlib import Path
+
+from kosha.settings import get_settings
 
 _APP = Path(__file__).resolve().parent
 _ROOT = _APP.parent
@@ -33,7 +34,15 @@ _RE_SENSE_BASE = re.compile(r"^(?P<dict>[^.]+)\.(?P<L>.+)\.(?P<n>\d+)$")
 
 
 def releases_dir() -> Path:
-    return Path(os.getenv("KOSHA_RELEASES_DIR", str(_ROOT / "data" / "releases")))
+    """The citation-archive mount.
+
+    W0C (H1945): read from typed settings rather than this module's own
+    `os.getenv`, so `KOSHA_ARCHIVE_DIR` — the documented knob — actually moves
+    where citations resolve from. `KOSHA_RELEASES_DIR` still works as a
+    deprecated alias; `refresh=True` because tests set the variable after
+    import and a cached value would ignore them.
+    """
+    return get_settings(refresh=True).archive_dir
 
 
 def parse_sense_id(sense_id: str):
