@@ -55,5 +55,10 @@ jobs:
           PYTHONDONTWRITEBYTECODE: "1"
         run: python -m pytest -q -p no:cacheprovider
 
-      - name: Dependency lock is present and parseable
-        run: python -c "import pathlib,sys; t=pathlib.Path('requirements.lock.txt').read_text(encoding='utf-8'); sys.exit(0 if '==' in t else 'lock file has no pins')"
+      - name: Dependency lock agrees with what the project declares
+        # Replaces a check that read the lock and asserted it contained the
+        # characters `==`. A lock pinning fastapi 0.136.1 against a declared
+        # floor of >=0.140.0 satisfied that without difficulty. `--audit`
+        # checks the invariants that hold on every platform: every declared
+        # root is pinned, and no pin contradicts its declared specifier.
+        run: python scripts/gen_requirements_lock.py --audit
