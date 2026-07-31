@@ -123,14 +123,23 @@ def iter_rows(calc_tables_path: Path):
                         yield (form, lemma_slp1, model, gender, gcase, number, refs)
 
 
-def build_verb_inflections(con, verb_tables_path: Path = DEFAULT_VERB_TABLES):
+def build_verb_inflections(con, verb_tables_path: Path | None = None):
     """K2a (H181): append present-system verb conjugations to `inflections`.
 
     Called after the nominal load (which owns the DELETE FROM inflections), so
     this is additive. Rows are Python-deduped before insert -- the table PK on
     a migrated (pre-K2a) DB doesn't cover person/tense/voice and its NULL gcase
     means INSERT OR IGNORE won't collapse verb duplicates on its own.
+
+    `verb_tables_path=None` resolves DEFAULT_VERB_TABLES **at call time**. It
+    used to be a default argument, which bound the constant at import and made
+    the module silently unconfigurable: rebinding
+    `build_inflections.DEFAULT_VERB_TABLES` (as the fixture pack does) changed
+    nothing, and no error said so (H1944).
     """
+    if verb_tables_path is None:
+        verb_tables_path = DEFAULT_VERB_TABLES
+    verb_tables_path = Path(verb_tables_path)
     if not verb_tables_path.exists():
         print(f"[P4 K2a] verb table absent ({verb_tables_path}); skipping verb ingest. "
               "Regenerate via `sh verbs/redo.sh` in the sibling MWinflect checkout "
@@ -186,8 +195,14 @@ def build_verb_inflections(con, verb_tables_path: Path = DEFAULT_VERB_TABLES):
     return len(rows)
 
 
-def build_inflections(con, calc_tables_path: Path = DEFAULT_CALC_TABLES,
-                      verb_tables_path: Path = DEFAULT_VERB_TABLES):
+def build_inflections(con, calc_tables_path: Path | None = None,
+                      verb_tables_path: Path | None = None):
+    # Both default to None and resolve the module constants at call time — see
+    # build_verb_inflections for why an import-time default was a silent
+    # configuration hole rather than a convenience (H1944).
+    if calc_tables_path is None:
+        calc_tables_path = DEFAULT_CALC_TABLES
+    calc_tables_path = Path(calc_tables_path)
     if not calc_tables_path.exists():
         raise SystemExit(
             f"missing MWinflect nominal table: {calc_tables_path}\n"

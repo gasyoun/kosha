@@ -5,6 +5,12 @@ __pycache__/
 # machine-local Claude Code settings, not a repo deliverable
 .claude/settings.local.json
 *.db
+# ...except the committed fixture pack's miniature dictionary dumps (W0B/H1944):
+# a few hundred entries per dict, sliced verbatim out of the csl-sqlite cache by
+# scripts/build_fixture_pack.py. They are the input the from-zero build of every
+# declared stage is proven against in CI, so they must be tracked — unlike the
+# 1.7 GB kosha.db the rule above is written for.
+!tests/fixtures/pack/raw_sqlite/**/*.sqlite
 # personal review/voting sheets (per Uprava's /review-sheet convention) -- working
 # artifacts for MG, not repo deliverables; decisions.json output lands here too
 review/

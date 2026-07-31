@@ -14,6 +14,58 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H1944 — W0B reproducible substrate.** Packaging (`pyproject.toml`,
+  installable [`src/kosha/`](https://github.com/gasyoun/kosha/blob/main/src/kosha/__init__.py),
+  committed `requirements.lock`; `app/` and `scripts/` unchanged as entry
+  points), typed settings
+  ([`src/kosha/settings.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/settings.py))
+  for the core/inflections/layers/archive/public-base paths and the history
+  flag, a declarative build DAG
+  ([`src/kosha/build/`](https://github.com/gasyoun/kosha/blob/main/src/kosha/build/stages.py))
+  with per-stage source-feed digests, postconditions, temporary build targets
+  and atomic promotion, a 748 KB committed fixture pack
+  ([`tests/fixtures/pack/`](https://github.com/gasyoun/kosha/blob/main/tests/fixtures/pack/sources.json),
+  derived from the real feeds by
+  [`scripts/build_fixture_pack.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_fixture_pack.py))
+  that builds all ten stages from zero in ~3 s, and required
+  [Python](https://github.com/gasyoun/kosha/blob/main/.github/workflows/python-ci.yml)
+  and [UI](https://github.com/gasyoun/kosha/blob/main/.github/workflows/ui-ci.yml)
+  CI. 59 new tests (389 → 448).
+
+### Fixed
+- **The no-flag database build silently omitted five of its ten declared
+  stages** — `entries`, `forms`, `inflections`, `hybrid` and `stem_bridge` were
+  dispatched with `if args.stage == "x"` rather than `in (None, "x")`, so
+  `python scripts/build_db.py` skipped them, stamped `data_version` and exited
+  0 ([#210](https://github.com/gasyoun/kosha/issues/210)). The stage list is now
+  data read by the CLI, the plan and the build lock alike, and a stage that
+  produces nothing fails the build.
+- **Feed paths bound as default arguments were silently unconfigurable.**
+  `build_db_layers`' five loaders and `build_inflections` captured their module
+  constants at import, so redirecting one moved the recorded provenance without
+  moving the read — measured: the lock named a 52-line fixture while 6.9 M rows
+  came from the real MWinflect tables. All now resolve at call time.
+- **`DATABASE_PATH` did nothing.** Advertised in `.env.example` since the start
+  while `app/db.py` hardcoded its own path. Kept as a deprecated alias that now
+  takes effect and warns; conflicting with `KOSHA_CORE_DB` is a hard error.
+- **`sanskrit_util` was an undeclared build dependency** satisfied only by a
+  sibling checkout, which made the `pronoun` stage unbuildable elsewhere with
+  no explanation. Declared and locked.
+- **Restricted-tier deploy ran over plaintext FTP.** `scripts/deploy_guhya.py`
+  now uses FTPS (`AUTH TLS` before login, `PROT P` on data), uploads to a
+  temporary remote name and renames into place only after the size matches,
+  compares a server-side `HASH`/`XSHA256` when offered, and reports
+  `verified_by: size` honestly when not. No plaintext path remains.
+- **Dependabot auto-merge approved before any evidence existed**, on a repo
+  whose protected branch required no checks (there were none to require). It
+  now waits for both test jobs to report SUCCESS on the PR head.
+
+### Changed
+- Search history, magic-link auth and aggregate stats are **off by default**:
+  the routes are absent from the route table (404), and no visitor row is
+  written. `KOSHA_ENABLE_HISTORY=1` restores them.
+
 ## [0.96.1] - 2026-07-31
 
 ### Fixed

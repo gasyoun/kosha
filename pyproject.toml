@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=77.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kosha"
+version = "0.96.1"
+description = "Gasuns Sanskrit Dictionary — unified Sanskrit dictionary lookup and derived-dataset hub"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "CC-BY-NC-4.0"
+license-files = ["LICENSE.md"]
+keywords = ["Sanskrit", "lexicography", "dictionaries", "linked-data", "morphology"]
+authors = [{ name = "Marcis Gasuns" }]
+
+# Runtime dependencies only. Test/docs extras live under
+# [project.optional-dependencies]; requirements.txt stays the flat
+# install-everything file the existing runbooks call, and
+# tests/test_packaging.py pins the two to each other so they cannot drift.
+dependencies = [
+    "fastapi>=0.140.0",
+    "uvicorn[standard]>=0.51.0",
+    "pydantic>=2.13.4",
+    "python-dotenv>=1.2.2",
+    "vidyut>=0.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.1.1",
+    "httpx>=0.28.1",
+]
+# The data-build chain, not the API. `scripts/build_pronoun_corrections.py`
+# imports `sanskrit_util` — until W0B that was an UNDECLARED dependency
+# satisfied only by a sibling checkout, so the `pronoun` stage was unbuildable
+# anywhere else and nothing said why. It is the org's canonical transliteration
+# helper (SHARED_CODE.md); consumed, not reimplemented.
+build = [
+    "sanskrit-util @ git+https://github.com/sanskrit-lexicon/sanskrit-util@9ac617a2b802293f66793bd3f20eb1da179e1b2f#subdirectory=py",
+]
+docs = [
+    "zettelkastenwiki @ git+https://github.com/gasyoun/ZettelkastenWiki@6b3eb831ce252ac8585ba507940b8c8271a4983f",
+]
+
+[project.urls]
+Homepage = "https://github.com/gasyoun/kosha"
+Repository = "https://github.com/gasyoun/kosha"
+Changelog = "https://github.com/gasyoun/kosha/blob/main/CHANGELOG.md"
+
+[project.scripts]
+kosha-build-db = "kosha.build.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# `app/` and `scripts/` are deliberately NOT packaged: they stay importable
+# top-level compatibility entry points for the existing runbooks
+# (`uvicorn app.main:app`, `python scripts/build_db.py`), which resolve them
+# from the repo root rather than from site-packages.
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# `fixture` marks tests that run entirely off the committed fixture pack
+# (tests/fixtures/pack) and therefore need no 1.7 GB local kosha.db. CI's
+# required Python check runs exactly this subset; the full suite still runs
+# locally against real data.
+markers = [
+    "fixture: runs against the committed fixture pack only (no local full DB)",
+]

@@ -1,6 +1,6 @@
 # kosha — pipeline operator runbook
 
-_Created: 10-07-2026 · Last updated: 24-07-2026_
+_Created: 10-07-2026 · Last updated: 31-07-2026_
 
 The one document that says what to run, in what order, how to know each stage
 worked, and what breaking looks like — for the whole chain: **DB build → API →
@@ -30,10 +30,11 @@ sibling repos + release feeds                 gasyoun.github.io/kosha (Pages,
         ▼                                             │
 scripts/build_db.py  ──►  data/db/kosha.db  ──►  static generators
   --stage lemmas · entries · forms ·             build_static_cache (docs/js/data + docs/cards — GITIGNORED, MG deploys)
-  evidence · inflections · stem_bridge ·         build_paradigms    (docs/inflect/  — committed)
-  heritage                                       build_colocation_page (colocation/ — committed)
-        │                                        build_directory    (directory/     — committed)
-        ▼                                        build_docs_site    (wiki/ → docs-site/ — committed)
+  inflections · hybrid · pronoun ·               build_paradigms    (docs/inflect/  — committed)
+  stem_bridge · heritage · evidence ·            build_colocation_page (colocation/ — committed)
+  layers                                         build_directory    (directory/     — committed)
+        │                                        build_docs_site    (wiki/ → docs-site/ — committed)
+        ▼
 uvicorn app.main:app   (live API tier)
         │
         ▼
@@ -66,12 +67,23 @@ outputs (`docs/js/data/`, `docs/cards/`) are deployed **out-of-band by M.G.**
 
 ## 2. The DB build (monthly rebuild, or after any upstream feed moves)
 
-One script, eight stages, dependency-ordered. **No flag runs all stages in
+One script, **ten** stages, dependency-ordered. **No flag runs all ten, in
 order** — the safe default after any upstream change:
 
 ```sh
 python scripts/build_db.py                # everything, in order → data/db/kosha.db
+python scripts/build_db.py --plan         # what would run, and what each stage proves
 ```
+
+> **Corrected 31-07-2026 (W0B / H1944).** This table said "eight stages" and
+> omitted `hybrid` and `pronoun`, and the no-flag build genuinely skipped
+> `entries`, `forms`, `inflections`, `hybrid` and `stem_bridge` while still
+> exiting 0 —
+> [issue #210](https://github.com/gasyoun/kosha/issues/210). The stage list now
+> lives in one place,
+> [`src/kosha/build/stages.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/build/stages.py),
+> which the CLI, the plan and the build lock all read, so this table can be
+> checked against it (`--plan`) rather than trusted.
 
 Individual stages (`--stage`), in their canonical order:
 
@@ -80,16 +92,48 @@ Individual stages (`--stage`), in their canonical order:
 | 1 | `lemmas` | the lemma spine + DCS frequency columns | new VisualDCS/frequency drop |
 | 2 | `entries` | per-dict csl-orig records from csl-sqlite zips (`--dicts mw,pwg,ap90`) | new csl-sqlite release / new dict |
 | 3 | `forms` | form→lemma TSVs (dcs 408,660 · vidyut 28,567 · heritage 992,194) from the glossary pipeline | glossary regen |
-| 4 | `evidence` | frequency band (1–5) + one corpus example per lemma | after 1 |
-| 5 | `inflections` | csl-inflect case/number/gender tables (MWinflect `calc_tables.txt`) | MWinflect update |
-| 6 | `stem_bridge` | strong/weak-stem crosswalk unifying `forms` ↔ `inflections` lemmas | after 3+5 |
-| 7 | `heritage` | Heritage anchor/coverage witness (H345) | Heritage TSV regen |
-| 8 | `layers` | **P-D5 public join layers** — `sense_frequency`, `roots_frequency`, `dict_corpus_coverage` (+ optional `mw_roots` / `mw_etymology` from sibling csl-orig) | new sense-freq / roots / coverage / mw_roots drop |
+| 4 | `inflections` | csl-inflect case/number/gender tables (MWinflect `calc_tables.txt`) | MWinflect update |
+| 5 | `hybrid` | vidyut-prakriya ṇatva fixes + VIDYUT_ONLY gap-fills over the Cologne base (E1/H185) | after 4 — 4 wipes the table |
+| 6 | `pronoun` | curated Gītā pronoun analyses, source-tagged `curated-gita-pronoun` | after 4+5 |
+| 7 | `stem_bridge` | strong/weak-stem crosswalk unifying `forms` ↔ `inflections` lemmas | after 3+4 |
+| 8 | `heritage` | Heritage anchor/coverage witness (H345) | Heritage TSV regen |
+| 9 | `evidence` | frequency band (1–5) + one corpus example per lemma | after 1+3 |
+| 10 | `layers` | **P-D5 public join layers** — `sense_frequency`, `roots_frequency`, `dict_corpus_coverage` (+ optional `mw_roots` / `mw_etymology` from sibling csl-orig) | new sense-freq / roots / coverage / mw_roots drop |
 
 ```sh
 python scripts/build_db.py --stage entries --dicts mw,pwg,ap90
 python scripts/build_db.py --stage layers     # P-D5 only (additive; safe re-run)
+python scripts/build_db.py --verify           # the artifact against its build lock
 python scripts/check_g_size.py                # D5-4 G-SIZE tripwire (FAIL >1.8 GB)
+```
+
+**What the build now refuses to do**, all of it recorded in
+`data/db/kosha.build-lock.json` next to the artifact:
+
+- **Run a stage whose source feed is missing.** It aborts naming the feed. Pass
+  `--allow-missing-sources` to record an explicit, named skip instead — and note
+  that `--release` then refuses to ship, because a release must be able to say
+  every declared stage ran.
+- **Promote a stage that produced nothing.** Each stage carries a postcondition
+  (`--plan` prints them); a stage that completes leaving its table empty fails
+  the build.
+- **Sit on stale prerequisites.** `--stage evidence` on a database whose
+  `lemmas` stage read feed bytes that have since changed — or that is now
+  configured to read a *different* feed — is refused, naming the stage and the
+  file. `--force` accepts it deliberately.
+- **Leave a half-built artifact at the live path.** A full build writes
+  `kosha.db.building-<id>` and `os.replace`s it into position only after every
+  stage has passed; a crashed build leaves the previous good database alone.
+- **Stamp `data_version` as `latest`.** `--release latest` is rejected: a
+  citation minted against a moving name resolves to different text every
+  rebuild (RISKS.md R1).
+
+Building without the sibling checkouts (what CI does) — the committed fixture
+pack drives the same ten stages from an empty file in a couple of seconds:
+
+```sh
+python scripts/build_db.py --sources tests/fixtures/pack/sources.json --db /tmp/fixture.db
+python scripts/build_fixture_pack.py      # regenerate the pack (needs the full local tree)
 ```
 
 ### P-D5 query surface (agent SQL)

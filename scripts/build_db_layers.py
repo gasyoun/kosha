@@ -186,7 +186,12 @@ def ensure_layer_schema(con: sqlite3.Connection) -> None:
     con.commit()
 
 
-def load_sense_frequency(con: sqlite3.Connection, path: Path = SENSE_FREQ_TSV) -> int:
+def load_sense_frequency(con: sqlite3.Connection, path: Path | None = None) -> int:
+    # `None` -> resolve the module constant NOW, not at import. As a default
+    # argument the constant was frozen at import time, so rebinding it (which
+    # is how the fixture pack redirects feeds) silently had no effect and the
+    # build lock recorded a source the loader had not read (H1944).
+    path = Path(path) if path is not None else SENSE_FREQ_TSV
     if not path.exists():
         raise SystemExit(f"[layers] missing required feed: {path}")
     con.execute("DELETE FROM sense_frequency")
@@ -234,7 +239,8 @@ def load_sense_frequency(con: sqlite3.Connection, path: Path = SENSE_FREQ_TSV) -
     return n
 
 
-def load_roots_frequency(con: sqlite3.Connection, path: Path = ROOTS_FREQ_TSV) -> int:
+def load_roots_frequency(con: sqlite3.Connection, path: Path | None = None) -> int:
+    path = Path(path) if path is not None else ROOTS_FREQ_TSV
     if not path.exists():
         raise SystemExit(f"[layers] missing required feed: {path}")
     con.execute("DELETE FROM roots_frequency")
@@ -267,9 +273,10 @@ def load_roots_frequency(con: sqlite3.Connection, path: Path = ROOTS_FREQ_TSV) -
 
 
 def load_dict_corpus_coverage(
-    con: sqlite3.Connection, path: Path = DICT_COVERAGE_TSV
+    con: sqlite3.Connection, path: Path | None = None
 ) -> int:
     """Summary coverage sidecar — one row per union headword (R-N7)."""
+    path = Path(path) if path is not None else DICT_COVERAGE_TSV
     if not path.exists():
         raise SystemExit(f"[layers] missing required feed: {path}")
     con.execute("DELETE FROM dict_corpus_coverage")
@@ -303,7 +310,8 @@ def load_dict_corpus_coverage(
     return n
 
 
-def load_mw_roots(con: sqlite3.Connection, path: Path = MW_ROOTS_TSV) -> int | None:
+def load_mw_roots(con: sqlite3.Connection, path: Path | None = None) -> int | None:
+    path = Path(path) if path is not None else MW_ROOTS_TSV
     if not path.exists():
         print(f"[layers] mw_roots: SKIP (sibling feed missing: {path})")
         return None
@@ -336,8 +344,9 @@ def load_mw_roots(con: sqlite3.Connection, path: Path = MW_ROOTS_TSV) -> int | N
 
 
 def load_mw_etymology(
-    con: sqlite3.Connection, path: Path = MW_ETYMOLOGY_TSV
+    con: sqlite3.Connection, path: Path | None = None
 ) -> int | None:
+    path = Path(path) if path is not None else MW_ETYMOLOGY_TSV
     if not path.exists():
         print(f"[layers] mw_etymology: SKIP (sibling feed missing: {path})")
         return None
@@ -451,7 +460,8 @@ def build_layers(con: sqlite3.Connection) -> dict:
     return summary
 
 
-def connect(db_path: Path = DB_PATH) -> sqlite3.Connection:
+def connect(db_path: Path | None = None) -> sqlite3.Connection:
+    db_path = Path(db_path) if db_path is not None else DB_PATH
     db_path.parent.mkdir(parents=True, exist_ok=True)
     con = sqlite3.connect(str(db_path))
     con.row_factory = sqlite3.Row

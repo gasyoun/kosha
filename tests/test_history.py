@@ -13,7 +13,12 @@ from fastapi.testclient import TestClient
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "app"))
 import history_db  # noqa: E402
-from app.main import app  # noqa: E402
+from app.main import build_app  # noqa: E402
+
+# History is default-OFF since W0B (H1944) — these tests are about the feature
+# when it IS on, so they run against an explicitly enabled application.
+# tests/test_history_default_off.py owns the other half of the contract.
+app = build_app(enable_history=True)
 
 
 @pytest.fixture(autouse=True)

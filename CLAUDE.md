@@ -28,10 +28,15 @@ endpoint behavior beyond what the live tests in `tests/` verify.
 > [docs/PIPELINE_OPERATOR_RUNBOOK.md](docs/PIPELINE_OPERATOR_RUNBOOK.md) (H501).
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.lock              # the pinned set CI installs (W0B/H1944)
+pip install -e .                              # installable package (src/kosha/)
 uvicorn app.main:app --reload --port 8000     # run the FastAPI dev server (needs .env, see below)
-pytest                                        # full test suite (tests/test_api.py, test_citability.py, test_render_golden.py, test_static_cache.py, test_docs_site.py)
-python scripts/build_db.py                    # build unified_dict.db from source dictionaries
+pytest                                        # full test suite — needs the local data/db/kosha.db
+pytest -m fixture                             # the subset CI runs: no big DB, fixture pack only
+python scripts/build_db.py                    # build data/db/kosha.db — ALL ten stages, in order
+python scripts/build_db.py --plan             # the resolved plan + what each stage must prove
+python scripts/build_db.py --verify           # check the artifact against its build lock
+python scripts/build_db.py --sources tests/fixtures/pack/sources.json --db /tmp/fx.db  # from-zero fixture build
 python scripts/build_crosswalk.py             # build the union headword crosswalk
 python scripts/build_entries.py               # build rendered entries
 python scripts/build_forms.py                 # build inflected-form index
@@ -42,15 +47,22 @@ python scripts/gen_golden.py                  # regenerate golden render fixture
 python scripts/measure_d5.py                  # D5 latency/perf measurement run
 ```
 
-Copy `.env.example` → `.env` before running the API — sets `DATABASE_PATH`,
-`LOG_LEVEL`, `CORS_ORIGINS`, and `COLOGNE_SCAN_BASE` (the csl-websanlexicon
-`serveimg`/`servepdf` host used for scan-anchored citations).
+Copy `.env.example` → `.env` before running the API. Settings are typed and
+validated in [`src/kosha/settings.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/settings.py) (W0B/H1944):
+`KOSHA_CORE_DB`, `KOSHA_ARCHIVE_DIR`, `KOSHA_PUBLIC_BASE`,
+`KOSHA_ENABLE_HISTORY` (off by default), plus `LOG_LEVEL`, `CORS_ORIGINS` and
+`COLOGNE_SCAN_BASE` (the csl-websanlexicon `serveimg`/`servepdf` host used for
+scan-anchored citations). `DATABASE_PATH` survives as a **deprecated alias** for
+`KOSHA_CORE_DB` — it used to be advertised while nothing read it; it now works,
+warns, and setting both to different paths is a hard error.
 
 ## Key directories / files
 
 | Path | Purpose |
 |---|---|
-| `app/` | FastAPI service: `main.py` (entry point/routes), `db.py`, `render.py` (entry rendering), `salt.py` (Salt facade REST — see Conventions), `scan_resolver.py`, `segment.py`, `transliterate.py`, `versions.py`, `cite.py` (citation-ID minting) |
+| `src/kosha/` | The installable package (W0B/H1944): `settings.py` (typed settings + the deprecated `DATABASE_PATH` alias) and `build/` — `stages.py` (the ONE stage registry: dependencies, source feeds, postconditions), `runner.py`, `lock.py`, `cli.py`. `app/` and `scripts/` stay as compatibility entry points and import from here |
+| `app/` | FastAPI service: `main.py` (`build_app()` + routes; history/auth/stats are OFF unless `KOSHA_ENABLE_HISTORY`), `db.py`, `render.py` (entry rendering), `salt.py` (Salt facade REST — see Conventions), `scan_resolver.py`, `segment.py`, `transliterate.py`, `versions.py`, `cite.py` (citation-ID minting) |
+| `tests/fixtures/pack/` | Committed slice of the real source feeds (748 KB, derived by `scripts/build_fixture_pack.py`) that drives a full from-zero build of every stage without the sibling checkouts — what CI builds against |
 | `scripts/` | One script per data-build stage (crosswalk → entries → forms → db → static cache → docs site); `measure_d5.py` and `archive_senses.py` are maintenance/measurement, not part of the main build chain |
 | `data/` | Data assets, incl. `data/frequency/` (DCS frequency sidecar joined against `union_headwords`, see `.ai_state.md`) — `data/raw*/`, `data/releases/`, and D5 measurement outputs are gitignored/regenerable |
 | `tests/` | `test_api.py`, `test_citability.py`, `test_render_golden.py` (golden fixtures in `tests/golden/`), `test_static_cache.py`, `test_docs_site.py` |
@@ -61,10 +73,19 @@ Copy `.env.example` → `.env` before running the API — sets `DATABASE_PATH`,
 | `RISKS.md` | R1–R12 pre-mortem, incl. the citability commitments (citation URLs must never depend on the `samskrtam.ru` server host) |
 | `KOSHA_DECISIONS_NEEDED.md` | Open @DECIDE items — check before assuming a design choice is settled |
 
-**CI (corrected 30-07-2026, H1943):** `.github/workflows/` now exists —
-`changelog-lint.yml` (duplicate-entry guard) and `dependabot-auto-merge.yml`.
-Neither runs the Python/UI test suite yet; required Python/UI CI is H1944
-scope (W0B), not yet shipped.
+**CI (updated 31-07-2026, H1944):** four workflows —
+[`python-ci.yml`](https://github.com/gasyoun/kosha/blob/main/.github/workflows/python-ci.yml)
+(job `pytest (fixture pack)`: installs `requirements.lock`, resolves the build
+plan, runs `pytest -m fixture` including a full from-zero build of all ten
+stages),
+[`ui-ci.yml`](https://github.com/gasyoun/kosha/blob/main/.github/workflows/ui-ci.yml)
+(job `vitest + vite build`), `changelog-lint.yml` (duplicate-entry guard) and
+`dependabot-auto-merge.yml` — the last now waits for both test jobs to report
+SUCCESS on the PR head before it approves or enables auto-merge, so a
+dependency bump cannot land on an unbuilt PR. **Those two job names are the
+contexts to require in branch protection** (a human still has to set that;
+`tests/test_packaging.py` pins the names to the gate so a rename cannot
+silently orphan them).
 
 ## Conventions
 
@@ -83,9 +104,15 @@ scope (W0B), not yet shipped.
   (`LICENSE.md`, non-commercial); data releases are CC BY-SA 4.0
   (`LICENSE-DATA.md`, inherited from Cologne's ShareAlike — which does **not**
   permit adding a non-commercial restriction on top).
-- **Data build order matters**: crosswalk → entries → forms → db → static
-  cache, per `scripts/`' naming; running a later stage against a stale earlier
-  one produces silently wrong output, not an error.
+- **Data build order matters**, and since W0B (H1944) the build enforces it
+  rather than trusting you: stage dependencies, source-feed digests and
+  per-stage postconditions live in
+  [`src/kosha/build/stages.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/build/stages.py),
+  and `python scripts/build_db.py --stage X` **refuses** to run on prerequisites
+  that never ran or whose feeds have changed since (`--force` to override).
+  Running a later stage against a stale earlier one used to produce silently
+  wrong output; it now produces a named error. The build lock beside the
+  database (`kosha.build-lock.json`) is the record of what actually ran.
 - **P5 static head (D4 / H1590):** after cards exist, regenerate word pages with
   `python scripts/build_word_pages.py --coverage 0.95` (or `--head N` after
   re-measure). N is measured at build time from `lemma_frequency.tsv` — never

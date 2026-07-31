@@ -11,13 +11,21 @@ import sys
 from pathlib import Path
 
 from dotenv import load_dotenv
-from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException, Query, Request, Response
+from fastapi import (
+    APIRouter, BackgroundTasks, Depends, FastAPI, HTTPException, Query, Request, Response,
+)
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+_SRC = Path(__file__).resolve().parent.parent / "src"
+if (_SRC / "kosha" / "__init__.py").is_file() and str(_SRC) not in sys.path:
+    sys.path.insert(0, str(_SRC))
+
+from kosha.settings import get_settings  # noqa: E402
 
 from db import get_db, data_version  # noqa: E402
 from render import render  # noqa: E402
@@ -50,33 +58,59 @@ PUBLIC_BASE = os.getenv("KOSHA_PUBLIC_BASE", "http://localhost:8000")
 # configurable, like COLOGNE_SCAN_BASE for scans.
 HERITAGE_BASE = os.getenv("HERITAGE_DICO_BASE", "https://sanskrit.inria.fr/")
 
-app = FastAPI(
-    title=os.getenv("API_TITLE", "kosha"),
-    description=os.getenv("API_DESCRIPTION", "Fast Sanskrit Dictionary Lookup"),
-    version=os.getenv("API_VERSION", "0.1.0"),
-)
+# Every public route hangs off this router rather than off a module-level app,
+# so `build_app()` below can assemble a *fresh* application per configuration.
+# That is what makes the history feature gate testable: proving the routes are
+# absent by default and present when enabled needs two independent app objects,
+# not one global that the first test to touch it mutates for the rest of the
+# session.
+router = APIRouter()
 
-try:
-    origins = json.loads(os.getenv("CORS_ORIGINS", '["*"]'))
-except json.JSONDecodeError:
-    origins = ["*"]
 
-# NB: allow_credentials must stay False while origins may be ["*"] —
-# Starlette silently drops the wildcard otherwise. Cookie-scoped personal
-# history (/api/v1/history, /api/v1/auth/*) needs credentialed CORS, so a
-# production deployment MUST set CORS_ORIGINS to an explicit origin list
-# (e.g. ["https://samskrtam.ru", "https://gasyoun.github.io"]) in .env — the
-# wildcard default only works same-origin, credential-free (public
-# /api/v1/stats/* endpoints still work fine under it).
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=origins != ["*"],
-    allow_methods=["GET", "POST", "DELETE"],
-    allow_headers=["*"],
-)
+def build_app(enable_history: bool | None = None) -> FastAPI:
+    """Assemble the FastAPI application.
 
-app.include_router(history_router)
+    `enable_history` defaults to the `KOSHA_ENABLE_HISTORY` setting (off). When
+    off, the personal-history, magic-link auth and aggregate-stats routes are
+    **not mounted at all** — they 404 like any unknown path, and no search is
+    written to the history store. W0's public surface is the dictionary; the
+    visitor-data surface is opt-in (W0B/H1944, and the precondition H1945
+    re-checks).
+    """
+    if enable_history is None:
+        enable_history = get_settings().enable_history
+
+    application = FastAPI(
+        title=os.getenv("API_TITLE", "kosha"),
+        description=os.getenv("API_DESCRIPTION", "Fast Sanskrit Dictionary Lookup"),
+        version=os.getenv("API_VERSION", "0.1.0"),
+    )
+
+    try:
+        origins = json.loads(os.getenv("CORS_ORIGINS", '["*"]'))
+    except json.JSONDecodeError:
+        origins = ["*"]
+
+    # NB: allow_credentials must stay False while origins may be ["*"] —
+    # Starlette silently drops the wildcard otherwise. Cookie-scoped personal
+    # history (/api/v1/history, /api/v1/auth/*) needs credentialed CORS, so a
+    # production deployment MUST set CORS_ORIGINS to an explicit origin list
+    # (e.g. ["https://samskrtam.ru", "https://gasyoun.github.io"]) in .env — the
+    # wildcard default only works same-origin, credential-free (public
+    # /api/v1/stats/* endpoints still work fine under it).
+    application.add_middleware(
+        CORSMiddleware,
+        allow_origins=origins,
+        allow_credentials=origins != ["*"],
+        allow_methods=["GET", "POST", "DELETE"],
+        allow_headers=["*"],
+    )
+
+    application.state.enable_history = enable_history
+    application.include_router(router)
+    if enable_history:
+        application.include_router(history_router)
+    return application
 
 
 def envelope(con, query: dict, results):
@@ -89,12 +123,12 @@ def error(code: str, message: str, status: int, suggestions=None):
     })
 
 
-@app.get("/")
+@router.get("/")
 def root():
     return {"message": "kosha — Sanskrit Dictionary Lookup", "docs": "/docs"}
 
 
-@app.get("/health")
+@router.get("/health")
 def health():
     return {"status": "ok"}
 
@@ -161,7 +195,7 @@ def _entry_payload(con, row, out: str, raw: bool):
     return payload
 
 
-@app.get("/api/v1/lemma/{key}")
+@router.get("/api/v1/lemma/{key}")
 def get_lemma(key: str, in_: str = Query("auto", alias="in"), out: str = "iast",
               dicts: str = ",".join(ALL_DICTS), raw: int = 0,
               con: sqlite3.Connection = Depends(get_db)):
@@ -181,7 +215,7 @@ def get_lemma(key: str, in_: str = Query("auto", alias="in"), out: str = "iast",
     return envelope(con, {"key": key, "in": in_, "out": out, "dicts": dict_list}, results)
 
 
-@app.get("/w/{slp1}", response_class=HTMLResponse)
+@router.get("/w/{slp1}", response_class=HTMLResponse)
 def word_page(slp1: str, con: sqlite3.Connection = Depends(get_db)):
     """P5-4 SSR half (H537): server-render the word page for the long tail — any
     lemma, not just the top-N the static prerender ships. Renders the EXACT same
@@ -224,7 +258,7 @@ def _neighbor_payload(con, row, out: str, query_L=None):
     }
 
 
-@app.get("/api/v1/page/{dict_id}")
+@router.get("/api/v1/page/{dict_id}")
 def get_page(dict_id: str, page: int, vol: int = Query(None),
              merge: int = 0, out: str = "iast",
              con: sqlite3.Connection = Depends(get_db)):
@@ -247,7 +281,7 @@ def get_page(dict_id: str, page: int, vol: int = Query(None),
     }, results)
 
 
-@app.get("/api/v1/neighbors/{dict_id}/{L}")
+@router.get("/api/v1/neighbors/{dict_id}/{L}")
 def get_neighbors(dict_id: str, L: str, merge: int = 0, out: str = "iast",
                   con: sqlite3.Connection = Depends(get_db)):
     """Given one entry, the other words printed on the same column (or leaf).
@@ -275,7 +309,7 @@ def get_neighbors(dict_id: str, L: str, merge: int = 0, out: str = "iast",
     }, results)
 
 
-@app.get("/api/v1/form/{form}")
+@router.get("/api/v1/form/{form}")
 def get_form(form: str, in_: str = Query("auto", alias="in"),
              heritage: bool = Query(False),
              con: sqlite3.Connection = Depends(get_db)):
@@ -300,7 +334,7 @@ def get_form(form: str, in_: str = Query("auto", alias="in"),
                     [{"lemmas": lemmas}])
 
 
-@app.get("/api/v1/forms/{form}/analyze")
+@router.get("/api/v1/forms/{form}/analyze")
 def analyze_form(form: str, in_: str = Query("auto", alias="in"),
                   heritage: bool = Query(False),
                   con: sqlite3.Connection = Depends(get_db)):
@@ -334,7 +368,7 @@ def analyze_form(form: str, in_: str = Query("auto", alias="in"),
                           "heritage": heritage}, [result])
 
 
-@app.get("/api/v1/paradigm/{lemma}")
+@router.get("/api/v1/paradigm/{lemma}")
 def get_paradigm(lemma: str, in_: str = Query("auto", alias="in"),
                  con: sqlite3.Connection = Depends(get_db)):
     """P4 Wave K2b (H183): forward stem->paradigm lookup. Returns every model's
@@ -387,7 +421,7 @@ def _log_search_background(anon_id: str, ts: str, query_raw: str, query_slp1: st
         hcon.close()
 
 
-@app.get("/api/v1/search")
+@router.get("/api/v1/search")
 def search(q: str, request: Request, response: Response, background_tasks: BackgroundTasks,
            mode: str = "prefix", limit: int = 50, offset: int = 0,
            con: sqlite3.Connection = Depends(get_db)):
@@ -426,17 +460,21 @@ def search(q: str, request: Request, response: Response, background_tasks: Backg
                 "rank_all": r["rank_all"]} for r in rows]
     # Log after results are computed, via BackgroundTasks so this never adds
     # latency to the D5-1 search SLO (KOSHA_DECISIONS_NEEDED.md D5-1).
-    anon_id = resolve_anon_id(request, response)
-    background_tasks.add_task(
-        _log_search_background, anon_id, datetime.now(timezone.utc).isoformat(),
-        q, slp1_q, mode, total, hash_ip(request),
-    )
+    # Skipped entirely when the history feature is off: a disabled feature must
+    # not keep writing a visitor store nothing can read back (the routes that
+    # would read it are not even mounted).
+    if request.app.state.enable_history:
+        anon_id = resolve_anon_id(request, response)
+        background_tasks.add_task(
+            _log_search_background, anon_id, datetime.now(timezone.utc).isoformat(),
+            q, slp1_q, mode, total, hash_ip(request),
+        )
     return {"data_version": data_version(con),
             "query": {"q": q, "mode": mode, "limit": limit, "offset": offset, "total": total},
             "results": results}
 
 
-@app.get("/api/v1/sense/{sense_id}")
+@router.get("/api/v1/sense/{sense_id}")
 def get_sense(sense_id: str, v: str = Query(None),
               con: sqlite3.Connection = Depends(get_db)):
     parsed = parse_sense_id(sense_id)
@@ -496,7 +534,7 @@ def get_sense(sense_id: str, v: str = Query(None),
     return envelope(con, {"sense_id": sense_id, "v": v}, [result])
 
 
-@app.get("/api/v1/meta")
+@router.get("/api/v1/meta")
 def meta(con: sqlite3.Connection = Depends(get_db)):
     sources = con.execute("SELECT * FROM sources").fetchall()
     counts = {
@@ -521,7 +559,7 @@ def meta(con: sqlite3.Connection = Depends(get_db)):
 # Salt facade REST faces (ARCHITECTURE.md "Maximum-reuse rules" point 4)
 # ---------------------------------------------------------------------------
 
-@app.get("/dicts/{dict_id}/restful/entries")
+@router.get("/dicts/{dict_id}/restful/entries")
 def salt_entries(dict_id: str, field: str = "headword_slp1", query: str = "",
                   query_type: str = "term", size: int = 25, input: str = "slp1",
                   output: str = "deva", con: sqlite3.Connection = Depends(get_db)):
@@ -557,7 +595,7 @@ def salt_entries(dict_id: str, field: str = "headword_slp1", query: str = "",
     return {"data": {"entries": entries}}
 
 
-@app.get("/dicts/{dict_id}/restful/ids")
+@router.get("/dicts/{dict_id}/restful/ids")
 def salt_ids(dict_id: str, ids: list[str] = Query(default=[]),
              con: sqlite3.Connection = Depends(get_db)):
     dict_code = dict_id.lower()
@@ -589,6 +627,11 @@ def salt_ids(dict_id: str, ids: list[str] = Query(default=[]),
         for r in hom_rows:
             out_entries.append(salt_entry(con, r, len(hom_rows), dv))
     return {"data": {"ids": out_entries}}
+
+
+# The module-level application `uvicorn app.main:app` binds to. Built from the
+# environment, so the history gate is a deployment setting, not a code change.
+app = build_app()
 
 
 if __name__ == "__main__":

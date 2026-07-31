@@ -1,37 +1,124 @@
 name: Dependabot auto-merge
 
-# Hands-off merge of Dependabot pull requests. GitHub merges the PR after the
-# repo's required checks pass; major version bumps stay open for human review.
-# Deployed by /cologne-dependabot-automerge-all.
+# Hands-off merge of Dependabot pull requests — but never ahead of the tests.
+#
+# W0B (H1944) hardening. The previous version approved and enabled auto-merge
+# the moment the PR opened, on a repo whose protected branch required **no
+# status checks at all**, because until this wave there were no test workflows
+# to require. The result was a dependency bump merging on nobody's evidence.
+# `--auto` respects branch protection, so it looked safe; with nothing
+# protected it was a straight pass-through.
+#
+# Two changes close that:
+#
+# 1. This workflow waits for the required checks (Python CI, UI CI) to be
+#    reported GREEN on the PR head before it approves anything, and re-checks
+#    on every `check_suite` completion rather than only at open time. So even
+#    if branch protection is misconfigured or later relaxed, the checks still
+#    gate the merge here.
+# 2. Approval no longer precedes the evidence. It was the approval — not the
+#    merge — that did the bypassing: `--auto` will merge as soon as protection
+#    is satisfied, and an unconditional approval satisfies a review rule
+#    against an unbuilt PR.
+#
+# Major version bumps are never auto-merged; they wait for a human.
 
-on: pull_request
+on:
+  pull_request:
+  check_suite:
+    types: [completed]
 
 permissions:
   contents: write
   pull-requests: write
+  checks: read
+
+concurrency:
+  group: dependabot-automerge-${{ github.event.pull_request.number || github.event.check_suite.head_sha }}
+  cancel-in-progress: false
 
 jobs:
   dependabot:
     name: Auto-merge Dependabot PRs
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    if: github.event.pull_request.user.login == 'dependabot[bot]' || github.event.check_suite.app.slug == 'github-actions'
     steps:
+      - name: Resolve the pull request
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          EVENT: ${{ github.event_name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.check_suite.head_sha }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT" = "pull_request" ]; then
+            number="$PR_NUMBER"
+          else
+            number=$(gh api "repos/$REPO/commits/$HEAD_SHA/pulls" \
+              --jq '[.[] | select(.user.login == "dependabot[bot]")][0].number // empty')
+          fi
+          if [ -z "$number" ]; then
+            echo "no dependabot pull request for this event"
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "found=true" >> "$GITHUB_OUTPUT"
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+
       - name: Fetch Dependabot metadata
         id: meta
+        if: steps.pr.outputs.found == 'true'
         uses: dependabot/fetch-metadata@v3
         with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Approve the PR
-        if: ${{ steps.meta.outputs.update-type != 'version-update:semver-major' }}
-        run: gh pr review --approve "$PR_URL" || true
+      - name: Require the protected checks to be green on this head
+        id: gate
+        if: steps.pr.outputs.found == 'true' && steps.meta.outputs.update-type != 'version-update:semver-major'
         env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          NUMBER: ${{ steps.pr.outputs.number }}
+        run: |
+          set -euo pipefail
+          # The names here must match the `name:` of the jobs in python-ci.yml
+          # and ui-ci.yml — the same contexts branch protection requires.
+          required="pytest (fixture pack)
+          vitest + vite build"
+          rollup=$(gh pr view "$NUMBER" --repo "$REPO" \
+            --json statusCheckRollup --jq '.statusCheckRollup')
+          ok=true
+          while IFS= read -r context; do
+            context=$(echo "$context" | sed 's/^[[:space:]]*//')
+            [ -z "$context" ] && continue
+            conclusion=$(echo "$rollup" | jq -r --arg c "$context" \
+              '[.[] | select(.name == $c)] | last | .conclusion // "MISSING"')
+            echo "$context -> $conclusion"
+            if [ "$conclusion" != "SUCCESS" ]; then
+              ok=false
+            fi
+          done <<< "$required"
+          if [ "$ok" != "true" ]; then
+            echo "required checks are not green yet; not approving or merging"
+            echo "green=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "green=true" >> "$GITHUB_OUTPUT"
+
+      - name: Approve
+        if: steps.gate.outputs.green == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          NUMBER: ${{ steps.pr.outputs.number }}
+        run: gh pr review --approve "$NUMBER" --repo "$REPO"
 
       - name: Enable auto-merge
-        if: ${{ steps.meta.outputs.update-type != 'version-update:semver-major' }}
-        run: gh pr merge --auto --squash "$PR_URL"
+        if: steps.gate.outputs.green == 'true'
         env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          NUMBER: ${{ steps.pr.outputs.number }}
+        run: gh pr merge --auto --squash "$NUMBER" --repo "$REPO"
