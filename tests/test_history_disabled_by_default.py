@@ -51,31 +51,28 @@ def test_ungated_paths_still_answer():
     assert client.get("/health").status_code == 200
 
 
-def _mounted_paths() -> set[str]:
-    """Route paths, tolerating FastAPI's `_IncludedRouter` wrapper.
+def _documented_paths() -> set[str]:
+    """The app's own OpenAPI paths.
 
-    Newer FastAPI wraps an included router in an object with no `.path`, so
-    introspecting `route.path` directly works on some versions and raises on
-    others — the CI runner caught exactly that.
+    Asserted through the schema rather than `app.routes`: FastAPI changed the
+    internal shape of an included router between the version this workstation
+    has and the one CI installs (`_IncludedRouter`, no `.path`), while the
+    schema is the stable, user-visible contract — and it is the surface the
+    "absent, not merely disabled" claim is really about.
     """
-    paths = set()
-    for route in app.routes:
-        path = getattr(route, "path", None)
-        if path:
-            paths.add(path)
-        for nested in getattr(getattr(route, "router", None), "routes", ()):
-            nested_path = getattr(nested, "path", None)
-            if nested_path:
-                paths.add(nested_path)
-    return paths
+    app.openapi_schema = None
+    try:
+        return set(app.openapi()["paths"])
+    finally:
+        app.openapi_schema = None
 
 
 def test_mounting_history_makes_the_routes_reachable_again():
     """The gate is a mount decision, not a missing implementation."""
     with mount_history(app):
-        paths = _mounted_paths()
-        assert "/api/v1/history" in paths
-        assert "/api/v1/stats/summary" in paths
+        documented = _documented_paths()
+        assert "/api/v1/history" in documented
+        assert "/api/v1/stats/summary" in documented
     # …and unmounting restores the default surface for every later test.
-    assert "/api/v1/history" not in _mounted_paths()
+    assert "/api/v1/history" not in _documented_paths()
     assert client.get("/api/v1/history").status_code == 404
