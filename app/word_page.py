@@ -169,11 +169,24 @@ def _plain(rendered_html: str, limit: int = 160) -> str:
     return text
 
 
+def entry_fields(entry):
+    """The kosha-owned fields of a card entry, whatever card generation it is.
+
+    W0C (H1945) moved `dict`/`L`/`headword`/`scan_url`/`rendered_html`/
+    `evidence` into the Salt entry's `kosha` block. The static tier is deployed
+    out of band, so a newly-shipped template can meet a card generated before
+    that cut until the next Pages deploy — reading through this accessor keeps
+    both readable instead of making the page 500 on a stale card.
+    """
+    block = entry.get("kosha")
+    return block if isinstance(block, dict) else entry
+
+
 def _group_by_dict(results):
     """{dict: [entry, ...]} in DICT_ORDER, entries in their card order (L order)."""
     grouped = {}
     for r in results:
-        grouped.setdefault(r["dict"], []).append(r)
+        grouped.setdefault(entry_fields(r)["dict"], []).append(r)
     return [(d, grouped[d]) for d in DICT_ORDER if d in grouped]
 
 
@@ -209,14 +222,19 @@ def _view_toggle():
 
 def _entry_html(entry):
     esc = html.escape
+    fields = entry_fields(entry)
     scan = ""
-    if entry.get("scan_url"):
-        scan = (f'<a class="scan" href="{esc(entry["scan_url"])}" '
+    if fields.get("scan_url"):
+        scan = (f'<a class="scan" href="{esc(fields["scan_url"])}" '
                 f'target="_blank" rel="noopener">scan ↗</a>')
+    # `rendered_html` is interpolated unescaped — it is HTML by contract. What
+    # makes that safe is that it can only have come through
+    # `kosha.api.sanitize` (W0C item 6); the serializer has no path that emits
+    # unsanitized render output.
     return (
         '<article class="dict-entry">'
-        f'<div class="entry-head"><span class="hw">{esc(entry.get("headword", ""))}</span>{scan}</div>'
-        f'<div class="rendered">{entry.get("rendered_html", "")}</div>'
+        f'<div class="entry-head"><span class="hw">{esc(fields.get("headword", ""))}</span>{scan}</div>'
+        f'<div class="rendered">{fields.get("rendered_html", "")}</div>'
         "</article>"
     )
 
@@ -496,7 +514,7 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
     iast = from_slp1(slp1)
     groups = _group_by_dict(results)
     n_dicts = len(groups)
-    ev = results[0].get("evidence") if results else None
+    ev = entry_fields(results[0]).get("evidence") if results else None
     band = (ev or {}).get("band", 5)
     band_label = (ev or {}).get("band_label", "")
 
@@ -528,7 +546,7 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
         return main
 
     dv = data_version or card.get("data_version", "")
-    desc = esc(_plain(results[0]["rendered_html"]) if results else iast)
+    desc = esc(_plain(entry_fields(results[0])["rendered_html"]) if results else iast)
     title = f"{esc(deva)} {esc(iast)} — Sanskrit dictionary | kosha"
     canonical = (f'<link rel="canonical" href="{esc(public_base)}/w/{esc(token)}.html">'
                  if public_base else "")

@@ -76,3 +76,39 @@ def test_mounting_history_makes_the_routes_reachable_again():
     # …and unmounting restores the default surface for every later test.
     assert "/api/v1/history" not in _documented_paths()
     assert client.get("/api/v1/history").status_code == 404
+
+
+# --------------------------------------------------------------------------- #
+# W0C (H1945, item 8) — absent routes are only half the promise
+# --------------------------------------------------------------------------- #
+
+def test_no_visitor_data_is_collected_while_history_is_off(fixture_client):
+    """Serving a search must neither mint an identity cookie nor write a store.
+
+    Unmounting the *read* routes while the *write* path kept logging would be
+    the worst of both worlds: data collected from a public deployment that
+    documents itself as collecting none, and no endpoint through which anyone
+    could notice. This exercises the real search route, so it fails if the
+    logging branch is ever re-enabled independently of the gate.
+    """
+    from kosha.settings import get_settings
+
+    history_db = get_settings().history_db
+    existed = history_db.exists()
+    before = history_db.stat().st_mtime_ns if existed else None
+
+    response = fixture_client.get("/api/v1/search", params={"q": "a"})
+    assert response.status_code == 200
+
+    # No `Set-Cookie` at all — the anon-id cookie is the collection trigger.
+    assert "set-cookie" not in {k.lower() for k in response.headers}
+    if existed:
+        assert history_db.stat().st_mtime_ns == before, "history store was written"
+    else:
+        assert not history_db.exists(), "history store was created"
+
+
+def test_the_search_route_still_answers_with_history_off(fixture_client):
+    """The gate must not cost the public surface anything."""
+    body = fixture_client.get("/api/v1/search", params={"q": "a"}).json()
+    assert set(body) == {"data_version", "query", "results"}
