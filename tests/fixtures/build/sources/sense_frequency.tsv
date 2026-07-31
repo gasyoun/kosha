@@ -1,0 +1,5 @@
+lemma_slp1	layer	sense_id	sense_gloss	count_all	sense_rank	lemma_share	n_texts	dispersion_dp	largest_text_share	count_adj	sense_rank_adj	count_bal_uniform	sense_rank_bal	count_nonsastra	sense_rank_nonsastra	top_genre	top_genre_share
+agni	pwg	pwg.1001.sense1	Feuer, Opferfeuer	6100	1	0.65	42	0.31	0.22	5900.0	1	5800.0	1	5100.0	1	vedic	0.54
+agni	pwg	pwg.1001.sense2	der Gott des Feuers	2900	2	0.31	38	0.28	0.19	2800.0	2	2700.0	2	2600.0	2	vedic	0.51
+indra	pwg	pwg.1102.sense1	König der Götter	6000	1	0.83	40	0.25	0.30	5800.0	1	5700.0	1	5400.0	1	vedic	0.72
+deva	pwg	pwg.1203.sense1	Gott, Gottheit	12000	1	0.76	55	0.18	0.14	11800.0	1	11500.0	1	11000.0	1	epic	0.48
