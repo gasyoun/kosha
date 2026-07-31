@@ -10,6 +10,6 @@ Import surface kept deliberately small: settings and the build DAG. Everything
 else still lives under `app/` and `scripts/` until a later wave moves it.
 """
 
-__version__ = "0.96.1"
+__version__ = "0.97.0"
 
 __all__ = ["__version__"]
