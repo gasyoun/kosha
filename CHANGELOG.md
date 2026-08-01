@@ -14,6 +14,10 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.98.3] - 2026-08-01
+### Added
+- **«Старт чтения» cohort pack freeze (H2109, Grok 4.5 `grok-4.5`, override dual-run of Sonnet handoff, 01-08-2026):** [`data/cohort_start_chteniya/`](https://github.com/gasyoun/kosha/blob/main/data/cohort_start_chteniya/) pins Hitopadeśa-0 + subhāṣita-beginner + sandhi curriculum/drills L1–3 with `MANIFEST.json` sha256 pins, optional `lemmas_for_srs.tsv`, builder [`scripts/freeze_cohort_start_chteniya.py`](https://github.com/gasyoun/kosha/blob/main/scripts/freeze_cohort_start_chteniya.py) (`--check` goal gate), and manifest row `cohort-start-chteniya-pack-freeze`. Freeze only — no new linguistics; subhashita schema delta documented for H2110 adapter.
+
 ## [0.98.2] - 2026-08-01
 ### Added
 - **Sandhi methods deep manual (H2069, Grok 4.5 `grok-4.5`, 01-08-2026):** [docs/SANDHI_METHODS_DEEP_MANUAL.md](https://github.com/gasyoun/kosha/blob/main/docs/SANDHI_METHODS_DEEP_MANUAL.md) — A/B/C decision table, mode-1/2 induction, ~3.7% Gītā miss taxonomy, portability contract. Closes DEEP_MANUAL_GAP_CENSUS row 14 residue (hub ≠ methods).
