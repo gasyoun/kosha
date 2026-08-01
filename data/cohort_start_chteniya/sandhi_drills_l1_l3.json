@@ -1,0 +1,696 @@
+{
+  "title": "Sandhi drills — lessons 1–3 (cohort «Старт чтения» freeze)",
+  "description": "Subset of data/sandhi/sandhi_drills.json restricted to curriculum lessons 1–3 (beginner band for 5-week pilot). No new items authored.",
+  "source": {
+    "corpus": "data/sandhi/corpus_sandhi.tsv (17 texts, ~580k junctions)",
+    "curriculum": "data/sandhi/sandhi_curriculum.tsv (H902 graded syllabus)",
+    "scope": "lessons 1..9 (132 rules)",
+    "builder": "scripts/build_sandhi_drills.py",
+    "license": "public/MIT; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS)",
+    "parent": "data/sandhi/sandhi_drills.json",
+    "parent_sha256": "805d92ee6dd4d571fb4fed212c40cdfbc928d7b69a0f3750c1cc96f841638377",
+    "lesson_max": 3,
+    "freeze": "cohort_start_chteniya",
+    "handoff": "H2109"
+  },
+  "item_types": {
+    "join": "Given the pre-sandhi junction (X + Y), choose the sandhied result (Z).",
+    "split": "Given the sandhied result (Z), choose the original junction (X + Y).",
+    "identify": "Given a rule (X Y → Z), choose its sandhi class."
+  },
+  "stats": {
+    "items": 30,
+    "by_lesson": {
+      "1": 6,
+      "2": 12,
+      "3": 12
+    },
+    "by_type": {
+      "join": 10,
+      "split": 10,
+      "identify": 10
+    }
+  },
+  "items": [
+    {
+      "rule": "a a → ā",
+      "category": "vowel coalescence",
+      "lesson": 1,
+      "difficulty": "easy",
+      "corpus_count": 35533,
+      "context": "ajarāmaravat prājño vidyāmarthaṃ ca cintayet ajara+amara→ajarāmaravat",
+      "id": "SD-0001",
+      "type": "join",
+      "question": "Apply sandhi: a + a → ?",
+      "answer": "ā",
+      "choices": [
+        "e",
+        "y ā",
+        "v a",
+        "ā"
+      ],
+      "tags": [
+        "join",
+        "vowel coalescence"
+      ]
+    },
+    {
+      "rule": "a a → ā",
+      "category": "vowel coalescence",
+      "lesson": 1,
+      "difficulty": "easy",
+      "corpus_count": 35533,
+      "context": "ajarāmaravat prājño vidyāmarthaṃ ca cintayet ajara+amara→ajarāmaravat",
+      "id": "SD-0002",
+      "type": "split",
+      "question": "You meet “ā” while reading. What was the original junction?",
+      "answer": "a + a",
+      "choices": [
+        "a + a",
+        "a + ā",
+        "a + i",
+        "a + u"
+      ],
+      "tags": [
+        "split",
+        "vowel coalescence"
+      ]
+    },
+    {
+      "rule": "a a → ā",
+      "category": "vowel coalescence",
+      "lesson": 1,
+      "difficulty": "easy",
+      "corpus_count": 35533,
+      "context": "ajarāmaravat prājño vidyāmarthaṃ ca cintayet ajara+amara→ajarāmaravat",
+      "id": "SD-0003",
+      "type": "identify",
+      "question": "Which sandhi class is “a + a → ā”?",
+      "answer": "vowel coalescence",
+      "choices": [
+        "consonant / other",
+        "anusvāra / nasal",
+        "vowel coalescence",
+        "visarga"
+      ],
+      "tags": [
+        "identify",
+        "vowel coalescence"
+      ]
+    },
+    {
+      "rule": "m p → ṃ p",
+      "category": "anusvāra / nasal",
+      "lesson": 1,
+      "difficulty": "easy",
+      "corpus_count": 21875,
+      "context": "udyoginaṃ puruṣasiṃham upaiti lakṣmīr daivena deyam iti kāpuruṣā vadanti udyoginaṃ+puruṣa",
+      "id": "SD-0004",
+      "type": "join",
+      "question": "Apply sandhi: m + p → ?",
+      "answer": "ṃ p",
+      "choices": [
+        "ṃ d",
+        "ṃ p",
+        "ṃ bh",
+        "ṃ j"
+      ],
+      "tags": [
+        "join",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m p → ṃ p",
+      "category": "anusvāra / nasal",
+      "lesson": 1,
+      "difficulty": "easy",
+      "corpus_count": 21875,
+      "context": "udyoginaṃ puruṣasiṃham upaiti lakṣmīr daivena deyam iti kāpuruṣā vadanti udyoginaṃ+puruṣa",
+      "id": "SD-0005",
+      "type": "split",
+      "question": "You meet “ṃ p” while reading. What was the original junction?",
+      "answer": "m + p",
+      "choices": [
+        "m + p",
+        "m + k",
+        "m + j",
+        "m + r"
+      ],
+      "tags": [
+        "split",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m p → ṃ p",
+      "category": "anusvāra / nasal",
+      "lesson": 1,
+      "difficulty": "easy",
+      "corpus_count": 21875,
+      "context": "udyoginaṃ puruṣasiṃham upaiti lakṣmīr daivena deyam iti kāpuruṣā vadanti udyoginaṃ+puruṣa",
+      "id": "SD-0006",
+      "type": "identify",
+      "question": "Which sandhi class is “m + p → ṃ p”?",
+      "answer": "anusvāra / nasal",
+      "choices": [
+        "consonant / other",
+        "visarga",
+        "anusvāra / nasal",
+        "vowel coalescence"
+      ],
+      "tags": [
+        "identify",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m s → ṃ s",
+      "category": "anusvāra / nasal",
+      "lesson": 2,
+      "difficulty": "easy",
+      "corpus_count": 18981,
+      "context": "śruto hitopadeśo 'yaṃ pāṭavaṃ saṃskṛtoktiṣu pāṭavaṃ+saṃskṛta",
+      "id": "SD-0007",
+      "type": "join",
+      "question": "Apply sandhi: m + s → ?",
+      "answer": "ṃ s",
+      "choices": [
+        "ṃ k",
+        "ṃ dh",
+        "ṃ b",
+        "ṃ s"
+      ],
+      "tags": [
+        "join",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m s → ṃ s",
+      "category": "anusvāra / nasal",
+      "lesson": 2,
+      "difficulty": "easy",
+      "corpus_count": 18981,
+      "context": "śruto hitopadeśo 'yaṃ pāṭavaṃ saṃskṛtoktiṣu pāṭavaṃ+saṃskṛta",
+      "id": "SD-0008",
+      "type": "split",
+      "question": "You meet “ṃ s” while reading. What was the original junction?",
+      "answer": "m + s",
+      "choices": [
+        "m + b",
+        "m + s",
+        "m + d",
+        "m + c"
+      ],
+      "tags": [
+        "split",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m s → ṃ s",
+      "category": "anusvāra / nasal",
+      "lesson": 2,
+      "difficulty": "easy",
+      "corpus_count": 18981,
+      "context": "śruto hitopadeśo 'yaṃ pāṭavaṃ saṃskṛtoktiṣu pāṭavaṃ+saṃskṛta",
+      "id": "SD-0009",
+      "type": "identify",
+      "question": "Which sandhi class is “m + s → ṃ s”?",
+      "answer": "anusvāra / nasal",
+      "choices": [
+        "visarga",
+        "vowel coalescence",
+        "consonant / other",
+        "anusvāra / nasal"
+      ],
+      "tags": [
+        "identify",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m t → ṃ t",
+      "category": "anusvāra / nasal",
+      "lesson": 2,
+      "difficulty": "easy",
+      "corpus_count": 18549,
+      "context": "pātratvāt dhanam āpnoti dhanād dharmaṃ tataḥ sukham dharmaṃ+tataḥ",
+      "id": "SD-0010",
+      "type": "join",
+      "question": "Apply sandhi: m + t → ?",
+      "answer": "ṃ t",
+      "choices": [
+        "ṃ c",
+        "ṃ d",
+        "ṃ h",
+        "ṃ t"
+      ],
+      "tags": [
+        "join",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m t → ṃ t",
+      "category": "anusvāra / nasal",
+      "lesson": 2,
+      "difficulty": "easy",
+      "corpus_count": 18549,
+      "context": "pātratvāt dhanam āpnoti dhanād dharmaṃ tataḥ sukham dharmaṃ+tataḥ",
+      "id": "SD-0011",
+      "type": "split",
+      "question": "You meet “ṃ t” while reading. What was the original junction?",
+      "answer": "m + t",
+      "choices": [
+        "m + t",
+        "m + g",
+        "m + y",
+        "m + j"
+      ],
+      "tags": [
+        "split",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m t → ṃ t",
+      "category": "anusvāra / nasal",
+      "lesson": 2,
+      "difficulty": "easy",
+      "corpus_count": 18549,
+      "context": "pātratvāt dhanam āpnoti dhanād dharmaṃ tataḥ sukham dharmaṃ+tataḥ",
+      "id": "SD-0012",
+      "type": "identify",
+      "question": "Which sandhi class is “m + t → ṃ t”?",
+      "answer": "anusvāra / nasal",
+      "choices": [
+        "consonant / other",
+        "vowel coalescence",
+        "anusvāra / nasal",
+        "visarga"
+      ],
+      "tags": [
+        "identify",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m v → ṃ v",
+      "category": "anusvāra / nasal",
+      "lesson": 2,
+      "difficulty": "easy",
+      "corpus_count": 17515,
+      "context": "vidyā dadāti vinayaṃ vinayād yāti pātratām vinayaṃ+vinayād",
+      "id": "SD-0013",
+      "type": "join",
+      "question": "Apply sandhi: m + v → ?",
+      "answer": "ṃ v",
+      "choices": [
+        "ṃ l",
+        "ṃs t",
+        "ṃ h",
+        "ṃ v"
+      ],
+      "tags": [
+        "join",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m v → ṃ v",
+      "category": "anusvāra / nasal",
+      "lesson": 2,
+      "difficulty": "easy",
+      "corpus_count": 17515,
+      "context": "vidyā dadāti vinayaṃ vinayād yāti pātratām vinayaṃ+vinayād",
+      "id": "SD-0014",
+      "type": "split",
+      "question": "You meet “ṃ v” while reading. What was the original junction?",
+      "answer": "m + v",
+      "choices": [
+        "m + ś",
+        "m + l",
+        "m + g",
+        "m + v"
+      ],
+      "tags": [
+        "split",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m v → ṃ v",
+      "category": "anusvāra / nasal",
+      "lesson": 2,
+      "difficulty": "easy",
+      "corpus_count": 17515,
+      "context": "vidyā dadāti vinayaṃ vinayād yāti pātratām vinayaṃ+vinayād",
+      "id": "SD-0015",
+      "type": "identify",
+      "question": "Which sandhi class is “m + v → ṃ v”?",
+      "answer": "anusvāra / nasal",
+      "choices": [
+        "vowel coalescence",
+        "anusvāra / nasal",
+        "consonant / other",
+        "visarga"
+      ],
+      "tags": [
+        "identify",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m c → ṃ c",
+      "category": "anusvāra / nasal",
+      "lesson": 2,
+      "difficulty": "easy",
+      "corpus_count": 15334,
+      "context": "ajarāmaravat prājño vidyāmarthaṃ ca cintayet artham→vidyāmarthaṃ +ca",
+      "id": "SD-0016",
+      "type": "join",
+      "question": "Apply sandhi: m + c → ?",
+      "answer": "ṃ c",
+      "choices": [
+        "ṃ c",
+        "ṃ ś",
+        "ṃs t",
+        "ṃ p"
+      ],
+      "tags": [
+        "join",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m c → ṃ c",
+      "category": "anusvāra / nasal",
+      "lesson": 2,
+      "difficulty": "easy",
+      "corpus_count": 15334,
+      "context": "ajarāmaravat prājño vidyāmarthaṃ ca cintayet artham→vidyāmarthaṃ +ca",
+      "id": "SD-0017",
+      "type": "split",
+      "question": "You meet “ṃ c” while reading. What was the original junction?",
+      "answer": "m + c",
+      "choices": [
+        "m + bh",
+        "m + c",
+        "m + p",
+        "m + g"
+      ],
+      "tags": [
+        "split",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m c → ṃ c",
+      "category": "anusvāra / nasal",
+      "lesson": 2,
+      "difficulty": "easy",
+      "corpus_count": 15334,
+      "context": "ajarāmaravat prājño vidyāmarthaṃ ca cintayet artham→vidyāmarthaṃ +ca",
+      "id": "SD-0018",
+      "type": "identify",
+      "question": "Which sandhi class is “m + c → ṃ c”?",
+      "answer": "anusvāra / nasal",
+      "choices": [
+        "visarga",
+        "consonant / other",
+        "vowel coalescence",
+        "anusvāra / nasal"
+      ],
+      "tags": [
+        "identify",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m k → ṃ k",
+      "category": "anusvāra / nasal",
+      "lesson": 3,
+      "difficulty": "easy",
+      "corpus_count": 12801,
+      "context": "dhanurvaṃśaviśuddho 'pi nirguṇaḥ kiṃ kariṣyati kiṃ+kariṣyati",
+      "id": "SD-0019",
+      "type": "join",
+      "question": "Apply sandhi: m + k → ?",
+      "answer": "ṃ k",
+      "choices": [
+        "ṃ j",
+        "ṃ t",
+        "ṃ v",
+        "ṃ k"
+      ],
+      "tags": [
+        "join",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m k → ṃ k",
+      "category": "anusvāra / nasal",
+      "lesson": 3,
+      "difficulty": "easy",
+      "corpus_count": 12801,
+      "context": "dhanurvaṃśaviśuddho 'pi nirguṇaḥ kiṃ kariṣyati kiṃ+kariṣyati",
+      "id": "SD-0020",
+      "type": "split",
+      "question": "You meet “ṃ k” while reading. What was the original junction?",
+      "answer": "m + k",
+      "choices": [
+        "m + k",
+        "m + d",
+        "m + gh",
+        "m + r"
+      ],
+      "tags": [
+        "split",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m k → ṃ k",
+      "category": "anusvāra / nasal",
+      "lesson": 3,
+      "difficulty": "easy",
+      "corpus_count": 12801,
+      "context": "dhanurvaṃśaviśuddho 'pi nirguṇaḥ kiṃ kariṣyati kiṃ+kariṣyati",
+      "id": "SD-0021",
+      "type": "identify",
+      "question": "Which sandhi class is “m + k → ṃ k”?",
+      "answer": "anusvāra / nasal",
+      "choices": [
+        "consonant / other",
+        "vowel coalescence",
+        "anusvāra / nasal",
+        "visarga"
+      ],
+      "tags": [
+        "identify",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m m → ṃ m",
+      "category": "anusvāra / nasal",
+      "lesson": 3,
+      "difficulty": "easy",
+      "corpus_count": 12302,
+      "context": "dāne tapasi śaurye ca yasya na prathitaṃ manaḥ prathitaṃ+manaḥ",
+      "id": "SD-0022",
+      "type": "join",
+      "question": "Apply sandhi: m + m → ?",
+      "answer": "ṃ m",
+      "choices": [
+        "ṃ n",
+        "ṃ bh",
+        "ṃ s",
+        "ṃ m"
+      ],
+      "tags": [
+        "join",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m m → ṃ m",
+      "category": "anusvāra / nasal",
+      "lesson": 3,
+      "difficulty": "easy",
+      "corpus_count": 12302,
+      "context": "dāne tapasi śaurye ca yasya na prathitaṃ manaḥ prathitaṃ+manaḥ",
+      "id": "SD-0023",
+      "type": "split",
+      "question": "You meet “ṃ m” while reading. What was the original junction?",
+      "answer": "m + m",
+      "choices": [
+        "m + v",
+        "m + y",
+        "m + m",
+        "m + h"
+      ],
+      "tags": [
+        "split",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m m → ṃ m",
+      "category": "anusvāra / nasal",
+      "lesson": 3,
+      "difficulty": "easy",
+      "corpus_count": 12302,
+      "context": "dāne tapasi śaurye ca yasya na prathitaṃ manaḥ prathitaṃ+manaḥ",
+      "id": "SD-0024",
+      "type": "identify",
+      "question": "Which sandhi class is “m + m → ṃ m”?",
+      "answer": "anusvāra / nasal",
+      "choices": [
+        "anusvāra / nasal",
+        "visarga",
+        "consonant / other",
+        "vowel coalescence"
+      ],
+      "tags": [
+        "identify",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m n → ṃ n",
+      "category": "anusvāra / nasal",
+      "lesson": 3,
+      "difficulty": "easy",
+      "corpus_count": 10855,
+      "context": "vācāṃ sarvatra vaicitryaṃ nītividyāṃ dadāti ca vaicitryaṃ+nīti",
+      "id": "SD-0025",
+      "type": "join",
+      "question": "Apply sandhi: m + n → ?",
+      "answer": "ṃ n",
+      "choices": [
+        "ṃ n",
+        "ṃ bh",
+        "ṃ y",
+        "ṃ gh"
+      ],
+      "tags": [
+        "join",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m n → ṃ n",
+      "category": "anusvāra / nasal",
+      "lesson": 3,
+      "difficulty": "easy",
+      "corpus_count": 10855,
+      "context": "vācāṃ sarvatra vaicitryaṃ nītividyāṃ dadāti ca vaicitryaṃ+nīti",
+      "id": "SD-0026",
+      "type": "split",
+      "question": "You meet “ṃ n” while reading. What was the original junction?",
+      "answer": "m + n",
+      "choices": [
+        "m + p",
+        "n + c",
+        "m + n",
+        "m + h"
+      ],
+      "tags": [
+        "split",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "m n → ṃ n",
+      "category": "anusvāra / nasal",
+      "lesson": 3,
+      "difficulty": "easy",
+      "corpus_count": 10855,
+      "context": "vācāṃ sarvatra vaicitryaṃ nītividyāṃ dadāti ca vaicitryaṃ+nīti",
+      "id": "SD-0027",
+      "type": "identify",
+      "question": "Which sandhi class is “m + n → ṃ n”?",
+      "answer": "anusvāra / nasal",
+      "choices": [
+        "consonant / other",
+        "vowel coalescence",
+        "anusvāra / nasal",
+        "visarga"
+      ],
+      "tags": [
+        "identify",
+        "anusvāra / nasal"
+      ]
+    },
+    {
+      "rule": "ḥ t → s t",
+      "category": "visarga",
+      "lesson": 3,
+      "difficulty": "easy",
+      "corpus_count": 18378,
+      "context": "kathāchalena bālānāṃ nītis tad iha kathyate nītis+tad",
+      "id": "SD-0028",
+      "type": "join",
+      "question": "Apply sandhi: ḥ + t → ?",
+      "answer": "s t",
+      "choices": [
+        "s t",
+        "Ø t",
+        "ṃpāyana u",
+        "Ø g"
+      ],
+      "tags": [
+        "join",
+        "visarga"
+      ]
+    },
+    {
+      "rule": "ḥ t → s t",
+      "category": "visarga",
+      "lesson": 3,
+      "difficulty": "easy",
+      "corpus_count": 18378,
+      "context": "kathāchalena bālānāṃ nītis tad iha kathyate nītis+tad",
+      "id": "SD-0029",
+      "type": "split",
+      "question": "You meet “s t” while reading. What was the original junction?",
+      "answer": "ḥ + t",
+      "choices": [
+        "ḥ + t",
+        "iḥ + p",
+        "ḥ + bh",
+        "ḥ + s"
+      ],
+      "tags": [
+        "split",
+        "visarga"
+      ]
+    },
+    {
+      "rule": "ḥ t → s t",
+      "category": "visarga",
+      "lesson": 3,
+      "difficulty": "easy",
+      "corpus_count": 18378,
+      "context": "kathāchalena bālānāṃ nītis tad iha kathyate nītis+tad",
+      "id": "SD-0030",
+      "type": "identify",
+      "question": "Which sandhi class is “ḥ + t → s t”?",
+      "answer": "visarga",
+      "choices": [
+        "visarga",
+        "vowel coalescence",
+        "consonant / other",
+        "anusvāra / nasal"
+      ],
+      "tags": [
+        "identify",
+        "visarga"
+      ]
+    }
+  ]
+}
