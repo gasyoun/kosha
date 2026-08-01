@@ -1,0 +1,11 @@
+rank	rule	category	count	pct	cumulative_pct	family_size	priority	lesson
+1	a a → ā	vowel coalescence	35533	6.219	6.22	11	43899.7	1
+2	m p → ṃ p	anusvāra / nasal	21875	3.828	10.05	37	33810.8	1
+3	m s → ṃ s	anusvāra / nasal	18981	3.322	13.37	37	29337.8	2
+4	m t → ṃ t	anusvāra / nasal	18549	3.246	16.61	37	28670.0	2
+5	m v → ṃ v	anusvāra / nasal	17515	3.065	19.68	37	27071.8	2
+6	m c → ṃ c	anusvāra / nasal	15334	2.684	22.36	37	23700.8	2
+7	m k → ṃ k	anusvāra / nasal	12801	2.24	24.6	37	19785.7	3
+8	m m → ṃ m	anusvāra / nasal	12302	2.153	26.76	37	19014.4	3
+9	m n → ṃ n	anusvāra / nasal	10855	1.9	28.66	37	16777.9	3
+10	ḥ t → s t	visarga	18378	3.216	31.87	2	16054.9	3
