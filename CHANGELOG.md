@@ -14,6 +14,10 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.98.2] - 2026-08-01
+### Added
+- **Sandhi methods deep manual (H2069, Grok 4.5 `grok-4.5`, 01-08-2026):** [docs/SANDHI_METHODS_DEEP_MANUAL.md](https://github.com/gasyoun/kosha/blob/main/docs/SANDHI_METHODS_DEEP_MANUAL.md) — A/B/C decision table, mode-1/2 induction, ~3.7% Gītā miss taxonomy, portability contract. Closes DEEP_MANUAL_GAP_CENSUS row 14 residue (hub ≠ methods).
+
 ## [0.98.1] - 2026-07-31
 ### Fixed
 
