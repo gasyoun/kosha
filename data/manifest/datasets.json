@@ -1674,6 +1674,33 @@
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/subhashita-reader-pack.meta.md"
     },
     {
+      "id": "cohort-start-chteniya-pack-freeze",
+      "title": "Start chteniya cohort pack freeze (Hitopadesa-0 + subhashita-beginner + sandhi L1-3)",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "release_asset": "data/cohort_start_chteniya/MANIFEST.json",
+      "format": "json+tsv",
+      "rows": 5,
+      "size_bytes": 974119,
+      "keying": "MANIFEST packs[] with pin_path + sha256; reading pins + sandhi L1-3 subsets + optional lemmas_for_srs.tsv",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/cohort_start_chteniya/",
+      "builder": "scripts/freeze_cohort_start_chteniya.py (H2109) — pin/copy + lesson filter; no new linguistics",
+      "consumers": [
+        "Systema-Sanscriticum resources/data/cohort_start_chteniya/ (H2106)",
+        "reading_pack multi-pack import (H2110)"
+      ],
+      "notes": "H2109 pack freeze for Akro-style 5-week «Старт чтения» pilot. Pins hitopadesa-0 (reading_pack_v1) + subhashita-beginner (schema delta documented in MANIFEST adapter_note) + sandhi drills/curriculum lessons 1-3. Rebuild: python scripts/freeze_cohort_start_chteniya.py; verify: --check. Override dual-run lane: Grok 4.5 (grok-4.5); Sonnet residual for compare.",
+      "sha256": {
+        "hitopadesa-0": "86cde2bd4bc27b889f11356c39f4747cf004f035b049e59fb8b42f854fc2c9dc",
+        "subhashita-beginner": "2c617a1151e8904505c57759a937e94e22ca089fe6ee4bf8fa717171802ec46c",
+        "sandhi-drills-l1-l3": "ef11e9abb546e9f50779ce50ddf0d4469e98ffc5d052bdaec4dfd2439c8c1511",
+        "sandhi-curriculum-l1-l3": "c5eab79c75c844418e7f74dbe70bae5a9a89991405f57080389d37c0d34092f7",
+        "lemmas-for-srs": "312038b68fe28ee9a5e6216764b6925114d4122d78fd77aed692b45cf75b10f9"
+      },
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/data/cohort_start_chteniya/README.md"
+    },
+    {
       "id": "scherzl-government-dcs-adjudication",
       "title": "Scherzl case-government relations × DCS-treebank adjudication",
       "tier": "public",
