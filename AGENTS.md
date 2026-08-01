@@ -26,3 +26,7 @@ This file orients Codex and other non-Claude agent sessions. The section between
 - Gitignored/off-git canonical assets are registered as pointer rows in the org-private [shadow-assets registry](https://github.com/gasyoun/Uprava/blob/main/SHADOW_ASSETS_POINTERS.md).
 
 [/generated-block]
+
+## Repo-curated notes (hand-maintained)
+
+- **Sandhi methods (H2069):** for rule induction, method A/B/C decision table, and miss taxonomy read [docs/SANDHI_METHODS_DEEP_MANUAL.md](https://github.com/gasyoun/kosha/blob/main/docs/SANDHI_METHODS_DEEP_MANUAL.md). For inventory / pedagogy surfaces use [SANDHI_PROGRAMME.md](https://github.com/gasyoun/kosha/blob/main/SANDHI_PROGRAMME.md) — do not expand methods prose into the hub.
