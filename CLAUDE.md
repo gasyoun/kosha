@@ -55,6 +55,8 @@ Copy `.env.example` → `.env` before running the API — sets `DATABASE_PATH`,
 | `data/` | Data assets, incl. `data/frequency/` (DCS frequency sidecar joined against `union_headwords`, see `.ai_state.md`) — `data/raw*/`, `data/releases/`, and D5 measurement outputs are gitignored/regenerable |
 | `tests/` | `test_api.py`, `test_citability.py`, `test_render_golden.py` (golden fixtures in `tests/golden/`), `test_static_cache.py`, `test_docs_site.py` |
 | `docs/`, `docs-site/`, `wiki/` | Static site output / docs-site pilot / wiki content |
+| `docs/SANDHI_METHODS_DEEP_MANUAL.md` | Sandhi **methods** deep manual (induce / score / method A·B·C / failure taxonomy) — H2069; hub inventory stays in `SANDHI_PROGRAMME.md` |
+| `SANDHI_PROGRAMME.md` | Sandhi programme hub — what exists, pedagogy surfaces, curriculum TSVs (not methods depth) |
 | `ARCHITECTURE.md` | A1–A4 design, SQLite DDL, API v1 contract, Salt max-reuse rules |
 | `IMPLEMENTATION_PLAN.md`, `PHASE1_PLAN.md` | The gated P1–P7 roadmap and exit checks — **the actual source of truth for what's buildable next**, not this file |
 | `EVAL_PLAN.md` | Anti-gaming rules (G-SEG/G-RENDER/G-SALT/G-PC/G-SCAN/G-LAT gates) + UC1–UC13 test scenarios |
