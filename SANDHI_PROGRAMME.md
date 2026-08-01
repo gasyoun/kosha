@@ -7,6 +7,8 @@ corpus-attested, frequency-ranked **sandhi teaching data** — then into
 learner-facing tools. Shipped end to end across kosha
 [v0.36.0 → v0.48.0](https://github.com/gasyoun/kosha/releases).
 
+**Methods deep manual** (induction A/B/C, miss taxonomy, portability): [docs/SANDHI_METHODS_DEEP_MANUAL.md](https://github.com/gasyoun/kosha/blob/main/docs/SANDHI_METHODS_DEEP_MANUAL.md) (H2069).
+
 This is the **"what exists & how to use it"** companion to the plan,
 [ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md).
 
