@@ -1681,7 +1681,7 @@
       "release_asset": "data/cohort_start_chteniya/MANIFEST.json",
       "format": "json+tsv",
       "rows": 5,
-      "size_bytes": 974119,
+      "size_bytes": 973412,
       "keying": "MANIFEST packs[] with pin_path + sha256; reading pins + sandhi L1-3 subsets + optional lemmas_for_srs.tsv",
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "data/cohort_start_chteniya/",
@@ -1690,12 +1690,12 @@
         "Systema-Sanscriticum resources/data/cohort_start_chteniya/ (H2106)",
         "reading_pack multi-pack import (H2110)"
       ],
-      "notes": "H2109 pack freeze for Akro-style 5-week «Старт чтения» pilot. Pins hitopadesa-0 (reading_pack_v1) + subhashita-beginner (schema delta documented in MANIFEST adapter_note) + sandhi drills/curriculum lessons 1-3. Rebuild: python scripts/freeze_cohort_start_chteniya.py; verify: --check. Override dual-run lane: Grok 4.5 (grok-4.5); Sonnet residual for compare.",
+      "notes": "H2109 pack freeze for Akro-style 5-week «Старт чтения» pilot. Pins hitopadesa-0 (reading_pack_v1) + subhashita-beginner (schema delta documented in MANIFEST adapter_note) + sandhi drills/curriculum lessons 1-3. Rebuild: python scripts/freeze_cohort_start_chteniya.py; verify: --check. Override dual-run lane: Grok 4.5 (grok-4.5); H2129 Sonnet 5 (claude-sonnet-5) independent re-run found and fixed 2 stale sha256/bytes (sandhi-drills-l1-l3, sandhi-curriculum-l1-l3 — pre-.gitattributes-normalization hashes) — see MANIFEST.json manifest_fix.",
       "sha256": {
         "hitopadesa-0": "86cde2bd4bc27b889f11356c39f4747cf004f035b049e59fb8b42f854fc2c9dc",
         "subhashita-beginner": "2c617a1151e8904505c57759a937e94e22ca089fe6ee4bf8fa717171802ec46c",
-        "sandhi-drills-l1-l3": "ef11e9abb546e9f50779ce50ddf0d4469e98ffc5d052bdaec4dfd2439c8c1511",
-        "sandhi-curriculum-l1-l3": "c5eab79c75c844418e7f74dbe70bae5a9a89991405f57080389d37c0d34092f7",
+        "sandhi-drills-l1-l3": "d1e23d5383a4d3c5de40a24b85e08906c082f659bb8fb885e030bbb95e37ed71",
+        "sandhi-curriculum-l1-l3": "6f97c347d7dc5f5140b60a35ff8f84f2e9b38566016b92e73eaeb8b1b34b5212",
         "lemmas-for-srs": "312038b68fe28ee9a5e6216764b6925114d4122d78fd77aed692b45cf75b10f9"
       },
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/data/cohort_start_chteniya/README.md"
