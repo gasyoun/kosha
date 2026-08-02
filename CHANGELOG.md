@@ -14,6 +14,10 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.98.4] - 2026-08-02
+### Changed
+- **A55/A56 JOHD data papers upgraded to submission drafts (H1872, Fable 5 `claude-fable-5`, 02-08-2026):** [papers/A55_UNION_HEADWORDS_DATA_PAPER_JOHD.md](https://github.com/gasyoun/kosha/blob/main/papers/A55_UNION_HEADWORDS_DATA_PAPER_JOHD.md) and [papers/A56_ZALIZNYAK_GRAMMAR_INDEX_DATA_PAPER_JOHD.md](https://github.com/gasyoun/kosha/blob/main/papers/A56_ZALIZNYAK_GRAMMAR_INDEX_DATA_PAPER_JOHD.md) rewritten to full JOHD section structure (Overview / Method / Dataset description / Reuse potential / Acknowledgements / Funding / Competing interests / References), readiness 2/5 → 4/5. All counts re-verified against the frozen `data-v0.1.0` release assets: A55 gains the `n_dicts` distribution table (44.1% single-witness; 11 headwords in all 15 dicts) + H684 overlap/witness-independence integration; A56 gains its core result — the token-frequency distribution (6 tokens = 50% of PWG, 26 = 80%, 154 = 99%; 48 singleton classes; 335 frozen tokens vs 342 live, versioning note added) and a column-fill census with corrected feature-flag semantics. DOI mint + submission stay human steps.
+
 ## [0.98.3] - 2026-08-01
 ### Added
 - **«Старт чтения» cohort pack freeze (H2109, Grok 4.5 `grok-4.5`, override dual-run of Sonnet handoff, 01-08-2026):** [`data/cohort_start_chteniya/`](https://github.com/gasyoun/kosha/blob/main/data/cohort_start_chteniya/) pins Hitopadeśa-0 + subhāṣita-beginner + sandhi curriculum/drills L1–3 with `MANIFEST.json` sha256 pins, optional `lemmas_for_srs.tsv`, builder [`scripts/freeze_cohort_start_chteniya.py`](https://github.com/gasyoun/kosha/blob/main/scripts/freeze_cohort_start_chteniya.py) (`--check` goal gate), and manifest row `cohort-start-chteniya-pack-freeze`. Freeze only — no new linguistics; subhashita schema delta documented for H2110 adapter.
