@@ -66,8 +66,13 @@ def sha256_file(p: Path) -> str:
 
 
 def write_json(path: Path, obj: object) -> None:
+    # newline="\n" pins LF regardless of host OS, so the hash embedded in
+    # MANIFEST.json can't drift when .gitattributes (eol=lf) normalizes on
+    # commit (H2129 found a CRLF-vs-LF sha256 mismatch from this exact gap).
     path.write_text(
-        json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        json.dumps(obj, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
     )
 
 
@@ -197,7 +202,9 @@ def build() -> dict:
         if lesson <= 3:
             kept.append(line)
     cur_dst = OUT / "sandhi_curriculum_l1_l3.tsv"
-    cur_dst.write_text("\n".join(kept) + "\n", encoding="utf-8")
+    cur_dst.write_text(
+        "\n".join(kept) + "\n", encoding="utf-8", newline="\n"
+    )
     packs.append(
         {
             "slug": "sandhi-curriculum-l1-l3",
