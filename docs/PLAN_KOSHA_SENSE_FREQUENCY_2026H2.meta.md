@@ -7,7 +7,7 @@ _Created: 22-07-2026 · Last updated: 22-07-2026_
 ## Purpose
 Execution-ready `/ask` plan for a **per-sense** frequency layer ("частотность значений") in kosha, built
 on DCS's WordSem = Sanskrit-WordNet gold. The index for a five-doc set (roadmap / architecture /
-implementation / verification) driving handoff [H1453](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1453-Opus_kosha_sense-frequency-wordsem-3layer-wave1_22.07.26.md).
+implementation / verification) driving handoff [H1453](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1453-Opus_kosha_sense-frequency-wordsem-3layer-wave1_22.07.26.md).
 
 ## Audience
 The wave-1 execution agent (Opus 4.8) and any future session extending sense-frequency (wave-2 WSD, wave-3

@@ -10,7 +10,7 @@ polysemous word split by translators because per-sense loci were dropped.
 
 Deliverables, each stating what unblocks it:
 
-1. **PWG sense→loci export** ([H1456](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1456-Sonnet_RussianTranslation_pwg-sense-loci-export_22.07.26.md), RussianTranslation)
+1. **PWG sense→loci export** ([H1456](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1456-Sonnet_RussianTranslation_pwg-sense-loci-export_22.07.26.md), RussianTranslation)
    — `pwg_sense_loci.tsv` from `microstructure.py`. *Unblocks everything below.* Ships first.
 2. **`<ls>`-locus resolver** — each sense's `<ls>` strings → citable DCS/Samudra passages, reusing
    `pwg_sources.py` + `concordance_core.citable_locus`. *Unblocks step 3's high-confidence tier.*

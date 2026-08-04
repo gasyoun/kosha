@@ -6,8 +6,8 @@ _Created: 22-07-2026 · Last updated: 22-07-2026_
 corpus-attestation layer (wave-1) and the cross-dictionary reconciliation view (wave-2) — so a fresh
 session need not re-derive the scope, the prior-art verdicts, or the interview rulings.
 
-**Audience.** The execution agent for [H1455](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1455-Sonnet_kosha_corpus-attestation-per-sense-join_22.07.26.md)
-(kosha) and [H1456](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1456-Sonnet_RussianTranslation_pwg-sense-loci-export_22.07.26.md)
+**Audience.** The execution agent for [H1455](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1455-Sonnet_kosha_corpus-attestation-per-sense-join_22.07.26.md)
+(kosha) and [H1456](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1456-Sonnet_RussianTranslation_pwg-sense-loci-export_22.07.26.md)
 (RussianTranslation); anyone triaging the kosha sense-layer backlog.
 
 **Provenance.** Authored 22-07-2026 via `/ask` (Opus 4.8 `claude-opus-4-8`), grounded in the
