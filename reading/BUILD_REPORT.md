@@ -18,7 +18,7 @@ from [reading/index.html](../reading/index.html) — until H1448 fixed the overs
   [vocabulary curriculum](vocabulary/curriculum/), [samāsa drills](samasa/drills/).
 
 Wiring only — no pack data, drill content, or scorer changed. See
-[H1448](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1448-Sonnet_kosha_wire-reading-packs-drill-nav_22.07.26.md).
+[H1448](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1448-Sonnet_kosha_wire-reading-packs-drill-nav_22.07.26.md).
 
 ## nala-1 — Nala 1 — Nalopākhyāna (Mahābhārata 3.50)
 

@@ -72,7 +72,7 @@ no UTF-8 BOM; multi-step logic in a `.py` file, not inline shell).
 - Run the acceptance checks in
   [VERIFICATION](https://github.com/gasyoun/kosha/blob/main/docs/VERIFICATION_KOSHA_SENSE_RECONCILIATION.md).
   Commit → PR → auto-merge + delete branch. Update `.ai_state.md` Completed + point Next Steps at
-  wave-2 (reconciliation view). Close [H1455](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1455-Sonnet_kosha_corpus-attestation-per-sense-join_22.07.26.md)
+  wave-2 (reconciliation view). Close [H1455](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1455-Sonnet_kosha_corpus-attestation-per-sense-join_22.07.26.md)
   via `/handoff-close`.
 
 _Dr. Mārcis Gasūns_

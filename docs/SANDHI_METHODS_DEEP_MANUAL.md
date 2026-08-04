@@ -6,7 +6,7 @@ _Created: 01-08-2026 · Last updated: 01-08-2026_
 
 **What this is not.** The programme hub / “what exists” page remains [SANDHI_PROGRAMME.md](https://github.com/gasyoun/kosha/blob/main/SANDHI_PROGRAMME.md). Pedagogy surfaces and curriculum TSVs are covered there; this doc is the **methods** layer the hub deliberately does not expand.
 
-**Handoff:** [H2069](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2069-Grok_kosha_sandhi-methods-deep-manual_01.08.26.md) · Grok 4.5 (`grok-4.5`).  
+**Handoff:** [H2069](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2069-Grok_kosha_sandhi-methods-deep-manual_01.08.26.md) · Grok 4.5 (`grok-4.5`).  
 **Census residual:** DEEP_MANUAL_GAP_CENSUS row 14 🟡.
 
 ---

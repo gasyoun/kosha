@@ -21,7 +21,7 @@ Layered docs (read in this order):
 - **Implementation (wave-1, file-level)** — [IMPLEMENTATION_KOSHA_SENSE_FREQUENCY_WAVE1.md](https://github.com/gasyoun/kosha/blob/main/docs/IMPLEMENTATION_KOSHA_SENSE_FREQUENCY_WAVE1.md)
 - **Verification & risks** — [VERIFICATION_KOSHA_SENSE_FREQUENCY.md](https://github.com/gasyoun/kosha/blob/main/docs/VERIFICATION_KOSHA_SENSE_FREQUENCY.md)
 
-Execution handoff: [H1453](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1453-Opus_kosha_sense-frequency-wordsem-3layer-wave1_22.07.26.md) (Opus 4.8 `claude-opus-4-8`).
+Execution handoff: [H1453](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1453-Opus_kosha_sense-frequency-wordsem-3layer-wave1_22.07.26.md) (Opus 4.8 `claude-opus-4-8`).
 
 ---
 
