@@ -18,7 +18,7 @@ headword-level [`build_dict_corpus_concordance.py`](https://github.com/gasyoun/k
 + [`concordance_core.py`](https://github.com/gasyoun/kosha/blob/main/scripts/concordance_core.py)
 (REUSE, do not rebuild). Wave-1: (1) consume a PWG per-sense `<ls>`-locus map exported from
 [`RussianTranslation/src/microstructure.py`](https://github.com/sanskrit-lexicon/SanskritLexicography/blob/master/RussianTranslation/src/microstructure.py)
-(handoff [H1456](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1456-Sonnet_RussianTranslation_pwg-sense-loci-export_22.07.26.md));
+(handoff [H1456](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1456-Sonnet_RussianTranslation_pwg-sense-loci-export_22.07.26.md));
 (2) resolve those `<ls>` loci to DCS/Samudra passages; (3) a **hybrid** aligner assigns each
 headword's DCS attestations to a numbered sense (deterministic locus-match + gloss-overlap
 candidates, LLM only on the residue), flagging `confidence<τ` to a review queue; (4) emit
@@ -40,7 +40,7 @@ Layered docs (read in order):
 - **Implementation (wave-1, file-level)** — [IMPLEMENTATION_KOSHA_SENSE_RECONCILIATION_WAVE1.md](https://github.com/gasyoun/kosha/blob/main/docs/IMPLEMENTATION_KOSHA_SENSE_RECONCILIATION_WAVE1.md)
 - **Verification & risks** — [VERIFICATION_KOSHA_SENSE_RECONCILIATION.md](https://github.com/gasyoun/kosha/blob/main/docs/VERIFICATION_KOSHA_SENSE_RECONCILIATION.md)
 
-Execution handoffs: [H1455](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1455-Sonnet_kosha_corpus-attestation-per-sense-join_22.07.26.md) (kosha, Sonnet 5 `claude-sonnet-5`) · [H1456](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1456-Sonnet_RussianTranslation_pwg-sense-loci-export_22.07.26.md) (RussianTranslation, Sonnet 5, the `<ls>`-loci export it depends on).
+Execution handoffs: [H1455](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1455-Sonnet_kosha_corpus-attestation-per-sense-join_22.07.26.md) (kosha, Sonnet 5 `claude-sonnet-5`) · [H1456](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1456-Sonnet_RussianTranslation_pwg-sense-loci-export_22.07.26.md) (RussianTranslation, Sonnet 5, the `<ls>`-loci export it depends on).
 
 ---
 

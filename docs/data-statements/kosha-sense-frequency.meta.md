@@ -211,7 +211,7 @@ next `/cut-release` freeze.
 ## Provenance of this statement
 
 Authored 22-07-2026 by Opus 4.8 (`claude-opus-4-8`) under handoff
-[H1453](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1453-Opus_kosha_sense-frequency-wordsem-3layer-wave1_22.07.26.md),
+[H1453](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1453-Opus_kosha_sense-frequency-wordsem-3layer-wave1_22.07.26.md),
 from the build outputs, the `sense_frequency.meta.json` coverage counters, and
 column inspection of the live files.
 
