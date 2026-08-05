@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="81 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="83 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="81 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="83 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -349,6 +349,34 @@
         "Sanskrit",
         "computational linguistics",
         "dcs-nominal-paradigm-grid"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "json",
+        "contentUrl": "https://github.com/gasyoun/VisualDCS"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS verbal paradigm — per-root attested finite + non-finite cells",
+      "description": "H1299 (scale-up from the 6-root hand-curated view to 7,689 corpus-attested roots); schema 1.1.0 since H2294 (05-08-2026, Opus 5 claude-opus-5). THE TRAP THAT TRAVELS WITH IT: the finite past indicative is split into Aorist / Periphrastic Perfect / Perfect, but the split is ONE-SIDED. UD has no Aorist value; DCS's own feat_formation supplies it, so Aorist and Periphrastic Perfect are READ off the corpus while `Perfect` is the UNMARKED DEFAULT (feat_formation IS NULL) and is therefore INFERRED, never observed. Every 'Perfect' cell is 100% defaulted. Aorist is a LOWER bound (>=869 more sit untagged inside Perfect, 1.13% of the default) and Perfect an UPPER bound (>=1.13% misfiled aorists + >=3.54% misfiled imperfects); a consumer quoting either as an exact corpus count is wrong. The dataset carries this as a machine-readable `cellEvidence` map (formation-attested | defaulted) per display category plus `cellEvidenceNote` -- READ IT AND SURFACE IT: rendering a `defaulted` category to a learner unmarked presents an assumption as an attestation. The per-cell defaulted share is exactly 0% or 100% (1,955 attested vs 3,229 defaulted cells), degenerate by construction since Perfect IS the untagged residue, which is why a per-category flag is exact rather than approximate; the build asserts it. Two further ceilings: no Panini class number is assigned anywhere (DCS tags unaccented text and cannot separate class I/VI or IV/passive), and feat_voice distinguishes only Passive from non-passive -- parasmaipada vs atmanepada is NOT tagged, so non-passive forms for a cell are pooled. Finite cell identity is deliberately identical to csl-observatory's E46 census, reconciled at 6,454 roots match / 0 disagree. DCS is CC BY 4.0; this derivative ships BY-SA with the public tier.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dcs-verbal-paradigm-attested"
       ],
       "distribution": {
         "@type": "DataDownload",
@@ -2094,6 +2122,34 @@
     },
     {
       "@type": "Dataset",
+      "name": "Start chteniya cohort pack freeze (Hitopadesa-0 + subhashita-beginner + sandhi L1-3)",
+      "description": "H2109 pack freeze for Akro-style 5-week «Старт чтения» pilot. Pins hitopadesa-0 (reading_pack_v1) + subhashita-beginner (schema delta documented in MANIFEST adapter_note) + sandhi drills/curriculum lessons 1-3. Rebuild: python scripts/freeze_cohort_start_chteniya.py; verify: --check. Override dual-run lane: Grok 4.5 (grok-4.5); H2129 Sonnet 5 (claude-sonnet-5) independent re-run found and fixed 2 stale sha256/bytes (sandhi-drills-l1-l3, sandhi-curriculum-l1-l3 — pre-.gitattributes-normalization hashes) — see MANIFEST.json manifest_fix.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "cohort-start-chteniya-pack-freeze"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "json+tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/not-applicable/data/cohort_start_chteniya/MANIFEST.json"
+      }
+    },
+    {
+      "@type": "Dataset",
       "name": "Scherzl case-government relations × DCS-treebank adjudication",
       "description": "All 1168 Scherzl case-government relations adjudicated against the DCS dependency treebank: 693 CONFIRMED / 1 CONTRADICTED (hand-adjudicated to a non-defect) / 288 UNATTESTED-INSUFFICIENT / 186 NOT-ADJUDICABLE. Only ~3.9% of DCS sentences carry dependency arcs, so CONFIRMED is a lower bound and a zero dep-count never disconfirms. Already tracked+public in SanskritGrammar; listed for discovery, not re-released.",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -2385,8 +2441,8 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>81</b><span>public datasets</span></div>
-      <div class="tally"><b>11</b><span>restricted (on request)</span></div>
+      <div class="tally"><b>83</b><span>public datasets</span></div>
+      <div class="tally"><b>12</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
     <div class="nav">
@@ -2511,6 +2567,16 @@
       <p class="key">declension class (14, lemma-final heuristic) × token gender (Masc|Fem|Neut|?) × 24 case.number cells; each cell carries token count, distinct lemma_ids, segmentable count, top-8 attested unsandhied forms, top-6 surface endings, up to 3 corpus examples (sentence + text + ref)</p>
       <p class="meta">14 rows · 620.0 KB · JSON</p>
       <div class="chips"><span class="chip">VisualDCS sanskrit_nominal_dashboard.html</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS verbal paradigm — per-root attested finite + non-finite cells</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">root (VERB lemma string, frequency floor &gt;=2 total VERB tokens) x display category x number (sg|du|pl) x person (1|2|3) for finite cells, plus 8 non-finite buckets (PPP, Abs, Inf, FPP, PresPart, FutPart, PartOther, Other); each cell carries its top-5 attested forms with corpus counts</p>
+      <p class="meta">7,689 rows · 3.5 MB · JSON</p>
+      <div class="chips"><span class="chip">VisualDCS sanskrit_paradigm_trainer.html (browse grid + frequency-weighted flashcard deck, with JSON deck export)</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
     <article class="card">
@@ -3135,6 +3201,16 @@
     </article>
     <article class="card">
       <div class="card-h">
+        <h3>Start chteniya cohort pack freeze (Hitopadesa-0 + subhashita-beginner + sandhi L1-3)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">MANIFEST packs[] with pin_path + sha256; reading pins + sandhi L1-3 subsets + optional lemmas_for_srs.tsv</p>
+      <p class="meta">5 rows · 950.6 KB · JSON+TSV</p>
+      <div class="chips"><span class="chip">Systema-Sanscriticum resources/data/cohort_start_chteniya/ (H2106)</span><span class="chip">reading_pack multi-pack import (H2110)</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/data/cohort_start_chteniya/MANIFEST.json">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
         <h3>Scherzl case-government relations × DCS-treebank adjudication</h3>
         <span class="badge pub">public</span>
       </div>
@@ -3325,6 +3401,16 @@
       <p class="key">(key1, subcard) card -&gt; one MDF record; senses -&gt; \sn (observed PWG numbering) + \de RU (+ \ge EN when promoted)</p>
       <p class="meta">2,350 rows · 3.7 MB · MDF (SFM, BLANK-LINE-DELIMITED RECORDS, SINGLE FILE)</p>
       <div class="chips"><span class="chip">Lexique Pro / Webonary / Dictionary App Builder (SIL toolchain)</span><span class="chip">SIL MDF program (papers/SIL_MDF_ECOSYSTEM_CORRELATION.md)</span></div>
+      <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>PWG→RU nonstop-pipeline working set (TM store, layers, manifests, raws, gate logs)</h3>
+        <span class="badge res">restricted</span>
+      </div>
+      <p class="key">bucketed per data_root.py layout: tm/ (canonical store, subcard-keyed jsonl, 11,603 rows @ 02-08-2026) · layers/ (NWS packed tar.gz, 168k files) · manifests/ · raws/ (per-key window payloads) · telemetry/ · gatelogs/ · parked/ · corpus/ (corpus-gate dictionaries)</p>
+      <p class="meta">11,603 rows · 683.1 MB · GIT REPO + LFS (JSONL/TAR.GZ/JSON)</p>
+      <div class="chips"><span class="chip">RussianTranslation nonstop lanes (PC / samskrte.ru / routine)</span><span class="chip">bounded_staged_run.py --data-root</span><span class="chip">spot_check_daily.py / lane_guard.py / digest_daily.py</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
     </div>
