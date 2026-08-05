@@ -354,6 +354,24 @@
    "rebuild": "python src/DCS-data-2026/gen_paradigm_nominal.py (needs the pinned dcs_full.sqlite; refuses a master with no provenance pin, emits a real SHA-256)."
   },
   {
+   "id": "dcs-verbal-paradigm-attested",
+   "title": "DCS verbal paradigm — per-root attested finite + non-finite cells",
+   "tier": "public",
+   "in_release": "not-applicable",
+   "format": "json",
+   "rows": 7689,
+   "size_bytes": 3710411,
+   "keying": "root (VERB lemma string, frequency floor >=2 total VERB tokens) x display category x number (sg|du|pl) x person (1|2|3) for finite cells, plus 8 non-finite buckets (PPP, Abs, Inf, FPP, PresPart, FutPart, PartOther, Other); each cell carries its top-5 attested forms with corpus counts",
+   "source_repo": "https://github.com/gasyoun/VisualDCS",
+   "source_path": "visual/paradigm_attested.json (tracked; _data.js twin for file:// pages)",
+   "builder": "src/DCS-data-2026/gen_paradigm_attested.py (H1299; past-split H1486/H2294), over the pinned dcs_full.sqlite",
+   "consumers": [
+    "VisualDCS sanskrit_paradigm_trainer.html (browse grid + frequency-weighted flashcard deck, with JSON deck export)"
+   ],
+   "notes": "H1299 (scale-up from the 6-root hand-curated view to 7,689 corpus-attested roots); schema 1.1.0 since H2294 (05-08-2026, Opus 5 claude-opus-5). THE TRAP THAT TRAVELS WITH IT: the finite past indicative is split into Aorist / Periphrastic Perfect / Perfect, but the split is ONE-SIDED. UD has no Aorist value; DCS's own feat_formation supplies it, so Aorist and Periphrastic Perfect are READ off the corpus while `Perfect` is the UNMARKED DEFAULT (feat_formation IS NULL) and is therefore INFERRED, never observed. Every 'Perfect' cell is 100% defaulted. Aorist is a LOWER bound (>=869 more sit untagged inside Perfect, 1.13% of the default) and Perfect an UPPER bound (>=1.13% misfiled aorists + >=3.54% misfiled imperfects); a consumer quoting either as an exact corpus count is wrong. The dataset carries this as a machine-readable `cellEvidence` map (formation-attested | defaulted) per display category plus `cellEvidenceNote` -- READ IT AND SURFACE IT: rendering a `defaulted` category to a learner unmarked presents an assumption as an attestation. The per-cell defaulted share is exactly 0% or 100% (1,955 attested vs 3,229 defaulted cells), degenerate by construction since Perfect IS the untagged residue, which is why a per-category flag is exact rather than approximate; the build asserts it. Two further ceilings: no Panini class number is assigned anywhere (DCS tags unaccented text and cannot separate class I/VI or IV/passive), and feat_voice distinguishes only Passive from non-passive -- parasmaipada vs atmanepada is NOT tagged, so non-passive forms for a cell are pooled. Finite cell identity is deliberately identical to csl-observatory's E46 census, reconciled at 6,454 roots match / 0 disagree. DCS is CC BY 4.0; this derivative ships BY-SA with the public tier.",
+   "rebuild": "python src/DCS-data-2026/gen_paradigm_attested.py [--db PATH] [--e46-tsv PATH] (needs the pinned dcs_full.sqlite; pass --e46-tsv when running from a linked git worktree, or the E46 reconciliation report is rewritten as BLOCKED)."
+  },
+  {
    "id": "varga-series-diachrony",
    "title": "Consonant series (varga) by DCS period + Cramér's V",
    "tier": "public",
