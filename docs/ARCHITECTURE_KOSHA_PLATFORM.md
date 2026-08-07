@@ -18,7 +18,7 @@ The installable package is rooted at `src/kosha/`:
 | `rendering` | safe Cologne renderer, citations, shared serializers | route or build orchestration |
 | `pipeline` | stage registry, dependency DAG, build lock, postconditions, atomic promotion | domain presentation |
 | `settings` | typed environment and path configuration | import-time side effects |
-| `api` | thin FastAPI routers, exception mapping, readiness | duplicated SQL/serialization |
+| `api` | thin FastAPI routers, exception mapping, readiness (`GET /ready`) | duplicated SQL/serialization |
 
 `app/` and `scripts/` initially import these modules. Direct `sys.path`
 injection is removed as each consumer moves.
@@ -63,7 +63,8 @@ One typed settings object reads:
 - `KOSHA_LAYERS_DB_PATH`;
 - `KOSHA_ARCHIVE_DIR`;
 - `KOSHA_PUBLIC_BASE`;
-- `KOSHA_HISTORY_ENABLED`, default `false`.
+- `KOSHA_HISTORY_ENABLED`, default `false`;
+- `KOSHA_EXPECTED_DATA_VERSION` (optional; readiness fails closed on mismatch).
 
 `DATABASE_PATH` remains a deprecated alias for `KOSHA_CORE_DB_PATH` during W0
 and emits a warning. Conflicting values fail startup. Production-only secrets
@@ -90,6 +91,15 @@ TEMP VIEW projection for unqualified SQL, history never attached). Runtime
 defaults still point at the monolith `data/db/kosha.db` until a later wave
 performs the bulk physical move; multi-DB attach is exercised by the fixture
 parity suite (`tests/test_storage_facade.py`).
+
+**W1C (H2343) status:** readiness lives in
+[`src/kosha/api/readiness.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/readiness.py)
+and is exposed as `GET /ready` (distinct from liveness `GET /health`). Checks:
+core open via the storage facade, optional attached layers, readable
+`data_version` (+ optional expected-version match), citation archives via
+`kosha.api.archive`, and history as `disabled` when the D10 flag is off.
+HTTP: 200 when ready, 503 when not — never 500 for a correctly disabled
+optional writable. Tests: `tests/test_readiness.py`.
 
 ## Build system
 

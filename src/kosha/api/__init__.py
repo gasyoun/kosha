@@ -12,7 +12,11 @@ The typed boundary every public surface serializes through:
 * [`sanitize`](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/sanitize.py)
   — the rendered-HTML allowlist every one of those crosses;
 * [`errors`](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/errors.py)
-  — one documented error shape per contract.
+  — one documented error shape per contract;
+* [`archive`](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/archive.py)
+  — citation-archive validation;
+* [`readiness`](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/readiness.py)
+  — DB / version / archive / optional-writable readiness (W1C).
 """
 
 from kosha.api.models import (

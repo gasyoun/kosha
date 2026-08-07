@@ -27,7 +27,8 @@ W0 adds commands for:
 - sanitizer adversarial fixtures;
 - manifest/truth and surface-registry checks
   (`python scripts/validate_surfaces.py` — W1B / H2342, required CI step);
-- citation archive and public-base resolution.
+- citation archive and public-base resolution;
+- readiness probes (`GET /ready` — W1C / H2343; `pytest tests/test_readiness.py`).
 
 Every required command must exit zero. Warnings are accepted only when the
 handoff explicitly classifies them as known noncritical residue.
