@@ -14,6 +14,20 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.100.0] - 2026-08-07
+### Added
+- **W1A multi-DB storage facade (H2341, Grok 4.5 `grok-4.5`):**
+  [`src/kosha/query/`](https://github.com/gasyoun/kosha/tree/main/src/kosha/query)
+  opens the core store and ATTACHes read-only `inflections` / `layers` with the
+  architecture's stable aliases when those files exist; TEMP VIEWs keep
+  existing unqualified SQL working. History is never mounted on the query path
+  (even if `history.db` is present and `KOSHA_HISTORY_ENABLED=1`).
+  `app/db.get_db` and fixture connections go through the facade only.
+  Parity tools: `split_monolith_to_facade` + 12 frozen golden sample queries;
+  tests in `tests/test_storage_facade.py` prove monolith ≡ multi-DB results and
+  Salt payloads carry no physical placement. **No production bulk data move**
+  in this wave — facade first, split later.
+
 ## [0.99.0] - 2026-08-07
 ### Fixed
 - **Renormalized `docs/inflect/index.html` to LF (H2315, Sonnet 5 `claude-sonnet-5`):**
