@@ -104,12 +104,14 @@ def fixture_con():
     verified on the tier CI actually runs. The pre-existing API tests are
     pinned to full-data counts and skip in CI, so a gate written against them
     would have proved nothing on any pull request.
+
+    W1A (H2341): opens through the storage facade so ATTACH behaviour matches
+    production `get_db()`, not a bare sqlite3 open that would miss multi-DB.
     """
-    import sqlite3
+    from kosha.query.connection import open_query_connection
 
     path = _require_fixture_db()
-    con = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
-    con.row_factory = sqlite3.Row
+    con = open_query_connection(core_path=path)
     try:
         yield con
     finally:
@@ -131,18 +133,17 @@ def fixture_client():
     objects are thread-bound) and, worse, would test a concurrency shape the
     service never runs.
     """
-    import sqlite3
-
     from fastapi.testclient import TestClient
 
     from app.main import app
     from db import get_db
+    from kosha.query.connection import open_query_connection
 
     path = _require_fixture_db()
 
     def _fixture_db():
-        con = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
-        con.row_factory = sqlite3.Row
+        # Same facade as production get_db() — multi-DB ATTACH when present.
+        con = open_query_connection(core_path=path)
         try:
             yield con
         finally:

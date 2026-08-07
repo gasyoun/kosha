@@ -7,6 +7,11 @@ attached public layers, the citation archive, and the writable history DB),
 the public citation base (D9/R1), and the D10 feature flags that keep history,
 auth, and analytics off for public v1.
 
+W1A (H2341): `kosha.query.open_query_connection` consumes `core_db` /
+`inflections_db` / `layers_db` and ATTACHes the latter two with stable aliases
+when the files exist. History stays a separate writable store — never attached
+on the dictionary query path.
+
 Two rules this module exists to enforce mechanically:
 
 1. **`DATABASE_PATH` is a deprecated alias for the core DB**, kept because

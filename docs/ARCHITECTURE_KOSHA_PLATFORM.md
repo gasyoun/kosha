@@ -1,6 +1,6 @@
 # Kosha platform architecture
 
-_Created: 30-07-2026_
+_Created: 30-07-2026 · Last updated: 07-08-2026_
 
 This target architecture implements the decisions in the
 [plan of record](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md).
@@ -82,6 +82,14 @@ The repository attaches read-only databases with stable aliases and is the
 only API/static query path. Physical placement never leaks into response
 models. The split occurs only after parity tests cover existing monolith
 queries.
+
+**W1A (H2341) status:** the facade is implemented in
+[`src/kosha/query/`](https://github.com/gasyoun/kosha/tree/main/src/kosha/query)
+(`open_query_connection`, stable aliases `core` / `inflections` / `layers`,
+TEMP VIEW projection for unqualified SQL, history never attached). Runtime
+defaults still point at the monolith `data/db/kosha.db` until a later wave
+performs the bulk physical move; multi-DB attach is exercised by the fixture
+parity suite (`tests/test_storage_facade.py`).
 
 ## Build system
 
