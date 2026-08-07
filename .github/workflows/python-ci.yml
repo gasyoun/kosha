@@ -37,6 +37,14 @@ jobs:
           pip install -r requirements.txt
           pip install -e .
 
+      - name: Generated-surface registry
+        # W1B (H2342) — D15 surface registry. Fails when a row is missing
+        # required fields, points at a non-owned builder, or lacks an
+        # acceptance command. Also covered by pytest; this named step makes
+        # the gate visible in the required PR check and cannot be skipped by
+        # auto-merge (same job as Fixture build + tests).
+        run: python scripts/validate_surfaces.py
+
       - name: Declared stage order
         # The #210 regression guard, run before anything is built: the no-flag
         # plan must list every declared stage.

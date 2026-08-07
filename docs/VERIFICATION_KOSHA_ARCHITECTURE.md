@@ -25,7 +25,8 @@ W0 adds commands for:
 - Salt `/api/v1` plus `/dicts/*` parity;
 - API/static/SSR payload parity;
 - sanitizer adversarial fixtures;
-- manifest/truth and surface-registry checks;
+- manifest/truth and surface-registry checks
+  (`python scripts/validate_surfaces.py` — W1B / H2342, required CI step);
 - citation archive and public-base resolution.
 
 Every required command must exit zero. Warnings are accepted only when the
