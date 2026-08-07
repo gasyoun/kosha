@@ -118,7 +118,24 @@ def root():
 
 @app.get("/health")
 def health():
+    """Liveness only — process is up. Use `/ready` for dependency checks."""
     return {"status": "ok"}
+
+
+@app.get("/ready")
+def ready():
+    """W1C readiness probe (H2343).
+
+    Fail-closed for missing core DB / data-version mismatch; optional
+    subsystems (history when flag off, empty citation archive) report
+    disabled/unconfigured without 500. Body is built by
+    `kosha.api.readiness` — this route only maps ready → 200 / 503.
+    """
+    from fastapi.responses import JSONResponse
+    from kosha.api.readiness import readiness_payload
+
+    body, status = readiness_payload()
+    return JSONResponse(status_code=status, content=body)
 
 
 # ---------------------------------------------------------------------------

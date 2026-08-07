@@ -14,6 +14,18 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.102.0] - 2026-08-07
+### Added
+- **W1C readiness checks (H2343, Grok 4.5 `grok-4.5`):**
+  [`src/kosha/api/readiness.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/readiness.py)
+  probes core DB (via the W1A storage facade), optional attached
+  inflections/layers, readable `data_version` with optional
+  `KOSHA_EXPECTED_DATA_VERSION` fail-closed match, citation archives (reuses
+  W0C `validate_archive`), and optional history/auth (reports `disabled` when
+  `KOSHA_HISTORY_ENABLED` is false — never looks ready while unmounted).
+  Thin route `GET /ready` returns 200 / 503; liveness stays at `GET /health`.
+  Tests in `tests/test_readiness.py`.
+
 ## [0.101.0] - 2026-08-07
 ### Added
 - **W1B generated-surface registry (H2342, Grok 4.5 `grok-4.5`):**
