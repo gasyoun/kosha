@@ -14,6 +14,21 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.99.0] - 2026-08-07
+### Fixed
+- **Renormalized `docs/inflect/index.html` to LF (H2315, Sonnet 5 `claude-sonnet-5`):**
+  the sole kosha offender in the org EOL census
+  ([Uprava/tools/eol_census.py](https://github.com/gasyoun/Uprava/blob/main/tools/eol_census.py)).
+  [PR #246](https://github.com/gasyoun/kosha/pull/246) fixed the original 13 CR
+  bytes; the squash-merge itself reintroduced one CRLF line, fixed in a
+  follow-up ([PR #247](https://github.com/gasyoun/kosha/pull/247)). Verified
+  `eol_census.py --ref origin/main` exits 0. **Both PRs landed via a temporary
+  `enforce_admins` toggle** — kosha's GitHub Actions has no billing/minutes, so
+  the two required status checks (`Fixture build + tests`, `vitest + vite
+  build`) queue forever and can never self-clear; see
+  [Uprava FINDINGS](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)
+  for the standing note.
+
 ## [0.98.5] - 2026-08-02
 ### Fixed
 - **«Старт чтения» freeze MANIFEST hash drift (H2129, Sonnet 5 `claude-sonnet-5`, dual-run compare of H2109, 02-08-2026):** [`data/cohort_start_chteniya/MANIFEST.json`](https://github.com/gasyoun/kosha/blob/main/data/cohort_start_chteniya/MANIFEST.json) and [`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) carried stale sha256/bytes for `sandhi-drills-l1-l3` and `sandhi-curriculum-l1-l3` — hashed before `.gitattributes` (`eol=lf`) normalized those two generated files on commit, so `python scripts/freeze_cohort_start_chteniya.py --check` FAILED on a pristine clone of 0.98.3 despite the release notes claiming it was green. Pin file bytes are unchanged (content-identical, LF-only); only the two stale hash/byte fields are corrected, and [`scripts/freeze_cohort_start_chteniya.py`](https://github.com/gasyoun/kosha/blob/main/scripts/freeze_cohort_start_chteniya.py) now writes `newline="\n"` so the drift cannot recur. Independent-rebuild compare memo: [Uprava H2129](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2129-Sonnet_kosha_h2109-grok-dual-run-compare_01.08.26.md).
