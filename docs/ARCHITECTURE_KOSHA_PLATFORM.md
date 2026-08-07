@@ -120,6 +120,15 @@ A machine-readable registry declares for each surface:
 - deterministic acceptance command;
 - deployment owner and rollback method.
 
+**W1B (H2342) status:** the registry is
+[`data/manifest/surfaces.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/surfaces.json)
+(`schema: kosha-generated-surfaces-v1`). Validation is
+[`src/kosha/surfaces/`](https://github.com/gasyoun/kosha/tree/main/src/kosha/surfaces)
+plus CLI [`scripts/validate_surfaces.py`](https://github.com/gasyoun/kosha/blob/main/scripts/validate_surfaces.py);
+the required Python CI job runs the CLI before the fixture build. Dictionary-payload
+surfaces must name `kosha.api.repository` and `kosha.api.serializer` (no mirrored
+SQL or payload code).
+
 Crawlable independent surfaces remain. They consume the shared query and
 serializer services rather than mirroring payload code.
 
