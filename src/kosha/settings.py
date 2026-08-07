@@ -107,6 +107,11 @@ class Settings(BaseModel):
     # --- feature gates (D10: off for public v1) -----------------------------
     enable_history: bool = False
 
+    # --- readiness (W1C, H2343) ---------------------------------------------
+    #: When set, readiness fails closed if the store's meta.data_version
+    #: disagrees. Unset (default) only checks that a version is readable.
+    expected_data_version: str | None = None
+
     @field_validator("public_base")
     @classmethod
     def _strip_trailing_slash(cls, value: str) -> str:
@@ -166,6 +171,11 @@ class Settings(BaseModel):
             public_base=env.get("KOSHA_PUBLIC_BASE", "http://localhost:8000"),
             enable_history=_as_bool(
                 env.get("KOSHA_HISTORY_ENABLED"), key="KOSHA_HISTORY_ENABLED"
+            ),
+            expected_data_version=(
+                env["KOSHA_EXPECTED_DATA_VERSION"].strip() or None
+                if env.get("KOSHA_EXPECTED_DATA_VERSION") is not None
+                else None
             ),
         )
 
