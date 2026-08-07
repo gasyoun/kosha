@@ -14,6 +14,22 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.101.0] - 2026-08-07
+### Added
+- **W1B generated-surface registry (H2342, Grok 4.5 `grok-4.5`):**
+  [`data/manifest/surfaces.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/surfaces.json)
+  rows every live public surface (API, Salt faces, SSR, static cards/word pages,
+  directory/docs/features Pages hubs, UI SPA, concordance/reading/pedagogy
+  viewers) with id, audience, source datasets, builder, output paths, rights
+  tier, acceptance command, deploy owner, and rollback method. Validator in
+  [`src/kosha/surfaces/`](https://github.com/gasyoun/kosha/tree/main/src/kosha/surfaces)
+  + CLI [`scripts/validate_surfaces.py`](https://github.com/gasyoun/kosha/blob/main/scripts/validate_surfaces.py)
+  fails on missing fields, unowned builders, empty acceptance commands, or
+  dictionary-payload rows that omit the shared
+  `kosha.api.repository` / `kosha.api.serializer` modules. Wired as a named
+  step in the required `Fixture build + tests` CI job; tests in
+  `tests/test_surface_registry.py`.
+
 ## [0.100.0] - 2026-08-07
 ### Added
 - **W1A multi-DB storage facade (H2341, Grok 4.5 `grok-4.5`):**
