@@ -1,6 +1,6 @@
 # Dataset + surface manifests — machine-readable kosha indices
 
-_Created: 06-07-2026 · Last updated: 07-08-2026_
+_Created: 06-07-2026 · Last updated: 08-08-2026_
 
 ## Datasets
 
@@ -39,6 +39,22 @@ python scripts/validate_surfaces.py
 **Agent contract (surfaces):** a session that adds or materially changes a shipping
 surface must update this registry in the same pass. Dictionary-payload surfaces must
 consume `kosha.api.repository` + `kosha.api.serializer` (no mirrored payload code).
+
+## Deployment bundle recipe (W1D / H2344)
+
+[`deploy_bundle.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/deploy_bundle.json)
+is the machine-readable list of files, env keys, runtime probes, and rollback
+steps that make a versioned public-API deploy unit. Assemble and rehearse
+locally (never production):
+
+```text
+python scripts/assemble_deploy_bundle.py --validate-only
+python scripts/assemble_deploy_bundle.py --profile fixture
+python scripts/rehearse_deploy.py
+```
+
+Human procedure + rollback:
+[KOSHA_DEPLOYMENT.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DEPLOYMENT.md).
 
 Public-tier data license: [CC BY-SA 4.0](https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md).
 
