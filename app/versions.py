@@ -14,14 +14,22 @@ The archive is the same artifact that ships as a GitHub release asset (R1c) —
 one dump, two uses: browser resolution here, and the sense_crosswalk diff
 (scripts/build_crosswalk.py, Commitment 2).
 
+W2A (H2346): every freeze also writes `release.json` beside the dump with the
+sha256 of the sqlite bytes, so a mount is an *identity* (version + digest),
+not a mutable directory that happens to contain a file.
+
 `data/releases/` is bulk + regenerable → gitignored (RISKS.md R11: data ships
 as release assets, not in-repo). The mechanism and its tests live in git; the
-dumps do not.
+dumps do not. A committed mini-archive under `tests/fixtures/archives/` is the
+regression fixture for historical multi-version resolution.
 """
+import hashlib
+import json
 import re
 import sqlite3
 from pathlib import Path
 
+from kosha.api.archive import METADATA_NAME
 from kosha.settings import get_settings
 
 _APP = Path(__file__).resolve().parent
@@ -92,10 +100,15 @@ def resolve_sense(version: str, sense_id: str):
 
 
 def write_archive(version: str, senses):
-    """Freeze `senses` (iterable of dicts: sense_id, dict, L, sense_n,
-    headword, text_raw) into the version's archive sqlite. Idempotent."""
+    """Freeze `senses` into the version's archive sqlite + `release.json`.
+
+    Idempotent. Always writes the checksum metadata (W2A): an archive without
+    an identity is not a citable release asset. The sha256 is of the dump
+    bytes on disk after the write completes.
+    """
     path = archive_db_path(version)
     path.parent.mkdir(parents=True, exist_ok=True)
+    rows = list(senses)
     con = sqlite3.connect(path)
     try:
         con.executescript(ARCHIVE_SCHEMA)
@@ -104,9 +117,19 @@ def write_archive(version: str, senses):
             "INSERT OR REPLACE INTO archive "
             "(sense_id, dict, L, sense_n, headword, text_raw) VALUES "
             "(:sense_id, :dict, :L, :sense_n, :headword, :text_raw)",
-            list(senses),
+            rows,
         )
         con.commit()
     finally:
         con.close()
+    digest = hashlib.sha256(path.read_bytes()).hexdigest()
+    metadata = {
+        "version": version,
+        "sha256": digest,
+        "senses": len(rows),
+    }
+    (path.parent / METADATA_NAME).write_text(
+        json.dumps(metadata, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
     return path
