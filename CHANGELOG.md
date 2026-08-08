@@ -14,6 +14,25 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.103.0] - 2026-08-08
+### Added
+- **W1D deploy bundle + runbook + local rehearsal + rollback (H2344, Grok 4.5 `grok-4.5`):**
+  machine recipe
+  [`data/manifest/deploy_bundle.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/deploy_bundle.json)
+  with assemble/validate in
+  [`src/kosha/deploy/`](https://github.com/gasyoun/kosha/tree/main/src/kosha/deploy)
+  + CLIs
+  [`scripts/assemble_deploy_bundle.py`](https://github.com/gasyoun/kosha/blob/main/scripts/assemble_deploy_bundle.py)
+  /
+  [`scripts/rehearse_deploy.py`](https://github.com/gasyoun/kosha/blob/main/scripts/rehearse_deploy.py)
+  (fixture profile only — boots uvicorn on 127.0.0.1, probes `/health` +
+  `/ready`, zero production contact). Restored human runbook
+  [`KOSHA_DEPLOYMENT.md`](https://github.com/gasyoun/kosha/blob/main/KOSHA_DEPLOYMENT.md)
+  (systemd `Type=exec`, nginx `proxy_pass`, rollback packet). Committed
+  rehearsal log
+  [`docs/DEPLOY_REHEARSAL_LOG.md`](https://github.com/gasyoun/kosha/blob/main/docs/DEPLOY_REHEARSAL_LOG.md).
+  Tests in `tests/test_deploy_bundle.py`. Unlocks H2345 MG live-smoke packet.
+
 ## [0.102.0] - 2026-08-07
 ### Added
 - **W1C readiness checks (H2343, Grok 4.5 `grok-4.5`):**
