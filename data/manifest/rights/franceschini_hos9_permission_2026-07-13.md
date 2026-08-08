@@ -1,6 +1,6 @@
 # Rights grant — Franceschini digital edition of Bloomfield's *A Vedic Concordance* (HOS 9, 1906)
 
-_Created: 13-07-2026 · Last updated: 13-07-2026_
+_Created: 13-07-2026 · Last updated: 08-08-2026_
 
 ## What this covers
 
@@ -27,11 +27,13 @@ relayed — it is not a verbatim reproduction of the complete original email**
 (the two quoted messages below were pasted in parts; a small gap exists between
 the end of the "hereby grant..." quote and the start of the "...n prepared by
 Marco Franceschini" quote, evidently the same sentence split across two pastes —
-marked `[…]` below rather than reconstructed/guessed). A signed PDF version was
-offered by the grantor but not yet obtained — **follow-up: request it and
-archive it in this same directory** when available, per his own offer ("If you
-need a signed PDF version of this letter, please let me know and I will be
-happy to provide one").
+marked `[…]` below rather than reconstructed/guessed).
+
+**✅ CLOSED 08-08-2026 (MG ruling, H2440): email grant is enough.** Do **not**
+request a signed PDF; do **not** re-open a `@DO` / follow-up for one. The
+grantor's offer of a signed PDF is optional and is **declined as unnecessary** —
+agents must **never reask**. Residual epistemic status stays "email-relayed
+grant (unsigned)" as already recorded; that is an accepted fact, not a gap.
 
 ## Quoted grant (formal message)
 
