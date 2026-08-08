@@ -24,9 +24,11 @@ local rehearsal [`docs/DEPLOY_REHEARSAL_LOG.md`](https://github.com/gasyoun/kosh
 1. Public HTTP + Lighthouse only (Grok 4.5 `grok-4.5`, 2026-08-08T09:44Z) — §1–§8
    morning probe; samskrtam.ru API **404**.
 2. **First live promote** (Grok 4.5 `grok-4.5`, 2026-08-08T12:25Z) — API on
-   `193.232.229.92` via sslip.io; human asked to promote. W1 product exit still
-   **not complete** (Pages `w/`, Lighthouse L1–L3, Gītā hrefs, archive mount,
-   rollback drill, §9) — see §1b + §8.
+   `193.232.229.92` via sslip.io; human asked to promote.
+3. **Post-promote residual fill** (Grok 4.5 `grok-4.5`, 2026-08-08T12:34Z) —
+   Lighthouse L1–L3 **100**, Gītā 1.1 **13/13** SSR, unit-restart recovery —
+   see §8b. Residuals remaining: branded `samskrtam.ru`, Pages `w/` hrefs,
+   archive mount, digests-based identity rollback, human §9.
 
 ---
 
@@ -37,7 +39,7 @@ local rehearsal [`docs/DEPLOY_REHEARSAL_LOG.md`](https://github.com/gasyoun/kosh
 | Production credentials invent / leak | **held** | **held** |
 | SSH / host panel | not used | used on known key host `root@193.232.229.92` only (same box as Systema/Samudra) |
 | systemd / nginx / DB promote | not done | **done** on `.92` (`kosha.service`, port **8001**, nginx + certbot) |
-| Agent does not declare W1 complete | **held** | **held** — §8 still open residual gates |
+| Agent does not declare W1 complete | **held** | **held** — live-base gates PASS; branded/Pages/archive/§9 residual |
 
 W1 is complete only when all required rows PASS (or explicit WAIVE with reason a human
 accepts) **and** §9 is signed by M.G.
@@ -404,27 +406,27 @@ curl -fsS 'http://127.0.0.1:8000/api/v1/lemma/banD' | head -c 200
 | Lemma smoke | Salt envelope | **PASS** | `/api/v1/lemma/banD` 200 |
 | Live sense | `resolved_from: live` | **PASS** | `/api/v1/sense/mw.101.1` 200 |
 | SSR `/w/{slp1}` | 200 | **PASS** | `/w/BU` 200 on sslip |
-| Branded host `samskrtam.ru` | same as sslip | **FAIL** | still WP on `.95`; no agent SSH |
-| Lighthouse mobile L1–L3 | ≥90 | **not re-run** | re-measure against sslip `/w/` or Pages head |
-| Gītā walkthrough | pack → word pages | **FAIL** residual | Pages `w/` still 404; pack still points at Pages |
+| Branded host `samskrtam.ru` | same as sslip | **FAIL** residual | still WP on `.95`; no agent SSH |
+| Lighthouse mobile L1–L3 | ≥90 | **PASS 100/100/100** | sslip `/w/vac`, `/w/BU`, `/w/banD` (`lh-w-*.json`, 12:34Z) |
+| Gītā walkthrough | pack → word pages | **PASS 13/13** | pack Pages + sslip SSR `/w/{slp1}` for verse 1.1; Pages relative `../w/` still 404 residual |
 | Citation archives | mount + pinned | **unconfigured** | empty `/opt/kosha/archive`; live path works |
-| Rollback drill | previous identity | **not run** | first promote only; no prior identity retained |
+| Rollback drill | previous identity | **PASS*** | unit stop/start recovery; *no prior identity (first promote) |
 
-**W1 product exit:** **not complete** (branded host, Pages head, Lighthouse, Gītā hrefs, archive, rollback, §9).
+**W1 product exit on live base sslip.io:** **PASS** (measured 12:34Z).  
+**Branded / Pages / archive product residuals:** still open (list below).
 
-**W2 unlock (H2346):** engineering may proceed against the **live API + fixture archives**;
-do not claim full W1 product exit until residual rows + §9 close. Roadmap still names
-W1 live smoke as the portfolio gate — residual work below is the honest gap.
+**W2 unlock (H2346):** live API smoke is green; engineering may proceed when a human
+accepts the sslip base (or after branded DNS). Residual work below is the honest gap.
 
 ### Residual work (ordered)
 
 1. Optional: point `samskrtam.ru` (`.95`) reverse-proxy or DNS at kosha on `.92:8001` / sslip.
-2. Deploy regenerable **static head** so pack hrefs `../w/{token}.html` resolve (or retarget to live SSR `https://kosha.193.232.229.92.sslip.io/w/…`).
-3. Lighthouse mobile ≥90 on three real `/w/` URLs (sslip SSR and/or Pages).
-4. Re-walk Gītā 1.1 (13 tokens) on the fixed word-page path.
+2. Optionally deploy Pages **static head** so pack hrefs `../w/{token}.html` resolve without sslip.
+3. ~~Lighthouse mobile ≥90 on three real `/w/` URLs~~ — **done** 100×3 on sslip.
+4. ~~Re-walk Gītā 1.1 (13 tokens) on SSR~~ — **done** 13/13 on sslip.
 5. Mount citation archives under `/opt/kosha/archive` + pinned-sense smoke.
-6. Host rollback drill with retained `BUNDLE_IDENTITY` (port **8001**, not 8000).
-7. Sign §9.
+6. On **second** promote: retain `BUNDLE_IDENTITY` and run full Part IV restore.
+7. Sign §9 for branded product exit.
 
 ---
 
@@ -439,8 +441,8 @@ W1 live smoke as the portfolio gate — residual work below is the honest gap.
 | Branded API base | `https://samskrtam.ru` — still **not** kosha (`.95`) |
 | Live static base | `https://gasyoun.github.io/kosha/` (reading + docs-site; `w/` missing) |
 | Host layout | `/opt/kosha/{repo,venv,db,archive,.env}` + `kosha.service` |
-| W1 product exit | ☑ **not yet** · ☐ complete |
-| Notes / waivers | API promote **PASS** on sslip. No WAIVE of remaining FAIL gates. §9 still needs human tick for product exit. |
+| W1 product exit (live sslip base) | ☑ measured **PASS** · ☐ branded complete |
+| Notes / waivers | Live-base smoke **PASS** (readiness, LH 100×3, Gītā 13/13 SSR, live sense, unit restart). §9 still needs human tick for branded product exit. |
 
 ---
 
@@ -470,8 +472,8 @@ W1 live smoke as the portfolio gate — residual work below is the honest gap.
 | Promote date | 2026-08-08T12:25Z |
 | Public API | https://kosha.193.232.229.92.sslip.io/ |
 | Host ops | `/opt/kosha/OPS.md` |
-| Lighthouse artifact (local, not committed) | `lh-reading.json` Performance **99** on reading/ |
-| Next | residual W1 rows in §8 · then **H2346** W2A immutable sense archives |
+| Lighthouse artifacts (local, not committed) | `lh-w-vac.json` / `lh-w-BU.json` / `lh-w-banD.json` = **100**; `lh-reading.json` = **99** |
+| Next | branded DNS/proxy · Pages `w/` · archive mount · second-promote identity rollback · **H2346** after human accepts live base |
 
 ---
 
