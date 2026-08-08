@@ -14,6 +14,21 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.108.0] - 2026-08-08
+### Added
+- **W2A immutable sense archives + historical-resolution tests (H2346, Grok 4.5
+  `grok-4.5`):** `write_archive` always freezes `release.json` (sha256 identity)
+  beside `senses.sqlite`. Release gate
+  [`scripts/validate_release_archives.py`](https://github.com/gasyoun/kosha/blob/main/scripts/validate_release_archives.py)
+  / `validate_release_archives()` requires metadata, matching digests, durable
+  public base, and sense resolution across mounted versions. Committed
+  mini-archive under
+  [`tests/fixtures/archives/`](https://github.com/gasyoun/kosha/tree/main/tests/fixtures/archives)
+  (`0.1.0-w2a-prior` + `0.2.0-w2a-current`) exercises prior≠current wording.
+  Tests in `tests/test_w2a_immutable_archives.py`. DOI mint remains MG —
+  checklist stub
+  [`docs/DOI_CHECKLIST_W2A.md`](https://github.com/gasyoun/kosha/blob/main/docs/DOI_CHECKLIST_W2A.md).
+
 ## [0.107.0] - 2026-08-08
 ### Changed
 - **W1E post-promote residual fill (Grok 4.5 `grok-4.5`):** Lighthouse mobile
