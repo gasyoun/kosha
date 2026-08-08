@@ -14,6 +14,19 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.106.0] - 2026-08-08
+### Changed
+- **W1 first live API promote + packet re-fill (Grok 4.5 `grok-4.5`):** kosha
+  API running on `193.232.229.92` (`kosha.service` :8001, nginx + Let's Encrypt)
+  at
+  [https://kosha.193.232.229.92.sslip.io/](https://kosha.193.232.229.92.sslip.io/)
+  with core DB `0.1.0-dev` (323 425 lemmas / 692 403 senses). Documented in
+  [`docs/MG_LIVE_SMOKE_PACKET_W1E.md`](https://github.com/gasyoun/kosha/blob/main/docs/MG_LIVE_SMOKE_PACKET_W1E.md)
+  §1b/§8b (health/ready/lemma/live-sense/SSR **PASS** on sslip). **W1 product
+  exit still not complete:** `samskrtam.ru` remains WP on `.95`; Pages `w/` and
+  Gītā pack hrefs still 404; archive mount empty; rollback drill not run; §9
+  unsigned. Host ops: `/opt/kosha/OPS.md`.
+
 ## [0.105.0] - 2026-08-08
 ### Changed
 - **W1E live-smoke packet public-probe fill (H2345 follow-up, Grok 4.5 `grok-4.5`):**
