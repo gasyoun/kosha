@@ -14,6 +14,20 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.104.0] - 2026-08-08
+### Added
+- **W1E MG live-smoke packet (H2345, Grok 4.5 `grok-4.5`):** human-only exit
+  checklist
+  [`docs/MG_LIVE_SMOKE_PACKET_W1E.md`](https://github.com/gasyoun/kosha/blob/main/docs/MG_LIVE_SMOKE_PACKET_W1E.md)
+  (+ metadoc) with fillable tables for readiness probe, Lighthouse mobile ≥90,
+  Gītā walkthrough, citation resolve / release-asset openability, and rollback
+  confirmation. Explicit agent non-deploy fence; W1 product exit stays
+  MG-signed. Links from
+  [`KOSHA_DEPLOYMENT.md`](https://github.com/gasyoun/kosha/blob/main/KOSHA_DEPLOYMENT.md)
+  and
+  [`docs/ROADMAP_KOSHA_2026_2027.md`](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP_KOSHA_2026_2027.md).
+  Does not deploy production. Unlocks H2346+ **after** live results are filled.
+
 ## [0.103.0] - 2026-08-08
 ### Added
 - **W1D deploy bundle + runbook + local rehearsal + rollback (H2344, Grok 4.5 `grok-4.5`):**
