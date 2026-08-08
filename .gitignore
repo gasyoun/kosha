@@ -9,6 +9,10 @@ __pycache__/
 # artifacts for MG, not repo deliverables; decisions.json output lands here too
 review/
 *.sqlite
+# W2A (H2346): committed mini-archive fixture for historical-resolution tests
+# (tiny public MW-shaped sample; not bulk data/releases dumps).
+!tests/fixtures/archives/
+!tests/fixtures/archives/**
 data/raw/
 data/raw_sqlite/
 data/releases/
