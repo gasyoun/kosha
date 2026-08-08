@@ -14,6 +14,16 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.105.0] - 2026-08-08
+### Changed
+- **W1E live-smoke packet public-probe fill (H2345 follow-up, Grok 4.5 `grok-4.5`):**
+  filled
+  [`docs/MG_LIVE_SMOKE_PACKET_W1E.md`](https://github.com/gasyoun/kosha/blob/main/docs/MG_LIVE_SMOKE_PACKET_W1E.md)
+  from public HTTP + Lighthouse only (no prod credentials). Result: production
+  API routes on samskrtam.ru **404**; Pages reading Lighthouse mobile **99**;
+  Gītā pack loads but `../w/` word-page hrefs **404**; `data-v0.1.0` release
+  asset openable. **W1 product exit still not complete.**
+
 ## [0.104.0] - 2026-08-08
 ### Added
 - **W1E MG live-smoke packet (H2345, Grok 4.5 `grok-4.5`):** human-only exit

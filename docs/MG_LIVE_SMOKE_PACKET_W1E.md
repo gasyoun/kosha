@@ -2,8 +2,8 @@
 
 _Created: 08-08-2026 · Last updated: 08-08-2026_
 
-**Handoff:** [H2345](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2345-Grok_kosha_architecture-roadmap-w1e-mg-live-smoke-packet_07.08.26.md)
-(Grok 4.5 `grok-4.5` — agent half: this packet only).
+**Handoff:** [H2345](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2345-Grok_kosha_architecture-roadmap-w1e-mg-live-smoke-packet_07.08.26.md)
+(Grok 4.5 `grok-4.5` — agent half shipped; public-probe fill 08-08-2026).
 
 **Roadmap:** [ROADMAP_KOSHA_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP_KOSHA_2026_2027.md)
 W1 exit criteria — MG production deploy, Lighthouse mobile ≥90, Gītā walkthrough,
@@ -18,6 +18,10 @@ local rehearsal [`docs/DEPLOY_REHEARSAL_LOG.md`](https://github.com/gasyoun/kosh
 **Companion (P5 static head, still human-gated):**
 [`docs/P5_WORD_PAGE_EXIT_PACKET.md`](https://github.com/gasyoun/kosha/blob/main/docs/P5_WORD_PAGE_EXIT_PACKET.md).
 
+**Fill mode (this pass):** public HTTP + Lighthouse only (Grok 4.5 `grok-4.5`,
+2026-08-08T09:44Z). **No SSH, no production credentials, no systemd rollback drill.**
+W1 product exit remains **not complete** — see §8–§9.
+
 ---
 
 ## 0. Agent non-execution fence (hard)
@@ -27,10 +31,10 @@ local rehearsal [`docs/DEPLOY_REHEARSAL_LOG.md`](https://github.com/gasyoun/kosh
 | No production credentials received or used | **held** |
 | No SSH / FTP / `deploy_guhya.py --upload` / host panel | **held** |
 | No production systemd / nginx / DB swap | **held** |
-| Agent does not declare W1 complete | **held** — only MG fills § results |
+| Agent does not declare W1 complete | **held** — §8 is FAIL overall |
 
-W1 is **not** complete when this packet merges. W1 is complete only when MG fills the
-result tables below (all required rows PASS or explicit WAIVE with reason) and signs §9.
+W1 is complete only when all required rows PASS (or explicit WAIVE with reason a human
+accepts) **after a real production promote**, and §9 is signed by M.G.
 
 Agents may re-run the **local** rehearsal from H2344; that does not substitute for live smoke.
 
@@ -42,20 +46,23 @@ Use the host that is actually serving the **promoted** bundle. Defaults from
 [`KOSHA_DEPLOYMENT.md`](https://github.com/gasyoun/kosha/blob/main/KOSHA_DEPLOYMENT.md)
 Part III:
 
-| Surface | Default public URL | Role |
-|---|---|---|
-| API liveness | `https://samskrtam.ru/health` | process up |
-| API readiness | `https://samskrtam.ru/ready` | DB + version + archives |
-| Lemma card | `https://samskrtam.ru/api/v1/lemma/banD` | Salt-compatible envelope |
-| Sense / citation live | `https://samskrtam.ru/api/v1/sense/{dict}.{L}.{n}` | live resolve |
-| Sense / citation pinned | `https://samskrtam.ru/api/v1/sense/{dict}.{L}.{n}@{data_version}` | archive path |
-| SSR word page | `https://samskrtam.ru/w/{slp1}` | long-tail / head SSR |
-| Pages static SPA | `https://gasyoun.github.io/kosha/` | committed static tier |
-| Pages reading packs | `https://gasyoun.github.io/kosha/reading/` | Gītā packs (if Pages path used) |
-| Pages word head (when deployed) | `https://gasyoun.github.io/kosha/w/{token}.html` | static head (gitignored; MG deploys) |
+| Surface | Default public URL | Role | Probe 08-08-2026 |
+|---|---|---|---|
+| API liveness | `https://samskrtam.ru/health` | process up | **404** |
+| API readiness | `https://samskrtam.ru/ready` | DB + version + archives | **404** |
+| Lemma card | `https://samskrtam.ru/api/v1/lemma/banD` | Salt-compatible envelope | **404** |
+| Sense / citation live | `https://samskrtam.ru/api/v1/sense/{dict}.{L}.{n}` | live resolve | not probed (API absent) |
+| Sense / citation pinned | `https://samskrtam.ru/api/v1/sense/{dict}.{L}.{n}@{data_version}` | archive path | not probed (API absent) |
+| SSR word page | `https://samskrtam.ru/w/{slp1}` | long-tail / head SSR | **404** (`/w/BU`, sample lemmas) |
+| Path-prefix try | `https://samskrtam.ru/kosha/health` | alternate mount | **404** (also `/kosha/`, `/api/health`) |
+| Site root | `https://samskrtam.ru/` | marketing WP | **200** HTML (not kosha API) |
+| Pages static root | `https://gasyoun.github.io/kosha/` | committed static tier | **200** → redirect to `./docs-site/` |
+| Pages reading packs | `https://gasyoun.github.io/kosha/reading/` | Gītā packs | **200** |
+| Pages word head (pack href target) | `https://gasyoun.github.io/kosha/w/{token}.html` | static head | **404** (not deployed) |
+| Pages cards at pack-relative path | `https://gasyoun.github.io/kosha/docs/cards/{token}.json` | static cards under `docs/` | **200** for several head lemmas |
 
-If the live API is mounted under a path prefix (e.g. `https://samskrtam.ru/kosha/`),
-rewrite every absolute path in this packet by that prefix and record the rewrite in §9.
+**Path rewrite:** none found for the API — neither bare host nor `/kosha/` serves
+`/health` / `/ready` / `/api/v1/*`. Production kosha API is **not promoted**.
 
 **Citation durability (RISKS R5):** `KOSHA_PUBLIC_BASE` used in minting must remain a
 **durable** citation base (typically the GitHub Pages / release-asset policy), not a
@@ -83,12 +90,12 @@ Part III in full. Checklist condensed:
 
 | Step | Done? (Y/N) | Notes |
 |---|---|---|
-| Staged bundle assembled | | |
-| Previous `BUNDLE_IDENTITY` saved | | |
-| Host `.env` pinned | | |
-| systemd unit up | | |
-| nginx reloaded | | |
-| Static head / cards out-of-band (if in scope) | | |
+| Staged bundle assembled | **N** | not observed from public net |
+| Previous `BUNDLE_IDENTITY` saved | **N** | host-only |
+| Host `.env` pinned | **N** | host-only |
+| systemd unit up | **N** | `/health` 404 ⇒ unit not public |
+| nginx reloaded | **N** | no kosha locations public |
+| Static head / cards out-of-band (if in scope) | **partial** | `docs/cards/*.json` live on Pages for some keys; `w/*.html` **missing** at pack href targets |
 
 ---
 
@@ -114,19 +121,21 @@ curl -fsS 'https://samskrtam.ru/api/v1/lemma/banD' | head -c 200
 | History | `disabled` when `KOSHA_HISTORY_ENABLED=false` — must not look "ready" as a writable |
 | Lemma smoke | HTTP **200** with Salt envelope, **or** clean 404 error envelope (not 500 / HTML) |
 
-### Results (MG fills)
+### Results (public probe 08-08-2026)
 
 | Field | Value |
 |---|---|
-| Date (UTC) | |
-| Live base URL used | |
-| Repo tag / bundle id promoted | |
-| `data_version` from `/ready` or `/meta` | |
-| `GET /health` status + body snippet | |
-| `GET /ready` status + `ready` | |
-| Notable `checks[]` rows | |
-| Lemma `banD` status | |
-| PASS / FAIL | |
+| Date (UTC) | 2026-08-08T09:44Z |
+| Live base URL used | `https://samskrtam.ru` (also tried `/kosha` prefix) |
+| Repo tag / bundle id promoted | **none observable** — API not public |
+| `data_version` from `/ready` or `/meta` | n/a (404) |
+| `GET /health` status + body snippet | **404** Not Found |
+| `GET /ready` status + `ready` | **404** Not Found |
+| Notable `checks[]` rows | n/a |
+| Lemma `banD` status | **404** at `/api/v1/lemma/banD` |
+| PASS / FAIL | **FAIL** — production API surface absent |
+
+Also: `https://samskrtam.ru/` → **200** WordPress HTML (site up; kosha routes not mounted).
 
 ---
 
@@ -159,14 +168,16 @@ Accessibility/SEO are out of scope for this gate.
 |---|---|
 | Performance (mobile) | **≥ 90** on **each** of L1–L3; L4 recorded (target ≥90; note if SPA budget differs) |
 
-### Results (MG fills)
+### Results (public probe 08-08-2026)
 
 | ID | URL | Performance | Report path / screenshot | PASS? |
 |---|---|---:|---|---|
-| L1 | | | | |
-| L2 | | | | |
-| L3 | | | | |
-| L4 | | | | |
+| L1 | `https://gasyoun.github.io/kosha/w/_42_55.html` (*bhū*) | n/a | HTTP **404** — surface missing | **FAIL** (blocked) |
+| L2 | `https://samskrtam.ru/w/BU` | n/a | HTTP **404** — API/SSR missing | **FAIL** (blocked) |
+| L3 | `https://gasyoun.github.io/kosha/w/vac.html` (sample pack token) | n/a | HTTP **404** | **FAIL** (blocked) |
+| L4 | `https://gasyoun.github.io/kosha/reading/` | **99** | local `lh-reading.json` (852 695 B; FCP 1.3 s · LCP 1.3 s · TBT 110 ms · CLS 0) | **PASS** (reading only) |
+
+Gate requires L1–L3 ≥90 → **FAIL** overall (word pages not deployed). L4 alone does not pass W1.
 
 ---
 
@@ -200,19 +211,19 @@ word page (static head or SSR) with dictionary panels — same product path as P
 | Dict content | each opened page shows lemma/dict content or honest empty state (not crash) |
 | SSR tail (optional) | one out-of-head lemma via `GET /w/{slp1}` if API is live |
 
-### Results (MG fills)
+### Results (public probe 08-08-2026)
 
 | Field | Value |
 |---|---|
-| Date (UTC) | |
-| Reading base URL | |
-| Pack id (e.g. gita-1) | |
-| Verse / block id | |
-| Token count in block | |
-| Tokens that failed (list) | |
-| Sample successful word-page URL | |
-| Prose toggle checked? (Y/N/n/a) | |
-| PASS / FAIL | |
+| Date (UTC) | 2026-08-08T09:44Z |
+| Reading base URL | https://gasyoun.github.io/kosha/reading/ |
+| Pack id (e.g. gita-1) | **gita-1** — pack JS **200** at `reading/data/gita-1.js` (slug `gita-1`, 47 sentences, 570 tokens, 568 linked / 99.6%) |
+| Verse / block id | **1.1** (`dhṛtarāṣṭra uvāca` / locus Bhagavadgītā 1.1) |
+| Token count in block | **13** (all carry `href` like `../w/_44ftar_41zwra.html`) |
+| Tokens that failed (list) | **all 13 href targets** resolve under `https://gasyoun.github.io/kosha/w/…` → **404** (sampled: `_44ftar_41zwra`, `vac`, `_44armakzetra`, `kurukzetra`, …). Side note: some cards exist at `docs/cards/{token}.json` (200) but pack links point at `../w/`, not cards. |
+| Sample successful word-page URL | **none** at pack href path |
+| Prose toggle checked? (Y/N/n/a) | n/a (HTTP probe of pack data only; `data/gita_prose.js` is listed in the reading index) |
+| PASS / FAIL | **FAIL** — pack + data load; **token → word page** broken (static `w/` not on Pages; API SSR 404) |
 
 ---
 
@@ -258,18 +269,18 @@ From a `cite` object returned by the sense endpoint (or from a published data re
 | Release asset URL | opens / downloads (200) for at least one published `data-v*` asset used in production cites |
 | No host-only cite | cite URLs must not require the production host as the **only** resolve path (R5) |
 
-### Results (MG fills)
+### Results (public probe 08-08-2026)
 
 | Field | Value |
 |---|---|
-| Live sense URL tested | |
-| Live HTTP + `resolved_from` | |
-| Pinned sense URL tested | |
-| Pinned HTTP + `resolved_from` | |
-| Release asset URL opened | |
-| Asset HTTP / size note | |
-| Archive mount configured? (Y/N) | |
-| PASS / FAIL | |
+| Live sense URL tested | `https://samskrtam.ru/api/v1/sense/…` |
+| Live HTTP + `resolved_from` | **API 404** — cannot exercise live sense resolve |
+| Pinned sense URL tested | n/a (no live API / no archive mount signal) |
+| Pinned HTTP + `resolved_from` | n/a |
+| Release asset URL opened | https://github.com/gasyoun/kosha/releases/download/data-v0.1.0/datasets.json |
+| Asset HTTP / size note | **200**, **11 728** bytes; tag `data-v0.1.0` has **8** assets (incl. `union_headwords.tsv`, `lemma_frequency.tsv`, …) |
+| Archive mount configured? (Y/N) | **N** (public — no `/ready` to confirm host mount) |
+| PASS / FAIL | **FAIL** overall (live/pinned sense blocked). **Partial PASS** on release-asset openability alone (R1 durable tier works without samskrtam.ru). |
 
 ---
 
@@ -312,37 +323,47 @@ curl -fsS 'http://127.0.0.1:8000/api/v1/lemma/banD' | head -c 200
 | Post-rollback `/ready` | 200 + `ready: true` (or documented expected fail if previous was intentionally incomplete) |
 | Lemma smoke | 200 or clean 404 envelope |
 
-### Results (MG fills)
+### Results (public probe 08-08-2026)
 
 | Field | Value |
 |---|---|
-| Date (UTC) | |
-| Previous bundle id / stamp | |
-| New bundle id that was rolled back from | |
-| Identity live **after** drill | |
-| `/health` after rollback | |
-| `/ready` after rollback | |
-| Lemma smoke after rollback | |
-| Re-promoted new bundle after drill? (Y/N) | |
-| PASS / FAIL | |
+| Date (UTC) | 2026-08-08T09:44Z |
+| Previous bundle id / stamp | n/a — no public promote observed |
+| New bundle id that was rolled back from | n/a |
+| Identity live **after** drill | n/a |
+| `/health` after rollback | not run (host-only; no public unit) |
+| `/ready` after rollback | not run |
+| Lemma smoke after rollback | not run |
+| Re-promoted new bundle after drill? (Y/N) | n/a |
+| PASS / FAIL | **FAIL** / blocked — requires host access after first promote |
 
 ---
 
-## 8. Gate summary (MG fills after live run)
+## 8. Gate summary (after public probe 08-08-2026)
 
 | Gate | Threshold | Result (PASS/FAIL/WAIVE) | Evidence link / note |
 |---|---|---|---|
-| Pre-flight deploy | §2 all critical steps | | |
-| Readiness | §3 | | |
-| Lighthouse mobile | ≥90 on L1–L3 | | |
-| Gītā walkthrough | §5 | | |
-| Citation resolve | §6 | | |
-| Rollback | §7 | | |
+| Pre-flight deploy | §2 all critical steps | **FAIL** | API not public; static `w/` missing |
+| Readiness | §3 | **FAIL** | `/health` `/ready` `/api/v1/*` → 404 |
+| Lighthouse mobile | ≥90 on L1–L3 | **FAIL** | L1–L3 surfaces 404; L4 reading **99** only |
+| Gītā walkthrough | §5 | **FAIL** | pack OK; all verse-1.1 `../w/` hrefs 404 |
+| Citation resolve | §6 | **FAIL** (partial) | live sense blocked; **data-v0.1.0** asset 200 |
+| Rollback | §7 | **FAIL** / blocked | host-only; no first promote |
 
-**W1 product exit:** all required gates **PASS** (WAIVE only with written reason a human accepts).
+**W1 product exit:** **not complete** (required gates FAIL).
 
-**W2 unlock:** only after this summary is fully filled and §9 is signed. Next agent series:
-**H2346+** (W2 citable v1) — do **not** start W2 engineering on agent say-so alone.
+**W2 unlock:** still gated. Next agent series **H2346+** only after a human promote
+clears §3–§7 and §9 is signed.
+
+### Residual human work (ordered)
+
+1. **Promote** kosha API per `KOSHA_DEPLOYMENT.md` Part III so `/health` and `/ready` are public.
+2. Deploy regenerable **static head** so pack hrefs `../w/{token}.html` resolve (or retarget links to live cards/SSR).
+3. Re-run Lighthouse on three real `/w/` pages; keep reading L4 as optional.
+4. Re-walk Gītā 1.1 (13 tokens) on the fixed word-page path.
+5. Exercise live + pinned sense resolve with real L-numbers from the promoted DB.
+6. Host rollback drill with retained `BUNDLE_IDENTITY`.
+7. Sign §9.
 
 ---
 
@@ -350,13 +371,13 @@ curl -fsS 'http://127.0.0.1:8000/api/v1/lemma/banD' | head -c 200
 
 | Field | Value |
 |---|---|
-| Operator | M.G. |
-| Date (UTC) | |
-| Live API base | |
-| Live static base | |
-| Bundle / tag promoted | |
-| W1 product exit | ☐ not yet · ☐ complete |
-| Notes / waivers | |
+| Operator | public probe by Grok 4.5 (`grok-4.5`) — **not** M.G. product sign-off |
+| Date (UTC) | 2026-08-08T09:44Z |
+| Live API base | **absent** (`https://samskrtam.ru` serves WP; no kosha routes) |
+| Live static base | `https://gasyoun.github.io/kosha/` (reading + docs-site; `w/` missing) |
+| Bundle / tag promoted | none observed for API |
+| W1 product exit | ☑ **not yet** · ☐ complete |
+| Notes / waivers | Public-probe fill only. No WAIVE of FAIL gates. M.G. must re-fill after promote and tick complete. |
 
 ---
 
@@ -369,19 +390,21 @@ curl -fsS 'http://127.0.0.1:8000/api/v1/lemma/banD' | head -c 200
 | [docs/DEPLOY_REHEARSAL_LOG.md](https://github.com/gasyoun/kosha/blob/main/docs/DEPLOY_REHEARSAL_LOG.md) | Local fixture rehearsal (agent) |
 | [docs/P5_WORD_PAGE_EXIT_PACKET.md](https://github.com/gasyoun/kosha/blob/main/docs/P5_WORD_PAGE_EXIT_PACKET.md) | Static head / Lighthouse / Gītā product exit (P5) |
 | [src/kosha/api/readiness.py](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/readiness.py) | `/ready` checks (W1C) |
-| GTD row | Existing **kosha P5 product exit (live checks)** `@DO` — fill **this** packet as the W1 superseding checklist |
+| GTD row | Existing **kosha W1 / P5 live checks** `@DO` — this packet is the superseding checklist |
 
 ---
 
-## 11. Agent close evidence (this half)
+## 11. Agent evidence
 
 | Item | Value |
 |---|---|
 | Packet path | `docs/MG_LIVE_SMOKE_PACKET_W1E.md` |
 | Model | Grok 4.5 (`grok-4.5`) |
-| Production host touched by agent | **no** |
+| Production host credentials used | **no** |
 | W1 declared complete by agent | **no** |
-| Next after live smoke | H2346+ W2 (citable v1) — only when §8–§9 filled |
+| Public probe date | 2026-08-08T09:44Z |
+| Lighthouse artifact (local, not committed) | `lh-reading.json` Performance **99** on reading/ |
+| Next after live smoke | H2346+ W2 — only when §8–§9 PASS after real promote |
 
 ---
 
