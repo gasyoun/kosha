@@ -42,6 +42,7 @@ readiness). Agents assemble the packet; M.G. deploys, measures, and signs.
 | Date | Change |
 |---|---|
 | 08-08-2026 | Initial metadoc with H2345 packet |
+| 08-08-2026 | Public-probe fill: API 404, reading LH 99, Gītā w/ 404, data-v0.1.0 asset OK; W1 still open |
 
 ---
 
