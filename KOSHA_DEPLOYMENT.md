@@ -212,7 +212,9 @@ curl -fsS 'https://samskrtam.ru/api/v1/lemma/banD' | head -c 200
 ```
 
 Full live-smoke (Lighthouse mobile ≥90, Gītā walkthrough, citation resolve,
-rollback confirmation) is the **H2345** packet — not this handoff.
+rollback confirmation) is the **H2345** packet:
+[`docs/MG_LIVE_SMOKE_PACKET_W1E.md`](https://github.com/gasyoun/kosha/blob/main/docs/MG_LIVE_SMOKE_PACKET_W1E.md)
+— not this handoff.
 
 ### III.6 Static / Pages tier
 
@@ -271,7 +273,9 @@ Machine-readable restore list: the `rollback` object inside
 - Point citation minting at the deployment host as the only resolve path
   (RISKS R5).
 - Skip `/ready` after a DB swap.
-- Declare W1 complete before H2345 live-smoke results are filled by M.G.
+- Declare W1 complete before
+  [`docs/MG_LIVE_SMOKE_PACKET_W1E.md`](https://github.com/gasyoun/kosha/blob/main/docs/MG_LIVE_SMOKE_PACKET_W1E.md)
+  result tables are filled and signed by M.G.
 
 ---
 
@@ -296,6 +300,7 @@ Full API contract:
 |---|---|
 | [`data/manifest/deploy_bundle.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/deploy_bundle.json) | Machine recipe |
 | [`docs/DEPLOY_REHEARSAL_LOG.md`](https://github.com/gasyoun/kosha/blob/main/docs/DEPLOY_REHEARSAL_LOG.md) | Last committed local rehearsal evidence |
+| [`docs/MG_LIVE_SMOKE_PACKET_W1E.md`](https://github.com/gasyoun/kosha/blob/main/docs/MG_LIVE_SMOKE_PACKET_W1E.md) | H2345 MG live-smoke (Lighthouse / Gītā / citation / rollback) |
 | [`docs/PIPELINE_OPERATOR_RUNBOOK.md`](https://github.com/gasyoun/kosha/blob/main/docs/PIPELINE_OPERATOR_RUNBOOK.md) | Build stages + static generators |
 | [`ARCHITECTURE.md`](https://github.com/gasyoun/kosha/blob/main/ARCHITECTURE.md) § A3 | Local-first / MG-deploys rule |
 
