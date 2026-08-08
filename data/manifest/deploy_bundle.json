@@ -1,0 +1,131 @@
+{
+  "manifest_version": "1.0.0",
+  "schema": "kosha-deploy-bundle-v1",
+  "bundle_id": "kosha-public-api-v1",
+  "generated": "2026-08-08",
+  "architecture": "https://github.com/gasyoun/kosha/blob/main/docs/ARCHITECTURE_KOSHA_PLATFORM.md",
+  "runbook": "https://github.com/gasyoun/kosha/blob/main/KOSHA_DEPLOYMENT.md",
+  "note_for_agents": "Versioned deployment-bundle recipe (W1D / H2344). Assemble locally with `python scripts/assemble_deploy_bundle.py --profile fixture`. Never embed production credentials. Production deploy is MG-only (A3).",
+  "components": [
+    {
+      "id": "installable-package",
+      "kind": "code",
+      "paths": [
+        "pyproject.toml",
+        "requirements.txt",
+        "requirements.lock.txt",
+        "src/kosha"
+      ],
+      "required": true,
+      "role": "Installable Python package + locked runtime deps"
+    },
+    {
+      "id": "fastapi-app",
+      "kind": "code",
+      "paths": ["app"],
+      "required": true,
+      "role": "FastAPI entrypoint (app.main:app) and thin route layer"
+    },
+    {
+      "id": "core-database",
+      "kind": "data",
+      "paths": ["data/db/kosha.db"],
+      "required": true,
+      "role": "Core dictionary SQLite. Fixture profile rewrites to kosha_fixture.db. Production path is staged locally then copied by MG — never committed."
+    },
+    {
+      "id": "optional-attached-stores",
+      "kind": "data",
+      "paths": [
+        "data/db/kosha_inflections.db",
+        "data/db/kosha_layers.db"
+      ],
+      "required": false,
+      "role": "W1A ATTACH stores when split; absent while monolith remains default"
+    },
+    {
+      "id": "citation-archive-mount",
+      "kind": "data",
+      "paths": ["data/releases"],
+      "required": false,
+      "role": "Immutable sense archives (KOSHA_ARCHIVE_DIR). Empty = unconfigured readiness, not fail."
+    },
+    {
+      "id": "env-template",
+      "kind": "config-template",
+      "paths": [".env.example"],
+      "required": true,
+      "role": "Documented env keys only — never .env or .env.deploy"
+    },
+    {
+      "id": "surface-registry",
+      "kind": "docs",
+      "paths": [
+        "data/manifest/surfaces.json",
+        "data/manifest/deploy_bundle.json"
+      ],
+      "required": true,
+      "role": "Machine-readable surface + bundle recipes shipped with the tree"
+    },
+    {
+      "id": "deploy-runbook",
+      "kind": "docs",
+      "paths": ["KOSHA_DEPLOYMENT.md"],
+      "required": true,
+      "role": "Human deploy + rollback procedure (MG executes Part II)"
+    },
+    {
+      "id": "operator-scripts",
+      "kind": "script",
+      "paths": [
+        "scripts/assemble_deploy_bundle.py",
+        "scripts/rehearse_deploy.py",
+        "scripts/build_db.py"
+      ],
+      "required": true,
+      "role": "Assemble, local-rehearse, and rebuild fixture/core stores"
+    }
+  ],
+  "env": {
+    "KOSHA_CORE_DB_PATH": "required",
+    "KOSHA_PUBLIC_BASE": "required",
+    "CORS_ORIGINS": "required",
+    "KOSHA_HISTORY_ENABLED": "optional",
+    "KOSHA_EXPECTED_DATA_VERSION": "optional",
+    "KOSHA_INFLECTIONS_DB_PATH": "optional",
+    "KOSHA_LAYERS_DB_PATH": "optional",
+    "KOSHA_ARCHIVE_DIR": "optional",
+    "HISTORY_DB_PATH": "optional",
+    "HISTORY_IP_SALT": "production-only-secret",
+    "FTP_HOST": "production-only-secret",
+    "FTP_USER": "production-only-secret",
+    "FTP_PASS": "production-only-secret"
+  },
+  "runtime": {
+    "serve_command": "uvicorn app.main:app --host 127.0.0.1 --port {port}",
+    "health_path": "/health",
+    "ready_path": "/ready",
+    "port": 8000,
+    "working_directory": "repo root (or bundle payload root after unpack)",
+    "python": ">=3.12"
+  },
+  "rollback": {
+    "previous_bundle_identity": "see sibling BUNDLE_IDENTITY.json from the prior successful assemble under data/deploy_bundles/",
+    "restore_steps": [
+      "Stop the kosha systemd unit (MG only on production host).",
+      "Restore the previous payload tree (or previous git tag + previous kosha.db / attached DBs) from the prior BUNDLE_IDENTITY.json digests.",
+      "Restore the previous .env values that named those paths (no secret rotation required for pure rollback).",
+      "Start the unit; confirm GET /health → 200 and GET /ready → 200.",
+      "Spot-check one lemma (e.g. GET /api/v1/lemma/banD) and one citation resolve if archives were mounted."
+    ],
+    "verify_after": [
+      "curl -fsS http://127.0.0.1:8000/health",
+      "curl -fsS http://127.0.0.1:8000/ready",
+      "curl -fsS 'http://127.0.0.1:8000/api/v1/lemma/banD' | head -c 200"
+    ]
+  },
+  "profiles": {
+    "fixture": "Local CI/agent rehearsal against tests/fixtures-built kosha_fixture.db — zero prod contact.",
+    "staged": "Human-prepared non-prod paths on a workstation; still never production credentials."
+  }
+}
