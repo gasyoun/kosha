@@ -1,6 +1,6 @@
 # Kosha roadmap — August 2026 to July 2027
 
-_Created: 30-07-2026 · Last updated: 30-07-2026_
+_Created: 30-07-2026 · Last updated: 08-08-2026_
 
 The governing decisions and autonomy contract live in the
 [plan of record](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md).
@@ -42,7 +42,9 @@ Deliverables:
 - versioned deployment bundle, restored deployment runbook, local deployment
   rehearsal, and rollback packet;
 - MG production deploy, Lighthouse mobile score at least 90, Gītā walkthrough,
-  citation checks, and rollback confirmation.
+  citation checks, and rollback confirmation — fillable packet:
+  [MG_LIVE_SMOKE_PACKET_W1E.md](https://github.com/gasyoun/kosha/blob/main/docs/MG_LIVE_SMOKE_PACKET_W1E.md)
+  (H2345 agent half; W1 product exit remains MG-signed).
 
 Non-goal: Claude Code never receives production credentials or performs the
 production deployment.
