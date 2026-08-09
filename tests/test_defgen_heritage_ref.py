@@ -30,16 +30,23 @@ ARMS = ["A0_random_floor", "A1_chat_ctx", "A2_chat_noctx", "A3_reasoner_ctx",
 
 
 def load_module():
-    """Import the harness without executing its CLI. Skips when the local
-    SanskritLexicography sibling (restricted Heritage layer) is absent."""
+    """Import the harness without executing its CLI.
+
+    Skips rather than fails when the eval-only toolchain is absent: `sacrebleu`
+    is a research dependency, not a kosha runtime one, and the restricted
+    Heritage layer lives in a sibling checkout. CI has neither, so the
+    harness-level tests below are local-only by design — the data-level tests
+    (digests present, no gloss text committed, stored numbers back the claims)
+    still run everywhere.
+    """
     spec = importlib.util.spec_from_file_location(
         "defgen_heritage_ref", SCRIPTS / "defgen_heritage_ref.py")
     mod = importlib.util.module_from_spec(spec)
     sys.path.insert(0, str(SCRIPTS))
     try:
         spec.loader.exec_module(mod)
-    except FileNotFoundError as exc:  # .env / sibling missing
-        pytest.skip("harness deps unavailable: %s" % exc)
+    except (ImportError, FileNotFoundError) as exc:  # sacrebleu / .env / sibling missing
+        pytest.skip("eval-only harness deps unavailable: %s" % exc)
     return mod
 
 
