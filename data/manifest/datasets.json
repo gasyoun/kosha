@@ -1911,6 +1911,25 @@
    ],
    "notes": "PRIVATE repo (rights: raws/ + corpus/ carry PWG German and modern in-copyright Russian corpus material — R2.2). One logical store, promoter-only tm/ writes. Never flip visibility without /publish-safety-check.",
    "data_statement": "https://github.com/gasyoun/pwg-ru-data/blob/main/README.md"
+  },
+  {
+   "id": "defgen-heritage-second-reference",
+   "title": "Definition-generation eval: Heritage (Huet) French glosses as an independent second reference (H2408)",
+   "tier": "public",
+   "in_release": "not-applicable",
+   "format": "tsv + jsonl + json",
+   "rows": 3742,
+   "size_bytes": 271718,
+   "keying": "heritage_ref_subset.tsv (slp1 -> DICO anchor + gloss SHA-256 + word count; NO gloss text) · judge_fr_<arm>.jsonl (slp1 -> cross-lingual adequacy 0-5, 5 arms x 333) · heritage_ref_per_item.tsv (arm x slp1 -> chrF vs MW/FR/multi-ref + token-F1) · heritage_ref_scores.json (summary, gates, paired MW-FR premium with bootstrap CI)",
+   "source_repo": "https://github.com/gasyoun/kosha",
+   "source_path": "data/eval/defgen/heritage/",
+   "builder": "scripts/defgen_heritage_ref.py (build/metrics/judge/report) + defgen_heritage_delta.py + defgen_heritage_coverage.py, H2408, Fable 5 (claude-fable-5) 09-08-2026",
+   "consumers": [
+    "docs/DEFGEN_HERITAGE_SECOND_REFERENCE_EVAL.md (report of record: reference-invariant arm ranking + MW-familiarity premium +0.13..+0.25)",
+    "docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md next-step #4 (closed by this dataset)"
+   ],
+   "notes": "PUBLIC tier despite consuming the restricted Heritage layer (D20, LGPLLR, heritage-dico-gloss): gloss TEXT is deliberately never copied into kosha — the subset carries mw_key1 + DICO anchor + SHA-256 + word count, and defgen_heritage_ref.py REFUSES to score if any digest stops matching the local SanskritLexicography file. Reproduction therefore requires that sibling checkout. Derived from the frozen 500-headword MW sample (seed 730, H730) intersected with Heritage = 333 items; the subset is high-frequency-skewed by Heritage coverage, so its numbers are not comparable to the published 500-item table.",
+   "data_statement": "docs/DEFGEN_HERITAGE_SECOND_REFERENCE_EVAL.md"
   }
  ]
 }

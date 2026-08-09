@@ -14,6 +14,30 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.110.0] - 2026-08-09
+### Added
+- **Heritage (Huet) French glosses as an independent second reference for the
+  definition-generation eval (Fable 5 `claude-fable-5`, H2408):** the five frozen
+  generation arms from H730/H972 are re-scored against Gérard Huet's French glosses on the
+  333-headword MW∩Heritage subset — the parent protocol's own ranked next-step #4.
+  **The arm ranking is reference-invariant** (`F1_fable_ctx > A1_chat_ctx > A3_reasoner_ctx
+  > A2_chat_noctx > A0_random_floor` under both the MW judge and the cross-lingual French
+  judge), and the paired MW-familiarity premium is real but small: +0.13 to +0.25 on a 0–5
+  scale, bootstrap CI excluding 0 for every system arm (sign p ≤ 1.5e-4), largest for the
+  no-context memorisation arm A2 (+0.246) and smallest for the best arm F1 (+0.132) — the
+  direction the contamination caveat predicted. Cross-lingual surface metrics are
+  near-degenerate (token-F1 0.012–0.037 vs 0.101–0.338 against MW), so the judged score is
+  the measurement and chrF-FR is decoration. Report:
+  [docs/DEFGEN_HERITAGE_SECOND_REFERENCE_EVAL.md](https://github.com/gasyoun/kosha/blob/main/docs/DEFGEN_HERITAGE_SECOND_REFERENCE_EVAL.md)
+  (+ metadoc); harness
+  [scripts/defgen_heritage_ref.py](https://github.com/gasyoun/kosha/blob/main/scripts/defgen_heritage_ref.py),
+  [scripts/defgen_heritage_delta.py](https://github.com/gasyoun/kosha/blob/main/scripts/defgen_heritage_delta.py),
+  [scripts/defgen_heritage_coverage.py](https://github.com/gasyoun/kosha/blob/main/scripts/defgen_heritage_coverage.py);
+  data [data/eval/defgen/heritage/](https://github.com/gasyoun/kosha/tree/main/data/eval/defgen/heritage).
+  No generation was re-run (frozen `gen_<arm>.jsonl` reused); no Heritage gloss text is
+  committed — the subset carries SHA-256 digests instead, and the scorer refuses to run on a
+  drifted join (LGPLLR, `tier=restricted`).
+
 ## [0.109.0] - 2026-08-09
 ### Fixed
 - **FTPS self-signed hosting cert + no-HASH ProFTPD (Grok 4.5 `grok-4.5`):**
