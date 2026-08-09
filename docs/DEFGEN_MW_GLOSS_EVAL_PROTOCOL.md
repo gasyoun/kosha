@@ -1,6 +1,6 @@
 # Definition-generation + gloss-grounded WSD eval over MW glosses — protocol + results
 
-_Created: 11-07-2026 · Last updated: 15-07-2026_
+_Created: 11-07-2026 · Last updated: 09-08-2026_
 
 **What this is.** The first definition-generation ("definition modeling") evaluation run on
 Sanskrit lexicographic data from the CDSL side: a frozen 500-headword Monier-Williams sample,
@@ -222,8 +222,15 @@ per-item: [scores_per_item.tsv](https://github.com/gasyoun/kosha/blob/main/data/
 2. **DCS `m_wordsem` inventory recovery** → gold-scored WSD (the Hellwig-comparable track).
 3. **Gold cleaning pass** over A3 artifacts (frozen sample v2; keep v1 byte-stable for
    comparability).
-4. **Second reference** — D20 `heritage_dico_gloss.tsv` French glosses as a multi-reference
-   or cross-lingual arm.
+4. ~~**Second reference** — D20 `heritage_dico_gloss.tsv` French glosses as a
+   multi-reference or cross-lingual arm.~~ **DONE 09-08-2026 (H2408)** —
+   [DEFGEN_HERITAGE_SECOND_REFERENCE_EVAL.md](https://github.com/gasyoun/kosha/blob/main/docs/DEFGEN_HERITAGE_SECOND_REFERENCE_EVAL.md):
+   all five frozen arms re-scored on the 333-headword MW∩Heritage subset against Huet's
+   French glosses. **The arm ranking is reference-invariant** (F1 > A1 > A3 > A2 > A0 under
+   both judges), and the MW-familiarity premium is real but small (+0.13 to +0.25 on 0–5,
+   CI excludes 0 for every system arm; largest for the memorisation arm A2, smallest for the
+   best arm F1). Cross-lingual surface metrics are near-degenerate — the judged score is the
+   measurement there. That run also supersedes this list's #4 with its own next steps.
 5. **BERTScore / embedding metric** once a local torch stack is justified.
 6. **More models** — the arms are two DeepSeek variants + floor; adding a non-DeepSeek
    model family removes a same-vendor blind spot.
