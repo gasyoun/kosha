@@ -1,0 +1,694 @@
+{
+  "handoff": "H2408",
+  "purpose": "Heritage (Huet) French glosses as an independent second reference for the H730/H972 definition-generation eval (protocol next-step #4)",
+  "n_frozen_sample": 500,
+  "n_subset": 333,
+  "n_skipped": 167,
+  "cells": {
+    "high/mono": 52,
+    "high/poly2_4": 47,
+    "high/poly5p": 49,
+    "low/mono": 13,
+    "low/poly2_4": 22,
+    "low/poly5p": 26,
+    "mid/mono": 37,
+    "mid/poly2_4": 36,
+    "mid/poly5p": 51
+  },
+  "rights": "Heritage gloss_fr is LGPLLR (composition with CC BY-SA approved by Gerard Huet 03-07-2026), registered tier=restricted in data/manifest/datasets.json. Gloss TEXT is deliberately NOT copied here; the sha256 + word count pin the join instead.",
+  "inputs": {
+    "frozen_sample.tsv": "a259df13ac9ca3a778eb221a29c11f6505622c21278bff1d767ca84886aacffc",
+    "attestations.jsonl": "82af2304d4e86e80b8c66b18b108e90fe8e253a4e0fad8ae9002089e43de5338",
+    "heritage_dico_gloss.tsv": "e443d582363bf0d0f2c978d4e6ef2f047eb16d2b5b8297c29ef2274dde730741"
+  },
+  "skipped": [
+    {
+      "slp1": "hvA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "satkf",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "nityam",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "ABa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "pippalI",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "smf",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "agratas",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "mad",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "hotf",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "sTa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vAsin",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "pfzWatas",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "uddiS",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "devatA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "yAma",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "prakAra",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "jAla",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "udBava",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "Seza",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vfdDa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "BadraSriya",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "atiBA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "mfqAnI",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "niraBra",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "sudUra",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "nAwakIyA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "anavasita",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "viPal",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "srOva",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "truwI",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "natANgI",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "parivrajyA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "suKatama",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "koSavatI",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "pUrvadakziRa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "tryambakA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "yaTAsAmarTyam",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "klAnti",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "apalApa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "niSITinI",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "tapAtyaya",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "araRyaka",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "bahulIBU",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "avAcI",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "avaruj",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "toyaniDi",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "mAnavatI",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "asulaBa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "yaTAkArya",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "GanAtyaya",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "aByudgati",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "viSrARita",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "duhitfmat",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "muravErin",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "mfgendrAsana",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "suruNgA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "anuzic",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "atipramARa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "viyA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "kiMkarI",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "sumuKA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "durmantrin",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "dvaMdvin",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "divizad",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "mAnasI",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vakriman",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "aBimantf",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "mahAniSA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "prAtyayika",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vfdDaSravas",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "prasvApana",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "ananyagati",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vimanyu",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "apAvft",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "SrAva",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "mIQuzwama",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vIjana",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "aBIti",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "sidDAdeSa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "karAlA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "prasADikA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "koSavat",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "SataDfti",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "tEza",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "DUmorRA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "kAsAra",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "dehaja",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vitanu",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "akalya",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "hAstina",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "puzpakAla",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "kalakaRWa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "tajja",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "saMniDAtf",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "uttApa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "munIndra",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "ratnapraBA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "varRikA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "tArAvalI",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "visara",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "nirvAda",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "SaktiDara",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "maDumatI",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vipralApa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "BAvinI",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "arTatas",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "Sataparvan",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vEzayika",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "anAsTA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "prasAra",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "Badrasena",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "suparRaka",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "pAkala",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vajratuRqa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "suzamA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "unnayana",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "nirasana",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "pradyotana",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "jEvAtfka",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vAlikA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "jaraWa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "darImuKa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "mahAnanda",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "Avij",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vitras",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "saMtan",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "saMgA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "ApannasattvA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "viliK",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "rAjakoSAtakI",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "niSri",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "avamantf",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "indriyArTa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "ArakUwa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "BAgyavat",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "pinah",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "matsyaRqikA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "niH",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "kirAtatikta",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "jImUtaka",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "paricArikA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "etAdfSa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "pramArjana",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "DvAna",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "gulmaka",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "mahIBft",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "antima",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "viriYci",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "upaSamanIya",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "nimIlana",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "rAjata",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "antarAya",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "nicaya",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vAsavadattA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "varjam",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "uzwrikA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "prAtiBAvya",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "karuRA",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "apagama",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vinDyavAsinI",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "manIzita",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "durBaga",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vedagarBa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vApa",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "udBid",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "vyaYjaka",
+      "reason": "no_heritage_entry"
+    },
+    {
+      "slp1": "prAcIna",
+      "reason": "no_heritage_entry"
+    }
+  ]
+}
