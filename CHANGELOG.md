@@ -14,6 +14,18 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.109.0] - 2026-08-09
+### Fixed
+- **FTPS self-signed hosting cert + no-HASH ProFTPD (Grok 4.5 `grok-4.5`):**
+  [`FTPSTransport`](https://github.com/gasyoun/kosha/blob/main/src/kosha/backup/transport.py)
+  gains `verify_tls` (default True) + `ssl_context(verify=…)`;
+  [`deploy_guhya.py`](https://github.com/gasyoun/kosha/blob/main/scripts/deploy_guhya.py)
+  honors `FTP_TLS_INSECURE=1` / `FTP_SSL_VERIFY=0` for samskrtam.ru / t3cloud
+  self-signed certs (still encrypted — not plaintext). When the server has no
+  XSHA256/HASH (ProFTPD FEAT), verify by TLS **RETR** re-download + local
+  sha256 before promote. Documented in `.env.deploy.example`. Tests in
+  `tests/test_backup_transport.py`.
+
 ## [0.108.0] - 2026-08-08
 ### Added
 - **W2A immutable sense archives + historical-resolution tests (H2346, Grok 4.5

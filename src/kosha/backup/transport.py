@@ -76,6 +76,20 @@ class Transport(Protocol):
     def size(self, remote_dir: str, name: str) -> int: ...
 
 
+def ssl_context(*, verify: bool = True) -> ssl.SSLContext:
+    """Build the TLS context for FTPS.
+
+    Default is system CA verify. Shared hosting (e.g. t3cloud / samskrtam.ru
+    ProFTPD) often serves a self-signed cert; set ``verify=False`` (or the
+    deploy env flag ``FTP_TLS_INSECURE=1``) so AUTH TLS still runs — credentials
+    and data stay encrypted, only hostname/CA matching is relaxed. Never use
+    plaintext FTP as a workaround for a bad cert.
+    """
+    if verify:
+        return ssl.create_default_context()
+    return ssl._create_unverified_context()
+
+
 @dataclass
 class FTPSTransport:
     """Explicit-TLS FTP. Refuses to operate on an unencrypted connection."""
@@ -85,10 +99,11 @@ class FTPSTransport:
     password: str
     port: int = 21
     timeout: int = 60
+    verify_tls: bool = True
     _ftp: ftplib.FTP_TLS | None = field(default=None, repr=False)
 
     def __enter__(self) -> "FTPSTransport":
-        context = ssl.create_default_context()
+        context = ssl_context(verify=self.verify_tls)
         ftp = ftplib.FTP_TLS(context=context)
         ftp.connect(self.host, self.port, timeout=self.timeout)
         # AUTH TLS on the control channel, then PROT P for the data channel.
@@ -130,20 +145,20 @@ class FTPSTransport:
             self.ftp.storbinary(f"STOR {name}", handle, blocksize=CHUNK)
 
     def remote_sha256(self, remote_dir: str, name: str) -> str | None:
-        """Ask the server to hash the uploaded file. `None` ⇒ unsupported.
+        """Prove the remote bytes match. `None` ⇒ could not verify.
 
-        The two commands answer in different shapes, and only one of them puts
-        the digest last:
+        Prefer server-side digests when advertised:
 
             XSHA256 f.bin  ->  213 <digest>
             HASH    f.bin  ->  213 SHA-256 0-1048576 <digest> f.bin
 
-        Reading `split()[-1]` therefore returns the *filename* for a `HASH`
-        reply, which is not 64 hex characters, so the method fell through to
-        `None` — and `upload()` treats `None` as "this server proved nothing"
-        and refuses to promote. On a server offering `HASH` but not the older
-        `XSHA256`, every backup upload was rejected. Scan for the first 64-hex
-        token instead of assuming a position.
+        Scan for the first 64-hex token (HASH puts the filename last).
+
+        Shared hosting ProFTPD (samskrtam.ru / t3cloud) often has AUTH TLS
+        but **no** HASH/XSHA256 in FEAT. Fall back to a full TLS ``RETR`` of
+        the just-uploaded temp name and hash the stream client-side — still
+        encrypted, still refuse-to-promote on mismatch, costs a second
+        transfer. SIZE alone is never treated as proof.
         """
         self.ensure_dir(remote_dir)
         for command in (f"XSHA256 {name}", f"HASH {name}"):
@@ -155,7 +170,20 @@ class FTPSTransport:
                 token = raw.split("=")[-1].strip().lower()
                 if len(token) == 64 and all(c in "0123456789abcdef" for c in token):
                     return token
-        return None
+        return self._sha256_via_retr(name)
+
+    def _sha256_via_retr(self, name: str) -> str | None:
+        """Client-side digest by re-downloading ``name`` over the TLS data channel."""
+        digest = hashlib.sha256()
+        try:
+            self.ftp.retrbinary(
+                f"RETR {name}",
+                lambda chunk: digest.update(chunk),
+                blocksize=CHUNK,
+            )
+        except ftplib.all_errors:
+            return None
+        return digest.hexdigest()
 
     def rename(self, remote_dir: str, source: str, target: str) -> None:
         self.ensure_dir(remote_dir)
@@ -252,10 +280,9 @@ def upload(
     remote_digest = transport.remote_sha256(remote_dir, scratch)
     if remote_digest is None:
         raise DigestUnsupported(
-            f"{name}: the server proved no digest for {scratch}. Refusing to "
-            "promote an unverified backup — the temporary name is left in "
-            "place for inspection. Enable XSHA256/HASH on the server, or use "
-            "a transport that can verify."
+            f"{name}: could not verify remote bytes for {scratch} "
+            "(no XSHA256/HASH reply and re-download hash failed). Refusing to "
+            "promote — temporary name left for inspection."
         )
     if remote_digest != digest:
         raise DigestMismatch(
