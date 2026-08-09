@@ -11,7 +11,7 @@ import pytest
 
 from kosha.backup.transport import (
     DigestMismatch, DigestUnsupported, FTPSTransport, FakeTransport, sha256_of,
-    temp_name, upload,
+    ssl_context, temp_name, upload,
 )
 
 
@@ -119,6 +119,10 @@ class _ReplyFTP:
             raise ftplib.error_perm("500 unknown command")
         return self.replies[verb]
 
+    def retrbinary(self, command, callback, blocksize=8192):
+        # Default: no redownload path — exercises "hash unsupported and RETR fails".
+        raise ftplib.error_perm("550 not found")
+
 
 def _transport_answering(replies):
     # `_ftp` is the backing field; the `ftp` property guards against use
@@ -148,6 +152,57 @@ def test_hash_reply_is_parsed_even_though_the_digest_is_not_last():
 def test_a_server_answering_neither_still_reports_none():
     transport = _transport_answering({})
     assert transport.remote_sha256("guhya", "kosha.db") is None
+
+
+def test_ssl_context_defaults_to_verified():
+    ctx = ssl_context(verify=True)
+    assert ctx.verify_mode == __import__("ssl").CERT_REQUIRED
+
+
+def test_ssl_context_insecure_skips_hostname_and_ca():
+    ctx = ssl_context(verify=False)
+    # Unverified context: either CERT_NONE or check_hostname False depending on
+    # Python build — both mean the self-signed hosting path can connect.
+    assert ctx.check_hostname is False or ctx.verify_mode == __import__("ssl").CERT_NONE
+
+
+def test_ftps_transport_defaults_to_verify_tls_true():
+    t = FTPSTransport(host="example.invalid", user="u", password="p")
+    assert t.verify_tls is True
+
+
+def test_tls_verify_from_env_flags():
+    import deploy_guhya
+
+    assert deploy_guhya.tls_verify_from_env({}) is True
+    assert deploy_guhya.tls_verify_from_env({"FTP_TLS_INSECURE": "1"}) is False
+    assert deploy_guhya.tls_verify_from_env({"FTP_TLS_INSECURE": "yes"}) is False
+    assert deploy_guhya.tls_verify_from_env({"FTP_SSL_VERIFY": "0"}) is False
+    assert deploy_guhya.tls_verify_from_env({"FTP_SSL_VERIFY": "false"}) is False
+    assert deploy_guhya.tls_verify_from_env({"FTP_SSL_VERIFY": "1"}) is True
+
+
+class _RetrFTP(_ReplyFTP):
+    """Digest commands fail; RETR returns fixed payload for client-side hash."""
+
+    def __init__(self, payload: bytes):
+        super().__init__({})
+        self.payload = payload
+
+    def retrbinary(self, command, callback, blocksize=8192):
+        assert command.startswith("RETR ")
+        # chunk to exercise the callback path
+        for i in range(0, len(self.payload), 8):
+            callback(self.payload[i : i + 8])
+
+
+def test_remote_sha256_falls_back_to_retr_when_hash_unsupported():
+    payload = b"guhya canary bytes for redownload verify"
+    transport = FTPSTransport(
+        host="example.invalid", user="u", password="p", _ftp=_RetrFTP(payload)
+    )
+    got = transport.remote_sha256("guhya", "canary.txt")
+    assert got == __import__("hashlib").sha256(payload).hexdigest()
 
 
 def test_a_reply_with_no_digest_is_not_mistaken_for_one():

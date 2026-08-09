@@ -83,6 +83,21 @@ def load_env(path: Path) -> dict:
     return env
 
 
+def tls_verify_from_env(cfg: dict) -> bool:
+    """Whether FTPS should verify the server certificate (default True).
+
+    Shared hosting often serves a self-signed ProFTPD cert. Prefer
+    ``FTP_TLS_INSECURE=1`` (encrypt without CA match) over plaintext FTP.
+    """
+    insecure = cfg.get("FTP_TLS_INSECURE", "").strip().lower()
+    if insecure in ("1", "true", "yes", "on"):
+        return False
+    verify = cfg.get("FTP_SSL_VERIFY", "1").strip().lower()
+    if verify in ("0", "false", "no", "off"):
+        return False
+    return True
+
+
 def resolve(rel: str) -> Path:
     local = Path(rel)
     return local if local.is_absolute() else GITHUB_ROOT / rel
@@ -146,12 +161,16 @@ def main() -> None:
     host, user, passwd = cfg.get("FTP_HOST", ""), cfg.get("FTP_USER", ""), cfg.get("FTP_PASS", "")
     remote_dir = cfg.get("FTP_PATH", "guhya").strip("/")
     port = int(cfg.get("FTP_PORT", "21"))
+    verify_tls = tls_verify_from_env(cfg)
     if not all([host, user, passwd]):
         sys.exit("Incomplete credentials in .env.deploy (need FTP_HOST, FTP_USER, FTP_PASS).")
 
-    print(f"\nConnecting to {host}:{port} over explicit TLS ...")
+    tls_note = "TLS (CA verify)" if verify_tls else "TLS (insecure verify — self-signed host)"
+    print(f"\nConnecting to {host}:{port} over explicit {tls_note} ...")
     failures = []
-    with FTPSTransport(host, user, passwd, port=port) as transport:
+    with FTPSTransport(
+        host, user, passwd, port=port, verify_tls=verify_tls
+    ) as transport:
         for rel, remote_name in manifest:
             local = resolve(rel)
             if not local.exists():
