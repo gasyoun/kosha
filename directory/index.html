@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="83 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="84 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="83 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="84 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -2371,6 +2371,34 @@
         "encodingFormat": "tsv",
         "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory"
       }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Definition-generation eval: Heritage (Huet) French glosses as an independent second reference (H2408)",
+      "description": "PUBLIC tier despite consuming the restricted Heritage layer (D20, LGPLLR, heritage-dico-gloss): gloss TEXT is deliberately never copied into kosha — the subset carries mw_key1 + DICO anchor + SHA-256 + word count, and defgen_heritage_ref.py REFUSES to score if any digest stops matching the local SanskritLexicography file. Reproduction therefore requires that sibling checkout. Derived from the frozen 500-headword MW sample (seed 730, H730) intersected with Heritage = 333 items; the subset is high-frequency-skewed by Heritage coverage, so its numbers are not comparable to the published 500-item table.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "defgen-heritage-second-reference"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv + jsonl + json",
+        "contentUrl": "https://github.com/gasyoun/kosha"
+      }
     }
   ]
 }
@@ -2441,7 +2469,7 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>83</b><span>public datasets</span></div>
+      <div class="tally"><b>84</b><span>public datasets</span></div>
       <div class="tally"><b>12</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
@@ -3288,6 +3316,16 @@
       <p class="meta">82 rows · 34.6 KB · TSV</p>
       <div class="chips"><span class="chip">csl-observatory reports/pwg_scan_index.md</span><span class="chip">csl-observatory /scan-index dashboard page</span><span class="chip">data/pwg_scan_index_tracker/pwg_etext_candidate_queue.tsv (e-text extraction ranking, H1715)</span><span class="chip">data/pwg_scan_index_tracker/scan_target_audit.tsv (resolver wiring, H1714)</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/sanskrit-lexicon/csl-observatory">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Definition-generation eval: Heritage (Huet) French glosses as an independent second reference (H2408)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">heritage_ref_subset.tsv (slp1 -&gt; DICO anchor + gloss SHA-256 + word count; NO gloss text) · judge_fr_&lt;arm&gt;.jsonl (slp1 -&gt; cross-lingual adequacy 0-5, 5 arms x 333) · heritage_ref_per_item.tsv (arm x slp1 -&gt; chrF vs MW/FR/multi-ref + token-F1) · heritage_ref_scores.json (summary, gates, paired MW-FR premium with bootstrap CI)</p>
+      <p class="meta">3,742 rows · 265.3 KB · TSV + JSONL + JSON</p>
+      <div class="chips"><span class="chip">docs/DEFGEN_HERITAGE_SECOND_REFERENCE_EVAL.md (report of record: reference-invariant arm ranking + MW-familiarity premium +0.13..+0.25)</span><span class="chip">docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md next-step #4 (closed by this dataset)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/kosha">In source repo ↗</a></div>
     </article>
     </div>
     <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>
