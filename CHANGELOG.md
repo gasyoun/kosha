@@ -14,6 +14,27 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.110.1] - 2026-08-10
+### Changed
+- **H2408 propagation sweep — the defgen eval line is now discoverable (Fable 5
+  `claude-fable-5`):** the benchmark shipped in 0.110.0 (and its H730/H972
+  predecessors) was registered nowhere a future session would look. Fixed across
+  surfaces: a docs-table row in
+  [README.md](https://github.com/gasyoun/kosha/blob/main/README.md) pointing at both
+  protocols (and marking `EVAL_PLAN.md` as lookup-service gates only, which is what
+  made the research eval line invisible); **eval-data sync rules** in
+  [CLAUDE.md](https://github.com/gasyoun/kosha/blob/main/CLAUDE.md) — never copy
+  Heritage French text in, re-score-an-arm ⇒ update both protocol docs + the
+  manifest row, `sacrebleu` is eval-only so harness tests skip in CI, and never
+  quote a defgen number without its contamination caveat; the frozen eval files
+  added to "What not to touch"; a ✅ Completed entry in `.ai_state.md`; and the
+  regenerated [directory page](https://gasyoun.github.io/kosha/directory/) now
+  carries the new dataset.
+### Fixed
+- **Stale `CITATION.cff` version** — pinned at `0.108.0`/2026-08-08 while `v0.109.0`
+  and `v0.110.0` had shipped; bumped to `0.110.0`/2026-08-09. Caught by the
+  propagation sweep's CITATION check, not by release tooling.
+
 ## [0.110.0] - 2026-08-09
 ### Added
 - **Heritage (Huet) French glosses as an independent second reference for the
