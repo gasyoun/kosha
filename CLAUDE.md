@@ -125,6 +125,35 @@ input. Do not add a stage by editing the CLI — add it to the registry.
   gitignored, regenerable or fetched separately.
 - `data/d5_run*.log`, `data/d5_profile.log`, `data/d5_measurements.json` —
   machine-specific measurement outputs from `scripts/measure_d5.py`.
+- `data/eval/defgen/frozen_sample.tsv`, `attestations.jsonl`, `gen_*.jsonl`,
+  `judge_*.jsonl` — the **frozen** definition-generation eval set and its
+  scored arms. Byte-stable by design so results stay comparable across runs
+  (H730/H752 ruling: exactly ONE canonical frozen sample; any new sample is a
+  v2 that supersedes v1 in writing, never a parallel alternative). Re-score
+  freely; never rewrite these in place.
+
+### Eval-data sync rules (defgen)
+
+- **Never copy Heritage French gloss text into this repo.** `heritage_dico_gloss`
+  is LGPLLR / `tier=restricted`; the eval subset stores `mw_key1` + DICO anchor +
+  **SHA-256** + word count instead, and
+  [scripts/defgen_heritage_ref.py](https://github.com/gasyoun/kosha/blob/main/scripts/defgen_heritage_ref.py)
+  **refuses to score** when a digest stops matching the local
+  `SanskritLexicography` sibling. If that refusal fires, the join drifted —
+  investigate, do not re-run `build` to paper over it.
+- **Adding or re-scoring an arm ⇒ update BOTH protocol docs in the same PR**
+  ([MW](https://github.com/gasyoun/kosha/blob/main/docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md),
+  [Heritage second reference](https://github.com/gasyoun/kosha/blob/main/docs/DEFGEN_HERITAGE_SECOND_REFERENCE_EVAL.md)),
+  plus the `defgen-heritage-second-reference` row in `data/manifest/datasets.json`.
+  A number quoted in one doc and stale in the other is the failure mode these
+  two files exist to prevent.
+- **`sacrebleu` is an eval-only dependency**, absent in CI — harness tests must
+  `pytest.skip` on ImportError, never fail (see
+  `tests/test_defgen_heritage_ref.py`).
+- **Never quote a defgen number without its caveat:** MW 1899 is in every
+  model's pretraining data, so the eval measures *reproduction + grounding*, not
+  generation from corpus evidence; and the human-scored subsample is still owed
+  before any paper-grade claim.
 
 ## Operational hazard notes
 

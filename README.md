@@ -1,6 +1,6 @@
 # Gasuns Sanskrit Dictionary
 
-_Created: 02-07-2026 · Last updated: 09-08-2026_
+_Created: 02-07-2026 · Last updated: 10-08-2026_
 
 > **Status: pre-alpha — the lookup API + UI run locally and the public
 > dictionary URL is not deployed yet, but the data-hub tier already is live.**
@@ -355,7 +355,8 @@ volume-page, hyphen, 7 volumes · AP90 `0001-a` = page-column-letter.
 | [docs/ROADMAP_KOSHA_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP_KOSHA_2026_2027.md) · [docs/ARCHITECTURE_KOSHA_PLATFORM.md](https://github.com/gasyoun/kosha/blob/main/docs/ARCHITECTURE_KOSHA_PLATFORM.md) | Twelve-month W0–W4 portfolio and modular target architecture |
 | [PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md) | D1–D5 work order — **the next thing to execute** |
 | [IMPLEMENTATION_PLAN.md](https://github.com/gasyoun/kosha/blob/main/IMPLEMENTATION_PLAN.md) | P1–P7 full plan with exit checks |
-| [EVAL_PLAN.md](https://github.com/gasyoun/kosha/blob/main/EVAL_PLAN.md) | quality gates, anti-gaming rules, T-UC1…T-UC13 acceptance tests |
+| [EVAL_PLAN.md](https://github.com/gasyoun/kosha/blob/main/EVAL_PLAN.md) | quality gates, anti-gaming rules, T-UC1…T-UC13 acceptance tests — **lookup-service gates only**; the research eval line is the two defgen protocols below |
+| [docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md](https://github.com/gasyoun/kosha/blob/main/docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md) · [docs/DEFGEN_HERITAGE_SECOND_REFERENCE_EVAL.md](https://github.com/gasyoun/kosha/blob/main/docs/DEFGEN_HERITAGE_SECOND_REFERENCE_EVAL.md) | definition-generation + gloss-grounded WSD benchmark: frozen 500-headword MW sample, 5 arms, gated LLM judge (H730/H752/H972) — plus Huet's French glosses as an **independent second reference** on the 333-item overlap, which shows the arm ranking is reference-invariant and the MW-familiarity premium small (H2408). Read before quoting any defgen number: MW 1899 is in pretraining data, so these measure reproduction + grounding |
 | [USE_CASES.md](https://github.com/gasyoun/kosha/blob/main/USE_CASES.md) | UC1–UC13 scenarios mapped to phases |
 | [RISKS.md](https://github.com/gasyoun/kosha/blob/main/RISKS.md) | R1–R12 pre-mortem, citability commitments |
 | [RELATIONS.md](https://github.com/gasyoun/kosha/blob/main/RELATIONS.md) | ecosystem diplomacy — Meyer, Cologne, Ambuda, C-SALT |
