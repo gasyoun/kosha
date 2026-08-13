@@ -14,6 +14,7 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.110.5] - 2026-08-13
 ### Added
 - **Branded `samskrtam.ru` kosha proxy (Grok 4.6 `grok-4.6`, H2646):**
   `/health` `/ready` `/metrics` `/api/` `/dicts/` `/w/` on
