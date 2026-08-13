@@ -61,15 +61,18 @@ def test_all_dict_panels_in_dom(tok):
     dicts_with_entries = {r["dict"] for r in card["results"]}
     for d in dicts_with_entries:
         assert f'id="panel-{d}"' in html, f"{d} panel missing from DOM for {tok}"
-    # exactly one active tab; the rest of the panels carry `hidden`
-    assert html.count('role="tabpanel"') == len(dicts_with_entries)
+    for d in ("pwg_ru", "mw_ru"):
+        assert f'id="panel-{d}"' in html, f"{d} panel missing from DOM for {tok}"
+    # Fixed chrome: MW + PWG + AP90 + pwg_ru + mw_ru. One first-paint panel
+    # shown (EN/MW); the rest carry `hidden`. All is a top-level language tab.
+    assert html.count('role="tabpanel"') == 5
     n_hidden = len(re.findall(r'class="dict-panel"[^>]*\shidden', html))
-    assert n_hidden == max(0, len(dicts_with_entries) - 1)
-    if len(dicts_with_entries) > 1:
-        assert 'id="tab-all"' in html
-        assert 'data-dict="all"' in html
-    else:
-        assert 'id="tab-all"' not in html
+    assert n_hidden == 4
+    assert 'id="tab-all"' in html
+    assert 'data-dict="all"' in html
+    assert 'id="tab-lang-en"' in html
+    assert 'id="tab-lang-de"' in html
+    assert 'id="tab-lang-ru"' in html
 
 
 @pytest.mark.parametrize("tok", _sample_tokens())
