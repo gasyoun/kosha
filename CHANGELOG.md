@@ -14,6 +14,7 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.110.7] - 2026-08-13
 ### Added
 - **Pages pack-token static `/w/` heads (Grok 4.6 `grok-4.6`, H2665):**
   reading-pack `../w/{token}.html` hrefs now have committed HTML at
