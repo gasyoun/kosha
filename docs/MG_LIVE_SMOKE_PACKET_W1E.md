@@ -1,6 +1,6 @@
 # W1E — MG live-smoke packet (public-product readiness exit)
 
-_Created: 08-08-2026 · Last updated: 13-08-2026_
+_Created: 08-08-2026 · Last updated: 14-08-2026_
 
 **Branded API (13-08-2026):** [https://samskrtam.ru/health](https://samskrtam.ru/health) and the other kosha paths are live.
 
@@ -35,6 +35,9 @@ local rehearsal [`docs/DEPLOY_REHEARSAL_LOG.md`](https://github.com/gasyoun/kosh
    `git pull --ff-only` `/opt/kosha/repo` `0cd22ef5` → `ae4f93c4` (v0.110.3),
    unit restart, public probe of W2C (`X-Request-ID` + `GET /metrics`) plus
    the original W1 gates. See §8c.
+5. **Citation-archive mount** (Grok 4.6 `grok-4.6`, 2026-08-14T00:30Z, H2671) —
+   snapshot of live `0.1.0-dev` under `/opt/kosha/archive/0.1.0-dev/`;
+   `/ready` `citation_archives` **ok**; pinned sense 200. See §8e.
 
 ---
 
@@ -430,9 +433,9 @@ accepts the sslip base (or after branded DNS). Residual work below is the honest
 2. ~~Optionally deploy Pages **static head** so pack hrefs `../w/{token}.html` resolve without sslip.~~ — **done** 13-08-2026 (H2665): committed pack-token HTML at repo-root `w/` (2,324 pages / 60.4 MB); full D4 `docs/w/` head stays gitignored.
 3. ~~Lighthouse mobile ≥90 on three real `/w/` URLs~~ — **done** 100×3 on sslip.
 4. ~~Re-walk Gītā 1.1 (13 tokens) on SSR~~ — **done** 13/13 on sslip.
-5. Mount citation archives under `/opt/kosha/archive` + pinned-sense smoke.
+5. ~~Mount citation archives under `/opt/kosha/archive` + pinned-sense smoke.~~ — **done** 14-08-2026 (H2671): live `0.1.0-dev` snapshot; `/ready` archives **ok**; see §8e.
 6. On **second** promote: retain `BUNDLE_IDENTITY` and run full Part IV restore.
-7. Sign §9 for branded product exit.
+7. Sign-off table in **Sign-off** below — a human ticks the branded-complete box. An agent must not mark Wave 1 complete.
 
 ### 8c. W2C re-fill 2026-08-13T11:13Z (sslip.io @ v0.110.3)
 
@@ -481,6 +484,29 @@ already proxies `/metrics`; no site-file edit required.
 | `https://samskrtam.ru/faq/` | **200** (unchanged) |
 | `https://samskrtam.ru/wp-json/` | **200** (not proxied) |
 
+### 8e. Citation-archive mount 2026-08-14T00:30Z (H2671)
+
+R3/R10/R18: one pin, snapshot of live `0.1.0-dev` (not a new `data_version`).
+Live DB opened read-only and not written (`/opt/kosha/db/kosha.db` mtime
+still 08-08 12:16). No unit restart. `KOSHA_ARCHIVE_DIR=/opt/kosha/archive`
+was already in `/opt/kosha/.env`.
+
+| Check | Result |
+|---|---|
+| Mount | `/opt/kosha/archive/0.1.0-dev/senses.sqlite` **98 MB**, `kosha:kosha` |
+| Identity | `release.json` `version=0.1.0-dev` `senses=692403` `sha256=cb3f6988859fa83ab92706a0f83d289ba060baf560cee369ae58d997631bbdfc` |
+| Archive count | **692403** (matches live `senses` count) |
+| Sample row | `mw.101.1` → headword `aMseBAra` |
+| `GET https://samskrtam.ru/ready` | **200** `ready:true`; `citation_archives` **ok** `1 archived version(s) validated` |
+| `GET https://samskrtam.ru/api/v1/sense/mw.101.1@0.1.0-dev` | **200** `sense_id=mw.101.1@0.1.0-dev` `resolved_from=live` |
+
+`resolved_from` is **live** because the pin equals the live `data_version`
+(`app/main.py` `get_sense`: archive path only when `want_version != dv`).
+That is the documented equivalent for R10 (do not invent a second version
+just to force `resolved_from: archive`). The mount is proven by `/ready`
+`citation_archives=ok` plus the on-disk dump. Wave 1 is **not** declared
+complete.
+
 ---
 
 ## 9. Sign-off
@@ -526,11 +552,12 @@ already proxies `/metrics`; no site-file edit required.
 | Public probe date | 2026-08-08T09:44Z |
 | Promote date | 2026-08-08T12:25Z |
 | W2C re-fill date | 2026-08-13T11:13Z |
+| Archive mount date | 2026-08-14T00:30Z (H2671) |
 | Public API | https://kosha.193.232.229.92.sslip.io/ |
 | Host SHA | `ae4f93c4` / v0.110.3 |
 | Host ops | `/opt/kosha/OPS.md` |
 | Lighthouse artifacts (local, not committed) | `lh-w-vac.json` / `lh-w-BU.json` / `lh-w-banD.json` = **100** (08-08); not re-run 13-08 |
-| Next | branded DNS/proxy · Pages `w/` · archive mount · second-promote identity rollback · human §9 |
+| Next | second-promote identity rollback (H2672) · human Sign-off tick for branded product exit |
 
 ---
 
