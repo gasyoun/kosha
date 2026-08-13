@@ -14,6 +14,17 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **W2B / P-D6 public dataset catalog API (Grok 4.6 `grok-4.6`, H2347):**
+  read-only `GET /api/v1/datasets` and `GET /api/v1/datasets/{id}` over the
+  existing [`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
+  — identity, version, license/rights pointer, download/locator, checksum when
+  present. Only `tier=public` rows are listed; restricted and intermediate ids
+  share the same `dataset_not_found` 404 as unknown ids (no existence leak, no
+  restricted checksum/path in the body). Salt `/dicts/*` and `/api/v1/lemma`
+  are unchanged. Surface registry row `api-v1-datasets`. Tests:
+  [`tests/test_dataset_catalog.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_dataset_catalog.py).
+
 ## [0.110.1] - 2026-08-10
 ### Changed
 - **H2408 propagation sweep — the defgen eval line is now discoverable (Fable 5

@@ -1,6 +1,6 @@
 # Dataset + surface manifests — machine-readable kosha indices
 
-_Created: 06-07-2026 · Last updated: 08-08-2026_
+_Created: 06-07-2026 · Last updated: 13-08-2026_
 
 ## Datasets
 
@@ -55,6 +55,17 @@ python scripts/rehearse_deploy.py
 
 Human procedure + rollback:
 [KOSHA_DEPLOYMENT.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DEPLOYMENT.md).
+
+## Public catalog API (W2B / P-D6)
+
+Read-only HTTP over the same `datasets.json` (no second registry):
+
+- `GET /api/v1/datasets` — public-tier rows only
+- `GET /api/v1/datasets/{id}` — one public row; restricted / intermediate /
+  unknown share `dataset_not_found` 404
+
+Implementation: [`src/kosha/api/catalog.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/catalog.py).
+Surface registry id: `api-v1-datasets`.
 
 Public-tier data license: [CC BY-SA 4.0](https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md).
 

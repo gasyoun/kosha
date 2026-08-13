@@ -205,6 +205,7 @@ def test_core_dictionary_surfaces_present(surfaces):
     ids = {s["id"] for s in surfaces}
     for required in (
         "api-v1-lemma",
+        "api-v1-datasets",
         "salt-dicts-facade",
         "ssr-word-page",
         "static-cards",
