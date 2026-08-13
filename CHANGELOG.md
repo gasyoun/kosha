@@ -14,6 +14,13 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **Branded `samskrtam.ru` kosha proxy (Grok 4.6 `grok-4.6`, H2646):**
+  `/health` `/ready` `/metrics` `/api/` `/dicts/` `/w/` on
+  [samskrtam.ru](https://samskrtam.ru/) reverse-proxy to the live unit on
+  `.92` (LAN `:8002`, WordPress `/` and `/faq/` unchanged). Recipe:
+  [`deploy/samskrtam-brand-proxy/`](https://github.com/gasyoun/kosha/blob/main/deploy/samskrtam-brand-proxy/README.md).
+
 ## [0.110.4] - 2026-08-13
 ### Changed
 - **W1E live-smoke re-fill after W2C (Grok 4.6 `grok-4.6`, H2642):**
