@@ -13,6 +13,8 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+
+## [0.110.8] - 2026-08-13
 ### Added
 - **`/ask` plan for `/w/` language groups + ops leftovers (Grok 4.6 `grok-4.6`):**
   five-layer spec
