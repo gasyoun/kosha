@@ -1,0 +1,7 @@
+# BEGIN kosha-proxy
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(health|ready|metrics)/?$ /kosha/proxy.php [L,QSA]
+RewriteRule ^(api|dicts|w)(/.*)?$ /kosha/proxy.php [L,QSA]
+</IfModule>
+# END kosha-proxy
