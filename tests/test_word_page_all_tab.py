@@ -49,16 +49,21 @@ def test_all_tab_present_for_multi_dict():
     assert 'id="tab-all"' in html
     assert 'data-dict="all"' in html
     assert "mw-body" in html and "pwg-body" in html and "ap90-body" in html
-    assert html.count('class="dict-label"') == 3
+    # Five headings: MW + PWG + AP90 + pwg_ru + mw_ru (H2670 / R15).
+    assert html.count('class="dict-label"') == 5
     assert "all-dicts" in html  # JS class toggle
     assert 'id="panel-mw"' in html
     assert 'id="panel-pwg"' in html
     assert 'id="panel-ap90"' in html
+    assert 'id="panel-pwg_ru"' in html
+    assert 'id="panel-mw_ru"' in html
 
 
-def test_no_all_tab_for_single_dict():
+def test_all_tab_present_for_single_dict():
+    """All is a top-level language control (R15), even for one Cologne dict."""
     card = _card()
     card["results"] = card["results"][:1]
     html = render_word_page(card, token="_42_55")
-    assert 'id="tab-all"' not in html
+    assert 'id="tab-all"' in html
     assert 'id="panel-mw"' in html
+    assert 'id="panel-pwg_ru"' in html
