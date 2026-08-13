@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="sa" data-view="adaptive"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>दानव dānava — Sanskrit dictionary | kosha</title><meta name="description" content="dānava m. (fr. 2. dānu) a class of demons often identified with the Daityas or Asuras and held to be implacable enemies of the gods or Devas, &amp;nbsp;RV.&amp;nbsp;;…"><meta name="data-version" content="0.1.0-dev"><style>:root{--fg:#1a1a1a;--muted:#6b7280;--border:#d7d7db;--accent:#7b2d26;
+--card-bg:#fafafa;--head-bg:#f0f0f2;--hit-bg:#fdf3e7;--tag-bg:#ece7e0;
+--tag-fg:#7b2d26;--page-bg:#fff;--b1:#7b2d26;--b2:#a05a2c;--b3:#4a7a3a;
+--b4:#5a6b8c;--b5:#9aa0a6}
+@media(prefers-color-scheme:dark){:root{--fg:#e8e8ea;--muted:#9aa0a6;
+--border:#3a3a40;--accent:#e0a44a;--card-bg:#202024;--head-bg:#26262b;
+--hit-bg:#3a3020;--tag-bg:#2c2c31;--tag-fg:#e0a44a;--page-bg:#161618;
+--b1:#e0a44a;--b2:#d08a3a;--b3:#7bbf6a;--b4:#8fa4c8;--b5:#6b7078}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page-bg);color:var(--fg);
+font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+.word-page{max-width:52rem;margin:0 auto;padding:1.2rem 1rem 4rem}
+.hw-strip{display:flex;gap:.7rem;align-items:baseline;flex-wrap:wrap;
+border-bottom:1px solid var(--border);padding-bottom:.6rem}
+.hw-deva{font-size:2rem}.hw-iast{font-size:1.2rem;color:var(--muted)}
+.hw-key{font-family:monospace;font-size:.8rem;color:var(--muted)}
+.band{font-size:.65rem;font-weight:700;padding:.12rem .45rem;border-radius:4px;
+color:#fff;text-transform:uppercase}
+.band.b1{background:var(--b1)}.band.b2{background:var(--b2)}
+.band.b3{background:var(--b3)}.band.b4{background:var(--b4)}.band.b5{background:var(--b5)}
+.ndicts,.gram{font-size:.72rem;color:var(--muted)}
+.gram{font-family:monospace}
+.view-toggle{display:inline-flex;margin:.7rem 0 0;border:1px solid var(--border);
+border-radius:6px;overflow:hidden}
+.view-toggle button{border:none;background:var(--page-bg);color:var(--muted);
+padding:.3rem .7rem;cursor:pointer;font-size:.8rem}
+.view-toggle button[aria-checked=true]{background:var(--head-bg);color:var(--fg);font-weight:600}
+.dict-tabs{display:flex;gap:.35rem;flex-wrap:wrap;margin:.9rem 0 0;
+border-bottom:1px solid var(--border)}
+.tab{border:1px solid var(--border);border-bottom:none;background:var(--card-bg);
+color:var(--fg);padding:.4rem .8rem;cursor:pointer;border-radius:6px 6px 0 0;font-size:.9rem}
+.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tab-all{margin-left:.35rem}
+.tab-n{font-size:.65rem;opacity:.75;margin-left:.3rem}
+.dict-label{display:none;font:600 .85rem/1.3 system-ui,sans-serif;
+margin:0 0 .6rem;color:var(--accent)}
+.word-page.all-dicts .dict-label{display:block}
+.word-page.all-dicts .dict-panel{border-top:1px solid var(--border);
+padding-top:.9rem;margin-top:1.1rem}
+.dict-panel{border:1px solid var(--border);border-top:none;padding:.4rem 1rem;
+background:var(--card-bg)}
+.dict-entry{border-top:1px solid var(--border);padding:.55rem 0}
+.dict-entry:first-child{border-top:none}
+.entry-head{display:flex;gap:.7rem;align-items:baseline;margin-bottom:.25rem}
+.entry-head .hw{font-weight:600}
+.scan{font-size:.8rem;color:var(--accent)}
+.rendered{overflow-wrap:anywhere}
+[data-view=gloss] .dict-entry:not(:first-child){display:none}
+@media(max-width:640px){[data-view=adaptive] .dict-entry:not(:first-child){display:none}}
+.disclosure{margin:.8rem 0 0;border:1px solid var(--border);border-radius:8px;
+background:var(--card-bg);padding:.3rem .8rem}
+.disclosure summary{cursor:pointer;font-weight:600;font-size:.9rem;padding:.3rem 0}
+.upa-list{margin:.2rem 0 .4rem;padding-left:1.1rem;font-size:.9rem}
+.upa-pv{font-weight:600}
+.ev-list{margin:.2rem 0 .4rem;padding-left:1.1rem;font-size:.9rem}
+.example{margin:.3rem 0;padding:.4rem .7rem;border-left:3px solid var(--accent);
+background:var(--hit-bg);font-size:1.05rem}
+.sf-head{margin:.2rem 0 .5rem;font-size:.85rem;color:var(--muted)}
+.sf-head b{color:var(--fg)}
+.sf-legend{margin-left:.5rem;font-size:.72rem}
+.sf-list{list-style:none;margin:.2rem 0 .3rem;padding:0}
+.sf-item{margin:.35rem 0}
+.sf-gloss{display:block;font-size:.9rem;margin-bottom:.15rem}
+.sf-bar{display:block;height:.5rem;background:var(--tag-bg);border-radius:3px;overflow:hidden}
+.sf-fill{display:block;height:100%;background:var(--accent);border-radius:3px}
+.sf-nums{display:flex;align-items:center;gap:.4rem;margin-top:.15rem;font-size:.8rem;flex-wrap:wrap}
+.sf-share{color:var(--muted)}
+.sf-more{font-size:.8rem;color:var(--muted);margin-top:.3rem;list-style:none}
+.chip{display:inline-block;font-size:.7rem;padding:.05rem .4rem;border-radius:4px;line-height:1.5}
+.chip.att{background:var(--tag-bg);color:var(--tag-fg)}
+.chip.att b{color:var(--tag-fg)}
+.chip.est{background:transparent;border:1px dashed var(--border);color:var(--muted);min-width:1.6rem}
+.chip.genre{background:transparent;border:1px solid var(--b2);color:var(--b2)}
+.chip.warn{background:var(--b1);color:#fff;font-weight:600}
+.sf-foot{margin:.5rem 0 .2rem;font-size:.72rem;color:var(--muted);line-height:1.4}
+.sf-foot .chip.warn{font-size:.66rem}
+.wp-foot{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--border);
+font-size:.78rem;color:var(--muted)}
+.wp-foot a{color:var(--accent)}</style></head><body><main class="word-page" data-slp1="dAnava"><header class="hw-strip"><span class="hw-deva" lang="sa">दानव</span><span class="hw-iast">dānava</span><span class="hw-key" title="SLP1 key">[dAnava]</span><span class="band b2" title="frequent -- learn early">band 2</span><span class="ndicts">2 dicts</span><span class="gram" data-gram hidden></span></header><div class="view-toggle" role="radiogroup" aria-label="Detail level" hidden><button type="button" data-view-set="gloss" role="radio" aria-checked="false">Gloss</button><button type="button" data-view-set="full" role="radio" aria-checked="false">Full</button><button type="button" data-view-set="adaptive" role="radio" aria-checked="true">Adaptive</button></div><noscript><style>.dict-panel[hidden]{display:block!important}.dict-tabs,.view-toggle{display:none!important}</style></noscript><nav class="dict-tabs" role="tablist" aria-label="Dictionaries"><button type="button" class="tab active" role="tab" aria-selected="true" aria-controls="panel-mw" id="tab-mw" data-dict="mw" title="Monier-Williams">MW<span class="tab-n">2</span></button><button type="button" class="tab" role="tab" aria-selected="false" aria-controls="panel-pwg" id="tab-pwg" data-dict="pwg" title="Petersburger Wörterbuch (großes)">PWG<span class="tab-n">3</span></button><button type="button" class="tab tab-all" role="tab" aria-selected="false" aria-controls="panel-mw panel-pwg" id="tab-all" data-dict="all" title="Show every dictionary">All<span class="tab-n">5</span></button></nav><section class="dict-panel" id="panel-mw" role="tabpanel" aria-labelledby="tab-mw" data-dict="mw"><h2 class="dict-label">Monier-Williams</h2><article class="dict-entry"><div class="entry-head"><span class="hw">dānava</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=474" target="_blank" rel="noopener">scan ↗</a></div><div class="rendered"><span class='sdata'>dānava</span> <strong>m.</strong> (<span>fr.</span> <span class='hom' title='Homonym'>2.</span> <span class='sdata'>dānu</span>) a class of demons often identified with the Daityas or Asuras and held to be implacable enemies of the gods or Devas, &nbsp;<span class='ls'>RV.</span>&nbsp;; &nbsp;<span class='ls'>AV.</span>&nbsp;; &nbsp;<span class='ls'>ŚBr.</span>&nbsp;; &nbsp;<span class='ls'>Mn.</span>&nbsp;; &nbsp;<span class='ls'>MBh.</span>&nbsp; &c. (described as children of Danu and Kaśyapa, sometimes reckoned as 40 in number, &nbsp;<span class='ls'>MBh. i, 252</span>&nbsp;; sometimes as 100 &c.)</div></article><article class="dict-entry"><div class="entry-head"><span class="hw">dānava</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=474" target="_blank" rel="noopener">scan ↗</a></div><div class="rendered"><span class='sdata'>dānava</span> <strong>mf(<span class='sdata'>ī</span>)n.</strong> belonging to the <span title='Danu' style='border-bottom: 1px dotted #000; text-decoration: none;'>D˚</span>, &nbsp;<span class='ls'>MBh.</span>&nbsp;; &nbsp;<span class='ls'>R.</span>&nbsp; &c.</div></article></section><section class="dict-panel" id="panel-pwg" role="tabpanel" aria-labelledby="tab-pwg" data-dict="pwg" hidden><h2 class="dict-label">Petersburger Wörterbuch (großes)</h2><article class="dict-entry"><div class="entry-head"><span class="hw">dānava</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=587" target="_blank" rel="noopener">scan ↗</a></div><div class="rendered"><span class='hom' title='Homonym'>1.</span> <span class='sdata'>dānava</span> (von <span class='sdata'>dānu</span>) <strong>m.</strong> <span>Bez.</span> von <i>Dämonen</i>: <span class='sdata'>ni māyino dānavasya māyā apādayat</span> &nbsp;<span class='ls'>ṚV. 2,11,10</span>&nbsp;. <span class='ls' title='ṚV.'>5,29,4</span>&nbsp;. <span class='ls' title='ṚV. 5,'>32,1</span>&nbsp;. <span class='ls' title='ṚV. 5,29,'>4</span>&nbsp;. <span class='ls' title='ṚV. 5,29,'>7</span>&nbsp;. <span class='sdata'>vṛtraṃ tīrtvā dānavaṃ vajrabāhurdiśo dṛṃhat</span> &nbsp;<span class='ls'>TBR. 2,8,3,7</span>&nbsp;. <span class='sdata'>śuṣṇo dānavaḥ</span> &nbsp;<span class='ls'>KĀṬH. 37,14</span>&nbsp;_in_&nbsp;<span class='ls'>Ind. St. 3,467</span>&nbsp;. &nbsp;<span class='ls'>ŚAT. BR. 3,1,3,11</span>&nbsp;. <span class='sdata'>vṛtra</span> <span class='ls' title='ŚAT. BR.'>1,6,3,9</span>&nbsp;. <span>pl.</span>: <span class='sdata'>sa naḥ śakraścidā śakaddānavā~ antarābharaḥ</span> &nbsp;<span class='ls'>ṚV. 8,32,12</span>&nbsp;. <span class='sdata'>yo dānavānāṃ balamāruroja</span> &nbsp;<span class='ls'>AV. 4,24,2</span>&nbsp;. <span class='ls' title='AV.'>10,6,10</span>&nbsp;. <span class='sdata'>pitṛbhyo devadānavāḥ (jātāḥ)</span> &nbsp;<span class='ls'>M. 3,201</span>&nbsp;. <span class='sdata'>daityadānavayakṣāṇām</span> <span class='ls' title='M.'>196</span>&nbsp;. <span class='sdata'>devadānavagandharvāḥ</span> <span class='ls' title='M.'>7,23</span>&nbsp;. Nach einer späteren Vorstellung sind die <span style='letter-spacing:2px;'>Dānava</span>, die unversöhnlichen Feinde der <span style='letter-spacing:2px;'>Deva</span>, Kinder der <span style='letter-spacing:2px;'>Danu</span> und des <span style='letter-spacing:2px;'>Kaśyapa</span>, &nbsp;<span class='ls'>AK. 1,1,1,7</span>&nbsp;. &nbsp;<span class='ls'>H. 238</span>&nbsp;, <span>Sch.</span> <span class='sdata'>danuputrāḥ — daśadānavavaṃśajāḥ</span> &nbsp;<span class='ls'>MBH. 1,2536</span>&nbsp;. &nbsp;<span class='ls'>HARIV. 195. fgg.</span>&nbsp; <span class='ls' title='HARIV.'>11552</span>&nbsp;. <span class='sdata'>suraśatrūṇāṃ daityadānavarakṣasām</span> <span class='ls' title='HARIV.'>2384</span>&nbsp;. &nbsp;<span class='ls'>VP. 147</span>&nbsp;. <span class='sdata'>devadānavagandharvaiḥ kiṃnarairupaśobhitam</span> &nbsp;<span class='ls'>R. 1,51,24</span>&nbsp;. <span class='sdata'>daityadānavamardana</span> &nbsp;<span class='ls'>N. 4,11</span>&nbsp;. <span class='sdata'>tato 'dhastādrasātale daiteyā dānavāḥ paṇayo nāma nivātakavacāḥ kāleyā hiraṇyapuravāsina iti vibudhapratyanīkāḥ — vileśayā iva vasanti</span> &nbsp;<span class='ls'>BHĀG. P. 5,24,30</span>&nbsp;. <span class='sdata'>na hi te bhagavanvyaktiṃ vidurdevā na dānavāḥ</span> &nbsp;<span class='ls'>BHAG. 10,14</span>&nbsp;. <span class='sdata'>asti kālanemiprasūtirdurjayo nāma dānavagaṇaḥ</span> &nbsp;<span class='ls'>ŚĀK. 95,4</span>&nbsp;. <span class='sdata'>dānavapati</span> = <span class='sdata'>rāhu</span> &nbsp;<span class='ls'>BHARTṚ. 2,27</span>&nbsp;. Die <span style='letter-spacing:2px;'>Daitya</span> und <span style='letter-spacing:2px;'>Dānava</span> werden häufig einander gleichgesetzt und schlechtweg bloss als <span style='letter-spacing:2px;'>Asura</span> oder <i>Feinde der Götter</i> aufgefasst. <span class='sdata'>dānavī</span> <strong>f.</strong> &nbsp;<span class='ls'>KĀṬH. 13,5</span>&nbsp;_in_&nbsp;<span class='ls'>Ind. St. 3,479, N.</span>&nbsp; &nbsp;<span class='ls'>DRAUP. 2,2</span>&nbsp;. &nbsp;<span class='ls'>HARIV. 14499</span>&nbsp;. &nbsp;<span class='ls'>BHĀG. P. 6,18,11</span>&nbsp;.</div></article><article class="dict-entry"><div class="entry-head"><span class="hw">dānava</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=587" target="_blank" rel="noopener">scan ↗</a></div><div class="rendered"><span class='hom' title='Homonym'>2.</span> <span class='sdata'>dānava</span> (vom <span>vorherg.</span>) <strong>adj.</strong> <strong>f.</strong> <span class='sdata'>ī</span> <i>den</i> <span style='letter-spacing:2px;'>Dānava</span> <i>gehörig, ihnen eigenthümlich <span>u. s. w.</span></i>: <span class='sdata'>māyā</span> &nbsp;<span class='ls'>ARJ. 10,24</span>&nbsp;. &nbsp;<span class='ls'>HARIV. 9222</span>&nbsp;. <span class='sdata'>astra</span> &nbsp;<span class='ls'>R. GORR. 1,30,20</span>&nbsp;. <span class='sdata'>yoni</span> &nbsp;<span class='ls'>BHĀG. P. 6,17,38</span>&nbsp;.</div></article><article class="dict-entry"><div class="entry-head"><span class="hw">dānava</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=1491" target="_blank" rel="noopener">scan ↗</a></div><div class="rendered"><span class='hom' title='Homonym'>1.</span> <span class='sdata'>dānava</span> am Ende eines <span>adj. comp.</span> <strong>f.</strong> <span class='sdata'>ā</span> &nbsp;<span class='ls'>KATHĀS. 80,27</span>&nbsp;.</div></article></section><details class="disclosure evidence"><summary>Evidence</summary><ul class="ev-list"><li><b>Frequency band 2</b> — frequent -- learn early</li><li>1249 attestations in DCS</li><li>first attested: Vedic</li></ul><blockquote class="example" lang="sa">dānava — <cite>01_mahabharata-adiparva</cite></blockquote></details><details class="disclosure sense-freq"><summary>Sense frequency</summary><p class="sf-head"><b>141</b> for the lemma · attested in DCS WordSem gold · <b>1302</b> estimated (untagged MFS) <span class="sf-legend"><span class="chip att">attested</span><span class="chip est" title="WSD estimate — H1588">estimated</span></span></p><ul class="sf-list"><li class="sf-item"><span class="sf-gloss">dAnava/ m. ( fr. 2. dA/nu ) a class of demons often identified with the Daitya s or Asura s and held</span><span class="sf-bar" aria-hidden="true"><span class="sf-fill" style="width:100%"></span></span><span class="sf-nums"><span class="chip att"><b>141</b> in this sense</span><span class="chip est" title="WSD estimate (MFS on untagged DCS tokens; not blended with attested)"><b>1302</b> estimated</span><span class="chip genre" title="most tokens of this sense come from one genre — read the count as genre-relative">78% epic</span><span class="sf-share">100%</span></span></li></ul><p class="sf-foot">DCS over-samples technical śāstra (alchemy/medicine); a <span class="chip warn">śāstra-only</span> or genre chip marks a count that reflects corpus composition, not general Sanskrit. Estimated counts cover untagged DCS tokens via most-frequent-sense WSD and are never added into the attested figure.</p></details><details class="disclosure paradigm" data-paradigm data-slp1="dAnava"><summary>Paradigm (all forms)</summary><p class="para-fallback">Full inflection table: <a href="../inflect/?lemma=dAnava">open in the inflection lookup →</a></p></details><footer class="wp-foot">Gasuns Sanskrit Dictionary · <a href="../inflect/">inflection lookup</a> · <a href="../browse/">browse</a> · entries from MW, PWG &amp; Apte (Cologne), rendered verbatim.</footer></main><script>(function(){
+ var VM='kosha_view_mode',root=document.documentElement;
+ function setView(v){root.setAttribute('data-view',v);
+  try{localStorage.setItem(VM,v)}catch(e){}
+  document.querySelectorAll('[data-view-set]').forEach(function(b){
+   b.setAttribute('aria-checked',b.getAttribute('data-view-set')===v?'true':'false')})}
+ try{var s=localStorage.getItem(VM);if(s)root.setAttribute('data-view',s)}catch(e){}
+ var vt=document.querySelector('.view-toggle');if(vt){vt.hidden=false;
+  setView(root.getAttribute('data-view')||'adaptive');
+  vt.addEventListener('click',function(e){var b=e.target.closest('[data-view-set]');
+   if(b)setView(b.getAttribute('data-view-set'))})}
+ var tabs=document.querySelectorAll('.dict-tabs .tab');
+ var page=document.querySelector('.word-page');
+ tabs.forEach(function(t){t.addEventListener('click',function(){
+  tabs.forEach(function(x){x.classList.remove('active');x.setAttribute('aria-selected','false')});
+  t.classList.add('active');t.setAttribute('aria-selected','true');
+  var want=t.getAttribute('data-dict');
+  var all=want==='all';
+  if(page)page.classList.toggle('all-dicts',all);
+  document.querySelectorAll('.dict-panel').forEach(function(p){
+   p.hidden=!all && p.getAttribute('data-dict')!==want})})})
+})();</script></body></html>

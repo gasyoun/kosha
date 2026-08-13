@@ -14,6 +14,15 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **Pages pack-token static `/w/` heads (Grok 4.6 `grok-4.6`, H2665):**
+  reading-pack `../w/{token}.html` hrefs now have committed HTML at
+  repo-root [`w/`](https://github.com/gasyoun/kosha/blob/main/w/README.md)
+  (site-root on Pages). Builder flag
+  `python scripts/build_word_pages.py --reading-packs`. Live delta vs
+  Meyer `bhū` recorded in
+  [COMPARISON.md](https://github.com/gasyoun/kosha/blob/main/COMPARISON.md).
+
 ## [0.110.6] - 2026-08-13
 ### Added
 - **Word-page All tab (Grok 4.6 `grok-4.6`, H2653):** an **All** tab on

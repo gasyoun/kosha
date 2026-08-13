@@ -13,7 +13,12 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT / "app"))
 
-from build_word_pages import measure_head_n, select_head_tokens, card_token  # noqa: E402
+from build_word_pages import (  # noqa: E402
+    measure_head_n,
+    select_head_tokens,
+    card_token,
+    harvest_reading_pack_tokens,
+)
 
 LEMMA_FREQ = ROOT / "data" / "frequency" / "lemma_frequency.tsv"
 ATTESTED = ROOT / "docs" / "js" / "data" / "attested_keys.json"
@@ -67,3 +72,11 @@ def test_select_all_attested_when_no_head():
     tokens, meta = select_head_tokens(attested, CARDS)
     assert meta["mode"] == "all_attested"
     assert tokens == list(attested)
+
+
+def test_harvest_reading_pack_tokens_from_fixture(tmp_path):
+    (tmp_path / "gita.js").write_text(
+        '{"href": "../w/vac.html"}, "../w/_42_55.html"', encoding="utf-8")
+    (tmp_path / "skip.bin").write_bytes(b"../w/nope.html")
+    toks = harvest_reading_pack_tokens(tmp_path)
+    assert toks == ["_42_55", "vac"]

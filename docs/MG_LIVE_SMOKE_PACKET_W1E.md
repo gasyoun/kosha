@@ -427,7 +427,7 @@ accepts the sslip base (or after branded DNS). Residual work below is the honest
 ### Residual work (ordered)
 
 1. ~~Optional: point `samskrtam.ru` (`.95`) reverse-proxy or DNS at kosha on `.92:8001` / sslip.~~ — **done** 13-08-2026 (H2646): path proxy, not DNS move.
-2. Optionally deploy Pages **static head** so pack hrefs `../w/{token}.html` resolve without sslip.
+2. ~~Optionally deploy Pages **static head** so pack hrefs `../w/{token}.html` resolve without sslip.~~ — **done** 13-08-2026 (H2665): committed pack-token HTML at repo-root `w/` (2,324 pages / 60.4 MB); full D4 `docs/w/` head stays gitignored.
 3. ~~Lighthouse mobile ≥90 on three real `/w/` URLs~~ — **done** 100×3 on sslip.
 4. ~~Re-walk Gītā 1.1 (13 tokens) on SSR~~ — **done** 13/13 on sslip.
 5. Mount citation archives under `/opt/kosha/archive` + pinned-sense smoke.
