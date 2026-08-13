@@ -1,6 +1,6 @@
 # Digital Sanskrit dictionaries — live comparison
 
-_Created: 02-07-2026 · Last updated: 02-07-2026_
+_Created: 02-07-2026 · Last updated: 13-08-2026_
 
 Twelve platforms compared for the Gasuns Sanskrit Dictionary. **Method:** three
 parallel research passes on 2026-07-02, each site actually fetched that day;
@@ -78,6 +78,26 @@ target this comparison justifies, not a claim about built software.
   docs.)
 - **Single-maintainer, closed, "last updated December 15, 2024"** — the
   fragility is the opportunity.
+
+#### Live page delta 13-08-2026 — kosha `/w/BU` vs Meyer `bhū`
+
+Fetched the same headword on both live surfaces (Grok 4.6 `grok-4.6`).
+Publishing Pages static `w/` copies the kosha card; it does **not** close
+this gap. Meyer's page is a 41-dict collapse; kosha `/w/BU` is still a
+**three-dictionary Cologne dump**.
+
+| | [kosha `/w/BU`](https://samskrtam.ru/w/BU) | [Meyer `bhū`](https://michaelmeyer.fr/sanskrit/meta/terms/bh%C5%AB) |
+|---|---|---|
+| Dictionaries on the page | **3** — MW 1899, PWG, AP90 (tabs + All) | **41** grouped by target language (Wilson, Yates, Benfey, MW **1872**, Lanman, Apte, Cappeller, Macdonell, …; PWG/PW/MW1899 also in his inventory) |
+| Layout | Raw Cologne `basicdisplay` run-on; Gloss / Full / Adaptive | Numbered compact senses; per-dict heading + scan ☞ |
+| Scan links | Per-**entry** CDSL `servepdf?page=` | Per-**sense** page + column on Meyer's own scan viewer (19 dicts) |
+| Script | Devanagari title + IAST | IAST only (doctrine: no Deva) |
+| Cross-refs | Upasarga panel when the root is in the W6 table | See-also cluster (`bhavāmi`, `bhūḥ`, `bubhūṣāmi`) |
+| Frequency / API | Adaptive + sense-freq; `GET /api/v1/lemma/BU` | None |
+| MW edition on this page | **1899** (2nd) | **1872** (1st) as the MW block; 1899 is a separate dict in his stack |
+
+kosha **advantages that are already live** and that Meyer does not do: Devanagari, live API, versioned citation path, Gloss/Adaptive, PWG as a first-class tab (the huge German Petersburg, not a gloss).
+kosha **still missing vs this Meyer page**: the other ~38 dictionaries, sense-numbered compact layout, per-sense page+column scans, form see-also cluster.
 
 ### 2. sanskritdictionary.com (Cloudflare-walled; archived snapshots ≤2 months old)
 

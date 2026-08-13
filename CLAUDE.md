@@ -37,6 +37,7 @@ python scripts/build_entries.py               # build rendered entries
 python scripts/build_forms.py                 # build inflected-form index
 python scripts/build_static_cache.py          # generate the P2 static-cache JSON (Pages deploy input)
 python scripts/build_word_pages.py --coverage 0.95 --force  # P5 D4 static head (H1590); gitignored docs/w/ + docs/browse/
+python scripts/build_word_pages.py --reading-packs --force  # pack ../w/ hrefs → committed repo-root w/ (H2665)
 python scripts/build_docs_site.py             # build the docs-site (ZettelkastenWiki Wave-3 pilot)
 python scripts/gen_golden.py                  # regenerate golden render fixtures for test_render_golden.py
 python scripts/measure_d5.py                  # D5 latency/perf measurement run

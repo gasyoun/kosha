@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="sa" data-view="adaptive"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>संघर्ष saṃgharṣa — Sanskrit dictionary | kosha</title><meta name="description" content="saṃ-gharṣa m. rubbing together, friction, &amp;nbsp;MBh.&amp;nbsp;; &amp;nbsp;Kāv.&amp;nbsp; &amp;c."><meta name="data-version" content="0.1.0-dev"><style>:root{--fg:#1a1a1a;--muted:#6b7280;--border:#d7d7db;--accent:#7b2d26;
+--card-bg:#fafafa;--head-bg:#f0f0f2;--hit-bg:#fdf3e7;--tag-bg:#ece7e0;
+--tag-fg:#7b2d26;--page-bg:#fff;--b1:#7b2d26;--b2:#a05a2c;--b3:#4a7a3a;
+--b4:#5a6b8c;--b5:#9aa0a6}
+@media(prefers-color-scheme:dark){:root{--fg:#e8e8ea;--muted:#9aa0a6;
+--border:#3a3a40;--accent:#e0a44a;--card-bg:#202024;--head-bg:#26262b;
+--hit-bg:#3a3020;--tag-bg:#2c2c31;--tag-fg:#e0a44a;--page-bg:#161618;
+--b1:#e0a44a;--b2:#d08a3a;--b3:#7bbf6a;--b4:#8fa4c8;--b5:#6b7078}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page-bg);color:var(--fg);
+font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+.word-page{max-width:52rem;margin:0 auto;padding:1.2rem 1rem 4rem}
+.hw-strip{display:flex;gap:.7rem;align-items:baseline;flex-wrap:wrap;
+border-bottom:1px solid var(--border);padding-bottom:.6rem}
+.hw-deva{font-size:2rem}.hw-iast{font-size:1.2rem;color:var(--muted)}
+.hw-key{font-family:monospace;font-size:.8rem;color:var(--muted)}
+.band{font-size:.65rem;font-weight:700;padding:.12rem .45rem;border-radius:4px;
+color:#fff;text-transform:uppercase}
+.band.b1{background:var(--b1)}.band.b2{background:var(--b2)}
+.band.b3{background:var(--b3)}.band.b4{background:var(--b4)}.band.b5{background:var(--b5)}
+.ndicts,.gram{font-size:.72rem;color:var(--muted)}
+.gram{font-family:monospace}
+.view-toggle{display:inline-flex;margin:.7rem 0 0;border:1px solid var(--border);
+border-radius:6px;overflow:hidden}
+.view-toggle button{border:none;background:var(--page-bg);color:var(--muted);
+padding:.3rem .7rem;cursor:pointer;font-size:.8rem}
+.view-toggle button[aria-checked=true]{background:var(--head-bg);color:var(--fg);font-weight:600}
+.dict-tabs{display:flex;gap:.35rem;flex-wrap:wrap;margin:.9rem 0 0;
+border-bottom:1px solid var(--border)}
+.tab{border:1px solid var(--border);border-bottom:none;background:var(--card-bg);
+color:var(--fg);padding:.4rem .8rem;cursor:pointer;border-radius:6px 6px 0 0;font-size:.9rem}
+.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tab-all{margin-left:.35rem}
+.tab-n{font-size:.65rem;opacity:.75;margin-left:.3rem}
+.dict-label{display:none;font:600 .85rem/1.3 system-ui,sans-serif;
+margin:0 0 .6rem;color:var(--accent)}
+.word-page.all-dicts .dict-label{display:block}
+.word-page.all-dicts .dict-panel{border-top:1px solid var(--border);
+padding-top:.9rem;margin-top:1.1rem}
+.dict-panel{border:1px solid var(--border);border-top:none;padding:.4rem 1rem;
+background:var(--card-bg)}
+.dict-entry{border-top:1px solid var(--border);padding:.55rem 0}
+.dict-entry:first-child{border-top:none}
+.entry-head{display:flex;gap:.7rem;align-items:baseline;margin-bottom:.25rem}
+.entry-head .hw{font-weight:600}
+.scan{font-size:.8rem;color:var(--accent)}
+.rendered{overflow-wrap:anywhere}
+[data-view=gloss] .dict-entry:not(:first-child){display:none}
+@media(max-width:640px){[data-view=adaptive] .dict-entry:not(:first-child){display:none}}
+.disclosure{margin:.8rem 0 0;border:1px solid var(--border);border-radius:8px;
+background:var(--card-bg);padding:.3rem .8rem}
+.disclosure summary{cursor:pointer;font-weight:600;font-size:.9rem;padding:.3rem 0}
+.upa-list{margin:.2rem 0 .4rem;padding-left:1.1rem;font-size:.9rem}
+.upa-pv{font-weight:600}
+.ev-list{margin:.2rem 0 .4rem;padding-left:1.1rem;font-size:.9rem}
+.example{margin:.3rem 0;padding:.4rem .7rem;border-left:3px solid var(--accent);
+background:var(--hit-bg);font-size:1.05rem}
+.sf-head{margin:.2rem 0 .5rem;font-size:.85rem;color:var(--muted)}
+.sf-head b{color:var(--fg)}
+.sf-legend{margin-left:.5rem;font-size:.72rem}
+.sf-list{list-style:none;margin:.2rem 0 .3rem;padding:0}
+.sf-item{margin:.35rem 0}
+.sf-gloss{display:block;font-size:.9rem;margin-bottom:.15rem}
+.sf-bar{display:block;height:.5rem;background:var(--tag-bg);border-radius:3px;overflow:hidden}
+.sf-fill{display:block;height:100%;background:var(--accent);border-radius:3px}
+.sf-nums{display:flex;align-items:center;gap:.4rem;margin-top:.15rem;font-size:.8rem;flex-wrap:wrap}
+.sf-share{color:var(--muted)}
+.sf-more{font-size:.8rem;color:var(--muted);margin-top:.3rem;list-style:none}
+.chip{display:inline-block;font-size:.7rem;padding:.05rem .4rem;border-radius:4px;line-height:1.5}
+.chip.att{background:var(--tag-bg);color:var(--tag-fg)}
+.chip.att b{color:var(--tag-fg)}
+.chip.est{background:transparent;border:1px dashed var(--border);color:var(--muted);min-width:1.6rem}
+.chip.genre{background:transparent;border:1px solid var(--b2);color:var(--b2)}
+.chip.warn{background:var(--b1);color:#fff;font-weight:600}
+.sf-foot{margin:.5rem 0 .2rem;font-size:.72rem;color:var(--muted);line-height:1.4}
+.sf-foot .chip.warn{font-size:.66rem}
+.wp-foot{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--border);
+font-size:.78rem;color:var(--muted)}
+.wp-foot a{color:var(--accent)}</style></head><body><main class="word-page" data-slp1="saMGarza"><header class="hw-strip"><span class="hw-deva" lang="sa">संघर्ष</span><span class="hw-iast">saṃgharṣa</span><span class="hw-key" title="SLP1 key">[saMGarza]</span><span class="band b3" title="common -- recognise">band 3</span><span class="ndicts">2 dicts</span><span class="gram" data-gram hidden></span></header><div class="view-toggle" role="radiogroup" aria-label="Detail level" hidden><button type="button" data-view-set="gloss" role="radio" aria-checked="false">Gloss</button><button type="button" data-view-set="full" role="radio" aria-checked="false">Full</button><button type="button" data-view-set="adaptive" role="radio" aria-checked="true">Adaptive</button></div><noscript><style>.dict-panel[hidden]{display:block!important}.dict-tabs,.view-toggle{display:none!important}</style></noscript><nav class="dict-tabs" role="tablist" aria-label="Dictionaries"><button type="button" class="tab active" role="tab" aria-selected="true" aria-controls="panel-mw" id="tab-mw" data-dict="mw" title="Monier-Williams">MW<span class="tab-n">4</span></button><button type="button" class="tab" role="tab" aria-selected="false" aria-controls="panel-pwg" id="tab-pwg" data-dict="pwg" title="Petersburger Wörterbuch (großes)">PWG<span class="tab-n">1</span></button><button type="button" class="tab tab-all" role="tab" aria-selected="false" aria-controls="panel-mw panel-pwg" id="tab-all" data-dict="all" title="Show every dictionary">All<span class="tab-n">5</span></button></nav><section class="dict-panel" id="panel-mw" role="tabpanel" aria-labelledby="tab-mw" data-dict="mw"><h2 class="dict-label">Monier-Williams</h2><article class="dict-entry"><div class="entry-head"><span class="hw">saṃgharṣa</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=1130" target="_blank" rel="noopener">scan ↗</a></div><div class="rendered"><span class='sdata'>saṃ-gharṣa</span> <strong>m.</strong> rubbing together, friction, &nbsp;<span class='ls'>MBh.</span>&nbsp;; &nbsp;<span class='ls'>Kāv.</span>&nbsp; &c.</div></article><article class="dict-entry"><div class="entry-head"><span class="hw">saṃgharṣa</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=1130" target="_blank" rel="noopener">scan ↗</a></div><div class="rendered">mutual attrition, rivalry, envy, jealousy in regard to (<span>acc.</span> with <span class='sdata'>prati</span> or <span>comp.</span>), &nbsp;<span class='ls'>ib.</span>&nbsp;</div></article><article class="dict-entry"><div class="entry-head"><span class="hw">saṃgharṣa</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=1130" target="_blank" rel="noopener">scan ↗</a></div><div class="rendered">sexual excitement, &nbsp;<span class='ls'>MBh. (B.)</span>&nbsp; <span class='ls' title='MBh.'>xv, 840</span>&nbsp; (<span>C.</span> <span class='sdata'>saṃharṣa</span>)</div></article><article class="dict-entry"><div class="entry-head"><span class="hw">saṃgharṣa</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=1130" target="_blank" rel="noopener">scan ↗</a></div><div class="rendered">going gently, gliding (= <span class='sdata'>saṃ-sarpa</span>), &nbsp;<span class='ls'>L.</span>&nbsp;</div></article></section><section class="dict-panel" id="panel-pwg" role="tabpanel" aria-labelledby="tab-pwg" data-dict="pwg" hidden><h2 class="dict-label">Petersburger Wörterbuch (großes)</h2><article class="dict-entry"><div class="entry-head"><span class="hw">saṃgharṣa</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=542" target="_blank" rel="noopener">scan ↗</a></div><div class="rendered"><span class='sdata'>saṃgharṣa</span> (von <span class='sdata'>gharṣ</span> mit <span class='sdata'>sam</span>) <strong>m.</strong> <div style='padding-left:1.0em;'> 1〉 <i>Reibung</i> &nbsp;<span class='ls'>ŚABDAR.</span>&nbsp;_im_&nbsp;<span class='ls'>ŚKDR.</span>&nbsp; &nbsp;<span class='ls'>MBH. 1,1134</span>&nbsp;. <span class='ls' title='MBH.'>3,1610</span>&nbsp;. <span class='ls' title='MBH.'>7,3713</span>&nbsp;. <span class='ls' title='MBH. 7,'>4004</span>&nbsp;. &nbsp;<span class='ls'>HARIV. 11339</span>&nbsp;. <span class='ls' title='HARIV.'>13894</span>&nbsp;. &nbsp;<span class='ls'>R. 1,26,10</span>&nbsp; (<span class='ls' title='R. 1,'>27,9 GORR.</span>&nbsp;). &nbsp;<span class='ls'>SUŚR. 2,19,5</span>&nbsp;. <span class='ls' title='SUŚR. 2,'>312,18</span>&nbsp;. &nbsp;<span class='ls'>KATHĀS. 47,51</span>&nbsp;. &nbsp;<span class='ls'>Spr. (II) 2682</span>&nbsp;. &nbsp;<span class='ls'>BHĀG. P. 11,13,7</span>&nbsp;. </div><div style='padding-left:1.0em;'>— 2〉 <i>wollüstige Erregung</i> &nbsp;<span class='ls'>MBH. 15,840</span>&nbsp; nach der Lesart der &nbsp;<span class='ls'>ed. Bomb.</span>&nbsp; <span>st.</span> <span class='sdata'>saṃharṣa</span> der &nbsp;<span class='ls'>ed. Calc.</span>&nbsp; </div><div style='padding-left:1.0em;'>— 3〉 <i>Wettstreit, Wetteifer, Eifersucht</i> &nbsp;<span class='ls'>H. 1515</span>&nbsp;, <span>Schol.</span> &nbsp;<span class='ls'>ŚABDAR.</span>&nbsp;_im_&nbsp;<span class='ls'>ŚKDR.</span>&nbsp; <span class='sdata'>surāṇāmasurāṇāṃ ca samajāyata vai mithaḥ . aiśvaryaṃ prati saṃgharṣaḥ</span> (&nbsp;<span class='ls'>NĪLAK.</span>&nbsp; scheint <span class='sdata'>aiśvarye pratisaṃ˚</span> gelesen zu haben) &nbsp;<span class='ls'>MBH. 1,3187</span>&nbsp;. <span class='ls' title='MBH.'>6,3360</span>&nbsp; (<span class='sdata'>saṃharṣa</span> &nbsp;<span class='ls'>ed. Bomb.</span>&nbsp;). <span class='ls' title='MBH.'>9,1251</span>&nbsp; (<span class='sdata'>saṃgharṣeṇā˚</span> zu lesen; <span class='sdata'>saṃghātenā˚</span> &nbsp;<span class='ls'>ed. Bomb.</span>&nbsp;). <span class='ls' title='MBH.'>12,49</span>&nbsp;. &nbsp;<span class='ls'>R. 7,42,14</span>&nbsp;. <span class='ls' title='R. 7,'>101,12</span>&nbsp;. &nbsp;<span class='ls'>KATHĀS. 15,142</span>&nbsp;. <span class='ls' title='KATHĀS.'>18,130</span>&nbsp;. <span class='ls' title='KATHĀS.'>74,50</span>&nbsp; (<span class='sdata'>tat</span> von <span class='sdata'>saṃ˚</span> zu trennen). &nbsp;<span class='ls'>Spr. (II) 5329</span>&nbsp;. &nbsp;<span class='ls'>DAŚAK. 66,11</span>&nbsp;. &nbsp;<span class='ls'>ŚAṂK.</span>&nbsp;_zu_&nbsp;<span class='ls'>BṚH. ĀR. UP. S. 315</span>&nbsp;. &nbsp;<span class='ls'>VP.</span>&nbsp;_bei_&nbsp;<span class='ls'>MUIR, ST. 1,193, N. 15</span>&nbsp;. &nbsp;<span class='ls'>BHĀG. P. 11,30,13</span>&nbsp;. <span class='sdata'>atrabhavatoḥ paraspareṇa jñānasaṃgharṣo jātaḥ</span> &nbsp;<span class='ls'>MĀLAV. ed. Bomb. 14,9</span>&nbsp;. <span class='ls' title='MĀLAV. ed. Bomb. 14,'>10</span>&nbsp;. <span class='sdata'>˚śālin</span> <i>eifersüchtig</i> &nbsp;<span class='ls'>KATHĀS. 18,139</span>&nbsp;. </div><div style='padding-left:1.0em;'>— 4〉 = <span class='sdata'>saṃsarpa</span> &nbsp;<span class='ls'>ŚABDAR. a. a. O.</span>&nbsp; — [Page7-0543] <span>Vgl.</span> <span class='sdata'>danta˚</span>.</div></div></article></section><details class="disclosure evidence"><summary>Evidence</summary><ul class="ev-list"><li><b>Frequency band 3</b> — common -- recognise</li><li>66 attestations in DCS</li></ul><blockquote class="example" lang="sa">saṃgharṣa — <cite>kama-sutra</cite></blockquote></details><details class="disclosure sense-freq"><summary>Sense frequency</summary><p class="sf-head"><b>5</b> for the lemma · attested in DCS WordSem gold · <b>61</b> estimated (untagged MFS) <span class="sf-legend"><span class="chip att">attested</span><span class="chip est" title="WSD estimate — H1588">estimated</span></span></p><ul class="sf-list"><li class="sf-item"><span class="sf-gloss">mutual attrition, rivalry, envy, jealousy in regard to ( acc. with prati or comp. ), ib.</span><span class="sf-bar" aria-hidden="true"><span class="sf-fill" style="width:80%"></span></span><span class="sf-nums"><span class="chip att"><b>4</b> in this sense</span><span class="chip est" title="WSD estimate (MFS on untagged DCS tokens; not blended with attested)"><b>61</b> estimated</span><span class="sf-share">80%</span></span></li><li class="sf-item"><span class="sf-gloss">saM-Garza m. rubbing together, friction, MBh. ; Kāv. &amp;c.</span><span class="sf-bar" aria-hidden="true"><span class="sf-fill" style="width:20%"></span></span><span class="sf-nums"><span class="chip att"><b>1</b> in this sense</span><span class="chip est" title="no WSD estimate for this sense"></span><span class="chip warn" title="never attested outside technical śāstra (alchemy/medicine/…) — a corpus-composition artefact, not general usage">śāstra-only</span><span class="sf-share">20%</span></span></li></ul><p class="sf-foot">DCS over-samples technical śāstra (alchemy/medicine); a <span class="chip warn">śāstra-only</span> or genre chip marks a count that reflects corpus composition, not general Sanskrit. Estimated counts cover untagged DCS tokens via most-frequent-sense WSD and are never added into the attested figure.</p></details><details class="disclosure paradigm" data-paradigm data-slp1="saMGarza"><summary>Paradigm (all forms)</summary><p class="para-fallback">Full inflection table: <a href="../inflect/?lemma=saMGarza">open in the inflection lookup →</a></p></details><footer class="wp-foot">Gasuns Sanskrit Dictionary · <a href="../inflect/">inflection lookup</a> · <a href="../browse/">browse</a> · entries from MW, PWG &amp; Apte (Cologne), rendered verbatim.</footer></main><script>(function(){
+ var VM='kosha_view_mode',root=document.documentElement;
+ function setView(v){root.setAttribute('data-view',v);
+  try{localStorage.setItem(VM,v)}catch(e){}
+  document.querySelectorAll('[data-view-set]').forEach(function(b){
+   b.setAttribute('aria-checked',b.getAttribute('data-view-set')===v?'true':'false')})}
+ try{var s=localStorage.getItem(VM);if(s)root.setAttribute('data-view',s)}catch(e){}
+ var vt=document.querySelector('.view-toggle');if(vt){vt.hidden=false;
+  setView(root.getAttribute('data-view')||'adaptive');
+  vt.addEventListener('click',function(e){var b=e.target.closest('[data-view-set]');
+   if(b)setView(b.getAttribute('data-view-set'))})}
+ var tabs=document.querySelectorAll('.dict-tabs .tab');
+ var page=document.querySelector('.word-page');
+ tabs.forEach(function(t){t.addEventListener('click',function(){
+  tabs.forEach(function(x){x.classList.remove('active');x.setAttribute('aria-selected','false')});
+  t.classList.add('active');t.setAttribute('aria-selected','true');
+  var want=t.getAttribute('data-dict');
+  var all=want==='all';
+  if(page)page.classList.toggle('all-dicts',all);
+  document.querySelectorAll('.dict-panel').forEach(function(p){
+   p.hidden=!all && p.getAttribute('data-dict')!==want})})})
+})();</script></body></html>

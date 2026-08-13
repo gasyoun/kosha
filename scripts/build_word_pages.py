@@ -31,6 +31,7 @@ Usage:
     python scripts/build_word_pages.py --head 11148      # explicit head after measure
     python scripts/build_word_pages.py                   # all attested (legacy full set)
     python scripts/build_word_pages.py --limit 200       # smoke: first 200 of selection
+    python scripts/build_word_pages.py --reading-packs   # pack href tokens → repo-root w/
     python scripts/build_word_pages.py --no-browse
     python scripts/build_word_pages.py --force
 """
@@ -38,6 +39,7 @@ import argparse
 import csv
 import html
 import json
+import re
 import sys
 import time
 from pathlib import Path
@@ -101,6 +103,30 @@ def _decode_token(tok):
             out.append(tok[j])
             j += 1
     return "".join(out)
+
+
+PACK_HREF_RE = re.compile(r"\.\./w/([A-Za-z0-9_]+)\.html")
+
+
+def harvest_reading_pack_tokens(reading_dir=None):
+    """Unique card tokens named by reading-pack ``../w/{token}.html`` hrefs.
+
+    Pack pages live at ``/reading/``; those relative hrefs resolve on Pages
+    as ``/w/{token}.html`` (site root), not ``/docs/w/``.
+    """
+    root = Path(reading_dir) if reading_dir is not None else ROOT / "reading"
+    tokens = set()
+    if not root.exists():
+        return []
+    for p in root.rglob("*"):
+        if p.suffix.lower() not in {".js", ".html", ".json", ".md"}:
+            continue
+        try:
+            text = p.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        tokens.update(PACK_HREF_RE.findall(text))
+    return sorted(tokens)
 
 
 def measure_head_n(freq_path=LEMMA_FREQ, coverage=0.95):
@@ -206,18 +232,31 @@ def select_head_tokens(attested_tokens, cards_dir, head_n=None, coverage=None,
     return tokens, meta
 
 
-def build_word_pages(out_dir, limit=None, force=False, head_n=None, coverage=None):
-    cards_dir = out_dir / "cards"
-    att_path = out_dir / "js" / "data" / "attested_keys.json"
-    if not att_path.exists():
-        sys.exit(f"error: {att_path} not found — run scripts/build_static_cache.py first "
-                 "(it emits the card set + attested_keys.json this consumes).")
-    attested = _read_json(att_path)["tokens"]
-    tokens, meta = select_head_tokens(
-        attested, cards_dir, head_n=head_n, coverage=coverage)
+def build_word_pages(out_dir, limit=None, force=False, head_n=None, coverage=None,
+                     tokens=None, w_dir=None, cards_dir=None):
+    cards_dir = Path(cards_dir) if cards_dir is not None else out_dir / "cards"
+    w_dir = Path(w_dir) if w_dir is not None else out_dir / "w"
+    if tokens is not None:
+        tokens = list(tokens)
+        meta = {
+            "mode": "reading_packs",
+            "head_n": None,
+            "coverage_achieved": None,
+            "head_with_card": 0,
+            "head_without_card": 0,
+            "ssr_tail_beyond_head": None,
+            "pack_tokens": len(tokens),
+        }
+    else:
+        att_path = out_dir / "js" / "data" / "attested_keys.json"
+        if not att_path.exists():
+            sys.exit(f"error: {att_path} not found — run scripts/build_static_cache.py first "
+                     "(it emits the card set + attested_keys.json this consumes).")
+        attested = _read_json(att_path)["tokens"]
+        tokens, meta = select_head_tokens(
+            attested, cards_dir, head_n=head_n, coverage=coverage)
     if limit:
         tokens = tokens[:limit]
-    w_dir = out_dir / "w"
     w_dir.mkdir(parents=True, exist_ok=True)
     total = len(tokens)
     print(f"[word-pages] mode={meta['mode']} selection={total} -> {w_dir}")
@@ -370,6 +409,9 @@ def main():
                          "still logging the measure.")
     ap.add_argument("--no-browse", dest="browse", action="store_false", default=True,
                     help="skip the /browse spine")
+    ap.add_argument("--reading-packs", action="store_true",
+                    help="prerender tokens named by reading/ ../w/{token}.html "
+                         "hrefs into repo-root w/ (Pages site-root /w/)")
     ap.add_argument("--force", action="store_true", help="re-emit existing pages")
     args = ap.parse_args()
 
@@ -378,14 +420,27 @@ def main():
     if args.coverage is not None and not (0.0 < args.coverage <= 1.0):
         sys.exit("error: --coverage must be in (0, 1]")
 
+    extra = {}
+    browse = args.browse
+    if args.reading_packs:
+        extra = {
+            "tokens": harvest_reading_pack_tokens(),
+            "w_dir": ROOT / "w",
+            "cards_dir": ROOT / "docs" / "cards",
+        }
+        browse = False
+        if not extra["tokens"]:
+            sys.exit("error: --reading-packs found no ../w/{token}.html hrefs")
+
     rendered, meta = build_word_pages(
         args.out_dir,
         limit=args.limit,
         force=args.force,
         head_n=args.head_n,
         coverage=args.coverage,
+        **extra,
     )
-    if args.browse:
+    if browse:
         build_browse(args.out_dir, rendered, force=args.force)
     print("[word-pages] complete.")
     # Machine-readable one-liner for exit packets / CI logs.
