@@ -4,7 +4,7 @@
 1. Ensures the fixture DB exists (builds it if missing).
 2. Assembles a fixture-profile deploy bundle with digests.
 3. Boots uvicorn against that fixture on 127.0.0.1 (ephemeral port).
-4. Probes GET /health and GET /ready; optional lemma smoke.
+4. Probes GET /health, GET /ready, optional lemma smoke, GET /metrics.
 5. Tears down the server.
 
 Never contacts production. Never reads .env.deploy. Exit 0 only when every
@@ -228,6 +228,23 @@ def main() -> int:
         )
         if not lemma_ok:
             print("ERROR: lemma smoke unexpected status", file=sys.stderr)
+            _write_log(log)
+            return 1
+
+        metrics_url = f"http://127.0.0.1:{port}/metrics"
+        metrics_status, metrics_body = _http_get(metrics_url, timeout=5.0)
+        metrics_ok = metrics_status == 200 and "kosha_ready" in metrics_body
+        print(f"metrics: {metrics_status} kosha_ready={'yes' if 'kosha_ready' in metrics_body else 'no'}")
+        log["steps"].append(
+            {
+                "step": "metrics",
+                "ok": metrics_ok,
+                "status": metrics_status,
+                "has_kosha_ready": "kosha_ready" in metrics_body,
+            }
+        )
+        if not metrics_ok:
+            print("ERROR: /metrics not green", file=sys.stderr)
             _write_log(log)
             return 1
 

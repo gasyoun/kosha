@@ -37,6 +37,20 @@
       "rollback_method": "redeploy previous release tag; git revert app/main.py + src/kosha/api/catalog.py + data/manifest/surfaces.json"
     },
     {
+      "id": "ops-metrics",
+      "title": "Release observability metrics (GET /metrics)",
+      "audience": "operators, release-ops",
+      "kind": "ops",
+      "source_datasets": ["core-db"],
+      "builder": "app/main.py",
+      "output_paths": ["/metrics"],
+      "output_class": "runtime",
+      "rights_tier": "public",
+      "acceptance_command": "python -m pytest tests/test_observability.py tests/test_readiness.py tests/test_surface_registry.py -q -p no:cacheprovider",
+      "deploy_owner": "mg-samskrtam-ru",
+      "rollback_method": "redeploy previous release tag; git revert app/main.py + src/kosha/api/observability.py + data/manifest/surfaces.json"
+    },
+    {
       "id": "salt-dicts-facade",
       "title": "Cologne Salt dictionary faces (/dicts/*)",
       "audience": "api-clients, Cologne-compatible consumers",

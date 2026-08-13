@@ -1,6 +1,6 @@
 # kosha — deployment runbook
 
-_Created: 08-08-2026 · Last updated: 08-08-2026_
+_Created: 08-08-2026 · Last updated: 13-08-2026_
 
 The human-facing deploy procedure for the **public API surface** on a host
 M.G. controls (samskrtam.ru) and for **local rehearsal** every agent can run.
@@ -85,8 +85,9 @@ What it does:
 2. Assembles a fixture-profile bundle with digests.
 3. Spawns `uvicorn app.main:app` on `127.0.0.1` (ephemeral port) with
    `KOSHA_CORE_DB_PATH` pointing at the fixture and history disabled.
-4. Probes `GET /health` → 200, `GET /ready` → 200/`ready:true`, and a lemma
-   smoke (`/api/v1/lemma/banD` may be 200 or clean 404 on a tiny fixture).
+4. Probes `GET /health` → 200, `GET /ready` → 200/`ready:true`, a lemma
+   smoke (`/api/v1/lemma/banD` may be 200 or clean 404 on a tiny fixture),
+   and `GET /metrics` → 200 containing `kosha_ready`.
 5. Terminates the process. Writes
    `data/deploy_bundles/last_rehearsal.json` (gitignored).
 
@@ -103,7 +104,12 @@ uvicorn app.main:app --host 127.0.0.1 --port 8000
 # other terminal:
 curl -fsS http://127.0.0.1:8000/health
 curl -fsS http://127.0.0.1:8000/ready
+curl -fsS http://127.0.0.1:8000/metrics
 ```
+
+Post-deploy watch list (correlation header, metric names, `data_version`,
+archive health):
+[`docs/RELEASE_OBSERVABILITY.md`](https://github.com/gasyoun/kosha/blob/main/docs/RELEASE_OBSERVABILITY.md).
 
 ---
 
@@ -198,6 +204,10 @@ location = /health {
 location = /ready {
     proxy_pass http://127.0.0.1:8000/ready;
 }
+
+location = /metrics {
+    proxy_pass http://127.0.0.1:8000/metrics;
+}
 ```
 
 Reload nginx after editing. Prefer separate `location` blocks over a catch-all
@@ -208,6 +218,8 @@ so static Pages assets and the API do not silently collide.
 ```sh
 curl -fsS https://samskrtam.ru/health
 curl -fsS https://samskrtam.ru/ready
+curl -fsS https://samskrtam.ru/metrics | findstr kosha_ready
+curl -sS -D - -o /dev/null -H "X-Request-ID: deploy-smoke-01" https://samskrtam.ru/ready
 curl -fsS 'https://samskrtam.ru/api/v1/lemma/banD' | head -c 200
 ```
 
