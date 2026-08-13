@@ -1,6 +1,6 @@
 # Architecture contract — Gasuns Sanskrit Dictionary (kosha)
 
-_Created: 02-07-2026 · Last updated: 30-07-2026_
+_Created: 02-07-2026 · Last updated: 13-08-2026_
 
 The engineering contract for Phase 1, locking the four decisions M.G. took on
 02-07-2026 (A1–A4 below) on top of the product meta-decisions M1–M4
@@ -127,11 +127,14 @@ Prefix `/api/v1/`. JSON only. Every response carries the envelope:
 | `GET /api/v1/search?q=&mode=prefix&limit=50&offset=0` | Headword search over `lemmas`; `mode`: `exact`/`prefix`/`fuzzy`. Paginated: `limit` ≤ 200, `offset`, `total` in envelope |
 | `GET /api/v1/sense/{dict}.{L}.{n}` | The citable unit: sense text (raw + rendered), parent entry, scan link, and a `cite` object (formatted string + BibTeX + CSL-JSON) pinned to `data_version` — the Gandhāri Cite button, versioned |
 | `GET /api/v1/meta` | `data_version`, per-dict `sources` rows, counts |
+| `GET /api/v1/datasets` | **Catalog lane (W2B / P-D6), not the lemma envelope.** Public-tier rows from `data/manifest/datasets.json` (`schema: kosha-dataset-catalog-v1`). Restricted/intermediate omitted |
+| `GET /api/v1/datasets/{id}` | One public catalog row. Restricted, intermediate, and unknown ids share `dataset_not_found` 404 |
 | `GET /health` | `{"status":"ok"}` (unversioned, for probes) |
 
 **Errors** (uniform): HTTP status + `{"error": {"code": "lemma_not_found",
 "message": "...", "suggestions": [...]}}`. Codes: `bad_input_scheme`,
-`lemma_not_found`, `form_not_found`, `sense_not_found`, `bad_request`.
+`lemma_not_found`, `form_not_found`, `sense_not_found`, `dataset_not_found`,
+`bad_request`.
 
 **Encoding policy:** SLP1 is the internal key everywhere; IAST is the default
 display; conversion at the boundary only, via sanskrit-util.
