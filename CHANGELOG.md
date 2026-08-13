@@ -14,6 +14,7 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.110.3] - 2026-08-13
 ### Added
 - **W2C release observability (Grok 4.6 `grok-4.6`, H2348):**
   `X-Request-ID` on every response (echo or UUID4) plus structured
