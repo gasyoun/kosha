@@ -14,6 +14,13 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Changed
+- **W1E live-smoke re-fill after W2C (Grok 4.6 `grok-4.6`, H2642):**
+  promoted `/opt/kosha/repo` `0cd22ef5` → `ae4f93c4` (v0.110.3) on
+  `.92`; public sslip re-probe **PASS** including `X-Request-ID` and
+  `GET /metrics`; Gītā 1.1 **13/13** SSR. Packet §8c. Residuals
+  unchanged (branded host, Pages `w/`, archive mount, §9).
+
 ## [0.110.3] - 2026-08-13
 ### Added
 - **W2C release observability (Grok 4.6 `grok-4.6`, H2348):**
