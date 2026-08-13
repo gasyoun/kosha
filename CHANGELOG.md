@@ -14,6 +14,7 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.110.9] - 2026-08-14
 ### Changed
 - **Citation archive mounted on live `.92` (Grok 4.6 `grok-4.6`, H2671):**
   `/opt/kosha/archive/0.1.0-dev/` is a snapshot of live `data_version`
