@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="sa" data-view="adaptive"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>पॄ pṝ — Sanskrit dictionary | kosha</title><meta name="description" content="pṝ cl. 9. P. (&amp;nbsp;Dhātup. xxxi, 19&amp;nbsp;) pṛṇāti, &amp;nbsp;RV.&amp;nbsp;; cl. 6. P. (√pṛṇ, xxviii, 40&amp;nbsp;) pṛṇati, &amp;nbsp;ib.&amp;nbsp;; cl. 3. P. (xxv, 4&amp;nbsp;) pipar…"><meta name="data-version" content="0.1.0-dev"><style>:root{--fg:#1a1a1a;--muted:#6b7280;--border:#d7d7db;--accent:#7b2d26;
+--card-bg:#fafafa;--head-bg:#f0f0f2;--hit-bg:#fdf3e7;--tag-bg:#ece7e0;
+--tag-fg:#7b2d26;--page-bg:#fff;--b1:#7b2d26;--b2:#a05a2c;--b3:#4a7a3a;
+--b4:#5a6b8c;--b5:#9aa0a6}
+@media(prefers-color-scheme:dark){:root{--fg:#e8e8ea;--muted:#9aa0a6;
+--border:#3a3a40;--accent:#e0a44a;--card-bg:#202024;--head-bg:#26262b;
+--hit-bg:#3a3020;--tag-bg:#2c2c31;--tag-fg:#e0a44a;--page-bg:#161618;
+--b1:#e0a44a;--b2:#d08a3a;--b3:#7bbf6a;--b4:#8fa4c8;--b5:#6b7078}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page-bg);color:var(--fg);
+font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+.word-page{max-width:52rem;margin:0 auto;padding:1.2rem 1rem 4rem}
+.hw-strip{display:flex;gap:.7rem;align-items:baseline;flex-wrap:wrap;
+border-bottom:1px solid var(--border);padding-bottom:.6rem}
+.hw-deva{font-size:2rem}.hw-iast{font-size:1.2rem;color:var(--muted)}
+.hw-key{font-family:monospace;font-size:.8rem;color:var(--muted)}
+.band{font-size:.65rem;font-weight:700;padding:.12rem .45rem;border-radius:4px;
+color:#fff;text-transform:uppercase}
+.band.b1{background:var(--b1)}.band.b2{background:var(--b2)}
+.band.b3{background:var(--b3)}.band.b4{background:var(--b4)}.band.b5{background:var(--b5)}
+.ndicts,.gram{font-size:.72rem;color:var(--muted)}
+.gram{font-family:monospace}
+.view-toggle{display:inline-flex;margin:.7rem 0 0;border:1px solid var(--border);
+border-radius:6px;overflow:hidden}
+.view-toggle button{border:none;background:var(--page-bg);color:var(--muted);
+padding:.3rem .7rem;cursor:pointer;font-size:.8rem}
+.view-toggle button[aria-checked=true]{background:var(--head-bg);color:var(--fg);font-weight:600}
+.dict-tabs{display:flex;gap:.35rem;flex-wrap:wrap;margin:.9rem 0 0;
+border-bottom:1px solid var(--border)}
+.tab{border:1px solid var(--border);border-bottom:none;background:var(--card-bg);
+color:var(--fg);padding:.4rem .8rem;cursor:pointer;border-radius:6px 6px 0 0;font-size:.9rem}
+.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tab-all{margin-left:.35rem}
+.tab-n{font-size:.65rem;opacity:.75;margin-left:.3rem}
+.dict-label{display:none;font:600 .85rem/1.3 system-ui,sans-serif;
+margin:0 0 .6rem;color:var(--accent)}
+.word-page.all-dicts .dict-label{display:block}
+.word-page.all-dicts .dict-panel{border-top:1px solid var(--border);
+padding-top:.9rem;margin-top:1.1rem}
+.dict-panel{border:1px solid var(--border);border-top:none;padding:.4rem 1rem;
+background:var(--card-bg)}
+.dict-entry{border-top:1px solid var(--border);padding:.55rem 0}
+.dict-entry:first-child{border-top:none}
+.entry-head{display:flex;gap:.7rem;align-items:baseline;margin-bottom:.25rem}
+.entry-head .hw{font-weight:600}
+.scan{font-size:.8rem;color:var(--accent)}
+.rendered{overflow-wrap:anywhere}
+[data-view=gloss] .dict-entry:not(:first-child){display:none}
+@media(max-width:640px){[data-view=adaptive] .dict-entry:not(:first-child){display:none}}
+.disclosure{margin:.8rem 0 0;border:1px solid var(--border);border-radius:8px;
+background:var(--card-bg);padding:.3rem .8rem}
+.disclosure summary{cursor:pointer;font-weight:600;font-size:.9rem;padding:.3rem 0}
+.upa-list{margin:.2rem 0 .4rem;padding-left:1.1rem;font-size:.9rem}
+.upa-pv{font-weight:600}
+.ev-list{margin:.2rem 0 .4rem;padding-left:1.1rem;font-size:.9rem}
+.example{margin:.3rem 0;padding:.4rem .7rem;border-left:3px solid var(--accent);
+background:var(--hit-bg);font-size:1.05rem}
+.sf-head{margin:.2rem 0 .5rem;font-size:.85rem;color:var(--muted)}
+.sf-head b{color:var(--fg)}
+.sf-legend{margin-left:.5rem;font-size:.72rem}
+.sf-list{list-style:none;margin:.2rem 0 .3rem;padding:0}
+.sf-item{margin:.35rem 0}
+.sf-gloss{display:block;font-size:.9rem;margin-bottom:.15rem}
+.sf-bar{display:block;height:.5rem;background:var(--tag-bg);border-radius:3px;overflow:hidden}
+.sf-fill{display:block;height:100%;background:var(--accent);border-radius:3px}
+.sf-nums{display:flex;align-items:center;gap:.4rem;margin-top:.15rem;font-size:.8rem;flex-wrap:wrap}
+.sf-share{color:var(--muted)}
+.sf-more{font-size:.8rem;color:var(--muted);margin-top:.3rem;list-style:none}
+.chip{display:inline-block;font-size:.7rem;padding:.05rem .4rem;border-radius:4px;line-height:1.5}
+.chip.att{background:var(--tag-bg);color:var(--tag-fg)}
+.chip.att b{color:var(--tag-fg)}
+.chip.est{background:transparent;border:1px dashed var(--border);color:var(--muted);min-width:1.6rem}
+.chip.genre{background:transparent;border:1px solid var(--b2);color:var(--b2)}
+.chip.warn{background:var(--b1);color:#fff;font-weight:600}
+.sf-foot{margin:.5rem 0 .2rem;font-size:.72rem;color:var(--muted);line-height:1.4}
+.sf-foot .chip.warn{font-size:.66rem}
+.wp-foot{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--border);
+font-size:.78rem;color:var(--muted)}
+.wp-foot a{color:var(--accent)}</style></head><body><main class="word-page" data-slp1="pF"><header class="hw-strip"><span class="hw-deva" lang="sa">पॄ</span><span class="hw-iast">pṝ</span><span class="hw-key" title="SLP1 key">[pF]</span><span class="band b4" title="attested -- look up">band 4</span><span class="ndicts">2 dicts</span><span class="gram" data-gram hidden></span></header><div class="view-toggle" role="radiogroup" aria-label="Detail level" hidden><button type="button" data-view-set="gloss" role="radio" aria-checked="false">Gloss</button><button type="button" data-view-set="full" role="radio" aria-checked="false">Full</button><button type="button" data-view-set="adaptive" role="radio" aria-checked="true">Adaptive</button></div><noscript><style>.dict-panel[hidden]{display:block!important}.dict-tabs,.view-toggle{display:none!important}</style></noscript><nav class="dict-tabs" role="tablist" aria-label="Dictionaries"><button type="button" class="tab active" role="tab" aria-selected="true" aria-controls="panel-mw" id="tab-mw" data-dict="mw" title="Monier-Williams">MW<span class="tab-n">2</span></button><button type="button" class="tab" role="tab" aria-selected="false" aria-controls="panel-ap90" id="tab-ap90" data-dict="ap90" title="Apte 1890">AP90<span class="tab-n">1</span></button><button type="button" class="tab tab-all" role="tab" aria-selected="false" aria-controls="panel-mw panel-ap90" id="tab-all" data-dict="all" title="Show every dictionary">All<span class="tab-n">3</span></button></nav><section class="dict-panel" id="panel-mw" role="tabpanel" aria-labelledby="tab-mw" data-dict="mw"><h2 class="dict-label">Monier-Williams</h2><article class="dict-entry"><div class="entry-head"><span class="hw">pṝ</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=648" target="_blank" rel="noopener">scan ↗</a></div><div class="rendered"><span class='sdata'>pṝ</span> <span>cl.</span> 9. <span>P.</span> (&nbsp;<span class='ls'>Dhātup. xxxi, 19</span>&nbsp;) <span class='sdata'>pṛṇāti</span>, &nbsp;<span class='ls'>RV.</span>&nbsp;; <div style='margin-top:0.6em;'></div></div> <strong><span>cl.</span></strong> 6. <span>P.</span> (√<span class='sdata'>pṛṇ</span>, <span class='ls' title='Dhātup.'>xxviii, 40</span>&nbsp;) <span class='sdata'>pṛṇati</span>, &nbsp;<span class='ls'>ib.</span>&nbsp;; <div style='margin-top:0.6em;'></div></div> <strong><span>cl.</span></strong> 3. <span>P.</span> (<span class='ls' title='Dhātup.'>xxv, 4</span>&nbsp;) <span class='sdata'>piparti</span>, &nbsp;<span class='ls'>ib.</span>&nbsp; (also <span>Ā.</span>; <span>Impv.</span> <span class='sdata'>pipīpṛhi</span>, &nbsp;<span class='ls'>BhP. iv, 19, 38</span>&nbsp;; <span>pf.</span> <span class='sdata'>papāra</span>, 3. <span>pl.</span> <span class='sdata'>paparuḥ</span>, or <span class='sdata'>papruḥ</span>, &nbsp;<span class='ls'>Pāṇ. vii, 4, 12</span>&nbsp;; <span class='sdata'>pupūre</span>, <span class='sdata'>˚rire</span>, &nbsp;<span class='ls'>Bhaṭṭ.</span>&nbsp;; <span class='sdata'>-pupūryās</span>, &nbsp;<span class='ls'>RV.</span>&nbsp;; <span class='sdata'>papṛvas</span> [?] &nbsp;<span class='ls'>MaitrS.</span>&nbsp;; <span>aor.</span> <span class='sdata'>apārīt</span> <span>Gr.</span>, <span class='sdata'>pūriṣṭhās</span>, &nbsp;<span class='ls'>TĀr.</span>&nbsp;; <span>Impv.</span> <span class='sdata'>pūrdhi</span>, &nbsp;<span class='ls'>RV.</span>&nbsp;; <span>Prec.</span> <span class='sdata'>priyāsam</span>, &nbsp;<span class='ls'>AV.</span>&nbsp;, <span class='sdata'>pūryāt</span> <span>Gr.</span>; <span>fut.</span> <span class='sdata'>parīṣyati</span> or <span class='sdata'>pariṣyati</span>, <span class='sdata'>parītā</span> or <span class='sdata'>paritā</span> <span>Gr.</span>; <span>ind.p.</span> <span class='sdata'>pūrtvā</span> <span>Gr.</span>, <span class='sdata'>-pūrya</span>, &nbsp;<span class='ls'>MBh.</span>&nbsp;; <span class='sdata'>-pūram</span> [in <span>comp.</span> with its object; <span>cf.</span> <span class='sdata'>udara-p˚</span>, <span class='sdata'>goṣpada-p˚</span>, <span class='sdata'>carma-p˚</span>. and &nbsp;<span class='ls'>Pāṇ. iii, 4, 31</span>&nbsp;; <span class='ls' title='Pāṇ. iii, 4'>32</span>&nbsp;]; <span>inf.</span> <span class='sdata'>pṛṇadhyai</span>, &nbsp;<span class='ls'>RV.</span>&nbsp;; <span class='sdata'>-puras</span>, &nbsp;<span class='ls'>Kāṭh.</span>&nbsp;; <span class='sdata'>pūritum</span>, &nbsp;<span class='ls'>R.</span>&nbsp;), <div style='margin-top:0.6em;'></div></div>to fill (<span>Ā.</span> ‘one's self’), &nbsp;<span class='ls'>RV.</span>&nbsp;; &nbsp;<span class='ls'>AV.</span>&nbsp;; <div style='margin-top:0.6em;'></div></div>to fill with air, blow into (<span>acc.</span>), &nbsp;<span class='ls'>Bhaṭṭ.</span>&nbsp;; <div style='margin-top:0.6em;'></div></div>to sate, cherish, nourish, bring up, &nbsp;<span class='ls'>RV.</span>&nbsp;; &nbsp;<span class='ls'>AV.</span>&nbsp;; <div style='margin-top:0.6em;'></div></div>to refresh (as the Pitṛs), &nbsp;<span class='ls'>Bhaṭṭ.</span>&nbsp; (<span>aor.</span> <span class='sdata'>apārīt</span> <span>v.l.</span> <span class='sdata'>atārpsīt</span>); <div style='margin-top:0.6em;'></div></div>to grant abundantly, bestow on (<span>dat.</span>), present with (<span>instr.</span>), &nbsp;<span class='ls'>RV.</span>&nbsp;; &nbsp;<span class='ls'>AV.</span>&nbsp; (often <span>p.</span> <span class='sdata'>pṛṇat</span> = bounteous, liberal, ungrudging); <div style='margin-top:0.6em;'></div></div>to fulfil, satisfy (as a wish), &nbsp;<span class='ls'>BhP.</span>&nbsp; : <div style='margin-top:0.6em;'></div></div><strong><span>Pass.</span></strong> <span class='sdata'>pūryate</span> (<span>ep.</span> also <span class='sdata'>˚ti</span>, and &nbsp;<span class='ls'>RV.</span>&nbsp; <span>Ā.</span> <span class='sdata'>pūryate</span>, <span>p.</span> <span class='sdata'>pūryamāṇa</span>), to be filled with, become full of (<span>instr.</span>), be sated, &nbsp;<span class='ls'>RV.</span>&nbsp;; &nbsp;<span class='ls'>VS.</span>&nbsp;; &nbsp;<span class='ls'>ŚBr.</span>&nbsp;; &nbsp;<span class='ls'>MBh.</span>&nbsp; &c.; <div style='margin-top:0.6em;'></div></div>to become complete (as a number), &nbsp;<span class='ls'>Lāṭy.</span>&nbsp; : <div style='margin-top:0.6em;'></div></div><strong><span>Caus.</span></strong> <span class='sdata'>pārayati</span>, to fill, &nbsp;<span class='ls'>Dhātup. xxxii, 15</span>&nbsp;; <div style='margin-top:0.6em;'></div></div>to fulfil (only <span>aor.</span> <span class='sdata'>pīparat</span>), &nbsp;<span class='ls'>RV.</span>&nbsp;; <div style='margin-top:0.6em;'></div></div> <span class='sdata'>pūrayati</span> (&nbsp;<span class='ls'>Dhātup. xxxiii, 126</span>&nbsp;), <span class='sdata'>˚te</span> (<span>Pass.</span> <span class='sdata'>pūryate</span> [<span>cf.</span> above]; <span>aor.</span> <span class='sdata'>apūri</span>, <span class='sdata'>apūriṣṭa</span>), <div style='margin-top:0.6em;'></div></div>to fill, fill up with (<span>instr.</span>), &nbsp;<span class='ls'>ŚBr.</span>&nbsp;; &nbsp;<span class='ls'>GṛŚrS.</span>&nbsp;; &nbsp;<span class='ls'>MBh.</span>&nbsp; &c.; <div style='margin-top:0.6em;'></div></div>to fill (with a noise, said also of the noise itself), &nbsp;<span class='ls'>MBh.</span>&nbsp;; &nbsp;<span class='ls'>R.</span>&nbsp;; <div style='margin-top:0.6em;'></div></div>to fill with wind, blow (a conch), &nbsp;<span class='ls'>ib.</span>&nbsp; <pb n='648,2'>; <div style='margin-top:0.6em;'></div></div>to draw (a bow or an arrow to the ear), &nbsp;<span class='ls'>R.</span>&nbsp;; <div style='margin-top:0.6em;'></div></div>to make full, complete, supplement (a sentence), &nbsp;<span class='ls'>Kuval.</span>&nbsp;; <div style='margin-top:0.6em;'></div></div>to cover completely, overspread, bestrew, surround, &nbsp;<span class='ls'>MBh.</span>&nbsp;; &nbsp;<span class='ls'>Kāv.</span>&nbsp; &c.; <div style='margin-top:0.6em;'></div></div>to load or enrich or present with (<span>instr.</span>), &nbsp;<span class='ls'>ib.</span>&nbsp;; <div style='margin-top:0.6em;'></div></div>to fulfil (a wish or hope), &nbsp;<span class='ls'>AV.</span>&nbsp; &c. &c.; <div style='margin-top:0.6em;'></div></div>to spend completely (a period of time), &nbsp;<span class='ls'>R.</span>&nbsp; : <div style='margin-top:0.6em;'></div></div><strong><span>Desid.</span></strong> <span class='sdata'>piparīṣati</span> or <span class='sdata'>pipariṣati</span>, <span class='sdata'>pupūrṣati</span> <span>Gr.</span>: <div style='margin-top:0.6em;'></div></div><strong><span>Intens.</span></strong> <span class='sdata'>pāparti</span>, <span class='sdata'>popūrti</span>, <span class='sdata'>popūryate</span>, &nbsp;<span class='ls'>ib.</span>&nbsp;</div></article><article class="dict-entry"><div class="entry-head"><span class="hw">pṝ</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=648" target="_blank" rel="noopener">scan ↗</a></div><div class="rendered"><span class='sdata'>pṝ</span> [<span>cf.</span> <span>Gk.</span> <span style='color: brown;' title='Greek script'>πίμπλημι</span>; <span>Lat.</span> <i>plere</i>, <i>plenus</i>; <span>Lit.</span> <i>pìlti</i>, <i>pìlnas</i>; <span>Slav.</span> <i>plǔnǔ</i>; <span>Goth.</span> <i>fulls</i>; <span>Germ.</span> <i>voll</i>; <span>Eng.</span> <i>full</i>.]</div></article></section><section class="dict-panel" id="panel-ap90" role="tabpanel" aria-labelledby="tab-ap90" data-dict="ap90" hidden><h2 class="dict-label">Apte 1890</h2><article class="dict-entry"><div class="entry-head"><span class="hw">pṝ</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/AP90Scan/2020/web/webtc/servepdf.php?page=720" target="_blank" rel="noopener">scan ↗</a></div><div class="rendered"><span class='sdata'>pṝ</span> 3 9 <span>P.</span> (<span class='sdata'>pirpīṃta, pṛṇāti, papāra, apārīt</span>, <span class='sdata'>pari-rī-ṣyati, pari-rī-tuṃ, pūrṇa</span>; <i><span>pass.</span></i> <span class='sdata'>pūryate</span>; <i><span>caus.</span></i> <span class='sdata'>pūrayati-te</span>; <i><span>desid.</span></i> <span class='sdata'>pipari-rī-ṣati</span>, <span class='sdata'>pupūrṣati</span>) <div style='margin-top:0.6em;'></div></div><strong>1</strong> To fill, fill up, complete. <div style='margin-top:0.6em;'></div></div><strong>2</strong> To fulfil, gratify (as hopes &c.). <div style='margin-top:0.6em;'></div></div><strong>3</strong> To fill with wind, blow (as a conch, flute &c.). <div style='margin-top:0.6em;'></div></div><strong>4</strong> To satisfy, refresh, please; <span class='sdata'>pitṝnapārit</span> &nbsp;<span class='ls'>Bk. 1. 2</span>&nbsp; <div style='margin-top:0.6em;'></div></div><strong>5</strong> To rear, bring up, nourish, nurture, cherish.</div></article></section><details class="disclosure evidence"><summary>Evidence</summary><ul class="ev-list"><li><b>Frequency band 4</b> — attested -- look up</li><li>4 attestations in DCS</li><li>first attested: Classic</li></ul><blockquote class="example" lang="sa">pṛṇat — <cite>01_rigveda</cite></blockquote></details><details class="disclosure paradigm" data-paradigm data-slp1="pF"><summary>Paradigm (all forms)</summary><p class="para-fallback">Full inflection table: <a href="../inflect/?lemma=pF">open in the inflection lookup →</a></p></details><footer class="wp-foot">Gasuns Sanskrit Dictionary · <a href="../inflect/">inflection lookup</a> · <a href="../browse/">browse</a> · entries from MW, PWG &amp; Apte (Cologne), rendered verbatim.</footer></main><script>(function(){
+ var VM='kosha_view_mode',root=document.documentElement;
+ function setView(v){root.setAttribute('data-view',v);
+  try{localStorage.setItem(VM,v)}catch(e){}
+  document.querySelectorAll('[data-view-set]').forEach(function(b){
+   b.setAttribute('aria-checked',b.getAttribute('data-view-set')===v?'true':'false')})}
+ try{var s=localStorage.getItem(VM);if(s)root.setAttribute('data-view',s)}catch(e){}
+ var vt=document.querySelector('.view-toggle');if(vt){vt.hidden=false;
+  setView(root.getAttribute('data-view')||'adaptive');
+  vt.addEventListener('click',function(e){var b=e.target.closest('[data-view-set]');
+   if(b)setView(b.getAttribute('data-view-set'))})}
+ var tabs=document.querySelectorAll('.dict-tabs .tab');
+ var page=document.querySelector('.word-page');
+ tabs.forEach(function(t){t.addEventListener('click',function(){
+  tabs.forEach(function(x){x.classList.remove('active');x.setAttribute('aria-selected','false')});
+  t.classList.add('active');t.setAttribute('aria-selected','true');
+  var want=t.getAttribute('data-dict');
+  var all=want==='all';
+  if(page)page.classList.toggle('all-dicts',all);
+  document.querySelectorAll('.dict-panel').forEach(function(p){
+   p.hidden=!all && p.getAttribute('data-dict')!==want})})})
+})();</script></body></html>
