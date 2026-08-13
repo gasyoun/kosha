@@ -14,6 +14,7 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.110.6] - 2026-08-13
 ### Added
 - **Word-page All tab (Grok 4.6 `grok-4.6`, H2653):** an **All** tab on
   `/w/{slp1}` stacks MW + PWG + AP90 on one scroll (per-dict headings).
