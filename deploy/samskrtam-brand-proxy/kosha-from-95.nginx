@@ -1,0 +1,21 @@
+# Internal kosha upstream for samskrtam.ru (.95) reverse-proxy only.
+# Public NAT is 193.232.229.92; container IP is 192.168.200.92.
+# .95 is 192.168.200.95 on the same LAN.
+server {
+    listen 192.168.200.92:8002;
+    listen 127.0.0.1:8002;
+    server_name _;
+    allow 192.168.200.95;
+    allow 127.0.0.1;
+    deny all;
+
+    location / {
+        proxy_pass http://127.0.0.1:8001;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Request-ID $http_x_request_id;
+        proxy_read_timeout 120s;
+    }
+}

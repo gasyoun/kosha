@@ -2,6 +2,8 @@
 
 _Created: 08-08-2026 · Last updated: 13-08-2026_
 
+**Branded API (13-08-2026):** [https://samskrtam.ru/health](https://samskrtam.ru/health) and the other kosha paths are live.
+
 **Handoff:** [H2345](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2345-Grok_kosha_architecture-roadmap-w1e-mg-live-smoke-packet_07.08.26.md)
 (Grok 4.5 `grok-4.5` — agent half shipped; public-probe fill 08-08-2026;
 first live promote 08-08-2026 same day — see §1b).
@@ -424,7 +426,7 @@ accepts the sslip base (or after branded DNS). Residual work below is the honest
 
 ### Residual work (ordered)
 
-1. Optional: point `samskrtam.ru` (`.95`) reverse-proxy or DNS at kosha on `.92:8001` / sslip.
+1. ~~Optional: point `samskrtam.ru` (`.95`) reverse-proxy or DNS at kosha on `.92:8001` / sslip.~~ — **done** 13-08-2026 (H2646): path proxy, not DNS move.
 2. Optionally deploy Pages **static head** so pack hrefs `../w/{token}.html` resolve without sslip.
 3. ~~Lighthouse mobile ≥90 on three real `/w/` URLs~~ — **done** 100×3 on sslip.
 4. ~~Re-walk Gītā 1.1 (13 tokens) on SSR~~ — **done** 13/13 on sslip.
@@ -460,7 +462,24 @@ already proxies `/metrics`; no site-file edit required.
 | Archives | mount | **unconfigured** | `/opt/kosha/archive` empty |
 
 **W1 product exit on live sslip base:** still **PASS** (re-confirmed 13-08-2026, now including W2C).  
-**W1 branded / Pages / archive / §9:** still open. Agent does not sign §9.
+**W1 branded / Pages / archive / §9:** branded API **PASS** 13-08 (H2646); Pages `w/` + archives + §9 still open. Agent does not sign §9.
+
+### 8d. Branded wire 2026-08-13T13:05Z (`samskrtam.ru` → LAN `:8002`)
+
+`.95` has no SSH. FTP + WordPress `.htaccess` + mu-plugin proxy to
+`192.168.200.92:8002` (nginx allowlist). WordPress `/` and `/faq/` stay on `.95`.
+
+| Check | Result |
+|---|---|
+| `https://samskrtam.ru/health` | **200** `{"status":"ok"}` |
+| `https://samskrtam.ru/ready` | **200** `ready:true` `0.1.0-dev` |
+| `https://samskrtam.ru/metrics` | **200** Prometheus |
+| `https://samskrtam.ru/api/v1/lemma/banD` | **200** 179 914 B |
+| `https://samskrtam.ru/w/BU` | **200** HTML |
+| `X-Request-ID: brand-wire-01` | echoed; `X-Kosha-Proxy: http://192.168.200.92:8002` |
+| `https://samskrtam.ru/` WP home | **200** (unchanged) |
+| `https://samskrtam.ru/faq/` | **200** (unchanged) |
+| `https://samskrtam.ru/wp-json/` | **200** (not proxied) |
 
 ---
 
@@ -473,7 +492,7 @@ already proxies `/metrics`; no site-file edit required.
 | Operator (W2C re-fill) | Grok 4.6 (`grok-4.6`) 2026-08-13T11:13Z (H2642) |
 | Date (UTC) | 2026-08-13 (re-fill); first promote 2026-08-08 |
 | Live API base | **https://kosha.193.232.229.92.sslip.io/** (`data_version` **0.1.0-dev**, code **v0.110.3** / `ae4f93c4`) |
-| Branded API base | `https://samskrtam.ru` — still **not** kosha (`.95`; `/health` 403) |
+| Branded API base | **https://samskrtam.ru** — kosha paths live 13-08-2026 (H2646); WP `/` unchanged |
 | Live static base | `https://gasyoun.github.io/kosha/` (reading + docs-site; `w/` missing) |
 | Host layout | `/opt/kosha/{repo,venv,db,archive,.env}` + `kosha.service` |
 | W1 product exit (live sslip base) | ☑ measured **PASS** (re-confirmed 13-08) · ☐ branded complete |
