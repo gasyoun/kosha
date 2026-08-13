@@ -1,6 +1,6 @@
 # DATA_HUB_ROADMAP.md — kosha as the Sanskrit data-hub
 
-_Created: 06-07-2026 · Last updated: 24-07-2026_
+_Created: 06-07-2026 · Last updated: 13-08-2026_
 
 ## Why this exists
 
@@ -57,7 +57,7 @@ index — it is a **hub that hosts the bytes**.
 | **P-D3** | Public **Sanskrit NLP data + tools directory** page on the kosha site (our datasets + external stacks), from FEATURES_INDEX/REUSE_INDEX/SAMSAADHANII_INDEX content | ✅ 06-07-2026 (H236) — [`directory/`](https://gasyoun.github.io/kosha/directory/), rendered by [`scripts/build_directory.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_directory.py) from [`datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) + [`external_tools.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/external_tools.json); schema.org `Dataset` JSON-LD per public asset |
 | **P-D4** | samskrtam.ru canonical hosting: upload public-tier files, manifest URLs flip from GitHub Releases to server; restricted tier gets a non-public server path | ⛔ MG deploy gate (GTD @DO) |
 | **P-D5** | Queryable-DB integration: the manifest's join-table assets ingested into `kosha.db` as attached layers (frequency already done — DCS M9 pattern); one SQLite an agent can query cross-asset | ✅ 24-07-2026 (H1589) — `python scripts/build_db.py --stage layers` loads public `sense_frequency` · `roots_frequency` · `dict_corpus_coverage` (+ optional `mw_roots` / `mw_etymology`); G-SIZE tripwire `scripts/check_g_size.py`; operator query surface in [`docs/PIPELINE_OPERATOR_RUNBOOK.md`](https://github.com/gasyoun/kosha/blob/main/docs/PIPELINE_OPERATOR_RUNBOOK.md). D5-4 core/inflections ATTACH split remains optional follow-on. |
-| **P-D6** | API tier: C-SALT/Kosh-style dataset endpoints on the kosha API, csl-apidev alignment | 🟡 after P-D4 |
+| **P-D6** | API tier: C-SALT/Kosh-style dataset endpoints on the kosha API, csl-apidev alignment | ✅ 13-08-2026 (H2347) — `GET /api/v1/datasets` + `GET /api/v1/datasets/{id}` over [`datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json); public tier only; restricted/intermediate → 404; surface `api-v1-datasets`. P-D4 canonical hosting remains a separate MG deploy gate |
 
 ## Rules
 

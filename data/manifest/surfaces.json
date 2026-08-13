@@ -1,7 +1,7 @@
 {
   "manifest_version": "1.0.0",
   "schema": "kosha-generated-surfaces-v1",
-  "generated": "2026-08-07",
+  "generated": "2026-08-13",
   "architecture": "https://github.com/gasyoun/kosha/blob/main/docs/ARCHITECTURE_KOSHA_PLATFORM.md#static-surfaces",
   "validator": "python scripts/validate_surfaces.py",
   "note_for_agents": "Machine-readable registry of every committed and out-of-band public surface that ships with kosha (W1B / D15). A session that adds or materially changes a shipping surface MUST add/update a row here in the same pass. Dictionary-payload surfaces must set kind=dictionary-payload and name kosha.api.repository + kosha.api.serializer — no mirrored SQL or payload code. acceptance_command is the deterministic gate CI or an operator runs; it must exit non-zero on breakage.",
@@ -21,6 +21,20 @@
       "rollback_method": "redeploy previous release tag; git revert app/main.py + kosha.api if needed",
       "query_module": "kosha.api.repository",
       "serializer_module": "kosha.api.serializer"
+    },
+    {
+      "id": "api-v1-datasets",
+      "title": "Public dataset catalog API (/api/v1/datasets)",
+      "audience": "api-clients, agents, scholars",
+      "kind": "catalog",
+      "source_datasets": ["datasets-manifest"],
+      "builder": "app/main.py",
+      "output_paths": ["/api/v1/datasets", "/api/v1/datasets/{id}"],
+      "output_class": "runtime",
+      "rights_tier": "public",
+      "acceptance_command": "python -m pytest tests/test_dataset_catalog.py tests/test_surface_registry.py -q -p no:cacheprovider",
+      "deploy_owner": "mg-samskrtam-ru",
+      "rollback_method": "redeploy previous release tag; git revert app/main.py + src/kosha/api/catalog.py + data/manifest/surfaces.json"
     },
     {
       "id": "salt-dicts-facade",

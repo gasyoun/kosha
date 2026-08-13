@@ -20,6 +20,7 @@ sys.stderr.reconfigure(encoding="utf-8")
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
+from kosha.api import catalog as dataset_catalog  # noqa: E402
 from kosha.api import repository, serializer  # noqa: E402
 from kosha.api.errors import install_error_handlers, raise_error  # noqa: E402
 from kosha.api.models import (  # noqa: E402
@@ -136,6 +137,33 @@ def ready():
 
     body, status = readiness_payload()
     return JSONResponse(status_code=status, content=body)
+
+
+# ---------------------------------------------------------------------------
+# W2B / P-D6 — public dataset catalog (not the Salt dictionary-entry lane)
+# ---------------------------------------------------------------------------
+
+
+@app.get("/api/v1/datasets")
+def list_public_datasets():
+    """List public-tier rows from data/manifest/datasets.json.
+
+    Restricted and intermediate rows are omitted. An empty public set is
+    explicit (`empty_reason`), never a silent `[]`.
+    """
+    manifest = dataset_catalog.load_manifest()
+    records = dataset_catalog.public_records(manifest)
+    return dataset_catalog.list_payload(manifest, records)
+
+
+@app.get("/api/v1/datasets/{dataset_id}")
+def get_public_dataset(dataset_id: str):
+    """Resolve one public catalog row. Restricted / unknown → same 404."""
+    manifest = dataset_catalog.load_manifest()
+    record = dataset_catalog.get_public_record(manifest, dataset_id)
+    if record is None:
+        error("dataset_not_found", "No public dataset with that id", 404)
+    return record
 
 
 # ---------------------------------------------------------------------------
