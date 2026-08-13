@@ -59,7 +59,7 @@ Deliverables:
 - MG-minted DOI and updated citation metadata;
 - P-D6 public dataset API over manifest records (✅ H2347 — `GET /api/v1/datasets`);
 - request correlation, low-cardinality metrics, readiness failures, and
-  release observability.
+  release observability (✅ H2348 — `X-Request-ID` + `GET /metrics`).
 
 Non-goals: history/auth enablement, full RU, and full sense reconciliation.
 
