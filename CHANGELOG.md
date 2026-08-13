@@ -14,6 +14,12 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **Word-page All tab (Grok 4.6 `grok-4.6`, H2653):** an **All** tab on
+  `/w/{slp1}` stacks MW + PWG + AP90 on one scroll (per-dict headings).
+  Single-dictionary lemmas stay as they were. Tests:
+  [`tests/test_word_page_all_tab.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_word_page_all_tab.py).
+
 ## [0.110.5] - 2026-08-13
 ### Added
 - **Branded `samskrtam.ru` kosha proxy (Grok 4.6 `grok-4.6`, H2646):**

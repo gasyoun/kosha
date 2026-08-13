@@ -243,8 +243,10 @@ def _dict_panels(groups):
     esc = html.escape
     tabs = []
     panels = []
+    ids = []
     for i, (d, entries) in enumerate(groups):
         active = i == 0
+        ids.append(f"panel-{d}")
         tabs.append(
             f'<button type="button" class="tab{" active" if active else ""}" '
             f'role="tab" aria-selected="{"true" if active else "false"}" '
@@ -252,11 +254,21 @@ def _dict_panels(groups):
             f'title="{esc(DICT_FULL.get(d, d))}">{esc(DICT_LABEL.get(d, d.upper()))}'
             f'<span class="tab-n">{len(entries)}</span></button>'
         )
+        label = esc(DICT_FULL.get(d, d))
         body = "".join(_entry_html(e) for e in entries)
         hidden = "" if active else " hidden"
         panels.append(
             f'<section class="dict-panel" id="panel-{d}" role="tabpanel" '
-            f'aria-labelledby="tab-{d}" data-dict="{d}"{hidden}>{body}</section>'
+            f'aria-labelledby="tab-{d}" data-dict="{d}"{hidden}>'
+            f'<h2 class="dict-label">{label}</h2>{body}</section>'
+        )
+    if len(groups) > 1:
+        n = sum(len(entries) for _, entries in groups)
+        tabs.append(
+            f'<button type="button" class="tab tab-all" role="tab" '
+            f'aria-selected="false" aria-controls="{" ".join(ids)}" '
+            f'id="tab-all" data-dict="all" title="Show every dictionary">'
+            f'All<span class="tab-n">{n}</span></button>'
         )
     tabbar = f'<nav class="dict-tabs" role="tablist" aria-label="Dictionaries">{"".join(tabs)}</nav>'
     return tabbar, "".join(panels)
@@ -424,7 +436,13 @@ border-bottom:1px solid var(--border)}
 .tab{border:1px solid var(--border);border-bottom:none;background:var(--card-bg);
 color:var(--fg);padding:.4rem .8rem;cursor:pointer;border-radius:6px 6px 0 0;font-size:.9rem}
 .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tab-all{margin-left:.35rem}
 .tab-n{font-size:.65rem;opacity:.75;margin-left:.3rem}
+.dict-label{display:none;font:600 .85rem/1.3 system-ui,sans-serif;
+margin:0 0 .6rem;color:var(--accent)}
+.word-page.all-dicts .dict-label{display:block}
+.word-page.all-dicts .dict-panel{border-top:1px solid var(--border);
+padding-top:.9rem;margin-top:1.1rem}
 .dict-panel{border:1px solid var(--border);border-top:none;padding:.4rem 1rem;
 background:var(--card-bg)}
 .dict-entry{border-top:1px solid var(--border);padding:.55rem 0}
@@ -481,11 +499,15 @@ PAGE_JS = """
   vt.addEventListener('click',function(e){var b=e.target.closest('[data-view-set]');
    if(b)setView(b.getAttribute('data-view-set'))})}
  var tabs=document.querySelectorAll('.dict-tabs .tab');
+ var page=document.querySelector('.word-page');
  tabs.forEach(function(t){t.addEventListener('click',function(){
   tabs.forEach(function(x){x.classList.remove('active');x.setAttribute('aria-selected','false')});
-  document.querySelectorAll('.dict-panel').forEach(function(p){p.hidden=true});
   t.classList.add('active');t.setAttribute('aria-selected','true');
-  var p=document.getElementById('panel-'+t.getAttribute('data-dict'));if(p)p.hidden=false})})
+  var want=t.getAttribute('data-dict');
+  var all=want==='all';
+  if(page)page.classList.toggle('all-dicts',all);
+  document.querySelectorAll('.dict-panel').forEach(function(p){
+   p.hidden=!all && p.getAttribute('data-dict')!==want})})})
 })();
 """.strip()
 
