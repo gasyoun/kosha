@@ -1,6 +1,6 @@
 # W1E — MG live-smoke packet (public-product readiness exit)
 
-_Created: 08-08-2026 · Last updated: 08-08-2026_
+_Created: 08-08-2026 · Last updated: 13-08-2026_
 
 **Handoff:** [H2345](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2345-Grok_kosha_architecture-roadmap-w1e-mg-live-smoke-packet_07.08.26.md)
 (Grok 4.5 `grok-4.5` — agent half shipped; public-probe fill 08-08-2026;
@@ -29,6 +29,10 @@ local rehearsal [`docs/DEPLOY_REHEARSAL_LOG.md`](https://github.com/gasyoun/kosh
    Lighthouse L1–L3 **100**, Gītā 1.1 **13/13** SSR, unit-restart recovery —
    see §8b. Residuals remaining: branded `samskrtam.ru`, Pages `w/` hrefs,
    archive mount, digests-based identity rollback, human §9.
+4. **W2C re-fill** (Grok 4.6 `grok-4.6`, 2026-08-13T11:13Z, H2642) —
+   `git pull --ff-only` `/opt/kosha/repo` `0cd22ef5` → `ae4f93c4` (v0.110.3),
+   unit restart, public probe of W2C (`X-Request-ID` + `GET /metrics`) plus
+   the original W1 gates. See §8c.
 
 ---
 
@@ -428,6 +432,36 @@ accepts the sslip base (or after branded DNS). Residual work below is the honest
 6. On **second** promote: retain `BUNDLE_IDENTITY` and run full Part IV restore.
 7. Sign §9 for branded product exit.
 
+### 8c. W2C re-fill 2026-08-13T11:13Z (sslip.io @ v0.110.3)
+
+Host was 12 commits behind (`0cd22ef5`, first-promote docs). Pulled
+`origin/main` **ff-only** to `ae4f93c4` (`v0.110.3`), `pip install -r
+requirements.txt` (no new runtime pins), `systemctl restart kosha`. DB
+untouched (`/opt/kosha/db/kosha.db`, `0.1.0-dev`). nginx `location /`
+already proxies `/metrics`; no site-file edit required.
+
+| Gate | Threshold | Result | Evidence |
+|---|---|---|---|
+| Code SHA | `origin/main` | **PASS** | `/opt/kosha/repo` @ `ae4f93c4` |
+| Unit | active | **PASS** | `kosha.service` active after restart |
+| `GET /health` | 200 `status:ok` | **PASS** | public sslip 200 + minted `X-Request-ID` |
+| `GET /ready` | 200 `ready:true` | **PASS** | `data_version=0.1.0-dev`; `core_db` ok; `data_version_match` ok; archives **unconfigured**; history **disabled** |
+| Correlation | echo / mint | **PASS** | `X-Request-ID: w1e-fill-01` echoed; minted UUID on bare `/health` |
+| `GET /metrics` | Prometheus, low-card | **PASS** | 200 `text/plain; version=0.0.4`; `kosha_ready`, `kosha_http_requests_total{route="/ready"}` — no headword labels |
+| Lemma `banD` | Salt envelope | **PASS** | 200, `data_version=0.1.0-dev`, MW/PWG/AP90 |
+| Live sense `mw.101.1` | `resolved_from: live` | **PASS** | 200, `sense_id` `mw.101.1@0.1.0-dev`; cite `resolution_url` on Pages |
+| Catalog `GET /api/v1/datasets` | W2B public list | **PASS** | 200, `schema=kosha-dataset-catalog-v1`, `count=84` |
+| SSR `/w/BU` | 200 HTML | **PASS** | 200, 236 426 B |
+| Gītā 1.1 tokens | 13/13 SSR | **PASS 13/13** | sslip `/w/{slp1}` for `DftarAzwra vac Darmakzetra kurukzetra samaveta yuyutsu mAmaka pARqava ca eva kim kf ji` |
+| Lighthouse L1–L3 | ≥90 | **PASS (prior 100)** | not re-run this pass; SSR still 200 on the same three URLs; 08-08 scores 100/100/100 stand unless a human re-measures |
+| Branded `samskrtam.ru` | same as sslip | **FAIL** residual | `/health` now **403** (was 404 on 08-08) — still not kosha; host `.95` |
+| Pages `w/` hrefs | pack `../w/` | **FAIL** residual | `https://gasyoun.github.io/kosha/w/vac.html` 404; cards at `docs/cards/vac.json` 200 |
+| Release asset | data-v0.1.0 | **PASS** | `datasets.json` 200, 11 728 B |
+| Archives | mount | **unconfigured** | `/opt/kosha/archive` empty |
+
+**W1 product exit on live sslip base:** still **PASS** (re-confirmed 13-08-2026, now including W2C).  
+**W1 branded / Pages / archive / §9:** still open. Agent does not sign §9.
+
 ---
 
 ## 9. Sign-off
@@ -436,13 +470,14 @@ accepts the sslip base (or after branded DNS). Residual work below is the honest
 |---|---|
 | Operator (probe) | Grok 4.5 (`grok-4.5`) public probe 09:44Z |
 | Operator (promote) | Grok 4.5 (`grok-4.5`) first live promote 12:25Z on human “promotes” |
-| Date (UTC) | 2026-08-08 |
-| Live API base | **https://kosha.193.232.229.92.sslip.io/** (`data_version` **0.1.0-dev**) |
-| Branded API base | `https://samskrtam.ru` — still **not** kosha (`.95`) |
+| Operator (W2C re-fill) | Grok 4.6 (`grok-4.6`) 2026-08-13T11:13Z (H2642) |
+| Date (UTC) | 2026-08-13 (re-fill); first promote 2026-08-08 |
+| Live API base | **https://kosha.193.232.229.92.sslip.io/** (`data_version` **0.1.0-dev**, code **v0.110.3** / `ae4f93c4`) |
+| Branded API base | `https://samskrtam.ru` — still **not** kosha (`.95`; `/health` 403) |
 | Live static base | `https://gasyoun.github.io/kosha/` (reading + docs-site; `w/` missing) |
 | Host layout | `/opt/kosha/{repo,venv,db,archive,.env}` + `kosha.service` |
-| W1 product exit (live sslip base) | ☑ measured **PASS** · ☐ branded complete |
-| Notes / waivers | Live-base smoke **PASS** (readiness, LH 100×3, Gītā 13/13 SSR, live sense, unit restart). §9 still needs human tick for branded product exit. |
+| W1 product exit (live sslip base) | ☑ measured **PASS** (re-confirmed 13-08) · ☐ branded complete |
+| Notes / waivers | Live-base smoke **PASS** including W2C correlation + `/metrics`. §9 still needs human tick for branded product exit. |
 
 ---
 
@@ -455,6 +490,7 @@ accepts the sslip base (or after branded DNS). Residual work below is the honest
 | [docs/DEPLOY_REHEARSAL_LOG.md](https://github.com/gasyoun/kosha/blob/main/docs/DEPLOY_REHEARSAL_LOG.md) | Local fixture rehearsal (agent) |
 | [docs/P5_WORD_PAGE_EXIT_PACKET.md](https://github.com/gasyoun/kosha/blob/main/docs/P5_WORD_PAGE_EXIT_PACKET.md) | Static head / Lighthouse / Gītā product exit (P5) |
 | [src/kosha/api/readiness.py](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/readiness.py) | `/ready` checks (W1C) |
+| [docs/RELEASE_OBSERVABILITY.md](https://github.com/gasyoun/kosha/blob/main/docs/RELEASE_OBSERVABILITY.md) | W2C correlation + `/metrics` watch list |
 | GTD row | Existing **kosha W1 / P5 live checks** `@DO` — this packet is the superseding checklist |
 
 ---
@@ -464,16 +500,18 @@ accepts the sslip base (or after branded DNS). Residual work below is the honest
 | Item | Value |
 |---|---|
 | Packet path | `docs/MG_LIVE_SMOKE_PACKET_W1E.md` |
-| Model | Grok 4.5 (`grok-4.5`) |
+| Model | Grok 4.6 (`grok-4.6`) re-fill; original promote Grok 4.5 (`grok-4.5`) |
 | Morning probe credentials | **no** |
 | Promote host access | SSH `root@193.232.229.92` (existing key; no new secrets committed) |
 | W1 declared complete by agent | **no** |
 | Public probe date | 2026-08-08T09:44Z |
 | Promote date | 2026-08-08T12:25Z |
+| W2C re-fill date | 2026-08-13T11:13Z |
 | Public API | https://kosha.193.232.229.92.sslip.io/ |
+| Host SHA | `ae4f93c4` / v0.110.3 |
 | Host ops | `/opt/kosha/OPS.md` |
-| Lighthouse artifacts (local, not committed) | `lh-w-vac.json` / `lh-w-BU.json` / `lh-w-banD.json` = **100**; `lh-reading.json` = **99** |
-| Next | branded DNS/proxy · Pages `w/` · archive mount · second-promote identity rollback · **H2346** after human accepts live base |
+| Lighthouse artifacts (local, not committed) | `lh-w-vac.json` / `lh-w-BU.json` / `lh-w-banD.json` = **100** (08-08); not re-run 13-08 |
+| Next | branded DNS/proxy · Pages `w/` · archive mount · second-promote identity rollback · human §9 |
 
 ---
 
