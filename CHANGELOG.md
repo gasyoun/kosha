@@ -14,7 +14,7 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
-## [0.110.9] - 2026-08-14
+## [0.110.10] - 2026-08-14
 ### Added
 - **`/w/` language groups + pwg_ru/mw_ru join (Grok 4.6 `grok-4.6`, H2670):**
   two-level chrome **EN | DE | RU | All** (EN: MW, AP90; DE: PWG; RU:
@@ -26,6 +26,18 @@ sense citations pin to `data_version`, not to repo tags.
   `navigator.language` is `ru`. No Kochergina; no SanskritRussian strip
   (that is H2680). Tests:
   [`tests/test_word_page_lang_groups.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_word_page_lang_groups.py).
+
+## [0.110.9] - 2026-08-14
+### Changed
+- **Citation archive mounted on live `.92` (Grok 4.6 `grok-4.6`, H2671):**
+  `/opt/kosha/archive/0.1.0-dev/` is a snapshot of live `data_version`
+  `0.1.0-dev` (692 403 senses, `release.json` sha256 identity). Public
+  [`/ready`](https://samskrtam.ru/ready) reports `citation_archives` **ok**;
+  [`mw.101.1@0.1.0-dev`](https://samskrtam.ru/api/v1/sense/mw.101.1@0.1.0-dev)
+  returns **200**. Packet residual:
+  [`docs/MG_LIVE_SMOKE_PACKET_W1E.md`](https://github.com/gasyoun/kosha/blob/main/docs/MG_LIVE_SMOKE_PACKET_W1E.md)
+  section **8e. Citation-archive mount**. Does not invent a second
+  `data_version`; does not declare Wave 1 complete.
 
 ## [0.110.8] - 2026-08-13
 ### Added
