@@ -2,6 +2,13 @@
 
 _Created: 08-08-2026 · Last updated: 13-08-2026_
 
+Branded dictionary routes on
+[`https://samskrtam.ru`](https://samskrtam.ru/) (`/health` `/ready`
+`/metrics` `/api/` `/dicts/` `/w/`) are reverse-proxied to the `.92`
+unit — see
+[`deploy/samskrtam-brand-proxy/`](https://github.com/gasyoun/kosha/blob/main/deploy/samskrtam-brand-proxy/README.md).
+WordPress on the same host is untouched.
+
 The human-facing deploy procedure for the **public API surface** on a host
 M.G. controls (samskrtam.ru) and for **local rehearsal** every agent can run.
 Companion machine recipe:
