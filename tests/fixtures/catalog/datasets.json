@@ -1,0 +1,53 @@
+{
+  "manifest_version": "0.1.0-fixture",
+  "generated": "2026-08-13",
+  "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
+  "note_for_agents": "H2347 fixture: public vs restricted vs intermediate. Restricted bytes and checksums must never leave the catalog API.",
+  "datasets": [
+    {
+      "id": "public-released",
+      "title": "Public released fixture dataset",
+      "tier": "public",
+      "in_release": "data-v0.1.0",
+      "release_asset": "public_released.tsv",
+      "format": "tsv",
+      "rows": 3,
+      "size_bytes": 42,
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/frequency/public_released.tsv",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-roots.meta.md",
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+      "id": "public-unreleased",
+      "title": "Public unreleased fixture dataset",
+      "tier": "public",
+      "in_release": "unreleased",
+      "release_asset": "public_unreleased.tsv",
+      "format": "tsv",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/frequency/public_unreleased.tsv"
+    },
+    {
+      "id": "secret-restricted",
+      "title": "Restricted fixture — must 404",
+      "tier": "restricted",
+      "in_release": "not-applicable",
+      "format": "jsonl",
+      "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+      "source_path": "RussianTranslation/src/secret.jsonl (GITIGNORED)",
+      "notes": "RIGHTS: do not publish. LEAK-TOKEN-RESTRICTED-CHECKSUM",
+      "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "id": "working-intermediate",
+      "title": "Intermediate fixture — not a public catalog entry",
+      "tier": "intermediate",
+      "in_release": "not-applicable",
+      "format": "tsv",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/raw/working.tsv",
+      "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    }
+  ]
+}

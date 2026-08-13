@@ -16,7 +16,9 @@ The typed boundary every public surface serializes through:
 * [`archive`](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/archive.py)
   — citation-archive validation;
 * [`readiness`](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/readiness.py)
-  — DB / version / archive / optional-writable readiness (W1C).
+  — DB / version / archive / optional-writable readiness (W1C);
+* [`catalog`](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/catalog.py)
+  — public dataset catalog over `data/manifest/datasets.json` (W2B / P-D6).
 """
 
 from kosha.api.models import (
