@@ -14,6 +14,19 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.110.9] - 2026-08-14
+### Added
+- **`/w/` language groups + pwg_ru/mw_ru join (Grok 4.6 `grok-4.6`, H2670):**
+  two-level chrome **EN | DE | RU | All** (EN: MW, AP90; DE: PWG; RU:
+  pwg_ru, mw_ru). All still stacks every dict (H2653 kept). Runtime join
+  from sibling `SanskritLexicography/RussianTranslation`; CI uses
+  [`tests/fixtures/ru_join/`](https://github.com/gasyoun/kosha/blob/main/tests/fixtures/ru_join/README.md).
+  Unreviewed rows carry a visible **AI-translated** mark; missing rows get
+  a one-line empty state. First paint is EN unless `Accept-Language` /
+  `navigator.language` is `ru`. No Kochergina; no SanskritRussian strip
+  (that is H2680). Tests:
+  [`tests/test_word_page_lang_groups.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_word_page_lang_groups.py).
+
 ## [0.110.8] - 2026-08-13
 ### Added
 - **`/ask` plan for `/w/` language groups + ops leftovers (Grok 4.6 `grok-4.6`):**

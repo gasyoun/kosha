@@ -48,6 +48,7 @@ from neighbors import (  # noqa: E402
 )
 from paradigm import build_paradigm  # noqa: E402
 from word_page import render_word_page, card_token  # noqa: E402
+from kosha.api.ru_join import locale_from_accept_language  # noqa: E402
 from history_db import log_search_event, open_connection as open_history_db, upsert_visitor  # noqa: E402
 from identity import hash_ip, resolve_anon_id  # noqa: E402
 from history import router as history_router  # noqa: E402
@@ -252,13 +253,14 @@ def get_lemma(key: str, in_: str = Query("auto", alias="in"), out: str = "iast",
 
 
 @app.get("/w/{slp1}", response_class=HTMLResponse)
-def word_page(slp1: str, con: sqlite3.Connection = Depends(get_db)):
+def word_page(slp1: str, request: Request, con: sqlite3.Connection = Depends(get_db)):
     """P5-4 SSR half (H537): server-render the word page for the long tail — any
     lemma, not just the top-N the static prerender ships. Renders the EXACT same
     card the static tier holds (the /api/v1/lemma envelope) through the shared
     app/word_page.py template, so static ∥ SSR are byte-comparable on primary
     content (P5-4 parity; tests/test_word_page.py locks it). Permalinks address by
     SLP1 key, the canonical addressing scheme (P5_ADVANCED_UI_DESIGN.md §3).
+    First paint is EN unless Accept-Language contains `ru` (H2670 / R13).
     """
     slp1_key = to_slp1_auto(slp1, "slp1")
     results = _lemma_entries(con, slp1_key, "iast", False)
@@ -275,7 +277,11 @@ def word_page(slp1: str, con: sqlite3.Connection = Depends(get_db)):
     card = {"data_version": dv,
             "query": {"key": slp1_key, "in": "slp1", "out": "iast", "dicts": list(ALL_DICTS)},
             "results": results}
-    return HTMLResponse(render_word_page(card, token=card_token(slp1_key), data_version=dv))
+    default_lang = locale_from_accept_language(request.headers.get("accept-language"))
+    return HTMLResponse(render_word_page(
+        card, token=card_token(slp1_key), data_version=dv,
+        default_lang=default_lang,
+    ))
 
 
 def _neighbor_payload(con, row, out: str, query_L=None):
