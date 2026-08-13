@@ -28,7 +28,9 @@ import re
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent / "sanskrit-util" / "py"))
+_REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(_REPO / "src"))
+sys.path.insert(0, str(_REPO.parent / "sanskrit-util" / "py"))
 from sanskrit_util import from_slp1, slp1_to_devanagari, to_slp1  # noqa: E402
 
 
@@ -128,17 +130,35 @@ _GENRE_LABEL = {  # Renou genre key (dcs_text_genre.tsv) -> display label
     "stotra_bhakti": "stotra",
 }
 
-# Fixed presentation order (P5-1). RU is intentionally absent until the P6 gates
-# (G5 review + Kochergina rights) clear — see IMPLEMENTATION_PLAN.md §P6 and
-# P5_ADVANCED_UI_DESIGN.md §8; cards carry no `ru` dict, so this is also a data
-# fact, not only a policy one.
-DICT_ORDER = ("mw", "pwg", "ap90")
-DICT_LABEL = {"mw": "MW", "pwg": "PWG", "ap90": "AP90"}
+# Fixed chrome (H2670 / R1·R7·R12). Cologne dicts stay in card results;
+# pwg_ru / mw_ru are joined at render time. Vote R5 ships them labeled
+# AI-translated — it does not flip review_status and does not add Kochergina.
+DICT_ORDER = ("mw", "pwg", "ap90", "pwg_ru", "mw_ru")
+DICT_LABEL = {
+    "mw": "MW", "pwg": "PWG", "ap90": "AP90",
+    "pwg_ru": "pwg_ru", "mw_ru": "mw_ru",
+}
 DICT_FULL = {
     "mw": "Monier-Williams",
     "pwg": "Petersburger Wörterbuch (großes)",
     "ap90": "Apte 1890",
+    "pwg_ru": "PWG Russian",
+    "mw_ru": "MW Russian",
 }
+DICT_LANG = {
+    "mw": "en", "ap90": "en",
+    "pwg": "de",
+    "pwg_ru": "ru", "mw_ru": "ru",
+}
+LANG_ORDER = ("en", "de", "ru")
+LANG_LABEL = {"en": "EN", "de": "DE", "ru": "RU"}
+LANG_DICTS = {
+    "en": ("mw", "ap90"),
+    "de": ("pwg",),
+    "ru": ("pwg_ru", "mw_ru"),
+}
+COLOGNE_DICTS = frozenset({"mw", "pwg", "ap90"})
+RU_DICTS = ("pwg_ru", "mw_ru")
 
 BAND_CLASS = {1: "b1", 2: "b2", 3: "b3", 4: "b4", 5: "b5"}
 
@@ -183,11 +203,24 @@ def entry_fields(entry):
 
 
 def _group_by_dict(results):
-    """{dict: [entry, ...]} in DICT_ORDER, entries in their card order (L order)."""
+    """Cologne dicts from the card, in DICT_ORDER. RU comes from the join."""
     grouped = {}
     for r in results:
-        grouped.setdefault(entry_fields(r)["dict"], []).append(r)
+        d = entry_fields(r).get("dict")
+        if d in COLOGNE_DICTS:
+            grouped.setdefault(d, []).append(r)
     return [(d, grouped[d]) for d in DICT_ORDER if d in grouped]
+
+
+def _groups_for_page(results, ru_overlay):
+    """Always emit the five chrome dicts; RU lists come from the join only."""
+    grouped = {d: [] for d in DICT_ORDER}
+    for d, entries in _group_by_dict(results):
+        grouped[d] = entries
+    overlay = ru_overlay or {}
+    for d in RU_DICTS:
+        grouped[d] = list(overlay.get(d) or [])
+    return [(d, grouped[d]) for d in DICT_ORDER]
 
 
 def _headword_strip(slp1, deva, iast, band, band_label, n_dicts):
@@ -227,51 +260,101 @@ def _entry_html(entry):
     if fields.get("scan_url"):
         scan = (f'<a class="scan" href="{esc(fields["scan_url"])}" '
                 f'target="_blank" rel="noopener">scan ↗</a>')
+    status = (fields.get("review_status") or entry.get("review_status") or "").strip()
+    badge = ""
+    if status and status not in {"approved", "human_reviewed"}:
+        badge = '<span class="chip ai-translated">AI-translated</span>'
     # `rendered_html` is interpolated unescaped — it is HTML by contract. What
     # makes that safe is that it can only have come through
     # `kosha.api.sanitize` (W0C item 6); the serializer has no path that emits
     # unsanitized render output.
     return (
         '<article class="dict-entry">'
-        f'<div class="entry-head"><span class="hw">{esc(fields.get("headword", ""))}</span>{scan}</div>'
+        f'<div class="entry-head"><span class="hw">{esc(fields.get("headword", ""))}</span>'
+        f"{scan}{badge}</div>"
         f'<div class="rendered">{fields.get("rendered_html", "")}</div>'
         "</article>"
     )
 
 
-def _dict_panels(groups):
+def _empty_state(dict_id):
     esc = html.escape
-    tabs = []
-    panels = []
-    ids = []
-    for i, (d, entries) in enumerate(groups):
-        active = i == 0
-        ids.append(f"panel-{d}")
-        tabs.append(
+    return f'<p class="ru-empty">No {esc(dict_id)} row for this lemma.</p>'
+
+
+def _first_visible_dict(default_lang):
+    dicts = LANG_DICTS.get(default_lang) or LANG_DICTS["en"]
+    return dicts[0]
+
+
+def _dict_tab(d, entries, active):
+    esc = html.escape
+    return (
+        f'<button type="button" class="tab{" active" if active else ""}" '
+        f'role="tab" aria-selected="{"true" if active else "false"}" '
+        f'aria-controls="panel-{d}" id="tab-{d}" data-dict="{d}" '
+        f'data-lang="{DICT_LANG[d]}" '
+        f'title="{esc(DICT_FULL.get(d, d))}">{esc(DICT_LABEL.get(d, d.upper()))}'
+        f'<span class="tab-n">{len(entries)}</span></button>'
+    )
+
+
+def _dict_panels(groups, default_lang="en"):
+    """Two-level chrome: EN | DE | RU | All, then the dicts of that language."""
+    esc = html.escape
+    by_dict = {d: entries for d, entries in groups}
+    if default_lang not in LANG_DICTS:
+        default_lang = "en"
+    first_dict = _first_visible_dict(default_lang)
+
+    lang_tabs = []
+    for lang in LANG_ORDER:
+        active = lang == default_lang
+        lang_tabs.append(
             f'<button type="button" class="tab{" active" if active else ""}" '
             f'role="tab" aria-selected="{"true" if active else "false"}" '
-            f'aria-controls="panel-{d}" id="tab-{d}" data-dict="{d}" '
-            f'title="{esc(DICT_FULL.get(d, d))}">{esc(DICT_LABEL.get(d, d.upper()))}'
-            f'<span class="tab-n">{len(entries)}</span></button>'
+            f'id="tab-lang-{lang}" data-lang="{lang}" '
+            f'title="{esc(LANG_LABEL[lang])}">{esc(LANG_LABEL[lang])}</button>'
         )
+    n_all = sum(len(entries) for _, entries in groups)
+    ids = " ".join(f"panel-{d}" for d in DICT_ORDER)
+    lang_tabs.append(
+        f'<button type="button" class="tab tab-all" role="tab" '
+        f'aria-selected="false" aria-controls="{ids}" '
+        f'id="tab-all" data-dict="all" data-lang="all" '
+        f'title="Show every dictionary">'
+        f'All<span class="tab-n">{n_all}</span></button>'
+    )
+    langbar = (
+        f'<nav class="lang-tabs" role="tablist" aria-label="Languages">'
+        f'{"".join(lang_tabs)}</nav>'
+    )
+
+    inner = []
+    for lang, dicts in LANG_DICTS.items():
+        hidden = "" if lang == default_lang else " hidden"
+        tabs = [
+            _dict_tab(d, by_dict.get(d) or [], active=(d == first_dict))
+            for d in dicts
+        ]
+        inner.append(
+            f'<nav class="dict-tabs" role="tablist" aria-label="Dictionaries" '
+            f'data-lang="{lang}"{hidden}>{"".join(tabs)}</nav>'
+        )
+
+    panels = []
+    for d in DICT_ORDER:
+        entries = by_dict.get(d) or []
+        lang = DICT_LANG[d]
         label = esc(DICT_FULL.get(d, d))
-        body = "".join(_entry_html(e) for e in entries)
-        hidden = "" if active else " hidden"
+        body = "".join(_entry_html(e) for e in entries) if entries else _empty_state(d)
+        hidden = "" if d == first_dict else " hidden"
         panels.append(
             f'<section class="dict-panel" id="panel-{d}" role="tabpanel" '
-            f'aria-labelledby="tab-{d}" data-dict="{d}"{hidden}>'
+            f'aria-labelledby="tab-{d}" data-dict="{d}" data-lang="{lang}"{hidden}>'
             f'<h2 class="dict-label">{label}</h2>{body}</section>'
         )
-    if len(groups) > 1:
-        n = sum(len(entries) for _, entries in groups)
-        tabs.append(
-            f'<button type="button" class="tab tab-all" role="tab" '
-            f'aria-selected="false" aria-controls="{" ".join(ids)}" '
-            f'id="tab-all" data-dict="all" title="Show every dictionary">'
-            f'All<span class="tab-n">{n}</span></button>'
-        )
-    tabbar = f'<nav class="dict-tabs" role="tablist" aria-label="Dictionaries">{"".join(tabs)}</nav>'
-    return tabbar, "".join(panels)
+    return langbar + "".join(inner), "".join(panels)
 
 
 def _evidence_block(ev):
@@ -431,13 +514,17 @@ border-radius:6px;overflow:hidden}
 .view-toggle button{border:none;background:var(--page-bg);color:var(--muted);
 padding:.3rem .7rem;cursor:pointer;font-size:.8rem}
 .view-toggle button[aria-checked=true]{background:var(--head-bg);color:var(--fg);font-weight:600}
-.dict-tabs{display:flex;gap:.35rem;flex-wrap:wrap;margin:.9rem 0 0;
+.lang-tabs,.dict-tabs{display:flex;gap:.35rem;flex-wrap:wrap;margin:.9rem 0 0;
 border-bottom:1px solid var(--border)}
+.dict-tabs{margin-top:.35rem}
 .tab{border:1px solid var(--border);border-bottom:none;background:var(--card-bg);
 color:var(--fg);padding:.4rem .8rem;cursor:pointer;border-radius:6px 6px 0 0;font-size:.9rem}
 .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 .tab-all{margin-left:.35rem}
 .tab-n{font-size:.65rem;opacity:.75;margin-left:.3rem}
+.ru-empty{font-size:.9rem;color:var(--muted);margin:.6rem 0}
+.chip.ai-translated{background:var(--hit-bg);color:var(--accent);font-weight:600;
+margin-left:.45rem}
 .dict-label{display:none;font:600 .85rem/1.3 system-ui,sans-serif;
 margin:0 0 .6rem;color:var(--accent)}
 .word-page.all-dicts .dict-label{display:block}
@@ -498,22 +585,47 @@ PAGE_JS = """
   setView(root.getAttribute('data-view')||'adaptive');
   vt.addEventListener('click',function(e){var b=e.target.closest('[data-view-set]');
    if(b)setView(b.getAttribute('data-view-set'))})}
- var tabs=document.querySelectorAll('.dict-tabs .tab');
  var page=document.querySelector('.word-page');
- tabs.forEach(function(t){t.addEventListener('click',function(){
-  tabs.forEach(function(x){x.classList.remove('active');x.setAttribute('aria-selected','false')});
-  t.classList.add('active');t.setAttribute('aria-selected','true');
-  var want=t.getAttribute('data-dict');
-  var all=want==='all';
-  if(page)page.classList.toggle('all-dicts',all);
+ function markTabs(sel, attr, want){
+  document.querySelectorAll(sel).forEach(function(x){
+   var on=x.getAttribute(attr)===want;
+   x.classList.toggle('active',on);
+   x.setAttribute('aria-selected',on?'true':'false')})}
+ function showLang(lang){
+  var all=lang==='all';
+  if(page){page.classList.toggle('all-dicts',all);page.setAttribute('data-lang',lang)}
+  markTabs('.lang-tabs .tab','data-lang',lang);
+  document.querySelectorAll('.dict-tabs').forEach(function(n){
+   n.hidden=all || n.getAttribute('data-lang')!==lang});
+  if(all){
+   document.querySelectorAll('.dict-panel').forEach(function(p){p.hidden=false});
+   document.querySelectorAll('.dict-tabs .tab').forEach(function(t){
+    t.classList.remove('active');t.setAttribute('aria-selected','false')});
+   return}
+  var bar=document.querySelector('.dict-tabs[data-lang="'+lang+'"]');
+  var first=bar && bar.querySelector('.tab');
+  showDict(first?first.getAttribute('data-dict'):null)}
+ function showDict(want){
+  if(!want)return;
+  if(page)page.classList.remove('all-dicts');
+  markTabs('.dict-tabs .tab','data-dict',want);
   document.querySelectorAll('.dict-panel').forEach(function(p){
-   p.hidden=!all && p.getAttribute('data-dict')!==want})})})
+   p.hidden=p.getAttribute('data-dict')!==want})}
+ document.querySelectorAll('.lang-tabs .tab').forEach(function(t){
+  t.addEventListener('click',function(){showLang(t.getAttribute('data-lang'))})});
+ document.querySelectorAll('.dict-tabs .tab').forEach(function(t){
+  t.addEventListener('click',function(){showDict(t.getAttribute('data-dict'))})});
+ var lang=(page && page.getAttribute('data-lang'))||'en';
+ try{var nav=(navigator.language||'').toLowerCase();
+  if(nav.indexOf('ru')===0)lang='ru'}catch(e){}
+ showLang(lang)
 })();
 """.strip()
 
 
 def render_word_page(card, *, token=None, base="../", data_version=None,
-                     public_base="", include_doc=True):
+                     public_base="", include_doc=True, default_lang="en",
+                     ru_overlay=None):
     """Render one word page from a card (the /api/v1/lemma envelope shape).
 
     `card`      : {"query": {"key": slp1}, "results": [...], "data_version": ...}
@@ -526,6 +638,9 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
                   empty keeps everything relative (R1/R5 default).
     `include_doc`: wrap in <!doctype html>… (prerender). False returns just the
                   <main> fragment (SSR can embed it, tests compare the core).
+    `default_lang`: first-paint language (`en` unless SSR saw `ru`).
+    `ru_overlay`: optional `{pwg_ru, mw_ru}` entry lists; `None` joins the
+                  sibling/fixture store. Pass `{}` to force the empty state.
     """
     esc = html.escape
     slp1 = card["query"]["key"]
@@ -534,21 +649,27 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
     results = card.get("results", [])
     deva = slp1_to_devanagari(slp1)
     iast = from_slp1(slp1)
-    groups = _group_by_dict(results)
-    n_dicts = len(groups)
+    if ru_overlay is None:
+        from kosha.api.ru_join import join_ru
+        ru_overlay = join_ru(slp1)
+    groups = _groups_for_page(results, ru_overlay)
+    n_dicts = sum(1 for _, entries in groups if entries)
     ev = entry_fields(results[0]).get("evidence") if results else None
     band = (ev or {}).get("band", 5)
     band_label = (ev or {}).get("band_label", "")
+    if default_lang not in LANG_DICTS:
+        default_lang = "en"
 
-    tabbar, panels = _dict_panels(groups)
+    tabbar, panels = _dict_panels(groups, default_lang=default_lang)
     strip = _headword_strip(slp1, deva, iast, band, band_label, n_dicts)
 
     # <noscript>: show every panel stacked (CSS reveals them), hide the tab bar.
     noscript = ("<noscript><style>.dict-panel[hidden]{display:block!important}"
-                ".dict-tabs,.view-toggle{display:none!important}</style></noscript>")
+                ".lang-tabs,.dict-tabs,.view-toggle{display:none!important}</style></noscript>")
 
     main = (
-        '<main class="word-page" data-slp1="%s">' % esc(slp1)
+        '<main class="word-page" data-slp1="%s" data-lang="%s">' % (
+            esc(slp1), esc(default_lang))
         + strip
         + _view_toggle()
         + noscript
