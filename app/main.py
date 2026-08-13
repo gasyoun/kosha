@@ -23,6 +23,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 from kosha.api import catalog as dataset_catalog  # noqa: E402
 from kosha.api import repository, serializer  # noqa: E402
 from kosha.api.errors import install_error_handlers, raise_error  # noqa: E402
+from kosha.api.observability import (  # noqa: E402
+    ObservabilityMiddleware,
+    record_readiness,
+    render_prometheus,
+)
 from kosha.api.models import (  # noqa: E402
     IMPLEMENTED_FIELDS,
     IMPLEMENTED_QUERY_TYPES,
@@ -86,6 +91,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# W2C (H2348) — correlation IDs + low-cardinality request metrics. Added
+# after CORS so this layer is the outermost (last add_middleware runs first)
+# and every response, including CORS preflight, carries X-Request-ID.
+app.add_middleware(ObservabilityMiddleware)
+
 # D10 — history, magic-link auth, and analytics are OFF for public v1. The
 # router is mounted only when `KOSHA_HISTORY_ENABLED` is explicitly truthy, so
 # with the default configuration `/api/v1/history`, `/api/v1/auth/*`, and
@@ -124,19 +134,43 @@ def health():
 
 
 @app.get("/ready")
-def ready():
+def ready(request: Request):
     """W1C readiness probe (H2343).
 
     Fail-closed for missing core DB / data-version mismatch; optional
     subsystems (history when flag off, empty citation archive) report
     disabled/unconfigured without 500. Body is built by
     `kosha.api.readiness` — this route only maps ready → 200 / 503.
+    Required-check failures increment `kosha_ready_failures_total` (W2C).
     """
     from fastapi.responses import JSONResponse
-    from kosha.api.readiness import readiness_payload
+    from kosha.api.readiness import assess_readiness
 
-    body, status = readiness_payload()
-    return JSONResponse(status_code=status, content=body)
+    report = assess_readiness()
+    record_readiness(
+        report,
+        increment_failures=True,
+        request_id=getattr(request.state, "request_id", None),
+    )
+    return JSONResponse(status_code=report.http_status(), content=report.as_dict())
+
+
+@app.get("/metrics")
+def metrics():
+    """W2C low-cardinality Prometheus text (H2348).
+
+    Refreshes H2343 readiness gauges from a live `assess_readiness()` but
+    does **not** increment failure counters (scrapes are not incidents).
+    Labels are route templates / check names only — never headwords.
+    """
+    from kosha.api.readiness import assess_readiness
+
+    report = assess_readiness()
+    record_readiness(report, increment_failures=False)
+    return Response(
+        content=render_prometheus(),
+        media_type="text/plain; version=0.0.4; charset=utf-8",
+    )
 
 
 # ---------------------------------------------------------------------------
