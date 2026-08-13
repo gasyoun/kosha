@@ -14,6 +14,7 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.110.2] - 2026-08-13
 ### Added
 - **W2B / P-D6 public dataset catalog API (Grok 4.6 `grok-4.6`, H2347):**
   read-only `GET /api/v1/datasets` and `GET /api/v1/datasets/{id}` over the
