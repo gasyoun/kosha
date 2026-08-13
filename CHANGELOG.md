@@ -14,6 +14,21 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **W2C release observability (Grok 4.6 `grok-4.6`, H2348):**
+  `X-Request-ID` on every response (echo or UUID4) plus structured
+  `request_id=` log lines; `GET /metrics` Prometheus text with a locked
+  low-cardinality name list (`kosha_http_requests_total`,
+  `kosha_http_request_duration_seconds`, `kosha_ready`,
+  `kosha_ready_check`, `kosha_ready_failures_total`,
+  `kosha_data_version_info`). Labels are route templates / H2343 check
+  names only — never headwords, queries, or request ids. `/ready` 503
+  increments the failure counter; scrapes do not. History/auth stay off.
+  Operator notes:
+  [`docs/RELEASE_OBSERVABILITY.md`](https://github.com/gasyoun/kosha/blob/main/docs/RELEASE_OBSERVABILITY.md).
+  Surface `ops-metrics`. Tests:
+  [`tests/test_observability.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_observability.py).
+
 ## [0.110.2] - 2026-08-13
 ### Added
 - **W2B / P-D6 public dataset catalog API (Grok 4.6 `grok-4.6`, H2347):**

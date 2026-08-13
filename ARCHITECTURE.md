@@ -130,6 +130,8 @@ Prefix `/api/v1/`. JSON only. Every response carries the envelope:
 | `GET /api/v1/datasets` | **Catalog lane (W2B / P-D6), not the lemma envelope.** Public-tier rows from `data/manifest/datasets.json` (`schema: kosha-dataset-catalog-v1`). Restricted/intermediate omitted |
 | `GET /api/v1/datasets/{id}` | One public catalog row. Restricted, intermediate, and unknown ids share `dataset_not_found` 404 |
 | `GET /health` | `{"status":"ok"}` (unversioned, for probes) |
+| `GET /ready` | H2343 readiness (core / version / archives / optional writables). 200 or 503. Never 500 for history disabled |
+| `GET /metrics` | W2C Prometheus text. Low-cardinality labels only (route template, status class, H2343 check names). `X-Request-ID` on every response |
 
 **Errors** (uniform): HTTP status + `{"error": {"code": "lemma_not_found",
 "message": "...", "suggestions": [...]}}`. Codes: `bad_input_scheme`,
