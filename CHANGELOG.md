@@ -14,6 +14,7 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.110.4] - 2026-08-13
 ### Changed
 - **W1E live-smoke re-fill after W2C (Grok 4.6 `grok-4.6`, H2642):**
   promoted `/opt/kosha/repo` `0cd22ef5` → `ae4f93c4` (v0.110.3) on
