@@ -1,6 +1,6 @@
 # Kosha platform architecture
 
-_Created: 30-07-2026 · Last updated: 07-08-2026_
+_Created: 30-07-2026 · Last updated: 13-08-2026_
 
 This target architecture implements the decisions in the
 [plan of record](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md).
@@ -18,7 +18,7 @@ The installable package is rooted at `src/kosha/`:
 | `rendering` | safe Cologne renderer, citations, shared serializers | route or build orchestration |
 | `pipeline` | stage registry, dependency DAG, build lock, postconditions, atomic promotion | domain presentation |
 | `settings` | typed environment and path configuration | import-time side effects |
-| `api` | thin FastAPI routers, exception mapping, readiness (`GET /ready`) | duplicated SQL/serialization |
+| `api` | thin FastAPI routers, exception mapping, readiness (`GET /ready`), correlation + low-cardinality metrics (`GET /metrics`) | duplicated SQL/serialization; visitor analytics |
 
 `app/` and `scripts/` initially import these modules. Direct `sys.path`
 injection is removed as each consumer moves.
@@ -100,6 +100,17 @@ core open via the storage facade, optional attached layers, readable
 `kosha.api.archive`, and history as `disabled` when the D10 flag is off.
 HTTP: 200 when ready, 503 when not — never 500 for a correctly disabled
 optional writable. Tests: `tests/test_readiness.py`.
+
+**W2C (H2348) status:** request correlation and low-cardinality metrics live
+in
+[`src/kosha/api/observability.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/observability.py).
+Every response carries `X-Request-ID` (echo or UUID4). `GET /metrics`
+exports Prometheus text: request counts/durations by **route template**
+(never headword/path), `kosha_ready` + `kosha_ready_check` using the
+H2343 names, and `kosha_ready_failures_total` incremented only by
+`GET /ready`. History/auth stay off. Operator notes:
+[`docs/RELEASE_OBSERVABILITY.md`](https://github.com/gasyoun/kosha/blob/main/docs/RELEASE_OBSERVABILITY.md).
+Tests: `tests/test_observability.py`.
 
 ## Build system
 
