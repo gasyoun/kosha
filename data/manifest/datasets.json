@@ -1,6 +1,6 @@
 {
  "manifest_version": "0.1.0",
- "generated": "2026-07-24",
+ "generated": "2026-08-13",
  "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
  "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
  "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
@@ -1930,6 +1930,24 @@
    ],
    "notes": "PUBLIC tier despite consuming the restricted Heritage layer (D20, LGPLLR, heritage-dico-gloss): gloss TEXT is deliberately never copied into kosha — the subset carries mw_key1 + DICO anchor + SHA-256 + word count, and defgen_heritage_ref.py REFUSES to score if any digest stops matching the local SanskritLexicography file. Reproduction therefore requires that sibling checkout. Derived from the frozen 500-headword MW sample (seed 730, H730) intersected with Heritage = 333 items; the subset is high-frequency-skewed by Heritage coverage, so its numbers are not comparable to the published 500-item table.",
    "data_statement": "docs/DEFGEN_HERITAGE_SECOND_REFERENCE_EVAL.md"
+  },
+  {
+   "id": "grammar-lab-g1",
+   "title": "Grammar Lab Wave-1 topic graph (Whitney + Zalizniak root alternation / verbal morphology)",
+   "tier": "public",
+   "in_release": "not-applicable",
+   "format": "json + tsv + yml",
+   "rows": 32,
+   "size_bytes": 424863,
+   "keying": "subject:grammar-lab:<slug> with Type-D edges to whitney-sec / whitney-root / zalizniak-1975|1978|2004",
+   "source_repo": "https://github.com/gasyoun/SanskritGrammar",
+   "source_path": "data/grammar_lab/export/",
+   "builder": "scripts/build_grammar_lab.py (H2492, Grok 4.6 grok-4.6, 13-08-2026)",
+   "consumers": [
+    "Systema-Sanscriticum Grammar Lab import (H2493 G2)"
+   ],
+   "notes": "32 published topics, 182 Type-D edges, 192 frozen queries. Evidence contract: Whitney + Zalizniak + dictionary + corpus-or-not_attested + deterministic exercise. Semantic vectors are char-ngram hash projection (semantic_ready false) until G2 MiniLM sidecar. Sandhi fenced. PR https://github.com/gasyoun/SanskritGrammar/pull/857 v0.121.6.",
+   "data_statement": "https://github.com/gasyoun/SanskritGrammar/blob/main/data/grammar_lab/README.md"
   }
  ]
 }
