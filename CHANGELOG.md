@@ -13,6 +13,19 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+### Added
+- **`/ask` plan for `/w/` language groups + ops leftovers (Grok 4.6 `grok-4.6`):**
+  five-layer spec
+  [`docs/PLAN_KOSHA_RU_LANG_GROUPS_OPS_2026.md`](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_RU_LANG_GROUPS_OPS_2026.md)
+  (R1–R24). Execution:
+  [H2670](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2670-Grok_kosha_w-page-ru-pwg-mw-tabs_13.08.26.md)
+  (EN/DE/RU chrome + pwg_ru/mw_ru),
+  [H2680](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2680-Grok_kosha_w-page-sanskritrussian-strip_13.08.26.md)
+  (SanskritRussian strip after H2670),
+  [H2671](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2671-Grok_kosha_citation-archive-mount_13.08.26.md),
+  [H2672](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2672-Grok_kosha_identity-rollback-drill_13.08.26.md),
+  [H2681](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2681-Codex_kosha_w0-h1944-h1945-compare-memo_13.08.26.md).
+  Not executed this sitting (R24).
 
 ## [0.110.7] - 2026-08-13
 ### Added
