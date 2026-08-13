@@ -65,6 +65,11 @@ def test_all_dict_panels_in_dom(tok):
     assert html.count('role="tabpanel"') == len(dicts_with_entries)
     n_hidden = len(re.findall(r'class="dict-panel"[^>]*\shidden', html))
     assert n_hidden == max(0, len(dicts_with_entries) - 1)
+    if len(dicts_with_entries) > 1:
+        assert 'id="tab-all"' in html
+        assert 'data-dict="all"' in html
+    else:
+        assert 'id="tab-all"' not in html
 
 
 @pytest.mark.parametrize("tok", _sample_tokens())
