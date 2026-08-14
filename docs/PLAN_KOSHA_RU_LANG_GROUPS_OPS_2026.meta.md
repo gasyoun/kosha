@@ -45,6 +45,7 @@ A human checking the autonomy gate before `/go`.
 |---|---|
 | 13-08-2026 | Initial metadoc with plan set |
 | 14-08-2026 | H2680 SanskritRussian strip shipped (one line, not a tab) |
+| 14-08-2026 | H2681 Codex W0 retrospective shipped in PR #399; no open P0/P1 |
 
 ---
 
