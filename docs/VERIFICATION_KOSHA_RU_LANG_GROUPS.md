@@ -41,9 +41,10 @@ _Created: 13-08-2026 · Last updated: 14-08-2026_
 
 | Criterion | Proof |
 |---|---|
-| Memo | committed under `kosha/docs/` |
-| Comments | posted on the H1944 / H1945 PRs (or #215 if that is the review home) |
-| No silent patch | defects named as follow-on, not fixed in the memo session |
+| Memo | [committed under `kosha/docs/`](https://github.com/gasyoun/kosha/blob/main/docs/REVIEW_KOSHA_W0_H1944_H1945_CODEX_2026.md) in [PR #399](https://github.com/gasyoun/kosha/pull/399) |
+| Comments | posted on [H1944 / #215](https://github.com/gasyoun/kosha/pull/215#issuecomment-5297808328) and [H1945 / #224](https://github.com/gasyoun/kosha/pull/224#issuecomment-5297808587) |
+| No silent patch | no product code changed; the one open P2 was routed to H2768 (Codex) — Resolve kosha extension on strict Salt compatibility faces |
+| Gate | no open P0/P1; 188 passed / 30 skipped in the focused W0 suite |
 
 ## Risks
 
