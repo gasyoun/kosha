@@ -14,6 +14,9 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Added
+- **H2685 (Grok 4.6 `grok-4.6`) — PWG TM canonical v1 registered:** `pwg-tm-canonical-v1` in [`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) (2,392 public-tier records; JSONL/TMX/TEI Lex-0/OntoLex). Bytes live on SanskritLexicography release `pwg-tm-canonical-v1.0.0`.
+
 ## [0.110.12] - 2026-08-14
 ### Added
 - **`/w/` SanskritRussian glossary strip (Grok 4.6 `grok-4.6`, H2680):**
