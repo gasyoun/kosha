@@ -1,6 +1,6 @@
 # Verification — kosha RU language groups and ops leftovers
 
-_Created: 13-08-2026 · Last updated: 13-08-2026_
+_Created: 13-08-2026 · Last updated: 14-08-2026_
 
 ## H2670
 
@@ -31,7 +31,7 @@ _Created: 13-08-2026 · Last updated: 13-08-2026_
 
 | Criterion | Command / URL |
 |---|---|
-| Tests | pytest on the word-page suite plus a fixture that the strip is one line, not a tab |
+| Tests | `python -m pytest tests/test_word_page.py tests/test_word_page_all_tab.py tests/test_word_page_lang_groups.py tests/test_word_page_saru_strip.py -q -p no:cacheprovider` |
 | Live | `https://samskrtam.ru/w/BU` shows a SanskritRussian public-tier gloss line under the headword when the lemma hits |
 | Rights | only public site-tier files; `corpus_lexicon` never read |
 
