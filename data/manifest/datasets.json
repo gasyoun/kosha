@@ -1,6 +1,6 @@
 {
  "manifest_version": "0.1.0",
- "generated": "2026-07-24",
+ "generated": "2026-08-14",
  "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
  "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
  "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
@@ -1930,6 +1930,26 @@
    ],
    "notes": "PUBLIC tier despite consuming the restricted Heritage layer (D20, LGPLLR, heritage-dico-gloss): gloss TEXT is deliberately never copied into kosha — the subset carries mw_key1 + DICO anchor + SHA-256 + word count, and defgen_heritage_ref.py REFUSES to score if any digest stops matching the local SanskritLexicography file. Reproduction therefore requires that sibling checkout. Derived from the frozen 500-headword MW sample (seed 730, H730) intersected with Heritage = 333 items; the subset is high-frequency-skewed by Heritage coverage, so its numbers are not comparable to the published 500-item table.",
    "data_statement": "docs/DEFGEN_HERITAGE_SECOND_REFERENCE_EVAL.md"
+  },
+  {
+   "id": "pwg-tm-canonical-v1",
+   "title": "PWG German–Russian translation memory (canonical v1 four-format pack)",
+   "tier": "public",
+   "in_release": "not-applicable",
+   "release_asset": "pwg-tm-canonical-v1.0.0",
+   "format": "jsonl + tmx + tei-xml + turtle",
+   "rows": 2392,
+   "size_bytes": 101677729,
+   "keying": "pwg.tm.v1 record_id; entry_id / sense_id / fragment_id; SHA-256 of source/target strings",
+   "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+   "source_path": "RussianTranslation/release/pwg_tm/",
+   "builder": "RussianTranslation/src/pwg_tm_release.py (H2685, Grok 4.6)",
+   "consumers": [
+    "RussianTranslation TM interchange",
+    "csl-standards LLOD modelling (generator stays in RussianTranslation)"
+   ],
+   "notes": "PUBLIC: PWG PD + own machine translation. 2175 exact-card + 217 exact-fragment. Wave-1 5000-key Grok drafts are NOT in this pack (independent serious-error 2.5%). Rebuild: python src/pwg_tm_release.py. GitHub release pwg-tm-canonical-v1.0.0 carries the four binaries; DOI pending.",
+   "data_statement": "https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/release/pwg_tm/DATASHEET.md"
   }
  ]
 }
