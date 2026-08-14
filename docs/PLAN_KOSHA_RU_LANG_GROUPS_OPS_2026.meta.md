@@ -1,6 +1,6 @@
 # Metadoc — PLAN_KOSHA_RU_LANG_GROUPS_OPS_2026
 
-_Created: 13-08-2026 · Last updated: 13-08-2026_
+_Created: 13-08-2026 · Last updated: 14-08-2026_
 
 ## Purpose
 
@@ -44,6 +44,7 @@ A human checking the autonomy gate before `/go`.
 | Date | Change |
 |---|---|
 | 13-08-2026 | Initial metadoc with plan set |
+| 14-08-2026 | H2680 SanskritRussian strip shipped (one line, not a tab) |
 
 ---
 

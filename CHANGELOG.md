@@ -14,6 +14,18 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.110.12] - 2026-08-14
+### Added
+- **`/w/` SanskritRussian glossary strip (Grok 4.6 `grok-4.6`, H2680):**
+  one public-tier gloss line under the headword (lemma, then surface);
+  a one-line miss when the public files miss. Not a third dictionary
+  tab. Reuses
+  [`RuGlosser`](https://github.com/gasyoun/kosha/blob/main/scripts/build_ru_gloss_layer.py)
+  from the reading-pack join. CI fixture
+  [`tests/fixtures/sanskritrussian/`](https://github.com/gasyoun/kosha/blob/main/tests/fixtures/sanskritrussian/README.md).
+  Restricted `corpus_lexicon` is never read. Tests:
+  [`tests/test_word_page_saru_strip.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_word_page_saru_strip.py).
+
 ## [0.110.11] - 2026-08-14
 ### Changed
 - **Live Part IV identity rollback drill on `.92` (Grok 4.6 `grok-4.6`, H2672):**

@@ -87,20 +87,42 @@ def _load_tsv_map(path, key_col, val_col):
     return m
 
 
-def load_layers():
-    """Return (surface, lemma, root, lemma2root) join maps from the public tier."""
-    surface = _load_tsv_map(SURFACE_TSV, "form_slp1", "ru")
-    lemma = _load_tsv_map(LEMMA_TSV, "lemma_slp1", "ru")
-    root = _load_tsv_map(ROOT_TSV, "root_slp1", "ru")
-    lemma2root = _load_tsv_map(LEMMA2ROOT_TSV, "lemma_slp1", "root_slp1")
-    return surface, lemma, root, lemma2root
+def _layer_files(root=None):
+    """Public site-tier TSV paths (surface / lemma / root + lemma2root map)."""
+    base = Path(root) if root is not None else SR
+    return (
+        (base / "surface_glossary.tsv", "form_slp1", "ru"),
+        (base / "lemma_glossary.tsv", "lemma_slp1", "ru"),
+        (base / "root_glossary.tsv", "root_slp1", "ru"),
+        (base / "dcs_lemma2root.tsv", "lemma_slp1", "root_slp1"),
+    )
+
+
+def load_layers(root=None, missing_ok=False):
+    """Return (surface, lemma, root, lemma2root) join maps from the public tier.
+
+    `root` overrides the sibling SanskritRussian checkout (H2680 fixture).
+    `missing_ok` yields empty maps instead of raising — word-page miss line.
+    The builder keeps the default (files must exist).
+    """
+    out = []
+    for path, key_col, val_col in _layer_files(root):
+        if path.is_file():
+            out.append(_load_tsv_map(path, key_col, val_col))
+        elif missing_ok:
+            out.append({})
+        else:
+            raise FileNotFoundError(path)
+    return tuple(out)
 
 
 class RuGlosser:
     """Loaded-once join primitive; call `.gloss(form_iast, lemma_iast, lemma_slp1)`."""
 
-    def __init__(self):
-        self.surface, self.lemma, self.root, self.lemma2root = load_layers()
+    def __init__(self, root=None, missing_ok=False):
+        self.surface, self.lemma, self.root, self.lemma2root = load_layers(
+            root=root, missing_ok=missing_ok
+        )
 
     def gloss(self, form_iast, lemma_iast=None, lemma_slp1=None):
         surf_key = _dekey(to_slp1(form_iast or ""))
