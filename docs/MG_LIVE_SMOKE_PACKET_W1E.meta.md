@@ -1,6 +1,6 @@
 # Metadoc — MG_LIVE_SMOKE_PACKET_W1E.md
 
-_Created: 08-08-2026 · Last updated: 13-08-2026_
+_Created: 08-08-2026 · Last updated: 14-08-2026_
 
 ## Purpose
 
@@ -44,6 +44,7 @@ readiness). Agents assemble the packet; M.G. deploys, measures, and signs.
 | 08-08-2026 | Initial metadoc with H2345 packet |
 | 08-08-2026 | Public-probe fill: API 404, reading LH 99, Gītā w/ 404, data-v0.1.0 asset OK; W1 still open |
 | 13-08-2026 | H2642 re-fill after W2C promote to v0.110.3; sslip PASS including `/metrics`; residuals unchanged |
+| 14-08-2026 | H2672 live Part IV restore + re-promote; residual row 6 closed; Wave 1 still not agent-complete |
 
 ---
 
