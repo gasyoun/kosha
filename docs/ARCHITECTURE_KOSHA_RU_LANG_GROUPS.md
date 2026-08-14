@@ -1,6 +1,6 @@
 # Architecture — kosha `/w/` language groups and RU join
 
-_Created: 13-08-2026 · Last updated: 13-08-2026_
+_Created: 13-08-2026 · Last updated: 14-08-2026_
 
 ## Chrome
 
@@ -30,8 +30,10 @@ Pages) `navigator.language` starts with `ru`.
   exists and says so in one line.
 - **Badge:** unreviewed store rows show **AI-translated**. Do not flip
   `review_status` in the translation store.
-- **SanskritRussian strip (W-RU-2):** the public glossary already used by
-  reading packs. One line under the headword. Not a third dictionary tab.
+- **SanskritRussian strip (W-RU-2 / H2680):** the public glossary already
+  used by reading packs. One `<p class="saru-strip">` under the headword
+  (lemma, then surface). Honest miss line when the public files miss.
+  Not a third dictionary tab.
 
 ## Build-vs-reuse
 

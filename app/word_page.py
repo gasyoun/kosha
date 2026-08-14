@@ -223,6 +223,28 @@ def _groups_for_page(results, ru_overlay):
     return [(d, grouped[d]) for d in DICT_ORDER]
 
 
+def _saru_strip(slp1, sr_strip):
+    """One public-tier SanskritRussian line under the headword (H2680).
+
+    Not a dictionary tab. Lemma layer wins, then surface. Honest miss
+    when the public files are absent or the key is uncovered.
+    """
+    esc = html.escape
+    if sr_strip is None:
+        from kosha.api.sr_gloss import join_sr_strip
+        sr_strip = join_sr_strip(slp1)
+    text = (sr_strip or {}).get("text")
+    if (sr_strip or {}).get("hit") and text:
+        return (
+            f'<p class="saru-strip" lang="ru">'
+            f'<span class="saru-src">SanskritRussian</span> {esc(text)}</p>'
+        )
+    return (
+        '<p class="saru-strip saru-miss">'
+        "No SanskritRussian gloss for this lemma.</p>"
+    )
+
+
 def _headword_strip(slp1, deva, iast, band, band_label, n_dicts):
     esc = html.escape
     band_cls = BAND_CLASS.get(band, "b5")
@@ -509,6 +531,10 @@ color:#fff;text-transform:uppercase}
 .band.b3{background:var(--b3)}.band.b4{background:var(--b4)}.band.b5{background:var(--b5)}
 .ndicts,.gram{font-size:.72rem;color:var(--muted)}
 .gram{font-family:monospace}
+.saru-strip{margin:.4rem 0 0;font-size:.95rem;line-height:1.4}
+.saru-strip .saru-src{font-size:.68rem;font-weight:700;letter-spacing:.04em;
+text-transform:uppercase;color:var(--muted);margin-right:.45rem}
+.saru-strip.saru-miss{font-size:.85rem;color:var(--muted)}
 .view-toggle{display:inline-flex;margin:.7rem 0 0;border:1px solid var(--border);
 border-radius:6px;overflow:hidden}
 .view-toggle button{border:none;background:var(--page-bg);color:var(--muted);
@@ -625,7 +651,7 @@ PAGE_JS = """
 
 def render_word_page(card, *, token=None, base="../", data_version=None,
                      public_base="", include_doc=True, default_lang="en",
-                     ru_overlay=None):
+                     ru_overlay=None, sr_strip=None):
     """Render one word page from a card (the /api/v1/lemma envelope shape).
 
     `card`      : {"query": {"key": slp1}, "results": [...], "data_version": ...}
@@ -641,6 +667,8 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
     `default_lang`: first-paint language (`en` unless SSR saw `ru`).
     `ru_overlay`: optional `{pwg_ru, mw_ru}` entry lists; `None` joins the
                   sibling/fixture store. Pass `{}` to force the empty state.
+    `sr_strip`: optional `{hit, text, layer}` for the SanskritRussian line;
+                  `None` joins the public site-tier files.
     """
     esc = html.escape
     slp1 = card["query"]["key"]
@@ -662,6 +690,7 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
 
     tabbar, panels = _dict_panels(groups, default_lang=default_lang)
     strip = _headword_strip(slp1, deva, iast, band, band_label, n_dicts)
+    saru = _saru_strip(slp1, sr_strip)
 
     # <noscript>: show every panel stacked (CSS reveals them), hide the tab bar.
     noscript = ("<noscript><style>.dict-panel[hidden]{display:block!important}"
@@ -671,6 +700,7 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
         '<main class="word-page" data-slp1="%s" data-lang="%s">' % (
             esc(slp1), esc(default_lang))
         + strip
+        + saru
         + _view_toggle()
         + noscript
         + tabbar
