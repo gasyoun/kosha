@@ -26,9 +26,12 @@ for extra in (ROOT, ROOT / "src", ROOT / "app", ROOT / "scripts"):
     if str(extra) not in sys.path:
         sys.path.insert(0, str(extra))
 
-# CI / local pytest: join the committed slice only (H2670). Production SSR
-# leaves KOSHA_RU_JOIN unset and resolves the sibling tree.
+# CI / local pytest: join the committed slice only (H2670 / H2680).
+# Production SSR leaves these unset and resolves the sibling trees.
 os.environ.setdefault("KOSHA_RU_JOIN", str(ROOT / "tests" / "fixtures" / "ru_join"))
+os.environ.setdefault(
+    "KOSHA_SR_GLOSS", str(ROOT / "tests" / "fixtures" / "sanskritrussian")
+)
 
 #: Modules whose assertions are pinned to full-data counts (e.g. 323,425
 #: lemmas) or to entries only present in the real dictionaries.

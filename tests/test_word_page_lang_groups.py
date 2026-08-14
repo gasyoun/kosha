@@ -88,7 +88,10 @@ def test_ru_panels_render_fixture_russian():
     assert "pwg-body-werden" not in ru_pwg
     assert "pwg-body-werden" not in ru_mw
     assert "Кочергина" not in html
-    assert "saru-strip" not in html
+    # H2680 strip is a line, not a sixth dictionary tab.
+    assert 'id="tab-saru"' not in html
+    assert 'data-dict="saru"' not in html
+    assert html.count('class="saru-strip"') == 1
 
 
 def test_empty_state_is_visible():
