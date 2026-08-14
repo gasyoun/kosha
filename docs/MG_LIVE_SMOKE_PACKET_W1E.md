@@ -38,6 +38,9 @@ local rehearsal [`docs/DEPLOY_REHEARSAL_LOG.md`](https://github.com/gasyoun/kosh
 5. **Citation-archive mount** (Grok 4.6 `grok-4.6`, 2026-08-14T00:30Z, H2671) —
    snapshot of live `0.1.0-dev` under `/opt/kosha/archive/0.1.0-dev/`;
    `/ready` `citation_archives` **ok**; pinned sense 200. See §8e.
+6. **Identity rollback drill** (Grok 4.6 `grok-4.6`, 2026-08-14T00:27Z, H2672) —
+   first `BUNDLE_IDENTITY` pair on `.92`, Part IV restore of previous, then
+   immediate re-promote of current. Unit left on current. See **8f**.
 
 ---
 
@@ -393,6 +396,30 @@ curl -fsS 'http://127.0.0.1:8000/api/v1/lemma/banD' | head -c 200
 | Re-promoted new bundle after drill? (Y/N) | n/a |
 | PASS / FAIL | **FAIL** / blocked — requires host access after first promote |
 
+### Results (live Part IV drill 2026-08-14T00:27Z, H2672)
+
+No previous identity existed (first promote 08-08 had none). Created
+previous from the live tree, then a no-op second identity, restored
+previous, smoked, immediately re-promoted current. Same
+`kosha.db` digest on both hops (hashed in place; never copied or replaced).
+
+| Field | Value |
+|---|---|
+| Date (UTC) | 2026-08-14T00:26:59Z restore · 00:27:31Z re-promote |
+| Operator | Grok 4.6 (`grok-4.6`) |
+| Previous identity | `/opt/kosha/releases/h2672-previous/bundle/BUNDLE_IDENTITY.json` — git `2649f046`, 63 payload files, no stamp; runtime `/opt/kosha/releases/h2672-previous/runtime` |
+| Current identity | `/opt/kosha/releases/h2672-current/bundle/BUNDLE_IDENTITY.json` — git `2649f046` + `deploy/H2672_NOOP_STAMP`; live WD `/opt/kosha/repo` |
+| Core DB | `/opt/kosha/db/kosha.db` sha256 `140c6638811559677c4335c034dce5c2718e56868a188acc1e9bac15b6b34f04` (1 732 337 664 B) |
+| `/health` after restore | **200** `{"status":"ok"}` — local `:8001`, [samskrtam.ru/health](https://samskrtam.ru/health), sslip |
+| `/ready` after restore | **200** `ready:true` `0.1.0-dev`; `core_db` ok; archives **ok**; history disabled |
+| Lemma after restore | [samskrtam.ru/api/v1/lemma/banD](https://samskrtam.ru/api/v1/lemma/banD) **200** 179 914 B |
+| `/health` after re-promote | **200** `{"status":"ok"}` — same three URLs |
+| `/ready` after re-promote | **200** `ready:true`; archives still **ok** |
+| Lemma / SSR after re-promote | `banD` **200** 179 914 B; [samskrtam.ru/w/BU](https://samskrtam.ru/w/BU) **200** 240 211 B |
+| Identity live **after** drill | **current** — WD `/opt/kosha/repo` @ `2649f046` (H2670); drop-in removed |
+| Re-promoted new bundle after drill? (Y/N) | **Y** — immediately |
+| PASS / FAIL | **PASS** — both hops green; unit left on current. Wave 1 **not** declared complete |
+
 ---
 
 ## 8. Gate summary
@@ -434,7 +461,7 @@ accepts the sslip base (or after branded DNS). Residual work below is the honest
 3. ~~Lighthouse mobile ≥90 on three real `/w/` URLs~~ — **done** 100×3 on sslip.
 4. ~~Re-walk Gītā 1.1 (13 tokens) on SSR~~ — **done** 13/13 on sslip.
 5. ~~Mount citation archives under `/opt/kosha/archive` + pinned-sense smoke.~~ — **done** 14-08-2026 (H2671): live `0.1.0-dev` snapshot; `/ready` archives **ok**; see §8e.
-6. On **second** promote: retain `BUNDLE_IDENTITY` and run full Part IV restore.
+6. ~~On **second** promote: retain `BUNDLE_IDENTITY` and run full Part IV restore.~~ — **done** 14-08-2026 (H2672): previous+current identities under `/opt/kosha/releases/`; restore then immediate re-promote; unit left on current. See **8f. Identity rollback drill**.
 7. Sign-off table in **Sign-off** below — a human ticks the branded-complete box. An agent must not mark Wave 1 complete.
 
 ### 8c. W2C re-fill 2026-08-13T11:13Z (sslip.io @ v0.110.3)
@@ -507,6 +534,35 @@ just to force `resolved_from: archive`). The mount is proven by `/ready`
 `citation_archives=ok` plus the on-disk dump. Wave 1 is **not** declared
 complete.
 
+### 8f. Identity rollback drill 2026-08-14T00:27Z (H2672)
+
+R4/R11/R19: live
+[KOSHA_DEPLOYMENT.md](https://github.com/gasyoun/kosha/blob/main/KOSHA_DEPLOYMENT.md)
+Part IV restore on `.92`, not a paper rehearsal. First promote had no prior
+identity, so previous was assembled from the live tree (`2649f046`, H2670)
+and current is the same tree plus a no-op `deploy/H2672_NOOP_STAMP`. Restore
+switched systemd `WorkingDirectory` to the previous runtime snapshot; re-promote
+removed the drop-in and returned WD to `/opt/kosha/repo`. Core DB was **not**
+copied or replaced (same sha256 on both hops). H2670 language groups and
+H2671 archive mount remain the live product.
+
+| Check | Result |
+|---|---|
+| Previous identity | `/opt/kosha/releases/h2672-previous/bundle/BUNDLE_IDENTITY.json` git `2649f046` 63 files |
+| Current identity | `/opt/kosha/releases/h2672-current/bundle/BUNDLE_IDENTITY.json` git `2649f046` + stamp 64 files |
+| Pointers | `/opt/kosha/releases/previous_bundle_identity` · `/opt/kosha/releases/current_bundle_identity` |
+| DB digest | `140c6638811559677c4335c034dce5c2718e56868a188acc1e9bac15b6b34f04` in place; `core_db_copied=false` |
+| Restore start/stop | 00:26:59Z stop+WD previous · 00:27:02Z `/health`+`/ready` 200 |
+| Restore WD | `/opt/kosha/releases/h2672-previous/runtime` unit `active` |
+| Re-promote start/stop | 00:27:31Z stop+WD live · 00:27:34Z `/health`+`/ready` 200 |
+| Re-promote WD | `/opt/kosha/repo` @ `2649f046` unit `active`; drop-in gone |
+| [samskrtam.ru/health](https://samskrtam.ru/health) both hops | **200** `{"status":"ok"}` |
+| [samskrtam.ru/ready](https://samskrtam.ru/ready) both hops | **200** `ready:true` archives **ok** |
+| sslip `/health`+`/ready` both hops | **200** / **200** |
+| Host log | `/opt/kosha/OPS.md` section **Identity rollback drill** |
+
+Wave 1 is **not** declared complete.
+
 ---
 
 ## 9. Sign-off
@@ -516,13 +572,15 @@ complete.
 | Operator (probe) | Grok 4.5 (`grok-4.5`) public probe 09:44Z |
 | Operator (promote) | Grok 4.5 (`grok-4.5`) first live promote 12:25Z on human “promotes” |
 | Operator (W2C re-fill) | Grok 4.6 (`grok-4.6`) 2026-08-13T11:13Z (H2642) |
-| Date (UTC) | 2026-08-13 (re-fill); first promote 2026-08-08 |
-| Live API base | **https://kosha.193.232.229.92.sslip.io/** (`data_version` **0.1.0-dev**, code **v0.110.3** / `ae4f93c4`) |
+| Operator (archive mount) | Grok 4.6 (`grok-4.6`) 2026-08-14T00:30Z (H2671) |
+| Operator (identity rollback) | Grok 4.6 (`grok-4.6`) 2026-08-14T00:27Z (H2672) |
+| Date (UTC) | 2026-08-14 (rollback drill); first promote 2026-08-08 |
+| Live API base | **https://kosha.193.232.229.92.sslip.io/** (`data_version` **0.1.0-dev**, code **v0.110.10** / `2649f046`) |
 | Branded API base | **https://samskrtam.ru** — kosha paths live 13-08-2026 (H2646); WP `/` unchanged |
-| Live static base | `https://gasyoun.github.io/kosha/` (reading + docs-site; `w/` missing) |
-| Host layout | `/opt/kosha/{repo,venv,db,archive,.env}` + `kosha.service` |
-| W1 product exit (live sslip base) | ☑ measured **PASS** (re-confirmed 13-08) · ☐ branded complete |
-| Notes / waivers | Live-base smoke **PASS** including W2C correlation + `/metrics`. §9 still needs human tick for branded product exit. |
+| Live static base | `https://gasyoun.github.io/kosha/` (reading + docs-site; pack-token `w/` from H2665) |
+| Host layout | `/opt/kosha/{repo,venv,db,archive,.env,releases}` + `kosha.service` |
+| W1 product exit (live sslip base) | ☑ measured **PASS** (re-confirmed 14-08) · ☐ branded complete |
+| Notes / waivers | Live-base smoke **PASS** including W2C, archive mount, and Part IV rollback drill. The Sign-off branded-complete box still needs a human tick. An agent must not mark Wave 1 complete. |
 
 ---
 
@@ -553,11 +611,12 @@ complete.
 | Promote date | 2026-08-08T12:25Z |
 | W2C re-fill date | 2026-08-13T11:13Z |
 | Archive mount date | 2026-08-14T00:30Z (H2671) |
+| Identity rollback date | 2026-08-14T00:27Z (H2672) |
 | Public API | https://kosha.193.232.229.92.sslip.io/ |
-| Host SHA | `ae4f93c4` / v0.110.3 |
+| Host SHA | `2649f046` / v0.110.10 (H2670 tree; unit left here after drill) |
 | Host ops | `/opt/kosha/OPS.md` |
 | Lighthouse artifacts (local, not committed) | `lh-w-vac.json` / `lh-w-BU.json` / `lh-w-banD.json` = **100** (08-08); not re-run 13-08 |
-| Next | second-promote identity rollback (H2672) · human Sign-off tick for branded product exit |
+| Next | human tick of the branded-complete box in **Sign-off** — an agent must not mark Wave 1 complete |
 
 ---
 

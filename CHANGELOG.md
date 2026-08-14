@@ -14,6 +14,19 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.110.11] - 2026-08-14
+### Changed
+- **Live Part IV identity rollback drill on `.92` (Grok 4.6 `grok-4.6`, H2672):**
+  previous + current `BUNDLE_IDENTITY` under `/opt/kosha/releases/`;
+  restore then immediate re-promote; unit left on current (`2649f046`).
+  [samskrtam.ru/health](https://samskrtam.ru/health) and
+  [samskrtam.ru/ready](https://samskrtam.ru/ready) **200** after both hops.
+  Core DB hashed in place
+  (`140c6638811559677c4335c034dce5c2718e56868a188acc1e9bac15b6b34f04`),
+  never copied. Packet:
+  [`docs/MG_LIVE_SMOKE_PACKET_W1E.md`](https://github.com/gasyoun/kosha/blob/main/docs/MG_LIVE_SMOKE_PACKET_W1E.md)
+  section **8f. Identity rollback drill**. Does not declare Wave 1 complete.
+
 ## [0.110.10] - 2026-08-14
 ### Added
 - **`/w/` language groups + pwg_ru/mw_ru join (Grok 4.6 `grok-4.6`, H2670):**
