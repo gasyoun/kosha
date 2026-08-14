@@ -1,8 +1,8 @@
-# W0 freeze-exit verdict — kosha, 31-07-2026
+# W0 freeze-exit verdict — kosha, 31-07-2026 / 14-08-2026
 
-_Created: 31-07-2026 · Last updated: 31-07-2026_
+_Created: 31-07-2026 · Last updated: 14-08-2026_
 
-Recorded by [H1945](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1945-Opus_kosha_architecture-roadmap-w0c-contract-trust-boundaries_30.07.26.md)
+Recorded by [H1945](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1945-Opus_kosha_architecture-roadmap-w0c-contract-trust-boundaries_30.07.26.md)
 (W0C, item 10), executed by Opus 5 1M (`claude-opus-5[1m]`). The checklist is
 [VERIFICATION_KOSHA_ARCHITECTURE.md](https://github.com/gasyoun/kosha/blob/main/docs/VERIFICATION_KOSHA_ARCHITECTURE.md)
 § Freeze-exit checklist. Each row below was checked against the repository as
@@ -10,12 +10,17 @@ it stands, not against what a previous handoff reported.
 
 ## Verdict
 
-**W0 does not exit yet — one of thirteen criteria still fails, and it is not a
-W0C deliverable.** All ten H1945 items are done and their gates are green. What
-blocks the exit is the retrospective **Codex review**, which has not happened
-for either H1944 or H1945.
+**W0 exits its technical freeze: all thirteen criteria pass as of 14-08-2026.**
+The missing retrospective review shipped in
+[H2681 / PR #399](https://github.com/gasyoun/kosha/pull/399), with substantive
+comments on [#215](https://github.com/gasyoun/kosha/pull/215#issuecomment-5297808328)
+and [#224](https://github.com/gasyoun/kosha/pull/224#issuecomment-5297808587).
+It found no open P0/P1. One P2 Salt-profile conflict is explicitly routed to
+[H2768 (Codex) — Resolve kosha extension on strict Salt compatibility faces](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2768-Codex_kosha_salt-face-kosha-extension-contract_14.08.26.md)
+and does not reopen this gate.
 
-W1 and W3 therefore stay gated, as the handoff requires.
+This is a W0 technical verdict, not a Wave 1 product-exit, deployment, DOI, or
+later-roadmap completion claim.
 
 > **Updated 31-07-2026, same day.** As first recorded, *two* criteria failed:
 > the Codex review, and required status checks on `main`, which the verification
@@ -31,8 +36,8 @@ W1 and W3 therefore stay gated, as the handoff requires.
 
 | # | Criterion | Verdict | Evidence |
 |---|---|---|---|
-| 1 | H1943, H1944, H1945 merged | ⚠️ pending | H1943 · H1944 merged ([#215](https://github.com/gasyoun/kosha/pull/215)); H1945 is this PR |
-| 2 | Retrospective Codex review has no open P0/P1 | ❌ **FAIL** | No Codex review exists for H1944 — [#215](https://github.com/gasyoun/kosha/pull/215) carries zero reviews and zero comments. H1945's dependency gate was cleared by explicit human authorization, not by a review |
+| 1 | H1943, H1944, H1945 merged | ✅ | H1943 [#213](https://github.com/gasyoun/kosha/pull/213), H1944 [#215](https://github.com/gasyoun/kosha/pull/215), H1945 [#224](https://github.com/gasyoun/kosha/pull/224) |
+| 2 | Retrospective Codex review has no open P0/P1 | ✅ (was ❌) | [Written comparison](https://github.com/gasyoun/kosha/blob/main/docs/REVIEW_KOSHA_W0_H1944_H1945_CODEX_2026.md) + comments on [#215](https://github.com/gasyoun/kosha/pull/215#issuecomment-5297808328) and [#224](https://github.com/gasyoun/kosha/pull/224#issuecomment-5297808587); no open P0/P1, one non-blocking P2 routed to H2768 |
 | 3 | Fixture clean build succeeds from zero | ✅ | `--plan` lists all 10 stages; two consecutive builds from a removed target, `10 stage(s), 0 skipped` |
 | 4 | Required Python/UI CI is protected and green | ✅ (was ❌) | Found unprotected — `branches/main` → `"protected": false`, `rulesets` → `[]`, so no check was *required* and a red run did not block a merge ([#223](https://github.com/gasyoun/kosha/issues/223)). Protection enabled 31-07-2026 on human instruction: both workflows required by name, `enforce_admins: true`. Readback confirms `"protected": true` |
 | 5 | Dependency auto-merge cannot bypass those checks | ✅ (was ⚠️) | `dependabot-auto-merge.yml`'s `workflow_run`+`success` condition always held; the second barrier — queued auto-merge waiting on branch protection — became real when #4 was fixed |
@@ -45,7 +50,7 @@ W1 and W3 therefore stay gated, as the handoff requires.
 | 12 | No known deployment-blocking configuration contradiction remains | ✅ | The one found was fixed: `archive_dir` (`data/archive`) vs `KOSHA_RELEASES_DIR` (`data/releases`) — two names for one mount, defaulting to different directories. Unified; a contradicting pair is now a hard error |
 | 13 | Rights uncertainty is not a criterion | ✅ n/a | D18 — no rights question arose; the fixture pack is written for the fixture and carries none |
 
-## The failures, stated plainly
+## The historical failures, now resolved
 
 **#4 — the required-checks control did not exist. Fixed the same day.** W0B's
 own verification document asserted "The protected `main` branch requires both
@@ -64,12 +69,15 @@ and the reasoning per setting are in
 [VERIFICATION_KOSHA_ARCHITECTURE.md](https://github.com/gasyoun/kosha/blob/main/docs/VERIFICATION_KOSHA_ARCHITECTURE.md)
 § Required checks.
 
-**#2 — no Codex review has taken place.** The plan of record (D21) makes Codex
+**#2 — no Codex review had taken place. Resolved 14-08-2026.** The plan of record (D21) makes Codex
 the retrospective reviewer of every merged handoff, and the W0 sequence gates
 each handoff on the previous one's review carrying no unresolved P1. H1944 was
 merged without one; H1945 was authorized to proceed regardless, by explicit
 human instruction, which is a legitimate override of a process gate but is not
-a substitute for the review itself. Both reviews remain owed before W0 exits.
+a substitute for the review itself. H2681 supplied the review, compared both
+merged PRs with their handoffs and the independent H1944 lane, and recorded no
+open P0/P1. The full adjudication is the
+[Codex retrospective memo](https://github.com/gasyoun/kosha/blob/main/docs/REVIEW_KOSHA_W0_H1944_H1945_CODEX_2026.md).
 
 ## What W0C shipped
 
