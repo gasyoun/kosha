@@ -1948,7 +1948,7 @@
     "RussianTranslation TM interchange",
     "csl-standards LLOD modelling (generator stays in RussianTranslation)"
    ],
-   "notes": "PUBLIC: PWG PD + own machine translation. 2175 exact-card + 217 exact-fragment. Wave-1 5000-key Grok drafts are NOT in this pack (independent serious-error 2.5%). Rebuild: python src/pwg_tm_release.py. GitHub release pwg-tm-canonical-v1.0.0 carries the four binaries; DOI pending.",
+   "notes": "PUBLIC: PWG PD + own machine translation. 2175 exact-card + 217 exact-fragment. Wave-1 5000-key Grok drafts are NOT in this pack (independent serious-error 2.5%). Rebuild: python src/pwg_tm_release.py. GitHub release pwg-tm-canonical-v1.0.0. Dataset concept DOI 10.5281/zenodo.21932900 (version 10.5281/zenodo.21932901). Distinct from repo software DOI 10.5281/zenodo.21306715.",
    "data_statement": "https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/release/pwg_tm/DATASHEET.md"
   }
  ]
