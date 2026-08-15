@@ -1,6 +1,6 @@
 {
  "manifest_version": "0.1.0",
- "generated": "2026-08-14",
+ "generated": "2026-08-15",
  "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
  "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
  "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
@@ -1950,6 +1950,24 @@
    ],
    "notes": "PUBLIC: PWG PD + own machine translation. 2175 exact-card + 217 exact-fragment. Wave-1 5000-key Grok drafts are NOT in this pack (independent serious-error 2.5%). Rebuild: python src/pwg_tm_release.py. GitHub release pwg-tm-canonical-v1.0.0. Dataset concept DOI 10.5281/zenodo.21932900 (version 10.5281/zenodo.21932901). Distinct from repo software DOI 10.5281/zenodo.21306715.",
    "data_statement": "https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/release/pwg_tm/DATASHEET.md"
+  },
+  {
+   "id": "grammar-lab-g1",
+   "title": "Grammar Lab Wave-1 topic graph (Whitney + Zalizniak root alternation / verbal morphology)",
+   "tier": "public",
+   "in_release": "not-applicable",
+   "format": "json + tsv + yml",
+   "rows": 32,
+   "size_bytes": 424863,
+   "keying": "subject:grammar-lab:<slug> with Type-D edges to whitney-sec / whitney-root / zalizniak-1975|1978|2004",
+   "source_repo": "https://github.com/gasyoun/SanskritGrammar",
+   "source_path": "data/grammar_lab/export/",
+   "builder": "scripts/build_grammar_lab.py (H2492, Grok 4.6 grok-4.6, 13-08-2026)",
+   "consumers": [
+    "Systema-Sanscriticum Grammar Lab import (H2493 G2)"
+   ],
+   "notes": "32 published topics, 182 Type-D edges, 192 frozen queries. Evidence contract: Whitney + Zalizniak + dictionary + corpus-or-not_attested + deterministic exercise. Semantic vectors are char-ngram hash projection (semantic_ready false) until G2 MiniLM sidecar. Sandhi fenced. PR https://github.com/gasyoun/SanskritGrammar/pull/857 v0.121.6.",
+   "data_statement": "https://github.com/gasyoun/SanskritGrammar/blob/main/data/grammar_lab/README.md"
   }
  ]
 }
