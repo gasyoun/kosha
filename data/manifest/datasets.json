@@ -2016,6 +2016,25 @@
    ],
    "notes": "PUBLIC, DE-ONLY: 459 entries / 11581 edition senses; 40700 citation edges, 6008 edition_rel, 2125 government, 86 non-German gloss spans, 42 form notes. Contains NO translation, review score or evidence grade — enforced by a field allowlist plus a post-serialization byte fence, not by convention. PWG/PW/SCH/PWKVN are public domain; NWS is the Cologne working layer (432 senses, 3.7%); derived structure CC-BY-SA-4.0. Dataset concept DOI 10.5281/zenodo.21961709 (version 10.5281/zenodo.21961710) — distinct from repo software DOI 10.5281/zenodo.21306715. The two large artifacts are release/deposit assets, NOT repo files; the repo keeps SHA256SUMS. COVERAGE CAVEAT: the pwg_ru pipeline's frequency-biased 459-headword slice, not a random sample of PWG — do not read per-sense counts as dictionary-wide rates. 22 senses quarantined (Cyrillic contamination in DE fields); edition_rel is machine classification with a measured 10.69% inter-layer conflict rate flagged needs_human. Rebuild: python src/export_de_edition.py export --store ... then src/build_de_sidecar_pack.py build.",
    "data_statement": "https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/release/pwg_de_sidecars/DATASHEET.md"
+  },
+  {
+   "id": "mbh-vulgate-critical-presence",
+   "title": "MBh Nīlakaṇṭha vulgate × BORI critical-edition presence verdicts (H2845)",
+   "tier": "public",
+   "in_release": "not-applicable",
+   "format": "csv",
+   "rows": 83971,
+   "size_bytes": 5732433,
+   "sha256": "adabcbc28cd81688449f487586f0f64e1a10ef4cfaa206098c0397584eb5a097",
+   "keying": "parvan/adhyaya/shloka (Nīlakaṇṭha vulgate) + fitted per-parvan continuous index -> four-state verdict in {present, absent, unchecked} x {present, absent, unchecked}, plus BORI locus, critical_score and matched-half counts",
+   "source_repo": "https://github.com/sanskrit-lexicon/csl-atlas",
+   "source_path": "data/forensic/mbh_vulgate_critical_presence.csv (verse level, unconditional) (+ mbh_citation_presence.csv 70,423 PWG/MW citations, conditional on the fitted locus; mbh_quote_lane_check.csv; f8_presence_report.json)",
+   "builder": "scripts/forensic/f8_mbh_presence.py (witnesses staged by f8_mbh_witnesses.py straight out of a sibling repo's git object store — no re-scrape, no network)",
+   "consumers": [
+    "SanskritLexicography RussianTranslation ls_links.MbhEtext — renders E / E† beside every MBh scan link on a card (PR #1753)",
+    "csl-atlas data/forensic/MBH_ETEXT_PRESENCE_CENSUS.md"
+   ],
+   "notes": "H2845 (16-08-2026), MG's P2: an MBh citation should link its e-text, not only its scan, and say which recension carries it. Verse level, unconditional over all 83,971 Nīlakaṇṭha verses: 92.0 % present/present, 7.7 % (6,494) vulgate-only — the verse the critical edition relegated to its apparatus — 0.3 % service records with an empty mūla, 0 unchecked. Per-parvan vulgate-only share ranges 0.9 % (sauptika) to 29.1 % (svargārohaṇa). CAVEAT, do not quote the citation-level table as if it were this one: mbh_citation_presence.csv (85.3 % present/present, 8.4 % present/absent) is only as good as the fitted locus, which lands on the exactly right verse about HALF the time, so its present/absent means 'the verse the index points at is vulgate-only', NOT 'PWG cited a verse BORI rejects'. Integrity rule enforced in code, not convention: unchecked is never written as absent, and a consumer without csl-atlas checked out prints no marker at all rather than implying a verse is missing. RIGHTS: this CSV holds verdicts, scores and BORI addresses — no verse bytes; the two witnesses (sanatana.in volunteer transcription; BORI/Tokunaga-Smith critical text, © BORI 1999, Smith asks that copies not be redistributed) stay in gitignored caches on a local-only branch and are NOT part of this dataset. The one deliberate exception is the specimen file f8_specimen_mbh_12_8081.json, which quotes three vulgate verses in full. PR: https://github.com/sanskrit-lexicon/csl-atlas/pull/404"
   }
  ]
 }
