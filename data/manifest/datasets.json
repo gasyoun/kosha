@@ -1950,6 +1950,27 @@
    ],
    "notes": "PUBLIC: PWG PD + own machine translation. 2175 exact-card + 217 exact-fragment. Wave-1 5000-key Grok drafts are NOT in this pack (independent serious-error 2.5%). Rebuild: python src/pwg_tm_release.py. GitHub release pwg-tm-canonical-v1.0.0. Dataset concept DOI 10.5281/zenodo.21932900 (version 10.5281/zenodo.21932901). Distinct from repo software DOI 10.5281/zenodo.21306715.",
    "data_statement": "https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/release/pwg_tm/DATASHEET.md"
+  },
+  {
+   "id": "pwg-de-edition-v1",
+   "title": "PWG DE edition graph — OntoLex-Lemon + TEI Lex-0 sidecars",
+   "tier": "public",
+   "in_release": "not-applicable",
+   "release_asset": "pwg-de-edition-v1.0.0",
+   "format": "turtle + tei-xml + json",
+   "rows": 11581,
+   "size_bytes": 46382247,
+   "keying": "IRI under https://w3id.org/sanskrit-lexicon/repwg/ ; entry = (key1, homonym); sense = entry + edition layer + sense_tag slug",
+   "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+   "source_path": "RussianTranslation/release/pwg_de_sidecars/",
+   "builder": "RussianTranslation/src/export_de_edition.py (H1629) + src/build_de_sidecar_pack.py (H1635, Opus 5)",
+   "consumers": [
+    "csl-standards LLOD modelling",
+    "RussianTranslation SPARQL queries (release/query/*.rq)",
+    "edition-graph consumers needing PWG/PW/SCH/PWKVN/NWS sense relations"
+   ],
+   "notes": "PUBLIC, DE-ONLY: 459 entries / 11581 edition senses; 40700 citation edges, 6008 edition_rel, 2125 government, 86 non-German gloss spans, 42 form notes. Contains NO translation, review score or evidence grade — enforced by a field allowlist plus a post-serialization byte fence, not by convention. PWG/PW/SCH/PWKVN are public domain; NWS is the Cologne working layer (432 senses, 3.7%); derived structure CC-BY-SA-4.0. Dataset concept DOI 10.5281/zenodo.21961709 (version 10.5281/zenodo.21961710) — distinct from repo software DOI 10.5281/zenodo.21306715. The two large artifacts are release/deposit assets, NOT repo files; the repo keeps SHA256SUMS. COVERAGE CAVEAT: the pwg_ru pipeline's frequency-biased 459-headword slice, not a random sample of PWG — do not read per-sense counts as dictionary-wide rates. 22 senses quarantined (Cyrillic contamination in DE fields); edition_rel is machine classification with a measured 10.69% inter-layer conflict rate flagged needs_human. Rebuild: python src/export_de_edition.py export --store ... then src/build_de_sidecar_pack.py build.",
+   "data_statement": "https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/release/pwg_de_sidecars/DATASHEET.md"
   }
  ]
 }
