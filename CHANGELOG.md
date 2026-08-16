@@ -14,6 +14,13 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Changed
+- **H2768 (Codex Sol `gpt-5.6-sol`) — strict Salt compatibility faces:**
+  `/dicts/*` now emits only the six C-SALT entry fields plus the normative
+  `csl` extension; `/api/v1`, cards, and SSR retain the `kosha` namespace.
+  One serializer remains authoritative, with a terminal projection and an
+  independent profile-derived wire-key regression.
+
 ### Added
 - **H2685 (Grok 4.6 `grok-4.6`) — PWG TM canonical v1 registered:** `pwg-tm-canonical-v1` in [`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) (2,392 public-tier records; JSONL/TMX/TEI Lex-0/OntoLex). Bytes live on SanskritLexicography release `pwg-tm-canonical-v1.0.0`. Dataset concept DOI [10.5281/zenodo.21932900](https://doi.org/10.5281/zenodo.21932900) (version [10.5281/zenodo.21932901](https://doi.org/10.5281/zenodo.21932901)).
 

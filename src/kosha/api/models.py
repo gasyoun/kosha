@@ -3,22 +3,23 @@
 Before W0C the payload shape existed only as dict literals built in three
 places that were kept in step by a comment saying "keep the two in lockstep"
 (`app/main.py::_entry_payload`, `scripts/build_static_cache.py::entry_payload`,
-`app/salt.py::salt_entry`). Nothing enforced it. These models are the contract
-those three now serialize *through*, so a field added in one place cannot go
-missing in another.
+`app/salt.py::salt_entry`). Nothing enforced it. These models are the full
+internal contract those three now serialize *through*, so a field added in one
+place cannot go missing in another. The strict `/dicts/*` wire face projects
+this model to Salt §9's six C-SALT fields plus `csl`.
 
-The shape is the **C-SALT / CSL Salt profile**
+The full shape is kosha's **Salt-derived internal entry model**
 ([SALT_API_PROFILE.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.md)
-§8), which D6 makes binding for `/api/v1`:
+§8), which D6 makes the base contract for `/api/v1`:
 
 * §8.1 top-level fields (`id`, `headword_slp1`, `sense`, `re_headwords_slp1`,
-  `created`, `xml`) reproduce C-SALT exactly, so a client written against
-  C-SALT reads a kosha entry unchanged;
+  `created`, `xml`) reproduce C-SALT exactly;
 * §8.2's `csl` object carries Cologne record provenance — the lnum, the scan
   coordinates, the reference labels, the accented key;
 * a `kosha` object carries everything that is kosha's own work and has no slot
   in either model: sense ids, the rendered HTML, the evidence badges, the
-  Heritage witness, and the citation payload.
+  Heritage witness, and the citation payload. It is retained on kosha-owned
+  surfaces and removed by the strict Salt-face projection.
 
 **Why the rendered HTML lives under `kosha`, not `csl.html`.** The profile
 lists `csl.html` as the CSL *host's* own rendering. kosha is not that host — it
@@ -129,13 +130,13 @@ class KoshaBlock(BaseModel):
 
 
 class SaltEntry(BaseModel):
-    """One dictionary entry in Salt-profile shape (§8).
+    """One full kosha dictionary entry built on the Salt profile (§8).
 
     **`id` is dictionary-scoped, not globally unique.** The profile addresses
     entries under `/dicts/{dict}/restful/ids`, so `lemma-agni` means "agni in
     *this* dictionary" — and MW, PWG and Apte each mint exactly that string for
-    their own agni. C-SALT never has to notice, because a C-SALT response is
-    always one dictionary's. kosha's `/api/v1/lemma` merges three, so a client
+    their own agni. C-SALT never has to notice, because the strict `/dicts/*`
+    response is always one dictionary's. kosha's `/api/v1/lemma` merges three, so a client
     keying a lemma card by `id` alone silently drops entries; the key is
     `(kosha.dict, id)`. Pinned by `test_salt_face_entry_equals_the_api_entry`.
     """
@@ -196,7 +197,7 @@ class ErrorResponse(BaseModel):
 class SaltFaceError(BaseModel):
     """Salt profile §3.2 error form — a bare string, not the object above.
 
-    The `/dicts/*` faces are wire-compatible with C-SALT, and C-SALT answers a
+    The strict `/dicts/*` projection is wire-compatible with C-SALT, and C-SALT answers a
     bad parameter with `{"error": "Missing or invalid parameter: 'field'"}`.
     Normalizing those to kosha's richer object would break the compatibility
     the faces exist to provide, so the two error shapes coexist by design:
