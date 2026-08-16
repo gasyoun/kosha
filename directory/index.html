@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="84 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="86 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="84 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="86 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -2399,6 +2399,62 @@
         "encodingFormat": "tsv + jsonl + json",
         "contentUrl": "https://github.com/gasyoun/kosha"
       }
+    },
+    {
+      "@type": "Dataset",
+      "name": "PWG German–Russian translation memory (canonical v1 four-format pack)",
+      "description": "PUBLIC: PWG PD + own machine translation. 2175 exact-card + 217 exact-fragment. Wave-1 5000-key Grok drafts are NOT in this pack (independent serious-error 2.5%). Rebuild: python src/pwg_tm_release.py. GitHub release pwg-tm-canonical-v1.0.0. Dataset concept DOI 10.5281/zenodo.21932900 (version 10.5281/zenodo.21932901). Distinct from repo software DOI 10.5281/zenodo.21306715.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "pwg-tm-canonical-v1"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "jsonl + tmx + tei-xml + turtle",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/not-applicable/pwg-tm-canonical-v1.0.0"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "PWG DE edition graph — OntoLex-Lemon + TEI Lex-0 sidecars",
+      "description": "PUBLIC, DE-ONLY: 459 entries / 11581 edition senses; 40700 citation edges, 6008 edition_rel, 2125 government, 86 non-German gloss spans, 42 form notes. Contains NO translation, review score or evidence grade — enforced by a field allowlist plus a post-serialization byte fence, not by convention. PWG/PW/SCH/PWKVN are public domain; NWS is the Cologne working layer (432 senses, 3.7%); derived structure CC-BY-SA-4.0. Dataset concept DOI 10.5281/zenodo.21961709 (version 10.5281/zenodo.21961710) — distinct from repo software DOI 10.5281/zenodo.21306715. The two large artifacts are release/deposit assets, NOT repo files; the repo keeps SHA256SUMS. COVERAGE CAVEAT: the pwg_ru pipeline's frequency-biased 459-headword slice, not a random sample of PWG — do not read per-sense counts as dictionary-wide rates. 22 senses quarantined (Cyrillic contamination in DE fields); edition_rel is machine classification with a measured 10.69% inter-layer conflict rate flagged needs_human. Rebuild: python src/export_de_edition.py export --store ... then src/build_de_sidecar_pack.py build.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "pwg-de-edition-v1"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "turtle + tei-xml + json",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/not-applicable/pwg-de-edition-v1.0.0"
+      }
     }
   ]
 }
@@ -2469,7 +2525,7 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>84</b><span>public datasets</span></div>
+      <div class="tally"><b>86</b><span>public datasets</span></div>
       <div class="tally"><b>12</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
@@ -3326,6 +3382,26 @@
       <p class="meta">3,742 rows · 265.3 KB · TSV + JSONL + JSON</p>
       <div class="chips"><span class="chip">docs/DEFGEN_HERITAGE_SECOND_REFERENCE_EVAL.md (report of record: reference-invariant arm ranking + MW-familiarity premium +0.13..+0.25)</span><span class="chip">docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md next-step #4 (closed by this dataset)</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/kosha">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>PWG German–Russian translation memory (canonical v1 four-format pack)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">pwg.tm.v1 record_id; entry_id / sense_id / fragment_id; SHA-256 of source/target strings</p>
+      <p class="meta">2,392 rows · 97.0 MB · JSONL + TMX + TEI-XML + TURTLE</p>
+      <div class="chips"><span class="chip">RussianTranslation TM interchange</span><span class="chip">csl-standards LLOD modelling (generator stays in RussianTranslation)</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/pwg-tm-canonical-v1.0.0">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>PWG DE edition graph — OntoLex-Lemon + TEI Lex-0 sidecars</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">IRI under https://w3id.org/sanskrit-lexicon/repwg/ ; entry = (key1, homonym); sense = entry + edition layer + sense_tag slug</p>
+      <p class="meta">11,581 rows · 44.2 MB · TURTLE + TEI-XML + JSON</p>
+      <div class="chips"><span class="chip">csl-standards LLOD modelling</span><span class="chip">RussianTranslation SPARQL queries (release/query/*.rq)</span><span class="chip">edition-graph consumers needing PWG/PW/SCH/PWKVN/NWS sense relations</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/pwg-de-edition-v1.0.0">Download ↓</a></div>
     </article>
     </div>
     <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>
