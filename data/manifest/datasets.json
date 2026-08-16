@@ -196,6 +196,30 @@
    "rebuild": "NOT deterministically rebuildable — DeepSeek LLM alignment (RussianTranslation/src/build_corpus_lexicon.py, append-only, resumable) over the SamudraManthanam corpus; a re-run costs weeks + API spend and yields different output. SINGLE COPY on MG disk — backup pending H235."
   },
   {
+   "id": "stenogrammy-teaching-glossary",
+   "title": "Sanskrit terminology glossary of the устный корпус (taught-term frequency)",
+   "tier": "restricted",
+   "in_release": "not-applicable",
+   "format": "tsv",
+   "rows": 1513,
+   "size_bytes": 118175,
+   "keying": "Cyrillic surface form → SLP1 lemma(s); frequency floor ≥ 20; 4,597 matched headwords before the floor, 205,012 occurrences over 1,521 files; per-course profile across 42 courses",
+   "source_repo": "https://github.com/gasyoun/Uprava",
+   "source_path": "data/stenogrammy_glossary_headwords.tsv · data/stenogrammy_glossary_by_course.tsv · data/stenogrammy_glossary_stats.json",
+   "builder": "Uprava/tools/build_stenogrammy_glossary.py (H2839 C1)",
+   "consumers": [
+    "samskrte.ru ₽5,000 membership tier (candidate)"
+   ],
+   "notes": "The asset H2839 recommended INSTEAD of the abandoned ~₽7.99M corpus-redaction programme. Safe by construction, not by care: it is the intersection of a 152-FZ private corpus with the ALREADY-PUBLISHED sa-ru-glossary lemma layer, so every headword was in a public dictionary before the corpus was opened and no corpus string can reach the output — do NOT reverse the join direction (Uprava FINDINGS §414). Course loci only, never per-file: a lecture title plus a rare term is a quasi-identifier. Verified: 0 of the 9 participant tokens removed by the H2839 path-name gate appear here. `tier: restricted` reflects the private SOURCE corpus, not personal data in the output. Not yet human-adjudicated — the keep/drop/regloss pass over the 1,513 headwords is still owed before this is sellable.",
+   "sha256": {
+    "stenogrammy_glossary_headwords.tsv": "b11967af03ed82b70b7788f41be8b653e2f7f7dbd3f8b5251305d4bd11946b66",
+    "stenogrammy_glossary_by_course.tsv": "a10d923e03b8c971d89d6b9eaf2c1be49bbee6699a53a7b5c30461408cce4ca7",
+    "stenogrammy_glossary_stats.json": "75941deb88ad3f5637b00d06486416071f4cf5159f1ef26367a1a4eec055d2e4"
+   },
+   "provenance_verified": "2026-08-16 (H2839, Opus 5 claude-opus-5)",
+   "rebuild": "Deterministic: python Uprava/tools/build_stenogrammy_glossary.py --floor 20, given Uprava/stenogrammy/ and SanskritRussian/lemma_glossary.tsv as siblings"
+  },
+  {
    "id": "sa-ru-glossary",
    "title": "Ranked Sa→Ru glossary (surface/lemma/root layers)",
    "tier": "restricted",
