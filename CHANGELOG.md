@@ -14,6 +14,7 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.110.14] - 2026-08-16
 ### Documentation
 - **H2768 propagation:** registered the strict Salt-face decision in README,
   agent cold-start guidance, a maintenance sync rule, and a metadoc.
