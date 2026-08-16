@@ -14,6 +14,10 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+### Documentation
+- **H2768 propagation:** registered the strict Salt-face decision in README,
+  agent cold-start guidance, a maintenance sync rule, and a metadoc.
+
 ## [0.110.13] - 2026-08-16
 ### Changed
 - **H2768 (Codex Sol `gpt-5.6-sol`) — strict Salt compatibility faces:**
