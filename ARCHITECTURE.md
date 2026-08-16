@@ -155,14 +155,16 @@ Salt equivalent, so v1 is its own contract.
 
 **Maximum-reuse rules (upgraded 02-07-2026 from "optional" to required — M.G.):**
 
-1. **Salt entry object = kosha's interchange object.** Inside `/api/v1`
+1. **Salt entry model = kosha's internal interchange model.** Inside `/api/v1`
    responses, each per-dictionary entry is serialized as a **Salt-profile
    entry** (id in `lemma-…`/`-L{lnum}` form, headword fields, and the
    `csl.{lnum,page,column,scanUrl,references,accentedKey}` block verbatim per
    [SALT_API_PROFILE.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.md)),
    extended with namespaced kosha-only fields (`kosha.sense_ids`,
-   `kosha.rendered_html`, `kosha.evidence`, `kosha.cite`). One shape, two
-   APIs — no translation layer between kosha's merged view and Salt clients.
+   `kosha.rendered_html`, `kosha.evidence`, `kosha.cite`). One full internal
+   model serves both consumers; the strict `/dicts/*` boundary projects only the six
+   C-SALT fields plus `csl`, exactly as profile §9 permits. This is a field
+   projection, not a second query or serializer.
 2. **Same addressing.** Cologne L-numbers everywhere; kosha's `mw.142512.3`
    nests under Salt entry IDs. Never mint an identity Salt cannot express.
 3. **Same data source.** Entry data is imported from the
@@ -174,7 +176,7 @@ Salt equivalent, so v1 is its own contract.
    csl-orig commit.
 4. **Salt facade REST faces ship in Phase 1 (D4):**
    `GET /dicts/{id}/restful/entries` + `/restful/ids` served from `kosha.db`
-   per the profile — parity-tested against csl-apidev's run-verified
+   per the profile — strict-wire-key tested and content-parity-tested against csl-apidev's run-verified
    envelopes for `agni`, `indra`, `ka` (incl. the `-L{lnum}` homonym
    disambiguation rule). The **GraphQL face ships by P7** (port reference:
    `csl-apidev/api1/salt_graphql*.php`). kosha thereby becomes the second

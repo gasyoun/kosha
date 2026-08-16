@@ -1,15 +1,15 @@
 """kosha — the one entry serializer (W0C items 2–4, H1945).
 
 `/api/v1/lemma`, the `/dicts/*` Salt faces, the prerendered static cards and
-the `/w/{slp1}` SSR page all produce an entry object. Until W0C they produced
+the `/w/{slp1}` SSR page all consume one full entry model. Until W0C they produced
 *three* entry objects held together by a comment ("Mirror of
 app/main.py::_entry_payload — keep the two in lockstep") and by nobody
-changing them. That is the drift D13 exists to end: one serializer, one shape,
-and a parity test that fails when a surface diverges instead of a note asking
-future readers to be careful.
+changing them. That is the drift D13 exists to end: one serializer, explicit
+public projections, and parity tests that fail when shared fields diverge.
 
-Everything crossing this boundary is Salt-profile shaped
-(`kosha.api.models`), and the rendered HTML crossing it is sanitized
+Everything crossing this boundary is built on the Salt profile
+(`kosha.api.models`); the strict `/dicts/*` projection is defined at the end of
+this module. The rendered HTML crossing it is sanitized
 (`kosha.api.sanitize`) — those are the same boundary on purpose. A surface that
 wants entry HTML gets it through here and therefore gets it sanitized; there is
 no path that serves `render()` output directly.
@@ -237,3 +237,28 @@ def entry_dict(entry: SaltEntry) -> dict:
     absent fields to be tidied away.
     """
     return entry.model_dump(mode="json", by_alias=True)
+
+
+# Salt profile v0.1.0 §8.1/§9: the strict public face may add `csl` and no
+# other top-level object. Keep this projection at the HTTP boundary while the
+# full serializer remains shared by every surface.
+SALT_FACE_TOP_LEVEL = (
+    "id",
+    "headword_slp1",
+    "sense",
+    "re_headwords_slp1",
+    "created",
+    "xml",
+    "csl",
+)
+
+
+def salt_face_entry_dict(entry: SaltEntry) -> dict:
+    """Project one full kosha entry onto the strict CSL Salt wire contract.
+
+    `/api/v1`, static cards, and SSR retain the namespaced `kosha` block. The
+    `/dicts/*` compatibility faces expose only C-SALT fields plus the one
+    extension Salt §9 permits: `csl`.
+    """
+    full = entry_dict(entry)
+    return {field: full[field] for field in SALT_FACE_TOP_LEVEL}

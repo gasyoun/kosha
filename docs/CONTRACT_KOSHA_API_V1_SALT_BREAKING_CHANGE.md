@@ -1,6 +1,6 @@
 # kosha `/api/v1` — the Salt contract and the W0C breaking change
 
-_Created: 31-07-2026 · Last updated: 31-07-2026_
+_Created: 31-07-2026 · Last updated: 16-08-2026_
 
 Handoff [H1945](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1945-Opus_kosha_architecture-roadmap-w0c-contract-trust-boundaries_30.07.26.md)
 · plan of record
@@ -105,12 +105,18 @@ forbids CSL display-XML there. Filling it with Cologne markup would look like
 conformance and be its opposite — a client would parse Cologne's tagset as TEI.
 The unmodified markup is available at `csl.xmlCsl`, opt-in via `?raw=1`.
 
+**The public faces are explicit projections.** `/api/v1` and static/SSR cards
+retain the full object above. `/dicts/*` exposes only the six §8.1 fields plus
+`csl`, because profile §9 permits no other structural divergence. Both are
+built by one serializer; the latter is a terminal field projection. Decision:
+[H2768 strict-face contract](DECISION_H2768_SALT_FACE_EXTENSION_CONTRACT.md).
+
 **A Salt `id` is dictionary-scoped, not globally unique.** C-SALT addresses
 entries under `/dicts/{dict}/…`, so `lemma-agni` means "agni in *this*
 dictionary" — and MW, PWG and Apte each mint exactly that string. C-SALT never
 notices, because a C-SALT response is always one dictionary's; kosha's lemma
 card merges three. **The key on a lemma card is `(kosha.dict, id)`.** Pinned by
-`test_salt_face_entry_equals_the_api_entry` and
+`test_salt_face_entry_matches_the_api_salt_projection` and
 `test_dictionary_scoped_ids_may_collide_across_dictionaries`.
 
 ## 4. Errors
