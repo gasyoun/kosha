@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="86 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="87 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="86 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="87 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -2347,7 +2347,7 @@
     {
       "@type": "Dataset",
       "name": "PWG literary-source scan-indexing campaign registry (2025-2026)",
-      "description": "H1706, csl-observatory PR #107, v1.5.0. Sidecars in the same directory: the verbatim 4-tab snapshot, the ranked e-text candidate queue, and a dated audit of all 37 sanskrit-lexicon-scans directories. CAVEAT 1 - the citation_count column is transcribed from a maintainer-kept sheet and its provenance is UNRESOLVED (1.2x to 433x against the full-dictionary <ls> extraction); use it to rank works, never as a numerator over a dictionary-wide denominator. CAVEAT 2 - multi-volume works carry their count once, on volume 1, so per-volume mass is a floor. CAVEAT 3 - the snapshot's Team tab has the volunteers' real-name column REDACTED at fetch time; handles are public on every coordinating issue, the name-to-handle linkage is not, and publishing it is a human decision (open MG @DECIDE in GTD).",
+      "description": "H1706, csl-observatory PR #107, v1.5.0. Sidecars in the same directory: the verbatim 4-tab snapshot, the ranked e-text candidate queue, a dated audit of all 37 sanskrit-lexicon-scans directories, and (H2874) ls_counts/ - the two <ls>-per-abbreviation count tables. CAVEAT 1 (RESOLVED 16-08-2026, H2874, csl-observatory PR #186 / v1.13.0) - citation_count is the 2024-09-11 lsextract_all.txt work-family rollup, ALL = 739056, with 66 of 67 valued rows exact; the old '1.2x to 433x disagreement' was a comparison against cleaned-STRING counts, which measure a different object. Consume citation_count_safe (blank where provenance is unresolved), never the raw citation_count; fold by in_pwgbib before summing, because the field is a work-family rollup and sibling edition/volume rows share one total; divide only by the ALL of the same snapshot. Gate: python scripts/pwg_citation_count_provenance.py --check. CAVEAT 2 - multi-volume works carry their count once, on volume 1, so per-volume mass is a floor. CAVEAT 3 - the snapshot's Team tab has the volunteers' real-name column REDACTED at fetch time; handles are public on every coordinating issue, the name-to-handle linkage is not, and publishing it is a human decision (open MG @DECIDE in GTD).",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
       "isAccessibleForFree": true,
       "creator": {
@@ -2365,6 +2365,34 @@
         "Sanskrit",
         "computational linguistics",
         "pwg-scan-index-campaign"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "PWG <ls> citation counts per bibliography abbreviation (work-family rollup)",
+      "description": "The count: every <ls> element in pwg.txt attributed to the LONGEST bibliography abbreviation that prefixes it (an n=\"...\" attribute is prepended first; leading digit -> NUMBER; no prefix -> UNKNOWN). Every element lands in exactly one bucket, so ALL is the only legitimate dictionary-wide denominator, and only against its own snapshot. CAVEAT 1 - this is a WORK FAMILY count, not a citation-string count; PWG's other family (sortedcrefs.txt, cleaned strings, total 344229) measures a different object and the two are never comparable (MED. is 30 there and 12990 here). CAVEAT 2 - pwg_ls_counts_2024-09-11.tsv is dated EVIDENCE for the scan-index tracker's Citation count column and must NEVER be regenerated against newer dictionary data; --recount writes only the _current table. Between the two snapshots `an.` falls 1797 to 1 while `H. an.` rises 2075 with a byte-identical bibliography entry - an ls re-tagging, not a recount. CAVEAT 3 - case is meaningful in this bibliography (S. vs s., Un. vs UN.) and 15 case-variant groups are cited on both sides, so a case-insensitive lookup silently picks one of two real works. Registered in Uprava DANGER_FACTS.md; see SanskritLexicography FINDINGS section 548.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "pwg-ls-counts"
       ],
       "distribution": {
         "@type": "DataDownload",
@@ -2525,8 +2553,8 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>86</b><span>public datasets</span></div>
-      <div class="tally"><b>12</b><span>restricted (on request)</span></div>
+      <div class="tally"><b>87</b><span>public datasets</span></div>
+      <div class="tally"><b>13</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
     <div class="nav">
@@ -3368,9 +3396,19 @@
         <h3>PWG literary-source scan-indexing campaign registry (2025-2026)</h3>
         <span class="badge pub">public</span>
       </div>
-      <p class="key">one row per tracked PWG/PWK literary source, keyed on ls_code (the abbreviation, presentation marks stripped). 34 columns: status + status_gloss, citation_count, total_pages, volunteer, started/finished/index_posted/public_link dates, coordinating issue repo+number+URL, scan_dir + canonical spelling + Pages URL + repo size, and the cross-validation set (in_pwgbib, dict_citations, count_ratio, ru_subset_refs, scan_wired). book_no is NOT unique - do not key on it.</p>
-      <p class="meta">82 rows · 34.6 KB · TSV</p>
-      <div class="chips"><span class="chip">csl-observatory reports/pwg_scan_index.md</span><span class="chip">csl-observatory /scan-index dashboard page</span><span class="chip">data/pwg_scan_index_tracker/pwg_etext_candidate_queue.tsv (e-text extraction ranking, H1715)</span><span class="chip">data/pwg_scan_index_tracker/scan_target_audit.tsv (resolver wiring, H1714)</span></div>
+      <p class="key">one row per tracked PWG/PWK literary source, keyed on ls_code (the abbreviation, presentation marks stripped). 43 columns: status + status_gloss, citation_count + citation_count_safe + citation_count_provenance + citation_count_full, total_pages, volunteer, started/finished/index_posted/public_link dates, coordinating issue repo+number+URL, scan_dir + canonical spelling + Pages URL + repo size, and the cross-validation set (in_pwgbib, dict_citations, count_ratio, ru_subset_refs, scan_wired). book_no is NOT unique - do not key on it.</p>
+      <p class="meta">82 rows · 37.3 KB · TSV</p>
+      <div class="chips"><span class="chip">csl-observatory reports/pwg_scan_index.md</span><span class="chip">csl-observatory /scan-index dashboard page</span><span class="chip">data/pwg_scan_index_tracker/pwg_etext_candidate_queue.tsv (e-text extraction ranking, H1715)</span><span class="chip">data/pwg_scan_index_tracker/scan_target_audit.tsv (resolver wiring, H1714)</span><span class="chip">data/pwg_scan_index_tracker/pwg_citation_count_provenance.tsv (citation-count provenance + the denominator contract, H2874)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/sanskrit-lexicon/csl-observatory">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>PWG &lt;ls&gt; citation counts per bibliography abbreviation (work-family rollup)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per bibliography abbreviation, keyed on abbrev (bib_code carried alongside), in two dated tables: pwg_ls_counts_2024-09-11.tsv (2837 buckets, ALL = 739056) and pwg_ls_counts_current.tsv (2846 buckets, ALL = 799500). Columns: total, abbrev, bib_code, gloss. Two synthetic buckets, NUMBER and UNKNOWN, complete the partition. Each table has a sibling .meta.json with input sha256s, source commits, and the ALL/NUMBER/UNKNOWN totals.</p>
+      <p class="meta">5,683 rows · 179.7 KB · TSV</p>
+      <div class="chips"><span class="chip">csl-observatory data/pwg_scan_index_tracker/pwg_citation_count_provenance.tsv</span><span class="chip">csl-observatory data/pwg_scan_index_tracker/pwg_scan_index.tsv (citation_count_safe / _full)</span><span class="chip">csl-observatory reports/pwg_citation_count_provenance.md</span><span class="chip">csl-observatory /scan-index dashboard page (dictionary-wide coverage denominator)</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/sanskrit-lexicon/csl-observatory">In source repo ↗</a></div>
     </article>
     <article class="card">
@@ -3415,6 +3453,16 @@
       <p class="key">SLP1 surface key (~190k keys), per verse-pair alignment</p>
       <p class="meta">1,093,391 rows · 277.1 MB · JSONL</p>
       <div class="chips"><span class="chip">SanskritRussian glossary</span><span class="chip">pwg_ru TM</span></div>
+      <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Sanskrit terminology glossary of the устный корпус (taught-term frequency)</h3>
+        <span class="badge res">restricted</span>
+      </div>
+      <p class="key">Cyrillic surface form → SLP1 lemma(s); frequency floor ≥ 20; 4,597 matched headwords before the floor, 205,012 occurrences over 1,521 files; per-course profile across 42 courses</p>
+      <p class="meta">1,513 rows · 115.4 KB · TSV</p>
+      <div class="chips"><span class="chip">samskrte.ru ₽5,000 membership tier (candidate)</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
     <article class="card">
