@@ -43,7 +43,7 @@ later-roadmap completion claim.
 | 5 | Dependency auto-merge cannot bypass those checks | ✅ (was ⚠️) | `dependabot-auto-merge.yml`'s `workflow_run`+`success` condition always held; the second barrier — queued auto-merge waiting on branch protection — became real when #4 was fixed |
 | 6 | Full default DAG contains every declared stage | ✅ | `python scripts/build_db.py --profile fixture --plan` |
 | 7 | [#210](https://github.com/gasyoun/kosha/issues/210) closed only after a fresh no-flag build proved every stage ran | ✅ | Closed by H1944; re-verified here by a from-zero build |
-| 8 | API, Salt facade, static cards and SSR share one serializer and pass parity | ✅ | `tests/test_contract_parity.py`, 12 tests — including static-card ≡ API equality across four output schemes, and a structural check that no copy of the serializer survives |
+| 8 | API, Salt facade, static cards and SSR share one serializer and explicit public projections | ✅ | `tests/test_contract_parity.py` — static-card ≡ API equality across four output schemes, strict Salt shared-field parity, and a structural check that no copy of the serializer survives; H2768 decision record |
 | 9 | Sanitizer adversarial suite passes | ✅ | `tests/test_sanitizer.py`, 110 tests — active content, event handlers, `javascript:`/`data:`/`vbscript:`/`file:` URLs, CSS `url()`/`expression()`, attribute injection via a source `title`, idempotence, plus a golden-corpus non-destruction gate |
 | 10 | History/auth/stats endpoints 404 by default | ✅ | `tests/test_history_disabled_by_default.py` — routes absent from the app *and* the OpenAPI schema; extended here to prove no cookie is minted and no history store is written while serving a search |
 | 11 | Current and historical citation smoke tests pass | ✅ | `tests/test_citation_archive.py`, 24 tests — live resolution, archived resolution against a mounted release, honest miss with the asset URL, checksum/metadata validation |
@@ -86,7 +86,7 @@ All ten H1945 items, with their gates:
 1. Canonical Pydantic Salt entry/envelope/error models — `src/kosha/api/models.py`.
 2. One repository query layer and one serializer — `repository.py`, `serializer.py`.
 3. `/api/v1` migrated to Salt entries, kosha fields namespaced, envelope kept — documented in [CONTRACT_KOSHA_API_V1_SALT_BREAKING_CHANGE.md](https://github.com/gasyoun/kosha/blob/main/docs/CONTRACT_KOSHA_API_V1_SALT_BREAKING_CHANGE.md).
-4. `/dicts/*` parity as a contract test rather than a second serializer.
+4. `/dicts/*` strict §9 projection with shared-field parity as a contract test rather than a second serializer (clarified by H2768).
 5. FastAPI errors normalized to the documented top-level object.
 6. Rendering wrapped in an nh3 allowlist, with the adversarial suite and the golden-corpus protection gate.
 7. Archive path/public base/metadata/checksum/asset-URL validation and both resolution paths.
