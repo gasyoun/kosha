@@ -91,6 +91,11 @@ input. Do not add a stage by editing the CLI — add it to the registry.
   `csl-websanlexicon` scan-serving, the union headword index). Check
   `../SHARED_CODE.md` and `../PROJECT_INTERLINKS.md` before adding a new
   transcoder/normalizer/crosswalk builder here.
+- **Salt public-face split (H2768):** `/dicts/*` projects the shared entry to
+  the six C-SALT fields plus `csl`; `/api/v1`, cards, and SSR retain `kosha`.
+  Changing either face means updating the
+  [decision record](https://github.com/gasyoun/kosha/blob/main/docs/DECISION_H2768_SALT_FACE_EXTENSION_CONTRACT.md),
+  profile-derived key fixture, and shared-field parity test in the same PR.
 - **Citation durability (RISKS.md R1/R5):** `PUBLIC_BASE` (citation URL host)
   is deliberately never the `samskrtam.ru` deployment host — citations must
   resolve independent of where the live server happens to run. Don't hardcode
