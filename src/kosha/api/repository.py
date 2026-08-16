@@ -5,9 +5,8 @@ Four surfaces answer "what does the dictionary say about this headword":
 the `/w/{slp1}` SSR page. Before W0C each of them wrote its own SQL against
 `entries`/`senses`/`lemmas`/`heritage_anchor`, and the copies had already
 drifted — the static builder silently omitted the `raw` branch, and the Salt
-face selected a narrower column list than the API, so an entry served through
-`/dicts/mw` could carry provenance the same entry served through `/api/v1`
-did not.
+face selected a narrower column list than the API, so shared Salt fields could
+carry different provenance across `/dicts/mw` and `/api/v1`.
 
 This module is the single reader. It returns rows, not payloads: shaping is
 `kosha.api.serializer`'s job, and keeping the two apart is what lets the

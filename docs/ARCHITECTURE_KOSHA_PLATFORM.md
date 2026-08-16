@@ -31,7 +31,7 @@ injection is removed as each consumer moves.
 {"data_version":"...","query":{},"results":[]}
 ```
 
-Each dictionary result is the canonical Cologne Salt entry described by
+Each dictionary result is the full kosha entry model built on the Cologne Salt entry described by
 [SALT_API_PROFILE.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.md).
 Kosha-specific fields appear only below `kosha`:
 
@@ -51,7 +51,8 @@ Kosha-specific fields appear only below `kosha`:
 ```
 
 The same model and serializer feed `/api/v1`, `/dicts/*`, static cards, and
-SSR pages. FastAPI exception handling emits the documented top-level error
+SSR pages. `/dicts/*` then applies the strict Salt §9 projection (six C-SALT
+fields plus `csl`); kosha-owned surfaces retain `kosha`. FastAPI exception handling emits the documented top-level error
 object rather than `detail.error`. This is an intentional pre-public break.
 
 ## Configuration
