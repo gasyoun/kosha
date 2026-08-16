@@ -14,6 +14,23 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.110.15] - 2026-08-16
+### Changed
+- **H2874 propagation — the PWG scan-index manifest caveat was telling consumers
+  something no longer true.** `pwg-scan-index-campaign`'s CAVEAT 1 declared
+  `citation_count` of unresolved provenance and barred it from any denominator; it is
+  the 2024-09-11 `lsextract_all.txt` work-family rollup (`ALL = 739,056`), 66 of 67 rows
+  exact ([csl-observatory#186](https://github.com/sanskrit-lexicon/csl-observatory/pull/186),
+  [v1.13.0](https://github.com/sanskrit-lexicon/csl-observatory/releases/tag/v1.13.0)).
+  Rewritten to the consumption rule instead: read `citation_count_safe`, fold by
+  `in_pwgbib`, divide only by the same snapshot's `ALL`. `keying` refreshed to 43 columns.
+
+### Added
+- **`pwg-ls-counts`** — the two `<ls>`-per-abbreviation count tables behind that number,
+  frozen 2024-09-11 evidence plus a current regeneration, with the never-regenerate
+  warning on the former (`an.` falls 1,797 → 1 between snapshots on a re-tagging, not a
+  recount) and the work-family-vs-cleaned-string incompatibility stated up front.
+
 ## [0.110.14] - 2026-08-16
 ### Documentation
 - **H2768 propagation:** registered the strict Salt-face decision in README,
