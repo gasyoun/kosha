@@ -14,6 +14,22 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.110.16] - 2026-08-16
+### Added
+- **`mbh-vulgate-critical-presence`** — the H2845 verdict table behind the new `E` / `E†`
+  e-text links on PWG cards: for each of 83,971 Nīlakaṇṭha vulgate verses, whether it also
+  stands in the BORI critical edition. **92.0 % `present/present`, 7.7 % (6,494) vulgate-only**
+  — what BORI relegated to its apparatus — 0 unchecked; per-parvan the vulgate-only share
+  runs 0.9 % (sauptika) to 29.1 % (svargārohaṇa). Registered with the caveat that separates
+  it from its citation-level sibling: `mbh_citation_presence.csv` (70,423 PWG/MW citations)
+  is conditional on a fitted locus that is exactly right about **half** the time, so its
+  `present/absent` means *"the verse the index points at is vulgate-only"*, not *"PWG cited a
+  verse BORI rejects"* — the two tables must not be quoted interchangeably. Verdicts,
+  scores and BORI addresses only; no verse bytes, both witnesses staying in gitignored
+  caches off a local-only branch
+  ([csl-atlas#404](https://github.com/sanskrit-lexicon/csl-atlas/pull/404),
+  [SanskritLexicography#1753](https://github.com/gasyoun/SanskritLexicography/pull/1753)).
+
 ## [0.110.15] - 2026-08-16
 ### Changed
 - **H2874 propagation — the PWG scan-index manifest caveat was telling consumers
