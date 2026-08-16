@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="87 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="88 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="87 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="88 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -2483,6 +2483,34 @@
         "encodingFormat": "turtle + tei-xml + json",
         "contentUrl": "https://github.com/gasyoun/kosha/releases/download/not-applicable/pwg-de-edition-v1.0.0"
       }
+    },
+    {
+      "@type": "Dataset",
+      "name": "MBh Nīlakaṇṭha vulgate × BORI critical-edition presence verdicts (H2845)",
+      "description": "H2845 (16-08-2026), MG's P2: an MBh citation should link its e-text, not only its scan, and say which recension carries it. Verse level, unconditional over all 83,971 Nīlakaṇṭha verses: 92.0 % present/present, 7.7 % (6,494) vulgate-only — the verse the critical edition relegated to its apparatus — 0.3 % service records with an empty mūla, 0 unchecked. Per-parvan vulgate-only share ranges 0.9 % (sauptika) to 29.1 % (svargārohaṇa). CAVEAT, do not quote the citation-level table as if it were this one: mbh_citation_presence.csv (85.3 % present/present, 8.4 % present/absent) is only as good as the fitted locus, which lands on the exactly right verse about HALF the time, so its present/absent means 'the verse the index points at is vulgate-only', NOT 'PWG cited a verse BORI rejects'. Integrity rule enforced in code, not convention: unchecked is never written as absent, and a consumer without csl-atlas checked out prints no marker at all rather than implying a verse is missing. RIGHTS: this CSV holds verdicts, scores and BORI addresses — no verse bytes; the two witnesses (sanatana.in volunteer transcription; BORI/Tokunaga-Smith critical text, © BORI 1999, Smith asks that copies not be redistributed) stay in gitignored caches on a local-only branch and are NOT part of this dataset. The one deliberate exception is the specimen file f8_specimen_mbh_12_8081.json, which quotes three vulgate verses in full. PR: https://github.com/sanskrit-lexicon/csl-atlas/pull/404",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "mbh-vulgate-critical-presence"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv",
+        "contentUrl": "https://github.com/sanskrit-lexicon/csl-atlas"
+      }
     }
   ]
 }
@@ -2553,7 +2581,7 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>87</b><span>public datasets</span></div>
+      <div class="tally"><b>88</b><span>public datasets</span></div>
       <div class="tally"><b>13</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
@@ -3440,6 +3468,16 @@
       <p class="meta">11,581 rows · 44.2 MB · TURTLE + TEI-XML + JSON</p>
       <div class="chips"><span class="chip">csl-standards LLOD modelling</span><span class="chip">RussianTranslation SPARQL queries (release/query/*.rq)</span><span class="chip">edition-graph consumers needing PWG/PW/SCH/PWKVN/NWS sense relations</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/pwg-de-edition-v1.0.0">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>MBh Nīlakaṇṭha vulgate × BORI critical-edition presence verdicts (H2845)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">parvan/adhyaya/shloka (Nīlakaṇṭha vulgate) + fitted per-parvan continuous index -&gt; four-state verdict in {present, absent, unchecked} x {present, absent, unchecked}, plus BORI locus, critical_score and matched-half counts</p>
+      <p class="meta">83,971 rows · 5.5 MB · CSV</p>
+      <div class="chips"><span class="chip">SanskritLexicography RussianTranslation ls_links.MbhEtext — renders E / E† beside every MBh scan link on a card (PR #1753)</span><span class="chip">csl-atlas data/forensic/MBH_ETEXT_PRESENCE_CENSUS.md</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/sanskrit-lexicon/csl-atlas">In source repo ↗</a></div>
     </article>
     </div>
     <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>
