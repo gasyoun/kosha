@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="88 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="89 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="88 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="89 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -2511,6 +2511,34 @@
         "encodingFormat": "csv",
         "contentUrl": "https://github.com/sanskrit-lexicon/csl-atlas"
       }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Grammar Lab Wave-1 topic graph (Whitney + Zalizniak root alternation / verbal morphology)",
+      "description": "32 published topics, 182 Type-D edges, 192 frozen queries. Evidence contract: Whitney + Zalizniak + dictionary + corpus-or-not_attested + deterministic exercise. Semantic vectors are char-ngram hash projection (semantic_ready false) until G2 MiniLM sidecar. Sandhi fenced. PR https://github.com/gasyoun/SanskritGrammar/pull/857 v0.121.6.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "grammar-lab-g1"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "json + tsv + yml",
+        "contentUrl": "https://github.com/gasyoun/SanskritGrammar"
+      }
     }
   ]
 }
@@ -2581,7 +2609,7 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>88</b><span>public datasets</span></div>
+      <div class="tally"><b>89</b><span>public datasets</span></div>
       <div class="tally"><b>13</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
@@ -3478,6 +3506,16 @@
       <p class="meta">83,971 rows · 5.5 MB · CSV</p>
       <div class="chips"><span class="chip">SanskritLexicography RussianTranslation ls_links.MbhEtext — renders E / E† beside every MBh scan link on a card (PR #1753)</span><span class="chip">csl-atlas data/forensic/MBH_ETEXT_PRESENCE_CENSUS.md</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/sanskrit-lexicon/csl-atlas">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Grammar Lab Wave-1 topic graph (Whitney + Zalizniak root alternation / verbal morphology)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">subject:grammar-lab:&lt;slug&gt; with Type-D edges to whitney-sec / whitney-root / zalizniak-1975|1978|2004</p>
+      <p class="meta">32 rows · 414.9 KB · JSON + TSV + YML</p>
+      <div class="chips"><span class="chip">Systema-Sanscriticum Grammar Lab import (H2493 G2)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritGrammar">In source repo ↗</a></div>
     </article>
     </div>
     <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>
