@@ -13,6 +13,16 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+### Added
+- **`grammar-lab-g1`** — Grammar Lab Wave-1 topic graph (Whitney + Zalizniak root
+  alternation / verbal morphology): 32 published topics, 182 Type-D edges, 192 frozen
+  queries, built from [SanskritGrammar](https://github.com/gasyoun/SanskritGrammar)
+  (H2492, PR [#857](https://github.com/gasyoun/SanskritGrammar/pull/857) v0.121.6).
+  Consumed by the Systema-Sanscriticum Grammar Lab import (H2493 G2). Re-land of
+  PR #401 (its predecessor #383 died to the same manifest-churn pattern the
+  15-08-2026 weekly-review sweep hit again) — regenerated the README dataset-count
+  markers against the current manifest total (105 → 106) so the count-parity test
+  passes.
 
 ## [0.110.16] - 2026-08-16
 ### Added
