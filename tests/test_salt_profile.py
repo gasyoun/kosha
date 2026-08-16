@@ -24,9 +24,18 @@ for extra in (ROOT, ROOT / "src", ROOT / "app"):
 
 from kosha.api import repository, serializer  # noqa: E402
 
-#: Profile §8.1 — the C-SALT-compatible top level. A conforming entry has
-#: exactly these, plus the namespaced extension objects.
+#: Profile §8.1 — the C-SALT-compatible top level. `/api/v1` adds both
+#: namespaced objects; strict `/dicts/*` adds only `csl` as permitted by §9.
 SALT_TOP_LEVEL = {"id", "headword_slp1", "sense", "re_headwords_slp1", "created", "xml"}
+
+
+def _salt_contract():
+    import json
+
+    return json.loads(
+        (ROOT / "tests" / "contracts" / "salt-entry-v0.1.0.json")
+        .read_text(encoding="utf-8")
+    )
 
 
 def _entries(client, lemma):
@@ -121,6 +130,29 @@ def test_rest_face_envelope_shape(fixture_client, fixture_lemma):
         "/dicts/mw/restful/ids", params={"ids": f"lemma-{fixture_lemma}"}
     ).json()
     assert set(ids) == {"data"} and set(ids["data"]) == {"ids"}
+
+
+def test_rest_face_wire_keys_match_normative_salt_schema(
+    fixture_client, fixture_lemma
+):
+    """H2768: inspect actual HTTP bytes against a profile-derived key fixture.
+
+    This deliberately does not validate through `SaltEntry`, whose full model
+    includes `kosha` and therefore cannot independently prove strict §9 output.
+    """
+    expected = set(_salt_contract()["entry_top_level_keys"])
+    response = fixture_client.get(
+        "/dicts/mw/restful/entries",
+        params={"field": "headword_slp1", "query": fixture_lemma,
+                "query_type": "term"},
+    )
+    assert response.status_code == 200, response.text
+    entries = response.json()["data"]["entries"]
+    if not entries:
+        pytest.skip("fixture pack has no MW entry for this headword")
+    for entry in entries:
+        assert set(entry) == expected
+        assert "kosha" not in entry
 
 
 def test_ids_face_round_trips_a_minted_id(fixture_client, fixture_lemma):

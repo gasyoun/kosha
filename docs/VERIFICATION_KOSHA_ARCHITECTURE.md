@@ -22,7 +22,7 @@ W0 adds commands for:
 - fixture build from an empty target;
 - DAG order and missing-prerequisite failures;
 - settings aliases/conflicts and history-disabled routes;
-- Salt `/api/v1` plus `/dicts/*` parity;
+- `/api/v1` full-entry and strict `/dicts/*` shared-field parity;
 - API/static/SSR payload parity;
 - sanitizer adversarial fixtures;
 - manifest/truth and surface-registry checks
@@ -109,7 +109,8 @@ Running those remains a workstation and full-data-release-gate duty.
 - full default DAG contains every declared stage;
 - [integrity issue #210](https://github.com/gasyoun/kosha/issues/210) closes
   only after a fresh no-flag build proves every declared stage ran;
-- API, Salt facade, static cards, and SSR share one serializer and pass parity;
+- API, Salt facade, static cards, and SSR share one serializer; full kosha
+  surfaces pass equality parity and Salt faces pass strict-key/shared-field parity;
 - sanitizer adversarial suite passes;
 - history/auth/stats endpoints return 404 by default;
 - current and historical citation smoke tests pass;

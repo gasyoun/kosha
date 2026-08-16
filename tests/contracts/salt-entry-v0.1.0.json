@@ -1,0 +1,15 @@
+{
+  "profile": "CSL Salt API Profile",
+  "version": "0.1.0",
+  "source": "https://github.com/sanskrit-lexicon/csl-standards/blob/490e062/data/schema/salt-api.openapi.yaml",
+  "source_sections": ["8.1", "8.2", "9"],
+  "entry_top_level_keys": [
+    "id",
+    "headword_slp1",
+    "sense",
+    "re_headwords_slp1",
+    "created",
+    "xml",
+    "csl"
+  ]
+}

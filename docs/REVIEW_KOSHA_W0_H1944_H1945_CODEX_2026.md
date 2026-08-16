@@ -95,10 +95,10 @@ wholesale and predates H1945.
 
 | Handoff obligation | Class | Review and adjudication |
 |---|---|---|
-| Typed Salt entry/envelope/error models | **Equivalent with one P2 conflict** | Models forbid undeclared fields and preserve Salt names. The handoff-mandated `kosha` namespace is appropriate for `/api/v1`, but emitting it unchanged on strict `/dicts/*` faces conflicts with Salt profile §9. Resolve under H2768; no P0/P1 impact. |
+| Typed Salt entry/envelope/error models | **Equivalent; P2 resolved 16-08-2026** | Models forbid undeclared fields and preserve Salt names. The handoff-mandated `kosha` namespace remains on `/api/v1`; H2768 added the strict `/dicts/*` §9 projection. |
 | One repository/query and serializer boundary | **Equivalent** | API, Salt faces, static cards and SSR delegate through the same repository/serializer. Structural and output parity tests replace the previous copied dictionaries. |
 | `/api/v1` Salt-shaped migration and namespacing | **Equivalent** | The envelope stayed stable; Salt fields are top-level and kosha additions moved under `kosha`. The breaking change was documented and in-repo clients were migrated. |
-| `/dicts/*` parity as a contract | **Equivalent for content; conflicting for strict profile projection** | Full-entry equality prevents internal drift, but it also propagates the `kosha` extension to a face whose normative contract currently permits only `csl`. H2768 must either project the strict face while retaining one internal serializer or amend the profile explicitly. |
+| `/dicts/*` parity as a contract | **Equivalent; strict projection resolved by H2768** | One serializer remains authoritative; actual wire keys are checked against the profile-derived v0.1.0 fixture and shared Salt fields are compared with `/api/v1`. |
 | One documented error shape per contract | **Equivalent** | `/api/v1` errors normalize to the structured object; Salt faces retain the bare-string profile form. Starlette 404/405 handling is covered at the base exception class. |
 | Allowlist sanitizer plus adversarial and golden gates | **Equivalent** | Active tags, handlers, unsafe URLs and CSS are rejected; legitimate Cologne display text/tags are protected, with `<pb>` as the one documented structural removal. Both live and archived sense paths cross the boundary. |
 | Archive path/base/metadata/checksum/asset URL and current/historical resolution | **Equivalent** | The archive validator distinguishes absent local archives from corrupt declared archives, checks SQLite readability and metadata hashes, and the route tests cover live and pinned historical senses. The `archive_dir`/`KOSHA_RELEASES_DIR` contradiction found during implementation was resolved conflict-fatally. |
@@ -112,7 +112,7 @@ wholesale and predates H1945.
 |---|---|---|---|
 | P0 | none | — | — |
 | P1 | none open | The original H1944 lock/HASH defects and absent branch protection were material, but all were corrected before this review (#218, #223). | Resolved; verified by current tests and protection readback. |
-| P2 | open | `/dicts/*` emits top-level `kosha` although the normative profile permits only additive `csl`. | H2768 (Codex) — Resolve kosha extension on strict Salt compatibility faces. |
+| P2 | resolved 16-08-2026 | `/dicts/*` emitted top-level `kosha` although the normative profile permits only additive `csl`. | H2768 (Codex) — Resolve kosha extension on strict Salt compatibility faces; strict-face decision and regression merged in this lane. |
 | P3 | documented | Dependabot workflow prose says it independently waits for both CI workflows; code observes only the triggering successful run. | Branch protection supplies the actual two-check barrier. No W0 code change required. |
 
 ## Final adjudication
@@ -121,7 +121,8 @@ Keep the merged H1944 and H1945 lines, including the focused corrections in
 #218 and the branch-protection control from #223. Do not merge or cherry-pick
 the rival H1944 implementation wholesale. Preserve its two useful discoveries:
 the `HASH` defect is already fixed, and its loader-path observation is recorded
-here for future simplification. Route the sole open P2 Salt/profile conflict to
-H2768. With no open P0/P1, the retrospective-review criterion passes.
+here for future simplification. H2768 resolved the sole P2 Salt/profile conflict
+with a strict face projection. With no open P0/P1, the retrospective-review
+criterion passes.
 
 _Dr. Mārcis Gasūns_

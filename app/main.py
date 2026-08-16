@@ -215,8 +215,8 @@ def _lemma_entries(con, slp1_key: str, out: str, raw: bool, dicts=ALL_DICTS):
     here — the per-dict query, the sense-id minting, the evidence join, the
     Heritage witness, the render — moved into `kosha.api.serializer`, which the
     static-card builder and the SSR route call too. That is what makes
-    `tests/test_contract_parity.py` able to assert the three surfaces are
-    equal rather than merely similar.
+    `tests/test_contract_parity.py` able to assert the full kosha surfaces are
+    equal and the Salt face is an equal strict projection.
     """
     return [
         serializer.entry_dict(entry)
@@ -595,7 +595,7 @@ def meta(con: sqlite3.Connection = Depends(get_db)):
 # ---------------------------------------------------------------------------
 
 def _salt_entries_for_keys(con, dict_code: str, keys, dv: str) -> list[dict]:
-    """Shared by both Salt faces — the same serializer `/api/v1` uses.
+    """Shared by both Salt faces — strict projection of `/api/v1`'s serializer.
 
     An id's homonym suffix is only correct relative to the whole group, so the
     group is read even when one row is wanted.
@@ -604,7 +604,7 @@ def _salt_entries_for_keys(con, dict_code: str, keys, dv: str) -> list[dict]:
     for key in keys:
         rows = repository.entries_for_key(con, dict_code, key)
         for row in rows:
-            entries.append(serializer.entry_dict(serializer.serialize_entry(
+            entries.append(serializer.salt_face_entry_dict(serializer.serialize_entry(
                 con, row, hom_count=len(rows), data_version=dv,
                 public_base=PUBLIC_BASE, heritage_base=HERITAGE_BASE,
             )))
@@ -658,7 +658,7 @@ def salt_ids(dict_id: str, ids: list[str] = Query(default=[]),
     dv = data_version(con)
 
     def serialize(row, hom_count):
-        return serializer.entry_dict(serializer.serialize_entry(
+        return serializer.salt_face_entry_dict(serializer.serialize_entry(
             con, row, hom_count=hom_count, data_version=dv,
             public_base=PUBLIC_BASE, heritage_base=HERITAGE_BASE,
         ))

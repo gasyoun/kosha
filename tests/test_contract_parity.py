@@ -1,10 +1,11 @@
-"""W0C — the four surfaces serve one entry shape (H1945, items 2–4).
+"""W0C/H2768 — the four surfaces share one serializer and explicit projections.
 
 `/api/v1/lemma`, the `/dicts/*` Salt faces, the prerendered static cards and
 the `/w/{slp1}` SSR page all answer "what does the dictionary say about this
 headword". Until W0C they did it through three separately-maintained
-serializers held together by a comment. These are the assertions that replace
-that comment.
+serializers held together by a comment. `/api/v1`, cards, and SSR retain the
+full entry; `/dicts/*` projects the strict Salt §9 face. These are the
+assertions that replace that comment.
 
 Fixture tier on purpose: every test here runs against the committed pack, so
 CI proves parity on each pull request instead of a workstation proving it
@@ -54,8 +55,10 @@ def test_static_card_equals_the_api_response(fixture_con, fixture_client, fixtur
     assert card["results"] == _api_results(fixture_client, fixture_lemma)
 
 
-def test_salt_face_entry_equals_the_api_entry(fixture_con, fixture_client, fixture_lemma):
-    """One entry, two faces, one object.
+def test_salt_face_entry_matches_the_api_salt_projection(
+    fixture_con, fixture_client, fixture_lemma
+):
+    """One serializer, two public contracts, shared Salt fields equal.
 
     Keyed by `(dict, id)`, not by `id`: a Salt id is **dictionary-scoped**
     (profile §5 fetches ids under `/dicts/{id}/…`), so MW's `agni` and Apte's
@@ -64,6 +67,11 @@ def test_salt_face_entry_equals_the_api_entry(fixture_con, fixture_client, fixtu
     `SaltEntry` too — a client indexing a lemma card by `id` alone would lose
     entries.
     """
+    contract = json.loads(
+        (ROOT / "tests" / "contracts" / "salt-entry-v0.1.0.json")
+        .read_text(encoding="utf-8")
+    )
+    salt_keys = contract["entry_top_level_keys"]
     api_by_key = {
         (e["kosha"]["dict"], e["id"]): e
         for e in _api_results(fixture_client, fixture_lemma)
@@ -79,7 +87,8 @@ def test_salt_face_entry_equals_the_api_entry(fixture_con, fixture_client, fixtu
         for entry in response.json()["data"]["entries"]:
             key = (dict_code, entry["id"])
             assert key in api_by_key, f"{key} absent from /api/v1"
-            assert entry == api_by_key[key]
+            assert set(entry) == set(salt_keys)
+            assert entry == {field: api_by_key[key][field] for field in salt_keys}
             seen += 1
     assert seen == len(api_by_key), "a face served fewer entries than /api/v1"
 
