@@ -33,4 +33,8 @@ This file orients Codex and other non-Claude agent sessions. The section between
 
 ## Repo-curated notes (hand-maintained)
 
+- **Salt compatibility boundary (H2768):** read
+  [docs/DECISION_H2768_SALT_FACE_EXTENSION_CONTRACT.md](https://github.com/gasyoun/kosha/blob/main/docs/DECISION_H2768_SALT_FACE_EXTENSION_CONTRACT.md)
+  before changing `/dicts/*`, `/api/v1`, or entry serialization. Strict Salt
+  faces exclude `kosha`; kosha-owned faces retain it.
 - **Sandhi methods (H2069):** for rule induction, method A/B/C decision table, and miss taxonomy read [docs/SANDHI_METHODS_DEEP_MANUAL.md](https://github.com/gasyoun/kosha/blob/main/docs/SANDHI_METHODS_DEEP_MANUAL.md). For inventory / pedagogy surfaces use [SANDHI_PROGRAMME.md](https://github.com/gasyoun/kosha/blob/main/SANDHI_PROGRAMME.md) — do not expand methods prose into the hub.
