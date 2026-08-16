@@ -1903,8 +1903,8 @@
    "in_release": "not-applicable",
    "format": "tsv",
    "rows": 82,
-   "size_bytes": 35402,
-   "keying": "one row per tracked PWG/PWK literary source, keyed on ls_code (the abbreviation, presentation marks stripped). 34 columns: status + status_gloss, citation_count, total_pages, volunteer, started/finished/index_posted/public_link dates, coordinating issue repo+number+URL, scan_dir + canonical spelling + Pages URL + repo size, and the cross-validation set (in_pwgbib, dict_citations, count_ratio, ru_subset_refs, scan_wired). book_no is NOT unique - do not key on it.",
+   "size_bytes": 38221,
+   "keying": "one row per tracked PWG/PWK literary source, keyed on ls_code (the abbreviation, presentation marks stripped). 43 columns: status + status_gloss, citation_count + citation_count_safe + citation_count_provenance + citation_count_full, total_pages, volunteer, started/finished/index_posted/public_link dates, coordinating issue repo+number+URL, scan_dir + canonical spelling + Pages URL + repo size, and the cross-validation set (in_pwgbib, dict_citations, count_ratio, ru_subset_refs, scan_wired). book_no is NOT unique - do not key on it.",
    "source_repo": "https://github.com/sanskrit-lexicon/csl-observatory",
    "source_path": "data/pwg_scan_index_tracker/pwg_scan_index.tsv",
    "builder": "csl-observatory scripts/pwg_scan_index.py (H1706; stdlib-only offline from the committed 4-tab snapshot, --fetch re-snapshots the upstream Google Sheet)",
@@ -1912,9 +1912,30 @@
     "csl-observatory reports/pwg_scan_index.md",
     "csl-observatory /scan-index dashboard page",
     "data/pwg_scan_index_tracker/pwg_etext_candidate_queue.tsv (e-text extraction ranking, H1715)",
-    "data/pwg_scan_index_tracker/scan_target_audit.tsv (resolver wiring, H1714)"
+    "data/pwg_scan_index_tracker/scan_target_audit.tsv (resolver wiring, H1714)",
+    "data/pwg_scan_index_tracker/pwg_citation_count_provenance.tsv (citation-count provenance + the denominator contract, H2874)"
    ],
-   "notes": "H1706, csl-observatory PR #107, v1.5.0. Sidecars in the same directory: the verbatim 4-tab snapshot, the ranked e-text candidate queue, and a dated audit of all 37 sanskrit-lexicon-scans directories. CAVEAT 1 - the citation_count column is transcribed from a maintainer-kept sheet and its provenance is UNRESOLVED (1.2x to 433x against the full-dictionary <ls> extraction); use it to rank works, never as a numerator over a dictionary-wide denominator. CAVEAT 2 - multi-volume works carry their count once, on volume 1, so per-volume mass is a floor. CAVEAT 3 - the snapshot's Team tab has the volunteers' real-name column REDACTED at fetch time; handles are public on every coordinating issue, the name-to-handle linkage is not, and publishing it is a human decision (open MG @DECIDE in GTD)."
+   "notes": "H1706, csl-observatory PR #107, v1.5.0. Sidecars in the same directory: the verbatim 4-tab snapshot, the ranked e-text candidate queue, a dated audit of all 37 sanskrit-lexicon-scans directories, and (H2874) ls_counts/ - the two <ls>-per-abbreviation count tables. CAVEAT 1 (RESOLVED 16-08-2026, H2874, csl-observatory PR #186 / v1.13.0) - citation_count is the 2024-09-11 lsextract_all.txt work-family rollup, ALL = 739056, with 66 of 67 valued rows exact; the old '1.2x to 433x disagreement' was a comparison against cleaned-STRING counts, which measure a different object. Consume citation_count_safe (blank where provenance is unresolved), never the raw citation_count; fold by in_pwgbib before summing, because the field is a work-family rollup and sibling edition/volume rows share one total; divide only by the ALL of the same snapshot. Gate: python scripts/pwg_citation_count_provenance.py --check. CAVEAT 2 - multi-volume works carry their count once, on volume 1, so per-volume mass is a floor. CAVEAT 3 - the snapshot's Team tab has the volunteers' real-name column REDACTED at fetch time; handles are public on every coordinating issue, the name-to-handle linkage is not, and publishing it is a human decision (open MG @DECIDE in GTD)."
+  },
+  {
+   "id": "pwg-ls-counts",
+   "title": "PWG <ls> citation counts per bibliography abbreviation (work-family rollup)",
+   "tier": "public",
+   "in_release": "not-applicable",
+   "format": "tsv",
+   "rows": 5683,
+   "size_bytes": 184000,
+   "keying": "one row per bibliography abbreviation, keyed on abbrev (bib_code carried alongside), in two dated tables: pwg_ls_counts_2024-09-11.tsv (2837 buckets, ALL = 739056) and pwg_ls_counts_current.tsv (2846 buckets, ALL = 799500). Columns: total, abbrev, bib_code, gloss. Two synthetic buckets, NUMBER and UNKNOWN, complete the partition. Each table has a sibling .meta.json with input sha256s, source commits, and the ALL/NUMBER/UNKNOWN totals.",
+   "source_repo": "https://github.com/sanskrit-lexicon/csl-observatory",
+   "source_path": "data/pwg_scan_index_tracker/ls_counts/",
+   "builder": "csl-observatory scripts/pwg_ls_counts.py --recount (H2874; a port of PWG pwgissues/issue94/lsextract_all.py, held to byte-identical output by --verify-port). Reads csl-orig v02/pwg/pwg.txt + PWG pwgbib_input.txt; everything else is offline over committed data.",
+   "consumers": [
+    "csl-observatory data/pwg_scan_index_tracker/pwg_citation_count_provenance.tsv",
+    "csl-observatory data/pwg_scan_index_tracker/pwg_scan_index.tsv (citation_count_safe / _full)",
+    "csl-observatory reports/pwg_citation_count_provenance.md",
+    "csl-observatory /scan-index dashboard page (dictionary-wide coverage denominator)"
+   ],
+   "notes": "The count: every <ls> element in pwg.txt attributed to the LONGEST bibliography abbreviation that prefixes it (an n=\"...\" attribute is prepended first; leading digit -> NUMBER; no prefix -> UNKNOWN). Every element lands in exactly one bucket, so ALL is the only legitimate dictionary-wide denominator, and only against its own snapshot. CAVEAT 1 - this is a WORK FAMILY count, not a citation-string count; PWG's other family (sortedcrefs.txt, cleaned strings, total 344229) measures a different object and the two are never comparable (MED. is 30 there and 12990 here). CAVEAT 2 - pwg_ls_counts_2024-09-11.tsv is dated EVIDENCE for the scan-index tracker's Citation count column and must NEVER be regenerated against newer dictionary data; --recount writes only the _current table. Between the two snapshots `an.` falls 1797 to 1 while `H. an.` rises 2075 with a byte-identical bibliography entry - an ls re-tagging, not a recount. CAVEAT 3 - case is meaningful in this bibliography (S. vs s., Un. vs UN.) and 15 case-variant groups are cited on both sides, so a case-insensitive lookup silently picks one of two real works. Registered in Uprava DANGER_FACTS.md; see SanskritLexicography FINDINGS section 548."
   },
   {
    "id": "pwg-ru-data-workingset",
