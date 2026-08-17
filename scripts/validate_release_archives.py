@@ -2,7 +2,8 @@
 
 Verifies the mount that a citable release ships with:
 
-  * durable public base (absolute https, not the deployment host)
+  * durable public base (absolute http(s), not the deployment host, and not a
+    loopback/private/single-label host that resolves only where it was cut)
   * ≥1 archived version (configurable via --min-versions)
   * each version has senses.sqlite + release.json with matching sha256
   * at least one sense resolves from every mounted version

@@ -1,6 +1,6 @@
 # Kosha roadmap — August 2026 to July 2027
 
-_Created: 30-07-2026 · Last updated: 13-08-2026_
+_Created: 30-07-2026 · Last updated: 17-08-2026_
 
 The governing decisions and autonomy contract live in the
 [plan of record](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md).
@@ -55,8 +55,12 @@ production deployment.
 
 Deliverables:
 
-- immutable sense archives with checksums and historical-resolution tests;
-- MG-minted DOI and updated citation metadata;
+- immutable sense archives with checksums and historical-resolution tests
+  (✅ H2346 — [PR #342](https://github.com/gasyoun/kosha/pull/342); the release
+  gate is executed by required CI and rejects a local-only citation base since
+  H2870);
+- MG-minted DOI and updated citation metadata (**human gate** — MG mints; agent
+  half is [DOI_CHECKLIST_W2A.md](https://github.com/gasyoun/kosha/blob/main/docs/DOI_CHECKLIST_W2A.md));
 - P-D6 public dataset API over manifest records (✅ H2347 — `GET /api/v1/datasets`);
 - request correlation, low-cardinality metrics, readiness failures, and
   release observability (✅ H2348 — `X-Request-ID` + `GET /metrics`).
