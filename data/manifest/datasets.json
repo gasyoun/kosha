@@ -2053,6 +2053,24 @@
    ],
    "notes": "32 published topics, 182 Type-D edges, 192 frozen queries. Evidence contract: Whitney + Zalizniak + dictionary + corpus-or-not_attested + deterministic exercise. Semantic vectors are char-ngram hash projection (semantic_ready false) until G2 MiniLM sidecar. Sandhi fenced. PR https://github.com/gasyoun/SanskritGrammar/pull/857 v0.121.6.",
    "data_statement": "https://github.com/gasyoun/SanskritGrammar/blob/main/data/grammar_lab/README.md"
+  },
+  {
+   "id": "pwg-mw-ap-sense-coverage",
+   "title": "MW/AP90 sense units vs the PWG-family store: matched / unalignable / absent-candidate verdicts (wave 4)",
+   "tier": "public",
+   "in_release": "not-applicable",
+   "format": "jsonl",
+   "rows": 2767,
+   "size_bytes": 840289,
+   "keying": "dict (mw|ap90) + SLP1 lemma + Cologne unit id (MW <L> record / AP90 {@N@} segment)",
+   "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+   "source_path": "RussianTranslation/pwg_ru/mw_ap_sense_coverage.jsonl",
+   "builder": "RussianTranslation/src/mw_ap_sense_coverage.py (deterministic Sanskrit-anchor fingerprints, csl-atlas A09 method; selftest 11/11)",
+   "consumers": [
+    "SanskritLexicography edition-relations roadmap (issue #1736)",
+    "csl-atlas A09 sense-alignment paper"
+   ],
+   "notes": "H2882 wave 4. absent_candidate is an UPPER BOUND on genuine absence: adjudication of 30 random candidates left ~17% genuine (FINDINGS s559); 23% of false absents trace to degraded store key1 (FINDINGS s560). Summary sibling: mw_ap_sense_coverage_summary.json."
   }
  ]
 }
