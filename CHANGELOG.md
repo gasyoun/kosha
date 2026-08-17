@@ -14,6 +14,22 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 ### Added
+- **W2A release archive gate now runs** (H2870) — `scripts/validate_release_archives.py`
+  shipped with H2346 as a gate no release path ever invoked. It is now the
+  `Release archive gate` step of the required `Python CI` check, run against the
+  committed prior+current mini-archive with an explicit durable public base, so a
+  regression in checksum identity or historical resolution fails the PR.
+
+### Fixed
+- **The citation-durability gate passed on `http://localhost:8000`** (H2870) —
+  `validate_public_base` only rejects the deployment host (R5), so the development
+  default sailed through the W2A release gate and a freeze cut on a workstation would
+  have minted citations resolving on that workstation alone (R1). The release path now
+  also applies `validate_durable_public_base`, rejecting loopback, private, link-local,
+  unspecified, `.local`-class and single-label hosts, and passing a public IP literal
+  with a note. Runtime `GET /ready` is deliberately unchanged — a developer on
+  `localhost` is not unready.
+
 - **`grammar-lab-g1`** — Grammar Lab Wave-1 topic graph (Whitney + Zalizniak root
   alternation / verbal morphology): 32 published topics, 182 Type-D edges, 192 frozen
   queries, built from [SanskritGrammar](https://github.com/gasyoun/SanskritGrammar)

@@ -45,6 +45,21 @@ jobs:
         # auto-merge (same job as Fixture build + tests).
         run: python scripts/validate_surfaces.py
 
+      - name: Release archive gate
+        # W2A (H2346/H2870) — the citation-archive release gate. It shipped as
+        # a script no release path ever ran, so "fails closed" was a claim in a
+        # docstring rather than a check. Run against the committed mini-archive
+        # (prior + current identities) with an explicit durable public base, so
+        # a regression in checksum identity, historical resolution, or the
+        # citation host fails the required PR check like the surface registry
+        # above.
+        run: |
+          python scripts/validate_release_archives.py \
+            --archive-dir tests/fixtures/archives \
+            --public-base https://gasyoun.github.io/kosha \
+            --min-versions 2 \
+            --sense-id mw.101.1
+
       - name: Declared stage order
         # The #210 regression guard, run before anything is built: the no-flag
         # plan must list every declared stage.

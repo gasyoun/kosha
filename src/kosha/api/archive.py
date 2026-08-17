@@ -31,6 +31,7 @@ and historical resolution must succeed for current + prior mounted versions.
 from __future__ import annotations
 
 import hashlib
+import ipaddress
 import json
 import sqlite3
 from dataclasses import dataclass, field
@@ -45,6 +46,12 @@ from kosha.settings import Settings, get_settings
 #: dies with the deployment. Kept as a check, not a comment, because the
 #: comment already existed and the value still has to be set correctly by hand.
 DEPLOYMENT_HOSTS = frozenset({"samskrtam.ru", "www.samskrtam.ru"})
+
+#: Name suffixes that only resolve inside one network. Runtime readiness
+#: tolerates them — a developer serving on `localhost` is not misconfigured —
+#: but a *citable freeze* minted against one advertises a URL that resolves
+#: nowhere but the machine that cut the release.
+LOCAL_ONLY_SUFFIXES = (".local", ".localhost", ".internal", ".lan", ".home.arpa")
 
 METADATA_NAME = "release.json"
 DUMP_NAME = "senses.sqlite"
@@ -103,6 +110,78 @@ def validate_public_base(public_base: str) -> Check:
             "durable API mirror",
         )
     return Check("public_base", True, f"citations resolve against {public_base}")
+
+
+def validate_durable_public_base(public_base: str) -> Check:
+    """Release-gate half of R1/R5: the citation host must also be reachable
+    from somewhere other than the machine that cut the release.
+
+    `validate_public_base` only rules out the deployment host, so the
+    development default `http://localhost:8000` passes it — and passed it on
+    the committed fixture mount, which is how this gap was found. A release
+    frozen against a loopback, private, or dotless host mints citations that
+    resolve for one person on one machine, i.e. exactly the R1 failure the
+    archive exists to prevent, arriving as a green gate.
+
+    A public IP literal is a *pass with a note*, not a failure: it resolves
+    for everyone today, but the promise lasts only as long as the address is
+    held, and that is a human's call to make at release time.
+    """
+    parsed = urlparse(public_base)
+    host = (parsed.hostname or "").lower()
+    if not host:
+        return Check(
+            "public_base_durable",
+            False,
+            f"{public_base!r} has no host to resolve",
+        )
+
+    try:
+        address = ipaddress.ip_address(host)
+    except ValueError:
+        address = None
+
+    if address is not None:
+        if (
+            address.is_loopback
+            or address.is_private
+            or address.is_link_local
+            or address.is_unspecified
+        ):
+            return Check(
+                "public_base_durable",
+                False,
+                f"{host} is not routable outside this network; a sense id "
+                "minted against it resolves nowhere else",
+            )
+        return Check(
+            "public_base_durable",
+            True,
+            f"{host} is a bare address — citations stay durable only while "
+            "this IP is held; a stable name is safer",
+        )
+
+    if host == "localhost" or host.endswith(LOCAL_ONLY_SUFFIXES):
+        return Check(
+            "public_base_durable",
+            False,
+            f"{host} resolves only on the machine or LAN that cut the release; "
+            "point KOSHA_PUBLIC_BASE at the durable mirror before freezing",
+        )
+
+    if "." not in host:
+        return Check(
+            "public_base_durable",
+            False,
+            f"{host!r} is a single-label host with no public domain; it "
+            "resolves only inside one network",
+        )
+
+    return Check(
+        "public_base_durable",
+        True,
+        f"{host} is a public name; citations outlive the deployment",
+    )
 
 
 def validate_release_asset(version: str) -> Check:
@@ -360,6 +439,11 @@ def validate_release_archives(
     Fails when archives lack identity metadata, when digests disagree with
     bytes, when the public base is not a durable absolute URL, or when a
     required sense cannot be resolved from a mounted version.
+
+    The durable-base check is applied *here* and not in `validate_archive`,
+    because the two callers want opposite answers about `localhost`: runtime
+    readiness on a workstation is healthy, a citable freeze on a workstation
+    is not.
     """
     settings = settings or get_settings()
     report = validate_archive(
@@ -367,6 +451,7 @@ def validate_release_archives(
         require_metadata=True,
         require_versions=True,
     )
+    report.checks.append(validate_durable_public_base(settings.public_base))
     if len(report.versions) < min_versions:
         report.checks.append(Check(
             "min_versions",
