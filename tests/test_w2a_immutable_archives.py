@@ -28,6 +28,7 @@ from kosha.api.archive import (  # noqa: E402
     mounted_versions,
     resolve_archived_sense,
     validate_archive,
+    validate_durable_public_base,
     validate_historical_resolution,
     validate_release_archives,
     validate_version,
@@ -124,6 +125,67 @@ def test_release_gate_fails_on_deployment_public_base(tmp_path, monkeypatch):
     )
     assert not report.ok
     assert any(c.name == "public_base" for c in report.failures())
+
+
+@pytest.mark.parametrize(
+    "base",
+    [
+        "http://localhost:8000",   # the development default — the gap this closes
+        "http://127.0.0.1:8000",
+        "http://[::1]:8000",
+        "http://0.0.0.0:8000",
+        "http://192.168.1.20:8000",
+        "http://10.0.0.5",
+        "http://kosha:8000",       # single-label LAN name
+        "https://kosha.local",
+    ],
+)
+def test_durable_public_base_rejects_local_only_hosts(base):
+    """R1: a citation minted here resolves only where the release was cut."""
+    check = validate_durable_public_base(base)
+    assert not check.ok, check
+    assert check.name == "public_base_durable"
+
+
+@pytest.mark.parametrize(
+    "base",
+    ["https://gasyoun.github.io/kosha", "https://samskrtam.ru", "http://8.8.8.8"],
+)
+def test_durable_public_base_accepts_publicly_resolvable_hosts(base):
+    """Durability is a separate axis from R5 — `samskrtam.ru` is durable and
+    still forbidden, and `validate_public_base` is what forbids it."""
+    assert validate_durable_public_base(base).ok
+
+
+def test_release_gate_fails_on_localhost_public_base(tmp_path, monkeypatch):
+    """The development default used to pass the release gate outright."""
+    monkeypatch.setenv("KOSHA_ARCHIVE_DIR", str(tmp_path))
+    versions.write_archive("1.0.0", [{
+        "sense_id": SENSE_ID, "dict": "mw", "L": "101", "sense_n": 1,
+        "headword": "agni", "text_raw": "<H1>fire</H1>",
+    }])
+    report = validate_release_archives(
+        _settings(tmp_path, public_base="http://localhost:8000"),
+        sense_id=SENSE_ID,
+    )
+    assert not report.ok
+    assert any(c.name == "public_base_durable" for c in report.failures())
+
+
+def test_runtime_readiness_still_tolerates_localhost(tmp_path, monkeypatch):
+    """Readiness and the release gate want opposite answers about localhost;
+    hardening the gate must not make local development report 503."""
+    monkeypatch.setenv("KOSHA_ARCHIVE_DIR", str(tmp_path))
+    versions.write_archive("1.0.0", [{
+        "sense_id": SENSE_ID, "dict": "mw", "L": "101", "sense_n": 1,
+        "headword": "agni", "text_raw": "<H1>fire</H1>",
+    }])
+    report = validate_archive(
+        _settings(tmp_path, public_base="http://localhost:8000"),
+        require_metadata=True,
+        require_versions=True,
+    )
+    assert report.ok, report.failures()
 
 
 def test_release_gate_passes_healthy_mount(tmp_path, monkeypatch):

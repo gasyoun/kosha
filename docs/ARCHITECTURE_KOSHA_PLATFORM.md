@@ -1,6 +1,6 @@
 # Kosha platform architecture
 
-_Created: 30-07-2026 · Last updated: 13-08-2026_
+_Created: 30-07-2026 · Last updated: 17-08-2026_
 
 This target architecture implements the decisions in the
 [plan of record](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md).
@@ -101,6 +101,23 @@ core open via the storage facade, optional attached layers, readable
 `kosha.api.archive`, and history as `disabled` when the D10 flag is off.
 HTTP: 200 when ready, 503 when not — never 500 for a correctly disabled
 optional writable. Tests: `tests/test_readiness.py`.
+
+**W2A (H2346, H2870) status:** immutable citation archives live in
+[`src/kosha/api/archive.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/api/archive.py).
+The same module serves two callers that want **opposite** answers about the
+same configuration, and the split is deliberate: `validate_archive` is the
+runtime path behind `GET /ready` (a workstation on `http://localhost:8000` is
+healthy), while `validate_release_archives` is the release gate (a citable
+freeze on `localhost` is a broken promise, R1/R5). Only the gate applies
+`validate_durable_public_base`, which rejects loopback, private, link-local,
+and single-label hosts and passes a public IP literal with a note. The gate
+runs on every PR as the `Release archive gate` step of
+[`python-ci.yml`](https://github.com/gasyoun/kosha/blob/main/.github/workflows/python-ci.yml)
+against the committed prior+current mini-archive — before H2870 it was a
+script no release path invoked, so its "fails closed" docstring described
+nothing. DOI minting stays MG's
+([DOI_CHECKLIST_W2A.md](https://github.com/gasyoun/kosha/blob/main/docs/DOI_CHECKLIST_W2A.md)).
+Tests: `tests/test_w2a_immutable_archives.py`, `tests/test_citation_archive.py`.
 
 **W2C (H2348) status:** request correlation and low-cardinality metrics live
 in
