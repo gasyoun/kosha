@@ -13,6 +13,8 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+
+## [0.111.0] - 2026-08-19
 ### Changed
 - **Roadmap truth-pass + residual `/ask` programme** (H3001, stale-roadmap slice 3).
   `roadmap_handoff_truth.py` confirms all 20 handoffs referenced by
