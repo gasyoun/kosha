@@ -13,6 +13,8 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+
+## [0.111.1] - 2026-08-19
 ### Changed
 - **[ROADMAP_INFLECT](https://github.com/gasyoun/kosha/blob/main/ROADMAP_INFLECT_2026_2027.md) Wave U2 flipped 🟢 CONDITION FIRED → ✅ DONE 09-07-2026** (Opus 5 `claude-opus-5`, 19-08-2026). The 19-08 truth-pass (H3001) corrected this row once, from *conditional* to *unblocked since 03-07-2026*, and it was still understating it: the queue had already been **drained on 09-07-2026**. [`help-examples` PR #22](https://github.com/sanskrit-lexicon/csl-inflect/pull/22) and [`output-polish` PR #23](https://github.com/sanskrit-lexicon/csl-inflect/pull/23) merged; [`devanagari-input` PR #21](https://github.com/sanskrit-lexicon/csl-inflect/pull/21) was closed after [PR #20](https://github.com/sanskrit-lexicon/csl-inflect/pull/20) landed mid-review adding the same `DEVA` option, and was superseded by [PR #24](https://github.com/sanskrit-lexicon/csl-inflect/pull/24), merged the same day with the client-side conversion `main` lacked. The upstream give-back track is complete. [H3165](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3165-Sonnet_csl-inflect_inflect-u2-drip-prepared-prs_19.08.26.md), minted that day to drip the queue, was closed as a stale mint against those three PRs — the roadmap-level lesson is [FINDINGS §501](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md) (a gate with no observer), the tooling-level one [FINDINGS §504](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md).
 
