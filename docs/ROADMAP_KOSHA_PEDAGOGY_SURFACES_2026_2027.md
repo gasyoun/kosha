@@ -1,4 +1,13 @@
-_Created: 14-07-2026 · Last updated: 22-07-2026_
+_Created: 14-07-2026 · Last updated: 19-08-2026_
+
+> **Truth-pass 19-08-2026** ([H3001 (Opus 5) — Stale-roadmap slice 3: full /ask replan of stale Tier-1 roadmaps](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3001-Opus_multi_stale-roadmap-s3-tier1-ask-replan_17.08.26.md)).
+> All 15 handoffs this roadmap references are closed ✅. **Wave RU shipped
+> 19-07-2026** and was still marked 🟡 queued — corrected below. With that
+> correction the roadmap is **fully drained**: every wave shipped, W3b closed as
+> REUSE, Wave 4 an agenda pointer. One small leftover is queued as
+> [H3167 (Sonnet 5) — Re-run gloss.ru over the subhāṣita beginner pack](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3167-Sonnet_kosha_pedagogy-subhashita-gloss-ru-rerun_19.08.26.md);
+> residual programme:
+> [docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md).
 
 # Roadmap — kosha pedagogy surfaces (2026–2027)
 
@@ -46,7 +55,7 @@ It **is** the template — Wave 1 copies its scripts' shape. *Unblocked by:* not
 | **W3a — Metre-ID wired into reading.** Do **not** rebuild a metre trainer — [SanskritKaraoke](https://github.com/gasyoun/SanskritKaraoke) owns it (wave notation + quizzes + Apte prosody). kosha's contribution: annotate the reading packs with per-verse metre (the field §3.9 gap: "metre-ID as a graded drill wired into reading") using vidyut-chandas `meters.tsv` | ✅ SHIPPED v0.59.0 (reuse/integrate) | `data/vidyut/chandas/meters.tsv` + reading packs (W2a) | [H951](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H951-Sonnet_kosha_pedagogy-w3-metre-in-reading-integration_14.07.26.md) |
 | **W3b — Script / Devanāgarī** | ⚪ REUSE (roadmap only) | [csl-guides](https://github.com/sanskrit-lexicon/csl-guides) already owns the devanāgarī/transliteration quizzes + "name-in-devanāgarī" tool; kosha adds no surface. Revisit only if a kosha-specific onboarding need appears | — |
 
-## Wave RU — Russian-learner reading surfaces (2026 H2) 🟡 (queued 19-07-2026)
+## Wave RU — Russian-learner reading surfaces (2026 H2) ✅ (both shipped 19-07-2026)
 
 Staged via [`/ask-batch`](https://github.com/gasyoun/claude-config/blob/main/commands/ask-batch.md)
 (interview rulings in
@@ -61,8 +70,8 @@ restricted bulk layers stay local-only inputs. File-level steps:
 
 | Deliverable | Verdict | Unblocked by | Handoff |
 |---|---|---|---|
-| **W-RU-a — Inline Sa→Ru gloss layer.** Join the SanskritRussian public three-layer glossary (surface/lemma/root) to reading-pack tokens; hover shows the RU triple; per-pack RU coverage % reported | 🟢 BUILD (queued) | reading packs (H871/W2a) + sandhi hover pattern (H917) + SanskritRussian public layers (all exist) | [H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md) |
-| **W-RU-b — Beginner subhāṣita reader.** New pack family from Böhtlingk's Indische Sprüche (7,537 public-domain sayings, F33): difficulty-scored (W2a scorer), beginner band curated, sandhi-split + metre-tagged + RU-glossed | 🟢 BUILD (queued) | difficulty scorer (W2a) + corpus sandhi (W0) + metre path (W3a) + F33 JSONL (all exist); RU glosses soft-depend on W-RU-a | [H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md) |
+| **W-RU-a — Inline Sa→Ru gloss layer.** Join the SanskritRussian public three-layer glossary (surface/lemma/root) to reading-pack tokens; hover shows the RU triple; per-pack RU coverage % reported | ✅ SHIPPED [v0.63.0](https://github.com/gasyoun/kosha/releases/tag/v0.63.0) (build) — `ru_gloss_layer.tsv` (2,958 rows), additive `gloss_ru` triple, `--gloss-lang ru` + reader RU toggle, [PR #138](https://github.com/gasyoun/kosha/pull/138) | reading packs (H871/W2a) + sandhi hover pattern (H917) + SanskritRussian public layers (all exist) | [H1278](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1278-Opus_kosha_pedagogy-wave-ru-inline-gloss-reader_19.07.26.md) |
+| **W-RU-b — Beginner subhāṣita reader.** New pack family from Böhtlingk's Indische Sprüche (7,537 public-domain sayings, F33): difficulty-scored (W2a scorer), beginner band curated, sandhi-split + metre-tagged + RU-glossed | ✅ SHIPPED (build) — 7,537 sayings scored, 106-saying band curated with a 144-row coded reject log, pack sandhi-split + junction-labelled + metre-tagged, reader page + Anki deck, manifest row + data statement. **Leftover:** the pack shipped the same day as W-RU-a, so the RU gloss was never applied over it — queued as [H3167 (Sonnet 5) — Re-run gloss.ru over the subhāṣita beginner pack](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3167-Sonnet_kosha_pedagogy-subhashita-gloss-ru-rerun_19.08.26.md) | difficulty scorer (W2a) + corpus sandhi (W0) + metre path (W3a) + F33 JSONL (all exist); RU glosses soft-depend on W-RU-a | [H1279](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1279-Fable_kosha_pedagogy-wave-ru-subhashita-reader_19.07.26.md) |
 
 ## Wave T — thematic vocabulary axis (2026 H2) ✅ (shipped)
 
