@@ -4,7 +4,9 @@ _Created: 03-07-2026 · Last updated: 19-08-2026_
 
 > **Truth-pass 19-08-2026** ([H3001 (Opus 5) — Stale-roadmap slice 3: full /ask replan of stale Tier-1 roadmaps](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3001-Opus_multi_stale-roadmap-s3-tier1-ask-replan_17.08.26.md)).
 > Every handoff this roadmap references is closed ✅. Two status corrections applied
-> below: **Wave U2's condition fired on 03-07-2026** and went unnoticed for six weeks,
+> below: **Wave U2's condition fired on 03-07-2026** and went unnoticed for six weeks
+> — and a 19-08-2026 re-check found the wave had in fact been **delivered on
+> 09-07-2026**, so the row was understating it twice over (see U2),
 > and **Wave E1 is done** but was still marked pending. The residual programme is
 > [docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md).
 
@@ -72,17 +74,25 @@ Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://
   csl-inflect issues and post structured findings per issue (D6). Handoff:
   [H094](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H094-Fable_csl-inflect_cslinflect_question_research_03.07.26.md).
   Runs parallel to U0.
-- **Wave U2 — drip the queue. 🟢 CONDITION FIRED — unblocked since 03-07-2026,
-  queued as [H3165 (Sonnet 5) — Wave U2: drip the three prepared csl-inflect PRs](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3165-Sonnet_csl-inflect_inflect-u2-drip-prepared-prs_19.08.26.md).**
+- **Wave U2 — drip the queue. ✅ DONE 09-07-2026 — the whole queue shipped six
+  weeks before anything was queued to ship it.**
   D5 gated this on *"probe merged ≤ ~1 month"*. The probe —
   [csl-inflect PR #17 "Make the inflected-form lookup usable on phones"](https://github.com/sanskrit-lexicon/csl-inflect/pull/17)
   — was **merged the same day it was opened, 03-07-2026**. The condition was
-  satisfied immediately and this row went on reading "conditional" for six weeks
-  while three finished branches (`devanagari-input`, `help-examples`,
-  `output-polish`) sat unsent on the H093 fork.
-  Open the remaining prepared PRs one at a time, each waiting for the
-  previous merge. If a PR now meets silence: park the queue; the kosha track
-  carries everything (D5).
+  satisfied immediately — and the queue was then **drained on 09-07-2026**:
+  [`help-examples` PR #22](https://github.com/sanskrit-lexicon/csl-inflect/pull/22) and [`output-polish` PR #23](https://github.com/sanskrit-lexicon/csl-inflect/pull/23)
+  both merged, while [`devanagari-input` PR #21](https://github.com/sanskrit-lexicon/csl-inflect/pull/21) was closed after
+  [PR #20](https://github.com/sanskrit-lexicon/csl-inflect/pull/20) landed mid-review and independently added the same `DEVA`
+  option, and was superseded by
+  [`devanagari-input-slp1` PR #24](https://github.com/sanskrit-lexicon/csl-inflect/pull/24) — merged the same day, wiring the
+  client-side conversion `main` was missing. **Nothing remained unsent.**
+  The row nonetheless read "conditional" until 19-08-2026, when the truth-pass
+  above minted
+  [H3165 (Sonnet 5) — Wave U2: drip the three prepared csl-inflect PRs](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3165-Sonnet_csl-inflect_inflect-u2-drip-prepared-prs_19.08.26.md)
+  to drip a queue that was already empty; H3165 closed the same day as a stale
+  mint (Opus 5 `claude-opus-5`), evidence in [FINDINGS §501](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md).
+  The upstream give-back track is **complete**; the kosha track carries
+  everything further (D5).
 
 ### kosha track (executes in the existing P4 slot, after P3)
 
