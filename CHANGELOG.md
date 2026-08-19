@@ -13,6 +13,18 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+### Changed
+- **Roadmap truth-pass + residual `/ask` programme** (H3001, stale-roadmap slice 3).
+  `roadmap_handoff_truth.py` confirms all 20 handoffs referenced by
+  `ROADMAP_INFLECT_2026_2027.md` and `docs/ROADMAP_KOSHA_PEDAGOGY_SURFACES_2026_2027.md`
+  are closed ✅; three status lies corrected. **Wave U2's condition fired on
+  03-07-2026** — [csl-inflect PR #17](https://github.com/sanskrit-lexicon/csl-inflect/pull/17)
+  merged the same day it was opened — and the row read "conditional" for six weeks
+  while three finished branches sat unsent. **Wave E1** was marked pending though
+  H185 closed it 12-07-2026 (v0.21.0). **Wave RU** was marked 🟡 queued though both
+  its handoffs shipped 19-07-2026; with that fixed the pedagogy roadmap is fully
+  drained. New five-doc residual set under `docs/` (PLAN/ROADMAP/ARCHITECTURE/
+  IMPLEMENTATION/VERIFICATION + metadoc); residual work queued as H3165, H3166, H3167.
 
 ## [0.110.17] - 2026-08-17
 ### Added

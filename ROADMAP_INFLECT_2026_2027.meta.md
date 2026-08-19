@@ -1,6 +1,6 @@
 # ROADMAP_INFLECT_2026_2027.meta.md — metadoc for `ROADMAP_INFLECT_2026_2027.md`
 
-_Created: 18-07-2026 · Last updated: 18-07-2026_
+_Created: 18-07-2026 · Last updated: 19-08-2026_
 
 This is a **metadoc** — a document *about* a document. Its subject is
 [ROADMAP_INFLECT_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_INFLECT_2026_2027.md).
@@ -66,7 +66,12 @@ standing "one metadoc per important document" convention (`~/.claude/CLAUDE.md`)
   superseded by whatever P5 (advanced UI) roadmap follows — not yet triggered.
 
 ## Deprecation status
-`active`
+`active` — truth-passed 19-08-2026 (H3001). Upstream track: U0/U1 done, **U2
+unblocked since 03-07-2026** (the probe merged same-day; the conditional row went
+stale for six weeks) and queued as H3165. kosha track K1–K3 done. Evolution track
+E1 done 12-07-2026; its verb number needs the identity crosswalk (H3166) before it
+means anything. Residual programme:
+[docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md).
 
 ## Related documents
 - [wiki/docs/roadmap.md](https://github.com/gasyoun/kosha/blob/main/wiki/docs/roadmap.md) and its [metadoc](https://github.com/gasyoun/kosha/blob/main/wiki/docs/roadmap.meta.md) — the public-site P1–P7 phase page that names this roadmap as P4's spec.
