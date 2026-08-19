@@ -1,6 +1,12 @@
 # ROADMAP_INFLECT — drastic improvement of the Cologne inflected-form tool
 
-_Created: 03-07-2026 · Last updated: 05-07-2026_
+_Created: 03-07-2026 · Last updated: 19-08-2026_
+
+> **Truth-pass 19-08-2026** ([H3001 (Opus 5) — Stale-roadmap slice 3: full /ask replan of stale Tier-1 roadmaps](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3001-Opus_multi_stale-roadmap-s3-tier1-ask-replan_17.08.26.md)).
+> Every handoff this roadmap references is closed ✅. Two status corrections applied
+> below: **Wave U2's condition fired on 03-07-2026** and went unnoticed for six weeks,
+> and **Wave E1 is done** but was still marked pending. The residual programme is
+> [docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md).
 
 Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php)
 — and its drastically better successor inside kosha. Rulings elicited from MG
@@ -66,10 +72,17 @@ Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://
   csl-inflect issues and post structured findings per issue (D6). Handoff:
   [H094](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H094-Fable_csl-inflect_cslinflect_question_research_03.07.26.md).
   Runs parallel to U0.
-- **Wave U2 — drip the queue** *(conditional: probe merged ≤ ~1 month)*.
+- **Wave U2 — drip the queue. 🟢 CONDITION FIRED — unblocked since 03-07-2026,
+  queued as [H3165 (Sonnet 5) — Wave U2: drip the three prepared csl-inflect PRs](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3165-Sonnet_csl-inflect_inflect-u2-drip-prepared-prs_19.08.26.md).**
+  D5 gated this on *"probe merged ≤ ~1 month"*. The probe —
+  [csl-inflect PR #17 "Make the inflected-form lookup usable on phones"](https://github.com/sanskrit-lexicon/csl-inflect/pull/17)
+  — was **merged the same day it was opened, 03-07-2026**. The condition was
+  satisfied immediately and this row went on reading "conditional" for six weeks
+  while three finished branches (`devanagari-input`, `help-examples`,
+  `output-polish`) sat unsent on the H093 fork.
   Open the remaining prepared PRs one at a time, each waiting for the
-  previous merge. If the probe meets silence: park the queue permanently;
-  the kosha track carries everything (D5).
+  previous merge. If a PR now meets silence: park the queue; the kosha track
+  carries everything (D5).
 
 ### kosha track (executes in the existing P4 slot, after P3)
 
@@ -113,9 +126,12 @@ Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://
 
 ### Evolution track
 
-- **Wave E1 — dual-engine comparison (the vidyut path, D3). 🔶 nominal
-  comparison done 05-07-2026 (Opus 4.8 `claude-opus-4-8`); ruling + give-back
-  post + verbs pending ([H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md)).**
+- **Wave E1 — dual-engine comparison (the vidyut path, D3). ✅ done 12-07-2026
+  (Opus 4.8 `claude-opus-4-8`, [v0.21.0](https://github.com/gasyoun/kosha/releases/tag/v0.21.0),
+  [PR #64](https://github.com/gasyoun/kosha/pull/64)) — the hybridize layer and the
+  verb comparison both shipped; only the diplomacy-gated upstream post remains
+  parked.** The 05-07-2026 "🔶 pending" reading below was correct on the day and
+  stale from 12-07-2026 onward; corrected 19-08-2026.
   - **Done:** [`scripts/compare_vidyut_cologne.py`](https://github.com/gasyoun/kosha/blob/main/scripts/compare_vidyut_cologne.py)
     (vidyut-prakriya 0.4.0 local, R12-clean) + [`E1_DIVERGENCE_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/E1_DIVERGENCE_REPORT.md):
     **90.5 % cell agreement** over 240k cells / 10k nominal stems, divergences
@@ -132,8 +148,24 @@ Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://
     forks). Filed as an **@DECIDE** in [Uprava/GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md).
   - **(c) optional paper** — three-engine (Cologne/Huet/vidyut) divergence table;
     scaffold only if MG wants it.
-  - **Pending:** the ruling, the (cleared) upstream post, and the **verb
-    comparison** (answers #8) — all in [H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md).
+  - **Shipped 12-07-2026 under [H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md):**
+    the **hybridize forms layer** ([`scripts/build_hybrid_forms.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_hybrid_forms.py)
+    — 326 ṇatva cells / 89 stems auto-fixed, 16 cardinal cells gap-filled,
+    13,770 cells flagged `disputed=1`, no Cologne row deleted) and the **verb
+    comparison** ([`scripts/compare_vidyut_verbs.py`](https://github.com/gasyoun/kosha/blob/main/scripts/compare_vidyut_verbs.py)).
+  - **Still open — the verb number is not yet interpretable.** Strict verb
+    agreement came out at **12.68 %** against 90.5 % for nominals, which H185 read
+    as a dhātu-identity mapping gap rather than a real divergence; no verb
+    hybridization was applied on that basis. Building the identity layer and
+    re-running the comparison is
+    [H3166 (Opus 5) — Verb dhātu-identity crosswalk](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3166-Opus_kosha_inflect-dhatu-identity-crosswalk_19.08.26.md).
+  - **Still parked — human act, blocks nothing.** The
+    [csl-inflect#10](https://github.com/sanskrit-lexicon/csl-inflect/issues/10)
+    ṇatva give-back is drafted and correct; posting it is diplomacy-gated
+    ([RELATIONS.md](https://github.com/gasyoun/kosha/blob/main/RELATIONS.md) §2/§7)
+    and waits on a human reading the draft in H185 and deciding this is the moment
+    to tell a dormant maintainer their data carries a 20-year-old bug. The optional
+    three-engine paper (E1c) likewise waits on a human yes/no.
 
 ## 4. Non-goals (considered and ruled out — do not re-propose)
 

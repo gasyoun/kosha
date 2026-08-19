@@ -1,4 +1,4 @@
-_Created: 15-07-2026 · Last updated: 15-07-2026_
+_Created: 15-07-2026 · Last updated: 19-08-2026_
 
 # Metadoc — kosha pedagogy surfaces roadmap
 
@@ -94,8 +94,14 @@ of the pedagogy-surface build-out and its status table freezes; it is superseded
 deleted (the shipped surfaces remain the reference).
 
 ## Deprecation status
-`active` — the plan of record for kosha's pedagogy-surface build-out (Waves 0–2 shipped,
-W3a next).
+`active` — truth-passed 19-08-2026 (H3001), and now **fully drained**: Waves 0, 1,
+2, 3a, RU and T all shipped; W3b closed as REUSE (csl-guides owns it); Wave 4
+(audio) is a 2028 external-gated agenda pointer, not a wave. The 15-07-2026 reading
+"Waves 0–2 shipped, W3a next" was correct on the day and stale from 22-07-2026
+onward. One leftover — the RU gloss was never applied over the subhāṣita pack —
+is queued as H3167. When that closes, this roadmap should be retitled as a
+historical record rather than left looking like a live plan. Residual programme:
+[docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md).
 
 ## Related
 - Plan (cover): [`PLAN_KOSHA_PEDAGOGY_ENGINE_2026_2027.md`](https://github.com/gasyoun/kosha/blob/main/PLAN_KOSHA_PEDAGOGY_ENGINE_2026_2027.md) (+ its metadoc).
