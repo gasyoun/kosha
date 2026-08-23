@@ -13,6 +13,25 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+### Changed
+- **H3167 closed as already-fulfilled by H1312** (Sonnet 5 `claude-sonnet-5`). H3167 (minted
+  by the H3001 truth-pass residual queue) asked for a `gloss.ru` re-run over the
+  beginner subhāṣita pack — but that exact work already shipped same-day as H1279,
+  under [H1312](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1312-Sonnet_kosha_subhashita-pack-ru-gloss-rerun_19.07.26.md)
+  ([kosha PR #142](https://github.com/gasyoun/kosha/pull/142), v0.66.0, 19-07-2026):
+  85.3 % of the pack's 1,510 tokens (1,288/1,510) already carry a lemma-layer RU
+  gloss. H3001's truth-pass minted H3167 off H1279's own stale close-row note
+  ("gloss.ru re-run TODO logged") without checking H1312 had already closed that
+  TODO the same day. No rebuild needed — added the one piece of evidence H3167
+  still lacked: a 15-token hand spot-check of `gloss_ru` triples
+  (`scripts/_h3167_spotcheck.py`) against each token's actual surface/lemma,
+  recorded in [`docs/VERIFICATION_KOSHA_PEDAGOGY_SURFACES.md`](https://github.com/gasyoun/kosha/blob/main/docs/VERIFICATION_KOSHA_PEDAGOGY_SURFACES.md)
+  W-RU-b row. Finding: surface-tier gloss correct 15/15; lemma-tier gloss wrong on
+  ~5/15 (`kāvyāni`, `bhāryām`, `as`, `sthānam`, `te`) — vidyut-cheda mis-lemmatizing
+  these nouns onto an unrelated verb-root homograph, faithfully propagated by the
+  RU-gloss join (not a defect in the join itself, and out of this handoff's fence).
+  Flagged as a residual accuracy caveat on the reported 85.3 % figure, not a rights
+  or coverage-padding issue.
 
 ## [0.111.1] - 2026-08-19
 ### Changed
