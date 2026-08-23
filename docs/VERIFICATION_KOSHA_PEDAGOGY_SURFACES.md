@@ -1,4 +1,4 @@
-_Created: 14-07-2026 · Last updated: 19-07-2026_
+_Created: 14-07-2026 · Last updated: 24-08-2026_
 
 # Verification — kosha pedagogy surfaces (acceptance + risks)
 
@@ -58,9 +58,10 @@ defined done (dataset + page + manifest + tests + a coverage headline).
 |---|---|
 | Grading reproducible | difficulty scores regenerate byte-stable from the W2a scorer; 10 hand-checked sayings match expected band |
 | Curation auditable | beginner band selection criteria + reject log committed in `data/subhashita/CURATION_NOTES.md` — no unlogged picks |
-| Pack completeness | every selected saying carries sandhi-split + metre tag; RU gloss where W-RU-a shipped (absence logged as re-run TODO, not silent) |
+| Pack completeness | every selected saying carries sandhi-split + metre tag; RU gloss now **present** — the re-run TODO closed by [H1312](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1312-Sonnet_kosha_subhashita-pack-ru-gloss-rerun_19.07.26.md) ([kosha PR #142](https://github.com/gasyoun/kosha/pull/142), v0.66.0, 19-07-2026): 85.3 % of 1,510 tokens (1,288/1,510) carry a lemma-layer RU gloss, folded into [`reading/RU_GLOSS_COVERAGE.md`](https://github.com/gasyoun/kosha/blob/main/reading/RU_GLOSS_COVERAGE.md) |
 | Public-domain base | pack text provenance = Indische Sprüche (F33) only; `/publish-safety-check` run before any site deploy |
 | Manifest + release | `subhashita-reader-pack` row + data statement; changelog + release |
+| RU-triple spot-check (H3167, 24-08-2026) | 15-token hand sample across the pack (surface, `lemma_slp1`, `gloss_ru`) — **surface-tier gloss correct in all 15/15**; **lemma-tier gloss wrong in ~5/15** (`kāvyāni`→lemma `ku`/"почва" instead of `kāvya`/poetry; `bhāryām`→lemma `Bf`/"принеси" instead of `bhāryā`/wife; `as`→lemma `a`/"о" instead of `as`/"to be"; `sthānam`→lemma `sTA`/"пребывает" instead of `sthāna`/place; `te`→lemma gloss "эти" disagrees in person/number with surface gloss "тебе"). Root cause is upstream **vidyut-cheda mis-lemmatizing these noun tokens onto an unrelated verb-root homograph**, faithfully propagated by `RuGlosser`'s lemma-tier join (`scripts/build_ru_gloss_layer.py`) — not a defect in the join logic itself, and out of this handoff's fence (gloss-join re-run only, no lemmatizer changes). Flagged here as a residual accuracy caveat on the reported 85.3 % lemma-hit figure; not a rights or coverage-padding issue. Sample script (not part of the build chain): `scripts/_h3167_spotcheck.py`. |
 
 ## Global acceptance (every wave)
 
