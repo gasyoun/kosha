@@ -2071,6 +2071,25 @@
     "csl-atlas A09 sense-alignment paper"
    ],
    "notes": "H2882 wave 4. absent_candidate is an UPPER BOUND on genuine absence: adjudication of 30 random candidates left ~17% genuine (FINDINGS s559); 23% of false absents trace to degraded store key1 (FINDINGS s560). Summary sibling: mw_ap_sense_coverage_summary.json."
+  },
+  {
+   "id": "pwg-sense-attestation-window",
+   "title": "PWG per-sense attestation window (Ceiling C2 phase 1)",
+   "tier": "public",
+   "in_release": "unreleased",
+   "format": "jsonl",
+   "rows": 53003,
+   "size_bytes": 18145647,
+   "keying": "(key1, sense_index) + sense_no; every row basis \"per Böhtlingk–Roth's citations\"; dated_works are ls_source_map.json sigla",
+   "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+   "source_path": "RussianTranslation/src/pwg_sense_attestation_window.jsonl",
+   "builder": "RussianTranslation/src/ceiling_c2p1_window.py (H3168)",
+   "consumers": [
+    "pwg_ru cards (era badge)",
+    "Ceiling C2 phase 2 curated dating table",
+    "C7 residue repair queue"
+   ],
+   "notes": "Attestation windows (earliest/latest/n_dated_works/n_undated_citations) from the 45 dated works of ls_source_map.json - evidence about what PWG cites, never about sense emergence. Conservative lower bounds: C7 residue (115,354 unmapped instances / 2,607 sigla) carried in RussianTranslation/research/C2P1_ATTESTATION_WINDOW.md. Layered on pwg_sense_stratum.jsonl Renou proxy (consumed, not rewritten)."
   }
  ]
 }
