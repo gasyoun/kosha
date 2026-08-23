@@ -193,7 +193,12 @@
    "notes": "RIGHTS: aligns PUBLISHED Russian translations — not publishable as-is. BACKUP GAP: registered asset existing in exactly one place. P-D2/H233. Live count 11-07-2026: 1,093,391 rows (append-only, still growing); the ONLY genuinely single-copy giant in the census §2 list per the H691 sweep.",
    "sha256": "9f3d852f1f1424c275af2cc1823dab1b561e649320e597d3cab013068ccc4072",
    "provenance_verified": "2026-07-11 (H691, Fable 5 claude-fable-5)",
-   "rebuild": "NOT deterministically rebuildable — DeepSeek LLM alignment (RussianTranslation/src/build_corpus_lexicon.py, append-only, resumable) over the SamudraManthanam corpus; a re-run costs weeks + API spend and yields different output. SINGLE COPY on MG disk — backup pending H235."
+   "rebuild": "NOT deterministically rebuildable — DeepSeek LLM alignment (RussianTranslation/src/build_corpus_lexicon.py, append-only, resumable) over the SamudraManthanam corpus; a re-run costs weeks + API spend and yields different output. Was SINGLE-COPY on MG disk; backed up to samskrtam.ru/guhya 23-08-2026 (H3389) — see the backup block.",
+   "backup": {
+    "location": "samskrtam.ru/guhya (FTPS, sha256 sidecar beside every file) — corpus_lexicon.jsonl",
+    "sha256": "9f3d852f1f1424c275af2cc1823dab1b561e649320e597d3cab013068ccc4072",
+    "date": "23-08-2026"
+   }
   },
   {
    "id": "stenogrammy-teaching-glossary",
@@ -240,7 +245,12 @@
     "surface_glossary.jsonl": "d19ff0810a6482b025bccda0d49509082b9a495b38b07c1a7f7dd6d29c265434"
    },
    "provenance_verified": "2026-07-11 (H691, Fable 5 claude-fable-5)",
-   "rebuild": "Rebuildable from corpus-lexicon via RussianTranslation/src/build_surface_glossary.py (+ lemma/root siblings); bulk layers are ALSO git-tracked in gasyoun/SanskritRussian (surface_glossary.jsonl.gz, lemma_glossary.jsonl, root_glossary.jsonl) — backed up, not single-copy."
+   "rebuild": "Rebuildable from corpus-lexicon via RussianTranslation/src/build_surface_glossary.py (+ lemma/root siblings); bulk layers are ALSO git-tracked in gasyoun/SanskritRussian (surface_glossary.jsonl.gz, lemma_glossary.jsonl, root_glossary.jsonl) — backed up, not single-copy.",
+   "backup": {
+    "location": "samskrtam.ru/guhya (FTPS, sha256 sidecar beside every file) — renou/surface_glossary.jsonl (plus the pre-existing .gz in SanskritRussian)",
+    "sha256": "d19ff0810a6482b025bccda0d49509082b9a495b38b07c1a7f7dd6d29c265434",
+    "date": "23-08-2026"
+   }
   },
   {
    "id": "kosha-db",
@@ -261,7 +271,13 @@
    "notes": "Regenerable but expensive; backup = cheap insurance. Candidate single queryable DB for P-D5. H837 (13-07-2026, Sonnet 5 claude-sonnet-5): re-ran the H345 `--stage heritage` ingest on the live DB, fixing the H691-flagged regression — heritage_anchor table now present (185,803 rows, 24,549 anchor-resolved, matching H345's original counts exactly) and `/api/v1/lemma` verified live to return the `heritage` witness (spot-checked key `akAra`). Completeness-audited 11-07-2026 (H687): loaded dicts mw/pwg/ap90 match live csl-orig <L> counts exactly (0.000% drift); 41/44 csl-orig dicts not full-text-loaded (union lemmas layer spans 15 codes) — see docs/KOSHA_DB_COMPLETENESS_AUDIT.md. inflections row count drifted slightly (6,916,522 → 6,916,865) between the 05-07 and 12-07 live-DB rebuilds prior to this pass — not re-audited here, out of this handoff's scope. DISTRIBUTION (H1367, 20-07-2026, Opus 4.8 claude-opus-4-8): re-measured at 1,673,854,976 B = 84% of the 2 GB release-asset ceiling (inflections layer ~65% of the file); the sha256 below predates the current rebuild (inflections now 6,917,018). Per D5-4 ruling (KOSHA_DECISIONS_NEEDED.md) the restricted-tier backup ships COMPRESSED (gzip-1 floor 458 MB / 27%, xz/zstd-19 ~330 MB), never the raw .db, and P-D5 splits into ATTACH-able kosha_core.db (~0.5-0.6 GB) + kosha_inflections.db (~1.1 GB). Backup-compress/split/G-SIZE plumbing is queued follow-on, not landed in H1367. P-D5 layers (H1589, 24-07-2026, Grok 4.5 grok-4.5): build_db.py --stage layers loads public sense_frequency + roots_frequency + dict_corpus_coverage (+ optional mw_roots/mw_etymology); G-SIZE tripwire scripts/check_g_size.py landed. Core/inflections ATTACH split still optional follow-on.",
    "sha256": "9e634b13380ff80d27934241c6b196a2579f21eed94b6f3bb4bc41f429c32391",
    "provenance_verified": "2026-07-13 (H837, Sonnet 5 claude-sonnet-5)",
-   "rebuild": "Regenerable (hours): scripts/build_crosswalk.py → build_entries.py → build_forms.py → build_db.py; raw inputs auto-downloaded (see kosha-raw-sqlite row)."
+   "rebuild": "Regenerable (hours): scripts/build_crosswalk.py → build_entries.py → build_forms.py → build_db.py; raw inputs auto-downloaded (see kosha-raw-sqlite row).",
+   "backup": {
+    "location": "samskrtam.ru/guhya (FTPS, sha256 sidecar beside every file) — kosha.db",
+    "sha256": "140c6638811559677c4335c034dce5c2718e56868a188acc1e9bac15b6b34f04",
+    "date": "23-08-2026",
+    "note": "current rebuild (inflections 6,917,018); supersedes the stale sha256 field above"
+   }
   },
   {
    "id": "dcs-full-sqlite",
@@ -283,7 +299,12 @@
    "notes": "DCS upstream is CC BY 4.0; regenerable from CoNLL-U but the ingest is the canonical one — 5 repos historically re-parsed. P-D2/H233.",
    "sha256": "8f3b06bd6ef0e47a9ccf81d147e73d5d240d64e0c12f6d789262eb422ebb23bc",
    "provenance_verified": "2026-07-11 (H691, Fable 5 claude-fable-5)",
-   "rebuild": "Fully regenerable: python src/DCS-data-2026/import_dcs_conllu.py over the DCS CoNLL-U dump (upstream CC BY 4.0, redownloadable)."
+   "rebuild": "Fully regenerable: python src/DCS-data-2026/import_dcs_conllu.py over the DCS CoNLL-U dump (upstream CC BY 4.0, redownloadable).",
+   "backup": {
+    "location": "samskrtam.ru/guhya (FTPS, sha256 sidecar beside every file) — dcs_full.sqlite",
+    "sha256": "8f3b06bd6ef0e47a9ccf81d147e73d5d240d64e0c12f6d789262eb422ebb23bc",
+    "date": "23-08-2026"
+   }
   },
   {
    "id": "samudra-corpus-db",
@@ -517,7 +538,12 @@
    "consumers": [
     "corpus-lexicon (this directory's own build output)"
    ],
-   "notes": "H291 Step 3, MG ruling: register as tier=intermediate rather than skip/route to DATA_LAYERS_CENSUS.md — this is the raw/working directory that ALSO produces the already-registered corpus-lexicon dataset (corpus_lexicon.jsonl itself, excluded here to avoid double-counting). Includes progressive pipeline stages (assembled_cards.jsonl → .chunk/.perf/.quarantine/.smoke/.test variants) not yet deduped — see DATA_LAYERS_CENSUS.md § Actionable gaps."
+   "notes": "H291 Step 3, MG ruling: register as tier=intermediate rather than skip/route to DATA_LAYERS_CENSUS.md — this is the raw/working directory that ALSO produces the already-registered corpus-lexicon dataset (corpus_lexicon.jsonl itself, excluded here to avoid double-counting). Includes progressive pipeline stages (assembled_cards.jsonl → .chunk/.perf/.quarantine/.smoke/.test variants) not yet deduped — see DATA_LAYERS_CENSUS.md § Actionable gaps.",
+   "backup": {
+    "location": "samskrtam.ru/guhya (FTPS, sha256 sidecar beside every file) — renou/ (12 production card-set files)",
+    "date": "23-08-2026",
+    "note": "PARTIAL: the 13 underscore-spelled variants in deploy_guhya MANIFEST do not exist on this disk (H235 dedup @DECIDE resolved by disk reality: dot-variants canonical). corpus.db NOT backed up: local copy is 0 bytes; regenerable from tracked web/corpus_builder/jsonl/"
+   }
   },
   {
    "id": "dcs-verb-example-ids",
