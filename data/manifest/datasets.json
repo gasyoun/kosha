@@ -2090,6 +2090,24 @@
     "C7 residue repair queue"
    ],
    "notes": "Attestation windows (earliest/latest/n_dated_works/n_undated_citations) from the 45 dated works of ls_source_map.json - evidence about what PWG cites, never about sense emergence. Conservative lower bounds: C7 residue (115,354 unmapped instances / 2,607 sigla) carried in RussianTranslation/research/C2P1_ATTESTATION_WINDOW.md. Layered on pwg_sense_stratum.jsonl Renou proxy (consumed, not rewritten)."
+  },
+  {
+   "id": "les-1990-static-dump",
+   "title": "LES-1990 («Лингвистический энциклопедический словарь», Ярцева 1990) static HTML dump",
+   "tier": "public",
+   "in_release": "not-applicable",
+   "format": "html",
+   "rows": 1408,
+   "size_bytes": 27814964,
+   "keying": "flat article files (009a.html-style names) + index.html ToC + a.css; no machine keying yet (Phase 4 parser pending)",
+   "source_repo": "https://github.com/gasyoun/les-1990",
+   "source_path": "/ (repo root; commit 1 raw dump, commit 2 Metrika-stripped)",
+   "builder": "H465 Phase 0 one-shot HTTP mirror of samskrtam.ru/sanskrit-lexicon/les-1990/ (walked the index.html 1408-link manifest, 6 workers, 3-try cap: 0 failures, 0 empty); commit 2 strips the inlined Yandex.Metrika counter from all 1409 HTML files",
+   "consumers": [
+    "samskrtam.ru LES binding programme (Uprava ROADMAP_LES1990_SITE_INTEGRATION_2026H2.md, Phases 2-4)",
+    "BookIndex glossary - 36 les-1990/?s= links awaiting the Phase-4 search"
+   ],
+   "notes": "Rights: MG accepted legal risk 10-07-2026 - /publish-safety-check deliberately not run, do not re-raise. Byte-identical to the tapemark.narod.ru/les/ mirror (same text serves les.academic.ru), so raw SEO value is nil; differentiation is Phase 3 (12 expanded Sanskrit articles). Repo name + URL policy @DECIDEs resolved 19-07/22-07-2026: personal gasyoun/les-1990, URL stays /sanskrit-lexicon/les-1990/."
   }
  ]
 }
