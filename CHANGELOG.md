@@ -13,6 +13,8 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+
+## [0.111.2] - 2026-08-24
 ### Changed
 - **H3167 closed as already-fulfilled by H1312** (Sonnet 5 `claude-sonnet-5`). H3167 (minted
   by the H3001 truth-pass residual queue) asked for a `gloss.ru` re-run over the
