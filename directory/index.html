@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="89 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="91 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="89 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="91 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -2539,6 +2539,62 @@
         "encodingFormat": "json + tsv + yml",
         "contentUrl": "https://github.com/gasyoun/SanskritGrammar"
       }
+    },
+    {
+      "@type": "Dataset",
+      "name": "MW/AP90 sense units vs the PWG-family store: matched / unalignable / absent-candidate verdicts (wave 4)",
+      "description": "H2882 wave 4. absent_candidate is an UPPER BOUND on genuine absence: adjudication of 30 random candidates left ~17% genuine (FINDINGS s559); 23% of false absents trace to degraded store key1 (FINDINGS s560). Summary sibling: mw_ap_sense_coverage_summary.json.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "pwg-mw-ap-sense-coverage"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "jsonl",
+        "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "PWG per-sense attestation window (Ceiling C2 phase 1)",
+      "description": "Attestation windows (earliest/latest/n_dated_works/n_undated_citations) from the 45 dated works of ls_source_map.json - evidence about what PWG cites, never about sense emergence. Conservative lower bounds: C7 residue (115,354 unmapped instances / 2,607 sigla) carried in RussianTranslation/research/C2P1_ATTESTATION_WINDOW.md. Layered on pwg_sense_stratum.jsonl Renou proxy (consumed, not rewritten).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "pwg-sense-attestation-window"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "jsonl",
+        "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
+      }
     }
   ]
 }
@@ -2609,8 +2665,8 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>89</b><span>public datasets</span></div>
-      <div class="tally"><b>13</b><span>restricted (on request)</span></div>
+      <div class="tally"><b>91</b><span>public datasets</span></div>
+      <div class="tally"><b>14</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
     <div class="nav">
@@ -3517,6 +3573,26 @@
       <div class="chips"><span class="chip">Systema-Sanscriticum Grammar Lab import (H2493 G2)</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritGrammar">In source repo ↗</a></div>
     </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>MW/AP90 sense units vs the PWG-family store: matched / unalignable / absent-candidate verdicts (wave 4)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">dict (mw|ap90) + SLP1 lemma + Cologne unit id (MW &lt;L&gt; record / AP90 {@N@} segment)</p>
+      <p class="meta">2,767 rows · 820.6 KB · JSONL</p>
+      <div class="chips"><span class="chip">SanskritLexicography edition-relations roadmap (issue #1736)</span><span class="chip">csl-atlas A09 sense-alignment paper</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>PWG per-sense attestation window (Ceiling C2 phase 1)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">(key1, sense_index) + sense_no; every row basis &quot;per Böhtlingk–Roth&#x27;s citations&quot;; dated_works are ls_source_map.json sigla</p>
+      <p class="meta">53,003 rows · 17.3 MB · JSONL</p>
+      <div class="chips"><span class="chip">pwg_ru cards (era badge)</span><span class="chip">Ceiling C2 phase 2 curated dating table</span><span class="chip">C7 residue repair queue</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
+    </article>
     </div>
     <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>
     <p class="sub">Rights-encumbered or unbackuped local-only assets — listed for discovery; available on request as rights clear.</p>
@@ -3649,6 +3725,16 @@
       <p class="key">bucketed per data_root.py layout: tm/ (canonical store, subcard-keyed jsonl, 11,603 rows @ 02-08-2026) · layers/ (NWS packed tar.gz, 168k files) · manifests/ · raws/ (per-key window payloads) · telemetry/ · gatelogs/ · parked/ · corpus/ (corpus-gate dictionaries)</p>
       <p class="meta">11,603 rows · 683.1 MB · GIT REPO + LFS (JSONL/TAR.GZ/JSON)</p>
       <div class="chips"><span class="chip">RussianTranslation nonstop lanes (PC / samskrte.ru / routine)</span><span class="chip">bounded_staged_run.py --data-root</span><span class="chip">spot_check_daily.py / lane_guard.py / digest_daily.py</span></div>
+      <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>akshara.ru MT benchmark pilot corpus (H3455 lane A)</h3>
+        <span class="badge res">restricted</span>
+      </div>
+      <p class="key">one row per headword slp1: {stratum(tm|control), originals:{likh,mw,apte,mac,pwg} html fragments, mt:{mw_ru,apte_ru,pwg_ru} html fragments, provenance sha256 per fetched part}; length-preserving SLP1 keys</p>
+      <p class="meta">304 rows · 49.3 MB · JSONL (PARSED) + HTML (RAW)</p>
+      <div class="chips"><span class="chip">H3456 blinded pwg_ru-vs-akshara-MT benchmark</span><span class="chip">future SanskritRussian mw_ru/apte_ru comparison</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
     </div>
