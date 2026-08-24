@@ -2116,6 +2116,24 @@
     "C7 residue repair queue"
    ],
    "notes": "Attestation windows (earliest/latest/n_dated_works/n_undated_citations) from the 45 dated works of ls_source_map.json - evidence about what PWG cites, never about sense emergence. Conservative lower bounds: C7 residue (115,354 unmapped instances / 2,607 sigla) carried in RussianTranslation/research/C2P1_ATTESTATION_WINDOW.md. Layered on pwg_sense_stratum.jsonl Renou proxy (consumed, not rewritten)."
+  },
+  {
+   "id": "akshara-mt-benchmark-pilot",
+   "title": "akshara.ru MT benchmark pilot corpus (H3455 lane A)",
+   "tier": "restricted",
+   "in_release": "not-applicable",
+   "format": "jsonl (parsed) + html (raw)",
+   "rows": 304,
+   "size_bytes": 51683637,
+   "keying": "one row per headword slp1: {stratum(tm|control), originals:{likh,mw,apte,mac,pwg} html fragments, mt:{mw_ru,apte_ru,pwg_ru} html fragments, provenance sha256 per fetched part}; length-preserving SLP1 keys",
+   "source_repo": "https://akshara.ru/kosha (external site, scraped 24-08-2026)",
+   "source_path": "data/akshara_pilot/parsed_corpus.jsonl (LOCAL-ONLY gitignored; raw HTML under data/raw_akshara_pilot/ also gitignored)",
+   "builder": "scripts/akshara_pilot_sample.py (frozen manifest 254 c1-TM roots + 50 control, seed 730) -> akshara_pilot_crawl.py (robots-guarded, >=2s throttle, checkpointed resume; passes 304+912 fetches 0 fail) -> akshara_pilot_parse.py; coverage report docs/AKSHARA_PILOT_COVERAGE_H3455_24.08.26.md",
+   "consumers": [
+    "H3456 blinded pwg_ru-vs-akshara-MT benchmark",
+    "future SanskritRussian mw_ru/apte_ru comparison"
+   ],
+   "notes": "RESTRICTED benchmark-only: third-party AI MT of public-domain Cologne originals + Likhushina fragments as advisors - NOTHING here may reach any public surface without a fresh @DECIDE (MG posture 24-08-2026). Honest gaps recorded: 5 zero-article keys absent from their kosha; their pwg_ru MT covers only 149/193 PWG heads in sample; likh=87 advisor-only. robots.txt fences their data endpoints; HTML card pages crawled politely with identified UA, owner outreach DONE by MG pre-crawl."
   }
  ]
 }
