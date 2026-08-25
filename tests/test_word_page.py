@@ -95,6 +95,22 @@ def test_devanagari_is_correct_not_broken_iast_path():
     assert "भू" in html
 
 
+def test_capital_initial_lemma_not_case_folded():
+    # kosha#433: committed static cards store query.key case-folded for
+    # capital-initial SLP1 lemmas ("darma" for Darma, "rama" for rAma) — the
+    # token carries the exact key, so the template must derive slp1 from the
+    # token rather than trusting query.key.
+    for slp1, token, deva in (("Darma", card_token("Darma"), "धर्म"),
+                              ("rAma", card_token("rAma"), "राम")):
+        card = {"query": {"key": slp1.lower()}, "results":
+                [{"dict": "mw", "headword": slp1, "rendered_html": "x",
+                  "scan_url": None, "evidence": {"band": 1, "band_label": "core"}}]}
+        html = render_word_page(card, token=token)
+        assert deva in html
+        title = html.split("<title>", 1)[1].split("</title>", 1)[0]
+        assert deva in title  # not the case-folded card key's wrong Devanagari
+
+
 def test_deterministic():
     tok = _sample_tokens(1)[0]
     card = _load(tok)
