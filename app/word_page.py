@@ -700,8 +700,14 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
                   (docs/NOT_PUBLISHED_H3457_WPAGE_UX.md).
     """
     esc = html.escape
-    slp1 = card["query"]["key"]
-    if token is None:
+    if token is not None:
+        # Cards store query.key case-folded for capitalised SLP1 lemmas
+        # ("darma" for Darma, "rama" for rAma; kosha#433) — the token is the
+        # exact key, so derive slp1 from it whenever a token is supplied.
+        from word_page_ux import slp1_from_token
+        slp1 = slp1_from_token(token)
+    else:
+        slp1 = card["query"]["key"]
         token = card_token(slp1)
     results = card.get("results", [])
     deva = slp1_to_devanagari(slp1)
@@ -720,13 +726,12 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
     if ux is not None and not isinstance(ux, dict):
         ux = {"variant": str(ux)}
     if ux:
-        from word_page_ux import VARIANTS, DEFAULT_VARIANT, slp1_from_token
+        from word_page_ux import VARIANTS, DEFAULT_VARIANT
         if ux.get("variant") not in VARIANTS:
             ux = dict(ux, variant=DEFAULT_VARIANT)
-        # Cards store query.key case-folded for capitalised SLP1 lemmas
-        # ("darma" for Darma, "rama" for rAma) — the card token is the exact
-        # key, so every UX lookup (core_rank, favorites key) uses it.
-        ux = dict(ux, slp1=slp1_from_token(token) if token else slp1)
+        # slp1 is already token-derived above when a token is supplied, so
+        # every UX lookup (core_rank, favorites key) uses the exact key.
+        ux = dict(ux, slp1=slp1)
 
     tabbar, panels = _dict_panels(groups, default_lang=default_lang, ux=ux)
     strip = _headword_strip(slp1, deva, iast, band, band_label, n_dicts,
