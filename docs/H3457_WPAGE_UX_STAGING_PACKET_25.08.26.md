@@ -1,6 +1,6 @@
 # H3457 — word-page UX upgrade, staged: design packet + evidence
 
-_Created: 25-08-2026 · Last updated: 25-08-2026_
+_Created: 25-08-2026 · Last updated: 25-08-2026 (§7 — MG review R1–R5, direction d, H3480)_
 
 Handoff: [H3457 (Fable 5) — w-page UX upgrade staged: core_rank badge, favorites, PWG scan anchors](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3457-Fable_kosha_wpage-ux-badge-favorites-scananchors_24.08.26.md)
 · executor Fable 5 (`claude-fable-5`) · lane C of 3 (MG go 24-08-2026).
@@ -179,5 +179,23 @@ per-IP budget, not a link defect (H870 established the same on MW).
 3. **kosha#433** — case-folded `query.key` renders wrong Devanagari on
    capital-initial public pages (pre-existing; fix candidates in the issue).
 4. Error-report widget — parked, needs a backend.
+
+## 7. Review round 25-08-2026 — MG rulings R1–R5 → direction **d** ([H3480](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3480-Fable_kosha_wpage-header-rethink-flat-tabs-gloss-switch-ru-render_25.08.26.md), Fable 5 `claude-fable-5`)
+
+MG opened [direction a](https://gasyoun.github.io/mockups/h3457-wpage-ux/direction-a-gam.html) and ruled on the *existing* header, not only on the new organs:
+
+| # | Ruling (MG, verbatim intent) | What changed |
+|---|---|---|
+| R1 | "6 levels is too heavy for header" | **Three rows**: headword strip · SanskritRussian line · one dictionary tab row. The language row, the per-language rows and the RU sub-row are gone. |
+| R2 | "Full and Adaptive on desktop — nothing" | One **Gloss ⇄ Full** switch, left of the heart, in the strip. Adaptive is no longer a named mode (the default still shows gloss on a phone, full on desktop, until the reader flips the switch; the choice persists). |
+| R3 | "RU shows markup non rendered, that is not ok" | **Public-path bug fixed**: `kosha.api.ru_join.ru_markup_prepass` maps the RU pipeline's `{#slp1#}` → `<s>` (the renderer's own IAST transliteration) and `{%gloss%}` → `<i>` before `render_sanitized`. Locked by `tests/test_word_page_h3480_header.py`. Ships on the public page regardless of the flip. |
+| R4 | "one tab per level? No, bad UI" | One flat row: **MW 3 · PWG 4 · Apte 1 · PWG→RU 673 · All 681** — language implicit in the label. |
+| R5 | "one more level? That's too much" | Zero-count dictionaries (`mw_ru 0`) are dropped from the row instead of shown. |
+
+Direction **d** = a's organs + the three-row header. Look: [direction d](https://gasyoun.github.io/mockups/h3457-wpage-ux/direction-d-gam.html) · [phone, dark](https://gasyoun.github.io/mockups/h3457-wpage-ux/shots/d-dark-375.png) · [desktop, light](https://gasyoun.github.io/mockups/h3457-wpage-ux/shots/d-light-1280.png). Staging build: `python scripts/build_word_pages.py --ux-staging d …`; smoke 22/22 — [docs/H3480_WPAGE_UX_D_SMOKE_LOG_25.08.26.md](https://github.com/gasyoun/kosha/blob/main/docs/H3480_WPAGE_UX_D_SMOKE_LOG_25.08.26.md); the staged `gam` page contains zero `{#` / `{%`.
+
+**Recommendation now: d** (a's placement, MG's header). a/b/c remain buildable.
+
+Still visible and *not* a markup leak: the second PWG→RU entry quotes corpus lines as bare SLP1 with accent marks (`tena^ gacCa parasta\ram`). Those strings are not wrapped in `{#…#}` in the pwg_ru store, so no renderer can know they are Sanskrit — a translation-data issue for the RussianTranslation pipeline (H3480 packet note; not fixed here).
 
 _Dr. Mārcis Gasūns_

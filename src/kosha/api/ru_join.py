@@ -7,6 +7,7 @@ writes the translation store and never flips `review_status`.
 from __future__ import annotations
 
 import html
+import re
 import json
 import os
 from functools import lru_cache
@@ -98,13 +99,38 @@ def clear_caches() -> None:
     _store_index.cache_clear()
 
 
+_RU_SLP1_RE = re.compile(r"\{#(.*?)#\}", re.S)
+_RU_GLOSS_RE = re.compile(r"\{%(.*?)%\}", re.S)
+
+
+def ru_markup_prepass(ru: str) -> str:
+    """RU-pipeline wrappers -> Cologne markup the renderer already knows (H3480, R3).
+
+    The pwg_ru / mw_ru stores carry two conventions of their own on top of
+    Cologne markup: `{#slp1#}` for a Sanskrit word (the PWG `<s>` payload, SLP1,
+    accents allowed) and `{%…%}` around a Russian gloss. `render()` is the
+    basicdisplay port and knows neither, so before this pre-pass both leaked
+    verbatim into the public RU tab (`{#gam#} (vgl. {#gA#}) образует …`).
+    `<s>` goes through the renderer's server-side IAST transliteration
+    (src/kosha/render.py, sdata span); the gloss becomes `<i>` like PWG's own
+    German glosses. Nothing else is touched.
+    """
+    if not ru or ("{#" not in ru and "{%" not in ru):
+        return ru
+    ru = _RU_SLP1_RE.sub(lambda m: "<s>" + m.group(1) + "</s>", ru)
+    ru = _RU_GLOSS_RE.sub(lambda m: "<i>" + m.group(1) + "</i>", ru)
+    return ru
+
+
 def _render_ru(dict_id: str, row: dict[str, Any]) -> str:
     ready = row.get("rendered_html")
     if isinstance(ready, str) and ready.strip():
-        return sanitize_html(ready)
+        return sanitize_html(ru_markup_prepass(ready)) if ("{#" in ready or "{%" in ready) \
+            else sanitize_html(ready)
     ru = row.get("ru") or row.get("russian") or ""
     if not isinstance(ru, str) or not ru.strip():
         return ""
+    ru = ru_markup_prepass(ru)
     # Live store rows carry Cologne-style markup; never read the German `de`.
     if any(tok in ru for tok in ("<div", "{%", "{#", "<ls>", "<ab>", "<lex>")):
         try:
