@@ -1,0 +1,53 @@
+klass	root	model	cell	cologne	vidyut
+DIFF_conflict	Bikz	v_p	passive.ipv.1.sg	BikzyE	BikyE
+DIFF_conflict	Gaww	v_p	passive.ipv.2.sg	Gawwyasva	Gawyasva
+DIFF_conflict	Ij	v_p	passive.ipf.3.sg	Ejyata	Eyata
+DIFF_conflict	Ikz	v_p	passive.ipv.2.pl	IkzyaDvam	IkyaDvam
+DIFF_conflict	KE	v_p	passive.opt.1.du	KEyevahi	KAyevahi
+DIFF_conflict	Siz	v_p	passive.opt.3.sg	Sizyeta	Sezyeta
+DIFF_conflict	SlAG	v_p	passive.ipf.3.sg	aSlAGyata	aSlAyata
+DIFF_conflict	carc	v_10	middle.pre.1.sg	carcaye	cAraye
+DIFF_conflict	gumP	v_p	passive.ipv.1.sg	gumPyE	guPyE
+DIFF_conflict	kAS	v_p	passive.pre.1.pl	kASyAmahe	kAyAmahe
+DIFF_conflict	kUR	v_p	passive.ipf.3.sg	akURyata	akUyata
+DIFF_conflict	kam	v_p	passive.pre.2.du	kAmyeTe,kamyeTe	kyeTe
+DIFF_conflict	kxp	v_p	passive.pre.3.pl	kxpyante	kXyante
+DIFF_conflict	kzam	v_p	passive.pre.2.sg	kzamyase	kzyase
+DIFF_conflict	kzup	v_6	active.ipf.3.sg	akzupat	akzuvad,akzuvat
+DIFF_conflict	myakz	v_p	passive.pre.3.sg	myakzyate	myakyate
+DIFF_conflict	pA	v_p	passive.pre.3.sg	pAyate	pIyate
+DIFF_conflict	paR	v_p	passive.pre.2.pl	paRAyyaDve,paRyaDve	pyaDve
+DIFF_conflict	pruz	v_10	middle.ipf.1.du	aprozayAvahi	aprAvayAvahi
+DIFF_conflict	puw	v_p	passive.pre.1.du	puwyAvahe	pUyAvahe
+DIFF_conflict	ruc	v_p	passive.ipf.2.du	arucyeTAm	arUyeTAm
+DIFF_conflict	ruc	v_p	passive.pre.1.sg	rucye	rUye
+DIFF_conflict	taq	v_p	passive.opt.1.sg	taqyeya	tAqyeya
+DIFF_conflict	tul	v_10	middle.opt.2.sg	tolayeTAH	tAvayeTAH
+DIFF_conflict	uDras	v_p	passive.ipf.1.sg	ODrasye	ODrAsye
+DIFF_conflict	ulaq	v_p	passive.opt.1.sg	ulaqyeya	ulyeya
+DIFF_conflict	vAS	v_p	passive.opt.2.du	vASyeyATAm	vAyeyATAm
+DIFF_conflict	vezw	v_p	passive.ipf.1.pl	avezwyAmahi	avezyAmahi
+DIFF_conflict	yat	v_p	passive.ipf.3.sg	ayatyata	ayyata
+DIFF_conflict	yat	v_p	passive.pre.3.pl	yatyante	yyante
+COLOGNE_ONLY	as	v_4	middle.pre.1.sg	asye	
+COLOGNE_ONLY	kvaT	v_1	middle.pre.3.pl	kvaTante	
+COLOGNE_ONLY	maMh	v_1	middle.opt.1.sg	maMheya	
+COLOGNE_ONLY	mad	v_1	middle.ipf.2.du	amadeTAm	
+COLOGNE_ONLY	pru	v_1	middle.opt.3.sg	praveta	
+COLOGNE_ONLY	snA	v_4	middle.ipv.3.sg	snAyatAm	
+COLOGNE_ONLY	stuB	v_p	passive.ipf.2.pl	astuByaDvam	
+COLOGNE_ONLY	tF	v_1	middle.ipv.2.du	tareTAm	
+DIFF_vidyut_superset	Dvf	v_1	active.ipv.3.sg	Dvaratu	DvaratAd,DvaratAt,Dvaratu
+DIFF_vidyut_superset	hiMs	v_10	active.opt.3.pl	hiMsayeyuH	hiMsayeyuH,hiMseyuH
+DIFF_vidyut_superset	katr	v_10	active.pre.1.sg	katrayAmi	katrAmi,katrayAmi
+DIFF_vidyut_superset	lup	v_4	active.ipv.3.sg	lupyatu	lupyatAd,lupyatAt,lupyatu
+DIFF_final_stop	aww	v_10	active.opt.3.sg	awwayet	awwayed,awwayet
+DIFF_final_stop	dah	v_1	active.opt.3.sg	dahet	dahed,dahet
+DIFF_final_stop	lap	v_1	active.opt.3.sg	lapet	laped,lapet
+DIFF_cologne_superset	Cad	v_10	active.ipv.3.du	CAdayatAm,CadayatAm	CAdayatAm
+DIFF_cologne_superset	paw	v_10	middle.opt.3.pl	pAwayeran,pawayeran	pAwayeran
+DIFF_cologne_superset	sf	v_1	middle.pre.3.sg	DAvate,sarate	DAvate
+VIDYUT_ONLY	SiYj	v_10	active.ipv.3.du		SeYayatAm
+VIDYUT_ONLY	kfp	v_10	middle.ipf.1.sg		akfpaye
+VIDYUT_ONLY	laNG	v_10	middle.ipf.1.sg		alaNGaye
+VIDYUT_ONLY	vrIq	v_10	middle.opt.2.sg		vrAyayeTAH

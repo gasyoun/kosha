@@ -14,6 +14,55 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.113.0] - 2026-08-25
+### Changed
+- **H3166 — the E1 verb "genuine conflicts" are 85 % artifact, not divergence; the
+  handoff's own build was already shipped by H855** (Opus 5 `claude-opus-5`).
+  H3166 asked for a dhātu-identity crosswalk that
+  [H855](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H855-Opus_kosha_e1-verb-dhatu-identity-crosswalk_13.07.26.md)
+  had already committed six weeks earlier (12.68 % → 70.24 %); it was minted off a
+  stale roadmap bullet, and closes **DUPLICATE-SHIPPED** for that half. What was
+  genuinely missing is the adjudication of the residue, delivered here.
+  [`E1_DIVERGENCE_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/E1_DIVERGENCE_REPORT.md)
+  **retracts its own sentence** that *"the remaining 11,056 genuine conflicts are
+  real accent/sandhi/gaṇa-assignment differences needing scholarly review"*: over
+  the full population the conflicts are **55.8 % passive**, **66.9 % have vidyut's
+  form shorter than Cologne's**, and come from only **192 of 683 roots** — because
+  the crosswalk's `direct`/`bare` paths seed vidyut with an **unmarked root** for
+  **212 of 779 entries (27.2 %)**, and those roots carry **9,396 of the 11,056
+  conflicts (85.0 %)**. Without it-markers vidyut eats the root-final consonant:
+  `yat` → `yyate` where the passive is `yatyate`. The discriminating probe pins the
+  cause — for `yat`/`kam`/`paṇ`/`ruc`/`kṣam` the crosswalk seed **is** the bare root
+  so both paths give the same malformation, while for `pā`, where the crosswalk did
+  resolve, vidyut returns the correct `pīyate` against Cologne's `pāyate`. So true
+  divergence is at most **~1,660 cells (3.5 % of both-nonempty)**, not 23 %, and the
+  next rung is mechanical: resolve the 212 bare-seeded entries. 52 rows
+  hand-adjudicated class-weighted (seed 3166, Opus 5, **not** a human sign-off):
+  20/30 conflicts are the bare-root artifact, 5 vowel-grade, 3 curādi-vṛddhi fork,
+  1 genuinely different, 1 **Cologne wrong**. Control classes hold — `DIFF_final_stop`
+  100 % active citation-form, `COLOGNE_ONLY` **77.3 % middle** (a pada-assignment
+  fork, not a coverage bug), `DIFF_cologne_superset` 383 cells from **8 roots**.
+  New read-only scripts:
+  [`sample_verb_divergence.py`](https://github.com/gasyoun/kosha/blob/main/scripts/sample_verb_divergence.py),
+  [`profile_verb_divergence.py`](https://github.com/gasyoun/kosha/blob/main/scripts/profile_verb_divergence.py),
+  [`probe_passive_conflict.py`](https://github.com/gasyoun/kosha/blob/main/scripts/probe_passive_conflict.py),
+  [`measure_passive_bare_root.py`](https://github.com/gasyoun/kosha/blob/main/scripts/measure_passive_bare_root.py)
+  — all importing `compare_vidyut_verbs.py`'s own helpers rather than restating them.
+  Evidence committed under [`data/e1/`](https://github.com/gasyoun/kosha/tree/main/data/e1).
+  The drafted csl-inflect#8 give-back lives in the H3166 handoff body and is **not
+  posted** (RELATIONS.md §2/§7 diplomacy gate, same as #10).
+### Fixed
+- **Two stale docs that caused the duplicate mint** (same pass):
+  [`ROADMAP_INFLECT_2026_2027.md`](https://github.com/gasyoun/kosha/blob/main/ROADMAP_INFLECT_2026_2027.md)
+  still read *"Still open — the verb number is not yet interpretable … 12.68 %"* six
+  weeks after H855 landed, and `E1_DIVERGENCE_REPORT.md`'s **Deferred** section still
+  listed the crosswalk as future work **directly below the section describing it as
+  built**. Both corrected, with the correction itself recorded in place. The K2 row in
+  [`docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md`](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md)
+  now points at the live successor instead of the shipped work. This is the **second**
+  stale mint from the same 19-08-2026 truth-pass — H3165 was the first
+  ([Uprava FINDINGS §501](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)).
+
 ## [0.112.0] - 2026-08-25
 ### Added
 - **H3457 — word-page UX layer, STAGED (not published)** (Fable 5 `claude-fable-5`).
