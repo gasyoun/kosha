@@ -13,6 +13,8 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+
+## [0.115.0] - 2026-08-25
 ### Fixed
 - **RU tab still showed raw Sanskrit** (H3490, Fable 5 `claude-fable-5`; MG 25-08-2026
   "RU still showed raw"). Two leak classes the H3480 pre-pass could not see:
