@@ -14,6 +14,22 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.115.2] - 2026-08-25
+### Added
+- **Literary-source `<ls>` citation links, H3457 wave 2** (H3479, Sonnet 5
+  `claude-sonnet-5`). New `app/ls_hydrate.py` hydrates a PWG entry's
+  `<span class='ls'>` citations (Cologne's own render deferral — see
+  `app/render.py`'s documented "no href" gap) into links, reusing the
+  SanskritLexicography `ls_resolver.generate_href` port plus the
+  csl-observatory `pwg_scan_index.tsv` campaign registry (`scan_wired`) to tell
+  a volunteer-scanned print facsimile apart from a resolved but untracked
+  e-text/scan host — no new resolver. STAGING ONLY, same `ux=` gate and
+  byte-identical-default guarantee as H3457; PWG only (MW-side is a later
+  wave). Census over the staged 11-lemma sample: 6,303 `<ls>` citations, 1,731
+  scan-wired, 3,569 e-text, 737 mintable gaps, 266 bare/no-locus. Smoke 22/22,
+  12/12 links live-verified. See
+  [docs/H3479_LS_CITATION_WAVE2_PACKET_25.08.26.md](https://github.com/gasyoun/kosha/blob/main/docs/H3479_LS_CITATION_WAVE2_PACKET_25.08.26.md).
+
 ## [0.115.1] - 2026-08-25
 ### Fixed
 - **Capital-initial SLP1 lemmas rendered the wrong Devanagari** (H3478, Sonnet 5

@@ -1,6 +1,7 @@
 # NOT PUBLISHED — H3457 word-page UX layer is STAGING ONLY
 
-_Created: 25-08-2026 · Last updated: 25-08-2026 (H3480: direction d added, recommended)_
+_Created: 25-08-2026 · Last updated: 25-08-2026 (H3479: literary-source `<ls>`
+citation links added, PWG only)_
 
 **Status: staged, not live. A human decides when (and whether) this goes public.**
 No session may flip it without that ruling — MG named the lane
@@ -20,6 +21,15 @@ the `--ux-staging` flag of
 [scripts/build_word_pages.py](https://github.com/gasyoun/kosha/blob/main/scripts/build_word_pages.py).
 Design packet + evidence:
 [docs/H3457_WPAGE_UX_STAGING_PACKET_25.08.26.md](https://github.com/gasyoun/kosha/blob/main/docs/H3457_WPAGE_UX_STAGING_PACKET_25.08.26.md).
+
+**H3479 wave 2** extends the same staging layer to literary-source `<ls>`
+citations inside a PWG entry (Cologne's own render deferral: "renders as
+`<span class='ls'>text</span>` without an href"), hydrating resolvable ones
+into links via the SanskritLexicography `ls_resolver` + the csl-observatory
+PWG scan-index campaign registry — PWG only, still behind the same `ux=` gate.
+Code: [app/ls_hydrate.py](https://github.com/gasyoun/kosha/blob/main/app/ls_hydrate.py).
+Packet + census + smoke + live-check evidence:
+[docs/H3479_LS_CITATION_WAVE2_PACKET_25.08.26.md](https://github.com/gasyoun/kosha/blob/main/docs/H3479_LS_CITATION_WAVE2_PACKET_25.08.26.md).
 
 ## What keeps it off the public surface
 
