@@ -1,0 +1,26 @@
+{
+  "crosswalk_entries": 779,
+  "via": {
+    "direct": 205,
+    "3sg": 474,
+    "unresolved": 57,
+    "bare": 43
+  },
+  "seed_is_bare_root": 212,
+  "conflict_cells": 11056,
+  "conflict_bare_seeded": 9396,
+  "by_voice": {
+    "passive": {
+      "cells": 6174,
+      "bare_seeded": 4788
+    },
+    "active": {
+      "cells": 4333,
+      "bare_seeded": 4212
+    },
+    "middle": {
+      "cells": 549,
+      "bare_seeded": 396
+    }
+  }
+}
