@@ -34,6 +34,9 @@ Usage:
     python scripts/build_word_pages.py --reading-packs   # pack href tokens → repo-root w/
     python scripts/build_word_pages.py --no-browse
     python scripts/build_word_pages.py --force
+    python scripts/build_word_pages.py --ux-staging a --tokens kf,gam,vac   # H3457 staging
+                                        # -> dist/w-staging/a/ (never docs/); see
+                                        # docs/NOT_PUBLISHED_H3457_WPAGE_UX.md
 """
 import argparse
 import csv
@@ -234,7 +237,7 @@ def select_head_tokens(attested_tokens, cards_dir, head_n=None, coverage=None,
 
 
 def build_word_pages(out_dir, limit=None, force=False, head_n=None, coverage=None,
-                     tokens=None, w_dir=None, cards_dir=None):
+                     tokens=None, w_dir=None, cards_dir=None, ux=None):
     cards_dir = Path(cards_dir) if cards_dir is not None else out_dir / "cards"
     w_dir = Path(w_dir) if w_dir is not None else out_dir / "w"
     if tokens is not None:
@@ -287,7 +290,7 @@ def build_word_pages(out_dir, limit=None, force=False, head_n=None, coverage=Non
             total_bytes += page_path.stat().st_size
             continue
         card = _read_json(card_path)
-        html_str = render_word_page(card, token=tok)
+        html_str = render_word_page(card, token=tok, ux=ux)
         page_path.write_text(html_str, encoding="utf-8")
         total_bytes += len(html_str.encode("utf-8"))
         written += 1
@@ -393,6 +396,56 @@ def _browse_doc(title, body):
     )
 
 
+STAGING_ROOT = ROOT / "dist" / "w-staging"
+NOT_PUBLISHED_MARKER = ROOT / "docs" / "NOT_PUBLISHED_H3457_WPAGE_UX.md"
+
+
+def build_ux_staging(variant, tokens=None, limit=None, force=True, out_root=None):
+    """H3457: the word-page UX layer (study badge · favorites · print-scan
+    anchors) rendered into a STAGING tree — dist/w-staging/<variant>/ — never
+    into docs/ (the Pages deploy input). Writes w/<token>.html + favorites.html
+    + a NOT_PUBLISHED marker beside them. Cards come from the committed
+    docs/cards/ set; no DB.
+
+    `tokens`: explicit card tokens (comma list from --tokens) or None for the
+    reading-pack token set (the same selection the committed w/ tree uses).
+    """
+    from word_page_ux import favorites_page_html, core_ranks_json, VARIANTS
+    if variant not in VARIANTS:
+        sys.exit(f"error: --ux-staging variant must be one of {VARIANTS}")
+    out_root = Path(out_root) if out_root is not None else STAGING_ROOT
+    try:
+        out_root.resolve().relative_to((ROOT / "docs").resolve())
+        sys.exit("error: --ux-staging refuses to write under docs/ (the Pages tree) — "
+                 "H3457 is staging-only; see docs/NOT_PUBLISHED_H3457_WPAGE_UX.md")
+    except ValueError:
+        pass
+    out_dir = out_root / variant
+    cards_dir = ROOT / "docs" / "cards"
+    if tokens is None:
+        tokens = harvest_reading_pack_tokens()
+        if not tokens:
+            sys.exit("error: no reading-pack tokens found; pass --tokens")
+    rendered, meta = build_word_pages(
+        out_dir, limit=limit, force=force, tokens=tokens,
+        w_dir=out_dir / "w", cards_dir=cards_dir, ux={"variant": variant})
+    slp1s = [_decode_token(t) for _s, t in rendered]
+    (out_dir / "favorites.html").write_text(
+        favorites_page_html(core_ranks_json(slp1s)), encoding="utf-8")
+    marker = out_dir / "NOT_PUBLISHED.md"
+    marker.write_text(
+        "# NOT PUBLISHED — H3457 word-page UX staging build\n\n"
+        f"Variant `{variant}`; {len(rendered)} word pages + favorites.html. "
+        "This tree is a local staging artifact: never copy it into docs/, never push it "
+        "to Pages or samskrtam.ru without a human ruling. "
+        "Contract: docs/NOT_PUBLISHED_H3457_WPAGE_UX.md\n",
+        encoding="utf-8")
+    print(f"[ux-staging] variant={variant} pages={len(rendered)} -> {out_dir}  "
+          f"(favorites.html + NOT_PUBLISHED.md written; docs/ untouched)")
+    meta.update({"ux_variant": variant, "staging_dir": str(out_dir)})
+    return rendered, meta
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -414,7 +467,26 @@ def main():
                     help="prerender tokens named by reading/ ../w/{token}.html "
                          "hrefs into repo-root w/ (Pages site-root /w/)")
     ap.add_argument("--force", action="store_true", help="re-emit existing pages")
+    ap.add_argument("--ux-staging", metavar="VARIANT", default=None,
+                    help="H3457: render the study-badge/favorites/scan-anchor layer "
+                         "(variant a|b|c) into dist/w-staging/<variant>/ — staging "
+                         "only, never docs/")
+    ap.add_argument("--tokens", default=None,
+                    help="comma-separated card tokens for --ux-staging (default: the "
+                         "reading-pack token set)")
+    ap.add_argument("--staging-root", type=Path, default=None,
+                    help="override dist/w-staging (tests); still refuses docs/")
     args = ap.parse_args()
+
+    if args.ux_staging:
+        toks = [t.strip() for t in args.tokens.split(",") if t.strip()] if args.tokens else None
+        _rendered, meta = build_ux_staging(
+            args.ux_staging, tokens=toks, limit=args.limit, force=True,
+            out_root=args.staging_root)
+        print("[word-pages] META "
+              + json.dumps({k: v for k, v in meta.items() if k != "ranked"},
+                           ensure_ascii=False))
+        return
 
     if args.head_n is not None and args.head_n < 1:
         sys.exit("error: --head must be >= 1")
