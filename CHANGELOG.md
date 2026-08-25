@@ -13,6 +13,8 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+
+## [0.112.0] - 2026-08-25
 ### Added
 - **H3457 — word-page UX layer, STAGED (not published)** (Fable 5 `claude-fable-5`).
   Three learner organs behind a staging flag, our own design over the P5 theme
