@@ -196,6 +196,15 @@ Direction **d** = a's organs + the three-row header. Look: [direction d](https:/
 
 **Recommendation now: d** (a's placement, MG's header). a/b/c remain buildable.
 
-Still visible and *not* a markup leak: the second PWG→RU entry quotes corpus lines as bare SLP1 with accent marks (`tena^ gacCa parasta\ram`). Those strings are not wrapped in `{#…#}` in the pwg_ru store, so no renderer can know they are Sanskrit — a translation-data issue for the RussianTranslation pipeline (H3480 packet note; not fixed here).
+**Retracted 25-08-2026 (H3490):** the paragraph that stood here said the bare
+SLP1 quotations (`tena^ gacCa parasta\ram`) could not be fixed on the page.
+MG re-checked and rejected that. They can: `kosha.api.ru_join.ru_bare_slp1_pass`
+detects runs of tokens that can only be SLP1 (an accent mark, or an SLP1-only
+capital after the first letter) and transliterates them; on the 11-lemma sample
+116/1,063 entries carried such runs and 0 remain. A second class — rows with
+`<s>…</s>` but no render trigger, HTML-escaped as literal `&lt;s&gt;` — is fixed
+by adding `<s>`/`<i>`/`<b>` to the triggers. The committed `w/` tree was
+regenerated so the live site changed. Source-side wrapping in the
+RussianTranslation store remains the proper long-term fix (that lane).
 
 _Dr. Mārcis Gasūns_
