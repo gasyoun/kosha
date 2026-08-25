@@ -1,6 +1,6 @@
 # ROADMAP_INFLECT — drastic improvement of the Cologne inflected-form tool
 
-_Created: 03-07-2026 · Last updated: 19-08-2026_
+_Created: 03-07-2026 · Last updated: 25-08-2026_
 
 > **Truth-pass 19-08-2026** ([H3001 (Opus 5) — Stale-roadmap slice 3: full /ask replan of stale Tier-1 roadmaps](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3001-Opus_multi_stale-roadmap-s3-tier1-ask-replan_17.08.26.md)).
 > Every handoff this roadmap references is closed ✅. Two status corrections applied
@@ -163,12 +163,25 @@ Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://
     — 326 ṇatva cells / 89 stems auto-fixed, 16 cardinal cells gap-filled,
     13,770 cells flagged `disputed=1`, no Cologne row deleted) and the **verb
     comparison** ([`scripts/compare_vidyut_verbs.py`](https://github.com/gasyoun/kosha/blob/main/scripts/compare_vidyut_verbs.py)).
-  - **Still open — the verb number is not yet interpretable.** Strict verb
-    agreement came out at **12.68 %** against 90.5 % for nominals, which H185 read
-    as a dhātu-identity mapping gap rather than a real divergence; no verb
-    hybridization was applied on that basis. Building the identity layer and
-    re-running the comparison is
-    [H3166 (Opus 5) — Verb dhātu-identity crosswalk](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3166-Opus_kosha_inflect-dhatu-identity-crosswalk_19.08.26.md).
+  - **Shipped 14-07-2026 under [H855](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H855-Opus_kosha_e1-verb-dhatu-identity-crosswalk_13.07.26.md):**
+    the **dhātu-identity crosswalk**
+    ([`scripts/build_dhatu_crosswalk.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_dhatu_crosswalk.py)
+    → committed [`data/e1/dhatu_crosswalk.json`](https://github.com/gasyoun/kosha/blob/main/data/e1/dhatu_crosswalk.json),
+    722/779 root-models resolved) — which took strict verb agreement from
+    **12.68 % → 70.24 %** and confirmed H185's read that the low first number was
+    mapping, not divergence.
+    *(This bullet said "Still open — the verb number is not yet interpretable"
+    until 25-08-2026, six weeks after H855 landed. That stale line is what sent
+    [H3166](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3166-Opus_kosha_inflect-dhatu-identity-crosswalk_19.08.26.md)
+    out to build an existing artifact a second time.)*
+  - **Still open — the 11,056 "genuine conflicts" are 85 % artifact, not divergence.**
+    H3166 (25-08-2026) adjudicated the residue instead: 212 of the 779 crosswalk
+    entries still seed vidyut with a **bare** Cologne root, and those roots carry
+    **9,396 of the 11,056** conflicts. True divergence is at most ~1,660 cells
+    (3.5 % of both-nonempty), not 23 %. Next rung, mechanical: resolve the 212
+    bare-seeded entries (the 57 `unresolved` first) and re-run. Evidence:
+    [E1_DIVERGENCE_REPORT.md](https://github.com/gasyoun/kosha/blob/main/E1_DIVERGENCE_REPORT.md)
+    § "The 11,056 genuine conflicts are mostly NOT divergence".
   - **Still parked — human act, blocks nothing.** The
     [csl-inflect#10](https://github.com/sanskrit-lexicon/csl-inflect/issues/10)
     ṇatva give-back is drafted and correct; posting it is diplomacy-gated

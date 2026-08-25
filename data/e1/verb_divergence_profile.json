@@ -1,0 +1,196 @@
+{
+  "COLOGNE_ONLY": {
+    "cells": 15984,
+    "distinct_roots": 336,
+    "top_models": [
+      [
+        "v_1",
+        10224
+      ],
+      [
+        "v_4",
+        2304
+      ],
+      [
+        "v_p",
+        1656
+      ],
+      [
+        "v_6",
+        1548
+      ]
+    ],
+    "voices": [
+      [
+        "middle",
+        12348
+      ],
+      [
+        "active",
+        1980
+      ],
+      [
+        "passive",
+        1656
+      ]
+    ]
+  },
+  "DIFF_cologne_superset": {
+    "cells": 383,
+    "distinct_roots": 8,
+    "top_models": [
+      [
+        "v_10",
+        283
+      ],
+      [
+        "v_1",
+        100
+      ]
+    ],
+    "voices": [
+      [
+        "active",
+        248
+      ],
+      [
+        "middle",
+        135
+      ]
+    ]
+  },
+  "DIFF_conflict": {
+    "cells": 11056,
+    "distinct_roots": 192,
+    "top_models": [
+      [
+        "v_p",
+        6174
+      ],
+      [
+        "v_1",
+        2789
+      ],
+      [
+        "v_10",
+        1049
+      ],
+      [
+        "v_6",
+        612
+      ]
+    ],
+    "voices": [
+      [
+        "passive",
+        6174
+      ],
+      [
+        "active",
+        4333
+      ],
+      [
+        "middle",
+        549
+      ]
+    ],
+    "vidyut_form_vs_cologne": {
+      "shorter": 7395,
+      "equal_length": 2724,
+      "longer": 937,
+      "shorter_pct": 66.9
+    }
+  },
+  "DIFF_final_stop": {
+    "cells": 937,
+    "distinct_roots": 416,
+    "top_models": [
+      [
+        "v_1",
+        532
+      ],
+      [
+        "v_4",
+        144
+      ],
+      [
+        "v_6",
+        131
+      ],
+      [
+        "v_10",
+        130
+      ]
+    ],
+    "voices": [
+      [
+        "active",
+        937
+      ]
+    ]
+  },
+  "DIFF_vidyut_superset": {
+    "cells": 1711,
+    "distinct_roots": 429,
+    "top_models": [
+      [
+        "v_1",
+        615
+      ],
+      [
+        "v_10",
+        598
+      ],
+      [
+        "v_4",
+        216
+      ],
+      [
+        "v_6",
+        141
+      ]
+    ],
+    "voices": [
+      [
+        "active",
+        1570
+      ],
+      [
+        "passive",
+        141
+      ]
+    ]
+  },
+  "VIDYUT_ONLY": {
+    "cells": 4680,
+    "distinct_roots": 122,
+    "top_models": [
+      [
+        "v_10",
+        2160
+      ],
+      [
+        "v_1",
+        1908
+      ],
+      [
+        "v_4",
+        468
+      ],
+      [
+        "v_6",
+        144
+      ]
+    ],
+    "voices": [
+      [
+        "active",
+        2664
+      ],
+      [
+        "middle",
+        2016
+      ]
+    ]
+  }
+}
