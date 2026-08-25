@@ -13,6 +13,8 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+
+## [0.114.0] - 2026-08-25
 ### Fixed
 - **RU tab leaked raw markup** (H3480 R3, Fable 5 `claude-fable-5`): the pwg_ru /
   mw_ru overlay showed `{#gam#}` and `{%…%}` verbatim on the public word page
