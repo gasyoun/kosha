@@ -1,6 +1,6 @@
 # NOT PUBLISHED — H3457 word-page UX layer is STAGING ONLY
 
-_Created: 25-08-2026 · Last updated: 25-08-2026_
+_Created: 25-08-2026 · Last updated: 25-08-2026 (H3480: direction d added, recommended)_
 
 **Status: staged, not live. A human decides when (and whether) this goes public.**
 No session may flip it without that ruling — MG named the lane
@@ -36,8 +36,9 @@ Design packet + evidence:
 
 ## How a human flips it live (the one edit, when ruled)
 
-1. Reply in chat with the variant to ship (`a` is the implemented winner; `b` /
-   `c` are built alternatives — see the packet).
+1. Reply in chat with the variant to ship — **`d`** (three-row header, flat
+   tab row, Gloss/Full switch; recommended after MG's review R1–R5, H3480) or
+   `a` / `b` / `c` (built alternatives — packet §2 and §7).
 2. An agent then passes `ux={"variant": "<v>"}` in the two public call sites
    (`build_word_pages.build_word_pages` for the static tiers and the
    `GET /w/{slp1}` SSR route in `app/main.py`), regenerates the committed

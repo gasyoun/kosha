@@ -252,11 +252,14 @@ def _headword_strip(slp1, deva, iast, band, band_label, n_dicts, ux=None, token=
     if ux:
         # H3457 staging organs (see app/word_page_ux.py). Variant b keeps the
         # strip clean and puts both organs in the study rail instead.
-        from word_page_ux import study_badge, fav_button
+        from word_page_ux import study_badge, fav_button, gloss_switch
         v = ux["variant"]
         k = ux.get("slp1", slp1)
         if v == "a":
             extra = study_badge(k, v) + fav_button(k, deva, iast, token, v)
+        elif v == "d":
+            # H3480 R2: the Gloss/Full switch lives left of the heart, in the strip.
+            extra = study_badge(k, v) + gloss_switch() + fav_button(k, deva, iast, token, v)
         elif v == "c":
             extra = fav_button(k, deva, iast, token, v)
     return (
@@ -731,12 +734,17 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
     saru = _saru_strip(slp1, sr_strip)
     ux_css = ux_js = ux_pre = ux_rail = ux_foot = ""
     if ux:
-        from word_page_ux import (ux_css as _ux_css, UX_JS, study_badge,
-                                  study_rail, footer_fav_link)
+        from word_page_ux import (ux_css as _ux_css, ux_js as _ux_js, study_badge,
+                                  study_rail, footer_fav_link, flat_tabbar)
         v = ux["variant"]
         ux_css = "\n" + _ux_css(v)
-        ux_js = "\n" + UX_JS
+        ux_js = "\n" + _ux_js(v)
         ux_foot = footer_fav_link(base)
+        if v == "d":
+            # H3480 R1/R4/R5: three header rows — strip · SanskritRussian · ONE
+            # flat dictionary tab row. The language row, the per-language rows and
+            # the RU sub-row are gone; the toggle moved into the strip.
+            tabbar = flat_tabbar(groups, _first_visible_dict(default_lang))
         k = ux["slp1"]
         if v == "c":
             ux_pre = study_badge(k, v)          # the rank line under the strip
@@ -748,7 +756,7 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
                 ".lang-tabs,.dict-tabs,.view-toggle{display:none!important}</style></noscript>")
 
     body_core = (
-        _view_toggle()
+        ("" if (ux and ux["variant"] == "d") else _view_toggle())
         + noscript
         + tabbar
         + panels

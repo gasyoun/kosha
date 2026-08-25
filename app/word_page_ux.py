@@ -44,7 +44,7 @@ _REPO = Path(__file__).resolve().parent.parent
 LEMMA_FREQ = _REPO / "data" / "frequency" / "lemma_frequency.tsv"
 PWG_PC = _REPO / "data" / "pwg_scan" / "pwg_L_pc.tsv"
 
-VARIANTS = ("a", "b", "c")
+VARIANTS = ("a", "b", "c", "d")
 DEFAULT_VARIANT = "a"
 
 # Rungs on core_rank (1 = learn first). Cut points are design wording over the
@@ -253,6 +253,46 @@ def study_rail(slp1, deva, iast, token, groups):
     )
 
 
+# ---------------------------------------------------------------- variant d chrome (H3480)
+
+FLAT_LABEL = {"mw": "MW", "pwg": "PWG", "ap90": "Apte", "pwg_ru": "PWG→RU", "mw_ru": "MW→RU"}
+
+
+def flat_tabbar(groups, first_dict):
+    """R4/R5: ONE tab row — every dictionary with its count, language implicit in
+    the label, zero-count dictionaries dropped (they were the `mw_ru 0` noise),
+    plus All. Replaces the language row + per-language rows + RU sub-row."""
+    from word_page import DICT_FULL
+    esc = html.escape
+    tabs = []
+    for d, entries in groups:
+        if not entries:
+            continue
+        active = d == first_dict
+        tabs.append(
+            f'<button type="button" class="tab{" active" if active else ""}" role="tab" '
+            f'aria-selected="{"true" if active else "false"}" aria-controls="panel-{d}" '
+            f'id="tab-{d}" data-dict="{d}" title="{esc(DICT_FULL.get(d, d))}">'
+            f'{esc(FLAT_LABEL.get(d, d.upper()))}<span class="tab-n">{len(entries)}</span></button>'
+        )
+    n_all = sum(len(e) for _, e in groups)
+    tabs.append(
+        f'<button type="button" class="tab tab-all" role="tab" aria-selected="false" '
+        f'id="tab-all" data-dict="all" title="Show every dictionary">All<span class="tab-n">{n_all}</span></button>'
+    )
+    return f'<nav class="flat-tabs" role="tablist" aria-label="Dictionaries">{"".join(tabs)}</nav>'
+
+
+def gloss_switch():
+    """R2: one Gloss ⇄ Full switch (no Adaptive as a named mode). Hidden for
+    no-JS readers, who get the full stacked content anyway."""
+    return (
+        '<button type="button" class="vswitch" data-vswitch hidden '
+        'aria-label="Gloss or full entry" title="Gloss: first entry only · Full: everything">'
+        '<span class="vs vs-gloss">Gloss</span><span class="vs vs-full">Full</span></button>'
+    )
+
+
 # ---------------------------------------------------------------- CSS / JS
 
 UX_CSS_COMMON = """
@@ -304,6 +344,20 @@ color:var(--muted)}
 .rail-d{font-size:.72rem;color:var(--muted)}
 .print-sources .scan{display:block;font-size:.8rem}
 """.strip(),
+    "d": """
+.hw-strip .study-badge{margin-left:.2rem}
+.hw-strip .vswitch{margin-left:auto;display:inline-flex;border:1px solid var(--border);
+border-radius:999px;overflow:hidden;background:var(--page-bg);padding:0;cursor:pointer;font-size:.72rem}
+.hw-strip .vswitch+.fav{margin-left:.35rem}
+.vs{padding:.18rem .55rem;color:var(--muted)}
+html[data-view=gloss] .vs-gloss,html[data-view=full] .vs-full{background:var(--head-bg);color:var(--fg);font-weight:600}
+html[data-view=adaptive] .vs-full{background:var(--head-bg);color:var(--fg);font-weight:600}
+@media(max-width:640px){html[data-view=adaptive] .vs-full{background:none;color:var(--muted);font-weight:400}
+html[data-view=adaptive] .vs-gloss{background:var(--head-bg);color:var(--fg);font-weight:600}}
+.flat-tabs{display:flex;gap:.35rem;flex-wrap:wrap;margin:.9rem 0 0;border-bottom:1px solid var(--border)}
+.flat-tabs .tab-all{margin-left:auto}
+@media(max-width:640px){.flat-tabs .tab-all{margin-left:0}}
+""".strip(),
     "c": """
 .study-line{margin:.35rem 0 0;font-size:.78rem;letter-spacing:.04em;color:var(--muted);
 font-variant:small-caps}
@@ -345,8 +399,39 @@ UX_JS = """
 """.strip()
 
 
+UX_JS_D = """
+(function(){
+ var VM='kosha_view_mode',root=document.documentElement,page=document.querySelector('.word-page');
+ var sw=document.querySelector('[data-vswitch]');
+ if(sw){sw.hidden=false;sw.addEventListener('click',function(){
+  var cur=root.getAttribute('data-view'),mobile=window.matchMedia('(max-width:640px)').matches;
+  var gloss=cur==='gloss'||(cur==='adaptive'&&mobile);
+  var v=gloss?'full':'gloss';root.setAttribute('data-view',v);
+  try{localStorage.setItem(VM,v)}catch(e){}})}
+ function show(want){
+  var all=want==='all';
+  if(page)page.classList.toggle('all-dicts',all);
+  document.querySelectorAll('.flat-tabs .tab').forEach(function(t){
+   var on=t.getAttribute('data-dict')===want;t.classList.toggle('active',on);
+   t.setAttribute('aria-selected',on?'true':'false')});
+  document.querySelectorAll('.dict-panel').forEach(function(p){
+   p.hidden=!all && p.getAttribute('data-dict')!==want})}
+ document.querySelectorAll('.flat-tabs .tab').forEach(function(t){
+  t.addEventListener('click',function(){show(t.getAttribute('data-dict'))})});
+ var first=document.querySelector('.flat-tabs .tab.active');
+ try{var nav=(navigator.language||'').toLowerCase();
+  if(nav.indexOf('ru')===0){var ru=document.querySelector('.flat-tabs .tab[data-dict="pwg_ru"]');if(ru)first=ru}}catch(e){}
+ if(first)show(first.getAttribute('data-dict'));
+})();
+""".strip()
+
+
 def ux_css(variant):
     return UX_CSS_COMMON + "\n" + UX_CSS_VARIANT.get(variant, UX_CSS_VARIANT["a"])
+
+
+def ux_js(variant):
+    return UX_JS + ("\n" + UX_JS_D if variant == "d" else "")
 
 
 def footer_fav_link(base):
