@@ -20,7 +20,7 @@ from kosha.api.ru_join import (  # noqa: E402
     join_ru,
     locale_from_accept_language,
 )
-from app.word_page import render_word_page  # noqa: E402
+from app.word_page import card_token, render_word_page  # noqa: E402
 
 FIXTURE = ROOT / "tests" / "fixtures" / "ru_join"
 
@@ -108,7 +108,7 @@ def test_ai_translated_badge_on_unreviewed_only():
     assert "AI-translated" in _panel(html, "mw_ru")
     approved = render_word_page(
         {**_card(), "query": {"key": "banD"}},
-        token="band",
+        token=card_token("banD"),
     )
     assert "AI-translated" not in _panel(approved, "pwg_ru")
     assert "связывать" in _panel(approved, "pwg_ru")

@@ -13,6 +13,19 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+### Fixed
+- **Capital-initial SLP1 lemmas rendered the wrong Devanagari** (H3478, Sonnet 5
+  `claude-sonnet-5`; kosha#433). `app/word_page.py::render_word_page` derived `slp1`
+  from `card["query"]["key"]`, which committed static cards store case-folded for
+  capital-initial keys (`"darma"` for `Darma`, `"rama"` for `rAma`) — the template now
+  derives `slp1` from the token (the exact key) whenever a token is supplied, falling
+  back to `query.key` only when no token is given. `query.key` for the current data is
+  already correctly-cased (no committed page needed regenerating), so this is a
+  structural hardening against a future case-folded card regressing the bug again.
+  Added `tests/test_word_page.py::test_capital_initial_lemma_not_case_folded`
+  (synthetic case-folded fixture) and fixed a pre-existing test bug in
+  `tests/test_word_page_lang_groups.py::test_ai_translated_badge_on_unreviewed_only`
+  that passed a raw lowercase string as `token` instead of `card_token(...)`.
 
 ## [0.115.0] - 2026-08-25
 ### Fixed
