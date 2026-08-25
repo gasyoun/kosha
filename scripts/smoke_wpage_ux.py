@@ -91,6 +91,14 @@ def run(variant, log_path, tokens=None):
                     pc = pwg_pc_of(L)
                     if pc and f"page={pc[0]}-{pc[1]:04d}" not in href:
                         pwg_bad += 1
+                # -- ls-citation links (H3479): every a.ls carries a real http(s) href
+                ls_n = 0
+                ls_bad = 0
+                for a in page.query_selector_all("a.ls"):
+                    ls_n += 1
+                    href = a.get_attribute("href") or ""
+                    if not href.startswith("http"):
+                        ls_bad += 1
                 # -- favorites: toggle, reload, verify, favorites page, untoggle
                 fav_ok = None
                 fav = page.query_selector("[data-fav]")
@@ -111,16 +119,18 @@ def run(variant, log_path, tokens=None):
                     fav_note = f"click->{pressed1} reload->{pressed2} listed={listed} (n={n_txt}) unfav->{pressed3}"
                 else:
                     fav_note = "no [data-fav] on page"
-                ok = (not errs) and badge_ok and pwg_bad == 0 and fav_ok is True
+                ok = (not errs) and badge_ok and pwg_bad == 0 and ls_bad == 0 and fav_ok is True
                 fails += 0 if ok else 1
                 rows.append({
                     "token": p.stem, "slp1": slp1, "width": width, "ok": ok,
                     "console_errors": len(errs), "badge": badge_note, "badge_ok": badge_ok,
-                    "pwg_anchors": pwg_n, "pwg_bad": pwg_bad, "fav": fav_note, "fav_ok": fav_ok,
+                    "pwg_anchors": pwg_n, "pwg_bad": pwg_bad, "ls_n": ls_n, "ls_bad": ls_bad,
+                    "fav": fav_note, "fav_ok": fav_ok,
                     "errs": errs[:3],
                 })
                 print(f"[smoke] {'PASS' if ok else 'FAIL'} {p.stem:<10} {width:>4}px  {badge_note}; "
-                      f"pwg anchors {pwg_n} bad {pwg_bad}; {fav_note}; console_errors={len(errs)}")
+                      f"pwg anchors {pwg_n} bad {pwg_bad}; ls links {ls_n} bad {ls_bad}; "
+                      f"{fav_note}; console_errors={len(errs)}")
                 page.close()
             ctx.close()
         browser.close()
@@ -139,12 +149,13 @@ def run(variant, log_path, tokens=None):
         "Local-only: nothing here touched docs/, Pages or samskrtam.ru "
         "(docs/NOT_PUBLISHED_H3457_WPAGE_UX.md).",
         "",
-        "| token | slp1 | px | ok | console | badge vs lemma_frequency.tsv | PWG anchors (bad) | favorites: click → reload → listed → un-fav |",
-        "|---|---|---:|---|---:|---|---|---|",
+        "| token | slp1 | px | ok | console | badge vs lemma_frequency.tsv | PWG anchors (bad) | ls links (bad) | favorites: click → reload → listed → un-fav |",
+        "|---|---|---:|---|---:|---|---|---|---|",
     ]
     for r in rows:
         md.append(f"| `{r['token']}` | `{r['slp1']}` | {r['width']} | {'✅' if r['ok'] else '❌'} | "
-                  f"{r['console_errors']} | {r['badge']} | {r['pwg_anchors']} ({r['pwg_bad']}) | {r['fav']} |")
+                  f"{r['console_errors']} | {r['badge']} | {r['pwg_anchors']} ({r['pwg_bad']}) | "
+                  f"{r['ls_n']} ({r['ls_bad']}) | {r['fav']} |")
     md.append("")
     md.append(f"Reproduce: `python scripts/build_word_pages.py --ux-staging {variant} --tokens "
               f"{','.join(p.stem for p in pages)}` then `python scripts/smoke_wpage_ux.py --variant {variant}`.")

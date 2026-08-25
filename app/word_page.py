@@ -309,6 +309,13 @@ def _entry_html(entry, ux=None):
     badge = ""
     if status and status not in {"approved", "human_reviewed"}:
         badge = '<span class="chip ai-translated">AI-translated</span>'
+    rendered = fields.get("rendered_html", "")
+    if ux and fields.get("dict") == "pwg":
+        # H3479 wave 2: hydrate literary-source `<ls>` citations into links
+        # (PWG only; see app/ls_hydrate.py). Honest no-op when the two
+        # sibling checkouts it reads are absent.
+        from ls_hydrate import hydrate_pwg_ls
+        rendered, _stats = hydrate_pwg_ls(rendered)
     # `rendered_html` is interpolated unescaped — it is HTML by contract. What
     # makes that safe is that it can only have come through
     # `kosha.api.sanitize` (W0C item 6); the serializer has no path that emits
@@ -317,7 +324,7 @@ def _entry_html(entry, ux=None):
         f'<article class="dict-entry"{eid}>'
         f'<div class="entry-head"><span class="hw">{esc(fields.get("headword", ""))}</span>'
         f"{scan}{badge}</div>"
-        f'<div class="rendered">{fields.get("rendered_html", "")}</div>'
+        f'<div class="rendered">{rendered}</div>'
         "</article>"
     )
 
