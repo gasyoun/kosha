@@ -75,3 +75,6 @@ data/frequency/.cache/
 
 data/raw_akshara_pilot/
 data/akshara_pilot/parsed_corpus.jsonl
+data/akshara_pilot/bench/judge_packets/
+data/akshara_pilot/bench/bench_items.jsonl
+data/akshara_pilot/bench/tm_snapshot.jsonl

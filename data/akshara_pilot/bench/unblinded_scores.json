@@ -1,0 +1,273 @@
+{
+ "rows": [
+  {
+   "item_id": "B005",
+   "slp1": "Buj",
+   "ours": 4,
+   "theirs": 5
+  },
+  {
+   "item_id": "B006",
+   "slp1": "Cid",
+   "ours": 4,
+   "theirs": 5
+  },
+  {
+   "item_id": "B007",
+   "slp1": "DA",
+   "ours": 4,
+   "theirs": 4
+  },
+  {
+   "item_id": "B009",
+   "slp1": "KApara",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B014",
+   "slp1": "anana",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B016",
+   "slp1": "anvita",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B019",
+   "slp1": "atura",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B021",
+   "slp1": "banD",
+   "ours": 4,
+   "theirs": 5
+  },
+  {
+   "item_id": "B023",
+   "slp1": "car",
+   "ours": 4,
+   "theirs": 5
+  },
+  {
+   "item_id": "B024",
+   "slp1": "catur",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B025",
+   "slp1": "dA",
+   "ours": 4,
+   "theirs": 4
+  },
+  {
+   "item_id": "B026",
+   "slp1": "dah",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B030",
+   "slp1": "gA",
+   "ours": 4,
+   "theirs": 5
+  },
+  {
+   "item_id": "B041",
+   "slp1": "jIv",
+   "ours": 4,
+   "theirs": 5
+  },
+  {
+   "item_id": "B042",
+   "slp1": "jUrti",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B044",
+   "slp1": "jan",
+   "ours": 4,
+   "theirs": 5
+  },
+  {
+   "item_id": "B047",
+   "slp1": "kARaBUti",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B055",
+   "slp1": "man",
+   "ours": 4,
+   "theirs": 5
+  },
+  {
+   "item_id": "B058",
+   "slp1": "muc",
+   "ours": 4,
+   "theirs": 5
+  },
+  {
+   "item_id": "B060",
+   "slp1": "naS",
+   "ours": 4,
+   "theirs": 5
+  },
+  {
+   "item_id": "B061",
+   "slp1": "nila",
+   "ours": 5,
+   "theirs": 3
+  },
+  {
+   "item_id": "B062",
+   "slp1": "nirbIja",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B063",
+   "slp1": "pA",
+   "ours": 4,
+   "theirs": 5
+  },
+  {
+   "item_id": "B065",
+   "slp1": "pariga",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B067",
+   "slp1": "pramara",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B068",
+   "slp1": "prasna",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B070",
+   "slp1": "rAjavAhana",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B071",
+   "slp1": "rakz",
+   "ours": 4,
+   "theirs": 5
+  },
+  {
+   "item_id": "B074",
+   "slp1": "satta",
+   "ours": 4,
+   "theirs": 3
+  },
+  {
+   "item_id": "B080",
+   "slp1": "sulin",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B081",
+   "slp1": "utsaha",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B082",
+   "slp1": "utta",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B084",
+   "slp1": "vA",
+   "ours": 4,
+   "theirs": 5
+  },
+  {
+   "item_id": "B086",
+   "slp1": "vad",
+   "ours": 4,
+   "theirs": 5
+  },
+  {
+   "item_id": "B090",
+   "slp1": "vasin",
+   "ours": 5,
+   "theirs": 3
+  },
+  {
+   "item_id": "B091",
+   "slp1": "vasya",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B093",
+   "slp1": "vicAraRA",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B094",
+   "slp1": "vid",
+   "ours": 4,
+   "theirs": 5
+  },
+  {
+   "item_id": "B096",
+   "slp1": "visala",
+   "ours": 5,
+   "theirs": 4
+  },
+  {
+   "item_id": "B100",
+   "slp1": "yat",
+   "ours": 4,
+   "theirs": 5
+  }
+ ],
+ "summary": {
+  "n": 40,
+  "mean_ours": 4.525,
+  "mean_theirs": 4.325,
+  "mean_diff_ours_minus_theirs": 0.2,
+  "bootstrap95CI_diff": [
+   -0.12,
+   0.53
+  ],
+  "win_ours": 22,
+  "tie": 2,
+  "win_theirs": 16,
+  "dist_ours": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 19,
+   "5": 21
+  },
+  "dist_theirs": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 3,
+   "4": 21,
+   "5": 16
+  }
+ }
+}
