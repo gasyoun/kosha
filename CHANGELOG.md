@@ -13,6 +13,8 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+
+## [0.115.1] - 2026-08-25
 ### Fixed
 - **Capital-initial SLP1 lemmas rendered the wrong Devanagari** (H3478, Sonnet 5
   `claude-sonnet-5`; kosha#433). `app/word_page.py::render_word_page` derived `slp1`
