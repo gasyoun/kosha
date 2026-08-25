@@ -5,9 +5,10 @@ _Created: 11-07-2026 · Last updated: 25-08-2026_
 **Target venue:** Journal of Open Humanities Data (JOHD), data-paper track.
 **Dataset:** [`union-headwords`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/union-headwords.meta.md)
 (323,425 rows), release
-[data-v0.1.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.1.0).
+[data-v0.4.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.4.0),
+DOI [10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090).
 **Readiness:** 4/5 (submission draft; all numbers re-verified against the frozen
-release asset 02-08-2026; DOI mint and final human pass pending).
+release asset 02-08-2026; DOI minted 25-08-2026; final human pass pending).
 
 ## Abstract
 
@@ -44,15 +45,11 @@ machine-readable manifest row in
 [datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json);
 full data statement at
 [docs/data-statements/union-headwords.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/union-headwords.meta.md).
-Zenodo DOI pending — corrected 25-08-2026: the GitHub–Zenodo integration is
-now live (webhook wired 14-08-2026; verified against the Zenodo API — kosha's
-own concept DOI is
-[10.5281/zenodo.21965599](https://doi.org/10.5281/zenodo.21965599)), but it
-only archives releases published **after** that date, and `data-v0.1.0`
-(06-07-2026) predates it — no automatic mint occurred, and no separate
-deposit has been made for this dataset. Minting still requires either a new
-`data-v*` release (auto-archived going forward) or a manual retroactive
-Zenodo deposit of `data-v0.1.0`; citation metadata in
+**Zenodo DOI: [10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090)**
+(minted 25-08-2026 for [data-v0.4.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.4.0),
+a re-cut of the identical `data-v0.1.0` content — `data-v0.1.0` itself
+predates the GitHub–Zenodo webhook, wired 14-08-2026, so it was never
+auto-archived); citation metadata in
 [CITATION.cff](https://github.com/gasyoun/kosha/blob/main/CITATION.cff)).
 
 ### Context
@@ -149,12 +146,10 @@ corpus frequency or importance.
 - **License:** CC BY-SA 4.0 (ShareAlike inherited from the CDSL
   digitizations; see
   [LICENSE-DATA.md](https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)).
-- **Repository name:** GitHub (kosha data-hub, release `data-v0.1.0`);
-  Zenodo deposit pending DOI mint — this release predates the GitHub–Zenodo
-  webhook (wired 14-08-2026), so it was not auto-archived (verified 25-08-2026
-  against the Zenodo API); the software repo's own concept DOI is
-  [10.5281/zenodo.21965599](https://doi.org/10.5281/zenodo.21965599), a
-  different citable object from this dataset.
+- **Repository name:** GitHub (kosha data-hub, release
+  [data-v0.4.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.4.0));
+  Zenodo DOI [10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090)
+  (minted 25-08-2026).
 - **Publication date:** 06-07-2026.
 
 ### Headline distributions
@@ -238,17 +233,14 @@ The author declares no competing interests.
 - Grassmann, H. *Wörterbuch zum Rig-Veda.* Leipzig: Brockhaus, 1873.
 - Monier-Williams, M. *A Sanskrit-English Dictionary.* Oxford: Clarendon
   Press, 1899.
-- Gasūns, M. *Gasuns Sanskrit Dictionary data release v0.1.0.* GitHub,
-  06-07-2026.
-  [github.com/gasyoun/kosha/releases/tag/data-v0.1.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.1.0).
+- Gasūns, M. *Gasuns Sanskrit Dictionary data release v0.4.0.* Zenodo, 25-08-2026.
+  [doi.org/10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090).
 
 ## Backlog to 5/5
 
-1. Mint a Zenodo DOI for this dataset and replace the "DOI pending" slots
-   (human step) — the GitHub–Zenodo integration is now live (wired
-   14-08-2026) but only archives releases published after that date; either
-   cut a fresh `data-v*` release (auto-archived) or MG manually
-   retro-deposits `data-v0.1.0` on Zenodo.
+1. ~~Mint a Zenodo DOI for this dataset~~ — done 25-08-2026:
+   [10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090)
+   (`data-v0.4.0`).
 2. Final human pass on the dictionary-tradition characterization (§1) and the
    reference list's edition details.
 3. Transfer into JOHD's submission template (their online form re-keys the
