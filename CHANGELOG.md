@@ -13,6 +13,22 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+### Fixed
+- **RU tab leaked raw markup** (H3480 R3, Fable 5 `claude-fable-5`): the pwg_ru /
+  mw_ru overlay showed `{#gam#}` and `{%…%}` verbatim on the public word page
+  because `render()` (the basicdisplay port) never knew the RU pipeline's two
+  wrappers. New `kosha.api.ru_join.ru_markup_prepass` maps `{#slp1#}` → `<s>`
+  (renderer's own IAST) and `{%gloss%}` → `<i>` before `render_sanitized`; test
+  `tests/test_word_page_h3480_header.py`.
+### Added
+- **Word-page header rethink, staged as direction d** (H3480, MG rulings R1–R5
+  25-08-2026): three header rows instead of six — headword strip · SanskritRussian
+  · ONE flat dictionary tab row (`MW · PWG · Apte · PWG→RU · All`, zero-count
+  dictionaries dropped) — and a single Gloss ⇄ Full switch left of the heart
+  (Adaptive gone as a named mode). `build_word_pages.py --ux-staging d`; mockup
+  + 4 screenshots under `mockups/h3457-wpage-ux/`; packet §7. Public page
+  unchanged until the flip ruling
+  ([docs/NOT_PUBLISHED_H3457_WPAGE_UX.md](https://github.com/gasyoun/kosha/blob/main/docs/NOT_PUBLISHED_H3457_WPAGE_UX.md)).
 
 ## [0.113.0] - 2026-08-25
 ### Changed
