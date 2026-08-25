@@ -1,6 +1,6 @@
 # A56 — A Zaliznyak-Style Grammar-Token Index for 98,639 Sanskrit Headwords (JOHD data paper, submission draft)
 
-_Created: 11-07-2026 · Last updated: 02-08-2026_
+_Created: 11-07-2026 · Last updated: 25-08-2026_
 
 **Target venue:** Journal of Open Humanities Data (JOHD), data-paper track.
 **Dataset:** [`zaliznyak-grammar-index`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-grammar-index.meta.md)
@@ -43,7 +43,15 @@ machine-readable manifest row in
 [datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json);
 full data statement at
 [docs/data-statements/zaliznyak-grammar-index.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-grammar-index.meta.md).
-Zenodo DOI pending (citation metadata in
+Zenodo DOI pending — corrected 25-08-2026: the GitHub–Zenodo integration is
+now live (webhook wired 14-08-2026; verified against the Zenodo API — kosha's
+own concept DOI is
+[10.5281/zenodo.21965599](https://doi.org/10.5281/zenodo.21965599)), but it
+only archives releases published **after** that date, and `data-v0.1.0`
+(06-07-2026) predates it — no automatic mint occurred, and no separate
+deposit has been made for this dataset. Minting still requires either a new
+`data-v*` release (auto-archived going forward) or a manual retroactive
+Zenodo deposit of `data-v0.1.0`; citation metadata in
 [CITATION.cff](https://github.com/gasyoun/kosha/blob/main/CITATION.cff)).
 
 ### Context
@@ -130,7 +138,11 @@ philologist-validated.
   [LICENSE-DATA.md](https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)).
   The vidyut paradigm engine is a separate work under MIT.
 - **Repository name:** GitHub (kosha data-hub, release `data-v0.1.0`);
-  Zenodo deposit pending DOI mint.
+  Zenodo deposit pending DOI mint — this release predates the GitHub–Zenodo
+  webhook (wired 14-08-2026), so it was not auto-archived (verified 25-08-2026
+  against the Zenodo API); the software repo's own concept DOI is
+  [10.5281/zenodo.21965599](https://doi.org/10.5281/zenodo.21965599), a
+  different citable object from this dataset.
 - **Publication date:** 06-07-2026.
 
 ### The token-frequency distribution
@@ -218,8 +230,11 @@ The author declares no competing interests.
 1. Validation sample: human check of N generated paradigms against reference
    grammars; report the error rate in §2 (the one honesty gap named in
    Limitations).
-2. Freeze a Zenodo DOI via `/cut-release` and replace the "DOI pending" slots
-   (human step — GitHub–Zenodo integration @DO in GTD).
+2. Mint a Zenodo DOI for this dataset and replace the "DOI pending" slots
+   (human step) — the GitHub–Zenodo integration is now live (wired
+   14-08-2026) but only archives releases published after that date; either
+   cut a fresh `data-v*` release (auto-archived) or MG manually
+   retro-deposits `data-v0.1.0` on Zenodo.
 3. Exact bibliographic verification of the Zaliznyak 1977 inventory-size
    comparison if a numeric side-by-side is added (current text deliberately
    avoids asserting his token count).

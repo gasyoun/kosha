@@ -1,6 +1,6 @@
 # A55 — A Union Headword Index of Fifteen Digitized Sanskrit Dictionaries (JOHD data paper, submission draft)
 
-_Created: 11-07-2026 · Last updated: 02-08-2026_
+_Created: 11-07-2026 · Last updated: 25-08-2026_
 
 **Target venue:** Journal of Open Humanities Data (JOHD), data-paper track.
 **Dataset:** [`union-headwords`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/union-headwords.meta.md)
@@ -44,8 +44,16 @@ machine-readable manifest row in
 [datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json);
 full data statement at
 [docs/data-statements/union-headwords.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/union-headwords.meta.md).
-Zenodo DOI pending (GitHub–Zenodo integration in progress; citation metadata
-in [CITATION.cff](https://github.com/gasyoun/kosha/blob/main/CITATION.cff)).
+Zenodo DOI pending — corrected 25-08-2026: the GitHub–Zenodo integration is
+now live (webhook wired 14-08-2026; verified against the Zenodo API — kosha's
+own concept DOI is
+[10.5281/zenodo.21965599](https://doi.org/10.5281/zenodo.21965599)), but it
+only archives releases published **after** that date, and `data-v0.1.0`
+(06-07-2026) predates it — no automatic mint occurred, and no separate
+deposit has been made for this dataset. Minting still requires either a new
+`data-v*` release (auto-archived going forward) or a manual retroactive
+Zenodo deposit of `data-v0.1.0`; citation metadata in
+[CITATION.cff](https://github.com/gasyoun/kosha/blob/main/CITATION.cff)).
 
 ### Context
 
@@ -142,7 +150,11 @@ corpus frequency or importance.
   digitizations; see
   [LICENSE-DATA.md](https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)).
 - **Repository name:** GitHub (kosha data-hub, release `data-v0.1.0`);
-  Zenodo deposit pending DOI mint.
+  Zenodo deposit pending DOI mint — this release predates the GitHub–Zenodo
+  webhook (wired 14-08-2026), so it was not auto-archived (verified 25-08-2026
+  against the Zenodo API); the software repo's own concept DOI is
+  [10.5281/zenodo.21965599](https://doi.org/10.5281/zenodo.21965599), a
+  different citable object from this dataset.
 - **Publication date:** 06-07-2026.
 
 ### Headline distributions
@@ -232,8 +244,11 @@ The author declares no competing interests.
 
 ## Backlog to 5/5
 
-1. Freeze a Zenodo DOI via `/cut-release` and replace the "DOI pending" slots
-   (human step — GitHub–Zenodo integration @DO in GTD).
+1. Mint a Zenodo DOI for this dataset and replace the "DOI pending" slots
+   (human step) — the GitHub–Zenodo integration is now live (wired
+   14-08-2026) but only archives releases published after that date; either
+   cut a fresh `data-v*` release (auto-archived) or MG manually
+   retro-deposits `data-v0.1.0` on Zenodo.
 2. Final human pass on the dictionary-tradition characterization (§1) and the
    reference list's edition details.
 3. Transfer into JOHD's submission template (their online form re-keys the
