@@ -1,11 +1,12 @@
 # Data statement — Cross-dictionary union headword index (`union-headwords`)
 
-_Created: 11-07-2026 · Last updated: 11-07-2026_
+_Created: 11-07-2026 · Last updated: 25-08-2026_
 
 Data statement for the `union-headwords` dataset served by the kosha data-hub —
 the headword master of the ecosystem. Manifest row:
 [data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json).
-Download: [`union_headwords.tsv` in release data-v0.1.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.1.0).
+Download: [`union_headwords.tsv` in release data-v0.4.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.4.0)
+(DOI [10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090)).
 
 ## Composition & counts
 
@@ -104,11 +105,13 @@ would only retire into a successor union with entry-id resolution.
 
 ## Citation
 
-Cite the release: *Gasuns Sanskrit Dictionary data release v0.1.0* (CC BY-SA
+Cite the release: *Gasuns Sanskrit Dictionary data release v0.4.0* (CC BY-SA
 4.0), asset `union_headwords.tsv`,
-[github.com/gasyoun/kosha/releases/tag/data-v0.1.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.1.0),
-with attribution to the Cologne Digital Sanskrit Dictionaries. `CITATION.cff`
-+ Zenodo DOI pending the next `/cut-release` freeze.
+[github.com/gasyoun/kosha/releases/tag/data-v0.4.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.4.0),
+with attribution to the Cologne Digital Sanskrit Dictionaries. Zenodo DOI
+[10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090) (minted
+25-08-2026, re-cut of the identical `data-v0.1.0` content — that release
+predates the GitHub–Zenodo webhook wired 14-08-2026).
 
 ## Provenance of this statement
 

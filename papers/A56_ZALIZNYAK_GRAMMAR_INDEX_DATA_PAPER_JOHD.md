@@ -5,10 +5,12 @@ _Created: 11-07-2026 · Last updated: 25-08-2026_
 **Target venue:** Journal of Open Humanities Data (JOHD), data-paper track.
 **Dataset:** [`zaliznyak-grammar-index`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-grammar-index.meta.md)
 (98,639 rows, 335 paradigm tokens), release
-[data-v0.1.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.1.0).
+[data-v0.4.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.4.0),
+DOI [10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090).
 **Readiness:** 4/5 (submission draft; token-frequency distribution — the
 paper's core result — computed and tabled from the frozen release asset
-02-08-2026; DOI mint, paradigm-sample validation and final human pass pending).
+02-08-2026; DOI minted 25-08-2026; paradigm-sample validation and final human
+pass pending).
 
 ## Abstract
 
@@ -38,20 +40,16 @@ paradigm generation; Petersburg Dictionary
 ### Repository location
 
 GitHub release asset `zaliznyak_grammar_index.tsv`,
-[github.com/gasyoun/kosha/releases/tag/data-v0.1.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.1.0);
+[github.com/gasyoun/kosha/releases/tag/data-v0.4.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.4.0);
 machine-readable manifest row in
 [datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json);
 full data statement at
 [docs/data-statements/zaliznyak-grammar-index.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-grammar-index.meta.md).
-Zenodo DOI pending — corrected 25-08-2026: the GitHub–Zenodo integration is
-now live (webhook wired 14-08-2026; verified against the Zenodo API — kosha's
-own concept DOI is
-[10.5281/zenodo.21965599](https://doi.org/10.5281/zenodo.21965599)), but it
-only archives releases published **after** that date, and `data-v0.1.0`
-(06-07-2026) predates it — no automatic mint occurred, and no separate
-deposit has been made for this dataset. Minting still requires either a new
-`data-v*` release (auto-archived going forward) or a manual retroactive
-Zenodo deposit of `data-v0.1.0`; citation metadata in
+**Zenodo DOI: [10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090)**
+(minted 25-08-2026 for [data-v0.4.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.4.0),
+a re-cut of the identical `data-v0.1.0` content — `data-v0.1.0` itself
+predates the GitHub–Zenodo webhook, wired 14-08-2026, so it was never
+auto-archived); citation metadata in
 [CITATION.cff](https://github.com/gasyoun/kosha/blob/main/CITATION.cff)).
 
 ### Context
@@ -137,12 +135,10 @@ philologist-validated.
   digitization; see
   [LICENSE-DATA.md](https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)).
   The vidyut paradigm engine is a separate work under MIT.
-- **Repository name:** GitHub (kosha data-hub, release `data-v0.1.0`);
-  Zenodo deposit pending DOI mint — this release predates the GitHub–Zenodo
-  webhook (wired 14-08-2026), so it was not auto-archived (verified 25-08-2026
-  against the Zenodo API); the software repo's own concept DOI is
-  [10.5281/zenodo.21965599](https://doi.org/10.5281/zenodo.21965599), a
-  different citable object from this dataset.
+- **Repository name:** GitHub (kosha data-hub, release
+  [data-v0.4.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.4.0));
+  Zenodo DOI [10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090)
+  (minted 25-08-2026).
 - **Publication date:** 06-07-2026.
 
 ### The token-frequency distribution
@@ -221,20 +217,17 @@ The author declares no competing interests.
   Russkij jazyk, 1977.
 - vidyut — Sanskrit morphology toolkit, Ambuda project (MIT).
   [github.com/ambuda-org/vidyut](https://github.com/ambuda-org/vidyut).
-- Gasūns, M. *Gasuns Sanskrit Dictionary data release v0.1.0.* GitHub,
-  06-07-2026.
-  [github.com/gasyoun/kosha/releases/tag/data-v0.1.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.1.0).
+- Gasūns, M. *Gasuns Sanskrit Dictionary data release v0.4.0.* Zenodo, 25-08-2026.
+  [doi.org/10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090).
 
 ## Backlog to 5/5
 
 1. Validation sample: human check of N generated paradigms against reference
    grammars; report the error rate in §2 (the one honesty gap named in
    Limitations).
-2. Mint a Zenodo DOI for this dataset and replace the "DOI pending" slots
-   (human step) — the GitHub–Zenodo integration is now live (wired
-   14-08-2026) but only archives releases published after that date; either
-   cut a fresh `data-v*` release (auto-archived) or MG manually
-   retro-deposits `data-v0.1.0` on Zenodo.
+2. ~~Mint a Zenodo DOI for this dataset~~ — done 25-08-2026:
+   [10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090)
+   (`data-v0.4.0`).
 3. Exact bibliographic verification of the Zaliznyak 1977 inventory-size
    comparison if a numeric side-by-side is added (current text deliberately
    avoids asserting his token count).

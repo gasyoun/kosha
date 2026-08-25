@@ -88,7 +88,7 @@
     "SanskritSpellCheck (union=N tags)",
     "PWG→EN pilot (94,753 subset)"
    ],
-   "notes": "THE headword master — 323k headwords across all dicts.",
+   "notes": "THE headword master — 323k headwords across all dicts. Zenodo DOI 10.5281/zenodo.22102090 (minted 25-08-2026 for data-v0.4.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/union-headwords.meta.md"
   },
   {
@@ -171,7 +171,7 @@
     "kosha P4 grammar tokens",
     "gramdict mapping"
    ],
-   "notes": "FAIR data package; paradigms generated via vidyut, never transcribe static tables.",
+   "notes": "FAIR data package; paradigms generated via vidyut, never transcribe static tables. Zenodo DOI 10.5281/zenodo.22102090 (minted 25-08-2026 for data-v0.4.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-grammar-index.meta.md"
   },
   {
