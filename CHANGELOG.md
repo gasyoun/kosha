@@ -13,6 +13,37 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+### Added
+- **H3457 — word-page UX layer, STAGED (not published)** (Fable 5 `claude-fable-5`).
+  Three learner organs behind a staging flag, our own design over the P5 theme
+  (not an akshara clone): a **study badge** from `lemma_frequency.tsv`
+  `core_rank`/`coverage_pct` (three rungs cut on the raw rank; no badge outside
+  the 7,120-lemma ordering), **localStorage favorites** (♡ + static
+  `favorites.html` with TSV/Anki export), and **print-scan anchors** (stable
+  `id="e-{dict}-{L}"` per entry; PWG links rebuilt through the H839
+  `{vol}-{col:04d}` key — every one of the 48,540 committed PWG `scan_url`s was
+  bare-page and silently served volume 1). New
+  [app/word_page_ux.py](https://github.com/gasyoun/kosha/blob/main/app/word_page_ux.py),
+  `render_word_page(..., ux=)` (default `None` is byte-identical to before),
+  `build_word_pages.py --ux-staging a|b|c` → gitignored `dist/w-staging/` and a
+  hard refusal to write under `docs/`. Three design directions + 12
+  screenshots under `mockups/h3457-wpage-ux/` (winner **a**, inline strip;
+  rationale in the packet). New derived dataset `pwg-print-anchors`
+  ([data/pwg_scan/pwg_L_pc.tsv](https://github.com/gasyoun/kosha/blob/main/data/pwg_scan/pwg_L_pc.tsv),
+  122,730 rows from csl-orig `<pc>`, live-verified on 11 keys across four
+  volumes). Evidence: Playwright smoke 22/22, badge byte-match 11/11 —
+  [docs/H3457_WPAGE_UX_STAGING_PACKET_25.08.26.md](https://github.com/gasyoun/kosha/blob/main/docs/H3457_WPAGE_UX_STAGING_PACKET_25.08.26.md).
+  Flip-live procedure and the no-publish rule:
+  [docs/NOT_PUBLISHED_H3457_WPAGE_UX.md](https://github.com/gasyoun/kosha/blob/main/docs/NOT_PUBLISHED_H3457_WPAGE_UX.md).
+  Error-report widget parked (needs a backend). Found and filed, not fixed:
+  [#433](https://github.com/gasyoun/kosha/issues/433) — cards case-fold
+  `query.key`, so public pages of capital-initial lemmas render the wrong
+  Devanagari (`Darma` → दर्म).
+### Changed
+- README dataset count 109 → 110; `directory/index.html` regenerated.
+  (`update_manifest.py refresh` was NOT run: it rewrites the whole file at
+  indent=2 against the committed indent=1 — ~4,000-line churn; 49 rows carry
+  stale rows/size_bytes and want a dedicated refresh pass.)
 
 ## [0.111.2] - 2026-08-24
 ### Changed

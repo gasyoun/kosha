@@ -245,9 +245,20 @@ def _saru_strip(slp1, sr_strip):
     )
 
 
-def _headword_strip(slp1, deva, iast, band, band_label, n_dicts):
+def _headword_strip(slp1, deva, iast, band, band_label, n_dicts, ux=None, token=None):
     esc = html.escape
     band_cls = BAND_CLASS.get(band, "b5")
+    extra = ""
+    if ux:
+        # H3457 staging organs (see app/word_page_ux.py). Variant b keeps the
+        # strip clean and puts both organs in the study rail instead.
+        from word_page_ux import study_badge, fav_button
+        v = ux["variant"]
+        k = ux.get("slp1", slp1)
+        if v == "a":
+            extra = study_badge(k, v) + fav_button(k, deva, iast, token, v)
+        elif v == "c":
+            extra = fav_button(k, deva, iast, token, v)
     return (
         '<header class="hw-strip">'
         f'<span class="hw-deva" lang="sa">{esc(deva)}</span>'
@@ -260,6 +271,7 @@ def _headword_strip(slp1, deva, iast, band, band_label, n_dicts):
         # byte-comparable (the paradigm is not part of the card payload). Empty in
         # the crawlable DOM, never fabricated.
         '<span class="gram" data-gram hidden></span>'
+        f"{extra}"
         "</header>"
     )
 
@@ -275,11 +287,19 @@ def _view_toggle():
     )
 
 
-def _entry_html(entry):
+def _entry_html(entry, ux=None):
     esc = html.escape
     fields = entry_fields(entry)
     scan = ""
-    if fields.get("scan_url"):
+    eid = ""
+    if ux:
+        # H3457 staging: stable per-entry anchor + a print anchor that names the
+        # volume/column (PWG rebuilt through the H839 vol-col key).
+        from word_page_ux import scan_anchor, entry_id
+        scan, _url, _label = scan_anchor(fields, ux["variant"])
+        _id = entry_id(fields)
+        eid = f' id="{_id}"' if _id else ""
+    elif fields.get("scan_url"):
         scan = (f'<a class="scan" href="{esc(fields["scan_url"])}" '
                 f'target="_blank" rel="noopener">scan ↗</a>')
     status = (fields.get("review_status") or entry.get("review_status") or "").strip()
@@ -291,7 +311,7 @@ def _entry_html(entry):
     # `kosha.api.sanitize` (W0C item 6); the serializer has no path that emits
     # unsanitized render output.
     return (
-        '<article class="dict-entry">'
+        f'<article class="dict-entry"{eid}>'
         f'<div class="entry-head"><span class="hw">{esc(fields.get("headword", ""))}</span>'
         f"{scan}{badge}</div>"
         f'<div class="rendered">{fields.get("rendered_html", "")}</div>'
@@ -321,7 +341,7 @@ def _dict_tab(d, entries, active):
     )
 
 
-def _dict_panels(groups, default_lang="en"):
+def _dict_panels(groups, default_lang="en", ux=None):
     """Two-level chrome: EN | DE | RU | All, then the dicts of that language."""
     esc = html.escape
     by_dict = {d: entries for d, entries in groups}
@@ -369,7 +389,7 @@ def _dict_panels(groups, default_lang="en"):
         entries = by_dict.get(d) or []
         lang = DICT_LANG[d]
         label = esc(DICT_FULL.get(d, d))
-        body = "".join(_entry_html(e) for e in entries) if entries else _empty_state(d)
+        body = "".join(_entry_html(e, ux) for e in entries) if entries else _empty_state(d)
         hidden = "" if d == first_dict else " hidden"
         panels.append(
             f'<section class="dict-panel" id="panel-{d}" role="tabpanel" '
@@ -651,7 +671,7 @@ PAGE_JS = """
 
 def render_word_page(card, *, token=None, base="../", data_version=None,
                      public_base="", include_doc=True, default_lang="en",
-                     ru_overlay=None, sr_strip=None):
+                     ru_overlay=None, sr_strip=None, ux=None):
     """Render one word page from a card (the /api/v1/lemma envelope shape).
 
     `card`      : {"query": {"key": slp1}, "results": [...], "data_version": ...}
@@ -669,6 +689,12 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
                   sibling/fixture store. Pass `{}` to force the empty state.
     `sr_strip`: optional `{hit, text, layer}` for the SanskritRussian line;
                   `None` joins the public site-tier files.
+    `ux`        : H3457 STAGING layer — `None` (default, the public page,
+                  byte-identical to pre-H3457 output) or a variant letter /
+                  `{"variant": "a"|"b"|"c"}` enabling the study badge,
+                  favorites and print-scan anchors (app/word_page_ux.py).
+                  Not on any public build until a human flips it
+                  (docs/NOT_PUBLISHED_H3457_WPAGE_UX.md).
     """
     esc = html.escape
     slp1 = card["query"]["key"]
@@ -688,20 +714,41 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
     if default_lang not in LANG_DICTS:
         default_lang = "en"
 
-    tabbar, panels = _dict_panels(groups, default_lang=default_lang)
-    strip = _headword_strip(slp1, deva, iast, band, band_label, n_dicts)
+    if ux is not None and not isinstance(ux, dict):
+        ux = {"variant": str(ux)}
+    if ux:
+        from word_page_ux import VARIANTS, DEFAULT_VARIANT, slp1_from_token
+        if ux.get("variant") not in VARIANTS:
+            ux = dict(ux, variant=DEFAULT_VARIANT)
+        # Cards store query.key case-folded for capitalised SLP1 lemmas
+        # ("darma" for Darma, "rama" for rAma) — the card token is the exact
+        # key, so every UX lookup (core_rank, favorites key) uses it.
+        ux = dict(ux, slp1=slp1_from_token(token) if token else slp1)
+
+    tabbar, panels = _dict_panels(groups, default_lang=default_lang, ux=ux)
+    strip = _headword_strip(slp1, deva, iast, band, band_label, n_dicts,
+                            ux=ux, token=token)
     saru = _saru_strip(slp1, sr_strip)
+    ux_css = ux_js = ux_pre = ux_rail = ux_foot = ""
+    if ux:
+        from word_page_ux import (ux_css as _ux_css, UX_JS, study_badge,
+                                  study_rail, footer_fav_link)
+        v = ux["variant"]
+        ux_css = "\n" + _ux_css(v)
+        ux_js = "\n" + UX_JS
+        ux_foot = footer_fav_link(base)
+        k = ux["slp1"]
+        if v == "c":
+            ux_pre = study_badge(k, v)          # the rank line under the strip
+        elif v == "b":
+            ux_rail = study_rail(k, deva, iast, token, groups)
 
     # <noscript>: show every panel stacked (CSS reveals them), hide the tab bar.
     noscript = ("<noscript><style>.dict-panel[hidden]{display:block!important}"
                 ".lang-tabs,.dict-tabs,.view-toggle{display:none!important}</style></noscript>")
 
-    main = (
-        '<main class="word-page" data-slp1="%s" data-lang="%s">' % (
-            esc(slp1), esc(default_lang))
-        + strip
-        + saru
-        + _view_toggle()
+    body_core = (
+        _view_toggle()
         + noscript
         + tabbar
         + panels
@@ -709,9 +756,22 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
         + _sense_frequency_block(slp1)
         + _paradigm_block(slp1, base)
         + _upasarga_block(slp1)
+    )
+    # Variant b's rail is a direct child of <main> (grid-placed by CSS, no
+    # wrapper div): entry rendered_html is Cologne markup and may close a
+    # wrapper early, which would spill the panels into the rail column.
+    main = (
+        '<main class="word-page" data-slp1="%s" data-lang="%s">' % (
+            esc(slp1), esc(default_lang))
+        + strip
+        + ux_pre
+        + ux_rail
+        + saru
+        + body_core
         + '<footer class="wp-foot">Gasuns Sanskrit Dictionary · '
         + '<a href="%sinflect/">inflection lookup</a> · ' % esc(base)
         + '<a href="%sbrowse/">browse</a> · ' % esc(base)
+        + ux_foot
         + 'entries from MW, PWG &amp; Apte (Cologne), rendered verbatim.</footer>'
         + "</main>"
     )
@@ -732,9 +792,9 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
         f'<meta name="description" content="{desc}">'
         f'<meta name="data-version" content="{esc(dv)}">'
         f"{canonical}"
-        f"<style>{PAGE_CSS}</style>"
+        f"<style>{PAGE_CSS}{ux_css}</style>"
         "</head><body>"
         f"{main}"
-        f"<script>{PAGE_JS}</script>"
+        f"<script>{PAGE_JS}{ux_js}</script>"
         "</body></html>\n"
     )

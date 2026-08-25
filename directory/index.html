@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="91 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="92 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="91 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="92 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -2595,6 +2595,34 @@
         "encodingFormat": "jsonl",
         "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
       }
+    },
+    {
+      "@type": "Dataset",
+      "name": "PWG entry L → printed volume/column (print-scan anchor table, H3457)",
+      "description": "H3457 (25-08-2026, Fable 5 claude-fable-5). Derived, deterministic, DB-free: the static site cannot regenerate cards (no kosha.db on the Pages tier), so the volume lives in this committed sidecar and is folded in at render time. Live-verified 25-08-2026 through Cologne's servepdf.php?api=1 on 11 keys across volumes 1/3/5/7: each resolved to the pdf of its own volume (two-column spreads: 7-1686 → pwg7-1685.pdf, 7-1737 → pwg7-1737.pdf). Not on the public word page until a human flips the H3457 layer (docs/NOT_PUBLISHED_H3457_WPAGE_UX.md). MW/AP90 are single-volume and need no table.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "pwg-print-anchors"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/sanskrit-lexicon/csl-orig"
+      }
     }
   ]
 }
@@ -2665,7 +2693,7 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>91</b><span>public datasets</span></div>
+      <div class="tally"><b>92</b><span>public datasets</span></div>
       <div class="tally"><b>14</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
@@ -3592,6 +3620,16 @@
       <p class="meta">53,003 rows · 17.3 MB · JSONL</p>
       <div class="chips"><span class="chip">pwg_ru cards (era badge)</span><span class="chip">Ceiling C2 phase 2 curated dating table</span><span class="chip">C7 residue repair queue</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>PWG entry L → printed volume/column (print-scan anchor table, H3457)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per PWG entry keyed on the Cologne L number: L, vol (1..7), col — PWG&#x27;s own &lt;pc&gt; &#x27;vol-Spalte&#x27; key, exactly the page key Cologne&#x27;s servepdf.php honours for a multi-volume dictionary (H839: &#x27;{vol}-{col:04d}&#x27;; a bare column silently serves volume 1)</p>
+      <p class="meta">122,730 rows · 1.4 MB · TSV</p>
+      <div class="chips"><span class="chip">app/word_page_ux.py print-scan anchors (H3457 staging word pages) — rebuilds the PWG scan URL through kosha.scan_resolver with the volume</span><span class="chip">any card-level consumer of docs/cards/*.json scan_url for PWG — every committed PWG scan_url (48,540 at 25-08-2026) is bare-page and must be overlaid with this table until the cards are regenerated</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/sanskrit-lexicon/csl-orig">In source repo ↗</a></div>
     </article>
     </div>
     <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>

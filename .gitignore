@@ -78,3 +78,8 @@ data/akshara_pilot/parsed_corpus.jsonl
 data/akshara_pilot/bench/judge_packets/
 data/akshara_pilot/bench/bench_items.jsonl
 data/akshara_pilot/bench/tm_snapshot.jsonl
+
+# H3457 word-page UX STAGING output (scripts/build_word_pages.py --ux-staging) —
+# local-only artifact tree, never the Pages input; docs/NOT_PUBLISHED_H3457_WPAGE_UX.md
+dist/
+# H3457 mockup screenshots are committed (design packet evidence) — nothing to ignore
