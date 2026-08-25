@@ -13,6 +13,23 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+### Fixed
+- **RU tab still showed raw Sanskrit** (H3490, Fable 5 `claude-fable-5`; MG 25-08-2026
+  "RU still showed raw"). Two leak classes the H3480 pre-pass could not see:
+  (1) 11 % of pwg_ru entries (116/1,063 on the H3457 sample) quote Sanskrit as
+  **bare SLP1 with Vedic accents and no `{#…#}` wrapper** (`tena^ gacCa
+  parasta\ram`) — new `kosha.api.ru_join.ru_bare_slp1_pass` detects such runs
+  (accent mark or SLP1-only capital after the first letter, extended over
+  lowercase neighbours; never Cyrillic / tags / `ls` citations / `vgl.`-style
+  abbreviations / ALL-CAPS) and transliterates them to IAST sdata spans;
+  (2) rows carrying `<s>…</s>` / `<i>` but none of the render trigger tokens were
+  HTML-escaped as literal `&lt;s&gt;gam&lt;/s&gt;` — `<s>`, `<i>`, `<b>` added
+  to the triggers. Sample census after: 0 escaped-tag entries, accent-marked
+  bare tokens 116 → 0 real (6 census false positives are Russian slashes).
+  **The committed `w/` tree was regenerated** (`--reading-packs --force`) so
+  the live Pages word pages change with this release, not only future builds.
+  Tests: `tests/test_ru_bare_slp1.py`. Residual: the RussianTranslation store
+  should wrap these at source (that lane, not kosha).
 
 ## [0.114.0] - 2026-08-25
 ### Fixed

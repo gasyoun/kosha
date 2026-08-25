@@ -122,27 +122,123 @@ def ru_markup_prepass(ru: str) -> str:
     return ru
 
 
+# --- bare SLP1 quotations (MG 25-08-2026: "RU still showed raw") ---------------
+# 11 % of pwg_ru entries (116/1,063 on the H3457 sample) quote Sanskrit as bare
+# SLP1 with Vedic accent marks and no {#…#} wrapper at all — `tena^ gacCa
+# parasta\ram`, `Sf\to ga^cCatu` — so neither render() nor the {#…#} pre-pass
+# can see them. The detector below finds runs of Latin-script tokens that can
+# only be SLP1 (an accent mark, or an SLP1-only capital after the first letter)
+# and extends each run over plain lowercase neighbours, then transliterates the
+# run to IAST in an sdata span. Cyrillic, tags, citations (`<span class="ls">`),
+# abbreviations with a trailing period and ALL-CAPS tokens never qualify.
+_SLP1_CAPS = "AIUFXEOKGNCJYWQRTDPBSZMH"
+_TAG_SPLIT = re.compile(r"(<[^>]+>)")
+_TOKEN = re.compile(r"'?[A-Za-z][A-Za-z'^\\/]*")
+
+
+def _slp1_anchor(tok: str) -> bool:
+    if tok.endswith("."):
+        return False
+    if any(c in tok for c in "^\\/"):
+        return True
+    if tok.isupper():
+        return False
+    return any(c in _SLP1_CAPS for c in tok[1:])
+
+
+def _slp1_neighbour(tok: str) -> bool:
+    return len(tok) >= 2 and tok.replace("'", "").isalpha() and tok.islower() and tok.isascii()
+
+
+def _ru_bare_slp1_text(text: str) -> str:
+    """One text node (no tags): wrap qualifying SLP1 runs as sdata IAST."""
+    if not any(c in text for c in "^\\/" + _SLP1_CAPS):
+        return text
+    from sanskrit_util import from_slp1
+    spans = [(m.start(), m.end(), m.group(0)) for m in _TOKEN.finditer(text)]
+    if not spans:
+        return text
+    anchors = [i for i, (_s, _e, t) in enumerate(spans) if _slp1_anchor(t)]
+    if not anchors:
+        return text
+    keep = set(anchors)
+    # extend runs over plain-lowercase neighbours separated by whitespace only
+    for i in anchors:
+        for step in (-1, 1):
+            j = i + step
+            while 0 <= j < len(spans) and j not in keep:
+                gap = text[spans[j][1]:spans[j + 1][0]] if step == -1 else text[spans[j - 1][1]:spans[j][0]]
+                if gap.strip() or not _slp1_neighbour(spans[j][2]):
+                    break
+                keep.add(j)
+                j += step
+    out, pos = [], 0
+    i = 0
+    while i < len(spans):
+        if i not in keep:
+            i += 1
+            continue
+        j = i
+        while j + 1 < len(spans) and (j + 1) in keep and not text[spans[j][1]:spans[j + 1][0]].strip():
+            j += 1
+        s0, e0 = spans[i][0], spans[j][1]
+        out.append(text[pos:s0])
+        raw = text[s0:e0]
+        try:
+            ia = from_slp1(raw.replace("^", "").replace("\\", "").replace("/", ""))
+        except Exception:
+            ia = raw
+        out.append('<span class="sdata">' + html.escape(ia) + "</span>")
+        pos = e0
+        i = j + 1
+    out.append(text[pos:])
+    return "".join(out)
+
+
+def ru_bare_slp1_pass(rendered: str) -> str:
+    """Apply _ru_bare_slp1_text to every text node outside tags, skipping the
+    inside of existing sdata / ls spans."""
+    if not rendered or not any(c in rendered for c in "^\\/" + _SLP1_CAPS):
+        return rendered
+    parts = _TAG_SPLIT.split(rendered)
+    out, depth_skip = [], 0
+    for part in parts:
+        if part.startswith("<"):
+            low = part.lower()
+            if low.startswith("<span") and ('class="sdata"' in low or "class='sdata'" in low
+                                            or 'class="ls"' in low or "class='ls'" in low):
+                depth_skip += 1
+            elif low.startswith("</span") and depth_skip:
+                depth_skip -= 1
+            out.append(part)
+        elif depth_skip:
+            out.append(part)
+        else:
+            out.append(_ru_bare_slp1_text(part))
+    return "".join(out)
+
+
 def _render_ru(dict_id: str, row: dict[str, Any]) -> str:
     ready = row.get("rendered_html")
     if isinstance(ready, str) and ready.strip():
-        return sanitize_html(ru_markup_prepass(ready)) if ("{#" in ready or "{%" in ready) \
-            else sanitize_html(ready)
+        pre = ru_markup_prepass(ready) if ("{#" in ready or "{%" in ready) else ready
+        return ru_bare_slp1_pass(sanitize_html(pre))
     ru = row.get("ru") or row.get("russian") or ""
     if not isinstance(ru, str) or not ru.strip():
         return ""
     ru = ru_markup_prepass(ru)
     # Live store rows carry Cologne-style markup; never read the German `de`.
-    if any(tok in ru for tok in ("<div", "{%", "{#", "<ls>", "<ab>", "<lex>")):
+    if any(tok in ru for tok in ("<div", "{%", "{#", "<ls>", "<ab>", "<lex>", "<s>", "<i>", "<b>")):
         try:
             from kosha.api.serializer import render_sanitized
 
             code = "pwg" if dict_id == "pwg_ru" else "mw"
-            return render_sanitized(code, ru)
+            return ru_bare_slp1_pass(render_sanitized(code, ru))
         except Exception:
             pass
     if ru.lstrip().startswith("<"):
-        return sanitize_html(ru)
-    return "<p>" + html.escape(ru) + "</p>"
+        return ru_bare_slp1_pass(sanitize_html(ru))
+    return ru_bare_slp1_pass("<p>" + html.escape(ru) + "</p>")
 
 
 def unreviewed(status: str | None) -> bool:
