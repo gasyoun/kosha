@@ -9,8 +9,12 @@ title: "kosha — Gasuns Sanskrit Dictionary (Sanskrit data-hub)"
 type: software
 version: 0.115.2
 date-released: 2026-08-25
-# DOI: pending — GitHub–Zenodo integration not yet wired (human @DO, tracked
-# in Uprava/GTD_NEXT_ACTIONS.md); concept DOI will be recorded here once minted.
+doi: 10.5281/zenodo.21965599
+# Concept DOI (resolves to the latest archived version on every future
+# release); GitHub-Zenodo webhook wired 14-08-2026, first archived release
+# v0.110.13 (16-08-2026). Version DOI for v0.115.1 (the latest archived at
+# time of writing): 10.5281/zenodo.22100527 — Zenodo mints one automatically
+# per tagged release; do not hand-pick a version DOI here going forward.
 authors:
   - family-names: "Gasūns"
     given-names: "Mārcis"
