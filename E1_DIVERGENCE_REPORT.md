@@ -1,6 +1,6 @@
 # E1 — vidyut-prakriya vs Cologne csl-inflect: nominal divergence report
 
-_Created: 05-07-2026 · Last updated: 12-07-2026_
+_Created: 05-07-2026 · Last updated: 25-08-2026_
 
 Wave **E1** of the inflection roadmap
 ([ROADMAP_INFLECT_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_INFLECT_2026_2027.md)
@@ -118,8 +118,17 @@ Huet line and quantifies where the three engines part ways. The drafted
 give-back comment for #10 is in the E1 handoff
 ([H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md));
 **it is not posted** — posting to the dormant, noise-averse upstream is
-diplomacy-gated (RELATIONS.md §2/§7) and awaits MG's go-ahead. [#8](https://github.com/sanskrit-lexicon/csl-inflect/issues/8)
-is verb-side and is answered by the verb follow-on, not this nominal pass.
+diplomacy-gated (RELATIONS.md §2/§7) and awaits MG's go-ahead.
+
+[#8](https://github.com/sanskrit-lexicon/csl-inflect/issues/8) is verb-side. Its
+answer is the § Verbs section above, and the **drafted give-back comment is in
+the H3166 handoff body**
+([H3166](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3166-Opus_kosha_inflect-dhatu-identity-crosswalk_19.08.26.md),
+25-08-2026) — **also not posted**, same diplomacy gate. The draft deliberately
+leads with the 70.24 % figure *and* the finding that 85 % of the residue is a
+resolution artifact rather than divergence: posting the raw 11,056 as "conflicts"
+would hand the upstream a number we have since shown to be mostly ours, not
+theirs.
 
 ## Recommendation → MG ruling (migrate / hybridize / stay)
 
@@ -214,19 +223,92 @@ run-time input** carrying only aupadeśika strings, so the comparison needs only
 bundled vidyut (`Dhatu.mula`); the external `vidyut-data` is a build-time-only
 input for the crosswalk builder (R12).
 
+### The 11,056 "genuine conflicts" are mostly NOT divergence (H3166, 25-08-2026)
+
+H855 stopped at the headline. H3166 adjudicated the residue, and the sentence
+this section used to carry — *"the remaining 11,056 genuine conflicts are real
+accent/sandhi/gaṇa-assignment differences needing scholarly review"* — **does
+not survive the measurement.** It is the same mapping artifact H855 diagnosed
+for the 12.68 %, one level down.
+
+**Where the conflicts sit.** Over all 11,056 cells
+([`scripts/profile_verb_divergence.py`](https://github.com/gasyoun/kosha/blob/main/scripts/profile_verb_divergence.py)
+→ [`data/e1/verb_divergence_profile.json`](https://github.com/gasyoun/kosha/blob/main/data/e1/verb_divergence_profile.json)):
+**55.8 % are passive** (`v_p`), **66.9 % have vidyut's form shorter than
+Cologne's**, and all of them come from just **192 of the 683 roots**. A genuine
+grammatical disagreement would not concentrate like that.
+
+**Why.** The crosswalk resolved 722/779 root-models, but its `direct` and `bare`
+paths *choose the bare Cologne root as the seed* — **212 entries (27.2 %) still
+feed `Dhatu.mula` an unmarked root** rather than an aupadeśika one. Those roots
+carry **9,396 of the 11,056 conflicts — 85.0 %**
+([`scripts/measure_passive_bare_root.py`](https://github.com/gasyoun/kosha/blob/main/scripts/measure_passive_bare_root.py)
+→ [`data/e1/verb_conflict_bare_root_measure.json`](https://github.com/gasyoun/kosha/blob/main/data/e1/verb_conflict_bare_root_measure.json);
+active 97.2 %, passive 77.6 %, middle 72.1 %). Without it-markers vidyut consumes
+the root-final consonant, so `yat` → `yyate` where the passive is `yatyate`,
+`kam` → `kyate`, `paṇ` → `pyate`, `kṣam` → `kṣyate`.
+
+**The discriminating probe.**
+[`scripts/probe_passive_conflict.py`](https://github.com/gasyoun/kosha/blob/main/scripts/probe_passive_conflict.py)
+re-derives the same cell from the crosswalk's seed and from the bare root. For
+`yat`/`kam`/`paṇ`/`ruc`/`kṣam` the two are **identical** — the crosswalk left
+them bare, so the malformation is not a crosswalk mis-pick. For `pā`, where the
+crosswalk *did* resolve (`pA\`), vidyut returns **`pīyate`** against Cologne's
+`pāyate` — vidyut is right and Cologne is wrong. Resolution is the variable.
+
+**Hand adjudication, 52 rows, class-weighted** (seed 3166,
+[`scripts/sample_verb_divergence.py`](https://github.com/gasyoun/kosha/blob/main/scripts/sample_verb_divergence.py)
+→ [`data/e1/verb_divergence_adjudication.tsv`](https://github.com/gasyoun/kosha/blob/main/data/e1/verb_divergence_adjudication.tsv);
+adjudicator **Opus 5 (`claude-opus-5`)**, not a human sign-off). Of the 30
+`DIFF_conflict` rows:
+
+| Verdict | Rows | Example |
+|---|---:|---|
+| **bare-root truncation — artifact, not divergence** | 20 | `kāś` `kāśyāmahe` vs `kāyāmahe` |
+| vowel-grade (guṇa/vṛddhi) — **real, needs review** | 5 | `śiṣ` `śiṣyeta` vs `śeṣyeta` |
+| curādi vṛddhi fork — **real modelling fork** | 3 | `tul` `tolayethāḥ` vs `tāvayethāḥ` |
+| genuinely different form — **real** | 1 | `kṣup` `akṣupat` vs `akṣuvat` |
+| **Cologne is wrong**, vidyut right | 1 | `pā` `pāyate` vs `pīyate` |
+
+The 67 % artifact share in the sample matches the 66.9 % shorter-form and 85 %
+bare-seeded population figures. The three control classes adjudicated as their
+labels claim: `DIFF_final_stop` is 100 % active citation-form `t`/`d`,
+`DIFF_vidyut_superset` is 91.8 % active and is the loṭ `-tāt` forms plus
+alternate curādi stems, `DIFF_cologne_superset` is 383 cells from **8 roots**
+only (Cologne listing both vṛddhi and non-vṛddhi causative stems).
+`COLOGNE_ONLY` is **77.3 % middle voice** — a pada-assignment fork, Cologne
+tabulating ātmanepada that vidyut declines to derive, not a coverage bug.
+
+**What the corrected number looks like.** If the bare-seeded 85 % is artifact,
+true divergence is at most **~1,660 cells — 3.5 % of the 47,340 both-nonempty
+cells**, not 23 %. The next rung is mechanical and named: resolve the 212
+bare-seeded entries (the 57 `unresolved` first) and re-run. **Not done here** —
+this pass measures, it does not re-tune the crosswalk.
+
 **Conclusion for #8 / the forms layer (unchanged posture, D3).** The 70.24 %
-agreement is a *comparison* result, not a licence to hybridize verbs: the
-remaining 11,056 genuine conflicts are real accent/sandhi/gaṇa-assignment
-differences needing scholarly review, and 110 roots + 75 passives stay
-unresolved. Cologne's verb tables remain the display base. Raw stats: gitignored
+agreement is a *comparison* result, not a licence to hybridize verbs, and the
+posture does not change — but the *reason* does. The blocker is no longer "real
+differences needing scholarly review"; it is that **85 % of the residue is still
+a resolution artifact**, with only ~1,660 cells plausibly genuine and 110 roots +
+75 passives unresolved. Cologne's verb tables remain the display base. Raw stats: gitignored
 `data/e1/e1_verbs_divergence.json`; reproduce with `python
 scripts/build_dhatu_crosswalk.py && python scripts/compare_vidyut_verbs.py`.
 
 ## Deferred (deliberately)
 
 This pass is present-system verbs only (Laṭ/Laṅ/Loṭ/Vidhiliṅ). The non-present
-lakāras (perfect, aorist, future) and the dhātu-identity crosswalk that would
-make a full verb comparison meaningful are future work — see § Verbs conclusion.
+lakāras (perfect, aorist, future) are future work.
+
+*(Corrected 25-08-2026, H3166: this paragraph used to also list "the
+dhātu-identity crosswalk that would make a full verb comparison meaningful" as
+future work. It was already built — H855, above — and that stale line is what
+sent H3166 out to build it a second time. A "Deferred" list is a claim about the
+present, and it goes stale the moment the section above it ships.)*
+
+The **remaining** crosswalk work is narrower and named: 212 of the 779
+root-model entries still seed vidyut with a bare root, which the § above shows
+carries 85 % of the surviving conflicts. Resolving those — the 57 `unresolved`
+first — is the next rung, and it is mechanical.
 
 ## Optional paper
 
