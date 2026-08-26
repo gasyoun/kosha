@@ -13,6 +13,8 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+
+## [0.115.3] - 2026-08-26
 - **H3457 published (MG ruling 25-08-2026) - word-page learner layer live on all 2,324 static /w/ pages:** study badge (core_rank/coverage from lemma_frequency.tsv), localStorage favorites + /favorites.html index, PWG print-scan anchors to the printed edition. Same render_word_page as SSR; content unchanged byte-level, chrome added. Revert = rebuild without the ux layer. NOT_PUBLISHED markers removed per decision.
 
 ## [0.115.2] - 2026-08-25
