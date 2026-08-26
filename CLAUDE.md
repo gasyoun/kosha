@@ -161,6 +161,12 @@ input. Do not add a stage by editing the CLI — add it to the registry.
   generation from corpus evidence; and the human-scored subsample is still owed
   before any paper-grade claim.
 
+## FINDINGS routing (F1)
+
+kosha has no local `FINDINGS.md` (not in the four-repo middle tier). Route gotchas:
+infra/process → [Uprava/FINDINGS.md](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md);
+Sanskrit-data → [SanskritLexicography/FINDINGS.md](https://github.com/gasyoun/SanskritLexicography/blob/master/FINDINGS.md).
+
 ## Operational hazard notes
 
 Destructive-risk facts for this repo (do-not-rerun scripts, decoys, traps) are
