@@ -173,8 +173,8 @@ def test_live_public_id_round_trips():
     assert r.status_code == 200
     rec = r.json()
     assert rec["id"] == "mw-roots"
-    assert rec["version"] == "data-v0.1.0"
-    assert rec["download"].endswith("/data-v0.1.0/mw_roots.tsv")
+    assert rec["version"] == "data-v0.5.0"
+    assert rec["download"].endswith("/data-v0.5.0/mw_roots.tsv")
     for key in RECORD_REQUIRED_KEYS:
         assert key in rec
 
