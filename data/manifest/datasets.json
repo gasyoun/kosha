@@ -2135,24 +2135,43 @@
    ],
    "notes": "RESTRICTED benchmark-only: third-party AI MT of public-domain Cologne originals + Likhushina fragments as advisors - NOTHING here may reach any public surface without a fresh @DECIDE (MG posture 24-08-2026). Honest gaps recorded: 5 zero-article keys absent from their kosha; their pwg_ru MT covers only 149/193 PWG heads in sample; likh=87 advisor-only. robots.txt fences their data endpoints; HTML card pages crawled politely with identified UA, owner outreach DONE by MG pre-crawl."
   },
- {
-  "id": "pwg-print-anchors",
-  "title": "PWG entry L → printed volume/column (print-scan anchor table, H3457)",
-  "tier": "public",
-  "in_release": "not-applicable",
-  "format": "tsv",
-  "rows": 122730,
-  "size_bytes": 1517824,
-  "keying": "one row per PWG entry keyed on the Cologne L number: L, vol (1..7), col — PWG's own <pc> 'vol-Spalte' key, exactly the page key Cologne's servepdf.php honours for a multi-volume dictionary (H839: '{vol}-{col:04d}'; a bare column silently serves volume 1)",
-  "source_repo": "https://github.com/sanskrit-lexicon/csl-orig",
-  "source_path": "data/pwg_scan/pwg_L_pc.tsv",
-  "builder": "scripts/build_pwg_scan_anchors.py over ../csl-orig/v02/pwg/pwg.txt (<L>…<pc>V-CCCC header lines; 636 headers without a parsable <pc> are dropped and counted)",
-  "consumers": [
-   "app/word_page_ux.py print-scan anchors (H3457 staging word pages) — rebuilds the PWG scan URL through kosha.scan_resolver with the volume",
-   "any card-level consumer of docs/cards/*.json scan_url for PWG — every committed PWG scan_url (48,540 at 25-08-2026) is bare-page and must be overlaid with this table until the cards are regenerated"
-  ],
-  "notes": "H3457 (25-08-2026, Fable 5 claude-fable-5). Derived, deterministic, DB-free: the static site cannot regenerate cards (no kosha.db on the Pages tier), so the volume lives in this committed sidecar and is folded in at render time. Live-verified 25-08-2026 through Cologne's servepdf.php?api=1 on 11 keys across volumes 1/3/5/7: each resolved to the pdf of its own volume (two-column spreads: 7-1686 → pwg7-1685.pdf, 7-1737 → pwg7-1737.pdf). Not on the public word page until a human flips the H3457 layer (docs/NOT_PUBLISHED_H3457_WPAGE_UX.md). MW/AP90 are single-volume and need no table.",
-  "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/H3457_WPAGE_UX_STAGING_PACKET_25.08.26.md"
- }
+  {
+   "id": "pwg-print-anchors",
+   "title": "PWG entry L → printed volume/column (print-scan anchor table, H3457)",
+   "tier": "public",
+   "in_release": "not-applicable",
+   "format": "tsv",
+   "rows": 122730,
+   "size_bytes": 1517824,
+   "keying": "one row per PWG entry keyed on the Cologne L number: L, vol (1..7), col — PWG's own <pc> 'vol-Spalte' key, exactly the page key Cologne's servepdf.php honours for a multi-volume dictionary (H839: '{vol}-{col:04d}'; a bare column silently serves volume 1)",
+   "source_repo": "https://github.com/sanskrit-lexicon/csl-orig",
+   "source_path": "data/pwg_scan/pwg_L_pc.tsv",
+   "builder": "scripts/build_pwg_scan_anchors.py over ../csl-orig/v02/pwg/pwg.txt (<L>…<pc>V-CCCC header lines; 636 headers without a parsable <pc> are dropped and counted)",
+   "consumers": [
+    "app/word_page_ux.py print-scan anchors (H3457 staging word pages) — rebuilds the PWG scan URL through kosha.scan_resolver with the volume",
+    "any card-level consumer of docs/cards/*.json scan_url for PWG — every committed PWG scan_url (48,540 at 25-08-2026) is bare-page and must be overlaid with this table until the cards are regenerated"
+   ],
+   "notes": "H3457 (25-08-2026, Fable 5 claude-fable-5). Derived, deterministic, DB-free: the static site cannot regenerate cards (no kosha.db on the Pages tier), so the volume lives in this committed sidecar and is folded in at render time. Live-verified 25-08-2026 through Cologne's servepdf.php?api=1 on 11 keys across volumes 1/3/5/7: each resolved to the pdf of its own volume (two-column spreads: 7-1686 → pwg7-1685.pdf, 7-1737 → pwg7-1737.pdf). Not on the public word page until a human flips the H3457 layer (docs/NOT_PUBLISHED_H3457_WPAGE_UX.md). MW/AP90 are single-volume and need no table.",
+   "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/H3457_WPAGE_UX_STAGING_PACKET_25.08.26.md"
+  },
+  {
+   "id": "wisdomlib-sanskrit-layers",
+   "title": "Layered Sanskrit corpus extracts of the wisdomlib.org Sanskrit portal (full store, L3-L8, 2026)",
+   "tier": "public",
+   "in_release": "not-applicable",
+   "format": "pack.zip (168 entries: tsv/jsonl/txt/md/cff/LICENSE-DATA + MANIFEST.json sha256 per file) + 4 loose root docs on the record",
+   "rows": 593587,
+   "size_bytes": 508233719,
+   "keying": "L3 one row per chapter page (593,587 across 83 books); L4 nav positions 1:1; L5 verse/segment units keyed slug:doc:verse-or-seg; L8 one row per definition (255,348); page source URLs reconstructable per row",
+   "source_repo": "https://www.wisdomlib.org/sanskrit",
+   "source_path": "wisdomlib.org portal pages scraped politely to local canonical store out/jsonl/** (JSONL.zst multi-frame); layers by extract_layers.py",
+   "builder": "analyze_corpus.py (zst-aware inventory) -> extract_layers.py l3/l4/l8/all-books-l5l6 (+l5seg zero-marker) -> build_peer_catalogs.py --skip-fetch (identity-tight v2 matcher) -> tools/h3301_release_pack.py; parity harness vs H1625 frozen baselines (zero regressions); spot-check 20/20 vs stored snapshots (H3301_RESULTS.md)",
+   "consumers": [
+    "Samudra Manthanam web/corpus_builder/wisdomlib/content/ (63 SA slugs, 582,998 txt rows, idempotent ingest verified)",
+    "SA-RU drafting pivot / lexicography reference per SA-EN placement ruling"
+   ],
+   "notes": "H3301 (26-08-2026, OxAlpha x-preview-f-free). Cite CONCEPT DOI 10.5281/zenodo.22117832 (all versions); current v1.0.1 = 10.5281/zenodo.22118256 (v1.0.0 = 10.5281/zenodo.22117833 superseded same-day: concept/version labels were swapped inside README/CFF; records immutable so fixed by corrective version under the same concept). License CC BY 4.0 with mandatory wisdomlib provenance (LICENSE-DATA); bulk-public GO per RIGHTS_RULING_BULK_PUBLIC_28.07.2026 - rights uncertainty documented, not a stop. L7 grammar-links layer ships as FROZEN 25-07 snapshot (anchors stripped by compaction, not regenerable). English-twin books included but marked; Samudra consumed pure-Sanskrit slugs only.",
+   "data_statement": "https://zenodo.org/records/22118256 (README + docs/DATASHEET_H3301_RELEASE.md inside pack.zip)"
+  }
  ]
 }
