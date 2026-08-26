@@ -16,6 +16,7 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [0.115.2] - 2026-08-25
 ### Added
+- **H3549 (OxAlpha) — kosha 30-day risk-ranked code review and future independent review gate: execution-ready five-layer plan staged** (OxAlpha (x-preview-f-free), plan authored 26-08-2026 by Codex Sol (gpt-5.6-sol)). [Plan index](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_OXALPHA_CODE_REVIEW_HARDENING_2026Q3.md) fixes the 30-day window, ten-slice risk cap, independent Standards/Spec passes, evidence-only P0/P1 repair contract, canonical GitHub adapter, and an inactive future status-gate design.
 - **Literary-source `<ls>` citation links, H3457 wave 2** (H3479, Sonnet 5
   `claude-sonnet-5`). New `app/ls_hydrate.py` hydrates a PWG entry's
   `<span class='ls'>` citations (Cologne's own render deferral — see
