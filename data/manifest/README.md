@@ -1,8 +1,15 @@
 # Dataset + surface manifests — machine-readable kosha indices
 
-_Created: 06-07-2026 · Last updated: 13-08-2026_
+_Created: 06-07-2026 · Last updated: 27-08-2026_
 
 ## Datasets
+
+**Scope (F7, 26-08-2026):** `datasets.json` is the machine-readable manifest of
+**published, fetchable** datasets — the release/download side. It stays deliberately
+separate from
+[Uprava/DATA_LAYERS_CENSUS.md](https://github.com/gasyoun/Uprava/blob/main/DATA_LAYERS_CENSUS.md),
+the human survey of large on-disk data across the org, including unregistered and
+unpublishable assets that never reach this manifest.
 
 [`datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
 is the ONE machine-readable list of canonical derived Sanskrit datasets across the ~85
