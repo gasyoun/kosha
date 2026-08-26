@@ -1,11 +1,12 @@
 # Data statement — Headword→root derivation table (`mw-etymology`)
 
-_Created: 11-07-2026 · Last updated: 11-07-2026_
+_Created: 11-07-2026 · Last updated: 26-08-2026_
 
 Data statement for the `mw-etymology` dataset served by the kosha data-hub.
 Manifest row:
 [data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json).
-Download: [`mw_etymology.tsv` in release data-v0.1.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.1.0).
+Download: [`mw_etymology.tsv` in release data-v0.5.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.5.0)
+(DOI [10.5281/zenodo.22105641](https://doi.org/10.5281/zenodo.22105641)).
 
 ## Composition & counts
 
@@ -98,11 +99,10 @@ redirect row.
 
 ## Citation
 
-Cite the release: *Gasuns Sanskrit Dictionary data release v0.1.0* (CC BY-SA
+Cite the release: *Gasuns Sanskrit Dictionary data release v0.5.0* (CC BY-SA
 4.0), asset `mw_etymology.tsv`,
-[github.com/gasyoun/kosha/releases/tag/data-v0.1.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.1.0),
-with attribution to the Cologne Digital Sanskrit Dictionaries. `CITATION.cff`
-+ Zenodo DOI pending the next `/cut-release` freeze.
+[github.com/gasyoun/kosha/releases/tag/data-v0.5.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.5.0),
+with attribution to the Cologne Digital Sanskrit Dictionaries. Zenodo DOI [10.5281/zenodo.22105641](https://doi.org/10.5281/zenodo.22105641) (minted 26-08-2026, re-cut of the identical data-v0.1.0 content -- that release predates the GitHub-Zenodo webhook wired 14-08-2026).
 
 ## Provenance of this statement
 

@@ -26,7 +26,7 @@
     "csl-atlas",
     "RussianTranslation verb worklist"
    ],
-   "notes": "3 repos independently re-scanned mw.txt before this existed (got 750/809/1163) — consume this, never re-scan.",
+   "notes": "3 repos independently re-scanned mw.txt before this existed (got 750/809/1163) — consume this, never re-scan. Zenodo DOI 10.5281/zenodo.22105641 (minted 26-08-2026 for data-v0.5.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-roots.meta.md"
   },
   {
@@ -46,7 +46,7 @@
     "WhitneyRoots",
     "csl-atlas"
    ],
-   "notes": "Derivations, distinct from the root inventory (mw-roots).",
+   "notes": "Derivations, distinct from the root inventory (mw-roots). Zenodo DOI 10.5281/zenodo.22105641 (minted 26-08-2026 for data-v0.5.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-etymology.meta.md"
   },
   {
@@ -67,7 +67,7 @@
     "csl-atlas",
     "VisualDCS"
    ],
-   "notes": "Reusable LOD linkset — never re-derive DCS↔CDSL joins.",
+   "notes": "Reusable LOD linkset — never re-derive DCS↔CDSL joins. Zenodo DOI 10.5281/zenodo.22105641 (minted 26-08-2026 for data-v0.5.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/dcs-cdsl-xref.meta.md"
   },
   {
@@ -108,7 +108,7 @@
     "kosha ingest (H345, kosha.db heritage_anchor table + /api/v1/lemma `heritage` witness)",
     "csl-atlas witness column (queued)"
    ],
-   "notes": "Crosswalk itself is ours/publishable; the Heritage mirror data behind it is LGPLLR-pending (restricted tier).",
+   "notes": "Crosswalk itself is ours/publishable; the Heritage mirror data behind it is LGPLLR-pending (restricted tier). Zenodo DOI 10.5281/zenodo.22105641 (minted 26-08-2026 for data-v0.5.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-heritage-crosswalk.meta.md"
   },
   {
@@ -128,7 +128,7 @@
     "kosha evidence layer",
     "Nagari teaching order"
    ],
-   "notes": "LEFT-JOIN this — never re-derive frequency ordering. ⚠ upstream UD Tense=Past conflates aorist/perfect.",
+   "notes": "LEFT-JOIN this — never re-derive frequency ordering. ⚠ upstream UD Tense=Past conflates aorist/perfect. Zenodo DOI 10.5281/zenodo.22105641 (minted 26-08-2026 for data-v0.5.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/kosha-lemma-frequency.meta.md"
   },
   {
