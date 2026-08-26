@@ -1,6 +1,6 @@
 # A55 — A Union Headword Index of Fifteen Digitized Sanskrit Dictionaries (JOHD data paper, submission draft)
 
-_Created: 11-07-2026 · Last updated: 25-08-2026_
+_Created: 11-07-2026 · Last updated: 26-08-2026_
 
 **Target venue:** Journal of Open Humanities Data (JOHD), data-paper track.
 **Dataset:** [`union-headwords`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/union-headwords.meta.md)
@@ -235,6 +235,8 @@ The author declares no competing interests.
   Press, 1899.
 - Gasūns, M. *Gasuns Sanskrit Dictionary data release v0.4.0.* Zenodo, 25-08-2026.
   [doi.org/10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090).
+- Gasūns, M. *Gasuns Sanskrit Dictionary data release v0.5.0.* Zenodo, 26-08-2026.
+  [doi.org/10.5281/zenodo.22105641](https://doi.org/10.5281/zenodo.22105641).
 
 ## Backlog to 5/5
 
