@@ -14,6 +14,10 @@ sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
 
+## [0.116.0] - 2026-08-27
+### Added
+- **H3596 (OxAlpha) — datasets.json manifest v0.2.0: `status` + `consumer_candidates` planning fields; all 10 zero-consumer rows annotated.** New optional per-row fields (documented in `note_for_agents`): `status` ∈ {`awaiting-consumer`, `diff-then-decide`, `internal-tooling`}, `consumer_candidates` `[{repo, use, confidence}]` — plan entries only, never promoted into `consumers` until the consuming lane wires up. Annotated: `dcs-compound-dictionary` (→kosha samāsa trainer attestation ranking / SanskritGrammar PR #428 cross-check / Sanskrit-in-Numbers), `dcs-stem-cooccurrence-full` (→SanskritSpellCheck lift instruments / pwg-sense-attestation-window extension), `dcs-parallel-passages-full` (→RussianRamayana translator-env / Parallel-Sanskrit-Corpora), `dcs-sintagmatic-appendix7` (→pwg_ru portraits / Sundara lexical-note QA), `dcs-sintagmatic-appendix6-periods` (→kosha frequency-layer cross-check / Sanskrit-in-Numbers), verb trio (→Sanskrit-in-Numbers + claims probes; notes now carry the R2606-01 unaccented I/VI dead-end caveat), `stopovye-parallel-passages` = `diff-then-decide`, `archive-stopword-sqlite` = `internal-tooling`. `directory/index.html` regenerated (also catches up the page to the already-landed 93rd dataset + data-v0.5.0 asset URLs — the page had drifted from `datasets.json`). Consumer wiring tracked as Uprava GTD @DO rows.
+
 ## [0.115.3] - 2026-08-26
 - **H3457 published (MG ruling 25-08-2026) - word-page learner layer live on all 2,324 static /w/ pages:** study badge (core_rank/coverage from lemma_frequency.tsv), localStorage favorites + /favorites.html index, PWG print-scan anchors to the printed edition. Same render_word_page as SSR; content unchanged byte-level, chrome added. Revert = rebuild without the ux layer. NOT_PUBLISHED markers removed per decision.
 
