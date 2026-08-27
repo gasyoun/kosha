@@ -13,6 +13,8 @@ assets from P1 on) are versioned separately per
 sense citations pin to `data_version`, not to repo tags.
 
 ## [Unreleased]
+### Added
+- **H3597 (OxAlpha) - akshara.ru FULL kosha crawl launched (RESTRICTED, benchmark-only): census-first, NO volume stop per MG ruling 27-08-2026.** Census FROZEN before the first card fetch from the site's own sitemap-kosha-001/002 index: **51,663 unique heads** (`data/akshara_full/head_manifest.jsonl` + `census.json`, sha256-pinned sources). New `scripts/akshara_census.py` (freeze + `--check` parity) and `scripts/akshara_full_crawl.py` (extends the H3455 pilot by **importing** its `guarded_fetch` robots allow-list - fenced endpoints never requested; 2.0 s throttle + ≤1 s jitter; exponential backoff; checkpointed resume-from-log JSONL manifests - load-bearing at 206,652 URLs = 51,663 heads × (dict=all + 3 MT variants); milestone record every 1000 URLs with rate/ETA, never aborting on volume). Pass 1 running detached since 27-08-2026 (~0.21 URLs/s, ETA ~69 h; then `--ru` pass 2 ~+208 h). Launch findings: cold-fetch mis-resolution quirk (site served the `ABa` card for `?q=ABA` while cold; warm re-fetch correct) → mandatory drain gate asserting `data-q-slp1` parity per stored card; launch refetch spot check 9/10 byte-identical with the 1 mismatch fully diagnosed by that quirk. Census report + resume instructions + drain acceptance gate: [docs/AKSHARA_FULL_COVERAGE_H3597_27.08.26.md](https://github.com/gasyoun/kosha/blob/main/docs/AKSHARA_FULL_COVERAGE_H3597_27.08.26.md). datasets.json + `akshara-mt-benchmark-full` (restricted sibling of the H3455 pilot row). Raw HTML/parsed corpus stay gitignored; nothing public without a fresh @DECIDE.
 
 ## [0.116.0] - 2026-08-27
 ### Added
