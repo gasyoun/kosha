@@ -1,12 +1,12 @@
 {
- "manifest_version": "0.1.0",
+ "manifest_version": "0.2.0",
  "generated": "2026-08-16",
  "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
  "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
  "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
  "canonical_base_future": "https://samskrtam.ru/kosha/data/",
  "interim_release": "https://github.com/gasyoun/kosha/releases/tag/data-v0.3.0",
- "note_for_agents": "This is the ONE machine-readable list of canonical derived Sanskrit datasets across the ~85 repos. Before deriving an alignment/frequency/headword/crosswalk asset, check here. tier=public assets are downloadable from the interim_release URL; tier=restricted assets exist but are not published (rights-encumbered or unbackuped local-only) — consult their source repo; tier=intermediate is raw/working data that feeds another registered dataset — not standalone-citable, not rights-gated, just not a finished asset in its own right (excluded from the public directory page). A session that creates or changes a derived dataset MUST add/update its row here in the same pass.",
+ "note_for_agents": "This is the ONE machine-readable list of canonical derived Sanskrit datasets across the ~85 repos. Before deriving an alignment/frequency/headword/crosswalk asset, check here. tier=public assets are downloadable from the interim_release URL; tier=restricted assets exist but are not published (rights-encumbered or unbackuped local-only) — consult their source repo; tier=intermediate is raw/working data that feeds another registered dataset — not standalone-citable, not rights-gated, just not a finished asset in its own right (excluded from the public directory page). A session that creates or changes a derived dataset MUST add/update its row here in the same pass. Optional planning fields since manifest_version 0.2.0: status (awaiting-consumer | diff-then-decide | internal-tooling) marks a row with zero consumers that is (a) open for a consumer, (b) pending a content-diff before a supersede-or-keep verdict, or (c) internal tooling with no external consumer expected; consumer_candidates [{repo,use,confidence}] are PLAN entries only — never promote a candidate into consumers until the consuming lane actually wires up, at which point the candidate entry is removed and consumers gains the repo.",
  "datasets": [
   {
    "id": "mw-roots",
@@ -446,7 +446,20 @@
    "source_path": "derived-data/Lexical-Cores/Prilozhenie-7.-«Sintagmaticheskaya-tablica-dlya-vseh-lemm-korpusa»v/DCS_Sintagmatic.csv (tracked)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
    "consumers": [],
-   "notes": "H291: a second, byte-different copy of the same data lives at derived-data/Sinonimy/S_P_D_F/Синтагматическая таблица DCS.csv (UTF-16LE, tab-delimited, Cyrillic header, 47 MB, 82,801 lines incl. blank separator rows) — same 'appendix table' family as this file, same underlying content verified by row-1 sample diff, both created 2026-06-05. This (semicolon-delimited, UTF-8, no BOM, 'Приложение 7' appendix numbering matching the Приложение-6 family below) is registered as canonical; the Sinonimy copy is left in place on disk as a raw/interim export, not separately registered."
+   "notes": "H291: a second, byte-different copy of the same data lives at derived-data/Sinonimy/S_P_D_F/Синтагматическая таблица DCS.csv (UTF-16LE, tab-delimited, Cyrillic header, 47 MB, 82,801 lines incl. blank separator rows) — same 'appendix table' family as this file, same underlying content verified by row-1 sample diff, both created 2026-06-05. This (semicolon-delimited, UTF-8, no BOM, 'Приложение 7' appendix numbering matching the Приложение-6 family below) is registered as canonical; the Sinonimy copy is left in place on disk as a raw/interim export, not separately registered.",
+   "status": "awaiting-consumer",
+   "consumer_candidates": [
+    {
+     "repo": "SanskritLexicography",
+     "use": "pwg_ru portrait enrichment — per-lemma collocate context joined onto word-portrait pages",
+     "confidence": "medium"
+    },
+    {
+     "repo": "CommentaryStrategies",
+     "use": "Sundara lexical-note QA — collocate profile per lemma as context for sense-note review",
+     "confidence": "medium"
+    }
+   ]
   },
   {
    "id": "dcs-parallel-passages-full",
@@ -461,7 +474,20 @@
    "source_path": "derived-data/Paralleli-v-tekstah-korpusa-SRC/PARA/Polnorazmernye/ (tracked, 245 files, *.csv per source passage)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
    "consumers": [],
-   "notes": "H291: a same-file-count, same-naming sibling directory PARA/Polnorazmernye-2022-archive/ (245 files, 56 MB) is a superseded 2022 snapshot — sample diff on 104_1--20.csv shows the archive uses a flat '!' match flag where the live version has richer PARTLY/+term-delta annotations. Archive left on disk as a historical snapshot, not separately registered."
+   "notes": "H291: a same-file-count, same-naming sibling directory PARA/Polnorazmernye-2022-archive/ (245 files, 56 MB) is a superseded 2022 snapshot — sample diff on 104_1--20.csv shows the archive uses a flat '!' match flag where the live version has richer PARTLY/+term-delta annotations. Archive left on disk as a historical snapshot, not separately registered.",
+   "status": "awaiting-consumer",
+   "consumer_candidates": [
+    {
+     "repo": "RussianRamayana",
+     "use": "translator-env context layers — parallel-passage context for auto-footnote sheets",
+     "confidence": "medium-high"
+    },
+    {
+     "repo": "Parallel-Sanskrit-Corpora",
+     "use": "alignment QA / recall baseline for the parallel-corpora programme",
+     "confidence": "medium"
+    }
+   ]
   },
   {
    "id": "dcs-verb-roots-by-class",
@@ -476,7 +502,20 @@
    "source_path": "derived-data/Glagolnye-formy/Klassy/Spiski-glagolnyh-kornej-po-klassam-2214/Imeyushchie-formy/ (tracked, 10 files, *.csv per verb class)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
    "consumers": [],
-   "notes": "H291 Step 2 bundle: 10 small per-class files registered as one row per MG ruling (bundle-worthy fragmented candidates → one row, not left as separate small files)."
+   "notes": "H291 Step 2 bundle: 10 small per-class files registered as one row per MG ruling (bundle-worthy fragmented candidates → one row, not left as separate small files). H3596 consumer-plan caveat: R2606-01 (Uprava DEAD_ENDS) — these are UNACCENTED counts, they cannot separate present class I from VI (only accent does); never use them for an I/VI verdict.",
+   "status": "awaiting-consumer",
+   "consumer_candidates": [
+    {
+     "repo": "SanskritLexicography",
+     "use": "Sanskrit-in-Numbers verb-class+voice module — consume instead of re-deriving class inventories",
+     "confidence": "high"
+    },
+    {
+     "repo": "SanskritGrammar",
+     "use": "claims.yml verb-class attestation probes (attestation floors for classes other than I/VI)",
+     "confidence": "medium"
+    }
+   ]
   },
   {
    "id": "dcs-verb-class-prefix-frequency",
@@ -491,7 +530,20 @@
    "source_path": "derived-data/Glagolnye-formy/Klassy/Spisok-form-s-prefiksami-8444/Cl_Frq/ (tracked, 10 files, *.csv per verb class)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
    "consumers": [],
-   "notes": "H291 Step 2 bundle: 10 small per-class files registered as one row per MG ruling. Sibling of dcs-verb-roots-by-class (same class-numbering scheme, prefixed-forms variant)."
+   "notes": "H291 Step 2 bundle: 10 small per-class files registered as one row per MG ruling. Sibling of dcs-verb-roots-by-class (same class-numbering scheme, prefixed-forms variant). H3596 consumer-plan caveat: R2606-01 (Uprava DEAD_ENDS) — these are UNACCENTED counts, they cannot separate present class I from VI (only accent does); never use them for an I/VI verdict.",
+   "status": "awaiting-consumer",
+   "consumer_candidates": [
+    {
+     "repo": "SanskritLexicography",
+     "use": "Sanskrit-in-Numbers verb-class+voice module (prefixed-form counts per class)",
+     "confidence": "high"
+    },
+    {
+     "repo": "SanskritGrammar",
+     "use": "claims.yml prefix-behavior probes (ud-/pra-/vi- class distribution)",
+     "confidence": "medium"
+    }
+   ]
   },
   {
    "id": "dcs-sintagmatic-appendix6-periods",
@@ -506,7 +558,20 @@
    "source_path": "derived-data/Lexical-Cores/Prilozhenie-6.-«Sintagmaticheskie-tablicy-chastotnyh-leksicheskih-yader-razlichnyh-istoricheskih-periodov»/ (tracked, 7 files, *.csv per period)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
    "consumers": [],
-   "notes": "H291 Step 2 bundle: 7 per-period files registered as one row per MG ruling. Same 'appendix table' family as dcs-sintagmatic-appendix7 (Приложение 7 = all-corpus version; this is the per-period breakdown, Приложение 6)."
+   "notes": "H291 Step 2 bundle: 7 per-period files registered as one row per MG ruling. Same 'appendix table' family as dcs-sintagmatic-appendix7 (Приложение 7 = all-corpus version; this is the per-period breakdown, Приложение 6).",
+   "status": "awaiting-consumer",
+   "consumer_candidates": [
+    {
+     "repo": "kosha",
+     "use": "frequency-layer cross-check — per-period collocate cores validate the per-period vectors in data/frequency/lemma_frequency.tsv",
+     "confidence": "medium"
+    },
+    {
+     "repo": "SanskritLexicography",
+     "use": "Sanskrit-in-Numbers period modules (diachronic lexical-core portrait)",
+     "confidence": "medium"
+    }
+   ]
   },
   {
    "id": "stopovye-parallel-passages",
@@ -521,7 +586,8 @@
    "source_path": "derived-data/Paralleli-v-tekstah-korpusa-SRC/PARA/Stopovye/ (tracked, 113 objects incl. 1 split .7z, *.csv per source passage)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
    "consumers": [],
-   "notes": "H291: the largest single derived-data bundle in VisualDCS (1.17 GB) — likely a stop-word-filtered variant of dcs-parallel-passages-full, not yet content-diffed against it. Git-tracked (confirmed 07-07-2026), so NOT a backup-risk giant; cross-referenced in Uprava/DATA_LAYERS_CENSUS.md § Actionable gaps instead of the unbackuped-giants table. rows left null: format is per-file alignment records, not a flat table — a meaningful row count needs a schema-aware parse, not a line count."
+   "notes": "H291: the largest single derived-data bundle in VisualDCS (1.17 GB) — likely a stop-word-filtered variant of dcs-parallel-passages-full, not yet content-diffed against it. Git-tracked (confirmed 07-07-2026), so NOT a backup-risk giant; cross-referenced in Uprava/DATA_LAYERS_CENSUS.md § Actionable gaps instead of the unbackuped-giants table. rows left null: format is per-file alignment records, not a flat table — a meaningful row count needs a schema-aware parse, not a line count. H3596 status: diff-then-decide — likely a stop-word-filtered variant of dcs-parallel-passages-full, never content-diffed; diff first, supersede this row if redundant, only then consider consumers. GTD @DO row minted 27-08-2026.",
+   "status": "diff-then-decide"
   },
   {
    "id": "russiantranslation-src-raw-ingests",
@@ -593,7 +659,15 @@
    "source_path": "derived-data/Glagolnye-formy/Частота появления глагольных форм в корпусе (Предварительные данные).csv (tracked)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
    "consumers": [],
-   "notes": "H291 Step 4: same 'derived-data/Fonetika family of small frequency tables as the already-public dcs-grapheme-frequency; filename marks it explicitly 'preliminary data' (Предварительные данные)."
+   "notes": "H291 Step 4: same 'derived-data/Fonetika family of small frequency tables as the already-public dcs-grapheme-frequency; filename marks it explicitly 'preliminary data' (Предварительные данные).",
+   "status": "awaiting-consumer",
+   "consumer_candidates": [
+    {
+     "repo": "SanskritLexicography",
+     "use": "Sanskrit-in-Numbers verb modules — corpus-side cross-check only (106 rows, filename itself marks it preliminary)",
+     "confidence": "low"
+    }
+   ]
   },
   {
    "id": "dcs-compound-dictionary",
@@ -608,7 +682,25 @@
    "source_path": "derived-data/Kompozity/ (tracked, *.csv — CompDic/cmps/names/parts/verbx/cmp400000.csv)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
    "consumers": [],
-   "notes": "H291 Step 4: bundle of all *.csv in derived-data/Kompozity/ (the dir also holds non-csv working files — .xlsx/.doc/.ods/.7z — out of scope for this manifest, which tracks the csv exports)."
+   "notes": "H291 Step 4: bundle of all *.csv in derived-data/Kompozity/ (the dir also holds non-csv working files — .xlsx/.doc/.ods/.7z — out of scope for this manifest, which tracks the csv exports).",
+   "status": "awaiting-consumer",
+   "consumer_candidates": [
+    {
+     "repo": "kosha",
+     "use": "samāsa analysis trainer drill ranking — names.csv (168,880 attested compounds w/ frequency vector) as the attestation source (H1398 follow-on; v0.67.0 downstream named it)",
+     "confidence": "high"
+    },
+    {
+     "repo": "SanskritGrammar",
+     "use": "cross-check for the PWG compound-split layer (PR #428, 16,745 samāsa splits)",
+     "confidence": "medium"
+    },
+    {
+     "repo": "SanskritLexicography",
+     "use": "Sanskrit-in-Numbers samāsa-types / longest-compounds modules",
+     "confidence": "medium"
+    }
+   ]
   },
   {
    "id": "uttarapada-dict-vs-corpus",
@@ -640,7 +732,20 @@
    "source_path": "derived-data/Sochetaemost-sanskritskih-osnov/NEW/1-222342.csv (tracked)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
    "consumers": [],
-   "notes": "H291 Step 4: checked for an older non-'NEW' sibling per the open question in this handoff — none found (Sochetaemost-sanskritskih-osnov/ has period-bucketed .txt files under Sochetaemost/ and a separate Ishodnye-dannye/ raw-inputs dir, neither is a prior version of this file); 'NEW' reads as this file's permanent name, not a superseded/current pair."
+   "notes": "H291 Step 4: checked for an older non-'NEW' sibling per the open question in this handoff — none found (Sochetaemost-sanskritskih-osnov/ has period-bucketed .txt files under Sochetaemost/ and a separate Ishodnye-dannye/ raw-inputs dir, neither is a prior version of this file); 'NEW' reads as this file's permanent name, not a superseded/current pair.",
+   "status": "awaiting-consumer",
+   "consumer_candidates": [
+    {
+     "repo": "SanskritSpellCheck",
+     "use": "corpus-instrument validation — stem-pair co-occurrence lift as a corroborating signal (never a tier promoter)",
+     "confidence": "medium"
+    },
+    {
+     "repo": "kosha",
+     "use": "extend pwg-sense-attestation-window with co-occurrence-based window expansion (pwg-de sense attestation pilot)",
+     "confidence": "medium"
+    }
+   ]
   },
   {
    "id": "which-dictionary-routing-benchmark",
@@ -808,7 +913,8 @@
    "builder": "src/DCS-data-2026/import_archive.py stopword",
    "rebuild": "Fully regenerable: python import_archive.py stopword — reassembles 11 7z-split CSVs from the git-tracked Stopovye/ export (= stopovye-parallel-passages row) and reloads ~40.5M rows. Deliberately NOT shipped (20-30x everything else); the compact sibling archive.sqlite ships as Release asset archive-2026-07.",
    "consumers": [],
-   "notes": "H691: the census §2 'uncounted 11 GB blind spot' resolved — live counts match the M9 validation report (reports/m9_archive_ingest.md) exactly. Filter quality='GOOD' for the high-precision subset. The full 245-text stop-word run was deliberately deleted by MG 02-07-2026; only this 113-text partial survives."
+   "notes": "H691: the census §2 'uncounted 11 GB blind spot' resolved — live counts match the M9 validation report (reports/m9_archive_ingest.md) exactly. Filter quality='GOOD' for the high-precision subset. The full 245-text stop-word run was deliberately deleted by MG 02-07-2026; only this 113-text partial survives. H3596 status: internal-tooling — deliberately unshipped and regenerable; it IS the query surface for the surviving 113-text M9 stop-word run (reports/m9_archive_ingest.md), so no external consumer is expected; excluded from the awaiting-consumer census.",
+   "status": "internal-tooling"
   },
   {
    "id": "samudra-offline-packs",
