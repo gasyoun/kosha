@@ -1,4 +1,6 @@
-_Created: 13-07-2026 · Last updated: 30-07-2026 (§5 stale Phase-4 line struck, H1878; prior: Phase 2c Śāstra/commentary sweep, H1492; Phase 2b H901; Method B H903; Method C H908)_
+_Created: 13-07-2026 · Last updated: 27-08-2026_
+
+> **Truth-pass 27-08-2026** (Grok 4.6 `grok-4.6`). D4 addendum: this file joined the Wave 1 FLAG list after 21-08. Closed references checked against the combined registry. Kept in place ([FINDINGS §475](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md) clause 3). Not archived. Prior: 30-07 §5 stale Phase-4 line struck.
 
 # Corpus-wide sandhi extraction for Sanskrit pedagogy — roadmap (2026–2027)
 
