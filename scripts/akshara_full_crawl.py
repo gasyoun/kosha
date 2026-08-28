@@ -50,6 +50,29 @@ RAW_DIR = ROOT / "data" / "raw_akshara_full"
 RU_DICTS = ("mw_ru", "apte_ru", "pwg_ru")
 MILESTONE_EVERY = 1000
 
+# H3597 report §5: the site can serve a near-miss head's card for a cold key.
+Q_SLP1_RE = re.compile(r'data-q-slp1="([^"]+)"')
+
+
+def verify_head(body: bytes, slp1: str, url: str) -> tuple[bytes, bool, str]:
+    """Cold-fetch mis-resolution guard: if the stored card names a different
+    head (data-q-slp1 != requested), re-fetch once warm and keep the answer.
+    Zero-article pages carry no marker and pass through untouched.
+
+    Returns (body_to_store, replaced_by_warm_refetch, misresolved_to)."""
+    m = Q_SLP1_RE.search(body.decode("utf-8", "replace"))
+    if m is None or m.group(1) == slp1:
+        return body, False, ""
+    time.sleep(THROTTLE_S)
+    try:
+        _status, body2 = guarded_fetch(url)
+    except Exception:  # keep the (wrong-headed) body; drain report decides
+        return body, False, m.group(1)
+    m2 = Q_SLP1_RE.search(body2.decode("utf-8", "replace"))
+    if m2 is None or m2.group(1) == slp1:
+        return body2, True, ""
+    return body2, False, m2.group(1)
+
 
 def done_keys(log: Path) -> set[str]:
     """Keys already fetched OK in `log`; ru-pass keys carry the dict suffix."""
@@ -89,6 +112,15 @@ def main() -> int:
     heads = [r["slp1"] for r in rows]
     RAW_DIR.mkdir(parents=True, exist_ok=True)
 
+    if sys.platform == "win32":
+        # Network I/O alone does not hold off Windows sleep; ask the OS to
+        # keep the system awake for as long as this process lives.
+        try:
+            import ctypes
+            ctypes.windll.kernel32.SetThreadExecutionState(0x80000000 | 0x00000001)
+        except Exception:  # noqa: BLE001 - best-effort keep-awake
+            pass
+
     if not args.ru:
         log = CRAWL_LOG
         done = done_keys(log)
@@ -120,6 +152,7 @@ def main() -> int:
         t = time.monotonic()
         try:
             status, body = guarded_fetch(url)
+            body, resolved_fix, misresolved = verify_head(body, slp1, url)
             (RAW_DIR / fname).write_bytes(body)
             rec = {
                 "slp1": key, "dict": dictpart or "all", "url": url,
@@ -128,6 +161,10 @@ def main() -> int:
                 "ms": int((time.monotonic() - t) * 1000),
                 "sha256": hashlib.sha256(body).hexdigest(),
             }
+            if resolved_fix:
+                rec["resolved_fix"] = True
+            if misresolved:
+                rec["misresolved"] = misresolved
             ok += 1
         except Exception as e:  # noqa: BLE001 - log everything, keep crawling
             rec = {"slp1": key, "dict": dictpart or "all", "url": url,
