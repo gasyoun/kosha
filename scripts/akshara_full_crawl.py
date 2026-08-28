@@ -6,12 +6,13 @@ Extends the H3455 bounded pilot (scripts/akshara_pilot_crawl.py) to ALL
 census first, full run regardless of volume; report volume at milestone
 checkpoints (every 1000 URLs), never abort because it got big.
 
-Contract UNCHANGED from H3455:
+Contract (H3455 base, amended by MG ruling 28-08-2026):
   - only /kosha?q=<slp1>&dict=(all|mw_ru|apte_ru|pwg_ru)&script=slp1 card pages;
     robots-fenced endpoints NEVER requested (guard reused verbatim from the
     pilot module - import, not fork);
-  - identified UA with contact, 2.0 s throttle + <=1 s jitter, exponential
-    backoff, one retry class;
+  - identified UA with contact; per-CONNECTION politeness unchanged: each of
+    the 2 workers keeps its own 2.0 s throttle + <=1 s jitter, exponential
+    backoff, one retry class (2 polite streams total, MG ruled 28-08-2026);
   - checkpointed append-only JSONL manifests with resume-from-log (a crash
     never restarts from zero - resumeability is LOAD-BEARING at ~207k URLs).
 
@@ -22,6 +23,7 @@ Passes:
 Usage:
   python scripts/akshara_full_crawl.py             # pass 1, resume to completion
   python scripts/akshara_full_crawl.py --ru        # pass 2, resume to completion
+  python scripts/akshara_full_crawl.py --workers 1 # revert to single polite stream
   python scripts/akshara_full_crawl.py --limit 3   # smoke run
 """
 from __future__ import annotations
@@ -32,8 +34,10 @@ import json
 import random
 import re
 import sys
+import threading
 import time
 import urllib.parse
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -106,7 +110,11 @@ def main() -> int:
     ap.add_argument("--limit", type=int, default=0, help="smoke-run cap")
     ap.add_argument("--ru", action="store_true",
                     help="pass 2: dict=mw_ru|apte_ru|pwg_ru per headword")
+    ap.add_argument("--workers", type=int, default=2,
+                    help="polite parallel streams (default 2 per MG ruling "
+                         "28-08-2026; each worker keeps its own 2.0 s throttle)")
     args = ap.parse_args()
+    workers = max(1, args.workers)
 
     rows = [json.loads(l) for l in open(MANIFEST, encoding="utf-8")]
     heads = [r["slp1"] for r in rows]
@@ -141,11 +149,15 @@ def main() -> int:
     if args.limit:
         todo = todo[: args.limit]
     print(f"pass={'ru' if args.ru else 'all'} census {len(rows)}, "
-          f"already-done {len(done)}, to-crawl {len(todo)}", flush=True)
+          f"already-done {len(done)}, to-crawl {len(todo)}, workers={workers}",
+          flush=True)
 
-    ok = fail = 0
+    lock = threading.Lock()
+    progress = {"i": 0, "ok": 0, "fail": 0}
     t0 = time.monotonic()
-    for i, (key, tag, url) in enumerate(todo, 1):
+
+    def task(item: tuple[str, str, str]) -> None:
+        key, tag, url = item
         slp1, _, dictpart = key.partition("|")
         safe = re.sub(r"[^A-Za-z0-9_.~-]", "_", slp1)[:80] or "_"
         fname = f"{safe}.html" if not dictpart else f"{safe}.{dictpart}.html"
@@ -165,23 +177,33 @@ def main() -> int:
                 rec["resolved_fix"] = True
             if misresolved:
                 rec["misresolved"] = misresolved
-            ok += 1
+            good = True
         except Exception as e:  # noqa: BLE001 - log everything, keep crawling
             rec = {"slp1": key, "dict": dictpart or "all", "url": url,
                    "ts": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                    "http": 0, "bytes": 0, "error": repr(e)[:200]}
-            fail += 1
-        with open(log, "a", encoding="utf-8", newline="\n") as f:
-            f.write(json.dumps(rec, ensure_ascii=False) + "\n")
-        if i % 50 == 0 or i == len(todo):
-            rate = i / max(1e-9, time.monotonic() - t0)
-            print(f"[{i}/{len(todo)}] ok={ok} fail={fail} rate={rate:.2f}/s "
-                  f"last={rec['http']} {key}", flush=True)
-        if i % MILESTONE_EVERY == 0:
-            milestone(len(todo), i, ok, fail, t0)
+            good = False
+        with lock:  # serialize log appends + progress from parallel workers
+            with open(log, "a", encoding="utf-8", newline="\n") as f:
+                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+            progress["i"] += 1
+            progress["ok" if good else "fail"] += 1
+            i, ok, fail = progress["i"], progress["ok"], progress["fail"]
+            if i % 50 == 0 or i == len(todo):
+                rate = i / max(1e-9, time.monotonic() - t0)
+                print(f"[{i}/{len(todo)}] ok={ok} fail={fail} rate={rate:.2f}/s "
+                      f"last={rec['http']} {key}", flush=True)
+            if i % MILESTONE_EVERY == 0:
+                milestone(len(todo), i, ok, fail, t0)
+        # per-worker politeness: sleep outside the lock
         time.sleep(THROTTLE_S + random.uniform(0, 1.0))
-    milestone(len(todo), len(todo), ok, fail, t0)
-    print(f"DONE ok={ok} fail={fail}")
+
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futures = [ex.submit(task, item) for item in todo]
+        for fut in as_completed(futures):
+            fut.result()  # task() handles fetch errors; surface anything else
+    milestone(len(todo), len(todo), progress["ok"], progress["fail"], t0)
+    print(f"DONE ok={progress['ok']} fail={progress['fail']}")
     return 0
 
 
