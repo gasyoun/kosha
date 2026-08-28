@@ -1,6 +1,6 @@
 # H3597 — akshara.ru FULL kosha crawl: census + run report
 
-_Created: 27-08-2026 · OxAlpha (`z-ai/glm-5.3-flash`) · RESTRICTED tier, benchmark-only_
+_Created: 27-08-2026 · Last updated: 28-08-2026 · OxAlpha (`z-ai/glm-5.3-flash`) · RESTRICTED tier, benchmark-only_
 
 MG ruling 27-08-2026: **NO volume stop** — census first, then a full run regardless of
 volume; volume reported at checkpoint milestones (every 1000 URLs in the crawl manifest
@@ -86,15 +86,29 @@ Raw HTML + parsed corpus gitignored, benchmark-only; NOTHING public without a fr
 `data/manifest/datasets.json` as `akshara-mt-benchmark-full` (sibling of the H3455
 pilot entry).
 
-## 8. Resume instructions (any future session)
+## 8. Supervision + resume (self-healing since 28-08-2026)
 
-The crawl runs detached in `C:\Users\user\Documents\GitHub\kosha-h3597-14872`
-(session worktree — **do not GC until drain**). If it stops (reboot/sleep/crash):
+The crawl is supervised by the scheduled task **`kosha-akshara-crawl-watchdog`**
+([`scripts/akshara_crawl_watchdog.ps1`](https://github.com/gasyoun/kosha/blob/main/scripts/akshara_crawl_watchdog.ps1),
+every 10 min, StartWhenAvailable + WakeToRun, IgnoreNew, 10-min exec limit, log:
+`data/akshara_full/watchdog.log`). Contract: healthy → no-op; wedged (alive, no
+manifest write >10 min) → taskkill + relaunch; dead → relaunch the incomplete pass;
+both passes exhausted (done+failed == total) → log + **self-disable** (no orphaned
+task). The crawler itself (since the 28-08 patch) holds Windows
+`SetThreadExecutionState(ES_CONTINUOUS|ES_SYSTEM_REQUIRED)` while alive — the
+machine stays awake while crawling — and validates every stored card inline
+(`data-q-slp1` parity; warm re-fetch once on mis-resolution, `resolved_fix` /
+`misresolved` fields in the crawl log).
 
-1. `python scripts/akshara_full_crawl.py` — resumes pass 1 from the log.
-2. When pass 1 prints `DONE`, run `python scripts/akshara_full_crawl.py --ru` for pass 2.
-3. At drain: §5 gate → `scripts/akshara_pilot_parse.py`-style full parse (extend, don't
-   fork) → per-dict coverage table → final §9 acceptance tick + Uprava GTD close.
+- End-to-end proof (28-08, §223 rule — a guard that never ran is not a guard):
+  healthy no-op kept 1 process; controlled `taskkill` → watchdog restarted pass 1
+  from the exact checkpoint (13,495/51,663 done, resume gap `brahmakalA → brahmatIrTa`,
+  0 fail) under the patched code.
+- Manual path (if the task is gone): the crawler is fully resume-safe —
+  1. `python scripts/akshara_full_crawl.py` — resumes pass 1 from the log.
+  2. When pass 1 prints `DONE`, run `python scripts/akshara_full_crawl.py --ru` for pass 2.
+  3. At drain: §5 gate → full parse (extend `akshara_pilot_parse.py`, don't fork) →
+     per-dict coverage table → final §9 acceptance tick + Uprava GTD close.
 
 ## 9. Acceptance (locked at launch; drain ticks the boxes)
 
@@ -107,4 +121,6 @@ The crawl runs detached in `C:\Users\user\Documents\GitHub\kosha-h3597-14872`
 - **On our data:** H3455 pilot (304 heads, 1216 fetches, 10/10 refetch) as the golden
   contract baseline; launch-time 9/10 + §5 diagnosis as the honest delta.
 - **Fail =:** any unexplained crawl manifest fail >0.1%, a guard exception, a wrong-head
-  page parsed silently, or a resume that restarts from zero.
+  page parsed silently, or a resume that restarts from zero. Watchdog addendum: an
+  interruption NOT healed within ~10 min (task disabled/removed early, or the worktree
+  path gone) is also a fail — do not unregister the task before drain.
