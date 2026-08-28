@@ -29,9 +29,12 @@ what the site itself declares.
 
 ## 2. Volume reality (reported, not obeyed as a stop)
 
-51,663 heads × (1 × `dict=all` + 3 × MT variants) = **206,652 URLs**. Measured live rate
-on launch: ~0.21 URLs/s (2.0 s throttle + ≤1 s jitter + ~1–2 s fetch of ~0.04–1.7 MB
-pages) → pass 1 ≈ 69 h, pass 2 ≈ +208 h. **~11–12 days of continuous polite crawling.**
+51,663 heads × (1 × `dict=all` + 3 × MT variants) = **206,652 URLs**. Single polite
+stream measured ~0.29–0.35 URLs/s → ~11–12 days. **MG ruling 28-08-2026: parallel
+streams approved** — the crawler now runs **2 polite streams** (each worker keeps its
+own 2.0 s throttle + ≤1 s jitter; per-connection behavior unchanged, global rate
+doubled to ~0.69 URLs/s measured live) → revised ETA: pass 1 ≈ 13–14 h from the
+28-08 switch, pass 2 ≈ +2.9 days; **full crawl done ≈ 1 September** (was 3–4 Sept).
 Proceeding per ruling; every 1000 URLs appends a milestone record with ok/fail/rate/ETA
 to `data/akshara_full/milestones.jsonl`.
 
@@ -44,6 +47,8 @@ to `data/akshara_full/milestones.jsonl`.
   (`guarded_fetch`; import, not fork) into [`scripts/akshara_full_crawl.py`](https://github.com/gasyoun/kosha/blob/main/scripts/akshara_full_crawl.py).
 - Identified UA with contact; robots.txt re-probed 27-08-2026 (fences unchanged from the
   H3455 24-08-2026 reading); owner outreach DONE by MG pre-pilot, no objection posted since.
+  28-08-2026 amendment (MG): 2 polite parallel streams — per-connection politeness
+  (≥2.0 s + jitter, backoff, retry class) is per-worker and unchanged.
 - 2.0 s throttle + ≤1 s jitter, exponential backoff (4/8/16 s, cap 60 s), one retry class.
 - Checkpointed append-only JSONL manifests with **resume-from-log** (`done_keys` counts
   only http-200 rows): a crash never restarts from zero — LOAD-BEARING at 206k URLs.
@@ -57,6 +62,11 @@ to `data/akshara_full/milestones.jsonl`.
   (`A`→5 originals, `ABARaka`→mw+pwg partial card — honest shape, not a parse defect).
 - Launched pass 1 detached 27-08-2026 ~17:58 UTC; crawl manifest grows, 0 fails,
   0 duplicate keys (single-crawler verified — no double-launch).
+- 28-08-2026: live switch to the 2-stream build under the watchdog — killed the old
+  process, watchdog relaunched from the exact checkpoint (`workers=2` in the run log,
+  rate 0.69/s, 0 fail). Two transient local-DNS fetch failures (`getaddrinfo failed`,
+  09:22–09:23 UTC — machine-side, not site-side) were re-fetched 200 OK within the
+  hour via the crawler's own code path; their ok-records complete the keys in the log.
 
 ## 5. NEW site-level finding: cold-fetch mis-resolution (drain gate)
 
