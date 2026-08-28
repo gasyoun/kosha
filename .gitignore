@@ -83,10 +83,13 @@ data/akshara_pilot/bench/tm_snapshot.jsonl
 # parsed corpus stay local-only; frozen census manifest + crawl logs DO commit.
 data/raw_akshara_full/
 data/akshara_full/parsed_corpus.jsonl
+data/akshara_full/parsed_corpus_ru.jsonl
 data/akshara_full/run_pass1.log
 data/akshara_full/run_pass1.err
 data/akshara_full/run_pass2.log
 data/akshara_full/run_pass2.err
+data/akshara_full/run_repair.log
+data/akshara_full/run_repair.err
 
 # H3457 word-page UX STAGING output (scripts/build_word_pages.py --ux-staging) —
 # local-only artifact tree, never the Pages input; docs/NOT_PUBLISHED_H3457_WPAGE_UX.md
