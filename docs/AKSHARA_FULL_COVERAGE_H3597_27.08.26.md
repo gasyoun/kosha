@@ -82,6 +82,38 @@ The launch-time 10/10 sha256 re-fetch spot check (acceptance asked ≥10) return
   `data-q-slp1` == requested manifest key; re-fetch mismatches once (warm cache), then
   classify any residue as honest anomalies. Never parse a wrong-head page silently.
 
+## 5b. INCIDENT 28-08-2026: case-twin filename collision + repair plan
+
+The site **distinguishes SLP1 case** (verified live: `dvipAd` vs `dvipad` serve
+different cards — different sha256/sizes; `BA`/`Ba`/`ba` — three distinct cards), and
+the census contains **case twins**: 51,663 keys = 46,488 casefold-distinct, i.e.
+**5,175 keys are case-variants of another key**. Windows NTFS is case-insensitive, so
+the crawler's original flat `<safe>.html` names made each twin pair share one physical
+file — the second fetch silently overwrote the first. The 28-08 parse+delete run then
+consolidated it: one (possibly mislabeled) row per pair, no row for the twin
+(3,810 keys affected at incident time; ~7,1k twin keys total once pass 1 ends).
+
+Two distinct site behaviors must not be conflated (both preserved as data, both
+classified at drain):
+
+- **Case-normalization fallback**: when the exact key has no entry, the site serves
+  the casefold-twin's card and says so (`data-q-slp1="a"` for `?q=A`; sample 300: 27/27
+  mismatches were exactly this class) — a legitimate answer, recorded via `q_slp1`.
+- **True distinct cards**: twin keys that both exist serve different content — the
+  collision class above.
+
+**Fix (landed 28-08):**
+1. Crawler filenames now carry a case-sensitive hash: `<safe>__<sha1-8>.html`
+   (`raw_filename()`) — collision-proof; `--manifest`/`--log` overrides added for
+   repair passes. Live crawler restarted on the fix.
+2. [`scripts/akshara_repair_twins.py`](https://github.com/gasyoun/kosha/blob/main/scripts/akshara_repair_twins.py)
+   — builds the repair manifest (`--build`), reports progress (`--status`), purges
+   tainted rows (`--purge`).
+3. Repair sequence (part of drain, after pass 1 prints DONE — see GTD @DO row):
+   `--build` → crawler over the repair manifest (~7,1k URLs, ~3 h) → `--purge` →
+   parse the repair log with `--delete-raw`.    Non-twin parsed rows are trustworthy:
+   their files were never overwritten.
+
 ## 6. Known site-level gaps (expected at scale, encoded as nulls — never fabricated)
 
 - pwg_ru MT inherently missing on ~22.8% of PWG heads (H3455, verified live) — the full

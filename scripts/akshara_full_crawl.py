@@ -54,6 +54,19 @@ RAW_DIR = ROOT / "data" / "raw_akshara_full"
 RU_DICTS = ("mw_ru", "apte_ru", "pwg_ru")
 MILESTONE_EVERY = 1000
 
+
+def raw_filename(key: str) -> str:
+    """Case-collision-proof raw filename.
+
+    SLP1 case is phonemic (dvipAd != dvipad) and the census contains case
+    twins, but NTFS is case-insensitive: flat <safe>.html names made one
+    twin's card silently overwrite the other's (incident 28-08-2026). A
+    case-sensitive hash of the EXACT key is appended to every name."""
+    slp1, _, dictpart = key.partition("|")
+    safe = re.sub(r"[^A-Za-z0-9_.~-]", "_", slp1)[:80] or "_"
+    h = hashlib.sha1(key.encode("utf-8")).hexdigest()[:8]
+    return f"{safe}__{h}.html" if not dictpart else f"{safe}__{h}.{dictpart}.html"
+
 # H3597 report §5: the site can serve a near-miss head's card for a cold key.
 Q_SLP1_RE = re.compile(r'data-q-slp1="([^"]+)"')
 
@@ -113,10 +126,17 @@ def main() -> int:
     ap.add_argument("--workers", type=int, default=2,
                     help="polite parallel streams (default 2 per MG ruling "
                          "28-08-2026; each worker keeps its own 2.0 s throttle)")
+    ap.add_argument("--manifest", default="",
+                    help="alternate head manifest (repair passes), relative to repo root")
+    ap.add_argument("--log", dest="log_override", default="",
+                    help="alternate crawl log (repair passes), relative to repo root")
     args = ap.parse_args()
     workers = max(1, args.workers)
 
-    rows = [json.loads(l) for l in open(MANIFEST, encoding="utf-8")]
+    manifest_path = Path(args.manifest) if Path(args.manifest).is_absolute() \
+        else ROOT / args.manifest if args.manifest else MANIFEST
+
+    rows = [json.loads(l) for l in open(manifest_path, encoding="utf-8")]
     heads = [r["slp1"] for r in rows]
     RAW_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -129,7 +149,14 @@ def main() -> int:
         except Exception:  # noqa: BLE001 - best-effort keep-awake
             pass
 
-    if not args.ru:
+    if args.log_override:
+        log = ROOT / args.log_override if not Path(args.log_override).is_absolute() \
+            else Path(args.log_override)
+        done = done_keys(log)
+        todo = [(h, "all",
+                 f"https://akshara.ru/kosha?q={urllib.parse.quote(h)}&dict=all&script=slp1")
+                for h in heads if h not in done]
+    elif not args.ru:
         log = CRAWL_LOG
         done = done_keys(log)
         todo = [(h, "all",
@@ -159,8 +186,7 @@ def main() -> int:
     def task(item: tuple[str, str, str]) -> None:
         key, tag, url = item
         slp1, _, dictpart = key.partition("|")
-        safe = re.sub(r"[^A-Za-z0-9_.~-]", "_", slp1)[:80] or "_"
-        fname = f"{safe}.html" if not dictpart else f"{safe}.{dictpart}.html"
+        fname = raw_filename(key)
         t = time.monotonic()
         try:
             status, body = guarded_fetch(url)
