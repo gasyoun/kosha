@@ -1,6 +1,8 @@
 # Roadmap — kosha next programme (2026 H2)
 
-_Created: 24-07-2026 · Last updated: 30-07-2026_
+_Created: 24-07-2026 · Last updated: 27-08-2026_
+
+> **Truth-pass 27-08-2026** (Grok 4.6 `grok-4.6`). Already marked superseded 30-07-2026; successor is [docs/ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP.md). Kept in place as historical evidence ([FINDINGS §475](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md) clause 3). Not archived.
 
 **🔒 SUPERSEDED 30-07-2026 (H1943):** the portfolio-status roadmap role is now
 [docs/ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP.md)
