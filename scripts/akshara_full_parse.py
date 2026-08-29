@@ -162,9 +162,14 @@ def main() -> int:
                 freed += path.stat().st_size
                 path.unlink()
                 deleted += 1
-    # second sweep: reclaim files whose rows landed in earlier runs
+    # second sweep: reclaim files whose rows landed in earlier runs; twin keys
+    # share one physical path on case-insensitive NTFS, so entries may already
+    # have been unlinked by the first sweep of this same run - skip those.
     for path in reclaim:
-        freed += path.stat().st_size
+        try:
+            freed += path.stat().st_size
+        except FileNotFoundError:
+            continue
         path.unlink()
         deleted += 1
 
