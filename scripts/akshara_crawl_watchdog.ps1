@@ -11,9 +11,22 @@
 # before every launch; the task itself runs IgnoreNew.
 #
 # Log: data/akshara_full/watchdog.log
+#
+# -CrawlRoot (SPOF fix 28-08-2026): the scheduled task lives on the PERSISTENT
+# kosha main clone but the crawl tree it supervises may be a session worktree
+# (H3597: kosha-h3597-14872). Default = the repo root this script lives in
+# (original single-tree behavior).
+
+param(
+    [string]$CrawlRoot = ''
+)
 
 $ErrorActionPreference = 'Stop'
-$root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+if ($CrawlRoot) {
+    $root = (Resolve-Path -LiteralPath $CrawlRoot).Path
+} else {
+    $root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+}
 $dataDir = Join-Path $root 'data\akshara_full'
 $log = Join-Path $dataDir 'watchdog.log'
 $manifest = Join-Path $dataDir 'head_manifest.jsonl'

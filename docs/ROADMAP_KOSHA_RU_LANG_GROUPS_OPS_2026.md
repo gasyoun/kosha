@@ -1,6 +1,8 @@
 # Roadmap — kosha RU language groups and ops leftovers
 
-_Created: 13-08-2026 · Last updated: 13-08-2026_
+_Created: 13-08-2026 · Last updated: 27-08-2026_
+
+> **Truth-pass 27-08-2026** (Grok 4.6 `grok-4.6`). Closed references checked against the combined registry. Kept in place ([FINDINGS §475](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md) clause 3). Not archived.
 
 Companion to
 [PLAN_KOSHA_RU_LANG_GROUPS_OPS_2026.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_RU_LANG_GROUPS_OPS_2026.md).
