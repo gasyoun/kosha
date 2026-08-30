@@ -1,9 +1,16 @@
-"""kosha word-page UX layer — study badge · favorites · print-scan anchors (H3457).
+"""kosha word-page UX layer — study badge · favorites · print-scan anchors (H3457),
+plus the H3744 aligned-sense organ.
 
-STAGING ONLY (25-08-2026). Nothing here is on the public word page until a human
-flips it: `render_word_page(card, ux=None)` (the default) is byte-identical to the
-pre-H3457 output, and `scripts/build_word_pages.py --ux-staging` refuses to write
-into the Pages tree (`docs/`). Marker: docs/NOT_PUBLISHED_H3457_WPAGE_UX.md.
+**PUBLISHED since 26-08-2026** (MG ruling, commit 070050a): the three H3457
+organs are live on all 2,324 static /w/ pages, and the NOT_PUBLISHED marker this
+docstring used to point at was deleted in that commit. `render_word_page(card,
+ux=None)` is still byte-identical to the pre-H3457 output, but `ux` being truthy
+is **no longer** a non-publication gate — a live rebuild passes it.
+
+Anything staged from here on therefore needs its OWN key inside the `ux` dict.
+The H3744 aligned-sense organ (organ 4 below) rides `ux={"sense_align": True}`,
+set only by `scripts/build_word_pages.py --ux-staging`; its contract is
+docs/NOT_PUBLISHED_H3744_SENSE_ALIGNMENT.md.
 
 Three organs, all DB-free and a pure function of committed files, so the static
 prerender and the FastAPI SSR route stay byte-comparable when `ux` is on:
@@ -33,6 +40,12 @@ to the reading column) — see mockups/h3457-wpage-ux/:
                       with the badge explained, the heart, and a print-sources list
   c  "margin marks"   editorial: rank line under the headword, text-link save,
                       column marks right-aligned like a critical edition
+
+4. **Aligned senses (H3744, STAGED)** — PWG/MW/Apte senses grouped into meanings
+   by shared literary witness, from the committed
+   data/concordance/sense_alignment.tsv. Unlike organs 1–3 this one makes a
+   lexicographic CLAIM in kosha's own voice, so it is gated separately and is
+   not on any live page.
 """
 import csv
 import html
@@ -43,6 +56,8 @@ from pathlib import Path
 _REPO = Path(__file__).resolve().parent.parent
 LEMMA_FREQ = _REPO / "data" / "frequency" / "lemma_frequency.tsv"
 PWG_PC = _REPO / "data" / "pwg_scan" / "pwg_L_pc.tsv"
+SENSE_ALIGN = _REPO / "data" / "concordance" / "sense_alignment.tsv"
+SENSE_ALIGN_CAP = 6   # aligned meanings shown per page; the rest fold into a note
 
 VARIANTS = ("a", "b", "c", "d")
 DEFAULT_VARIANT = "a"
@@ -84,8 +99,26 @@ def _load_pwg_pc():
     return d
 
 
+def _load_alignment():
+    """{lemma_slp1: [group row, …]} from the committed aligned-sense table
+    (H3744, scripts/build_sense_alignment.py). ALIGNED groups only: the
+    unaligned singletons are the failure record, they belong in the TSV and the
+    build report, not on a page. A pure function of the committed file, so the
+    static prerender and the SSR route stay byte-identical."""
+    d = {}
+    if not SENSE_ALIGN.exists():
+        return d
+    with SENSE_ALIGN.open(encoding="utf-8", newline="") as fh:
+        for r in csv.DictReader(fh, delimiter="\t"):
+            if (r.get("status") or "") != "aligned":
+                continue
+            d.setdefault(r["lemma_slp1"], []).append(r)
+    return d
+
+
 _CORE = None
 _PC = None
+_ALIGN = None
 
 
 def slp1_from_token(tok):
@@ -114,6 +147,90 @@ def pwg_pc_of(L):
     if _PC is None:
         _PC = _load_pwg_pc()
     return _PC.get(str(L))
+
+
+def alignment_of(slp1):
+    global _ALIGN
+    if _ALIGN is None:
+        _ALIGN = _load_alignment()
+    return _ALIGN.get(slp1) or []
+
+
+DICT_COL = (("pwg", "PWG", "de"), ("mw", "MW", "en"), ("apte", "Apte", "en"))
+
+
+def sense_alignment_block(slp1):
+    """H3744 STAGING organ — the aligned-sense table for one lemma.
+
+    One row per MEANING: the senses that the three dictionaries witness with the
+    same literary sources, side by side, with the evidence that put them there
+    printed in the row. Returns '' for a lemma outside the pilot table (an
+    honest miss, never an empty promise).
+
+    NOT on the public page. Reached only when `ux.get("sense_align")` is set —
+    which only `--ux-staging` does. The plain `ux` truthiness that gates organs
+    1-3 would NOT be enough: those organs were published on 26-08-2026, so every
+    live /w/ page is now rendered with `ux` on. The 2,324 live pages are built
+    without this block because a cross-dictionary sense alignment asserts that
+    three dictionaries' senses correspond, and that assertion can be scholarly
+    wrong in a way page chrome cannot.
+    Contract: docs/NOT_PUBLISHED_H3744_SENSE_ALIGNMENT.md.
+    """
+    groups = alignment_of(slp1)
+    if not groups:
+        return ""
+    esc = html.escape
+    rows = []
+    for g in groups[:SENSE_ALIGN_CAP]:
+        cells = []
+        for key, label, lang in DICT_COL:
+            gl = (g.get(f"{key}_gloss") or "").strip()
+            ids = (g.get(f"{key}_sense_ids") or "").strip()
+            if not gl:
+                cells.append('<td class="sa-null" aria-label="no sense in this '
+                             f'dictionary for this meaning">—</td>')
+                continue
+            cells.append(f'<td><span class="sa-sid">{esc(ids)}</span>{esc(gl)}</td>')
+        wit = (g.get("witnesses") or "").strip()
+        flags = (g.get("flags") or "").strip()
+        rows.append(
+            '<tr>'
+            f'<td class="sa-ev"><span class="chip sa-score" title="alignment method '
+            f'{esc(g.get("method") or "")}; score is the weight of the shared evidence, '
+            f'1/df within this lemma">{esc(g.get("method") or "")} '
+            f'{esc(g.get("score") or "")}</span>'
+            + (f'<span class="sa-wit" title="the literary sources both dictionaries cite '
+               f'for this meaning">{esc(wit)}</span>' if wit else "")
+            + (f'<span class="sa-flag" title="two or more senses on each side landed in one '
+               f'meaning — a real alignment at a coarser grain than either dictionary\'s own">'
+               f'{esc(flags)}</span>' if flags else "")
+            + "</td>" + "".join(cells) + "</tr>")
+    more = len(groups) - len(rows)
+    more_html = (f'<p class="sa-more">+{more} further aligned meaning'
+                 f'{"s" if more != 1 else ""} in the table.</p>') if more > 0 else ""
+    return (
+        # `open` and an id on purpose: this surface exists to be LOOKED at (the
+        # compare page deep-links to #aligned-senses), and it never ships closed
+        # on a live page because it never ships on a live page.
+        '<details class="disclosure sense-align" id="aligned-senses" open>'
+        '<summary>Aligned senses across dictionaries</summary>'
+        f'<p class="sa-head"><b>{len(groups)}</b> meaning'
+        f'{"s" if len(groups) != 1 else ""} where PWG, MW or Apte cite the same '
+        'literary sources for a sense. One row = one meaning.</p>'
+        '<div class="sa-scroll"><table class="sa-table"><thead><tr>'
+        '<th>evidence</th><th>PWG <span class="sa-lang">de</span></th>'
+        '<th>MW <span class="sa-lang">en</span></th>'
+        '<th>Apte <span class="sa-lang">en</span></th>'
+        f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
+        f'{more_html}'
+        '<p class="sa-foot">Alignment is by <b>shared literary witness</b>: two senses join a '
+        'meaning when both dictionaries cite the same text for them, weighted by how '
+        'discriminating that citation is inside this lemma. A shared citation is evidence, not '
+        'proof — the score says how much. Senses that could not be aligned are kept in '
+        '<code>data/concordance/sense_alignment_failures.tsv</code> with the reason, never '
+        'dropped. Sidecar only: no dictionary\'s own sense order is rewritten. '
+        'Staged, not published.</p></details>'
+    )
 
 
 def core_total():
@@ -317,6 +434,24 @@ margin-left:auto}
 .entry-head .eid{font-size:.75rem;color:var(--muted);text-decoration:none;margin-left:auto}
 .entry-head .eid:hover{color:var(--accent)}
 .wp-foot .fav-count{margin-left:.3rem;font-family:monospace}
+.sense-align .sa-head{margin:.2rem 0 .6rem;font-size:.85rem;color:var(--muted)}
+.sense-align .sa-head b{color:var(--fg)}
+.sa-scroll{overflow-x:auto}
+.sa-table{border-collapse:collapse;width:100%;font-size:.85rem}
+.sa-table th{text-align:left;font-weight:600;font-size:.72rem;letter-spacing:.04em;
+text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);
+padding:.25rem .5rem .3rem}
+.sa-table td{border-top:1px solid var(--border);padding:.45rem .5rem;vertical-align:top}
+.sa-table .sa-lang{font-weight:400;text-transform:none;letter-spacing:0;opacity:.7}
+.sa-sid{display:block;font-family:monospace;font-size:.68rem;color:var(--muted)}
+.sa-ev{white-space:nowrap;width:1%}
+.chip.sa-score{display:inline-block;font-size:.68rem;font-family:monospace;
+border:1px solid var(--border);border-radius:999px;padding:.05rem .4rem;color:var(--accent)}
+.sa-wit,.sa-flag{display:block;font-family:monospace;font-size:.65rem;color:var(--muted);
+margin-top:.2rem;max-width:9rem;white-space:normal}
+.sa-null{color:var(--muted)}
+.sa-more,.sa-foot{font-size:.75rem;color:var(--muted);margin:.5rem 0 0}
+@media(max-width:520px){.sa-table{font-size:.78rem}.sa-wit,.sa-flag{max-width:6rem}}
 """.strip()
 
 UX_CSS_VARIANT = {
