@@ -428,7 +428,11 @@ def build_ux_staging(variant, tokens=None, limit=None, force=True, out_root=None
             sys.exit("error: no reading-pack tokens found; pass --tokens")
     rendered, meta = build_word_pages(
         out_dir, limit=limit, force=force, tokens=tokens,
-        w_dir=out_dir / "w", cards_dir=cards_dir, ux={"variant": variant})
+        w_dir=out_dir / "w", cards_dir=cards_dir,
+        # `sense_align` (H3744) is set ONLY here, on the staging path: the live
+        # /w/ tree is rendered with ux since the H3457 publish, so the alignment
+        # organ needs its own key rather than riding on ux truthiness.
+        ux={"variant": variant, "sense_align": True})
     slp1s = [_decode_token(t) for _s, t in rendered]
     (out_dir / "favorites.html").write_text(
         favorites_page_html(core_ranks_json(slp1s)), encoding="utf-8")

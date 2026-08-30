@@ -747,7 +747,8 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
     ux_css = ux_js = ux_pre = ux_rail = ux_foot = ""
     if ux:
         from word_page_ux import (ux_css as _ux_css, ux_js as _ux_js, study_badge,
-                                  study_rail, footer_fav_link, flat_tabbar)
+                                  study_rail, footer_fav_link, flat_tabbar,
+                                  sense_alignment_block as _sense_alignment_block)
         v = ux["variant"]
         ux_css = "\n" + _ux_css(v)
         ux_js = "\n" + _ux_js(v)
@@ -774,6 +775,15 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
         + panels
         + _evidence_block(ev)
         + _sense_frequency_block(slp1)
+        # H3744 aligned senses — STAGING ONLY, on the ux= staging path, but behind
+        # an EXPLICIT opt-in key rather than the mere presence of `ux`. H3457's
+        # organs were published on 26-08-2026 (commit 070050a), so all 2,324 live
+        # /w/ pages are now rendered WITH ux — `ux` truthiness stopped being a
+        # non-publication gate the day that shipped. Only
+        # `build_word_pages.py --ux-staging` sets `sense_align`; no live build path
+        # can reach this block by accident.
+        # Contract: docs/NOT_PUBLISHED_H3744_SENSE_ALIGNMENT.md.
+        + (_sense_alignment_block(ux["slp1"]) if ux and ux.get("sense_align") else "")
         + _paradigm_block(slp1, base)
         + _upasarga_block(slp1)
     )
