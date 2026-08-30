@@ -1,6 +1,6 @@
 # Kosha roadmap — August 2026 to July 2027
 
-_Created: 30-07-2026 · Last updated: 17-08-2026_
+_Created: 30-07-2026 · Last updated: 30-08-2026_
 
 The governing decisions and autonomy contract live in the
 [plan of record](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md).
@@ -95,6 +95,14 @@ The user chooses exactly one:
 3. downstream sense-frequency distribution.
 
 Codex prepares the decision packet. No Claude Code executor selects the lane.
+
+## In-flight handoff set (pointer, not status)
+
+Three Claude Code handoffs claimed 30-08-2026 execute open units of this portfolio and of
+[docs/ROADMAP_KOSHA_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP_KOSHA_2026H2.md):
+the design record, exclusions and gates are in
+[docs/PLAN_KOSHA_IMPROVEMENT_SET_2026-08-30.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_IMPROVEMENT_SET_2026-08-30.md).
+Status stays here; the plan does not fork it.
 
 ## Portfolio non-goals
 
