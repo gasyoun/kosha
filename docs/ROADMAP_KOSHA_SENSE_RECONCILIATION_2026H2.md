@@ -1,6 +1,6 @@
 # ROADMAP — kosha sense-reconciliation layer (2026 H2)
 
-_Created: 22-07-2026 · Last updated: 22-07-2026_
+_Created: 22-07-2026 · Last updated: 31-08-2026_
 
 Index: [PLAN_KOSHA_SENSE_RECONCILIATION_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_SENSE_RECONCILIATION_2026H2.md).
 Origin: the [नागदन्त thread](https://groups.google.com/g/nagari/c/NOWqiBQl1Xc/m/_R8O4-39CAAJ) — a
@@ -28,11 +28,20 @@ Deliverables, each stating what unblocks it:
 (locus-resolution rate ≥ floor on the pilot set; `nāgadanta` a/b senses each carry their correct
 attestation; deterministic round-trip green).
 
-## Wave 2 — cross-dictionary reconciliation view (planned, not built here)
+## Wave 2 — cross-dictionary reconciliation view
 
-- **Aligned-sense table** — PWG↔MW↔Apte↔Sa→Sa (ŚKDR/Medinī/VCP/Amara) senses side-by-side per
-  headword, the tusk↔Pflock↔гвоздь rows linked as one meaning. The user-facing render of the
-  substrate wave-1 builds.
+- **Aligned-sense table** — ✅ **slice 1 shipped 31-08-2026 (H3744, Opus 5 `claude-opus-5`)**:
+  PWG↔MW↔Apte senses grouped into meanings by shared `<ls>` literary witness weighted `1/df`
+  within the lemma, the tusk↔Pflock rows linked as one meaning. Staged behind
+  `ux={"sense_align": True}`, **not** on the 2,324 live pages
+  ([NOT_PUBLISHED_H3744_SENSE_ALIGNMENT.md](https://github.com/gasyoun/kosha/blob/main/docs/NOT_PUBLISHED_H3744_SENSE_ALIGNMENT.md));
+  compare page for the human ruling:
+  [gasyoun.github.io/h3744-sense-align/](https://gasyoun.github.io/h3744-sense-align/).
+  Packet + limits:
+  [H3744_SENSE_ALIGNMENT_PACKET_31.08.26.md](https://github.com/gasyoun/kosha/blob/main/docs/H3744_SENSE_ALIGNMENT_PACKET_31.08.26.md).
+  **Slice 2 (open):** the Sa→Sa dictionaries (ŚKDR / Medinī / VCP / Amara) as further columns —
+  a loader, not a redesign, and PWG already cites ŚKDR/Medinī so the witness bridge points at
+  them.
 - **Lemma-variant graph** — full `nāgadanta`↔`nāgadantaka`-class normalisation across all dictionaries.
 - **Second acceptance pass** — the deferred (~6-month) sample + LLM-judge + `/review-sheet` human vote.
 - **pwg_ru RU-sense-structure deliverable** — carry PWG's ordered a)/b) hierarchy + per-sense loci

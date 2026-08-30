@@ -1949,6 +1949,26 @@
       "notes": "Wave-1 of PLAN_KOSHA_SENSE_RECONCILIATION_2026H2 (H1455). The middle arrow headword→SENSE→attestation, a SIDECAR left-joined at build time — MW/kosha `senses` are byte-unchanged. Inputs consumed, never re-derived: the H1456 PWG per-sense <ls> export (RussianTranslation microstructure.py), the reused dict-corpus-concordance, DCS 2026 (CC BY 4.0), pwg_sources.py (pwgbib abbrev resolver), and (wave-1.5) the csl-atlas f8 MBh vulgate crosswalk (mbh_vulgate_concordance.csv, H610/H761 — PWG-continuous → Nīlakaṇṭha-vulgate, all 18 parvans). Correction (wave-1.5): PWG↔MBh locus resolution is NOT infeasible — PWG-continuous → vulgate is solved and consumed (96% of pilot MBh <ls> resolved to a vulgate address). The residual is narrower: DCS's Mahābhārata is the BORI critical edition whose numbering drifts ~±1 adhyāya from the vulgate, so a DCS Mahābhārata match is an adhyāya-level corroboration (locus-mbh), not exact identity; texts DCS lacks (Pañcatantra, Kathāsaritsāgara) still cannot be DCS-matched. The load-bearing sense↔passage witness remains PWG's own <ls>, now carrying resolved vulgate addresses. Rights: all rows public (PWG <ls> = pre-1900 editions; DCS = CC BY 4.0); the evidence-only class is wired but unused in wave-1 (no modern-copyright gloss consumed). Build report: data/concordance/SENSE_CONCORDANCE_BUILD_REPORT.md."
     },
     {
+      "id": "sense-alignment-pilot",
+      "title": "Cross-dictionary aligned senses, PWG · MW · Apte (H3744, wave-2 slice 1)",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "release_asset": "sense_alignment.tsv",
+      "format": "tsv",
+      "rows": 30470,
+      "size_bytes": 5463365,
+      "keying": "one row per MEANING GROUP, keyed (lemma_slp1, group_id); columns status/shape/method/score/witnesses/flags/failure_class + per-dictionary sense_ids and glosses for pwg/mw/apte. `shape` is the pwg-mw-apte sense count of the row, so sense-granularity mismatch stays visible instead of being smoothed away. Aligned 2,957 of 30,470 rows (9.7%); 262 clean 1-1-1 rows; 477 of the 500 pilot lemmas carry at least one aligned meaning. Unaligned senses are KEPT as rows with a failure_class, never dropped; the per-sense failure record is sense_alignment_failures.tsv (30538 rows: no-shared-witness 17,671 · witness-too-common 6,844 · no-gloss 3,025 · cross-language-gap 1,835 · outranked 1,101 · absent-dictionary 62).",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/concordance/sense_alignment.tsv",
+      "builder": "scripts/build_sense_alignment.py (algorithm in app/sense_align.py, H3744)",
+      "consumers": [
+        "dist/sense-align-staging/ standalone viewer (STAGED, gitignored)",
+        "app/word_page_ux.sense_alignment_block — word-page organ behind ux={'sense_align': True}, staging only",
+        "https://gasyoun.github.io/h3744-sense-align/ before/after compare page"
+      ],
+      "notes": "Wave-2 slice 1 of PLAN_KOSHA_SENSE_RECONCILIATION_2026H2. Method: senses join a meaning through SHARED LITERARY WITNESS — the <ls> sources both dictionaries cite for them, each weighted 1/df within the lemma (a witness cited by every sense discriminates nothing). This is the only signal that crosses PWG's German gloss boundary; gloss-token Jaccard is fenced to MW↔Apte, where both are English. Grouping is a greedy BEST MATCH per dictionary pair, not transitive closure: closure merged amṛta's 'not dead', 'nectar' and 'N. pr. the mother of Parikṣit' into one component. Marked defaults TAU=0.30, GLOSS_FLOOR=0.20, PREFIX_MIN=4. SIDECAR ONLY — no dictionary's sense order or bytes are touched. NOT PUBLISHED: the table is not on the 2,324 live static pages, because it asserts in kosha's own voice that three dictionaries' senses correspond and that can be scholarly wrong in a way page chrome cannot (docs/NOT_PUBLISHED_H3744_SENSE_ALIGNMENT.md). False positives exist and are NOT quantified: precision needs the wave-2 acceptance pass (sample + judge + human vote), explicitly out of this slice's scope, so no precision figure is quoted anywhere. Scope fences: PWG/MW/Apte only — Sa→Sa dictionaries (ŚKDR/Medinī/VCP/Amara), the lemma-variant graph and the pwg_ru sense-structure deliverable are separate units. Build report: data/concordance/SENSE_ALIGNMENT_BUILD_REPORT.md; packet: docs/H3744_SENSE_ALIGNMENT_PACKET_31.08.26.md."
+    },
+    {
       "id": "paninian-sutra-coverage-map",
       "title": "Aṣṭādhyāyī sūtra-coverage / dark-class map (A4, W3a)",
       "tier": "public",
