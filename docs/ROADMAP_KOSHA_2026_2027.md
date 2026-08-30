@@ -59,8 +59,9 @@ Deliverables:
   (✅ H2346 — [PR #342](https://github.com/gasyoun/kosha/pull/342); the release
   gate is executed by required CI and rejects a local-only citation base since
   H2870);
-- MG-minted DOI and updated citation metadata (**human gate** — MG mints; agent
-  half is [DOI_CHECKLIST_W2A.md](https://github.com/gasyoun/kosha/blob/main/docs/DOI_CHECKLIST_W2A.md));
+- DOI minting and updated citation metadata (standing policy since 16-08-2026:
+  agents may mint DOIs — `publish-safety-check` still gates, visibility flips
+  stay human; agent half is [DOI_CHECKLIST_W2A.md](https://github.com/gasyoun/kosha/blob/main/docs/DOI_CHECKLIST_W2A.md));
 - P-D6 public dataset API over manifest records (✅ H2347 — `GET /api/v1/datasets`);
 - request correlation, low-cardinality metrics, readiness failures, and
   release observability (✅ H2348 — `X-Request-ID` + `GET /metrics`).
