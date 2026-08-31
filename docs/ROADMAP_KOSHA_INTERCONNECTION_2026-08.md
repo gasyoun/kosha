@@ -1,15 +1,16 @@
 # Roadmap — kosha interconnection, 2026-08
 
-_Created: 26-08-2026 · Last updated: 26-08-2026_
+_Created: 26-08-2026 · Last updated: 31-08-2026_
+
+**Truth-pass verdict (31-08-2026, H3786):** finished — H3565 shipped 27-08-2026
+([PR #458](https://github.com/gasyoun/kosha/pull/458)), kosha's sole Wave 1 item. No open work on this file.
 
 Index: [PLAN_KOSHA_INTERCONNECTION_2026-08.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_INTERCONNECTION_2026-08.md).
 Programme roadmap: [ROADMAP_SPINE_INTERCONNECTION_2026H2.md](https://github.com/gasyoun/Uprava/blob/main/docs/ROADMAP_SPINE_INTERCONNECTION_2026H2.md).
 
-**Every box is unstarted.** A ticked box before a human launches the handoff is a defect.
-
 ## Wave 1 — kosha's wiring change
 
-- [ ] [H3565 (Sonnet 5)](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3565-Sonnet_kosha_interconnect-kosha-datasets-scope-line_26.08.26.md) · trivial
+- [x] [H3565 (Sonnet 5)](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3565-Sonnet_kosha_interconnect-kosha-datasets-scope-line_26.08.26.md) · trivial · ✅ shipped 27-08-2026, [PR #458](https://github.com/gasyoun/kosha/pull/458)
 
 ## Order and prerequisites
 

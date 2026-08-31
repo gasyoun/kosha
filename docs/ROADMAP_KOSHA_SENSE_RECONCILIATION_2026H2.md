@@ -6,6 +6,11 @@ Index: [PLAN_KOSHA_SENSE_RECONCILIATION_2026H2.md](https://github.com/gasyoun/ko
 Origin: the [नागदन्त thread](https://groups.google.com/g/nagari/c/NOWqiBQl1Xc/m/_R8O4-39CAAJ) — a
 polysemous word split by translators because per-sense loci were dropped.
 
+**Truth-pass verdict (31-08-2026, H3786):** still live. Wave 1's mechanics are shipped
+(`scripts/build_sense_corpus_concordance.py`, `sense-corpus-concordance` manifest row) and Wave
+2 slice 1 shipped today (H3744); Wave 2 slice 2 (Sa→Sa dictionary columns) and Wave 3
+(frequency fusion) are the unticked residual — see those sections below.
+
 ## Wave 1 — per-sense corpus attestation (this plan)
 
 Deliverables, each stating what unblocks it:
