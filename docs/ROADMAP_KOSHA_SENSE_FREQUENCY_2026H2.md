@@ -1,10 +1,17 @@
 # ROADMAP — kosha sense-frequency layer
 
-_Created: 22-07-2026 · Last updated: 24-07-2026_
+_Created: 22-07-2026 · Last updated: 31-08-2026_
+
+**Truth-pass verdict (31-08-2026, H3786):** finished — all three waves shipped. Wave 1's five
+deliverables are on disk (`data/frequency/wordsem_inventory.tsv`, `sense_frequency.tsv`,
+`dcs_mw_sense_order_delta.md`, the `kosha-sense-frequency` manifest row + data statement, and the
+cards badge in `app/word_page.py`); Wave 2 shipped 24-07-2026 (H1588); Wave 3's consumers
+(pwg_ru, Cologne dict-web, VisualDCS) are tracked in their own repos' roadmaps, not here. No open
+work on this file.
 
 Index: [PLAN_KOSHA_SENSE_FREQUENCY_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_SENSE_FREQUENCY_2026H2.md).
 
-## Wave 1 — 3-layer sense frequency on WordSem gold + kosha-cards UI (this handoff, H1453)
+## Wave 1 — 3-layer sense frequency on WordSem gold + kosha-cards UI (this handoff, H1453) — DONE
 
 Deliverables, each with what unblocks it:
 
