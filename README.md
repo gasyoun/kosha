@@ -1,6 +1,6 @@
 # Gasuns Sanskrit Dictionary
 
-_Created: 02-07-2026 · Last updated: 16-08-2026_
+_Created: 02-07-2026 · Last updated: 01-09-2026_
 
 > **Status: pre-alpha — the lookup API + UI run locally and the public
 > dictionary URL is not deployed yet, but the data-hub tier already is live.**
@@ -50,7 +50,7 @@ It is a **two-tier** store:
 
 Every canonical dataset in **either** tier has one machine-readable row in
 [data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
-— currently <!-- dataset_count_start -->**113 datasets** (94 public · 15 restricted · 4 intermediate)<!-- dataset_count_end --> — the
+— currently <!-- dataset_count_start -->**114 datasets** (95 public · 15 restricted · 4 intermediate)<!-- dataset_count_end --> — the
 single source agents read to discover and fetch data; a new or changed derived
 dataset ends its session with a manifest row or it does not exist for reuse.
 
