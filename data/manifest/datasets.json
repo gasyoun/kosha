@@ -2317,6 +2317,25 @@
       ],
       "notes": "RESTRICTED benchmark-only, same posture as akshara-mt-benchmark-pilot: third-party AI MT of public-domain Cologne originals + Likhushina fragments as advisors - NOTHING public without a fresh @DECIDE (MG posture 24-08-2026; NO-volume-stop ruling 27-08-2026). size_bytes filled at drain. Cold-fetch mis-resolution quirk documented in the report - drain gate asserts data-q-slp1 parity per stored card.",
       "size_note": "sum of fetched card bytes across 206,652 ok fetches (51,663 originals + 154,989 ru), from committed crawl manifests"
+    },
+    {
+      "id": "kosha-mastery-schedule",
+      "title": "kosha combined mastery schedule (five drill families, H3742)",
+      "tier": "public",
+      "in_release": "not-yet-tagged",
+      "format": "json",
+      "rows": 35517,
+      "size_bytes": null,
+      "keying": "one row per drill item across sandhi/samasa/morphology/vocab/thematic-vocab: {family, id, ease, stability_days, due}; ease is the shared 0..1 (higher=easier) mastery weight from each family's drill_weights.json mastery block (data/MASTERY_WEIGHTS_SPEC.md)",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/mastery/combined_schedule.json",
+      "builder": "scripts/build_mastery_schedule.py (reads data/{sandhi,samasa,morphology,frequency}/*drill_weights.json + each family's items file)",
+      "consumers": [
+        "SanskritKaraoke reader surface (planned)",
+        "SanskritGrammar reader surface (planned)"
+      ],
+      "notes": "Data layer only, no UI. Deliberately excludes data/cohort_start_chteniya/ (a frozen lesson<=3 subset of sandhi_drills.json, not a distinct family -- see data/MASTERY_WEIGHTS_SPEC.md). Not a duplicate of Systema-Sanscriticum's Saraswati FSRS review engine -- this schedules kosha's own static reader surfaces only, holds no per-learner review state, and has no export path into Systema.",
+      "size_note": "size_bytes filled once the schedule ships in a tagged release"
     }
   ]
 }

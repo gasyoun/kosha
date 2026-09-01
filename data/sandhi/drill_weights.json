@@ -1,0 +1,13 @@
+{
+  "_doc": "kosha cross-family mastery weight layer (H3742). Curriculum-ORDER tunables for sandhi stay in difficulty_weights.json (unchanged, read by build_sandhi_curriculum.py); this file adds only the shared MASTERY layer read by build_mastery_schedule.py. Semantics: data/MASTERY_WEIGHTS_SPEC.md.",
+  "mastery": {
+    "bucket_field": "category",
+    "bucket_ease": {
+      "anusvāra / nasal": 1.0,
+      "vowel coalescence": 0.9,
+      "visarga": 0.75,
+      "consonant / other": 0.6
+    },
+    "family_default_ease": 0.8125
+  }
+}
