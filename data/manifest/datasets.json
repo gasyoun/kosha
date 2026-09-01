@@ -106,7 +106,7 @@
       "builder": "H099 Heritage mirror pipeline",
       "consumers": [
         "kosha ingest (H345, kosha.db heritage_anchor table + /api/v1/lemma `heritage` witness)",
-        "csl-atlas witness column (queued)"
+        "csl-atlas witness column (H346, 08-07-2026, csl-atlas PR #227 — delivered; was still marked queued until H3781, 01-09-2026)"
       ],
       "notes": "Crosswalk itself is ours/publishable; the Heritage mirror data behind it is LGPLLR-pending (restricted tier). Zenodo DOI 10.5281/zenodo.22105641 (minted 26-08-2026 for data-v0.5.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-heritage-crosswalk.meta.md"
