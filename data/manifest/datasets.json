@@ -2322,7 +2322,7 @@
       "id": "kosha-mastery-schedule",
       "title": "kosha combined mastery schedule (five drill families, H3742)",
       "tier": "public",
-      "in_release": "not-yet-tagged",
+      "in_release": "unreleased",
       "format": "json",
       "rows": 35517,
       "size_bytes": null,
