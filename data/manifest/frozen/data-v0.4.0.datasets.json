@@ -1,0 +1,53 @@
+{
+  "schema": "kosha-frozen-release-manifest-v1",
+  "release_tag": "data-v0.4.0",
+  "frozen_at": "2026-09-01T18:01:30Z",
+  "frozen_from_commit": "e231b3c6fa99b02fe78513d553be7741bcc6e58a",
+  "concept_doi": "10.5281/zenodo.21965599",
+  "version_doi": "10.5281/zenodo.22102090",
+  "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
+  "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
+  "source_manifest": "data/manifest/datasets.json",
+  "source_manifest_version": "0.2.0",
+  "note_for_citers": "Frozen public-tier slice of the kosha dataset manifest for this release tag. tier=restricted rows are excluded by design and are not part of any published release; consult their source repo. sha256_source=computed means this file records a digest taken from the bytes on disk at freeze time; unavailable means the source was not resolvable locally and the digest is not asserted. Every digest is over the LF-canonical form of the file (sha256_form), so it is reproducible from any compliant checkout regardless of platform.",
+  "datasets": [
+    {
+      "id": "union-headwords",
+      "title": "Cross-dictionary union headword index",
+      "tier": "public",
+      "in_release": "data-v0.4.0",
+      "release_asset": "union_headwords.tsv",
+      "format": "tsv",
+      "rows": 323425,
+      "size_bytes": 12397253,
+      "keying": "SLP1 headword + per-dict provenance flags",
+      "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+      "source_path": "HeadwordLists/union/union_headwords.tsv",
+      "builder": "HeadwordLists union build",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/union-headwords.meta.md",
+      "notes": "THE headword master — 323k headwords across all dicts. Zenodo DOI 10.5281/zenodo.22102090 (minted 25-08-2026 for data-v0.4.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
+      "sha256": "4d5d35311e26c7d175ffd93486b5dc18feaefeb64b751a603b8a298434643e09",
+      "sha256_source": "computed",
+      "sha256_form": "lf-canonical"
+    },
+    {
+      "id": "zaliznyak-grammar-index",
+      "title": "Zaliznyak-style compact grammar-token index over all PWG",
+      "tier": "public",
+      "in_release": "data-v0.4.0",
+      "release_asset": "zaliznyak_grammar_index.tsv",
+      "format": "tsv",
+      "rows": 98639,
+      "size_bytes": 6025400,
+      "keying": "SLP1 headword → paradigm token (335 tokens)",
+      "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+      "source_path": "RussianTranslation/src/headword_index.tsv",
+      "builder": "RussianTranslation grammar-index pipeline",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-grammar-index.meta.md",
+      "notes": "FAIR data package; paradigms generated via vidyut, never transcribe static tables. Zenodo DOI 10.5281/zenodo.22102090 (minted 25-08-2026 for data-v0.4.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
+      "sha256": "a9f4896d32e1cabac17316b743cb105034749ce68f35664c50454fcad896aa53",
+      "sha256_source": "computed",
+      "sha256_form": "lf-canonical"
+    }
+  ]
+}
