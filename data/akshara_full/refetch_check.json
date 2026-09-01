@@ -1,0 +1,56 @@
+{
+  "checked": 10,
+  "matched": 9,
+  "detail": [
+    {
+      "slp1": "A",
+      "http": 200,
+      "match": true
+    },
+    {
+      "slp1": "ABA",
+      "http": 200,
+      "match": false
+    },
+    {
+      "slp1": "ABARaka",
+      "http": 200,
+      "match": true
+    },
+    {
+      "slp1": "ABAs",
+      "http": 200,
+      "match": true
+    },
+    {
+      "slp1": "ABAsa",
+      "http": 200,
+      "match": true
+    },
+    {
+      "slp1": "ABAsana",
+      "http": 200,
+      "match": true
+    },
+    {
+      "slp1": "ABAsatva",
+      "http": 200,
+      "match": true
+    },
+    {
+      "slp1": "ABAsura",
+      "http": 200,
+      "match": true
+    },
+    {
+      "slp1": "ABAsvara",
+      "http": 200,
+      "match": true
+    },
+    {
+      "slp1": "ABAz",
+      "http": 200,
+      "match": true
+    }
+  ]
+}
