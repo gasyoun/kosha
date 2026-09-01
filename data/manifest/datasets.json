@@ -2263,6 +2263,24 @@
       "notes": "H2882 wave 4. absent_candidate is an UPPER BOUND on genuine absence: adjudication of 30 random candidates left ~17% genuine (FINDINGS s559); 23% of false absents trace to degraded store key1 (FINDINGS s560). Summary sibling: mw_ap_sense_coverage_summary.json."
     },
     {
+      "id": "pwg-work-dating-table",
+      "title": "Curated per-work dating table for PWG's cited works (Ceiling C2 phase 2)",
+      "tier": "public",
+      "in_release": "unreleased",
+      "format": "json",
+      "rows": 45,
+      "size_bytes": 41447,
+      "keying": "one object per ls_source_map.json siglum; earliest/latest are years (negative = BCE), every row carries >=1 {ref, claim, verified} source and a confidence in {anchored, consensus, contested, invalid}",
+      "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+      "source_path": "RussianTranslation/src/work_dating_table.json",
+      "builder": "hand-curated against the scholarly literature; validated + rendered by RussianTranslation/research/c2p2_dating_table.py (H3790)",
+      "consumers": [
+        "Ceiling C2 re-windowing of pwg-sense-attestation-window (blocked on the 11-card vote)",
+        "pwg_ru cards (era badge provenance)"
+      ],
+      "notes": "Supplies the provenance ls_source_map.json's 45 bare point dates never had: a RANGE plus the scholarly source per date (Witzel, Olivelle, Brockington, Rocher, Meulenbeld, Pingree, Cardona, Vogel, Stein and others), graded 9 anchored / 20 consensus / 14 contested / 2 dating-invalid. TRAP: 'Spr.' is Boehtlingk's OWN anthology (Indische Sprueche, 1863-1873) and 'SKDR.' the Sabdakalpadruma (Calcutta 1821-1858) - neither dates anything, yet phase 1 gave them 600 CE and 1830 CE, so they bound 11,771 of 43,990 attestation windows, set 'latest' on 9,082, and are the only dated work in 2,873. Both carry dating_valid=false; do not use them for chronology. Seven further sigla (AMAR, GIT. GOV, KATHAS, RAJAN, SAH. D, VOP, Spr) have map dates outside their sourced range and are corrected HERE only - ls_source_map.json is deliberately not rewritten, because the committed phase-1 store consumed it. Never a claim about when a SENSE emerged. Eight claims are quoted from Vogel 1979 with printed page (the volume is held in SanskritLexicography/literature/); the rest are marked verified='reference-only', page-level check still open. Gate: c2p2_dating_table.py --check fails a date with no citation. Eleven contested datings await a human at https://gasyoun.github.io/vote/sheets/pwg_c2p2_work_dating_11.html"
+    },
+    {
       "id": "pwg-sense-attestation-window",
       "title": "PWG per-sense attestation window (Ceiling C2 phase 1)",
       "tier": "public",
@@ -2279,7 +2297,7 @@
         "Ceiling C2 phase 2 curated dating table",
         "C7 residue repair queue"
       ],
-      "notes": "Attestation windows (earliest/latest/n_dated_works/n_undated_citations) from the 45 dated works of ls_source_map.json - evidence about what PWG cites, never about sense emergence. Conservative lower bounds: C7 residue (115,354 unmapped instances / 2,607 sigla) carried in RussianTranslation/research/C2P1_ATTESTATION_WINDOW.md. Layered on pwg_sense_stratum.jsonl Renou proxy (consumed, not rewritten)."
+      "notes": "Attestation windows (earliest/latest/n_dated_works/n_undated_citations) from the 45 dated works of ls_source_map.json - evidence about what PWG cites, never about sense emergence. Conservative lower bounds: C7 residue (115,354 unmapped instances / 2,607 sigla) carried in RussianTranslation/research/C2P1_ATTESTATION_WINDOW.md. Layered on pwg_sense_stratum.jsonl Renou proxy (consumed, not rewritten). TRAP (H3790, 01-09-2026): two of the 45 dated works cannot date anything - 'Spr.' is Boehtlingk's own 1863-1873 anthology and 'SKDR.' a Calcutta compilation of 1821-1858 - so 11,771 of these 43,990 windows carry a bound that says nothing about the language, and 9,082 have their 'latest' set that way. Read pwg-work-dating-table before using earliest/latest for chronology."
     },
     {
       "id": "akshara-mt-benchmark-pilot",
