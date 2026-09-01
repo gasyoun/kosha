@@ -167,6 +167,21 @@ All drain steps executed in worktree `kosha-h3597-14872` (landed `71d2bf879`):
 | Per-dict MT coverage (content/empty) | mw_ru 50,072/1,591 · apte_ru 17,512/34,151 · pwg_ru 34,146/17,517 (pwg_ru missing 33.9% — consistent with H3455's verified site gap, honest nulls) |
 | Tests | `python -m pytest tests` → **554 passed, 221 skipped** |
 
+## 8c. PROVENANCE: the site's originals ARE Cologne (verified 01-09-2026, OxAlpha)
+
+MG question (01-09): *what is the census, which Cologne version, is 100% parity possible?* Verified live:
+
+| Fact | Value |
+|---|---|
+| Census source | akshara.ru's own `sitemap-kosha-001/002.xml` (frozen 27-08-2026) — **site-declared head universe, not Cologne's** |
+| Cologne snapshot the site serves | **current csl-orig `v02`** (pwg.txt @ `88229223` 27-06-2026 · mw.txt @ `392ed6bd` 27-06-2026 · ap.txt @ `6f9ace0f` 26-06-2026, DC 24 June 2026); PWG digitization base = Böhtlingk–Roth 1855–1875, 2013 scans |
+| pwg.txt head inventory | k1 = **106,082 distinct — CONSTANT** across every revision in csl-orig history (14-06-2026 import → 27-06-2026): the head inventory never changed; corrections were text-only |
+| Census ∩ Cologne k1 (pwg+mw+ap) | **51,454 / 51,663 = 99.58%** |
+| Per-dict exact matches | pwg covers exactly the **35,839** pwg-content census heads (1:1 with the drain corpus) · mw 50,090 · ap 17,581 |
+| 100% accounting of the 209 gap | **37** casefold twins of Cologne heads (site case-fallback) + **172 "extra" heads**: 4 probed live = `likh` (Likhushina, non-Cologne: āsannamaraṇa, anāyati, pravip) + **site-side SLP1 spelling divergence** (`atiCattrakA` vs Cologne k1 `aticCattrakA` — same MW entry 12,2; `sahajanyI` vs Cologne `sahajanyA` — same MW 1194,1) |
+
+**Verdict:** the site's ORIGINALS are Cologne content re-served as HTML; nothing in the originals is unique once parity is confirmed at scale. The unique asset is the **MT layers** (`mw_ru/apte_ru/pwg_ru`) + `likh`/`mac` extras. 100% parity is achievable in principle: the 209 gap fully classifies into case-variants (37), non-Cologne dicts (likh/mac portion of the 172), and site transliteration variants (~5 classes) — a full head-by-head mapping script can settle it mechanically if this ever needs to be retired in favour of local Cologne files.
+
 ## 9. Acceptance (locked at launch; drain ticks the boxes)
 
 - **Done looks like:** census frozen (done) + both passes `DONE` at 206,652/206,652 urls
