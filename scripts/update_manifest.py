@@ -32,24 +32,26 @@ import json
 import sys
 from pathlib import Path
 
+from manifest_paths import detect_github_root, local_path_for as _local_path_for, repo_url_to_local
+
 REPO = Path(__file__).resolve().parent.parent
 MANIFEST_DIR = REPO / "data" / "manifest"
 DATASETS_JSON = MANIFEST_DIR / "datasets.json"
 CANDIDATES_JSON = MANIFEST_DIR / "_candidates.json"
-GITHUB_ROOT = REPO.parent  # C:\Users\user\Documents\GitHub
+# Worktree-safe: REPO.parent is NOT the checkout root when this runs inside a
+# linked worktree, and every sibling-sourced row then silently resolves to
+# nothing (H3788). See scripts/manifest_paths.py.
+GITHUB_ROOT = detect_github_root(REPO)
+
+# A refreshed size below this fraction of the recorded one is treated as a
+# missing payload rather than real drift. 0.5 cleanly separates the two known
+# hazards (pwg_tm at 0.02%, pwg_de_sidecars at 0.07%) from every legitimate
+# same-pass update observed, the largest of which was 96.6%.
+SHRINK_FLOOR = 0.5
 
 # source_repo -> local sibling checkout, so "source_path" (repo-relative) can
 # be resolved to a real file without hitting the network.
-REPO_URL_TO_LOCAL = {
-    "https://github.com/sanskrit-lexicon/csl-orig": GITHUB_ROOT / "csl-orig",
-    "https://github.com/sanskrit-lexicon/csl-apidev": GITHUB_ROOT / "csl-apidev",
-    "https://github.com/gasyoun/SanskritLexicography": GITHUB_ROOT / "SanskritLexicography",
-    "https://github.com/gasyoun/SanskritGrammar": GITHUB_ROOT / "SanskritGrammar",
-    "https://github.com/gasyoun/kosha": REPO,
-    "https://github.com/gasyoun/SanskritRussian": GITHUB_ROOT / "SanskritRussian",
-    "https://github.com/gasyoun/VisualDCS": GITHUB_ROOT / "VisualDCS",
-    "https://github.com/gasyoun/SamudraManthanam": GITHUB_ROOT / "SamudraManthanam",
-}
+REPO_URL_TO_LOCAL = repo_url_to_local(GITHUB_ROOT)
 
 # Producer globs to check for un-registered outputs during `scan`. Extend this
 # as new dataset-producing scripts are added elsewhere in the org.
@@ -63,16 +65,7 @@ CANDIDATE_GLOBS = [
 
 
 def local_path_for(ds: dict) -> Path | None:
-    base = REPO_URL_TO_LOCAL.get(ds.get("source_repo"))
-    if base is None:
-        return None
-    raw = ds.get("source_path") or ""
-    # strip inline parenthetical annotations e.g. "(GITIGNORED — ...)"
-    rel = raw.split(" (")[0].strip()
-    if not rel:
-        return None
-    p = base / rel
-    return p
+    return _local_path_for(ds, REPO, REPO_URL_TO_LOCAL)
 
 
 def count_rows(path: Path, fmt: str | None) -> int | None:
@@ -98,15 +91,29 @@ def dir_size(path: Path) -> int:
     return sum(f.stat().st_size for f in path.rglob("*") if f.is_file())
 
 
-def refresh(dry_run: bool) -> int:
+def refresh(dry_run: bool, allow_shrink: bool = False) -> int:
     manifest = json.loads(DATASETS_JSON.read_text(encoding="utf-8"))
     changed = 0
+    refused = []
     for ds in manifest["datasets"]:
         path = local_path_for(ds)
         if path is None or not path.exists():
             continue  # gitignored/unbackuped/remote-only entries are left alone
         size = dir_size(path) if path.is_dir() else path.stat().st_size
         rows = None if path.is_dir() else count_rows(path, ds.get("format"))
+
+        # A collapse to a fraction of the recorded size is almost never real
+        # drift -- it is an incomplete local clone. `RussianTranslation/release/
+        # pwg_tm/` resolves to 8 metadata files (17,668 B) in this checkout
+        # while the registered pack is 101,677,729 B: the payload ships
+        # separately and is not in git. Overwriting on that evidence would
+        # delete a curated fact and leave no trace that it was ever known.
+        # H3788 hit this the moment sibling resolution started working.
+        old = ds.get("size_bytes")
+        if old and size < old * SHRINK_FLOOR and not allow_shrink:
+            refused.append((ds["id"], old, size, str(path)))
+            continue
+
         diffs = []
         if ds.get("size_bytes") != size:
             diffs.append(f"size_bytes {ds.get('size_bytes')} -> {size}")
@@ -117,11 +124,27 @@ def refresh(dry_run: bool) -> int:
         if diffs:
             changed += 1
             print(f"[{ds['id']}] " + "; ".join(diffs))
+
+    if refused:
+        pct = int(SHRINK_FLOOR * 100)
+        print(
+            f"\nREFUSED {len(refused)} shrink(s) below {pct}% of the recorded size "
+            f"-- almost certainly a partial local clone, not real drift.\n"
+            f"Verify the payload is really gone before passing --allow-shrink:"
+        )
+        for id_, old, new, where in refused:
+            share = (new / old * 100) if old else 0
+            print(f"  [{id_}] {old:,} -> {new:,} ({share:.2f}% of recorded)  {where}")
+
     if changed and not dry_run:
         manifest["generated"] = manifest.get("generated")  # left to a human/agent to bump the date deliberately
-        DATASETS_JSON.write_text(
-            json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-        )
+        # newline="\n" is load-bearing: `.gitattributes` pins this file to LF,
+        # and Path.write_text on Windows emits CRLF. The committed blob survives
+        # (git renormalizes on add), but a CRLF working copy is how the 28
+        # inflated size_bytes rows H3788 repaired got recorded in the first
+        # place, and it makes any local digest of this manifest platform-dependent.
+        with DATASETS_JSON.open("w", encoding="utf-8", newline="\n") as fh:
+            fh.write(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
         print(f"Wrote {changed} updated entr{'y' if changed == 1 else 'ies'} to {DATASETS_JSON}")
     elif changed:
         print(f"[dry-run] {changed} entr{'y' if changed == 1 else 'ies'} would change")
@@ -178,7 +201,7 @@ def scan() -> int:
             ),
         })
 
-    CANDIDATES_JSON.write_text(
+    candidates_text = (
         json.dumps({"note": "Unregistered directories found by scripts/update_manifest.py scan -- "
                              "each row is a directory bundle, not a single file (a 'dataset' is "
                              "usually one export per text/class/period). Review each: decide "
@@ -186,9 +209,10 @@ def scan() -> int:
                              "into one row with a glob/pattern note) or genuine noise to ignore, "
                              "then add a proper row to datasets.json by hand (or via "
                              "/findings-append) and delete its entry here. Never auto-merged.",
-                    "candidates": candidates}, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
+                    "candidates": candidates}, ensure_ascii=False, indent=2) + "\n"
     )
+    with CANDIDATES_JSON.open("w", encoding="utf-8", newline="\n") as fh:
+        fh.write(candidates_text)
     print(f"{len(candidates)} unregistered director{'y' if len(candidates) == 1 else 'ies'} written to {CANDIDATES_JSON}")
     return len(candidates)
 
@@ -197,6 +221,12 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("mode", choices=["refresh", "scan"])
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument(
+        "--allow-shrink",
+        action="store_true",
+        help=f"apply size drops below {int(SHRINK_FLOOR * 100)}%% of the recorded size "
+             "(only after confirming the payload is really gone, not just absent locally)",
+    )
     args = ap.parse_args()
 
     if hasattr(sys.stdout, "reconfigure"):
@@ -205,7 +235,7 @@ def main() -> int:
         sys.stderr.reconfigure(encoding="utf-8")
 
     if args.mode == "refresh":
-        refresh(args.dry_run)
+        refresh(args.dry_run, args.allow_shrink)
     else:
         scan()
     return 0
