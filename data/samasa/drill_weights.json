@@ -10,5 +10,16 @@
     "idam", "tad", "etad", "yad", "kim", "adas", "sva",
     "kṛ", "as", "bhū", "gam", "i", "dā", "dhā", "sthā", "han", "nī", "pā", "yā",
     "tva", "tā"
-  ]
+  ],
+  "mastery": {
+    "_doc": "H3742 cross-family mastery layer (data/MASTERY_WEIGHTS_SPEC.md). samasa_drills.json items carry no per-item compound-category (KD/TP/BV/DV) field -- only reference.tsv/provenance do -- so ease approximates by TASK generation cost instead: recognition easiest, free production hardest.",
+    "bucket_field": "type",
+    "bucket_ease": {
+      "identify": 1.0,
+      "member_side": 0.7,
+      "member_recall": 0.6,
+      "split": 0.4
+    },
+    "family_default_ease": 0.6
+  }
 }

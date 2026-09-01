@@ -1,0 +1,9 @@
+{
+  "_doc": "kosha cross-family mastery weight layer (H3742) for thematic_vocab_drills.json. Named thematic_vocab_drill_weights.json (not drill_weights.json) because data/frequency/ hosts two families (vocab, thematic vocab); see data/MASTERY_WEIGHTS_SPEC.md for the shared schema.",
+  "mastery": {
+    "bucket_field": "rank",
+    "ease_formula": "clamp(1.0 - (rank - 1) / max(rank_max - 1, 1) * 0.6, 0.4, 1.0)",
+    "rank_max": 7528,
+    "family_default_ease": 0.7
+  }
+}
