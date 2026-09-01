@@ -1,6 +1,6 @@
 # H3597 — akshara.ru FULL kosha crawl: census + run report
 
-_Created: 27-08-2026 · Last updated: 28-08-2026 · OxAlpha (`z-ai/glm-5.3-flash`) · RESTRICTED tier, benchmark-only_
+_Last updated: 01-09-2026 · OxAlpha (`z-ai/glm-5.3-flash`) · RESTRICTED tier, benchmark-only_
 
 MG ruling 27-08-2026: **NO volume stop** — census first, then a full run regardless of
 volume; volume reported at checkpoint milestones (every 1000 URLs in the crawl manifest
@@ -151,6 +151,21 @@ machine stays awake while crawling — and validates every stored card inline
   2. When pass 1 prints `DONE`, run `python scripts/akshara_full_crawl.py --ru` for pass 2.
   3. At drain: §5 gate → full parse (extend `akshara_pilot_parse.py`, don't fork) →
      per-dict coverage table → final §9 acceptance tick + Uprava GTD close.
+
+## 8b. DRAIN RESULT (1 September 2026, OxAlpha)
+
+All drain steps executed in worktree `kosha-h3597-14872` (landed `71d2bf879`):
+
+| Item | Result |
+|---|---|
+| Pass 1 (dict=all) | 51,665 ok fetches / 4 transient local-net fails, all later recovered 200 OK via repair/twin path → **0 unexplained** |
+| Pass 2 (ru) + repair + resume | 154,996 ok fetches / 7 transient fails (SSL EOF ×2, DNS 11001 ×2, timeout ×2, …), **all 7 refetched 200 OK 31-08-2026 20:03 UTC** (commit + `crawl_manifest_ru.jsonl` tail) → **0 unexplained** |
+| Watchdog | Logged `pass2 exhausted … self-disabling` 31-08 13:30 +03; the scheduled task failed to self-disable at the scheduler level → **manually disabled + deleted** 01-09 after drain |
+| §5 twin repair | repair crawl **9,375/9,375 ok, 0 fail** (hashed collision-proof names); `--purge` removed 5,649 tainted rows; repair log re-parsed (`--delete-raw`, reclaimed ~609 MB) |
+| §5 parity gate | every stored card validated inline by the crawler (`data-q-slp1` parity + single warm re-fetch on mis-resolution); **0 misresolved rows in any crawl log**; 12 fresh warm-cache re-fetch checks with stored sha256: **12/12 byte-exact** |
+| Final corpus | `parsed_corpus.jsonl` **51,663 heads** (one row per census head; non-empty content varies per dict — honest nulls), `parsed_corpus_ru.jsonl` **154,989 rows** = 51,663 × 3 MT dicts |
+| Per-dict MT coverage (content/empty) | mw_ru 50,072/1,591 · apte_ru 17,512/34,151 · pwg_ru 34,146/17,517 (pwg_ru missing 33.9% — consistent with H3455's verified site gap, honest nulls) |
+| Tests | `python -m pytest tests` → **554 passed, 221 skipped** |
 
 ## 9. Acceptance (locked at launch; drain ticks the boxes)
 
