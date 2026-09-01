@@ -5,5 +5,12 @@
   "pronoun_lemmas": ["sarva", "viSva", "tad", "etad", "idam", "adas", "asmad", "yuzmad",
                       "kim", "eka", "dvi", "yad", "anya", "anyatara", "itara", "ubaya",
                       "eka2", "ekatara", "katama", "katara"],
-  "lesson_coverage_step": 0.1
+  "lesson_coverage_step": 0.1,
+  "mastery": {
+    "_doc": "H3742 cross-family mastery layer (data/MASTERY_WEIGHTS_SPEC.md). Every drills.json item carries a corpus-frequency `rank` (1..464); ease derives from it via the shared rank formula, not a fixed table.",
+    "bucket_field": "rank",
+    "ease_formula": "clamp(1.0 - (rank - 1) / max(rank_max - 1, 1) * 0.6, 0.4, 1.0)",
+    "rank_max": 464,
+    "family_default_ease": 0.7
+  }
 }
