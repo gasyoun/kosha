@@ -12,9 +12,12 @@ date-released: 2026-09-01
 doi: 10.5281/zenodo.21965599
 # Concept DOI (resolves to the latest archived version on every future
 # release); GitHub-Zenodo webhook wired 14-08-2026, first archived release
-# v0.110.13 (16-08-2026). Version DOI for v0.115.1 (the latest archived at
-# time of writing): 10.5281/zenodo.22100527 — Zenodo mints one automatically
-# per tagged release; do not hand-pick a version DOI here going forward.
+# v0.110.13 (16-08-2026). Zenodo mints a version DOI automatically per tagged
+# release: never hand-pick one here. The previous note named v0.115.1 as "the
+# latest archived at time of writing" and was four releases stale by 01-09-2026,
+# which is the failure mode this comment now exists to prevent. Per-version DOIs
+# are listed in docs/CITABLE_V1_RECORD_KOSHA_01.09.26.md; the policy is in
+# docs/VERSIONING_AND_CITATION_POLICY_KOSHA.md.
 authors:
   - family-names: "Gasūns"
     given-names: "Mārcis"
