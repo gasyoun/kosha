@@ -1,6 +1,6 @@
 # Sanskrit Concordance Program — 1-Year Roadmap
 
-_Created: 08-07-2026 · Last updated: 27-08-2026_
+_Created: 08-07-2026 · Last updated: 01-09-2026_
 
 > **Truth-pass 27-08-2026** (Grok 4.6 `grok-4.6`). D4 addendum: this file joined the Wave 1 FLAG list after 21-08. Closed references checked against the combined registry. Kept in place ([FINDINGS §475](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md) clause 3). Not archived.
 
@@ -54,7 +54,7 @@ themed four times.
 |---|---|---|---|
 | A1 | Root → attested corpus forms | [`mw-roots`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) (2,113), `dcs-verb-roots-by-class` (463) | folded into **A3** |
 | A2 | Paradigm-token → attestation (335 Zaliznyak tokens) | `zaliznyak-grammar-index` (98,639) | folded into **A3** |
-| **A3** | **Generated-vs-attested paradigm** | `kosha-db` (6.9M inflections), `dcs-full-sqlite` (5.7M tokens) | **Q3 flagship** |
+| **A3** | **Generated-vs-attested paradigm** | `kosha-db` `inflections` (6.9M rows / 3.33M distinct forms, **Cologne MW-inflect**, not vidyut — corrected H3782), `dcs-full-sqlite` (5.7M tokens) | **Q3 flagship** — both joins shipped (H1262 · H3782); web page owed |
 | **A4** | **Pāṇinian sūtra → form → corpus** | vidyut-prakriya sūtra chains, DCS | **Q4 flagship (highest novelty)** |
 | A5 | Compound (samāsa) structure → corpus | `dcs-compound-dictionary` (37,333) | stretch / Y2 |
 
@@ -78,6 +78,11 @@ Surface the two that are ~80% pre-computed first (fast wins, and they build the
 shared core), then the greenfield grammar work.
 
 ### Q1 (months 1–3) — B1 · Dictionary ↔ corpus, pan-corpus  ·  *+ the shared core*
+
+**Status: SHIPPED 10-07-2026 (H380, Fable 5 `claude-fable-5`), RELEASED 19-07-2026 in
+[data-v0.2.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.2.0) (asset
+`dict_corpus_concordance.tsv`, 6,738,653 bytes). Every exit check met.** Verified
+mechanically 01-09-2026 (H3782) — see the Q1–Q3 status table below.
 
 - **Inputs:** [`dcs-cdsl-xref`](https://github.com/sanskrit-lexicon/csl-apidev) (81.4% linked), `union-headwords`, `dcs-full-sqlite`, kosha rendered entries.
 - **Build:** generalize the GRA `id_gra` exact-match to CDSL headword → DCS lemma across MW/PWG/AP90 with strict tiers only (`xref`, `exact`, `floor`); the 18.6% residue unfilled per decision D6 (relaxed tier scored 0/3 on golden sample, dropped). **Build the concordance core here** (schema, `form_key()` join, scan anchoring, the reusable web viewer).
@@ -116,18 +121,101 @@ shared core), then the greenfield grammar work.
 - **Exit checks:** every source passage's parallels navigable ✅; verdict annotations surfaced
   ✅ (GOOD/PARTLY badges + word-diffs); RV subset cross-linked to Bloomfield ✅ (85% validated
   join, H896); variant provenance documented ✅ (build report + this section).
+- **Release status corrected 01-09-2026 (H3782).** The "release pending — same 'unreleased'
+  state as B1" clause above was **already false when it was written**: both
+  `parallel_passage_concordance.tsv` (32,224,842 bytes) and `bloomfield_rv_citations.tsv`
+  (2,790,672 bytes) shipped as assets of
+  [data-v0.2.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.2.0) on **19-07-2026**,
+  five weeks before this file's 27-08 truth-pass, and `datasets.json` carries
+  `in_release: data-v0.2.0` for both. B1 is released too. Nothing is pending.
 - **`@DECIDE` (a human should decide, not self-ruled) — one item remains:** confirm
   `Polnorazmernye/` as the released-canonical parallel-passage variant (or direct otherwise) —
   R-C2. The Bloomfield-digitization-source `@DECIDE` is **resolved** (see above).
 
 ### Q3 (months 7–9) — A3 · Generated-vs-attested morphology audit
 
-- **Inputs:** `kosha-db` (6.9M vidyut-generated inflections), `dcs-full-sqlite` (5.7M attested tokens), the [E1 dual-engine work](https://github.com/gasyoun/kosha/blob/main/E1_DIVERGENCE_REPORT.md) (already built).
+**Status: BOTH JOINS SHIPPED; the web-page deliverable is still open.** A3 was never run as
+its own quarter — the 17-07-2026 ruling (D1) promoted A4 into the Q3 slot and **absorbed
+A3's join into A4's wave 1 as a prerequisite**, so only the slice A4 needed was built.
+H3782 (01-09-2026) ran the join this section actually specifies. Detail below.
+
+- **Inputs:** `kosha-db` inflected forms, `dcs-full-sqlite` (5,688,416 attested tokens), the [E1 dual-engine work](https://github.com/gasyoun/kosha/blob/main/E1_DIVERGENCE_REPORT.md) (already built).
+  **Input attribution corrected 01-09-2026 (H3782): the 6.9M is NOT vidyut.** `kosha.db`
+  `inflections` holds 6,917,018 rows / 3,326,312 distinct `form_slp1`, of which
+  **6,916,522 are `source='cologne_mwinflect'`** (plus 326 `hybrid-natva-fix`, 153
+  `curated-gita-pronoun`, 17 `vidyut-gap-fill`). vidyut's actual output lives in the
+  separate `forms` table (28,567 rows). The two tables are different generators and the
+  audit means different things on each.
 - **Build:** join generated forms ⨯ attested forms on `form_key()` into three buckets — **attested & generated** (confirmed), **generated-never-attested** (over-generation), **attested-never-generated** (engine/grammar gaps). Absorbs A1 (root→forms) and A2 (paradigm-token→attestation). ⚠ handle the manifest-noted **DCS `Tense=Past` aorist/perfect conflation** in verb buckets.
-- **Deliverables:** dataset `morphology-attestation-audit` (manifest row + release) · web page `/concordance/morphology/` (paradigm cell → attested? with corpus evidence).
-- **Exit checks:** full 6.9M ⨯ 5.7M join complete; the "attested-never-generated" residue triaged (OCR/segmentation error vs genuine gap); gaps routed to the csl-inflect give-back (H185).
+- **Deliverables:** dataset `morphology-attestation-audit` (manifest row ✅ + released ✅ in
+  [data-v0.2.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.2.0), asset
+  `morph_attest_AG.tsv`) · dataset `morphology-attestation-audit-inflections` (manifest row
+  ✅ 01-09-2026, unreleased — rides the next data cut) · web page `/concordance/morphology/`
+  (paradigm cell → attested? with corpus evidence) — **❌ NOT BUILT.** `concordance/` carries
+  `dict/`, `panini/`, `parallels/` and `senses/`; there is no `morphology/`. This is the one
+  Q3 deliverable with no artefact behind it.
+
+#### The two joins, and why the second one had to exist
+
+| | W1b (H1262, 18-07-2026) | H3782 (01-09-2026) |
+|---|---|---|
+| Generated side | `forms`, heritage excluded — 426,410 rows | `inflections` — 3,326,312 distinct forms |
+| Generator | 93.3% `source='dcs'` + 28,567 vidyut | 99.99% `cologne_mwinflect` |
+| Attested side | `token.form` (sandhied) — 381,413 | `token.form` **+** `token.m_unsandhied` — 386,012 keys |
+| **AG** | 401,368 of 426,410 (94.1%) | **239,443 of 3,326,312 (7.20%)** |
+| **G¬A** | 25,042 | **3,086,869 (92.80%)** |
+| **A¬G** | **2** | **196,378 of 386,012 (50.87%)** |
+
+The W1b A¬G of **2** is not a finding about Sanskrit morphology; it is an artefact of
+joining DCS against a generated side that is itself 93% ingested DCS. That build's own
+report says so and hands the question on. The `inflections` side is derived from MW
+headwords with no DCS input, so it is the only one of the two on which
+"attested but never generated" carries engine meaning — and there the corpus half of the
+asymmetry is **196,378 keys, not 2**.
+
+⚠ **The A¬G residue is not 196,378 engine defects.** The generator's lemma inventory is
+**222,736 nominal lemmas against 680 verbal**, so finite verbs are territory
+`inflections` never claimed; the report cross-tabs every triage class against DCS `upos`
+so a verb-shaped gap is never quoted as a nominal-engine defect. Full method, triage and
+four human-checkable sample tables:
+[`data/concordance/MORPHOLOGY_ATTESTATION_INFLECTIONS_BUILD_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/MORPHOLOGY_ATTESTATION_INFLECTIONS_BUILD_REPORT.md).
+
+- **Exit checks:** full 6.9M ⨯ 5.7M join complete ✅ (H3782 — W1b did **not** satisfy this:
+  it joined 426,410 rows, not 6.9M); the "attested-never-generated" residue triaged
+  ✅ (H3782 triages it into `paradigm_gap` / `lexicon_gap` / `segmentation_artefact` /
+  `non_sanskrit_or_ocr`, each cross-tabbed by `upos`; W1b's triage ran over a residue of 2);
+  gaps routed to the csl-inflect give-back (H185) — **⏳ payload built, hand-off owed**: W1b
+  had `genuine_engine_gap = 0` so nothing was ever routed. H3782 produces the first real
+  payload and narrows it honestly —
+  [`morph_giveback_candidates.tsv`](https://github.com/gasyoun/kosha/blob/main/data/concordance/morph_giveback_candidates.tsv),
+  **5,656 rows**, from `paradigm_gap`'s 94,018 by three measured subtractions (verbs 26,470 ·
+  sandhied-surface-only 61,330 · bare stems 562). Quoting A¬G as "forms the engine misses"
+  overstates the actionable set **35×**. The head cross-validates (pronoun dative/locative
+  cells and irregular feminine/consonant stems — precisely where MW-inflect is weak, and
+  `inflections` already carries a hand-made `curated-gita-pronoun` patch), but allomorphic
+  bound stems still pass the filter (`rājñ`, `ātma` at ranks 2–3), so this is a **candidate
+  set needing human triage, not a defect list**. Routing it is a queued port, never an
+  in-pass csl-inflect edit.
+
+#### Q1–Q3 status, verified mechanically 01-09-2026 (H3782)
+
+| Quarter | Workstream | Dataset | Release | Web page | Verdict |
+|---|---|---|---|---|---|
+| Q1 | B1 dict ↔ corpus | `dict-corpus-concordance` ✅ 74,520 rows | data-v0.2.0 ✅ | [`/concordance/dict/`](https://github.com/gasyoun/kosha/blob/main/concordance/dict/index.html) ✅ | **complete** |
+| Q2 | B3 parallel passages | `parallel-passage-concordance` ✅ 153,045 · `bloomfield-rv-citations` ✅ | data-v0.2.0 ✅ | [`/concordance/parallels/`](https://github.com/gasyoun/kosha/blob/main/concordance/parallels/index.html) ✅ | **complete**, one `@DECIDE` open (R-C2 variant) |
+| Q3 | A3 morphology audit | `morphology-attestation-audit` ✅ 401,368 · `morphology-attestation-audit-inflections` ✅ 239,443 · `morphology-giveback-candidates` ✅ 5,656 | data-v0.2.0 ✅ / unreleased ×2 | `/concordance/morphology/` ❌ | **data complete, web page + give-back hand-off owed** |
+| (Q3 slot) | A4 Pāṇini *(promoted, D1)* | `panini-derivation-status` · `paninian-corpus-concordance` 893,482 · `paninian-sutra-coverage-map` | data-v0.3.0 ✅ | [`/concordance/panini/`](https://github.com/gasyoun/kosha/blob/main/concordance/panini/index.html) ✅ | **complete**, W4a polish open |
 
 ### Q4 (months 10–12) — A4 · Pāṇinian sūtra ↔ corpus  ·  *flagship, highest novelty*
+
+**Calendar-slot correction (01-09-2026, H3782).** A human ruling of 17-07-2026 (D1 in
+[`docs/PLAN_KOSHA_CONCORDANCE_Q3_2026H2.md`](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_CONCORDANCE_Q3_2026H2.md))
+**promoted A4 into the Q3 calendar slot, ahead of A3**. That plan states the roadmap's own
+A4 section "should be re-labelled in the same pass that this plan lands, so a third naming
+does not appear" — **the re-labelling never happened**, and this file has read "Q4 = A4"
+against a shipped-in-Q3 reality ever since. The workstream label **A4** is correct; the
+quarter is not. A4 shipped W2a–W3b between 20-07 and 24-07-2026 and released in
+[data-v0.3.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.3.0).
 
 - **Inputs:** vidyut-prakriya derivations (emit the Aṣṭādhyāyī sūtra chain per form), the Q3 attested-form join.
 - **Build:** for each attested form, run the vidyut derivation, capture the sūtra sequence, invert to `sūtra → {attested forms exemplifying it}`. A concordance keyed by sūtra number — **unpublished territory: no corpus-grounded Pāṇinian concordance exists.**
