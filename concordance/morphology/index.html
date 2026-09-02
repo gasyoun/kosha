@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kosha — generated ↔ attested morphology concordance (A3)</title>
+<style>
+:root { --ink:#222; --mut:#667; --line:#ddd; --bg:#faf9f6; --card:#fff;
+        --yes:#0a7a2f; --yesbg:#e8f5ec; --no:#8a8f98; --nobg:#f2f3f5;
+        --gap:#a0410a; --gapbg:#fdf0e8; --warn:#8a6d00; }
+* { box-sizing:border-box; }
+body { margin:0; font:15px/1.5 Georgia,'Times New Roman',serif; color:var(--ink); background:var(--bg); }
+header { background:#2b3a4a; color:#fff; padding:14px 20px; }
+header h1 { margin:0; font-size:18px; font-weight:normal; }
+header .sub { font-size:12.5px; opacity:.78; margin-top:3px; max-width:860px; }
+main { max-width:940px; margin:0 auto; padding:16px 20px 60px; }
+#q { width:100%; font-size:18px; padding:9px 12px; border:1px solid var(--line); border-radius:6px;
+     font-family:inherit; }
+#hint { font-size:12.5px; color:var(--mut); margin:6px 2px 14px; }
+#matches { margin:8px 0; }
+#matches a { display:inline-block; margin:2px 8px 2px 0; font-size:14.5px; }
+.entry { background:var(--card); border:1px solid var(--line); border-radius:8px;
+         padding:14px 18px; margin:14px 0; }
+.hw { font-size:21px; }
+.hw .slp { color:var(--mut); font-size:14px; margin-left:8px; font-family:Consolas,monospace; }
+.hw .freq { font-size:12.5px; color:var(--mut); margin-left:10px; }
+.bar { height:7px; background:var(--nobg); border-radius:4px; margin:9px 0 3px; overflow:hidden; }
+.bar i { display:block; height:100%; background:var(--yes); }
+.barlab { font-size:12.5px; color:var(--mut); }
+h3 { font-size:13px; text-transform:uppercase; letter-spacing:.05em; color:var(--mut);
+     margin:16px 0 6px; font-weight:normal; }
+table.para { border-collapse:collapse; width:100%; margin:4px 0 2px; }
+table.para th { font-size:11.5px; color:var(--mut); font-weight:normal; text-align:left;
+                padding:3px 6px; border-bottom:1px solid var(--line); }
+table.para td { border:1px solid #eceef0; padding:4px 6px; vertical-align:top; font-size:13.5px; }
+td.c { cursor:default; }
+td.yes { background:var(--yesbg); }
+td.no  { background:var(--nobg); color:var(--no); }
+td .frm { font-family:Consolas,monospace; font-size:12.5px; }
+td .occ { font-size:11px; color:var(--yes); margin-left:5px; }
+.cav { color:var(--warn); font-size:11px; margin-left:3px; }
+.kw { font-size:13px; margin:6px 0 0 2px; color:#333; }
+.kw .loc { font-family:Consolas,monospace; font-size:11px; color:#889; margin-left:5px; }
+.gaps li { margin:3px 0; font-size:13.5px; }
+.gaps .surf { opacity:.55; }
+.gaps .u { font-size:11px; background:#eef0f3; border-radius:8px; padding:1px 6px; color:#445; margin-left:5px; }
+.note { font-size:12.5px; color:var(--mut); margin:6px 0; }
+.callout { border-left:3px solid var(--warn); background:#fffdf3; padding:8px 12px;
+           font-size:12.5px; color:#544; margin:10px 0; }
+#trust { border-top:2px solid var(--line); margin-top:34px; padding-top:12px;
+         font-size:12.5px; color:var(--mut); }
+#trust table { border-collapse:collapse; margin:6px 0; }
+#trust td, #trust th { border:1px solid var(--line); padding:2px 9px; font-size:12px; }
+.none { color:var(--mut); font-style:italic; }
+a { color:#1a6fb0; }
+.legend span { display:inline-block; font-size:11.5px; padding:1px 8px; border-radius:8px; margin-right:6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Generated ↔ attested morphology <span style="opacity:.6">· A3 · kosha concordance program</span></h1>
+  <div class="sub">Every generated paradigm cell for a lemma, marked <b>attested</b> or
+  <b>not attested</b> in the DCS corpus (5.69M tokens, 270 texts), with the corpus evidence
+  behind each attestation — plus the forms DCS attests that the generator never produced.
+  370,664 cells over 9,150 lemmas · 175,027 attested (47.22%).</div>
+</header>
+<main>
+  <input id="q" placeholder="Type a lemma — IAST (rāma, agni, gaja) or SLP1 (rAma, agni) …" autocomplete="off">
+  <div id="hint">Static head: the 11,148 most frequent DCS lemmas, covering 95.00% of corpus
+  token mass (measured at build time from <code>lemma_frequency.tsv</code>, standing rule D4/D5 —
+  not a hardcoded N); 9,150 of them carry rows in the generator. KWIC is capped at
+  6 sentences per lemma — a preview, not the data; the full set is in the
+  <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/morph_attest_infl_AG.tsv">dataset TSV</a>
+  (per-cell <code>evidence_count</code>) and the canonical DCS SQLite.</div>
+  <div class="legend">
+    <span style="background:var(--yesbg);color:var(--yes)">attested — occurs in DCS</span>
+    <span style="background:var(--nobg);color:var(--no)">not attested — generated, absent from DCS</span>
+    <span style="background:var(--gapbg);color:var(--gap)">gap — DCS attests it, generator did not</span>
+  </div>
+  <div id="matches"></div>
+  <div id="out"></div>
+
+  <div id="trust">
+    <b>Trust block.</b> Source datasets:
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/morph_attest_infl_AG.tsv">morph_attest_infl_AG.tsv</a>
+    (239,443 attested generated forms) and
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/morph_attest_infl_AnG.tsv">morph_attest_infl_AnG.tsv</a>
+    (196,378 gap keys), built 01-09-2026 by
+    <a href="https://github.com/gasyoun/kosha/blob/main/scripts/build_morphology_attestation_audit_inflections.py">build_morphology_attestation_audit_inflections.py</a>
+    (H3782); paradigm cells from <code>kosha.db</code> <code>inflections</code> (6,917,018 rows,
+    <b>99.99% <code>source='cologne_mwinflect'</code></b>); attestation from
+    <i>dcs-full-sqlite</i> (DCS 2026, CC BY 4.0). Page built 02-09-2026 by
+    <a href="https://github.com/gasyoun/kosha/blob/main/scripts/build_morphology_concordance_page.py">build_morphology_concordance_page.py</a>
+    (H3861). A generated form absent from the AG index is in the G¬A bucket by the audit's own
+    reconciliation, so "not attested" here is read off the shipped dataset, not recomputed.
+    <p><b>What a red cell does and does not mean.</b> It means the form does not occur in the
+    5.69M-token DCS corpus. It is <b>not</b> a claim that the form is wrong or that the
+    generator is broken: most of Sanskrit's paradigm space is simply unattested in any finite
+    corpus — 47.22% of the cells shown here are attested, and 57 of the head
+    lemmas have no attested cell at all. Read it as corpus coverage, not as a defect list.</p>
+    <p><b>Two scope facts that bound every reading, carried from the audit.</b>
+    (1) <b>Verbs.</b> The generator holds <b>680 verbal lemmas against 222,736 nominal</b>, so
+    finite verbs are territory it never claimed; a verbal gap is out of scope, not a bug —
+    gap rows carry their DCS <code>upos</code>. (2) <b>Sandhi.</b> A paradigm generator emits
+    <i>unsandhied</i> forms while DCS records the sandhied surface, so gap rows attested only
+    as a surface (<code>via: surface</code>) are shown dimmed — for those the mismatch is an
+    artefact of the attested side. Of the full 196,378-key gap set, 51.06% are surface-only
+    and the defensible give-back subset is
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/morph_giveback_candidates.tsv">5,656 rows</a>,
+    method in the
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/MORPHOLOGY_GIVEBACK_CANDIDATES_REPORT.md">candidates report</a>.</p>
+    <p><b>Homographic cells share one evidence count — read <span class="cav">≈</span> carefully.</b>
+    The join key is <code>form_key()</code>, the length-preserving floor tier, which folds the
+    final visarga and homorganic nasals. So <i>rāmaḥ</i> (nom. sg.) and <i>rāma</i> (voc. sg.)
+    reduce to the same key and are credited with the <b>same</b> occurrence count — the corpus
+    evidence says "this key occurs 3,325 times", not "3,325 of them are vocatives". Any cell
+    matched below a byte-identical SLP1 key carries <span class="cav">≈</span>; where two cells
+    of one paradigm show an identical count, that is this fold, not a claim that both functions
+    are equally attested. Case-level disambiguation needs the DCS morphological tags, which this
+    page deliberately does not infer.</p>
+    <p>R-C4: DCS conflates aorist and perfect under <code>Tense=Past</code>; cells whose evidence
+    carries a Past-tense token are flagged <span class="cav">▵</span> rather than excluded.
+    Citable locus IDs are host-independent (<code>dcs:&lt;sent_id&gt;</code> — DCS's own stable
+    sentence id, resolvable against any copy of the corpus). CSV fallback: the two dataset TSVs
+    above. Full method:
+    <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/MORPHOLOGY_ATTESTATION_INFLECTIONS_BUILD_REPORT.md">build report</a>.</p>
+  </div>
+</main>
+<script src="data/stats.js"></script>
+<script>
+window.MORPH_DATA = {};
+var I2S = [["ai","E"],["au","O"],["kh","K"],["gh","G"],["ch","C"],["jh","J"],
+  ["ṭh","W"],["ḍh","Q"],["th","T"],["dh","D"],["ph","P"],["bh","B"],
+  ["ā","A"],["ī","I"],["ū","U"],["ṝ","F"],["ṛ","f"],["ḹ","X"],["ḷ","x"],
+  ["ṃ","M"],["ṁ","M"],["ḥ","H"],["ṅ","N"],["ñ","Y"],["ṭ","w"],["ḍ","q"],
+  ["ṇ","R"],["ś","S"],["ṣ","z"]];
+function toSlp1(s){ s=(s||"").trim();
+  for(var i=0;i<I2S.length;i++) s=s.split(I2S[i][0]).join(I2S[i][1]); return s; }
+function letterOf(k){ var c=(k||"?")[0].toLowerCase(); return /[a-z]/.test(c)?c:"_"; }
+// A letter may be split into size-capped chunks over sorted keys; pick the last chunk
+// whose first key still sorts at or before the query, and fall back to the first chunk
+// for a query that precedes them all (a prefix search must still find its neighbours).
+function chunksFor(letter){ return (window.MORPH_SHARDS||{})[letter]||[]; }
+function chunkFor(key){
+  var cs=chunksFor(letterOf(key));
+  if(!cs.length) return null;
+  var pick=cs[0][1];
+  for(var i=0;i<cs.length;i++){ if(cs[i][0]<=key) pick=cs[i][1]; else break; }
+  return pick;
+}
+var loaded={};
+function ensureShard(name,cb){
+  if(!name) return cb();
+  if(loaded[name]) return cb();
+  var s=document.createElement("script"); s.src="data/kwic_"+name+".js";
+  s.onload=function(){loaded[name]=1;cb();}; s.onerror=function(){loaded[name]=1;cb();};
+  document.head.appendChild(s); }
+// Every chunk of a letter merges into one bucket, so prefix search sees the whole letter
+// once its chunks are loaded, and a lookup never depends on which chunk happened to load.
+window.MORPH_ADD=function(name,obj){
+  var letter=name.split("_")[0];
+  var b=window.MORPH_DATA[letter]=window.MORPH_DATA[letter]||{};
+  for(var k in obj) b[k]=obj[k];
+};
+function esc(t){ var d=document.createElement("div"); d.textContent=t==null?"":String(t); return d.innerHTML; }
+function hi(sent,form){ if(!form) return esc(sent);
+  var i=sent.toLowerCase().indexOf(form.toLowerCase()); if(i<0) return esc(sent);
+  return esc(sent.slice(0,i))+"<mark>"+esc(sent.slice(i,i+form.length))+"</mark>"+esc(sent.slice(i+form.length)); }
+var CASES=["nom","acc","instr","dat","abl","gen","loc","voc"], NUMS=["sg","du","pl"],
+    GLABEL={m:"masculine",n:"neuter",f:"feminine","":"indeclinable / uninflected"};
+
+function paradigm(cells){
+  var byG={}; cells.forEach(function(c){ (byG[c.g]=byG[c.g]||[]).push(c); });
+  var h="";
+  Object.keys(byG).sort().forEach(function(g){
+    var grid={}, loose=[];
+    byG[g].forEach(function(c){
+      if(CASES.indexOf(c.cs)>=0 && NUMS.indexOf(c.n)>=0){
+        (grid[c.cs+"|"+c.n]=grid[c.cs+"|"+c.n]||[]).push(c);
+      } else loose.push(c);
+    });
+    h+="<h3>"+esc(GLABEL[g]||g)+"</h3>";
+    if(Object.keys(grid).length){
+      h+='<table class="para"><tr><th></th>'+NUMS.map(function(n){return "<th>"+n+"</th>";}).join("")+"</tr>";
+      CASES.forEach(function(cs){
+        var any=NUMS.some(function(n){return grid[cs+"|"+n];});
+        if(!any) return;
+        h+="<tr><th>"+cs+"</th>";
+        NUMS.forEach(function(n){
+          var cc=grid[cs+"|"+n];
+          if(!cc){ h+='<td class="c no">—</td>'; return; }
+          var att=cc.some(function(c){return c.a;});
+          h+='<td class="c '+(att?"yes":"no")+'" title="'+esc(cc.map(function(c){return c.f;}).join(" "))+'">'+cc.map(function(c){
+            return '<span class="frm">'+esc(c.i)+"</span>"+
+              (c.a?'<span class="occ">'+c.o+"×</span>":"")+
+              (c.t?'<span class="cav" title="floor tier — matched on the length-preserving form_key, not a byte-identical SLP1 key">≈</span>':"")+
+              (c.c?'<span class="cav" title="DCS Tense=Past conflates aorist and perfect">▵</span>':"");
+          }).join("<br>")+"</td>";
+        });
+        h+="</tr>";
+      });
+      h+="</table>";
+    }
+    if(loose.length){
+      h+='<div class="note">'+loose.map(function(c){
+        return '<span class="frm">'+esc(c.i)+"</span>"+(c.a?'<span class="occ">'+c.o+"×</span>":"");
+      }).join(" · ")+"</div>";
+    }
+  });
+  return h;
+}
+
+function verbs(cells){
+  if(!cells.length) return "";
+  var h="<h3>verbal cells</h3><table class=\"para\"><tr><th>form</th><th>person</th><th>tense</th><th>voice</th><th>number</th><th>attested</th></tr>";
+  cells.slice(0,60).forEach(function(c){
+    h+="<tr><td"+(c.a?' class="yes"':' class="no"')+'><span class="frm">'+esc(c.i)+"</span></td><td>"+
+      esc(c.p)+"</td><td>"+esc(c.te)+"</td><td>"+esc(c.v)+"</td><td>"+esc(c.n)+"</td><td>"+
+      (c.a?c.o+"×":"—")+"</td></tr>";
+  });
+  return h+"</table>";
+}
+
+function kwics(cells){
+  var out=cells.filter(function(c){return c.k;}).slice(0,8);
+  if(!out.length) return "";
+  return "<h3>corpus evidence</h3>"+out.map(function(c){
+    return '<div class="kw">'+hi(c.k,c.s)+'<span class="loc">'+esc(c.l)+"</span></div>";
+  }).join("");
+}
+
+function gaps(g){
+  if(!g.length) return '<h3>gaps — attested, never generated</h3><div class="note">None for this lemma: every DCS-attested form of it is produced by the generator.</div>';
+  var verbal=g.filter(function(x){return x.u==="VERB";}).length,
+      surf=g.filter(function(x){return x.vi==="surface";}).length;
+  var h="<h3>gaps — attested, never generated</h3>";
+  if(verbal||surf){
+    h+='<div class="callout">Of '+g.length+" shown, "+verbal+
+      " carry DCS <code>upos=VERB</code> (the generator holds 680 verbal lemmas against 222,736 nominal — out of scope, not a defect) and "+
+      surf+" are attested only as a <i>sandhied surface</i> (an artefact of the attested side, since a generator emits unsandhied forms). Neither class is an engine gap.</div>";
+  }
+  h+='<ul class="gaps">'+g.map(function(x){
+    var dim=(x.vi==="surface"||x.u==="VERB")?' class="surf"':"";
+    return "<li"+dim+'><span class="frm">'+esc(x.f)+"</span>"+
+      '<span class="u">'+esc(x.u||"—")+"</span>"+
+      '<span class="occ" style="color:var(--gap)">'+x.o+"×</span>"+
+      '<span class="loc" style="font-family:Consolas,monospace;font-size:11px;color:#889"> '+esc(x.l)+"</span>"+
+      '<span class="note" style="display:inline;margin-left:6px">'+esc(x.t.replace(/_/g," "))+
+      (x.vi==="surface"?", sandhied surface only":"")+"</span></li>";
+  }).join("")+"</ul>";
+  return h;
+}
+
+function renderEntry(key,e){
+  var p=e.tot?Math.round(100*e.att/e.tot):0;
+  var h='<div class="entry"><div class="hw">'+esc(e.iast)+
+    '<span class="slp">'+esc(key)+'</span>'+
+    (e.freq?'<span class="freq">'+e.freq.toLocaleString()+" corpus tokens</span>":"")+"</div>"+
+    '<div class="bar"><i style="width:'+p+'%"></i></div>'+
+    '<div class="barlab">'+e.att+" of "+e.tot+" generated cells attested in DCS ("+p+"%)"+
+    (e.att===0?" — nothing this generator produces for this lemma occurs in the corpus":"")+
+    ((e.mdl&&e.mdl.length)?' · declension model '+e.mdl.map(esc).join(", "):"")+"</div>";
+  h+=paradigm(e.nom||[]);
+  h+=verbs(e.vrb||[]);
+  h+=kwics((e.nom||[]).concat(e.vrb||[]));
+  h+=gaps(e.gap||[]);
+  return h+"</div>";
+}
+
+var q=document.getElementById("q"), out=document.getElementById("out"),
+    matches=document.getElementById("matches");
+function ensureIndex(letter,cb){
+  if(window.MORPH_INDEX && window.MORPH_INDEX[letter]) return cb();
+  var s=document.createElement("script"); s.src="data/index_"+letter+".js";
+  s.onload=cb; s.onerror=cb; document.head.appendChild(s);
+}
+function show(key){
+  ensureShard(chunkFor(key),function(){
+    var b=window.MORPH_DATA[letterOf(key)]||{};
+    if(b[key]) out.innerHTML=renderEntry(key,b[key]);
+    else out.innerHTML='<p class="none">Entry for “'+esc(key)+'” could not be loaded.</p>';
+  });
+}
+function lookup(){
+  var raw=q.value.trim(); matches.innerHTML=""; out.innerHTML="";
+  if(!raw) return;
+  var key=toSlp1(raw), letter=letterOf(key);
+  ensureIndex(letter,function(){
+    var idx=(window.MORPH_INDEX||{})[letter]||{};
+    if(idx[key]){ show(key); return; }
+    var pref=Object.keys(idx).filter(function(k){return k.indexOf(key)===0;}).sort().slice(0,60);
+    if(!pref.length){ out.innerHTML='<p class="none">No head lemma starts with “'+esc(raw)+
+      '”. The page carries the '+(window.MORPH_STATS?window.MORPH_STATS.head_n.toLocaleString():"")+
+      ' most frequent DCS lemmas (covering '+(window.MORPH_STATS?window.MORPH_STATS.coverage.toFixed(2):"")+
+      '% of corpus tokens); a rarer lemma is in the dataset TSVs but not in this static head.</p>'; return; }
+    matches.innerHTML=pref.map(function(k){
+      return '<a href="#'+encodeURIComponent(k)+'" data-k="'+esc(k)+'">'+esc(idx[k][0])+
+        ' <span style="font-size:11px;color:#889">'+idx[k][1]+"/"+idx[k][2]+"</span></a>";
+    }).join("");
+    matches.querySelectorAll("a").forEach(function(a){
+      a.onclick=function(ev){ ev.preventDefault(); q.value=a.dataset.k; lookup();
+        history.replaceState(null,"","#"+encodeURIComponent(a.dataset.k)); };
+    });
+  });
+}
+q.addEventListener("input",lookup);
+if(location.hash.length>1){ q.value=decodeURIComponent(location.hash.slice(1)); lookup(); }
+</script>
+</body>
+</html>
