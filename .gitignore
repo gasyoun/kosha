@@ -91,6 +91,13 @@ data/akshara_full/run_pass2.err
 data/akshara_full/run_repair.log
 data/akshara_full/run_repair.err
 
+# H3743 pwg_ru-only recrawl (FINDINGS §660 recovery) — same posture as above
+data/akshara_full/run_pwgru_recrawl.log
+data/akshara_full/run_pwgru_recrawl.err
+data/akshara_full/*.watchdog.log
+data/akshara_full/*.stdout.log
+data/akshara_full/*.stderr.log
+
 # H3457 word-page UX STAGING output (scripts/build_word_pages.py --ux-staging) —
 # local-only artifact tree, never the Pages input; docs/NOT_PUBLISHED_H3457_WPAGE_UX.md
 dist/
