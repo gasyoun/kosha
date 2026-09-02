@@ -112,7 +112,8 @@ def check_failures(rows: list[dict], frows: list[dict], out: list[tuple]) -> Non
     """Failure classes are recorded, not hidden."""
     classes = {r["failure_class"] for r in frows if r["failure_class"]}
     known = {"no-shared-witness", "witness-too-common", "cross-language-gap",
-             "no-gloss", "absent-dictionary", "outranked"}
+             "no-gloss", "absent-dictionary", "outranked",
+             "no-citation-apparatus"}   # H3862, the Sa→Sa columns
     out.append(("every failure row carries a class from the documented taxonomy",
                 classes <= known and bool(classes), ", ".join(sorted(classes))))
     unaligned_tbl = sum(1 for r in rows if r["status"] == "unaligned")

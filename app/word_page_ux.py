@@ -156,7 +156,11 @@ def alignment_of(slp1):
     return _ALIGN.get(slp1) or []
 
 
-DICT_COL = (("pwg", "PWG", "de"), ("mw", "MW", "en"), ("apte", "Apte", "en"))
+#: (TSV column stem, header, metalanguage). The Sa→Sa kośas joined in H3862; the
+#: language column is not decoration — it is why wording may be compared inside
+#: the two `en` columns and nowhere else (app/sense_align.py, gloss_channel_open).
+DICT_COL = (("pwg", "PWG", "de"), ("mw", "MW", "en"), ("apte", "Apte", "en"),
+            ("skd", "ŚKDR", "sa"), ("vcp", "VCP", "sa"))
 
 
 def sense_alignment_block(slp1):
@@ -215,17 +219,21 @@ def sense_alignment_block(slp1):
         '<details class="disclosure sense-align" id="aligned-senses" open>'
         '<summary>Aligned senses across dictionaries</summary>'
         f'<p class="sa-head"><b>{len(groups)}</b> meaning'
-        f'{"s" if len(groups) != 1 else ""} where PWG, MW or Apte cite the same '
-        'literary sources for a sense. One row = one meaning.</p>'
+        f'{"s" if len(groups) != 1 else ""} where two of these dictionaries cite the same '
+        'literary sources for a sense, or where one of them names a kośa that has the entry. '
+        'One row = one meaning.</p>'
         '<div class="sa-scroll"><table class="sa-table"><thead><tr>'
-        '<th>evidence</th><th>PWG <span class="sa-lang">de</span></th>'
-        '<th>MW <span class="sa-lang">en</span></th>'
-        '<th>Apte <span class="sa-lang">en</span></th>'
-        f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
+        '<th>evidence</th>'
+        + "".join(f'<th>{esc(label)} <span class="sa-lang">{esc(lang)}</span></th>'
+                  for _key, label, lang in DICT_COL)
+        + f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
         f'{more_html}'
         '<p class="sa-foot">Alignment is by <b>shared literary witness</b>: two senses join a '
         'meaning when both dictionaries cite the same text for them, weighted by how '
-        'discriminating that citation is inside this lemma. A shared citation is evidence, not '
+        'discriminating that citation is inside this lemma. A row marked <code>attrib</code> '
+        'rests on a weaker, one-directional thing — a western sense naming ŚKDR or VCP in its '
+        'own citations — because those kośas print no citations of their own to meet it with. '
+        'A shared citation is evidence, not '
         'proof — the score says how much. Senses that could not be aligned are kept in '
         '<code>data/concordance/sense_alignment_failures.tsv</code> with the reason, never '
         'dropped. Sidecar only: no dictionary\'s own sense order is rewritten. '

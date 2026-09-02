@@ -51,7 +51,7 @@ PAGE = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>H3744 — согласованные значения PWG · MW · Apte: до / после</title>
+<title>H3744 + H3862 — согласованные значения PWG · MW · Apte · ŚKDR · VCP: до / после</title>
 <style>
 :root{{color-scheme:light}}
 body{{font-family:Georgia,'Times New Roman',serif;margin:0;background:#faf8f4;color:#222}}
@@ -79,7 +79,7 @@ table.k td,table.k th{{border:1px solid #d8cdb4;padding:3px 9px;font-size:13.5px
 </head>
 <body>
 <header>
-<h1>Согласованные значения PWG · MW · Apte — до и после (H3744)</h1>
+<h1>Согласованные значения PWG · MW · Apte · ŚKDR · VCP — до и после (H3744 + H3862)</h1>
 <p class="sub">Слева — нынешний прод (те же байты, что отдаёт samskrtam.ru/w/ сегодня).
 Справа — та же страница с новым блоком «Aligned senses across dictionaries».
 Текст словарей идентичен: блок ничего не переписывает, он добавляется снизу.</p>
@@ -91,6 +91,18 @@ table.k td,table.k th{{border:1px solid #d8cdb4;padding:3px 9px;font-size:13.5px
 литературные источники</b>. В левой колонке — метод и вес доказательства
 (<code>ls</code> — общая цитата, <code>gloss</code> — совпадение английских
 толкований MW↔Apte) и сами источники (<code>mbh</code>, <code>panc</code>…).</div>
+
+<div class="feat"><b>Что нового во втором срезе (H3862):</b> справа добавлены два
+санскритско-санскритских кошa — <b>ŚKDR</b> (Śabdakalpadruma) и <b>VCP</b>
+(Vācaspatyam). Они попали в таблицу <b>не</b> по общей цитате: в них вообще нет
+разметки <code>&lt;ls&gt;</code> — ноль на 42&nbsp;531 статью ŚKDR и на 50&nbsp;135
+статей VCP. Зато <b>сам PWG ссылается на них</b> (<code>ŚKDR.</code> 1&nbsp;227 раз,
+<code>MED.</code> 1&nbsp;824 раза на пилотных 500 словах) — это метод
+<code>attrib</code>: свидетельство <b>одностороннее</b> (один словарь указывает на
+другой, а не два сходятся на третьем тексте), поэтому оно нарочно слабее
+<code>ls</code>, и это видно в столбце метода. <b>Медини и Амара в таблицу не
+попали вовсе:</b> их нет в CDSL — код <code>md</code> в csl-orig это
+<b>Макдонелл</b>, а не Мединикоша.</div>
 
 <div class="feat warn"><b>Почему это решение человека, а не агента.</b> Всё остальное, что
 мы ставили на страницы слов, — это оформление: бейдж частотности, закладки, ссылки на
