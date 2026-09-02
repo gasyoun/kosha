@@ -108,7 +108,14 @@ learners, then scholars.
   ([`/concordance/parallels/`](https://github.com/gasyoun/kosha/blob/main/concordance/parallels/index.html),
   153,045 GOOD/PARTLY links across 245 texts), with the Ṛgveda subset
   cross-linked to Marco Franceschini's digital edition of Bloomfield's 1906
-  *A Vedic Concordance* (used by direct permission). Full plan:
+  *A Vedic Concordance* (used by direct permission); a corpus-grounded Pāṇinian
+  concordance
+  ([`/concordance/panini/`](https://github.com/gasyoun/kosha/blob/main/concordance/panini/index.html),
+  893,482 sūtra→form→locus rows); and generated-vs-attested morphology
+  ([`/concordance/morphology/`](https://github.com/gasyoun/kosha/blob/main/concordance/morphology/index.html)
+  — every generated paradigm cell marked attested or not against the DCS corpus,
+  with the evidence behind each attestation and the forms DCS attests that the
+  generator never produced). Full plan:
   [CONCORDANCE_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/CONCORDANCE_ROADMAP.md).
 - **Trilingual glosses** — English (MW) · German (PWG) · Russian (pwg_ru
   translation layer) side by side; unique worldwide.
