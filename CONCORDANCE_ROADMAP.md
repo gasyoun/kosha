@@ -187,6 +187,20 @@ headwords with no DCS input, so it is the only one of the two on which
 "attested but never generated" carries engine meaning — and there the corpus half of the
 asymmetry is **196,378 keys, not 2**.
 
+⚠️ **That 196,378 is an upper bound, not a measurement** (corrected 02-09-2026, H3911).
+The join key `form_key()` folded anusvāra to `n` at every position while never touching a
+literal `m`, so `rasaṃ` → `rasan` but `rasam` → `rasam`: **the two standard spellings of a
+Sanskrit word-final nasal could never collide**, and every anusvāra-final attestation read as
+un-generated. Fixed in [sanskrit-util 0.11.0](https://github.com/sanskrit-lexicon/sanskrit-util/pull/72)
+— word-final anusvāra now folds to `m`, the medial fold is unchanged, and final `-n` stays
+distinct from final `-m`. Measured against this dataset: **24,149 of the 196,378 keys
+(12.30% of rows, 16.86% by corpus weight) stop being gaps** under the fixed key — `rūpaṃ`
+(1,113×), `duḥkhaṃ` (565×), `vijñānaṃ`, `ākāśaṃ`, textbook `-am` neuters written with
+anusvāra. **Corrected A¬G ≈ 172,229.** The AG / G¬A split and every conclusion drawn from
+the audit's *direction* are unaffected; only the gap magnitude moves. A rebuild against
+sanskrit-util ≥ 0.11.0 is owed before this dataset is released — it also re-runs the
+give-back triage and the `/concordance/morphology/` page, which read these keys.
+
 ⚠ **The A¬G residue is not 196,378 engine defects.** The generator's lemma inventory is
 **222,736 nominal lemmas against 680 verbal**, so finite verbs are territory
 `inflections` never claimed; the report cross-tabs every triage class against DCS `upos`
