@@ -1,4 +1,5 @@
-"""Cross-dictionary sense alignment — PWG ↔ MW ↔ Apte (H3744, wave-2 slice 1).
+"""Cross-dictionary sense alignment — PWG ↔ MW ↔ Apte ↔ ŚKDR ↔ VCP
+(H3744 wave-2 slice 1; the Sa→Sa columns are H3862, slice 2).
 
 STAGING ONLY. Nothing here changes a public page: the render organ fires only
 when `ux={"sense_align": True}`, which only `build_word_pages.py --ux-staging`
@@ -39,13 +40,48 @@ how many senses of this lemma (across all three dictionaries) cite it. A
 witness shared by exactly one sense on each side scores 0.5; a witness common
 to six senses scores 0.167 and cannot carry an edge alone.
 
+THE SECOND BRIDGE (H3862): PRINTED ATTRIBUTION
+----------------------------------------------
+The Sa→Sa kośas carry **no `<ls>` at all** — measured, not assumed: 0 of 42,531
+ŚKDR records and 0 of 50,135 VCP records contain one. They mark attribution in
+running Sanskrit prose (`ityamaraḥ`, `iti medinī`, `yathā suśrute`), so the
+weighted-witness bridge above does not exist for them by construction, and the
+gloss bridge is barred by the language fence (their metalanguage is Sanskrit).
+
+What does exist is the reverse direction, and it is printed rather than
+inferred: **PWG cites ŚKDR and Medinī in its own `<ls>`** — 1,227 and 1,824
+times across the 500-headword pilot, touching 479 of its 500 lemmas. A PWG
+sense whose `<ls>` names ŚKDR is *saying* that this meaning is the one
+Śabdakalpadruma records for the lemma. When ŚKDR has an entry for that lemma,
+that is an alignment edge asserted by a dictionary, not derived by us.
+
+It takes exactly the same weighting as `ls`, from exactly the same `df` table:
+`ŚKDR.` is already a witness key, so its 1/df within the lemma is already
+computed. A lemma where one PWG sense of fifteen cites ŚKDR scores 1.0 and the
+edge is sharp; a lemma where nine senses do scores 0.111 and cannot carry an
+edge at all. **No new constant is introduced by this channel** — τ decides it.
+
+An open-vocabulary reading of the kośas' own `iti X` prose was tried first and
+rejected: it re-invented witnesses through a side door PREFIX_MIN closes. On
+the pilot it matched PWG's `PRAT.` to `pratyarthin` ("counter-claimant") and
+`BUDDH.` to `buddhim`, because the attribution particle is followed by an
+ordinary word far more often than by a source name. Measured yield was 73 of
+707 records, most of them false. The dead end is recorded in the build report;
+a closed, curated source vocabulary would be the honest version of it, and it
+is not this slice.
+
 METHODS (each edge records which one carried it)
 ------------------------------------------------
 `ls`      shared weighted literary witness. The only method that crosses the
           German/English boundary. Score = Σ 1/df over shared witnesses, ≤ 1.
-`gloss`   Jaccard over content tokens. Usable ONLY between two English-glossed
-          dictionaries (MW↔Apte) — never across PWG, where it would silently
-          measure nothing.
+`gloss`   Jaccard over content tokens. Usable ONLY between two dictionaries
+          that gloss in the SAME language, and only when that language is
+          English (MW↔Apte) — never across PWG (German) and never across
+          ŚKDR/VCP (Sanskrit), where it would silently measure nothing.
+`attrib`  a western sense's `<ls>` names the Sa→Sa kośa itself, and that kośa
+          has an entry for the lemma. Weighted 1/df like `ls`, off the same
+          table. Directional evidence: the two sides do not converge
+          independently, one of them points at the other.
 `ls+gloss` both fired; score is the max, and the pair is the most trustworthy
           class in the table.
 
@@ -84,6 +120,12 @@ FAILURE CLASSES — recorded, never hidden
                       folded into somebody else's row.
 `no-gloss`            a structural chunk (PWG `<div>` carrying only `<lex>m.</lex>`)
                       with no gloss text; excluded before alignment, counted.
+`no-citation-apparatus`
+                      a ŚKDR/VCP sense that no western sense attributes to it:
+                      it has no `<ls>` of its own (the kośas have none at all),
+                      and its gloss is Sanskrit, so both bridges are closed for
+                      it. The Sa→Sa counterpart of `cross-language-gap` — a
+                      property of the source format, not a tuning failure.
 On the group side, `granularity-many-to-many` marks a component in which two or
 more senses of one dictionary land in the same meaning as two or more of
 another — a real alignment, at a coarser grain than either dictionary's own.
@@ -107,8 +149,35 @@ GLOSS_FLOOR = 0.20      # Jaccard floor below which a gloss edge is not drawn
 PREFIX_MIN = 4          # min chars for abbreviation prefix-folding (see fold_witnesses)
 MAX_GLOSS = 260         # gloss truncation for the table / viewer
 
-ENGLISH_DICTS = ("mw", "ap90")   # gloss overlap is only meaningful inside this set
-DICTS = ("pwg", "mw", "ap90")
+# The gloss channel is fenced BY DECLARED LANGUAGE, not by an implicit tuple.
+# Three metalanguages are now in the table and Jaccard is meaningful inside
+# exactly one of them: two dictionaries may be compared on wording only when
+# they gloss in the same language AND that language is English (the case where
+# Apte often reprints MW's own wording, which is what makes the signal strong).
+# German↔English measured nothing in slice 1; Sanskrit↔Sanskrit would measure
+# even less, since ŚKDR and VCP share a scholastic idiom in which two unrelated
+# senses routinely repeat `ityamaraḥ`, `ityarthaḥ`, `iti purāṇam`.
+GLOSS_LANG = {"pwg": "de", "mw": "en", "ap90": "en", "skd": "sa", "vcp": "sa"}
+GLOSS_CHANNEL_LANG = "en"
+ENGLISH_DICTS = tuple(d for d, lg in GLOSS_LANG.items() if lg == GLOSS_CHANNEL_LANG)
+
+SASA_DICTS = ("skd", "vcp")      # Sanskrit-to-Sanskrit kośas (H3862)
+DICTS = ("pwg", "mw", "ap90", "skd", "vcp")
+
+# The abbreviation table for the `attrib` channel: which witness keys, as the
+# WESTERN dictionaries spell them in `<ls>`, name each Sa→Sa kośa. Written out
+# rather than prefix-matched on purpose — `PREFIX_MIN` stays at 4 and is not
+# weakened to reach these, because a table is auditable and a shorter prefix
+# floor would let `R.` fold onto `RV.` everywhere else in the build.
+#
+# Keys are post-`witness_key` normalisations: `ŚKDR.` → `skdr`, `Śabdak.` →
+# `sabdak`, `VĀCASPATYA` → `vacaspatya`. Medinī's `MED.` is deliberately absent
+# — see the `attrib` note in the build report: Medinī is not in CDSL at all, so
+# there is no column for `MED.` to point at.
+ATTRIB_KEYS = {
+    "skd": ("skdr", "sabdak", "sabdakalpadr"),
+    "vcp": ("vcp", "vacaspatya", "vacasp"),
+}
 
 _TAG = re.compile(r"<[^>]+>")
 _WS = re.compile(r"\s+")
@@ -136,6 +205,7 @@ def strip_markup(s: str, limit: int = MAX_GLOSS) -> str:
 
 _LS_SPAN = re.compile(r"<ls\b[^>]*>.*?</ls>", re.S)
 _S_SPAN = re.compile(r"<s\b[^>]*>.*?</s>", re.S)
+_S_SPAN_TEXT = re.compile(r"<s\b[^>]*>(.*?)</s>", re.S)
 _I_SPAN = re.compile(r"<i\b[^>]*>(.*?)</i>", re.S)
 _LEAD_MARK = re.compile(r"^[\s—\-–·]*(?:[0-9a-zA-Z]?[〉\)]\s*)*")
 
@@ -152,7 +222,21 @@ def sense_gloss(raw_body: str, dct: str, limit: int = MAX_GLOSS) -> str:
     PWG marks its German definition with `<i>`, so when a PWG span has any `<i>`
     the definition is exactly those runs and nothing else. MW and Apte have no
     such marker, so they fall back to the stripped remainder.
+
+    ŚKDR and VCP invert the rule (H3862): their record is `<s>` end to end,
+    because their metalanguage IS Sanskrit. Stripping `<s>` there would leave an
+    empty string and the sense would be discarded as a structural chunk, so for
+    them the `<s>` runs are kept — they are the definition, not the apparatus.
+    The text comes back in SLP1, as it is stored; transliteration for display is
+    the caller's business (`scripts/build_sense_alignment.py` renders IAST).
     """
+    if dct in SASA_DICTS:
+        runs = [strip_markup(x, 0) for x in _S_SPAN_TEXT.findall(raw_body or "")]
+        t = " ".join(r for r in runs if r).strip()
+        if not t:
+            t = strip_markup(raw_body or "", 0)
+        t = _WS.sub(" ", t).strip(" .,;:")
+        return t[: limit - 1] + "…" if limit and len(t) > limit else t
     body = _LS_SPAN.sub(" ", raw_body or "")
     body = _S_SPAN.sub(" ", body)
     if dct == "pwg":
@@ -241,6 +325,32 @@ def jaccard(a: set[str], b: set[str]) -> float:
     return len(a & b) / len(a | b)
 
 
+def gloss_channel_open(d1: str, d2: str) -> bool:
+    """May wording be compared between these two dictionaries at all?
+
+    Only inside one metalanguage, and only when that metalanguage is English.
+    This is the fence slice 1 drew across German and slice 2 has to draw again
+    across Sanskrit: a Jaccard between a German and an English gloss, or between
+    two Sanskrit ones, does not measure a weak signal — it measures nothing, and
+    returns a number anyway. Relaxing it quietly is the failure mode this
+    function exists to make impossible to reach by accident.
+    """
+    lang = GLOSS_LANG.get(d1)
+    return lang is not None and lang == GLOSS_LANG.get(d2) == GLOSS_CHANNEL_LANG
+
+
+def attrib_witnesses(s_west: dict, s_sasa: dict) -> list[str]:
+    """The keys by which `s_west` names `s_sasa`'s kośa in its own `<ls>`.
+
+    Empty unless exactly one side is a Sa→Sa kośa and the other cites it. See
+    the module docstring: this is a printed attribution, not an inference.
+    """
+    if s_sasa["dict"] not in SASA_DICTS or s_west["dict"] in SASA_DICTS:
+        return []
+    wanted = set(ATTRIB_KEYS.get(s_sasa["dict"], ()))
+    return sorted(set(s_west["ls"]) & wanted)
+
+
 def score_pair(s1: dict, s2: dict, df: dict[str, int]) -> tuple[float, str, list[str]]:
     """(score, method, shared witnesses) for two senses of the same lemma from
     two different dictionaries. `df` is the per-lemma document frequency of each
@@ -253,10 +363,18 @@ def score_pair(s1: dict, s2: dict, df: dict[str, int]) -> tuple[float, str, list
     ls_score = min(ls_score, 1.0)
 
     g_score = 0.0
-    if s1["dict"] in ENGLISH_DICTS and s2["dict"] in ENGLISH_DICTS:
+    if gloss_channel_open(s1["dict"], s2["dict"]):
         g_score = jaccard(s1["toks"], s2["toks"])
         if g_score < GLOSS_FLOOR:
             g_score = 0.0
+
+    # `attrib` (H3862) — same 1/df weighting, same `df` table, no new constant.
+    a_keys = attrib_witnesses(s1, s2) or attrib_witnesses(s2, s1)
+    a_score = 0.0
+    for w in a_keys:
+        d = df.get(w, 2)
+        a_score += 1.0 / d if d else 0.0
+    a_score = min(a_score, 1.0)
 
     if ls_score and g_score:
         method = "ls+gloss"
@@ -264,8 +382,14 @@ def score_pair(s1: dict, s2: dict, df: dict[str, int]) -> tuple[float, str, list
         method = "ls"
     elif g_score:
         method = "gloss"
+    elif a_score:
+        method = "attrib"
     else:
         method = ""
+    # `attrib` never outranks a shared-witness edge: it is one dictionary
+    # pointing at another, not two of them converging on a third text.
+    if method == "attrib":
+        return a_score, method, a_keys
     return max(ls_score, g_score), method, shared
 
 
@@ -392,6 +516,12 @@ def align_lemma(senses: list[dict], present_dicts=None, tau: float = TAU) -> dic
                 failure = "outranked"
             elif near_miss.get(comp[0]):
                 failure = "witness-too-common"
+            elif m["dict"] in SASA_DICTS:
+                # ŚKDR/VCP never have `<ls>` — the format has none — and their
+                # gloss is Sanskrit, so both bridges are shut. The only one that
+                # could have opened is a western sense attributing this lemma to
+                # the kośa, and none did.
+                failure = "no-citation-apparatus"
             elif not m["ls"]:
                 failure = ("cross-language-gap" if m["dict"] == "pwg"
                            else "no-shared-witness")
