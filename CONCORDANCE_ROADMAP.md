@@ -160,8 +160,8 @@ H3782 (01-09-2026) ran the join this section actually specifies. Detail below.
   below it, the forms DCS attests that the generator never produced. Static head = the
   **measured** 95% token-coverage set (N=11,148 lemmas, 9,150 of them carrying generator rows
   — measured at build time per standing rule D4/D5, never hardcoded), 370,664 cells of which
-  175,027 (47.22%) attested. The audit's two controls are rendered, not footnoted: gap lists
-  state how many of their rows are verbal (out of scope: 680 verbal lemmas against 222,736
+  174,797 (47.16%) attested. The audit's two controls are rendered, not footnoted: gap lists
+  state how many of their rows are verbal (out of scope: 680 verbal lemmas against 222,735
   nominal) or sandhied-surface-only, and the trust block explains that homographic cells
   share one `form_key` evidence count. Builder:
   [`scripts/build_morphology_concordance_page.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_morphology_concordance_page.py);
@@ -175,34 +175,68 @@ H3782 (01-09-2026) ran the join this section actually specifies. Detail below.
 |---|---|---|
 | Generated side | `forms`, heritage excluded — 426,410 rows | `inflections` — 3,326,312 distinct forms |
 | Generator | 93.3% `source='dcs'` + 28,567 vidyut | 99.99% `cologne_mwinflect` |
-| Attested side | `token.form` (sandhied) — 381,413 | `token.form` **+** `token.m_unsandhied` — 386,012 keys |
-| **AG** | 401,368 of 426,410 (94.1%) | **239,443 of 3,326,312 (7.20%)** |
-| **G¬A** | 25,042 | **3,086,869 (92.80%)** |
-| **A¬G** | **2** | **196,378 of 386,012 (50.87%)** |
+| Attested side | `token.form` (sandhied) — 381,413 | `token.form` **+** `token.m_unsandhied` — 352,745 keys |
+| **AG** | 401,368 of 426,410 (94.1%) | **238,312 of 3,326,312 (7.16%)** |
+| **G¬A** | 25,042 | **3,088,000 (92.84%)** |
+| **A¬G** | **2** | **164,236 of 352,745 (46.56%)** |
+
+The H3782 column carries the **rebuilt** numbers (H3925, sanskrit-util 0.11.0); the pre-fix
+figures and the size of the correction are in the table below.
 
 The W1b A¬G of **2** is not a finding about Sanskrit morphology; it is an artefact of
 joining DCS against a generated side that is itself 93% ingested DCS. That build's own
 report says so and hands the question on. The `inflections` side is derived from MW
 headwords with no DCS input, so it is the only one of the two on which
 "attested but never generated" carries engine meaning — and there the corpus half of the
-asymmetry is **196,378 keys, not 2**.
+asymmetry is **164,236 keys, not 2**.
 
-⚠️ **That 196,378 is an upper bound, not a measurement** (corrected 02-09-2026, H3911).
-The join key `form_key()` folded anusvāra to `n` at every position while never touching a
-literal `m`, so `rasaṃ` → `rasan` but `rasam` → `rasam`: **the two standard spellings of a
-Sanskrit word-final nasal could never collide**, and every anusvāra-final attestation read as
-un-generated. Fixed in [sanskrit-util 0.11.0](https://github.com/sanskrit-lexicon/sanskrit-util/pull/72)
-— word-final anusvāra now folds to `m`, the medial fold is unchanged, and final `-n` stays
-distinct from final `-m`. Measured against this dataset: **24,149 of the 196,378 keys
-(12.30% of rows, 16.86% by corpus weight) stop being gaps** under the fixed key — `rūpaṃ`
-(1,113×), `duḥkhaṃ` (565×), `vijñānaṃ`, `ākāśaṃ`, textbook `-am` neuters written with
-anusvāra. **Corrected A¬G ≈ 172,229.** The AG / G¬A split and every conclusion drawn from
-the audit's *direction* are unaffected; only the gap magnitude moves. A rebuild against
-sanskrit-util ≥ 0.11.0 is owed before this dataset is released — it also re-runs the
-give-back triage and the `/concordance/morphology/` page, which read these keys.
+#### The join key was broken, and what fixing it moved
 
-⚠ **The A¬G residue is not 196,378 engine defects.** The generator's lemma inventory is
-**222,736 nominal lemmas against 680 verbal**, so finite verbs are territory
+The first run of this join (H3782) used a `form_key()` that folded anusvāra to `n` at **every**
+position while never touching a literal `m`, so `rasaṃ` → `rasan` but `rasam` → `rasam`: **the
+two standard spellings of a Sanskrit word-final nasal could never collide**, and every
+anusvāra-final attestation read as un-generated. Fixed in
+[sanskrit-util 0.11.0](https://github.com/sanskrit-lexicon/sanskrit-util/pull/72) — word-final
+anusvāra now folds to `m`, the medial fold is unchanged (`saṃskṛta == sanskṛta`), and final
+`-n` stays distinct from final `-m` (`rājan != rājam`). The whole A3 chain was then re-run
+against the fixed library (H3925, 02-09-2026); every figure quoted on this page is from that
+rebuild. The pre-fix column is kept so the size of the defect stays visible:
+
+| | pre-fix key (H3782) | fixed key 0.11.0 (H3925) | Δ |
+|---|---:|---:|---:|
+| distinct attested keys | 386,012 | **352,745** | −33,267 |
+| **AG** (generated view) | 239,443 | **238,312** | −1,131 |
+| **G¬A** | 3,086,869 | **3,088,000** | +1,131 |
+| **AG** (attested view) | 189,634 | **188,509** | −1,125 |
+| **A¬G** | 196,378 | **164,236** | **−32,142 (−16.4%)** |
+| attested-side coverage | 49.13% | **53.44%** | +4.31 pp |
+
+Two things are worth reading off this table rather than assuming. First, the correction is
+**larger than the 24,149 the sampled estimate predicted**: that sample could only see rows
+whose anusvāra twin was already inside the candidate set, so it was a floor, not a forecast.
+Second, the fix is a **re-partition, not a monotone gain** — folding final `-ṃ` onto `-m`
+also *breaks* matches that existed only because final `-ṃ` and final `-n` were conflated, and
+the net effect on the generated view is −1,131 forms. The coverage rise is likewise partly a
+denominator effect: 33,267 of the old "attested keys" were spelling twins of each other, not
+distinct words. The AG / G¬A split and every conclusion drawn from the audit's *direction*
+are unchanged.
+
+⚠️ **The same defect survives one position inward, and it is the largest known thing still
+wrong with this join.** Medial anusvāra before a **labial** is phonetically /m/, but the key
+still folds it to `n`, so `vaiśaṃpāyana` becomes `vaiśanpāyana` and never meets the
+`vaiśampāyanaḥ` the generator already emits. Measured on the one class that reaches a human —
+the 2,521 `slot-conflict` rows — **278 (11.03%, 11.58% by corpus weight) are not
+disagreements at all**: `saṃbhavaḥ` vs `sambhavaḥ`, `saṃbandhaḥ` vs `sambandhaḥ`,
+`samyaksaṃbuddhaḥ` vs `samyaksambuddhaḥ`. A further 90 candidates collapse into their own
+lemma once refolded and would leave A¬G outright. This is **not fixed here**: narrowing the
+medial fold to "labial → `m`, everything else → `n`" is a second change to a library ~85
+repos consume, and it needs its own release, regression pass and rebuild. Until then the 278
+rows are screened off the human validation sheet by a named rule rather than left for a
+reviewer to reject one at a time. Measured by
+[`scripts/measure_medial_anusvara_residual.py`](https://github.com/gasyoun/kosha/blob/main/scripts/measure_medial_anusvara_residual.py).
+
+⚠ **The A¬G residue is not 164,236 engine defects.** The generator's lemma inventory is
+**222,735 nominal lemmas against 680 verbal**, so finite verbs are territory
 `inflections` never claimed; the report cross-tabs every triage class against DCS `upos`
 so a verb-shaped gap is never quoted as a nominal-engine defect. Full method, triage and
 four human-checkable sample tables:
@@ -216,14 +250,24 @@ four human-checkable sample tables:
   had `genuine_engine_gap = 0` so nothing was ever routed. H3782 produces the first real
   payload and narrows it honestly —
   [`morph_giveback_candidates.tsv`](https://github.com/gasyoun/kosha/blob/main/data/concordance/morph_giveback_candidates.tsv),
-  **5,656 rows**, from `paradigm_gap`'s 94,018 by three measured subtractions (verbs 26,470 ·
-  sandhied-surface-only 61,330 · bare stems 562). Quoting A¬G as "forms the engine misses"
-  overstates the actionable set **35×**. The head cross-validates (pronoun dative/locative
+  **5,588 rows**, from `paradigm_gap`'s 70,510 by three measured subtractions (verbs 23,942 ·
+  sandhied-surface-only 40,424 · bare stems 556). Quoting A¬G as "forms the engine misses"
+  overstates the actionable set **29×**. The head cross-validates (pronoun dative/locative
   cells and irregular feminine/consonant stems — precisely where MW-inflect is weak, and
-  `inflections` already carries a hand-made `curated-gita-pronoun` patch), but allomorphic
-  bound stems still pass the filter (`rājñ`, `ātma` at ranks 2–3), so this is a **candidate
-  set needing human triage, not a defect list**. Routing it is a queued port, never an
-  in-pass csl-inflect edit.
+  `inflections` already carries a hand-made `curated-gita-pronoun` patch).
+
+  **The candidate set has since been triaged cell-by-cell (H3863), and it is machine-decidable.**
+  DCS's own morphological tagging resolves 5,587 of the 5,588 rows: **5,232 are owed**
+  (slot-conflict 2,521 — the engine fills that paradigm cell with a different form, though only
+  2,243 of those are a real disagreement once the medial-anusvāra twins above are screened off;
+  coverage-hole 2,711 — the cell is empty) and **355 are not** (compound-member 222, lexicon-gap 102,
+  indeclinable 31), with a single untagged residue. That triage is also the cleanest evidence
+  the key fix landed: the `orthographic-variant` verdict — the class that existed solely to
+  catch anusvāra twins the broken key had split — matched **146 rows before the rebuild and 0
+  after**, because those forms no longer reach A¬G at all. Full method, the corrected `rājñ`
+  reading and the dominance rule that separates a bound stem from a missing cell:
+  [`MORPHOLOGY_GIVEBACK_TRIAGE_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/MORPHOLOGY_GIVEBACK_TRIAGE_REPORT.md).
+  Routing it is a queued port, never an in-pass csl-inflect edit.
 
 #### Q1–Q3 status, verified mechanically 01-09-2026 (H3782)
 
@@ -231,7 +275,7 @@ four human-checkable sample tables:
 |---|---|---|---|---|---|
 | Q1 | B1 dict ↔ corpus | `dict-corpus-concordance` ✅ 74,520 rows | data-v0.2.0 ✅ | [`/concordance/dict/`](https://github.com/gasyoun/kosha/blob/main/concordance/dict/index.html) ✅ | **complete** |
 | Q2 | B3 parallel passages | `parallel-passage-concordance` ✅ 153,045 · `bloomfield-rv-citations` ✅ | data-v0.2.0 ✅ | [`/concordance/parallels/`](https://github.com/gasyoun/kosha/blob/main/concordance/parallels/index.html) ✅ | **complete**, one `@DECIDE` open (R-C2 variant) |
-| Q3 | A3 morphology audit | `morphology-attestation-audit` ✅ 401,368 · `morphology-attestation-audit-inflections` ✅ 239,443 · `morphology-giveback-candidates` ✅ 5,656 | data-v0.2.0 ✅ / unreleased ×2 | [`/concordance/morphology/`](https://github.com/gasyoun/kosha/blob/main/concordance/morphology/index.html) ✅ | **complete** (H3782 data + H3861 page); give-back hand-off owed |
+| Q3 | A3 morphology audit | `morphology-attestation-audit` ✅ 401,368 · `morphology-attestation-audit-inflections` ✅ 238,312 · `morphology-giveback-candidates` ✅ 5,588 | data-v0.2.0 ✅ / unreleased ×2 | [`/concordance/morphology/`](https://github.com/gasyoun/kosha/blob/main/concordance/morphology/index.html) ✅ | **complete** (H3782 data + H3861 page + H3863 triage, all rebuilt on the fixed join key in H3925); give-back hand-off owed |
 | (Q3 slot) | A4 Pāṇini *(promoted, D1)* | `panini-derivation-status` · `paninian-corpus-concordance` 893,482 · `paninian-sutra-coverage-map` | data-v0.3.0 ✅ | [`/concordance/panini/`](https://github.com/gasyoun/kosha/blob/main/concordance/panini/index.html) ✅ | **complete**, W4a polish open |
 
 ### Q4 (months 10–12) — A4 · Pāṇinian sūtra ↔ corpus  ·  *flagship, highest novelty*
