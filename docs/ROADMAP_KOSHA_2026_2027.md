@@ -1,6 +1,12 @@
 # Kosha roadmap — August 2026 to July 2027
 
-_Created: 30-07-2026 · Last updated: 01-09-2026_
+_Created: 30-07-2026 · Last updated: 02-09-2026_
+
+> **Truth-pass 02-09-2026** (H3775) — `roadmap_handoff_truth.py --check` flagged this
+> page drained but still living: **10 of 10 referenced handoffs have shipped, zero remain OPEN**.
+> Kept at this path per MG ruling 31-08-2026 (do not archive) — the strategy/plan
+> layer still holds even though its backlog has fully closed. A future session
+> reopening work here should mint a fresh H### rather than un-close these.
 
 The governing decisions and autonomy contract live in the
 [plan of record](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md).
