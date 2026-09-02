@@ -3,6 +3,8 @@
 _Created: 08-07-2026 · Last updated: 02-09-2026_
 
 > **Truth-pass 27-08-2026** (Grok 4.6 `grok-4.6`). D4 addendum: this file joined the Wave 1 FLAG list after 21-08. Closed references checked against the combined registry. Kept in place ([FINDINGS §475](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md) clause 3). Not archived.
+>
+> **Exit-check truth-pass 02-09-2026** (Claude Code Opus 5 `claude-opus-5`, H3783). The Q4/A4 **exit-check** bullet and open-`@DECIDE` 1 still read as unbuilt six weeks after the work shipped and was released, and a handoff was minted from that prose. Both are corrected below with per-check evidence. The lesson, in this file: a truth-pass that checks a section's **status line** has not checked its **exit checks, risks and `@DECIDE` list** — those are separate claims, and they are the ones a later `/fruit` or `/ask` pass reads to decide what is still open ([FINDINGS §644](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)).
 
 A twelve-month plan to build a portfolio of four Sanskrit **concordances** —
 grammar and nongrammar — each shipped as a citable dataset (registered in the
@@ -232,7 +234,35 @@ quarter is not. A4 shipped W2a–W3b between 20-07 and 24-07-2026 and released i
 - **Inputs:** vidyut-prakriya derivations (emit the Aṣṭādhyāyī sūtra chain per form), the Q3 attested-form join.
 - **Build:** for each attested form, run the vidyut derivation, capture the sūtra sequence, invert to `sūtra → {attested forms exemplifying it}`. A concordance keyed by sūtra number — **unpublished territory: no corpus-grounded Pāṇinian concordance exists.**
 - **Deliverables:** dataset `paninian-corpus-concordance` (manifest row + release) · web page `/concordance/panini/` (click a sūtra → its attested corpus exemplars, scan-anchored).
-- **Exit checks:** a sūtra-coverage map (which of ~4,000 sūtras have real corpus exemplars, which are "dark"); sampled human verification that the derivation chain is correct for N forms; derivation-metadata license settled (see @DECIDE).
+- **Exit checks — all three met; verified line by line 02-09-2026 (H3783).** This bullet
+  read as open prose for six weeks after the work shipped, and that is what minted a
+  duplicate handoff ([FINDINGS §644](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)
+  class: a follow-on sentence under a ✅ row is a separate claim from the status column).
+  Each check with the artefact that satisfies it:
+  1. **Sūtra-coverage map ✅** — W3a, 24-07-2026 (H1468,
+     [PR #180](https://github.com/gasyoun/kosha/pull/180)).
+     [`data/concordance/sutra_coverage_map.tsv`](https://github.com/gasyoun/kosha/blob/main/data/concordance/sutra_coverage_map.tsv)
+     classifies the **named** enumeration (vidyut 0.4.0 `Source.Ashtadhyayi`,
+     **n = 3983** — the map never publishes "~4,000" as if exact) into `lit` 221 ·
+     `dark-unattested` 55 · `dark-out-of-scope` 3707 · `dark-engine-gap` 0. Methodology,
+     per-class assignment rule and reproduction command:
+     [`SUTRA_COVERAGE_BUILD_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/SUTRA_COVERAGE_BUILD_REPORT.md).
+  2. **Sampled verification of the derivation chains ✅ built, human sign-off not recorded**
+     — W2a's report renders **30 `ok` chains** in full (lemma → attested form, every sūtra
+     step with its intermediate string) as exit-check 2a-7:
+     [`DERIVATION_HARNESS_BUILD_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/DERIVATION_HARNESS_BUILD_REPORT.md)
+     § *Sampled human-verification*. Honest residual: the report states neither **why N = 30**
+     nor a human's verdict on the 30 — it is a rendered sample awaiting sign-off, not a
+     recorded audit. Tracked as a human `@DO` in
+     [Uprava GTD](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md); no agent
+     can close it by re-reading the same chains.
+  3. **Derivation-metadata licence settled ✅** — 18-07-2026 (H1263), *before* the release,
+     in [`data/manifest/rights/vidyut_prakriya_derivation_2026-07.md`](https://github.com/gasyoun/kosha/blob/main/data/manifest/rights/vidyut_prakriya_derivation_2026-07.md):
+     vidyut **code** MIT and vidyut **derivation data** MIT are verified as two separate
+     artefacts from two separate files, DCS resolved to CC BY 4.0 from Hellwig's own terms,
+     and A4 output ships **CC BY-SA 4.0** because CDSL's ShareAlike binds regardless. That
+     record's own § *Human gate — not triggered* states the reason no `@DECIDE` is owed:
+     neither incompatibility branch occurred. See @DECIDE 1 below.
 - **W2a (derivation harness) DONE 20-07-2026 (Sonnet 5 `claude-sonnet-5`, H1368).** [`scripts/build_panini_derivations.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_panini_derivations.py) ran the FULL 401,368-row W1b AG bucket (pilot 10k reported first per exit-check 2a-1, then the full run — 883.8s, 454.1 forms/s, well under the 40-min scaling cap): `ok` 72,764 (18.13%) · `no-derivation` 237,447 (59.16%) · `ambiguous` 86,857 (21.64%) · `engine-error` 4,300 (1.07%); 2,815 distinct sūtra chains, length min 6 / median 12 / max 37. Full detail + 30-example sampled human-verification section: [`data/concordance/DERIVATION_HARNESS_BUILD_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/DERIVATION_HARNESS_BUILD_REPORT.md).
 - **W2b (invert to the sūtra concordance) DONE 20-07-2026 (Sonnet 5 `claude-sonnet-5`, H1390).** [`scripts/build_panini_concordance.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_panini_concordance.py) inverts W2a's `ok`-status forms (chain data verified absent for `ambiguous` forms — see gap note below) into `data/concordance/paninian_concordance.tsv`: **893,482** `(sūtra, form, locus)` rows, **221** distinct sūtras with a corpus exemplar across **7** of the 8 adhyāyas (adhyāya 5: none — a "dark" adhyāya for A4, pending W3a's full dark-class map), chain length min 6 / median 12 / max 36 (Ashtadhyayi-only steps). Per-sūtra ambiguity rate (2b-6, lemma-attributed): median 27.1%, range 0.0–69.2%, `data/concordance/panini_ambiguity_by_sutra.tsv`. Web page: [`concordance/panini/index.html`](https://github.com/gasyoun/kosha/blob/main/concordance/panini/index.html) (adhyāya-sharded `kwic_<1-8>.js`, chain view + a lit-only coverage preview). **PARKED GAP:** exit-check 2b-1's literal wording ("`ok`/`ambiguous` forms") could not be satisfied for `ambiguous` rows — W2a's shipped `derivation_status.tsv` records an empty `chain_id` for all 86,857 `ambiguous` rows (verified exhaustively), diverging from ARCHITECTURE §4's stated "records all of them" design; inverting them would require re-deriving with vidyut, out of scope for a build whose input is W2a's output. Full detail: [`data/concordance/PANINI_BUILD_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/PANINI_BUILD_REPORT.md). **W3a (sūtra-coverage/dark-sūtra map) DONE 24-07-2026 (Grok 4.5 `grok-4.5` on Opus-lock override, H1468).** [`scripts/build_sutra_coverage_map.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_sutra_coverage_map.py) classifies the named **vidyut 0.4.0** Aṣṭādhyāyī enumeration (**n = 3983**, never "~4,000") into four statuses: **`lit` 221** (5.55%) · **`dark-unattested` 55** (1.38%) · **`dark-out-of-scope` 3707** (93.07%) · **`dark-engine-gap` 0** (W2a records no partial rule traces on `engine-error` — class kept named, not inflated). Fire-set = 276 codes that appear in any successful AG-lemma cell `vidyut.prakriya` history (91,027 lemmas harvested). Map: [`data/concordance/sutra_coverage_map.tsv`](https://github.com/gasyoun/kosha/blob/main/data/concordance/sutra_coverage_map.tsv); report: [`SUTRA_COVERAGE_BUILD_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/SUTRA_COVERAGE_BUILD_REPORT.md). VERIFICATION 3a-1…3a-8. **W3b (manifest row + public release) DONE 24-07-2026 (Grok 4.5 `grok-4.5` on Sonnet-lock override, H1574).** Rights gate W1a verified. Data statements under [`docs/data-statements/`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/) for `panini-derivation-status`, `paninian-corpus-concordance`, `paninian-sutra-coverage-map`. Flipped `in_release` → **`data-v0.3.0`** (CC BY-SA 4.0 A4 composition). Release: [data-v0.3.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.3.0). **W4a (`/concordance/panini/` polish) is next.**
 
@@ -252,7 +282,7 @@ output, not an error.
 - **R-C4** DCS `Tense=Past` conflates aorist/perfect — affects A3 verb buckets and A4 sūtra attribution; carry the caveat through.
 
 **Open @DECIDE (a human should decide):**
-1. **License composition** — B1/B3 join DCS (CC BY 4.0) → concordances inherit BY-SA cleanly; but A4 embeds vidyut-prakriya derivation metadata — confirm the derivation output's license before the A4 release.
+1. ~~**License composition** — B1/B3 join DCS (CC BY 4.0) → concordances inherit BY-SA cleanly; but A4 embeds vidyut-prakriya derivation metadata — confirm the derivation output's license before the A4 release.~~ **RESOLVED 18-07-2026 (H1263), five days before the A4 release** — [`data/manifest/rights/vidyut_prakriya_derivation_2026-07.md`](https://github.com/gasyoun/kosha/blob/main/data/manifest/rights/vidyut_prakriya_derivation_2026-07.md) verifies vidyut code (MIT, installed `LICENSE.md`) and vidyut derivation data (MIT, `vidyut-prakriya/data/README.md`) as two separate licences, corrects kosha's own DCS contradiction to CC BY 4.0 from the primary source, and rules A4 output **CC BY-SA 4.0** with vidyut + DCS attribution. Its § *Human gate — not triggered* records why no human decision is owed. Carried into all three data statements and released in [data-v0.3.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.3.0). This line stood open for six weeks after the fact and was quoted back as an open `@DECIDE` by handoff H3783 (02-09-2026).
 2. **Papers, later?** — this cycle is datasets + web only by choice. A3 ("generated vs attested Sanskrit morphology") and A4 ("a Paninian concordance of the DCS") are both strong Axx paper candidates for a Year-2 pass — parked, not dropped.
 3. ~~**Bloomfield cross-reference source** (Q2) — which digitization of the 1906 *Vedic Concordance* to key against for the RV subset.~~ **RESOLVED 13-07-2026 (H896):** Marco Franceschini's digital edition (Harvard Oriental Series 9), rights-cleared by the author's direct written permission — see [`data/manifest/rights/franceschini_hos9_permission_2026-07-13.md`](https://github.com/gasyoun/kosha/blob/main/data/manifest/rights/franceschini_hos9_permission_2026-07-13.md).
 
