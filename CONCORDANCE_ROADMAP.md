@@ -1,6 +1,6 @@
 # Sanskrit Concordance Program — 1-Year Roadmap
 
-_Created: 08-07-2026 · Last updated: 01-09-2026_
+_Created: 08-07-2026 · Last updated: 02-09-2026_
 
 > **Truth-pass 27-08-2026** (Grok 4.6 `grok-4.6`). D4 addendum: this file joined the Wave 1 FLAG list after 21-08. Closed references checked against the combined registry. Kept in place ([FINDINGS §475](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md) clause 3). Not archived.
 
@@ -150,10 +150,22 @@ H3782 (01-09-2026) ran the join this section actually specifies. Detail below.
 - **Deliverables:** dataset `morphology-attestation-audit` (manifest row ✅ + released ✅ in
   [data-v0.2.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.2.0), asset
   `morph_attest_AG.tsv`) · dataset `morphology-attestation-audit-inflections` (manifest row
-  ✅ 01-09-2026, unreleased — rides the next data cut) · web page `/concordance/morphology/`
-  (paradigm cell → attested? with corpus evidence) — **❌ NOT BUILT.** `concordance/` carries
-  `dict/`, `panini/`, `parallels/` and `senses/`; there is no `morphology/`. This is the one
-  Q3 deliverable with no artefact behind it.
+  ✅ 01-09-2026, unreleased — rides the next data cut) · web page
+  [`/concordance/morphology/`](https://github.com/gasyoun/kosha/blob/main/concordance/morphology/index.html)
+  (paradigm cell → attested? with corpus evidence) — **✅ BUILT 02-09-2026 (H3861).**
+  Every generated cell of a lemma is rendered as a case × number grid per gender, marked
+  attested or not against DCS, with occurrence counts, citable `dcs:<sent_id>` loci and KWIC;
+  below it, the forms DCS attests that the generator never produced. Static head = the
+  **measured** 95% token-coverage set (N=11,148 lemmas, 9,150 of them carrying generator rows
+  — measured at build time per standing rule D4/D5, never hardcoded), 370,664 cells of which
+  175,027 (47.22%) attested. The audit's two controls are rendered, not footnoted: gap lists
+  state how many of their rows are verbal (out of scope: 680 verbal lemmas against 222,736
+  nominal) or sandhied-surface-only, and the trust block explains that homographic cells
+  share one `form_key` evidence count. Builder:
+  [`scripts/build_morphology_concordance_page.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_morphology_concordance_page.py);
+  invariants in
+  [`tests/test_morphology_page.py`](https://github.com/gasyoun/kosha/blob/main/tests/test_morphology_page.py).
+  **Q3 now has no deliverable without an artefact behind it.**
 
 #### The two joins, and why the second one had to exist
 
@@ -203,7 +215,7 @@ four human-checkable sample tables:
 |---|---|---|---|---|---|
 | Q1 | B1 dict ↔ corpus | `dict-corpus-concordance` ✅ 74,520 rows | data-v0.2.0 ✅ | [`/concordance/dict/`](https://github.com/gasyoun/kosha/blob/main/concordance/dict/index.html) ✅ | **complete** |
 | Q2 | B3 parallel passages | `parallel-passage-concordance` ✅ 153,045 · `bloomfield-rv-citations` ✅ | data-v0.2.0 ✅ | [`/concordance/parallels/`](https://github.com/gasyoun/kosha/blob/main/concordance/parallels/index.html) ✅ | **complete**, one `@DECIDE` open (R-C2 variant) |
-| Q3 | A3 morphology audit | `morphology-attestation-audit` ✅ 401,368 · `morphology-attestation-audit-inflections` ✅ 239,443 · `morphology-giveback-candidates` ✅ 5,656 | data-v0.2.0 ✅ / unreleased ×2 | `/concordance/morphology/` ❌ | **data complete, web page + give-back hand-off owed** |
+| Q3 | A3 morphology audit | `morphology-attestation-audit` ✅ 401,368 · `morphology-attestation-audit-inflections` ✅ 239,443 · `morphology-giveback-candidates` ✅ 5,656 | data-v0.2.0 ✅ / unreleased ×2 | [`/concordance/morphology/`](https://github.com/gasyoun/kosha/blob/main/concordance/morphology/index.html) ✅ | **complete** (H3782 data + H3861 page); give-back hand-off owed |
 | (Q3 slot) | A4 Pāṇini *(promoted, D1)* | `panini-derivation-status` · `paninian-corpus-concordance` 893,482 · `paninian-sutra-coverage-map` | data-v0.3.0 ✅ | [`/concordance/panini/`](https://github.com/gasyoun/kosha/blob/main/concordance/panini/index.html) ✅ | **complete**, W4a polish open |
 
 ### Q4 (months 10–12) — A4 · Pāṇinian sūtra ↔ corpus  ·  *flagship, highest novelty*
