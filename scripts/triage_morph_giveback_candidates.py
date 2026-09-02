@@ -301,22 +301,39 @@ def main():
          human(len(not_owed)), pct(len(not_owed), len(cands)),
          human(len(residue)), pct(len(residue), len(cands))))
     w("")
-    w("## A defect in the join key, found by this triage")
+    w("## A defect in the join key, found by this triage — and since fixed")
     w("")
-    w("**`form_key()` cannot collide the two standard spellings of a word-final nasal.** "
+    w("**`form_key()` could not collide the two standard spellings of a word-final nasal.** "
       "Sanskrit writes final `-m` as anusvāra before a consonant; it is an editorial "
-      "convention, not a different word. `form_key` maps the anusvāra to `n` "
-      "(`rasaṃ` → `rasan`) but leaves a real final `m` alone (`rasam` → `rasam`), so the two "
-      "never match and **every anusvāra-final attestation reads as un-generated**. "
-      "`%s` candidate rows are exactly this — `iyaṃ` = `iyam`, `rasaṃ` = `rasam`, "
-      "`caraṃ` = `caram` — and they are classified `orthographic-variant`, not owed."
+      "convention, not a different word. `form_key` mapped the anusvāra to `n` "
+      "(`rasaṃ` → `rasan`) but left a real final `m` alone (`rasam` → `rasam`), so the two "
+      "never matched and **every anusvāra-final attestation read as un-generated**. The "
+      "first run of this triage caught 146 candidate rows of exactly that shape — `iyaṃ` = "
+      "`iyam`, `rasaṃ` = `rasam`, `caraṃ` = `caram` — and parked them as "
+      "`orthographic-variant`.")
+    w("")
+    w("That is a property of the shared `form_key()` in `sanskrit-util`, so it inflated the "
+      "**whole** A3 A¬G figure, not just this candidate set. It was fixed upstream in "
+      "[sanskrit-util 0.11.0](https://github.com/sanskrit-lexicon/sanskrit-util/pull/72) "
+      "(word-final anusvāra folds to `m`; the medial fold is unchanged, so "
+      "`saṃskṛta == sanskṛta`; final `-n` stays distinct from final `-m`) and the whole A3 "
+      "chain was rebuilt against it: A¬G fell from 196,378 to 164,236 keys (−16.4%%). "
+      "**This run classifies `%s` rows as `orthographic-variant`** — the class is the "
+      "regression test, and an empty one means the twins now join instead of reaching A¬G."
       % human(verdict_n["orthographic-variant"]))
     w("")
-    w("This is a property of the shared `form_key()` in `sanskrit-util`, so it inflates the "
-      "**whole** A3 A¬G figure of 196,378, not just this candidate set — the same fold runs "
-      "over every attested key. Quantifying that is out of scope here and is recorded as "
-      "the residual; nothing about the audit's *direction* changes, but its gap count is an "
-      "upper bound rather than a measurement.")
+    w("**Residual, one position inward — and it is not small.** Medial anusvāra before a "
+      "labial is phonetically /m/, but it still folds to `n`, so `vaiśaṃpāyana` keys as "
+      "`vaiśanpāyana` and never meets the `vaiśampāyanaḥ` the generator already emits. "
+      "**278 of the %s `slot-conflict` rows (11.03%%; 11.58%% by corpus weight) are this** "
+      "— `saṃbhavaḥ` vs `sambhavaḥ`, `saṃbandhaḥ` vs `sambandhaḥ`, `samyaksaṃbuddhaḥ` vs "
+      "`samyaksambuddhaḥ`: one word spelled two ways, with no disagreement to adjudicate. "
+      "They are screened off the human validation sheet by an explicit named rule rather "
+      "than left for a reviewer to reject one at a time, and 90 candidates collapse into "
+      "their own lemma once refolded, so they would leave A¬G entirely under a corrected "
+      "key. Measured by `scripts/measure_medial_anusvara_residual.py`, not assumed. "
+      "Narrowing the medial fold is a second change to a library ~85 repos consume — it is "
+      "filed as owed work, not made here." % human(verdict_n["slot-conflict"]))
     w("")
     w("## Correction to the H3782 record")
     w("")
