@@ -146,9 +146,96 @@ def test_mw_apte_align_on_gloss_alone():
     assert len(aligned) == 1 and aligned[0]["method"] == "gloss"
 
 
+# ------------------------------------------- Sa→Sa columns (H3862, slice 2)
+
+def test_gloss_overlap_never_crosses_the_sanskrit_boundary():
+    """The slice-1 fence, drawn again for the third metalanguage.
+
+    ŚKDR and VCP gloss in Sanskrit. Two of their senses can repeat a whole
+    scholastic formula and still be unrelated, so wording may not be compared —
+    the same refusal PWG↔MW gets, for the same reason.
+    """
+    from sense_align import gloss_channel_open
+    assert gloss_channel_open("mw", "ap90")
+    assert not gloss_channel_open("skd", "vcp"), "Sanskrit↔Sanskrit is not a gloss channel"
+    assert not gloss_channel_open("pwg", "skd")
+    assert not gloss_channel_open("mw", "skd"), "English↔Sanskrit measures nothing"
+
+    identical = "iti kavikalpadrumaH ityarTaH iti purARam"
+    senses = [
+        {"dict": "skd", "sense_id": "skd:1:1", "label": "", "gloss": identical, "ls": []},
+        {"dict": "vcp", "sense_id": "vcp:1:1", "label": "", "gloss": identical, "ls": []},
+    ]
+    res = align_lemma(senses, present_dicts={"skd", "vcp"})
+    assert all(g["status"] == "unaligned" for g in res["groups"]), \
+        "identical Sanskrit wording must not create an edge"
+    assert {g["failure_class"] for g in res["groups"]} == {"no-citation-apparatus"}
+
+
+def test_skdr_aligns_on_the_attribution_pwg_prints():
+    """The `attrib` bridge: PWG's own `<ls>` names ŚKDR, and ŚKDR has the entry.
+
+    ŚKDR carries no `<ls>` of its own (0 in 42,531 records), so this is the only
+    channel open to it — and it is a citation the dictionary printed, not an
+    inference of ours.
+    """
+    senses = [
+        {"dict": "pwg", "sense_id": "pwg:1:1", "label": "", "gloss": "Gras",
+         "ls": ["skdr"]},
+        {"dict": "pwg", "sense_id": "pwg:1:2", "label": "", "gloss": "eine andere Bedeutung",
+         "ls": ["mbh"]},
+        {"dict": "skd", "sense_id": "skd:9:1", "label": "", "gloss": "kawa tfRaviSeze",
+         "ls": []},
+    ]
+    res = align_lemma(senses, present_dicts={"pwg", "skd"})
+    aligned = [g for g in res["groups"] if g["status"] == "aligned"]
+    assert len(aligned) == 1
+    assert aligned[0]["method"] == "attrib"
+    assert aligned[0]["witnesses"] == ["skdr"]
+    assert aligned[0]["score"] == 1.0, "one sense of the lemma cited it — df is 1"
+    assert aligned[0]["shape"] == "1-0-0-1-0"
+
+
+def test_attribution_shared_by_everything_carries_no_edge():
+    """`attrib` is decided by τ off the same 1/df table as `ls` — no new knob.
+
+    Four PWG senses citing ŚKDR make the pointer undiscriminating; 1/4 = 0.25
+    is below TAU and the edge does not survive.
+    """
+    senses = [{"dict": "pwg", "sense_id": f"pwg:1:{i}", "label": "",
+               "gloss": f"Bedeutung {i}", "ls": ["skdr"]} for i in range(4)]
+    senses.append({"dict": "skd", "sense_id": "skd:1:1", "label": "",
+                   "gloss": "kaScit arTaH", "ls": []})
+    res = align_lemma(senses, present_dicts={"pwg", "skd"})
+    assert all(g["status"] == "unaligned" for g in res["groups"])
+
+
+def test_attribution_does_not_reach_the_wrong_kosa():
+    """`ATTRIB_KEYS` is a table, not a prefix match: `ŚKDR.` names ŚKDR only."""
+    from sense_align import attrib_witnesses
+    pwg = {"dict": "pwg", "ls": ["skdr"]}
+    assert attrib_witnesses(pwg, {"dict": "skd", "ls": []}) == ["skdr"]
+    assert attrib_witnesses(pwg, {"dict": "vcp", "ls": []}) == []
+    # direction matters: a kośa never "attributes" a western dictionary
+    assert attrib_witnesses({"dict": "skd", "ls": ["skdr"]}, {"dict": "vcp", "ls": []}) == []
+
+
+def test_sanskrit_gloss_keeps_the_s_spans_it_is_made_of():
+    """`<s>` is apparatus in MW and PWG and the DEFINITION in ŚKDR/VCP.
+
+    Stripping it there would empty the gloss and the sense would be discarded as
+    a structural chunk, silently costing the column most of its rows.
+    """
+    from sense_align import sense_gloss
+    rec = ("<body><s>kawa , puMsi tfRaviSeze</s> <lb/><s>ityamaraH ..</s></body>")
+    assert sense_gloss(rec, "skd") == "kawa , puMsi tfRaviSeze ityamaraH"
+    # the western dictionaries are unchanged: there `<s>` is quoted Sanskrit
+    assert "nAga" not in sense_gloss("<s>nAga—danta</s> <lex>m.</lex> ivory", "mw")
+
+
 def test_failure_classes_are_from_the_documented_taxonomy():
     known = {"no-shared-witness", "witness-too-common", "cross-language-gap",
-             "no-gloss", "absent-dictionary", "outranked"}
+             "no-gloss", "absent-dictionary", "outranked", "no-citation-apparatus"}
     senses = [
         {"dict": "pwg", "sense_id": "pwg:1:1", "label": "", "gloss": "Bedeutung ohne Belege",
          "ls": []},                                     # cross-language-gap

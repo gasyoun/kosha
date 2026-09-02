@@ -1,6 +1,6 @@
 # ROADMAP — kosha sense-reconciliation layer (2026 H2)
 
-_Created: 22-07-2026 · Last updated: 31-08-2026_
+_Created: 22-07-2026 · Last updated: 02-09-2026_
 
 Index: [PLAN_KOSHA_SENSE_RECONCILIATION_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_SENSE_RECONCILIATION_2026H2.md).
 Origin: the [नागदन्त thread](https://groups.google.com/g/nagari/c/NOWqiBQl1Xc/m/_R8O4-39CAAJ) — a
@@ -10,6 +10,9 @@ polysemous word split by translators because per-sense loci were dropped.
 (`scripts/build_sense_corpus_concordance.py`, `sense-corpus-concordance` manifest row) and Wave
 2 slice 1 shipped today (H3744); Wave 2 slice 2 (Sa→Sa dictionary columns) and Wave 3
 (frequency fusion) are the unticked residual — see those sections below.
+
+**Update 02-09-2026 (H3862):** Wave 2 slice 2 has shipped. The unticked residual is now Wave
+2's acceptance pass, the lemma-variant graph, and Wave 3.
 
 ## Wave 1 — per-sense corpus attestation (this plan)
 
@@ -44,9 +47,21 @@ attestation; deterministic round-trip green).
   [gasyoun.github.io/h3744-sense-align/](https://gasyoun.github.io/h3744-sense-align/).
   Packet + limits:
   [H3744_SENSE_ALIGNMENT_PACKET_31.08.26.md](https://github.com/gasyoun/kosha/blob/main/docs/H3744_SENSE_ALIGNMENT_PACKET_31.08.26.md).
-  **Slice 2 (open):** the Sa→Sa dictionaries (ŚKDR / Medinī / VCP / Amara) as further columns —
-  a loader, not a redesign, and PWG already cites ŚKDR/Medinī so the witness bridge points at
-  them.
+  **Slice 2 — ✅ shipped 02-09-2026 (H3862, Opus 5 `claude-opus-5`)**: ŚKDR and VCP as further
+  columns, `shape` extended to five positions. Two of the four dictionaries asked for do not
+  exist as CDSL sources and are recorded as absences with their reason — **Medinī is not in
+  CDSL** (the `md` code in csl-orig/csl-sqlite is Macdonell), and neither is Amara. The kośas
+  carry **zero `<ls>`**, so the witness bridge does not point at them; what ships is the reverse
+  direction, PWG's own citations *of* them (`ŚKDR.` 1,227×, `MED.` 1,824× on the pilot) as the
+  `attrib` method — same `1/df`, same τ, no new constant, ranked below `ls` because it is
+  one-directional. Slice 1's numbers are unchanged, verified row by row against `--no-sasa`:
+  aligned 2,957 → 3,013 (56 kośa-only meanings + 11 existing meanings that gained a kośa cell),
+  clean `1-1-1` still 262. Smoke 31/31:
+  [H3862_SENSE_ALIGNMENT_SMOKE_LOG_02.09.26.md](https://github.com/gasyoun/kosha/blob/main/docs/H3862_SENSE_ALIGNMENT_SMOKE_LOG_02.09.26.md).
+  **Still open in Wave 2:** the acceptance pass (sample + judge + human vote — no precision
+  figure may be quoted until it runs) and the lemma-variant/homonym graph, which is what would
+  fix the known `attrib` false-positive class (a lemma-level join onto a ŚKDR verbal-root entry:
+  `kaṭa`, `bhū`).
 - **Lemma-variant graph** — full `nāgadanta`↔`nāgadantaka`-class normalisation across all dictionaries.
 - **Second acceptance pass** — the deferred (~6-month) sample + LLM-judge + `/review-sheet` human vote.
 - **pwg_ru RU-sense-structure deliverable** — carry PWG's ordered a)/b) hierarchy + per-sense loci

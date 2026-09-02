@@ -1,6 +1,15 @@
 # H3744 — the aligned-sense table (PWG · MW · Apte): design, evidence, limits
 
-_Created: 31-08-2026 · Last updated: 31-08-2026_
+_Created: 31-08-2026 · Last updated: 02-09-2026_
+
+> **Slice 2 has shipped (H3862, 02-09-2026).** Item 1 of §10 below is done, with
+> two corrections to what this packet assumed: ŚKDR and VCP do **not** "arrive
+> with the witness bridge already pointing at them" in the sense of having `<ls>`
+> — they carry none at all — and Medinī and Amara are **not in CDSL**, so they
+> have no column. The bridge that did open is PWG's own citations *of* those
+> kośas. Numbers, the row-by-row proof that no slice-1 score moved, and the
+> rejected `iti X` channel are in
+> [SENSE_ALIGNMENT_BUILD_REPORT.md](https://github.com/gasyoun/kosha/blob/main/data/concordance/SENSE_ALIGNMENT_BUILD_REPORT.md).
 
 Handoff: [H3744 (Opus 5, 🔴3 hard) — sense-reconciliation W2 slice 1: PWG/MW/Apte
 aligned-sense table, staged behind `ux=` with a published compare
@@ -190,10 +199,17 @@ the organ, the tests, the compare page — does not.
 
 ## 10. What the next slice should take, in order
 
-1. **Sa→Sa dictionaries** (ŚKDR / Medinī / VCP / Amara) as further columns. The
-   row model already carries per-dictionary cells; adding a fourth is a loader,
-   not a redesign. Note that ŚKDR/Medinī are cited *by* PWG, so they arrive with
-   the witness bridge already pointing at them.
+1. ~~**Sa→Sa dictionaries** (ŚKDR / Medinī / VCP / Amara) as further columns.~~
+   **DONE — H3862, 02-09-2026**, and it corrected two assumptions in this line.
+   ŚKDR and VCP shipped as columns; **Medinī and Amara are not in CDSL at all**
+   (the `md` code is Macdonell), so they are recorded absences, not columns. And
+   the kośas do not arrive with a witness bridge: they contain **zero `<ls>`**.
+   What ships is the reverse direction — PWG citing *them* (`ŚKDR.` 1,227×,
+   `MED.` 1,824× on the pilot) as the `attrib` method, weighted 1/df off the same
+   table and ranked below `ls` because it is one-directional. Reading the kośas'
+   own `iti X` prose as witnesses was measured and rejected. Slice 1's numbers are
+   unchanged: verified row by row, no western sense changed partner, method, score
+   or witness list, and `1-1-1` stays at 262.
 2. **The acceptance pass** — a sample of aligned rows, an LLM judge, a
    `/review-sheet` vote. Until it runs, precision is unknown, and this packet
    says so rather than guessing.
