@@ -6,25 +6,26 @@ _Created: 02-09-2026 · Last updated: 02-09-2026_
 
 ## The candidate set did not need a human
 
-[`MORPHOLOGY_GIVEBACK_CANDIDATES_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/MORPHOLOGY_GIVEBACK_CANDIDATES_REPORT.md) closed by calling its 5,656 rows "a candidate set needing human triage, not a defect list", because bound stems still passed an exact-match filter. **DCS's own `feat_case` decides it mechanically**, so this was applied and reported rather than voted.
+[`MORPHOLOGY_GIVEBACK_CANDIDATES_REPORT.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/MORPHOLOGY_GIVEBACK_CANDIDATES_REPORT.md) closed by calling its 5,588 rows "a candidate set needing human triage, not a defect list", because bound stems still passed an exact-match filter. **DCS's own `feat_case` decides it mechanically**, so this was applied and reported rather than voted.
 
 | Verdict | Rows | Share | Owed to csl-inflect? |
 |---|---:|---:|---|
-| `slot-conflict` | 2,441 | 43.16% | **yes** — and a human ruling is two concrete forms wide |
-| `coverage-hole` | 2,708 | 47.88% | **yes** — no adjudication needed |
-| `orthographic-variant` | 146 | 2.58% | no — an artefact of the join key, see below |
-| `compound-member` | 222 | 3.93% | no — out of scope |
-| `indeclinable` | 33 | 0.58% | no — a nominal generator does not inflect these |
-| `lexicon-gap` | 105 | 1.86% | no — a dictionary-coverage question, not an inflection bug |
+| `slot-conflict` | 2,521 | 45.11% | **yes** — and a human ruling is two concrete forms wide |
+| `coverage-hole` | 2,711 | 48.51% | **yes** — no adjudication needed |
+| `compound-member` | 222 | 3.97% | no — out of scope |
+| `indeclinable` | 31 | 0.55% | no — a nominal generator does not inflect these |
+| `lexicon-gap` | 102 | 1.83% | no — a dictionary-coverage question, not an inflection bug |
 | `untagged` | 1 | 0.02% | **judgment** — the only undecided class |
 
-**Owed to the give-back: 5,149 rows** (91.04% of the candidate set) — 2,441 slot-conflicts and 2,708 coverage-holes. **Not owed: 506** (8.95%). **Residue needing judgment: 1** (0.02%).
+**Owed to the give-back: 5,232 rows** (93.63% of the candidate set) — 2,521 slot-conflicts and 2,711 coverage-holes. **Not owed: 355** (6.35%). **Residue needing judgment: 1** (0.02%).
 
-## A defect in the join key, found by this triage
+## A defect in the join key, found by this triage — and since fixed
 
-**`form_key()` cannot collide the two standard spellings of a word-final nasal.** Sanskrit writes final `-m` as anusvāra before a consonant; it is an editorial convention, not a different word. `form_key` maps the anusvāra to `n` (`rasaṃ` → `rasan`) but leaves a real final `m` alone (`rasam` → `rasam`), so the two never match and **every anusvāra-final attestation reads as un-generated**. `146` candidate rows are exactly this — `iyaṃ` = `iyam`, `rasaṃ` = `rasam`, `caraṃ` = `caram` — and they are classified `orthographic-variant`, not owed.
+**`form_key()` could not collide the two standard spellings of a word-final nasal.** Sanskrit writes final `-m` as anusvāra before a consonant; it is an editorial convention, not a different word. `form_key` mapped the anusvāra to `n` (`rasaṃ` → `rasan`) but left a real final `m` alone (`rasam` → `rasam`), so the two never matched and **every anusvāra-final attestation read as un-generated**. The first run of this triage caught 146 candidate rows of exactly that shape — `iyaṃ` = `iyam`, `rasaṃ` = `rasam`, `caraṃ` = `caram` — and parked them as `orthographic-variant`.
 
-This is a property of the shared `form_key()` in `sanskrit-util`, so it inflates the **whole** A3 A¬G figure of 196,378, not just this candidate set — the same fold runs over every attested key. Quantifying that is out of scope here and is recorded as the residual; nothing about the audit's *direction* changes, but its gap count is an upper bound rather than a measurement.
+That is a property of the shared `form_key()` in `sanskrit-util`, so it inflated the **whole** A3 A¬G figure, not just this candidate set. It was fixed upstream in [sanskrit-util 0.11.0](https://github.com/sanskrit-lexicon/sanskrit-util/pull/72) (word-final anusvāra folds to `m`; the medial fold is unchanged, so `saṃskṛta == sanskṛta`; final `-n` stays distinct from final `-m`) and the whole A3 chain was rebuilt against it: A¬G fell from 196,378 to 164,236 keys (−16.4%). **This run classifies `0` rows as `orthographic-variant`** — the class is the regression test, and an empty one means the twins now join instead of reaching A¬G.
+
+**Residual, one position inward — and it is not small.** Medial anusvāra before a labial is phonetically /m/, but it still folds to `n`, so `vaiśaṃpāyana` keys as `vaiśanpāyana` and never meets the `vaiśampāyanaḥ` the generator already emits. **278 of the 2,521 `slot-conflict` rows (11.03%; 11.58% by corpus weight) are this** — `saṃbhavaḥ` vs `sambhavaḥ`, `saṃbandhaḥ` vs `sambandhaḥ`, `samyaksaṃbuddhaḥ` vs `samyaksambuddhaḥ`: one word spelled two ways, with no disagreement to adjudicate. They are screened off the human validation sheet by an explicit named rule rather than left for a reviewer to reject one at a time, and 90 candidates collapse into their own lemma once refolded, so they would leave A¬G entirely under a corrected key. Measured by `scripts/measure_medial_anusvara_residual.py`, not assumed. Narrowing the medial fold is a second change to a library ~85 repos consume — it is filed as owed work, not made here.
 
 ## Correction to the H3782 record
 
@@ -39,14 +40,14 @@ Each row names a corpus-attested form, the exact cell DCS assigns it, and the fo
 | 1 | `tvāt` | n.abl.sg | `tvasmāt` | `tva` | 6,853 |
 | 2 | `rājñ` | m.voc.sg | `rājan` | `rājan` | 5,212 |
 | 3 | `striyaḥ` | f.nom.pl | `stryaḥ` | `strī` | 1,434 |
-| 4 | `vaiśaṃpāyana` | m.nom.sg | `vaiśampāyanaḥ` | `vaiśampāyana` | 1,108 |
-| 5 | `śriyam` | f.acc.sg | `śrīm` | `śrī` | 1,084 |
-| 6 | `tvāya` | n.dat.sg | `tvasmai` | `tva` | 688 |
-| 7 | `striyam` | f.acc.sg | `strīm` | `strī` | 568 |
+| 4 | `śriyaṃ` | f.acc.sg | `śrīm` | `śrī` | 1,356 |
+| 5 | `vaiśaṃpāyana` | m.nom.sg | `vaiśampāyanaḥ` | `vaiśampāyana` | 1,108 |
+| 6 | `striyaṃ` | f.acc.sg | `strīm` | `strī` | 722 |
+| 7 | `tvāya` | n.dat.sg | `tvasmai` | `tva` | 688 |
 | 8 | `striyāḥ` | f.gen.sg | `stryāḥ` | `strī` | 547 |
 | 9 | `śriyaḥ` | f.gen.sg | `śryāḥ` | `śrī` | 424 |
 | 10 | `dhiyā` | f.instr.sg | `dhyā` | `dhī` | 393 |
-| 11 | `hem` | n.nom.sg | `hema` | `heman` | 337 |
+| 11 | `hem` | n.nom.sg | `hema` | `heman` | 339 |
 | 12 | `samyaksaṃbodhau` | f.loc.sg | `samyaksambodhau samyaksambodhyām` | `samyaksambodhi` | 304 |
 
 ## The coverage-holes — highest-frequency first
@@ -55,29 +56,27 @@ Each row names a corpus-attested form, the exact cell DCS assigns it, and the fo
 |---:|---|---|---|---:|
 | 1 | `asmai` | m.dat.sg | `idam` | 3,375 |
 | 2 | `tasmai` | m.dat.sg | `tad` | 3,228 |
-| 3 | `ākhyam` | n.nom.sg | `ākhyā` | 1,035 |
-| 4 | `etasmin` | m.loc.sg | `etad` | 784 |
-| 5 | `mahātmā` | m.nom.sg | `mahātman` | 739 |
-| 6 | `tasyai` | f.dat.sg | `tad` | 728 |
-| 7 | `yato` | m.nom.sg | `yatas` | 702 |
-| 8 | `amum` | m.acc.sg | `adas` | 690 |
-| 9 | `āpo` | f.nom.pl | `ap` | 635 |
-| 10 | `imāni` | n.nom.pl | `idam` | 610 |
-| 11 | `satām` | m.gen.pl | `sat` | 599 |
-| 12 | `tebhiḥ` | n.instr.pl | `tad` | 539 |
+| 3 | `ākhyam` | n.nom.sg | `ākhyā` | 1,036 |
+| 4 | `satāṃ` | m.gen.pl | `sat` | 909 |
+| 5 | `amum` | m.acc.sg | `adas` | 829 |
+| 6 | `etasmin` | m.loc.sg | `etad` | 784 |
+| 7 | `mahātmā` | m.nom.sg | `mahātman` | 739 |
+| 8 | `tasyai` | f.dat.sg | `tad` | 728 |
+| 9 | `yato` | m.nom.sg | `yatas` | 702 |
+| 10 | `āpo` | f.nom.pl | `ap` | 635 |
+| 11 | `imāni` | n.nom.pl | `idam` | 610 |
+| 12 | `mahātmānaṃ` | m.acc.sg | `mahātman` | 598 |
 
 ## Not owed — a sample of each excluded class
 
-**`orthographic-variant`** — `iyaṃ`(<`idam`, 831×) · `rasaṃ`(<`rasa`, 609×) · `caraṃ`(<`cara`, 558×) · `apāṃ`(<`ap`, 438×) · `prajānāṃ`(<`prajā`, 303×) · `kṣayaṃ`(<`kṣaya`, 257×) · `uttaraṃ`(<`uttara`, 244×) · `asyāṃ`(<`idam`, 243×)
-
 **`compound-member`** — `ātma`(<`ātman`, 5,108×) · `tamas`(<`tama`, 617×) · `aśma`(<`aśman`, 502×) · `plīha`(<`plīhan`, 416×) · `mūrdha`(<`mūrdhan`, 268×) · `svāmi`(<`svāmin`, 252×) · `ūṣma`(<`ūṣman`, 134×) · `chatra`(<`chattra`, 124×)
 
-**`indeclinable`** — `śvaḥ`(<`śvas`, 551×) · `dakṣiṇata`(<`dakṣiṇatas`, 377×) · `uttarata`(<`uttaratas`, 153×) · `viśvata`(<`viśvatas`, 102×) · `yatrā`(<`yatra`, 102×) · `yadī`(<`yadi`, 91×) · `cin`(<`cit`, 87×) · `ṣaṃ`(<`sam`, 41×)
+**`indeclinable`** — `śvaḥ`(<`śvas`, 551×) · `dakṣiṇata`(<`dakṣiṇatas`, 377×) · `uttarata`(<`uttaratas`, 153×) · `viśvata`(<`viśvatas`, 102×) · `yatrā`(<`yatra`, 102×) · `yadī`(<`yadi`, 91×) · `cin`(<`cit`, 87×) · `sārddhaṃ`(<`sārdham`, 47×)
 
 ## Output
 
-[`data/concordance/morph_giveback_triaged.tsv`](https://github.com/gasyoun/kosha/blob/main/data/concordance/morph_giveback_triaged.tsv) — 5,656 rows, 398,825 bytes, every candidate with its verdict, resolved cell and the generator's competing form where one exists. Runtime 166 s.
+[`data/concordance/morph_giveback_triaged.tsv`](https://github.com/gasyoun/kosha/blob/main/data/concordance/morph_giveback_triaged.tsv) — 5,588 rows, 394,995 bytes, every candidate with its verdict, resolved cell and the generator's competing form where one exists. Runtime 181 s.
 
-**Routing (hard stop).** The 5,149 owed rows go to the csl-inflect dual-engine give-back (H185) as a **queued port** — a GTD row and a pointer, never an in-pass edit to csl-inflect.
+**Routing (hard stop).** The 5,232 owed rows go to the csl-inflect dual-engine give-back (H185) as a **queued port** — a GTD row and a pointer, never an in-pass edit to csl-inflect.
 
 _Dr. Mārcis Gasūns_

@@ -1,18 +1,19 @@
 #!/usr/bin/env python
 """Validation sheet for the csl-inflect give-back slot-conflicts (H3863).
 
-The triage resolved 5,655 of 5,656 candidates mechanically, so **the candidate set itself
+The triage resolves all but one candidate mechanically, so **the candidate set itself
 is not sheet material** — a card the machine has answered does not belong on a human's
-plate (the emitter enforces exactly this: `non_decision_share` defaults to 0.0).
+plate (the emitter enforces exactly this: `non_decision_share` defaults to 0.0). Every
+count this sheet prints is measured from the triage TSV at build time, never typed in.
 
-What IS judgment: before 5,149 rows are handed to a third-party project, someone should
+What IS judgment: before the owed rows are handed to a third-party project, someone should
 confirm the *method* is sound on the class where the machine's verdict is a claim about
 Sanskrit rather than a lookup. That class is **slot-conflict** — the generator has the
 `(lemma, gender, case, number)` slot and emits a *different* form from the one the corpus
 attests. Deciding which is right is philology, not a join.
 
 So this sheet is a **sample of 40 slot-conflicts, highest-attestation first**, not the
-2,441. Approving them says "the corpus form is a real cell the generator should produce";
+whole class. Approving them says "the corpus form is a real cell the generator should produce";
 rejecting says "the generator is right, or this is not a gap". A high reject rate would
 invalidate the method before anything reaches csl-inflect, which is the point of running
 it first.
@@ -24,6 +25,7 @@ import argparse
 import collections
 import csv
 import os
+import re
 import sqlite3
 import sys
 import time
@@ -47,7 +49,29 @@ GH = _github_root(ROOT)
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
+sys.path.insert(0, str(GH / "sanskrit-util" / "py"))
+
 from csl_pyutil import render_review_sheet  # noqa: E402
+import sanskrit_util as su  # noqa: E402
+
+# sanskrit-util 0.11.0 collided WORD-FINAL anusvāra with final `m`, but medial anusvāra
+# still folds to `n` — correct before most consonants, wrong before a labial, where it is
+# phonetically /m/. So `vaiśaṃpāyana` keys as `vaiśanpāyana` and never meets the
+# generator's `vaiśampāyanaḥ`: a spelling difference dressed up as a paradigm disagreement.
+# Those rows are machine-decidable and must not reach a human sheet (MG 17-08-2026).
+MEDIAL_LABIAL = re.compile("[ṃṁ](?=[pbm])")
+
+
+def labial_refold_key(s):
+    return su.form_key(MEDIAL_LABIAL.sub("m", s))
+
+
+def is_medial_labial_twin(row):
+    """True when corpus and generator forms are one word spelled two ways."""
+    return (MEDIAL_LABIAL.search(row["attested_form"])
+            and labial_refold_key(row["attested_form"])
+            == labial_refold_key(row["generator_has"]))
+
 
 DCS = GH / "VisualDCS" / "src" / "DCS-data-2026" / "dcs_full.sqlite"
 TRIAGED = ROOT / "data" / "concordance" / "morph_giveback_triaged.tsv"
@@ -79,6 +103,8 @@ def main():
             verdicts[r["verdict"]] += 1
             if r["verdict"] == "slot-conflict":
                 rows.append(r)
+    twins = [r for r in rows if is_medial_labial_twin(r)]
+    rows = [r for r in rows if not is_medial_labial_twin(r)]
     rows.sort(key=lambda x: -int(x["evidence_count"]))
     picked = rows[:args.cards]
 
@@ -138,7 +164,7 @@ def main():
             "<p style='color:#667;font-size:12px'>This is a <b>sample of %s</b> "
             "slot-conflicts, not the whole set. A high reject rate invalidates the "
             "method before anything reaches csl-inflect — which is why it runs first.</p>"
-            % "{:,}".format(verdicts["slot-conflict"])))
+            % "{:,}".format(len(rows))))
         items.append({
             "id": "sc-%s" % r["attested_form"],
             "filt": CASE_EN.get(c, "other"),
@@ -161,8 +187,8 @@ def main():
                      "Approving ships the row upstream; a high reject rate stops the "
                      "hand-off. The other %s triaged rows are machine-resolved and are "
                      "deliberately NOT on this sheet."
-                     % (len(items), "{:,}".format(verdicts["slot-conflict"]),
-                        "{:,}".format(total - verdicts["slot-conflict"]))),
+                     % (len(items), "{:,}".format(len(rows)),
+                        "{:,}".format(total - len(rows)))),
         "footer": ("Source: data/concordance/morph_giveback_triaged.tsv (H3863) over "
                    "morph_giveback_candidates.tsv (H3782). Cells from DCS feat_case/"
                    "feat_number/feat_gender; generator forms from kosha.db inflections. "
@@ -178,28 +204,42 @@ def main():
             "labels": human_loci,
         },
     }
+    # Every count below is read off this run, never typed in: a stale hardcoded number on a
+    # screening banner tells a reviewer the plate was filtered by rules that did not run.
+    def n(k):
+        return "{:,}".format(verdicts[k])
+
     screening = {
-        "deterministic": total - verdicts["slot-conflict"],
+        "deterministic": total - len(rows),
         "lookup": 0,
         "agent": 0,
         "human": len(items),
         "evidence_path": "data/concordance/MORPHOLOGY_GIVEBACK_TRIAGE_REPORT.md",
         "rules": [
-            "DCS feat_case='Cpd' -> compound member, not an inflected cell (222 rows)",
-            "caseless + upos ADV/SCONJ/PART/ADP -> indeclinable, not owed (33 rows)",
-            "final anusvara spelling of a form the generator already emits -> "
-            "orthographic variant, not a gap (146 rows)",
+            "DCS feat_case='Cpd' dominates the lemma's real-case tokens -> compound "
+            "member, not an inflected cell (%s rows)" % n("compound-member"),
+            "caseless + upos ADV/SCONJ/PART/ADP -> indeclinable, not owed (%s rows)"
+            % n("indeclinable"),
+            "final anusvara spelling of a form the generator already emits -> orthographic "
+            "variant, not a gap (%s rows — 146 before the sanskrit-util 0.11.0 join-key "
+            "fix, which is why the class is now empty)" % n("orthographic-variant"),
+            "medial anusvara before a labial is the same word respelled (vaisampayana vs "
+            "vaisanpayana) -> not a real disagreement, screened off this sheet (%s rows)"
+            % "{:,}".format(len(twins)),
+            "DCS lemma absent from the generator's inventory -> lexicon gap, not an engine "
+            "defect (%s rows)" % n("lexicon-gap"),
             "real case+number and the generator's slot is EMPTY -> coverage-hole, owed "
-            "with no adjudication needed (2,708 rows)",
+            "with no adjudication needed (%s rows)" % n("coverage-hole"),
             "real case+number and the generator emits a DIFFERENT form -> slot-conflict: "
             "the only class whose verdict is a claim about Sanskrit, sampled here",
         ],
     }
     html = render_review_sheet(items, config, screening=screening)
     Path(args.out).write_text(html, encoding="utf-8")
-    print("wrote %s — %d cards (of %s slot-conflicts; %s rows machine-resolved)"
-          % (args.out, len(items), "{:,}".format(verdicts["slot-conflict"]),
-             "{:,}".format(total - verdicts["slot-conflict"])))
+    print("wrote %s — %d cards (of %s adjudicable slot-conflicts; %s rows machine-resolved, "
+          "of which %s medial-anusvara twins screened off)"
+          % (args.out, len(items), "{:,}".format(len(rows)),
+             "{:,}".format(total - len(rows)), "{:,}".format(len(twins))))
 
 
 if __name__ == "__main__":
