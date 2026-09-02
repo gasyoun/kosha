@@ -7,7 +7,7 @@ message: >-
   CC BY).
 title: "kosha — Gasuns Sanskrit Dictionary (Sanskrit data-hub)"
 type: software
-version: 0.117.6
+version: 0.117.7
 date-released: 2026-09-02
 doi: 10.5281/zenodo.21965599
 # Concept DOI (resolves to the latest archived version on every future
