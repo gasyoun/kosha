@@ -123,6 +123,9 @@ def main() -> int:
     ap.add_argument("--limit", type=int, default=0, help="smoke-run cap")
     ap.add_argument("--ru", action="store_true",
                     help="pass 2: dict=mw_ru|apte_ru|pwg_ru per headword")
+    ap.add_argument("--dict", dest="dict_filter", default="", choices=("", *RU_DICTS),
+                    help="restrict --ru to one MT dict (H3743 recrawl: --dict pwg_ru "
+                         "cuts pass-2 volume from 3x to 1x per headword)")
     ap.add_argument("--workers", type=int, default=2,
                     help="polite parallel streams (default 2 per MG ruling "
                          "28-08-2026; each worker keeps its own 2.0 s throttle)")
@@ -149,25 +152,22 @@ def main() -> int:
         except Exception:  # noqa: BLE001 - best-effort keep-awake
             pass
 
-    if args.log_override:
-        log = ROOT / args.log_override if not Path(args.log_override).is_absolute() \
-            else Path(args.log_override)
-        done = done_keys(log)
-        todo = [(h, "all",
-                 f"https://akshara.ru/kosha?q={urllib.parse.quote(h)}&dict=all&script=slp1")
-                for h in heads if h not in done]
-    elif not args.ru:
-        log = CRAWL_LOG
+    log_path = (ROOT / args.log_override if not Path(args.log_override).is_absolute()
+                else Path(args.log_override)) if args.log_override else None
+
+    if not args.ru:
+        log = log_path or CRAWL_LOG
         done = done_keys(log)
         todo = [(h, "all",
                  f"https://akshara.ru/kosha?q={urllib.parse.quote(h)}&dict=all&script=slp1")
                 for h in heads if h not in done]
     else:
-        log = CRAWL_LOG_RU
+        log = log_path or CRAWL_LOG_RU
         done = done_keys(log)
         todo = []
+        dicts = (args.dict_filter,) if args.dict_filter else RU_DICTS
         for h in heads:
-            for d in RU_DICTS:
+            for d in dicts:
                 key = f"{h}|{d}"
                 if key in done:
                     continue
