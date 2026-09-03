@@ -179,6 +179,28 @@ def fixture_lemma(fixture_con):
     return row["slp1_key"]
 
 
+@pytest.fixture(autouse=True)
+def _isolated_settings_cache():
+    """Reset the process-wide settings cache around every test.
+
+    Tests that patch env vars (`test_readiness`, `test_observability`,
+    `test_settings`, ...) call `get_settings(refresh=True)` so the code under
+    test sees the patched environment — but `kosha.settings._cached` then
+    keeps the patched values after `monkeypatch` restores the environ. Every
+    later module that resolves a store through `get_settings()` would inherit
+    e.g. a `KOSHA_CORE_DB_PATH` pointing into a deleted `tmp_path` and fail
+    with `sqlite3.OperationalError` that looks like data corruption but is
+    pure test-order leakage. Building the cache fresh from the live
+    environment per test (and leaving nothing behind) makes each test start
+    from the configuration it would have had in isolation.
+    """
+    from kosha import settings as settings_mod
+
+    settings_mod._cached = None
+    yield
+    settings_mod._cached = None
+
+
 def pytest_collection_modifyitems(config, items):
     full_data_skip = None
     if not _core_db_present():

@@ -23,7 +23,7 @@ def test_dharma_evidence_band_counts_example():
     r = client.get("/api/v1/lemma/dharma?in=iast")
     assert r.status_code == 200
     entry = r.json()["results"][0]
-    ev = entry["evidence"]
+    ev = entry["kosha"]["evidence"]
     assert ev["band"] == 1  # rank_all=36 <= 500, see scripts/build_evidence.py band thresholds
     assert ev["count_all"] is not None and ev["count_all"] > 0
     assert ev["rank_all"] == 36
@@ -34,7 +34,7 @@ def test_dharma_evidence_band_counts_example():
 
 def test_evidence_provenance_label_on_every_badge():
     r = client.get("/api/v1/lemma/dharma?in=iast")
-    ev = r.json()["results"][0]["evidence"]
+    ev = r.json()["results"][0]["kosha"]["evidence"]
     assert len(ev["badges"]) >= 4
     for badge in ev["badges"]:
         assert badge["source"], f"badge {badge['field']} missing a provenance source"
@@ -48,7 +48,7 @@ def test_evidence_negative_no_attestation_never_fabricates():
     r = client.get("/api/v1/lemma/ABAsaH?in=slp1")
     assert r.status_code == 200
     entry = r.json()["results"][0]
-    ev = entry["evidence"]
+    ev = entry["kosha"]["evidence"]
     assert ev["band"] == 5
     assert ev["count_all"] is None  # never a fabricated 0
     assert ev["rank_all"] is None
@@ -69,7 +69,7 @@ def test_evidence_absent_lemma_still_fails_closed():
     # via lemma_row not None) must not error and must not fabricate data.
     r = client.get("/api/v1/lemma/ABAsin?in=slp1")
     assert r.status_code == 200
-    ev = r.json()["results"][0]["evidence"]
+    ev = r.json()["results"][0]["kosha"]["evidence"]
     assert ev["band"] == 5
     assert ev["count_all"] is None
 
@@ -111,7 +111,7 @@ SAMPLE_20 = [
 def test_sample_band_matches_committed_thresholds(slp1, expected_band, _prefix):
     r = client.get(f"/api/v1/lemma/{slp1}?in=slp1")
     assert r.status_code == 200
-    ev = r.json()["results"][0]["evidence"]
+    ev = r.json()["results"][0]["kosha"]["evidence"]
     assert ev["band"] == expected_band, f"{slp1}: expected band {expected_band}, got {ev['band']}"
 
 
