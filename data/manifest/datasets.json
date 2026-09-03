@@ -2393,6 +2393,25 @@
       ],
       "notes": "Data layer only, no UI. Deliberately excludes data/cohort_start_chteniya/ (a frozen lesson<=3 subset of sandhi_drills.json, not a distinct family -- see data/MASTERY_WEIGHTS_SPEC.md). Not a duplicate of Systema-Sanscriticum's Saraswati FSRS review engine -- this schedules kosha's own static reader surfaces only, holds no per-learner review state, and has no export path into Systema.",
       "size_note": "size_bytes filled once the schedule ships in a tagged release"
+    },
+    {
+      "id": "cyrillic-proper-noun-slp1",
+      "title": "Cyrillic proper-noun -> SLP1 validated lookup table (H3985, SL GAPS §6)",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "format": "tsv",
+      "rows": 534,
+      "size_bytes": 92442,
+      "keying": "one row per Cyrillic proper-noun form: {cyrillic, slp1, iast_witness, validation, onomasticon, witness_count, seeds}; every slp1 key is transliterated from an attested iast_witness (rule_derived_keys: 0 -- a row without an IAST witness cannot exist), validation tier = onomasticon (446, csl-orig INM/PUI <k1>) | lexicon (50) | iast-witness-only (38)",
+      "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+      "source_path": "RussianTranslation/data/cyrillic_proper_noun_slp1.tsv",
+      "builder": "RussianTranslation/tools/h3985_cyr_slp1_table.py (seeds: IAST-bearing Russian name indices; validation: csl-orig v02 inm + pui)",
+      "consumers": [
+        "RussianTranslation pwg_ru / mw_ru name handling",
+        "SamudraManthanam name glossaries (planned)",
+        "csl-atlas (planned)"
+      ],
+      "notes": "This is the ONE sanctioned Cyrillic->SLP1 mapping: FINDINGS §60 stands, reverse-transliteration character rules remain unsafe, so a session needing a key looks it up here instead of inventing rules. Coverage of the seed indices is partial by design -- Erman-Temkin 174/478 (36.4%), Kadambari 130/393 (33.1%), Potapova 128/326 (39.3%); the 20 purely-Cyrillic seed files carry no IAST witness and are deliberately unkeyed. Metadoc: RussianTranslation/data/cyrillic_proper_noun_slp1.meta.md."
     }
   ]
 }
