@@ -88,7 +88,7 @@ def _era_map() -> dict[str, dict]:
         return _era_of
     _era_of = {}
     try:
-        with open(_ABBREV_TSV) as f:
+        with open(_ABBREV_TSV, encoding="utf-8") as f:
             for r in csv.DictReader(f, delimiter="\t"):
                 if r.get("era"):
                     _era_of[r["abbrev"]] = {"era": r["era"],
