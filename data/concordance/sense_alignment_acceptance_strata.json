@@ -1,0 +1,197 @@
+{
+  "seed": 3910,
+  "target": 120,
+  "population": 3013,
+  "sampled": 120,
+  "source": "data/concordance/sense_alignment.tsv",
+  "census_methods": [
+    "attrib+gloss+ls",
+    "attrib+ls"
+  ],
+  "census_shape": "m2m",
+  "oversample": {
+    "attrib": 30
+  },
+  "strata": [
+    {
+      "stratum": "attrib|hi >=0.70|clean",
+      "method": "attrib",
+      "score_band": "hi >=0.70",
+      "shape": "clean",
+      "population": 16,
+      "population_share": 0.00531,
+      "sampled": 9,
+      "census": false
+    },
+    {
+      "stratum": "attrib|lo <0.40|clean",
+      "method": "attrib",
+      "score_band": "lo <0.40",
+      "shape": "clean",
+      "population": 18,
+      "population_share": 0.005974,
+      "sampled": 10,
+      "census": false
+    },
+    {
+      "stratum": "attrib|mid 0.40-0.69|clean",
+      "method": "attrib",
+      "score_band": "mid 0.40-0.69",
+      "shape": "clean",
+      "population": 22,
+      "population_share": 0.007302,
+      "sampled": 12,
+      "census": false
+    },
+    {
+      "stratum": "attrib+gloss+ls|mid 0.40-0.69|clean",
+      "method": "attrib+gloss+ls",
+      "score_band": "mid 0.40-0.69",
+      "shape": "clean",
+      "population": 2,
+      "population_share": 0.000664,
+      "sampled": 2,
+      "census": true
+    },
+    {
+      "stratum": "attrib+ls|hi >=0.70|clean",
+      "method": "attrib+ls",
+      "score_band": "hi >=0.70",
+      "shape": "clean",
+      "population": 5,
+      "population_share": 0.001659,
+      "sampled": 5,
+      "census": true
+    },
+    {
+      "stratum": "attrib+ls|mid 0.40-0.69|clean",
+      "method": "attrib+ls",
+      "score_band": "mid 0.40-0.69",
+      "shape": "clean",
+      "population": 4,
+      "population_share": 0.001328,
+      "sampled": 4,
+      "census": true
+    },
+    {
+      "stratum": "gloss|hi >=0.70|clean",
+      "method": "gloss",
+      "score_band": "hi >=0.70",
+      "shape": "clean",
+      "population": 630,
+      "population_share": 0.209094,
+      "sampled": 8,
+      "census": false
+    },
+    {
+      "stratum": "gloss|lo <0.40|clean",
+      "method": "gloss",
+      "score_band": "lo <0.40",
+      "shape": "clean",
+      "population": 310,
+      "population_share": 0.102887,
+      "sampled": 5,
+      "census": false
+    },
+    {
+      "stratum": "gloss|mid 0.40-0.69|clean",
+      "method": "gloss",
+      "score_band": "mid 0.40-0.69",
+      "shape": "clean",
+      "population": 569,
+      "population_share": 0.188848,
+      "sampled": 7,
+      "census": false
+    },
+    {
+      "stratum": "gloss+ls|hi >=0.70|clean",
+      "method": "gloss+ls",
+      "score_band": "hi >=0.70",
+      "shape": "clean",
+      "population": 95,
+      "population_share": 0.03153,
+      "sampled": 3,
+      "census": false
+    },
+    {
+      "stratum": "gloss+ls|hi >=0.70|m2m",
+      "method": "gloss+ls",
+      "score_band": "hi >=0.70",
+      "shape": "m2m",
+      "population": 16,
+      "population_share": 0.00531,
+      "sampled": 16,
+      "census": true
+    },
+    {
+      "stratum": "gloss+ls|lo <0.40|clean",
+      "method": "gloss+ls",
+      "score_band": "lo <0.40",
+      "shape": "clean",
+      "population": 17,
+      "population_share": 0.005642,
+      "sampled": 3,
+      "census": false
+    },
+    {
+      "stratum": "gloss+ls|mid 0.40-0.69|clean",
+      "method": "gloss+ls",
+      "score_band": "mid 0.40-0.69",
+      "shape": "clean",
+      "population": 138,
+      "population_share": 0.045802,
+      "sampled": 3,
+      "census": false
+    },
+    {
+      "stratum": "gloss+ls|mid 0.40-0.69|m2m",
+      "method": "gloss+ls",
+      "score_band": "mid 0.40-0.69",
+      "shape": "m2m",
+      "population": 14,
+      "population_share": 0.004647,
+      "sampled": 14,
+      "census": true
+    },
+    {
+      "stratum": "ls|hi >=0.70|clean",
+      "method": "ls",
+      "score_band": "hi >=0.70",
+      "shape": "clean",
+      "population": 189,
+      "population_share": 0.062728,
+      "sampled": 4,
+      "census": false
+    },
+    {
+      "stratum": "ls|lo <0.40|clean",
+      "method": "ls",
+      "score_band": "lo <0.40",
+      "shape": "clean",
+      "population": 326,
+      "population_share": 0.108198,
+      "sampled": 5,
+      "census": false
+    },
+    {
+      "stratum": "ls|mid 0.40-0.69|clean",
+      "method": "ls",
+      "score_band": "mid 0.40-0.69",
+      "shape": "clean",
+      "population": 640,
+      "population_share": 0.212413,
+      "sampled": 8,
+      "census": false
+    },
+    {
+      "stratum": "ls|mid 0.40-0.69|m2m",
+      "method": "ls",
+      "score_band": "mid 0.40-0.69",
+      "shape": "m2m",
+      "population": 2,
+      "population_share": 0.000664,
+      "sampled": 2,
+      "census": true
+    }
+  ]
+}
