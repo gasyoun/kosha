@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="93 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="99 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="93 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="99 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -1983,7 +1983,7 @@
     {
       "@type": "Dataset",
       "name": "Generated↔attested morphology audit (A3, W1b)",
-      "description": "A3 = the artefact A4 cannot start without (D12). Sidecars in data/concordance/: morph_attest_GnA.tsv (over-generation), morph_attest_AnG.tsv (engine gap), MORPHOLOGY_ATTESTATION_BUILD_REPORT.md. CIRCULARITY: 93.30% of the generated side is itself source='dcs' (ingested DCS surface tokens), so its AG is a 99.99% round-trip; the research-meaningful figure is the vidyut-engine subtotal — AG 3,550 / 28,567 = 12.43% attested, 25,017 over-generated. Consequently A¬G is degenerate (=2: oṃ + one OCR token) and CANNOT measure engine gaps here — reported as the finding, not hidden (genuine_engine_gap=0, nothing routed to the csl-inflect give-back). CONTRADICTION surfaced (STOP-AND-SURFACE, not resolved): the plan set's 6.9M generated figure is `inflections` (6,917,018 rows), not `forms` (1,378,401) — built on forms per the deliverable text; A4's generated-side table is a human call. Read-only build. PUBLICATION GATED on the W1a rights record (H1263 / D2): unreleased until the DCS BY-SA/BY-4.0 licence contradiction is settled.",
+      "description": "A3 = the artefact A4 cannot start without (D12). Sidecars in data/concordance/: morph_attest_GnA.tsv (over-generation), morph_attest_AnG.tsv (engine gap), MORPHOLOGY_ATTESTATION_BUILD_REPORT.md. CIRCULARITY: 93.30% of the generated side is itself source='dcs' (ingested DCS surface tokens), so its AG is a 99.99% round-trip; the research-meaningful figure is the vidyut-engine subtotal — AG 3,550 / 28,567 = 12.43% attested, 25,017 over-generated. Consequently A¬G is degenerate (=2: oṃ + one OCR token) and CANNOT measure engine gaps here — reported as the finding, not hidden (genuine_engine_gap=0, nothing routed to the csl-inflect give-back). CONTRADICTION surfaced (STOP-AND-SURFACE, not resolved): the plan set's 6.9M generated figure is `inflections` (6,917,018 rows), not `forms` (1,378,401) — built on forms per the deliverable text; A4's generated-side table is a human call. CONTRADICTION RESOLVED 01-09-2026 (H3782) for A3's own purpose: `inflections` is 99.99% source='cologne_mwinflect' (6,916,522 of 6,917,018 rows), a DIFFERENT generator from vidyut and independent of DCS, so it — not `forms` — is the side on which A¬G is measurable; the roadmap's '6.9M vidyut-generated inflections' attribution was wrong and is corrected there. That join ships as the sibling dataset `morphology-attestation-audit-inflections`; this row's numbers stand unchanged and remain the correct input for A4/W2a. Read-only build. PUBLICATION GATED on the W1a rights record (H1263 / D2): unreleased until the DCS BY-SA/BY-4.0 licence contradiction is settled.",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
       "isAccessibleForFree": true,
       "creator": {
@@ -2006,6 +2006,62 @@
         "@type": "DataDownload",
         "encodingFormat": "tsv",
         "contentUrl": "https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/morph_attest_AG.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Generated↔attested morphology audit over `inflections` — the non-circular side (A3, H3782)",
+      "description": "WHY THIS EXISTS BESIDE `morphology-attestation-audit`: that build (H1262) joined `forms` and reported A¬G=2, degenerate because 93.30% of its generated side was itself source='dcs' — a round-trip, so the attested-never-generated direction was unmeasurable. `inflections` is Cologne MW-inflect output derived from MW headwords with NO DCS input, so it is the side on which that direction carries engine meaning: A¬G is 164,236, not 2. This also closes CONCORDANCE_ROADMAP Q3 exit check 1 ('full 6.9M x 5.7M join'), which H1262 did not satisfy (it joined 426,410 rows). ROADMAP ATTRIBUTION CORRECTED: the roadmap called this 6.9M table 'vidyut-generated inflections'; it is 6,916,522 cologne_mwinflect + 326 hybrid-natva-fix + 153 curated-gita-pronoun + 17 vidyut-gap-fill. TWO CONTROLS, both load-bearing and both published: (1) 68,049 of the 164,236 A¬G keys (41.43%) are attested only as a sandhied surface; (2) the generator holds 222,735 nominal lemmas against 680 verbal, so finite verbs are scope it never claimed — every triage class is cross-tabbed against DCS upos, and of 112,368 attested VERB keys only 25.43% are generated. A¬G triage: lexicon_gap 93,228 · paradigm_gap 70,510 · non_sanskrit_or_ocr 480 · segmentation_artefact 18. DO NOT quote A¬G as 'forms the engine misses' — see the sibling morphology-giveback-candidates row, which narrows it to 5,588. Sidecars in data/concordance/: morph_attest_infl_GnA.tsv.gz (over-generation, gzipped, 3,088,000 rows), morph_attest_infl_AnG.tsv (164,236 rows, triaged), MORPHOLOGY_ATTESTATION_INFLECTIONS_BUILD_REPORT.md (four human-checkable sample tables). Read-only on both source databases; deterministic (two full runs produced identical bucket counts). Runtime 1405 s, peak 321 MB. Unreleased: rides the next data cut. JOIN-KEY CORRECTION, NOW MEASURED (H3911 diagnosed 02-09-2026, H3925 rebuilt the same day): the first build used a form_key() that folded anusvāra to `n` at every position while never touching a literal `m`, so `rasaṃ`→`rasan` but `rasam`→`rasam` and the two standard spellings of a Sanskrit word-final nasal could never collide — every anusvāra-final attestation read as un-generated. Fixed in sanskrit-util 0.11.0 (sanskrit-lexicon/sanskrit-util PR #72: word-final anusvāra folds to `m`, medial fold unchanged, final -n still distinct from final -m), and THE NUMBERS IN THIS ROW ARE THE REBUILT ONES. Pre-fix -> post-fix: attested keys 386,012 -> 352,745 (−33,267 spelling twins that were never distinct words) · AG 239,443 -> 238,312 · G¬A 3,086,869 -> 3,088,000 · A¬G 196,378 -> 164,236 (−32,142, −16.4%) · attested-side coverage 49.13% -> 53.44%. Two cautions for anyone quoting the delta: the sampled pre-estimate of 24,149 was a FLOOR (it could only see twins already inside the candidate set), and the fix is a re-partition rather than a monotone gain — collapsing final -ṃ onto -m also breaks 1,131 net generated-side matches that existed only because final -ṃ and final -n were conflated. KNOWN RESIDUAL, measured not assumed, and NOT small: the same asymmetry survives one position inward, because medial anusvāra before a LABIAL is phonetically /m/ but still folds to `n` (`vaiśaṃpāyana` keys as `vaiśanpāyana` and never meets the `vaiśampāyanaḥ` the generator already emits). On the class that actually reaches a human — the 2,521 slot-conflicts — 278 rows (11.03%; 11.58% by corpus weight) are this: `saṃbhavaḥ` vs `sambhavaḥ`, `saṃbandhaḥ` vs `sambandhaḥ`, one word spelled two ways with no disagreement to adjudicate. 90 candidates additionally collapse into their own lemma once refolded and would leave A¬G outright. NOT fixed here because narrowing the medial fold is a second change to a library ~85 repos consume; the rows are screened off the validation sheet by an explicit named rule meanwhile. Measured by scripts/measure_medial_anusvara_residual.py.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "morphology-attestation-audit-inflections"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/morph_attest_infl_AG.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "csl-inflect give-back candidates — the defensible subset of A¬G (A3, H3782)",
+      "description": "A CANDIDATE SET, NOT A DEFECT LIST — the distinction is the point of this row. Quoting A¬G (164,236) as 'forms the engine misses' overstates the actionable set by 29x; every subtraction above is published with its count so the narrowing can be audited and reversed. Rebuilt on the sanskrit-util 0.11.0 join key (H3925, 02-09-2026); the pre-fix set held 5,656 rows. Composition: NOUN 3,810 (68.18%) · ADJ 1,594 · PRON 105 · ADV 35 · NUM 23 · rest 21. CROSS-CHECK IN FAVOUR: the head is pronoun dative/locative cells (asmai < idam, tasmai/tasyai < tad, etasmin < etad, amum < adas) and irregular feminine/consonant stems (striyaḥ < strī, śriyam < śrī, āpo < ap) — exactly where MW-inflect is weak, and `inflections` already carries a hand-made source='curated-gita-pronoun' patch of 153 rows, independent evidence that pronouns are a real gap and not an artefact of this method. CROSS-CHECK AGAINST: the bare-stem filter matches only exact lemma-key equality, so ALLOMORPHIC bound stems still pass — ātma (< ātman) at rank 3 is one, carrying feat_case='Cpd' on 2,544 tokens against 10 with a real case. Do NOT repeat the earlier claim that rājñ (rank 2) is the same kind of leak: DCS tags rājñ as Voc Sing Masc 880 times, so by the corpus's own annotation it is an inflected cell. TRIAGED SINCE (H3863): the set is machine-decidable, not a human-judgment pile — DCS tagging resolves 5,587 of 5,588 rows into owed 5,232 (slot-conflict 2,521 · coverage-hole 2,711) and not-owed 355 (compound-member 222 · lexicon-gap 102 · indeclinable 31), 1 untagged residue; sidecars morph_giveback_triaged.tsv + morph_giveback_triage_summary.json, method in MORPHOLOGY_GIVEBACK_TRIAGE_REPORT.md. The triage doubles as evidence the key fix landed: the orthographic-variant verdict, which existed only to catch anusvāra twins the broken key had split, matched 146 rows before the rebuild and 0 after. R-C4: 11 candidates (0.20%) carry tense_caveat=1. Report: data/concordance/MORPHOLOGY_GIVEBACK_CANDIDATES_REPORT.md. Cheap and re-derivable in seconds from the AnG TSV — the expensive join is a separate script.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "morphology-giveback-candidates"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/morph_giveback_candidates.tsv"
       }
     },
     {
@@ -2230,6 +2286,34 @@
         "@type": "DataDownload",
         "encodingFormat": "tsv",
         "contentUrl": "https://github.com/gasyoun/kosha/releases/download/not-applicable/sense_corpus_concordance.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Cross-dictionary aligned senses, PWG · MW · Apte · ŚKDR · VCP (H3744 slice 1 + H3862 slice 2)",
+      "description": "Wave-2 slices 1+2 of PLAN_KOSHA_SENSE_RECONCILIATION_2026H2. Method: senses join a meaning through SHARED LITERARY WITNESS — the <ls> sources both dictionaries cite for them, each weighted 1/df within the lemma (a witness cited by every sense discriminates nothing). Grouping is a greedy BEST MATCH per dictionary pair, not transitive closure: closure merged amṛta's 'not dead', 'nectar' and 'N. pr. the mother of Parikṣit' into one component. Marked defaults TAU=0.30, GLOSS_FLOOR=0.20, PREFIX_MIN=4 — unchanged by slice 2, which adds no constant of its own. LANGUAGE FENCE: gloss-token Jaccard is open only between two dictionaries glossing in the SAME language and only when that language is English (MW↔Apte). It never crosses PWG's German boundary and, since H3862, never crosses the ŚKDR/VCP Sanskrit boundary either — app/sense_align.gloss_channel_open() is the single gate. H3862 STEP-1 VERDICT: ŚKDR and VCP are reachable (csl-sqlite skd.zip/vcp.zip) and ship as columns; Medinī and Amara are NOT in CDSL at all and ship as recorded absences — the `md` code in csl-orig/csl-sqlite is MACDONELL, not Medinīkośa. THE Sa→Sa BRIDGE: the kośas carry ZERO <ls> (0 of 42,531 ŚKDR and 0 of 50,135 VCP records), so the witness channel does not exist for them; what does is PWG's own citations OF them (ŚKDR. 1,227×, MED. 1,824× in the pilot), which is the `attrib` method — weighted 1/df off the same table and decided by the same TAU, ranked below `ls` because it is directional. Reading the kośas' own `iti X` prose as witnesses was measured and REJECTED: it matched PWG's PRAT. to `pratyarthin` and BUDDH. to `buddhim`, re-inventing witnesses through a side door PREFIX_MIN closes; a closed curated source vocabulary is the honest version and is a slice of its own. SLICE-2 DELTA, verified row by row against `--no-sasa`: no western sense changed partner, method, score or witness list; 0 new western-only rows; aligned 2,957→3,013 = 56 kośa-only meanings + 11 existing meanings that gained a kośa cell; clean 1-1-1 unchanged at 262. `df` did not move because the kośas contribute no witnesses. SIDECAR ONLY — no dictionary's sense order or bytes are touched. NOT PUBLISHED: the table is not on the 2,324 live static pages, because it asserts in kosha's own voice that these dictionaries' senses correspond and that can be scholarly wrong in a way page chrome cannot (docs/NOT_PUBLISHED_H3744_SENSE_ALIGNMENT.md). False positives exist and are NOT quantified: precision needs the wave-2 acceptance pass (sample + judge + human vote), explicitly out of both slices' scope, so no precision figure is quoted anywhere; the known `attrib` false-positive class is lemma-level joins onto a ŚKDR verbal-root entry (kaṭa, bhū). Remaining scope fences: the lemma-variant graph and the pwg_ru sense-structure deliverable are separate units. Build report: data/concordance/SENSE_ALIGNMENT_BUILD_REPORT.md; packet: docs/H3744_SENSE_ALIGNMENT_PACKET_31.08.26.md; smoke: docs/H3862_SENSE_ALIGNMENT_SMOKE_LOG_02.09.26.md.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "sense-alignment-pilot"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/not-applicable/sense_alignment.tsv"
       }
     },
     {
@@ -2570,8 +2654,36 @@
     },
     {
       "@type": "Dataset",
+      "name": "Curated per-work dating table for PWG's cited works (Ceiling C2 phase 2)",
+      "description": "Supplies the provenance ls_source_map.json's 45 bare point dates never had: a RANGE plus the scholarly source per date (Witzel, Olivelle, Brockington, Rocher, Meulenbeld, Pingree, Cardona, Vogel, Stein and others), graded 9 anchored / 20 consensus / 14 contested / 2 dating-invalid. TRAP: 'Spr.' is Boehtlingk's OWN anthology (Indische Sprueche, 1863-1873) and 'SKDR.' the Sabdakalpadruma (Calcutta 1821-1858) - neither dates anything, yet phase 1 gave them 600 CE and 1830 CE, so they bound 11,771 of 43,990 attestation windows, set 'latest' on 9,082, and are the only dated work in 2,873. Both carry dating_valid=false; do not use them for chronology. Seven further sigla (AMAR, GIT. GOV, KATHAS, RAJAN, SAH. D, VOP, Spr) have map dates outside their sourced range and are corrected HERE only - ls_source_map.json is deliberately not rewritten, because the committed phase-1 store consumed it. Never a claim about when a SENSE emerged. Eight claims are quoted from Vogel 1979 with printed page (the volume is held in SanskritLexicography/literature/); the rest are marked verified='reference-only', page-level check still open. Gate: c2p2_dating_table.py --check fails a date with no citation. Eleven contested datings await a human at https://gasyoun.github.io/vote/sheets/pwg_c2p2_work_dating_11.html",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "pwg-work-dating-table"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "json",
+        "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
+      }
+    },
+    {
+      "@type": "Dataset",
       "name": "PWG per-sense attestation window (Ceiling C2 phase 1)",
-      "description": "Attestation windows (earliest/latest/n_dated_works/n_undated_citations) from the 45 dated works of ls_source_map.json - evidence about what PWG cites, never about sense emergence. Conservative lower bounds: C7 residue (115,354 unmapped instances / 2,607 sigla) carried in RussianTranslation/research/C2P1_ATTESTATION_WINDOW.md. Layered on pwg_sense_stratum.jsonl Renou proxy (consumed, not rewritten).",
+      "description": "Attestation windows (earliest/latest/n_dated_works/n_undated_citations) from the 45 dated works of ls_source_map.json - evidence about what PWG cites, never about sense emergence. Conservative lower bounds: C7 residue (115,354 unmapped instances / 2,607 sigla) carried in RussianTranslation/research/C2P1_ATTESTATION_WINDOW.md. Layered on pwg_sense_stratum.jsonl Renou proxy (consumed, not rewritten). TRAP (H3790, 01-09-2026): two of the 45 dated works cannot date anything - 'Spr.' is Boehtlingk's own 1863-1873 anthology and 'SKDR.' a Calcutta compilation of 1821-1858 - so 11,771 of these 43,990 windows carry a bound that says nothing about the language, and 9,082 have their 'latest' set that way. Read pwg-work-dating-table before using earliest/latest for chronology.",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
       "isAccessibleForFree": true,
       "creator": {
@@ -2651,6 +2763,62 @@
         "encodingFormat": "pack.zip (168 entries: tsv/jsonl/txt/md/cff/LICENSE-DATA + MANIFEST.json sha256 per file) + 4 loose root docs on the record",
         "contentUrl": "https://www.wisdomlib.org/sanskrit"
       }
+    },
+    {
+      "@type": "Dataset",
+      "name": "kosha combined mastery schedule (five drill families, H3742)",
+      "description": "Data layer only, no UI. Deliberately excludes data/cohort_start_chteniya/ (a frozen lesson<=3 subset of sandhi_drills.json, not a distinct family -- see data/MASTERY_WEIGHTS_SPEC.md). Not a duplicate of Systema-Sanscriticum's Saraswati FSRS review engine -- this schedules kosha's own static reader surfaces only, holds no per-learner review state, and has no export path into Systema.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "kosha-mastery-schedule"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "json",
+        "contentUrl": "https://github.com/gasyoun/kosha"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Cyrillic proper-noun -> SLP1 validated lookup table (H3985, SL GAPS §6)",
+      "description": "This is the ONE sanctioned Cyrillic->SLP1 mapping: FINDINGS §60 stands, reverse-transliteration character rules remain unsafe, so a session needing a key looks it up here instead of inventing rules. Coverage of the seed indices is partial by design -- Erman-Temkin 174/478 (36.4%), Kadambari 130/393 (33.1%), Potapova 128/326 (39.3%); the 20 purely-Cyrillic seed files carry no IAST witness and are deliberately unkeyed. Metadoc: RussianTranslation/data/cyrillic_proper_noun_slp1.meta.md.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "cyrillic-proper-noun-slp1"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
+      }
     }
   ]
 }
@@ -2721,8 +2889,8 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>93</b><span>public datasets</span></div>
-      <div class="tally"><b>14</b><span>restricted (on request)</span></div>
+      <div class="tally"><b>99</b><span>public datasets</span></div>
+      <div class="tally"><b>15</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
     <div class="nav">
@@ -2786,7 +2954,7 @@
       </div>
       <p class="key">MW entry id → Heritage anchor (25,140 covered, 97.6% anchor-resolved)</p>
       <p class="meta">185,803 rows · 3.1 MB · TSV</p>
-      <div class="chips"><span class="chip">kosha ingest (H345, kosha.db heritage_anchor table + /api/v1/lemma `heritage` witness)</span><span class="chip">csl-atlas witness column (queued)</span></div>
+      <div class="chips"><span class="chip">kosha ingest (H345, kosha.db heritage_anchor table + /api/v1/lemma `heritage` witness)</span><span class="chip">csl-atlas witness column (H346, 08-07-2026, csl-atlas PR #227 — delivered; was still marked queued until H3781, 01-09-2026)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.5.0/mw_heritage_crosswalk.tsv">Download ↓</a></div>
     </article>
     <article class="card">
@@ -2795,7 +2963,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">SLP1 lemma; whole-corpus counts + per-period vectors + core-vocab coverage</p>
-      <p class="meta">83,277 rows · 4.7 MB · TSV</p>
+      <p class="meta">83,277 rows · 4.6 MB · TSV</p>
       <div class="chips"><span class="chip">kosha evidence layer</span><span class="chip">Nagari teaching order</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.5.0/lemma_frequency.tsv">Download ↓</a></div>
     </article>
@@ -2815,7 +2983,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">SLP1 headword → paradigm token (335 tokens)</p>
-      <p class="meta">98,639 rows · 5.8 MB · TSV</p>
+      <p class="meta">98,639 rows · 5.7 MB · TSV</p>
       <div class="chips"><span class="chip">pwg_ru nominal layer</span><span class="chip">kosha P4 grammar tokens</span><span class="chip">gramdict mapping</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.4.0/zaliznyak_grammar_index.tsv">Download ↓</a></div>
     </article>
@@ -2835,7 +3003,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">akshara 7,347 · varṇa 48 · conjunct 999; corpus-wide + per DCS time-slot</p>
-      <p class="meta">8,394 rows · 910.2 KB · CSV</p>
+      <p class="meta">8,394 rows · 912.7 KB · CSV</p>
       <div class="chips"><span class="chip">Nagari script-teaching order</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
@@ -2845,7 +3013,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">declension class (14, lemma-final heuristic) × token gender (Masc|Fem|Neut|?) × 24 case.number cells; each cell carries token count, distinct lemma_ids, segmentable count, top-8 attested unsandhied forms, top-6 surface endings, up to 3 corpus examples (sentence + text + ref)</p>
-      <p class="meta">14 rows · 620.0 KB · JSON</p>
+      <p class="meta">14 rows · 619.6 KB · JSON</p>
       <div class="chips"><span class="chip">VisualDCS sanskrit_nominal_dashboard.html</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
@@ -2865,7 +3033,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">5 vargas × 5 DCS time-slots; column shares + counts + Δ(I→V)</p>
-      <p class="meta">5 rows · 7.6 KB · CSV</p>
+      <p class="meta">5 rows · 10.4 KB · CSV</p>
       <div class="chips"><span class="chip">GasunsDhatu 2026 §2.6 (Table 5 replacement, L7 fix)</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
@@ -2945,7 +3113,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">CompDic.csv (compound headword list, 37,333), cmps.csv (per-compound member breakdown, 401,478), names.csv (168,880 attested compounds w/ frequency vector, already noted in DATA_LAYERS_CENSUS.md), parts.csv (2,667), verbx.csv (3,400, verbal compounds); cmp400000.csv is present but empty (0 bytes)</p>
-      <p class="meta">613,758 rows · 161.4 MB · CSV</p>
+      <p class="meta">613,758 rows · 162.3 MB · CSV</p>
       
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
@@ -3005,7 +3173,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">concordance-core schema (anchor_type=parallel-verse/anchor_id=para:&lt;textId&gt;:&lt;col1&gt;|&lt;col2&gt;/target_locus verbatim/match_method=GOOD|PARTLY/confidence/evidence_count); source verdict GOOD (13,862 exact) or PARTLY (139,183 partial, word-diff attached) from the export&#x27;s own meter-to-meter matcher, NOT the Q1 SLP1-tier vocabulary — see data/concordance/PARALLEL_BUILD_REPORT.md</p>
-      <p class="meta">153,045 rows · 30.7 MB · TSV</p>
+      <p class="meta">153,045 rows · 30.6 MB · TSV</p>
       <div class="chips"><span class="chip">concordance/parallels/ static viewer</span><span class="chip">Q3-Q4 concordance program</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/parallel_passage_concordance.tsv">Download ↓</a></div>
     </article>
@@ -3015,7 +3183,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">maṇḍala + sūkta + verse + pada_letter (a/b/c/d, blank if unlettered) → pratīka text + full raw citation string</p>
-      <p class="meta">36,680 rows · 2.7 MB · TSV</p>
+      <p class="meta">36,680 rows · 2.6 MB · TSV</p>
       <div class="chips"><span class="chip">parallel_passage_verses.tsv bloomfield_pratika column</span><span class="chip">concordance/parallels/ static viewer</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/bloomfield_rv_citations.tsv">Download ↓</a></div>
     </article>
@@ -3035,7 +3203,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">IAST + SLP1 lemma; per-slot counts, cosine distances (5 slot pairs), freq-shift baseline, graded rank + binary flag (Vedic→Epic)</p>
-      <p class="meta">3,049 rows · 283.6 KB · TSV</p>
+      <p class="meta">3,049 rows · 309.8 KB · TSV</p>
       <div class="chips"><span class="chip">paper A57 (LChange&#x27;27/NLP4DH candidate, ARTICLES.md)</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
@@ -3115,7 +3283,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">SLP1 headword; 3x3 strata (E26 rank band x MW top-level sense count), seed 730; &lt;=5 DCS attestation sentences per headword</p>
-      <p class="meta">500 rows · 1.3 MB · TSV+JSONL</p>
+      <p class="meta">500 rows · 1.5 MB · TSV+JSONL</p>
       <div class="chips"><span class="chip">H730 protocol doc docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md (eLex/EURALEX/IJL paper candidate)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/eval/defgen/frozen_sample.tsv">Download ↓</a></div>
     </article>
@@ -3125,7 +3293,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one object per DCS chapter (slug); sentences[] each carry the sandhied text + ordered tokens (form, lemma, slp1, /w card href, upos, morph, gloss). 439 tokens, 434 (98.9%) linked to a kosha card via the concordance-core exact/floor tiers; 5 unlinked = DCS causative/denominative -ay stems + 1 indeclinable (honest residue, see reading/BUILD_REPORT.md). DCS is CC BY 4.0; this derivative ships BY-SA with the public tier.</p>
-      <p class="meta">65 rows · 134.2 KB · JSON</p>
+      <p class="meta">65 rows · 168.1 KB · JSON</p>
       <div class="chips"><span class="chip">reading/ static viewer</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/reading/data/nala-1.json">Download ↓</a></div>
     </article>
@@ -3135,7 +3303,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one row per unique content-word lemma (SLP1), {rank, slp1, deva, iast, gloss}, core_rank-ordered</p>
-      <p class="meta">164 rows · 24.9 KB · JSON</p>
+      <p class="meta">164 rows · 23.8 KB · JSON</p>
       <div class="chips"><span class="chip">Systema-Sanscriticum Saraswati SRS (Wave-2 importer, flag-gated)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/srs/srs-deck-b1-demo.json">Download ↓</a></div>
     </article>
@@ -3155,7 +3323,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one row per analysed word (9,091); structured morphology decoded from the Gita.xlsm Grammar-sheet shorthand (col AB) via the workbook&#x27;s Abbreviations legend: verse·widx·form·lemma·root·pos·case·number·gender·person·tense·voice·nonfinite·derivation·compound·raw_morph. Nominals get case·number·gender; finite verbs person·number·tense·voice; participles/derivatives tagged; compound type TP/BV/DV/KD. raw_morph preserves the source shorthand.</p>
-      <p class="meta">9,091 rows · 587.1 KB · TSV</p>
+      <p class="meta">9,091 rows · 578.3 KB · TSV</p>
       <div class="chips"><span class="chip">E1 inflection-engine QA (W4 / H874)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/gita/gita_morphology_gold.tsv">Download ↓</a></div>
     </article>
@@ -3165,7 +3333,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">DIVERGE (360) + GAP (919) rows from the W4 QA: gold Gita nominal case·number·gender NOT reproduced by kosha&#x27;s hybrid inflections. Cols verse·form·lemma·gold_case_num_gender·class·kosha_analyses. Finding: DIVERGE 71% pronouns (confirms E1&#x27;s flagged pronominal mis-modeling with attested text), GAP mostly compounds.</p>
-      <p class="meta">1,279 rows · 65.3 KB · TSV</p>
+      <p class="meta">1,279 rows · 64.1 KB · TSV</p>
       <div class="chips"><span class="chip">E1 hybrid forms layer — candidate disputed/gap-fill corrections (human @DO)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/gita/gita_inflection_divergences.tsv">Download ↓</a></div>
     </article>
@@ -3175,7 +3343,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one viewer pack per adhyaya (gita-1..18.js, window.READING_DATA[slug]); 701 verses / 9,092 words, each word links to its kosha /w/ card (~99.5% linked). Devanagari + IAST + English + Russian gloss (EN/Русский toggle) per verse. Built from the W0 master gita_gold_master.tsv by scripts/build_reading_pack_gita.py. Each word also carries its sandhi rule (hover).</p>
-      <p class="meta">701 rows · 187.9 KB · JS</p>
+      <p class="meta">701 rows · 180.8 KB · JS</p>
       <div class="chips"><span class="chip">reading/ static viewer</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha">Download ↓</a></div>
     </article>
@@ -3185,7 +3353,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one row per distinct sandhi rule (161) attested across the whole Gita (3,412 junctions): rule (e.g. &#x27;aḥ a → o &#x27;&#x27;), category (visarga/anusvara/vowel-coalescence/consonant), count, pct, example words+verse. Corpus-attested + frequency-ranked, aggregated from the master&#x27;s per-word sandhi field. Teaching page reading/sandhi/index.html; per-word sandhi also shown on hover in the Gita reader.</p>
-      <p class="meta">161 rows · 14.2 KB · TSV</p>
+      <p class="meta">161 rows · 14.0 KB · TSV</p>
       <div class="chips"><span class="chip">reading/ viewer (per-word sandhi hover)</span><span class="chip">reading/sandhi/ page</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/gita/gita_sandhi.tsv">Download ↓</a></div>
     </article>
@@ -3195,7 +3363,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one row per sandhi rule (2,181), ordered as a graded syllabus: rank, rule, category, count, pct, cumulative_pct, family_size, priority, lesson (10 lessons). Priority = frequency x class x environment-generality (MG ruling 14-07-2026); weights in data/sandhi/difficulty_weights.json (tunable). Learn 23 rules -&gt; read 50% of all corpus sandhi; 79 -&gt; 80%; 132 -&gt; 90%. Teaching page reading/sandhi/curriculum/index.html.</p>
-      <p class="meta">2,181 rows · 134.7 KB · TSV</p>
+      <p class="meta">2,181 rows · 132.6 KB · TSV</p>
       <div class="chips"><span class="chip">reading/sandhi/curriculum/ page</span><span class="chip">graded sandhi teaching (Phase 4)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/sandhi/sandhi_curriculum.tsv">Download ↓</a></div>
     </article>
@@ -3215,7 +3383,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one item per row: aspect=vocabulary, type (recognition: word-&gt;gloss / recall: gloss-&gt;word), prompt, answer, distractors (same-lesson-band lemmas), rank (core_rank), evidence (docs/cards/&lt;token&gt;.json), source_dataset=vocab-curriculum (ARCHITECTURE shared item schema). 2 items per curriculum lemma (6,667 x 2 = 13,334). Also shipped as data/frequency/vocab_curriculum.apkg (Anki deck, genanki, one Basic note per lemma: front=deva/iast, back=gloss).</p>
-      <p class="meta">13,334 rows · 7.2 MB · JSON</p>
+      <p class="meta">13,334 rows · 7.0 MB · JSON</p>
       <div class="chips"><span class="chip">vocab_curriculum.apkg (Anki deck)</span><span class="chip">Systema/csl-guides quiz component (future, via the shared item schema)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/frequency/vocab_drills.json">Download ↓</a></div>
     </article>
@@ -3245,7 +3413,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one row per (lemma, declension/conjugation model) paradigm that has at least one corpus-attested cell (7,134 of 5,985 core-vocabulary lemmas x their models), ordered by class bucket (a-stems -&gt; other-vowel-stems -&gt; consonant-stems -&gt; pronouns -&gt; present-class-verbs -&gt; other per drill_weights.json) then by lemma core_rank: rank, lemma_slp1, lemma_iast, model, kind (nominal/verb), bucket, core_rank, n_attested_cells, corpus_count, pct, cumulative_pct, lesson (10 lessons). Learn 4,862 paradigms -&gt; cover 50% of attested nominal/verbal tokens; 6,351 -&gt; 80%; 6,708 -&gt; 90% (bucket-first ordering trades coverage-efficiency for pedagogical class sequencing — an honest, expected tradeoff, not a defect). Teaching page reading/morphology/curriculum/index.html.</p>
-      <p class="meta">7,134 rows · 478.3 KB · TSV</p>
+      <p class="meta">7,134 rows · 471.3 KB · TSV</p>
       <div class="chips"><span class="chip">reading/morphology/curriculum/ page</span><span class="chip">morphology-drills dataset</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/morphology/morphology_curriculum.tsv">Download ↓</a></div>
     </article>
@@ -3255,7 +3423,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one item per row: aspect=morphology, type (fill: lemma+cell-&gt;form / match: form-&gt;cell), prompt, answer, choices (4-way MCQ, same-lemma-paradigm distractors), distractors, rank (core_rank), evidence (dcs:&lt;sent_id&gt; locus), source_dataset=morphology-drills, corpus_count (ARCHITECTURE shared item schema). 12,000 items over the top 6,000/38,782 attested cells by (core_rank, corpus frequency) — --max-drill-cells 0 rebuilds the full set; the curriculum TSV is never scoped by this cap. Also shipped as data/morphology/morphology_drills.apkg (Anki deck, genanki, 6,000 fill-type notes). Web quiz reading/morphology/drills/index.html (self-contained MCQ, theme-aware, fill/match type filter).</p>
-      <p class="meta">12,000 rows · 7.3 MB · JSON</p>
+      <p class="meta">12,000 rows · 7.0 MB · JSON</p>
       <div class="chips"><span class="chip">reading/morphology/drills/ page (web quiz)</span><span class="chip">morphology_drills.apkg (Anki deck)</span><span class="chip">Systema/csl-guides quiz component (future, via the shared item schema)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/morphology/drills.json">Download ↓</a></div>
     </article>
@@ -3265,7 +3433,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one item per row: id, type (join/split/identify), rule, category, lesson, difficulty, question, answer, choices (4-way MCQ with same-class distractors), context (attested example sentence). 396 items over the 132 curriculum rules covering 90% of corpus sandhi (lessons 1-9; lesson-10 long tail excluded by default, --max-lesson to widen). Also shipped as data/sandhi/sandhi_drills.tsv (flat fallback) and data/sandhi/sandhi_drills.apkg (Anki deck, genanki). Web quiz reading/sandhi/drills/index.html (self-contained MCQ, theme-aware).</p>
-      <p class="meta">396 rows · 207.4 KB · JSON</p>
+      <p class="meta">396 rows · 198.9 KB · JSON</p>
       <div class="chips"><span class="chip">reading/sandhi/drills/ page (web quiz)</span><span class="chip">sandhi_drills.apkg (Anki deck)</span><span class="chip">graded sandhi teaching (Phase 4, surface 4b)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/sandhi/sandhi_drills.json">Download ↓</a></div>
     </article>
@@ -3295,7 +3463,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">101 hand-written etymological/explanatory notes on selected Gita words (verse·widx·form·lemma·root·etymology), from the Gita.xlsm Grammar sheet col AG (which the Combined master drops), aligned by verse+word-index. Curated highlight layer, not a full etymological dictionary.</p>
-      <p class="meta">101 rows · 12.2 KB · TSV</p>
+      <p class="meta">101 rows · 12.1 KB · TSV</p>
       <div class="chips"><span class="chip">Gita reader / lexical enrichment</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/gita/gita_etymology.tsv">Download ↓</a></div>
     </article>
@@ -3305,7 +3473,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">148 verb roots attested in the Gita + 69 preverb-modified senses: root·preverb·combined·sense·count (empty preverb = base sense; √vac speak -&gt; pra-vac declare; √gam go -&gt; ava-gam understand). From the Gita.xlsm verbs sheet; a compositional dimension the Cologne dictionaries lack. Browsable page reading/upasarga/.</p>
-      <p class="meta">214 rows · 6.2 KB · TSV</p>
+      <p class="meta">214 rows · 6.0 KB · TSV</p>
       <div class="chips"><span class="chip">reading/upasarga/ page</span><span class="chip">/w/ root-card upasarga panel (app/word_page.py)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/gita/upasarga_semantics.tsv">Download ↓</a></div>
     </article>
@@ -3315,7 +3483,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">208 curated correct analyses (form_slp1·lemma_slp1·gcase·number·gender·source) for Sanskrit pronouns (sarvanaman), from the gold Gita attested pronoun forms. Applied to inflections as source=&#x27;curated-gita-pronoun&#x27; via build_db.py --stage pronoun (non-destructive INSERT OR IGNORE). Fixed the W4 QA&#x27;s pronominal mis-modeling: nominal agreement 93.0%-&gt;98.7%, divergences 360-&gt;73, gaps 919-&gt;588.</p>
-      <p class="meta">208 rows · 8.5 KB · TSV</p>
+      <p class="meta">208 rows · 8.3 KB · TSV</p>
       <div class="chips"><span class="chip">kosha inflections layer (source=curated-gita-pronoun)</span><span class="chip">E1 hybrid forms</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/gita/pronoun_corrections.tsv">Download ↓</a></div>
     </article>
@@ -3325,7 +3493,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one row per gold-verified compound (759; from the 815-row gita-morphology-gold compound column, minus 56 ambiguous dual-tag rows), ordered as a graded syllabus: rank, lesson (1-4 = KD/TP/BV/DV, transparent types first per the MG 14-07-2026 ruling), type, type_name, compound, form, verse, corpus_freq, cumulative_freq_pct. Within a lesson, ranked by corpus frequency (VisualDCS Kompozity names.csv join). Companion data/samasa/reference.tsv (per-type ranked lookup) and data/samasa/samasa_drills.json (3,565 identify/split practice items: 759 gold-verified identify, 806 gold-verified split, 2,000 corpus-derived unverified-type split, capped from a 168,421-item ranked corpus pool per data/samasa/drill_weights.json). Teaching pages reading/samasa/{curriculum,drills,reference}/index.html.</p>
-      <p class="meta">759 rows · 50.8 KB · TSV</p>
+      <p class="meta">759 rows · 50.1 KB · TSV</p>
       <div class="chips"><span class="chip">reading/samasa/{curriculum,drills,reference}/ pages</span><span class="chip">samasa_drills.apkg (Anki deck)</span><span class="chip">csl-guides samasa-quiz (cross-linked, not duplicated)</span><span class="chip">graded compound-analysis teaching (pedagogy Wave 1, W1c)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/samasa/samasa_curriculum.tsv">Download ↓</a></div>
     </article>
@@ -3335,7 +3503,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one row per scored reading pack, ascending difficulty: order, slug, difficulty (composite in [0,1]), vocab, sandhi, morphology, compound (four per-axis loads in [0,1]), content_tokens, tokens, sentences, title. Composite = weighted sum of the four axes; weights live in data/difficulty/difficulty_weights.json (tunable -- a human should confirm, VERIFICATION R5). Companion reading_pack_difficulty.json (same rows + the weights) and the graded-reading page reading/difficulty/index.html (easiest first). Method + limitations: data/difficulty/METHODS.md.</p>
-      <p class="meta">5 rows · 607 B · TSV</p>
+      <p class="meta">5 rows · 601 B · TSV</p>
       <div class="chips"><span class="chip">reading/difficulty/ page (graded reading sequence)</span><span class="chip">graded-reader auto-levelling (W2a join point, ARCHITECTURE data-flow)</span><span class="chip">W3a metre-in-reading (H951, consumes the ordered packs)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/difficulty/reading_pack_difficulty.tsv">Download ↓</a></div>
     </article>
@@ -3375,7 +3543,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one row per distinct &#x27;&lt;upos&gt;|&lt;morph&gt;&#x27; form signature over all ~5.69M DCS tokens: signature, count, share_pct. The signature is keyed exactly as the reading packs display it (build_reading_pack.morph_str), so a pack token joins with no re-derivation. Drives the difficulty scorer&#x27;s morphology axis (rarer form = higher parsing load).</p>
-      <p class="meta">840 rows · 27.6 KB · TSV</p>
+      <p class="meta">840 rows · 26.8 KB · TSV</p>
       <div class="chips"><span class="chip">scripts/build_difficulty_scorer.py (morphology axis)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/difficulty/morph_signature_freq.tsv">Download ↓</a></div>
     </article>
@@ -3385,7 +3553,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one object per DCS chapter (slug); sentences[] each carry the sandhied text + ordered tokens (form, lemma, slp1, /w card href, upos, morph, gloss). 392 tokens, 385 (98.2%) linked to a kosha card via concordance-core exact/floor tiers.</p>
-      <p class="meta">61 rows · 119.8 KB · JSON</p>
+      <p class="meta">61 rows · 149.9 KB · JSON</p>
       <div class="chips"><span class="chip">reading/ static viewer</span><span class="chip">reading-pack-difficulty (W2a scorer)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/reading/data/nala-2.json">Download ↓</a></div>
     </article>
@@ -3395,7 +3563,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one object per DCS chapter (slug); sentences[] carry sandhied text + ordered tokens (form, lemma, slp1, /w href, upos, morph, gloss). 351 tokens, 337 (96.0%) linked.</p>
-      <p class="meta">51 rows · 103.4 KB · JSON</p>
+      <p class="meta">51 rows · 130.9 KB · JSON</p>
       <div class="chips"><span class="chip">reading/ static viewer</span><span class="chip">reading-pack-difficulty (W2a scorer)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/reading/data/nala-3.json">Download ↓</a></div>
     </article>
@@ -3405,7 +3573,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one object per DCS chapter (slug); sentences[] carry sandhied text + ordered tokens (form, lemma, slp1, /w href, upos, morph, gloss). 900 tokens, 885 (98.3%) linked.</p>
-      <p class="meta">125 rows · 269.0 KB · JSON</p>
+      <p class="meta">125 rows · 333.9 KB · JSON</p>
       <div class="chips"><span class="chip">reading/ static viewer</span><span class="chip">reading-pack-difficulty (W2a scorer)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/reading/data/hitopadesa-0.json">Download ↓</a></div>
     </article>
@@ -3415,7 +3583,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one object per DCS chapter (slug); sentences[] carry sandhied text + ordered tokens (form, lemma, slp1, /w href, upos, morph, gloss). 876 tokens, 854 (97.5%) linked.</p>
-      <p class="meta">92 rows · 261.3 KB · JSON</p>
+      <p class="meta">92 rows · 325.7 KB · JSON</p>
       <div class="chips"><span class="chip">reading/ static viewer</span><span class="chip">reading-pack-difficulty (W2a scorer)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/reading/data/kiratarjuniya-1.json">Download ↓</a></div>
     </article>
@@ -3441,11 +3609,31 @@
     </article>
     <article class="card">
       <div class="card-h">
+        <h3>Generated↔attested morphology audit over `inflections` — the non-circular side (A3, H3782)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">kosha.db `inflections` (6,917,018 rows -&gt; 3,326,312 distinct form_slp1, ALL sources; 99.99% source=&#x27;cologne_mwinflect&#x27;) joined to DCS attestation on form_key() equality — the length-preserving floor tier, promoted to exact where SLP1 keys are byte-identical (no NFD+strip path, D6/1b-2). Attested side is the UNION of two DCS keys: token.form (sandhied surface, 381,413 distinct) and token.m_unsandhied (303,859 distinct) -&gt; 352,745 distinct form_keys; a paradigm generator emits unsandhied forms, so joining it against sandhied surfaces alone manufactures a fake engine-gap class. Buckets: AG 238,312 (7.16% of generated) · G¬A 3,088,000 (92.84%) · A¬G 164,236 (46.56% of 352,745 attested keys). Canonical concordance-core schema + gen_source, gen_cells, tense_caveat, attested_form, attested_via. Confidence from TIER_CONFIDENCE (exact 0.95 · floor 0.85; exact 164,030 / floor 74,282). Loci are host-independent dcs:&lt;sent_id&gt;.</p>
+      <p class="meta">238,312 rows · 27.1 MB · TSV</p>
+      <div class="chips"><span class="chip">csl-inflect give-back H185 (via morphology-giveback-candidates)</span><span class="chip">/concordance/morphology/ web viewer (H3861) — every attested/unattested mark and locus on that page is read off this TSV, and tests/test_morphology_page.py asserts the two cannot drift apart</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/morph_attest_infl_AG.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>csl-inflect give-back candidates — the defensible subset of A¬G (A3, H3782)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">Derived from morph_attest_infl_AnG.tsv by three measured subtractions from the 70,510 paradigm_gap rows: minus DCS upos=VERB (23,942 — `inflections` holds 680 verbal lemmas against 222,735 nominal, so finite verbs are scope it never claimed), minus forms attested only as a sandhied surface (40,424 — an artefact of the attested key, not the generator), minus bare stems and citation forms where form_key(token) == form_key(lemma) (556 — DCS tags bound stems and compound members as tokens). Sorted by descending corpus attestation so the give-back can be triaged by how much text each missing form would explain. Columns: attested_form, form_key, dcs_lemma, dcs_upos, target_locus, evidence_count, tense_caveat.</p>
+      <p class="meta">5,588 rows · 286.4 KB · TSV</p>
+      <div class="chips"><span class="chip">csl-inflect dual-engine give-back (H185) — queued port, never an in-pass csl-inflect edit</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/morph_giveback_candidates.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
         <h3>vidyut-prakriya derivation harness over the AG bucket (A4, W2a)</h3>
         <span class="badge pub">public</span>
       </div>
       <p class="key">For every W1b AG-bucket row (lemma_slp1 + attested_form), resolves candidate grammatical cells from kosha.db inflections (nominal: gender/gcase/number where person IS NULL; verbal: model/tense/voice/person/number where person IS NOT NULL, v_p passive borrowing gaṇa from the same root&#x27;s v_&lt;gana&gt; model per H855), derives every candidate cell with vidyut.prakriya (local library, no network — R12), and classifies the form: ok (exactly one distinct ordered-sūtra chain form_key-matches, exact 0.95 outranks floor 0.85 — TIER_CONFIDENCE, never a literal/1.0) · ambiguous (&gt;1 distinct chain matches) · engine-error (candidate cells existed, none derivable) · no-derivation (no cell exists, or cells ran but none matched). derivation_chains.tsv is the (chain_id, step_index)-&gt;(source, sutra_code, step_result) sidecar the chain_id in derivation_status.tsv points into.</p>
-      <p class="meta">401,368 rows · 25.9 MB · TSV</p>
+      <p class="meta">401,368 rows · 25.5 MB · TSV</p>
       <div class="chips"><span class="chip">A4 sūtra-&gt;corpus inversion (W2b DONE, H1390 — data/concordance/paninian_concordance.tsv)</span><span class="chip">W3a sūtra-coverage map (H1468 DONE — data/concordance/sutra_coverage_map.tsv)</span><span class="chip">data-v0.3.0 release asset</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.3.0/derivation_status.tsv">Download ↓</a></div>
     </article>
@@ -3455,7 +3643,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">Inverts W2a&#x27;s derivation_status.tsv (ok-status forms only — see notes) into one row per (sūtra, form, locus) triple: for every ok-status AG-bucket form, walks its ordered Ashtadhyayi-only sūtra chain (chain_id -&gt; derivation_chains.tsv) and emits a concordance row per chain step. Canonical concordance-core schema (anchor_type=panini-sutra, anchor_id=sutra:&lt;a.p.n&gt;, anchor_key_slp1 empty, target_locus=dcs:&lt;sent_id&gt;[_&lt;sub&gt;], source_dataset=dcs, match_method in {exact,floor}, confidence from TIER_CONFIDENCE, evidence_count=1) + form_key_slp1, dcs_text, chain_position, chain_length, chain_id, derivation_status, tense_caveat.</p>
-      <p class="meta">893,482 rows · 82.8 MB · TSV</p>
+      <p class="meta">893,482 rows · 82.0 MB · TSV</p>
       <div class="chips"><span class="chip">concordance/panini/index.html web viewer (kwic_&lt;adhyaya&gt;.js shards)</span><span class="chip">W3a sūtra-coverage map (H1468 DONE)</span><span class="chip">data-v0.3.0 release asset</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.3.0/paninian_concordance.tsv">Download ↓</a></div>
     </article>
@@ -3465,7 +3653,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one row per (reading pack, sentence, token index); joins each pack token to the three SanskritRussian PUBLIC site-tier layers — surface (token slp1 → surface_glossary), lemma (lemma slp1 → lemma_glossary), root (lemma → dcs_lemma2root → root_glossary) — emitting surface_ru/lemma_ru/root_ru + a layer_hit provenance column. 95.6% of tokens carry a lemma-layer RU gloss.</p>
-      <p class="meta">2,958 rows · 190.0 KB · TSV</p>
+      <p class="meta">2,958 rows · 187.1 KB · TSV</p>
       <div class="chips"><span class="chip">reading/data/*.json reading packs (additive token.gloss_ru)</span><span class="chip">reading/index.html Russian gloss toggle</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/ru_gloss_layer.tsv">Download ↓</a></div>
     </article>
@@ -3475,7 +3663,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one object per curated saying, ordered by difficulty ascending: num/saying_id (Indische Sprüche numbering), deva, iast, translation_de, source_attribution, difficulty (W2a-reduced 2-axis composite in [0,1]), metre + metre_method + syllables (vidyut-chandas strict vṛtta else anuṣṭubh syllable heuristic), lines[].chunks[] with per-chunk sandhi-split tokens (t), per-seam X Y → Z junction rules (j, corpus-attested, data/sandhi/corpus_sandhi.tsv), per-token SLP1 lemma (lemma_slp1, H1312 — vidyut-cheda, honest null when unresolved) and per-token gloss_ru {surface,lemma,root} triple (H1312, null where uncovered), cross-boundary rules in lines[].xj. Grading spine: data/subhashita/subhashita_difficulty.tsv (all 7,537 sayings, full score decomposition). Curation: beginner_band.tsv + CURATION_NOTES.md (criteria + full reject log, no unlogged picks).</p>
-      <p class="meta">106 rows · 533.7 KB · JSON</p>
+      <p class="meta">106 rows · 507.7 KB · JSON</p>
       <div class="chips"><span class="chip">reading/subhashita/ page (graded beginner reader, difficulty-ordered, RU-gloss toggle)</span><span class="chip">data/subhashita/subhashita_beginner_anki.apkg (Anki export of the band, GlossRu back field)</span><span class="chip">reading/RU_GLOSS_COVERAGE.md (this pack&#x27;s row, folded in alongside the 5 DCS reading packs)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/data/subhashita/subhashita_beginner_pack.json">Download ↓</a></div>
     </article>
@@ -3485,7 +3673,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">MANIFEST packs[] with pin_path + sha256; reading pins + sandhi L1-3 subsets + optional lemmas_for_srs.tsv</p>
-      <p class="meta">5 rows · 950.6 KB · JSON+TSV</p>
+      <p class="meta">5 rows · 958.6 KB · JSON+TSV</p>
       <div class="chips"><span class="chip">Systema-Sanscriticum resources/data/cohort_start_chteniya/ (H2106)</span><span class="chip">reading_pack multi-pack import (H2110)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/data/cohort_start_chteniya/MANIFEST.json">Download ↓</a></div>
     </article>
@@ -3495,7 +3683,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one row per Scherzl government relation (root/stem × case), verdict + evidence</p>
-      <p class="meta">1,168 rows · 88.5 KB · TSV</p>
+      <p class="meta">1,168 rows · 89.6 KB · TSV</p>
       <div class="chips"><span class="chip">Sanskrit parser / valence-frame stack</span><span class="chip">BuhlerLeitfaden_1923 government_lexicon (corpus-confirmation layer)</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritGrammar">In source repo ↗</a></div>
     </article>
@@ -3515,9 +3703,19 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">one row per (headword slp1, numbered PWG sense_id, attestation); columns slp1/hom/sense_id/lemma/locus/cite/conf/method/rights/source/gloss/sent. Method tiers: ls 85,472 (PWG&#x27;s own &lt;ls&gt; under the sense, conf 0.99, guaranteed-correct witness; MBh loci carry their resolved Nīlakaṇṭha-vulgate address) · locus 5 (DCS attestation verse-EQUAL to a sense&#x27;s &lt;ls&gt;, conf 0.90 — canonically-numbered Vedic texts) · locus-mbh 48 (wave-1.5: DCS Mahābhārata attestation whose parvan+adhyāya matches a sense&#x27;s &lt;ls&gt;-resolved vulgate adhyāya at ±1, conf 0.65–0.80, via the csl-atlas f8 crosswalk) · overlap 1,655 (shared proper-noun/Latin-binomial/digit gloss tokens across the DE/EN gap, conf 0.50–0.70). confidence&lt;0.60 + unassigned residue parked in sense_review_queue.tsv, never dropped. A2 acceptance: &lt;ls&gt;-locus-resolution rate 99.3% on the 500-headword pilot; MBh &lt;ls&gt;→vulgate resolution 96% (7,055/7,353).</p>
-      <p class="meta">87,092 rows · 14.6 MB · TSV</p>
+      <p class="meta">87,092 rows · 14.7 MB · TSV</p>
       <div class="chips"><span class="chip">concordance/senses/ static viewer (sense-sharded KWIC)</span><span class="chip">kosha-sense-frequency (H1453) — shared attestation→sense assignment, two witnesses</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/sense_corpus_concordance.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Cross-dictionary aligned senses, PWG · MW · Apte · ŚKDR · VCP (H3744 slice 1 + H3862 slice 2)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per MEANING GROUP, keyed (lemma_slp1, group_id); columns status/shape/method/score/witnesses/flags/failure_class + per-dictionary sense_ids and glosses for pwg/mw/apte/skd/vcp. `shape` is the five-position pwg-mw-apte-skd-vcp sense count of the row, so sense-granularity mismatch stays visible instead of being smoothed away. Aligned 3,013 of 32,399 rows (9.3%); 262 clean western 1-1-1 rows (unchanged from slice 1); 477 of the 500 pilot lemmas carry at least one aligned meaning. Unaligned senses are KEPT as rows with a failure_class, never dropped; the per-sense failure record is sense_alignment_failures.tsv (32,411 rows: no-shared-witness 17,517 · witness-too-common 6,944 · no-gloss 3,025 · cross-language-gap 1,835 · no-citation-apparatus 1,832 · outranked 1,196 · absent-dictionary 62).</p>
+      <p class="meta">32,399 rows · 6.2 MB · TSV</p>
+      <div class="chips"><span class="chip">dist/sense-align-staging/ standalone viewer (STAGED, gitignored)</span><span class="chip">app/word_page_ux.sense_alignment_block — word-page organ behind ux={&#x27;sense_align&#x27;: True}, staging only</span><span class="chip">https://gasyoun.github.io/h3744-sense-align/ before/after compare page</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/sense_alignment.tsv">Download ↓</a></div>
     </article>
     <article class="card">
       <div class="card-h">
@@ -3641,6 +3839,16 @@
     </article>
     <article class="card">
       <div class="card-h">
+        <h3>Curated per-work dating table for PWG&#x27;s cited works (Ceiling C2 phase 2)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one object per ls_source_map.json siglum; earliest/latest are years (negative = BCE), every row carries &gt;=1 {ref, claim, verified} source and a confidence in {anchored, consensus, contested, invalid}</p>
+      <p class="meta">45 rows · 40.5 KB · JSON</p>
+      <div class="chips"><span class="chip">Ceiling C2 re-windowing of pwg-sense-attestation-window (blocked on the 11-card vote)</span><span class="chip">pwg_ru cards (era badge provenance)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
         <h3>PWG per-sense attestation window (Ceiling C2 phase 1)</h3>
         <span class="badge pub">public</span>
       </div>
@@ -3668,6 +3876,26 @@
       <p class="meta">593,587 rows · 484.7 MB · PACK.ZIP (168 ENTRIES: TSV/JSONL/TXT/MD/CFF/LICENSE-DATA + MANIFEST.JSON SHA256 PER FILE) + 4 LOOSE ROOT DOCS ON THE RECORD</p>
       <div class="chips"><span class="chip">Samudra Manthanam web/corpus_builder/wisdomlib/content/ (63 SA slugs, 582,998 txt rows, idempotent ingest verified)</span><span class="chip">SA-RU drafting pivot / lexicography reference per SA-EN placement ruling</span></div>
       <div class="card-f"><a class="dl ghost" href="https://www.wisdomlib.org/sanskrit">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>kosha combined mastery schedule (five drill families, H3742)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per drill item across sandhi/samasa/morphology/vocab/thematic-vocab: {family, id, ease, stability_days, due}; ease is the shared 0..1 (higher=easier) mastery weight from each family&#x27;s drill_weights.json mastery block (data/MASTERY_WEIGHTS_SPEC.md)</p>
+      <p class="meta">35,517 rows · 5.2 MB · JSON</p>
+      <div class="chips"><span class="chip">SanskritKaraoke reader surface (planned)</span><span class="chip">SanskritGrammar reader surface (planned)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/kosha">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Cyrillic proper-noun -&gt; SLP1 validated lookup table (H3985, SL GAPS §6)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per Cyrillic proper-noun form: {cyrillic, slp1, iast_witness, validation, onomasticon, witness_count, seeds}; every slp1 key is transliterated from an attested iast_witness (rule_derived_keys: 0 -- a row without an IAST witness cannot exist), validation tier = onomasticon (446, csl-orig INM/PUI &lt;k1&gt;) | lexicon (50) | iast-witness-only (38)</p>
+      <p class="meta">534 rows · 90.3 KB · TSV</p>
+      <div class="chips"><span class="chip">RussianTranslation pwg_ru / mw_ru name handling</span><span class="chip">SamudraManthanam name glossaries (planned)</span><span class="chip">csl-atlas (planned)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
     </article>
     </div>
     <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>
@@ -3729,7 +3957,7 @@
         <span class="badge res">restricted</span>
       </div>
       <p class="key">580,552 corpus lines · 152 sources, verse-aligned (FTS5 index included)</p>
-      <p class="meta">580,552 rows · 624.8 MB · SQLITE</p>
+      <p class="meta">580,552 rows · 603.6 MB · SQLITE</p>
       <div class="chips"><span class="chip">pwg_ru gate dicts</span><span class="chip">mw_ru validation</span><span class="chip">corpus-lexicon upstream</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
@@ -3749,7 +3977,7 @@
         <span class="badge res">restricted</span>
       </div>
       <p class="key">heritage_dico_gloss (mw_key1 → Heritage anchor + FR gloss), heritage_forms_oracle_disagreements (form → Heritage/kosha lemma disagreement class), heritage_only_forms (form → lemma, Heritage-only coverage)</p>
-      <p class="meta">1,037,239 rows · 457.9 MB · TSV</p>
+      <p class="meta">1,037,239 rows · 487.8 MB · TSV</p>
       <div class="chips"><span class="chip">kosha ingest (H111, kosha.db forms table: heritage_only_forms.tsv -&gt; 951,991 source=&#x27;heritage&#x27; rows, 928,262 distinct forms)</span><span class="chip">kosha default-off enforcement (H696, R7 ruling 10-07-2026: heritage witnesses opt-in only via ?heritage=1; excluded from the static tier)</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
@@ -3811,6 +4039,16 @@
       <p class="key">one row per headword slp1: {stratum(tm|control), originals:{likh,mw,apte,mac,pwg} html fragments, mt:{mw_ru,apte_ru,pwg_ru} html fragments, provenance sha256 per fetched part}; length-preserving SLP1 keys</p>
       <p class="meta">304 rows · 49.3 MB · JSONL (PARSED) + HTML (RAW)</p>
       <div class="chips"><span class="chip">H3456 blinded pwg_ru-vs-akshara-MT benchmark</span><span class="chip">future SanskritRussian mw_ru/apte_ru comparison</span></div>
+      <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>akshara.ru MT benchmark FULL corpus (H3597)</h3>
+        <span class="badge res">restricted</span>
+      </div>
+      <p class="key">one row per headword slp1 (site sitemap census, 51,663 heads): {originals:{likh,mw,apte,mac,pwg} html fragments, mt:{mw_ru,apte_ru,pwg_ru} html fragments, provenance sha256 per fetched part}; length-preserving SLP1 keys</p>
+      <p class="meta">51,663 rows · 8.1 GB · JSONL (PARSED) + HTML (RAW)</p>
+      <div class="chips"><span class="chip">H3456 blinded pwg_ru-vs-akshara-MT benchmark (full-scale extension)</span><span class="chip">future SanskritRussian mw_ru/apte_ru comparison</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
     </div>
