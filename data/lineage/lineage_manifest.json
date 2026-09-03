@@ -1,0 +1,43 @@
+{
+ "pairs": {
+  "SKD_VCP": {
+   "A": 35525,
+   "B": 44172,
+   "inter": 20084,
+   "jaccard": 0.3369,
+   "cont_A_in_B": 0.5653,
+   "cont_B_in_A": 0.4547
+  },
+  "SKD_AMAR": {
+   "A": 35525,
+   "B": 11057,
+   "inter": 3635,
+   "jaccard": 0.0846,
+   "cont_A_in_B": 0.1023,
+   "cont_B_in_A": 0.3288
+  }
+ },
+ "definition_similarity": {
+  "n": 3000,
+  "median": 0.0588,
+  "mean": 0.0716,
+  "ge_0.5": 0
+ },
+ "quotation_census": {
+  "medinikosa": 4347,
+  "amarakosa": 30,
+  "vaijayantI": 0,
+  "SAzvata": 0,
+  "kSirasvAmin": 0
+ },
+ "manifest_sha16": "49f251bfa1f7b3ce",
+ "sizes": {
+  "skd_k": 35525,
+  "vcp_k": 44172,
+  "amar_syns": 11057,
+  "skd_entries": 42531,
+  "vcp_entries": 50135,
+  "amar_groups": 5590
+ },
+ "matching_rule": "k1.lower() minus trailing H; AMAR syns minus gender suffixes; token-jaccard defs, cap 3000 deterministic"
+}
