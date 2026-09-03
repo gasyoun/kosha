@@ -20,13 +20,21 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from app.main import app  # noqa: E402
 import build_static_cache as bsc  # noqa: E402
+from kosha.settings import get_settings  # noqa: E402
 
 client = TestClient(app)
 
 
+def _core_db():
+    # Resolve through the typed settings, not the generator's CLI default:
+    # one source of truth for where the core DB lives (KOSHA_CORE_DB_PATH
+    # included), matching tests/conftest.py::_core_db_present.
+    return get_settings().core_db
+
+
 @pytest.mark.parametrize("slp1", ["ca", "iti", "BU", "agni", "indra"])
 def test_card_matches_live_api(slp1):
-    con = bsc.open_db(bsc.DEFAULT_DB)
+    con = bsc.open_db(_core_db())
     try:
         card = bsc.lemma_card(con, slp1, bsc.data_version(con))
     finally:
@@ -57,7 +65,7 @@ def test_card_token_roundtrip_and_case():
 
 
 def test_generator_writes_ranked_shards(tmp_path):
-    con = bsc.open_db(bsc.DEFAULT_DB)
+    con = bsc.open_db(_core_db())
     try:
         total = bsc.build_cards(con, tmp_path, limit=10)
     finally:
@@ -72,7 +80,7 @@ def test_generator_writes_ranked_shards(tmp_path):
 
 
 def test_index_has_all_headwords(tmp_path):
-    con = bsc.open_db(bsc.DEFAULT_DB)
+    con = bsc.open_db(_core_db())
     try:
         bsc.build_index(con, tmp_path)
     finally:
