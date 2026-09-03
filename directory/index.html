@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="99 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="100 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="99 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="100 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -349,6 +349,34 @@
         "Sanskrit",
         "computational linguistics",
         "dcs-nominal-paradigm-grid"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "json",
+        "contentUrl": "https://github.com/gasyoun/VisualDCS"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS nominal pooled-class split — long-ī and -ant/-at, on an external lexical signal",
+      "description": "H3984 (03-09-2026, Opus 5 claude-opus-5), closing the NOUN half of SanskritLexicography GAPS §14; epistemic residue in FINDINGS §630, FEATURES_INDEX E51. An ADDITIVE SIDE-CAR to dcs-nominal-paradigm-grid: paradigm_nominal.json's own 14 buckets are unchanged and every G2 total is asserted unmoved (reconciles: true, six checks) — a moved total is a build failure, not a diff to accept. Two signals, both EXTERNAL to the corpus, because H1472 refused to guess a character rule: (A) the long-ī bucket splits on IAST vowel-nucleus count of the NFC citation form (ai/au count once) — 17 lemma_ids / 6,373 tokens monosyllabic (śrī, strī, dhī) vs 4,477 / 58,295 polysyllabic (devī, nadī); no dictionary and no segmenter needed, a Sanskrit syllable has exactly one nucleus. (B) the -ant/-at bucket splits on MW + PWG csl-json headword ENTRY-ID SETS, not headword presence — 191 lemma_ids / 8,851 tokens one lexeme two spellings, 0 two headwords, 51 / 2,384 at_only, 1 / 1 ant_only, 36 / 70 with no witness in either lexicon and therefore LEFT POOLED. Reach 243 of 279 = 87.1%. TRAP: a presence-only test ('is each spelling in the dictionary?') calls 191 lemmas two headwords and inverts the pair GAPS §14 pins by name — PWG files भगवत् and भगवन्त् under the identical ids 53806,80057. TRAP: the universe is Sangram G2's upos='NOUN' only; the ii pool is 99.0% NOUN by token mass but the ant pool only 23.5% (36,768 ADJ tokens), and that surplus has no per-lemma inventory outside the 921 MB pinned dcs_full.sqlite — it is declared UNREACHED, never estimated. Source dictionaries are sanskrit-lexicon/csl-json (mw.json 195,313 headwords, pwg.json 108,952), public-domain lexica; DCS is CC BY 4.0 and this derivative ships BY-SA with the public tier.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dcs-nominal-class-split"
       ],
       "distribution": {
         "@type": "DataDownload",
@@ -2889,7 +2917,7 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>99</b><span>public datasets</span></div>
+      <div class="tally"><b>100</b><span>public datasets</span></div>
       <div class="tally"><b>15</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
@@ -3015,6 +3043,16 @@
       <p class="key">declension class (14, lemma-final heuristic) × token gender (Masc|Fem|Neut|?) × 24 case.number cells; each cell carries token count, distinct lemma_ids, segmentable count, top-8 attested unsandhied forms, top-6 surface endings, up to 3 corpus examples (sentence + text + ref)</p>
       <p class="meta">14 rows · 619.6 KB · JSON</p>
       <div class="chips"><span class="chip">VisualDCS sanskrit_nominal_dashboard.html</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS nominal pooled-class split — long-ī and -ant/-at, on an external lexical signal</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">per-lemma verdicts keyed by DCS lemma_id: the 279 -ant/-at pool members each carry the MW and PWG per-dictionary verdict plus the combined one (one_lexeme_two_spellings | two_headwords | at_only | ant_only | unresolved); alongside them the two long-ī subclass aggregates (ii_monosyllabic / ii_polysyllabic), 6 mergedPairs, 26 variantCitations, 36 unresolved, the pinnedPair record and the 6-check G2 reconciliation</p>
+      <p class="meta">279 rows · 119.2 KB · JSON</p>
+      
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
     <article class="card">
