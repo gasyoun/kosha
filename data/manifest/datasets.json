@@ -2398,7 +2398,7 @@
       "id": "cyrillic-proper-noun-slp1",
       "title": "Cyrillic proper-noun -> SLP1 validated lookup table (H3985, SL GAPS §6)",
       "tier": "public",
-      "in_release": "1.144.146",
+      "in_release": "not-applicable",
       "format": "tsv",
       "rows": 534,
       "size_bytes": 92442,
