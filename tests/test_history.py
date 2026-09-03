@@ -14,12 +14,27 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "app"))
 import history_db  # noqa: E402
 from app.main import app  # noqa: E402
+from kosha.feature_gates import mount_history  # noqa: E402
+from kosha.settings import get_settings  # noqa: E402
 
 
 @pytest.fixture(autouse=True)
-def isolated_history_db(tmp_path, monkeypatch):
+def history_surface(tmp_path, monkeypatch):
+    """Exercise the history/auth/stats surface the documented way.
+
+    D10 mounts these routers only when `KOSHA_HISTORY_ENABLED` is truthy, and
+    `/api/v1/search` consults the same gate before logging — so the surface
+    needs both the runtime mount (`mount_history`, because `app/main.py` built
+    its FastAPI app at import time) and the flag visible through
+    `get_settings()`. The per-test settings-cache reset in `conftest` restores
+    the default (off) state afterwards; `mount_history` restores the exact
+    route list, including the cached OpenAPI schema.
+    """
     monkeypatch.setattr(history_db, "HISTORY_DB_PATH", tmp_path / "test_history.db")
-    yield
+    monkeypatch.setenv("KOSHA_HISTORY_ENABLED", "1")
+    get_settings(refresh=True)
+    with mount_history(app):
+        yield
 
 
 @pytest.fixture()
