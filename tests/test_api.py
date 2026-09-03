@@ -35,14 +35,14 @@ def test_lemma_found():
     assert r.status_code == 200
     body = r.json()
     assert len(body["results"]) > 0
-    assert all(e["dict"] in ("mw", "pwg", "ap90") for e in body["results"])
-    assert all(e["sense_ids"] for e in body["results"])
+    assert all(e["kosha"]["dict"] in ("mw", "pwg", "ap90") for e in body["results"])
+    assert all(e["kosha"]["sense_ids"] for e in body["results"])
 
 
 def test_lemma_not_found():
     r = client.get("/api/v1/lemma/zzznonexistentzzz")
     assert r.status_code == 404
-    assert r.json()["detail"]["error"]["code"] == "lemma_not_found"
+    assert r.json()["error"]["code"] == "lemma_not_found"
 
 
 def test_lemma_encoding_auto_detect():
@@ -93,7 +93,7 @@ def test_search_prefix_case_significant_excludes_kha():
 
 def test_sense_roundtrip_from_lemma():
     lemma_r = client.get("/api/v1/lemma/agni")
-    sense_id = lemma_r.json()["results"][0]["sense_ids"][0]
+    sense_id = lemma_r.json()["results"][0]["kosha"]["sense_ids"][0]
     r = client.get(f"/api/v1/sense/{sense_id}")
     assert r.status_code == 200
     result = r.json()["results"][0]
@@ -104,7 +104,7 @@ def test_sense_roundtrip_from_lemma():
 def test_sense_not_found():
     r = client.get("/api/v1/sense/mw.999999999.1@0.1.0-dev")
     assert r.status_code == 404
-    assert r.json()["detail"]["error"]["code"] == "sense_not_found"
+    assert r.json()["error"]["code"] == "sense_not_found"
 
 
 def test_sense_bad_id_format():
