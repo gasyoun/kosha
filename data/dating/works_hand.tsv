@@ -1,0 +1,89 @@
+kind	work_key	display	match_locus_folds	match_abbrevs	dm_title_folds	era	date_range	via	reason	flags	notes
+canon_dm	ramayana	Rāmāyaṇa	ramayana		ramayana	epic-sutra	-500..299	dharmamitra	DM family mode 8/8 per-kāṇḍa chunks Epic & Sutra; corroborates the seed's DCS call (Rām -500..299)		
+canon_dm	mahabharata	Mahābhārata	mahabharata		mahabharata	epic-sutra	-500..500	dharmamitra	DM family mode 14/18 parvan chunks Epic & Sutra; composite c. 4th c. BCE - 4th c. CE; corroborates the seed's DCS call		DM parvan strata vary (Śānti-/Anuśāsana-/Mahāprasthānika-/Svargāroha- labelled Classical, later didactic strata) — recorded, not averaged; work-level bucket follows the composite
+canon_dm	markandeyapurana	Mārkaṇḍeya-Purāṇa	markandeyapurana		markandeya purana	classical	3rd..6th c. CE	dharmamitra	DM anchor: core c. 3rd-6th c. CE, Devīmāhātmya layer c. 5th-6th c.; corroborates the seed		
+canon_dm	amarakosa	Amarakoṣa	amarakosa		namalinganusasana	classical	4th..6th c. CE	dharmamitra	DM anchors under alias title Nāmaliṅgānuśāsana [Amarakoṣa]: Classical c. 4th-6th c. CE; corroborates the seed		H4016 conflict note kept: DM classical vs DCS AKośa 500..700
+canon_dm	atharvaveda	Atharvaveda-Saṃhitā	atharvaveda		atharvaveda	vedic	-1200..-900	dharmamitra	DM family mode 2/2 chunks Vedic; corroborates the seed's DCS call (AVŚ -1200..-1000)		
+canon_dm	sisupalavadha	Śiśupālavadha	sisupalavadha		sisupalavadha	early-medieval	late 7th..early 8th c. CE	dharmamitra	DM anchor: c. late 7th-early 8th c. CE		net-new (no seed call)
+canon_dm	kumarasambhava	Kumārasaṃbhava	kumarasambhava		kumarasambhava	classical	4th..5th c. CE	dharmamitra	DM anchor: c. 4th-5th c. CE (Gupta); corroborates the seed's DCS call (350..450)		
+canon_dm	hitopadesa	Hitopadeśa	hitopadesa		hitopadesa	early-medieval	9th..10th c. CE	dharmamitra	DM anchor: core c. 9th-10th c. CE; corroborates the seed		
+canon_dm	bhattikavya	Bhaṭṭikāvya	bhattikavya		ravanavadha	classical	c. 600 CE	dharmamitra	DM anchor under alias title Rāvaṇavadha [Bhaṭṭikāvya]: c. 6th-7th c. CE; corroborates the seed		
+canon_dm	meghaduta	Meghadūta	meghaduta		meghaduta	classical	4th..5th c. CE	dharmamitra	DM family mode 3/3 chunks Classical; corroborates the seed's DCS call (350..450)		
+canon_dm	sahityadarpana	Sāhityadarpaṇa	sahityadarpana		sahityadarpana	late-medieval	14th c. CE	dharmamitra	DM family mode 12/12 chunks Late Medieval (before c. 1384); corroborates the seed		
+canon_dm	rgveda	Ṛgveda	rgveda		rgveda	vedic	-1500..-1200	dharmamitra	DM family mode 20/20 maṇḍala chunks Vedic; corroborates the seed's DCS call		
+canon_dm	raghuvamsa	Raghuvaṃśa	raghuvamsa		raghuvamsa	classical	4th..5th c. CE	dharmamitra	DM family mode 3/3 chunks Classical; corroborates the seed		
+canon_dm	satapathabrahmana	Śatapatha-Brāhmaṇa	satapathabrahmana		satapatha brahmana	vedic	-800..-600	dharmamitra	DM family mode 12/12 chunks Vedic (late Vedic prose); corroborates the seed's DCS call		
+canon_dm	kiratarjuniya	Kirātārjunīya	kiratarjuniya		kiratarjuniya	classical	c. 550..600 CE	dharmamitra	DM anchor: Bhāravi fl. c. 550-600 CE; corroborates the seed's DCS call (500..650)		
+canon_dm	dasakumaracarita	Daśakumāracarita	dasakumaracarita		dasakumaracarita	classical	late 7th..early 8th c. CE	dharmamitra	DM anchor; corroborates the seed		
+canon_dm	gitagovinda	Gītagovinda	gitagovinda		gitagovinda	early-medieval	c. 1170..1200	dharmamitra	DM anchor: late 12th c. CE; corroborates the seed's DCS call (1150..1250)		
+canon_dm	pancatantra	Pañcatantra	pancatantra		pancatantra	classical	c. 300 BCE..300 CE	dharmamitra	DM anchor: commonly placed c. 300 CE (Hertel point); corroborates the seed		
+canon_dm	brhatsamhita	Bṛhatsaṃhitā	brhatsamhita		brhatsamhita	classical	c. 550 CE	dharmamitra	DM anchor: 6th c. CE (c. 550); corroborates the seed		DCS trap recorded (H3673): the DCS RHT 900..1000 row is NOT this work — never joined
+canon_dm	bhagavatapurana	Bhāgavata-Purāṇa	bhagavatapurana		bhagavata purana	early-medieval	9th..10th c. CE	dharmamitra	DM family mode 13/13 skandha chunks Early Medieval (whole work; disputed); corroborates the seed's DCS call (500..1000)		
+canon_dm	kathasaritsagara	Kathāsaritsāgara	kathasaritsagara		kathasaritsagara	early-medieval	c. 1063..1081	dharmamitra	DM family mode 2/3 chunks Early Medieval (Somadeva c. 1063-1081); corroborates the seed		one DM chunk labelled Late Medieval (continuation kathā) — minority stratum, noted
+canon_dm	kavyaprakasa	Kāvyaprakāśa	kavyaprakasa		kavyaprakasa	early-medieval	late 11th..early 12th c. CE	dharmamitra	DM family mode 3/3 chunks Early Medieval (Mammaṭa)		net-new (no seed call)
+canon_dm	bhavaprakasa	Bhāvaprakāśa	bhavaprakasa		bhavaprakasa	late-medieval	16th c. CE	dharmamitra	DM anchor: 16th c. CE (c. 1550-1600; Bhāvamiśra)		net-new (no seed call)
+hand	uttararamacarita	Uttararāmacarita	uttararamacarita	UTTARAR.		classical	early 8th c. CE	hand:class	Bhavabhūti, early 8th c. (standard author dating; same anchor class as the probe's Kālidāsa play calls)		net-new; seed had this abbrev on unresolved loci
+hand	malatimadhava	Mālatīmādhava	malatimadhava	MĀLATĪM.		classical	early 8th c. CE	hand:class	Bhavabhūti, early 8th c. (standard author dating)		net-new; seed had this abbrev on unresolved loci
+hand	kulluka	Kullūka Bhaṭṭa (commentary apparatus)	kulluka	KULL		late-medieval	15th c.	hand:class	Kullūka Bhaṭṭa's Manu-commentary, 15th c.; a commentator's date attests the SENSE's use in his commentary, not the commented text		net-new canon text (no seed call)
+hand	sayana	Sāyaṇa (commentary apparatus)	sayana	SĀY		late-medieval	d. 1387	hand:class	Sāyaṇa (d. 1387), Vedic commentaries; commentator-date semantics as for Kullūka		net-new canon text (no seed call)
+hand	mallinatha	Mallinātha Sūri (commentary apparatus)	mallinatha	MALLIN		late-medieval	14th..15th c.	hand:class	Mallinātha's kāvya commentaries, 14th-15th c.		net-new canon text (no seed call)
+hand	dasarupa	Daśarūpa	dasarupa	DAŚARŪPA DAŚAR.		early-medieval	c. 10th c.	hand:class	Dhanañjaya's Daśarūpaka, c. 10th c. (standard dating)		net-new canon text (no seed call)
+hand	bhaminivilasa	Bhāminīvilāsa	bhaminivilasa	BHĀMINĪVILĀSA BHĀMINĪV.		late-medieval	17th c.	hand:class	Jagannātha's Bhāminīvilāsa, 17th c.		net-new canon text (no seed call)
+hand	bhasapariccheda	Bhāṣāpariccheda	bhasapariccheda	BHĀṢĀPARICCHEDA BHĀṢĀPAR.		late-medieval	17th c.	hand:class	Viśvanātha Pañcānana's Bhāṣāpariccheda, 17th c.		net-new canon text (no seed call)
+hand	dayabhaga	Dāyabhāga	dayabhaga	DĀYABHĀGA DĀYABH.		early-medieval	c. 12th c.	hand:class	Jimūtavāhana's Dāyabhāga, c. 12th c. (standard dating)		net-new canon text (no seed call)
+hand	naishadhacarita	Naiṣadhacarita	naishadhacarita	NAIṢADHACARITA NAIṢADH. NAIṢ.		early-medieval	c. 12th c.	hand:class	Śrīharṣa's Naiṣadhīyacarita, c. 12th c. (standard dating)		net-new canon text (no seed call)
+hand	sabdakalpadruma	Śabdakalpadruma	sabdakalpadruma	ŚKDR		late-medieval	19th c. CE (terminus ceiling)	hand:class	Rādhākānta Deva's kośa, 19th-c. compile; MG ruling 03-09-2026 (H4019 addendum §1): PWG citations give only a recent terminus — dated late-medieval CEILING with low attestation value	terminus-ceiling,low_value	same discount class as anthologies (H4019 addendum)
+hand	srutabodha	Śrutabodha	srutabodha	ŚRUTABODHA ŚRUT.		UNDATEABLE		hand:disputed	attributed to Kālidāsa; dating genuinely unknown — never forced (H4016 discipline); the PWG loci are journal editions, which would not date the text either		net-new canon text (no seed call)
+hand	mrcchakatika	Mṛcchakaṭikā	mrcchakatika	MṚCCHAKAṬIKĀ MṚCCH.		UNDATEABLE		hand:disputed	Śūdraka: dating contested (2nd c. BCE - 5th c. CE proposals) — never forced		net-new canon text (no seed call)
+hand	mudraraksasa	Mudrārākṣasa	mudraraksasa	MUDRĀRĀKṢASA MUDRĀR.		UNDATEABLE		hand:disputed	Viśākhadatta: dating contested (c. 4th-8th c. proposals) — never forced		net-new canon text (no seed call)
+hand	sarvadarsanasamgraha	Sarvadarśanasaṃgraha		SARVADARŚANAS.		late-medieval	c. 14th c.	hand:class	Mādhava-Vidyāraṇya's doxography, c. 14th c. (standard dating)		binds the abbrev: PWG loci for it are unresolved (? [Cologne Addition])
+hand	vopadeva	Vopadeva's grammar (Mugdhabodha)	vopadeva s grammatik	VOP. VOP		early-medieval	c. mid-13th c.	hand:class	Vopadeva's Mugdhabodha, c. mid-13th c. — before the 1300 early/late-medieval boundary used throughout this layer		seed left no-rule; extended
+hand	rajanighantu	Rājanighaṇṭu	rajanirghanta	RĀJAN RĀJAN.		UNDATEABLE		hand:disputed	medieval nighaṇṭu; dating uncertain (13th-15th c. proposals) — never forced		seed left no-rule
+hand	suryasiddhanta	Sūryasiddhānta	suryasiddhanta	SŪRYAS. SŪRYASIDDHĀNTA		early-medieval	extant recension c. 4th..9th c.	dharmamitra	DM anchor: extant recension c. 4th-9th c. CE; older core disputed	recension-terminus	the extant recension is what PWG cites
+hand	nirukta	Nirukta (Yāska) with the Nighaṇṭus	yaska s nirukta sammt den nighantava s h	NIR. NIR		epic-sutra	5th..3rd c. BCE	hand:class	Yāska's Nirukta (vedāṅga) with the Nighaṇṭus; standard dating 5th-3rd c. BCE — post-Vedic, pre-classical bucket		seed left no-rule (unresolved locus 'das')
+hand	rgveda-pratisakhya	Ṛgveda-Prātiśākhya	pratisakhya zun rgveda	ṚV. PRĀT. ṚV. PRĀTIŚĀKH.		epic-sutra	late Vedic / sūtra transition	hand:class	prātiśākhya genre (vedāṅga), late-Vedic/sūtra transition; standard dating within the sūtra period		seed left no-rule
+hand	katyayana-srautasutra	Kātyāyana-Śrautasūtra	katyayana s srautasutrani	KĀTY. ŚR. KĀTY. ŚRAUT.		epic-sutra	c. 4th..3rd c. BCE	hand:class	śrautasūtra genre; standard dating c. 4th-3rd c. BCE (same genre anchor as the seed's ŚĀṄKH. ŚR. call)		seed left no-rule
+hand	nalopakhyana	Nalopākhyāna	nalopakhyana in bohtlingk s chrestomathi			epic-sutra	epic (MBh stratum)	hand:class	Nala episode of the Mahābhārata; PWG cites Böhtlingk's Chrestomathie — text date, not edition date (same pattern as the seed's HARIVAṂŚA im 4ten Bande des MBH call)		net-new; cited via a modern chrestomathy
+hand	vaikhanasadharmasutra	Vaikhānasadharmasūtra	vaikhanasadharmasutra	DCS		UNDATEABLE		hand:disputed	Vaikhānasa-dharmasūtra: dating spread c. 300 BCE - 700 CE — never forced		the odd 'DCS' abbreviation rows in the concordance are this text
+hand	parskaragrhyasutra	Pāraskara-Gṛhyasūtra	parskara s grhyasutrani	PĀR. GṚHY.		epic-sutra	sūtra period	hand:class	gṛhyasūtra genre; standard dating within the sūtra period (same genre anchor as the seed's ĀŚV. GṚHY. call)		seed left no-rule; genre-secure, so extended
+hand	oxford-catalogue	Aufrecht's Oxford catalogue (modern reference)	verz d oxf h	VERZ. D. OXF. H		UNDATEABLE		modern-ref	modern catalogue apparatus (Aufrecht's catalogus), not a citable work stratum		binds the abbrev: PWG loci for it are unresolved
+note	manusmrti	Manusmṛti									seed pins epic-sutra via DCS (100..300); DM carries no Manusmṛti row — nothing to add
+note	bhagavadgita	Bhagavadgītā									seed pins epic-sutra via DM; DM chunks are mixed (12 Classical / 6 Epic & Sutra / 3 Early Medieval — chapter-level strata) — recorded, seed tier wins
+note	harivamsa	Harivaṃśa									seed pins epic-sutra via DM; DM chunks split 1 Epic & Sutra / 1 Classical — Harivaṃśa straddles the epic/classical boundary; seed tier wins
+note	susruta	Suśruta-Saṃhitā									seed treats UNDATEABLE as layered (DM classical vs DCS -100..500) — conflict kept, never averaged
+note	rajatarangini	Rājataraṅgiṇī									seed pins early-medieval via DM with the recorded trap: the DM row is labelled by the Jonarāja continuation era (15th c.) while the bucket holds for Kalhaṇa's original (12th c. CE = early-medieval either way)
+note	medinikosa	Medinīkoṣa									seed treats UNDATEABLE (hand:disputed) — kośa dating genuinely contested
+note	kamandakiya-nitisara	Kāmandakīya-Nītisāra									seed treats UNDATEABLE (hand:disputed) — dating contested
+note	taittiriyopanisad	Taittirīyopaniṣad (unresolved loci)									seed: locus strings unresolved in the concordance (? [Cologne Addition]) — a resolution gap, not a dating gap
+note	trikandasesa	Trikāṇḍaśeṣa									seed pins classical via DM (Hemacandra's supplement to Amara, dated with the Amara cluster); DM carries no separate row
+note	kavyadarsa	Kāvyādarśa									seed treats UNDATEABLE: DM itself splits the work across Classical/Early Medieval chunks — a boundary case, never forced
+note	sakuntala	Śākuntala									seed pins classical via hand:class (Kālidāsa); DM carries no dedicated row
+note	malavikagnimitra	Mālavikāgnimitra									seed pins classical via hand:class (Kālidāsa)
+note	vikramorvasi	Vikramorvaśī									seed pins classical via hand:class (Kālidāsa)
+note	prabodhacandrodaya	Prabodhacandrodaya									seed pins early-medieval via hand:class (Kṛṣṇamiśra, c. 11th c.)
+note	halayudha	Halāyudha									seed pins early-medieval via hand:class (Halāyudha's kośa, c. 10th-11th c.)
+note	hemacandra-kosas	Hemacandra's kośas (Abhidhānacintāmaṇi, Anekārthasaṃgraha)									seed pins early-medieval via hand:class (Hemacandra, 12th c.)
+note	vetala-suka-in-lassen	Vetālapañcaviṃśati / Śukasaptati in Lassen's Anthologie									seed treats UNDATEABLE (hand:recension) — recension-dependent which text version PWG cites
+note	dhurtasamagama	Dhūrtasamāgama									seed treats UNDATEABLE (hand:disputed)
+note	nrsimhatapaniya	Nṛsiṃhatāpanīyopaniṣad									seed treats UNDATEABLE (hand:disputed) — late Upaniṣad, boundary
+note	ratnamala	Ratnamālā (nighaṇṭu)									seed treats UNDATEABLE (hand:disputed) — with the recorded DM proxy trap: DM hits for ratnavali/ratnamala are a DIFFERENT work (Buddhist Ratnāvalī)
+hand	colebrooke-essays	Colebrooke's Miscellaneous Essays	colebrooke s miscellaneous essays			UNDATEABLE		modern-ref	Colebrooke's collected essays — modern scholarship apparatus, not a work stratum		
+hand	latyayana-srautasutra	Lāṭyāyana-Śrautasūtra	latyayana s sutra zum sv			epic-sutra	sūtra period	hand:class	śrautasūtra genre (on the Sāmaveda); standard dating within the sūtra period		same genre anchor as the seed's ŚĀṄKH. ŚR. call
+hand	weber-verzeichnis	Weber's Verzeichniss (Berlin catalogue)	weber s verzeichniss der berliner sanskr			UNDATEABLE		modern-ref	Weber's catalogue of Berlin MSS — modern reference apparatus		
+hand	vidusaka-geschichte	Böhtlingk, Geschichte des Vidūṣaka	geschichte des vidusaka in bohtlingk s c			UNDATEABLE		modern-ref	Böhtlingk's modern monograph on the Vidūṣaka — scholarship, not a citable text stratum		
+hand	asvalayana-srautasutra	Āśvalāyana-Śrautasūtra	asvalayana s srautasutrani in 12 adhyaya			epic-sutra	sūtra period	hand:class	śrautasūtra genre; standard dating within the sūtra period (same genre anchor as the seed's ŚĀṄKH. ŚR. call)		
+hand	pancavimsabrahmana	Pañcaviṃśa-Brāhmaṇa (Tāṇḍya)	pancavimsabrahmana			vedic	late-Vedic brāhmaṇa	hand:class	brāhmaṇa genre — vedic by definition (Tāṇḍya-mahābrāhmaṇa, one of the later brāhmaṇas)		
+hand	wilson-wordlist	Wilson's dictionary (Gildemeister Bibl.)	wilson s worterbuch gild bibl			UNDATEABLE		modern-ref	H. H. Wilson's 19th-c. Sanskrit-English dictionary — modern reference, only a recent terminus	terminus-ceiling,low_value	
+hand	bhartrhari	Bhartṛhari (Vākyapadīya)	bhartrhari	BHARTṚHARI BHARTṚ		classical	c. 5th..6th c. CE	hand:class	Bhartṛhari's Vākyapadīya, c. 5th-6th c. CE (standard core attribution; bucket classical across the 5th-7th c. spread)		
+hand	benfey-chrestomathie	Benfey's Chrestomathie	benfey chrestomathie aus sanskritwerken			UNDATEABLE		modern-ref	Theodor Benfey's 19th-c. chrestomathy — modern edition apparatus		
+hand	samkhyakarika	Sāṃkhyakārikā	samkhyakarika			classical	c. 4th..6th c. CE	hand:class	Īśvarakṛṣṇa's Sāṃkhyakārikā; standard dating c. 4th-6th c. CE — bucket classical		
+hand	vajasaneyi-pratisakhya	Vājasaneyi-Prātiśākhya	pratisakhya zur vajasaneyisamhita			epic-sutra	late Vedic / sūtra transition	hand:class	prātiśākhya genre (vedāṅga); same anchor as Ṛgveda-Prātiśākhya		
+hand	rtusamhara	Ṛtusaṃhāra	rtusamhara			UNDATEABLE		hand:disputed	attributed to Kālidāsa; authorship and dating both contested — never forced		
+hand	kapila-samkhyasutra	Sāṃkhyasūtra (attributed Kapila)	kapila the aphorisms of the sankhya phi			UNDATEABLE		hand:disputed	attributed to Kapila; dating extremely contested (c. 350-1400 CE proposals) — never forced		
+hand	haravali	Hārāvalī	haravali			UNDATEABLE		hand:disputed	kośa; dating uncertain — never forced		
+hand	gobhila-grhyasutra	Gobhila-Gṛhyasūtra	gobhila s grhyasutra			epic-sutra	sūtra period	hand:class	gṛhyasūtra genre; standard dating within the sūtra period		
+hand	atharvana-pratisakhya	Atharvaveda-Prātiśākhya	pratisakhya zum atharvaveda			epic-sutra	late Vedic / sūtra transition	hand:class	prātiśākhya genre (vedāṅga)		
+hand	vaijayanti	Vaijayantī (kośa)	vaijayanti			UNDATEABLE		hand:disputed	kośa attributed to Amaracandra; dating uncertain — never forced		
+hand	lalitavistara	Lalitavistara (Foucaux's ed.)	rgya tch er rol pa lalitavistara ou de			UNDATEABLE		hand:recension	PWG cites Foucaux's French rendering of the late Nepalese recension; the core text is far earlier but recension-dependent — never forced	recension-terminus	
+hand	sabdaratnavali	Śabdaratnāvalī	sabdaratnavali			UNDATEABLE		hand:disputed	kośa; dating uncertain — never forced		
+hand	brhadaranyakopanisad	Bṛhadāraṇyakopaniṣad	brhadaranyakopanisad			vedic	-699..-499	dcs	late-Vedic Upaniṣad; DCS date table BĀU -699..-499 (the pin both probes used for Chānd./Bṛh. Āraṇyaka strata)		

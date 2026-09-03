@@ -316,6 +316,13 @@ def _entry_html(entry, ux=None):
         # sibling checkouts it reads are absent.
         from ls_hydrate import hydrate_pwg_ls
         rendered, _stats = hydrate_pwg_ls(rendered)
+        if ux.get("sense_dating"):
+            # H4019 P3 (staged): additive first-attestation era badges on the
+            # hydrated `<ls>` citations. app/dating_hydrate.py — same
+            # staging contract, never reached without the ux key, so the
+            # default render path is byte-identical.
+            from dating_hydrate import hydrate_dating
+            rendered, _dating_stats = hydrate_dating(rendered)
     # `rendered_html` is interpolated unescaped — it is HTML by contract. What
     # makes that safe is that it can only have come through
     # `kosha.api.sanitize` (W0C item 6); the serializer has no path that emits
