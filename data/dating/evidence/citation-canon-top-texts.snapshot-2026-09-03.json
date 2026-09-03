@@ -1,0 +1,355 @@
+{
+ "_snapshot_note": "topTexts (50) verbatim snapshot of csl-atlas/src/data/citations/citation_canon.json taken 2026-09-03 for H4019; the canonical work-identity spine (canon text + variants) that DM/DCS dates join onto.",
+ "topTexts": [
+  {
+   "text": "Rāmāyaṇa",
+   "totalCites": 38155,
+   "inGraphCites": 38155,
+   "nDicts": 9,
+   "variants": "RĀMĀYAṆA; Rāmāyaṇa; RĀMĀYANA"
+  },
+  {
+   "text": "Kathāsaritsāgara",
+   "totalCites": 17015,
+   "inGraphCites": 17015,
+   "nDicts": 9,
+   "variants": "KATHĀSARITSĀGARA; Kathāsaritsāgara"
+  },
+  {
+   "text": "Bhagavadgītā",
+   "totalCites": 5649,
+   "inGraphCites": 5649,
+   "nDicts": 9,
+   "variants": "Bhagavadgītā; BHAGAVADGĪTĀ; BHAGAVADGITĀ; Bhagavad Gītā"
+  },
+  {
+   "text": "Mārkandeyapuraṇa",
+   "totalCites": 5648,
+   "inGraphCites": 5648,
+   "nDicts": 9,
+   "variants": "MĀRKĀṆḌEYAPURĀṆA; MĀRKAṆḌEYAPURĀṆA; Mārkaṇḍeya-Purāṇa; Mārkaṇḍeya Purāṇa"
+  },
+  {
+   "text": "Mahābhārata",
+   "totalCites": 56818,
+   "inGraphCites": 56818,
+   "nDicts": 8,
+   "variants": "MAHĀBHĀRATA; Mahābhārata"
+  },
+  {
+   "text": "Amarakoṣa",
+   "totalCites": 14918,
+   "inGraphCites": 14918,
+   "nDicts": 8,
+   "variants": "AMARAKOṢA; Amarakoṣa; AMARAKOŚA; Amarakośa"
+  },
+  {
+   "text": "Śakuntalā",
+   "totalCites": 11900,
+   "inGraphCites": 11900,
+   "nDicts": 8,
+   "variants": "Śakuntalā; ŚĀKUNTALA; Śākuntala"
+  },
+  {
+   "text": "Atharvaveda",
+   "totalCites": 10820,
+   "inGraphCites": 10820,
+   "nDicts": 8,
+   "variants": "Atharvaveda; ATHARVAVEDA; Atharva-veda"
+  },
+  {
+   "text": "Śiśupālavadha",
+   "totalCites": 9677,
+   "inGraphCites": 9677,
+   "nDicts": 8,
+   "variants": "Śiśupālavadha; ŚIŚUPĀLAVADHA"
+  },
+  {
+   "text": "Kumārasambhava",
+   "totalCites": 8846,
+   "inGraphCites": 8846,
+   "nDicts": 8,
+   "variants": "Kumārasambhava; KUMĀRASAM̃BHAVA; Kumārasaṃbhava; KUMĀRASAM5BHAVA"
+  },
+  {
+   "text": "Hitopadeśa",
+   "totalCites": 6456,
+   "inGraphCites": 6456,
+   "nDicts": 8,
+   "variants": "Hitopadeśa; HITOPADEŚA"
+  },
+  {
+   "text": "Bhaṭṭikāvya",
+   "totalCites": 5827,
+   "inGraphCites": 5827,
+   "nDicts": 8,
+   "variants": "Bhaṭṭikāvya; BHAṬṬIKĀVYA"
+  },
+  {
+   "text": "Meghadūta",
+   "totalCites": 5604,
+   "inGraphCites": 5604,
+   "nDicts": 8,
+   "variants": "Meghadūta; MEGHADŪTA"
+  },
+  {
+   "text": "Sāhityadarpaṇa",
+   "totalCites": 4699,
+   "inGraphCites": 4699,
+   "nDicts": 8,
+   "variants": "SĀHITYADARPAṆA; Sāhityadarpaṇa; SĀHITYADARPAṆA2; Sāhitya Darpaṇa"
+  },
+  {
+   "text": "Kullūka",
+   "totalCites": 1707,
+   "inGraphCites": 1707,
+   "nDicts": 8,
+   "variants": "KULLŪKA; Kullūka"
+  },
+  {
+   "text": "Daśarūpa",
+   "totalCites": 609,
+   "inGraphCites": 609,
+   "nDicts": 8,
+   "variants": "Daśa-Rūpa; DAŚARŪPA; Daśarūpa"
+  },
+  {
+   "text": "Śrutabodha",
+   "totalCites": 355,
+   "inGraphCites": 355,
+   "nDicts": 8,
+   "variants": "ŚRUTABODHA; Śrutabodha"
+  },
+  {
+   "text": "Ṛgveda",
+   "totalCites": 38187,
+   "inGraphCites": 38187,
+   "nDicts": 7,
+   "variants": "ṚGVEDA; Ṛg-veda; Ṛgveda"
+  },
+  {
+   "text": "Manusmṛti",
+   "totalCites": 26365,
+   "inGraphCites": 26365,
+   "nDicts": 7,
+   "variants": "Manusmṛti"
+  },
+  {
+   "text": "Śabdakalpadruma",
+   "totalCites": 20232,
+   "inGraphCites": 20232,
+   "nDicts": 7,
+   "variants": "ŚABDAKALPADRUMA; Śabdakalpadruma"
+  },
+  {
+   "text": "Raghuvaṃśa",
+   "totalCites": 19922,
+   "inGraphCites": 19922,
+   "nDicts": 7,
+   "variants": "Raghuvaṃśa; RAGHUVAṂŚA; RAGHUVAM5ŚA"
+  },
+  {
+   "text": "Harivaṃśa",
+   "totalCites": 13685,
+   "inGraphCites": 13685,
+   "nDicts": 7,
+   "variants": "HARIVAṂŚA; HARIVAM5ŚA; Harivaṃśa"
+  },
+  {
+   "text": "Suśruta",
+   "totalCites": 11571,
+   "inGraphCites": 11571,
+   "nDicts": 7,
+   "variants": "SUŚRUTA; Suśruta"
+  },
+  {
+   "text": "Śatapatha-Brāhmaṇa",
+   "totalCites": 11010,
+   "inGraphCites": 11010,
+   "nDicts": 7,
+   "variants": "Śatapatha-Brāhmaṇa"
+  },
+  {
+   "text": "Vājasaneyi Saṃhitā",
+   "totalCites": 5222,
+   "inGraphCites": 5222,
+   "nDicts": 7,
+   "variants": "VĀJASANEYISAM̃HITĀ; Vājasaneyi Saṃhitā; Vājasaneyi-Saṃhitā"
+  },
+  {
+   "text": "Kirātārjunīya",
+   "totalCites": 5136,
+   "inGraphCites": 5136,
+   "nDicts": 7,
+   "variants": "Kirātārjunīya; KIRĀTĀRJUNĪYA"
+  },
+  {
+   "text": "Daśakumāracarita",
+   "totalCites": 4493,
+   "inGraphCites": 4493,
+   "nDicts": 7,
+   "variants": "Daśakumāracarita; DAŚAKUMĀRACARITA"
+  },
+  {
+   "text": "Mālavikāgnimitra",
+   "totalCites": 2612,
+   "inGraphCites": 2612,
+   "nDicts": 7,
+   "variants": "Mālavikāgnimitra; MĀLAVIKĀGNIMITRA"
+  },
+  {
+   "text": "Gītagovinda",
+   "totalCites": 2512,
+   "inGraphCites": 2512,
+   "nDicts": 7,
+   "variants": "Gītagovinda; GĪTAGOVINDA"
+  },
+  {
+   "text": "Pañcatantra",
+   "totalCites": 14743,
+   "inGraphCites": 14743,
+   "nDicts": 6,
+   "variants": "Pañcatantra; PAÑCATANTRA"
+  },
+  {
+   "text": "Medinīkośa",
+   "totalCites": 13246,
+   "inGraphCites": 13246,
+   "nDicts": 6,
+   "variants": "MEDINĪKOṢA; MEDINIKOŚA; Medinīkośa"
+  },
+  {
+   "text": "Trikāṇḍaśeṣa",
+   "totalCites": 8435,
+   "inGraphCites": 8435,
+   "nDicts": 6,
+   "variants": "TRIKĀṆḌAŚEṢA; Trikāṇḍaśeṣa"
+  },
+  {
+   "text": "Bṛhatsaṃhitā",
+   "totalCites": 8255,
+   "inGraphCites": 8255,
+   "nDicts": 6,
+   "variants": "Bṛhatsaṃhitā"
+  },
+  {
+   "text": "Halāyudha",
+   "totalCites": 5121,
+   "inGraphCites": 5121,
+   "nDicts": 6,
+   "variants": "HALĀYUDHA; Halāyudha"
+  },
+  {
+   "text": "Uttararāmacarita",
+   "totalCites": 4246,
+   "inGraphCites": 4246,
+   "nDicts": 6,
+   "variants": "Uttararāmacarita; Uttara Rāmacarita"
+  },
+  {
+   "text": "Mṛcchakaṭikā",
+   "totalCites": 3157,
+   "inGraphCites": 3157,
+   "nDicts": 6,
+   "variants": "MṚCCHAKAṬIKĀ; Mṛcchakaṭikā"
+  },
+  {
+   "text": "Prabodhacandrodaya",
+   "totalCites": 2717,
+   "inGraphCites": 2717,
+   "nDicts": 6,
+   "variants": "PRABODHACANDRODAYA; Prabodhacandrodaya"
+  },
+  {
+   "text": "Kauśikasūtra",
+   "totalCites": 2671,
+   "inGraphCites": 2671,
+   "nDicts": 6,
+   "variants": "Kauśika-Sūtra; Kauśikasūtra; Kauśika Sūtra"
+  },
+  {
+   "text": "Bhāvaprakāśa",
+   "totalCites": 2308,
+   "inGraphCites": 2308,
+   "nDicts": 6,
+   "variants": "BHĀVAPRAK4ĀŚA; BHĀVAPRAKĀŚA; Bhāvaprakāśa"
+  },
+  {
+   "text": "Sāyaṇa",
+   "totalCites": 2005,
+   "inGraphCites": 2005,
+   "nDicts": 6,
+   "variants": "SĀYAṆA; Sāyaṇa"
+  },
+  {
+   "text": "Naiṣadhacarita",
+   "totalCites": 1876,
+   "inGraphCites": 1876,
+   "nDicts": 6,
+   "variants": "Naiṣadhacarita; NAIṢADHACARITA"
+  },
+  {
+   "text": "Mudrārākṣasa",
+   "totalCites": 1502,
+   "inGraphCites": 1502,
+   "nDicts": 6,
+   "variants": "Mudrārākṣasa; MUDRĀRĀKṢASA"
+  },
+  {
+   "text": "Bhāminīvilāsa",
+   "totalCites": 1437,
+   "inGraphCites": 1437,
+   "nDicts": 6,
+   "variants": "Bhāminīvilāsa; BHĀMINĪVILĀSA; BHĀMINIVILĀSA"
+  },
+  {
+   "text": "Kāvyaprakāśa",
+   "totalCites": 1143,
+   "inGraphCites": 1143,
+   "nDicts": 6,
+   "variants": "Kāvyaprakāśa; KĀVYAPRAKĀŚA; Kāvya Prakaśa"
+  },
+  {
+   "text": "Hemacandra",
+   "totalCites": 894,
+   "inGraphCites": 894,
+   "nDicts": 6,
+   "variants": "HEMACANDRA; Hemacandra"
+  },
+  {
+   "text": "Bhāṣāpariccheda",
+   "totalCites": 759,
+   "inGraphCites": 759,
+   "nDicts": 6,
+   "variants": "Bhāṣāpariccheda; BHĀṢĀPARICCHEDA"
+  },
+  {
+   "text": "Mallinātha",
+   "totalCites": 710,
+   "inGraphCites": 710,
+   "nDicts": 6,
+   "variants": "MALLINĀTHA; Mallinātha"
+  },
+  {
+   "text": "Śvetāśvataropaniṣad",
+   "totalCites": 591,
+   "inGraphCites": 591,
+   "nDicts": 6,
+   "variants": "ŚVETĀŚVATAROPANIṢAD; Śvetāśvataropaniṣad"
+  },
+  {
+   "text": "Dāyabhāga",
+   "totalCites": 120,
+   "inGraphCites": 120,
+   "nDicts": 6,
+   "variants": "DĀYABHĀGA; Dāyabhāga"
+  },
+  {
+   "text": "Bhāgavata-Purāṇa",
+   "totalCites": 21330,
+   "inGraphCites": 21330,
+   "nDicts": 5,
+   "variants": "BHĀGAVATAPURĀṆA; Bhāgavata-Purāṇa; Bhāgavata Purāṇa"
+  }
+ ]
+}
