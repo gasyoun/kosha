@@ -115,7 +115,7 @@ def load_seed() -> dict[str, dict]:
     (hand:disputed, anthology, modern-ref, edition-siglum are real undateable
     classes). Only via='no-rule' rows (the probe applied no rule) are dropped:
     silence is not a call, and the hand table may extend over them."""
-    data = json.loads((EVIDENCE / "nomen.classification.0309.json").read_text())
+    data = json.loads((EVIDENCE / "nomen.classification.0309.json").read_text(encoding="utf-8"))
     by_fold: dict[str, Counter] = defaultdict(Counter)
     via_by_fold: dict[str, Counter] = defaultdict(Counter)
     for sense in data:
@@ -142,13 +142,13 @@ def load_seed() -> dict[str, dict]:
 
 
 def load_hand() -> list[dict]:
-    with open(DATING / "works_hand.tsv") as f:
+    with open(DATING / "works_hand.tsv", encoding="utf-8") as f:
         return list(csv.DictReader(f, delimiter="\t"))
 
 
 def load_dm() -> dict[str, list[dict]]:
     data = json.loads(
-        (EVIDENCE / "dharmamitra-chronology.snapshot-2026-09-03.json").read_text()
+        (EVIDENCE / "dharmamitra-chronology.snapshot-2026-09-03.json").read_text(encoding="utf-8")
     )
     fam: dict[str, list[dict]] = defaultdict(list)
     for w in data["works"]:
@@ -176,7 +176,7 @@ def dm_family_era(fam: dict[str, list[dict]], key: str) -> tuple[str | None, str
 def load_canon_variants() -> dict[str, str]:
     """fold(variant) → canon text, for the identity spine."""
     data = json.loads(
-        (EVIDENCE / "citation-canon-top-texts.snapshot-2026-09-03.json").read_text()
+        (EVIDENCE / "citation-canon-top-texts.snapshot-2026-09-03.json").read_text(encoding="utf-8")
     )
     out = {}
     for t in data["topTexts"]:
@@ -189,7 +189,7 @@ def load_canon_variants() -> dict[str, str]:
 
 def load_dcs() -> dict[str, tuple[int, int]]:
     out = {}
-    with open(EVIDENCE / "dcs-text-dates-2021.tsv") as f:
+    with open(EVIDENCE / "dcs-text-dates-2021.tsv", encoding="utf-8") as f:
         for r in csv.DictReader(f, delimiter="\t"):
             out[r["text"]] = (int(r["date1"]), int(r["date2"]))
     return out
@@ -322,7 +322,7 @@ class Resolver:
 
 def read_concordance() -> list[dict]:
     rows = []
-    with open(CONCORDANCE) as f:
+    with open(CONCORDANCE, encoding="utf-8") as f:
         for r in csv.DictReader(f, delimiter="\t"):
             try:
                 conf = float(r["conf"])
@@ -433,7 +433,7 @@ def build_sense_dating(conc: list[dict], per_prefix: dict[str, dict]) -> list[di
 
 
 def write_tsv(path: Path, cols: list[str], rows: list[dict]) -> None:
-    with open(path, "w", newline="") as f:
+    with open(path, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=cols, delimiter="\t", lineterminator="\n",
                            extrasaction="raise")
         w.writeheader()
@@ -535,7 +535,7 @@ def coverage_report(conc, work_rows, sense_rows, resolver) -> str:
               "",
               "| sense | probe class | probe era | layer class | layer era | agree |",
               "|---|---|---|---|---|---|"]
-    probe = json.loads((EVIDENCE / "nomen.classification.0309.json").read_text())
+    probe = json.loads((EVIDENCE / "nomen.classification.0309.json").read_text(encoding="utf-8"))
     layer_by_key = {(r["slp1"], r["hom"], r["sense_id"]): r for r in sense_rows}
     agree = mism = 0
     for s in probe:
@@ -604,16 +604,16 @@ def check() -> int:
     per_prefix = {r["locus_prefix"] or r["fold"]: r for r in work_rows}
     sense_rows = build_sense_dating(conc, per_prefix)
     ok = True
-    stored = list(csv.DictReader(open(DATING / "work_dates.tsv"), delimiter="\t"))
+    stored = list(csv.DictReader(open(DATING / "work_dates.tsv", encoding="utf-8"), delimiter="\t"))
     if _stringify(work_rows, WORK_COLS) != stored:
         print("parity FAIL: work_dates.tsv", file=sys.stderr)
         ok = False
-    stored_ab = list(csv.DictReader(open(DATING / "abbrev_map.tsv"), delimiter="\t"))
+    stored_ab = list(csv.DictReader(open(DATING / "abbrev_map.tsv", encoding="utf-8"), delimiter="\t"))
     want_ab = sorted(abbrev_map.values(), key=lambda r: r["abbrev"])
     if _stringify(want_ab, ABBREV_COLS) != stored_ab:
         print("parity FAIL: abbrev_map.tsv", file=sys.stderr)
         ok = False
-    stored_s = list(csv.DictReader(open(DATING / "sense_dating.tsv"), delimiter="\t"))
+    stored_s = list(csv.DictReader(open(DATING / "sense_dating.tsv", encoding="utf-8"), delimiter="\t"))
     if _stringify(sense_rows, SENSE_COLS) != stored_s:
         print("parity FAIL: sense_dating.tsv", file=sys.stderr)
         ok = False
