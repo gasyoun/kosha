@@ -1,0 +1,3 @@
+pair	A_size	B_size	intersection	jaccard	cont_A_in_B	cont_B_in_A
+SKD_VCP	35525	44172	20084	0.3369	0.5653	0.4547
+SKD_AMAR	35525	11057	3635	0.0846	0.1023	0.3288
