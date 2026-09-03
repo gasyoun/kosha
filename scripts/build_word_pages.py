@@ -236,8 +236,21 @@ def select_head_tokens(attested_tokens, cards_dir, head_n=None, coverage=None,
     return tokens, meta
 
 
+#: The PUBLISHED word-page ux layer, rendered by every live build path unless
+#: explicitly overridden: the H3457 organs (variant a — study badge,
+#: favorites, print-scan anchors, the ls-scan/ls-etext citation links of
+#: H3479 wave 2) plus the sense-dating era badges (H4019 P3, published
+#: 03-09-2026, H4026). `--ux-staging` passes its own dict and never sees this.
+#: Historical note: between the H3457 publish (26-08) and H4026 this default
+#: was still `None`, so a blind rebuild would have silently stripped the
+#: organs the committed w/ tree carries — H4026 pins the default to the
+#: published layer and closes that trap.
+DEFAULT_LIVE_UX = {"variant": "a", "sense_dating": True}
+
+
 def build_word_pages(out_dir, limit=None, force=False, head_n=None, coverage=None,
                      tokens=None, w_dir=None, cards_dir=None, ux=None):
+    ux = DEFAULT_LIVE_UX if ux is None else ux
     cards_dir = Path(cards_dir) if cards_dir is not None else out_dir / "cards"
     w_dir = Path(w_dir) if w_dir is not None else out_dir / "w"
     if tokens is not None:

@@ -317,12 +317,17 @@ def _entry_html(entry, ux=None):
         from ls_hydrate import hydrate_pwg_ls
         rendered, _stats = hydrate_pwg_ls(rendered)
         if ux.get("sense_dating"):
-            # H4019 P3 (staged): additive first-attestation era badges on the
-            # hydrated `<ls>` citations. app/dating_hydrate.py — same
-            # staging contract, never reached without the ux key, so the
-            # default render path is byte-identical.
+            # H4019 P3, PUBLISHED 03-09-2026 (MG order, H4026): additive
+            # first-attestation era badges on the hydrated `<ls>` citations.
+            # app/dating_hydrate.py — same explicit-key contract as the
+            # H3744 organ: never reached without `ux["sense_dating"]` (the
+            # live build sets it), so the default render path is
+            # byte-identical. Badge hits are threaded back through the ux
+            # dict so the page-level caveat block renders only where badges
+            # actually appear.
             from dating_hydrate import hydrate_dating
-            rendered, _dating_stats = hydrate_dating(rendered)
+            rendered, dating_stats = hydrate_dating(rendered)
+            ux["_dating_hits"] = ux.get("_dating_hits", 0) + dating_stats["hits"]
     # `rendered_html` is interpolated unescaped — it is HTML by contract. What
     # makes that safe is that it can only have come through
     # `kosha.api.sanitize` (W0C item 6); the serializer has no path that emits
@@ -437,6 +442,28 @@ def _evidence_block(ev):
     return (
         '<details class="disclosure evidence"><summary>Evidence</summary>'
         f'<ul class="ev-list">{"".join(rows)}</ul>{ex_html}</details>'
+    )
+
+
+def _dating_caveat_block():
+    """Sense-dating preface caveat (H4019/H4026) — the exact RU+EN wording
+    the data layer's README ships, plus the bucket legend. Rendered only on
+    pages where at least one era badge appears (see render_word_page)."""
+    esc = html.escape
+    from dating_hydrate import ERA_LABEL
+    legend = " · ".join(
+        f'<span class="ls-era-demo" data-era="{esc(era)}">{esc(label)}</span>'
+        for era, label in ERA_LABEL.items())
+    return (
+        '<details class="disclosure dating-note"><summary>Sense dating / Датировка значений</summary>'
+        '<p class="dating-caveat" lang="en">The small era badges on the cited sources mark the '
+        '<b>first attestation of a meaning in the cited corpus, not the origin of the meaning</b>. '
+        'Only citations that resolve to exactly one dateable work carry a badge; disputed or '
+        'ambiguous sources are never dated.</p>'
+        '<p class="dating-caveat" lang="ru"><b>Первое засвидетельствование значения в цитируемом '
+        'корпусе — не происхождение значения.</b> Бейдж ставится только у цитат, относящихся ровно '
+        'к одной датированной работе; спорные и омонимичные источники никогда не датируются.</p>'
+        f'<p class="dating-legend">{legend}</p></details>'
     )
 
 
@@ -633,6 +660,27 @@ background:var(--hit-bg);font-size:1.05rem}
 .wp-foot{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--border);
 font-size:.78rem;color:var(--muted)}
 .wp-foot a{color:var(--accent)}
+/* H4019/H4026 sense-dating era badges — quiet chips riding the citation */
+.ls-era{display:inline-block;font-size:.6rem;line-height:1.4;letter-spacing:.02em;
+vertical-align:super;margin-left:.25rem;padding:0 .3rem;border-radius:3px;
+border:1px solid var(--border);color:var(--muted);background:var(--page-bg);
+white-space:nowrap}
+a .ls-era{text-decoration:none}
+.ls-era[data-era="vedic"]{border-color:#a66a00;color:#a66a00}
+.ls-era[data-era="epic-sutra"]{border-color:#7a6ea8;color:#7a6ea8}
+.ls-era[data-era="classical"]{border-color:#3d7a68;color:#3d7a68}
+.ls-era[data-era="early-medieval"]{border-color:#36679b;color:#36679b}
+.ls-era[data-era="late-medieval"]{border-color:#8a5a5a;color:#8a5a5a}
+.dating-note{font-size:.78rem;color:var(--muted)}
+.dating-caveat{margin:.4rem 0}
+.dating-legend{margin:.4rem 0 0}
+.ls-era-demo{display:inline-block;font-size:.62rem;padding:0 .3rem;border-radius:3px;
+border:1px solid var(--border);margin-right:.15rem;white-space:nowrap}
+.ls-era-demo[data-era="vedic"]{border-color:#a66a00;color:#a66a00}
+.ls-era-demo[data-era="epic-sutra"]{border-color:#7a6ea8;color:#7a6ea8}
+.ls-era-demo[data-era="classical"]{border-color:#3d7a68;color:#3d7a68}
+.ls-era-demo[data-era="early-medieval"]{border-color:#36679b;color:#36679b}
+.ls-era-demo[data-era="late-medieval"]{border-color:#8a5a5a;color:#8a5a5a}
 """.strip()
 
 
@@ -791,6 +839,12 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
         # can reach this block by accident.
         # Contract: docs/NOT_PUBLISHED_H3744_SENSE_ALIGNMENT.md.
         + (_sense_alignment_block(ux["slp1"]) if ux and ux.get("sense_align") else "")
+        # H4019 P3 / H4026 (published 03-09-2026): the sense-dating caveat —
+        # the RU+EN preface contract from data/dating/README.md, shown on the
+        # page whenever at least one era badge rendered (hits threaded through
+        # the per-render ux dict from _entry_html).
+        + (_dating_caveat_block() if ux and ux.get("sense_dating")
+           and ux.get("_dating_hits") else "")
         + _paradigm_block(slp1, base)
         + _upasarga_block(slp1)
     )

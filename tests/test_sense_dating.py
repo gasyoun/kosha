@@ -11,12 +11,16 @@ Locks:
   * verb honesty: high-frequency verb senses sit at the ṚV floor (all-tie
     vedic), never reordered;
   * parity: `--check` recompute == stored outputs (derive-don't-store);
-  * the render (app/dating_hydrate.py) is staging-only: badges appear only
-    on `<span class='ls'>` citations, only for abbreviations that resolve
-    to one work at mode share ≥ 0.9, and the default render path (no ux
-    key) never calls it — no existing display order changes.
+  * the render (app/dating_hydrate.py): badges appear only for
+    abbreviations that resolve to one work at mode share ≥ 0.9, on BOTH the
+    plain `<span class='ls'>` citations and the `<a class="ls ls-scan">`
+    anchors app/ls_hydrate rewrites them into (H4026 go-live fix — before
+    it, the live path badged only the citations ls_hydrate could NOT link),
+    with the continuation-citation `title` fallback; the default render
+    path (no ux key) never calls it — no existing display order changes.
 """
 import csv
+import json
 import re
 import subprocess
 import sys
@@ -179,3 +183,100 @@ def test_span_structure_preserved():
     assert re.search(r"<span class='ls era-[a-z-]+' title='7'>RAGH\. 1,3", out)
     assert out.count("<span") == 2 and out.count("</span>") == 2
     assert out.endswith("</span>")
+
+
+# ------------------------------------------------- H4026 go-live render gates
+
+_LINKED = ('<a class="ls ls-scan" href="https://sanskrit-lexicon-scans.github.io/'
+           'brihatsam/app1?52,29" target="_blank" rel="noopener" '
+           'title="Cologne print scan: BRIHATSAMHITA">VARĀH. BṚH. S. 52,29</a>')
+
+
+def test_linked_citation_badges_and_keeps_its_link():
+    """On the live path ls_hydrate has already rewritten resolvable citations
+    into anchors — the badge must ride them (H4026), keeping href/inner so the
+    citation's own display order is untouched."""
+    out, stats = dh.hydrate_dating(_LINKED)
+    assert stats["hits"] == 1
+    assert 'href="https://sanskrit-lexicon-scans.github.io/brihatsam/app1?52,29"' in out
+    assert ">VARĀH. BṚH. S. 52,29<span class='ls-era'" in out
+    assert out.count("</a>") == 1 and out.endswith("</span></a>")
+    assert "data-era='classical'" in out  # VARĀH. BṚH. S. → classical (DM)
+
+
+def test_anchor_idempotent():
+    once, s1 = dh.hydrate_dating(_LINKED)
+    twice, s2 = dh.hydrate_dating(once)
+    assert twice == once and s2["hits"] == 0 and s1["hits"] == 1
+
+
+def test_continuation_title_fallback_badges():
+    """PWG continuation citations keep the abbreviation in the `title`
+    (`<ls n="ṚV. 4,">22,9</ls>`) — the visible text alone resolves to
+    nothing; the title fallback must supply the abbrev. A coordinate-only
+    title (the ls n-attribute form title='7') must NOT become an abbrev."""
+    cont = "<span class='ls' title='ṚV. 4,'>22,9</span>"
+    out, stats = dh.hydrate_dating(cont)
+    assert stats["hits"] == 1 and "data-era='vedic'" in out
+    # a bare-coordinate title is not an abbreviation: no badge
+    out2, stats2 = dh.hydrate_dating("<span class='ls' title='7'>1,3</span>")
+    assert stats2["hits"] == 0 and "ls-era" not in out2
+
+
+def test_disputed_work_refuses_badge():
+    """Suśruta stays NULL in the layer (disputed) → no abbrev_map row → any
+    citation of it renders without a badge, in both markup forms."""
+    abbrevs = {r["abbrev"] for r in _rows(DATING / "abbrev_map.tsv")}
+    assert "SUŚR." not in abbrevs
+    html = ("<span class='ls'>SUŚR. 1,182,7</span>"
+            '<a class="ls ls-etext" href="https://x.example/susruta?1.12" '
+            'target="_blank" rel="noopener" title="Resolved literary-source link">'
+            "SUŚR. 1,12</a>")
+    out, stats = dh.hydrate_dating(html)
+    assert stats["hits"] == 0 and stats["misses"] == 2
+    assert "ls-era" not in out
+
+
+def _card(tok):
+    return json.loads((ROOT / "docs" / "cards" / f"{tok}.json").read_text(encoding="utf-8"))
+
+
+@pytest.mark.skipif(not (ROOT / "docs" / "cards" / "padma.json").exists(),
+                    reason="docs/cards/padma.json missing")
+def test_live_render_padma_carries_badges_and_caveat():
+    """H4026 evidence lock: the live-shaped render (explicit sense_dating key,
+    as the build sets it) badges padma's nomen senses 4/5 (classical, via
+    VARĀH. BṚH. S.) and ships the RU+EN caveat when any badge rendered."""
+    from word_page import render_word_page
+    out = render_word_page(_card("padma"), token="padma", include_doc=False,
+                           ux={"variant": "a", "sense_dating": True})
+    assert out.count("ls-era") > 0
+    assert "Первое засвидетельствование значения" in out
+    assert "first attestation of a meaning in the cited corpus" in out
+    # bare variant-a (organs only, no key): NO badges, NO caveat — the
+    # explicit-key contract of the H3744 doctrine
+    bare = render_word_page(_card("padma"), token="padma", include_doc=False,
+                            ux={"variant": "a"})
+    assert "ls-era" not in bare and "dating-note" not in bare
+    # no ux at all: byte-stable default path
+    assert render_word_page(_card("padma"), token="padma", include_doc=False) == \
+        render_word_page(_card("padma"), token="padma", include_doc=False,
+                         ux=None)
+
+
+@pytest.mark.skipif(not (ROOT / "docs" / "cards" / "han.json").exists(),
+                    reason="docs/cards/han.json missing")
+def test_live_render_verb_all_tie_honesty():
+    """Verb honesty on the live surface: the ṚV-floor verb senses badge
+    `vedic`, and citations of the disputed Suśruta carry NO badge in either
+    markup form — refusal, not silence-by-bug."""
+    from word_page import render_word_page
+    out = render_word_page(_card("han"), token="han", include_doc=False,
+                           ux={"variant": "a", "sense_dating": True})
+    eras = re.findall(r"data-era='([a-z-]+)'", out)
+    assert "vedic" in eras, "the all-tie ṚV-floor senses must badge vedic"
+    # disputed work: no badge directly after a Suśruta citation (span form:
+    # the span stays class-less; anchor form: badge never appended)
+    assert not re.search(r"<span class='ls'>SUŚR\.[^<]*"
+                         r"<span class='ls-era'", out)
+    assert not re.search(r'SUŚR\.[^<]*</a><span class=.ls-era', out)
