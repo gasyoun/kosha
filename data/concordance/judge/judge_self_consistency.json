@@ -1,0 +1,341 @@
+{
+  "handoff": "H3910",
+  "judge": "Opus 5 (claude-opus-5)",
+  "harness": "in-session read of the emitted packet file; no API-key judge harness exists in this repo",
+  "shuffle_seed": 19103,
+  "convention_pass_a": "A meaning group is `same` only if EVERY member shown expresses one and the same sense. A group whose members are individually defensible but merge two distinct senses (the granularity-many-to-many case) is `different`, and the reason says so. `unsure` is used when the entry shown is grammatical apparatus, a bare cross-reference, or narrowed by a parenthetical in a way the card cannot resolve.",
+  "convention_pass_b": "A meaning group is `same` only if EVERY member shown expresses one and the same sense, judged on referent rather than on the source dictionary's own numbering: where one dictionary splits into two members what another dictionary's single member unites, that is one sense. A group whose members are individually defensible but merge two distinct referents (the granularity-many-to-many case) is `different`, and the reason says so. `unsure` is used when the entry shown is grammatical apparatus, a bare cross-reference, or narrowed by a parenthetical in a way the card cannot resolve.",
+  "conventions_identical": false,
+  "limitations": [
+    "Both passes were run in-session by the same model (Opus 5, claude-opus-5) over reordered, renumbered presentations of the same 120 cards. No independent judge harness exists in this repo. A same-model re-read is a WEAKER test than two independent judges, so the agreement figure below is an OPTIMISTIC bound on judge stability, not a neutral one.",
+    "The two passes' `convention` strings are not byte-identical: pass B adds a clause instructing that a group is judged on referent rather than on the source dictionary's own sense numbering. Some A/B disagreement is therefore convention drift rather than judge instability, and the flip list below must be read with that in mind.",
+    "This file contains NO acceptance precision figure. The judge is a first pass; the verdict is the human vote on the published review sheet. The `same`-rates below are judge-side signals used to size and stratify that vote."
+  ],
+  "cards_joined": 120,
+  "unjoined": [],
+  "agreement": 0.95,
+  "flip_rate": 0.05,
+  "cohens_kappa": 0.9022,
+  "agreement_excluding_unsure": 0.9492,
+  "confusion": {
+    "different|different": 62,
+    "different|same": 3,
+    "same|different": 3,
+    "same|same": 50,
+    "unsure|unsure": 2
+  },
+  "by_channel": {
+    "attrib*": {
+      "cards": 42,
+      "agree": 42
+    },
+    "western": {
+      "cards": 78,
+      "agree": 72
+    }
+  },
+  "flips": [
+    {
+      "group_id": "Atman#1",
+      "stratum": "gloss+ls|hi >=0.70|m2m",
+      "pass_a": "same",
+      "pass_b": "different",
+      "pass_a_reason": "PWG's two members (soul; the self/one's own person) pair correctly with MW/Apte's soul and body.",
+      "pass_b_reason": "The group merges 'the soul' with 'the body' — MW and Apte both carry the pair, PWG does not unite them."
+    },
+    {
+      "group_id": "SiKarin#1",
+      "stratum": "gloss+ls|mid 0.40-0.69|m2m",
+      "pass_a": "same",
+      "pass_b": "different",
+      "pass_a_reason": "Well-formed many-to-many: 'peaked, crested' pairs with itself and 'N. of a mountain' with itself in all three.",
+      "pass_b_reason": "The group merges the adjective 'pointed, crested' with the proper name of a mountain."
+    },
+    {
+      "group_id": "dahana#1",
+      "stratum": "gloss+ls|hi >=0.70|m2m",
+      "pass_a": "same",
+      "pass_b": "different",
+      "pass_a_reason": "Burning↔burning and fire↔fire pair cleanly across all three.",
+      "pass_b_reason": "The group merges the adjective 'burning, consuming' with the noun 'fire, Agni' — no member unites them."
+    },
+    {
+      "group_id": "krUra#2",
+      "stratum": "gloss+ls|hi >=0.70|m2m",
+      "pass_a": "different",
+      "pass_b": "same",
+      "pass_a_reason": "PWG is 'cruel, bloody'; the MW member is 'hard, solid' — Apte lists these as senses 1 and 10.",
+      "pass_b_reason": "PWG's member spans 'grausam' and 'roh, hart', uniting what Apte numbers as cruel and as hard."
+    },
+    {
+      "group_id": "mADava#3",
+      "stratum": "gloss+ls|mid 0.40-0.69|m2m",
+      "pass_a": "different",
+      "pass_b": "same",
+      "pass_a_reason": "'Descendant of Madhu / Kṛṣṇa' is shared, but MW's first member 'representing Kṛṣṇa (as a picture)' is a separate sense.",
+      "pass_b_reason": "All members converge on Mādhava as descendant of Madhu / Kṛṣṇa; MW's '(as a picture)' is a usage note on the same referent."
+    },
+    {
+      "group_id": "vilAsin#1",
+      "stratum": "gloss+ls|hi >=0.70|m2m",
+      "pass_a": "different",
+      "pass_b": "same",
+      "pass_a_reason": "The adjective 'playful, wanton' is shared, but PWG's second member is the substantive 'a playful woman, mistress'.",
+      "pass_b_reason": "Sportive, playful, wanton; PWG's second member is the substantivized feminine of the same adjective."
+    }
+  ],
+  "strata": [
+    {
+      "stratum": "ls|mid 0.40-0.69|clean",
+      "population": 640,
+      "population_share": 0.212413,
+      "census": false,
+      "sampled": 8,
+      "both_same": 8,
+      "rate": 1.0,
+      "ci95": [
+        0.6756,
+        1.0
+      ],
+      "flips": 0
+    },
+    {
+      "stratum": "gloss|hi >=0.70|clean",
+      "population": 630,
+      "population_share": 0.209094,
+      "census": false,
+      "sampled": 8,
+      "both_same": 8,
+      "rate": 1.0,
+      "ci95": [
+        0.6756,
+        1.0
+      ],
+      "flips": 0
+    },
+    {
+      "stratum": "gloss|mid 0.40-0.69|clean",
+      "population": 569,
+      "population_share": 0.188848,
+      "census": false,
+      "sampled": 7,
+      "both_same": 4,
+      "rate": 0.5714,
+      "ci95": [
+        0.2505,
+        0.8418
+      ],
+      "flips": 0
+    },
+    {
+      "stratum": "ls|lo <0.40|clean",
+      "population": 326,
+      "population_share": 0.108198,
+      "census": false,
+      "sampled": 5,
+      "both_same": 4,
+      "rate": 0.8,
+      "ci95": [
+        0.3755,
+        0.9638
+      ],
+      "flips": 0
+    },
+    {
+      "stratum": "gloss|lo <0.40|clean",
+      "population": 310,
+      "population_share": 0.102887,
+      "census": false,
+      "sampled": 5,
+      "both_same": 4,
+      "rate": 0.8,
+      "ci95": [
+        0.3755,
+        0.9638
+      ],
+      "flips": 0
+    },
+    {
+      "stratum": "ls|hi >=0.70|clean",
+      "population": 189,
+      "population_share": 0.062728,
+      "census": false,
+      "sampled": 4,
+      "both_same": 3,
+      "rate": 0.75,
+      "ci95": [
+        0.3006,
+        0.9544
+      ],
+      "flips": 0
+    },
+    {
+      "stratum": "gloss+ls|mid 0.40-0.69|clean",
+      "population": 138,
+      "population_share": 0.045802,
+      "census": false,
+      "sampled": 3,
+      "both_same": 1,
+      "rate": 0.3333,
+      "ci95": [
+        0.0615,
+        0.7923
+      ],
+      "flips": 0
+    },
+    {
+      "stratum": "gloss+ls|hi >=0.70|clean",
+      "population": 95,
+      "population_share": 0.03153,
+      "census": false,
+      "sampled": 3,
+      "both_same": 3,
+      "rate": 1.0,
+      "ci95": [
+        0.4385,
+        1.0
+      ],
+      "flips": 0
+    },
+    {
+      "stratum": "attrib|mid 0.40-0.69|clean",
+      "population": 22,
+      "population_share": 0.007302,
+      "census": false,
+      "sampled": 12,
+      "both_same": 0,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.2425
+      ],
+      "flips": 0
+    },
+    {
+      "stratum": "attrib|lo <0.40|clean",
+      "population": 18,
+      "population_share": 0.005974,
+      "census": false,
+      "sampled": 10,
+      "both_same": 0,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.2775
+      ],
+      "flips": 0
+    },
+    {
+      "stratum": "gloss+ls|lo <0.40|clean",
+      "population": 17,
+      "population_share": 0.005642,
+      "census": false,
+      "sampled": 3,
+      "both_same": 1,
+      "rate": 0.3333,
+      "ci95": [
+        0.0615,
+        0.7923
+      ],
+      "flips": 0
+    },
+    {
+      "stratum": "gloss+ls|hi >=0.70|m2m",
+      "population": 16,
+      "population_share": 0.00531,
+      "census": true,
+      "sampled": 16,
+      "both_same": 6,
+      "rate": 0.375,
+      "ci95": [
+        0.1848,
+        0.6136
+      ],
+      "flips": 4
+    },
+    {
+      "stratum": "attrib|hi >=0.70|clean",
+      "population": 16,
+      "population_share": 0.00531,
+      "census": false,
+      "sampled": 9,
+      "both_same": 2,
+      "rate": 0.2222,
+      "ci95": [
+        0.0632,
+        0.5474
+      ],
+      "flips": 0
+    },
+    {
+      "stratum": "gloss+ls|mid 0.40-0.69|m2m",
+      "population": 14,
+      "population_share": 0.004647,
+      "census": true,
+      "sampled": 14,
+      "both_same": 6,
+      "rate": 0.4286,
+      "ci95": [
+        0.2138,
+        0.6741
+      ],
+      "flips": 2
+    },
+    {
+      "stratum": "attrib+ls|hi >=0.70|clean",
+      "population": 5,
+      "population_share": 0.001659,
+      "census": true,
+      "sampled": 5,
+      "both_same": 0,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.4345
+      ],
+      "flips": 0
+    },
+    {
+      "stratum": "attrib+ls|mid 0.40-0.69|clean",
+      "population": 4,
+      "population_share": 0.001328,
+      "census": true,
+      "sampled": 4,
+      "both_same": 0,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.4899
+      ],
+      "flips": 0
+    },
+    {
+      "stratum": "attrib+gloss+ls|mid 0.40-0.69|clean",
+      "population": 2,
+      "population_share": 0.000664,
+      "census": true,
+      "sampled": 2,
+      "both_same": 0,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.6576
+      ],
+      "flips": 0
+    },
+    {
+      "stratum": "ls|mid 0.40-0.69|m2m",
+      "population": 2,
+      "population_share": 0.000664,
+      "census": true,
+      "sampled": 2,
+      "both_same": 0,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.6576
+      ],
+      "flips": 0
+    }
+  ]
+}
