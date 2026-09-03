@@ -399,6 +399,22 @@
       "rebuild": "python src/DCS-data-2026/gen_paradigm_nominal.py (needs the pinned dcs_full.sqlite; refuses a master with no provenance pin, emits a real SHA-256)."
     },
     {
+      "id": "dcs-nominal-class-split",
+      "title": "DCS nominal pooled-class split — long-ī and -ant/-at, on an external lexical signal",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "format": "json",
+      "rows": 279,
+      "size_bytes": 122022,
+      "keying": "per-lemma verdicts keyed by DCS lemma_id: the 279 -ant/-at pool members each carry the MW and PWG per-dictionary verdict plus the combined one (one_lexeme_two_spellings | two_headwords | at_only | ant_only | unresolved); alongside them the two long-ī subclass aggregates (ii_monosyllabic / ii_polysyllabic), 6 mergedPairs, 26 variantCitations, 36 unresolved, the pinnedPair record and the 6-check G2 reconciliation",
+      "source_repo": "https://github.com/gasyoun/VisualDCS",
+      "source_path": "visual/paradigm_nominal_class_split.json (tracked)",
+      "builder": "src/DCS-data-2026/split_pooled_nominal_classes.py (H3984), over Sangram G2 lemma_cell_coverage.csv + the MW/PWG csl-json headword indexes",
+      "consumers": [],
+      "notes": "H3984 (03-09-2026, Opus 5 claude-opus-5), closing the NOUN half of SanskritLexicography GAPS §14; epistemic residue in FINDINGS §630, FEATURES_INDEX E51. An ADDITIVE SIDE-CAR to dcs-nominal-paradigm-grid: paradigm_nominal.json's own 14 buckets are unchanged and every G2 total is asserted unmoved (reconciles: true, six checks) — a moved total is a build failure, not a diff to accept. Two signals, both EXTERNAL to the corpus, because H1472 refused to guess a character rule: (A) the long-ī bucket splits on IAST vowel-nucleus count of the NFC citation form (ai/au count once) — 17 lemma_ids / 6,373 tokens monosyllabic (śrī, strī, dhī) vs 4,477 / 58,295 polysyllabic (devī, nadī); no dictionary and no segmenter needed, a Sanskrit syllable has exactly one nucleus. (B) the -ant/-at bucket splits on MW + PWG csl-json headword ENTRY-ID SETS, not headword presence — 191 lemma_ids / 8,851 tokens one lexeme two spellings, 0 two headwords, 51 / 2,384 at_only, 1 / 1 ant_only, 36 / 70 with no witness in either lexicon and therefore LEFT POOLED. Reach 243 of 279 = 87.1%. TRAP: a presence-only test ('is each spelling in the dictionary?') calls 191 lemmas two headwords and inverts the pair GAPS §14 pins by name — PWG files भगवत् and भगवन्त् under the identical ids 53806,80057. TRAP: the universe is Sangram G2's upos='NOUN' only; the ii pool is 99.0% NOUN by token mass but the ant pool only 23.5% (36,768 ADJ tokens), and that surplus has no per-lemma inventory outside the 921 MB pinned dcs_full.sqlite — it is declared UNREACHED, never estimated. Source dictionaries are sanskrit-lexicon/csl-json (mw.json 195,313 headwords, pwg.json 108,952), public-domain lexica; DCS is CC BY 4.0 and this derivative ships BY-SA with the public tier.",
+      "rebuild": "python src/DCS-data-2026/split_pooled_nominal_classes.py (needs SanskritGrammar sangram/data/declension_cell_coverage/lemma_cell_coverage.csv and the csl-json mw.json + pwg.json; writes visual/paradigm_nominal_class_split.json plus reports/nominal_pooled_class_split.md and reports/nominal_g2_reconciliation_split.md — re-run it in the same PR as any change to the ii/ant membership test in gen_paradigm_nominal.py)."
+    },
+    {
       "id": "dcs-verbal-paradigm-attested",
       "title": "DCS verbal paradigm — per-root attested finite + non-finite cells",
       "tier": "public",
