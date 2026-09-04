@@ -303,7 +303,7 @@ PAGE = """<!doctype html>
 <header>
  <h1>%(title)s — word concordance %(badge)s %(drange)s</h1>
  <div class="sub">Every word occurrence feeding the dictionary (Tamilex corpus-dictionary
- pattern) · kosha H4034 pilot · <a href="../../concordance/index.html">concordance hub</a></div>
+ pattern) · kosha H4034 pilot · <a href="../../directory/index.html">dataset catalog</a></div>
 </header>
 <main>
  <div id="stats">%(stats)s</div>
