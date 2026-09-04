@@ -1,6 +1,6 @@
 # Data statement — Cross-dictionary union headword index (`union-headwords`)
 
-_Created: 11-07-2026 · Last updated: 25-08-2026_
+_Created: 11-07-2026 · Last updated: 04-09-2026_
 
 Data statement for the `union-headwords` dataset served by the kosha data-hub —
 the headword master of the ecosystem. Manifest row:
@@ -10,7 +10,7 @@ Download: [`union_headwords.tsv` in release data-v0.4.0](https://github.com/gasy
 
 ## Composition & counts
 
-323,425 rows, one per distinct SLP1 headword attested in at least one of 15
+323,422 rows, one per distinct SLP1 headword attested in at least one of 15
 digitized Sanskrit dictionaries (codes: AP, BHS, BUR, CAE, CCS, GRA, INM, MD,
 MW, PWG, PWK, SCH, SKD, VCP, VEI — Apte, Edgerton BHS, Burnouf, Cappeller,
 Grassmann, Macdonell, Monier-Williams, the two Petersburg dictionaries,
@@ -81,7 +81,7 @@ pipelines (the PWG→EN pilot drew a 94,753-row subset), kosha's lemma table.
 **Misuse:** treating `n_dicts` as frequency or importance (it measures
 lexicographic attestation, not corpus usage — join
 [`kosha-lemma-frequency`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/kosha-lemma-frequency.meta.md)
-for that); using key1 forms as citable printed forms; assuming 323,425 ≈ "the
+for that); using key1 forms as citable printed forms; assuming 323,422 ≈ "the
 Sanskrit lexicon" (it is the union of *digitized* dictionaries as of the build).
 
 ## License
