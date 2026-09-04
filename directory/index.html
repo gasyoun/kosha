@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="100 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="102 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="100 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="102 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -2847,6 +2847,62 @@
         "encodingFormat": "tsv",
         "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
       }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Per-sense first-attestation era buckets (PWG v1, H4019, additive)",
+      "description": "H4019 (MG GO 03-09-2026, additive-only ruling on the H4016 GOxSTRONG verdict). Date sources tiered: (1) Dharmamitra chronology snapshot (primary; canon-identity family joins, hand-verified expected eras asserted at build), (2) DCS 2021 date table (secondary, seed-verbatim), (3) H4016 seed hand calls + curated hand rows with reasons (tertiary). Work identity routes through the citation_canon topTexts spine — no fuzzy title matching; string fallbacks would be flagged uncertain, none auto-applied. Disputed/boundary/recension-dependent works -> NULL, never forced (Susruta layered, Medinikosa, Kavyadarsa, Mrcchakatika, Lalitavistara, ...). Coverage at build: 73.3% of 85,472 citation instances dateable; unresolved loci 6.7%; nomina spot-check 20/20 vs H4016 hand calls; Sabdakalpadruma dated late-medieval as a terminus CEILING with low attestation value (H4019 addendum §1). See data/dating/README.md + COVERAGE_REPORT.md.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "sense-dating"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/not-applicable/sense_dating.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Hitopadeśa per-text word concordance pilot — every word of the text feeding the dictionary (Tamilex corpus-dictionary pattern, H4034)",
+      "description": "Pilot (H4034). Source DCS 2026, CC BY 4.0 — license-gated ingest: derived measurements free, bulk corpus redistribution gated; attribution in MANIFEST.json. Era tie-in: early-medieval (DM canon_dm, core c. 9th-10th c. CE disputed) via data/dating/work_dates.json; the concordance page carries the H4026 .ls-era badge. Residue: 4.5% no headword join (DCS -ay causative stems kosha keys under the root, indeclinables); 87% sense-id absence = H1455 frame width, not PWG sense absence. Spot check 10/10 (independent SQL recount) in SPOT_CHECK_SAMPLE.md. Additive fold only — no existing surface touched (H4034 gate).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "hitopadesa-text-concordance"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/not-applicable/text_hitopadesa_concordance.tsv"
+      }
     }
   ]
 }
@@ -2917,7 +2973,7 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>100</b><span>public datasets</span></div>
+      <div class="tally"><b>102</b><span>public datasets</span></div>
       <div class="tally"><b>15</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
@@ -3934,6 +3990,26 @@
       <p class="meta">534 rows · 90.3 KB · TSV</p>
       <div class="chips"><span class="chip">RussianTranslation pwg_ru / mw_ru name handling</span><span class="chip">SamudraManthanam name glossaries (planned)</span><span class="chip">csl-atlas (planned)</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Per-sense first-attestation era buckets (PWG v1, H4019, additive)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per (slp1, hom, sense_id) at concordance conf &gt;= 0.99; columns slp1/hom/sense_id/n_cites/n_dateable/first_era/bucket_via/marginal/class/conflict_notes. first_era is an era bucket (vedic &lt; epic-sutra &lt; classical &lt; early-medieval &lt; late-medieval) = first attestation among the works PWG itself cites — NOT the origin of the meaning; printed PWG sense order is never reordered. Sibling tables: work_dates.tsv (+.json, per resolved locus prefix: work identity -&gt; era + via + reason + flags), abbrev_map.tsv (abbreviation -&gt; work at mode share &gt;= 0.9, the render badge lookup). Evidence snapshots + curated hand layer in data/dating/evidence/ and works_hand.tsv.</p>
+      <p class="meta">7,349 rows · 1.6 MB · TSV</p>
+      <div class="chips"><span class="chip">app/dating_hydrate.py (staged render: era badges on PWG &lt;ls&gt; citations behind ux[&#x27;sense_dating&#x27;])</span><span class="chip">sense-chronology programme (H3673/H4016 probes -&gt; H4019 build)</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/sense_dating.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Hitopadeśa per-text word concordance pilot — every word of the text feeding the dictionary (Tamilex corpus-dictionary pattern, H4034)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per distinct (surface form, DCS lemma) token pair of DCS text_id 189 (Hitop, 0-4, 3,432 sentences); columns surface/lemma_iast/upos/n_occ/n_refs/refs (every occurrence, document order, &#x27;Hitopadeśa, Hitop, &lt;ch&gt;, &lt;sent&gt;[.&lt;sub]&#x27;)/headword_slp1/link_method/conf/sense_ids/card_href. Each form joins the kosha dictionary via the H380 dict_corpus_concordance lemma join (95.5%) and carries numbered PWG sense ids from the H1455 per-sense layer where the headword is in frame (13.0%).</p>
+      <p class="meta">7,857 rows · 1.2 MB · TSV</p>
+      <div class="chips"><span class="chip">text-concordance programme (H4034 pilot; the INVERSE view of the H1455 sense-attestation layer)</span><span class="chip">per-text corpus-dictionary scale-up lane (future texts)</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/text_hitopadesa_concordance.tsv">Download ↓</a></div>
     </article>
     </div>
     <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>
