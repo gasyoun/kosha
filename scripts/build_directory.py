@@ -156,6 +156,12 @@ def dataset_card(ds: dict) -> str:
     else:
         action = '<span class="dl none">available on request / in preparation</span>'
         badge = '<span class="badge res">restricted</span>'
+    viewer = ""
+    if ds.get("viewer"):
+        # repo-root-relative path to a static page over the dataset, resolved
+        # from the directory/ page one level down.
+        viewer = (f'<a class="dl ghost" href="../{esc(ds["viewer"])}">'
+                  f'Open viewer ↗</a>')
 
     consumers = ds.get("consumers") or []
     cons_html = ""
@@ -171,7 +177,7 @@ def dataset_card(ds: dict) -> str:
       <p class="key">{esc(ds.get('keying', ''))}</p>
       <p class="meta">{meta_html}</p>
       {cons_html}
-      <div class="card-f">{action}</div>
+      <div class="card-f">{action}{viewer}</div>
     </article>"""
 
 
