@@ -34,7 +34,16 @@ Outputs (data/concordance/text_hitopadesa/):
   MANIFEST.json     license + edition + provenance + counts
   BUILD_REPORT.md   coverage memo (forms, occurrences, linked-vs-unlinked)
 
+H4038 (surface, 04-09-2026): the page badge is dating_hydrate.badge_html and
+the RU+EN caveat + bucket legend is word_page._dating_caveat_block — the
+H4026 machinery verbatim, never a second render system — and the page is
+wired into the existing Hitopadeśa reading pack (reading/index.html).
+Gates (--check, DCS-free): parity of concordance.tsv vs the rendered viewer
+payload vs page stats vs MANIFEST, and order-invariance (every row's
+occurrence refs in non-decreasing document order).
+
 Run:  python3 scripts/build_text_concordance_hitopadesa.py
+      python3 scripts/build_text_concordance_hitopadesa.py --check   (gates only)
 """
 from __future__ import annotations
 
@@ -49,7 +58,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from concordance_core import human_locus  # noqa: E402  (REUSE house locus)
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "app"))
-from word_page import card_token  # noqa: E402  (REUSE the /w/ URL key)
+from dating_hydrate import ERA_LABEL, badge_html  # noqa: E402  (REUSE H4026 badge)
+from word_page import _dating_caveat_block, card_token  # noqa: E402  (REUSE /w/ key + H4026 caveat)
 
 ROOT = Path(__file__).resolve().parent.parent
 DCS = ROOT.parent / "VisualDCS" / "src" / "DCS-data-2026" / "dcs_full.sqlite"
@@ -62,10 +72,8 @@ SENSE_CONC = ROOT / "data" / "concordance" / "sense_corpus_concordance.tsv"
 WORK_DATES = ROOT / "data" / "dating" / "work_dates.json"
 OUT = ROOT / "data" / "concordance" / "text_hitopadesa"
 
-ERA_CSS = {  # H4026 palette (w/ cards house style)
-    "vedic": ("#a66a00",), "epic-sutra": ("#7a6ea8",), "classical": ("#3d7a68",),
-    "early-medieval": ("#36679b",), "late-medieval": ("#8a5a5a",),
-}
+# H4026 badge palette lives in the data-era attribute CSS below (ported from
+# app/word_page.py PAGE_CSS) — no per-page color override is invented here.
 
 
 def load_lemma_join():
@@ -171,6 +179,9 @@ def main():
             "sense_ids": "|".join(sids),
             "card_href": href,
         })
+    # NOTE: the viewer payload row key order is (surface, lemma_iast, upos,
+    # n_occ, refs, n_refs, ...) — the order the committed H4034 js carries.
+    # payload_from_tsv() mirrors it; keep the two in lockstep or --check fails.
 
     fields = ["surface", "lemma_iast", "upos", "n_occ", "n_refs", "refs",
               "headword_slp1", "link_method", "conf", "sense_ids", "card_href"]
@@ -226,6 +237,9 @@ def main():
     }
     (OUT / "MANIFEST.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    gates = check_gates(tsv, js, OUT / "index.html", OUT / "MANIFEST.json")
+    print("gates: parity OK (%d rows, %d occurrences, era %r), order-invariance OK"
+          % (gates["rows"], gates["occurrences"], gates["era"]))
     print(json.dumps(manifest["stats"], ensure_ascii=False, indent=1))
     return 0
 
@@ -236,6 +250,112 @@ def sqlite_connect():
         sys.exit("STOP: DCS corpus not found at %s (H4034 gate: do not substitute "
                  "an unlicensed text)" % DCS)
     return sqlite3.connect(str(DCS))
+
+
+# ---------------------------------------------------------------------------
+# H4038 gates — parity of concordance input vs rendered counts, and
+# order-invariance of the underlying text. Pure functions of the COMMITTED
+# fold (no DCS, no kosha.db): the test tier runs them offline.
+# ---------------------------------------------------------------------------
+
+_LOCUS_RE = re.compile(r"Hitopadeśa, Hitop, (\d+), (\d+)(?:\.(\d+))?$")
+
+
+def _locus_key(ref: str):
+    m = _LOCUS_RE.match(ref.strip())
+    if not m:
+        return None
+    ch, sent, sub = m.groups()
+    return (int(ch), int(sent), int(sub) if sub else -1)
+
+
+def payload_from_tsv(tsv_path: Path) -> dict:
+    """Reconstruct the exact viewer payload from the committed TSV — the
+    single source both the build's write step and `--check` re-derive from,
+    so 'input vs rendered' parity is one function, never two opinions."""
+    era = load_era()
+    with open(tsv_path, newline="", encoding="utf-8") as fh:
+        rows = []
+        for r in csv.DictReader(fh, delimiter="\t"):
+            rows.append({
+                "surface": r["surface"], "lemma_iast": r["lemma_iast"],
+                "upos": r["upos"],
+                "n_occ": int(r["n_occ"]), "refs": r["refs"],
+                "n_refs": int(r["n_refs"]),
+                "headword_slp1": r["headword_slp1"],
+                "link_method": r["link_method"], "conf": r["conf"],
+                "sense_ids": r["sense_ids"], "card_href": r["card_href"],
+            })
+    # canonical row order — the build's own sort key (-n_occ, surface, lemma);
+    # applying it here makes the payload a pure function of row CONTENT, never
+    # of traversal order (the order-invariance half of the H4038 gates).
+    rows.sort(key=lambda r: (-r["n_occ"], r["surface"], r["lemma_iast"]))
+    s = stats(None, rows, sum(1 for r in rows if r["sense_ids"]))
+    s["tokens"] = s["occurrences_listed"]
+    return {
+        "text_name": TEXT_NAME, "work_key": WORK_KEY,
+        "era": era.get("era", ""), "era_date_range": era.get("date_range", ""),
+        "era_via": era.get("via", ""), "era_reason": era.get("reason", ""),
+        "license": "DCS 2026 — CC BY 4.0",
+        "stats": s,
+        "rows": rows,
+    }
+
+
+def check_gates(tsv_path: Path, js_path: Path, page_path: Path,
+                manifest_path: Path) -> dict:
+    """Gate 1 (parity): committed TSV == viewer payload == page stats ==
+    manifest stats. Gate 2 (order-invariance): every row's occurrence refs
+    are in non-decreasing document order (chapter, sentence, subcounter) —
+    the surface's claim about the underlying text holds row by row."""
+    payload = payload_from_tsv(tsv_path)
+
+    js_text = js_path.read_text(encoding="utf-8")
+    prefix = 'window.TEXT_CONCORDANCE["hitopadesa"] = '
+    js_header = "window.TEXT_CONCORDANCE = window.TEXT_CONCORDANCE || {};\n"
+    if not js_text.startswith(js_header + prefix):
+        sys.exit("GATE FAIL: %s does not carry the expected payload prefix" % js_path)
+    rebuilt = js_header + prefix + json.dumps(payload, ensure_ascii=False) + ";\n"
+    if js_text != rebuilt:
+        sys.exit("GATE FAIL: viewer payload != TSV re-derivation "
+                 "(parity of concordance input vs rendered counts)")
+
+    bad_order = []
+    for r in payload["rows"]:
+        keys = [_locus_key(x) for x in r["refs"].split("; ")]
+        if any(k is None for k in keys):
+            sys.exit("GATE FAIL: unparseable locus in refs of %r" % r["surface"])
+        if any(a > b for a, b in zip(keys, keys[1:])):
+            bad_order.append(r["surface"])
+    if bad_order:
+        sys.exit("GATE FAIL: refs out of document order in %d rows, e.g. %s "
+                 "(order-invariance of the underlying text)"
+                 % (len(bad_order), bad_order[:5]))
+
+    page = page_path.read_text(encoding="utf-8")
+    s = payload["stats"]
+    stats_line = ("%s tokens · %s forms · %s lemmas · %s%% sense-linked"
+                  % (s["tokens"], s["distinct_surface_lemma_pairs"],
+                     s["distinct_lemmas"], s["sense_linked_share_pct"]))
+    if stats_line not in page:
+        sys.exit("GATE FAIL: page stats line %r not rendered" % stats_line)
+    if payload["era"]:
+        for marker in ('data-era="%s"' % payload["era"],
+                       "first attestation of a meaning in the cited corpus",
+                       "Первое засвидетельствование значения",
+                       "dating-legend"):
+            if marker not in page:
+                sys.exit("GATE FAIL: H4026 surface marker %r missing from page" % marker)
+    else:
+        if "ls-era" in page or "dating-note" in page:
+            sys.exit("GATE FAIL: no work bucket but badge/caveat rendered "
+                     "(honest-absence contract)")
+
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if manifest.get("stats") != s:
+        sys.exit("GATE FAIL: MANIFEST stats != recomputed stats")
+    return {"rows": len(payload["rows"]), "occurrences": s["occurrences_listed"],
+            "era": payload["era"]}
 
 
 def stats(n_tokens, rows, n_sense_linked):
@@ -254,19 +374,20 @@ def stats(n_tokens, rows, n_sense_linked):
 
 
 def render_page(p):
+    # H4026 machinery, verbatim reuse: the work badge is dating_hydrate's own
+    # badge_html output (same span, same data-era attr, same tooltip caveat),
+    # and the RU+EN caveat + bucket legend is word_page's _dating_caveat_block
+    # byte-for-byte — this page never invents a second render system.
     era = p["era"]
-    color = ERA_CSS.get(era, ("#666",))[0]
+    badge = badge_html(era, p["era_via"]) if era else ""
+    dating_note = _dating_caveat_block() if era else ""
     s = p["stats"]
-    badge = ""
-    if era:
-        title = "%s — first-attestation bucket via %s (not origin)" % (era, p["era_via"])
-        badge = ('<span class="ls-era" data-era="%s" title="%s">%s</span>'
-                 % (era, title, era))
     drange = p["era_date_range"]
     date_html = ('<span class="drange">%s</span>' % drange) if drange else ""
     return PAGE % {
         "title": p["text_name"], "badge": badge, "drange": date_html,
-        "color": color, "stats": "%s tokens · %s forms · %s lemmas · %s%% sense-linked"
+        "dating": dating_note,
+        "stats": "%s tokens · %s forms · %s lemmas · %s%% sense-linked"
         % (s["tokens"], s["distinct_surface_lemma_pairs"], s["distinct_lemmas"],
            s["sense_linked_share_pct"]),
         "js": "text_hitopadesa.js",
@@ -279,18 +400,23 @@ PAGE = """<!doctype html>
 <title>%(title)s — text concordance | kosha</title>
 <style>
  body{font:15px/1.5 -apple-system,'Segoe UI',Roboto,sans-serif;margin:0;
-      color:#222;background:#fafaf8}
+       color:#222;background:#fafaf8}
  header{padding:1.2rem 1.4rem;border-bottom:1px solid #e5e2da;background:#fff}
  h1{margin:0;font-size:1.35rem}
  .sub{color:#666;font-size:.85rem;margin-top:.3rem}
  .ls-era{display:inline-block;font-size:.6rem;line-height:1.4;letter-spacing:.02em;
-   text-transform:uppercase;border:1px solid %(color)s;color:%(color)s;
-   border-radius:3px;padding:.05rem .4rem;margin-left:.5rem;vertical-align:middle}
+   text-transform:uppercase;border:1px solid #ddd;color:#888;border-radius:3px;
+   padding:.05rem .4rem;margin-left:.5rem;vertical-align:middle;white-space:nowrap}
+ .ls-era[data-era="vedic"]{border-color:#a66a00;color:#a66a00}
+ .ls-era[data-era="epic-sutra"]{border-color:#7a6ea8;color:#7a6ea8}
+ .ls-era[data-era="classical"]{border-color:#3d7a68;color:#3d7a68}
+ .ls-era[data-era="early-medieval"]{border-color:#36679b;color:#36679b}
+ .ls-era[data-era="late-medieval"]{border-color:#8a5a5a;color:#8a5a5a}
  .drange{color:#888;font-size:.8rem;margin-left:.6rem}
  main{padding:1rem 1.4rem;max-width:1100px}
  #stats{font-size:.85rem;color:#555;margin-bottom:.8rem}
  input{width:100%%;max-width:420px;padding:.45rem .6rem;font-size:.95rem;
-       border:1px solid #ccc;border-radius:4px;margin-bottom:.8rem}
+        border:1px solid #ccc;border-radius:4px;margin-bottom:.8rem}
  table{border-collapse:collapse;width:100%%;font-size:.85rem}
  th,td{text-align:left;padding:.3rem .5rem;border-bottom:1px solid #eee;vertical-align:top}
  th{position:sticky;top:0;background:#fafaf8;border-bottom:2px solid #ddd}
@@ -299,11 +425,22 @@ PAGE = """<!doctype html>
  a{color:#36679b;text-decoration:none} a:hover{text-decoration:underline}
  .sid{color:#7a6ea8;font-size:.75rem;margin-right:.35rem}
  tr:hover td{background:#f4f2ec}
+ .dating-note{font-size:.78rem;color:#888;margin-top:.9rem}
+ .dating-caveat{margin:.4rem 0}
+ .dating-legend{margin:.4rem 0 0}
+ .ls-era-demo{display:inline-block;font-size:.62rem;padding:0 .3rem;border-radius:3px;
+   border:1px solid #ddd;margin-right:.15rem;white-space:nowrap}
+ .ls-era-demo[data-era="vedic"]{border-color:#a66a00;color:#a66a00}
+ .ls-era-demo[data-era="epic-sutra"]{border-color:#7a6ea8;color:#7a6ea8}
+ .ls-era-demo[data-era="classical"]{border-color:#3d7a68;color:#3d7a68}
+ .ls-era-demo[data-era="early-medieval"]{border-color:#36679b;color:#36679b}
+ .ls-era-demo[data-era="late-medieval"]{border-color:#8a5a5a;color:#8a5a5a}
 </style></head><body>
 <header>
  <h1>%(title)s — word concordance %(badge)s %(drange)s</h1>
  <div class="sub">Every word occurrence feeding the dictionary (Tamilex corpus-dictionary
- pattern) · kosha H4034 pilot · <a href="../../directory/index.html">dataset catalog</a></div>
+ pattern) · <a href="../../reading/index.html#hitopadesa-0">Hitopadeśa reading pack</a> ·
+ <a href="../../directory/index.html">dataset catalog</a></div>
 </header>
 <main>
  <div id="stats">%(stats)s</div>
@@ -315,6 +452,7 @@ PAGE = """<!doctype html>
  <p style="color:#888;font-size:.78rem">Sense ids come from the H1455 per-sense layer
  (frame-limited); era badge = first-attestation bucket in the cited corpus, not the
  origin of the text. Source: DCS 2026, CC BY 4.0.</p>
+ %(dating)s
 </main>
 <script src="%(js)s"></script>
 <script>
@@ -346,4 +484,9 @@ PAGE = """<!doctype html>
 """
 
 if __name__ == "__main__":
+    if "--check" in sys.argv[1:]:
+        check_gates(OUT / "concordance.tsv", OUT / "text_hitopadesa.js",
+                    OUT / "index.html", OUT / "MANIFEST.json")
+        print("H4038 gates: parity OK, order-invariance OK")
+        sys.exit(0)
     sys.exit(main())
