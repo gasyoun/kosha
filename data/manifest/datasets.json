@@ -270,7 +270,7 @@
    "in_release": "not-applicable",
    "format": "sqlite",
    "rows": 444773,
-   "size_bytes": 1673854976,
+   "size_bytes": 1767456768,
    "keying": "10 tables: 444,773 entries · 323,425 lemmas · 692,403 senses · 1,378,401 forms · 6,917,018 inflections · 185,803 heritage_anchor rows (24,549 anchor-resolved) · 760 stem_bridge (+ meta, sources)",
    "source_repo": "https://github.com/gasyoun/kosha",
    "source_path": "data/db/kosha.db (GITIGNORED — regenerable via scripts/build_db.py chain, but hours of compute)",
@@ -289,7 +289,7 @@
     "date": "23-08-2026",
     "note": "current rebuild (inflections 6,917,018); supersedes the stale sha256 field above"
    },
-   "regen_checked": "2026-09-04 (H4046: PASS-REBUILT (entries 444,773 exact; inflections 6,930,902, +14,380 vs H691 vintage))"
+   "regen_checked": "2026-09-04 (H4046: drift-refresh — re-cut 04-09 (H4046): 10-stage DAG; entries 444,773 / lemmas 323,425 / senses 692,404 / forms 1,378,401 exact; inflections 6,930,902 (+14,380 vs 6,916,522 H691-vintage note))"
   },
   {
    "id": "dcs-full-sqlite",
@@ -325,8 +325,8 @@
    "tier": "restricted",
    "in_release": "not-applicable",
    "format": "sqlite",
-   "rows": 580552,
-   "size_bytes": 632909824,
+   "rows": 744151,
+   "size_bytes": 648073216,
    "keying": "580,552 corpus lines · 152 sources, verse-aligned (FTS5 index included)",
    "source_repo": "https://github.com/gasyoun/SamudraManthanam",
    "source_path": "web/corpus.db (GITIGNORED)",
@@ -340,7 +340,7 @@
    "sha256": "cf5230bcd53bedbb501c28c3fc3d5c9ba466a92ac3f09769b0d675b8d94d01f6",
    "provenance_verified": "2026-07-11 (H691, Fable 5 claude-fable-5)",
    "rebuild": "Regenerable: python web/ingest/ingest.py over git-tracked web/corpus_builder/jsonl/ (WAL empty at verification — counts are live).",
-   "regen_checked": "2026-09-04 (H4046: PASS-REBUILT (744,151 lines; manifest count stale))"
+   "regen_checked": "2026-09-04 (H4046: drift-refresh — re-cut 04-09 (H4046): corpus_lines 744,151 vs 580,552 vintage — corpus grew, manifest was stale)"
   },
   {
    "id": "heritage-mirror",
@@ -832,7 +832,7 @@
     "docs/img/ corrections-native viz via scripts/build_correction_viz.py"
    ],
    "notes": "H294 (07-07-2026): memo docs/HYPOTHESES_AND_VIZ_MEMO.md §5.1 layer. 39,540 records = 39,536 old→new + 4 old→del; process∈{bulk,human} splits the two machine markup batches (BOR 21,990 + LRV/markhom 8,063 = 76%) from human correction. Corrector identity deliberately excluded — public tier. PR: https://github.com/sanskrit-lexicon/csl-corrections/pull/291",
-   "regen_checked": "2026-09-04 (H4046: PASS-STALE-ROWS)"
+   "regen_checked": "2026-09-04 (H4046: drift-refresh — regen gives 61571 vs shipped-artifact vintage 39540; ~22k later MW batch records; selftest green; committed artifact still 39,540; re-cut = owner decision, not voted)"
   },
   {
    "id": "dict-corpus-concordance",
@@ -935,7 +935,7 @@
     "markup QA / under-marking triage"
    ],
    "notes": "H683 (11-07-2026, Fable 5 claude-fable-5). Verdicts in data/MARKUP_TAG_CENSUS_CSLORIG_2026.md: MW72/ARMH/FRI/NMMB under-marked; SKD/VCP expected-zero by construction; trace-tag inconsistencies flagged (SCH <ab> x2 in 29k entries, WIL <ls> x6 in 45k).",
-   "regen_checked": "2026-09-04 (H4046: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: drift-refresh — regen gives 679 vs shipped-artifact vintage 671; csl-orig/v02 grew 44→45 dicts since the H683 cut; committed artifact 671 unchanged (rebuild ran to temp); re-cut = owner decision, not voted)"
   },
   {
    "id": "dcs-lsc-pilot",
@@ -1158,7 +1158,7 @@
     "SIL MDF program (papers/SIL_MDF_ECOSYSTEM_CORRELATION.md)"
    ],
    "notes": "Registered by H727 (11-07-2026, Fable 5 claude-fable-5). Restricted: bulk derives from the unreleased ai_translated store (no human review pass yet); regenerate anytime from the store. Grows with every promoted window; refresh rows/size on release.",
-   "regen_checked": "2026-09-04 (H4046: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: drift-refresh — regen gives 2449 vs shipped-artifact vintage 2350; PWG_RU_STORE grows (manifest says so); +4.2%; re-cut = owner decision, not voted)"
   },
   {
    "id": "semdom-amarakosha-crosswalk",
@@ -2098,7 +2098,7 @@
     "kosha-sense-frequency (H1453) — shared attestation→sense assignment, two witnesses"
    ],
    "notes": "Wave-1 of PLAN_KOSHA_SENSE_RECONCILIATION_2026H2 (H1455). The middle arrow headword→SENSE→attestation, a SIDECAR left-joined at build time — MW/kosha `senses` are byte-unchanged. Inputs consumed, never re-derived: the H1456 PWG per-sense <ls> export (RussianTranslation microstructure.py), the reused dict-corpus-concordance, DCS 2026 (CC BY 4.0), pwg_sources.py (pwgbib abbrev resolver), and (wave-1.5) the csl-atlas f8 MBh vulgate crosswalk (mbh_vulgate_concordance.csv, H610/H761 — PWG-continuous → Nīlakaṇṭha-vulgate, all 18 parvans). Correction (wave-1.5): PWG↔MBh locus resolution is NOT infeasible — PWG-continuous → vulgate is solved and consumed (96% of pilot MBh <ls> resolved to a vulgate address). The residual is narrower: DCS's Mahābhārata is the BORI critical edition whose numbering drifts ~±1 adhyāya from the vulgate, so a DCS Mahābhārata match is an adhyāya-level corroboration (locus-mbh), not exact identity; texts DCS lacks (Pañcatantra, Kathāsaritsāgara) still cannot be DCS-matched. The load-bearing sense↔passage witness remains PWG's own <ls>, now carrying resolved vulgate addresses. Rights: all rows public (PWG <ls> = pre-1900 editions; DCS = CC BY 4.0); the evidence-only class is wired but unused in wave-1 (no modern-copyright gloss consumed). Build report: data/concordance/SENSE_CONCORDANCE_BUILD_REPORT.md.",
-   "regen_checked": "2026-09-04 (H4046: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: drift-refresh — regen gives 85763 vs shipped-artifact vintage 87092; −1.53% store churn; re-cut = owner decision, not voted)"
   },
   {
    "id": "sense-alignment-pilot",
@@ -2211,7 +2211,7 @@
    "tier": "public",
    "in_release": "not-applicable",
    "format": "tsv",
-   "rows": 82,
+   "rows": 80,
    "size_bytes": 38221,
    "keying": "one row per tracked PWG/PWK literary source, keyed on ls_code (the abbreviation, presentation marks stripped). 43 columns: status + status_gloss, citation_count + citation_count_safe + citation_count_provenance + citation_count_full, total_pages, volunteer, started/finished/index_posted/public_link dates, coordinating issue repo+number+URL, scan_dir + canonical spelling + Pages URL + repo size, and the cross-validation set (in_pwgbib, dict_citations, count_ratio, ru_subset_refs, scan_wired). book_no is NOT unique - do not key on it.",
    "source_repo": "https://github.com/sanskrit-lexicon/csl-observatory",
@@ -2225,7 +2225,7 @@
     "data/pwg_scan_index_tracker/pwg_citation_count_provenance.tsv (citation-count provenance + the denominator contract, H2874)"
    ],
    "notes": "H1706, csl-observatory PR #107, v1.5.0. Sidecars in the same directory: the verbatim 4-tab snapshot, the ranked e-text candidate queue, a dated audit of all 37 sanskrit-lexicon-scans directories, and (H2874) ls_counts/ - the two <ls>-per-abbreviation count tables. CAVEAT 1 (RESOLVED 16-08-2026, H2874, csl-observatory PR #186 / v1.13.0) - citation_count is the 2024-09-11 lsextract_all.txt work-family rollup, ALL = 739056, with 66 of 67 valued rows exact; the old '1.2x to 433x disagreement' was a comparison against cleaned-STRING counts, which measure a different object. Consume citation_count_safe (blank where provenance is unresolved), never the raw citation_count; fold by in_pwgbib before summing, because the field is a work-family rollup and sibling edition/volume rows share one total; divide only by the ALL of the same snapshot. Gate: python scripts/pwg_citation_count_provenance.py --check. CAVEAT 2 - multi-volume works carry their count once, on volume 1, so per-volume mass is a floor. CAVEAT 3 - the snapshot's Team tab has the volunteers' real-name column REDACTED at fetch time; handles are public on every coordinating issue, the name-to-handle linkage is not, and publishing it is a human decision (open MG @DECIDE in GTD).",
-   "regen_checked": "2026-09-04 (H4046: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: drift-refresh — manifest count 82 was stale vs its own committed tracker (80); builder green)"
   },
   {
    "id": "pwg-ls-counts",
@@ -2267,7 +2267,7 @@
    ],
    "notes": "PRIVATE repo (rights: raws/ + corpus/ carry PWG German and modern in-copyright Russian corpus material — R2.2). One logical store, promoter-only tm/ writes. Never flip visibility without /publish-safety-check.",
    "data_statement": "https://github.com/gasyoun/pwg-ru-data/blob/main/README.md",
-   "regen_checked": "2026-09-04 (H4046: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: drift-refresh — regen gives 11519 vs shipped-artifact vintage 11603; 59-surface inventory green; store −0.72%; re-cut = owner decision, not voted)"
   },
   {
    "id": "defgen-heritage-second-reference",
@@ -2287,7 +2287,7 @@
    ],
    "notes": "PUBLIC tier despite consuming the restricted Heritage layer (D20, LGPLLR, heritage-dico-gloss): gloss TEXT is deliberately never copied into kosha — the subset carries mw_key1 + DICO anchor + SHA-256 + word count, and defgen_heritage_ref.py REFUSES to score if any digest stops matching the local SanskritLexicography file. Reproduction therefore requires that sibling checkout. Derived from the frozen 500-headword MW sample (seed 730, H730) intersected with Heritage = 333 items; the subset is high-frequency-skewed by Heritage coverage, so its numbers are not comparable to the published 500-item table.",
    "data_statement": "docs/DEFGEN_HERITAGE_SECOND_REFERENCE_EVAL.md",
-   "regen_checked": "2026-09-04 (H4046: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: drift-refresh — regen gives 3663 vs shipped-artifact vintage 3742; −2.1% Heritage layer churn; re-cut = owner decision, not voted)"
   },
   {
    "id": "pwg-tm-canonical-v1",
@@ -2330,7 +2330,7 @@
    ],
    "notes": "PUBLIC, DE-ONLY: 459 entries / 11581 edition senses; 40700 citation edges, 6008 edition_rel, 2125 government, 86 non-German gloss spans, 42 form notes. Contains NO translation, review score or evidence grade — enforced by a field allowlist plus a post-serialization byte fence, not by convention. PWG/PW/SCH/PWKVN are public domain; NWS is the Cologne working layer (432 senses, 3.7%); derived structure CC-BY-SA-4.0. Dataset concept DOI 10.5281/zenodo.21961709 (version 10.5281/zenodo.21961710) — distinct from repo software DOI 10.5281/zenodo.21306715. The two large artifacts are release/deposit assets, NOT repo files; the repo keeps SHA256SUMS. COVERAGE CAVEAT: the pwg_ru pipeline's frequency-biased 459-headword slice, not a random sample of PWG — do not read per-sense counts as dictionary-wide rates. 22 senses quarantined (Cyrillic contamination in DE fields); edition_rel is machine classification with a measured 10.69% inter-layer conflict rate flagged needs_human. Rebuild: python src/export_de_edition.py export --store ... then src/build_de_sidecar_pack.py build.",
    "data_statement": "https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/release/pwg_de_sidecars/DATASHEET.md",
-   "regen_checked": "2026-09-04 (H4046: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: drift-refresh — regen gives 11499 vs shipped-artifact vintage 11581; senses −0.71%, entries 426 vs 459; both stages green; re-cut = owner decision, not voted)"
   },
   {
    "id": "mbh-vulgate-critical-presence",
@@ -2388,7 +2388,7 @@
     "csl-atlas A09 sense-alignment paper"
    ],
    "notes": "H2882 wave 4. absent_candidate is an UPPER BOUND on genuine absence: adjudication of 30 random candidates left ~17% genuine (FINDINGS s559); 23% of false absents trace to degraded store key1 (FINDINGS s560). Summary sibling: mw_ap_sense_coverage_summary.json.",
-   "regen_checked": "2026-09-04 (H4046: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: drift-refresh — regen gives 2128 vs shipped-artifact vintage 2767; −23.1% store-state drift; deterministic script green; re-cut = owner decision, not voted)"
   },
   {
    "id": "pwg-work-dating-table",
