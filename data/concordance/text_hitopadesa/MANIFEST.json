@@ -1,0 +1,44 @@
+{
+ "dataset": "hitopadesa-text-concordance-pilot",
+ "handoff": "H4034",
+ "built": "2026-09-04",
+ "text": {
+  "name": "Hitopadeśa",
+  "dcs_text_id": 189,
+  "chapters": "Hitop, 0–4"
+ },
+ "source": {
+  "corpus": "DCS (Digital Corpus of Sanskrit) 2026",
+  "file": "../VisualDCS/src/DCS-data-2026/dcs_full.sqlite",
+  "license": "CC BY 4.0",
+  "attribution": "Digital Corpus of Sanskrit (dcs.uni-heidelberg.de), Oliver Hellwig; lemmatized tokens consumed verbatim."
+ },
+ "rights_note": "license-gated ingest: measurements derived here are free; bulk redistribution of the underlying corpus stays gated (DharmaMitra memo precedent).",
+ "inputs": [
+  "data/concordance/dict_corpus_concordance.tsv",
+  "data/concordance/sense_corpus_concordance.tsv",
+  "data/dating/work_dates.json"
+ ],
+ "outputs": [
+  "data/concordance/text_hitopadesa/concordance.tsv",
+  "data/concordance/text_hitopadesa/text_hitopadesa.js",
+  "data/concordance/text_hitopadesa/index.html"
+ ],
+ "reuse": [
+  "scripts/concordance_core.py::human_locus",
+  "app/word_page.py::card_token",
+  "data/concordance/dict_corpus_concordance.tsv (H380 join)",
+  "data/concordance/sense_corpus_concordance.tsv (H1455 senses)",
+  "data/dating/work_dates.json (H4019/H4026 era badge)"
+ ],
+ "stats": {
+  "tokens": 25040,
+  "distinct_surface_lemma_pairs": 7857,
+  "distinct_lemmas": 3781,
+  "occurrences_listed": 25040,
+  "lemma_join_linked": 7503,
+  "lemma_join_share_pct": 95.5,
+  "sense_linked": 1024,
+  "sense_linked_share_pct": 13.0
+ }
+}
