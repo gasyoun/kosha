@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hitopadeśa — text concordance | kosha</title>
+<style>
+ body{font:15px/1.5 -apple-system,'Segoe UI',Roboto,sans-serif;margin:0;
+      color:#222;background:#fafaf8}
+ header{padding:1.2rem 1.4rem;border-bottom:1px solid #e5e2da;background:#fff}
+ h1{margin:0;font-size:1.35rem}
+ .sub{color:#666;font-size:.85rem;margin-top:.3rem}
+ .ls-era{display:inline-block;font-size:.6rem;line-height:1.4;letter-spacing:.02em;
+   text-transform:uppercase;border:1px solid #36679b;color:#36679b;
+   border-radius:3px;padding:.05rem .4rem;margin-left:.5rem;vertical-align:middle}
+ .drange{color:#888;font-size:.8rem;margin-left:.6rem}
+ main{padding:1rem 1.4rem;max-width:1100px}
+ #stats{font-size:.85rem;color:#555;margin-bottom:.8rem}
+ input{width:100%;max-width:420px;padding:.45rem .6rem;font-size:.95rem;
+       border:1px solid #ccc;border-radius:4px;margin-bottom:.8rem}
+ table{border-collapse:collapse;width:100%;font-size:.85rem}
+ th,td{text-align:left;padding:.3rem .5rem;border-bottom:1px solid #eee;vertical-align:top}
+ th{position:sticky;top:0;background:#fafaf8;border-bottom:2px solid #ddd}
+ td.refs{color:#555;font-size:.78rem;max-width:340px}
+ td.n{text-align:right;white-space:nowrap}
+ a{color:#36679b;text-decoration:none} a:hover{text-decoration:underline}
+ .sid{color:#7a6ea8;font-size:.75rem;margin-right:.35rem}
+ tr:hover td{background:#f4f2ec}
+</style></head><body>
+<header>
+ <h1>Hitopadeśa — word concordance <span class="ls-era" data-era="early-medieval" title="early-medieval — first-attestation bucket via dharmamitra (not origin)">early-medieval</span> </h1>
+ <div class="sub">Every word occurrence feeding the dictionary (Tamilex corpus-dictionary
+ pattern) · kosha H4034 pilot · <a href="../../concordance/index.html">concordance hub</a></div>
+</header>
+<main>
+ <div id="stats">25040 tokens · 7857 forms · 3781 lemmas · 13.0% sense-linked</div>
+ <input id="q" placeholder="Filter by form or lemma (IAST)…" autofocus>
+ <table id="t"><thead><tr>
+  <th>form</th><th>lemma</th><th>pos</th><th>n</th>
+  <th>occurrences (Hitop, chapter, sentence)</th><th>koshasense</th>
+ </tr></thead><tbody></tbody></table>
+ <p style="color:#888;font-size:.78rem">Sense ids come from the H1455 per-sense layer
+ (frame-limited); era badge = first-attestation bucket in the cited corpus, not the
+ origin of the text. Source: DCS 2026, CC BY 4.0.</p>
+</main>
+<script src="text_hitopadesa.js"></script>
+<script>
+(function(){
+ var D=window.TEXT_CONCORDANCE["hitopadesa"], tb=document.querySelector("#t tbody"),
+     q=document.querySelector("#q"), rows=D.rows;
+ function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]})}
+ function render(f){
+  var html="", n=0;
+  for(var i=0;i<rows.length&&n<500;i++){
+   var r=rows[i];
+   if(f && r.surface.indexOf(f)<0 && r.lemma_iast.indexOf(f)<0) continue;
+   n++;
+   var senses=r.sense_ids?r.sense_ids.split("|").map(function(s){
+     return '<span class="sid">'+esc(s)+'</span>'}).join(""):"",
+       card=r.card_href?'<a href="'+esc(r.card_href)+'">'+esc(r.headword_slp1)+'</a>'
+                        :esc(r.headword_slp1);
+   html+='<tr><td><b>'+esc(r.surface)+'</b></td><td>'+esc(r.lemma_iast)+'</td><td>'
+        +esc(r.upos)+'</td><td class="n">'+r.n_occ+'</td><td class="refs">'
+        +esc(r.refs)+'</td><td>'+(card?senses+" "+card:"—")+'</td></tr>';
+  }
+  tb.innerHTML=html||'<tr><td colspan="6" style="color:#999">no rows</td></tr>';
+ }
+ q.addEventListener("input",function(){render(q.value.trim().toLowerCase())});
+ render("");
+})();
+</script>
+</body></html>

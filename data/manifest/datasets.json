@@ -2447,6 +2447,25 @@
     "sense-chronology programme (H3673/H4016 probes -> H4019 build)"
    ],
    "notes": "H4019 (MG GO 03-09-2026, additive-only ruling on the H4016 GOxSTRONG verdict). Date sources tiered: (1) Dharmamitra chronology snapshot (primary; canon-identity family joins, hand-verified expected eras asserted at build), (2) DCS 2021 date table (secondary, seed-verbatim), (3) H4016 seed hand calls + curated hand rows with reasons (tertiary). Work identity routes through the citation_canon topTexts spine — no fuzzy title matching; string fallbacks would be flagged uncertain, none auto-applied. Disputed/boundary/recension-dependent works -> NULL, never forced (Susruta layered, Medinikosa, Kavyadarsa, Mrcchakatika, Lalitavistara, ...). Coverage at build: 73.3% of 85,472 citation instances dateable; unresolved loci 6.7%; nomina spot-check 20/20 vs H4016 hand calls; Sabdakalpadruma dated late-medieval as a terminus CEILING with low attestation value (H4019 addendum §1). See data/dating/README.md + COVERAGE_REPORT.md."
+  },
+  {
+   "id": "hitopadesa-text-concordance",
+   "title": "Hitopadeśa per-text word concordance pilot — every word of the text feeding the dictionary (Tamilex corpus-dictionary pattern, H4034)",
+   "tier": "public",
+   "in_release": "not-applicable",
+   "release_asset": "text_hitopadesa_concordance.tsv",
+   "format": "tsv",
+   "rows": 7857,
+   "size_bytes": 1267341,
+   "keying": "one row per distinct (surface form, DCS lemma) token pair of DCS text_id 189 (Hitop, 0-4, 3,432 sentences); columns surface/lemma_iast/upos/n_occ/n_refs/refs (every occurrence, document order, 'Hitopadeśa, Hitop, <ch>, <sent>[.<sub]')/headword_slp1/link_method/conf/sense_ids/card_href. Each form joins the kosha dictionary via the H380 dict_corpus_concordance lemma join (95.5%) and carries numbered PWG sense ids from the H1455 per-sense layer where the headword is in frame (13.0%).",
+   "source_repo": "https://github.com/gasyoun/kosha",
+   "source_path": "data/concordance/text_hitopadesa/concordance.tsv",
+   "builder": "scripts/build_text_concordance_hitopadesa.py (deterministic; consumes ../VisualDCS dcs_full.sqlite text 189, dict_corpus_concordance.tsv, sense_corpus_concordance.tsv, work_dates.json — never re-derives them)",
+   "consumers": [
+    "text-concordance programme (H4034 pilot; the INVERSE view of the H1455 sense-attestation layer)",
+    "per-text corpus-dictionary scale-up lane (future texts)"
+   ],
+   "notes": "Pilot (H4034). Source DCS 2026, CC BY 4.0 — license-gated ingest: derived measurements free, bulk corpus redistribution gated; attribution in MANIFEST.json. Era tie-in: early-medieval (DM canon_dm, core c. 9th-10th c. CE disputed) via data/dating/work_dates.json; the concordance page carries the H4026 .ls-era badge. Residue: 4.5% no headword join (DCS -ay causative stems kosha keys under the root, indeclinables); 87% sense-id absence = H1455 frame width, not PWG sense absence. Spot check 10/10 (independent SQL recount) in SPOT_CHECK_SAMPLE.md. Additive fold only — no existing surface touched (H4034 gate)."
   }
  ]
 }
