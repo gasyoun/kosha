@@ -4,18 +4,23 @@
 <title>Hitopadeśa — text concordance | kosha</title>
 <style>
  body{font:15px/1.5 -apple-system,'Segoe UI',Roboto,sans-serif;margin:0;
-      color:#222;background:#fafaf8}
+       color:#222;background:#fafaf8}
  header{padding:1.2rem 1.4rem;border-bottom:1px solid #e5e2da;background:#fff}
  h1{margin:0;font-size:1.35rem}
  .sub{color:#666;font-size:.85rem;margin-top:.3rem}
  .ls-era{display:inline-block;font-size:.6rem;line-height:1.4;letter-spacing:.02em;
-   text-transform:uppercase;border:1px solid #36679b;color:#36679b;
-   border-radius:3px;padding:.05rem .4rem;margin-left:.5rem;vertical-align:middle}
+   text-transform:uppercase;border:1px solid #ddd;color:#888;border-radius:3px;
+   padding:.05rem .4rem;margin-left:.5rem;vertical-align:middle;white-space:nowrap}
+ .ls-era[data-era="vedic"]{border-color:#a66a00;color:#a66a00}
+ .ls-era[data-era="epic-sutra"]{border-color:#7a6ea8;color:#7a6ea8}
+ .ls-era[data-era="classical"]{border-color:#3d7a68;color:#3d7a68}
+ .ls-era[data-era="early-medieval"]{border-color:#36679b;color:#36679b}
+ .ls-era[data-era="late-medieval"]{border-color:#8a5a5a;color:#8a5a5a}
  .drange{color:#888;font-size:.8rem;margin-left:.6rem}
  main{padding:1rem 1.4rem;max-width:1100px}
  #stats{font-size:.85rem;color:#555;margin-bottom:.8rem}
  input{width:100%;max-width:420px;padding:.45rem .6rem;font-size:.95rem;
-       border:1px solid #ccc;border-radius:4px;margin-bottom:.8rem}
+        border:1px solid #ccc;border-radius:4px;margin-bottom:.8rem}
  table{border-collapse:collapse;width:100%;font-size:.85rem}
  th,td{text-align:left;padding:.3rem .5rem;border-bottom:1px solid #eee;vertical-align:top}
  th{position:sticky;top:0;background:#fafaf8;border-bottom:2px solid #ddd}
@@ -24,11 +29,22 @@
  a{color:#36679b;text-decoration:none} a:hover{text-decoration:underline}
  .sid{color:#7a6ea8;font-size:.75rem;margin-right:.35rem}
  tr:hover td{background:#f4f2ec}
+ .dating-note{font-size:.78rem;color:#888;margin-top:.9rem}
+ .dating-caveat{margin:.4rem 0}
+ .dating-legend{margin:.4rem 0 0}
+ .ls-era-demo{display:inline-block;font-size:.62rem;padding:0 .3rem;border-radius:3px;
+   border:1px solid #ddd;margin-right:.15rem;white-space:nowrap}
+ .ls-era-demo[data-era="vedic"]{border-color:#a66a00;color:#a66a00}
+ .ls-era-demo[data-era="epic-sutra"]{border-color:#7a6ea8;color:#7a6ea8}
+ .ls-era-demo[data-era="classical"]{border-color:#3d7a68;color:#3d7a68}
+ .ls-era-demo[data-era="early-medieval"]{border-color:#36679b;color:#36679b}
+ .ls-era-demo[data-era="late-medieval"]{border-color:#8a5a5a;color:#8a5a5a}
 </style></head><body>
 <header>
- <h1>Hitopadeśa — word concordance <span class="ls-era" data-era="early-medieval" title="early-medieval — first-attestation bucket via dharmamitra (not origin)">early-medieval</span> </h1>
+ <h1>Hitopadeśa — word concordance <span class='ls-era' data-era='early-medieval' title='first attestation in the cited corpus, not the origin of the meaning (первое засвидетельствование в цитируемом корпусе) · via dharmamitra'>early medieval</span> </h1>
  <div class="sub">Every word occurrence feeding the dictionary (Tamilex corpus-dictionary
- pattern) · kosha H4034 pilot · <a href="../../directory/index.html">dataset catalog</a></div>
+ pattern) · <a href="../../reading/index.html#hitopadesa-0">Hitopadeśa reading pack</a> ·
+ <a href="../../directory/index.html">dataset catalog</a></div>
 </header>
 <main>
  <div id="stats">25040 tokens · 7857 forms · 3781 lemmas · 13.0% sense-linked</div>
@@ -40,6 +56,7 @@
  <p style="color:#888;font-size:.78rem">Sense ids come from the H1455 per-sense layer
  (frame-limited); era badge = first-attestation bucket in the cited corpus, not the
  origin of the text. Source: DCS 2026, CC BY 4.0.</p>
+ <details class="disclosure dating-note"><summary>Sense dating / Датировка значений</summary><p class="dating-caveat" lang="en">The small era badges on the cited sources mark the <b>first attestation of a meaning in the cited corpus, not the origin of the meaning</b>. Only citations that resolve to exactly one dateable work carry a badge; disputed or ambiguous sources are never dated.</p><p class="dating-caveat" lang="ru"><b>Первое засвидетельствование значения в цитируемом корпусе — не происхождение значения.</b> Бейдж ставится только у цитат, относящихся ровно к одной датированной работе; спорные и омонимичные источники никогда не датируются.</p><p class="dating-legend"><span class="ls-era-demo" data-era="vedic">Vedic</span> · <span class="ls-era-demo" data-era="epic-sutra">epic-sūtra</span> · <span class="ls-era-demo" data-era="classical">classical</span> · <span class="ls-era-demo" data-era="early-medieval">early medieval</span> · <span class="ls-era-demo" data-era="late-medieval">late medieval</span></p></details>
 </main>
 <script src="text_hitopadesa.js"></script>
 <script>
