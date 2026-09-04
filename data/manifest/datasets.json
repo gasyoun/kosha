@@ -187,7 +187,7 @@
    "keying": "SLP1 headword → paradigm token (335 tokens)",
    "source_repo": "https://github.com/gasyoun/SanskritLexicography",
    "source_path": "RussianTranslation/src/headword_index.tsv",
-   "builder": "RussianTranslation grammar-index pipeline",
+   "builder": "SanskritLexicography RussianTranslation/src/reverse_index.py --build (streams csl-orig/v02/pwg/pwg.txt; outputs headword_index.tsv + reverse_paradigm_index.json; H4075 04-09: located + regenerated, zero diff vs committed artifact — S3 drill 9 \"builder absent\" resolved)",
    "consumers": [
     "pwg_ru nominal layer",
     "kosha P4 grammar tokens",
@@ -195,7 +195,7 @@
    ],
    "notes": "FAIR data package; paradigms generated via vidyut, never transcribe static tables. Zenodo DOI 10.5281/zenodo.22102090 (minted 25-08-2026 for data-v0.4.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-grammar-index.meta.md",
-   "regen_checked": "2026-09-04 (H4046: PASS)"
+   "regen_checked": "2026-09-04 (H4075: reverse_index.py --build rerun over live csl-orig v02 — zero diff; builder located)"
   },
   {
    "id": "corpus-lexicon",
