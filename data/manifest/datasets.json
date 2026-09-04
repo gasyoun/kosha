@@ -28,7 +28,7 @@
    ],
    "notes": "3 repos independently re-scanned mw.txt before this existed (got 750/809/1163) — consume this, never re-scan. Zenodo DOI 10.5281/zenodo.22105641 (minted 26-08-2026 for data-v0.5.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-roots.meta.md",
-   "regen_checked": "2026-09-04 (H4037: NOT-REBUILDABLE upstream (server-regenerated))"
+   "regen_checked": "2026-09-04 (H4046: NOT-REBUILDABLE upstream (server-regenerated))"
   },
   {
    "id": "mw-etymology",
@@ -49,7 +49,7 @@
    ],
    "notes": "Derivations, distinct from the root inventory (mw-roots). Zenodo DOI 10.5281/zenodo.22105641 (minted 26-08-2026 for data-v0.5.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-etymology.meta.md",
-   "regen_checked": "2026-09-04 (H4037: NOT-REBUILDABLE upstream (server-regenerated))"
+   "regen_checked": "2026-09-04 (H4046: NOT-REBUILDABLE upstream (server-regenerated))"
   },
   {
    "id": "dcs-cdsl-xref",
@@ -71,7 +71,7 @@
    ],
    "notes": "Reusable LOD linkset — never re-derive DCS↔CDSL joins. Zenodo DOI 10.5281/zenodo.22105641 (minted 26-08-2026 for data-v0.5.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/dcs-cdsl-xref.meta.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL-COUNT-MISMATCH)"
+   "regen_checked": "2026-09-04 (H4046: FAIL-COUNT-MISMATCH)"
   },
   {
    "id": "union-headwords",
@@ -93,7 +93,7 @@
    ],
    "notes": "THE headword master — 323k headwords across all dicts. Zenodo DOI 10.5281/zenodo.22102090 (minted 25-08-2026 for data-v0.4.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/union-headwords.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "mw-heritage-crosswalk",
@@ -114,7 +114,7 @@
    ],
    "notes": "Crosswalk itself is ours/publishable; the Heritage mirror data behind it is LGPLLR-pending (restricted tier). Zenodo DOI 10.5281/zenodo.22105641 (minted 26-08-2026 for data-v0.5.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-heritage-crosswalk.meta.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL-INPUT-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: FAIL-INPUT-DEFER)"
   },
   {
    "id": "kosha-lemma-frequency",
@@ -135,7 +135,7 @@
    ],
    "notes": "LEFT-JOIN this — never re-derive frequency ordering. ⚠ upstream UD Tense=Past conflates aorist/perfect. Zenodo DOI 10.5281/zenodo.22105641 (minted 26-08-2026 for data-v0.5.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/kosha-lemma-frequency.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "kosha-sense-frequency",
@@ -158,7 +158,7 @@
    ],
    "notes": "LEFT-JOIN sidecar — never overwrites kosha senses. Attested = WordSem gold (103,079 rows); estimated = H1588 single-witness MFS on untagged tokens (13,709 mw rows, 4.5M tokens) after ≥70% held-out gate. SCL witness fail-closed (H057). Companions: wordsem_inventory.tsv, wn_to_mw_map.tsv, wsd_fusion_report.md, wsd_heldout_eval.json, wsd_review_queue.tsv.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/kosha-sense-frequency.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "zaliznyak-grammar-index",
@@ -180,7 +180,7 @@
    ],
    "notes": "FAIR data package; paradigms generated via vidyut, never transcribe static tables. Zenodo DOI 10.5281/zenodo.22102090 (minted 25-08-2026 for data-v0.4.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-grammar-index.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "corpus-lexicon",
@@ -207,7 +207,7 @@
     "sha256": "9f3d852f1f1424c275af2cc1823dab1b561e649320e597d3cab013068ccc4072",
     "date": "23-08-2026"
    },
-   "regen_checked": "2026-09-04 (H4037: NOT-REBUILDABLE by-design (LLM alignment, append-only))"
+   "regen_checked": "2026-09-04 (H4046: NOT-REBUILDABLE by-design (LLM alignment, append-only))"
   },
   {
    "id": "stenogrammy-teaching-glossary",
@@ -232,7 +232,7 @@
    },
    "provenance_verified": "2026-08-16 (H2839, Opus 5 claude-opus-5)",
    "rebuild": "Deterministic: python Uprava/tools/build_stenogrammy_glossary.py --floor 20, given Uprava/stenogrammy/ and SanskritRussian/lemma_glossary.tsv as siblings",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "sa-ru-glossary",
@@ -261,7 +261,7 @@
     "sha256": "d19ff0810a6482b025bccda0d49509082b9a495b38b07c1a7f7dd6d29c265434",
     "date": "23-08-2026"
    },
-   "regen_checked": "2026-09-04 (H4037: FAIL-INPUT-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: FAIL-INPUT-DEFER)"
   },
   {
    "id": "kosha-db",
@@ -289,7 +289,7 @@
     "date": "23-08-2026",
     "note": "current rebuild (inflections 6,917,018); supersedes the stale sha256 field above"
    },
-   "regen_checked": "2026-09-04 (H4037: PASS-REBUILT (entries 444,773 exact; inflections 6,930,902, +14,380 vs H691 vintage))"
+   "regen_checked": "2026-09-04 (H4046: PASS-REBUILT (entries 444,773 exact; inflections 6,930,902, +14,380 vs H691 vintage))"
   },
   {
    "id": "dcs-full-sqlite",
@@ -317,7 +317,7 @@
     "sha256": "8f3b06bd6ef0e47a9ccf81d147e73d5d240d64e0c12f6d789262eb422ebb23bc",
     "date": "23-08-2026"
    },
-   "regen_checked": "2026-09-04 (H4037: PASS-REBUILT (5,688,416 tokens exact; was 0-byte 29-08))"
+   "regen_checked": "2026-09-04 (H4046: PASS-REBUILT (5,688,416 tokens exact; was 0-byte 29-08))"
   },
   {
    "id": "samudra-corpus-db",
@@ -340,7 +340,7 @@
    "sha256": "cf5230bcd53bedbb501c28c3fc3d5c9ba466a92ac3f09769b0d675b8d94d01f6",
    "provenance_verified": "2026-07-11 (H691, Fable 5 claude-fable-5)",
    "rebuild": "Regenerable: python web/ingest/ingest.py over git-tracked web/corpus_builder/jsonl/ (WAL empty at verification — counts are live).",
-   "regen_checked": "2026-09-04 (H4037: PASS-REBUILT (744,151 lines; manifest count stale))"
+   "regen_checked": "2026-09-04 (H4046: PASS-REBUILT (744,151 lines; manifest count stale))"
   },
   {
    "id": "heritage-mirror",
@@ -359,7 +359,7 @@
     "HeadwordLists coverage studies"
    ],
    "notes": "LGPLLR rights @DECIDE pending — restricted until ruled. Upstream mirror exists on GitHub, so no backup urgency.",
-   "regen_checked": "2026-09-04 (H4037: FAIL-INPUT-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: FAIL-INPUT-DEFER)"
   },
   {
    "id": "indische-sprueche",
@@ -377,7 +377,7 @@
     "PWG <ls> citation links"
    ],
    "notes": "Already tracked+public in its repo; listed for discovery, not re-released.",
-   "regen_checked": "2026-09-04 (H4037: FAIL-UNDOCUMENTED)"
+   "regen_checked": "2026-09-04 (H4046: FAIL-UNDOCUMENTED)"
   },
   {
    "id": "dcs-grapheme-frequency",
@@ -395,7 +395,7 @@
     "Nagari script-teaching order"
    ],
    "notes": "Already tracked+public; listed for discovery.",
-   "regen_checked": "2026-09-04 (H4037: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)"
   },
   {
    "id": "dcs-nominal-paradigm-grid",
@@ -414,7 +414,7 @@
    ],
    "notes": "H1472 (27-07-2026, Opus 5 claude-opus-5[1m]). The nominal counterpart of the verbal paradigm layer; FEATURES_INDEX E50. Universe: upos IN ('NOUN','ADJ') with one of the 8 real cases and a number, keyed by lemma_id — 2,263,192 of 2,996,410 NOUN/ADJ tokens. THREE TRAPS travel with it: (1) feat_case='Cpd' is NOT a ninth case — 724,676 compound-member tokens carry no case, are excluded from the grid and counted separately, and grid+Cpd+untagged is asserted to equal the universe at build time; (2) declension class is NOT a DCS tag — it is a citation-form heuristic reusing SanskritGrammar Sangram G2's tag list (H1048), reconciled exactly against it (57,144 lemma_ids, 0 disagreements) and extended only by -ant (279 lemma_ids); (3) the gender axis is the TOKEN's tagged gender, so feminine tokens of -a-cited adjectives inflect as ā-/ī-stems inside the -a class. Endings are surface residues after stripping the class-marked stem; stem-alternating tokens (rājan -> rājñā) are counted as not segmentable rather than force-split. Forms shown are DCS's unsandhied analysis, reconstructed for 68.0% of grid tokens. DCS is CC BY 4.0; this derivative ships BY-SA with the public tier.",
    "rebuild": "python src/DCS-data-2026/gen_paradigm_nominal.py (needs the pinned dcs_full.sqlite; refuses a master with no provenance pin, emits a real SHA-256).",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "dcs-nominal-class-split",
@@ -431,7 +431,7 @@
    "consumers": [],
    "notes": "H3984 (03-09-2026, Opus 5 claude-opus-5), closing the NOUN half of SanskritLexicography GAPS §14; epistemic residue in FINDINGS §630, FEATURES_INDEX E51. An ADDITIVE SIDE-CAR to dcs-nominal-paradigm-grid: paradigm_nominal.json's own 14 buckets are unchanged and every G2 total is asserted unmoved (reconciles: true, six checks) — a moved total is a build failure, not a diff to accept. Two signals, both EXTERNAL to the corpus, because H1472 refused to guess a character rule: (A) the long-ī bucket splits on IAST vowel-nucleus count of the NFC citation form (ai/au count once) — 17 lemma_ids / 6,373 tokens monosyllabic (śrī, strī, dhī) vs 4,477 / 58,295 polysyllabic (devī, nadī); no dictionary and no segmenter needed, a Sanskrit syllable has exactly one nucleus. (B) the -ant/-at bucket splits on MW + PWG csl-json headword ENTRY-ID SETS, not headword presence — 191 lemma_ids / 8,851 tokens one lexeme two spellings, 0 two headwords, 51 / 2,384 at_only, 1 / 1 ant_only, 36 / 70 with no witness in either lexicon and therefore LEFT POOLED. Reach 243 of 279 = 87.1%. TRAP: a presence-only test ('is each spelling in the dictionary?') calls 191 lemmas two headwords and inverts the pair GAPS §14 pins by name — PWG files भगवत् and भगवन्त् under the identical ids 53806,80057. TRAP: the universe is Sangram G2's upos='NOUN' only; the ii pool is 99.0% NOUN by token mass but the ant pool only 23.5% (36,768 ADJ tokens), and that surplus has no per-lemma inventory outside the 921 MB pinned dcs_full.sqlite — it is declared UNREACHED, never estimated. Source dictionaries are sanskrit-lexicon/csl-json (mw.json 195,313 headwords, pwg.json 108,952), public-domain lexica; DCS is CC BY 4.0 and this derivative ships BY-SA with the public tier.",
    "rebuild": "python src/DCS-data-2026/split_pooled_nominal_classes.py (needs SanskritGrammar sangram/data/declension_cell_coverage/lemma_cell_coverage.csv and the csl-json mw.json + pwg.json; writes visual/paradigm_nominal_class_split.json plus reports/nominal_pooled_class_split.md and reports/nominal_g2_reconciliation_split.md — re-run it in the same PR as any change to the ii/ant membership test in gen_paradigm_nominal.py).",
-   "regen_checked": "2026-09-04 (H4037: NOT-RUN)"
+   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
   },
   {
    "id": "dcs-verbal-paradigm-attested",
@@ -450,7 +450,7 @@
    ],
    "notes": "H1299 (scale-up from the 6-root hand-curated view to 7,689 corpus-attested roots); schema 1.1.0 since H2294 (05-08-2026, Opus 5 claude-opus-5). THE TRAP THAT TRAVELS WITH IT: the finite past indicative is split into Aorist / Periphrastic Perfect / Perfect, but the split is ONE-SIDED. UD has no Aorist value; DCS's own feat_formation supplies it, so Aorist and Periphrastic Perfect are READ off the corpus while `Perfect` is the UNMARKED DEFAULT (feat_formation IS NULL) and is therefore INFERRED, never observed. Every 'Perfect' cell is 100% defaulted. Aorist is a LOWER bound (>=869 more sit untagged inside Perfect, 1.13% of the default) and Perfect an UPPER bound (>=1.13% misfiled aorists + >=3.54% misfiled imperfects); a consumer quoting either as an exact corpus count is wrong. The dataset carries this as a machine-readable `cellEvidence` map (formation-attested | defaulted) per display category plus `cellEvidenceNote` -- READ IT AND SURFACE IT: rendering a `defaulted` category to a learner unmarked presents an assumption as an attestation. The per-cell defaulted share is exactly 0% or 100% (1,955 attested vs 3,229 defaulted cells), degenerate by construction since Perfect IS the untagged residue, which is why a per-category flag is exact rather than approximate; the build asserts it. Two further ceilings: no Panini class number is assigned anywhere (DCS tags unaccented text and cannot separate class I/VI or IV/passive), and feat_voice distinguishes only Passive from non-passive -- parasmaipada vs atmanepada is NOT tagged, so non-passive forms for a cell are pooled. Finite cell identity is deliberately identical to csl-observatory's E46 census, reconciled at 6,454 roots match / 0 disagree. DCS is CC BY 4.0; this derivative ships BY-SA with the public tier.",
    "rebuild": "python src/DCS-data-2026/gen_paradigm_attested.py [--db PATH] [--e46-tsv PATH] (needs the pinned dcs_full.sqlite; pass --e46-tsv when running from a linked git worktree, or the E46 reconciliation report is rewritten as BLOCKED).",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "varga-series-diachrony",
@@ -468,7 +468,7 @@
     "GasunsDhatu 2026 §2.6 (Table 5 replacement, L7 fix)"
    ],
    "notes": "Aggregation of dcs-grapheme-frequency; Cramér's V=0.037 → series composition near-stable across ~2kyr; corrects the 2014 П9 claim. Includes slot_era_map.csv.",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "dcs-sintagmatic-appendix7",
@@ -497,7 +497,7 @@
      "confidence": "medium"
     }
    ],
-   "regen_checked": "2026-09-04 (H4037: NOT-RUN)"
+   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
   },
   {
    "id": "dcs-parallel-passages-full",
@@ -526,7 +526,7 @@
      "confidence": "medium"
     }
    ],
-   "regen_checked": "2026-09-04 (H4037: NOT-RUN)"
+   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
   },
   {
    "id": "dcs-verb-roots-by-class",
@@ -555,7 +555,7 @@
      "confidence": "medium"
     }
    ],
-   "regen_checked": "2026-09-04 (H4037: NOT-RUN)"
+   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
   },
   {
    "id": "dcs-verb-class-prefix-frequency",
@@ -584,7 +584,7 @@
      "confidence": "medium"
     }
    ],
-   "regen_checked": "2026-09-04 (H4037: NOT-RUN)"
+   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
   },
   {
    "id": "dcs-sintagmatic-appendix6-periods",
@@ -613,7 +613,7 @@
      "confidence": "medium"
     }
    ],
-   "regen_checked": "2026-09-04 (H4037: NOT-RUN)"
+   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
   },
   {
    "id": "stopovye-parallel-passages",
@@ -630,7 +630,7 @@
    "consumers": [],
    "notes": "H291: the largest single derived-data bundle in VisualDCS (1.17 GB) — likely a stop-word-filtered variant of dcs-parallel-passages-full, not yet content-diffed against it. Git-tracked (confirmed 07-07-2026), so NOT a backup-risk giant; cross-referenced in Uprava/DATA_LAYERS_CENSUS.md § Actionable gaps instead of the unbackuped-giants table. rows left null: format is per-file alignment records, not a flat table — a meaningful row count needs a schema-aware parse, not a line count. H3596 status: diff-then-decide — likely a stop-word-filtered variant of dcs-parallel-passages-full, never content-diffed; diff first, supersede this row if redundant, only then consider consumers. GTD @DO row minted 27-08-2026.",
    "status": "diff-then-decide",
-   "regen_checked": "2026-09-04 (H4037: NOT-RUN)"
+   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
   },
   {
    "id": "russiantranslation-src-raw-ingests",
@@ -653,7 +653,7 @@
     "date": "23-08-2026",
     "note": "PARTIAL: the 13 underscore-spelled variants in deploy_guhya MANIFEST do not exist on this disk (H235 dedup @DECIDE resolved by disk reality: dot-variants canonical). corpus.db NOT backed up: local copy is 0 bytes; regenerable from tracked web/corpus_builder/jsonl/"
    },
-   "regen_checked": "2026-09-04 (H4037: FAIL-INPUT-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: FAIL-INPUT-DEFER)"
   },
   {
    "id": "dcs-verb-example-ids",
@@ -671,7 +671,7 @@
     "other Glagolnye-formy derived assets (id lookup)"
    ],
    "notes": "H291 Step 3, MG ruling: register as tier=intermediate rather than skip — raw example-ID lookup table, not a standalone citable asset in its own right.",
-   "regen_checked": "2026-09-04 (H4037: NOT-RUN)"
+   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
   },
   {
    "id": "heritage-forms-crosswalk-extras",
@@ -690,7 +690,7 @@
     "kosha default-off enforcement (H696, R7 ruling 10-07-2026: heritage witnesses opt-in only via ?heritage=1; excluded from the static tier)"
    ],
    "notes": "H291 Step 4: sibling of mw-heritage-crosswalk (same HeadwordLists dir, same Heritage mirror pipeline) — registered as tier=restricted for the same Heritage LGPLLR-pending rights reason as that entry. H696 (11-07-2026): the R7 ruling (Uprava docs/DECISIONS_roadmap_forks_2026H2.md) is implemented — the 928,262-form heritage surplus is ingested provenance-flagged and DEFAULT-OFF in every kosha lookup path.",
-   "regen_checked": "2026-09-04 (H4037: FAIL-INPUT-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: FAIL-INPUT-DEFER)"
   },
   {
    "id": "dcs-verb-form-frequency-prelim",
@@ -714,7 +714,7 @@
      "confidence": "low"
     }
    ],
-   "regen_checked": "2026-09-04 (H4037: NOT-RUN)"
+   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
   },
   {
    "id": "dcs-compound-dictionary",
@@ -748,7 +748,7 @@
      "confidence": "medium"
     }
    ],
-   "regen_checked": "2026-09-04 (H4037: NOT-RUN)"
+   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
   },
   {
    "id": "uttarapada-dict-vs-corpus",
@@ -766,7 +766,7 @@
     "kosha samāsa trainer member_side/member_recall drill ranking (scripts/build_samasa_trainer.py, --mw-rank corpus, default since H1398 20-07-2026)"
    ],
    "notes": "H1328 (20-07-2026, Opus 4.8 claude-opus-4-8). Corpus side is the sibling of dcs-compound-dictionary (same Kompozity cmps.csv/names.csv), joined against the MW dictionary side (MWderivations issue15 reverse-classified index, master branch). corpus_tokens (summed DCS frequency) and corpus_compounds (distinct attested forms) are the corpus-attestation ranking signal for compound final members; corpus_status=final (6,249) is the drillable stratum, absent (10,387) is a lower bound on real absence, not a ghost-word verdict. Corpus head carries its own junk (ca/eva/pronoun-stems/bare-roots/-tva/-tā) that ranking by tokens alone does not drop — an explicit stoplist is required (report § \"corpus's own junk head\"). DCS is CC BY 4.0; MW public domain; ships BY-SA with the public tier. H1398 (20-07-2026, Sonnet 5 claude-sonnet-5): kosha's samāsa trainer now consumes this dataset by default (member_stoplist applied per the report's finding above).",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "dcs-stem-cooccurrence-full",
@@ -795,7 +795,7 @@
      "confidence": "medium"
     }
    ],
-   "regen_checked": "2026-09-04 (H4037: NOT-RUN)"
+   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
   },
   {
    "id": "which-dictionary-routing-benchmark",
@@ -813,7 +813,7 @@
     "csl-guides shared-tasks page (/about/shared-tasks) + leaderboard"
    ],
    "notes": "H281 (07-07-2026): public benchmark for the routing shared task — CC-BY-SA-4.0 (inherited from the gold panel, declared in-file), single-annotator gold (Fable 5 claude-fable-5, single pass — κ pending a human second pass), open golds / self-reported leaderboard. Data card: csl-guides /developers/data-cards.",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "correction-loci",
@@ -832,7 +832,7 @@
     "docs/img/ corrections-native viz via scripts/build_correction_viz.py"
    ],
    "notes": "H294 (07-07-2026): memo docs/HYPOTHESES_AND_VIZ_MEMO.md §5.1 layer. 39,540 records = 39,536 old→new + 4 old→del; process∈{bulk,human} splits the two machine markup batches (BOR 21,990 + LRV/markhom 8,063 = 76%) from human correction. Corrector identity deliberately excluded — public tier. PR: https://github.com/sanskrit-lexicon/csl-corrections/pull/291",
-   "regen_checked": "2026-09-04 (H4037: PASS-STALE-ROWS)"
+   "regen_checked": "2026-09-04 (H4046: PASS-STALE-ROWS)"
   },
   {
    "id": "dict-corpus-concordance",
@@ -853,7 +853,7 @@
    ],
    "notes": "Q1 of CONCORDANCE_ROADMAP.md (concordance core: schema + tiered matcher + citable loci, reused Q2-Q4). Coverage sidecar dict_corpus_coverage.tsv (323425 rows): every union headword attested (66,257 = 20.5%) or classed absence — the 20.5% is the honest Zipf reality of a 5.7M-token corpus vs a 323k-headword union. Inputs consumed, never re-derived: dcs-cdsl-xref, union-headwords, dcs-full-sqlite. Citable loci are host-independent dcs:<sent_id> IDs (RISKS R5). DCS is CC BY 4.0; this derivative ships BY-SA with the public tier.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "parallel-passage-concordance",
@@ -874,7 +874,7 @@
    ],
    "notes": "Q2 (B3) of CONCORDANCE_ROADMAP.md. Per-verse coverage sidecar parallel_passage_verses.tsv (501,231 rows, one per source verse incl. 0-parallel): 15,164 (3.0%) carry >=1 parallel occurrence; RV-subset rows (13,581) now also carry a `bloomfield_pratika` column (H896 follow-up, see bloomfield-rv-citations row below) — 85% validated against Bloomfield's 1906 concordance. Input: VisualDCS/derived-data/Paralleli-v-tekstah-korpusa-SRC/PARA/Polnorazmernye/ (245 CSV files, the 2026 corrected/regenerated full-text-match pass) — consumed, never re-derived. One open @DECIDE remains, surfaced to a human, not self-ruled (R-C2): which of three parallel-passage export variants (Polnorazmernye/ used here per the folder's own README default vs Polnorazmernye-2022-archive/ vs the differently-scoped Stopovye/) is the released canonical. The sibling @DECIDE (which Bloomfield digitization to key the RV subset against) is RESOLVED — see bloomfield-rv-citations. The roadmap's prior '506,787 alignments' estimate (itself sourced from an admittedly-unverified README note) does not match this build's directly-parsed counts (501,231 verses / 153,045 links) — flagged, not silently reconciled. DCS-derived; ships BY-SA with the public tier pending the DCS-license composition @DECIDE already open on the roadmap.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "bloomfield-rv-citations",
@@ -895,7 +895,7 @@
    ],
    "notes": "Every direct RV.<mandala>.<sukta>.<verse><pada-letter> citation extracted from Marco Franceschini's digital edition of Maurice Bloomfield's A Vedic Concordance (Harvard Oriental Series 9, 1906) — 88,835 total concordance entries scanned (the concordance indexes the WHOLE Vedic corpus, not just RV), 10,374 distinct RV (mandala,sukta,verse) keys cited. Used to populate parallel_passage_verses.tsv's bloomfield_pratika column for the RV subset (13,581 rows): 11,522 (85%) validated by substring-matching the Bloomfield pratika (parenthetical variant-reading asides stripped, form_key()-normalized, final character dropped to tolerate the pausa-vs-sandhi boundary mismatch) against the row's own recorded source_text — NOT positionally assumed (the row-pair layout is a printed first-half/second-half split, which does not line up 1:1 with Bloomfield's grammatical a/b/c/d pada lettering for 4-pada meters; naive positional mapping would have silently mismatched). Remaining 15% residue is genuine orthographic variance between the two independently-produced digitizations (anusvara-vs-homorganic-nasal spelling, consonant-doubling variants), documented not chased further — full method + counts in data/concordance/BLOOMFIELD_RV_CROSSREF_REPORT.md. RIGHTS: public tier by direct written permission from Marco Franceschini (University of Bologna), non-exclusive/worldwide/perpetual, covering all current and future kosha versions — see data/manifest/rights/franceschini_hos9_permission_2026-07-13.md and LICENSE-DATA.md. Required citation: \"Digitization by Marco Franceschini (University of Bologna), of Maurice Bloomfield's A Vedic Concordance (Harvard Oriental Series 9, 1906). Used with permission.\"",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL-INPUT-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: FAIL-INPUT-DEFER)"
   },
   {
    "id": "sundarakanda-two-tier-apparatus",
@@ -915,7 +915,7 @@
     "per-sarga interactive apparatus HTML (data/apparatus/)"
    ],
    "notes": "RIGHTS: tier-1 notes + verse anchors belong to Leonov/Kostina UNPUBLISHED translation — restricted until the LP volume ships (~08-2026); Sanskrit commentaries source = Gita Supersite, CC BY 4.0. Every tier-2 note carries review_required until both human gates pass (docs/MANUAL.md; role guides H497/H517/H533). Snapshot 10-07-2026, pre-gate counts.",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "markup-tag-census",
@@ -935,7 +935,7 @@
     "markup QA / under-marking triage"
    ],
    "notes": "H683 (11-07-2026, Fable 5 claude-fable-5). Verdicts in data/MARKUP_TAG_CENSUS_CSLORIG_2026.md: MW72/ARMH/FRI/NMMB under-marked; SKD/VCP expected-zero by construction; trace-tag inconsistencies flagged (SCH <ab> x2 in 29k entries, WIL <ls> x6 in 45k).",
-   "regen_checked": "2026-09-04 (H4037: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)"
   },
   {
    "id": "dcs-lsc-pilot",
@@ -953,7 +953,7 @@
     "paper A57 (LChange'27/NLP4DH candidate, ARTICLES.md)"
    ],
    "notes": "First Sanskrit LSC derivation (H728, 11-07-2026); freq-shift control Spearman -0.013; binary flag is a q75 heuristic pending ChiWUG-style gold over the 60-lemma target set.",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "archive-stopword-sqlite",
@@ -973,7 +973,7 @@
    "consumers": [],
    "notes": "H691: the census §2 'uncounted 11 GB blind spot' resolved — live counts match the M9 validation report (reports/m9_archive_ingest.md) exactly. Filter quality='GOOD' for the high-precision subset. The full 245-text stop-word run was deliberately deleted by MG 02-07-2026; only this 113-text partial survives. H3596 status: internal-tooling — deliberately unshipped and regenerable; it IS the query surface for the surviving 113-text M9 stop-word run (reports/m9_archive_ingest.md), so no external consumer is expected; excluded from the awaiting-consumer census.",
    "status": "internal-tooling",
-   "regen_checked": "2026-09-04 (H4037: PASS-REBUILT (40,573,260 parallels exact))"
+   "regen_checked": "2026-09-04 (H4046: PASS-REBUILT (40,573,260 parallels exact))"
   },
   {
    "id": "samudra-offline-packs",
@@ -997,7 +997,7 @@
     "SamudraManthanam mobile/offline app"
    ],
    "notes": "H691: packs are a 13-06-2026 snapshot of corpus.db (574,939 lines = the census's 06-07 corpus count; corpus.db has since grown to 580,552) — stale vs live corpus but internally consistent. Same published-RU-translations rights caveat as samudra-corpus-db.",
-   "regen_checked": "2026-09-04 (H4037: PASS-REBUILT (base 304.5MB + dict 91MB))"
+   "regen_checked": "2026-09-04 (H4046: PASS-REBUILT (base 304.5MB + dict 91MB))"
   },
   {
    "id": "kosha-raw-sqlite",
@@ -1022,7 +1022,7 @@
     "kosha-db"
    ],
    "notes": "H691: registered so the census §2 'rebuildable from csl-orig' guess is now a verified recipe with checksums. Not a backup-risk asset.",
-   "regen_checked": "2026-09-04 (H4037: PASS-RE-FETCHED)"
+   "regen_checked": "2026-09-04 (H4046: PASS-RE-FETCHED)"
   },
   {
    "id": "correction-events-log",
@@ -1042,7 +1042,7 @@
     "corrector-behaviour / error-typology studies (A36 family)"
    ],
    "notes": "H694 (11-07-2026, Fable 5 claude-fable-5). 52,498 data rows per view; sizes 57.8+59.0+61.2 MB.",
-   "regen_checked": "2026-09-04 (H4037: HEAVY-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: HEAVY-DEFER)"
   },
   {
    "id": "kompozity-names-compound-splits",
@@ -1062,7 +1062,7 @@
     "compound (samasa) morphology / onomastics studies"
    ],
    "notes": "H694 (11-07-2026, Fable 5 claude-fable-5). Example row: rajendra; rajan indra;2;863;...",
-   "regen_checked": "2026-09-04 (H4037: FAIL-UNDOCUMENTED)"
+   "regen_checked": "2026-09-04 (H4046: FAIL-UNDOCUMENTED)"
   },
   {
    "id": "cdsl-headword-ngram-oracle",
@@ -1082,7 +1082,7 @@
     "n-gram spell-check method (suspect-headword detection)"
    ],
    "notes": "H694 (11-07-2026, Fable 5 claude-fable-5). Membership oracle: a headword containing a chunk attested in no other headword is suspect.",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "headword-overlap-matrix",
@@ -1102,7 +1102,7 @@
     "A40 headword-inventory paper (H675)"
    ],
    "notes": "H684 (11-07-2026, Fable 5 claude-fable-5). CAE-CCS J=0.672 max; MW/PWG intersection = 94,753 (resolves the figure once mislabeled as the union size); BHS 58.7% unique, CCS 0.6%. Findings: data/HEADWORD_OVERLAP_UNION15_2026.md.",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "mdf-pilot-cdsl",
@@ -1121,7 +1121,7 @@
     "SIL MDF program (papers/SIL_MDF_ECOSYSTEM_CORRELATION.md)"
    ],
    "notes": "Registered by H727 (11-07-2026, Fable 5 claude-fable-5). Third export profile beside TEI/OntoLex; App. B field-order + \\de ruling refined by H721 (csl-standards PR #107).",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "lift-pilot-cdsl",
@@ -1139,7 +1139,7 @@
     "Webonary / Dictionary App Builder channel assessment (H726)"
    ],
    "notes": "Registered by H727 (11-07-2026, Fable 5 claude-fable-5). Landed via csl-standards PR #107 (H721).",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "pwg-ru-mdf-export",
@@ -1158,7 +1158,7 @@
     "SIL MDF program (papers/SIL_MDF_ECOSYSTEM_CORRELATION.md)"
    ],
    "notes": "Registered by H727 (11-07-2026, Fable 5 claude-fable-5). Restricted: bulk derives from the unreleased ai_translated store (no human review pass yet); regenerate anytime from the store. Grows with every promoted window; refresh rows/size on release.",
-   "regen_checked": "2026-09-04 (H4037: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)"
   },
   {
    "id": "semdom-amarakosha-crosswalk",
@@ -1177,7 +1177,7 @@
     "paper A58 (GWC / LT4HALA / eLex)"
    ],
    "notes": "Registered by H742 (11-07-2026, Fable 5 claude-fable-5). First SIL-semdom <-> classical-thesaurus map. CC BY-SA 4.0 (ID pairs only, no AK/UoHyd prose). Gold: 200 synsets dual-annotated blind (Fable 5 x Opus 4.8), exact kappa 0.677. Bridge candidates are a shortlist, NOT labels (top-1 17.5% - SanskritLexicography FINDINGS 76).",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "mw-defgen-eval-sample",
@@ -1197,7 +1197,7 @@
    "notes": "H730 (11-07-2026, Fable 5 claude-fable-5): first CDSL-side definition-modeling eval; joins A3 mw_en_tm x E26 lemma_frequency x C15 dcs_cdsl_xref x DCS 2026 sentences (CC BY 4.0, Hellwig). MW gloss text public domain. Judge scores gated (JUDGE-BENCH); WSD track is agreement-only pending DCS m_wordsem inventory recovery. H752 (11-07-2026): SHA-256 input digests added to frozen_sample.meta.json; this 500-headword seed-730 sample declared the single canonical frozen set (the parked rival lane's 520-headword sample was never scored and its branch deleted). H972 (15-07-2026, Fable 5 claude-fable-5): F1_fable_ctx arm added - in-session Claude generation over the gold-free inputs projection (scripts/defgen_fable_arm.py), scored + judged; leads all arms (chrF 24.35, token-F1 0.340, judge 4.60).",
    "release_asset": "data/eval/defgen/frozen_sample.tsv",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL-INPUT-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: FAIL-INPUT-DEFER)"
   },
   {
    "id": "dcs-reading-pack-nala-1",
@@ -1217,7 +1217,7 @@
    ],
    "notes": "P5 UI step 6b. CORRECTED 30-07-2026 (#198): the Bhagavadgita is NOT absent from the DCS corpus — MBh book 6's 18 Gita adhyayas are present, relabeled as chapter.ref 'MBh, 6, BhaGī 1'..'BhaGī 18' (10,547 tokens; verified twice, H1407 adversarial pass), not omitted. The kosha Gita reading pack is instead built from the hand-curated Gita gold master (see gita-gold-master row below), not DCS. Real DCS DB is VisualDCS/src/DCS-data-2026/dcs_full.sqlite (the 0-byte src/dcs_full.sqlite is a decoy).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "kosha-srs-deck-b1-demo",
@@ -1237,7 +1237,7 @@
    ],
    "notes": "Rung B1 one-verse-set proof of the kosha->Systema last-mile pipeline (SanskritGrammar docs/LAST_MILE_PIPELINE_SPEC.md, H916). Derived from the existing dcs-reading-pack-nala-1 (no new segmentation), joined to lemma_frequency.tsv core_rank, function words (grammar_all in ind/pron) stripped per the wave-1a finding. 439 tokens -> 164 unique content-word cards (108 dup, 136 function-word, 26 no-core-rank, 5 no-slp1 — full accounting in the file's stats block). Deliberately scoped to ONE reading pack, NOT the general vocabulary curriculum (that is H947's separate, in-flight scope) — avoids duplicating queued work.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "gita-gold-master",
@@ -1259,7 +1259,7 @@
    ],
    "notes": "H848 roadmap W0 — the canonical master every Gita-gold workstream derives from. License MIT; public; author Dr. Marcis Gasuns (co-authors TBC). Data statement: docs/data-statements/gita-gold.meta.md. Upstream Gita.xlsm is local-only (not git-committed). Method is a template for other texts (MG ruling). See ROADMAP_GITA_GOLD_EXTRACTION_2026.md.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "gita-morphology-gold",
@@ -1279,7 +1279,7 @@
    ],
    "notes": "H848 roadmap W3. Decoder legend embedded in the extractor (from the Abbreviations sheet). License MIT; public; credit Dr. Marcis Gasuns. Data statement docs/data-statements/gita-morphology.meta.md. Feeds the W4 attested-corpus inflection-engine QA (H874).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "gita-inflection-qa",
@@ -1299,7 +1299,7 @@
    ],
    "notes": "H848 roadmap W4. Report GITA_MORPHOLOGY_QA_REPORT.md — 93.0% agreement on nominals present in kosha (4,779/5,139). Divergences are candidate corrections, NOT auto-applied. Public/MIT.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL-COUNT-MISMATCH)"
+   "regen_checked": "2026-09-04 (H4046: FAIL-COUNT-MISMATCH)"
   },
   {
    "id": "gita-reading-pack",
@@ -1319,7 +1319,7 @@
    ],
    "notes": "H848 roadmap W1. Supersedes the chapter-1-only gita-reading-pack-1 (built from a separate ch-1 TSV; now unified on the master). Public/MIT, credit Dr. Marcis Gasuns. Sibling of dcs-reading-pack-nala-1.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "gita-sandhi",
@@ -1340,7 +1340,7 @@
    ],
    "notes": "H848 roadmap W2. Public/MIT, credit Dr. Marcis Gasuns. The first corpus-attested, frequency-ranked sandhi table in the ecosystem (categories: anusvara/nasal 1172, visarga 1163, vowel 813, consonant 264).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "sandhi-curriculum",
@@ -1361,7 +1361,7 @@
    ],
    "notes": "H902 roadmap Phase 4 (surface 2/4: graded curriculum). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Derived from the corpus-sandhi dataset; weighting is human-tunable per the MG ruling.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)"
   },
   {
    "id": "vocab-curriculum",
@@ -1382,7 +1382,7 @@
    ],
    "notes": "H947 Wave-1 pedagogy build (W1b). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Applies the sandhi-curriculum method to words; gloss is the lemma's own dictionary card teaser (MW preferred), not DCS's lemma.meanings (only ~23% coverage on this lemma set, rejected as primary source).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "vocab-drills",
@@ -1403,7 +1403,7 @@
    ],
    "notes": "H947 Wave-1 pedagogy build (W1b). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. No SRS scheduling here (deck items only, per the fence in H947 — Systema \"Saraswati\" owns scheduling).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "thematic-vocabulary",
@@ -1424,7 +1424,7 @@
    ],
    "notes": "H1462 L4 surface. Alternative browsing/study axis to H947's frequency curriculum: groups vocabulary by classical Amarakosa thematic section (varga) instead of by corpus rank. The varga's own Sanskrit name is the theme label; semdom names are secondary cross-reference tags, not the primary label (A58's crosswalk is many-to-many at the varga level). Public/MIT, credit Dr. Marcis Gasuns.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "thematic-vocab-drills",
@@ -1445,7 +1445,7 @@
    ],
    "notes": "H1462 L4 surface. Same-theme distractors are the deliberate difference from H947's vocab-drills (same-frequency-band distractors) -- a thematic axis is only pedagogically useful if its confusion set is thematically related. No SRS scheduling (deck items only, same fence as H947).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "morphology-curriculum",
@@ -1466,7 +1466,7 @@
    ],
    "notes": "H946 Wave-1 pedagogy build (W1a). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Drills only forms the corpus actually attests (field RQ1: 'stop drilling forms that never appear') — 38,782/254,805 candidate cells (15.2%) survived the DCS attestation join over the core-vocabulary lemma set; the rest are dropped by default (--include-generated keeps them, flagged attested:false). DCS aggregates by lemma TEXT not lemma_id, so a handful of homonym-shared lemma spellings pool their attestation counts (same simplification H950 already accepted). Verb voice (active/middle) is not part of the attestation match key — DCS's feat_voice marks only passive, an honest upstream tagging limitation.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "morphology-drills",
@@ -1488,7 +1488,7 @@
    ],
    "notes": "H946 Wave-1 pedagogy build (W1a). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Deterministic build (seeded RNG, seed 20260715) so choice ordering/distractors are reproducible across rebuilds. No fabricated forms: answer is verified (a real DCS-attested cell) or the item is dropped, per the shared item schema's 'no evidence, no item' rule.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "sandhi-drills",
@@ -1510,7 +1510,7 @@
    ],
    "notes": "H918 roadmap Phase 4 (surface 4b: drills/flashcards, the last core-programme surface — sibling surface 4a is the SanskritGrammar reader-hover, H917). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Deterministic build (seeded RNG, seed 20260714) so choice ordering/distractors are reproducible across rebuilds.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)"
   },
   {
    "id": "corpus-sandhi",
@@ -1531,7 +1531,7 @@
    ],
    "notes": "H900 roadmap Phase 2, broadened by H901 Phase 2b (14-07-2026, 17 texts), then H1492 Phase 2c (24-07-2026, +24 sastra/commentary texts → 41). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS). Texts swept (difficulty order): Hitopadesa, Vetalapancavimsatika, Sukasaptati, Amarusataka, Astavakragita, Gitagovinda, Kathasaritsagara, Buddhacarita, Kumarasambhava, Kiratarjuniya, Meghaduta, Dasakumaracarita, Bharatamanjari, Satakatraya, Bhallatasataka, Ramayana, Mahabharata (full); H1492 sastra/commentary: Yogasutra, Yogasutrabhasya, Nyayasutra, Nyayabhasya, Samkhyakarika, Samkhyatattvakaumudi, Vaisesikasutra, Mimamsasutrabhasya, Tarkasamgraha, Sarvadarsanasamgraha, Manusmrti, Yajnavalkyasmrti, Arthasastra, Kamasutra, Astadhyayi, Kasikavrtti, Nirukta, Amarakosa, Natyasastra, Kavyadarsa, Carakasamhita, Susrutasamhita, Abhidharmakosabhasya, Prasannapada. Curated pedagogical core — deliberately skips the rasaśāstra / āyurveda-dīpikā flood in dcs-conllu. Per-text tables also shipped as data/sandhi/<id>_sandhi.tsv. Counts: 17→41 texts, 580,230→707,936 events, 9,840→13,012 rules; top-N-for-80% 83→82 (stable). Extends the Gita-only gita-sandhi dataset corpus-wide.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)"
   },
   {
    "id": "roots-frequency-curriculum",
@@ -1552,7 +1552,7 @@
    ],
    "notes": "H950 roadmap Wave 2 W2b. Stops at stage 6 (data + export) per the pedagogy-surface architecture's integration-surface rule -- no kosha roots UI shipped; WhitneyRoots owns the 935-root explorer. Coverage headline: learn top 25 roots -> 58.7% of verb-token occurrences; top 50 -> 71.7%; top 100 -> 85.4%; top 200 -> 95.3% (549,549 total attested-lemma tokens, DCS 2026 CoNLL-U snapshot). 181 Whitney-hub roots have no DCS attestation at all and are excluded (grammarian/lexical roots, not corpus-absent by data error). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY 4.0 (Oliver Hellwig / DCS).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "gita-etymology",
@@ -1572,7 +1572,7 @@
    ],
    "notes": "H848 roadmap W5. Public/MIT, credit Dr. Marcis Gasuns. Data statement docs/data-statements/gita-etymology.meta.md. Companion to the Russian gloss layer (master gloss_ru, now toggleable EN/Русский in the reader).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "sanskrit-upasarga-semantics",
@@ -1593,7 +1593,7 @@
    ],
    "notes": "H848 roadmap W6 (final workstream). Public/MIT, credit Dr. Marcis Gasuns. Data statement docs/data-statements/upasarga-semantics.meta.md. Surfaced on /w/ root cards (app/word_page.py _upasarga_block) + the reading/upasarga/ page.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "pronoun-corrections",
@@ -1614,7 +1614,7 @@
    ],
    "notes": "W4 QA follow-up (H874), MG «do correction». Report PRONOUN_CORRECTION_REPORT.md. Public/MIT, credit Dr. Marcis Gasuns. Attested-forms correction (full-paradigm generation is a further step). Phase 2 flags 73 wrong Cologne pronoun rows disputed=1 (untagged or case/number contradicting the gold; 9 already E1-flagged; 79 gold-consistent untouched) — a review flag, non-destructive.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "samasa-trainer",
@@ -1637,7 +1637,7 @@
    ],
    "notes": "H948 kosha pedagogy Wave 1 (docs/IMPLEMENTATION_KOSHA_PEDAGOGY_WAVE1.md §W1c). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS). Type distribution is honestly skewed, not balanced: TP=458, BV=298, DV=2, KD=1 gold examples -- dvandva and karmadharaya are severely underrepresented in the Gita gold set and corpus-derived items cannot fill the gap (no verified type). 9 gold rows (lexicalized bahuvrihis like \"govinda\") carry no hyphen-segmented lemma and are identify-only, excluded from split.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "reading-pack-difficulty",
@@ -1659,7 +1659,7 @@
    ],
    "notes": "H949 kosha pedagogy Wave 2 (W2a), the difficulty spine. ONE estimator, not 'the' difficulty (R5): four corpus-grounded axes -- vocab-frequency x sandhi-density x morphology-rarity x compound-load -- documented in METHODS.md and honestly limited (frequency != learnability, R6; sandhi is a boundary-fusion proxy). Scores only packs carrying UD morphology; the 18 Gita packs (built by build_reading_pack_gita.py from a non-UD source) get a SEPARATE reduced 3-axis ordering instead -- see gita-reading-pack-difficulty (H977) -- never fabricated into this 4-axis score. Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY 4.0 (Oliver Hellwig / DCS).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)"
   },
   {
    "id": "gita-reading-pack-difficulty",
@@ -1680,7 +1680,7 @@
    ],
    "notes": "H977 kosha pedagogy Wave 2 (W2a follow-up), closing the '18 Gita packs unscored' gap H949 flagged. **NOT comparable to reading-pack-difficulty** (4-axis): different axis set AND a different sandhi definition -- this ranks the Gita chapters among THEMSELVES only. Honest ONE-estimator framing carries over (R5/R6). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY 4.0 (Oliver Hellwig / DCS).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)"
   },
   {
    "id": "reading-pack-metre",
@@ -1701,7 +1701,7 @@
    ],
    "notes": "H951 kosha pedagogy Wave 3 (W3a). REUSE/INTEGRATE, not greenfield: NO metre trainer/UI shipped in kosha -- SanskritKaraoke owns that (scope re-checked 15-07, unchanged). Coverage: 12% strict vrtta (high, validated -- Kiratarjuniya-1 scans 92/92 vamsastha, correct for Bharavi's canto 1), 77% anustubh (medium heuristic), 11% unresolved (honest, mostly prose/speaker-tags). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; metre engine vidyut (MIT, Arun Prasad); source DCS is CC BY 4.0 (Oliver Hellwig / DCS).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)"
   },
   {
    "id": "vidyut-chandas-meters",
@@ -1721,7 +1721,7 @@
    ],
    "notes": "H951. Upstream: vidyut-data (MIT, Arun Prasad / ambuda-org). Vendored copy pinned; re-sync from vidyut-data if upstream meters change.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "morph-signature-freq",
@@ -1741,7 +1741,7 @@
    ],
    "notes": "H949 kosha pedagogy Wave 2 (W2a). Derived once from the DCS full sqlite so the scorer needs no heavy DB at score time (the source->derive->consume split the sandhi programme uses). Source DCS is CC BY 4.0 (Oliver Hellwig / DCS).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "dcs-reading-pack-nala-2",
@@ -1762,7 +1762,7 @@
    ],
    "notes": "H949 Wave-2 W2a: new graded reading pack beyond Nala 1. DCS is CC BY 4.0; derivative ships BY-SA with the public tier.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "dcs-reading-pack-nala-3",
@@ -1783,7 +1783,7 @@
    ],
    "notes": "H949 Wave-2 W2a: new graded reading pack beyond Nala 1. DCS is CC BY 4.0; derivative ships BY-SA with the public tier.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "dcs-reading-pack-hitopadesa-0",
@@ -1804,7 +1804,7 @@
    ],
    "notes": "H949 Wave-2 W2a: new graded reading pack (didactic prose+verse) for difficulty spread. DCS is CC BY 4.0; derivative ships BY-SA with the public tier.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "dcs-reading-pack-kiratarjuniya-1",
@@ -1825,7 +1825,7 @@
    ],
    "notes": "H949 Wave-2 W2a: new graded reading pack (classical kavya, the hardest of the scored set at difficulty 0.389) chosen to test the scorer's spread. DCS is CC BY 4.0; derivative ships BY-SA with the public tier.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "handoff-lifecycle-gold",
@@ -1844,7 +1844,7 @@
     "Uprava handoff-status audit baseline"
    ],
    "notes": "H1251 (18-07-2026, Haiku 4.5 claude-haiku-4-5-20251001): 170 active handoffs (all in Uprava/handoffs/ as of 18-07-2026) classified + adversarially verified. Audit method: 35 batch classifiers (Opus 4.8) run independently on each handoff's body, each verdict re-checked by an independent adversarial verifier; verifier wins on refutation. Verdict breakdown: ARCHIVE_AS_DONE 57 · GENUINELY_BLOCKED 53 · NEEDS_STUB_FILL 4 · RERUN_NEEDED 22 · RETIRE_AS_DEAD 12 · RUNNABLE_NOW 22. Verification stats: 91 upheld · 15 refuted · 64 uncontested. 64 unverified verdicts reflect the audit's sampling strategy (only verdicts of consequence were re-checked); gold set is a baseline, not scripture — a later handoff correcting a gold row with evidence is legitimate and must be logged.",
-   "regen_checked": "2026-09-04 (H4037: HEAVY-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: HEAVY-DEFER)"
   },
   {
    "id": "morphology-attestation-audit",
@@ -1864,7 +1864,7 @@
    ],
    "notes": "A3 = the artefact A4 cannot start without (D12). Sidecars in data/concordance/: morph_attest_GnA.tsv (over-generation), morph_attest_AnG.tsv (engine gap), MORPHOLOGY_ATTESTATION_BUILD_REPORT.md. CIRCULARITY: 93.30% of the generated side is itself source='dcs' (ingested DCS surface tokens), so its AG is a 99.99% round-trip; the research-meaningful figure is the vidyut-engine subtotal — AG 3,550 / 28,567 = 12.43% attested, 25,017 over-generated. Consequently A¬G is degenerate (=2: oṃ + one OCR token) and CANNOT measure engine gaps here — reported as the finding, not hidden (genuine_engine_gap=0, nothing routed to the csl-inflect give-back). CONTRADICTION surfaced (STOP-AND-SURFACE, not resolved): the plan set's 6.9M generated figure is `inflections` (6,917,018 rows), not `forms` (1,378,401) — built on forms per the deliverable text; A4's generated-side table is a human call. CONTRADICTION RESOLVED 01-09-2026 (H3782) for A3's own purpose: `inflections` is 99.99% source='cologne_mwinflect' (6,916,522 of 6,917,018 rows), a DIFFERENT generator from vidyut and independent of DCS, so it — not `forms` — is the side on which A¬G is measurable; the roadmap's '6.9M vidyut-generated inflections' attribution was wrong and is corrected there. That join ships as the sibling dataset `morphology-attestation-audit-inflections`; this row's numbers stand unchanged and remain the correct input for A4/W2a. Read-only build. PUBLICATION GATED on the W1a rights record (H1263 / D2): unreleased until the DCS BY-SA/BY-4.0 licence contradiction is settled.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "morphology-attestation-audit-inflections",
@@ -1885,7 +1885,7 @@
    ],
    "notes": "WHY THIS EXISTS BESIDE `morphology-attestation-audit`: that build (H1262) joined `forms` and reported A¬G=2, degenerate because 93.30% of its generated side was itself source='dcs' — a round-trip, so the attested-never-generated direction was unmeasurable. `inflections` is Cologne MW-inflect output derived from MW headwords with NO DCS input, so it is the side on which that direction carries engine meaning: A¬G is 164,236, not 2. This also closes CONCORDANCE_ROADMAP Q3 exit check 1 ('full 6.9M x 5.7M join'), which H1262 did not satisfy (it joined 426,410 rows). ROADMAP ATTRIBUTION CORRECTED: the roadmap called this 6.9M table 'vidyut-generated inflections'; it is 6,916,522 cologne_mwinflect + 326 hybrid-natva-fix + 153 curated-gita-pronoun + 17 vidyut-gap-fill. TWO CONTROLS, both load-bearing and both published: (1) 68,049 of the 164,236 A¬G keys (41.43%) are attested only as a sandhied surface; (2) the generator holds 222,735 nominal lemmas against 680 verbal, so finite verbs are scope it never claimed — every triage class is cross-tabbed against DCS upos, and of 112,368 attested VERB keys only 25.43% are generated. A¬G triage: lexicon_gap 93,228 · paradigm_gap 70,510 · non_sanskrit_or_ocr 480 · segmentation_artefact 18. DO NOT quote A¬G as 'forms the engine misses' — see the sibling morphology-giveback-candidates row, which narrows it to 5,588. Sidecars in data/concordance/: morph_attest_infl_GnA.tsv.gz (over-generation, gzipped, 3,088,000 rows), morph_attest_infl_AnG.tsv (164,236 rows, triaged), MORPHOLOGY_ATTESTATION_INFLECTIONS_BUILD_REPORT.md (four human-checkable sample tables). Read-only on both source databases; deterministic (two full runs produced identical bucket counts). Runtime 1405 s, peak 321 MB. Unreleased: rides the next data cut. JOIN-KEY CORRECTION, NOW MEASURED (H3911 diagnosed 02-09-2026, H3925 rebuilt the same day): the first build used a form_key() that folded anusvāra to `n` at every position while never touching a literal `m`, so `rasaṃ`→`rasan` but `rasam`→`rasam` and the two standard spellings of a Sanskrit word-final nasal could never collide — every anusvāra-final attestation read as un-generated. Fixed in sanskrit-util 0.11.0 (sanskrit-lexicon/sanskrit-util PR #72: word-final anusvāra folds to `m`, medial fold unchanged, final -n still distinct from final -m), and THE NUMBERS IN THIS ROW ARE THE REBUILT ONES. Pre-fix -> post-fix: attested keys 386,012 -> 352,745 (−33,267 spelling twins that were never distinct words) · AG 239,443 -> 238,312 · G¬A 3,086,869 -> 3,088,000 · A¬G 196,378 -> 164,236 (−32,142, −16.4%) · attested-side coverage 49.13% -> 53.44%. Two cautions for anyone quoting the delta: the sampled pre-estimate of 24,149 was a FLOOR (it could only see twins already inside the candidate set), and the fix is a re-partition rather than a monotone gain — collapsing final -ṃ onto -m also breaks 1,131 net generated-side matches that existed only because final -ṃ and final -n were conflated. KNOWN RESIDUAL, measured not assumed, and NOT small: the same asymmetry survives one position inward, because medial anusvāra before a LABIAL is phonetically /m/ but still folds to `n` (`vaiśaṃpāyana` keys as `vaiśanpāyana` and never meets the `vaiśampāyanaḥ` the generator already emits). On the class that actually reaches a human — the 2,521 slot-conflicts — 278 rows (11.03%; 11.58% by corpus weight) are this: `saṃbhavaḥ` vs `sambhavaḥ`, `saṃbandhaḥ` vs `sambandhaḥ`, one word spelled two ways with no disagreement to adjudicate. 90 candidates additionally collapse into their own lemma once refolded and would leave A¬G outright. NOT fixed here because narrowing the medial fold is a second change to a library ~85 repos consume; the rows are screened off the validation sheet by an explicit named rule meanwhile. Measured by scripts/measure_medial_anusvara_residual.py.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/data/concordance/MORPHOLOGY_ATTESTATION_INFLECTIONS_BUILD_REPORT.md",
-   "regen_checked": "2026-09-04 (H4037: HEAVY-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: HEAVY-DEFER)"
   },
   {
    "id": "morphology-giveback-candidates",
@@ -1905,7 +1905,7 @@
    ],
    "notes": "A CANDIDATE SET, NOT A DEFECT LIST — the distinction is the point of this row. Quoting A¬G (164,236) as 'forms the engine misses' overstates the actionable set by 29x; every subtraction above is published with its count so the narrowing can be audited and reversed. Rebuilt on the sanskrit-util 0.11.0 join key (H3925, 02-09-2026); the pre-fix set held 5,656 rows. Composition: NOUN 3,810 (68.18%) · ADJ 1,594 · PRON 105 · ADV 35 · NUM 23 · rest 21. CROSS-CHECK IN FAVOUR: the head is pronoun dative/locative cells (asmai < idam, tasmai/tasyai < tad, etasmin < etad, amum < adas) and irregular feminine/consonant stems (striyaḥ < strī, śriyam < śrī, āpo < ap) — exactly where MW-inflect is weak, and `inflections` already carries a hand-made source='curated-gita-pronoun' patch of 153 rows, independent evidence that pronouns are a real gap and not an artefact of this method. CROSS-CHECK AGAINST: the bare-stem filter matches only exact lemma-key equality, so ALLOMORPHIC bound stems still pass — ātma (< ātman) at rank 3 is one, carrying feat_case='Cpd' on 2,544 tokens against 10 with a real case. Do NOT repeat the earlier claim that rājñ (rank 2) is the same kind of leak: DCS tags rājñ as Voc Sing Masc 880 times, so by the corpus's own annotation it is an inflected cell. TRIAGED SINCE (H3863): the set is machine-decidable, not a human-judgment pile — DCS tagging resolves 5,587 of 5,588 rows into owed 5,232 (slot-conflict 2,521 · coverage-hole 2,711) and not-owed 355 (compound-member 222 · lexicon-gap 102 · indeclinable 31), 1 untagged residue; sidecars morph_giveback_triaged.tsv + morph_giveback_triage_summary.json, method in MORPHOLOGY_GIVEBACK_TRIAGE_REPORT.md. The triage doubles as evidence the key fix landed: the orthographic-variant verdict, which existed only to catch anusvāra twins the broken key had split, matched 146 rows before the rebuild and 0 after. R-C4: 11 candidates (0.20%) carry tense_caveat=1. Report: data/concordance/MORPHOLOGY_GIVEBACK_CANDIDATES_REPORT.md. Cheap and re-derivable in seconds from the AnG TSV — the expensive join is a separate script.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/data/concordance/MORPHOLOGY_GIVEBACK_CANDIDATES_REPORT.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "panini-derivation-status",
@@ -1927,7 +1927,7 @@
    ],
    "notes": "Full run over all 401,368 AG rows (883.8s, 454.1 forms/s, cached per-lemma vidyut derivation — 90,690 distinct lemmas). Status distribution: ok 72,764 (18.13%) · no-derivation 237,447 (59.16%) · ambiguous 86,857 (21.64%) · engine-error 4,300 (1.07%) — all four buckets always reported (2a-4), never only successes. 2,815 distinct sūtra chains recorded; chain length min 6 / median 12 / max 37 among ok rows. R-C3: engine-error is dominated by the verbal dhātu+gaṇa+lakāra mapping (new work here; the nominal mapping is E1-proven). R-C4: 256 ok rows are verb-derived AND carry tense_caveat=1 (DCS Tense=Past conflates aorist/perfect) — sūtra attribution for tense-specific rules on those rows may be off, flagged not silently counted. Full detail + 30-example sampled human-verification section: data/concordance/DERIVATION_HARNESS_BUILD_REPORT.md. Deliberately excludes W2b's sūtra->form inversion and the /concordance/panini/ web page — out of scope for this handoff. Released data-v0.3.0 (H1574 / W3b).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/panini-derivation-status.meta.md",
-   "regen_checked": "2026-09-04 (H4037: HEAVY-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: HEAVY-DEFER)"
   },
   {
    "id": "paninian-corpus-concordance",
@@ -1949,7 +1949,7 @@
    ],
    "notes": "893,482 rows from 72,764 ok-status forms across 221 distinct sūtras (of the named 3983-sūtra vidyut enumeration (W3a)) spanning 7/8 adhyāyas (adhyāya 5: no exemplar in this build). Chain length (Ashtadhyayi-only steps) min 6 / median 12 / max 36. Per-sūtra ambiguity rate (2b-6, lemma-attributed — data/concordance/panini_ambiguity_by_sutra.tsv, 221 rows): median 27.1%, range 0.0-69.2%. tense_caveat=1 on 466 of the inverted ok forms, propagated verbatim (2b-5). PARKED GAP (documented, not hidden): exit-check 2b-1 asks for `ok`/`ambiguous` forms both inverted; W2a's shipped derivation_status.tsv carries an EMPTY chain_id for all 86,857 ambiguous rows (verified exhaustively — 0 exceptions), diverging from ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md §4's stated 'records all of them' design. Re-deriving with vidyut to recover ambiguous-form chains was out of scope (W2a's output is this build's entire input per H1390). Follow-up: extend build_panini_derivations.py to record the tied candidate chain_id set for ambiguous rows so a future W2b re-run can invert them too. 165 of 52,025 derivation_chains.tsv steps (Dhatupatha/Varttika/Kaumudi, 0.32%) are excluded from the inversion — not Pāṇini's own Ashtadhyayi sūtras, don't fit anchor_id's regex. Full detail: data/concordance/PANINI_BUILD_REPORT.md. Released data-v0.3.0 (H1574 / W3b).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/paninian-corpus-concordance.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "ru-gloss-layer",
@@ -1970,7 +1970,7 @@
    ],
    "notes": "RIGHTS GATE (PLAN decision 14): RU glosses come ONLY from SanskritRussian's public, GitHub-Pages-served surface/lemma/root glossaries; the restricted upstream RussianTranslation/src/corpus_lexicon.jsonl is never read. Additive: the English token `gloss` is untouched; RU lives under token.gloss_ru {surface,lemma,root}. Coverage report: reading/RU_GLOSS_COVERAGE.md — the measured 95.6% shows the public subset suffices (no rights unlock needed). CORRECTED 30-07-2026 (#198): the layer applies to the 5 DCS-sourced packs (nala 1-3, hitopadeśa, kirātārjunīya) because the Gītā packs are built and already carry their own hand-curated gloss_ru from gita-gold-master, not because the Gītā is absent from DCS (it is present, see the gita-reading-pack note).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/ru-gloss-layer.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "subhashita-reader-pack",
@@ -1992,7 +1992,7 @@
    ],
    "notes": "H1279 kosha pedagogy Wave RU (W-RU-b), the first non-DCS reading-pack family; H1312 re-ran the build with the gloss.ru join once W-RU-a (H1278) had shipped. Base text public domain (Böhtlingk, Indische Sprüche 1870-73, SanskritLexicography F33, consumed in place — never copied wholesale). Splits shown only where they rebuild the surface via corpus-attested rules (no fabricated signal; 56/1,263 chunks honestly unsplit) — the split/grading TSVs are byte-unchanged from H1279 (test_subhashita_difficulty.py green). gloss.ru now PRESENT: 85.3% of the pack's 1,510 tokens carry a lemma-layer RU gloss (89.1% carry a resolved SLP1 lemma at all) — the residual gap is mostly cheda lemmatization misses on rare/compound-internal forms, not a rights gap (still the SanskritRussian **public site-tier** subset only; corpus_lexicon never read). Curation by Fable 5 (claude-fable-5), auditable in CURATION_NOTES.md; its 50 R1 rejects double as an OCR to-fix list for IndischeSprueche.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/subhashita-reader-pack.meta.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL-INPUT-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: FAIL-INPUT-DEFER)"
   },
   {
    "id": "cohort-start-chteniya-pack-freeze",
@@ -2020,7 +2020,7 @@
     "lemmas-for-srs": "312038b68fe28ee9a5e6216764b6925114d4122d78fd77aed692b45cf75b10f9"
    },
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/data/cohort_start_chteniya/README.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "scherzl-government-dcs-adjudication",
@@ -2040,7 +2040,7 @@
    ],
    "notes": "All 1168 Scherzl case-government relations adjudicated against the DCS dependency treebank: 693 CONFIRMED / 1 CONTRADICTED (hand-adjudicated to a non-defect) / 288 UNATTESTED-INSUFFICIENT / 186 NOT-ADJUDICABLE. Only ~3.9% of DCS sentences carry dependency arcs, so CONFIRMED is a lower bound and a zero dep-count never disconfirms. Already tracked+public in SanskritGrammar; listed for discovery, not re-released.",
    "data_statement": "Aggregate government-relation verdicts + per-verb governed-case counts. Source corpus: Digital Corpus of Sanskrit (DCS), Oliver Hellwig, CC BY 4.0 (via dcs-conllu) — attribution required; counts are facts extracted from the corpus, not DCS text. Government catalogue: V. I. Scherzl's 19th-c. index (public domain).",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "pd-dcs-coverage",
@@ -2059,7 +2059,7 @@
     "reports/PD_DCS_CORPUS_COVERAGE_2026.md"
    ],
    "notes": "H1336 (20-07-2026): first measurement of DCS's coverage of PD's cited canon. DCS is 25.2% PD-citation-weighted but 77.9% DCS-token-weighted -- holds the Vedic/epic core, misses puranic/lexicographic/kavya breadth (residue = 75% of PD's primary citation mass). Scope: PD letter a- only (published a- ~ apaca-). MahaBha. != MahaBh. (Mahabharata vs Mahabhasya) deliberately not merged. PR: https://github.com/sanskrit-lexicon/csl-atlas/pull/276",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "handoff-lifecycle-gold",
@@ -2078,7 +2078,7 @@
     "handoff lifecycle recovery workflow (H1247-H1252)"
    ],
    "notes": "18-07-2026 audit: 91 verdicts upheld by verifier, 15 refuted (swept to corrected verdict), 64 uncontested. The gold set is a BASELINE, not scripture — legitimate corrections with evidence update this in a later handoff. Verifier corrections: H003/H004 → RERUN_NEEDED (surveyed artifact evidence found post-audit); H066 → NEEDS_STUB_FILL; remaining refutations retracted (evidence re-checked, classifier was right). Tool validation: gold_agreement.py --self-test == 1.0000 (21-07-2026).",
-   "regen_checked": "2026-09-04 (H4037: HEAVY-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: HEAVY-DEFER)"
   },
   {
    "id": "sense-corpus-concordance",
@@ -2098,7 +2098,7 @@
     "kosha-sense-frequency (H1453) — shared attestation→sense assignment, two witnesses"
    ],
    "notes": "Wave-1 of PLAN_KOSHA_SENSE_RECONCILIATION_2026H2 (H1455). The middle arrow headword→SENSE→attestation, a SIDECAR left-joined at build time — MW/kosha `senses` are byte-unchanged. Inputs consumed, never re-derived: the H1456 PWG per-sense <ls> export (RussianTranslation microstructure.py), the reused dict-corpus-concordance, DCS 2026 (CC BY 4.0), pwg_sources.py (pwgbib abbrev resolver), and (wave-1.5) the csl-atlas f8 MBh vulgate crosswalk (mbh_vulgate_concordance.csv, H610/H761 — PWG-continuous → Nīlakaṇṭha-vulgate, all 18 parvans). Correction (wave-1.5): PWG↔MBh locus resolution is NOT infeasible — PWG-continuous → vulgate is solved and consumed (96% of pilot MBh <ls> resolved to a vulgate address). The residual is narrower: DCS's Mahābhārata is the BORI critical edition whose numbering drifts ~±1 adhyāya from the vulgate, so a DCS Mahābhārata match is an adhyāya-level corroboration (locus-mbh), not exact identity; texts DCS lacks (Pañcatantra, Kathāsaritsāgara) still cannot be DCS-matched. The load-bearing sense↔passage witness remains PWG's own <ls>, now carrying resolved vulgate addresses. Rights: all rows public (PWG <ls> = pre-1900 editions; DCS = CC BY 4.0); the evidence-only class is wired but unused in wave-1 (no modern-copyright gloss consumed). Build report: data/concordance/SENSE_CONCORDANCE_BUILD_REPORT.md.",
-   "regen_checked": "2026-09-04 (H4037: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)"
   },
   {
    "id": "sense-alignment-pilot",
@@ -2119,7 +2119,7 @@
     "https://gasyoun.github.io/h3744-sense-align/ before/after compare page"
    ],
    "notes": "Wave-2 slices 1+2 of PLAN_KOSHA_SENSE_RECONCILIATION_2026H2. Method: senses join a meaning through SHARED LITERARY WITNESS — the <ls> sources both dictionaries cite for them, each weighted 1/df within the lemma (a witness cited by every sense discriminates nothing). Grouping is a greedy BEST MATCH per dictionary pair, not transitive closure: closure merged amṛta's 'not dead', 'nectar' and 'N. pr. the mother of Parikṣit' into one component. Marked defaults TAU=0.30, GLOSS_FLOOR=0.20, PREFIX_MIN=4 — unchanged by slice 2, which adds no constant of its own. LANGUAGE FENCE: gloss-token Jaccard is open only between two dictionaries glossing in the SAME language and only when that language is English (MW↔Apte). It never crosses PWG's German boundary and, since H3862, never crosses the ŚKDR/VCP Sanskrit boundary either — app/sense_align.gloss_channel_open() is the single gate. H3862 STEP-1 VERDICT: ŚKDR and VCP are reachable (csl-sqlite skd.zip/vcp.zip) and ship as columns; Medinī and Amara are NOT in CDSL at all and ship as recorded absences — the `md` code in csl-orig/csl-sqlite is MACDONELL, not Medinīkośa. THE Sa→Sa BRIDGE: the kośas carry ZERO <ls> (0 of 42,531 ŚKDR and 0 of 50,135 VCP records), so the witness channel does not exist for them; what does is PWG's own citations OF them (ŚKDR. 1,227×, MED. 1,824× in the pilot), which is the `attrib` method — weighted 1/df off the same table and decided by the same TAU, ranked below `ls` because it is directional. Reading the kośas' own `iti X` prose as witnesses was measured and REJECTED: it matched PWG's PRAT. to `pratyarthin` and BUDDH. to `buddhim`, re-inventing witnesses through a side door PREFIX_MIN closes; a closed curated source vocabulary is the honest version and is a slice of its own. SLICE-2 DELTA, verified row by row against `--no-sasa`: no western sense changed partner, method, score or witness list; 0 new western-only rows; aligned 2,957→3,013 = 56 kośa-only meanings + 11 existing meanings that gained a kośa cell; clean 1-1-1 unchanged at 262. `df` did not move because the kośas contribute no witnesses. SIDECAR ONLY — no dictionary's sense order or bytes are touched. NOT PUBLISHED: the table is not on the 2,324 live static pages, because it asserts in kosha's own voice that these dictionaries' senses correspond and that can be scholarly wrong in a way page chrome cannot (docs/NOT_PUBLISHED_H3744_SENSE_ALIGNMENT.md). False positives exist and are NOT quantified: precision needs the wave-2 acceptance pass (sample + judge + human vote), explicitly out of both slices' scope, so no precision figure is quoted anywhere; the known `attrib` false-positive class is lemma-level joins onto a ŚKDR verbal-root entry (kaṭa, bhū). Remaining scope fences: the lemma-variant graph and the pwg_ru sense-structure deliverable are separate units. Build report: data/concordance/SENSE_ALIGNMENT_BUILD_REPORT.md; packet: docs/H3744_SENSE_ALIGNMENT_PACKET_31.08.26.md; smoke: docs/H3862_SENSE_ALIGNMENT_SMOKE_LOG_02.09.26.md.",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "paninian-sutra-coverage-map",
@@ -2141,7 +2141,7 @@
    ],
    "notes": "Fire-set harvested over 91,027 AG lemmas (276 codes that fire). dark-engine-gap=0 not measurable from W2a empty engine-error chains (reported empty, not inflated). Full report: data/concordance/SUTRA_COVERAGE_BUILD_REPORT.md. Released data-v0.3.0 (H1574 / W3b).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/paninian-sutra-coverage-map.meta.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL-INPUT-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: FAIL-INPUT-DEFER)"
   },
   {
    "id": "zaliznyak-drills",
@@ -2162,7 +2162,7 @@
    ],
    "notes": "H1461 (L4 surface, delta vs H1296). Different asset/repo/question than SanskritGrammar/sangram H1296 (corpus-ATTESTED-CELL drills, “is this cell attested?”) and kosha’s own H946 morphology drills (attested FORM of a specific lemma cell): this drills PARADIGM-CLASS MEMBERSHIP of a PWG headword (“which declension class, and which other words share it”) over the Zaliznyak-style class index, no corpus-attestation join. index_token grammar is <gender>·<section>[+N]; the +N compound-arity suffix does not change the declension pattern (e.g. m·1 and m·1+2 share stem_class=a-stem), so distractor bucketing keys on stem_class, verified empirically against headword_index.tsv. ind·* (indeclinable) tokens are excluded, no declension class to drill. Deterministic build (seeded RNG, seed 20260722).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-drills.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "sense-crossdict-pilot",
@@ -2182,7 +2182,7 @@
    ],
    "notes": "Wave-2 of PLAN_KOSHA_SENSE_RECONCILIATION / PLAN_KOSHA_NEXT_PROGRAMME. SIDECAR only — MW/kosha senses never mutated. MW/Apte glosses sliced read-only from kosha.db; Apte nulls are honest gaps (273/500 have ap90 rows). nAgadanta smoke: PWG 1a/1b/2/3a/3b present. Full inventory deferred.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/sense-crossdict-pilot.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "gita-prose",
@@ -2203,7 +2203,7 @@
    ],
    "notes": "SIDECAR to word-by-word gita-gold-master — alternate display mode only. MIT/public same as gita-gold. Credit Dr. Marcis Gasuns (Gita.xlsm author).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/gita-prose.meta.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "pwg-scan-index-campaign",
@@ -2225,7 +2225,7 @@
     "data/pwg_scan_index_tracker/pwg_citation_count_provenance.tsv (citation-count provenance + the denominator contract, H2874)"
    ],
    "notes": "H1706, csl-observatory PR #107, v1.5.0. Sidecars in the same directory: the verbatim 4-tab snapshot, the ranked e-text candidate queue, a dated audit of all 37 sanskrit-lexicon-scans directories, and (H2874) ls_counts/ - the two <ls>-per-abbreviation count tables. CAVEAT 1 (RESOLVED 16-08-2026, H2874, csl-observatory PR #186 / v1.13.0) - citation_count is the 2024-09-11 lsextract_all.txt work-family rollup, ALL = 739056, with 66 of 67 valued rows exact; the old '1.2x to 433x disagreement' was a comparison against cleaned-STRING counts, which measure a different object. Consume citation_count_safe (blank where provenance is unresolved), never the raw citation_count; fold by in_pwgbib before summing, because the field is a work-family rollup and sibling edition/volume rows share one total; divide only by the ALL of the same snapshot. Gate: python scripts/pwg_citation_count_provenance.py --check. CAVEAT 2 - multi-volume works carry their count once, on volume 1, so per-volume mass is a floor. CAVEAT 3 - the snapshot's Team tab has the volunteers' real-name column REDACTED at fetch time; handles are public on every coordinating issue, the name-to-handle linkage is not, and publishing it is a human decision (open MG @DECIDE in GTD).",
-   "regen_checked": "2026-09-04 (H4037: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)"
   },
   {
    "id": "pwg-ls-counts",
@@ -2246,7 +2246,7 @@
     "csl-observatory /scan-index dashboard page (dictionary-wide coverage denominator)"
    ],
    "notes": "The count: every <ls> element in pwg.txt attributed to the LONGEST bibliography abbreviation that prefixes it (an n=\"...\" attribute is prepended first; leading digit -> NUMBER; no prefix -> UNKNOWN). Every element lands in exactly one bucket, so ALL is the only legitimate dictionary-wide denominator, and only against its own snapshot. CAVEAT 1 - this is a WORK FAMILY count, not a citation-string count; PWG's other family (sortedcrefs.txt, cleaned strings, total 344229) measures a different object and the two are never comparable (MED. is 30 there and 12990 here). CAVEAT 2 - pwg_ls_counts_2024-09-11.tsv is dated EVIDENCE for the scan-index tracker's Citation count column and must NEVER be regenerated against newer dictionary data; --recount writes only the _current table. Between the two snapshots `an.` falls 1797 to 1 while `H. an.` rises 2075 with a byte-identical bibliography entry - an ls re-tagging, not a recount. CAVEAT 3 - case is meaningful in this bibliography (S. vs s., Un. vs UN.) and 15 case-variant groups are cited on both sides, so a case-insensitive lookup silently picks one of two real works. Registered in Uprava DANGER_FACTS.md; see SanskritLexicography FINDINGS section 548.",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "pwg-ru-data-workingset",
@@ -2267,7 +2267,7 @@
    ],
    "notes": "PRIVATE repo (rights: raws/ + corpus/ carry PWG German and modern in-copyright Russian corpus material — R2.2). One logical store, promoter-only tm/ writes. Never flip visibility without /publish-safety-check.",
    "data_statement": "https://github.com/gasyoun/pwg-ru-data/blob/main/README.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)"
   },
   {
    "id": "defgen-heritage-second-reference",
@@ -2287,7 +2287,7 @@
    ],
    "notes": "PUBLIC tier despite consuming the restricted Heritage layer (D20, LGPLLR, heritage-dico-gloss): gloss TEXT is deliberately never copied into kosha — the subset carries mw_key1 + DICO anchor + SHA-256 + word count, and defgen_heritage_ref.py REFUSES to score if any digest stops matching the local SanskritLexicography file. Reproduction therefore requires that sibling checkout. Derived from the frozen 500-headword MW sample (seed 730, H730) intersected with Heritage = 333 items; the subset is high-frequency-skewed by Heritage coverage, so its numbers are not comparable to the published 500-item table.",
    "data_statement": "docs/DEFGEN_HERITAGE_SECOND_REFERENCE_EVAL.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)"
   },
   {
    "id": "pwg-tm-canonical-v1",
@@ -2308,7 +2308,7 @@
    ],
    "notes": "PUBLIC: PWG PD + own machine translation. 2175 exact-card + 217 exact-fragment. Wave-1 5000-key Grok drafts are NOT in this pack (independent serious-error 2.5%). Rebuild: python src/pwg_tm_release.py. GitHub release pwg-tm-canonical-v1.0.0. Dataset concept DOI 10.5281/zenodo.21932900 (version 10.5281/zenodo.21932901). Distinct from repo software DOI 10.5281/zenodo.21306715.",
    "data_statement": "https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/release/pwg_tm/DATASHEET.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "pwg-de-edition-v1",
@@ -2330,7 +2330,7 @@
    ],
    "notes": "PUBLIC, DE-ONLY: 459 entries / 11581 edition senses; 40700 citation edges, 6008 edition_rel, 2125 government, 86 non-German gloss spans, 42 form notes. Contains NO translation, review score or evidence grade — enforced by a field allowlist plus a post-serialization byte fence, not by convention. PWG/PW/SCH/PWKVN are public domain; NWS is the Cologne working layer (432 senses, 3.7%); derived structure CC-BY-SA-4.0. Dataset concept DOI 10.5281/zenodo.21961709 (version 10.5281/zenodo.21961710) — distinct from repo software DOI 10.5281/zenodo.21306715. The two large artifacts are release/deposit assets, NOT repo files; the repo keeps SHA256SUMS. COVERAGE CAVEAT: the pwg_ru pipeline's frequency-biased 459-headword slice, not a random sample of PWG — do not read per-sense counts as dictionary-wide rates. 22 senses quarantined (Cyrillic contamination in DE fields); edition_rel is machine classification with a measured 10.69% inter-layer conflict rate flagged needs_human. Rebuild: python src/export_de_edition.py export --store ... then src/build_de_sidecar_pack.py build.",
    "data_statement": "https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/release/pwg_de_sidecars/DATASHEET.md",
-   "regen_checked": "2026-09-04 (H4037: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)"
   },
   {
    "id": "mbh-vulgate-critical-presence",
@@ -2350,7 +2350,7 @@
     "csl-atlas data/forensic/MBH_ETEXT_PRESENCE_CENSUS.md"
    ],
    "notes": "H2845 (16-08-2026), MG's P2: an MBh citation should link its e-text, not only its scan, and say which recension carries it. Verse level, unconditional over all 83,971 Nīlakaṇṭha verses: 92.0 % present/present, 7.7 % (6,494) vulgate-only — the verse the critical edition relegated to its apparatus — 0.3 % service records with an empty mūla, 0 unchecked. Per-parvan vulgate-only share ranges 0.9 % (sauptika) to 29.1 % (svargārohaṇa). CAVEAT, do not quote the citation-level table as if it were this one: mbh_citation_presence.csv (85.3 % present/present, 8.4 % present/absent) is only as good as the fitted locus, which lands on the exactly right verse about HALF the time, so its present/absent means 'the verse the index points at is vulgate-only', NOT 'PWG cited a verse BORI rejects'. Integrity rule enforced in code, not convention: unchecked is never written as absent, and a consumer without csl-atlas checked out prints no marker at all rather than implying a verse is missing. RIGHTS: this CSV holds verdicts, scores and BORI addresses — no verse bytes; the two witnesses (sanatana.in volunteer transcription; BORI/Tokunaga-Smith critical text, © BORI 1999, Smith asks that copies not be redistributed) stay in gitignored caches on a local-only branch and are NOT part of this dataset. The one deliberate exception is the specimen file f8_specimen_mbh_12_8081.json, which quotes three vulgate verses in full. PR: https://github.com/sanskrit-lexicon/csl-atlas/pull/404",
-   "regen_checked": "2026-09-04 (H4037: FAIL-INPUT-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: FAIL-INPUT-DEFER)"
   },
   {
    "id": "grammar-lab-g1",
@@ -2369,7 +2369,7 @@
    ],
    "notes": "32 published topics, 182 Type-D edges, 192 frozen queries. Evidence contract: Whitney + Zalizniak + dictionary + corpus-or-not_attested + deterministic exercise. Semantic vectors are char-ngram hash projection (semantic_ready false) until G2 MiniLM sidecar. Sandhi fenced. PR https://github.com/gasyoun/SanskritGrammar/pull/857 v0.121.6.",
    "data_statement": "https://github.com/gasyoun/SanskritGrammar/blob/main/data/grammar_lab/README.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "pwg-mw-ap-sense-coverage",
@@ -2388,7 +2388,7 @@
     "csl-atlas A09 sense-alignment paper"
    ],
    "notes": "H2882 wave 4. absent_candidate is an UPPER BOUND on genuine absence: adjudication of 30 random candidates left ~17% genuine (FINDINGS s559); 23% of false absents trace to degraded store key1 (FINDINGS s560). Summary sibling: mw_ap_sense_coverage_summary.json.",
-   "regen_checked": "2026-09-04 (H4037: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)"
   },
   {
    "id": "pwg-work-dating-table",
@@ -2407,7 +2407,7 @@
     "pwg_ru cards (era badge provenance)"
    ],
    "notes": "Supplies the provenance ls_source_map.json's 45 bare point dates never had: a RANGE plus the scholarly source per date (Witzel, Olivelle, Brockington, Rocher, Meulenbeld, Pingree, Cardona, Vogel, Stein and others), graded 9 anchored / 20 consensus / 14 contested / 2 dating-invalid. TRAP: 'Spr.' is Boehtlingk's OWN anthology (Indische Sprueche, 1863-1873) and 'SKDR.' the Sabdakalpadruma (Calcutta 1821-1858) - neither dates anything, yet phase 1 gave them 600 CE and 1830 CE, so they bound 11,771 of 43,990 attestation windows, set 'latest' on 9,082, and are the only dated work in 2,873. Both carry dating_valid=false; do not use them for chronology. Seven further sigla (AMAR, GIT. GOV, KATHAS, RAJAN, SAH. D, VOP, Spr) have map dates outside their sourced range and are corrected HERE only - ls_source_map.json is deliberately not rewritten, because the committed phase-1 store consumed it. Never a claim about when a SENSE emerged. Eight claims are quoted from Vogel 1979 with printed page (the volume is held in SanskritLexicography/literature/); the rest are marked verified='reference-only', page-level check still open. Gate: c2p2_dating_table.py --check fails a date with no citation. Eleven contested datings await a human at https://gasyoun.github.io/vote/sheets/pwg_c2p2_work_dating_11.html",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "pwg-sense-attestation-window",
@@ -2427,7 +2427,7 @@
     "C7 residue repair queue"
    ],
    "notes": "Attestation windows (earliest/latest/n_dated_works/n_undated_citations) from the 45 dated works of ls_source_map.json - evidence about what PWG cites, never about sense emergence. Conservative lower bounds: C7 residue (115,354 unmapped instances / 2,607 sigla) carried in RussianTranslation/research/C2P1_ATTESTATION_WINDOW.md. Layered on pwg_sense_stratum.jsonl Renou proxy (consumed, not rewritten). TRAP (H3790, 01-09-2026): two of the 45 dated works cannot date anything - 'Spr.' is Boehtlingk's own 1863-1873 anthology and 'SKDR.' a Calcutta compilation of 1821-1858 - so 11,771 of these 43,990 windows carry a bound that says nothing about the language, and 9,082 have their 'latest' set that way. Read pwg-work-dating-table before using earliest/latest for chronology.",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "akshara-mt-benchmark-pilot",
@@ -2446,7 +2446,7 @@
     "future SanskritRussian mw_ru/apte_ru comparison"
    ],
    "notes": "RESTRICTED benchmark-only: third-party AI MT of public-domain Cologne originals + Likhushina fragments as advisors - NOTHING here may reach any public surface without a fresh @DECIDE (MG posture 24-08-2026). Honest gaps recorded: 5 zero-article keys absent from their kosha; their pwg_ru MT covers only 149/193 PWG heads in sample; likh=87 advisor-only. robots.txt fences their data endpoints; HTML card pages crawled politely with identified UA, owner outreach DONE by MG pre-crawl.",
-   "regen_checked": "2026-09-04 (H4037: NETWORK-UNTESTED (H4037 guardrail))"
+   "regen_checked": "2026-09-04 (H4046: NETWORK-UNTESTED (H4046 guardrail))"
   },
   {
    "id": "pwg-print-anchors",
@@ -2466,7 +2466,7 @@
    ],
    "notes": "H3457 (25-08-2026, Fable 5 claude-fable-5). Derived, deterministic, DB-free: the static site cannot regenerate cards (no kosha.db on the Pages tier), so the volume lives in this committed sidecar and is folded in at render time. Live-verified 25-08-2026 through Cologne's servepdf.php?api=1 on 11 keys across volumes 1/3/5/7: each resolved to the pdf of its own volume (two-column spreads: 7-1686 → pwg7-1685.pdf, 7-1737 → pwg7-1737.pdf). Not on the public word page until a human flips the H3457 layer (docs/NOT_PUBLISHED_H3457_WPAGE_UX.md). MW/AP90 are single-volume and need no table.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/H3457_WPAGE_UX_STAGING_PACKET_25.08.26.md",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "wisdomlib-sanskrit-layers",
@@ -2486,7 +2486,7 @@
    ],
    "notes": "H3301 (26-08-2026, OxAlpha x-preview-f-free). Cite CONCEPT DOI 10.5281/zenodo.22117832 (all versions); current v1.0.1 = 10.5281/zenodo.22118256 (v1.0.0 = 10.5281/zenodo.22117833 superseded same-day: concept/version labels were swapped inside README/CFF; records immutable so fixed by corrective version under the same concept). License CC BY 4.0 with mandatory wisdomlib provenance (LICENSE-DATA); bulk-public GO per RIGHTS_RULING_BULK_PUBLIC_28.07.2026 - rights uncertainty documented, not a stop. L7 grammar-links layer ships as FROZEN 25-07 snapshot (anchors stripped by compaction, not regenerable). English-twin books included but marked; Samudra consumed pure-Sanskrit slugs only.",
    "data_statement": "https://zenodo.org/records/22118256 (README + docs/DATASHEET_H3301_RELEASE.md inside pack.zip)",
-   "regen_checked": "2026-09-04 (H4037: NOT-RUN)"
+   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
   },
   {
    "id": "akshara-mt-benchmark-full",
@@ -2506,7 +2506,7 @@
    ],
    "notes": "RESTRICTED benchmark-only, same posture as akshara-mt-benchmark-pilot: third-party AI MT of public-domain Cologne originals + Likhushina fragments as advisors - NOTHING public without a fresh @DECIDE (MG posture 24-08-2026; NO-volume-stop ruling 27-08-2026). size_bytes filled at drain. Cold-fetch mis-resolution quirk documented in the report - drain gate asserts data-q-slp1 parity per stored card.",
    "size_note": "sum of fetched card bytes across 206,652 ok fetches (51,663 originals + 154,989 ru), from committed crawl manifests",
-   "regen_checked": "2026-09-04 (H4037: NETWORK-UNTESTED (H4037 guardrail))"
+   "regen_checked": "2026-09-04 (H4046: NETWORK-UNTESTED (H4046 guardrail))"
   },
   {
    "id": "kosha-mastery-schedule",
@@ -2526,7 +2526,7 @@
    ],
    "notes": "Data layer only, no UI. Deliberately excludes data/cohort_start_chteniya/ (a frozen lesson<=3 subset of sandhi_drills.json, not a distinct family -- see data/MASTERY_WEIGHTS_SPEC.md). Not a duplicate of Systema-Sanscriticum's Saraswati FSRS review engine -- this schedules kosha's own static reader surfaces only, holds no per-learner review state, and has no export path into Systema.",
    "size_note": "size_bytes filled once the schedule ships in a tagged release",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "cyrillic-proper-noun-slp1",
@@ -2546,7 +2546,7 @@
     "csl-atlas (planned)"
    ],
    "notes": "This is the ONE sanctioned Cyrillic->SLP1 mapping: FINDINGS §60 stands, reverse-transliteration character rules remain unsafe, so a session needing a key looks it up here instead of inventing rules. Coverage of the seed indices is partial by design -- Erman-Temkin 174/478 (36.4%), Kadambari 130/393 (33.1%), Potapova 128/326 (39.3%); the 20 purely-Cyrillic seed files carry no IAST witness and are deliberately unkeyed. Metadoc: RussianTranslation/data/cyrillic_proper_noun_slp1.meta.md.",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "sense-dating",
@@ -2566,7 +2566,7 @@
     "sense-chronology programme (H3673/H4016 probes -> H4019 build)"
    ],
    "notes": "H4019 (MG GO 03-09-2026, additive-only ruling on the H4016 GOxSTRONG verdict). Date sources tiered: (1) Dharmamitra chronology snapshot (primary; canon-identity family joins, hand-verified expected eras asserted at build), (2) DCS 2021 date table (secondary, seed-verbatim), (3) H4016 seed hand calls + curated hand rows with reasons (tertiary). Work identity routes through the citation_canon topTexts spine — no fuzzy title matching; string fallbacks would be flagged uncertain, none auto-applied. Disputed/boundary/recension-dependent works -> NULL, never forced (Susruta layered, Medinikosa, Kavyadarsa, Mrcchakatika, Lalitavistara, ...). Coverage at build: 73.3% of 85,472 citation instances dateable; unresolved loci 6.7%; nomina spot-check 20/20 vs H4016 hand calls; Sabdakalpadruma dated late-medieval as a terminus CEILING with low attestation value (H4019 addendum §1). See data/dating/README.md + COVERAGE_REPORT.md.",
-   "regen_checked": "2026-09-04 (H4037: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
    "id": "hitopadesa-text-concordance",
@@ -2586,7 +2586,7 @@
     "per-text corpus-dictionary scale-up lane (future texts)"
    ],
    "notes": "Pilot (H4034). Source DCS 2026, CC BY 4.0 — license-gated ingest: derived measurements free, bulk corpus redistribution gated; attribution in MANIFEST.json. Era tie-in: early-medieval (DM canon_dm, core c. 9th-10th c. CE disputed) via data/dating/work_dates.json; the concordance page carries the H4026 .ls-era badge. Residue: 4.5% no headword join (DCS -ay causative stems kosha keys under the root, indeclinables); 87% sense-id absence = H1455 frame width, not PWG sense absence. Spot check 10/10 (independent SQL recount) in SPOT_CHECK_SAMPLE.md. Additive fold only — no existing surface touched (H4034 gate).",
-   "regen_checked": "2026-09-04 (H4037: NOT-RUN)"
+   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
   }
  ]
 }

@@ -1,10 +1,10 @@
-# H4037 — end-to-end regeneration audit: `regen_checked` stamps on all 121 manifest rows
+# H4046 — end-to-end regeneration audit: `regen_checked` stamps on all 121 manifest rows
 
 **Date:** 04-09-2026 · **Tier:** OxAlpha `zai-coding-plan/glm-5.3-flash` · **Box:** Mac
 
 Every row of [data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
-now carries `regen_checked: "2026-09-04 (H4037: <verdict>)"` from the estate-wide
-end-to-end regeneration audit ([full report](https://github.com/gasyoun/Uprava/blob/main/docs/REPORT_H4037_kosha_derived-datasets-regen-audit_04-09-2026.md)).
+now carries `regen_checked: "2026-09-04 (H4046: <verdict>)"` from the estate-wide
+end-to-end regeneration audit ([full report](https://github.com/gasyoun/Uprava/blob/main/docs/REPORT_H4046_kosha_derived-datasets-regen-audit_04-09-2026.md)).
 
 What the audit did before stamping:
 
@@ -23,5 +23,5 @@ What the audit did before stamping:
    9 box-input gaps) · 15 NOT-REBUILDABLE-by-design · rest deferred/network-gated.
 
 The stamps are provenance, not a quality flip: the 15 stale-count rows still need
-the follow-up kosha PR queued in the Uprava GTD (H4037 rows), and the 6 real
+the follow-up kosha PR queued in the Uprava GTD (H4046 rows), and the 6 real
 builder defects are red-invariant repairs, not advisories.
