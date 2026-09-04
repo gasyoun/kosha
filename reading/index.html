@@ -81,6 +81,9 @@
       <a class="src" href="vocabulary/drills/">vocabulary drills →</a> ·
       <a class="src" href="samasa/drills/">samāsa drills →</a> ·
       <a class="src" href="zaliznyak/drills/">declension classes →</a></p>
+    <p class="sub" id="conclink" hidden><b>Word concordance:</b>
+      <a class="src" href="../data/concordance/text_hitopadesa/index.html">every
+      word of this text → dictionary senses, era-badged →</a></p>
   </header>
   <div class="banner" id="banner" hidden></div>
   <main id="passage"></main>
@@ -165,6 +168,9 @@
     var d = DATA[slug];
     if(!d) return;
     current = slug;
+    // H4038: the per-text word concordance rides the Hitopadeśa pack view only —
+    // the affordance stays hidden for every other pack (additive wiring).
+    document.getElementById("conclink").hidden = slug.indexOf("hitopadesa") !== 0;
     var hasRU = (d.sentences[0].tokens||[]).some(function(t){return t.gloss_ru;});
     document.getElementById("langtoggle").style.display = hasRU ? "" : "none";
     var hasProse = packHasProse(d);
