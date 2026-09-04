@@ -58,8 +58,8 @@
    "in_release": "data-v0.5.0",
    "release_asset": "dcs_cdsl_xref.tsv",
    "format": "tsv",
-   "rows": 15902,
-   "size_bytes": 633294,
+   "rows": 98606,
+   "size_bytes": 4313092,
    "keying": "DCS lemma id ↔ CDSL headword (SLP1), 81.4% linked",
    "source_repo": "https://github.com/sanskrit-lexicon/csl-apidev",
    "source_path": "simple-search/dcs_xref/dcs_cdsl_xref.tsv",
@@ -71,7 +71,7 @@
    ],
    "notes": "Reusable LOD linkset — never re-derive DCS↔CDSL joins. Zenodo DOI 10.5281/zenodo.22105641 (minted 26-08-2026 for data-v0.5.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/dcs-cdsl-xref.meta.md",
-   "regen_checked": "2026-09-04 (H4046: FAIL-COUNT-MISMATCH)"
+   "regen_checked": "2026-09-04 (H4046: VOTED re-cut applied — VOTED 04-09 — v2 re-cut built (98,606 attested lemmas, 56,377 linked 57.2%); коммит в csl-apidev ОЧЕРЕДНОЙ (Cologne fence) — стейдж data/xref/dcs_cdsl_xref_v2__pending-upstream.tsv; v1 = pre-conllu-rewrite срез)"
   },
   {
    "id": "union-headwords",
@@ -1288,8 +1288,8 @@
    "in_release": "data-v0.2.0",
    "release_asset": "data/gita/gita_inflection_divergences.tsv",
    "format": "tsv",
-   "rows": 1279,
-   "size_bytes": 65589,
+   "rows": 661,
+   "size_bytes": 36530,
    "keying": "DIVERGE (360) + GAP (919) rows from the W4 QA: gold Gita nominal case·number·gender NOT reproduced by kosha's hybrid inflections. Cols verse·form·lemma·gold_case_num_gender·class·kosha_analyses. Finding: DIVERGE 71% pronouns (confirms E1's flagged pronominal mis-modeling with attested text), GAP mostly compounds.",
    "source_repo": "https://github.com/gasyoun/kosha",
    "source_path": "data/gita/gita_inflection_divergences.tsv",
@@ -1299,7 +1299,7 @@
    ],
    "notes": "H848 roadmap W4. Report GITA_MORPHOLOGY_QA_REPORT.md — 93.0% agreement on nominals present in kosha (4,779/5,139). Divergences are candidate corrections, NOT auto-applied. Public/MIT.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4046: FAIL-COUNT-MISMATCH)"
+   "regen_checked": "2026-09-04 (H4046: VOTED re-cut applied — VOTED 04-09 — ledger re-cut на новом kosha.db (agreement 93.0→98.7%))"
   },
   {
    "id": "gita-reading-pack",
@@ -1349,8 +1349,8 @@
    "in_release": "data-v0.2.0",
    "release_asset": "data/sandhi/sandhi_curriculum.tsv",
    "format": "tsv",
-   "rows": 2181,
-   "size_bytes": 135792,
+   "rows": 2634,
+   "size_bytes": 163070,
    "keying": "one row per sandhi rule (2,181), ordered as a graded syllabus: rank, rule, category, count, pct, cumulative_pct, family_size, priority, lesson (10 lessons). Priority = frequency x class x environment-generality (MG ruling 14-07-2026); weights in data/sandhi/difficulty_weights.json (tunable). Learn 23 rules -> read 50% of all corpus sandhi; 79 -> 80%; 132 -> 90%. Teaching page reading/sandhi/curriculum/index.html.",
    "source_repo": "https://github.com/gasyoun/kosha",
    "source_path": "data/sandhi/sandhi_curriculum.tsv",
@@ -1361,7 +1361,7 @@
    ],
    "notes": "H902 roadmap Phase 4 (surface 2/4: graded curriculum). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Derived from the corpus-sandhi dataset; weighting is human-tunable per the MG ruling.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4046: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: VOTED re-cut applied — VOTED 04-09 (лист h4046_regen_recuts_3, 3/3 approve) — re-cut applied: committed TSV был старого винтажа corpus-sandhi; builder не менялся с H902, 0 правил потеряно, +453 новых)"
   },
   {
    "id": "vocab-curriculum",
@@ -1497,8 +1497,8 @@
    "in_release": "data-v0.2.0",
    "release_asset": "data/sandhi/sandhi_drills.json",
    "format": "json",
-   "rows": 396,
-   "size_bytes": 203642,
+   "rows": 399,
+   "size_bytes": 96196,
    "keying": "one item per row: id, type (join/split/identify), rule, category, lesson, difficulty, question, answer, choices (4-way MCQ with same-class distractors), context (attested example sentence). 396 items over the 132 curriculum rules covering 90% of corpus sandhi (lessons 1-9; lesson-10 long tail excluded by default, --max-lesson to widen). Also shipped as data/sandhi/sandhi_drills.tsv (flat fallback) and data/sandhi/sandhi_drills.apkg (Anki deck, genanki). Web quiz reading/sandhi/drills/index.html (self-contained MCQ, theme-aware).",
    "source_repo": "https://github.com/gasyoun/kosha",
    "source_path": "data/sandhi/sandhi_drills.json",
@@ -1510,7 +1510,7 @@
    ],
    "notes": "H918 roadmap Phase 4 (surface 4b: drills/flashcards, the last core-programme surface — sibling surface 4a is the SanskritGrammar reader-hover, H917). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Deterministic build (seeded RNG, seed 20260714) so choice ordering/distractors are reproducible across rebuilds.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4046: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: VOTED re-cut applied — VOTED 04-09 — каскад re-cut от новой sandhi-curriculum (399 vs 396))"
   },
   {
    "id": "corpus-sandhi",
