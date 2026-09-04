@@ -102,8 +102,9 @@ re-verified at release cut and re-verified again against the frozen release
 asset on 02-08-2026, including the full `n_dicts` distribution and the 237
 `fem_fold` rows. Per-dictionary totals reconcile against the frozen 2014-era
 exports (e.g. PWG 106,054 here vs. the frozen `PWG-unique-key1-106085`
-export; small deltas are exactly the union's feminine folds and homograph
-collapse).
+export; small deltas are the union's feminine folds plus a decade of csl-orig
+digitization corrections (±≈150 keys each way for PWG); homograph collapse
+contributes none).
 
 ### Limitations
 
