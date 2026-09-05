@@ -102,3 +102,5 @@ Builders and per-row curation history are in each row's manifest `builder` /
 - `morphology-attestation-audit` (H1262) — a generated-vs-attested join; read
   its own build report for false-positive/false-negative rates before citing
   match rates from it directly.
+
+_Dr. Mārcis Gasūns_

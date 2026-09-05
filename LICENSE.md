@@ -1,3 +1,5 @@
+_Created: 02-07-2026 · Last updated: 05-09-2026_
+
 # License — code
 
 The **source code** of the Gasuns Sanskrit Dictionary (kosha) is licensed under

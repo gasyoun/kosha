@@ -1,6 +1,6 @@
 # H4038 — Hitopadeśa concordance surface with era badges: rendered proof (04-09-2026)
 
-_Created: 04-09-2026 · Last updated: 04-09-2026_
+_Created: 04-09-2026 · Last updated: 05-09-2026_
 
 Executor: OxAlpha (opencode / zai-coding-plan/glm-5.3-flash). The H4034 pilot data
 (`data/concordance/text_hitopadesa/`, 7,857 (surface, lemma) forms / 25,040
@@ -43,7 +43,7 @@ never forking — the H4026 badge machinery.
 | file | what to look at |
 |---|---|
 | `badges-surface.hitopadesa.html` | live-shaped rendered proof: the `api` row — 464 occurrences in document order, 13 PWG sense-id chips, card link `../w/api.html` — under the page-level **early-medieval** badge; and the `avalokya` row (DCS lemma `avalokay`, causative `-ay` stem, no H380 join) rendered `—` — honest absence, nothing fabricated. RU+EN caveat + bucket legend at the bottom, verbatim H4026 block. |
-| [../index.html](../index.html) | the built concordance page itself (badge in the h1, caveat disclosure under the table). |
+| [../index.html](https://github.com/gasyoun/kosha/blob/main/data/concordance/text_hitopadesa/index.html) | the built concordance page itself (badge in the h1, caveat disclosure under the table). |
 | [../../../reading/index.html](../../../reading/index.html) | the pack page hook — pick «Hitopadeśa», the «Word concordance» line appears; pick any other pack, it stays hidden. |
 
 ## Reproduce

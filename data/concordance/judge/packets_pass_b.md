@@ -1,3 +1,5 @@
+_Created: 03-09-2026 · Last updated: 05-09-2026_
+
 # H3910 judge packets — pass B
 
 Question, asked once per card: **are the glosses below the same meaning?**
@@ -1685,3 +1687,5 @@ Cards: 120
 **MW (en)** (mw:255215:1): situation, circumstance, case ( , ‘in such a case’)
 
 ---
+
+_Dr. Mārcis Gasūns_
