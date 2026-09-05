@@ -1,6 +1,6 @@
 # kosha inflection UI (P4 Wave K2b)
 
-_Created: 05-07-2026 · Last updated: 05-07-2026_
+_Created: 05-07-2026 · Last updated: 05-09-2026_
 
 The translator-first Sanskrit **inflection lookup UI** — the frontend half of
 [ROADMAP_INFLECT_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_INFLECT_2026_2027.md)'s
@@ -27,7 +27,7 @@ so MG's existing GitHub Pages deploy serves it at
 
 ## Data backend (K2b-2 "both")
 
-One code path per feature ([`src/lib/datasource.js`](src/lib/datasource.js)):
+One code path per feature ([`src/lib/datasource.js`](https://github.com/gasyoun/kosha/blob/main/ui/src/lib/datasource.js)):
 
 - **Static (default)** — fetches the pre-generated JSON that ships with the
   Pages deploy. Works fully on `gasyoun.github.io` with **no live server**
@@ -77,11 +77,11 @@ parity locked by
 ## Reuse (maximum-reuse rules)
 
 - Transliteration is the vendored **sanskrit-util** JS package
-  ([`src/lib/sanskrit-util.mjs`](src/lib/sanskrit-util.mjs), SHARED_CODE.md
+  ([`src/lib/sanskrit-util.mjs`](https://github.com/gasyoun/kosha/blob/main/ui/src/lib/sanskrit-util.mjs), SHARED_CODE.md
   family #1) — re-copy from `sanskrit-util/js/index.mjs` on package updates;
   never edit in place. `src/lib/translit.js` adds only the auto-detect sniffer
   (JS twin of `app/transliterate.py`).
-- `card_token` / `reverseBucket` ([`src/lib/cardToken.js`](src/lib/cardToken.js))
+- `card_token` / `reverseBucket` ([`src/lib/cardToken.js`](https://github.com/gasyoun/kosha/blob/main/ui/src/lib/cardToken.js))
   are exact twins of the Python encoders in `scripts/`.
 - Autocomplete reuses the existing `lemmas.json` index — no second index.
 

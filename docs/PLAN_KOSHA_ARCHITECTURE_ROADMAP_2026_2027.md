@@ -1,3 +1,5 @@
+_Created: 30-07-2026 · Last updated: 05-09-2026_
+
 # Kosha architecture and roadmap reset — plan of record
 
 _Created: 30-07-2026 · Planning span: August 2026–July 2027_
