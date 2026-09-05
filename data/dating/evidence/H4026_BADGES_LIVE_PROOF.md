@@ -53,3 +53,5 @@ badge would attach eras to the wrong homonym's senses — silently wrong data. T
 per-citation badge cannot mis-attach: it keys on the citation's own abbreviation.
 
 _Др. Мārcis Gasūns_
+
+_Dr. Mārcis Gasūns_

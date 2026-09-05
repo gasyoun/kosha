@@ -1,3 +1,5 @@
+_Created: 02-07-2026 · Last updated: 05-09-2026_
+
 # License — data releases
 
 The data this project builds and redistributes is **derived from upstream

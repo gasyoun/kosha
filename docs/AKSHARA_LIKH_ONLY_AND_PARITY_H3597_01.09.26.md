@@ -1,3 +1,5 @@
+_Created: 01-09-2026 · Last updated: 05-09-2026_
+
 # H3597 — Cologne parity verified at scale + likh-only words + site divergence lists
 
 _Created: 01-09-2026 · Last updated: 01-09-2026 · OxAlpha (`z-ai/glm-5.3-flash`)_

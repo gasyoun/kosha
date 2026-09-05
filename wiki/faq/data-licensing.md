@@ -11,6 +11,7 @@ aliases:
 last_updated: 2026-07-03
 ---
 
+_Created: 03-07-2026 · Last updated: 05-09-2026_
 # Data, licensing and citability
 
 Three layers, three sets of terms:
@@ -27,3 +28,5 @@ Three layers, three sets of terms:
   2036 (phase P7 of the [[../docs/roadmap]])
 
 For what the project is, start at [[../docs/what-is-kosha]].
+
+_Dr. Mārcis Gasūns_

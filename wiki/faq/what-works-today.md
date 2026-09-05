@@ -11,6 +11,7 @@ aliases:
 last_updated: 2026-07-03
 ---
 
+_Created: 03-07-2026 · Last updated: 05-09-2026_
 # What works today?
 
 **Pre-alpha — no public lookup runs yet.** This project publishes its status
@@ -30,3 +31,5 @@ first one arrives with P2 (see [[../docs/roadmap]]).
 Progress is tracked in the open — every phase gate, decision and measurement
 is a committed document in the
 [repository](https://github.com/gasyoun/kosha).
+
+_Dr. Mārcis Gasūns_
