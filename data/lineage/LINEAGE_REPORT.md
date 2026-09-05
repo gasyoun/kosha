@@ -1,8 +1,8 @@
 # LINEAGE REPORT — kośa-lineage crosswalk (H4033, wave B)
 
-_Created: 04-09-2026 · Last updated: 04-09-2026_
+_Created: 04-09-2026 · Last updated: 05-09-2026_
 
-**Handoff:** [H4033](https://github.com/gasyoun/Uprava/blob/main/handoffs/H4033-OxAlpha_Kosha_kosa-lineage-crosswalk_04.09.26.md) · **Executor:** OxAlpha (opencode/z-ai/glm-5.3-flash) · **Pattern:** the Tamilex Caturakarāti lineage study (Chevillard/Trento), applied to the Sanskrit kośa chain. **Manifest SHA-16:** `49f251bfa1f7b3ce` (frozen before computation; matching rule in [lineage_manifest.json](lineage_manifest.json)).
+**Handoff:** [H4033](https://github.com/gasyoun/Uprava/blob/main/handoffs/H4033-OxAlpha_Kosha_kosa-lineage-crosswalk_04.09.26.md) · **Executor:** OxAlpha (opencode/z-ai/glm-5.3-flash) · **Pattern:** the Tamilex Caturakarāti lineage study (Chevillard/Trento), applied to the Sanskrit kośa chain. **Manifest SHA-16:** `49f251bfa1f7b3ce` (frozen before computation; matching rule in [lineage_manifest.json](https://github.com/gasyoun/kosha/blob/main/data/lineage/lineage_manifest.json)).
 
 ## Step 0 — inventory
 
@@ -47,7 +47,7 @@ Token-Jaccard over markup-stripped SKD↔VCP bodies on 3,000 deterministic share
 
 - AMAR stems normalized minimally (gender suffixes stripped; hyphen compounds kept whole) — some sandhi-joined stems may miss; direction of the reported containment is conservative.
 - Quotation census is token-level on entry bodies (multi-line, hyphenated linebreaks may split a rare name); the medinī count (4,347) is a floor.
-- Spot-checks: 10/10 shared-headword pairs + 10/10 medinī hits hand-verified ([spotcheck_dump.tsv](spotcheck_dump.tsv)).
+- Spot-checks: 10/10 shared-headword pairs + 10/10 medinī hits hand-verified ([spotcheck_dump.tsv](https://github.com/gasyoun/kosha/blob/main/data/lineage/spotcheck_dump.tsv)).
 - VCP↔AMAR pair not computed (both feed SKD; the direct edge adds little to the cascade question).
 
 _Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 25-08-2026 · Last updated: 05-09-2026_
+
 # H3456 — pwg_ru vs akshara-MT blinded benchmark: verdict memo
 
 _Created: 24-08-2026 · OxAlpha (`opencode/x-preview-f-free`) executing H3456 (Fable 5 mint, MG «go здесь») · RESTRICTED inputs, public scores_
@@ -50,3 +52,5 @@ Is our c1-lane PWG→RU translation quality distinguishable from akshara.ru's AI
 1. Fix the three our-side defect classes above in the RussianTranslation pipeline (they are lane-internal, no akshara dependency).
 2. Re-run this benchmark after the fixes if a publish decision ever needs it.
 3. QUESTIONS_LOG row records the hypothesis outcome (comparable, not significantly different).
+
+_Dr. Mārcis Gasūns_

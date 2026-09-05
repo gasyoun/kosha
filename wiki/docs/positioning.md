@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Positioning — "Logeion for Sanskrit"
 slug: positioning
@@ -34,3 +36,5 @@ One program, three tracks:
 See [[what-is-kosha]] for the overview and [[roadmap]] for the build phases.
 Full review:
 [POSITIONING.md](https://github.com/gasyoun/kosha/blob/main/POSITIONING.md).
+
+_Dr. Mārcis Gasūns_
