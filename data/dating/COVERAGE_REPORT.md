@@ -1,3 +1,5 @@
+_Created: 03-09-2026 · Last updated: 05-09-2026_
+
 # Sense-dating layer — coverage report (H4019)
 
 _Generated from `data/concordance/sense_corpus_concordance.tsv` (conf ≥ 0.99); builder `scripts/build_sense_dating.py` (derive-don't-store; `--check` recomputes). Resolver stats: {'seed': 157, 'hand': 72, 'no_match': 815, 'canon_dm': 6596, 'unresolved': 3358, 'unresolved_abbrev': 348, 'hand_abbrev': 1}._
@@ -110,3 +112,5 @@ The verb probe predicted high-frequency verb senses sit at the ṚV floor — al
 ## Preface caveat (must ship with any render of this layer)
 
 «Первое засвидетельствование в цитируемом корпусе, не происхождение значения.» — *First attestation in the cited corpus, not the origin of the meaning.* The printed PWG sense order is never reordered by this layer; buckets are additive machine-readable data.
+
+_Dr. Mārcis Gasūns_

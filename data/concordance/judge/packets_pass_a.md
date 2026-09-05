@@ -1,3 +1,5 @@
+_Created: 03-09-2026 · Last updated: 05-09-2026_
+
 # H3910 judge packets — pass A
 
 Question, asked once per card: **are the glosses below the same meaning?**
@@ -1685,3 +1687,5 @@ Cards: 120
 **Apte (en)** (ap90:7872:4): 2 Rising (as of luminaries); newly risen
 
 ---
+
+_Dr. Mārcis Gasūns_

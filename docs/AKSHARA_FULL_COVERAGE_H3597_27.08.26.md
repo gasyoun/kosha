@@ -1,3 +1,5 @@
+_Created: 27-08-2026 · Last updated: 05-09-2026_
+
 # H3597 — akshara.ru FULL kosha crawl: census + run report
 
 _Last updated: 01-09-2026 · OxAlpha (`z-ai/glm-5.3-flash`) · RESTRICTED tier, benchmark-only_
@@ -196,3 +198,5 @@ MG question (01-09): *what is the census, which Cologne version, is 100% parity 
   page parsed silently, or a resume that restarts from zero. Watchdog addendum: an
   interruption NOT healed within ~10 min (task disabled/removed early, or the worktree
   path gone) is also a fail — do not unregister the task before drain.
+
+_Dr. Mārcis Gasūns_

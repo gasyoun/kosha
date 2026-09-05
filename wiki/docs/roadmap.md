@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Roadmap — phases P1–P7
 slug: roadmap
@@ -28,3 +30,5 @@ runs in seven gated phases:
 
 Where things stand today: [[../faq/what-works-today]]. What the data may be
 used for: [[../faq/data-licensing]].
+
+_Dr. Mārcis Gasūns_

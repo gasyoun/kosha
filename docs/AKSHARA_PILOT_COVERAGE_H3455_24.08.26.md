@@ -1,3 +1,5 @@
+_Created: 24-08-2026 · Last updated: 05-09-2026_
+
 # H3455 lane A — akshara.ru bounded scrape pilot: coverage report
 
 _Created: 24-08-2026 · OxAlpha (`opencode/x-preview-f-free`) · RESTRICTED tier, benchmark-only_
@@ -46,3 +48,5 @@ Byte-level sha256 match between stored raw and a fresh polite re-fetch, plus art
 ## Rights posture
 
 Raw HTML lives gitignored under `data/raw_akshara_pilot/`; parsed text corpus `data/akshara_pilot/parsed_corpus.jsonl` is gitignored (RESTRICTED). Nothing scraped may reach any public surface without a fresh @DECIDE. Registered in [datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) as `akshara-mt-benchmark-pilot`.
+
+_Dr. Mārcis Gasūns_

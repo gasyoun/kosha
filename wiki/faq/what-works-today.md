@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: What works today?
 slug: what-works-today
@@ -30,3 +32,5 @@ first one arrives with P2 (see [[../docs/roadmap]]).
 Progress is tracked in the open — every phase gate, decision and measurement
 is a committed document in the
 [repository](https://github.com/gasyoun/kosha).
+
+_Dr. Mārcis Gasūns_

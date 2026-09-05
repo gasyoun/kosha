@@ -1,3 +1,5 @@
+_Created: 03-09-2026 · Last updated: 05-09-2026_
+
 # Sense-dating bucket layer (H4019) — first-attestation era buckets
 
 _Created: 03-09-2026 · Last updated: 03-09-2026 (H4026 go-live)_
@@ -91,7 +93,7 @@ continuation era (the bucket holds for Kalhaṇa's original either way);
   citations into, plus the continuation-citation `title` fallback
   (`<ls n="ṚV. 4,">22,9</ls>`); never a URL reverse-resolution. The page-level
   RU+EN caveat renders whenever ≥1 badge does. Rendered proof:
-  [evidence/H4026_BADGES_LIVE_PROOF.md](evidence/H4026_BADGES_LIVE_PROOF.md).
+  [evidence/H4026_BADGES_LIVE_PROOF.md](https://github.com/gasyoun/kosha/blob/main/data/dating/evidence/H4026_BADGES_LIVE_PROOF.md).
 - Future: PW dictionary inherits through the same canon spine (H4019
   addendum §3: PW's citation apparatus is ~9.5% of PWG's instance mass).
 - Future (measured, unsurfaced): a SENSE-keyed render of

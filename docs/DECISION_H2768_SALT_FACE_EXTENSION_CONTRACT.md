@@ -1,3 +1,5 @@
+_Created: 16-08-2026 · Last updated: 05-09-2026_
+
 # H2768 decision — strict Salt compatibility face
 
 _Decided: 16-08-2026 · Executor: Codex Sol (`gpt-5.6-sol`)_
