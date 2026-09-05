@@ -1,6 +1,6 @@
 # kosha `/api/v1` — the Salt contract and the W0C breaking change
 
-_Created: 31-07-2026 · Last updated: 16-08-2026_
+_Created: 31-07-2026 · Last updated: 05-09-2026_
 
 Handoff [H1945](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1945-Opus_kosha_architecture-roadmap-w0c-contract-trust-boundaries_30.07.26.md)
 · plan of record
@@ -109,7 +109,7 @@ The unmodified markup is available at `csl.xmlCsl`, opt-in via `?raw=1`.
 retain the full object above. `/dicts/*` exposes only the six §8.1 fields plus
 `csl`, because profile §9 permits no other structural divergence. Both are
 built by one serializer; the latter is a terminal field projection. Decision:
-[H2768 strict-face contract](DECISION_H2768_SALT_FACE_EXTENSION_CONTRACT.md).
+[H2768 strict-face contract](https://github.com/gasyoun/kosha/blob/main/docs/DECISION_H2768_SALT_FACE_EXTENSION_CONTRACT.md).
 
 **A Salt `id` is dictionary-scoped, not globally unique.** C-SALT addresses
 entries under `/dicts/{dict}/…`, so `lemma-agni` means "agni in *this*

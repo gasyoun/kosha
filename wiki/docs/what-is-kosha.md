@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: What is the Gasuns Sanskrit Dictionary?
 slug: what-is-kosha
@@ -34,3 +36,5 @@ What it will do:
 See [[positioning]] for where this sits among existing platforms, and
 [[../faq/what-works-today]] for the honest current status. Full detail:
 [README.md](https://github.com/gasyoun/kosha/blob/main/README.md).
+
+_Dr. Mārcis Gasūns_

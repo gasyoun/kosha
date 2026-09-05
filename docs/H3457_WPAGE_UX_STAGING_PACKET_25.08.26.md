@@ -1,3 +1,5 @@
+_Created: 25-08-2026 · Last updated: 05-09-2026_
+
 # H3457 — word-page UX upgrade, staged: design packet + evidence
 
 _Created: 25-08-2026 · Last updated: 25-08-2026 (§7 — MG review R1–R5, direction d, H3480)_

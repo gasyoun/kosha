@@ -20,7 +20,7 @@ Each axis is a load in [0,1]; the composite is therefore in [0,1]. Current weigh
 | MORPH | 0.250 | mean surprisal of each token's `upos\|morph` form over 840 corpus signatures (`morph_signature_freq.tsv`) |
 | COMPOUND | 0.150 | share of tokens that are compound members (DCS `feat_case=Cpd`) |
 
-Raw (pre-normalisation) weights as stored: `{"vocab": 0.4, "sandhi": 0.2, "morphology": 0.25, "compound": 0.15}`. Tune them in [`difficulty_weights.json`](difficulty_weights.json).
+Raw (pre-normalisation) weights as stored: `{"vocab": 0.4, "sandhi": 0.2, "morphology": 0.25, "compound": 0.15}`. Tune them in [`difficulty_weights.json`](https://github.com/gasyoun/kosha/blob/main/data/difficulty/difficulty_weights.json).
 
 ## Limitations (honest)
 
@@ -54,7 +54,7 @@ with the morphology weight dropped and the other three renormalised to sum to 1 
 | SANDHI | 0.267 | fraction of tokens carrying an **induced junction rule** (the pack's own per-token `sandhi` field) — a real sandhi signal, *not* the boundary proxy the 4-axis scorer uses |
 | COMPOUND | 0.200 | fraction of tokens whose lemma is a hyphen-segmented compound |
 
-> **Not comparable to the 4-axis table above.** Different axis set *and* a different sandhi definition — this ranks the Gītā chapters **among themselves** only. Do not read a Gītā score against a Nala/Kirātārjunīya score. Output: [`gita_reading_pack_difficulty.tsv`](gita_reading_pack_difficulty.tsv).
+> **Not comparable to the 4-axis table above.** Different axis set *and* a different sandhi definition — this ranks the Gītā chapters **among themselves** only. Do not read a Gītā score against a Nala/Kirātārjunīya score. Output: [`gita_reading_pack_difficulty.tsv`](https://github.com/gasyoun/kosha/blob/main/data/difficulty/gita_reading_pack_difficulty.tsv).
 
 | # | pack | difficulty | vocab | sandhi | compound |
 |---:|---|---:|---:|---:|---:|
