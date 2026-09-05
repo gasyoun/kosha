@@ -12,7 +12,6 @@ last_updated: 2026-07-03
 ---
 
 _Created: 03-07-2026 · Last updated: 05-09-2026_
-
 # What is the Gasuns Sanskrit Dictionary?
 
 A **translator-first Sanskrit dictionary**: every major dictionary on one
