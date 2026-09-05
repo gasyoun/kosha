@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Data, licensing and citability
 slug: data-licensing
@@ -27,3 +29,5 @@ Three layers, three sets of terms:
   2036 (phase P7 of the [[../docs/roadmap]])
 
 For what the project is, start at [[../docs/what-is-kosha]].
+
+_Dr. Mārcis Gasūns_

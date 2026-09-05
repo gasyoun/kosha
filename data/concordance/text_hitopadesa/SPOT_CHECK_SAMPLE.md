@@ -1,3 +1,5 @@
+_Created: 04-09-2026 · Last updated: 05-09-2026_
+
 # Hitopadesa text-concordance pilot — 10-form hand-verified spot check (H4034)
 
 _Created: 04-09-2026_
