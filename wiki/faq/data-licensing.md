@@ -12,7 +12,6 @@ last_updated: 2026-07-03
 ---
 
 _Created: 03-07-2026 · Last updated: 05-09-2026_
-
 # Data, licensing and citability
 
 Three layers, three sets of terms:
