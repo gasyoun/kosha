@@ -1,5 +1,3 @@
-_Created: 03-07-2026 · Last updated: 05-09-2026_
-
 ---
 title: What works today?
 slug: what-works-today
@@ -13,6 +11,7 @@ aliases:
 last_updated: 2026-07-03
 ---
 
+_Created: 03-07-2026 · Last updated: 05-09-2026_
 # What works today?
 
 **Pre-alpha — no public lookup runs yet.** This project publishes its status
