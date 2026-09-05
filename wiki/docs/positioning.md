@@ -1,5 +1,3 @@
-_Created: 03-07-2026 · Last updated: 05-09-2026_
-
 ---
 title: Positioning — "Logeion for Sanskrit"
 slug: positioning
@@ -12,6 +10,7 @@ aliases:
 last_updated: 2026-07-03
 ---
 
+_Created: 03-07-2026 · Last updated: 05-09-2026_
 # Positioning — "Logeion for Sanskrit"
 
 The identity in one line: **"Logeion for Sanskrit."** A 12-platform live
