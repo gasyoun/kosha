@@ -1,3 +1,5 @@
+_Created: 30-07-2026 · Last updated: 05-09-2026_
+
 # Kosha architecture verification and risks
 
 _Created: 30-07-2026_

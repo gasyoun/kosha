@@ -1,3 +1,5 @@
+_Created: 04-09-2026 · Last updated: 05-09-2026_
+
 # Hitopadeśa per-text concordance pilot — build report (H4034)
 
 _Created: 04-09-2026 · Built by `scripts/build_text_concordance_hitopadesa.py`_
@@ -42,13 +44,13 @@ consumed, not re-derived.
 
 ## Files
 
-- [concordance.tsv](concordance.tsv) — one row per distinct (surface, lemma):
+- [concordance.tsv](https://github.com/gasyoun/kosha/blob/main/data/concordance/text_hitopadesa/concordance.tsv) — one row per distinct (surface, lemma):
   upos, occurrence refs (document order), headword slp1 + link method +
   confidence, PWG sense ids, `/w/` card href.
-- [text_hitopadesa.js](text_hitopadesa.js) + [index.html](index.html) — the
+- [text_hitopadesa.js](https://github.com/gasyoun/kosha/blob/main/data/concordance/text_hitopadesa/text_hitopadesa.js) + [index.html](https://github.com/gasyoun/kosha/blob/main/data/concordance/text_hitopadesa/index.html) — the
   concordance page (filterable, 500-row render cap) carrying the era badge.
-- [MANIFEST.json](MANIFEST.json) — license + provenance + counts.
-- [SPOT_CHECK_SAMPLE.md](SPOT_CHECK_SAMPLE.md) — 10-form hand-verified sample,
+- [MANIFEST.json](https://github.com/gasyoun/kosha/blob/main/data/concordance/text_hitopadesa/MANIFEST.json) — license + provenance + counts.
+- [SPOT_CHECK_SAMPLE.md](https://github.com/gasyoun/kosha/blob/main/data/concordance/text_hitopadesa/SPOT_CHECK_SAMPLE.md) — 10-form hand-verified sample,
   independent re-derivation, 10/10 PASS.
 
 ## License / rights

@@ -1,6 +1,6 @@
 # Data statement — Gītā morphology + compound gold
 
-_Created: 13-07-2026 · Last updated: 13-07-2026_
+_Created: 13-07-2026 · Last updated: 05-09-2026_
 
 **Dataset:** `gita-morphology-gold` — every analysed word of the Bhagavadgītā
 tagged with structured morphology (case·number·gender for nominals;
@@ -26,7 +26,7 @@ person · tense · voice · nonfinite · derivation · compound · raw_morph`
 author's; co-authors TBC).
 
 **Provenance / relation.** Derives from the same workbook as the W0 master
-[`gita-gold`](gita-gold.meta.md); roadmap **W3**
+[`gita-gold`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/gita-gold.meta.md); roadmap **W3**
 ([`ROADMAP_GITA_GOLD_EXTRACTION_2026.md`](https://github.com/gasyoun/kosha/blob/main/ROADMAP_GITA_GOLD_EXTRACTION_2026.md)).
 
 **Consumer.** The inflection-engine QA workstream **W4**
