@@ -108,7 +108,7 @@ A `paradigm_gap` row on a verbal lemma is therefore **not** evidence that the Co
 ## Run
 
 - Peak Python-object memory: **318 MB** (tracemalloc).
-- Runtime: **418 s**.
+- Runtime: **412 s**.
 
 ## Spot-check — A¬G `paradigm_gap`, 10 rows (human-verifiable)
 

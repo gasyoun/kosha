@@ -53,6 +53,26 @@ control  : form_key('saṃbhavaḥ') -> sanbhava   (0.11.0)
 treatment: form_key('saṃbhavaḥ') -> sambhava   (0.12.0)
 ```
 
+## The second failure: a partial restore, caught by CI and not by me
+
+The control arm writes into the worktree, so the driver copies the treatment artifacts aside
+and restores them afterwards. It backed up **two** of the four the audit writes — the build
+report and `morph_attest_infl_AnG.tsv` — and silently left `morph_attest_infl_AG.tsv` and
+`morph_attest_infl_GnA.tsv.gz` holding the **control arm's** output. Nothing in the working
+tree looked wrong: every file was present, recent and internally consistent.
+
+`tests/test_morphology_page.py::test_attestation_marks_agree_with_the_dataset` caught it on
+the first CI run — `cell asaMBavAya marked attested=True but AG membership is False` — because
+the committed page was the treatment's and the committed AG set was the control's, and
+`asaṃbhavāya` is precisely a form whose membership the two arms disagree about. Fixed by
+re-running the audit in treatment configuration (412 s), which rewrites all four artifacts
+from one run. AG is back to 239,189 rows and the whole suite is green (628 passed).
+
+**Rule:** a temporary environment override that redirects a build must restore **everything
+that build writes**, and the honest way to get back is to re-run the real configuration, not
+to copy files back one at a time from a list someone typed. A cross-artifact consistency test
+is what makes a partial restore visible at all.
+
 ## Result — both directions
 
 | | control — 0.11.0 | treatment — 0.12.0 | Δ |
