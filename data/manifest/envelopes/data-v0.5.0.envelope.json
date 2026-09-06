@@ -1,0 +1,198 @@
+{
+  "schema": "release-envelope-v1",
+  "envelope_id": "kosha/data-v0.5.0",
+  "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
+  "release_kind": "data",
+  "release_tag": "data-v0.5.0",
+  "created": "2026-09-06",
+  "authored_by": "H4239 (OxAlpha, zai-coding-plan/glm-5.3-flash) — portfolio W0 item 5 release-envelope pilot; spec: Uprava docs/SPEC_RELEASE_ENVELOPE_V6_PORTFOLIO_2026.md",
+  "code_revision": {
+    "repo_url": "https://github.com/gasyoun/kosha",
+    "tag": "data-v0.5.0",
+    "commit": "e231b3c6fa99b02fe78513d553be7741bcc6e58a"
+  },
+  "pinned_artifacts": [
+    {
+      "path": "data/manifest/frozen/data-v0.5.0.datasets.json",
+      "role": "frozen public-tier dataset manifest — per-dataset output digests, rows, sizes, data statements",
+      "sha256": "5be4e26cba8fe0174735012eea919b1af9e91aea22c4d48b8c48a7729a18086a",
+      "sha256_form": "raw file bytes (LF; .gitattributes eol=lf)"
+    }
+  ],
+  "source_pins": [
+    {
+      "dataset": "dcs-cdsl-xref",
+      "source_repo": "https://github.com/sanskrit-lexicon/csl-apidev",
+      "source_path": "simple-search/dcs_xref/dcs_cdsl_xref.tsv",
+      "pin_commit": "7196abfb0730a723c08beecf63e91c4d18ab8f48",
+      "pin_rule": "git rev-list -1 --before=2026-09-01T18:04:42Z (the pinned manifest's frozen_at) on the source repo default branch",
+      "sha256": "208a62862b852077acc67f4aaacc2e581eaf0fe93ac1b8340cd93d6151974a3c",
+      "sha256_form": "lf-canonical"
+    },
+    {
+      "dataset": "kosha-lemma-frequency",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/frequency/lemma_frequency.tsv",
+      "pin_commit": "e231b3c6fa99b02fe78513d553be7741bcc6e58a",
+      "pin_rule": "the code_revision.commit itself (source lives in this repo)",
+      "sha256": "c07f6a0229067267d2bf18ba79f43f5081f05fef8875a352cc18f5e157ceccef",
+      "sha256_form": "lf-canonical"
+    },
+    {
+      "dataset": "mw-etymology",
+      "source_repo": "https://github.com/sanskrit-lexicon/csl-orig",
+      "source_path": "v02/mw/mw_etymology.tsv",
+      "pin_commit": "30b2ae7b3c6619b1ac6a417a02e4af907c1dd9d4",
+      "pin_rule": "git rev-list -1 --before=2026-09-01T18:04:42Z (the pinned manifest's frozen_at) on the source repo default branch",
+      "sha256": "249ccc6ae3de224335a5bcad2b2c1444c988654b6666e441abbf3decefaa756b",
+      "sha256_form": "lf-canonical"
+    },
+    {
+      "dataset": "mw-heritage-crosswalk",
+      "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+      "source_path": "HeadwordLists/mw_heritage_crosswalk.tsv",
+      "pin_commit": "ba271e0ac446925c2426e4ba984bb403e87b51b8",
+      "pin_rule": "git rev-list -1 --before=2026-09-01T18:04:42Z (the pinned manifest's frozen_at) on the source repo default branch",
+      "sha256": "182fd19a24f89d32df9740738d5956b7656b3f959baefedbb671c00477c0bf4e",
+      "sha256_form": "lf-canonical"
+    },
+    {
+      "dataset": "mw-roots",
+      "source_repo": "https://github.com/sanskrit-lexicon/csl-orig",
+      "source_path": "v02/mw/mw_roots.tsv",
+      "pin_commit": "30b2ae7b3c6619b1ac6a417a02e4af907c1dd9d4",
+      "pin_rule": "git rev-list -1 --before=2026-09-01T18:04:42Z (the pinned manifest's frozen_at) on the source repo default branch",
+      "sha256": "688273a435b4e824836d0287fb78a9ffc6ccb8f1071690efedf849cb46269f41",
+      "sha256_form": "lf-canonical"
+    }
+  ],
+  "output_digests": {
+    "carried_in": "data/manifest/frozen/data-v0.5.0.datasets.json",
+    "note": "For kosha data releases the release asset is byte-identical to the pinned source file, so each digest doubles as source and output digest. The per-dataset block restates the frozen values so a consumer can verify without trusting the frozen file beyond its own pin digest.",
+    "datasets": {
+      "dcs-cdsl-xref": {
+        "release_asset": "dcs_cdsl_xref.tsv",
+        "sha256": "208a62862b852077acc67f4aaacc2e581eaf0fe93ac1b8340cd93d6151974a3c",
+        "rows": 15902,
+        "size_bytes": 633294
+      },
+      "kosha-lemma-frequency": {
+        "release_asset": "lemma_frequency.tsv",
+        "sha256": "c07f6a0229067267d2bf18ba79f43f5081f05fef8875a352cc18f5e157ceccef",
+        "rows": 83277,
+        "size_bytes": 4827466
+      },
+      "mw-etymology": {
+        "release_asset": "mw_etymology.tsv",
+        "sha256": "249ccc6ae3de224335a5bcad2b2c1444c988654b6666e441abbf3decefaa756b",
+        "rows": 9377,
+        "size_bytes": 1602340
+      },
+      "mw-heritage-crosswalk": {
+        "release_asset": "mw_heritage_crosswalk.tsv",
+        "sha256": "182fd19a24f89d32df9740738d5956b7656b3f959baefedbb671c00477c0bf4e",
+        "rows": 185803,
+        "size_bytes": 3078150
+      },
+      "mw-roots": {
+        "release_asset": "mw_roots.tsv",
+        "sha256": "688273a435b4e824836d0287fb78a9ffc6ccb8f1071690efedf849cb46269f41",
+        "rows": 2113,
+        "size_bytes": 77094
+      }
+    }
+  },
+  "config": {
+    "source_manifest": "data/manifest/datasets.json",
+    "source_manifest_version": "0.2.0",
+    "selection_rule": "in_release == data-v0.5.0",
+    "tier_filter": "public-only; tier=restricted rows excluded by the freeze fence (rights-encumbered)",
+    "digest_form": "sha256 over the LF-canonical form (CRLF normalised) — reproducible from any compliant checkout",
+    "frozen_at": "2026-09-01T18:04:42Z",
+    "checkout_warnings": "mw-heritage-crosswalk held CRLF in the freeze-time working tree; digests are LF-canonical and remain correct"
+  },
+  "tool_versions": {
+    "freezer": "scripts/freeze_release_manifest.py (H3788) at code_revision.commit",
+    "envelope_checker": "scripts/envelope_check.py — stdlib-only, Python >= 3.9",
+    "model_note": "no model-generated content enters the datasets; the envelope's prose was authored by H4239 (OxAlpha, zai-coding-plan/glm-5.3-flash) and every number in it is recomputed by envelope_check.py"
+  },
+  "licence": {
+    "code": "CC BY-NC 4.0 (LICENSE.md) — deliberate non-commercial choice, M.G. 02-07-2026",
+    "data_public_tier": "CC BY-SA 4.0 (LICENSE-DATA.md)",
+    "per_dataset": {
+      "dcs-cdsl-xref": "CC BY-SA 4.0",
+      "kosha-lemma-frequency": "CC BY-SA 4.0",
+      "mw-etymology": "CC BY-SA 4.0",
+      "mw-heritage-crosswalk": "CC BY-SA 4.0",
+      "mw-roots": "CC BY-SA 4.0"
+    },
+    "restricted_rows": "excluded from this release by the public-tier fence; consult source repos"
+  },
+  "checks": [
+    {
+      "id": "CHK-1-schema",
+      "desc": "envelope carries every release-envelope-v1 required field with a non-empty value",
+      "result": "pass",
+      "ran_at": "2026-09-06",
+      "evidence": "scripts/envelope_check.py run on the authored envelope"
+    },
+    {
+      "id": "CHK-2-frozen-pin",
+      "desc": "sha256 of the pinned frozen manifest recomputes to the recorded pin digest",
+      "result": "pass",
+      "ran_at": "2026-09-06",
+      "evidence": "scripts/envelope_check.py CHK-2"
+    },
+    {
+      "id": "CHK-3-output-parity",
+      "desc": "per-dataset sha256/rows/size_bytes in output_digests match the pinned frozen manifest exactly",
+      "result": "pass",
+      "ran_at": "2026-09-06",
+      "evidence": "scripts/envelope_check.py CHK-3 (5/5 datasets)"
+    },
+    {
+      "id": "CHK-4-source-pins",
+      "desc": "each source pin commit re-derives by pin_rule from the local sibling clone and git show <pin>:<path> digests to the recorded sha256, which also equals the frozen output digest",
+      "result": "pass",
+      "ran_at": "2026-09-06",
+      "evidence": "scripts/envelope_check.py CHK-4 (5/5 resolved, 5/5 match); skipped-not-failed when a sibling clone is absent on the checking box"
+    },
+    {
+      "id": "CHK-5-rerun-tolerance",
+      "desc": "independent rerun reproduces declared outputs or explains deterministic tolerances (V6 verification)",
+      "result": "pass",
+      "ran_at": "2026-09-06",
+      "evidence": "all digests are deterministic LF-canonical sha256; no tolerance declared — rerun must match exactly, and did (5/5)"
+    }
+  ],
+  "review": [
+    {
+      "reviewer": "freeze gate (scripts/freeze_release_manifest.py, H3788)",
+      "verdict": "public-tier fence enforced at freeze; restricted rows refuse loudly rather than drop silently",
+      "date": "2026-09-01"
+    },
+    {
+      "reviewer": "H4046 regen audit (Uprava)",
+      "verdict": "per-dataset rebuildability verdicts: kosha-lemma-frequency PASS; dcs-cdsl-xref VOTED re-cut applied; mw-heritage-crosswalk FAIL-INPUT-DEFER; mw-roots + mw-etymology NOT-REBUILDABLE upstream (server-regenerated)",
+      "date": "2026-09-04"
+    },
+    {
+      "reviewer": "H4239 pilot authoring (OxAlpha, zai-coding-plan/glm-5.3-flash)",
+      "verdict": "envelope authored and mechanically verified; every digest recomputed from bytes, not copied from prose",
+      "date": "2026-09-06"
+    }
+  ],
+  "citation": {
+    "concept_doi": "10.5281/zenodo.21965599",
+    "version_doi": "10.5281/zenodo.22105641",
+    "cff": "CITATION.cff",
+    "policy": "docs/VERSIONING_AND_CITATION_POLICY_KOSHA.md",
+    "record": "docs/CITABLE_V1_RECORD_KOSHA_01.09.26.md"
+  },
+  "publication_state": {
+    "state": "published",
+    "zenodo_archived": true,
+    "github_release": "https://github.com/gasyoun/kosha/releases/tag/data-v0.5.0",
+    "note": "tier=restricted rows are excluded by design and are not part of any published release"
+  }
+}
