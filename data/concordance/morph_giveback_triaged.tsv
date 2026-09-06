@@ -6,7 +6,6 @@ asmai	idam	PRON	coverage-hole	m.dat.sg	1819		3375	dcs:748682
 tasmai	tad	PRON	coverage-hole	m.dat.sg	1667		3228	dcs:479273_1
 striyaḥ	strī	NOUN	slot-conflict	f.nom.pl	656	stryaḥ	1434	dcs:483887
 śriyaṃ	śrī	NOUN	slot-conflict	f.acc.sg	272	śrīm	1356	dcs:483769
-vaiśaṃpāyana	vaiśampāyana	NOUN	slot-conflict	m.nom.sg	912	vaiśampāyanaḥ	1108	dcs:757894
 ākhyam	ākhyā	NOUN	coverage-hole	n.nom.sg	287		1036	dcs:479319
 satāṃ	sat	ADJ	coverage-hole	m.gen.pl	304		909	dcs:464406
 amum	adas	PRON	coverage-hole	m.acc.sg	438		829	dcs:748917
@@ -40,20 +39,17 @@ etasmāt	etad	PRON	coverage-hole	n.abl.sg	112		352	dcs:748656_2
 īkṣaṇāḥ	īkṣaṇa	NOUN	coverage-hole	m.nom.pl	32		352	dcs:387207
 hem	heman	NOUN	slot-conflict	n.nom.sg	187	hema	339	dcs:37268
 amunā	adas	PRON	coverage-hole	m.instr.sg	133		335	dcs:749165
-samyaksaṃbodhau	samyaksambodhi	NOUN	slot-conflict	f.loc.sg	153	samyaksambodhau samyaksambodhyām	304	dcs:642000
 kasmin	ka	PRON	slot-conflict	m.loc.sg	106	ke	298	dcs:651793
 amuṣmai	adas	PRON	coverage-hole	m.dat.sg	167		293	dcs:749165
 madhyataḥ	madhya	NOUN	slot-conflict	n.abl.sg	121	madhyāt	290	dcs:748744_1
 it	id	PART	coverage-hole	m.nom.sg	21		284	dcs:748856
 mūrdha	mūrdhan	NOUN	compound-member		134		268	dcs:465907
-samyaksaṃbodhiṃ	samyaksambodhi	NOUN	slot-conflict	f.acc.sg	16	samyaksambodhim	267	dcs:641970
 asmāsu	mad	PRON	lexicon-gap	?.loc.pl	159		263	dcs:748883
 devāsa	deva	NOUN	slot-conflict	m.voc.pl	22	devāḥ	262	dcs:748691
 tattvataḥ	tattva	NOUN	slot-conflict	n.abl.sg	231	tattvāt	259	dcs:555599
 svāmi	svāmin	NOUN	compound-member		126		252	dcs:589901
 prayatnataḥ	prayatna	NOUN	slot-conflict	m.abl.sg	238	prayatnāt	248	dcs:27539
 pṛṣṭhataḥ	pṛṣṭhatas	ADV	coverage-hole	n.abl.sg	19		241	dcs:484962
-samyaksaṃbuddhaḥ	samyaksambuddha	ADJ	slot-conflict	m.nom.sg	173	samyaksambuddhaḥ	235	dcs:642266
 asmad	mad	PRON	lexicon-gap	?.abl.pl	87		230	dcs:646140
 duhitrī	duhitṛ	NOUN	slot-conflict	f.nom.sg	177	duhitā	224	dcs:590561
 striyo	strī	NOUN	slot-conflict	f.nom.pl	161	stryaḥ	222	dcs:484561
@@ -61,8 +57,6 @@ etasyām	etad	PRON	coverage-hole	f.loc.sg	110		220	dcs:589946
 nas	mad	PRON	lexicon-gap	?.gen.pl	75		220	dcs:651466
 kasmai	ka	PRON	slot-conflict	m.dat.sg	113	kāya	218	dcs:687541
 āyudhāḥ	āyudha	NOUN	coverage-hole	m.nom.pl	85		216	dcs:484741
-saṃbhavaḥ	sambhava	NOUN	slot-conflict	m.nom.sg	86	sambhavaḥ	202	dcs:555591
-saṃpad	sampad	NOUN	slot-conflict	f.nom.sg	90	sampat	198	dcs:748666_1
 vyom	vyoman	NOUN	slot-conflict	n.nom.sg	109	vyoma	194	dcs:590220
 dhiyaṃ	dhī	NOUN	slot-conflict	f.acc.sg	52	dhīm	193	dcs:748685
 mayāni	maya	ADJ	coverage-hole	n.nom.pl	52		182	dcs:749105
@@ -70,13 +64,10 @@ striyāṃ	strī	NOUN	slot-conflict	f.loc.sg	33	stryām	182	dcs:749164
 śreyān	śreyas	ADJ	coverage-hole	m.nom.sg	120		180	dcs:650197_2
 yatnataḥ	yatnatas	ADV	coverage-hole	m.abl.sg	69		177	dcs:30080
 dyāvā	div	NOUN	lexicon-gap	m.nom.du	28		172	dcs:651652
-saṃpratiḥ	samprati	NOUN	slot-conflict	m.nom.sg	1	sampratiḥ	171	dcs:590000
 abhidhaḥ	abhidhā	NOUN	coverage-hole	m.nom.sg	81		168	dcs:589947
 etāsām	etad	PRON	coverage-hole	f.gen.pl	82		164	dcs:650801
 anyonyasya	anyonya	PRON	coverage-hole	m.gen.sg	79		160	dcs:651643
 nāmataḥ	nāman	NOUN	slot-conflict	n.abl.sg	147	nāmnaḥ	159	dcs:484712
-saṃbandhaḥ	sambandha	NOUN	slot-conflict	m.nom.sg	87	sambandhaḥ	155	dcs:67869
-saṃpadā	sampad	NOUN	slot-conflict	f.instr.sg	77	sampadā	155	dcs:748865
 uttarata	uttaratas	ADV	indeclinable		49		153	dcs:651895
 dharmataḥ	dharma	NOUN	slot-conflict	m.abl.sg	136	dharmāt	150	dcs:479338
 pratimam	pratimā	NOUN	coverage-hole	m.acc.sg	34		150	dcs:555633
@@ -129,16 +120,12 @@ yatrā	yatra	SCONJ	indeclinable		63		102	dcs:649518
 devebhiḥ	deva	NOUN	slot-conflict	m.instr.pl	82	devaiḥ	99	dcs:651728
 rājbhiḥ	rājan	NOUN	slot-conflict	m.instr.pl	74	rājabhiḥ	99	dcs:577944
 rājsu	rājan	NOUN	slot-conflict	m.loc.pl	70	rājasu	99	dcs:87375
-saṃbhārān	sambhāra	NOUN	slot-conflict	m.acc.pl	56	sambhārān	99	dcs:639557
 svabhāvataḥ	svabhāva	NOUN	slot-conflict	m.abl.sg	83	svabhāvāt	99	dcs:555751
 vasvaḥ	vasu	NOUN	slot-conflict	n.gen.sg	45	vasunaḥ	99	dcs:484706
 rajo	rajas	NOUN	slot-conflict	n.nom.sg	58	rajaḥ	98	dcs:647558
 udakāḥ	udaka	NOUN	coverage-hole	f.nom.pl	18		98	dcs:634877
 śriyai	śrī	NOUN	slot-conflict	f.dat.sg	59	śryai	98	dcs:748904
-saṃmukhaṃ	sammukha	ADJ	slot-conflict	n.acc.sg	24	sammukham	97	dcs:645498
 ahobhiḥ	ahar	NOUN	slot-conflict	n.instr.pl	61	ahārbhiḥ	96	dcs:484504
-samyaksaṃbuddhāḥ	samyaksambuddha	ADJ	slot-conflict	m.nom.pl	48	samyaksambuddhāḥ	96	dcs:642263
-saṃpadam	sampad	NOUN	slot-conflict	f.acc.sg	49	sampadam	96	dcs:464395
 ānanām	ānana	NOUN	coverage-hole	f.acc.sg	48		96	dcs:573102
 satvam	sattva	NOUN	slot-conflict	n.nom.sg	6	sattvam	95	dcs:636113
 abhidham	abhidhā	NOUN	coverage-hole	n.nom.sg	35		94	dcs:90322
@@ -146,11 +133,9 @@ abhidham	abhidhā	NOUN	coverage-hole	n.nom.sg	35		94	dcs:90322
 garīyāḥ	garīyas	ADJ	coverage-hole	f.nom.sg	54		93	dcs:91963
 amūṃ	adas	PRON	coverage-hole	f.acc.sg	18		92	dcs:651647
 tvaram	tvarā	NOUN	coverage-hole	n.acc.sg	43		92	dcs:93555
-saṃpraiṣaṃ	sampraiṣa	NOUN	slot-conflict	m.acc.sg	3	sampraiṣam	91	dcs:686981
 yadī	yadi	SCONJ	indeclinable		59		91	dcs:634017
 ekasyām	eka	NUM	coverage-hole	f.loc.sg	45		90	dcs:650255_1
 mahātmanau	mahātman	ADJ	coverage-hole	m.nom.du	65		90	dcs:370236
-samyaksaṃbuddhasya	samyaksambuddha	ADJ	slot-conflict	m.gen.sg	44	samyaksambuddhasya	90	dcs:642732
 vadhvam	vadhū	NOUN	slot-conflict	f.acc.sg	58	vadhūm	89	dcs:648280_1
 mahātmānau	mahātman	ADJ	coverage-hole	m.nom.du	64		88	dcs:657855
 cin	cit	PART	indeclinable		71		87	dcs:749328
@@ -163,7 +148,6 @@ mātarā	mātṛ	NOUN	slot-conflict	f.acc.du	24	mātarau	83	dcs:635006
 somāsaḥ	soma	NOUN	slot-conflict	m.nom.pl	50	somāḥ	83	dcs:660367
 hriyā	hrī	NOUN	slot-conflict	f.instr.sg	39	hryā	82	dcs:102923
 āyudhān	āyudha	NOUN	coverage-hole	m.acc.pl	41		82	dcs:484974
-saṃbhāra	sambhāra	NOUN	compound-member		26		80	dcs:727910
 yuvānaḥ	yuvan	NOUN	coverage-hole	m.nom.pl	46		80	dcs:524191
 dūrata	dūratas	ADV	coverage-hole	n.abl.sg	1		78	dcs:644221
 sakṛdāgāmi	sakṛdāgāmin	NOUN	compound-member		39		78	dcs:642685
@@ -184,23 +168,18 @@ pārśvataḥ	pārśvatas	ADV	coverage-hole	n.abl.sg	20		73	dcs:656215
 svāyām	sva	ADJ	slot-conflict	f.loc.sg	39	svasyām	73	dcs:650591_4
 jīvo	jīva	NOUN	slot-conflict	m.nom.sg	70	jīvaḥ	72	dcs:76816
 ākhyasya	ākhyā	NOUN	coverage-hole	m.gen.sg	30		72	dcs:574164
-svayaṃbhuvā	svayambhu	NOUN	slot-conflict	m.instr.sg	66	svayambhunā	71	dcs:574520
-saṃpātān	sampāta	NOUN	slot-conflict	m.acc.pl	35	sampātān	70	dcs:729203
 ātmakām	ātmaka	ADJ	coverage-hole	f.acc.sg	35		70	dcs:477813
 agnā	agni	NOUN	slot-conflict	m.loc.sg	31	agnau	69	dcs:712080_1
 harivas	harivat	ADJ	slot-conflict	m.voc.sg	60	harivan	69	dcs:651129
 mūrcchā	mūrchā	NOUN	slot-conflict	f.nom.sg	59	mūrchā	69	dcs:331363
-samyaksaṃbuddhānāṃ	samyaksambuddha	ADJ	slot-conflict	m.gen.pl	12	samyaksambuddhānām	68	dcs:644162
 amuṣmāt	adas	PRON	coverage-hole	m.abl.sg	39		67	dcs:652154
 patyau	pati	NOUN	slot-conflict	m.loc.sg	52	patau	67	dcs:651135
 amīṣām	adas	PRON	coverage-hole	m.gen.pl	31		66	dcs:646368_1
 amūn	adas	PRON	coverage-hole	m.acc.pl	34		66	dcs:635159_1
 anulepanā	anulepana	NOUN	coverage-hole	f.nom.sg	9		66	dcs:477677
-saṃbhavam	sambhava	NOUN	slot-conflict	m.acc.sg	30	sambhavam	66	dcs:575267
 bhaktitaḥ	bhakti	NOUN	slot-conflict	f.abl.sg	61	bhakteḥ bhaktyāḥ	64	dcs:464274
 dyūn	div	NOUN	lexicon-gap	m.acc.pl	33		64	dcs:641380
 ekaikasmin	ekaika	PRON	slot-conflict	m.loc.sg	30	ekaike	64	dcs:687858
-samyaksaṃbuddhaṃ	samyaksambuddha	ADJ	slot-conflict	m.acc.sg	22	samyaksambuddham	64	dcs:642696
 viśvebhiḥ	viśva	ADJ	slot-conflict	m.instr.pl	39	viśvaiḥ	64	dcs:650422
 ūdhar	ūdhas	NOUN	slot-conflict	n.nom.sg	21	ūdhaḥ	64	dcs:749420
 adrivas	adrivat	ADJ	slot-conflict	m.voc.sg	52	adrivan	63	dcs:666302
@@ -210,7 +189,6 @@ prātassavanaṃ	prātaḥsavana	NOUN	slot-conflict	n.nom.sg	10	prātaḥsavanam
 ūruvoḥ	ūru	NOUN	slot-conflict	m.gen.du	23	ūrvoḥ	60	dcs:30386
 satre	sattra	NOUN	slot-conflict	n.loc.sg	43	sattre	59	dcs:652950
 savitaḥ	savitṛ	NOUN	slot-conflict	m.voc.sg	57	savitar	59	dcs:650344
-saṃpadaḥ	sampad	NOUN	slot-conflict	f.nom.pl	15	sampadaḥ	59	dcs:645483
 ekasyā	eka	NUM	coverage-hole	f.gen.sg	14		58	dcs:102880
 kāmataḥ	kāmatas	ADV	coverage-hole	m.abl.sg	34		58	dcs:27653
 aśvāsaḥ	aśva	NOUN	slot-conflict	m.nom.pl	30	aśvāḥ	56	dcs:648685
@@ -223,7 +201,6 @@ anyonyena	anyonya	PRON	coverage-hole	m.instr.sg	24		54	dcs:569083_1
 ima	idam	PRON	slot-conflict	m.nom.pl	43	ime	54	dcs:651621
 vyacāḥ	vyacas	NOUN	coverage-hole	m.nom.sg	20		54	dcs:647714
 mittraṃ	mitra	NOUN	slot-conflict	n.nom.sg	10	mitram	53	dcs:583384
-samyaksaṃbodheḥ	samyaksambodhi	NOUN	slot-conflict	f.gen.sg	25	samyaksambodheḥ samyaksambodhyāḥ	53	dcs:643440
 samīpataḥ	samīpa	NOUN	slot-conflict	n.abl.sg	13	samīpāt	53	dcs:440541
 vidvobhiḥ	vidvas	ADJ	coverage-hole	m.instr.pl	41		53	dcs:90217
 vṛdhaḥ	vṛdh	ADJ	lexicon-gap	m.nom.sg	24		53	dcs:637377
@@ -235,10 +212,8 @@ dvārām	dvāra	NOUN	coverage-hole	f.acc.sg	26		52	dcs:465162
 kiyantam	kiyat	ADJ	coverage-hole	m.acc.sg	26		52	dcs:687479
 līlam	līlā	NOUN	coverage-hole	n.acc.sg	24		52	dcs:89429
 parasparasya	paraspara	PRON	coverage-hole	m.gen.sg	26		52	dcs:629959
-saṃbādha	sambādha	NOUN	compound-member		24		52	dcs:638361
 spṛhaḥ	spṛhā	NOUN	coverage-hole	m.nom.sg	26		52	dcs:555876
 svataḥ	svatas	ADV	coverage-hole	n.abl.sg	3		52	dcs:555567
-saṃbhārā	sambhāra	NOUN	slot-conflict	m.nom.pl	7	sambhārāḥ	51	dcs:638037
 brahmaṇas	brahman	NOUN	slot-conflict	m.gen.sg	26	brahmaṇaḥ	50	dcs:687038
 daśam	daśā	NOUN	coverage-hole	n.acc.sg	24		50	dcs:670615
 maghonām	maghavan	NOUN	slot-conflict	m.gen.pl	25	maghavnām	50	dcs:554690
@@ -247,9 +222,7 @@ graho	graha	NOUN	slot-conflict	m.nom.sg	43	grahaḥ	49	dcs:650808
 maghonaḥ	maghavan	ADJ	slot-conflict	m.gen.sg	17	maghavnaḥ	49	dcs:641408
 striyau	strī	NOUN	slot-conflict	f.nom.du	23	stryau	49	dcs:75497
 arthām	artha	NOUN	coverage-hole	f.acc.sg	24		48	dcs:644521
-daṃpatī	dampati	NOUN	slot-conflict	m.nom.du	24	dampatī	48	dcs:76248
 gandhāśma	gandhāśman	NOUN	compound-member		24		48	dcs:427243
-saṃpadām	sampad	NOUN	slot-conflict	f.gen.pl	26	sampadām	48	dcs:576121
 trāmāṇam	trāman	NOUN	coverage-hole	f.acc.sg	18		48	dcs:650165_5
 bhūyasyā	bhūyas	ADJ	slot-conflict	f.instr.sg	24	bhūyasā	47	dcs:642148
 hotārā	hotṛ	NOUN	slot-conflict	m.acc.du	13	hotārau	47	dcs:650561
@@ -260,25 +233,19 @@ yonā	yoni	NOUN	slot-conflict	m.loc.sg	17	yonau	47	dcs:638245
 devataḥ	devatā	NOUN	coverage-hole	m.nom.sg	19		46	dcs:650045_1
 kratve	kratu	NOUN	slot-conflict	m.dat.sg	23	kratave	46	dcs:649049
 yajīyān	yajīyas	ADJ	coverage-hole	m.nom.sg	23		46	dcs:652645_3
-śaṃbhuḥ	śambhu	NOUN	slot-conflict	m.nom.sg	23	śambhuḥ	46	dcs:589943
 sakhyuḥ	sakhi	NOUN	slot-conflict	m.gen.sg	29	sakheḥ	45	dcs:589912
 śriyo	śrī	NOUN	slot-conflict	f.gen.sg	28	śryāḥ	45	dcs:652045
 śāstrataḥ	śāstra	NOUN	slot-conflict	n.abl.sg	41	śāstrāt	45	dcs:76517
-saṃpuṭe	sampuṭa	NOUN	slot-conflict	m.loc.sg	42	sampuṭe	44	dcs:393296
-svayaṃbhūḥ	svayambhu	NOUN	slot-conflict	m.nom.sg	31	svayambhuḥ	44	dcs:590316
 vartmā	vartman	NOUN	coverage-hole	m.nom.sg	21		44	dcs:647623
 viprāsa	vipra	NOUN	slot-conflict	m.nom.pl	4	viprāḥ	44	dcs:640679
 yavīyāḥ	yavīyas	ADJ	coverage-hole	m.nom.sg	31		44	dcs:488119
 yogataḥ	yoga	NOUN	slot-conflict	m.abl.sg	30	yogāt	44	dcs:584240
 dadhinas	dadhi	NOUN	slot-conflict	n.gen.sg	35	dadhinaḥ	43	dcs:506124
-paraṃparām	paramparā	NOUN	slot-conflict	f.acc.sg	22	paramparām	43	dcs:641945
 uṣāsā	uṣas	NOUN	slot-conflict	f.acc.du	10	uṣasau	43	dcs:648877
 vārtā	vārttā	NOUN	slot-conflict	f.nom.sg	28	vārttā	43	dcs:590414
 āpriyaḥ	āprī	NOUN	slot-conflict	f.nom.pl	24	āpryaḥ	43	dcs:650552
-śaṃbho	śambhu	NOUN	slot-conflict	m.voc.sg	4	śambho	43	dcs:584823
 achidreṇa	acchidra	ADJ	slot-conflict	n.instr.sg	17	acchidreṇa	42	dcs:651099
 jyotīḥ	jyotis	NOUN	slot-conflict	m.nom.sg	15	jyotiḥ	42	dcs:90804
-saṃpraiṣa	sampraiṣa	NOUN	compound-member		13		42	dcs:686982
 vṛṣo	vṛṣa	NOUN	slot-conflict	m.nom.sg	39	vṛṣaḥ	42	dcs:589988
 chatraiḥ	chattra	NOUN	slot-conflict	n.instr.pl	21	chattraiḥ	41	dcs:644114
 iyān	iyat	ADJ	coverage-hole	m.nom.sg	20		41	dcs:650673_7
@@ -290,7 +257,6 @@ dhairyāḥ	dhairya	NOUN	coverage-hole	m.nom.pl	19		40	dcs:641980
 janimā	janiman	NOUN	slot-conflict	n.acc.pl	13	janimāni	40	dcs:646215
 kan	ka	PRON	slot-conflict	m.nom.sg	13	kaḥ	40	dcs:652384
 paramasyāṃ	parama	ADJ	coverage-hole	f.loc.sg	7		40	dcs:646913
-saṃbandhaṃ	sambandha	NOUN	slot-conflict	m.acc.sg	14	sambandham	40	dcs:615326
 sāmataḥ	sāman	NOUN	slot-conflict	n.abl.sg	25	sāmnaḥ	40	dcs:749127
 tanuvam	tanū	NOUN	slot-conflict	f.acc.sg	20	tanūm	40	dcs:669430_1
 tanuvā	tanū	NOUN	slot-conflict	f.instr.sg	17	tanvā	40	dcs:669709
@@ -303,25 +269,21 @@ aprayucchan	aprayucchat	ADJ	slot-conflict	m.nom.sg	22	aprayucchat	39	dcs:650434_
 avāc	ava	NOUN	compound-member		18		39	dcs:555420
 ekasmāt	eka	NUM	slot-conflict	n.abl.sg	20	ekāt	39	dcs:331199
 maghonī	maghavan	ADJ	coverage-hole	f.nom.sg	19		39	dcs:474336
-saṃbhrama	sambhrama	NOUN	compound-member		9		39	dcs:657390
 viśuddhitaḥ	viśuddhi	NOUN	slot-conflict	f.abl.sg	20	viśuddheḥ viśuddhyāḥ	39	dcs:645091
 amuṣyai	adas	PRON	coverage-hole	f.dat.sg	22		38	dcs:435155
 ayāsi	ayās	ADJ	coverage-hole	m.loc.sg	21		38	dcs:669716
 datraḥ	dattra	NOUN	coverage-hole	m.nom.sg	15		38	dcs:649064
 nāsaḥ	nāsā	NOUN	coverage-hole	m.nom.sg	19		38	dcs:643265
 padām	pada	NOUN	coverage-hole	f.acc.sg	16		38	dcs:650923
-saṃpātam	sampāta	NOUN	slot-conflict	m.acc.sg	22	sampātam	38	dcs:728828
 stomebhiḥ	stoma	NOUN	slot-conflict	m.instr.pl	29	stomaiḥ	38	dcs:651520
 vaktrām	vaktra	NOUN	coverage-hole	f.acc.sg	19		38	dcs:568401
 yajuṣṭaḥ	yajus	NOUN	slot-conflict	n.abl.sg	16	yajuṣaḥ	38	dcs:652168
 yuvānā	yuvan	ADJ	coverage-hole	m.nom.du	8		38	dcs:651990
 ākhyaiḥ	ākhyā	NOUN	coverage-hole	m.instr.pl	17		38	dcs:28472
-śaṃbhunā	śambhu	NOUN	slot-conflict	m.instr.sg	31	śambhunā	38	dcs:766304
 bhūyāṃsaṃ	bhūyas	ADJ	slot-conflict	m.acc.sg	16	bhūyasam	37	dcs:652536
 dhūr	dhū	NOUN	lexicon-gap	f.nom.sg	23		37	dcs:671381
 kiyantaḥ	kiyat	ADJ	coverage-hole	m.nom.pl	28		37	dcs:644098
 paramārthataḥ	paramārtha	NOUN	slot-conflict	m.abl.sg	33	paramārthāt	37	dcs:555955
-svayaṃbhuva	svayambhu	NOUN	slot-conflict	m.dat.sg	1	svayambhave	37	dcs:520396
 vyāhṛtībhiḥ	vyāhṛti	NOUN	slot-conflict	f.instr.pl	26	vyāhṛtibhiḥ	37	dcs:436450_1
 vīryān	vīrya	NOUN	coverage-hole	m.acc.pl	18		37	dcs:39990
 aṅgīm	aṅga	ADJ	coverage-hole	f.acc.sg	18		36	dcs:94837
@@ -355,14 +317,13 @@ garīyān	garīyas	ADJ	coverage-hole	m.nom.sg	25		33	dcs:27291
 japoḥ	jap	NOUN	lexicon-gap	m.gen.du	2		33	dcs:552338
 mūlataḥ	mūla	NOUN	slot-conflict	n.abl.sg	19	mūlāt	33	dcs:29743
 satra	sattra	NOUN	compound-member		16		33	dcs:651892
-saṃbandhī	sambandhin	ADJ	slot-conflict	m.nom.sg	26	sambandhī	33	dcs:584087
 striyai	strī	NOUN	coverage-hole	?.dat.sg	8		33	dcs:748894
 amo	ama	NOUN	slot-conflict	m.nom.sg	29	amaḥ	32	dcs:651146
 bhūyāṃsaḥ	bhūyas	ADJ	slot-conflict	m.nom.pl	25	bhūyasaḥ	32	dcs:651187
 mahima	mahiman	NOUN	compound-member		16		32	dcs:89417
 mīḍhva	mīḍhvas	ADJ	slot-conflict	m.voc.sg	1	mīḍhvan	32	dcs:651822
 pratyayāni	pratyaya	NOUN	coverage-hole	n.nom.pl	16		32	dcs:642689
-samyaksaṃbuddhena	samyaksambuddha	ADJ	slot-conflict	m.instr.sg	16	samyaksambuddhena	32	dcs:642901
+saṃbhārāṇi	sambhāra	NOUN	coverage-hole	n.nom.pl	10		32	dcs:642689
 stanām	stana	NOUN	coverage-hole	f.acc.sg	16		32	dcs:91745
 vedasam	vedas	NOUN	coverage-hole	m.acc.sg	15		32	dcs:651953
 vicārataḥ	vicāra	NOUN	slot-conflict	m.abl.sg	26	vicārāt	32	dcs:99051
@@ -375,7 +336,6 @@ maghāni	magha	NOUN	coverage-hole	n.acc.pl	15		31	dcs:597018
 mantrataḥ	mantra	NOUN	slot-conflict	m.abl.sg	18	mantrāt	31	dcs:645592
 prasādataḥ	prasāda	NOUN	slot-conflict	m.abl.sg	28	prasādāt	31	dcs:98411
 putrāsaḥ	putra	NOUN	slot-conflict	m.nom.pl	22	putrāḥ	31	dcs:687773
-saṃbandhi	sambandhin	ADJ	compound-member		11		31	dcs:642065
 sāmbhiḥ	sāman	NOUN	slot-conflict	n.instr.pl	20	sāmabhiḥ	31	dcs:486233
 uṣāsaḥ	uṣas	NOUN	slot-conflict	f.nom.pl	12	uṣasaḥ	31	dcs:647526
 dhiyām	dhī	NOUN	coverage-hole	m.gen.pl	7		30	dcs:89172
@@ -405,6 +365,7 @@ udā	uda	NOUN	coverage-hole	f.nom.sg	7		28	dcs:440527
 vājebhiḥ	vāja	NOUN	slot-conflict	m.instr.pl	23	vājaiḥ	28	dcs:705724
 vājāṁ	vāja	NOUN	slot-conflict	m.acc.pl	14	vājān	28	dcs:652903
 vīrāsaḥ	vīra	NOUN	slot-conflict	m.nom.pl	14	vīrāḥ	28	dcs:648704
+śaṃbhuvā	śambhu	ADJ	slot-conflict	m.nom.du	1	śambhū	28	dcs:650440_1
 śīrṣāṇam	śīrṣan	NOUN	coverage-hole	m.acc.sg	14		28	dcs:484092
 brāhmām	brāhma	ADJ	coverage-hole	f.acc.sg	25		27	dcs:483839
 dhīrāsaḥ	dhīra	ADJ	slot-conflict	m.nom.pl	16	dhīrāḥ	27	dcs:650537_1
@@ -412,7 +373,6 @@ dvitīyasyāṃ	dvitīya	ADJ	coverage-hole	f.loc.sg	9		27	dcs:464587
 prem	preman	NOUN	slot-conflict	n.nom.sg	15	prema	27	dcs:102903
 rudrebhiḥ	rudra	NOUN	slot-conflict	m.instr.pl	19	rudraiḥ	27	dcs:648720
 rāyas	rai	NOUN	slot-conflict	m.gen.sg	26	rāyaḥ	27	dcs:652055
-saṃpattiḥ	sampatti	NOUN	slot-conflict	f.nom.sg	6	sampattiḥ	27	dcs:76741
 upāyataḥ	upāya	NOUN	slot-conflict	m.abl.sg	15	upāyāt	27	dcs:521987
 vidvasam	vidvas	ADJ	coverage-hole	m.acc.sg	21		27	dcs:570620_1
 ārto	ārta	ADJ	slot-conflict	m.nom.sg	21	ārtaḥ	27	dcs:92424
@@ -432,16 +392,12 @@ mūrcchāṃ	mūrchā	NOUN	slot-conflict	f.acc.sg	19	mūrchām	26	dcs:59130
 nāsam	nāsā	NOUN	coverage-hole	m.acc.sg	9		26	dcs:484245
 prajñācakṣūḥ	prajñācakṣus	NOUN	slot-conflict	m.nom.sg	20	prajñācakṣuḥ	26	dcs:575081
 rākṣasām	rākṣasa	NOUN	coverage-hole	f.acc.sg	21		26	dcs:522219
-saṃbhāram	sambhāra	NOUN	slot-conflict	m.acc.sg	10	sambhāram	26	dcs:669917
-saṃbodhi	sambodhi	NOUN	compound-member		11		26	dcs:644694
-saṃmanasaḥ	sammanas	ADJ	slot-conflict	m.nom.pl	7	sammanasaḥ	26	dcs:647725
 spṛham	spṛhā	NOUN	coverage-hole	n.acc.sg	8		26	dcs:585009
 āyatanā	āyatana	NOUN	coverage-hole	f.nom.sg	6		26	dcs:748939
 agruvaḥ	agru	ADJ	coverage-hole	f.nom.pl	10		25	dcs:646609_1
 dhenvaḥ	dhenu	NOUN	slot-conflict	f.gen.sg	18	dhenoḥ dhenvāḥ	25	dcs:466181
 jyāyāṃsaṃ	jyāyas	ADJ	slot-conflict	m.acc.sg	5	jyāyasam	25	dcs:662425
 patnayaḥ	patnī	NOUN	slot-conflict	f.nom.pl	15	patnyaḥ	25	dcs:672912
-saṃbhramam	sambhrama	NOUN	slot-conflict	n.acc.sg	8	sambhramam	25	dcs:580728
 valagān	valaga	NOUN	coverage-hole	m.acc.pl	12		25	dcs:675228
 śubhas	śubh	NOUN	slot-conflict	f.gen.sg	21	śubhaḥ	25	dcs:636160
 apāt	apa	NOUN	coverage-hole	m.abl.sg	4		24	dcs:590436
@@ -456,9 +412,7 @@ patrāḥ	pattra	NOUN	coverage-hole	f.nom.pl	8		24	dcs:648866
 peśasam	peśas	NOUN	coverage-hole	m.acc.sg	6		24	dcs:649688
 pūjanām	pūjanī	NOUN	slot-conflict	f.acc.sg	12	pūjanīm	24	dcs:644096
 sahasas	sahas	NOUN	slot-conflict	n.gen.sg	13	sahasaḥ	24	dcs:649527
-samyaksaṃbodhaye	samyaksambodhi	NOUN	slot-conflict	f.dat.sg	12	samyaksambodhaye samyaksambodhyai	24	dcs:644705
 satreṣu	sattra	NOUN	slot-conflict	n.loc.pl	14	sattreṣu	24	dcs:749568
-saṃbandhāt	sambandha	NOUN	slot-conflict	m.abl.sg	13	sambandhāt	24	dcs:98937
 stambho	stambha	NOUN	slot-conflict	m.nom.sg	22	stambhaḥ	24	dcs:590504
 udām	uda	NOUN	coverage-hole	f.acc.sg	12		24	dcs:197686
 ukthebhiḥ	uktha	NOUN	slot-conflict	n.instr.pl	15	ukthaiḥ	24	dcs:742765
@@ -467,13 +421,10 @@ vṛdham	vṛdh	ADJ	lexicon-gap	m.acc.sg	10		24	dcs:647549
 yajani	yajana	ADJ	coverage-hole	f.voc.sg	12		24	dcs:437397
 ārttim	ārti	NOUN	slot-conflict	f.acc.sg	12	ārtim	24	dcs:687908
 āsthaḥ	āsthā	NOUN	coverage-hole	m.nom.sg	11		24	dcs:477537
-śaṃbhave	śambhu	NOUN	slot-conflict	m.dat.sg	21	śambhave	24	dcs:624776
 adevīḥ	adeva	ADJ	coverage-hole	f.acc.pl	13		23	dcs:652590
 anyonyasmin	anyonya	PRON	coverage-hole	m.loc.sg	10		23	dcs:651214
 bhūyasīm	bhūyas	ADJ	slot-conflict	f.acc.sg	11	bhūyasam	23	dcs:641772
 pāma	pāman	NOUN	compound-member		11		23	dcs:76278
-saṃbandhe	sambandha	NOUN	slot-conflict	m.loc.sg	14	sambandhe	23	dcs:169508
-saṃmoham	sammoha	NOUN	slot-conflict	m.acc.sg	10	sammoham	23	dcs:570303
 bodhisatva	bodhisattva	NOUN	slot-conflict	m.nom.sg	2	bodhisattvaḥ	22	dcs:667749
 bodhisatvena	bodhisattva	NOUN	slot-conflict	m.instr.sg	11	bodhisattvena	22	dcs:365006
 bṛṃhaṇī	bṛṃhaṇa	ADJ	coverage-hole	f.nom.sg	19		22	dcs:27184
@@ -489,9 +440,7 @@ nyāyataḥ	nyāya	NOUN	slot-conflict	m.abl.sg	16	nyāyāt	22	dcs:575729
 nāmnau	nāman	NOUN	coverage-hole	m.nom.du	10		22	dcs:528841
 parvāṇaḥ	parvan	NOUN	coverage-hole	m.nom.pl	11		22	dcs:40959
 patre	pattra	NOUN	slot-conflict	n.loc.sg	11	pattre	22	dcs:552296
-saṃbahulāḥ	sambahula	ADJ	slot-conflict	m.nom.pl	11	sambahulāḥ	22	dcs:654985
 saṃkhyebhiḥ	saṃkhyā	NOUN	coverage-hole	n.instr.pl	11		22	dcs:36353
-saṃpraiṣau	sampraiṣa	NOUN	slot-conflict	m.nom.du	10	sampraiṣau	22	dcs:746944
 svavāṁ	svavat	ADJ	slot-conflict	m.nom.sg	11	svavān	22	dcs:637119
 uṣāsaṃ	uṣas	NOUN	slot-conflict	f.acc.sg	1	uṣasam	22	dcs:648650
 varṇataḥ	varṇa	NOUN	slot-conflict	m.abl.sg	19	varṇāt	22	dcs:506292
@@ -499,7 +448,6 @@ vāmataḥ	vāmatas	ADV	coverage-hole	n.abl.sg	2		22	dcs:465946
 vārṣikām	vārṣika	ADJ	coverage-hole	f.acc.sg	12		22	dcs:452798
 āūm	oṃ	INTJ	indeclinable		11		22	dcs:628962_1
 īkṣaṇau	īkṣaṇa	NOUN	coverage-hole	m.nom.du	10		22	dcs:92419
-śaṃbhuṃ	śambhu	NOUN	slot-conflict	m.acc.sg	15	śambhum	22	dcs:759315
 dadhani	dadhi	NOUN	slot-conflict	n.loc.sg	11	dadhini	21	dcs:687691
 devānt	deva	NOUN	slot-conflict	m.acc.pl	20	devān	21	dcs:638853
 ekāntataḥ	ekānta	NOUN	slot-conflict	m.abl.sg	4	ekāntāt	21	dcs:87226
@@ -511,13 +459,11 @@ patraiḥ	pattra	NOUN	slot-conflict	n.instr.pl	16	pattraiḥ	21	dcs:656460
 sakhāyā	sakhi	NOUN	slot-conflict	m.nom.du	6	sakhī	21	dcs:636113
 viṣṇav	viṣṇu	NOUN	slot-conflict	m.voc.sg	20	viṣṇo	21	dcs:670942
 śacīvas	śacīvat	ADJ	slot-conflict	m.voc.sg	12	śacīvan	21	dcs:726371_1
-abhisaṃbodhana	abhisambodhana	NOUN	compound-member		10		20	dcs:643800
 adhyāśayataḥ	adhyāśaya	NOUN	slot-conflict	m.abl.sg	10	adhyāśayāt	20	dcs:644125
 ambam	ambā	NOUN	coverage-hole	m.acc.sg	10		20	dcs:452450
 apas	ap	NOUN	coverage-hole	f.acc.pl	15		20	dcs:648644
 apekṣāt	apekṣā	NOUN	coverage-hole	m.abl.sg	10		20	dcs:480707
 arthataḥ	artha	NOUN	slot-conflict	m.abl.sg	13	arthāt	20	dcs:555597
-avaśyaṃbhāvīni	avaśyambhāvin	ADJ	slot-conflict	n.nom.pl	10	avaśyambhāvīni	20	dcs:642689
 aṇīyān	aṇīyas	ADJ	coverage-hole	m.nom.sg	14		20	dcs:727049
 bhvaḥ	bhū	NOUN	lexicon-gap	m.nom.pl	8		20	dcs:358988
 candrikam	candrikā	NOUN	coverage-hole	n.acc.sg	5		20	dcs:29395
@@ -531,9 +477,6 @@ karo	kara	NOUN	slot-conflict	m.nom.sg	14	karaḥ	20	dcs:75283
 paramasyāḥ	parama	ADJ	coverage-hole	f.abl.sg	10		20	dcs:633913
 pāṇiyoḥ	pāṇi	NOUN	slot-conflict	m.gen.du	7	pāṇyoḥ	20	dcs:31308
 retasam	retas	NOUN	coverage-hole	m.acc.sg	10		20	dcs:748773_1
-saṃbandhāḥ	sambandha	NOUN	slot-conflict	m.nom.pl	8	sambandhāḥ	20	dcs:485830
-saṃbhāreṣu	sambhāra	NOUN	slot-conflict	m.loc.pl	13	sambhāreṣu	20	dcs:727474_1
-saṃbhārāṇi	sambhāra	NOUN	coverage-hole	n.nom.pl	10		20	dcs:642689
 saṃdarśayitrī	saṃdarśayitṛ	ADJ	slot-conflict	f.nom.sg	10	saṃdarśayitā	20	dcs:645852
 stomāsa	stoma	NOUN	slot-conflict	m.nom.pl	3	stomāḥ	20	dcs:729887
 tanūnapād	tanūnapāt	NOUN	slot-conflict	m.nom.sg	9	tanūnapāt	20	dcs:650555
@@ -553,7 +496,6 @@ chandassu	chandas	NOUN	slot-conflict	n.loc.pl	14	chandaḥsu	19	dcs:651574
 hriyaṃ	hrī	NOUN	slot-conflict	f.acc.sg	3	hrīm	19	dcs:586032
 manasas	manas	NOUN	slot-conflict	n.gen.sg	14	manasaḥ	19	dcs:649941
 sakhāyau	sakhi	NOUN	slot-conflict	m.nom.du	11	sakhī	19	dcs:649255
-saṃpāta	sampāta	NOUN	compound-member		5		19	dcs:748888
 taruṇām	taruṇa	ADJ	coverage-hole	f.acc.sg	16		19	dcs:575694
 vadanān	vadana	NOUN	coverage-hole	m.acc.pl	8		19	dcs:574870
 yajñebhiḥ	yajña	NOUN	slot-conflict	m.instr.pl	14	yajñaiḥ	19	dcs:651780
@@ -563,7 +505,6 @@ achāvākasya	acchāvāka	NOUN	slot-conflict	m.gen.sg	9	acchāvākasya	18	dcs:65
 anarvāṇaṃ	anarvan	ADJ	coverage-hole	m.acc.sg	5		18	dcs:690387
 atichandasā	aticchandas	NOUN	slot-conflict	f.instr.sg	5	aticchandasā	18	dcs:749255_1
 aṇīyasam	aṇīyas	ADJ	coverage-hole	m.acc.sg	11		18	dcs:578473
-daṃpatyoḥ	dampati	NOUN	slot-conflict	m.gen.du	11	dampatyoḥ	18	dcs:613538
 ekaikasyāḥ	ekaika	PRON	coverage-hole	f.gen.sg	9		18	dcs:569524_1
 hotaḥ	hotṛ	NOUN	slot-conflict	m.voc.sg	16	hotar	18	dcs:652494
 indrayavāḥ	indrayava	NOUN	coverage-hole	m.nom.pl	6		18	dcs:34292
@@ -581,9 +522,6 @@ rathebhiḥ	ratha	NOUN	slot-conflict	m.instr.pl	12	rathaiḥ	18	dcs:686677
 ratnām	ratna	NOUN	coverage-hole	f.acc.sg	9		18	dcs:522886
 rātriyā	rātri	NOUN	slot-conflict	f.abl.sg	5	rātreḥ rātryāḥ	18	dcs:659572
 sahīyān	sahīyas	ADJ	coverage-hole	m.nom.sg	10		18	dcs:650416
-samyaksaṃbodhiḥ	samyaksambodhi	NOUN	slot-conflict	f.nom.sg	8	samyaksambodhiḥ	18	dcs:644087
-saṃmārjana	sammārjana	NOUN	compound-member		9		18	dcs:518828
-saṃpriyaḥ	sampriya	ADJ	slot-conflict	m.nom.sg	9	sampriyaḥ	18	dcs:676860
 sānavi	sānu	NOUN	slot-conflict	m.loc.sg	7	sānau	18	dcs:598861_2
 sīmataḥ	sīman	NOUN	slot-conflict	n.abl.sg	9	sīmnaḥ	18	dcs:647672
 turāsa	tura	ADJ	slot-conflict	m.nom.pl	2	turāḥ	18	dcs:702129
@@ -610,7 +548,6 @@ pitaḥ	pitṛ	NOUN	slot-conflict	m.voc.sg	17	pitar	17	dcs:94588
 pāpīyāṃsa	pāpīyas	ADJ	coverage-hole	m.nom.pl	2		17	dcs:188142
 pāṇḍavām	pāṇḍava	ADJ	coverage-hole	f.acc.sg	17		17	dcs:235045
 rombhiḥ	roman	NOUN	slot-conflict	n.instr.pl	11	romabhiḥ	17	dcs:32227
-saṃmukhān	sammukha	ADJ	slot-conflict	m.acc.pl	9	sammukhān	17	dcs:671218
 udakān	udaka	NOUN	coverage-hole	m.acc.pl	8		17	dcs:558863
 vaiṣṇavām	vaiṣṇava	ADJ	coverage-hole	f.acc.sg	14		17	dcs:91135
 śamyuḥ	śaṃyu	NOUN	slot-conflict	m.nom.sg	1	śaṃyuḥ	17	dcs:712618
@@ -645,12 +582,9 @@ paramakām	paramaka	ADJ	coverage-hole	f.acc.sg	16		16	dcs:557218
 parvṇaḥ	parvan	NOUN	coverage-hole	m.acc.pl	8		16	dcs:160738
 paṅktinā	paṅkti	NOUN	coverage-hole	m.instr.sg	7		16	dcs:650793
 plīhnau	plīhan	NOUN	slot-conflict	m.nom.du	6	plīhānau	16	dcs:16986
-samyaksaṃbuddhān	samyaksambuddha	ADJ	slot-conflict	m.acc.pl	8	samyaksambuddhān	16	dcs:644345
 samyājye	saṃyājyā	NOUN	slot-conflict	f.nom.du	8	saṃyājye	16	dcs:712892
-saṃmitau	sammiti	NOUN	coverage-hole	m.nom.du	6		16	dcs:553432
 somebhiḥ	soma	NOUN	slot-conflict	m.instr.pl	9	somaiḥ	16	dcs:596098_1
 sundarām	sundara	ADJ	coverage-hole	f.acc.sg	9		16	dcs:574953
-svayaṃprabhā	svayamprabhā	NOUN	slot-conflict	f.nom.sg	6	svayamprabhā	16	dcs:622373
 tīrthām	tīrtha	NOUN	coverage-hole	f.acc.sg	8		16	dcs:763615
 uttamāṅgāḥ	uttamāṅga	NOUN	coverage-hole	m.nom.pl	8		16	dcs:233716
 āgūr	āgur	NOUN	slot-conflict	f.nom.sg	9	āgūḥ	16	dcs:650828
@@ -665,14 +599,10 @@ chānam	śāna	NOUN	slot-conflict	m.acc.sg	1	śānam	15	dcs:661136
 dyumāṁ	dyumat	ADJ	slot-conflict	m.nom.sg	8	dyumān	15	dcs:641380
 ekadhanān	ekadhana	NOUN	coverage-hole	m.acc.pl	8		15	dcs:671184
 jananām	janana	ADJ	coverage-hole	f.acc.sg	8		15	dcs:35400
-paraṃparā	paramparā	NOUN	compound-member		7		15	dcs:230916
 paścimasyāṃ	paścima	ADJ	coverage-hole	f.loc.sg	8		15	dcs:543270
 pitṛtaḥ	pitṛ	NOUN	slot-conflict	m.abl.sg	12	pituḥ	15	dcs:63014
 pārthivāsaḥ	pārthiva	ADJ	slot-conflict	m.nom.pl	11	pārthivāḥ	15	dcs:648736
 pārṣadīḥ	pārṣada	ADJ	coverage-hole	f.acc.pl	7		15	dcs:519612
-saṃbhoga	sambhoga	NOUN	compound-member		6		15	dcs:613542
-svayaṃbhuvaṃ	svayambhu	NOUN	slot-conflict	m.acc.sg	6	svayambhum	15	dcs:519610
-svayaṃbhuve	svayambhu	NOUN	slot-conflict	m.dat.sg	12	svayambhave	15	dcs:520396
 sāmsu	sāman	NOUN	slot-conflict	n.loc.pl	11	sāmasu	15	dcs:540291
 treṇyā	tryeṇī	NOUN	slot-conflict	f.instr.sg	9	tryeṇyā	15	dcs:435142
 udarān	udara	NOUN	coverage-hole	m.acc.pl	7		15	dcs:35347
@@ -719,8 +649,6 @@ rudrāsa	rudra	NOUN	slot-conflict	m.voc.pl	2	rudrāḥ	14	dcs:504927
 sadasyām	sadasya	ADJ	coverage-hole	f.acc.sg	7		14	dcs:691362
 saindhavām	saindhava	NOUN	coverage-hole	f.acc.sg	7		14	dcs:32601
 sapatnāṁ	sapatna	NOUN	slot-conflict	m.acc.pl	7	sapatnān	14	dcs:648539_1
-saṃbandhasya	sambandha	NOUN	slot-conflict	m.gen.sg	7	sambandhasya	14	dcs:771695
-saṃbhavāḥ	sambhava	NOUN	slot-conflict	m.nom.pl	5	sambhavāḥ	14	dcs:749116
 saṃrāj	samrāj	NOUN	slot-conflict	m.nom.sg	11	samrāṭ	14	dcs:687367
 saṃvatam	saṃvat	NOUN	coverage-hole	f.acc.sg	7		14	dcs:647329_1
 somasvāmi	somasvāmin	NOUN	compound-member		7		14	dcs:625389
@@ -740,7 +668,6 @@ akṣiṇas	akṣi	NOUN	slot-conflict	n.gen.sg	7	akṣiṇaḥ	13	dcs:76359
 apasyuvaḥ	apasyu	ADJ	slot-conflict	f.nom.pl	6	apasyavaḥ	13	dcs:749210_1
 aptur	aptu	ADJ	slot-conflict	m.nom.sg	9	aptuḥ	13	dcs:671122
 aruṣāsa	aruṣa	ADJ	slot-conflict	m.nom.pl	1	aruṣāḥ	13	dcs:633895
-dhanasaṃmataḥ	dhanasammata	NOUN	slot-conflict	m.nom.sg	13	dhanasammataḥ	13	dcs:654442
 hanuvoḥ	hanu	NOUN	slot-conflict	m.loc.du	8	hanvoḥ	13	dcs:30188
 iḍāyās	iḍā	NOUN	slot-conflict	f.gen.sg	12	iḍāyāḥ	13	dcs:647000
 janmataḥ	janman	NOUN	slot-conflict	n.abl.sg	10	janmanaḥ	13	dcs:519992
@@ -752,12 +679,6 @@ pāpīyāṃsam	pāpīyas	ADJ	coverage-hole	m.acc.sg	7		13	dcs:651015
 rājñau	rājan	NOUN	slot-conflict	m.nom.du	9	rājānau	13	dcs:526424
 sakthnaḥ	sakthi	NOUN	slot-conflict	n.abl.sg	5	sakthinaḥ	13	dcs:553934
 satve	sattva	NOUN	slot-conflict	n.loc.sg	12	sattve	13	dcs:531864
-saṃbhave	sambhava	NOUN	slot-conflict	m.loc.sg	8	sambhave	13	dcs:518932
-saṃbhramāt	sambhrama	NOUN	slot-conflict	m.abl.sg	11	sambhramāt	13	dcs:578957
-saṃparāya	samparāya	NOUN	compound-member		6		13	dcs:519853
-saṃpatsu	sampad	NOUN	coverage-hole	?.loc.pl	6		13	dcs:94431
-saṃpradānam	sampradāna	NOUN	slot-conflict	n.nom.sg	6	sampradānam	13	dcs:470070
-sāṃparāye	sāmparāya	NOUN	slot-conflict	m.loc.sg	6	sāmparāye	13	dcs:519369
 vaḍavāmukham	vaḍabāmukha	NOUN	slot-conflict	m.acc.sg	4	vaḍabāmukham	13	dcs:620977
 vaḍavāṃ	vaḍabā	NOUN	slot-conflict	f.acc.sg	4	vaḍabām	13	dcs:687903
 ātmataḥ	ātman	NOUN	slot-conflict	m.abl.sg	6	ātmanaḥ	13	dcs:63077
@@ -765,7 +686,6 @@ vaḍavāṃ	vaḍabā	NOUN	slot-conflict	f.acc.sg	4	vaḍabām	13	dcs:687903
 anulomanā	anulomana	ADJ	coverage-hole	f.nom.sg	5		12	dcs:34425
 anyakeṣāṃ	anyaka	ADJ	slot-conflict	m.gen.pl	6	anyakānām	12	dcs:612239
 anyonyasmai	anyonya	PRON	coverage-hole	m.dat.sg	8		12	dcs:437309
-asambhavāt	asaṃbhava	NOUN	slot-conflict	m.abl.sg	7	asaṃbhavāt	12	dcs:697476
 aśraḥ	asra	NOUN	slot-conflict	m.nom.sg	4	asraḥ	12	dcs:466484
 aśrām	asra	NOUN	coverage-hole	f.acc.sg	6		12	dcs:670000_1
 bhūmikam	bhūmikā	NOUN	coverage-hole	n.nom.sg	2		12	dcs:479364
@@ -813,19 +733,12 @@ pṛṣan	pṛṣat	ADJ	slot-conflict	m.nom.sg	6	pṛṣat	12	dcs:699167_1
 rathakāni	rathaka	NOUN	coverage-hole	n.nom.pl	3		12	dcs:721906
 rodhasam	rodhas	NOUN	coverage-hole	f.acc.sg	4		12	dcs:521544
 sakthim	sakthi	NOUN	coverage-hole	m.acc.sg	4		12	dcs:465714
-sambhārāṇi	sambhāra	NOUN	coverage-hole	n.nom.pl	5		12	dcs:654269
-samyaksaṃbuddhaiḥ	samyaksambuddha	ADJ	slot-conflict	m.instr.pl	6	samyaksambuddhaiḥ	12	dcs:645498
-saṃbandhān	sambandha	NOUN	slot-conflict	m.acc.pl	6	sambandhān	12	dcs:425886
-saṃbhārāṇāṃ	sambhāra	NOUN	slot-conflict	m.gen.pl	3	sambhārāṇām	12	dcs:687874
-saṃmohaḥ	sammoha	NOUN	slot-conflict	m.nom.sg	10	sammohaḥ	12	dcs:31452
-saṃpraiṣāt	sampraiṣa	NOUN	slot-conflict	m.abl.sg	6	sampraiṣāt	12	dcs:727498_1
 sindhūṃr	sindhu	NOUN	slot-conflict	m.acc.pl	8	sindhūn	12	dcs:70170
 snuṣaḥ	snuṣā	NOUN	coverage-hole	m.nom.sg	6		12	dcs:765919
 sopānāḥ	sopāna	NOUN	coverage-hole	f.acc.pl	2		12	dcs:93170
 sudhiyaḥ	sudhī	ADJ	coverage-hole	m.nom.pl	7		12	dcs:572916
 svarūpataḥ	svarūpa	NOUN	slot-conflict	n.abl.sg	7	svarūpāt	12	dcs:89517
 svarṣātā	svarṣāti	NOUN	slot-conflict	f.loc.sg	6	svarṣātau svarṣātyām	12	dcs:594687
-svāyaṃbhuve	svāyambhuva	NOUN	slot-conflict	n.loc.sg	8	svāyambhuve	12	dcs:546030
 sālva	śālva	NOUN	compound-member		4		12	dcs:552979
 sūrpeṇa	śūrpa	NOUN	slot-conflict	m.instr.sg	6	śūrpeṇa	12	dcs:772553
 tattvā	tattva	NOUN	coverage-hole	f.nom.sg	4		12	dcs:92684
@@ -876,13 +789,7 @@ pṛṣṭhān	pṛṣṭha	NOUN	slot-conflict	n.abl.sg	5	pṛṣṭhāt	11	dcs:
 sakthyau	sakthi	NOUN	slot-conflict	n.acc.du	4	sakthinī	11	dcs:635788
 samasmāt	sama	PRON	slot-conflict	m.abl.sg	6	samāt	11	dcs:676436
 satreṇa	sattra	NOUN	slot-conflict	n.instr.sg	10	sattreṇa	11	dcs:639798
-saṃbhūtiḥ	sambhūti	NOUN	slot-conflict	f.nom.sg	7	sambhūtiḥ	11	dcs:613958
-saṃbādham	sambādha	NOUN	slot-conflict	m.acc.sg	3	sambādham	11	dcs:761865
-saṃmardaḥ	sammarda	NOUN	slot-conflict	m.nom.sg	4	sammardaḥ	11	dcs:578946
-saṃmiśraṃ	sammiśra	ADJ	slot-conflict	n.acc.sg	9	sammiśram	11	dcs:542690
-saṃpattau	sampatti	NOUN	slot-conflict	f.loc.sg	7	sampattau sampattyām	11	dcs:37124
 svāyai	sva	ADJ	slot-conflict	f.dat.sg	6	svasyai	11	dcs:701558_1
-svāyaṃbhuvaṃ	svāyambhuva	NOUN	slot-conflict	m.acc.sg	7	svāyambhuvam	11	dcs:586596
 ubhayānām	ubhaya	ADJ	slot-conflict	m.gen.pl	7	ubhayeṣām	11	dcs:90138
 vārebhiḥ	vāra	NOUN	slot-conflict	m.instr.pl	7	vāraiḥ	11	dcs:594837
 ādityebhiḥ	āditya	NOUN	slot-conflict	m.instr.pl	8	ādityaiḥ	11	dcs:648719
@@ -910,7 +817,7 @@ citikam	citikā	NOUN	coverage-hole	n.nom.sg	5		10	dcs:756339
 cātanīḥ	cātana	ADJ	coverage-hole	f.nom.pl	5		10	dcs:647928
 devayuvam	devayu	ADJ	slot-conflict	f.acc.sg	3	devayum	10	dcs:714738
 dhruvāsaḥ	dhruva	ADJ	slot-conflict	m.nom.pl	6	dhruvāḥ	10	dcs:636282
-durgahā	durgaha	NOUN	slot-conflict	n.acc.pl	4	durgahāni	10	dcs:598311
+durgahā	durgaha	NOUN	slot-conflict	n.acc.pl	4	durgahāni durgahāṇi	10	dcs:598311
 duṣvapnyāt	duḥṣvapnya	NOUN	slot-conflict	n.abl.sg	6	duḥṣvapnyāt	10	dcs:634469
 ekataraṃ	ekatara	ADJ	coverage-hole	n.acc.sg	2		10	dcs:352955
 gauryam	gaurī	NOUN	slot-conflict	f.acc.sg	5	gaurīm	10	dcs:424913
@@ -960,13 +867,10 @@ sakthyoḥ	sakthi	NOUN	slot-conflict	n.loc.du	4	sakthinoḥ	10	dcs:553957
 sami	sam	ADP	coverage-hole	m.loc.sg	4		10	dcs:552332
 sasmin	tad	PRON	coverage-hole	n.loc.sg	5		10	dcs:593020
 saṃjñikam	saṃjñikā	NOUN	coverage-hole	n.nom.sg	3		10	dcs:328615
-saṃpratyaya	sampratyaya	NOUN	slot-conflict	m.nom.sg	1	sampratyayaḥ	10	dcs:387296
-saṃpādana	sampādana	NOUN	compound-member		5		10	dcs:630381
 saṃśrayāṇi	saṃśraya	NOUN	coverage-hole	n.acc.pl	3		10	dcs:63570
 sraktinā	srakti	NOUN	coverage-hole	n.instr.sg	5		10	dcs:728732
 svebhiḥ	sva	ADJ	slot-conflict	m.instr.pl	5	svaiḥ	10	dcs:636872_1
 svātma	svātman	NOUN	compound-member		5		10	dcs:90335
-svāyaṃbhuvaḥ	svāyambhuva	ADJ	slot-conflict	m.nom.sg	10	svāyambhuvaḥ	10	dcs:690393
 tandrīṃ	tandrā	NOUN	slot-conflict	f.acc.sg	8	tandrām	10	dcs:90441
 trāmā	trāman	NOUN	coverage-hole	m.nom.sg	5		10	dcs:641694
 tāmasām	tāmasa	ADJ	coverage-hole	f.acc.sg	7		10	dcs:579083
@@ -1020,13 +924,10 @@ putrataḥ	putra	NOUN	slot-conflict	m.abl.sg	5	putrāt	9	dcs:644215
 pṛkṣāsaḥ	pṛkṣa	ADJ	slot-conflict	m.nom.pl	5	pṛkṣāḥ	9	dcs:596773
 rājbhyaḥ	rājan	NOUN	slot-conflict	m.dat.pl	4	rājabhyaḥ	9	dcs:527496
 satriṇaḥ	sattrin	NOUN	slot-conflict	m.nom.pl	5	sattriṇaḥ	9	dcs:651507
-saṃbhāṣām	sambhāṣā	NOUN	slot-conflict	f.acc.sg	4	sambhāṣām	9	dcs:435137
-saṃbādhe	sambādha	NOUN	slot-conflict	m.loc.sg	8	sambādhe	9	dcs:465916
 saṃvvatsaram	saṃvatsara	NOUN	slot-conflict	n.acc.sg	3	saṃvatsaram	9	dcs:565235_6
 svasa	svasṛ	NOUN	slot-conflict	f.voc.sg	1	svasar	9	dcs:636584
 svatavadbhyaḥ	svatavas	ADJ	slot-conflict	m.dat.pl	5	svatavobhyaḥ	9	dcs:673521
 sālvaṃ	śālva	NOUN	slot-conflict	m.acc.sg	7	śālvam	9	dcs:761263
-sāṃparāyikam	sāmparāyika	NOUN	slot-conflict	n.nom.sg	3	sāmparāyikam	9	dcs:76785
 tado	tad	NOUN	coverage-hole	m.abl.sg	1		9	dcs:553736
 tanuve	tanū	NOUN	slot-conflict	f.dat.sg	5	tanvai	9	dcs:389843
 varīyāḥ	varīyas	ADJ	coverage-hole	m.nom.sg	7		9	dcs:529687
@@ -1063,7 +964,6 @@ camasāṁ	camasa	NOUN	slot-conflict	m.acc.pl	4	camasān	8	dcs:595141_2
 caturthāyām	caturtha	ADJ	coverage-hole	f.loc.sg	7		8	dcs:464587
 cintaḥ	cintā	NOUN	coverage-hole	m.nom.sg	4		8	dcs:556218
 daṃsāḥ	daṃsas	NOUN	coverage-hole	m.nom.sg	3		8	dcs:593193
-dhanasaṃmatasya	dhanasammata	NOUN	slot-conflict	m.gen.sg	4	dhanasammatasya	8	dcs:654457
 dāraṇām	dāraṇa	ADJ	coverage-hole	f.acc.sg	6		8	dcs:580615
 ekasyai	eka	NUM	coverage-hole	f.dat.sg	4		8	dcs:651146
 ekādaśāsaḥ	ekādaśa	ADJ	slot-conflict	m.nom.pl	4	ekādaśāḥ	8	dcs:697343_2
@@ -1138,33 +1038,14 @@ sanoḥ	san	NOUN	lexicon-gap	m.loc.du	3		8	dcs:551796
 saptamām	saptama	ADJ	coverage-hole	f.acc.sg	8		8	dcs:63705
 sarparājñiyā	sarparājñī	NOUN	slot-conflict	f.gen.sg	4	sarparājñyāḥ	8	dcs:719446
 satrasya	sattra	NOUN	slot-conflict	n.gen.sg	5	sattrasya	8	dcs:574482
-saṃbhavena	sambhava	NOUN	slot-conflict	m.instr.sg	3	sambhavena	8	dcs:388956
-saṃbhedaḥ	sambheda	NOUN	slot-conflict	m.nom.sg	4	sambhedaḥ	8	dcs:654220
-saṃbhrame	sambhrama	NOUN	slot-conflict	m.loc.sg	7	sambhrame	8	dcs:763292
-saṃbhāvanā	sambhāvanā	NOUN	slot-conflict	f.nom.sg	5	sambhāvanā	8	dcs:523328
-saṃbhāṣaṇaḥ	sambhāṣaṇa	NOUN	coverage-hole	m.nom.sg	2		8	dcs:629749
-saṃbhāṣā	sambhāṣā	NOUN	slot-conflict	f.nom.sg	3	sambhāṣā	8	dcs:698401
-saṃbodhaye	sambodhi	NOUN	slot-conflict	f.dat.sg	4	sambodhaye sambodhyai	8	dcs:645596
 saṃhārāṇi	saṃhāra	NOUN	coverage-hole	n.nom.pl	2		8	dcs:658602
-saṃmodanīṃ	sammodana	ADJ	coverage-hole	f.acc.sg	4		8	dcs:654580
-saṃmudaḥ	sammud	NOUN	coverage-hole	m.nom.pl	3		8	dcs:636928
-saṃmukhā	sammukha	ADJ	slot-conflict	m.nom.pl	3	sammukhāḥ	8	dcs:728670
-saṃmārjanaṃ	sammārjana	NOUN	slot-conflict	n.acc.sg	6	sammārjanam	8	dcs:543627
-saṃpradānena	sampradāna	NOUN	slot-conflict	n.instr.sg	7	sampradānena	8	dcs:382125
-saṃprahāraḥ	samprahāra	NOUN	slot-conflict	m.nom.sg	8	samprahāraḥ	8	dcs:580525
-saṃprakāśana	samprakāśana	NOUN	compound-member		4		8	dcs:723818
-saṃprāptiḥ	samprāpti	NOUN	slot-conflict	f.nom.sg	6	samprāptiḥ	8	dcs:61807
-saṃpuṭa	sampuṭa	NOUN	compound-member		3		8	dcs:629838
-saṃpāte	sampāta	NOUN	slot-conflict	m.loc.sg	4	sampāte	8	dcs:519835
 saṃrādhanyai	saṃrādhana	ADJ	coverage-hole	f.dat.sg	4		8	dcs:434884
 saṃrājaṃ	samrāj	NOUN	slot-conflict	m.acc.sg	4	samrājam	8	dcs:437180
 sme	sma	NOUN	coverage-hole	m.loc.sg	4		8	dcs:552443
 smṛtinā	smṛti	NOUN	coverage-hole	m.instr.sg	4		8	dcs:645086
 srotasam	srotas	NOUN	coverage-hole	f.acc.sg	4		8	dcs:629604
 svagākṛtyai	svagākṛti	NOUN	coverage-hole	f.dat.sg	4		8	dcs:718788_1
-svāyaṃbhuvasya	svāyambhuva	NOUN	slot-conflict	m.gen.sg	7	svāyambhuvasya	8	dcs:758423
 sāhīm	sah	ADJ	slot-conflict	f.acc.sg	4	saham	8	dcs:669477_1
-sāyaṃprātar	sāyamprātar	ADV	indeclinable		5		8	dcs:634318
 sītam	sītā	NOUN	coverage-hole	m.acc.sg	2		8	dcs:737940
 sītaḥ	sītā	NOUN	coverage-hole	m.nom.sg	4		8	dcs:484278
 tanutrāṇāḥ	tanutrāṇa	NOUN	coverage-hole	m.nom.pl	4		8	dcs:172648
@@ -1223,10 +1104,9 @@ asthnaḥ	asthi	NOUN	slot-conflict	n.gen.sg	3	asthinaḥ	7	dcs:647296
 bhasattaḥ	bhasad	NOUN	slot-conflict	f.abl.sg	4	bhasadaḥ	7	dcs:727882
 bhūmanaḥ	bhūman	NOUN	slot-conflict	n.gen.sg	3	bhūmnaḥ	7	dcs:601977
 dānavām	dānava	ADJ	coverage-hole	f.acc.sg	5		7	dcs:201314
-evaṃprāyā	evamprāya	ADJ	slot-conflict	m.nom.pl	2	evamprāyāḥ	7	dcs:763104
 haṃsāsaḥ	haṃsa	NOUN	slot-conflict	m.nom.pl	4	haṃsāḥ	7	dcs:596484_1
 homadhenvaḥ	homadhenu	NOUN	slot-conflict	f.gen.sg	4	homadhenoḥ homadhenvāḥ	7	dcs:581033
-idamaḥ	idam	NOUN	coverage-hole	m.gen.sg	3		7	dcs:552122
+idamaḥ	idam	NOUN	slot-conflict	m.gen.sg	3	asya	7	dcs:552122
 idhmapravraścanāni	idhmapravraścana	NOUN	coverage-hole	n.acc.pl	4		7	dcs:669707
 jaghanataḥ	jaghanatas	ADV	coverage-hole	n.abl.sg	3		7	dcs:91405
 jyeṣṭhāsaḥ	jyeṣṭha	ADJ	slot-conflict	m.nom.pl	4	jyeṣṭhāḥ	7	dcs:600130_1
@@ -1251,14 +1131,7 @@ rombhyaḥ	roman	NOUN	slot-conflict	n.abl.pl	4	romabhyaḥ	7	dcs:540464
 rudriyāsaḥ	rudriya	NOUN	slot-conflict	m.voc.pl	3	rudriyāḥ	7	dcs:592688
 samakṣataḥ	samakṣa	ADJ	slot-conflict	n.abl.sg	3	samakṣāt	7	dcs:92963
 satriṇām	sattrin	NOUN	slot-conflict	m.gen.pl	4	sattriṇām	7	dcs:762067
-saṃbandhinaḥ	sambandhin	ADJ	slot-conflict	m.acc.pl	3	sambandhinaḥ	7	dcs:464269
-saṃbhavaiḥ	sambhava	NOUN	slot-conflict	m.instr.pl	3	sambhavaiḥ	7	dcs:762001
-saṃbhavāt	sambhava	NOUN	slot-conflict	m.abl.sg	1	sambhavāt	7	dcs:479401
-saṃbhāraiḥ	sambhāra	NOUN	slot-conflict	m.instr.pl	5	sambhāraiḥ	7	dcs:29953
-saṃmukhī	sammukha	ADJ	coverage-hole	f.nom.sg	4		7	dcs:615876
 saṃnipātataḥ	saṃnipāta	NOUN	slot-conflict	m.abl.sg	4	saṃnipātāt	7	dcs:645853
-saṃpade	sampad	NOUN	slot-conflict	f.dat.sg	5	sampade	7	dcs:570986
-saṃpradāyaḥ	sampradāya	NOUN	slot-conflict	m.nom.sg	3	sampradāyaḥ	7	dcs:70056
 saṃvvatsaraḥ	saṃvatsara	NOUN	slot-conflict	m.nom.sg	4	saṃvatsaraḥ	7	dcs:565192_2
 svasārā	svasṛ	NOUN	slot-conflict	f.nom.du	3	svasārau	7	dcs:684956
 sārataḥ	sāra	NOUN	slot-conflict	m.abl.sg	5	sārāt	7	dcs:331574
@@ -1344,7 +1217,6 @@ darbhapuṣpāḥ	darbhapuṣpa	NOUN	coverage-hole	m.nom.pl	3		6	dcs:59907
 darbhām	darbha	NOUN	coverage-hole	f.acc.sg	3		6	dcs:477830
 darśayitrī	darśayitṛ	ADJ	slot-conflict	f.nom.sg	3	darśayitā	6	dcs:644904
 daṃśmā	daṃśman	NOUN	coverage-hole	m.nom.sg	3		6	dcs:649440
-dhanasaṃmatena	dhanasammata	NOUN	slot-conflict	m.instr.sg	3	dhanasammatena	6	dcs:654469
 dharima	dhariman	NOUN	compound-member		3		6	dcs:81385
 dhruvataḥ	dhruva	NOUN	slot-conflict	n.abl.sg	2	dhruvāt	6	dcs:436285
 dhūmāni	dhūma	NOUN	coverage-hole	n.acc.pl	2		6	dcs:59376
@@ -1459,7 +1331,6 @@ rāgāṇi	rāga	NOUN	coverage-hole	n.acc.pl	2		6	dcs:765261
 sahasvas	sahasvat	ADJ	slot-conflict	m.voc.sg	6	sahasvan	6	dcs:595747
 sakhivāṁ	sakhivat	ADJ	slot-conflict	m.nom.sg	3	sakhivān	6	dcs:650479
 sakhyebhiḥ	sakhya	NOUN	slot-conflict	n.instr.pl	3	sakhyaiḥ	6	dcs:596699
-samaṃbhūmi	samambhūmi	ADV	indeclinable		3		6	dcs:70693_1
 samudrataḥ	samudra	NOUN	slot-conflict	m.abl.sg	5	samudrāt	6	dcs:647446
 sapiṇḍām	sapiṇḍa	ADJ	coverage-hole	f.acc.sg	3		6	dcs:389708
 sarvatomukhām	sarvatomukha	ADJ	coverage-hole	f.acc.sg	5		6	dcs:541736
@@ -1467,36 +1338,14 @@ sarṣapāṇi	sarṣapa	NOUN	coverage-hole	n.acc.pl	2		6	dcs:389392
 sattvataḥ	sattva	NOUN	slot-conflict	n.abl.sg	4	sattvāt	6	dcs:88041
 saubhagebhiḥ	saubhaga	NOUN	slot-conflict	n.instr.pl	3	saubhagaiḥ	6	dcs:650341_1
 saudhanvanāsaḥ	saudhanvana	NOUN	slot-conflict	m.nom.pl	3	saudhanvanāḥ	6	dcs:594098
-saṃbahulān	sambahula	ADJ	slot-conflict	m.acc.pl	3	sambahulān	6	dcs:642763
-saṃbahulāni	sambahula	ADJ	slot-conflict	n.nom.pl	3	sambahulāni	6	dcs:643808
-saṃbandhinaṃ	sambandhin	ADJ	slot-conflict	m.acc.sg	3	sambandhinam	6	dcs:624899
-saṃbharaṇyāṃ	sambharaṇī	NOUN	slot-conflict	f.loc.sg	3	sambharaṇyām	6	dcs:671363
-saṃbhedaṃ	sambheda	NOUN	slot-conflict	m.acc.sg	1	sambhedam	6	dcs:294875
-saṃbhāṣaḥ	sambhāṣā	NOUN	coverage-hole	m.nom.sg	3		6	dcs:435719
-saṃbhāṣaṇeṣu	sambhāṣaṇa	NOUN	slot-conflict	n.loc.pl	3	sambhāṣaṇeṣu	6	dcs:629882
-saṃmukhe	sammukha	ADJ	slot-conflict	n.loc.sg	3	sammukhe	6	dcs:368085
-saṃpadi	sampad	NOUN	slot-conflict	f.loc.sg	2	sampadi	6	dcs:76740
-saṃparāye	samparāya	NOUN	slot-conflict	m.loc.sg	5	samparāye	6	dcs:519853
-saṃplave	samplava	NOUN	slot-conflict	m.loc.sg	5	samplave	6	dcs:766197
-saṃpraiṣāḥ	sampraiṣa	NOUN	slot-conflict	m.nom.pl	3	sampraiṣāḥ	6	dcs:756155
-saṃprakṣālanī	samprakṣālanī	NOUN	slot-conflict	f.nom.sg	3	samprakṣālanī	6	dcs:520150
-saṃpreṣaṇa	sampreṣaṇa	NOUN	compound-member		3		6	dcs:642764
-saṃpriyau	sampriya	ADJ	slot-conflict	m.nom.du	2	sampriyau	6	dcs:649413
-saṃpriyaṃ	sampriya	ADJ	slot-conflict	m.acc.sg	3	sampriyam	6	dcs:677118
-saṃprokṣaṇam	samprokṣaṇa	NOUN	slot-conflict	n.nom.sg	3	samprokṣaṇam	6	dcs:470126
-saṃprokṣaṇībhyāṃ	samprokṣaṇī	NOUN	slot-conflict	f.instr.du	3	samprokṣaṇībhyām	6	dcs:71105
-saṃpātāt	sampāta	NOUN	slot-conflict	m.abl.sg	3	sampātāt	6	dcs:70879
+saṃmātarā	saṃmātṛ	ADJ	lexicon-gap	f.acc.du	2		6	dcs:735398
 siṃhavarma	siṃhavarman	NOUN	compound-member		3		6	dcs:487898
 sthalām	sthala	NOUN	coverage-hole	f.acc.sg	3		6	dcs:526944
 sthāmā	sthāman	NOUN	coverage-hole	f.nom.sg	1		6	dcs:645512
 sudham	sudhā	NOUN	coverage-hole	m.acc.sg	2		6	dcs:526820
 sujātāsaḥ	sujāta	ADJ	slot-conflict	m.nom.pl	3	sujātāḥ	6	dcs:600083_1
 svasrām	svasṛ	NOUN	slot-conflict	f.gen.pl	3	svasṝṇām	6	dcs:648075
-sākaṃprasthāyyaḥ	sākamprasthāyya	NOUN	slot-conflict	m.nom.sg	1	sākamprasthāyyaḥ	6	dcs:712769
 sāttvikām	sāttvika	ADJ	coverage-hole	f.acc.sg	5		6	dcs:292215
-sāṃmanasyam	sāmmanasya	NOUN	slot-conflict	n.acc.sg	2	sāmmanasyam	6	dcs:647930
-sāṃpadaṃ	sāmpada	ADJ	slot-conflict	m.acc.sg	2	sāmpadam	6	dcs:70475
-sāṃpadāni	sāmpada	ADJ	slot-conflict	n.nom.pl	3	sāmpadāni	6	dcs:70306_1
 sūrpam	śūrpa	NOUN	slot-conflict	n.nom.sg	3	śūrpam	6	dcs:772569
 sūrpasya	śūrpa	NOUN	slot-conflict	m.gen.sg	2	śūrpasya	6	dcs:772569
 sūryāsaḥ	sūrya	NOUN	slot-conflict	m.nom.pl	3	sūryāḥ	6	dcs:594535
@@ -1525,7 +1374,6 @@ utsavām	utsava	NOUN	coverage-hole	f.acc.sg	3		6	dcs:617398
 uḍupām	uḍupa	NOUN	coverage-hole	f.acc.sg	3		6	dcs:242178
 vahoḥ	vah	NOUN	lexicon-gap	m.gen.du	3		6	dcs:552356
 vaistārikī	vaistārika	ADJ	coverage-hole	f.nom.sg	3		6	dcs:644470
-vaiśaṃpāyanam	vaiśampāyana	NOUN	slot-conflict	m.acc.sg	5	vaiśampāyanam	6	dcs:757704
 vaktrayā	vaktra	NOUN	coverage-hole	f.instr.sg	3		6	dcs:622119
 vamriyaḥ	vamra	NOUN	coverage-hole	f.nom.pl	3		6	dcs:753005_1
 vanaspatīṃr	vanaspati	NOUN	slot-conflict	m.acc.pl	4	vanaspatīn	6	dcs:595089
@@ -1551,7 +1399,6 @@ vṛṣṭimāṁ	vṛṣṭimat	ADJ	slot-conflict	m.nom.sg	3	vṛṣṭimān	6	
 yajanyai	yajana	ADJ	coverage-hole	f.dat.sg	3		6	dcs:669449_1
 yakṛtau	yakṛt	NOUN	slot-conflict	n.nom.du	1	yakṛtī	6	dcs:76306
 yatarad	yatara	PRON	slot-conflict	n.nom.sg	4	yatarat	6	dcs:651308
-yathāsaṃbhavam	yathāsambhava	ADJ	slot-conflict	n.acc.sg	2	yathāsambhavam	6	dcs:389938
 yavīyāṃsam	yavīyas	ADJ	coverage-hole	m.acc.sg	2		6	dcs:93887
 yodhām	yodha	NOUN	coverage-hole	f.acc.sg	3		6	dcs:199542
 yujyebhiḥ	yujya	ADJ	slot-conflict	m.instr.pl	4	yujyaiḥ	6	dcs:594956
@@ -1575,7 +1422,6 @@ yāvarīḥ	yāvan	NOUN	coverage-hole	f.nom.pl	1		6	dcs:593550
 śagmāsaḥ	śagma	ADJ	slot-conflict	m.nom.pl	3	śagmāḥ	6	dcs:603021
 śarvavarma	śarvavarman	NOUN	compound-member		3		6	dcs:614251
 śatapatra	śatapattra	NOUN	compound-member		3		6	dcs:89554
-śaṃbhuvā	śambhu	ADJ	slot-conflict	m.nom.du	1	śambhū	6	dcs:650440_1
 śekharām	śekhara	NOUN	coverage-hole	f.acc.sg	3		6	dcs:453838
 śimīvāṁ	śimīvat	ADJ	slot-conflict	m.nom.sg	3	śimīvān	6	dcs:596309_1
 śirasau	śiras	NOUN	coverage-hole	m.nom.du	2		6	dcs:729876
@@ -1633,11 +1479,9 @@ gotrataḥ	gotra	NOUN	slot-conflict	n.abl.sg	3	gotrāt	5	dcs:94515
 haritālāyāḥ	haritāla	NOUN	coverage-hole	f.gen.sg	3		5	dcs:101166
 hrasīyāḥ	hrasīyas	ADJ	coverage-hole	f.nom.sg	3		5	dcs:42374
 iyanta	iyat	ADJ	coverage-hole	m.nom.pl	1		5	dcs:364617
-jaṃbūdvīpe	jambūdvīpa	NOUN	slot-conflict	m.loc.sg	4	jambūdvīpe	5	dcs:373206
 jyāyāṃsaḥ	jyāyas	ADJ	slot-conflict	m.nom.pl	3	jyāyasaḥ	5	dcs:652723_2
 jñānān	jñāna	NOUN	coverage-hole	m.acc.pl	2		5	dcs:175971
 kaniṣṭhikātaḥ	kaniṣṭhikā	NOUN	slot-conflict	f.abl.sg	3	kaniṣṭhikāyāḥ	5	dcs:727845
-kiṃpuruṣa	kimpuruṣa	NOUN	compound-member		2		5	dcs:761055
 kāpotām	kāpota	ADJ	coverage-hole	f.acc.sg	5		5	dcs:584509
 kārtikeya	kārttikeya	NOUN	slot-conflict	m.nom.sg	2	kārttikeyaḥ	5	dcs:577954
 kārṣṇāyasām	kārṣṇāyasa	ADJ	coverage-hole	f.acc.sg	5		5	dcs:543798
@@ -1653,7 +1497,6 @@ mṛṣaḥ	mṛṣ	NOUN	lexicon-gap	m.abl.sg	2		5	dcs:551651
 nahaḥ	nah	NOUN	lexicon-gap	m.abl.sg	1		5	dcs:552507
 navanītā	navanīta	NOUN	coverage-hole	f.nom.sg	2		5	dcs:40331
 naūnām	nau	NOUN	slot-conflict	f.gen.pl	4	nāvām	5	dcs:382839
-paraṃparayā	paramparā	NOUN	slot-conflict	f.instr.sg	3	paramparayā	5	dcs:642916
 payasvāṁ	payasvat	ADJ	slot-conflict	m.nom.sg	2	payasvān	5	dcs:670335
 phalataḥ	phala	NOUN	slot-conflict	n.abl.sg	4	phalāt	5	dcs:70686_1
 prabhavataḥ	prabhava	NOUN	slot-conflict	m.abl.sg	2	prabhavāt	5	dcs:573087
@@ -1670,14 +1513,6 @@ raśmīṃr	raśmi	NOUN	slot-conflict	m.acc.pl	3	raśmīn	5	dcs:594083
 samīcīnāsaḥ	samīcīna	ADJ	slot-conflict	m.nom.pl	3	samīcīnāḥ	5	dcs:603855_1
 satrāt	sattra	NOUN	slot-conflict	n.abl.sg	3	sattrāt	5	dcs:770014
 satyāsaḥ	satya	ADJ	slot-conflict	m.nom.pl	3	satyāḥ	5	dcs:641667
-saṃbandhena	sambandha	NOUN	slot-conflict	m.instr.sg	3	sambandhena	5	dcs:179819
-saṃbharaṇaḥ	sambharaṇa	NOUN	slot-conflict	m.nom.sg	3	sambharaṇaḥ	5	dcs:737690
-saṃbhāṣāyāṃ	sambhāṣā	NOUN	slot-conflict	f.loc.sg	3	sambhāṣāyām	5	dcs:62278
-saṃbodhaḥ	sambodha	NOUN	slot-conflict	m.nom.sg	2	sambodhaḥ	5	dcs:770198
-saṃmohāt	sammoha	NOUN	slot-conflict	m.abl.sg	4	sammohāt	5	dcs:220702
-saṃmukhaḥ	sammukha	ADJ	slot-conflict	m.nom.sg	3	sammukhaḥ	5	dcs:583405
-saṃplavaṃ	samplava	NOUN	slot-conflict	m.acc.sg	1	samplavam	5	dcs:764180
-saṃpātinā	sampātin	ADJ	slot-conflict	m.instr.sg	4	sampātinā	5	dcs:629748
 saṃrādhanīṃ	saṃrādhana	ADJ	coverage-hole	f.acc.sg	1		5	dcs:434883
 saṃvvatsarasya	saṃvatsara	NOUN	slot-conflict	m.gen.sg	4	saṃvatsarasya	5	dcs:565358
 sindhutaḥ	sindhu	NOUN	slot-conflict	m.abl.sg	4	sindhoḥ	5	dcs:647446
@@ -1695,7 +1530,6 @@ upālin	upāli	NOUN	slot-conflict	m.voc.sg	3	upāle	5	dcs:656910
 varṣīyāṃsa	varṣīyas	ADJ	coverage-hole	m.nom.pl	2		5	dcs:689217
 vasīyāṃsaḥ	vasīyas	ADJ	coverage-hole	m.nom.pl	4		5	dcs:648226_1
 vidvasi	vidvas	ADJ	coverage-hole	m.loc.sg	3		5	dcs:285850
-viśvaṃbharā	viśvambharā	NOUN	slot-conflict	f.nom.sg	3	viśvambharā	5	dcs:639727_1
 vīrebhiḥ	vīra	NOUN	slot-conflict	m.instr.pl	3	vīraiḥ	5	dcs:596307_1
 vīryebhiḥ	vīrya	NOUN	slot-conflict	n.instr.pl	4	vīryaiḥ	5	dcs:715889
 yajuḥsu	yajus	NOUN	slot-conflict	n.loc.pl	4	yajuḥṣu	5	dcs:219297
@@ -1715,7 +1549,6 @@ adhvnaḥ	adhvan	NOUN	slot-conflict	m.acc.pl	2	adhvanaḥ	4	dcs:364426
 aghniye	aghnyā	NOUN	slot-conflict	f.voc.sg	2	aghnye	4	dcs:673025
 agnicityam	agnicityā	NOUN	coverage-hole	n.nom.sg	2		4	dcs:672807
 agnitaḥ	agni	NOUN	slot-conflict	m.abl.sg	3	agneḥ	4	dcs:655467
-ahaṃmāna	ahammāna	NOUN	compound-member		2		4	dcs:518234
 aindrām	aindra	ADJ	coverage-hole	f.acc.sg	3		4	dcs:440465
 aindrāvaruṇyā	aindrāvaruṇa	ADJ	coverage-hole	f.instr.sg	2		4	dcs:652455
 aindrāvaruṇī	aindrāvaruṇa	ADJ	coverage-hole	f.nom.sg	2		4	dcs:652452
@@ -1758,7 +1591,6 @@ ardhapañcāśatī	ardhapañcāśat	NOUN	slot-conflict	f.nom.sg	2	ardhapañcāś
 arkām	arka	NOUN	coverage-hole	f.acc.sg	2		4	dcs:366940_2
 arthayā	artha	NOUN	coverage-hole	f.instr.sg	2		4	dcs:762232
 arthābhiḥ	artha	NOUN	coverage-hole	f.instr.pl	2		4	dcs:314980
-asambhavaḥ	asaṃbhava	NOUN	slot-conflict	m.nom.sg	3	asaṃbhavaḥ	4	dcs:88509
 asattam	asattā	NOUN	coverage-hole	n.nom.sg	2		4	dcs:480092
 atichandasam	aticchandas	NOUN	slot-conflict	f.acc.sg	2	aticchandasam	4	dcs:753144_1
 atidūrataḥ	atidūra	NOUN	slot-conflict	n.abl.sg	2	atidūrāt	4	dcs:766534
@@ -1780,7 +1612,6 @@ ayātayāmniyā	ayātayāman	ADJ	coverage-hole	f.instr.sg	2		4	dcs:670619
 aśmāni	aśman	NOUN	coverage-hole	n.acc.pl	1		4	dcs:29715
 aśvatthāmn	aśvatthāman	NOUN	slot-conflict	m.voc.sg	4	aśvatthāman	4	dcs:252729
 aśvāni	aśva	NOUN	coverage-hole	n.acc.pl	1		4	dcs:659210
-aṃbu	ambu	NOUN	slot-conflict	n.acc.sg	1	ambu	4	dcs:688309
 aṅgakā	aṅgaka	NOUN	coverage-hole	f.nom.sg	2		4	dcs:393951
 aṅgamantrāṇi	aṅgamantra	NOUN	coverage-hole	n.acc.pl	2		4	dcs:384508
 aṣṭāpadyā	aṣṭāpada	ADJ	coverage-hole	f.instr.sg	2		4	dcs:499217
@@ -1857,9 +1688,7 @@ dṛṃhaṇīḥ	dṛṃhaṇa	ADJ	coverage-hole	f.nom.pl	2		4	dcs:646434
 ekaikasmāt	ekaika	PRON	slot-conflict	n.abl.sg	2	ekaikāt	4	dcs:430475_1
 ekaikasyai	ekaika	PRON	coverage-hole	f.dat.sg	2		4	dcs:660827
 elāpatraḥ	elāpattra	NOUN	slot-conflict	m.nom.sg	3	elāpattraḥ	4	dcs:654416
-evaṃprāyān	evamprāya	ADJ	slot-conflict	m.acc.pl	2	evamprāyān	4	dcs:630565
 gajāni	gaja	NOUN	coverage-hole	n.acc.pl	1		4	dcs:179328
-gavāṃpatinā	gavāmpati	NOUN	slot-conflict	m.instr.sg	2	gavāmpatinā	4	dcs:666383
 gaṇḍakāni	gaṇḍaka	NOUN	coverage-hole	n.acc.pl	2		4	dcs:449986
 ghasām	ghas	NOUN	lexicon-gap	m.gen.pl	2		4	dcs:554655
 goṣātā	goṣāti	NOUN	slot-conflict	f.loc.sg	2	goṣātau goṣātyām	4	dcs:606596
@@ -1912,8 +1741,6 @@ kaṭhillayā	kaṭhilla	NOUN	coverage-hole	f.instr.sg	2		4	dcs:153465
 khalvāṁ	khalva	NOUN	slot-conflict	m.acc.pl	2	khalvān	4	dcs:633799
 khādyakāni	khādyaka	NOUN	coverage-hole	n.acc.pl	2		4	dcs:655664
 kikidīvyā	kikidīvi	NOUN	slot-conflict	m.instr.sg	2	kikidīvinā	4	dcs:649998
-kiṃpramāṇāḥ	kimpramāṇa	ADJ	slot-conflict	m.nom.pl	1	kimpramāṇāḥ	4	dcs:770191
-kiṃpuruṣe	kimpuruṣa	NOUN	slot-conflict	m.loc.sg	2	kimpuruṣe	4	dcs:669879
 kiṭṭau	kiṭṭa	NOUN	coverage-hole	m.acc.du	1		4	dcs:28032
 kopataḥ	kopa	NOUN	slot-conflict	m.abl.sg	3	kopāt	4	dcs:392979
 koṣataḥ	kośa	NOUN	slot-conflict	m.abl.sg	2	kośāt	4	dcs:625118
@@ -2056,7 +1883,6 @@ pākavanti	pākavat	ADJ	coverage-hole	n.nom.pl	2		4	dcs:61618
 pālāśām	pālāśa	ADJ	coverage-hole	f.acc.sg	2		4	dcs:430804_1
 pāpakām	pāpaka	ADJ	coverage-hole	f.acc.sg	4		4	dcs:522833
 pārayiṣṇvaḥ	pārayiṣṇu	ADJ	slot-conflict	f.nom.pl	2	pārayiṣṇavaḥ	4	dcs:716540
-pāraṃparyeṇa	pāramparya	NOUN	slot-conflict	n.instr.sg	3	pāramparyeṇa	4	dcs:240146
 pātanābhiḥ	pātana	NOUN	coverage-hole	f.instr.pl	2		4	dcs:363717
 pāvakāsaḥ	pāvaka	ADJ	slot-conflict	m.nom.pl	2	pāvakāḥ	4	dcs:593226_1
 pāṃsūni	pāṃsu	ADJ	coverage-hole	n.acc.pl	1		4	dcs:722332
@@ -2081,13 +1907,10 @@ sadasas	sadas	NOUN	slot-conflict	n.gen.sg	2	sadasaḥ	4	dcs:671499
 sadbhāvāyām	sadbhāva	NOUN	coverage-hole	f.loc.sg	2		4	dcs:449282
 sahasrābhiḥ	sahasra	NUM	coverage-hole	f.instr.pl	2		4	dcs:723953
 sahādhyāyi	sahādhyāyin	NOUN	compound-member		2		4	dcs:464564
-sahāṃpatiḥ	sahāmpati	NOUN	slot-conflict	m.nom.sg	2	sahāmpatiḥ	4	dcs:667015
 saiṃhām	saiṃha	ADJ	coverage-hole	f.acc.sg	3		4	dcs:352116
 sakhīṃr	sakhi	NOUN	slot-conflict	m.acc.pl	3	sakhīn	4	dcs:595350
 samayataḥ	samaya	NOUN	slot-conflict	m.abl.sg	4	samayāt	4	dcs:658365
-samaṃbilaṃ	samambila	ADJ	slot-conflict	n.acc.sg	1	samambilam	4	dcs:746810
 sameddhāraṃ	sameddhṛ	ADJ	coverage-hole	m.acc.sg	1		4	dcs:601496
-samyaksaṃbuddheṣu	samyaksambuddha	ADJ	slot-conflict	m.loc.pl	2	samyaksambuddheṣu	4	dcs:721499
 samākhyāni	samākhyā	NOUN	coverage-hole	n.nom.pl	2		4	dcs:380125
 sargāsaḥ	sarga	NOUN	slot-conflict	m.nom.pl	2	sargāḥ	4	dcs:608357_1
 sas	tad	PRON	coverage-hole	m.nom.sg	2		4	dcs:636785
@@ -2095,20 +1918,6 @@ satrāya	sattra	NOUN	slot-conflict	n.dat.sg	2	sattrāya	4	dcs:88731
 satrāṇi	sattra	NOUN	slot-conflict	n.nom.pl	3	sattrāṇi	4	dcs:639494
 satyavarma	satyavarman	NOUN	compound-member		2		4	dcs:487564
 savasam	savas	NOUN	coverage-hole	m.acc.sg	2		4	dcs:670620
-saṃbahulānāṃ	sambahula	ADJ	slot-conflict	m.gen.pl	2	sambahulānām	4	dcs:655014
-saṃbandhau	sambandha	NOUN	slot-conflict	m.nom.du	1	sambandhau	4	dcs:771750
-saṃbandhebhyaḥ	sambandha	NOUN	slot-conflict	m.dat.pl	1	sambandhebhyaḥ	4	dcs:745605
-saṃbandhinā	sambandhin	ADJ	slot-conflict	m.instr.sg	3	sambandhinā	4	dcs:228597
-saṃbandhināṃ	sambandhin	ADJ	slot-conflict	m.gen.pl	3	sambandhinām	4	dcs:617206
-saṃbandhinīm	sambandhin	ADJ	coverage-hole	f.acc.sg	2		4	dcs:687908
-saṃbhavān	sambhava	NOUN	slot-conflict	m.acc.pl	2	sambhavān	4	dcs:758228
-saṃbhāreṇa	sambhāra	NOUN	slot-conflict	m.instr.sg	2	sambhāreṇa	4	dcs:630656
-saṃbhāṣī	sambhāṣin	ADJ	slot-conflict	m.nom.sg	2	sambhāṣī	4	dcs:520121
-saṃbhūtiṃ	sambhūti	NOUN	slot-conflict	f.acc.sg	3	sambhūtim	4	dcs:376113
-saṃbhūtyai	sambhūti	NOUN	slot-conflict	f.dat.sg	2	sambhūtaye sambhūtyai	4	dcs:618955
-saṃbhūtyāḥ	sambhūti	NOUN	slot-conflict	f.abl.sg	1	sambhūteḥ sambhūtyāḥ	4	dcs:648600_1
-saṃbhūtyāṃ	sambhūti	NOUN	slot-conflict	f.loc.sg	2	sambhūtau sambhūtyām	4	dcs:456492
-saṃbuddhau	sambuddhi	NOUN	slot-conflict	f.loc.sg	2	sambuddhau sambuddhyām	4	dcs:551572
 saṃghāni	saṃgha	NOUN	coverage-hole	n.nom.pl	2		4	dcs:164359
 saṃghāṭām	saṃghāṭa	NOUN	coverage-hole	f.acc.sg	2		4	dcs:242182
 saṃhartrī	saṃhartṛ	ADJ	slot-conflict	f.nom.sg	2	saṃhartā	4	dcs:398964
@@ -2116,22 +1925,6 @@ saṃjñakām	saṃjñaka	ADJ	coverage-hole	f.acc.sg	2		4	dcs:408713
 saṃkathaḥ	saṃkathā	NOUN	coverage-hole	m.nom.sg	2		4	dcs:630500
 saṃkramayā	saṃkrama	NOUN	coverage-hole	f.instr.sg	2		4	dcs:565051
 saṃkāśāni	saṃkāśa	NOUN	coverage-hole	n.nom.pl	2		4	dcs:61618
-saṃmadaḥ	sammada	NOUN	slot-conflict	m.nom.sg	1	sammadaḥ	4	dcs:618323
-saṃmanasau	sammanas	ADJ	slot-conflict	m.nom.du	2	sammanasau	4	dcs:649078
-saṃmarśanam	sammarśana	NOUN	slot-conflict	n.nom.sg	2	sammarśanam	4	dcs:742037
-saṃmohana	sammohana	NOUN	compound-member		2		4	dcs:616373
-saṃmārjanāni	sammārjana	NOUN	slot-conflict	n.acc.pl	2	sammārjanāni	4	dcs:669485_1
-saṃmātarā	saṃmātṛ	ADJ	lexicon-gap	f.acc.du	2		4	dcs:735398
-saṃparkaḥ	samparka	NOUN	slot-conflict	m.nom.sg	2	samparkaḥ	4	dcs:522482
-saṃparkāt	samparka	NOUN	slot-conflict	m.abl.sg	2	samparkāt	4	dcs:614547
-saṃpradāne	sampradāna	NOUN	slot-conflict	n.loc.sg	3	sampradāne	4	dcs:301732
-saṃpratiṣṭhā	sampratiṣṭhā	NOUN	slot-conflict	f.nom.sg	1	sampratiṣṭhā	4	dcs:231728
-saṃpratyayāt	sampratyaya	NOUN	slot-conflict	m.abl.sg	2	sampratyayāt	4	dcs:387236
-saṃpraśnaṃ	sampraśna	NOUN	slot-conflict	m.acc.sg	2	sampraśnam	4	dcs:633496
-saṃpriyā	sampriya	ADJ	coverage-hole	f.nom.sg	1		4	dcs:633861
-saṃpuṭena	sampuṭa	NOUN	slot-conflict	m.instr.sg	3	sampuṭena	4	dcs:629714
-saṃpātaiḥ	sampāta	NOUN	slot-conflict	m.instr.pl	2	sampātaiḥ	4	dcs:766130
-saṃpātena	sampāta	NOUN	slot-conflict	m.instr.sg	2	sampātena	4	dcs:729673
 saṃsparśāni	saṃsparśa	NOUN	coverage-hole	n.nom.pl	2		4	dcs:666562
 saṃsārāṇi	saṃsāra	NOUN	coverage-hole	n.nom.pl	2		4	dcs:328155
 saṭṭakān	saṭṭaka	NOUN	coverage-hole	m.acc.pl	2		4	dcs:4582
@@ -2159,7 +1952,6 @@ suvam	sū	NOUN	coverage-hole	f.acc.sg	2		4	dcs:93963
 suvoḥ	sū	NOUN	coverage-hole	f.gen.du	1		4	dcs:555041
 svabhāvāni	svabhāva	NOUN	coverage-hole	n.nom.pl	2		4	dcs:58354
 svastivācanām	svastivācana	NOUN	coverage-hole	f.acc.sg	2		4	dcs:5808
-svayaṃprabhām	svayamprabhā	NOUN	slot-conflict	f.acc.sg	2	svayamprabhām	4	dcs:622446
 svālakṣaṇyā	svālakṣaṇya	ADJ	coverage-hole	f.nom.sg	2		4	dcs:470896
 sādhiṣṭhebhiḥ	sādhiṣṭha	ADJ	slot-conflict	m.instr.pl	2	sādhiṣṭhaiḥ	4	dcs:593107_1
 sādhvasān	sādhvasa	NOUN	coverage-hole	m.acc.pl	2		4	dcs:174457
@@ -2168,8 +1960,6 @@ sārathinaḥ	sārathi	NOUN	slot-conflict	m.nom.pl	2	sārathayaḥ	4	dcs:696189
 sārgālām	sārgāla	ADJ	coverage-hole	f.acc.sg	4		4	dcs:584679
 sārivebhiḥ	sārivā	NOUN	coverage-hole	n.instr.pl	2		4	dcs:38946
 sāvitriyā	sāvitrī	NOUN	slot-conflict	f.instr.sg	2	sāvitryā	4	dcs:703637
-sāyaṃprātikaḥ	sāyamprātika	ADJ	slot-conflict	m.nom.sg	2	sāyamprātikaḥ	4	dcs:364887
-sāṃpradāyikaṃ	sāmpradāyika	ADJ	slot-conflict	n.acc.sg	1	sāmpradāyikam	4	dcs:519377
 sṛjam	sṛj	ADJ	lexicon-gap	m.acc.sg	2		4	dcs:260398
 sṛjām	sṛj	ADJ	lexicon-gap	m.gen.pl	2		4	dcs:92864
 takat	taka	PRON	slot-conflict	n.nom.sg	1	takam	4	dcs:646916_1
@@ -2272,7 +2062,6 @@ yamunam	yamunā	NOUN	coverage-hole	n.acc.sg	2		4	dcs:521799
 yamāsaḥ	yama	NOUN	slot-conflict	m.nom.pl	2	yamāḥ	4	dcs:595574
 yantrām	yantra	NOUN	coverage-hole	f.acc.sg	2		4	dcs:448787
 yatha	yathā	PART	indeclinable		2		4	dcs:609634_1
-yathāsaṃpad	yathāsampad	ADV	indeclinable		2		4	dcs:73058
 yaudhiṣṭhirām	yaudhiṣṭhira	ADJ	coverage-hole	f.acc.sg	4		4	dcs:225232
 yogebhiḥ	yoga	NOUN	slot-conflict	m.instr.pl	2	yogaiḥ	4	dcs:649376
 yopanān	yopana	ADJ	coverage-hole	m.acc.pl	2		4	dcs:633736
@@ -2294,6 +2083,7 @@ yātāraṃ	yātṛ	ADJ	slot-conflict	m.acc.sg	1	yātaram	4	dcs:648669
 ākhyeṣu	ākhyā	NOUN	coverage-hole	n.loc.pl	2		4	dcs:30444
 āparāhṇikyau	āparāhṇika	ADJ	coverage-hole	f.nom.du	1		4	dcs:748536
 āpaṇām	āpaṇa	NOUN	coverage-hole	f.acc.sg	2		4	dcs:306933
+ārambhaṇataḥ	ārambhaṇa	NOUN	slot-conflict	n.abl.sg	3	ārambhaṇāt	4	dcs:650879
 ārambhaṇau	ārambhaṇa	NOUN	coverage-hole	m.nom.du	1		4	dcs:755490
 ārtavām	ārtava	NOUN	coverage-hole	f.acc.sg	2		4	dcs:40453
 ārtavāyāḥ	ārtava	NOUN	coverage-hole	f.gen.sg	2		4	dcs:465861
@@ -2302,7 +2092,6 @@ yātāraṃ	yātṛ	ADJ	slot-conflict	m.acc.sg	1	yātaram	4	dcs:648669
 āsanau	āsana	NOUN	coverage-hole	m.nom.du	2		4	dcs:478431
 āstaraṇān	āstaraṇa	NOUN	coverage-hole	m.acc.pl	2		4	dcs:181905
 āstham	āsthā	NOUN	coverage-hole	n.acc.sg	1		4	dcs:627386
-ātmaṃbhari	ātmambhari	ADJ	compound-member		2		4	dcs:630854
 ātānāni	ātāna	NOUN	coverage-hole	n.nom.pl	2		4	dcs:628687_1
 āvārīṃ	āvāri	NOUN	slot-conflict	f.acc.sg	1	āvārim	4	dcs:653756
 āvṛtīn	āvṛti	NOUN	coverage-hole	m.acc.pl	2		4	dcs:462298
@@ -2345,7 +2134,6 @@ yātāraṃ	yātṛ	ADJ	slot-conflict	m.acc.sg	1	yātaram	4	dcs:648669
 śuṣmebhiḥ	śuṣma	NOUN	slot-conflict	m.instr.pl	2	śuṣmaiḥ	4	dcs:599266
 śvetāsa	śveta	ADJ	slot-conflict	m.nom.pl	2	śvetāḥ	4	dcs:605867
 śyāmūlena	syāmūla	NOUN	slot-conflict	n.instr.sg	2	syāmūlena	4	dcs:757639
-śāṃbhavaṃ	śāmbhava	ADJ	slot-conflict	n.acc.sg	2	śāmbhavam	4	dcs:618601
 śīrṣṇīm	śīrṣan	NOUN	coverage-hole	f.acc.sg	2		4	dcs:726642
 ūṣmṇaḥ	ūṣman	NOUN	slot-conflict	m.acc.pl	3	ūṣmaṇaḥ	4	dcs:39765
 ṣaṇḍām	ṣaṇḍa	NOUN	coverage-hole	f.acc.sg	2		4	dcs:138237
@@ -2396,7 +2184,6 @@ cāndramasām	cāndramasa	ADJ	coverage-hole	f.acc.sg	2		3	dcs:617004
 daivayogataḥ	daivayoga	NOUN	slot-conflict	m.abl.sg	2	daivayogāt	3	dcs:625992
 damyebhiḥ	damya	ADJ	slot-conflict	n.instr.pl	2	damyaiḥ	3	dcs:650404
 dantaveṣṭau	dantaveṣṭa	NOUN	coverage-hole	m.nom.du	2		3	dcs:444611
-daṃpatibhyāṃ	dampati	NOUN	slot-conflict	m.dat.du	1	dampatibhyām	3	dcs:640009
 devarāj	devara	NOUN	slot-conflict	m.nom.sg	2	devaraḥ	3	dcs:519402
 dhāmbhiḥ	dhāman	NOUN	slot-conflict	m.instr.pl	1	dhāmabhiḥ	3	dcs:357715
 dhānyābhrakā	dhānyābhraka	ADJ	coverage-hole	f.nom.sg	2		3	dcs:101266
@@ -2410,7 +2197,6 @@ dvādaśasāhasrām	dvādaśasāhasra	ADJ	coverage-hole	f.acc.sg	2		3	dcs:292800
 dyūtataḥ	dyūta	NOUN	slot-conflict	n.abl.sg	2	dyūtāt	3	dcs:619774
 dānāsaḥ	dāna	NOUN	slot-conflict	m.nom.pl	2	dānāḥ	3	dcs:605668
 ekajyotīḥ	ekajyotis	NOUN	coverage-hole	m.nom.sg	2		3	dcs:540689
-evaṃprabhāvaḥ	evamprabhāva	ADJ	slot-conflict	m.nom.sg	3	evamprabhāvaḥ	3	dcs:758385
 gandhataḥ	gandha	NOUN	slot-conflict	m.abl.sg	3	gandhāt	3	dcs:644778
 gavyebhiḥ	gavya	ADJ	slot-conflict	n.instr.pl	3	gavyaiḥ	3	dcs:601781
 gharmāsaḥ	gharma	NOUN	slot-conflict	m.nom.pl	2	gharmāḥ	3	dcs:684940
@@ -2467,7 +2253,7 @@ prathīyāṃsaḥ	prathīyas	ADJ	coverage-hole	m.nom.pl	3		3	dcs:689217
 prativeśataḥ	prativeśa	ADJ	slot-conflict	m.abl.sg	2	prativeśāt	3	dcs:663163
 pratnebhiḥ	pratna	ADJ	slot-conflict	m.instr.pl	2	pratnaiḥ	3	dcs:607833
 pratyayataḥ	pratyaya	NOUN	slot-conflict	m.abl.sg	2	pratyayāt	3	dcs:388276
-prātaryāvāṇā	prātaryāvan	ADJ	slot-conflict	m.nom.du	2	prātaryāvānau	3	dcs:697343_1
+prātaryāvāṇā	prātaryāvan	ADJ	slot-conflict	m.nom.du	2	prātaryāvānau prātaryāvāṇau	3	dcs:697343_1
 punarvasuvoḥ	punarvasu	NOUN	slot-conflict	m.loc.du	2	punarvasvoḥ	3	dcs:343551
 purātanām	purātana	ADJ	coverage-hole	f.acc.sg	3		3	dcs:540405
 pāpāsaḥ	pāpa	ADJ	slot-conflict	m.nom.pl	2	pāpāḥ	3	dcs:598049
@@ -2489,21 +2275,6 @@ sarasvas	sarasvat	ADJ	slot-conflict	m.voc.sg	2	sarasvan	3	dcs:746323
 sarvebhiḥ	sarva	NOUN	slot-conflict	n.instr.pl	3	sarvaiḥ	3	dcs:704742
 satveṣu	sattva	NOUN	slot-conflict	n.loc.pl	2	sattveṣu	3	dcs:642319
 satyebhiḥ	satya	ADJ	slot-conflict	m.instr.pl	2	satyaiḥ	3	dcs:603256
-saṃbhoge	sambhoga	NOUN	slot-conflict	m.loc.sg	2	sambhoge	3	dcs:755809
-saṃbhojanī	sambhojanī	NOUN	slot-conflict	f.nom.sg	2	sambhojanī	3	dcs:311545
-saṃbhūtau	sambhūti	NOUN	slot-conflict	f.loc.sg	2	sambhūtau sambhūtyām	3	dcs:509457
-saṃmardam	sammarda	NOUN	slot-conflict	m.acc.sg	1	sammardam	3	dcs:766492
-saṃmiślā	sammiśla	ADJ	slot-conflict	m.nom.sg	1	sammiślaḥ	3	dcs:684838
-saṃmukheṣu	sammukha	ADJ	slot-conflict	m.loc.pl	2	sammukheṣu	3	dcs:698838
-saṃmārjane	sammārjana	NOUN	slot-conflict	n.acc.du	1	sammārjane	3	dcs:749835
-saṃparkāḥ	samparka	NOUN	slot-conflict	m.nom.pl	2	samparkāḥ	3	dcs:528452
-saṃpattim	sampatti	NOUN	slot-conflict	f.acc.sg	2	sampattim	3	dcs:488955
-saṃpattyā	sampatti	NOUN	slot-conflict	f.instr.sg	2	sampattyā	3	dcs:269697
-saṃplavāt	samplava	NOUN	slot-conflict	m.abl.sg	2	samplavāt	3	dcs:539202
-saṃprativid	samprativid	ADJ	slot-conflict	m.nom.sg	3	samprativit	3	dcs:749101
-saṃpratividaḥ	samprativid	ADJ	slot-conflict	m.nom.pl	2	sampratividaḥ	3	dcs:628648
-saṃpātinau	sampātin	ADJ	slot-conflict	m.nom.du	2	sampātinau	3	dcs:649661
-saṃpātāḥ	sampāta	NOUN	coverage-hole	f.acc.pl	1		3	dcs:70895
 skambhanīḥ	skambhana	ADJ	coverage-hole	f.nom.sg	3		3	dcs:714774
 snāv	snāvan	NOUN	slot-conflict	n.acc.sg	2	snāva	3	dcs:33391
 somasām	somasāman	NOUN	slot-conflict	n.nom.sg	1	somasāma	3	dcs:566146
@@ -2558,7 +2329,6 @@ yāmāsaḥ	yāma	NOUN	slot-conflict	m.nom.pl	2	yāmāḥ	3	dcs:599145
 ādarata	ādara	NOUN	slot-conflict	m.abl.sg	1	ādarāt	3	dcs:449071
 āmayataḥ	āmaya	NOUN	slot-conflict	m.abl.sg	2	āmayāt	3	dcs:687119_1
 āmitrām	āmitra	ADJ	coverage-hole	f.acc.sg	2		3	dcs:182943
-ārambhaṇataḥ	ārambhaṇa	NOUN	slot-conflict	n.abl.sg	3	ārambhaṇāt	3	dcs:650879
 ārtteḥ	ārti	NOUN	slot-conflict	f.abl.sg	2	ārteḥ ārtyāḥ	3	dcs:491380
 āryakṛtī	āryakṛta	ADJ	coverage-hole	f.nom.sg	2		3	dcs:677807
 āsthāpanā	āsthāpana	ADJ	coverage-hole	f.nom.sg	2		3	dcs:155052
@@ -2593,11 +2363,8 @@ abhinayām	abhinaya	NOUN	coverage-hole	f.acc.sg	1		2	dcs:617080
 abhinirvṛttitaḥ	abhinirvṛtti	NOUN	slot-conflict	f.abl.sg	1	abhinirvṛtteḥ abhinirvṛttyāḥ	2	dcs:643718
 abhiprāyām	abhiprāya	NOUN	coverage-hole	f.acc.sg	1		2	dcs:449501
 abhiroddhāra	abhiroddhṛ	ADJ	coverage-hole	m.nom.pl	1		2	dcs:680818
-abhisaṃbodhanāya	abhisambodhana	NOUN	slot-conflict	n.dat.sg	1	abhisambodhanāya	2	dcs:723351
 abhisaṃdham	abhisaṃdhā	NOUN	coverage-hole	m.acc.sg	1		2	dcs:63143
 abhisaṃdhānāḥ	abhisaṃdhāna	NOUN	coverage-hole	m.nom.pl	1		2	dcs:283641
-abhisaṃmukhaṃ	abhisammukha	ADJ	slot-conflict	n.acc.sg	1	abhisammukham	2	dcs:724665
-abhisaṃparāyaḥ	abhisamparāya	NOUN	slot-conflict	m.nom.sg	2	abhisamparāyaḥ	2	dcs:667637
 abhivandanau	abhivandana	NOUN	coverage-hole	m.nom.du	1		2	dcs:123222
 abhivandanām	abhivandana	NOUN	coverage-hole	f.acc.sg	1		2	dcs:619449
 abhivandanāḥ	abhivandana	NOUN	coverage-hole	m.nom.pl	1		2	dcs:325469
@@ -2659,7 +2426,6 @@ agvi	agu	NOUN	slot-conflict	f.voc.sg	1	ago	2	dcs:94642
 ahaitukām	ahaituka	ADJ	coverage-hole	f.acc.sg	1		2	dcs:87676
 ahastāsaḥ	ahasta	ADJ	slot-conflict	m.nom.pl	1	ahastāḥ	2	dcs:609992_3
 ahaṃkārāṇi	ahaṃkāra	NOUN	coverage-hole	n.nom.pl	1		2	dcs:480472
-ahaṃprathamikā	ahamprathamikā	NOUN	compound-member		1		2	dcs:616212
 ahetutaḥ	ahetu	NOUN	slot-conflict	m.abl.sg	1	ahetoḥ	2	dcs:632141
 ahām	aha	NOUN	coverage-hole	f.acc.sg	1		2	dcs:81227
 aidhā	aidha	NOUN	slot-conflict	n.instr.sg	1	aidhena	2	dcs:595357
@@ -2808,8 +2574,6 @@ arvāṇam	arvan	NOUN	coverage-hole	m.acc.sg	1		2	dcs:610255
 arvāṇaḥ	arvan	ADJ	coverage-hole	m.voc.pl	1		2	dcs:641612
 arāyyam	arāyī	NOUN	slot-conflict	f.acc.sg	1	arāyīm	2	dcs:612503
 arāyāsaḥ	arāya	ADJ	slot-conflict	m.nom.pl	1	arāyāḥ	2	dcs:605973
-asambhavāya	asaṃbhava	NOUN	slot-conflict	m.dat.sg	1	asaṃbhavāya	2	dcs:89158
-asambhāvyam	asaṃbhāvya	ADJ	slot-conflict	n.acc.sg	1	asaṃbhāvyam	2	dcs:710493_1
 asano	asana	NOUN	slot-conflict	m.nom.sg	1	asanaḥ	2	dcs:24900
 asidhenunā	asidhenu	NOUN	coverage-hole	m.instr.sg	1		2	dcs:629618
 asiputrikaḥ	asiputrikā	NOUN	coverage-hole	m.nom.sg	1		2	dcs:520763
@@ -2866,7 +2630,6 @@ avatāraṇī	avatāraṇa	ADJ	coverage-hole	f.nom.sg	1		2	dcs:644908
 avatāsaḥ	avata	NOUN	slot-conflict	m.nom.pl	2	avatāḥ	2	dcs:749038
 avaśeṣāsu	avaśeṣa	NOUN	coverage-hole	f.loc.pl	1		2	dcs:578253
 avaśeṣāyām	avaśeṣa	NOUN	coverage-hole	f.loc.sg	1		2	dcs:279409
-avaśyaṃbhāvinaṃ	avaśyambhāvin	ADJ	slot-conflict	m.acc.sg	1	avaśyambhāvinam	2	dcs:759288
 avekṣaṇāḥ	avekṣaṇa	NOUN	coverage-hole	m.nom.pl	1		2	dcs:573099
 avidhīni	avidhi	NOUN	coverage-hole	n.nom.pl	1		2	dcs:98242
 aviduṣṭarāsaḥ	aviduṣṭara	ADJ	slot-conflict	m.nom.pl	1	aviduṣṭarāḥ	2	dcs:609322_1
@@ -2894,7 +2657,6 @@ aśvamedhikī	aśvamedhika	ADJ	coverage-hole	f.nom.sg	1		2	dcs:468830
 aśvamedhikīnām	aśvamedhika	ADJ	coverage-hole	f.gen.pl	1		2	dcs:757527
 aśviyā	aśviya	NOUN	slot-conflict	n.acc.pl	1	aśviyāni	2	dcs:598288
 aśāsanāḥ	aśāsana	ADJ	coverage-hole	m.nom.pl	1		2	dcs:372076
-aṃbara	ambara	NOUN	compound-member		1		2	dcs:364996
 aṃhāḥ	aṃhas	NOUN	coverage-hole	m.nom.sg	1		2	dcs:684455
 aṃsatrā	aṃsatra	NOUN	slot-conflict	n.acc.pl	1	aṃsatrāṇi	2	dcs:598692
 aṃśayā	aṃśa	NOUN	coverage-hole	f.instr.sg	1		2	dcs:41692
@@ -3002,7 +2764,6 @@ bibhīdaka	vibhītaka	NOUN	compound-member		1		2	dcs:699710_1
 bibhīṣikām	vibhīṣikā	NOUN	slot-conflict	f.acc.sg	1	vibhīṣikām	2	dcs:629799
 bindukāni	binduka	NOUN	coverage-hole	n.nom.pl	1		2	dcs:378509
 bista	vista	NOUN	compound-member		1		2	dcs:552828
-biṃba	bimba	NOUN	compound-member		1		2	dcs:465809
 bodhakāyāḥ	bodhaka	ADJ	coverage-hole	f.gen.sg	1		2	dcs:434600
 bodhisatvebhyaḥ	bodhisattva	NOUN	slot-conflict	m.dat.pl	1	bodhisattvebhyaḥ	2	dcs:640846
 brahmajaṭaḥ	brahmajaṭā	NOUN	coverage-hole	m.nom.sg	1		2	dcs:438562
@@ -3143,7 +2904,6 @@ duhitri	duhitṛ	NOUN	slot-conflict	f.voc.sg	1	duhitar	2	dcs:527267
 duhitāram	duhitṛ	NOUN	coverage-hole	m.acc.sg	1		2	dcs:348427
 duhitārau	duhitṛ	NOUN	slot-conflict	f.nom.du	1	duhitarau	2	dcs:674381
 dukūlām	dukūla	NOUN	coverage-hole	f.acc.sg	1		2	dcs:387064
-durabhisaṃbhavā	durabhisambhava	ADJ	coverage-hole	f.nom.sg	1		2	dcs:644117
 durbhikṣāṃ	durbhikṣa	ADJ	coverage-hole	f.acc.sg	1		2	dcs:411572
 durbhyaḥ	dus	NOUN	coverage-hole	m.abl.pl	1		2	dcs:555440
 durdaśam	durdaśā	NOUN	coverage-hole	m.acc.sg	1		2	dcs:260753
@@ -3212,8 +2972,6 @@ ekādaśāṁ	ekādaśa	ADJ	slot-conflict	m.acc.pl	1	ekādaśān	2	dcs:605354
 elāpatrāya	elāpattra	NOUN	slot-conflict	m.dat.sg	1	elāpattrāya	2	dcs:518530
 etadaḥ	etad	NOUN	coverage-hole	m.gen.sg	2		2	dcs:552123
 etādṛkṣāsa	etādṛkṣa	ADJ	slot-conflict	m.nom.pl	1	etādṛkṣāḥ	2	dcs:684465
-evaṃprāyeṣu	evamprāya	ADJ	slot-conflict	m.loc.pl	2	evamprāyeṣu	2	dcs:613828
-evaṃprāyāṇi	evamprāya	ADJ	slot-conflict	n.acc.pl	1	evamprāyāṇi	2	dcs:614247
 evāsaḥ	eva	NOUN	slot-conflict	m.nom.pl	1	evāḥ	2	dcs:595362
 gadham	gadhā	NOUN	coverage-hole	n.nom.sg	1		2	dcs:696069
 gaganābhiḥ	gagana	NOUN	coverage-hole	f.instr.pl	1		2	dcs:365711
@@ -3233,7 +2991,6 @@ gatikām	gatika	NOUN	coverage-hole	f.acc.sg	1		2	dcs:393744
 gatvarām	gatvara	ADJ	coverage-hole	f.acc.sg	1		2	dcs:582180
 gaurataḥ	gaura	ADJ	slot-conflict	m.abl.sg	1	gaurāt	2	dcs:27175
 gav	go	NOUN	compound-member		1		2	dcs:648183_1
-gavāṃpatiḥ	gavāmpati	NOUN	slot-conflict	m.nom.sg	1	gavāmpatiḥ	2	dcs:632893
 gaṇāni	gaṇa	NOUN	coverage-hole	n.acc.pl	1		2	dcs:122802
 gaṇḍīrāṇi	gaṇḍīra	NOUN	coverage-hole	n.nom.pl	1		2	dcs:58323
 gehān	geha	NOUN	coverage-hole	m.acc.pl	1		2	dcs:96250
@@ -3286,6 +3043,7 @@ hārataḥ	hāra	NOUN	slot-conflict	m.abl.sg	1	hārāt	2	dcs:623181
 hṛdayadravām	hṛdayadrava	NOUN	coverage-hole	f.acc.sg	1		2	dcs:33671
 icchātaḥ	icchā	NOUN	slot-conflict	f.abl.sg	2	icchāyāḥ	2	dcs:772310
 idambhyām	idam	NOUN	coverage-hole	m.abl.du	1		2	dcs:553617
+idaṃmadhuṃ	idaṃmadhu	NOUN	lexicon-gap	m.acc.sg	1		2	dcs:672951
 idi	id	NOUN	coverage-hole	m.loc.sg	1		2	dcs:85708
 ikṣurakām	ikṣuraka	NOUN	coverage-hole	f.acc.sg	1		2	dcs:52945
 ikṣvākvaḥ	ikṣvāku	NOUN	slot-conflict	f.gen.sg	1	ikṣvākoḥ ikṣvākvāḥ	2	dcs:374709
@@ -3298,8 +3056,6 @@ indrakāḥ	indraka	NOUN	coverage-hole	m.nom.pl	1		2	dcs:644015
 indravantā	indravat	ADJ	slot-conflict	m.nom.du	1	indravantau	2	dcs:594288_1
 indriyebhiḥ	indriya	ADJ	slot-conflict	m.instr.pl	1	indriyaiḥ	2	dcs:598714
 ināsaḥ	ina	ADJ	slot-conflict	m.nom.pl	1	ināḥ	2	dcs:600021_2
-irammada	iraṃmada	NOUN	compound-member		1		2	dcs:552362
-irammadam	iraṃmada	NOUN	slot-conflict	m.acc.sg	1	iraṃmadam	2	dcs:501913
 itaretaraiḥ	itaretara	PRON	coverage-hole	m.instr.pl	1		2	dcs:479260
 itaretarān	itaretara	PRON	coverage-hole	m.acc.pl	1		2	dcs:358235
 itthamsu	ittham	NOUN	coverage-hole	m.loc.pl	1		2	dcs:552716
@@ -3325,6 +3081,7 @@ jagattrayām	jagattraya	NOUN	coverage-hole	f.acc.sg	1		2	dcs:582501
 jaitrāyāḥ	jaitra	ADJ	coverage-hole	f.gen.sg	2		2	dcs:283187
 jaiṣṇavī	jaiṣṇava	ADJ	coverage-hole	f.nom.sg	1		2	dcs:359352
 jaladhini	jaladhi	NOUN	coverage-hole	n.loc.sg	1		2	dcs:367747
+jalajaṃbukasya	jalajambukā	NOUN	coverage-hole	m.gen.sg	1		2	dcs:427687
 jalodbhavebhiḥ	jalodbhavā	NOUN	coverage-hole	n.instr.pl	1		2	dcs:15261
 janimānaḥ	janiman	NOUN	coverage-hole	m.nom.pl	1		2	dcs:603056
 janitārā	janitṛ	NOUN	slot-conflict	m.nom.du	1	janitārau	2	dcs:601948
@@ -3359,7 +3116,6 @@ jāmātri	jāmātṛ	NOUN	slot-conflict	m.loc.sg	2	jāmātari	2	dcs:528223
 jātakarmā	jātakarman	NOUN	coverage-hole	m.nom.sg	1		2	dcs:463783_1
 jātiphalām	jātiphala	NOUN	coverage-hole	f.acc.sg	1		2	dcs:39429
 jātvoḥ	jātu	NOUN	coverage-hole	m.loc.du	1		2	dcs:552655
-jāṃbukaṃ	jāmbuka	ADJ	slot-conflict	m.acc.sg	1	jāmbukam	2	dcs:757666
 jīvātma	jīvātman	NOUN	compound-member		1		2	dcs:77715
 jūṭikaḥ	jūṭikā	NOUN	coverage-hole	m.nom.sg	1		2	dcs:562458
 jṛmbhaṇī	jṛmbhaṇa	ADJ	coverage-hole	f.nom.sg	1		2	dcs:436502
@@ -3376,7 +3132,6 @@ kalaṅkayā	kalaṅka	NOUN	coverage-hole	f.instr.sg	1		2	dcs:487743
 kalevarayā	kalevara	NOUN	coverage-hole	f.instr.sg	1		2	dcs:367553
 kalyāṇābhiḥ	kalyāṇa	ADJ	coverage-hole	f.instr.pl	1		2	dcs:270531
 kalyāṇāyāḥ	kalyāṇa	ADJ	coverage-hole	f.gen.sg	1		2	dcs:125407
-kamalasambhave	kamalasaṃbhava	NOUN	slot-conflict	m.loc.sg	1	kamalasaṃbhave	2	dcs:629542
 kambūkāṁ	kambūka	NOUN	slot-conflict	m.acc.pl	1	kambūkān	2	dcs:639084
 kanakapurītaḥ	kanakapurī	NOUN	slot-conflict	f.abl.sg	1	kanakapuryāḥ	2	dcs:621485
 kandinī	kandin	ADJ	coverage-hole	f.nom.sg	1		2	dcs:362162
@@ -3440,8 +3195,6 @@ kirātatiktāni	kirātatikta	NOUN	coverage-hole	n.acc.pl	1		2	dcs:7557
 kisalayām	kisalaya	NOUN	coverage-hole	f.acc.sg	1		2	dcs:573406
 kiyan	kiyat	ADJ	coverage-hole	m.nom.sg	1		2	dcs:620237
 kiyāti	kiyat	ADJ	coverage-hole	m.loc.sg	1		2	dcs:594191
-kiṃpuruṣau	kimpuruṣa	NOUN	slot-conflict	m.nom.du	1	kimpuruṣau	2	dcs:631412
-kiṃpāka	kimpāka	NOUN	compound-member		1		2	dcs:625463
 kleśayā	kleśa	NOUN	coverage-hole	f.instr.sg	1		2	dcs:622721
 kodravāṇi	kodrava	NOUN	coverage-hole	n.nom.pl	1		2	dcs:747833
 kośinīḥ	kośin	ADJ	coverage-hole	f.nom.pl	1		2	dcs:683119
@@ -3472,7 +3225,6 @@ kuśāmbu	kuśāmba	NOUN	compound-member		1		2	dcs:513475
 kuśīlā	kuśīla	ADJ	coverage-hole	f.nom.sg	1		2	dcs:421960
 kuśīlāṃ	kuśīla	ADJ	coverage-hole	f.acc.sg	1		2	dcs:111917
 kuḍubaḥ	kuḍava	NOUN	slot-conflict	m.nom.sg	1	kuḍavaḥ	2	dcs:465326
-kuṃbham	kumbha	NOUN	slot-conflict	m.acc.sg	1	kumbham	2	dcs:465909
 kuṇḍataḥ	kuṇḍa	NOUN	slot-conflict	n.abl.sg	1	kuṇḍāt	2	dcs:624698
 kuṣṭhikam	kuṣṭhikā	NOUN	coverage-hole	m.acc.sg	1		2	dcs:744692_1
 kuṭīrakāṇi	kuṭīraka	NOUN	coverage-hole	n.acc.pl	1		2	dcs:365001
@@ -3637,7 +3389,6 @@ māsāyāḥ	māsa	NOUN	coverage-hole	f.gen.sg	1		2	dcs:30022
 mātrataḥ	mātra	NOUN	slot-conflict	n.abl.sg	1	mātrāt	2	dcs:49091
 mātṛmātrī	mātṛmātṛ	NOUN	slot-conflict	f.nom.sg	1	mātṛmātā	2	dcs:590300
 mātṛṣvasrīyāyām	mātṛṣvasrīya	ADJ	coverage-hole	f.loc.sg	1		2	dcs:447623
-māṃpaśyam	māmpaśya	ADJ	slot-conflict	n.acc.sg	1	māmpaśyam	2	dcs:636802_1
 māṃsām	māṃsa	NOUN	coverage-hole	f.acc.sg	1		2	dcs:40450
 mūlakām	mūlaka	NOUN	coverage-hole	f.acc.sg	1		2	dcs:401132
 mūradevāṁ	mūradeva	NOUN	slot-conflict	m.acc.pl	1	mūradevān	2	dcs:638646
@@ -3701,7 +3452,6 @@ nimeṣāṇi	nimeṣa	NOUN	coverage-hole	n.nom.pl	1		2	dcs:312734
 nimnagam	nimnagā	NOUN	coverage-hole	m.acc.sg	1		2	dcs:618324
 nindaṃ	nind	NOUN	lexicon-gap	m.acc.sg	1		2	dcs:100004
 nipānā	nipāna	NOUN	slot-conflict	n.acc.pl	1	nipānāni	2	dcs:673922
-niravalaṃbanam	niravalambana	ADJ	slot-conflict	m.acc.sg	1	niravalambanam	2	dcs:630758
 niraḥ	nis	NOUN	coverage-hole	m.abl.sg	1		2	dcs:554881
 nirbandhām	nirbandha	NOUN	coverage-hole	f.acc.sg	1		2	dcs:523205
 nirmocanām	nirmocana	ADJ	coverage-hole	f.acc.sg	1		2	dcs:340955
@@ -3930,8 +3680,6 @@ pratikarmā	pratikarman	NOUN	coverage-hole	f.nom.sg	1		2	dcs:524781
 pratimāt	pratimā	NOUN	coverage-hole	n.abl.sg	1		2	dcs:307593
 pratiniḥsargāyai	pratiniḥsarga	NOUN	coverage-hole	f.dat.sg	1		2	dcs:666796
 pratipādanā	pratipādana	ADJ	coverage-hole	f.nom.sg	1		2	dcs:464116_2
-pratisaṃmodana	pratisammodana	NOUN	compound-member		1		2	dcs:667370
-pratisaṃmodanaṃ	pratisammodana	NOUN	slot-conflict	n.acc.sg	1	pratisammodanam	2	dcs:657873
 pratisāraṇāṃ	pratisāraṇa	NOUN	coverage-hole	f.acc.sg	1		2	dcs:67937
 pratiśrutkāni	pratiśrutkā	NOUN	coverage-hole	n.nom.pl	1		2	dcs:387538
 pratiṣeddhāraḥ	pratiṣeddhṛ	ADJ	coverage-hole	m.nom.pl	1		2	dcs:180496
@@ -4018,8 +3766,6 @@ pāpacelikam	pāpacelikā	NOUN	coverage-hole	n.acc.sg	1		2	dcs:64901
 pāpīyāṃsau	pāpīyas	ADJ	coverage-hole	m.nom.du	1		2	dcs:663395
 pāradāri	pāradārin	NOUN	compound-member		1		2	dcs:82635
 pāratalpikān	pāratalpika	ADJ	coverage-hole	m.acc.pl	1		2	dcs:465670
-pāraṃparya	pāramparya	NOUN	compound-member		1		2	dcs:751909
-pāraṃparyāt	pāramparya	NOUN	slot-conflict	n.abl.sg	2	pāramparyāt	2	dcs:768305
 pāribarhāni	pāribarha	NOUN	coverage-hole	n.acc.pl	1		2	dcs:171021
 pāribhāṣikām	pāribhāṣika	ADJ	coverage-hole	f.acc.sg	2		2	dcs:7736
 pārthām	pārtha	NOUN	coverage-hole	f.acc.sg	1		2	dcs:580748
@@ -4061,7 +3807,6 @@ raktikaiḥ	raktikā	NOUN	coverage-hole	m.voc.sg	1		2	dcs:392458
 raktikaṃ	raktikā	NOUN	coverage-hole	n.acc.sg	1		2	dcs:356930
 rakṣitārā	rakṣitṛ	ADJ	slot-conflict	m.nom.du	1	rakṣitārau	2	dcs:596592
 ratnakūṭataḥ	ratnakūṭa	NOUN	slot-conflict	n.abl.sg	1	ratnakūṭāt	2	dcs:625080
-ratnasaṃbhavaṃ	ratnasambhava	NOUN	coverage-hole	n.nom.sg	1		2	dcs:722939
 ratnayā	ratna	NOUN	coverage-hole	f.instr.sg	1		2	dcs:91736
 ratnāsu	ratna	NOUN	coverage-hole	f.loc.pl	1		2	dcs:524913
 ratīni	rati	NOUN	coverage-hole	n.acc.pl	1		2	dcs:358557
@@ -4096,10 +3841,8 @@ sadhrīm	sadhri	ADJ	slot-conflict	m.acc.sg	1	sadhrim	2	dcs:596056
 sadāmattakā	sadāmattaka	NOUN	coverage-hole	m.nom.pl	1		2	dcs:657315
 sadṛkṣāsaḥ	sadṛkṣa	ADJ	slot-conflict	m.nom.pl	1	sadṛkṣāḥ	2	dcs:684466
 saharṣīṃ	saharṣa	ADJ	coverage-hole	f.acc.sg	1		2	dcs:102541
-sahasraṃbharaḥ	sahasrambhara	ADJ	slot-conflict	m.nom.sg	1	sahasrambharaḥ	2	dcs:682780
 sahasrām	sahasra	NUM	coverage-hole	f.acc.sg	1		2	dcs:183133_1
 sahasrārcīḥ	sahasrārcis	NOUN	slot-conflict	m.nom.sg	2	sahasrārciḥ	2	dcs:557798
-sahāṃpatinā	sahāmpati	NOUN	slot-conflict	m.instr.sg	1	sahāmpatinā	2	dcs:721005
 sahīyā	sahīyas	ADJ	coverage-hole	f.nom.sg	1		2	dcs:478642
 saidhrakīṃ	saidhraka	ADJ	coverage-hole	f.acc.sg	1		2	dcs:425091
 sakthyaḥ	sakthi	NOUN	coverage-hole	f.nom.pl	1		2	dcs:764191
@@ -4109,12 +3852,11 @@ sambhārataḥ	sambhāra	NOUN	slot-conflict	m.abl.sg	1	sambhārāt	2	dcs:632938
 sambhāṣaṇā	sambhāṣaṇa	NOUN	coverage-hole	f.nom.sg	1		2	dcs:447915
 sameddhā	sameddhṛ	ADJ	coverage-hole	m.nom.sg	1		2	dcs:701177
 samithāni	samitha	NOUN	coverage-hole	n.acc.pl	1		2	dcs:593074
-sammātarā	saṃmātṛ	ADJ	lexicon-gap	m.nom.du	1		2	dcs:611982
 sampādayitrīṃ	sampādayitṛ	ADJ	slot-conflict	f.acc.sg	1	sampādayitāram	2	dcs:485115
+sampādikā	saṃpādaka	ADJ	compound-member		1		2	dcs:45379
 samudbhavāni	samudbhava	NOUN	coverage-hole	n.acc.pl	1		2	dcs:15411
 samudrāsaḥ	samudra	NOUN	slot-conflict	m.nom.pl	1	samudrāḥ	2	dcs:608509_2
 samutthānau	samutthāna	NOUN	coverage-hole	m.acc.du	1		2	dcs:13144
-samyaksaṃbuddhayoḥ	samyaksambuddha	ADJ	slot-conflict	m.gen.du	1	samyaksambuddhayoḥ	2	dcs:724664
 samākhyam	samākhyā	NOUN	coverage-hole	m.acc.sg	1		2	dcs:61530
 samānasmāt	samāna	ADJ	slot-conflict	n.abl.sg	1	samānāt	2	dcs:600510
 samāpanīḥ	samāpana	ADJ	coverage-hole	f.acc.pl	1		2	dcs:71165
@@ -4138,33 +3880,7 @@ saudhanvanebhiḥ	saudhanvana	NOUN	slot-conflict	m.instr.pl	1	saudhanvanaiḥ	2	
 saumāraudrīm	saumāraudra	ADJ	coverage-hole	f.acc.sg	1		2	dcs:680104
 sauṣṭhavāḥ	sauṣṭhava	NOUN	coverage-hole	f.nom.pl	1		2	dcs:394473
 savyetarataḥ	savyetara	ADJ	slot-conflict	m.abl.sg	1	savyetarāt	2	dcs:93536
-saṃbahulaiḥ	sambahula	ADJ	slot-conflict	m.instr.pl	1	sambahulaiḥ	2	dcs:655011
-saṃbandhakāt	sambandhaka	ADJ	slot-conflict	n.abl.sg	1	sambandhakāt	2	dcs:240667
-saṃbandheṣu	sambandha	NOUN	slot-conflict	m.loc.pl	1	sambandheṣu	2	dcs:744828_1
-saṃbandhini	sambandhin	ADJ	slot-conflict	n.loc.sg	1	sambandhini	2	dcs:772413
-saṃbandhinyāṃ	sambandhin	ADJ	coverage-hole	f.loc.sg	1		2	dcs:773176
-saṃbandhām	sambandha	NOUN	coverage-hole	f.acc.sg	1		2	dcs:746150
-saṃbandhāni	sambandha	NOUN	slot-conflict	n.nom.pl	1	sambandhāni	2	dcs:745880
-saṃbhalasya	sambhala	NOUN	slot-conflict	m.gen.sg	1	sambhalasya	2	dcs:640867
-saṃbhalaḥ	sambhala	NOUN	slot-conflict	m.nom.sg	2	sambhalaḥ	2	dcs:633854
-saṃbhalaṃ	sambhala	NOUN	slot-conflict	m.acc.sg	1	sambhalam	2	dcs:72221
-saṃbhale	sambhala	NOUN	slot-conflict	m.loc.sg	1	sambhale	2	dcs:640868
 saṃbhalāyai	sambhala	NOUN	coverage-hole	f.dat.sg	1		2	dcs:640644
-saṃbharaṇam	sambharaṇa	NOUN	slot-conflict	n.nom.sg	1	sambharaṇam	2	dcs:771341
-saṃbhedāt	sambheda	NOUN	slot-conflict	m.abl.sg	2	sambhedāt	2	dcs:686979
-saṃbhogaiḥ	sambhoga	NOUN	slot-conflict	m.instr.pl	1	sambhogaiḥ	2	dcs:614778
-saṃbhogaṃ	sambhoga	NOUN	slot-conflict	m.acc.sg	1	sambhogam	2	dcs:755808
-saṃbhogena	sambhoga	NOUN	slot-conflict	m.instr.sg	1	sambhogena	2	dcs:752347
-saṃbhogā	sambhoga	NOUN	coverage-hole	f.nom.sg	1		2	dcs:623054
-saṃbhojanāt	sambhojana	NOUN	slot-conflict	n.abl.sg	1	sambhojanāt	2	dcs:674304
-saṃbhramāḥ	sambhrama	NOUN	coverage-hole	f.nom.pl	1		2	dcs:617768
-saṃbhrāntyā	sambhrānti	NOUN	slot-conflict	f.instr.sg	1	sambhrāntyā	2	dcs:349015
-saṃbhārām	sambhāra	NOUN	coverage-hole	f.acc.sg	1		2	dcs:520243
-saṃbhāvanānām	sambhāvanā	NOUN	slot-conflict	f.gen.pl	1	sambhāvanānām	2	dcs:630394
-saṃbhāvanāyāḥ	sambhāvanā	NOUN	slot-conflict	f.gen.sg	1	sambhāvanāyāḥ	2	dcs:616610
-saṃbhūtiṣu	sambhūti	NOUN	slot-conflict	f.loc.pl	1	sambhūtiṣu	2	dcs:513516
-saṃbādheṣu	sambādha	NOUN	slot-conflict	m.loc.pl	1	sambādheṣu	2	dcs:436533
-saṃbādhām	sambādha	NOUN	coverage-hole	f.acc.sg	1		2	dcs:767549
 saṃdeśataḥ	saṃdeśa	NOUN	slot-conflict	m.abl.sg	1	saṃdeśāt	2	dcs:616443
 saṃdṛśī	saṃdṛś	NOUN	coverage-hole	n.nom.du	1		2	dcs:647364_2
 saṃghām	saṃgha	NOUN	coverage-hole	f.acc.sg	1		2	dcs:264984
@@ -4176,50 +3892,8 @@ saṃketāni	saṃketa	NOUN	coverage-hole	n.nom.pl	1		2	dcs:645895
 saṃkocām	saṃkoca	NOUN	coverage-hole	f.acc.sg	1		2	dcs:533918
 saṃkramām	saṃkrama	NOUN	coverage-hole	f.acc.sg	1		2	dcs:246062
 saṃkrāntitaḥ	saṃkrānti	NOUN	slot-conflict	f.abl.sg	1	saṃkrānteḥ saṃkrāntyāḥ	2	dcs:644853
-saṃmadāḥ	sammada	NOUN	slot-conflict	m.nom.pl	1	sammadāḥ	2	dcs:469635
-saṃmanasaṃ	sammanas	ADJ	slot-conflict	m.acc.sg	1	sammanasam	2	dcs:649279
-saṃmanāḥ	sammanas	ADJ	slot-conflict	m.nom.sg	1	sammanāḥ	2	dcs:634307
-saṃmarśanasya	sammarśana	NOUN	slot-conflict	n.gen.sg	1	sammarśanasya	2	dcs:496230
-saṃmarśanāt	sammarśana	NOUN	slot-conflict	n.abl.sg	1	sammarśanāt	2	dcs:697681
-saṃmohanī	sammohana	ADJ	coverage-hole	f.nom.sg	1		2	dcs:655223
-saṃmohāḥ	sammoha	NOUN	slot-conflict	m.nom.pl	1	sammohāḥ	2	dcs:26946
-saṃmukhasya	sammukha	ADJ	slot-conflict	m.gen.sg	1	sammukhasya	2	dcs:553583
-saṃmukhāni	sammukha	ADJ	slot-conflict	n.nom.pl	1	sammukhāni	2	dcs:728429
-saṃmukhāṃ	sammukha	ADJ	coverage-hole	f.acc.sg	1		2	dcs:496527
-saṃmārjanāya	sammārjana	NOUN	slot-conflict	n.dat.sg	1	sammārjanāya	2	dcs:697742
-saṃmīlyena	sammīlya	NOUN	slot-conflict	n.instr.sg	1	sammīlyena	2	dcs:751498
+saṃmitībhyaḥ	saṃmita	ADJ	lexicon-gap	f.dat.pl	1		2	dcs:437136
 saṃnidhānāḥ	saṃnidhāna	NOUN	coverage-hole	m.nom.pl	1		2	dcs:480072
-saṃpakva	sampakva	ADJ	compound-member		1		2	dcs:764876
-saṃpatnīyaṃ	sampatnīya	NOUN	slot-conflict	m.acc.sg	1	sampatnīyam	2	dcs:747076
-saṃpattaye	sampatti	NOUN	slot-conflict	f.dat.sg	1	sampattaye sampattyai	2	dcs:725892
-saṃpattyai	sampatti	NOUN	slot-conflict	f.dat.sg	1	sampattaye sampattyai	2	dcs:673226
-saṃpeṣaṇa	sampeṣaṇa	NOUN	compound-member		1		2	dcs:747803
-saṃpibaḥ	sampiba	ADJ	slot-conflict	m.nom.sg	1	sampibaḥ	2	dcs:636596
-saṃpradānāt	sampradāna	NOUN	slot-conflict	n.abl.sg	1	sampradānāt	2	dcs:768972
-saṃpraiṣaiḥ	sampraiṣa	NOUN	slot-conflict	m.instr.pl	1	sampraiṣaiḥ	2	dcs:754427
-saṃpraiṣasya	sampraiṣa	NOUN	slot-conflict	m.gen.sg	1	sampraiṣasya	2	dcs:729704
-saṃpraiṣān	sampraiṣa	NOUN	slot-conflict	m.acc.pl	1	sampraiṣān	2	dcs:755990
-saṃprakāśakaḥ	samprakāśaka	ADJ	slot-conflict	m.nom.sg	1	samprakāśakaḥ	2	dcs:668985
-saṃprakāśakāḥ	samprakāśaka	ADJ	slot-conflict	m.nom.pl	1	samprakāśakāḥ	2	dcs:721324
-saṃpramoṣaṃ	sampramoṣa	NOUN	slot-conflict	m.acc.sg	1	sampramoṣam	2	dcs:725512
-saṃprasādāt	samprasāda	NOUN	slot-conflict	m.abl.sg	1	samprasādāt	2	dcs:668228
-saṃprasāraṇam	samprasāraṇa	NOUN	slot-conflict	n.nom.sg	1	samprasāraṇam	2	dcs:554028
-saṃpratipattau	sampratipatti	NOUN	slot-conflict	f.loc.sg	1	sampratipattau sampratipattyām	2	dcs:771821
-saṃpratipatti	sampratipatti	NOUN	compound-member		1		2	dcs:771642
-saṃpratyayaṃ	sampratyaya	NOUN	slot-conflict	m.acc.sg	1	sampratyayam	2	dcs:772822
-saṃpraśna	sampraśna	NOUN	compound-member		1		2	dcs:552674
-saṃprekṣakā	samprekṣaka	ADJ	slot-conflict	m.nom.pl	1	samprekṣakāḥ	2	dcs:765673
-saṃpreṣam	sampreṣa	NOUN	slot-conflict	m.acc.sg	1	sampreṣam	2	dcs:755952
-saṃpreṣaṇam	sampreṣaṇa	NOUN	slot-conflict	n.nom.sg	1	sampreṣaṇam	2	dcs:642618
-saṃpuṣṭyai	sampuṣṭi	NOUN	slot-conflict	f.dat.sg	1	sampuṣṭaye sampuṣṭyai	2	dcs:726509_1
-saṃpuṭau	sampuṭa	NOUN	slot-conflict	m.nom.du	1	sampuṭau	2	dcs:724049
-saṃpādakam	sampādaka	ADJ	slot-conflict	m.acc.sg	1	sampādakam	2	dcs:629874
-saṃpāraṇāya	sampāraṇa	NOUN	slot-conflict	n.dat.sg	1	sampāraṇāya	2	dcs:685691
-saṃpātānām	sampāta	NOUN	slot-conflict	m.gen.pl	1	sampātānām	2	dcs:726548
-saṃpīḍām	sampīḍa	NOUN	coverage-hole	f.acc.sg	1		2	dcs:104057
-saṃpīḍāḥ	sampīḍa	NOUN	slot-conflict	m.nom.pl	1	sampīḍāḥ	2	dcs:770197
-saṃpūjitena	sampūjita	NOUN	slot-conflict	m.instr.sg	1	sampūjitena	2	dcs:666443
-saṃpūrṇaḥ	sampūrṇa	NOUN	slot-conflict	m.nom.sg	2	sampūrṇaḥ	2	dcs:641925
 saṃrādhanī	saṃrādhana	ADJ	coverage-hole	f.nom.sg	1		2	dcs:434882
 saṃrāje	samrāj	NOUN	slot-conflict	m.dat.sg	1	samrāje	2	dcs:674005
 saṃsargataḥ	saṃsarga	NOUN	slot-conflict	m.abl.sg	1	saṃsargāt	2	dcs:388345
@@ -4290,7 +3964,6 @@ supiṣṭāṃ	supiṣṭa	ADJ	coverage-hole	f.acc.sg	1		2	dcs:10704
 suptakau	suptaka	ADJ	coverage-hole	m.nom.du	1		2	dcs:550639
 surabhinas	surabhi	ADJ	slot-conflict	n.gen.sg	1	surabhiṇaḥ	2	dcs:387156
 surālayām	surālaya	NOUN	coverage-hole	f.acc.sg	1		2	dcs:527697
-susaṃprasthitena	susamprasthita	NOUN	slot-conflict	m.instr.sg	1	susamprasthitena	2	dcs:720997
 sutegṛbhaṃ	sutegṛbh	ADJ	coverage-hole	m.acc.sg	1		2	dcs:599806
 sutukebhiḥ	sutuka	ADJ	slot-conflict	m.instr.pl	1	sutukaiḥ	2	dcs:609342_1
 suvarbhānuḥ	svarbhānu	NOUN	slot-conflict	m.nom.sg	1	svarbhānuḥ	2	dcs:701598_1
@@ -4305,9 +3978,6 @@ svargastriyāṃ	svargastrī	NOUN	slot-conflict	f.loc.sg	1	svargastryām	2	dcs:6
 svarvāṁ	svarvat	ADJ	slot-conflict	m.nom.sg	1	svarvān	2	dcs:606911
 svarṇagairikayā	svarṇagairika	NOUN	coverage-hole	f.instr.sg	1		2	dcs:329782
 svarṇapuṣpikam	svarṇapuṣpikā	NOUN	coverage-hole	m.acc.sg	1		2	dcs:405571
-svayaṃbhojaḥ	svayambhoja	NOUN	slot-conflict	m.nom.sg	1	svayambhojaḥ	2	dcs:760677
-svayaṃbhojāt	svayambhoja	NOUN	slot-conflict	m.abl.sg	1	svayambhojāt	2	dcs:760677
-svayaṃbhuṃ	svayambhu	NOUN	slot-conflict	m.acc.sg	1	svayambhum	2	dcs:666431
 svaḥstriyaḥ	svaḥstrī	NOUN	slot-conflict	f.nom.pl	1	svaḥstryaḥ	2	dcs:94081
 svedebhiḥ	sveda	ADJ	slot-conflict	m.instr.pl	1	svedaiḥ	2	dcs:610731
 svādhyāyataḥ	svādhyāya	NOUN	slot-conflict	m.abl.sg	1	svādhyāyāt	2	dcs:723910
@@ -4315,14 +3985,10 @@ svādīyāṃsaṃ	svādīyas	ADJ	coverage-hole	m.acc.sg	1		2	dcs:649735
 svāpateyām	svāpateya	NOUN	coverage-hole	f.acc.sg	1		2	dcs:630654
 svāsaḥ	sva	ADJ	slot-conflict	m.nom.pl	1	sve svāḥ	2	dcs:609336_1
 svātīm	svāti	NOUN	slot-conflict	f.acc.sg	1	svātim	2	dcs:764851
-svāyaṃbhuvena	svāyambhuva	ADJ	slot-conflict	m.instr.sg	1	svāyambhuvena	2	dcs:764303
 syādvādi	syādvādin	NOUN	compound-member		1		2	dcs:589944
 syūmanā	syūman	NOUN	slot-conflict	n.instr.sg	1	syūmnā	2	dcs:594205
 sādhayitryai	sādhayitṛ	ADJ	slot-conflict	f.dat.sg	1	sādhayitre	2	dcs:712810
 sāhasikām	sāhasika	ADJ	coverage-hole	f.acc.sg	1		2	dcs:487677
-sākaṃprasthāyyasya	sākamprasthāyya	NOUN	slot-conflict	m.gen.sg	1	sākamprasthāyyasya	2	dcs:712762
-sākaṃprasthāyyena	sākamprasthāyya	NOUN	slot-conflict	m.instr.sg	1	sākamprasthāyyena	2	dcs:712763
-sākaṃprasthāyīyena	sākamprasthāyīya	NOUN	slot-conflict	m.instr.sg	1	sākamprasthāyīyena	2	dcs:696606
 sālabhañjikābhiḥ	śālabhañjikā	NOUN	slot-conflict	f.instr.pl	1	śālabhañjikābhiḥ	2	dcs:466633
 sālvena	śālva	NOUN	slot-conflict	m.instr.sg	1	śālvena	2	dcs:769195
 sālvāt	śālva	NOUN	slot-conflict	m.abl.sg	1	śālvāt	2	dcs:553119
@@ -4340,13 +4006,6 @@ sārdrāṃ	sārdra	ADJ	coverage-hole	f.acc.sg	1		2	dcs:52408
 sārvakāmikām	sārvakāmika	ADJ	coverage-hole	f.acc.sg	2		2	dcs:180351
 sāsnaiḥ	sāsnā	NOUN	coverage-hole	m.voc.sg	1		2	dcs:560488
 sāttvikayā	sāttvika	ADJ	coverage-hole	f.instr.sg	1		2	dcs:77292
-sāyaṃbhavaṃ	sāyambhava	NOUN	slot-conflict	m.acc.sg	1	sāyambhavam	2	dcs:638376
-sāṃmadaḥ	sāmmada	NOUN	slot-conflict	m.nom.sg	1	sāmmadaḥ	2	dcs:743954_1
-sāṃmanasyāni	sāmmanasya	NOUN	slot-conflict	n.nom.pl	1	sāmmanasyāni	2	dcs:70330_1
-sāṃpadānām	sāmpada	ADJ	slot-conflict	m.gen.pl	1	sāmpadānām	2	dcs:71690
-sāṃparāyeṇa	sāmparāya	NOUN	slot-conflict	m.instr.sg	1	sāmparāyeṇa	2	dcs:745886
-sāṃpratasya	sāmprata	ADJ	slot-conflict	m.gen.sg	1	sāmpratasya	2	dcs:758528
-sāṃprate	sāmprata	ADJ	slot-conflict	n.loc.sg	1	sāmprate	2	dcs:758475
 sāṃvatsarām	sāṃvatsara	ADJ	coverage-hole	f.acc.sg	1		2	dcs:542963
 sīdhve	sīdhu	NOUN	slot-conflict	f.dat.sg	1	sīdhave sīdhvai	2	dcs:367923
 sīmam	sīmā	NOUN	coverage-hole	n.nom.sg	1		2	dcs:571843
@@ -4453,7 +4112,6 @@ tīrthāsu	tīrtha	NOUN	coverage-hole	f.loc.pl	1		2	dcs:762856
 tūpura	tūpara	ADJ	slot-conflict	m.nom.sg	1	tūparaḥ	2	dcs:772438
 tūpuram	tūpara	ADJ	slot-conflict	m.acc.sg	1	tūparam	2	dcs:772436
 tūṇīrāṇi	tūṇīra	NOUN	coverage-hole	n.acc.pl	1		2	dcs:233259
-tūṣṇīmbhāvena	tūṣṇīṃbhāva	NOUN	slot-conflict	m.instr.sg	1	tūṣṇīṃbhāvena	2	dcs:658620
 tūṣṇīmi	tūṣṇīm	NOUN	coverage-hole	m.loc.sg	1		2	dcs:552752
 tūṣṇīṃgaṅgāṃ	tūṣṇīṃgaṅga	NOUN	coverage-hole	f.acc.sg	1		2	dcs:312921
 tṛptitaḥ	tṛpti	NOUN	slot-conflict	f.abl.sg	1	tṛpteḥ tṛptyāḥ	2	dcs:657695
@@ -4491,7 +4149,6 @@ uddīpanīṣu	uddīpana	ADJ	coverage-hole	f.loc.pl	1		2	dcs:763583
 udgārām	udgāra	NOUN	coverage-hole	f.acc.sg	1		2	dcs:30086
 udgātaram	udgātṛ	NOUN	slot-conflict	m.acc.sg	1	udgātāram	2	dcs:727796
 udhā	udhan	NOUN	coverage-hole	m.nom.sg	1		2	dcs:597773
-uduṃbara	udumbara	NOUN	slot-conflict	m.nom.sg	1	udumbaraḥ	2	dcs:772492
 udyamām	udyama	NOUN	coverage-hole	f.acc.sg	1		2	dcs:485605
 udyānā	udyāna	NOUN	coverage-hole	f.nom.sg	1		2	dcs:119759
 udāsu	uda	NOUN	coverage-hole	f.loc.pl	1		2	dcs:149199
@@ -4540,7 +4197,6 @@ upapattinā	upapatti	NOUN	coverage-hole	m.instr.sg	1		2	dcs:520873
 uparodhakāḥ	uparodhaka	ADJ	coverage-hole	m.nom.pl	1		2	dcs:535351
 uparodhataḥ	uparodha	NOUN	slot-conflict	m.abl.sg	1	uparodhāt	2	dcs:79304
 upasadanān	upasadana	NOUN	coverage-hole	m.acc.pl	1		2	dcs:172325
-upasampattau	upasaṃpatti	NOUN	slot-conflict	f.loc.sg	1	upasaṃpattau upasaṃpattyām	2	dcs:554275
 upasargām	upasarga	NOUN	coverage-hole	f.acc.sg	1		2	dcs:59232
 upasarpaṇā	upasarpaṇa	NOUN	coverage-hole	f.nom.sg	1		2	dcs:641671
 upasaṃbhāṣam	upasaṃbhāṣā	NOUN	coverage-hole	m.acc.sg	1		2	dcs:357874
@@ -4809,7 +4465,6 @@ yantrāyāḥ	yantra	NOUN	coverage-hole	f.gen.sg	1		2	dcs:448433
 yantārā	yantṛ	NOUN	slot-conflict	m.nom.du	1	yantārau	2	dcs:595188
 yathābhyām	yathā	NOUN	coverage-hole	f.instr.du	1		2	dcs:555206
 yathācchandasam	yathāchandasam	ADV	indeclinable		1		2	dcs:737184
-yathāsaṃbhavi	yathāsambhavin	ADJ	slot-conflict	n.acc.sg	1	yathāsambhavi	2	dcs:620239
 yatnāyāḥ	yatna	NOUN	coverage-hole	f.gen.sg	1		2	dcs:478086
 yatrayoḥ	yatra	NOUN	coverage-hole	m.loc.du	1		2	dcs:552661
 yavāguṃ	yavāgū	NOUN	slot-conflict	f.acc.sg	1	yavāgūm	2	dcs:727972
@@ -4916,7 +4571,6 @@ yūpataḥ	yūpa	NOUN	slot-conflict	m.abl.sg	1	yūpāt	2	dcs:94358
 ātmaghāti	ātmaghātin	NOUN	compound-member		1		2	dcs:547002
 ātmakāsu	ātmaka	ADJ	coverage-hole	f.loc.pl	1		2	dcs:46325
 ātmakāyāḥ	ātmaka	ADJ	coverage-hole	f.gen.sg	1		2	dcs:467841
-ātmasaṃbhavā	ātmasambhavā	NOUN	slot-conflict	f.nom.sg	1	ātmasambhavā	2	dcs:627919
 ātyantikām	ātyantika	ADJ	coverage-hole	f.acc.sg	1		2	dcs:545947
 āveśayā	āveśa	NOUN	coverage-hole	f.instr.sg	1		2	dcs:683482
 āvyādhām	āvyādha	NOUN	coverage-hole	f.acc.sg	1		2	dcs:640734
@@ -4980,9 +4634,6 @@ yūpataḥ	yūpa	NOUN	slot-conflict	m.abl.sg	1	yūpāt	2	dcs:94358
 śaśvattamāsaḥ	śaśvattama	ADJ	slot-conflict	m.nom.pl	1	śaśvattamāḥ	2	dcs:610095_1
 śaśvāṁ	śaśvat	ADJ	slot-conflict	m.nom.sg	1	śaśvān	2	dcs:596570
 śaśīyāṃsam	śaśīyas	ADJ	coverage-hole	m.acc.sg	1		2	dcs:598609
-śaṃbaraḥ	śambara	NOUN	slot-conflict	m.nom.sg	1	śambaraḥ	2	dcs:516410
-śaṃbhau	śambhu	NOUN	slot-conflict	m.loc.sg	1	śambhau	2	dcs:613192
-śaṃbhubhyāṃ	śambhu	ADJ	slot-conflict	m.instr.du	1	śambhubhyām	2	dcs:647927
 śevṛdhāsaḥ	śevṛdha	ADJ	slot-conflict	m.nom.pl	1	śevṛdhāḥ	2	dcs:596987
 śikhāni	śikhā	NOUN	coverage-hole	n.acc.pl	1		2	dcs:358698
 śilpavatyaḥ	śilpavat	ADJ	coverage-hole	f.nom.pl	1		2	dcs:464292
@@ -5033,7 +4684,6 @@ yūpataḥ	yūpa	NOUN	slot-conflict	m.abl.sg	1	yūpāt	2	dcs:94358
 śātakaumbhīṃ	śātakaumbha	ADJ	coverage-hole	f.acc.sg	1		2	dcs:629857
 śātanām	śātana	ADJ	coverage-hole	f.acc.sg	1		2	dcs:133891
 śāśvatāyai	śāśvata	ADJ	coverage-hole	f.dat.sg	1		2	dcs:509191
-śāṃbhavā	śāmbhava	ADJ	slot-conflict	m.nom.pl	1	śāmbhavāḥ	2	dcs:615868
 śīghrajanma	śīghrajanman	NOUN	coverage-hole	n.nom.sg	1		2	dcs:27211
 śīrṣaṇā	śīrṣan	NOUN	slot-conflict	n.instr.sg	2	śīrṣṇā	2	dcs:91600
 śīrṣṇyaḥ	śīrṣan	NOUN	coverage-hole	f.nom.pl	1		2	dcs:499339
@@ -5077,7 +4727,6 @@ yūpataḥ	yūpa	NOUN	slot-conflict	m.abl.sg	1	yūpāt	2	dcs:94358
 ṣaṭpañcāśatīm	ṣaṭpañcāśat	NOUN	slot-conflict	f.acc.sg	2	ṣaṭpañcāśatam	2	dcs:301979
 ṣṭhiram	sthira	ADJ	slot-conflict	m.acc.sg	1	sthiram	2	dcs:593252
 ṭaṅkaṇāni	ṭaṅkaṇa	NOUN	coverage-hole	n.nom.pl	1		2	dcs:390488
-abhisaṃbandhaḥ	abhisambandha	NOUN	slot-conflict	m.nom.sg	1	abhisambandhaḥ	1	dcs:772372
 abhiśocanau	abhiśocana	ADJ	coverage-hole	m.nom.du	1		1	dcs:649645
 abālāni	abāla	ADJ	coverage-hole	n.acc.pl	1		1	dcs:64498
 acakrebhiḥ	acakra	ADJ	slot-conflict	m.instr.pl	1	acakraiḥ	1	dcs:599748
@@ -5107,7 +4756,6 @@ amitebhiḥ	amita	ADJ	slot-conflict	n.instr.pl	1	amitaiḥ	1	dcs:686776
 amuṣmān	adas	PRON	coverage-hole	m.acc.pl	1		1	dcs:690687
 amṛtavapūḥ	amṛtavapus	NOUN	slot-conflict	m.nom.sg	1	amṛtavapuḥ	1	dcs:380955
 andhakūpataḥ	andhakūpa	NOUN	slot-conflict	m.abl.sg	1	andhakūpāt	1	dcs:613845
-andhaṃbhāvukaḥ	andhambhāvuka	ADJ	slot-conflict	m.nom.sg	1	andhambhāvukaḥ	1	dcs:70166
 antamebhiḥ	antama	ADJ	slot-conflict	m.instr.pl	1	antamaiḥ	1	dcs:595334
 anāgatavidhātri	anāgatavidhātṛ	NOUN	slot-conflict	m.loc.sg	1	anāgatavidhātari	1	dcs:486753
 apakartri	apakartṛ	ADJ	slot-conflict	m.loc.sg	1	apakartari	1	dcs:353488
@@ -5116,7 +4764,6 @@ apavāhataḥ	apavāha	NOUN	slot-conflict	m.abl.sg	1	apavāhāt	1	dcs:708535
 apikakṣebhiḥ	apikakṣa	NOUN	slot-conflict	m.instr.pl	1	apikakṣaiḥ	1	dcs:612265
 aprāyuvaḥ	aprāyu	ADJ	slot-conflict	f.nom.pl	1	aprāyavaḥ	1	dcs:593640
 apsarābhiḥ	apsaras	NOUN	slot-conflict	f.instr.pl	1	apsarobhiḥ	1	dcs:646172
-apāṃpatiḥ	apāmpati	NOUN	slot-conflict	m.nom.sg	1	apāmpatiḥ	1	dcs:694761
 araṃgamāsaḥ	araṃgama	ADJ	slot-conflict	m.nom.pl	1	araṃgamāḥ	1	dcs:640445
 ariṣṭāsaḥ	ariṣṭa	ADJ	slot-conflict	m.nom.pl	1	ariṣṭāḥ	1	dcs:636865
 aruṇāsaḥ	aruṇa	ADJ	slot-conflict	m.nom.pl	1	aruṇāḥ	1	dcs:601860
@@ -5215,7 +4862,6 @@ iṣirāsaḥ	iṣira	ADJ	slot-conflict	m.nom.pl	1	iṣirāḥ	1	dcs:608435
 iṭataḥ	iṭa	NOUN	slot-conflict	m.abl.sg	1	iṭāt	1	dcs:612653
 jaganmātryāḥ	jaganmātṛ	NOUN	slot-conflict	f.gen.sg	1	jaganmātuḥ	1	dcs:348125
 jajjhatīḥ	jajhjhatī	NOUN	slot-conflict	f.acc.pl	1	jajhjhatīḥ	1	dcs:599951
-jalajambukasya	jalajambukā	NOUN	coverage-hole	m.gen.sg	1		1	dcs:427687
 jambhebhiḥ	jambha	NOUN	slot-conflict	m.instr.pl	1	jambhaiḥ	1	dcs:602195
 jambhyebhiḥ	jambhya	NOUN	slot-conflict	m.instr.pl	1	jambhyaiḥ	1	dcs:696533
 jambhāsaḥ	jambha	NOUN	slot-conflict	m.nom.pl	1	jambhāḥ	1	dcs:605939
@@ -5395,16 +5041,9 @@ sarjanām	sarjanāman	NOUN	slot-conflict	n.acc.sg	1	sarjanāma	1	dcs:6762
 sarāhuvoḥ	sarāhu	ADJ	slot-conflict	m.gen.du	1	sarāhvoḥ	1	dcs:91169
 sarīsṛpataḥ	sarīsṛpa	NOUN	slot-conflict	m.abl.sg	1	sarīsṛpāt	1	dcs:645853
 satrāṣāh	satrāsāh	ADJ	slot-conflict	m.nom.sg	1	satrāsāṭ	1	dcs:602407
-saṃbhṛtīḥ	sambhṛti	NOUN	slot-conflict	f.nom.pl	1	sambhṛtayaḥ	1	dcs:746345
-saṃbodhāt	sambodha	NOUN	slot-conflict	m.abl.sg	1	sambodhāt	1	dcs:770198
-saṃbādhāt	sambādha	NOUN	slot-conflict	m.abl.sg	1	sambādhāt	1	dcs:365002
 saṃdhiyoḥ	saṃdhi	NOUN	slot-conflict	m.loc.du	1	saṃdhyoḥ	1	dcs:558645
 saṃjananām	saṃjanana	ADJ	coverage-hole	f.acc.sg	1		1	dcs:131480
-saṃmiślaḥ	sammiśla	ADJ	slot-conflict	m.nom.sg	1	sammiślaḥ	1	dcs:684838
 saṃmātarar	saṃmātṛ	ADJ	lexicon-gap	f.nom.pl	1		1	dcs:637583
-saṃpadbhyaḥ	sampad	NOUN	slot-conflict	f.dat.pl	1	sampadbhyaḥ	1	dcs:694874
-saṃpatnīḥ	sampatnī	NOUN	slot-conflict	f.acc.pl	1	sampatnīḥ	1	dcs:717944
-saṃpravādaḥ	sampravāda	NOUN	slot-conflict	m.nom.sg	1	sampravādaḥ	1	dcs:749283
 saṃrājaḥ	samrāj	NOUN	slot-conflict	m.nom.pl	1	samrājaḥ	1	dcs:713899
 saṃyājyātaḥ	saṃyājyā	NOUN	slot-conflict	f.abl.sg	1	saṃyājyāyāḥ	1	dcs:712675
 siṃhataḥ	siṃha	NOUN	slot-conflict	m.abl.sg	1	siṃhāt	1	dcs:655467
@@ -5428,7 +5067,6 @@ sumitrebhiḥ	sumitra	NOUN	slot-conflict	m.instr.pl	1	sumitraiḥ	1	dcs:610781
 surūpakām	surūpaka	ADJ	coverage-hole	f.acc.sg	1		1	dcs:523607
 svakṣatrebhiḥ	svakṣatra	ADJ	slot-conflict	m.instr.pl	1	svakṣatraiḥ	1	dcs:595334
 svarṇamātrī	svarṇamātṛ	NOUN	slot-conflict	f.nom.sg	1	svarṇamātā	1	dcs:21618
-svayaṃprabhāyāḥ	svayamprabhā	NOUN	slot-conflict	f.gen.sg	1	svayamprabhāyāḥ	1	dcs:622445
 svedamātrī	svedamātṛ	NOUN	slot-conflict	f.nom.sg	1	svedamātā	1	dcs:24017
 svābhāvikām	svābhāvika	ADJ	coverage-hole	f.acc.sg	1		1	dcs:441335
 svābhāvikāyām	svābhāvika	ADJ	coverage-hole	f.loc.sg	1		1	dcs:152854
@@ -5442,7 +5080,6 @@ sāptebhiḥ	sāpta	NOUN	slot-conflict	n.instr.pl	1	sāptaiḥ	1	dcs:605908
 sāraghebhiḥ	sāragha	NOUN	slot-conflict	n.instr.pl	1	sāraghaiḥ	1	dcs:673943
 sārasvatām	sārasvata	ADJ	coverage-hole	f.acc.sg	1		1	dcs:195175
 sāvitrām	sāvitra	ADJ	coverage-hole	f.acc.sg	1		1	dcs:359360
-sāṃprataḥ	sāmprata	ADJ	slot-conflict	m.nom.sg	1	sāmprataḥ	1	dcs:758411
 sīmātaḥ	sīmā	NOUN	slot-conflict	f.abl.sg	1	sīmāyāḥ	1	dcs:474374
 sūdayitnvaḥ	sūdayitnu	ADJ	slot-conflict	f.nom.pl	1	sūdayitnavaḥ	1	dcs:610641
 sūrpe	śūrpa	NOUN	slot-conflict	m.loc.sg	1	śūrpe	1	dcs:772585
@@ -5516,7 +5153,7 @@ vyāghrataḥ	vyāghra	NOUN	slot-conflict	m.abl.sg	1	vyāghrāt	1	dcs:655467
 vāhīkeṣu	bāhīka	ADJ	slot-conflict	m.loc.pl	1	bāhīkeṣu	1	dcs:553831
 vāraṇapuṣpām	vāraṇapuṣpa	NOUN	coverage-hole	f.acc.sg	1		1	dcs:308671
 vārdhrābhiḥ	vārdhra	NOUN	coverage-hole	f.instr.pl	1		1	dcs:565932
-vārtrāghnau	vārtraghna	ADJ	slot-conflict	m.acc.du	1	vārtraghnau	1	dcs:469933
+vārtrāghnau	vārtraghna	ADJ	slot-conflict	m.acc.du	1	vārtraghnau vārtraghṇau	1	dcs:469933
 vārttākām	vārttāka	NOUN	coverage-hole	f.acc.sg	1		1	dcs:515
 vāruṇāyām	vāruṇa	ADJ	coverage-hole	f.loc.sg	1		1	dcs:429878
 vāsavadattātaḥ	vāsavadattā	NOUN	slot-conflict	f.abl.sg	1	vāsavadattāyāḥ	1	dcs:617377
@@ -5550,7 +5187,6 @@ yāthātmyataḥ	yāthātmya	NOUN	slot-conflict	n.abl.sg	1	yāthātmyāt	1	dcs:6
 āmalakāyām	āmalaka	NOUN	coverage-hole	f.loc.sg	1		1	dcs:483488
 āmuṣmikām	āmuṣmika	ADJ	coverage-hole	f.acc.sg	1		1	dcs:391946
 āpātataḥ	āpāta	NOUN	slot-conflict	m.abl.sg	1	āpātāt	1	dcs:645853
-āraṃbhaṇataḥ	ārambhaṇa	NOUN	slot-conflict	n.abl.sg	1	ārambhaṇāt	1	dcs:771013
 ārtniyoḥ	ārtnī	NOUN	slot-conflict	f.loc.du	1	ārtnyoḥ	1	dcs:702975
 āñjasām	āñjasa	ADJ	coverage-hole	f.acc.sg	1		1	dcs:487374
 āśvatarām	āśvatara	ADJ	coverage-hole	f.acc.sg	1		1	dcs:421229
