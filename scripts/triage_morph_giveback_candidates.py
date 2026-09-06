@@ -47,6 +47,7 @@ import collections
 import csv
 import json
 import os
+import re
 import sys
 import sqlite3
 import time
@@ -68,7 +69,21 @@ def _github_root(root):
 
 GH = _github_root(ROOT)
 sys.path.insert(0, str(GH / "sanskrit-util" / "py"))
-from sanskrit_util import from_slp1  # noqa: E402
+from sanskrit_util import from_slp1, form_key  # noqa: E402
+
+# H3975: the medial-anusvāra-before-a-labial twin class. Kept as an in-run measurement so the
+# report never quotes a typed number — under sanskrit-util >=0.12.0 form_key folds this itself,
+# these rows stop reaching A¬G, and the count must be 0. See the report prose below.
+MEDIAL_LABIAL = re.compile("[ṃṁ](?=[pbm])")
+LIBRARY_HAS_LABIAL_FOLD = form_key("saṃbhavaḥ") == form_key("sambhavaḥ")
+
+
+def is_medial_labial_twin(attested, generated):
+    """One word spelled two ways across the medial anusvāra/labial boundary."""
+    if not (attested and generated and MEDIAL_LABIAL.search(attested)):
+        return False
+    refold = lambda s: form_key(MEDIAL_LABIAL.sub("m", s))  # noqa: E731
+    return refold(attested) == refold(generated)
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -241,6 +256,11 @@ def main():
     not_owed = [r for r in rows if r["verdict"] in ("compound-member", "indeclinable",
                                                     "orthographic-variant", "lexicon-gap")]
     residue = [r for r in rows if r["verdict"] in ("untagged", "no-dcs-token")]
+    # measured in-run, never typed: the count the H3975 fix is supposed to drive to zero
+    labial_twins = [r for r in rows if r["verdict"] == "slot-conflict"
+                    and is_medial_labial_twin(r.get("attested_form"), r.get("generator_has"))]
+    labial_weight = sum(int(r["evidence_count"]) for r in labial_twins)
+    sc_weight = sum(int(r["evidence_count"]) for r in rows if r["verdict"] == "slot-conflict")
 
     today = time.strftime("%d-%m-%Y")
     L = []
@@ -315,25 +335,39 @@ def main():
     w("That is a property of the shared `form_key()` in `sanskrit-util`, so it inflated the "
       "**whole** A3 A¬G figure, not just this candidate set. It was fixed upstream in "
       "[sanskrit-util 0.11.0](https://github.com/sanskrit-lexicon/sanskrit-util/pull/72) "
-      "(word-final anusvāra folds to `m`; the medial fold is unchanged, so "
-      "`saṃskṛta == sanskṛta`; final `-n` stays distinct from final `-m`) and the whole A3 "
-      "chain was rebuilt against it: A¬G fell from 196,378 to 164,236 keys (−16.4%%). "
-      "**This run classifies `%s` rows as `orthographic-variant`** — the class is the "
-      "regression test, and an empty one means the twins now join instead of reaching A¬G."
-      % human(verdict_n["orthographic-variant"]))
+      "(word-final anusvāra folds to `m`; final `-n` stays distinct from final `-m`) and the "
+      "whole A3 chain was rebuilt against it: A¬G fell from 196,378 to 164,236 keys "
+      "(−16.4%%). **This run classifies `%s` rows as `orthographic-variant`** — the class is "
+      "the regression test, and an empty one means the twins now join instead of reaching "
+      "A¬G." % human(verdict_n["orthographic-variant"]))
     w("")
-    w("**Residual, one position inward — and it is not small.** Medial anusvāra before a "
-      "labial is phonetically /m/, but it still folds to `n`, so `vaiśaṃpāyana` keys as "
-      "`vaiśanpāyana` and never meets the `vaiśampāyanaḥ` the generator already emits. "
-      "**278 of the %s `slot-conflict` rows (11.03%%; 11.58%% by corpus weight) are this** "
-      "— `saṃbhavaḥ` vs `sambhavaḥ`, `saṃbandhaḥ` vs `sambandhaḥ`, `samyaksaṃbuddhaḥ` vs "
-      "`samyaksambuddhaḥ`: one word spelled two ways, with no disagreement to adjudicate. "
-      "They are screened off the human validation sheet by an explicit named rule rather "
-      "than left for a reviewer to reject one at a time, and 90 candidates collapse into "
-      "their own lemma once refolded, so they would leave A¬G entirely under a corrected "
-      "key. Measured by `scripts/measure_medial_anusvara_residual.py`, not assumed. "
-      "Narrowing the medial fold is a second change to a library ~85 repos consume — it is "
-      "filed as owed work, not made here." % human(verdict_n["slot-conflict"]))
+    w("**The same defect one position inward — now fixed too.** 0.11.0 corrected the fold "
+      "only word-finally, and the emptied `orthographic-variant` class read like "
+      "completeness. It was not: *homorganic* is a place of articulation, and before a "
+      "labial (`p ph b bh m`) that place is labial, so medial `-ṃ-` there is phonetically "
+      "/m/ as well. Under 0.11.0 `vaiśaṃpāyana` keyed as `vaiśanpāyana` and never met the "
+      "`vaiśampāyanaḥ` the generator already emits — **278 of 2,521 `slot-conflict` rows "
+      "(11.03%; 11.58% by corpus weight)** were that shape, plus 90 candidates that collapse "
+      "into their own lemma once refolded. "
+      "[sanskrit-util 0.12.0](https://github.com/sanskrit-lexicon/sanskrit-util/pull/75) "
+      "(H3975) narrows the medial fold to labials only — `saṃskṛta == sanskṛta` and "
+      "`saṃvatsara → sanvatsara` are unchanged, `ṅ/ñ/ṇ` are never rewritten — and this chain "
+      "is rebuilt against it.")
+    w("")
+    w("**This run's residual: `%s` of the %s `slot-conflict` rows (%s; %s by corpus weight) "
+      "are medial-labial twins.** The library in use %s the labial fold, so that count is "
+      "%s. It is measured over this run's own rows, never typed in: a screening banner "
+      "quoting a stale constant tells a reviewer the plate was filtered by rules that did "
+      "not run."
+      % (human(len(labial_twins)), human(verdict_n["slot-conflict"]),
+         pct(len(labial_twins), verdict_n["slot-conflict"]),
+         pct(labial_weight, sc_weight),
+         "carries" if LIBRARY_HAS_LABIAL_FOLD else "does NOT carry",
+         "the expected 0 — the twins now join upstream instead of reaching A¬G"
+         if LIBRARY_HAS_LABIAL_FOLD and not labial_twins else
+         "**non-zero, which means these artifacts predate the fix — re-run "
+         "`scripts/rebuild_a3_chain.py`**" if LIBRARY_HAS_LABIAL_FOLD else
+         "the live measurement of work still owed"))
     w("")
     w("## Correction to the H3782 record")
     w("")
