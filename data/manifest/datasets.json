@@ -2682,6 +2682,26 @@
    ],
    "notes": "Pilot (H4034). Source DCS 2026, CC BY 4.0 — license-gated ingest: derived measurements free, bulk corpus redistribution gated; attribution in MANIFEST.json. Era tie-in: early-medieval (DM canon_dm, core c. 9th-10th c. CE disputed) via data/dating/work_dates.json; the concordance page carries the H4026 .ls-era badge. Residue: 4.5% no headword join (DCS -ay causative stems kosha keys under the root, indeclinables); 87% sense-id absence = H1455 frame width, not PWG sense absence. Spot check 10/10 (independent SQL recount) in SPOT_CHECK_SAMPLE.md. Additive fold only — no existing surface touched (H4034 gate).",
    "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
+  },
+  {
+   "id": "tamil-fold",
+   "title": "csl-santam Tamil/Capeller/MW corpus fold (mwd+cap+otl, Pahlavi separate)",
+   "tier": "public",
+   "license": "CC BY-NC-SA 3.0 (Cologne scan data, csl-santam LICENSE.md)",
+   "in_release": "not-applicable",
+   "format": "sqlite (regenerable fold)",
+   "rows": 325838,
+   "size_bytes": 40673280,
+   "keying": "lexicon-tagged rows (mwd 166,434 / cap 37,413 / otl 117,773 / cpd 4,218): id, lexicon, st, en — st/en verbatim Kyoto-Harvard (otl HK-like, never auto-converted)",
+   "source_repo": "https://github.com/gasyoun/csl-santam",
+   "source_path": "sqlite/tamil.sqlite",
+   "builder": "scripts/ingest_tamil_fold.py (read-only sibling read; fold at data/raw_sqlite/tamil_fold.sqlite, gitignored; committed stats data/tamil/fold_stats.json)",
+   "consumers": [
+    "kosha (Wave-4 fold, queryable corpus table + provenance fold_meta)"
+   ],
+   "notes": "H4178 flip 2 (edge queued -> live): the mwd+cap+otl fold = 321,620 entries, matching the 08-07-2026 interlinks snapshot exactly; total 325,838 incl. 4,218 Pahlavi (cpd, excluded from csl-santam's own 'all' searches). Wave-4 of csl-santam docs/ROADMAP_2026_2027.md starts here: corpus landed queryable in kosha with provenance (fold_meta: source commit + sha256 + counts + encoding stats); full pipeline integration (scheme normalization, static-cache tier) is the later Wave-4 work this fold de-risks. Encoding: per-cell UTF-8 with cp1252 fallback — H1513/92d1670 normalized the TEXT export (ganz_utf8.txt), NOT the shipped sqlite; the fold retires the PHP runtime iconv workaround (12,330/651,676 cp1252 cells, 6 latin-1 strays). Source pin: file-level commit e94ca0559c449b7f5fa14b7de933c88f84bba8fa, sha256 627cc830de9618e7… (data unchanged on origin since).",
+   "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/tamil-fold.meta.md",
+   "regen": "python scripts/ingest_tamil_fold.py (--check verifies an existing fold)"
   }
  ]
 }
