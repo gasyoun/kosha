@@ -1,6 +1,8 @@
 # A56 — A Zaliznyak-Style Grammar-Token Index for 98,639 Sanskrit Headwords (JOHD data paper, submission draft)
 
-_Created: 11-07-2026 · Last updated: 26-08-2026_
+_Created: 11-07-2026 · Last updated: 06-09-2026_
+
+Mārcis Gasūns, independent scholar ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru
 
 **Target venue:** Journal of Open Humanities Data (JOHD), data-paper track.
 **Dataset:** [`zaliznyak-grammar-index`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-grammar-index.meta.md)
@@ -16,21 +18,22 @@ pass pending).
 
 Zaliznyak's *Grammatical Dictionary of Russian* (1977) demonstrated that a
 small closed inventory of paradigm tokens can fully specify the inflection of
-every word in a large lexicon. We apply this design to Sanskrit for the first
-time at dictionary scale: ≈94,000 of PWG's ≈106,000 headwords (≈89%) — the
-large Petersburg Dictionary (Böhtlingk–Roth), the largest European-compiled
-Sanskrit lexicon — are assigned one of 335 compact paradigm tokens, from
-which a complete paradigm is generated deterministically by the open-source
-vidyut morphology engine — no inflection tables are transcribed.
+every word in a large lexicon. I apply this design to Sanskrit for the first
+time at dictionary scale, to the large Petersburg Dictionary (PWG,
+Böhtlingk–Roth), the largest European-compiled Sanskrit lexicon. Of PWG's
+≈106,000 headwords, ≈94,000 (≈89%) are assigned one of 335 compact paradigm
+tokens, from which the open-source vidyut morphology engine generates a
+complete paradigm deterministically; no inflection tables are transcribed.
 Cross-reference entries and a residue of verbal and rare nominal lemmas are
 not yet tokenized. The released TSV (98,639 rows) records
 headword, homonym number, lexical category, accentuation, paradigm token,
 stem class, compound decomposition, and machine-readable paradigm feature
 flags. The token inventory's frequency structure is itself a finding: six
 tokens cover half the lexicon, 26 cover 80%, and 154 cover 99%, while 48
-classes are singletons (classifier-dependent counts; see §3) — a full Sanskrit lexicon exercises two orders of
-magnitude fewer paradigm types than its headword count, with a long thin
-irregular tail. Released under CC BY-SA 4.0.
+classes are singletons (classifier-dependent counts; see §3). A full Sanskrit
+lexicon exercises two orders of magnitude fewer paradigm types than its
+headword count, with a long thin irregular tail. The dataset is released
+under CC BY-SA 4.0.
 
 ## Keywords
 
@@ -57,7 +60,7 @@ auto-archived); citation metadata in
 ### Context
 
 Sanskrit dictionaries state a headword's gender and stem class but delegate
-inflection to reference grammars — usable by trained readers, opaque to
+inflection to reference grammars — usable by trained readers but opaque to
 software and learners. Russian lexicography solved the analogous problem in
 1977: Zaliznyak's dictionary attaches to every one of roughly 100,000 words a
 compact index symbol from a closed inventory that fully determines its
@@ -66,11 +69,11 @@ retrofits one onto the Petersburg Dictionary (PWG), produced within the
 PWG→Russian translation programme (provenance trail:
 [PIPELINE_HISTORY.md](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/PIPELINE_HISTORY.md)).
 
-The design decision with the widest consequence: paradigms are *generated* by
-[vidyut](https://github.com/ambuda-org/vidyut) (Ambuda project, MIT license)
-from the token, never transcribed from static grammar tables — the token
-layer stays compact, and the generation stays auditable and re-runnable. The
-token, not the table, is the datum.
+The design decision with the widest consequence is that paradigms are
+*generated* by [vidyut](https://github.com/ambuda-org/vidyut) (Ambuda
+project, MIT license) from the token, never transcribed from static grammar
+tables; the token layer stays compact, and the generation stays auditable
+and re-runnable. The token, not the table, is the datum.
 
 ## 2. Method
 
@@ -92,12 +95,12 @@ the generated forms.
 
 ### Quality control
 
-Classification is deterministic and reproducible from PWG labels. The closed
-token inventory was grown only when an attested headword fit no existing
+Classification is deterministic and reproducible from PWG labels. I grew the
+closed token inventory only when an attested headword fit no existing
 token; unresolved or deviant entries carry explicit markers rather than a
-silent default. All headline counts in this paper (98,639 rows; 335 distinct
-tokens, of which 3 indeclinable classes covering 2,003 headwords; per-token
-member counts; column fill rates) were re-verified directly against the
+silent default. I re-verified all headline counts in this paper (98,639
+rows; 335 distinct tokens, of which 3 indeclinable classes covering 2,003
+headwords; per-token member counts; column fill rates) directly against the
 frozen `data-v0.1.0` release asset on 02-08-2026. The inventory is versioned:
 the live pipeline's inventory has since grown past 335 as edge paradigms are
 ruled, and each `data-v*` cut freezes one auditable state.
@@ -146,7 +149,7 @@ philologist-validated.
 
 ### The token-frequency distribution
 
-How much paradigm diversity does a full Sanskrit lexicon actually exercise?
+How much paradigm diversity does a full Sanskrit lexicon exercise?
 Computed over the frozen release asset (02-08-2026):
 
 | lexicon coverage | tokens required |
@@ -169,8 +172,8 @@ singletons against the printed PWG is owed before these figures are read as
 a finding. Three indeclinable classes cover
 2,003 headwords; the remaining 332 declension classes partition 96,636. This
 distribution is directly comparable with Zaliznyak-style inventories for
-Russian and other languages — a rare cross-linguistic object: the paradigm
-entropy of a whole lexicon under a closed classification.
+Russian and other languages. That makes it a rare cross-linguistic object:
+the paradigm entropy of a whole lexicon under a closed classification.
 
 ## 4. Reuse potential
 
@@ -180,20 +183,21 @@ PWG→Russian nominal translation layer uses tokens to control
 paradigm-sensitive wording; a public drill set
 ([`zaliznyak-drills`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-drills.meta.md),
 3,434 items) is generated from the class index with no additional
-lexicographic work — evidence that the token layer, once present, spawns
-derived educational assets nearly for free.
+lexicographic work. That is evidence that the token layer, once present,
+spawns derived educational assets nearly for free.
 
-External reuse: (a) **learner tooling** — card decks and readers can render
-full inflection tables for any of 98k words from an 8-column TSV plus an
-MIT-licensed engine; (b) **quantitative morphology** — the published
-token-frequency distribution (which paradigm types carry the lexicon, how
-heavy the irregular tail is) is comparable across languages wherever
-Zaliznyak-style inventories exist; (c) **NLP** — a lexicon-scale
-morphological prior for taggers and lemmatizers, complementary to
-corpus-trained models; (d) **lexicographic method** — a worked template for
-retrofitting grammatical-dictionary layers onto other digitized dictionaries
-(Monier-Williams being the obvious next candidate: its headword inventory is
-Petersburg-derived, so token transfer is a join, not a re-classification).
+External reuse runs in four directions. (a) In learner tooling, card decks
+and readers can render full inflection tables for any of 98k words from an
+8-column TSV plus an MIT-licensed engine. (b) In quantitative morphology,
+the published token-frequency distribution (which paradigm types carry the
+lexicon, how heavy the irregular tail is) is comparable across languages
+wherever Zaliznyak-style inventories exist. (c) In NLP, the index is a
+lexicon-scale morphological prior for taggers and lemmatizers,
+complementary to corpus-trained models. (d) As lexicographic method, it is
+a worked template for retrofitting grammatical-dictionary layers onto other
+digitized dictionaries (Monier-Williams being the obvious next candidate:
+its headword inventory is Petersburg-derived, so token transfer is a join,
+not a re-classification).
 ShareAlike licensing permits commercial reuse with attribution.
 
 ## Acknowledgements
@@ -232,7 +236,7 @@ The author declares no competing interests.
 ## Backlog to 5/5
 
 1. Validation sample: human check of N generated paradigms against reference
-   grammars; report the error rate in §2 (the one honesty gap named in
+   grammars; report the error rate in §2 (the one validation gap named in
    Limitations).
 2. ~~Mint a Zenodo DOI for this dataset~~ — done 25-08-2026:
    [10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090)
@@ -254,5 +258,6 @@ tokens confirmed; the live inventory has since grown to 342, which the
 versioning note in §2 now covers), column-fill census added, feature-flag
 column semantics corrected from value inspection. Registered as A56 in
 [ARTICLES.md](https://github.com/gasyoun/Uprava/blob/main/ARTICLES.md).
+Author-voice pass 06-09-2026 by Fable 5.1 (`claude-fable-5-1`) under handoff [H3857](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3857-Fable_Uprava_all-articles-author-voice-pass-workflow_01.09.26.md) — voice, register and framing only, no number, claim or citation altered ([SIGNOFF_A56_author_pass.md](https://github.com/gasyoun/kosha/blob/main/papers/SIGNOFF_A56_author_pass.md)).
 
 _Dr. Mārcis Gasūns_
