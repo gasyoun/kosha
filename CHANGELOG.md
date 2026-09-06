@@ -17,6 +17,45 @@ sense citations pin to `data_version`, not to repo tags.
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [0.117.16] - 2026-09-06
+
+- **H3975 (Opus 5 `claude-opus-5`) — the A3 chain is rebuilt on
+  [sanskrit-util 0.12.0](https://github.com/sanskrit-lexicon/sanskrit-util/releases/tag/v0.12.0),
+  which narrows `form_key()`'s medial anusvāra fold before a labial; the largest known
+  defect in the morphology join is closed and the human review sheet no longer carries a
+  single spelling twin.** *Homorganic* is a place of articulation, so anusvāra before
+  `p ph b bh m` is phonetically /m/: under 0.11.0 `vaiśaṃpāyana` keyed as `vaiśanpāyana`
+  and could never meet the `vaiśampāyanaḥ` the generator already emits. Measured on the one
+  class that reaches a human, **278 of 2,521 `slot-conflict` rows (11.03%, 11.58% by corpus
+  weight) were not disagreements at all** — `saṃbhavaḥ` vs `sambhavaḥ` — plus 90 candidates
+  that collapse into their own lemma once refolded. After the rebuild both are **0**:
+  slot-conflicts 2,521 → 2,212, coverage-holes 2,711 → 2,688, owed 5,232 → 4,900.
+- **The re-partition is reported in both directions, against a same-inputs control arm —
+  not against the 02-09-2026 figures.** `kosha.db` was itself rebuilt on 04-09-2026
+  (1,732.3 → 1,767.5 MB; generated forms 3,326,312 → 3,333,034), so a raw before/after diff
+  would quote an input change as a key effect. The control arm re-runs the identical audit
+  over the identical inputs with a pinned 0.11.0 checkout, which isolates the key.
+  Numbers and method: [`CONCORDANCE_ROADMAP.md`](https://github.com/gasyoun/kosha/blob/main/CONCORDANCE_ROADMAP.md)
+  § "The join key was broken, and what fixing it moved".
+- **`scripts/concordance_core.py` now honours `GITHUB_ROOT` when resolving sanskrit-util.**
+  Its hard-coded `sys.path.insert(0, <repo>/../sanskrit-util/py)` ran at import time and
+  silently outranked the path the caller had already put first, so the first control-arm run
+  loaded 0.12.0 in both arms and produced numbers identical to the treatment. A controlled
+  key-version A/B is impossible without this. The stale comment in
+  `scripts/build_morphology_attestation_audit_inflections.py` claiming its own path entry
+  wins is corrected to state the real ordering.
+- **`scripts/rebuild_a3_chain.py` gained `--check` and enforces six `form_key` invariants**
+  (both folds *and* their deliberate limits: final `-n` is not merged into final `-m`;
+  `saṃvatsara` keeps `n` because `v` is not a labial stop; `saṃskṛta == sanskṛta`) before
+  spending ~55 minutes, so no consumer can rebuild against a stale library checkout.
+- **`scripts/measure_medial_anusvara_residual.py` is now a standing regression check**, not a
+  one-shot measurement: it carries the recorded 02-09-2026 baseline (5,588 rows / 2,521
+  conflicts / 278 twins / 90 lemma-twins), reports deltas and prints PASS/FAIL. It also had a
+  dead `sys.path` entry (an extra `GitHub` segment) that silently measured site-packages
+  instead of the sibling checkout — fixed. The screening banner on the validation sheet and
+  the residual section of the triage report are now **measured in-run** rather than typed,
+  and the sheet builder warns on stderr if the library carries the labial fold yet twins
+  survive.
 ## [0.117.15] - 2026-09-06
 
 - **H4239 (OxAlpha `zai-coding-plan/glm-5.3-flash`) — release-envelope pilot: the portfolio V6 scholarly release envelope authored as `release-envelope-v1` and piloted on the existing `data-v0.5.0` release — kosha is the first of the six research providers to carry one (spec: [Uprava docs/SPEC_RELEASE_ENVELOPE_V6_PORTFOLIO_2026.md](https://github.com/gasyoun/Uprava/blob/main/docs/SPEC_RELEASE_ENVELOPE_V6_PORTFOLIO_2026.md); adoption beyond the pilot is a separate human decision).** [data/manifest/envelopes/data-v0.5.0.envelope.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/envelopes/data-v0.5.0.envelope.json) wraps the H3788 frozen manifest (pinned by sha256 `5be4e26c…8086a`) with the V6 evidence list the frozen manifest does not carry: upstream **source pins** (per dataset: pin commit re-derived by `rev-list -1 --before` the manifest's `frozen_at` + blob digest), output digests restated, **config** (selection rule, tier fence, digest form), **tool versions**, **licence** (code CC BY-NC 4.0 / data CC BY-SA 4.0, per-dataset), recorded **checks**, **review** provenance (freeze gate H3788 · H4046 regen audit · H4239 authoring), **citation** (concept + version DOI, CITATION.cff, policy) and **publication state**. Verified end-to-end: [scripts/envelope_check.py](https://github.com/gasyoun/kosha/blob/main/scripts/envelope_check.py) re-derives every declared digest from bytes — **10/10 PASS** on the authoring box (all 5 source pins resolve and match: frozen == upstream pin == current tree); sibling-clone-absent boxes SKIP rather than fail (negative control: 6 pass / 4 skip / 0 fail). Additive only: no canonical store touched, no frozen manifest rewritten, canonical ownership unchanged.
