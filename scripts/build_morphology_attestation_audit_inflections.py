@@ -73,9 +73,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 # kosha.db (1.7 GB) and the DCS dump are gitignored, so they live only in the canonical
 # main clone's working tree, never in a worktree checkout. Resolve them there. The same
-# root supplies sanskrit-util: `concordance_core` finds it at ROOT/../../sanskrit-util,
-# which is correct in the main clone and wrong in a worktree, so it is put on the path
-# here FIRST and that stale-relative guess never fires.
+# root supplies sanskrit-util: `concordance_core` resolves it from GITHUB_ROOT when that
+# is set and falls back to ROOT/../../sanskrit-util otherwise. Note the ordering: the
+# `sys.path.insert(0, ...)` below runs BEFORE `import concordance_core`, but that module's
+# own insert(0) at import time lands on top of it — so GITHUB_ROOT, not this path entry,
+# is what actually pins the library version (H3975).
 def _github_root(root):
     """The org checkout root that holds the sibling repos (VisualDCS, sanskrit-util).
 

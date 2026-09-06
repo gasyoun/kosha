@@ -54,12 +54,22 @@ sys.path.insert(0, str(GH / "sanskrit-util" / "py"))
 from csl_pyutil import render_review_sheet  # noqa: E402
 import sanskrit_util as su  # noqa: E402
 
-# sanskrit-util 0.11.0 collided WORD-FINAL anusvāra with final `m`, but medial anusvāra
-# still folds to `n` — correct before most consonants, wrong before a labial, where it is
-# phonetically /m/. So `vaiśaṃpāyana` keys as `vaiśanpāyana` and never meets the
-# generator's `vaiśampāyanaḥ`: a spelling difference dressed up as a paradigm disagreement.
-# Those rows are machine-decidable and must not reach a human sheet (MG 17-08-2026).
+# sanskrit-util 0.11.0 collided WORD-FINAL anusvāra with final `m`, but medial anusvāra still
+# folded to `n` — correct before most consonants, wrong before a labial, where it is
+# phonetically /m/. So `vaiśaṃpāyana` keyed as `vaiśanpāyana` and never met the generator's
+# `vaiśampāyanaḥ`: a spelling difference dressed up as a paradigm disagreement. Those rows are
+# machine-decidable and must not reach a human sheet (MG 17-08-2026).
+#
+# H3975 moved that fold INTO the library (0.12.0), so on a chain rebuilt against >=0.12.0 these
+# rows never become slot-conflicts in the first place — their attested key now matches a
+# generated form and they leave A¬G upstream. The rule below is therefore kept as a **named
+# backstop, not a workaround**: under a fixed library its count must be ZERO, and a non-zero
+# count means the artifacts were built against a pre-0.12.0 key era. That is a finding, not
+# something to screen away silently — see the LIBRARY_HAS_LABIAL_FOLD check in main().
 MEDIAL_LABIAL = re.compile("[ṃṁ](?=[pbm])")
+# Does the imported library already fold medial anusvāra before a labial? Probed, never assumed
+# from __version__: a consumer can import an installed copy that differs from the checkout.
+LIBRARY_HAS_LABIAL_FOLD = su.form_key("saṃbhavaḥ") == su.form_key("sambhavaḥ")
 
 
 def labial_refold_key(s):
@@ -105,6 +115,15 @@ def main():
                 rows.append(r)
     twins = [r for r in rows if is_medial_labial_twin(r)]
     rows = [r for r in rows if not is_medial_labial_twin(r)]
+    # H3975: with the fold in the library, these rows leave A¬G upstream and must never reach
+    # this sheet's input at all. A non-zero residual here means morph_giveback_triaged.tsv was
+    # built against a pre-0.12.0 key era — say so loudly rather than quietly screening it, or
+    # the sheet silently papers over a stale artifact chain.
+    if LIBRARY_HAS_LABIAL_FOLD and twins:
+        print("WARNING: sanskrit_util at %s folds medial anusvara before a labial, yet %s "
+              "slot-conflict row(s) are still medial-labial twins. The triaged TSV predates "
+              "the fix — re-run scripts/rebuild_a3_chain.py before trusting this sheet."
+              % (su.__file__, "{:,}".format(len(twins))), file=sys.stderr)
     rows.sort(key=lambda x: -int(x["evidence_count"]))
     picked = rows[:args.cards]
 
@@ -224,8 +243,11 @@ def main():
             "variant, not a gap (%s rows — 146 before the sanskrit-util 0.11.0 join-key "
             "fix, which is why the class is now empty)" % n("orthographic-variant"),
             "medial anusvara before a labial is the same word respelled (vaisampayana vs "
-            "vaisanpayana) -> not a real disagreement, screened off this sheet (%s rows)"
-            % "{:,}".format(len(twins)),
+            "vaisanpayana) -> not a real disagreement, screened off this sheet (%s rows — "
+            "%s)" % ("{:,}".format(len(twins)),
+                     "278 before the sanskrit-util 0.12.0 join-key fix, which is why the "
+                     "class is now empty" if LIBRARY_HAS_LABIAL_FOLD
+                     else "the library in use still folds this to n, so the screen is live"),
             "DCS lemma absent from the generator's inventory -> lexicon gap, not an engine "
             "defect (%s rows)" % n("lexicon-gap"),
             "real case+number and the generator's slot is EMPTY -> coverage-hole, owed "
