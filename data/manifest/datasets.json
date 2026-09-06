@@ -390,7 +390,8 @@
    "source_path": "IndischeSprueche/data/indische_sprueche.jsonl (tracked — already downloadable)",
    "builder": "IndischeSprueche extraction",
    "consumers": [
-    "PWG <ls> citation links"
+    "PWG <ls> citation links",
+    "SanskritKaraoke tools/import_subhashita_jsonl.py (H4178 wiring 5, 06-09-2026: batch import from the tracked JSONL, first drop 25 auto-screened anushubh verses)"
    ],
    "notes": "Already tracked+public in its repo; listed for discovery, not re-released.",
    "regen_checked": "2026-09-04 (H4046: FAIL-UNDOCUMENTED)"
@@ -564,7 +565,9 @@
    "source_repo": "https://github.com/gasyoun/VisualDCS",
    "source_path": "derived-data/Glagolnye-formy/Klassy/Spiski-glagolnyh-kornej-po-klassam-2214/Imeyushchie-formy/ (tracked, 10 files, *.csv per verb class)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
-   "consumers": [],
+   "consumers": [
+    "SanskritGrammar dcs_verb_roots_by_class_probe.py (H4178 wiring 4, 06-09-2026: per-class attested-roots probe, 463-row parity, report DCS_VERB_ROOTS_BY_CLASS_PROBE_06.09.2026.md)"
+   ],
    "notes": "H291 Step 2 bundle: 10 small per-class files registered as one row per MG ruling (bundle-worthy fragmented candidates → one row, not left as separate small files). H3596 consumer-plan caveat: R2606-01 (Uprava DEAD_ENDS) — these are UNACCENTED counts, they cannot separate present class I from VI (only accent does); never use them for an I/VI verdict.",
    "status": "awaiting-consumer",
    "consumer_candidates": [
@@ -579,7 +582,7 @@
      "confidence": "medium"
     }
    ],
-   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
+   "regen_checked": "2026-09-06 (H4178: consumer landed, parity OK)"
   },
   {
    "id": "dcs-verb-class-prefix-frequency",
