@@ -32,10 +32,20 @@ Keys come from the canonical sanskrit-util package (sibling checkout, the
 same path app/transliterate.py uses) — form_key()/norm()/normalize_sanskrit()
 are CONSUMED, not re-implemented (SHARED_CODE.md discipline).
 """
+import os
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent / "sanskrit-util" / "py"))
+# GITHUB_ROOT wins over the relative sibling guess. The guess (`<repo>/../sanskrit-util`)
+# is right in the canonical clone and in a worktree checked out beside it, but it is an
+# `insert(0)` executed at import time, so it silently OUTRANKS whatever path a caller
+# already put first — H3975 lost a whole control-arm run to that: an A/B that pointed
+# GITHUB_ROOT at a pinned 0.11.0 checkout got 0.12.0 anyway and produced numbers
+# identical to the treatment arm. Honouring the env var here is what makes a controlled
+# key-version A/B possible at all.
+_su_root = os.environ.get("GITHUB_ROOT")
+_su = (Path(_su_root) if _su_root else Path(__file__).resolve().parent.parent.parent) / "sanskrit-util" / "py"
+sys.path.insert(0, str(_su))
 from sanskrit_util import form_key, norm, normalize_sanskrit, to_slp1  # noqa: E402
 
 RECORD_FIELDS = [

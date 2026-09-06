@@ -45,14 +45,34 @@ sys.path.insert(0, str(GH / "sanskrit-util" / "py"))
 import sanskrit_util as su  # noqa: E402
 
 # --- precondition: the fix must be live in the library these scripts will import --------
-if su.form_key("rasaṃ") != su.form_key("rasam"):
-    sys.exit("REFUSING: %s does not carry the final-nasal fix (form_key('rasaṃ')=%r, "
-             "form_key('rasam')=%r). Update the sanskrit-util checkout to >=0.11.0 first."
-             % (su.__file__, su.form_key("rasaṃ"), su.form_key("rasam")))
-if su.form_key("rājan") == su.form_key("rājam"):
-    sys.exit("REFUSING: form_key over-folds final -n into -m; that is not the shipped fix.")
-print("precondition OK: sanskrit_util %s at %s" % (getattr(su, "__version__", "?"),
-                                                   su.__file__), flush=True)
+# Each row is (must_be_equal, left, right, why). Both halves matter: the EQUAL rows prove the
+# fold actually landed, the DISTINCT rows prove it did not land too wide. A stale checkout
+# fails an EQUAL row; an over-eager reimplementation fails a DISTINCT row. Add a row here in
+# the same pass as any further narrowing of form_key — this list is the only thing standing
+# between a consumer and an hour-long rebuild that silently reproduces the previous era's keys.
+INVARIANTS = [
+    # H3911 — word-final anusvāra is /m/
+    (True, "rasaṃ", "rasam", "final anusvāra folds to m (>=0.11.0)"),
+    (False, "rājan", "rājam", "final -n is NOT merged into final -m"),
+    # H3975 — medial anusvāra before a labial (p ph b bh m) is /m/ too
+    (True, "saṃbhavaḥ", "sambhavaḥ", "medial anusvāra before a labial folds to m (>=0.12.0)"),
+    (True, "vaiśaṃpāyana", "vaiśampāyana", "same, on the highest-evidence twin in the corpus"),
+    (False, "saṃvatsara", "samvatsara", "v is not a labial stop — that anusvāra stays n"),
+    (True, "saṃskṛta", "sanskṛta", "anusvāra before a non-labial still folds to n"),
+]
+_bad = []
+for want_equal, left, right, why in INVARIANTS:
+    if (su.form_key(left) == su.form_key(right)) is not want_equal:
+        _bad.append("  %s %s %s   (form_key: %r vs %r)  -- %s"
+                    % (left, "==" if want_equal else "!=", right,
+                       su.form_key(left), su.form_key(right), why))
+if _bad:
+    sys.exit("REFUSING: %s does not carry the form_key contract this chain is keyed on.\n%s\n"
+             "Update the sanskrit-util checkout to >=0.12.0 (and reinstall it if the consumer "
+             "imports the installed package rather than the sibling checkout) before rebuilding."
+             % (su.__file__, "\n".join(_bad)))
+print("precondition OK: sanskrit_util %s at %s (%d form_key invariants)"
+      % (getattr(su, "__version__", "?"), su.__file__, len(INVARIANTS)), flush=True)
 
 STAGES = [
     ("audit  ", ["scripts/build_morphology_attestation_audit_inflections.py"]),
@@ -65,6 +85,14 @@ STAGES = [
 
 
 def main():
+    if "--check" in sys.argv[1:]:
+        # The invariant block above already ran (and exited non-zero on any failure), so
+        # reaching here IS the pass. Exists so a consumer can prove its checkout before
+        # committing to a ~55-minute rebuild, instead of learning at minute 54.
+        for want_equal, left, right, why in INVARIANTS:
+            print("  %-14s %s %-14s  -> %-14r  %s"
+                  % (left, "==" if want_equal else "!=", right, su.form_key(left), why))
+        return
     (ROOT / "review").mkdir(exist_ok=True)
     t0 = time.time()
     for name, args in STAGES:
