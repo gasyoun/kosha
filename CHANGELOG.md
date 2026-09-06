@@ -17,6 +17,28 @@ sense citations pin to `data_version`, not to repo tags.
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [0.117.15] - 2026-09-06
+
+- **H4239 (OxAlpha `zai-coding-plan/glm-5.3-flash`) — release-envelope pilot: the portfolio V6 scholarly release envelope authored as `release-envelope-v1` and piloted on the existing `data-v0.5.0` release — kosha is the first of the six research providers to carry one (spec: [Uprava docs/SPEC_RELEASE_ENVELOPE_V6_PORTFOLIO_2026.md](https://github.com/gasyoun/Uprava/blob/main/docs/SPEC_RELEASE_ENVELOPE_V6_PORTFOLIO_2026.md); adoption beyond the pilot is a separate human decision).** [data/manifest/envelopes/data-v0.5.0.envelope.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/envelopes/data-v0.5.0.envelope.json) wraps the H3788 frozen manifest (pinned by sha256 `5be4e26c…8086a`) with the V6 evidence list the frozen manifest does not carry: upstream **source pins** (per dataset: pin commit re-derived by `rev-list -1 --before` the manifest's `frozen_at` + blob digest), output digests restated, **config** (selection rule, tier fence, digest form), **tool versions**, **licence** (code CC BY-NC 4.0 / data CC BY-SA 4.0, per-dataset), recorded **checks**, **review** provenance (freeze gate H3788 · H4046 regen audit · H4239 authoring), **citation** (concept + version DOI, CITATION.cff, policy) and **publication state**. Verified end-to-end: [scripts/envelope_check.py](https://github.com/gasyoun/kosha/blob/main/scripts/envelope_check.py) re-derives every declared digest from bytes — **10/10 PASS** on the authoring box (all 5 source pins resolve and match: frozen == upstream pin == current tree); sibling-clone-absent boxes SKIP rather than fail (negative control: 6 pass / 4 skip / 0 fail). Additive only: no canonical store touched, no frozen manifest rewritten, canonical ownership unchanged.
+- **H4178 (OxAlpha `zai-coding-plan/glm-5.3-flash`) — csl-santam Tamil/Capeller/MW
+  corpus fold landed in kosha (Wave-4 edge queued → live).**
+  [scripts/ingest_tamil_fold.py](https://github.com/gasyoun/kosha/blob/main/scripts/ingest_tamil_fold.py)
+  folds the sibling's combined `tamil(id, st, en)` corpus (325,838 rows; mwd
+  166,434 / cap 37,413 / otl 117,773 / cpd 4,218 Pahlavi) into a lexicon-tagged,
+  provenance-pinned fold (`data/raw_sqlite/tamil_fold.sqlite`, gitignored,
+  regenerable; committed stats
+  [data/tamil/fold_stats.json](https://github.com/gasyoun/kosha/blob/main/data/tamil/fold_stats.json)
+  + manifest row `tamil-fold` +
+  [data statement](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/tamil-fold.meta.md)).
+  The mwd+cap+otl band = **321,620 entries, exactly the 08-07-2026 interlinks
+  snapshot**; source pinned file-level (commit `e94ca05`, sha256). Encoding
+  honesty: H1513 normalized only the TEXT export — the shipped sqlite still
+  carries cp1252 cells behind the PHP runtime `iconv` workaround; the fold
+  decodes per-cell UTF-8→cp1252 (12,330/651,676 cells, 6 latin-1 strays) and
+  retires that workaround for kosha-side consumers. Scheme kept verbatim HK
+  (otl HK-like, never auto-converted); scheme normalization + static-cache tier
+  remain later Wave-4 steps this fold de-risks. `--check` mode verifies an
+  existing fold against the committed stats.
 ## [0.117.14] - 2026-09-04
 
 - **H4034 (OxAlpha `zai-coding-plan/glm-5.3-flash`) — Hitopadeśa per-text word concordance pilot ([#519](https://github.com/gasyoun/kosha/pull/519), catalog tail [#520](https://github.com/gasyoun/kosha/pull/520)): the Tamilex corpus-dictionary pattern over DCS text_id 189 (Hitop 0–4, 3,432 sentences, 25,040 tokens, CC BY 4.0), every (surface, lemma) form linked back into the kosha dictionary — the INVERSE view of the H1455 sense-attestation layer.** Additive fold [data/concordance/text_hitopadesa/](https://github.com/gasyoun/kosha/tree/main/data/concordance/text_hitopadesa): `concordance.tsv` (7,857 distinct (surface, lemma) forms, every occurrence in document order; 95.5% joined to a kosha headword via the H380 join; 1,024 forms carry numbered PWG sense ids from the H1455 layer — absence = frame width, reported honestly), a filterable `index.html` carrying the H4026 era badge (early-medieval via the Dharmamitra join in `work_dates.json`), `MANIFEST.json` (license + provenance, license-gated ingest discipline), `BUILD_REPORT.md` (honest residue: 4.5% DCS `-ay` causative stems + indeclinables with no headword join) and a 10-form hand-verified spot check against an independent per-form SQL recount — 10/10 PASS. No new join invented: the H380 join, the H1455 sense layer, the house `human_locus` format, the `card_token` URL encoder and the H4026 `.ls-era` badge are all consumed, not re-derived; no printed-order change, no existing surface touched. Manifest row `hitopadesa-text-concordance` added.
