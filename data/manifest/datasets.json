@@ -120,9 +120,9 @@
    "builder": "H099 Heritage mirror pipeline",
    "consumers": [
     "kosha ingest (H345, kosha.db heritage_anchor table + /api/v1/lemma `heritage` witness)",
-    "csl-atlas witness column (H346, 08-07-2026, csl-atlas PR #227 — delivered; was still marked queued until H3781, 01-09-2026)"
+    "csl-atlas witness column (H346, delivered 08-07-2026 via csl-atlas PR #227)"
    ],
-   "notes": "Crosswalk itself is ours/publishable; the Heritage mirror data behind it is LGPLLR-pending (restricted tier). Zenodo DOI 10.5281/zenodo.22105641 (minted 26-08-2026 for data-v0.5.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
+   "notes": "Crosswalk itself is ours/publishable; the Heritage mirror data behind it is LGPLLR-pending (restricted tier). Zenodo DOI 10.5281/zenodo.22105641 (minted 26-08-2026 for data-v0.5.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026). History: this consumer was still marked queued until H3781 (01-09-2026) flipped the interlink edge live.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-heritage-crosswalk.meta.md",
    "regen_checked": "2026-09-04 (H4046: FAIL-INPUT-DEFER)"
   },
@@ -236,9 +236,7 @@
    "source_repo": "https://github.com/gasyoun/Uprava",
    "source_path": "data/stenogrammy_glossary_headwords.tsv · data/stenogrammy_glossary_by_course.tsv · data/stenogrammy_glossary_stats.json",
    "builder": "Uprava/tools/build_stenogrammy_glossary.py (H2839 C1)",
-   "consumers": [
-    "samskrte.ru ₽5,000 membership tier (candidate)"
-   ],
+   "consumers": [],
    "notes": "The asset H2839 recommended INSTEAD of the abandoned ~₽7.99M corpus-redaction programme. Safe by construction, not by care: it is the intersection of a 152-FZ private corpus with the ALREADY-PUBLISHED sa-ru-glossary lemma layer, so every headword was in a public dictionary before the corpus was opened and no corpus string can reach the output — do NOT reverse the join direction (Uprava FINDINGS §414). Course loci only, never per-file: a lecture title plus a rare term is a quasi-identifier. Verified: 0 of the 9 participant tokens removed by the H2839 path-name gate appear here. `tier: restricted` reflects the private SOURCE corpus, not personal data in the output. Not yet human-adjudicated — the keep/drop/regloss pass over the 1,513 headwords is still owed before this is sellable.",
    "sha256": {
     "stenogrammy_glossary_headwords.tsv": "b11967af03ed82b70b7788f41be8b653e2f7f7dbd3f8b5251305d4bd11946b66",
@@ -247,7 +245,14 @@
    },
    "provenance_verified": "2026-08-16 (H2839, Opus 5 claude-opus-5)",
    "rebuild": "Deterministic: python Uprava/tools/build_stenogrammy_glossary.py --floor 20, given Uprava/stenogrammy/ and SanskritRussian/lemma_glossary.tsv as siblings",
-   "regen_checked": "2026-09-04 (H4046: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)",
+   "consumer_candidates": [
+    {
+     "repo": "samskrte.ru",
+     "use": "₽5,000 membership tier — teaching glossary surface",
+     "confidence": "low"
+    }
+   ]
   },
   {
    "id": "sa-ru-glossary",
@@ -1006,11 +1011,16 @@
    "source_repo": "https://github.com/gasyoun/VisualDCS",
    "source_path": "derived-lsc/ (tracked; lsc_scores.tsv + lsc_targets.tsv + lsc_stats.json)",
    "builder": "build_lsc_pilot.py over sibling dcs-conllu + chapter-info.xml dcsTimeSlot (deterministic, --selftest)",
-   "consumers": [
-    "paper A57 (LChange'27/NLP4DH candidate, ARTICLES.md)"
-   ],
+   "consumers": [],
    "notes": "First Sanskrit LSC derivation (H728, 11-07-2026); freq-shift control Spearman -0.013; binary flag is a q75 heuristic pending ChiWUG-style gold over the 60-lemma target set.",
-   "regen_checked": "2026-09-04 (H4046: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)",
+   "consumer_candidates": [
+    {
+     "repo": "Uprava",
+     "use": "paper A57 (LChange'27/NLP4DH candidate, ARTICLES.md)",
+     "confidence": "low"
+    }
+   ]
   },
   {
    "id": "archive-stopword-sqlite",
@@ -1258,13 +1268,18 @@
    "source_repo": "https://github.com/gasyoun/kosha",
    "source_path": "data/eval/defgen/ (frozen_sample.tsv + attestations.jsonl frozen; gen_*/judge_*/wsd_*/scores_* are run outputs: A-arms 11-07-2026, F1_fable_ctx 15-07-2026 H972)",
    "builder": "scripts/defgen_build_sample.py (arms: scripts/defgen_run_baselines.py, scoring: scripts/defgen_score.py)",
-   "consumers": [
-    "H730 protocol doc docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md (eLex/EURALEX/IJL paper candidate)"
-   ],
+   "consumers": [],
    "notes": "H730 (11-07-2026, Fable 5 claude-fable-5): first CDSL-side definition-modeling eval; joins A3 mw_en_tm x E26 lemma_frequency x C15 dcs_cdsl_xref x DCS 2026 sentences (CC BY 4.0, Hellwig). MW gloss text public domain. Judge scores gated (JUDGE-BENCH); WSD track is agreement-only pending DCS m_wordsem inventory recovery. H752 (11-07-2026): SHA-256 input digests added to frozen_sample.meta.json; this 500-headword seed-730 sample declared the single canonical frozen set (the parked rival lane's 520-headword sample was never scored and its branch deleted). H972 (15-07-2026, Fable 5 claude-fable-5): F1_fable_ctx arm added - in-session Claude generation over the gold-free inputs projection (scripts/defgen_fable_arm.py), scored + judged; leads all arms (chrF 24.35, token-F1 0.340, judge 4.60).",
    "release_asset": "data/eval/defgen/frozen_sample.tsv",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4046: FAIL-INPUT-DEFER)"
+   "regen_checked": "2026-09-04 (H4046: FAIL-INPUT-DEFER)",
+   "consumer_candidates": [
+    {
+     "repo": "Uprava",
+     "use": "H730 protocol doc docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md (eLex/EURALEX/IJL paper candidate)",
+     "confidence": "low"
+    }
+   ]
   },
   {
    "id": "dcs-reading-pack-nala-1",
@@ -1366,12 +1381,17 @@
    "source_repo": "https://github.com/gasyoun/kosha",
    "source_path": "data/gita/gita_inflection_divergences.tsv",
    "builder": "scripts/gita_inflection_qa.py (H873 gold morphology vs kosha inflections, H874 W4)",
-   "consumers": [
-    "E1 hybrid forms layer — candidate disputed/gap-fill corrections (human @DO)"
-   ],
+   "consumers": [],
    "notes": "H848 roadmap W4. Report GITA_MORPHOLOGY_QA_REPORT.md — 93.0% agreement on nominals present in kosha (4,779/5,139). Divergences are candidate corrections, NOT auto-applied. Public/MIT.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4046: VOTED re-cut applied — VOTED 04-09 — ledger re-cut на новом kosha.db (agreement 93.0→98.7%))"
+   "regen_checked": "2026-09-04 (H4046: VOTED re-cut applied — VOTED 04-09 — ledger re-cut на новом kosha.db (agreement 93.0→98.7%))",
+   "consumer_candidates": [
+    {
+     "repo": "Systema-Sanscriticum",
+     "use": "E1 hybrid forms layer — disputed/gap-fill corrections (human @DO)",
+     "confidence": "low"
+    }
+   ]
   },
   {
    "id": "gita-reading-pack",
@@ -1608,13 +1628,22 @@
    "source_repo": "https://github.com/gasyoun/kosha",
    "source_path": "data/sandhi/corpus_sandhi.tsv",
    "builder": "scripts/build_corpus_sandhi.py over scripts/dcs_sandhi_induce.py (method A); source DCS CoNLL-U (dcs-conllu)",
-   "consumers": [
-    "reading/sandhi/ pages (planned)",
-    "graded sandhi curriculum (planned)"
-   ],
+   "consumers": [],
    "notes": "H900 roadmap Phase 2, broadened by H901 Phase 2b (14-07-2026, 17 texts), then H1492 Phase 2c (24-07-2026, +24 sastra/commentary texts → 41). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS). Texts swept (difficulty order): Hitopadesa, Vetalapancavimsatika, Sukasaptati, Amarusataka, Astavakragita, Gitagovinda, Kathasaritsagara, Buddhacarita, Kumarasambhava, Kiratarjuniya, Meghaduta, Dasakumaracarita, Bharatamanjari, Satakatraya, Bhallatasataka, Ramayana, Mahabharata (full); H1492 sastra/commentary: Yogasutra, Yogasutrabhasya, Nyayasutra, Nyayabhasya, Samkhyakarika, Samkhyatattvakaumudi, Vaisesikasutra, Mimamsasutrabhasya, Tarkasamgraha, Sarvadarsanasamgraha, Manusmrti, Yajnavalkyasmrti, Arthasastra, Kamasutra, Astadhyayi, Kasikavrtti, Nirukta, Amarakosa, Natyasastra, Kavyadarsa, Carakasamhita, Susrutasamhita, Abhidharmakosabhasya, Prasannapada. Curated pedagogical core — deliberately skips the rasaśāstra / āyurveda-dīpikā flood in dcs-conllu. Per-text tables also shipped as data/sandhi/<id>_sandhi.tsv. Counts: 17→41 texts, 580,230→707,936 events, 9,840→13,012 rules; top-N-for-80% 83→82 (stable). Extends the Gita-only gita-sandhi dataset corpus-wide.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
-   "regen_checked": "2026-09-04 (H4046: FAIL)"
+   "regen_checked": "2026-09-04 (H4046: FAIL)",
+   "consumer_candidates": [
+    {
+     "repo": "Systema-Sanscriticum",
+     "use": "reading/sandhi/ pages",
+     "confidence": "low"
+    },
+    {
+     "repo": "SanskritGrammar",
+     "use": "graded sandhi curriculum",
+     "confidence": "low"
+    }
+   ]
   },
   {
    "id": "roots-frequency-curriculum",
@@ -2001,12 +2030,17 @@
    "source_repo": "https://github.com/gasyoun/kosha",
    "source_path": "data/concordance/morph_giveback_candidates.tsv",
    "builder": "scripts/analyze_morph_giveback_set.py (H3782)",
-   "consumers": [
-    "csl-inflect dual-engine give-back (H185) — queued port, never an in-pass csl-inflect edit"
-   ],
+   "consumers": [],
    "notes": "A CANDIDATE SET, NOT A DEFECT LIST — the distinction is the point of this row. Quoting A¬G (164,236) as 'forms the engine misses' overstates the actionable set by 29x; every subtraction above is published with its count so the narrowing can be audited and reversed. Rebuilt on the sanskrit-util 0.11.0 join key (H3925, 02-09-2026); the pre-fix set held 5,656 rows. Composition: NOUN 3,810 (68.18%) · ADJ 1,594 · PRON 105 · ADV 35 · NUM 23 · rest 21. CROSS-CHECK IN FAVOUR: the head is pronoun dative/locative cells (asmai < idam, tasmai/tasyai < tad, etasmin < etad, amum < adas) and irregular feminine/consonant stems (striyaḥ < strī, śriyam < śrī, āpo < ap) — exactly where MW-inflect is weak, and `inflections` already carries a hand-made source='curated-gita-pronoun' patch of 153 rows, independent evidence that pronouns are a real gap and not an artefact of this method. CROSS-CHECK AGAINST: the bare-stem filter matches only exact lemma-key equality, so ALLOMORPHIC bound stems still pass — ātma (< ātman) at rank 3 is one, carrying feat_case='Cpd' on 2,544 tokens against 10 with a real case. Do NOT repeat the earlier claim that rājñ (rank 2) is the same kind of leak: DCS tags rājñ as Voc Sing Masc 880 times, so by the corpus's own annotation it is an inflected cell. TRIAGED SINCE (H3863): the set is machine-decidable, not a human-judgment pile — DCS tagging resolves 5,587 of 5,588 rows into owed 5,232 (slot-conflict 2,521 · coverage-hole 2,711) and not-owed 355 (compound-member 222 · lexicon-gap 102 · indeclinable 31), 1 untagged residue; sidecars morph_giveback_triaged.tsv + morph_giveback_triage_summary.json, method in MORPHOLOGY_GIVEBACK_TRIAGE_REPORT.md. The triage doubles as evidence the key fix landed: the orthographic-variant verdict, which existed only to catch anusvāra twins the broken key had split, matched 146 rows before the rebuild and 0 after. R-C4: 11 candidates (0.20%) carry tense_caveat=1. Report: data/concordance/MORPHOLOGY_GIVEBACK_CANDIDATES_REPORT.md. Cheap and re-derivable in seconds from the AnG TSV — the expensive join is a separate script.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/data/concordance/MORPHOLOGY_GIVEBACK_CANDIDATES_REPORT.md",
-   "regen_checked": "2026-09-04 (H4046: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)",
+   "consumer_candidates": [
+    {
+     "repo": "csl-inflect",
+     "use": "dual-engine give-back (H185) — queued port, never an in-pass csl-inflect edit",
+     "confidence": "low"
+    }
+   ]
   },
   {
    "id": "panini-derivation-status",
@@ -2631,13 +2665,22 @@
    "source_repo": "https://github.com/gasyoun/kosha",
    "source_path": "data/mastery/combined_schedule.json",
    "builder": "scripts/build_mastery_schedule.py (reads data/{sandhi,samasa,morphology,frequency}/*drill_weights.json + each family's items file)",
-   "consumers": [
-    "SanskritKaraoke reader surface (planned)",
-    "SanskritGrammar reader surface (planned)"
-   ],
+   "consumers": [],
    "notes": "Data layer only, no UI. Deliberately excludes data/cohort_start_chteniya/ (a frozen lesson<=3 subset of sandhi_drills.json, not a distinct family -- see data/MASTERY_WEIGHTS_SPEC.md). Not a duplicate of Systema-Sanscriticum's Saraswati FSRS review engine -- this schedules kosha's own static reader surfaces only, holds no per-learner review state, and has no export path into Systema.",
    "size_note": "size_bytes filled once the schedule ships in a tagged release",
-   "regen_checked": "2026-09-04 (H4046: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)",
+   "consumer_candidates": [
+    {
+     "repo": "SanskritKaraoke",
+     "use": "reader surface",
+     "confidence": "low"
+    },
+    {
+     "repo": "SanskritGrammar",
+     "use": "reader surface",
+     "confidence": "low"
+    }
+   ]
   },
   {
    "id": "cyrillic-proper-noun-slp1",
@@ -2653,12 +2696,22 @@
    "source_path": "RussianTranslation/data/cyrillic_proper_noun_slp1.tsv",
    "builder": "RussianTranslation/tools/h3985_cyr_slp1_table.py (seeds: IAST-bearing Russian name indices; validation: csl-orig v02 inm + pui)",
    "consumers": [
-    "RussianTranslation pwg_ru / mw_ru name handling",
-    "SamudraManthanam name glossaries (planned)",
-    "csl-atlas (planned)"
+    "RussianTranslation pwg_ru / mw_ru name handling"
    ],
    "notes": "This is the ONE sanctioned Cyrillic->SLP1 mapping: FINDINGS §60 stands, reverse-transliteration character rules remain unsafe, so a session needing a key looks it up here instead of inventing rules. Coverage of the seed indices is partial by design -- Erman-Temkin 174/478 (36.4%), Kadambari 130/393 (33.1%), Potapova 128/326 (39.3%); the 20 purely-Cyrillic seed files carry no IAST witness and are deliberately unkeyed. Metadoc: RussianTranslation/data/cyrillic_proper_noun_slp1.meta.md.",
-   "regen_checked": "2026-09-04 (H4046: PASS)"
+   "regen_checked": "2026-09-04 (H4046: PASS)",
+   "consumer_candidates": [
+    {
+     "repo": "SamudraManthanam",
+     "use": "name glossaries",
+     "confidence": "low"
+    },
+    {
+     "repo": "csl-atlas",
+     "use": "proper-noun handling",
+     "confidence": "low"
+    }
+   ]
   },
   {
    "id": "sense-dating",
