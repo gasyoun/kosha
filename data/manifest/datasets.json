@@ -454,6 +454,22 @@
    "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
   },
   {
+   "id": "dcs-nominal-class-split-adj",
+   "title": "DCS nominal pooled-class split, ADJ half — the -ant surplus G2 could not see",
+   "tier": "public",
+   "license": "CC BY-SA 4.0",
+   "in_release": "not-applicable",
+   "format": "json",
+   "rows": 1880,
+   "size_bytes": 800745,
+   "keying": "per-lemma verdicts keyed by DCS lemma_id: each of the 1880 -ant/-at pool members carrying ADJ tokens holds its ADJ and NOUN token counts, the MW and PWG per-dictionary verdicts and the combined one (one_lexeme_two_spellings | two_headwords | at_only | ant_only | unresolved), plus the Devanagari spelling pair actually looked up; alongside them the pool aggregate (48,074 tokens / 2,159 lemma_ids = ADJ 36,768/1,880 + NOUN 11,306/279, zero mixed-upos ids), the long-ī non-NOUN residue split by syllable count (664 tokens / 54 lemma_ids), the pinnedPair record for bhagavat (lemma_id 48482), the unresolved-residual characterisation and an 11-check reconciliation against paradigm_nominal.json and Sangram G2",
+   "source_repo": "https://github.com/gasyoun/VisualDCS",
+   "source_path": "visual/paradigm_nominal_class_split_adj.json (tracked)",
+   "builder": "src/DCS-data-2026/split_pooled_nominal_classes_adj.py (H4011), over dcs_full.sqlite read-only + the MW/PWG csl-json headword indexes; imports its membership test, dictionary loader, adjudicator and syllable counter from the H3984 builder",
+   "consumers": [],
+   "notes": "H4011 (06-09-2026, Opus 5 claude-opus-5), closing the ADJ half of SanskritLexicography GAPS §14 and graduating it in full; epistemic residue in the FINDINGS §630 addendum of 06-09-2026. An ADDITIVE SIBLING of dcs-nominal-class-split, which it does not modify: that row is the NOUN universe (Sangram G2), this one is the ADJ surplus G2's upos='NOUN' universe cannot see, taken per-lemma from the DCS master. Signal B is an entry-id SET comparison, never presence-only. 659 lemma_ids / 1,203 tokens stay pooled with no dictionary witness — a productivity artefact (528 productive -vat/-mat, 449 hapax), never split on a character rule."
+  },
+  {
    "id": "dcs-verbal-paradigm-attested",
    "title": "DCS verbal paradigm — per-root attested finite + non-finite cells",
    "tier": "public",
