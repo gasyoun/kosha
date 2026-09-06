@@ -1,6 +1,8 @@
 # A55 — A Union Headword Index of Fifteen Digitized Sanskrit Dictionaries (JOHD data paper, submission draft)
 
-_Created: 11-07-2026 · Last updated: 26-08-2026_
+_Created: 11-07-2026 · Last updated: 06-09-2026_
+
+Mārcis Gasūns, independent scholar ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru
 
 **Target venue:** Journal of Open Humanities Data (JOHD), data-paper track.
 **Dataset:** [`union-headwords`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/union-headwords.meta.md)
@@ -12,7 +14,7 @@ release asset 02-08-2026; DOI minted 25-08-2026; final human pass pending).
 
 ## Abstract
 
-We present a union headword index of 323,425 distinct Sanskrit lexemes,
+I present a union headword index of 323,425 distinct Sanskrit lexemes,
 compiled from fifteen digitized dictionaries of the Cologne Digital Sanskrit
 Dictionaries (CDSL) ecosystem — from Grassmann's Rig-Veda lexicon and the
 Vedic name index through the great European bilingual dictionaries
@@ -63,7 +65,7 @@ pipelines, coverage studies — re-derived its own union from per-dictionary
 exports, with divergent results. One symptom circulated for years: the figure
 "94,753" was repeatedly quoted as the size of "the" Sanskrit headword union,
 when it is in fact exactly the intersection of Monier-Williams with the large
-Petersburg dictionary, an intersection mislabeled as a union. This dataset
+Petersburg dictionary, mislabeled as a union. This dataset
 fixes one canonical union at the normalized key layer.
 
 The fifteen members (CDSL codes) span four lexicographic traditions:
@@ -101,10 +103,10 @@ build); the distinct-code and count invariants (15 codes, 323,425 rows) were
 re-verified at release cut and re-verified again against the frozen release
 asset on 02-08-2026, including the full `n_dicts` distribution and the 237
 `fem_fold` rows. Per-dictionary totals reconcile against the frozen 2014-era
-exports (e.g. PWG 106,054 here vs. the frozen `PWG-unique-key1-106085`
-export; small deltas are the union's feminine folds plus a decade of csl-orig
-digitization corrections (±≈150 keys each way for PWG); homograph collapse
-contributes none).
+exports: PWG, for example, has 106,054 here against the frozen
+`PWG-unique-key1-106085` export. The small deltas are the union's feminine
+folds plus a decade of csl-orig digitization corrections (±≈150 keys each way
+for PWG); homograph collapse contributes none.
 
 ### Limitations
 
@@ -115,7 +117,7 @@ a spelling — correct for machine joins, wrong for philology (print-faithful
 "key2" exports exist separately for that). Membership is binary per
 dictionary: no entry IDs, page references, or sense counts.
 
-Most importantly, **attestation count is not corroboration.** The dictionary
+The chief limitation is that attestation count is not corroboration. The dictionary
 mix skews toward one European lineage: Cappeller's two editions are one work,
 PWK and Schmidt descend from PWG, and Monier-Williams's inventory is itself
 Petersburg-derived. The dominant pairwise overlaps (MW∩PWG 94,753, MW∩PWK
@@ -182,7 +184,7 @@ Böhtlingk–Monier-Williams lineage.
 
 ## 4. Reuse potential
 
-The index is already the load-bearing spine of several independent consumers:
+The index already serves as the headword spine of several independent consumers:
 the kosha unified lookup database keys its lemma table on it; the
 SanskritSpellCheck project uses membership tags as evidence tiers; the PWG
 translation pilot sampled its worklist from it; the DCS corpus-frequency
@@ -190,18 +192,18 @@ sidecar and the dictionary–corpus concordance
 ([data-v0.2.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.2.0))
 join corpus evidence onto its key.
 
-Beyond the origin ecosystem: (a) **coverage studies** — which vocabulary
+Beyond the origin ecosystem, coverage studies can ask which vocabulary
 strata are attested only in Sanskrit-medium lexica, only in Vedic lexica, or
 in a single dictionary, using the published `n_dicts` distribution as the
-baseline; (b) **NLP lexicon induction** — a 323k-lemma candidate list with
-per-source provenance for weighting, and a documented independence structure
-for anyone tempted to use attestation count as a prior; (c) **history of
-lexicography** — the overlap matrix quantifies inheritance between the
+baseline. For NLP lexicon induction the index is a 323k-lemma candidate list
+with per-source provenance for weighting, and a documented independence
+structure for anyone tempted to use attestation count as a prior. For the
+history of lexicography, the overlap matrix quantifies inheritance between the
 European and Indian dictionary traditions on a shared key, and the
-witness-independence analysis is a worked method for any similarly
-inbred lexicographic field; (d) **digitization QA** — a new digitization's
-headword extraction can be diffed against the union to find both its gaps and
-the union's. ShareAlike licensing permits commercial reuse with attribution.
+witness-independence analysis is a worked method for any similarly inbred
+lexicographic field. In digitization QA, a new digitization's headword
+extraction can be diffed against the union to find both its gaps and the
+union's. ShareAlike licensing permits commercial reuse with attribution.
 
 ## Acknowledgements
 
@@ -261,5 +263,6 @@ witness-independence results integrated from
 [HEADWORD_OVERLAP_UNION15_2026.md](https://github.com/gasyoun/SanskritLexicography/blob/master/data/HEADWORD_OVERLAP_UNION15_2026.md)
 (H684/H1363). Registered as A55 in
 [ARTICLES.md](https://github.com/gasyoun/Uprava/blob/main/ARTICLES.md).
+Author-voice pass 06-09-2026 by Fable 5.1 (`claude-fable-5-1`) under [H3857](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3857-Fable_Uprava_all-articles-author-voice-pass-workflow_01.09.26.md) — voice, register and framing only; signoff: [SIGNOFF_A55_author_pass.md](https://github.com/gasyoun/kosha/blob/main/papers/SIGNOFF_A55_author_pass.md).
 
 _Dr. Mārcis Gasūns_
