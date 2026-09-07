@@ -7,7 +7,7 @@ _Created: 25-08-2026 · Last updated: 25-08-2026 (§7 — MG review R1–R5, dir
 Handoff: [H3457 (Fable 5) — w-page UX upgrade staged: core_rank badge, favorites, PWG scan anchors](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3457-Fable_kosha_wpage-ux-badge-favorites-scananchors_24.08.26.md)
 · executor Fable 5 (`claude-fable-5`) · lane C of 3 (MG go 24-08-2026).
 **Status: STAGED, NOT PUBLISHED** —
-[docs/NOT_PUBLISHED_H3457_WPAGE_UX.md](https://github.com/gasyoun/kosha/blob/main/docs/NOT_PUBLISHED_H3457_WPAGE_UX.md).
+docs/NOT_PUBLISHED_H3457_WPAGE_UX.md.
 
 ## 1. What was asked, what shipped
 
@@ -168,7 +168,7 @@ per-IP budget, not a link defect (H870 established the same on MW).
    no invented badge, H839 key, rungs, favorites markup, rail placement,
    docs/ refusal).
 4. `CHANGELOG.md` [Unreleased] · `.ai_state.md` Completed.
-5. NOT-PUBLISHED marker: [docs/NOT_PUBLISHED_H3457_WPAGE_UX.md](https://github.com/gasyoun/kosha/blob/main/docs/NOT_PUBLISHED_H3457_WPAGE_UX.md)
+5. NOT-PUBLISHED marker: docs/NOT_PUBLISHED_H3457_WPAGE_UX.md
    — carries the one-edit flip procedure for when a human rules.
 
 ## 6. Residuals
