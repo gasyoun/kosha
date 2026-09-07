@@ -8,7 +8,7 @@ _Created: 26-08-2026 · Last updated: 26-08-2026_
 4. Spec reviewer: ruled evidence chain; no evidence becomes no spec available.
 5. [Evidence ledger](https://github.com/gasyoun/kosha/blob/main/docs/CODE_REVIEW_KOSHA_OXALPHA_30D_2026-08-26.md) preserving axes, exclusions, and proof.
 6. Fix lane: only proven P0/P1, one minimal regression-tested PR per defect.
-7. Inactive [future-gate design](https://github.com/gasyoun/kosha/blob/main/docs/DESIGN_KOSHA_OXALPHA_STATUS_GATE_2026.md).
+7. Inactive future-gate design.
 
 Each manifest row records PR, base/head SHA, executable paths, exclusions, reasons, spec source, and both review states. Findings require severity, exact location, failure mode, and repro/test. Future check states are pass, evidence-backed fail, or infrastructure-neutral—never silent success.
 
