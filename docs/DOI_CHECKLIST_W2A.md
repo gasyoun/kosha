@@ -1,6 +1,6 @@
 # W2A DOI checklist — superseded by an automated mint
 
-_Created: 08-08-2026 · Last updated: 01-09-2026_
+_Created: 08-08-2026 · Last updated: 07-09-2026_
 
 Companion to [H2346](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2346-Grok_kosha_architecture-roadmap-w2a-immutable-sense-archives_07.08.26.md)
 (immutable sense archives). **This checklist described a world that no longer
@@ -51,6 +51,9 @@ The DOI arrives on its own; these do not.
 - [ ] Confirm the uploaded asset bytes match the frozen manifest's LF-canonical
       `sha256`. **Cut from a clean checkout**: the freezer refuses a CRLF
       working tree precisely because assets uploaded from one cannot match.
+      Nine assets across `data-v0.2.0`/`data-v0.3.0`/`data-v0.5.0` failed this
+      check retroactively (H3976, 07-09-2026) — recorded, not re-uploaded, in
+      [docs/ERRATA_CRLF_RELEASE_ASSETS_07-09-2026.md](https://github.com/gasyoun/kosha/blob/main/docs/ERRATA_CRLF_RELEASE_ASSETS_07-09-2026.md).
 - [ ] One-line note in [CHANGELOG.md](https://github.com/gasyoun/kosha/blob/main/CHANGELOG.md)
       under the data-release section.
 
