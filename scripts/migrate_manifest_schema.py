@@ -85,8 +85,10 @@ def main():
         if (old_ir, old_ra, old_ds) != (new_ir, new_ra, new_ds):
             changed.append((row["id"], old_ir, new_ir, old_ra, new_ra, old_ds, new_ds))
 
+    # newline="\n" is load-bearing: .gitattributes pins this file to LF, and
+    # write_text on Windows emits CRLF -- see FINDINGS §654 / H3788.
     MANIFEST.write_text(
-        json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
     )
 
     print(f"{len(changed)} row(s) changed:")

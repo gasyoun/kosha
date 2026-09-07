@@ -1,12 +1,12 @@
 {
  "manifest_version": "0.3.0",
- "generated": "2026-09-04",
+ "generated": "2026-09-07",
  "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
  "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
  "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
  "canonical_base_future": "https://samskrtam.ru/kosha/data/",
  "interim_release": "https://github.com/gasyoun/kosha/releases/tag/data-v0.5.0",
- "note_for_agents": "This is the ONE machine-readable list of canonical derived Sanskrit datasets across the ~85 repos. Before deriving an alignment/frequency/headword/crosswalk asset, check here. tier=public assets are downloadable from the interim_release URL; tier=restricted assets exist but are not published (rights-encumbered or unbackuped local-only) — consult their source repo; tier=intermediate is raw/working data that feeds another registered dataset — not standalone-citable, not rights-gated, just not a finished asset in its own right (excluded from the public directory page). A session that creates or changes a derived dataset MUST add/update its row here in the same pass. Optional planning fields since manifest_version 0.2.0: status (awaiting-consumer | diff-then-decide | internal-tooling) marks a row with zero consumers that is (a) open for a consumer, (b) pending a content-diff before a supersede-or-keep verdict, or (c) internal tooling with no external consumer expected; consumer_candidates [{repo,use,confidence}] are PLAN entries only — never promote a candidate into consumers until the consuming lane actually wires up, at which point the candidate entry is removed and consumers gains the repo. FAIR fields since manifest_version 0.3.0 (H4075, 04-09-2026): doi (citable Zenodo DOI when one exists — minted for the row, never placeholder), license (per-row license where established — public-tier rows default to the hub-level CC BY-SA 4.0; restricted/intermediate rows carry it only when their own rights statement establishes one), data_statement (provenance README under docs/data-statements/).",
+ "note_for_agents": "This is the ONE machine-readable list of canonical derived Sanskrit datasets across the ~85 repos. Before deriving an alignment/frequency/headword/crosswalk asset, check here. tier=public assets are downloadable from the interim_release URL; tier=restricted assets exist but are not published (rights-encumbered or unbackuped local-only) — consult their source repo; tier=intermediate is raw/working data that feeds another registered dataset — not standalone-citable, not rights-gated, just not a finished asset in its own right (excluded from the public directory page). A session that creates or changes a derived dataset MUST add/update its row here in the same pass. Optional planning fields since manifest_version 0.2.0: status (awaiting-consumer | diff-then-decide | internal-tooling) marks a row with zero consumers that is (a) open for a consumer, (b) pending a content-diff before a supersede-or-keep verdict, or (c) internal tooling with no external consumer expected; consumer_candidates [{repo,use,confidence}] are PLAN entries only — never promote a candidate into consumers until the consuming lane actually wires up, at which point the candidate entry is removed and consumers gains the repo. FAIR fields since manifest_version 0.3.0 (H4075, 04-09-2026): doi (citable Zenodo DOI when one exists — minted for the row, never placeholder), license (per-row license where established — public-tier rows default to the hub-level CC BY-SA 4.0; restricted/intermediate rows carry it only when their own rights statement establishes one), data_statement (provenance README under docs/data-statements/). CRLF NOTICE (H3976, 07-09-2026): nine published TSV assets across data-v0.2.0/data-v0.3.0/data-v0.5.0 carry CRLF line endings from the upload checkout and so do not byte-match this manifest's LF-canonical size_bytes/sha256 — content is identical, only line-ending bytes differ, both byte sequences and reproducible LF-canonical checksums are recorded in docs/ERRATA_CRLF_RELEASE_ASSETS_07-09-2026.md rather than the assets being silently re-uploaded under their already-DOI-archived tags.",
  "datasets": [
   {
    "id": "mw-roots",
@@ -113,7 +113,7 @@
    "release_asset": "mw_heritage_crosswalk.tsv",
    "format": "tsv",
    "rows": 185803,
-   "size_bytes": 3263954,
+   "size_bytes": 3078150,
    "keying": "MW entry id → Heritage anchor (25,140 covered, 97.6% anchor-resolved)",
    "source_repo": "https://github.com/gasyoun/SanskritLexicography",
    "source_path": "HeadwordLists/mw_heritage_crosswalk.tsv",
