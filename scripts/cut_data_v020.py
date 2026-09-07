@@ -24,8 +24,10 @@ def main():
 
     data["interim_release"] = f"https://github.com/gasyoun/kosha/releases/tag/{NEW_TAG}"
 
+    # newline="\n" is load-bearing: .gitattributes pins this file to LF, and
+    # write_text on Windows emits CRLF -- see FINDINGS §654 / H3788.
     MANIFEST.write_text(
-        json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
     )
 
     print(f"{len(flipped)} row(s) flipped to {NEW_TAG}:")
