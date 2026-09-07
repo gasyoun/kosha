@@ -21,7 +21,7 @@ lookup-service gates only). The nearest published work,
 [Hellwig et al. 2026 (ISCLS)](https://aclanthology.org/2026.iscls-1.2/), trains a
 *supervised* WSD system over MW lexicographic definitions, with Sanskrit Sembank human
 gold on DCS occurrences (343k connected tokens; code at
-[OliverHellwig/sanskrit/papers/2026iscls](https://github.com/OliverHellwig/sanskrit/tree/master/papers/2026iscls))
+OliverHellwig/sanskrit/papers/2026iscls)
 — checked against the actual paper 11-07-2026 by the parked lane
 ([Uprava FINDINGS §67](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)), which
 closes the overlap check this section previously flagged as to-verify. Track (b) below is

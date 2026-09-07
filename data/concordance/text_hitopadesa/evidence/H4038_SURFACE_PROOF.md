@@ -20,7 +20,7 @@ never forking — the H4026 badge machinery.
      H4026 contract (only when the work carries a bucket);
    - era CSS ported from `app/word_page.py` PAGE_CSS (`data-era`-keyed, all 5 buckets).
 2. **Wired into the EXISTING Hitopadeśa pack page** (H1448 surface,
-   [reading/index.html](../../../reading/index.html)): selecting `hitopadesa-0` now
+   reading/index.html): selecting `hitopadesa-0` now
    shows a «Word concordance →» affordance linking to the page; the page links back
    to `reading/index.html#hitopadesa-0`. Additive conditional — every other pack's
    view byte-unchanged.
@@ -44,7 +44,7 @@ never forking — the H4026 badge machinery.
 |---|---|
 | `badges-surface.hitopadesa.html` | live-shaped rendered proof: the `api` row — 464 occurrences in document order, 13 PWG sense-id chips, card link `../w/api.html` — under the page-level **early-medieval** badge; and the `avalokya` row (DCS lemma `avalokay`, causative `-ay` stem, no H380 join) rendered `—` — honest absence, nothing fabricated. RU+EN caveat + bucket legend at the bottom, verbatim H4026 block. |
 | [../index.html](https://github.com/gasyoun/kosha/blob/main/data/concordance/text_hitopadesa/index.html) | the built concordance page itself (badge in the h1, caveat disclosure under the table). |
-| [../../../reading/index.html](../../../reading/index.html) | the pack page hook — pick «Hitopadeśa», the «Word concordance» line appears; pick any other pack, it stays hidden. |
+| ../../../reading/index.html | the pack page hook — pick «Hitopadeśa», the «Word concordance» line appears; pick any other pack, it stays hidden. |
 
 ## Reproduce
 
@@ -59,7 +59,7 @@ evidence proof) HTTP 200 at the repo-relative layout the pages assume.
 
 ## Scope note
 
-Production deploy is out of scope per [KOSHA_DEPLOYMENT.md](../../../KOSHA_DEPLOYMENT.md)
+Production deploy is out of scope per KOSHA_DEPLOYMENT.md
 (no agent holds deploy credentials; `deploy_guhya.py --upload` is agent-forbidden) —
 the page renders live in the repo tree; the samskrtam.ru push stays with the human.
 

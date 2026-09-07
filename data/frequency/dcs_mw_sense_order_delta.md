@@ -72,7 +72,7 @@ The divergence is not random noise — a recurring cause, visible directly in th
 
 ## Fence / provenance
 
-- **MW canonical senses untouched.** Reads [`kosha.db`](https://github.com/gasyoun/kosha/blob/main/data/db/kosha.db) `senses` + `sense_frequency.tsv`; writes only this report. `git diff` on any DB/sense artifact is clean.
+- **MW canonical senses untouched.** Reads `kosha.db` `senses` + `sense_frequency.tsv`; writes only this report. `git diff` on any DB/sense artifact is clean.
 - **Dominance is on WordSem gold** (219/270 texts, `provenance=attested`) — a corpus-usage signal, not an accuracy claim about disambiguation. The 51 untagged texts (incl. the 2026 Vedic wave) contribute nothing, so genres under-represented in the sense-tagged subset are under-weighted (e.g. rasaśāstra texts inflate `rasa`'s "mercury" dominance).
 - Verdict basis: native WN layer; the MW-sense pointer shown per row is the gloss-overlap projection [`wn_to_mw_map.tsv`](https://github.com/gasyoun/kosha/blob/main/data/frequency/wn_to_mw_map.tsv) (68.8% token coverage), for context only.
 

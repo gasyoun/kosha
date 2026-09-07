@@ -68,7 +68,7 @@ said **CC BY 4.0**.
 
 - **Resolved: DCS data is CC BY 4.0** — from Hellwig's **own published terms**, not a
   kosha secondary source. Read from the DCS repository's
-  [`dcs/data/conllu/readme.md`](https://github.com/OliverHellwig/sanskrit/blob/master/dcs/data/conllu/readme.md)
+  `dcs/data/conllu/readme.md`
   (read 18-07-2026; file last committed 2024-10-29), which states verbatim:
 
   > ## License
