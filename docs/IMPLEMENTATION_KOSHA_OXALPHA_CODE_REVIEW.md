@@ -9,7 +9,7 @@ _Created: 26-08-2026 · Last updated: 26-08-2026_
 5. Run independent bounded passes focused on storage facade, immutable archives, deploy bundle, surface registry, readiness, observability, RU join/word pages, Heritage validation, restricted scrape, and pre-push guards.
 6. Publish [the report](https://github.com/gasyoun/kosha/blob/main/docs/CODE_REVIEW_KOSHA_OXALPHA_30D_2026-08-26.md) with explicit exclusions and no-spec outcomes.
 7. For every proven P0/P1, add adjacent regression proof, implement the smallest fix, run focused and repository gates, and merge a minimal green PR.
-8. Write [the design](https://github.com/gasyoun/kosha/blob/main/docs/DESIGN_KOSHA_OXALPHA_STATUS_GATE_2026.md) without altering workflows/protection.
+8. Write the design without altering workflows/protection.
 9. Update changelog/state; close only after adapter, report, applicable fixes, and design exist.
 
 _Dr. Mārcis Gasūns_

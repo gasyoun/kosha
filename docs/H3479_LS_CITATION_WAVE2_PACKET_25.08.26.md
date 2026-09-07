@@ -3,7 +3,7 @@
 _Created: 25-08-2026 · Last updated: 25-08-2026_
 
 **Status: staged, not live** — same non-publication contract as
-[docs/NOT_PUBLISHED_H3457_WPAGE_UX.md](https://github.com/gasyoun/kosha/blob/main/docs/NOT_PUBLISHED_H3457_WPAGE_UX.md),
+docs/NOT_PUBLISHED_H3457_WPAGE_UX.md,
 extended in this pass to cover this wave.
 
 ## What this wave adds
