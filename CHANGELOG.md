@@ -235,7 +235,7 @@ sense citations pin to `data_version`, not to repo tags.
   (Adaptive gone as a named mode). `build_word_pages.py --ux-staging d`; mockup
   + 4 screenshots under `mockups/h3457-wpage-ux/`; packet §7. Public page
   unchanged until the flip ruling
-  ([docs/NOT_PUBLISHED_H3457_WPAGE_UX.md](https://github.com/gasyoun/kosha/blob/main/docs/NOT_PUBLISHED_H3457_WPAGE_UX.md)).
+  (docs/NOT_PUBLISHED_H3457_WPAGE_UX.md).
 
 ## [0.113.0] - 2026-08-25
 ### Changed
@@ -308,7 +308,7 @@ sense citations pin to `data_version`, not to repo tags.
   volumes). Evidence: Playwright smoke 22/22, badge byte-match 11/11 —
   [docs/H3457_WPAGE_UX_STAGING_PACKET_25.08.26.md](https://github.com/gasyoun/kosha/blob/main/docs/H3457_WPAGE_UX_STAGING_PACKET_25.08.26.md).
   Flip-live procedure and the no-publish rule:
-  [docs/NOT_PUBLISHED_H3457_WPAGE_UX.md](https://github.com/gasyoun/kosha/blob/main/docs/NOT_PUBLISHED_H3457_WPAGE_UX.md).
+  docs/NOT_PUBLISHED_H3457_WPAGE_UX.md.
   Error-report widget parked (needs a backend). Found and filed, not fixed:
   [#433](https://github.com/gasyoun/kosha/issues/433) — cards case-fold
   `query.key`, so public pages of capital-initial lemmas render the wrong
@@ -1288,7 +1288,7 @@ sense citations pin to `data_version`, not to repo tags.
 ### Fixed
 
 - **DCS licence contradiction resolved from Hellwig's own published terms.** DCS's
-  [`dcs/data/conllu/readme.md`](https://github.com/OliverHellwig/sanskrit/blob/master/dcs/data/conllu/readme.md)
+  `dcs/data/conllu/readme.md`
   states the CoNLL-U data is **CC BY 4.0**; `data/manifest/external_tools.json` (`id: dcs`) was the
   outlier at CC BY-SA 4.0 and is corrected to **CC BY 4.0** (with a `license_source` citation).
   `CONCORDANCE_ROADMAP.md`:151 and the 14 `datasets.json` assertions were already correct and left
