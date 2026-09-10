@@ -2774,6 +2774,29 @@
    "notes": "H4178 flip 2 (edge queued -> live): the mwd+cap+otl fold = 321,620 entries, matching the 08-07-2026 interlinks snapshot exactly; total 325,838 incl. 4,218 Pahlavi (cpd, excluded from csl-santam's own 'all' searches). Wave-4 of csl-santam docs/ROADMAP_2026_2027.md starts here: corpus landed queryable in kosha with provenance (fold_meta: source commit + sha256 + counts + encoding stats); full pipeline integration (scheme normalization, static-cache tier) is the later Wave-4 work this fold de-risks. Encoding: per-cell UTF-8 with cp1252 fallback — H1513/92d1670 normalized the TEXT export (ganz_utf8.txt), NOT the shipped sqlite; the fold retires the PHP runtime iconv workaround (12,330/651,676 cp1252 cells, 6 latin-1 strays). Source pin: file-level commit e94ca0559c449b7f5fa14b7de933c88f84bba8fa, sha256 627cc830de9618e7… (data unchanged on origin since).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/tamil-fold.meta.md",
    "regen": "python scripts/ingest_tamil_fold.py (--check verifies an existing fold)"
+  },
+  {
+   "id": "shiva-sutras-machine",
+   "title": "Śiva Sūtras (Māheśvara Sūtras) + pratyāhāra table, machine-readable",
+   "tier": "public",
+   "license": "MIT (Pāṇini's grammar itself is public domain)",
+   "in_release": "not-applicable",
+   "format": "tsv+json",
+   "rows": 42,
+   "size_bytes": 18179,
+   "keying": "sutras.tsv: one row per Māheśvara Sūtra (14 rows) — sutra_number, devanagari (incl. its anubandha/IT marker), letters_only, it_marker. pratyaharas.tsv: one row per named pratyāhāra (42 rows, e.g. aK, aC, yaṆ, haL) — name, devanagari_span (first letter through terminal marker), letters_only (markers stripped), it_marker, length. shiva_sutras.json bundles both plus the 57-token master sequence.",
+   "source_repo": "https://github.com/gasyoun/kosha",
+   "source_path": "data/shiva_sutras/",
+   "builder": "scripts/build_shiva_sutras.py — pinned constants extracted once (openpyxl fill.patternType read) from Panini/ShivaSutras.xlsx (yadisk, gitignored local-only, never committed); builder does not re-open the xlsx",
+   "consumers": [],
+   "status": "awaiting-consumer",
+   "consumer_candidates": [
+    {"repo": "VisualDCS", "use": "pratyāhāra-range lookups for sandhi/derivation displays", "confidence": "low"},
+    {"repo": "SanskritGrammar", "use": "sangram morphology programme, pratyāhāra reference table", "confidence": "low"}
+   ],
+   "notes": "H4471 (09-09-2026). Source workbook's Ranges sheet encodes each pratyāhāra as a cell-fill-highlighted span, not a text cell — not machine-parseable by reading values alone; extracted via cell fill inspection and cross-checked against standard Pāṇinian pratyāhāra tables (aK = a i u ṛ ḷ, aC = all vowels, aṇ = a i u, yaṆ = y v r l, haL = all consonants — all match). Prior-art checked: no existing pratyāhāra/Śiva-Sūtra table in this manifest (paninian-sutra-coverage-map is the unrelated 3,983-row Aṣṭādhyāyī derivation enumeration), VisualDCS, Sangram, or the local vidyut 0.4.0 Python build (Sutra type is Aṣṭādhyāyī-only; no pratyāhāra table exposed to Python). Source workbook's Pictures (visual render) and SandhiExamples (worked examples) sheets are out of scope for this handoff — a future pass can lift SandhiExamples separately.",
+   "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/shiva-sutras-machine.meta.md",
+   "regen": "python scripts/build_shiva_sutras.py"
   }
  ]
 }
