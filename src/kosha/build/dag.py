@@ -30,6 +30,7 @@ from __future__ import annotations
 import importlib
 import json
 import os
+import re
 import sqlite3
 import sys
 import time
@@ -277,8 +278,62 @@ def execute(plan: BuildPlan, *, relock: bool = False, verbose: bool = True) -> d
         return _run(plan, modules, verbose=verbose)
 
 
+TMP_NAME_RE = re.compile(r"^(?P<stem>.+)\.(?P<pid>\d+)\.tmp(?:-journal)?$")
+
+
+def _pid_alive(pid: int) -> bool:
+    """Portable liveness check (no psutil dependency)."""
+    if sys.platform == "win32":
+        import ctypes
+
+        PROCESS_QUERY_LIMITED_INFORMATION = 0x1000
+        handle = ctypes.windll.kernel32.OpenProcess(
+            PROCESS_QUERY_LIMITED_INFORMATION, False, pid
+        )
+        if not handle:
+            return False
+        ctypes.windll.kernel32.CloseHandle(handle)
+        return True
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True  # exists, just owned by another user
+    return True
+
+
+def sweep_stale_build_tmp(build_dir: Path, *, verbose: bool = True) -> list[Path]:
+    """Remove PID-tagged `.build/*.<pid>.tmp[-journal]` scratch files whose
+    PID is dead (H4407).
+
+    A build killed mid-run (OOM, ctrl-C, a crashed host) leaves its
+    `os.replace`-pending scratch target behind forever — a 1.695GB
+    `kosha.db.25514.tmp` from a Sep-4 kill sat unnoticed until this audit.
+    A file whose PID is still alive is left alone: it may be a build
+    genuinely in progress right now.
+    """
+    removed: list[Path] = []
+    if not build_dir.is_dir():
+        return removed
+    for path in build_dir.iterdir():
+        match = TMP_NAME_RE.match(path.name)
+        if not match or not path.is_file():
+            continue
+        pid = int(match.group("pid"))
+        if _pid_alive(pid):
+            continue
+        size_mb = path.stat().st_size / 1e6
+        path.unlink()
+        removed.append(path)
+        if verbose:
+            print(f"[dag] GC removed stale {path.name} ({size_mb:.1f} MB, dead pid {pid})")
+    return removed
+
+
 def _run(plan: BuildPlan, modules: dict, *, verbose: bool) -> dict:
     plan.temp_target.parent.mkdir(parents=True, exist_ok=True)
+    sweep_stale_build_tmp(plan.temp_target.parent, verbose=verbose)
     for stale in (plan.temp_target, Path(str(plan.temp_target) + "-journal")):
         if stale.exists():
             stale.unlink()
