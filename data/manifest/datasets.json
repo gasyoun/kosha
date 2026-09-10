@@ -1,6 +1,6 @@
 {
  "manifest_version": "0.3.0",
- "generated": "2026-09-07",
+ "generated": "2026-09-10",
  "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
  "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
  "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
@@ -2797,6 +2797,26 @@
    "notes": "H4471 (09-09-2026). Source workbook's Ranges sheet encodes each pratyāhāra as a cell-fill-highlighted span, not a text cell — not machine-parseable by reading values alone; extracted via cell fill inspection and cross-checked against standard Pāṇinian pratyāhāra tables (aK = a i u ṛ ḷ, aC = all vowels, aṇ = a i u, yaṆ = y v r l, haL = all consonants — all match). Prior-art checked: no existing pratyāhāra/Śiva-Sūtra table in this manifest (paninian-sutra-coverage-map is the unrelated 3,983-row Aṣṭādhyāyī derivation enumeration), VisualDCS, Sangram, or the local vidyut 0.4.0 Python build (Sutra type is Aṣṭādhyāyī-only; no pratyāhāra table exposed to Python). Source workbook's Pictures (visual render) and SandhiExamples (worked examples) sheets are out of scope for this handoff — a future pass can lift SandhiExamples separately.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/shiva-sutras-machine.meta.md",
    "regen": "python scripts/build_shiva_sutras.py"
+  },
+  {
+   "id": "zaliznyak-lectures-transcripts",
+   "title": "А.А.Зализняк public-lecture transcript census (Sanskrit/Vedic + Slavic linguistics)",
+   "tier": "public",
+   "in_release": "not-applicable",
+   "format": "tsv (index only — full transcripts NOT vendored, source is a private Yandex.Disk remote)",
+   "rows": 272,
+   "size_bytes": null,
+   "keying": "folder, basename, text_formats (csv of txt/srt/json/ans/html/tsv/vtt present), media_formats, topic_tags (sanskrit_vedic/russian_diachrony/birchbark_novgorod/velesova_book/interview_conversation/other_unclassified), text_bytes_total",
+   "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+   "source_path": "external-archives/zaliznyak-lectures-transcripts/transcript_index.tsv",
+   "builder": "https://github.com/gasyoun/SanskritLexicography/blob/master/external-archives/zaliznyak-lectures-transcripts/build_census.py, reading an rclone listing of yadisk:ААЗализняк-архив",
+   "consumers": [],
+   "notes": "Index only, not a vendored corpus — 101.3 GiB source stays on the private Yandex.Disk remote (rclone remote 'yadisk', not this repo). 66 of 272 groups are Sanskrit/Vedic-tagged (Ṛgveda close-reading + grammar courses); the rest are Slavic-linguistics/Novgorod-birchbark/miscellaneous. Uploader channel names (Головастиков, Осанкина) are public YouTube operators, kept in the index by design (mission note); no other personal data found in sampled content.",
+   "sha256": {},
+   "provenance_verified": "2026-09-09 (H4473, OxAlpha z-ai/glm-5.3-flash claim; executed by Claude Code Sonnet 5)",
+   "rebuild": "rclone lsf yadisk:ААЗализняк-архив -R --files-only --format tsp > listing.tsv && python3 build_census.py listing.tsv transcript_index.tsv",
+   "regen_checked": null,
+   "consumer_candidates": []
   }
  ]
 }
