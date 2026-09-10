@@ -7,6 +7,7 @@ and a built database must be able to say which stages actually ran.
 """
 
 import json
+import os
 from pathlib import Path
 import sqlite3
 
@@ -229,6 +230,34 @@ def test_changed_source_bytes_fail_the_lock(tmp_path):
 
     # …and --relock accepts the new bytes deliberately.
     dag.execute(replan, relock=True, verbose=False)
+
+
+# --- .build GC (H4407) -----------------------------------------------------
+
+
+def test_sweep_removes_dead_pid_tmp_and_spares_live_pid(tmp_path):
+    build_dir = tmp_path / ".build"
+    build_dir.mkdir()
+    dead = build_dir / "kosha.db.999999999.tmp"
+    dead.write_bytes(b"stale scratch from a killed build")
+    dead_journal = build_dir / "kosha.db.999999999.tmp-journal"
+    dead_journal.write_bytes(b"stale journal")
+    live = build_dir / f"kosha.db.{os.getpid()}.tmp"
+    live.write_bytes(b"a build genuinely in progress right now")
+    unrelated = build_dir / "kosha.db.lock.json"
+    unrelated.write_bytes(b"not a tmp scratch file, must be left alone")
+
+    removed = dag.sweep_stale_build_tmp(build_dir, verbose=False)
+
+    assert {p.name for p in removed} == {dead.name, dead_journal.name}
+    assert not dead.exists()
+    assert not dead_journal.exists()
+    assert live.exists()
+    assert unrelated.exists()
+
+
+def test_sweep_on_missing_build_dir_is_a_noop(tmp_path):
+    assert dag.sweep_stale_build_tmp(tmp_path / "no-such-dir", verbose=False) == []
 
 
 # --- atomic promotion -----------------------------------------------------
