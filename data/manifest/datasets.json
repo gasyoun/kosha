@@ -2818,5 +2818,34 @@
    "regen_checked": null,
    "consumer_candidates": []
   }
- ]
+,
+{
+   "id": "sanskrityatina-reverse-index",
+   "title": "Sanskrityatina 04_Reverse coding legend — 187,992-headword reverse-dictionary stock taxonomy (H4475)",
+   "tier": "public",
+   "license": "CC BY-SA 4.0",
+   "in_release": "not-applicable",
+   "format": "tsv",
+   "rows": 27,
+   "size_bytes": 1502,
+   "keying": "two TSVs from one legend file: coding_classes.tsv one row per legend class (class_code, headwords, description, is_stock_total; 24 rows = stock-total class 0 (187,992) + 23 OVERLAPPING subclasses, counts sum 197,019, delta 9,027) and examples.tsv one row per attested legend example (headword_slp1, headword_iast, form_key, cdsl_key, exact_key, sources, rev_class, source_page_ref — the ref column empty by construction, the legend carries no page refs; 3 rows)",
+   "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+   "source_path": "ReverseDictionary/sanskrityatina/",
+   "builder": "ReverseDictionary/sanskrityatina/tools/h4475_build_reverse_index.py (source: yadisk:Sanskrityatina/04_Reverse/187992 headwords.txt, 1,706 B ASCII/CRLF, sha256 c269e11f...; raw gitignored, rclone refetch in --help; keys via sanskrit-util from_slp1/slp1_form_key/slp1_norm/norm)",
+   "consumers": [],
+   "notes": "The source file is the CODING LEGEND of MG's Schwarz-based 187,992-headword reverse-dictionary stock (codes IEG/PD/BHS/MW/SCH), NOT the headword list — the list itself is not in 04_Reverse (leads: IAST-hyphenation_b7.xlsm, Freq2011.zip, 384k-word index docx; see metadoc backlog). SLP1 hazard documented: R=ṇ, N=ṅ, f=ṛ. All 3 legend examples cross-validated against csl-orig v02 <k1> headwords (paryantIkfta MW+BHS; aMSagaRa IEG, PD unprobeable; paryavadApayitar BHS and absent from MW = negative control). Companion census: SCH-experimental XML research cases (16,243 cases, UTF-16LE, csl-orig markup WITH <L>/<pc> page-column refs) — the natural follow-up dataset; distinct from the canonical 266,820-reverse-Gasuns master (different object, nothing superseded). Metadoc: ReverseDictionary/sanskrityatina/sanskrityatina-reverse-index.meta.md.",
+   "regen_checked": "2026-09-10 (H4475: double-run byte-identical incl. provenance.json)",
+   "consumer_candidates": [
+    {
+     "repo": "ReverseDictionary",
+     "use": "master-list complement (187,992 coded Schwarz stock vs 266,820 merge)",
+     "confidence": "medium"
+    },
+    {
+     "repo": "csl-atlas",
+     "use": "reverse-form lookups by morphological class",
+     "confidence": "low"
+    }
+   ]
+  } ]
 }
