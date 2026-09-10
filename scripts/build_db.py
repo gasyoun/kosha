@@ -278,31 +278,32 @@ def build_lemmas(con):
             freq[row["lemma_slp1"]] = row
 
     con.execute("DELETE FROM lemmas")
-    n = 0
-    with open(UNION_HEADWORDS, encoding="utf-8", newline="") as f:
-        reader = csv.DictReader(f, delimiter="\t")
-        rows = []
-        for r in reader:
-            slp1 = r["slp1"]
-            fr = freq.get(slp1)
-            rows.append((
-                slp1, r["iast"], int(r["n_dicts"]) if r["n_dicts"] else None,
-                r["dicts"], r["gender"] or None,
-                int(fr["count_all"]) if fr and fr["count_all"] else None,
-                fr["grammar_all"] if fr else None,
-                int(fr["rank_all"]) if fr and fr["rank_all"] else None,
-                fr["periods"] if fr else None,
-                int(fr["periods_sum"]) if fr and fr["periods_sum"] else None,
-                float(fr["coverage_pct"]) if fr and fr.get("coverage_pct") else None,
-                int(fr["core_rank"]) if fr and fr.get("core_rank") else None,
-            ))
-            n += 1
-        con.executemany(
-            "INSERT INTO lemmas (slp1, iast, n_dicts, dicts, gender, "
-            "count_all, grammar_all, rank_all, periods, periods_sum, "
-            "coverage_pct, core_rank) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
-            rows,
-        )
+
+    def _lemma_rows():
+        # Generator (H4407): streams straight into `executemany` instead of
+        # materializing all ~323k union_headwords rows as a Python list first.
+        with open(UNION_HEADWORDS, encoding="utf-8", newline="") as f:
+            for r in csv.DictReader(f, delimiter="\t"):
+                slp1 = r["slp1"]
+                fr = freq.get(slp1)
+                yield (
+                    slp1, r["iast"], int(r["n_dicts"]) if r["n_dicts"] else None,
+                    r["dicts"], r["gender"] or None,
+                    int(fr["count_all"]) if fr and fr["count_all"] else None,
+                    fr["grammar_all"] if fr else None,
+                    int(fr["rank_all"]) if fr and fr["rank_all"] else None,
+                    fr["periods"] if fr else None,
+                    int(fr["periods_sum"]) if fr and fr["periods_sum"] else None,
+                    float(fr["coverage_pct"]) if fr and fr.get("coverage_pct") else None,
+                    int(fr["core_rank"]) if fr and fr.get("core_rank") else None,
+                )
+
+    con.executemany(
+        "INSERT INTO lemmas (slp1, iast, n_dicts, dicts, gender, "
+        "count_all, grammar_all, rank_all, periods, periods_sum, "
+        "coverage_pct, core_rank) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+        _lemma_rows(),
+    )
     con.commit()
     count = con.execute("SELECT COUNT(*) FROM lemmas").fetchone()[0]
     joined = con.execute("SELECT COUNT(*) FROM lemmas WHERE count_all IS NOT NULL").fetchone()[0]
@@ -318,17 +319,19 @@ def build_heritage(con):
         raise SystemExit(f"missing sibling feed: {HERITAGE_CROSSWALK}")
 
     con.execute("DELETE FROM heritage_anchor")
-    rows = []
-    with open(HERITAGE_CROSSWALK, encoding="utf-8", newline="") as f:
-        for r in csv.DictReader(f, delimiter="\t"):
-            rows.append((
-                r["mw_key1"],
-                int(r["covered_flag"]),
-                r["heritage_entry_anchor"] or None,
-            ))
+
+    def _heritage_rows():
+        with open(HERITAGE_CROSSWALK, encoding="utf-8", newline="") as f:
+            for r in csv.DictReader(f, delimiter="\t"):
+                yield (
+                    r["mw_key1"],
+                    int(r["covered_flag"]),
+                    r["heritage_entry_anchor"] or None,
+                )
+
     con.executemany(
         "INSERT INTO heritage_anchor (mw_key1, covered, anchor) VALUES (?,?,?)",
-        rows,
+        _heritage_rows(),
     )
     con.commit()
     total = con.execute("SELECT COUNT(*) FROM heritage_anchor").fetchone()[0]
