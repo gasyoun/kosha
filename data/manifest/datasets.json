@@ -1,6 +1,6 @@
 {
  "manifest_version": "0.3.0",
- "generated": "2026-09-10",
+ "generated": "2026-09-11",
  "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
  "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
  "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
@@ -2791,8 +2791,16 @@
    "consumers": [],
    "status": "awaiting-consumer",
    "consumer_candidates": [
-    {"repo": "VisualDCS", "use": "pratyāhāra-range lookups for sandhi/derivation displays", "confidence": "low"},
-    {"repo": "SanskritGrammar", "use": "sangram morphology programme, pratyāhāra reference table", "confidence": "low"}
+    {
+     "repo": "VisualDCS",
+     "use": "pratyāhāra-range lookups for sandhi/derivation displays",
+     "confidence": "low"
+    },
+    {
+     "repo": "SanskritGrammar",
+     "use": "sangram morphology programme, pratyāhāra reference table",
+     "confidence": "low"
+    }
    ],
    "notes": "H4471 (09-09-2026). Source workbook's Ranges sheet encodes each pratyāhāra as a cell-fill-highlighted span, not a text cell — not machine-parseable by reading values alone; extracted via cell fill inspection and cross-checked against standard Pāṇinian pratyāhāra tables (aK = a i u ṛ ḷ, aC = all vowels, aṇ = a i u, yaṆ = y v r l, haL = all consonants — all match). Prior-art checked: no existing pratyāhāra/Śiva-Sūtra table in this manifest (paninian-sutra-coverage-map is the unrelated 3,983-row Aṣṭādhyāyī derivation enumeration), VisualDCS, Sangram, or the local vidyut 0.4.0 Python build (Sutra type is Aṣṭādhyāyī-only; no pratyāhāra table exposed to Python). Source workbook's Pictures (visual render) and SandhiExamples (worked examples) sheets are out of scope for this handoff — a future pass can lift SandhiExamples separately.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/shiva-sutras-machine.meta.md",
@@ -2817,9 +2825,8 @@
    "rebuild": "rclone lsf yadisk:ААЗализняк-архив -R --files-only --format tsp > listing.tsv && python3 build_census.py listing.tsv transcript_index.tsv",
    "regen_checked": null,
    "consumer_candidates": []
-  }
-,
-{
+  },
+  {
    "id": "sanskrityatina-reverse-index",
    "title": "Sanskrityatina 04_Reverse coding legend — 187,992-headword reverse-dictionary stock taxonomy (H4475)",
    "tier": "public",
@@ -2847,9 +2854,8 @@
      "confidence": "low"
     }
    ]
-  }
-,
-{
+  },
+  {
    "id": "sanskrityatina-sch-cases",
    "title": "Sanskrityatina 04_Reverse/Experimental SCH research cases — six-file keyed TSV with L/pc page refs (H4533)",
    "tier": "public",
@@ -2872,5 +2878,24 @@
      "confidence": "medium"
     }
    ]
-  } ]
+  },
+  {
+   "id": "dcs-upasarga-prefixus",
+   "title": "DCS prefixed-verb decomposition (MG 2014 workbook) — in-form × prefix × dhātu × Palsule №",
+   "tier": "public",
+   "license": "CC BY-SA 4.0",
+   "in_release": "unreleased",
+   "release_asset": "dcs_upasarga_prefixus.tsv",
+   "format": "tsv",
+   "rows": 6425,
+   "size_bytes": 192987,
+   "keying": "in_form (DCS surface) -> prefix_guess (naive allomorph match, 38 rows) / prefix (resolved parse, 5,059 rows) / dhatu (1,839 distinct) / palsule_no (1,099 rows, 321 distinct, 100% validated vs the workbook's own dhatu sheet); 1,350 rows carry no prefix resolution; dhatu_check duplicates dhatu exactly in 100% of rows (MG's own QA column)",
+   "source_repo": "yadisk:Sanskrityatina/05_Sanskrit-Lexicon/upasarga-stat (derived-only — xlsx never committed)",
+   "source_path": "DCS-upasarga-analysis.xlsx sheet 'praefixus', 6,425 data rows ×6 (MG workbook dated 28-09-2014; dims per H4477 census §5)",
+   "builder": "kosha scripts/extract_dcs_upasarga_prefixus.py --xlsx <DCS-upasarga-analysis.xlsx> (H4534)",
+   "consumers": [],
+   "notes": "H4534 (11-09-2026, OxAlpha glm-5.3-flash). Join view vs sibling sanskrit-upasarga-semantics (H4477 census §5): zero SOURCE overlap — DCS dictionary dimension vs Gita.xlsm compositional dimension — with a real key join: 5,007 resolved (dhatu,prefix) pairs vs 69 gita (root,preverb) pairs, 34 shared keys (bhū+pra-, dā+pra-, gam+ā-, vṛt+pra-/ati-/ni-/anu-/ā-…). Sheets dhatu (3,688×8 Palsule root lists), replace (40 normalization pairs), Лист2 (prefix tally) NOT derived — see data/upasarga/DCS_UPASARGA_PREFIXUS.md. DCS underlying data CC BY 4.0; ships BY-SA with the public tier, credit Dr. Mārcis Gasūns.",
+   "regen_checked": "2026-09-11 (H4534: PASS — rerun byte-identical, sha256 6d2f2ff2519d6ab6700be9f13741be74a1833226fa896c9c0ea9a403f37749b3)"
+  }
+ ]
 }
