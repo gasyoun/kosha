@@ -101,7 +101,7 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
 
     with open(OUT / "sutras.tsv", "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f, delimiter="\t")
+        w = csv.writer(f, delimiter="\t", lineterminator="\n")
         w.writerow(["sutra_number", "devanagari", "letters_only", "it_marker"])
         for i, s in enumerate(sutras, 1):
             marker = s[-2:] if s.endswith(VIRAMA) else ""
@@ -110,7 +110,7 @@ def main() -> None:
 
     rows = []
     with open(OUT / "pratyaharas.tsv", "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f, delimiter="\t")
+        w = csv.writer(f, delimiter="\t", lineterminator="\n")
         w.writerow(["name", "devanagari_span", "letters_only", "it_marker", "length"])
         for name, start, length in PRATYAHARA_SPANS:
             span_tokens = tokens[start:start + length]
@@ -135,6 +135,7 @@ def main() -> None:
     }
     with open(OUT / "shiva_sutras.json", "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
+        f.write("\n")
 
     print(f"wrote {len(sutras)} sutras, {len(rows)} pratyaharas -> {OUT}")
 
