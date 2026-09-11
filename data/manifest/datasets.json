@@ -2847,5 +2847,30 @@
      "confidence": "low"
     }
    ]
+  }
+,
+{
+   "id": "sanskrityatina-sch-cases",
+   "title": "Sanskrityatina 04_Reverse/Experimental SCH research cases — six-file keyed TSV with L/pc page refs (H4533)",
+   "tier": "public",
+   "license": "CC BY-SA 4.0",
+   "in_release": "not-applicable",
+   "format": "tsv",
+   "rows": 16304,
+   "size_bytes": 1466319,
+   "keying": "one row per <H1> case: key1_slp1, key2_accented (Schwarz's own numeric-accent transliteration, passed through verbatim, NOT re-derived), iast + form_key (both via sanskrit-util from_slp1/slp1_form_key on key1_slp1), case_class (from source filename: fiction, gedruckt, grade, pw-comparison, zu-betonen, zu-lesen), L (line/entry number), pc (page-column ref), source_xml",
+   "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+   "source_path": "ReverseDictionary/sanskrityatina/",
+   "builder": "ReverseDictionary/sanskrityatina/tools/h4533_build_sch_cases.py (source: yadisk:Sanskrityatina/04_Reverse/Experimental/ — 6 UTF-16LE XML files, 6,294,178 B total; raw gitignored, rclone refetch in --help; keys via sanskrit-util from_slp1/slp1_form_key)",
+   "consumers": [],
+   "notes": "Companion dataset to sanskrityatina-reverse-index (H4475): the SCH-experimental XML research cases carry the <L>/<pc> page-column refs the coding legend lacks. The mint-time acceptance denominator (16,243 = sum of the six filename-embedded case counts) does NOT match the actual number of <H1> entries on contact: real total is 16,304 (delta +61), verified per-file against a direct '<H1>' occurrence grep and recorded in sanskrityatina_sch_cases_provenance.json. Two files diverge from their filename count: SCH-fiction-3147_cases.xml carries 3,148 entries (unexplained +1, tag-balance-checked, not a parser artifact); 'SCH-zu betonen-83_cases.xml' carries 143 entries, not 83 — the file unions two accent-correction phrasings (83x 'zu betonen' + 60x 'zu akzentuieren', both German for 'to be accented thus'), the filename names only the first. <hom> (homonym index, ~10% of rows) is present in source but not part of this TSV's schema. One key1 ('ja|u', zu-betonen L=13803) carries a literal source-data '|' typo, passed through verbatim. Metadoc: ReverseDictionary/sanskrityatina/sanskrityatina-sch-cases.meta.md.",
+   "regen_checked": "2026-09-11 (H4533: double-run byte-identical incl. provenance json)",
+   "consumer_candidates": [
+    {
+     "repo": "ReverseDictionary",
+     "use": "page-column-referenced reverse-index complement to the coding-legend stock",
+     "confidence": "medium"
+    }
+   ]
   } ]
 }
