@@ -2823,7 +2823,7 @@
    "sha256": {},
    "provenance_verified": "2026-09-09 (H4473, OxAlpha z-ai/glm-5.3-flash claim; executed by Claude Code Sonnet 5)",
    "rebuild": "rclone lsf yadisk:ААЗализняк-архив -R --files-only --format tsp > listing.tsv && python3 build_census.py listing.tsv transcript_index.tsv",
-   "regen_checked": null,
+   "regen_checked": "2026-09-13 (H4473 verifier: rebuild byte-identical)",
    "consumer_candidates": []
   },
   {
