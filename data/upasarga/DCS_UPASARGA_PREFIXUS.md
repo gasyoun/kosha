@@ -40,6 +40,8 @@ H4477 census §5 verdict holds: **zero source overlap** — this dataset is the 
 
 A consumer can therefore join sense shift (Gita side) onto corpus attestation (DCS side) for those 34 keys; the remaining 4,973 praefixus pairs and 35 gita pairs are each side's unique complement.
 
+**First consumer (H4729, 15-09-2026):** the unified upasarga atlas [upasarga_atlas.tsv](upasarga_atlas.tsv) — joins this dataset (resolved-`prefix` keys only) with the Gita semantics and the VisualDCS per-class frequencies; data statement [docs/data-statements/upasarga-atlas.meta.md](../../docs/data-statements/upasarga-atlas.meta.md).
+
 ## Licence
 
 CC BY-SA 4.0, credit Dr. Mārcis Gasūns — mirrors sibling [`sanskrit-upasarga-semantics`](../gita/upasarga_semantics.tsv) (DCS underlying data is CC BY 4.0).
