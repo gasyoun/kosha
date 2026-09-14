@@ -1,0 +1,457 @@
+{
+ "handoff": "H4732 (census C5)",
+ "built_with": {
+  "kosha_commit": "f25eddf717768a7af7e959b5646df1390699bb12",
+  "sanskritlexicography_head": "8ae6a310f78c1fd7b515ae6bf28a4dfe278cec80",
+  "csl_santam_head": "17858dcf3ee2eb9d2a92c4bc5e4a9d6d28433f30",
+  "sanskrit_util_head": "791e30fa8ba1ffd90da9a707b519d73e939adecc",
+  "slp1_table_source": "sanskrit_util.to_slp1 (imported, never re-typed)",
+  "hk_stage": "scheme_bridge.hk_to_iast (longest-token-first)",
+  "otl_treatment": "HK-like scheme run through the same HK->IAST->SLP1 chain (fold_stats scheme_notes; Wave-4 normalization out of scope)"
+ },
+ "union_rows": 323422,
+ "union_codes": [
+  "AP",
+  "BHS",
+  "BUR",
+  "CAE",
+  "CCS",
+  "GRA",
+  "INM",
+  "MD",
+  "MW",
+  "PWG",
+  "PWK",
+  "SCH",
+  "SKD",
+  "VCP",
+  "VEI"
+ ],
+ "tamil_codes": [
+  "cap",
+  "mwd",
+  "otl"
+ ],
+ "extended_code_count": 18,
+ "pairwise_cells": 153,
+ "baseline_cells_checked": 105,
+ "extension_invariance": "PASS",
+ "extension_invariance_mismatches": [],
+ "baseline_drift_vs_registered": {
+  "cause": "registered matrix (H684, 11-07-2026) was computed on the pre-H4075 union (323,425 rows); union regenerated 04-09-2026 (323,422 rows) — drift is upstream of and independent from this extension",
+  "drifted_cells": 27,
+  "max_union_delta": 3,
+  "cells": [
+   {
+    "pair": "AP/BHS",
+    "recomputed_on_current_union": [
+     1962,
+     104546,
+     0.018767
+    ],
+    "registered_baseline": [
+     1962,
+     104543,
+     0.0188
+    ]
+   },
+   {
+    "pair": "AP/BUR",
+    "recomputed_on_current_union": [
+     7247,
+     100635,
+     0.072013
+    ],
+    "registered_baseline": [
+     7246,
+     100633,
+     0.072
+    ]
+   },
+   {
+    "pair": "AP/CAE",
+    "recomputed_on_current_union": [
+     13048,
+     114175,
+     0.114281
+    ],
+    "registered_baseline": [
+     13048,
+     114172,
+     0.1143
+    ]
+   },
+   {
+    "pair": "AP/CCS",
+    "recomputed_on_current_union": [
+     9982,
+     107508,
+     0.092849
+    ],
+    "registered_baseline": [
+     9982,
+     107505,
+     0.0929
+    ]
+   },
+   {
+    "pair": "AP/GRA",
+    "recomputed_on_current_union": [
+     3733,
+     96122,
+     0.038836
+    ],
+    "registered_baseline": [
+     3733,
+     96119,
+     0.0388
+    ]
+   },
+   {
+    "pair": "AP/INM",
+    "recomputed_on_current_union": [
+     2212,
+     95966,
+     0.02305
+    ],
+    "registered_baseline": [
+     2212,
+     95963,
+     0.0231
+    ]
+   },
+   {
+    "pair": "AP/MD",
+    "recomputed_on_current_union": [
+     8269,
+     100573,
+     0.082219
+    ],
+    "registered_baseline": [
+     8269,
+     100570,
+     0.0822
+    ]
+   },
+   {
+    "pair": "AP/MW",
+    "recomputed_on_current_union": [
+     38084,
+     244514,
+     0.155754
+    ],
+    "registered_baseline": [
+     38082,
+     244514,
+     0.1557
+    ]
+   },
+   {
+    "pair": "AP/PWG",
+    "recomputed_on_current_union": [
+     23709,
+     171092,
+     0.138575
+    ],
+    "registered_baseline": [
+     23708,
+     171090,
+     0.1386
+    ]
+   },
+   {
+    "pair": "AP/PWK",
+    "recomputed_on_current_union": [
+     26649,
+     213412,
+     0.124871
+    ],
+    "registered_baseline": [
+     26648,
+     213410,
+     0.1249
+    ]
+   },
+   {
+    "pair": "AP/SCH",
+    "recomputed_on_current_union": [
+     4535,
+     112643,
+     0.04026
+    ],
+    "registered_baseline": [
+     4535,
+     112640,
+     0.0403
+    ]
+   },
+   {
+    "pair": "AP/SKD",
+    "recomputed_on_current_union": [
+     18830,
+     110620,
+     0.170222
+    ],
+    "registered_baseline": [
+     18828,
+     110619,
+     0.1702
+    ]
+   },
+   {
+    "pair": "AP/VCP",
+    "recomputed_on_current_union": [
+     15754,
+     121576,
+     0.129581
+    ],
+    "registered_baseline": [
+     15753,
+     121574,
+     0.1296
+    ]
+   },
+   {
+    "pair": "AP/VEI",
+    "recomputed_on_current_union": [
+     890,
+     91559,
+     0.009721
+    ],
+    "registered_baseline": [
+     890,
+     91556,
+     0.0097
+    ]
+   },
+   {
+    "pair": "BHS/MW",
+    "recomputed_on_current_union": [
+     6525,
+     205087,
+     0.031816
+    ],
+    "registered_baseline": [
+     6525,
+     205088,
+     0.0318
+    ]
+   },
+   {
+    "pair": "BUR/MW",
+    "recomputed_on_current_union": [
+     13908,
+     199078,
+     0.069862
+    ],
+    "registered_baseline": [
+     13908,
+     199079,
+     0.0699
+    ]
+   },
+   {
+    "pair": "CAE/MW",
+    "recomputed_on_current_union": [
+     35053,
+     197274,
+     0.177687
+    ],
+    "registered_baseline": [
+     35053,
+     197275,
+     0.1777
+    ]
+   },
+   {
+    "pair": "CCS/MW",
+    "recomputed_on_current_union": [
+     25881,
+     196713,
+     0.131567
+    ],
+    "registered_baseline": [
+     25881,
+     196714,
+     0.1316
+    ]
+   },
+   {
+    "pair": "GRA/MW",
+    "recomputed_on_current_union": [
+     9752,
+     195207,
+     0.049957
+    ],
+    "registered_baseline": [
+     9752,
+     195208,
+     0.05
+    ]
+   },
+   {
+    "pair": "INM/MW",
+    "recomputed_on_current_union": [
+     6772,
+     196510,
+     0.034461
+    ],
+    "registered_baseline": [
+     6772,
+     196511,
+     0.0345
+    ]
+   },
+   {
+    "pair": "MD/MW",
+    "recomputed_on_current_union": [
+     18631,
+     195315,
+     0.095389
+    ],
+    "registered_baseline": [
+     18631,
+     195316,
+     0.0954
+    ]
+   },
+   {
+    "pair": "MW/PWG",
+    "recomputed_on_current_union": [
+     94753,
+     205152,
+     0.461867
+    ],
+    "registered_baseline": [
+     94753,
+     205153,
+     0.4619
+    ]
+   },
+   {
+    "pair": "MW/PWK",
+    "recomputed_on_current_union": [
+     128972,
+     216193,
+     0.59656
+    ],
+    "registered_baseline": [
+     128971,
+     216195,
+     0.5965
+    ]
+   },
+   {
+    "pair": "MW/SCH",
+    "recomputed_on_current_union": [
+     14499,
+     207783,
+     0.06978
+    ],
+    "registered_baseline": [
+     14499,
+     207784,
+     0.0698
+    ]
+   },
+   {
+    "pair": "MW/SKD",
+    "recomputed_on_current_union": [
+     8743,
+     225811,
+     0.038718
+    ],
+    "registered_baseline": [
+     8743,
+     225812,
+     0.0387
+    ]
+   },
+   {
+    "pair": "MW/VCP",
+    "recomputed_on_current_union": [
+     39011,
+     203423,
+     0.191773
+    ],
+    "registered_baseline": [
+     39011,
+     203424,
+     0.1918
+    ]
+   },
+   {
+    "pair": "MW/VEI",
+    "recomputed_on_current_union": [
+     3166,
+     194387,
+     0.016287
+    ],
+    "registered_baseline": [
+     3166,
+     194388,
+     0.0163
+    ]
+   }
+  ]
+ },
+ "tamil_fold": {
+  "cp1252_fallback_cells": 0,
+  "latin1_fallback_cells": 0
+ },
+ "tamil_per_dict": {
+  "mwd": {
+   "raw_entries": 166434,
+   "unique_slp1_keys": 158956,
+   "matched_into_union": 155095,
+   "matched_share": 97.57,
+   "keys_with_nonalpha_residue": 55,
+   "corpus_attested_of_keys": 55179,
+   "corpus_attested_pct_of_keys": 34.71,
+   "note": "attested share counts only keys present in the SLP1 union coverage sidecar; fold-only keys are unknown to DCS coverage"
+  },
+  "cap": {
+   "raw_entries": 37413,
+   "unique_slp1_keys": 36431,
+   "matched_into_union": 33315,
+   "matched_share": 91.45,
+   "keys_with_nonalpha_residue": 1955,
+   "corpus_attested_of_keys": 19847,
+   "corpus_attested_pct_of_keys": 54.48,
+   "note": "attested share counts only keys present in the SLP1 union coverage sidecar; fold-only keys are unknown to DCS coverage"
+  },
+  "otl": {
+   "raw_entries": 117773,
+   "unique_slp1_keys": 107197,
+   "matched_into_union": 1593,
+   "matched_share": 1.49,
+   "keys_with_nonalpha_residue": 34870,
+   "corpus_attested_of_keys": 631,
+   "corpus_attested_pct_of_keys": 0.59,
+   "note": "attested share counts only keys present in the SLP1 union coverage sidecar; fold-only keys are unknown to DCS coverage"
+  }
+ },
+ "canaries": {
+  "cap_vs_CAE": [
+   "CAE",
+   "cap",
+   33193,
+   41714,
+   0.795728
+  ],
+  "mwd_vs_MW": [
+   "MW",
+   "mwd",
+   155026,
+   197781,
+   0.783827
+  ],
+  "otl_vs_MW": [
+   "MW",
+   "otl",
+   913,
+   300135,
+   0.003042
+  ]
+ }
+}

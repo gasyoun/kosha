@@ -1182,6 +1182,24 @@
    "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
+   "id": "headword-overlap-matrix-ext",
+   "title": "Headword pairwise-overlap matrix, Tamil-fold extension (18 dicts)",
+   "tier": "public",
+   "license": "CC BY-SA 4.0",
+   "in_release": "not-applicable",
+   "format": "tsv",
+   "rows": 153,
+   "size_bytes": 4375,
+   "keying": "dict_a x dict_b (unordered pair) -> shared / union / Jaccard; 15 union codes on the union's SLP1 <k1> key + mwd/cap/otl fold keys HK->IAST->SLP1 (sanskrit-util table imported, never re-typed)",
+   "source_repo": "https://github.com/gasyoun/kosha",
+   "source_path": "data/tamil/headword_overlap_matrix_ext.tsv",
+   "builder": "scripts/build_overlap_matrix_ext.py (consumes union_headwords.tsv + csl-santam tamil.sqlite + sanskrit-util, all read-only siblings; never rebuilds the union or the registered 15-dict matrix)",
+   "consumers": [],
+   "notes": "H4732 (census C5, 15-09-2026, OxAlpha opencode/z-ai/glm-5.3-flash). Registered 15-dict headword-overlap-matrix predates the 06-09 tamil fold (H4178); this extends it to 18 dicts / 153 cells. Extension-invariance PASS (105 base cells identical with and without the fold); cpd/Pahlavi excluded as in csl-santam's UI. Canaries: cap x CAE J=0.7957, mwd x MW J=0.7838 validate HK->SLP1; otl contributes its Sanskrit layer only (1,593 keys into the union, 32.5% expected Tamil-phonology residue). 27/105 registered cells drift <=3 union vs the H684 baseline from the 04-09 H4075 union regen — per-cell record in data/tamil/overlap_matrix_ext_stats.json. Delta report: data/tamil/OVERLAP_MATRIX_EXT_DELTA_14-09-2026.md.",
+   "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/headword-overlap-matrix-ext.meta.md",
+   "regen_checked": "2026-09-15 (H4732: build + --verify PASS, byte-identical rerun)"
+  },
+  {
    "id": "mdf-pilot-cdsl",
    "title": "CDSL MDF pilot export (50-case neutral-model slice, MW-focused)",
    "tier": "public",
