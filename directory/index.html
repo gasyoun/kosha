@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="105 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="112 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="105 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="112 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -471,7 +471,7 @@
     {
       "@type": "Dataset",
       "name": "DCS syntagmatic table — all corpus lemmas (Приложение 7)",
-      "description": "H291: a second, byte-different copy of the same data lives at derived-data/Sinonimy/S_P_D_F/Синтагматическая таблица DCS.csv (UTF-16LE, tab-delimited, Cyrillic header, 47 MB, 82,801 lines incl. blank separator rows) — same 'appendix table' family as this file, same underlying content verified by row-1 sample diff, both created 2026-06-05. This (semicolon-delimited, UTF-8, no BOM, 'Приложение 7' appendix numbering matching the Приложение-6 family below) is registered as canonical; the Sinonimy copy is left in place on disk as a raw/interim export, not separately registered.",
+      "description": "H291: a second, byte-different copy of the same data lives at derived-data/Sinonimy/S_P_D_F/Синтагматическая таблица DCS.csv (UTF-16LE, tab-delimited, Cyrillic header, 47 MB, 82,801 lines incl. blank separator rows) — same 'appendix table' family as this file, same underlying content verified by row-1 sample diff, both created 2026-06-05. This (semicolon-delimited, UTF-8, no BOM, 'Приложение 7' appendix numbering matching the Приложение-6 family below) is registered as canonical; the Sinonimy copy is left in place on disk as a raw/interim export, not separately registered. H4708 (15-09-2026): first consumer landed — SanskritLexicography pwg_collocate_layer.tsv (39.5% of pwg_ru headwords carry a corpus collocate profile); selftest 10/10 + 10-portrait spot check 10/10.",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
       "isAccessibleForFree": true,
       "creator": {
@@ -583,7 +583,7 @@
     {
       "@type": "Dataset",
       "name": "DCS syntagmatic tables of frequent lexical cores, by historical period (Приложение 6)",
-      "description": "H291 Step 2 bundle: 7 per-period files registered as one row per MG ruling. Same 'appendix table' family as dcs-sintagmatic-appendix7 (Приложение 7 = all-corpus version; this is the per-period breakdown, Приложение 6).",
+      "description": "H291 Step 2 bundle: 7 per-period files registered as one row per MG ruling. Same 'appendix table' family as dcs-sintagmatic-appendix7 (Приложение 7 = all-corpus version; this is the per-period breakdown, Приложение 6). H4710 (15-09-2026): first consumer landed — kosha frequency-layer cross-check; ⚠ 723 lemmas carry DUPLICATE rows per file (768 extra of 19,083 lines; sum before use) and period buckets 2/6/7 disagree with the 2026 FRQ_P vectors (use collocate profiles, not exact counts).",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
       "isAccessibleForFree": true,
       "creator": {
@@ -723,7 +723,7 @@
     {
       "@type": "Dataset",
       "name": "Sanskrit-stem co-occurrence table (full)",
-      "description": "H291 Step 4: checked for an older non-'NEW' sibling per the open question in this handoff — none found (Sochetaemost-sanskritskih-osnov/ has period-bucketed .txt files under Sochetaemost/ and a separate Ishodnye-dannye/ raw-inputs dir, neither is a prior version of this file); 'NEW' reads as this file's permanent name, not a superseded/current pair.",
+      "description": "H291 Step 4: checked for an older non-'NEW' sibling per the open question in this handoff — none found (Sochetaemost-sanskritskih-osnov/ has period-bucketed .txt files under Sochetaemost/ and a separate Ishodnye-dannye/ raw-inputs dir, neither is a prior version of this file); 'NEW' reads as this file's permanent name, not a superseded/current pair. H4713 (15-09-2026, OxAlpha z-ai/glm-5.3-flash): first consumer — stem co-occurrence expansion of SanskritLexicography's pwg-sense-attestation-window (held-out verified, non-saturated stratum 89.3% intersection).",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
       "isAccessibleForFree": true,
       "creator": {
@@ -1670,6 +1670,34 @@
         "@type": "DataDownload",
         "encodingFormat": "tsv",
         "contentUrl": "https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/gita/gita_etymology.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Unified upasarga atlas — prefixed-verb decomposition x Gita semantics x verb-class frequencies",
+      "description": "H4729 (15-09-2026, OxAlpha glm-5.3-flash). Census C2 three-way join — first consumer of dcs-upasarga-prefixus, second of sanskrit-upasarga-semantics and dcs-verb-class-prefix-frequency. Sources breakdown: classfreq-only 7,020 / prefixus-only 5,037 / prefixus+classfreq 1,165 / all-three 108 / semantics-only 52 / prefixus+semantics 34 / semantics+classfreq 20. Class-freq per-class unkeyed bare-number total lines (10, one per file) excluded from the join and reported by the builder. dhatu∩classfreq roots 1,313/1,839; Gita-root∩classfreq 131/148. Derives CC BY-SA 4.0 like its sources (DCS underlying CC BY 4.0, Gita sheet MIT), credit Dr. Mārcis Gasūns.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "upasarga-atlas"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/data/upasarga/upasarga_atlas.tsv"
       }
     },
     {
@@ -2906,6 +2934,34 @@
     },
     {
       "@type": "Dataset",
+      "name": "Diachronic sense portraits — per-sense frequency x first-era buckets (H4735 join)",
+      "description": "H4735. Joins kosha-sense-frequency (MW layer) with sense-dating (H4019) through the H3744 crossdict pilot's MW INVENTORY column - inventory, not sense alignment (H3744 note verbatim); bridge_status keeps every row's provenance. first_era = first attestation among works PWG cites, NOT the origin of the meaning (H4019 preface caveat carried). Coverage at build: 7,349 dated senses over 500 lemmas; era census vedic 1342 / epic-sutra 2184 / classical 1107 / early-medieval 1039 / late-medieval 652 / null-undateable 1025; freq-joined 273 (3.7%) - widening is the concordance->MW alignment programme, not this join. See data/dating/SENSE_PORTRAITS_REPORT.md.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "sense-portraits"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/not-applicable/sense_portraits.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
       "name": "Hitopadeśa per-text word concordance pilot — every word of the text feeding the dictionary (Tamilex corpus-dictionary pattern, H4034)",
       "description": "Pilot (H4034). Source DCS 2026, CC BY 4.0 — license-gated ingest: derived measurements free, bulk corpus redistribution gated; attribution in MANIFEST.json. Era tie-in: early-medieval (DM canon_dm, core c. 9th-10th c. CE disputed) via data/dating/work_dates.json; the concordance page carries the H4026 .ls-era badge. Residue: 4.5% no headword join (DCS -ay causative stems kosha keys under the root, indeclinables); 87% sense-id absence = H1455 frame width, not PWG sense absence. Spot check 10/10 (independent SQL recount) in SPOT_CHECK_SAMPLE.md. Additive fold only — no existing surface touched (H4034 gate).",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -2987,6 +3043,146 @@
         "encodingFormat": "tsv+json",
         "contentUrl": "https://github.com/gasyoun/kosha"
       }
+    },
+    {
+      "@type": "Dataset",
+      "name": "А.А.Зализняк public-lecture transcript census (Sanskrit/Vedic + Slavic linguistics)",
+      "description": "Index only, not a vendored corpus — 101.3 GiB source stays on the private Yandex.Disk remote (rclone remote 'yadisk', not this repo). 66 of 272 groups are Sanskrit/Vedic-tagged (Ṛgveda close-reading + grammar courses); the rest are Slavic-linguistics/Novgorod-birchbark/miscellaneous. Uploader channel names (Головастиков, Осанкина) are public YouTube operators, kept in the index by design (mission note); no other personal data found in sampled content.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "zaliznyak-lectures-transcripts"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv (index only — full transcripts NOT vendored, source is a private Yandex.Disk remote)",
+        "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Sanskrityatina 04_Reverse coding legend — 187,992-headword reverse-dictionary stock taxonomy (H4475)",
+      "description": "The source file is the CODING LEGEND of MG's Schwarz-based 187,992-headword reverse-dictionary stock (codes IEG/PD/BHS/MW/SCH), NOT the headword list — the list itself is not in 04_Reverse (leads: IAST-hyphenation_b7.xlsm, Freq2011.zip, 384k-word index docx; see metadoc backlog). SLP1 hazard documented: R=ṇ, N=ṅ, f=ṛ. All 3 legend examples cross-validated against csl-orig v02 <k1> headwords (paryantIkfta MW+BHS; aMSagaRa IEG, PD unprobeable; paryavadApayitar BHS and absent from MW = negative control). Companion census: SCH-experimental XML research cases (16,243 cases, UTF-16LE, csl-orig markup WITH <L>/<pc> page-column refs) — the natural follow-up dataset; distinct from the canonical 266,820-reverse-Gasuns master (different object, nothing superseded). Metadoc: ReverseDictionary/sanskrityatina/sanskrityatina-reverse-index.meta.md.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "sanskrityatina-reverse-index"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Sanskrityatina 04_Reverse/Experimental SCH research cases — six-file keyed TSV with L/pc page refs (H4533)",
+      "description": "Companion dataset to sanskrityatina-reverse-index (H4475): the SCH-experimental XML research cases carry the <L>/<pc> page-column refs the coding legend lacks. The mint-time acceptance denominator (16,243 = sum of the six filename-embedded case counts) does NOT match the actual number of <H1> entries on contact: real total is 16,304 (delta +61), verified per-file against a direct '<H1>' occurrence grep and recorded in sanskrityatina_sch_cases_provenance.json. Two files diverge from their filename count: SCH-fiction-3147_cases.xml carries 3,148 entries (unexplained +1, tag-balance-checked, not a parser artifact); 'SCH-zu betonen-83_cases.xml' carries 143 entries, not 83 — the file unions two accent-correction phrasings (83x 'zu betonen' + 60x 'zu akzentuieren', both German for 'to be accented thus'), the filename names only the first. <hom> (homonym index, ~10% of rows) is present in source but not part of this TSV's schema. One key1 ('ja|u', zu-betonen L=13803) carries a literal source-data '|' typo, passed through verbatim. Metadoc: ReverseDictionary/sanskrityatina/sanskrityatina-sch-cases.meta.md.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "sanskrityatina-sch-cases"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "DCS prefixed-verb decomposition (MG 2014 workbook) — in-form × prefix × dhātu × Palsule №",
+      "description": "H4534 (11-09-2026, OxAlpha glm-5.3-flash). Join view vs sibling sanskrit-upasarga-semantics (H4477 census §5): zero SOURCE overlap — DCS dictionary dimension vs Gita.xlsm compositional dimension — with a real key join: 5,007 resolved (dhatu,prefix) pairs vs 69 gita (root,preverb) pairs, 34 shared keys (bhū+pra-, dā+pra-, gam+ā-, vṛt+pra-/ati-/ni-/anu-/ā-…). Sheets dhatu (3,688×8 Palsule root lists), replace (40 normalization pairs), Лист2 (prefix tally) NOT derived — see data/upasarga/DCS_UPASARGA_PREFIXUS.md. DCS underlying data CC BY 4.0; ships BY-SA with the public tier, credit Dr. Mārcis Gasūns.. H4729 (15-09-2026, OxAlpha glm-5.3-flash): first consumer — the unified upasarga atlas (data/upasarga/upasarga_atlas.tsv) joins it with sanskrit-upasarga-semantics + dcs-verb-class-prefix-frequency.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dcs-upasarga-prefixus"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/dcs_upasarga_prefixus.tsv"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Bloomfield 1906 RV citations × Elizarenkova Russian RV — citation-to-translation pointer join",
+      "description": "H4731 (15-09-2026, OxAlpha glm-5.3-flash). Joins every Bloomfield Ṛgveda citation (36,680 pada-level rows, 10,374 distinct verse keys) to the published Elizarenkova Russian (SamudraManthanam H2863 digitization, mandalas I-II) and the addressable rvlinks per-verse anchor. Statuses: 8,988 joined / 27,674 elizarenkova_out_of_samudra_coverage (mandalas 3-10: volumes exist in print, not in the Samudra digitization) / 18 unjoined_no_surface (named residue: 16 verse numbers beyond the standard text's count + 2 RV.16.x khila/parishiṣṭa keys — table in the report). Verse-pair blocks handled: hymns 1.65-1.84 print verse PAIRS in one block (id=65.1 carries 1-2, range title authoritative), so even verses resolve. RIGHTS DISCIPLINE: pointer layer ONLY — the TSV deliberately carries no Elizarenkova translation text (in copyright, М.: Наука 1989+; every Elizarenkova-derived bulk layer in the estate is tier=restricted — see sa-ru-glossary, pwg-ru-mdf-export); consumers resolve refs/anchors at render time; bounded ≤160-char excerpts exist only in the report's 25-citation verification sample. Own-data canary: Samudra vs rvlinks are two independent Elizarenkova digitizations; on all 2,415 joined verse keys normalized RU-vs-RU similarity mean 0.973, 97.4% >= 0.85 (line-break/punctuation variants, neither side mutated). Pratika-vs-source substring check (H896 method) on 8,988 applicable rows: 87.5% y (7,866), remainder the documented orthographic variance (e.g. RV.1.1.1a īḍe vs Elizarenkova's īḷe). Full method + counts: data/concordance/BLOOMFIELD_RV_X_ELIZARENKOVA_RU_REPORT.md.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "bloomfield-rv-x-elizarenkova-ru"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/bloomfield_rv_x_elizarenkova_ru.tsv"
+      }
     }
   ]
 }
@@ -3057,7 +3253,7 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>105</b><span>public datasets</span></div>
+      <div class="tally"><b>112</b><span>public datasets</span></div>
       <div class="tally"><b>15</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
@@ -3232,7 +3428,7 @@
       </div>
       <p class="key">lemma; total occurrences; co-occurrence count; ranked collocate list per lemma</p>
       <p class="meta">82,799 rows · 25.7 MB · CSV</p>
-      
+      <div class="chips"><span class="chip">{&#x27;repo&#x27;: &#x27;SanskritLexicography&#x27;, &#x27;use&#x27;: &#x27;pwg_ru collocate layer — per-lemma collocate profiles (top-12 iast:freq) joined onto headword_index k1 as the committed sidecar RussianTranslation/src/pwg_collocate_layer.tsv; 37,183 of 94,074 unique k1 covered (H4708, 15-09-2026)&#x27;, &#x27;confidence&#x27;: &#x27;high&#x27;}</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
     <article class="card">
@@ -3252,7 +3448,7 @@
       </div>
       <p class="key">root,count — one file per verb class (1.csv…10.csv), roots that have attested corpus forms</p>
       <p class="meta">463 rows · 4.4 KB · CSV</p>
-      <div class="chips"><span class="chip">SanskritGrammar dcs_verb_roots_by_class_probe.py (H4178 wiring 4, 06-09-2026: per-class attested-roots probe, 463-row parity, report DCS_VERB_ROOTS_BY_CLASS_PROBE_06.09.2026.md)</span></div>
+      <div class="chips"><span class="chip">SanskritGrammar dcs_verb_roots_by_class_probe.py (H4178 wiring 4, 06-09-2026: per-class attested-roots probe, 463-row parity, report DCS_VERB_ROOTS_BY_CLASS_PROBE_06.09.2026.md)</span><span class="chip">SanskritLexicography papers/sanskrit_in_numbers/module10b_dcs_verb_class_attestation.py (H4711 census A5, 15-09-2026: SinN module 10b corpus leg, 463-row parity, report H4711_MODULE10B_DCS_VERB_CLASS_ATTESTATION_15-09-2026.md, PR SanskritLexicography#2212)</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
     <article class="card">
@@ -3262,7 +3458,7 @@
       </div>
       <p class="key">root;count — one file per verb class (1.csv…10.csv), includes prefixed verb forms</p>
       <p class="meta">8,454 rows · 110.0 KB · CSV</p>
-      
+      <div class="chips"><span class="chip">SanskritLexicography papers/sanskrit_in_numbers/module10b_dcs_verb_class_attestation.py (H4711 census A5, 15-09-2026: FIRST consumer — SinN module 10b corpus leg, 8454-row parity, prefixed-only inventory analysis)</span><span class="chip">kosha — upasarga_atlas.tsv unified atlas (H4729, 15-09-2026: per-class frequency leg, 8,313 roots joined at root level — the dataset has no preverb dimension, class_freqs attach to root-level rows only)</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
     <article class="card">
@@ -3271,8 +3467,8 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">lemma; frequency; collocates — one file per historical period (1.csv…7.csv)</p>
-      <p class="meta">19,076 rows · 22.9 MB · CSV</p>
-      
+      <p class="meta">19,083 rows · 22.9 MB · CSV</p>
+      <div class="chips"><span class="chip">{&#x27;repo&#x27;: &#x27;kosha&#x27;, &#x27;use&#x27;: &#x27;frequency-layer cross-check — per-period collocate cores joined (IAST→SLP1, sanskrit-util) against the periods vectors of data/frequency/lemma_frequency.tsv; buckets 1 -800/3200/4700/5 1200 confirmed (ρ 0.79–0.89), 2 -300/6 1700/7 1900 diverge (re-dating drift); delta table data/frequency/appendix6_xcheck_delta.tsv + frozen sample (H4710, 15-09-2026)&#x27;, &#x27;confidence&#x27;: &#x27;high&#x27;}</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
     <article class="card">
@@ -3322,7 +3518,7 @@
       </div>
       <p class="key">stem-pair co-occurrence rows, ID range 1–222342</p>
       <p class="meta">353,351 rows · 34.6 MB · CSV</p>
-      
+      <div class="chips"><span class="chip">SanskritLexicography — pwg-sense-attestation-window co-occurrence expansion (H4713, 15-09-2026: 53,003 senses, cooc_*/expanded_* fields; cooc_saturated filter recommended)</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/VisualDCS">In source repo ↗</a></div>
     </article>
     <article class="card">
@@ -3632,7 +3828,7 @@
       </div>
       <p class="key">one row per distinct sandhi rule (13,012) aggregated across 41 DCS texts (707,936 sandhi events): rule, category, global_count, global_pct, n_texts, top_texts, examples. Induced by method A from DCS gold word-splits (96.3% Gita-gold frequency-mass coverage). The top 82 rules cover 80% of all corpus sandhi occurrences — the graded-curriculum backbone.</p>
       <p class="meta">13,012 rows · 3.2 MB · TSV</p>
-      
+      <div class="chips"><span class="chip">{&#x27;repo&#x27;: &#x27;Systema-Sanscriticum&#x27;, &#x27;use&#x27;: &#x27;/reading/sandhi page — top 147 rules (90% of corpus sandhi) baked into resources/data/corpus_sandhi/corpus_sandhi_top.json by scripts/vendor_corpus_sandhi.py (pins kosha commit+blob, --check for drift); behind features.kosha_reader (H4718, 15-09-2026, PR https://github.com/gasyoun/Systema-Sanscriticum/pull/2569)&#x27;, &#x27;confidence&#x27;: &#x27;high&#x27;}</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/sandhi/corpus_sandhi.tsv">Download ↓</a></div>
     </article>
     <article class="card">
@@ -3657,12 +3853,22 @@
     </article>
     <article class="card">
       <div class="card-h">
+        <h3>Unified upasarga atlas — prefixed-verb decomposition x Gita semantics x verb-class frequencies</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">(root, preverb) union of three legs — root bare (Gita √ stripped), preverb hyphen-terminated (&#x27;&#x27; = root-level row; Gita comma-lists kept verbatim, NOT exploded). prefixus leg keyed on the RESOLVED prefix column only (5,059 rows → 5,007 pairs; naive prefix_guess never keys; 1,366 no-prefix rows collapse to root-level keys), semantics leg 214 rows (69 with preverb), classfreq leg 8,313 roots at root level only (no preverb dimension — class_freqs attach to root-level rows, non-zero classes as &#x27;1:30478|3:22&#x27;). sources column = sorted &#x27;+&#x27;-join of {classfreq, prefixus, semantics}. Shared nonempty-preverb keys prefixus x semantics: 34 (H4477 census anchor reproduced exactly).</p>
+      <p class="meta">13,436 rows · 448.5 KB · TSV</p>
+      
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/data/upasarga/upasarga_atlas.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
         <h3>Sanskrit root x preverb (upasarga) semantics</h3>
         <span class="badge pub">public</span>
       </div>
       <p class="key">148 verb roots attested in the Gita + 69 preverb-modified senses: root·preverb·combined·sense·count (empty preverb = base sense; √vac speak -&gt; pra-vac declare; √gam go -&gt; ava-gam understand). From the Gita.xlsm verbs sheet; a compositional dimension the Cologne dictionaries lack. Browsable page reading/upasarga/.</p>
       <p class="meta">214 rows · 6.0 KB · TSV</p>
-      <div class="chips"><span class="chip">reading/upasarga/ page</span><span class="chip">/w/ root-card upasarga panel (app/word_page.py)</span></div>
+      <div class="chips"><span class="chip">reading/upasarga/ page</span><span class="chip">/w/ root-card upasarga panel (app/word_page.py)</span><span class="chip">kosha — upasarga_atlas.tsv unified atlas (H4729, 15-09-2026: sense + Gita-count leg of the three-way join; 34 shared nonempty-preverb keys with the prefixus side)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/gita/upasarga_semantics.tsv">Download ↓</a></div>
     </article>
     <article class="card">
@@ -4097,6 +4303,16 @@
     </article>
     <article class="card">
       <div class="card-h">
+        <h3>Diachronic sense portraits — per-sense frequency x first-era buckets (H4735 join)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per (slp1, hom, sense_id) from sense_dating.tsv (lossless LEFT JOIN; era buckets never altered): slp1/hom/sense_id/first_era/era_rank/bucket_via/class/n_cites/n_dateable + bridge_status( joined|bridge_no_freq|bridge_unaligned|no_pilot_row)/bridge_mw_sense + freq payload (count_all/sense_rank/lemma_share/n_texts/top_genre/top_genre_share/provenance/confidence) where joined.</p>
+      <p class="meta">7,349 rows · 536.4 KB · TSV</p>
+      <div class="chips"><span class="chip">sense-resolved LSC (A57 next): era axis x per-sense frequency weight</span><span class="chip">diachronic lexicon views over the H1455 500-headword frame</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/sense_portraits.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
         <h3>Hitopadeśa per-text word concordance pilot — every word of the text feeding the dictionary (Tamilex corpus-dictionary pattern, H4034)</h3>
         <span class="badge pub">public</span>
       </div>
@@ -4124,6 +4340,56 @@
       <p class="meta">42 rows · 17.8 KB · TSV+JSON</p>
       
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/kosha">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>А.А.Зализняк public-lecture transcript census (Sanskrit/Vedic + Slavic linguistics)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">folder, basename, text_formats (csv of txt/srt/json/ans/html/tsv/vtt present), media_formats, topic_tags (sanskrit_vedic/russian_diachrony/birchbark_novgorod/velesova_book/interview_conversation/other_unclassified), text_bytes_total</p>
+      <p class="meta">272 rows · TSV (INDEX ONLY — FULL TRANSCRIPTS NOT VENDORED, SOURCE IS A PRIVATE YANDEX.DISK REMOTE)</p>
+      
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Sanskrityatina 04_Reverse coding legend — 187,992-headword reverse-dictionary stock taxonomy (H4475)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">two TSVs from one legend file: coding_classes.tsv one row per legend class (class_code, headwords, description, is_stock_total; 24 rows = stock-total class 0 (187,992) + 23 OVERLAPPING subclasses, counts sum 197,019, delta 9,027) and examples.tsv one row per attested legend example (headword_slp1, headword_iast, form_key, cdsl_key, exact_key, sources, rev_class, source_page_ref — the ref column empty by construction, the legend carries no page refs; 3 rows)</p>
+      <p class="meta">27 rows · 1.5 KB · TSV</p>
+      
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Sanskrityatina 04_Reverse/Experimental SCH research cases — six-file keyed TSV with L/pc page refs (H4533)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per &lt;H1&gt; case: key1_slp1, key2_accented (Schwarz&#x27;s own numeric-accent transliteration, passed through verbatim, NOT re-derived), iast + form_key (both via sanskrit-util from_slp1/slp1_form_key on key1_slp1), case_class (from source filename: fiction, gedruckt, grade, pw-comparison, zu-betonen, zu-lesen), L (line/entry number), pc (page-column ref), source_xml</p>
+      <p class="meta">16,304 rows · 1.4 MB · TSV</p>
+      
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>DCS prefixed-verb decomposition (MG 2014 workbook) — in-form × prefix × dhātu × Palsule №</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">in_form (DCS surface) -&gt; prefix_guess (naive allomorph match, 38 rows) / prefix (resolved parse, 5,059 rows) / dhatu (1,839 distinct) / palsule_no (1,099 rows, 321 distinct, 100% validated vs the workbook&#x27;s own dhatu sheet); 1,350 rows carry no prefix resolution; dhatu_check duplicates dhatu exactly in 100% of rows (MG&#x27;s own QA column)</p>
+      <p class="meta">6,425 rows · 188.5 KB · TSV</p>
+      <div class="chips"><span class="chip">kosha — upasarga_atlas.tsv unified atlas (H4729, 15-09-2026: FIRST consumer — 6,344 (dhatu, prefix+&#x27;-&#x27;) keys joined with the Gita semantic + class-frequency legs; 34 shared nonempty-preverb keys, H4477 anchor reproduced)</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/dcs_upasarga_prefixus.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Bloomfield 1906 RV citations × Elizarenkova Russian RV — citation-to-translation pointer join</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">bloomfield-rv-citations rows (maṇḍala + sūkta + verse + pada_letter + pratīka) -&gt; match_status + elizarenkova_ref (SamudraManthanam 01/02_rigveda.no_tags block id, H2863) + rvlinks_anchor (rvMM.SSS.VV URL) + pratika_verified_in_elizarenkova</p>
+      <p class="meta">36,680 rows · 5.6 MB · TSV</p>
+      <div class="chips"><span class="chip">PWG gloss-vs-verse surfaces — pāda-granular RU alignment downstream of H2850</span><span class="chip">rvlinks verse pages (anchor targets, verified to exist for all 10,552 verses)</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/bloomfield_rv_x_elizarenkova_ru.tsv">Download ↓</a></div>
     </article>
     </div>
     <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>
