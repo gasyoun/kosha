@@ -1628,16 +1628,17 @@
    "source_repo": "https://github.com/gasyoun/kosha",
    "source_path": "data/sandhi/corpus_sandhi.tsv",
    "builder": "scripts/build_corpus_sandhi.py over scripts/dcs_sandhi_induce.py (method A); source DCS CoNLL-U (dcs-conllu)",
-   "consumers": [],
+   "consumers": [
+    {
+     "repo": "Systema-Sanscriticum",
+     "use": "/reading/sandhi page — top 147 rules (90% of corpus sandhi) baked into resources/data/corpus_sandhi/corpus_sandhi_top.json by scripts/vendor_corpus_sandhi.py (pins kosha commit+blob, --check for drift); behind features.kosha_reader (H4718, 15-09-2026, PR https://github.com/gasyoun/Systema-Sanscriticum/pull/2569)",
+     "confidence": "high"
+    }
+   ],
    "notes": "H900 roadmap Phase 2, broadened by H901 Phase 2b (14-07-2026, 17 texts), then H1492 Phase 2c (24-07-2026, +24 sastra/commentary texts → 41). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns; source DCS is CC BY-SA 4.0 (Oliver Hellwig / DCS). Texts swept (difficulty order): Hitopadesa, Vetalapancavimsatika, Sukasaptati, Amarusataka, Astavakragita, Gitagovinda, Kathasaritsagara, Buddhacarita, Kumarasambhava, Kiratarjuniya, Meghaduta, Dasakumaracarita, Bharatamanjari, Satakatraya, Bhallatasataka, Ramayana, Mahabharata (full); H1492 sastra/commentary: Yogasutra, Yogasutrabhasya, Nyayasutra, Nyayabhasya, Samkhyakarika, Samkhyatattvakaumudi, Vaisesikasutra, Mimamsasutrabhasya, Tarkasamgraha, Sarvadarsanasamgraha, Manusmrti, Yajnavalkyasmrti, Arthasastra, Kamasutra, Astadhyayi, Kasikavrtti, Nirukta, Amarakosa, Natyasastra, Kavyadarsa, Carakasamhita, Susrutasamhita, Abhidharmakosabhasya, Prasannapada. Curated pedagogical core — deliberately skips the rasaśāstra / āyurveda-dīpikā flood in dcs-conllu. Per-text tables also shipped as data/sandhi/<id>_sandhi.tsv. Counts: 17→41 texts, 580,230→707,936 events, 9,840→13,012 rules; top-N-for-80% 83→82 (stable). Extends the Gita-only gita-sandhi dataset corpus-wide.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
    "regen_checked": "2026-09-04 (H4046: FAIL)",
    "consumer_candidates": [
-    {
-     "repo": "Systema-Sanscriticum",
-     "use": "reading/sandhi/ pages",
-     "confidence": "low"
-    },
     {
      "repo": "SanskritGrammar",
      "use": "graded sandhi curriculum",
