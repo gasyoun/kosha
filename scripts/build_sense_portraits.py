@@ -70,13 +70,24 @@ def build_bridge():
 
 
 def build_freq_mw():
-    """(lemma_slp1, mw sense number) -> freq row (MW layer only)."""
+    """(lemma_slp1, mw sense number) -> freq row (MW layer only).
+
+    The sidecar carries at most one row per (key, provenance): an `attested`
+    WordSem-gold row and/or an `estimated` (H1588 MFS) row. On collision the
+    ATTESTED row wins — never last-wins, which would silently pick the
+    estimated block (H4735 verifier finding). The winning row's provenance
+    column travels into the portrait either way.
+    """
     freq = {}
     for row in read_tsv(FREQ_TSV):
         if row["layer"] != "mw":
             continue
         n = row["sense_id"].rsplit("#", 1)[1]
-        freq[(row["lemma_slp1"], n)] = row
+        key = (row["lemma_slp1"], n)
+        cur = freq.get(key)
+        if cur is None or (row["provenance"] == "attested"
+                           and cur["provenance"] != "attested"):
+            freq[key] = row
     return freq
 
 
@@ -177,6 +188,14 @@ def build_report(rows):
             era_lines.append(
                 f"| {era} | {era_census[era]} | {len(cnts)} | "
                 f"{med if med != '' else '—'} | {sum(cnts)} |")
+    # Null-era joined rows must surface too, never silently drop
+    # (H4735 verifier finding: 11 joined rows with empty first_era).
+    null_joined = joined_by_era.get("", [])
+    if null_joined:
+        era_lines.append(
+            f"| null-undateable | {era_census['null-undateable']} | "
+            f"{len(null_joined)} | {median(null_joined)} | "
+            f"{sum(null_joined)} |")
     top = sorted(joined, key=lambda r: -int(r["count_all"]))[:10]
     top_lines = [
         f"| {r['slp1']} | {r['sense_id']} | {r['first_era']} | "
@@ -223,7 +242,7 @@ crossdict pilot's MW inventory column. Output: `sense_portraits.tsv` —
 |---|---|---|
 """ + "\n".join(
         f"| {e} | {era_census[e]} | "
-        f"{sum(1 for r in joined if r['first_era'] == e)} |"
+        f"{sum(1 for r in joined if (r['first_era'] or 'null-undateable') == e)} |"
         for e in sorted(era_census, key=era_key)
     ) + f"""
 
@@ -292,16 +311,30 @@ def check(rows):
     n_dating = sum(1 for _ in open(DATING_TSV)) - 1
     assert len(rows) == n_dating, f"row loss: {len(rows)} != {n_dating}"
     # 3. Joined payload recount: every joined row's count_all must exist in
-    #    the freq sidecar at the bridged MW sense number.
+    #    the freq sidecar at the bridged MW sense number; attested-preference
+    #    invariant: an estimated payload is only legal when NO attested row
+    #    exists for that (lemma, sense) key (H4735 verifier finding).
     freq = build_freq_mw()
+    attested_keys = set()
+    for row in read_tsv(FREQ_TSV):
+        if row["layer"] == "mw" and row["provenance"] == "attested":
+            attested_keys.add(
+                (row["lemma_slp1"], row["sense_id"].rsplit("#", 1)[1]))
     for r in rows:
         if r["bridge_status"] == "joined":
             n = r["bridge_mw_sense"].rsplit(":", 1)[1]
             f = freq.get((r["slp1"], n))
             assert f is not None and f["count_all"] == r["count_all"], (
                 f"freq payload mismatch at {r['slp1']}#{r['sense_id']}")
+            if r["provenance"] == "estimated":
+                assert (r["slp1"], n) not in attested_keys, (
+                    f"estimated payload over an attested row: "
+                    f"{r['slp1']}#{r['sense_id']}")
         else:
             assert r["count_all"] == "", "freq payload on non-joined row"
+        if r["bridge_status"] == "joined":
+            assert r["first_era"] in ERA_RANK or r["first_era"] == "", (
+                f"joined row with unknown era: {r['first_era']!r}")
     # 4. Byte parity with the stored file.
     import io
     buf = io.StringIO()
