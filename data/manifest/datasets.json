@@ -2923,6 +2923,27 @@
    ],
    "notes": "H4534 (11-09-2026, OxAlpha glm-5.3-flash). Join view vs sibling sanskrit-upasarga-semantics (H4477 census §5): zero SOURCE overlap — DCS dictionary dimension vs Gita.xlsm compositional dimension — with a real key join: 5,007 resolved (dhatu,prefix) pairs vs 69 gita (root,preverb) pairs, 34 shared keys (bhū+pra-, dā+pra-, gam+ā-, vṛt+pra-/ati-/ni-/anu-/ā-…). Sheets dhatu (3,688×8 Palsule root lists), replace (40 normalization pairs), Лист2 (prefix tally) NOT derived — see data/upasarga/DCS_UPASARGA_PREFIXUS.md. DCS underlying data CC BY 4.0; ships BY-SA with the public tier, credit Dr. Mārcis Gasūns.. H4729 (15-09-2026, OxAlpha glm-5.3-flash): first consumer — the unified upasarga atlas (data/upasarga/upasarga_atlas.tsv) joins it with sanskrit-upasarga-semantics + dcs-verb-class-prefix-frequency.",
    "regen_checked": "2026-09-11 (H4534: PASS — rerun byte-identical, sha256 6d2f2ff2519d6ab6700be9f13741be74a1833226fa896c9c0ea9a403f37749b3)"
+  },
+  {
+   "id": "bloomfield-rv-x-elizarenkova-ru",
+   "title": "Bloomfield 1906 RV citations × Elizarenkova Russian RV — citation-to-translation pointer join",
+   "tier": "public",
+   "license": "CC BY-SA 4.0",
+   "in_release": "unreleased",
+   "release_asset": "bloomfield_rv_x_elizarenkova_ru.tsv",
+   "format": "tsv",
+   "rows": 36680,
+   "size_bytes": 5907419,
+   "keying": "bloomfield-rv-citations rows (maṇḍala + sūkta + verse + pada_letter + pratīka) -> match_status + elizarenkova_ref (SamudraManthanam 01/02_rigveda.no_tags block id, H2863) + rvlinks_anchor (rvMM.SSS.VV URL) + pratika_verified_in_elizarenkova",
+   "source_repo": "https://github.com/gasyoun/kosha",
+   "source_path": "data/concordance/bloomfield_rv_x_elizarenkova_ru.tsv",
+   "builder": "scripts/build_bloomfield_rv_elizarenkova_join.py (H4731, Census C4; reads sibling repos ../SamudraManthanam + ../rvlinks read-only, deterministic seed 42)",
+   "consumers": [
+    "PWG gloss-vs-verse surfaces — pāda-granular RU alignment downstream of H2850",
+    "rvlinks verse pages (anchor targets, verified to exist for all 10,552 verses)"
+   ],
+   "notes": "H4731 (15-09-2026, OxAlpha glm-5.3-flash). Joins every Bloomfield Ṛgveda citation (36,680 pada-level rows, 10,374 distinct verse keys) to the published Elizarenkova Russian (SamudraManthanam H2863 digitization, mandalas I-II) and the addressable rvlinks per-verse anchor. Statuses: 8,988 joined / 27,674 elizarenkova_out_of_samudra_coverage (mandalas 3-10: volumes exist in print, not in the Samudra digitization) / 18 unjoined_no_surface (named residue: 16 verse numbers beyond the standard text's count + 2 RV.16.x khila/parishiṣṭa keys — table in the report). Verse-pair blocks handled: hymns 1.65-1.84 print verse PAIRS in one block (id=65.1 carries 1-2, range title authoritative), so even verses resolve. RIGHTS DISCIPLINE: pointer layer ONLY — the TSV deliberately carries no Elizarenkova translation text (in copyright, М.: Наука 1989+; every Elizarenkova-derived bulk layer in the estate is tier=restricted — see sa-ru-glossary, pwg-ru-mdf-export); consumers resolve refs/anchors at render time; bounded ≤160-char excerpts exist only in the report's 25-citation verification sample. Own-data canary: Samudra vs rvlinks are two independent Elizarenkova digitizations; on all 2,415 joined verse keys normalized RU-vs-RU similarity mean 0.973, 97.4% >= 0.85 (line-break/punctuation variants, neither side mutated). Pratika-vs-source substring check (H896 method) on 8,988 applicable rows: 86.9% y, remainder the documented orthographic variance (e.g. RV.1.1.1a īḍe vs Elizarenkova's īḷe). Full method + counts: data/concordance/BLOOMFIELD_RV_X_ELIZARENKOVA_RU_REPORT.md.",
+   "regen_checked": "2026-09-15 (H4731: PASS — deterministic rerun, seed 42)"
   }
  ]
 }
