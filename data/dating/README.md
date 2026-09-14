@@ -28,6 +28,8 @@ H4016 GO×STRONG verdict).
 | `work_dates.tsv` + `.json` | one row per distinct resolved locus prefix: work identity → era bucket + via + reason + flags | derived — `--check` recomputes |
 | `abbrev_map.tsv` | PWG citation abbreviation → work + era (mode share ≥ 0.9); the render badge lookup | derived — `--check` recomputes |
 | `sense_dating.tsv` | one row per sense (slp1, hom, sense_id): n_cites, n_dateable, first_era, bucket_via, marginal, class, conflict notes | derived — `--check` recomputes |
+| `sense_portraits.tsv` | H4735 join with the DCS per-sense frequency sidecar (MW layer) via the H3744 pilot inventory bridge: era bucket + count_all per dated sense, `bridge_status` provenance per row | derived — `scripts/build_sense_portraits.py --check` recomputes |
+| `SENSE_PORTRAITS_REPORT.md` | era-bucket census, join coverage, era × frequency, lemma rollup | derived |
 | `COVERAGE_REPORT.md` | era × via × mass-share, nomina-first spot-check, honest residue | derived |
 
 Rebuild + parity gate:
