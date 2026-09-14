@@ -1,6 +1,6 @@
 # kosha frequency layer
 
-_Created: 02-07-2026 · Last updated: 02-07-2026_
+_Created: 02-07-2026 · Last updated: 15-09-2026_
 
 A per-lemma corpus-frequency **sidecar feed** for kosha, keyed by `lemma_slp1`
 (SLP1, `sanskrit-util`-normalised) so it joins directly onto the kosha lemma spine
@@ -61,6 +61,18 @@ all counted lemmas so nothing with a real signal is unranked. 7,120 rows carry
   such rows are harmless — a LEFT JOIN on `lemmas.slp1` never surfaces them.
 - **40.7 %** of the 94,074 PWG headwords carry a freq signal — the high-frequency
   ones, which is exactly what the slice ordering needs first.
+
+## Cross-check (H4710, 15-09-2026)
+
+The per-period `periods` vectors were independently cross-checked against Leonchenko's
+Приложение-6 per-period cores ([`dcs-sintagmatic-appendix6-periods`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)):
+buckets `1 -800` / `3200` / `4700` / `5 1200` confirmed (ρ 0.79–0.89, ≥84% within ±2×),
+buckets `2 -300` / `6 1700` / `7 1900` diverge (A6-side re-dating drift + duplicate lemma
+rows). Full verdict, delta table and frozen sample:
+[XCHECK_A6_PERIOD_CORES_LEMMA_FREQUENCY_15.09.26.md](https://github.com/gasyoun/kosha/blob/main/docs/XCHECK_A6_PERIOD_CORES_LEMMA_FREQUENCY_15.09.26.md),
+run by
+[`scripts/xcheck_appendix6_period_freq.py`](https://github.com/gasyoun/kosha/blob/main/scripts/xcheck_appendix6_period_freq.py).
+`lemma_frequency.tsv` itself is unchanged and stays authoritative.
 
 ## Rebuild
 
