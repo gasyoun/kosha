@@ -620,10 +620,10 @@
    "source_path": "derived-data/Glagolnye-formy/Klassy/Spisok-form-s-prefiksami-8444/Cl_Frq/ (tracked, 10 files, *.csv per verb class)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
    "consumers": [
-    "SanskritLexicography papers/sanskrit_in_numbers/module10b_dcs_verb_class_attestation.py (H4711 census A5, 15-09-2026: FIRST consumer — SinN module 10b corpus leg, 8454-row parity, prefixed-only inventory analysis)"
+    "SanskritLexicography papers/sanskrit_in_numbers/module10b_dcs_verb_class_attestation.py (H4711 census A5, 15-09-2026: FIRST consumer — SinN module 10b corpus leg, 8454-row parity, prefixed-only inventory analysis)",
+    "kosha — upasarga_atlas.tsv unified atlas (H4729, 15-09-2026: per-class frequency leg, 8,313 roots joined at root level — the dataset has no preverb dimension, class_freqs attach to root-level rows only)"
    ],
    "notes": "H291 Step 2 bundle: 10 small per-class files registered as one row per MG ruling. Sibling of dcs-verb-roots-by-class (same class-numbering scheme, prefixed-forms variant). H3596 consumer-plan caveat: R2606-01 (Uprava DEAD_ENDS) — these are UNACCENTED counts, they cannot separate present class I from VI (only accent does); never use them for an I/VI verdict.",
-   "status": "awaiting-consumer",
    "consumer_candidates": [
     {
      "repo": "SanskritLexicography",
@@ -1694,6 +1694,25 @@
    "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
+   "id": "upasarga-atlas",
+   "title": "Unified upasarga atlas — prefixed-verb decomposition x Gita semantics x verb-class frequencies",
+   "tier": "public",
+   "license": "CC BY-SA 4.0",
+   "in_release": "unreleased",
+   "release_asset": "data/upasarga/upasarga_atlas.tsv",
+   "format": "tsv",
+   "rows": 13436,
+   "size_bytes": 459268,
+   "keying": "(root, preverb) union of three legs — root bare (Gita √ stripped), preverb hyphen-terminated ('' = root-level row; Gita comma-lists kept verbatim, NOT exploded). prefixus leg keyed on the RESOLVED prefix column only (5,059 rows → 5,007 pairs; naive prefix_guess never keys; 1,366 no-prefix rows collapse to root-level keys), semantics leg 214 rows (69 with preverb), classfreq leg 8,313 roots at root level only (no preverb dimension — class_freqs attach to root-level rows, non-zero classes as '1:30478|3:22'). sources column = sorted '+'-join of {classfreq, prefixus, semantics}. Shared nonempty-preverb keys prefixus x semantics: 34 (H4477 census anchor reproduced exactly).",
+   "source_repo": "https://github.com/gasyoun/kosha",
+   "source_path": "data/upasarga/upasarga_atlas.tsv",
+   "builder": "scripts/build_upasarga_atlas.py (H4729) — reads the two in-repo upasarga datasets + VisualDCS Cl_Frq/1..10.csv (--classdir, sibling clone); --verify mode cross-checks the emitted TSV (H4477 anchor + parity sample + classfreq round-trip)",
+   "consumers": [],
+   "notes": "H4729 (15-09-2026, OxAlpha glm-5.3-flash). Census C2 three-way join — first consumer of dcs-upasarga-prefixus, second of sanskrit-upasarga-semantics and dcs-verb-class-prefix-frequency. Sources breakdown: classfreq-only 7,020 / prefixus-only 5,037 / prefixus+classfreq 1,165 / all-three 108 / semantics-only 52 / prefixus+semantics 34 / semantics+classfreq 20. Class-freq per-class unkeyed bare-number total lines (10, one per file) excluded from the join and reported by the builder. dhatu∩classfreq roots 1,313/1,839; Gita-root∩classfreq 131/148. Derives CC BY-SA 4.0 like its sources (DCS underlying CC BY 4.0, Gita sheet MIT), credit Dr. Mārcis Gasūns.",
+   "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/upasarga-atlas.meta.md",
+   "regen_checked": "2026-09-15 (H4729: PASS — rerun byte-identical, sha256 97f3b9758ad78ba5302f0f84ba7dca7c908e10e5414a8485f36f6e5bca091503)"
+  },
+  {
    "id": "sanskrit-upasarga-semantics",
    "title": "Sanskrit root x preverb (upasarga) semantics",
    "tier": "public",
@@ -1709,7 +1728,8 @@
    "builder": "scripts/extract_upasarga_semantics.py + scripts/build_upasarga_page.py (Gita.xlsm verbs sheet, H876 W6)",
    "consumers": [
     "reading/upasarga/ page",
-    "/w/ root-card upasarga panel (app/word_page.py)"
+    "/w/ root-card upasarga panel (app/word_page.py)",
+    "kosha — upasarga_atlas.tsv unified atlas (H4729, 15-09-2026: sense + Gita-count leg of the three-way join; 34 shared nonempty-preverb keys with the prefixus side)"
    ],
    "notes": "H848 roadmap W6 (final workstream). Public/MIT, credit Dr. Marcis Gasuns. Data statement docs/data-statements/upasarga-semantics.meta.md. Surfaced on /w/ root cards (app/word_page.py _upasarga_block) + the reading/upasarga/ page.",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
@@ -2898,8 +2918,10 @@
    "source_repo": "yadisk:Sanskrityatina/05_Sanskrit-Lexicon/upasarga-stat (derived-only — xlsx never committed)",
    "source_path": "DCS-upasarga-analysis.xlsx sheet 'praefixus', 6,425 data rows ×6 (MG workbook dated 28-09-2014; dims per H4477 census §5)",
    "builder": "kosha scripts/extract_dcs_upasarga_prefixus.py --xlsx <DCS-upasarga-analysis.xlsx> (H4534)",
-   "consumers": [],
-   "notes": "H4534 (11-09-2026, OxAlpha glm-5.3-flash). Join view vs sibling sanskrit-upasarga-semantics (H4477 census §5): zero SOURCE overlap — DCS dictionary dimension vs Gita.xlsm compositional dimension — with a real key join: 5,007 resolved (dhatu,prefix) pairs vs 69 gita (root,preverb) pairs, 34 shared keys (bhū+pra-, dā+pra-, gam+ā-, vṛt+pra-/ati-/ni-/anu-/ā-…). Sheets dhatu (3,688×8 Palsule root lists), replace (40 normalization pairs), Лист2 (prefix tally) NOT derived — see data/upasarga/DCS_UPASARGA_PREFIXUS.md. DCS underlying data CC BY 4.0; ships BY-SA with the public tier, credit Dr. Mārcis Gasūns.",
+   "consumers": [
+    "kosha — upasarga_atlas.tsv unified atlas (H4729, 15-09-2026: FIRST consumer — 6,344 (dhatu, prefix+'-') keys joined with the Gita semantic + class-frequency legs; 34 shared nonempty-preverb keys, H4477 anchor reproduced)"
+   ],
+   "notes": "H4534 (11-09-2026, OxAlpha glm-5.3-flash). Join view vs sibling sanskrit-upasarga-semantics (H4477 census §5): zero SOURCE overlap — DCS dictionary dimension vs Gita.xlsm compositional dimension — with a real key join: 5,007 resolved (dhatu,prefix) pairs vs 69 gita (root,preverb) pairs, 34 shared keys (bhū+pra-, dā+pra-, gam+ā-, vṛt+pra-/ati-/ni-/anu-/ā-…). Sheets dhatu (3,688×8 Palsule root lists), replace (40 normalization pairs), Лист2 (prefix tally) NOT derived — see data/upasarga/DCS_UPASARGA_PREFIXUS.md. DCS underlying data CC BY 4.0; ships BY-SA with the public tier, credit Dr. Mārcis Gasūns.. H4729 (15-09-2026, OxAlpha glm-5.3-flash): first consumer — the unified upasarga atlas (data/upasarga/upasarga_atlas.tsv) joins it with sanskrit-upasarga-semantics + dcs-verb-class-prefix-frequency.",
    "regen_checked": "2026-09-11 (H4534: PASS — rerun byte-identical, sha256 6d2f2ff2519d6ab6700be9f13741be74a1833226fa896c9c0ea9a403f37749b3)"
   }
  ]
