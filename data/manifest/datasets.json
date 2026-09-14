@@ -648,15 +648,15 @@
    "source_repo": "https://github.com/gasyoun/VisualDCS",
    "source_path": "derived-data/Lexical-Cores/Prilozhenie-6.-«Sintagmaticheskie-tablicy-chastotnyh-leksicheskih-yader-razlichnyh-istoricheskih-periodov»/ (tracked, 7 files, *.csv per period)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
-   "consumers": [],
-   "notes": "H291 Step 2 bundle: 7 per-period files registered as one row per MG ruling. Same 'appendix table' family as dcs-sintagmatic-appendix7 (Приложение 7 = all-corpus version; this is the per-period breakdown, Приложение 6).",
-   "status": "awaiting-consumer",
-   "consumer_candidates": [
+   "consumers": [
     {
      "repo": "kosha",
-     "use": "frequency-layer cross-check — per-period collocate cores validate the per-period vectors in data/frequency/lemma_frequency.tsv",
-     "confidence": "medium"
-    },
+     "use": "frequency-layer cross-check — per-period collocate cores joined (IAST→SLP1, sanskrit-util) against the periods vectors of data/frequency/lemma_frequency.tsv; buckets 1 -800/3200/4700/5 1200 confirmed (ρ 0.79–0.89), 2 -300/6 1700/7 1900 diverge (re-dating drift); delta table data/frequency/appendix6_xcheck_delta.tsv + frozen sample (H4710, 15-09-2026)",
+     "confidence": "high"
+    }
+   ],
+   "notes": "H291 Step 2 bundle: 7 per-period files registered as one row per MG ruling. Same 'appendix table' family as dcs-sintagmatic-appendix7 (Приложение 7 = all-corpus version; this is the per-period breakdown, Приложение 6). H4710 (15-09-2026): first consumer landed — kosha frequency-layer cross-check; ⚠ 723 lemmas carry DUPLICATE rows per file (768 extra of 19,083 lines; sum before use) and period buckets 2/6/7 disagree with the 2026 FRQ_P vectors (use collocate profiles, not exact counts).",
+   "consumer_candidates": [
     {
      "repo": "SanskritLexicography",
      "use": "Sanskrit-in-Numbers period modules (diachronic lexical-core portrait)",

@@ -102,3 +102,6 @@ data/akshara_full/*.stderr.log
 # local-only artifact tree, never the Pages input; docs/NOT_PUBLISHED_H3457_WPAGE_UX.md
 dist/
 # H3457 mockup screenshots are committed (design packet evidence) — nothing to ignore
+
+# editable-install artifact (never commit)
+*.egg-info/
