@@ -229,6 +229,10 @@ def main() -> int:
     per_m = max(1, args.sample // len(by_m))
     for m, idxs in sorted(by_m.items()):
         sample_idx.update(rng.sample(idxs, min(per_m, len(idxs))))
+    # top up to exactly --sample rows (per-mandala pass can undershoot)
+    all_idx = list(range(len(out_rows)))
+    while len(sample_idx) < args.sample:
+        sample_idx.add(rng.choice(all_idx))
     while len(sample_idx) > args.sample:
         sample_idx.discard(rng.choice(sorted(sample_idx)))
     sample = sorted(sample_idx)
