@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="sa" data-view="adaptive"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>अनाधृष्य anādhṛṣya — Sanskrit dictionary | kosha</title><meta name="description" content="an-ādhṛṣya mfn. invincible, not to be meddled with, &amp;nbsp;RV.&amp;nbsp; &amp;c."><meta name="data-version" content="0.1.0-dev"><style>:root{--fg:#1a1a1a;--muted:#6b7280;--border:#d7d7db;--accent:#7b2d26;
+--card-bg:#fafafa;--head-bg:#f0f0f2;--hit-bg:#fdf3e7;--tag-bg:#ece7e0;
+--tag-fg:#7b2d26;--page-bg:#fff;--b1:#7b2d26;--b2:#a05a2c;--b3:#4a7a3a;
+--b4:#5a6b8c;--b5:#9aa0a6}
+@media(prefers-color-scheme:dark){:root{--fg:#e8e8ea;--muted:#9aa0a6;
+--border:#3a3a40;--accent:#e0a44a;--card-bg:#202024;--head-bg:#26262b;
+--hit-bg:#3a3020;--tag-bg:#2c2c31;--tag-fg:#e0a44a;--page-bg:#161618;
+--b1:#e0a44a;--b2:#d08a3a;--b3:#7bbf6a;--b4:#8fa4c8;--b5:#6b7078}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page-bg);color:var(--fg);
+font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+.word-page{max-width:52rem;margin:0 auto;padding:1.2rem 1rem 4rem}
+.hw-strip{display:flex;gap:.7rem;align-items:baseline;flex-wrap:wrap;
+border-bottom:1px solid var(--border);padding-bottom:.6rem}
+.hw-deva{font-size:2rem}.hw-iast{font-size:1.2rem;color:var(--muted)}
+.hw-key{font-family:monospace;font-size:.8rem;color:var(--muted)}
+.band{font-size:.65rem;font-weight:700;padding:.12rem .45rem;border-radius:4px;
+color:#fff;text-transform:uppercase}
+.band.b1{background:var(--b1)}.band.b2{background:var(--b2)}
+.band.b3{background:var(--b3)}.band.b4{background:var(--b4)}.band.b5{background:var(--b5)}
+.ndicts,.gram{font-size:.72rem;color:var(--muted)}
+.gram{font-family:monospace}
+.saru-strip{margin:.4rem 0 0;font-size:.95rem;line-height:1.4}
+.saru-strip .saru-src{font-size:.68rem;font-weight:700;letter-spacing:.04em;
+text-transform:uppercase;color:var(--muted);margin-right:.45rem}
+.saru-strip.saru-miss{font-size:.85rem;color:var(--muted)}
+.view-toggle{display:inline-flex;margin:.7rem 0 0;border:1px solid var(--border);
+border-radius:6px;overflow:hidden}
+.view-toggle button{border:none;background:var(--page-bg);color:var(--muted);
+padding:.3rem .7rem;cursor:pointer;font-size:.8rem}
+.view-toggle button[aria-checked=true]{background:var(--head-bg);color:var(--fg);font-weight:600}
+.lang-tabs,.dict-tabs{display:flex;gap:.35rem;flex-wrap:wrap;margin:.9rem 0 0;
+border-bottom:1px solid var(--border)}
+.dict-tabs{margin-top:.35rem}
+.tab{border:1px solid var(--border);border-bottom:none;background:var(--card-bg);
+color:var(--fg);padding:.4rem .8rem;cursor:pointer;border-radius:6px 6px 0 0;font-size:.9rem}
+.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tab-all{margin-left:.35rem}
+.tab-n{font-size:.65rem;opacity:.75;margin-left:.3rem}
+.ru-empty{font-size:.9rem;color:var(--muted);margin:.6rem 0}
+.chip.ai-translated{background:var(--hit-bg);color:var(--accent);font-weight:600;
+margin-left:.45rem}
+.dict-label{display:none;font:600 .85rem/1.3 system-ui,sans-serif;
+margin:0 0 .6rem;color:var(--accent)}
+.word-page.all-dicts .dict-label{display:block}
+.word-page.all-dicts .dict-panel{border-top:1px solid var(--border);
+padding-top:.9rem;margin-top:1.1rem}
+.dict-panel{border:1px solid var(--border);border-top:none;padding:.4rem 1rem;
+background:var(--card-bg)}
+.dict-entry{border-top:1px solid var(--border);padding:.55rem 0}
+.dict-entry:first-child{border-top:none}
+.entry-head{display:flex;gap:.7rem;align-items:baseline;margin-bottom:.25rem}
+.entry-head .hw{font-weight:600}
+.scan{font-size:.8rem;color:var(--accent)}
+.rendered{overflow-wrap:anywhere}
+[data-view=gloss] .dict-entry:not(:first-child){display:none}
+@media(max-width:640px){[data-view=adaptive] .dict-entry:not(:first-child){display:none}}
+.disclosure{margin:.8rem 0 0;border:1px solid var(--border);border-radius:8px;
+background:var(--card-bg);padding:.3rem .8rem}
+.disclosure summary{cursor:pointer;font-weight:600;font-size:.9rem;padding:.3rem 0}
+.upa-list{margin:.2rem 0 .4rem;padding-left:1.1rem;font-size:.9rem}
+.upa-pv{font-weight:600}
+.ev-list{margin:.2rem 0 .4rem;padding-left:1.1rem;font-size:.9rem}
+.example{margin:.3rem 0;padding:.4rem .7rem;border-left:3px solid var(--accent);
+background:var(--hit-bg);font-size:1.05rem}
+.sf-head{margin:.2rem 0 .5rem;font-size:.85rem;color:var(--muted)}
+.sf-head b{color:var(--fg)}
+.sf-legend{margin-left:.5rem;font-size:.72rem}
+.sf-list{list-style:none;margin:.2rem 0 .3rem;padding:0}
+.sf-item{margin:.35rem 0}
+.sf-gloss{display:block;font-size:.9rem;margin-bottom:.15rem}
+.sf-bar{display:block;height:.5rem;background:var(--tag-bg);border-radius:3px;overflow:hidden}
+.sf-fill{display:block;height:100%;background:var(--accent);border-radius:3px}
+.sf-nums{display:flex;align-items:center;gap:.4rem;margin-top:.15rem;font-size:.8rem;flex-wrap:wrap}
+.sf-share{color:var(--muted)}
+.sf-more{font-size:.8rem;color:var(--muted);margin-top:.3rem;list-style:none}
+.chip{display:inline-block;font-size:.7rem;padding:.05rem .4rem;border-radius:4px;line-height:1.5}
+.chip.att{background:var(--tag-bg);color:var(--tag-fg)}
+.chip.att b{color:var(--tag-fg)}
+.chip.est{background:transparent;border:1px dashed var(--border);color:var(--muted);min-width:1.6rem}
+.chip.genre{background:transparent;border:1px solid var(--b2);color:var(--b2)}
+.chip.warn{background:var(--b1);color:#fff;font-weight:600}
+.sf-foot{margin:.5rem 0 .2rem;font-size:.72rem;color:var(--muted);line-height:1.4}
+.sf-foot .chip.warn{font-size:.66rem}
+.wp-foot{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--border);
+font-size:.78rem;color:var(--muted)}
+.wp-foot a{color:var(--accent)}
+/* H4019/H4026 sense-dating era badges — quiet chips riding the citation */
+.ls-era{display:inline-block;font-size:.6rem;line-height:1.4;letter-spacing:.02em;
+vertical-align:super;margin-left:.25rem;padding:0 .3rem;border-radius:3px;
+border:1px solid var(--border);color:var(--muted);background:var(--page-bg);
+white-space:nowrap}
+a .ls-era{text-decoration:none}
+.ls-era[data-era="vedic"]{border-color:#a66a00;color:#a66a00}
+.ls-era[data-era="epic-sutra"]{border-color:#7a6ea8;color:#7a6ea8}
+.ls-era[data-era="classical"]{border-color:#3d7a68;color:#3d7a68}
+.ls-era[data-era="early-medieval"]{border-color:#36679b;color:#36679b}
+.ls-era[data-era="late-medieval"]{border-color:#8a5a5a;color:#8a5a5a}
+.dating-note{font-size:.78rem;color:var(--muted)}
+.dating-caveat{margin:.4rem 0}
+.dating-legend{margin:.4rem 0 0}
+.ls-era-demo{display:inline-block;font-size:.62rem;padding:0 .3rem;border-radius:3px;
+border:1px solid var(--border);margin-right:.15rem;white-space:nowrap}
+.ls-era-demo[data-era="vedic"]{border-color:#a66a00;color:#a66a00}
+.ls-era-demo[data-era="epic-sutra"]{border-color:#7a6ea8;color:#7a6ea8}
+.ls-era-demo[data-era="classical"]{border-color:#3d7a68;color:#3d7a68}
+.ls-era-demo[data-era="early-medieval"]{border-color:#36679b;color:#36679b}
+.ls-era-demo[data-era="late-medieval"]{border-color:#8a5a5a;color:#8a5a5a}
+.study-badge{display:inline-flex;align-items:baseline;gap:.35rem;font-size:.68rem;
+font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:.14rem .5rem;
+border-radius:4px;border:1px solid var(--accent);color:var(--accent);background:transparent}
+.study-badge .study-rank{font-family:monospace;font-weight:600;letter-spacing:0;text-transform:none;
+opacity:.85}
+.study-badge.core-500{background:var(--accent);color:#fff}
+.study-badge.core-2000{background:var(--hit-bg)}
+.study-badge.none{border-style:dashed;color:var(--muted);border-color:var(--border)}
+.fav{border:1px solid var(--border);background:var(--page-bg);color:var(--muted);
+border-radius:999px;cursor:pointer;font-size:1rem;line-height:1;padding:.2rem .55rem;
+margin-left:auto}
+.fav:hover{color:var(--accent);border-color:var(--accent)}
+.fav[aria-pressed=true]{color:#fff;background:var(--accent);border-color:var(--accent)}
+.fav[aria-pressed=true] .fav-ico::before{content:"♥ "}
+.fav[aria-pressed=true] .fav-ico{font-size:0}
+.fav[aria-pressed=true] .fav-ico::before{font-size:1rem}
+.scan-unresolved{color:var(--muted);text-decoration:underline dotted}
+.dict-entry:target{background:var(--hit-bg);outline:2px solid var(--accent);outline-offset:.2rem}
+.entry-head .eid{font-size:.75rem;color:var(--muted);text-decoration:none;margin-left:auto}
+.entry-head .eid:hover{color:var(--accent)}
+.wp-foot .fav-count{margin-left:.3rem;font-family:monospace}
+.sense-align .sa-head{margin:.2rem 0 .6rem;font-size:.85rem;color:var(--muted)}
+.sense-align .sa-head b{color:var(--fg)}
+.sa-scroll{overflow-x:auto}
+.sa-table{border-collapse:collapse;width:100%;font-size:.85rem}
+.sa-table th{text-align:left;font-weight:600;font-size:.72rem;letter-spacing:.04em;
+text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);
+padding:.25rem .5rem .3rem}
+.sa-table td{border-top:1px solid var(--border);padding:.45rem .5rem;vertical-align:top}
+.sa-table .sa-lang{font-weight:400;text-transform:none;letter-spacing:0;opacity:.7}
+.sa-sid{display:block;font-family:monospace;font-size:.68rem;color:var(--muted)}
+.sa-ev{white-space:nowrap;width:1%}
+.chip.sa-score{display:inline-block;font-size:.68rem;font-family:monospace;
+border:1px solid var(--border);border-radius:999px;padding:.05rem .4rem;color:var(--accent)}
+.sa-wit,.sa-flag{display:block;font-family:monospace;font-size:.65rem;color:var(--muted);
+margin-top:.2rem;max-width:9rem;white-space:normal}
+.sa-null{color:var(--muted)}
+.sa-more,.sa-foot{font-size:.75rem;color:var(--muted);margin:.5rem 0 0}
+@media(max-width:520px){.sa-table{font-size:.78rem}.sa-wit,.sa-flag{max-width:6rem}}
+.hw-strip .study-badge{margin-left:.2rem}</style></head><body><main class="word-page" data-slp1="anADfzya" data-lang="en"><header class="hw-strip"><span class="hw-deva" lang="sa">अनाधृष्य</span><span class="hw-iast">anādhṛṣya</span><span class="hw-key" title="SLP1 key">[anADfzya]</span><span class="band b3" title="common -- recognise">band 3</span><span class="ndicts">3 dicts</span><span class="gram" data-gram hidden></span><button type="button" class="fav" data-fav data-slp1="anADfzya" data-token="an_41_44fzya" data-deva="अनाधृष्य" data-iast="anādhṛṣya" aria-pressed="false" aria-label="Save anādhṛṣya to favorites" hidden><span class="fav-ico">♡</span></button></header><p class="saru-strip" lang="ru"><span class="saru-src">SanskritRussian</span> неприступный</p><div class="view-toggle" role="radiogroup" aria-label="Detail level" hidden><button type="button" data-view-set="gloss" role="radio" aria-checked="false">Gloss</button><button type="button" data-view-set="full" role="radio" aria-checked="false">Full</button><button type="button" data-view-set="adaptive" role="radio" aria-checked="true">Adaptive</button></div><noscript><style>.dict-panel[hidden]{display:block!important}.lang-tabs,.dict-tabs,.view-toggle{display:none!important}</style></noscript><nav class="lang-tabs" role="tablist" aria-label="Languages"><button type="button" class="tab active" role="tab" aria-selected="true" id="tab-lang-en" data-lang="en" title="EN">EN</button><button type="button" class="tab" role="tab" aria-selected="false" id="tab-lang-de" data-lang="de" title="DE">DE</button><button type="button" class="tab" role="tab" aria-selected="false" id="tab-lang-ru" data-lang="ru" title="RU">RU</button><button type="button" class="tab tab-all" role="tab" aria-selected="false" aria-controls="panel-mw panel-pwg panel-ap90 panel-pwg_ru panel-mw_ru" id="tab-all" data-dict="all" data-lang="all" title="Show every dictionary">All<span class="tab-n">5</span></button></nav><nav class="dict-tabs" role="tablist" aria-label="Dictionaries" data-lang="en"><button type="button" class="tab active" role="tab" aria-selected="true" aria-controls="panel-mw" id="tab-mw" data-dict="mw" data-lang="en" title="Monier-Williams">MW<span class="tab-n">1</span></button><button type="button" class="tab" role="tab" aria-selected="false" aria-controls="panel-ap90" id="tab-ap90" data-dict="ap90" data-lang="en" title="Apte 1890">AP90<span class="tab-n">1</span></button></nav><nav class="dict-tabs" role="tablist" aria-label="Dictionaries" data-lang="de" hidden><button type="button" class="tab" role="tab" aria-selected="false" aria-controls="panel-pwg" id="tab-pwg" data-dict="pwg" data-lang="de" title="Petersburger Wörterbuch (großes)">PWG<span class="tab-n">3</span></button></nav><nav class="dict-tabs" role="tablist" aria-label="Dictionaries" data-lang="ru" hidden><button type="button" class="tab" role="tab" aria-selected="false" aria-controls="panel-pwg_ru" id="tab-pwg_ru" data-dict="pwg_ru" data-lang="ru" title="PWG Russian">pwg_ru<span class="tab-n">0</span></button><button type="button" class="tab" role="tab" aria-selected="false" aria-controls="panel-mw_ru" id="tab-mw_ru" data-dict="mw_ru" data-lang="ru" title="MW Russian">mw_ru<span class="tab-n">0</span></button></nav><section class="dict-panel" id="panel-mw" role="tabpanel" aria-labelledby="tab-mw" data-dict="mw" data-lang="en"><h2 class="dict-label">Monier-Williams</h2><article class="dict-entry" id="e-mw-5541"><div class="entry-head"><span class="hw">anādhṛṣya</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/servepdf.php?page=28" target="_blank" rel="noopener" title="Open the printed page in the Cologne scan viewer">MW p. 28 ↗</a></div><div class="rendered"><span class='sdata'>an-ādhṛṣya</span> <strong>mfn.</strong> invincible, not to be meddled with, &nbsp;<span class='ls'>RV.</span>&nbsp; &c.</div></article></section><section class="dict-panel" id="panel-pwg" role="tabpanel" aria-labelledby="tab-pwg" data-dict="pwg" data-lang="de" hidden><h2 class="dict-label">Petersburger Wörterbuch (großes)</h2><article class="dict-entry" id="e-pwg-14148.748"><div class="entry-head"><span class="hw">anādhṛṣya</span><a class="scan scan-unresolved" href="https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=1147" target="_blank" rel="noopener" title="Open the printed page in the Cologne scan viewer">PWG col. 1147 (volume unresolved) ↗</a></div><div class="rendered"><span class='sdata'>anādhṛṣya</span> [<span>vgl.</span> [Page1-0184]] {7,85,1} = {7,84,1}.</div></article><article class="dict-entry" id="e-pwg-2518"><div class="entry-head"><span class="hw">anādhṛṣya</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=1-0184" target="_blank" rel="noopener" title="Open the printed page in the Cologne scan viewer">PWG 1, 184 ↗</a></div><div class="rendered"><span class='sdata'>anādhṛṣya</span> (<span class='hom' title='Homonym'>3.</span> <span class='sdata'>a</span> + <span class='sdata'>ādhṛṣya</span>) <strong>adj.</strong> <i>woran man sich nicht wagt, unzugänglich, unantastbar</i>: <span class='sdata'>anādhṛṣyā tava pātrāṇi dharmaṇā</span> (mit dem <span>instr.</span> des Grundes) &nbsp;<a class="ls ls-etext" href="https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv10.044.html#rv10.044.05" target="_blank" rel="noopener" title="Resolved literary-source link">ṚV. 10,44,5<span class='ls-era' data-era='vedic' title='first attestation in the cited corpus, not the origin of the meaning (первое засвидетельствование в цитируемом корпусе) · via dcs'>Vedic</span></a>&nbsp;. <span class='sdata'>tapasā ye anādhṛṣyāḥ</span> <a class="ls ls-etext" href="https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv10.154.html#rv10.154.02" target="_blank" rel="noopener" title="Resolved literary-source link">154,2</a>&nbsp;. <span class='sdata'>ugrāḥ vaḥ santu bāhavo 'nādhṛṣyā yathāsatha</span> <a class="ls ls-etext" href="https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv10.103.html#rv10.103.13" target="_blank" rel="noopener" title="Resolved literary-source link">10,103,13</a>&nbsp;. <a class="ls ls-etext" href="https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv04.018.html#rv04.018.10" target="_blank" rel="noopener" title="Resolved literary-source link">4,18,10</a>&nbsp;. &nbsp;<a class="ls ls-etext" href="https://sanskrit-lexicon.github.io/avlinks/avhymns/av07.085.html#av07.085.01" target="_blank" rel="noopener" title="Resolved literary-source link">AV. 7,85,1<span class='ls-era' data-era='vedic' title='first attestation in the cited corpus, not the origin of the meaning (первое засвидетельствование в цитируемом корпусе) · via dcs'>Vedic</span></a>&nbsp;. &nbsp;<a class="ls ls-scan" href="https://sanskrit-lexicon-scans.github.io/vajasasa/app1?27,7" target="_blank" rel="noopener" title="Cologne print scan: VĀJASANEYISAM̃HITĀ">VS. 27,7<span class='ls-era' data-era='vedic' title='first attestation in the cited corpus, not the origin of the meaning (первое засвидетельствование в цитируемом корпусе) · via dcs'>Vedic</span></a>&nbsp;. <span class='sdata'>pitṛlokaḥ</span> &nbsp;<a class="ls ls-etext" href="https://sanskrit-lexicon-scans.github.io/ramayanagorr/?4,41,66" target="_blank" rel="noopener" title="Resolved literary-source link">R. 4,41,66<span class='ls-era' data-era='epic-sutra' title='first attestation in the cited corpus, not the origin of the meaning (первое засвидетельствование в цитируемом корпусе) · via dcs'>epic-sūtra</span></a>&nbsp;. <span class='sdata'>sāgaram</span> <a class="ls ls-etext" href="https://sanskrit-lexicon-scans.github.io/ramayanagorr/?5,6,1" target="_blank" rel="noopener" title="Resolved literary-source link">5,6,1</a>&nbsp;. <a class="ls ls-etext" href="https://sanskrit-lexicon-scans.github.io/ramayanagorr/?5,8,21" target="_blank" rel="noopener" title="Resolved literary-source link">8,21</a>&nbsp;. <span class='sdata'>tava devairanādhṛṣyaṃ vīryam</span> <a class="ls ls-etext" href="https://sanskrit-lexicon-scans.github.io/ramayanagorr/?6,39,28" target="_blank" rel="noopener" title="Resolved literary-source link">6,39,28</a>&nbsp;. <span class='sdata'>anādhṛṣyaṃ (vanaṃ) mṛgapakṣigaṇairapi</span> <a class="ls ls-etext" href="https://sanskrit-lexicon-scans.github.io/ramayanagorr/?4,48,13" target="_blank" rel="noopener" title="Resolved literary-source link">4,48,13</a>&nbsp;. <span>superl.</span> <span class='sdata'>anādhṛṣyatamaḥ (rathaḥ)</span> zur Erklärung von <span class='sdata'>dūḍabha</span> &nbsp;<a class="ls ls-etext" href="https://sanskrit-lexicon-scans.github.io/shatapathabr/app1?2,3,4,40" target="_blank" rel="noopener" title="Resolved literary-source link">ŚAT. BR. 2,3,4,40<span class='ls-era' data-era='vedic' title='first attestation in the cited corpus, not the origin of the meaning (первое засвидетельствование в цитируемом корпусе) · via dcs'>Vedic</span></a>&nbsp;. <span class='sdata'>anādhṛṣyatamaṃ devamapi devarṣidānavaiḥ</span> &nbsp;<a class="ls ls-etext" href="https://sanskrit-lexicon-scans.github.io/ramayanagorr/?6,4,16" target="_blank" rel="noopener" title="Resolved literary-source link">R. 6,4,16<span class='ls-era' data-era='epic-sutra' title='first attestation in the cited corpus, not the origin of the meaning (первое засвидетельствование в цитируемом корпусе) · via dcs'>epic-sūtra</span></a>&nbsp;.</div></article><article class="dict-entry" id="e-pwg-63465"><div class="entry-head"><span class="hw">anādhṛṣya</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2020/web/webtc/servepdf.php?page=5-0982" target="_blank" rel="noopener" title="Open the printed page in the Cologne scan viewer">PWG 5, 982 ↗</a></div><div class="rendered"><span class='sdata'>anādhṛṣya</span> *<span>Z.</span> 4 lies 7,84,1 <span>st.</span> 7,85,1. Hinzuzufügen &nbsp;<a class="ls ls-etext" href="https://sanskrit-lexicon-scans.github.io/mbhcalc?1.4004" target="_blank" rel="noopener" title="Resolved literary-source link">MBH. 1,4004<span class='ls-era' data-era='epic-sutra' title='first attestation in the cited corpus, not the origin of the meaning (первое засвидетельствование в цитируемом корпусе) · via dcs'>epic-sūtra</span></a>&nbsp;. <a class="ls ls-etext" href="https://sanskrit-lexicon-scans.github.io/mbhcalc?2.810" target="_blank" rel="noopener" title="Resolved literary-source link">2,810</a>&nbsp;. <a class="ls ls-etext" href="https://sanskrit-lexicon-scans.github.io/mbhcalc?3.1428" target="_blank" rel="noopener" title="Resolved literary-source link">3,1428</a>&nbsp;. <a class="ls ls-etext" href="https://sanskrit-lexicon-scans.github.io/mbhcalc?5.7134" target="_blank" rel="noopener" title="Resolved literary-source link">5,7134</a>&nbsp;. &nbsp;<a class="ls ls-etext" href="https://sanskrit-lexicon-scans.github.io/ramayanaschl/?2,100,22" target="_blank" rel="noopener" title="Resolved literary-source link">R. 2,100,22<span class='ls-era' data-era='epic-sutra' title='first attestation in the cited corpus, not the origin of the meaning (первое засвидетельствование в цитируемом корпусе) · via dcs'>epic-sūtra</span></a>&nbsp;.</div></article></section><section class="dict-panel" id="panel-ap90" role="tabpanel" aria-labelledby="tab-ap90" data-dict="ap90" data-lang="en" hidden><h2 class="dict-label">Apte 1890</h2><article class="dict-entry" id="e-ap90-1332.1"><div class="entry-head"><span class="hw">anādhṛṣya</span><a class="scan" href="https://sanskrit-lexicon.uni-koeln.de/scans/AP90Scan/2020/web/webtc/servepdf.php?page=61" target="_blank" rel="noopener" title="Open the printed page in the Cologne scan viewer">Apte p. 61 ↗</a></div><div class="rendered"><span class='sdata'>anādhṛṣṭa -ṣya</span> <i><span>a.</span></i> <div style='margin-top:0.6em;'></div></div><strong>1</strong> Invincible, unchecked, irresistible. <div style='margin-top:0.6em;'></div></div><strong>2</strong> Perfect, unimpaired.</div></article></section><section class="dict-panel" id="panel-pwg_ru" role="tabpanel" aria-labelledby="tab-pwg_ru" data-dict="pwg_ru" data-lang="ru" hidden><h2 class="dict-label">PWG Russian</h2><p class="ru-empty">No pwg_ru row for this lemma.</p></section><section class="dict-panel" id="panel-mw_ru" role="tabpanel" aria-labelledby="tab-mw_ru" data-dict="mw_ru" data-lang="ru" hidden><h2 class="dict-label">MW Russian</h2><p class="ru-empty">No mw_ru row for this lemma.</p></section><details class="disclosure evidence"><summary>Evidence</summary><ul class="ev-list"><li><b>Frequency band 3</b> — common -- recognise</li><li>50 attestations in DCS</li><li>first attested: Vedic</li></ul><blockquote class="example" lang="sa">anādhṛṣya — <cite>01_mahabharata-adiparva</cite></blockquote></details><details class="disclosure sense-freq"><summary>Sense frequency</summary><p class="sf-head"><b>3</b> for the lemma · attested in DCS WordSem gold · <b>64</b> estimated (untagged MFS) <span class="sf-legend"><span class="chip att">attested</span><span class="chip est" title="WSD estimate — H1588">estimated</span></span></p><ul class="sf-list"><li class="sf-item"><span class="sf-gloss">an-ADfzya/ mfn. invincible, not to be meddled with, RV. &amp;c.</span><span class="sf-bar" aria-hidden="true"><span class="sf-fill" style="width:100%"></span></span><span class="sf-nums"><span class="chip att"><b>3</b> in this sense</span><span class="chip est" title="WSD estimate (MFS on untagged DCS tokens; not blended with attested)"><b>64</b> estimated</span><span class="chip genre" title="most tokens of this sense come from one genre — read the count as genre-relative">100% epic</span><span class="sf-share">100%</span></span></li></ul><p class="sf-foot">DCS over-samples technical śāstra (alchemy/medicine); a <span class="chip warn">śāstra-only</span> or genre chip marks a count that reflects corpus composition, not general Sanskrit. Estimated counts cover untagged DCS tokens via most-frequent-sense WSD and are never added into the attested figure.</p></details><details class="disclosure dating-note"><summary>Sense dating / Датировка значений</summary><p class="dating-caveat" lang="en">The small era badges on the cited sources mark the <b>first attestation of a meaning in the cited corpus, not the origin of the meaning</b>. Only citations that resolve to exactly one dateable work carry a badge; disputed or ambiguous sources are never dated.</p><p class="dating-caveat" lang="ru"><b>Первое засвидетельствование значения в цитируемом корпусе — не происхождение значения.</b> Бейдж ставится только у цитат, относящихся ровно к одной датированной работе; спорные и омонимичные источники никогда не датируются.</p><p class="dating-legend"><span class="ls-era-demo" data-era="vedic">Vedic</span> · <span class="ls-era-demo" data-era="epic-sutra">epic-sūtra</span> · <span class="ls-era-demo" data-era="classical">classical</span> · <span class="ls-era-demo" data-era="early-medieval">early medieval</span> · <span class="ls-era-demo" data-era="late-medieval">late medieval</span></p></details><details class="disclosure paradigm" data-paradigm data-slp1="anADfzya"><summary>Paradigm (all forms)</summary><p class="para-fallback">Full inflection table: <a href="../inflect/?lemma=anADfzya">open in the inflection lookup →</a></p></details><footer class="wp-foot">Gasuns Sanskrit Dictionary · <a href="../inflect/">inflection lookup</a> · <a href="../browse/">browse</a> · <a href="../favorites.html">favorites<span class="fav-count" data-fav-count></span></a> · entries from MW, PWG &amp; Apte (Cologne), rendered verbatim.</footer></main><script>(function(){
+ var VM='kosha_view_mode',root=document.documentElement;
+ function setView(v){root.setAttribute('data-view',v);
+  try{localStorage.setItem(VM,v)}catch(e){}
+  document.querySelectorAll('[data-view-set]').forEach(function(b){
+   b.setAttribute('aria-checked',b.getAttribute('data-view-set')===v?'true':'false')})}
+ try{var s=localStorage.getItem(VM);if(s)root.setAttribute('data-view',s)}catch(e){}
+ var vt=document.querySelector('.view-toggle');if(vt){vt.hidden=false;
+  setView(root.getAttribute('data-view')||'adaptive');
+  vt.addEventListener('click',function(e){var b=e.target.closest('[data-view-set]');
+   if(b)setView(b.getAttribute('data-view-set'))})}
+ var page=document.querySelector('.word-page');
+ function markTabs(sel, attr, want){
+  document.querySelectorAll(sel).forEach(function(x){
+   var on=x.getAttribute(attr)===want;
+   x.classList.toggle('active',on);
+   x.setAttribute('aria-selected',on?'true':'false')})}
+ function showLang(lang){
+  var all=lang==='all';
+  if(page){page.classList.toggle('all-dicts',all);page.setAttribute('data-lang',lang)}
+  markTabs('.lang-tabs .tab','data-lang',lang);
+  document.querySelectorAll('.dict-tabs').forEach(function(n){
+   n.hidden=all || n.getAttribute('data-lang')!==lang});
+  if(all){
+   document.querySelectorAll('.dict-panel').forEach(function(p){p.hidden=false});
+   document.querySelectorAll('.dict-tabs .tab').forEach(function(t){
+    t.classList.remove('active');t.setAttribute('aria-selected','false')});
+   return}
+  var bar=document.querySelector('.dict-tabs[data-lang="'+lang+'"]');
+  var first=bar && bar.querySelector('.tab');
+  showDict(first?first.getAttribute('data-dict'):null)}
+ function showDict(want){
+  if(!want)return;
+  if(page)page.classList.remove('all-dicts');
+  markTabs('.dict-tabs .tab','data-dict',want);
+  document.querySelectorAll('.dict-panel').forEach(function(p){
+   p.hidden=p.getAttribute('data-dict')!==want})}
+ document.querySelectorAll('.lang-tabs .tab').forEach(function(t){
+  t.addEventListener('click',function(){showLang(t.getAttribute('data-lang'))})});
+ document.querySelectorAll('.dict-tabs .tab').forEach(function(t){
+  t.addEventListener('click',function(){showDict(t.getAttribute('data-dict'))})});
+ var lang=(page && page.getAttribute('data-lang'))||'en';
+ try{var nav=(navigator.language||'').toLowerCase();
+  if(nav.indexOf('ru')===0)lang='ru'}catch(e){}
+ showLang(lang)
+})();
+(function(){
+ var K='kosha_favorites';
+ function load(){try{var s=localStorage.getItem(K);return s?JSON.parse(s):{}}catch(e){return {}}}
+ function save(f){try{localStorage.setItem(K,JSON.stringify(f))}catch(e){}}
+ var favs=load();
+ var n=document.querySelector('[data-fav-count]');
+ function count(){var c=Object.keys(favs).length;if(n)n.textContent=c?'('+c+')':''}
+ document.querySelectorAll('[data-fav]').forEach(function(b){
+  var k=b.getAttribute('data-slp1');b.hidden=false;
+  function paint(){b.setAttribute('aria-pressed',favs[k]?'true':'false')}
+  paint();
+  b.addEventListener('click',function(){
+   if(favs[k]){delete favs[k]}else{favs[k]={t:b.getAttribute('data-token'),
+    ia:b.getAttribute('data-iast'),dv:b.getAttribute('data-deva'),ts:Date.now()}}
+   save(favs);paint();count()})});
+ count();
+ document.querySelectorAll('.dict-entry[id]').forEach(function(a){
+  var h=a.querySelector('.entry-head');if(!h||h.querySelector('.eid'))return;
+  var l=document.createElement('a');l.className='eid';l.href='#'+a.id;l.title='Link to this entry';
+  l.textContent='#';h.appendChild(l)});
+})();</script></body></html>
