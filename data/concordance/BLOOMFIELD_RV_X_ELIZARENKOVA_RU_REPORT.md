@@ -61,19 +61,22 @@ Elizarenkova Russian at the anchor. Full RU text stays at the pointer; excerpts 
 | 7 | RV.4.14.1d | imaṃ yajñam upa no yātam acha | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv04.014.html#rv04.014.01 | — |
 | 8 | RV.4.21.5a | upa yo namo namasi stabhāyan | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv04.021.html#rv04.021.05 | — |
 | 9 | RV.5.12.5d | ṛjūyate vṛjināni bruvantaḥ | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv05.012.html#rv05.012.05 | — |
-| 10 | RV.5.68.2c | devā deveṣu praśastā | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv05.068.html#rv05.068.02 | — |
-| 11 | RV.6.12.3c | adrogho na dravitā cetati tman | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv06.012.html#rv06.012.03 | — |
-| 12 | RV.6.63.6b | śubhe puṣṭim ūhathuḥ sūryāyāḥ | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv06.063.html#rv06.063.06 | — |
-| 13 | RV.7.3.8a | yā vā te santi dāśuṣe adhṛṣṭāḥ | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv07.003.html#rv07.003.08 | — |
-| 14 | RV.7.60.1d | tava priyāso aryaman gṛṇantaḥ | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv07.060.html#rv07.060.01 | — |
-| 15 | RV.8.2.37b | indraṃ satrācā manasā | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv08.002.html#rv08.002.37 | — |
-| 16 | RV.8.7.33a | o ṣu vṛṣṇaḥ prayajyūn | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv08.007.html#rv08.007.33 | — |
-| 17 | RV.9.45.6a | tayā pavasva dhārayā | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv09.045.html#rv09.045.06 | — |
-| 18 | RV.9.49.3c | asmabhyaṃ vṛṣṭim ā pava | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv09.049.html#rv09.049.03 | — |
-| 19 | RV.10.97.1c | manai nu babhrūṇām aham | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv10.097.html#rv10.097.01 | — |
-| 20 | RV.10.114.10c | śramasya dāyaṃ vi bhajanty ebhyaḥ | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv10.114.html#rv10.114.10 | — |
-| 21 | RV.16.36.1c | indraṃ huve marutaḥ parvatāṃ apa | — | — |
-| 22 | RV.16.85.10a | mano asyā ana āsīt | — | — |
+| 10 | RV.5.39.2c | vidyāma tasya te vayam | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv05.039.html#rv05.039.02 | — |
+| 11 | RV.5.68.2c | devā deveṣu praśastā | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv05.068.html#rv05.068.02 | — |
+| 12 | RV.6.12.3c | adrogho na dravitā cetati tman | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv06.012.html#rv06.012.03 | — |
+| 13 | RV.6.63.6b | śubhe puṣṭim ūhathuḥ sūryāyāḥ | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv06.063.html#rv06.063.06 | — |
+| 14 | RV.7.3.8a | yā vā te santi dāśuṣe adhṛṣṭāḥ | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv07.003.html#rv07.003.08 | — |
+| 15 | RV.7.60.1d | tava priyāso aryaman gṛṇantaḥ | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv07.060.html#rv07.060.01 | — |
+| 16 | RV.8.2.37b | indraṃ satrācā manasā | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv08.002.html#rv08.002.37 | — |
+| 17 | RV.8.7.33a | o ṣu vṛṣṇaḥ prayajyūn | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv08.007.html#rv08.007.33 | — |
+| 18 | RV.9.32.1b | śravase no maghonaḥ (SV. maghonām) | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv09.032.html#rv09.032.01 | — |
+| 19 | RV.9.45.6a | tayā pavasva dhārayā | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv09.045.html#rv09.045.06 | — |
+| 20 | RV.9.49.3c | asmabhyaṃ vṛṣṭim ā pava | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv09.049.html#rv09.049.03 | — |
+| 21 | RV.10.97.1c | manai nu babhrūṇām aham | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv10.097.html#rv10.097.01 | — |
+| 22 | RV.10.114.10c | śramasya dāyaṃ vi bhajanty ebhyaḥ | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv10.114.html#rv10.114.10 | — |
+| 23 | RV.10.135.1c | atrā no viśpatiḥ pitā | https://sanskrit-lexicon.github.io/rvlinks/rvhymns/rv10.135.html#rv10.135.01 | — |
+| 24 | RV.16.36.1c | indraṃ huve marutaḥ parvatāṃ apa | — | — |
+| 25 | RV.16.85.10a | mano asyā ana āsīt | — | — |
 
 ## Residue — citations no surface can answer (18 distinct verse keys)
 
