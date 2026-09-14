@@ -587,7 +587,8 @@
    "source_path": "derived-data/Glagolnye-formy/Klassy/Spiski-glagolnyh-kornej-po-klassam-2214/Imeyushchie-formy/ (tracked, 10 files, *.csv per verb class)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
    "consumers": [
-    "SanskritGrammar dcs_verb_roots_by_class_probe.py (H4178 wiring 4, 06-09-2026: per-class attested-roots probe, 463-row parity, report DCS_VERB_ROOTS_BY_CLASS_PROBE_06.09.2026.md)"
+    "SanskritGrammar dcs_verb_roots_by_class_probe.py (H4178 wiring 4, 06-09-2026: per-class attested-roots probe, 463-row parity, report DCS_VERB_ROOTS_BY_CLASS_PROBE_06.09.2026.md)",
+    "SanskritLexicography papers/sanskrit_in_numbers/module10b_dcs_verb_class_attestation.py (H4711 census A5, 15-09-2026: SinN module 10b corpus leg, 463-row parity, report H4711_MODULE10B_DCS_VERB_CLASS_ATTESTATION_15-09-2026.md, PR SanskritLexicography#2212)"
    ],
    "notes": "H291 Step 2 bundle: 10 small per-class files registered as one row per MG ruling (bundle-worthy fragmented candidates → one row, not left as separate small files). H3596 consumer-plan caveat: R2606-01 (Uprava DEAD_ENDS) — these are UNACCENTED counts, they cannot separate present class I from VI (only accent does); never use them for an I/VI verdict.",
    "status": "awaiting-consumer",
@@ -603,7 +604,7 @@
      "confidence": "medium"
     }
    ],
-   "regen_checked": "2026-09-06 (H4178: consumer landed, parity OK)"
+   "regen_checked": "2026-09-15 (H4711: second consumer landed, 463-row parity OK)"
   },
   {
    "id": "dcs-verb-class-prefix-frequency",
@@ -618,7 +619,9 @@
    "source_repo": "https://github.com/gasyoun/VisualDCS",
    "source_path": "derived-data/Glagolnye-formy/Klassy/Spisok-form-s-prefiksami-8444/Cl_Frq/ (tracked, 10 files, *.csv per verb class)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
-   "consumers": [],
+   "consumers": [
+    "SanskritLexicography papers/sanskrit_in_numbers/module10b_dcs_verb_class_attestation.py (H4711 census A5, 15-09-2026: FIRST consumer — SinN module 10b corpus leg, 8454-row parity, prefixed-only inventory analysis)"
+   ],
    "notes": "H291 Step 2 bundle: 10 small per-class files registered as one row per MG ruling. Sibling of dcs-verb-roots-by-class (same class-numbering scheme, prefixed-forms variant). H3596 consumer-plan caveat: R2606-01 (Uprava DEAD_ENDS) — these are UNACCENTED counts, they cannot separate present class I from VI (only accent does); never use them for an I/VI verdict.",
    "status": "awaiting-consumer",
    "consumer_candidates": [
@@ -633,7 +636,7 @@
      "confidence": "medium"
     }
    ],
-   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
+   "regen_checked": "2026-09-15 (H4711: first consumer landed, 8454-row parity OK)"
   },
   {
    "id": "dcs-sintagmatic-appendix6-periods",
