@@ -28,7 +28,7 @@ crossdict pilot's MW inventory column. Output: `sense_portraits.tsv` —
 | classical | 1107 | 20 |
 | early-medieval | 1039 | 9 |
 | late-medieval | 652 | 4 |
-| null-undateable | 1025 | 0 |
+| null-undateable | 1025 | 11 |
 
 ## Join coverage (bridge provenance)
 
@@ -48,11 +48,12 @@ crossdict pilot's MW inventory column. Output: `sense_portraits.tsv` —
 
 | era | dated senses | freq-joined | median count_all | total count_all |
 |---|---|---|---|---|
-| vedic | 1342 | 146 | 88.0 | 156119 |
-| epic-sutra | 2184 | 83 | 14 | 26027 |
-| classical | 1107 | 20 | 67.5 | 14967 |
-| early-medieval | 1039 | 9 | 21 | 683 |
-| late-medieval | 652 | 4 | 3.0 | 119 |
+| vedic | 1342 | 146 | 17.0 | 9910 |
+| epic-sutra | 2184 | 83 | 7 | 2335 |
+| classical | 1107 | 20 | 27.5 | 971 |
+| early-medieval | 1039 | 9 | 5 | 194 |
+| late-medieval | 652 | 4 | 3.0 | 17 |
+| null-undateable | 1025 | 11 | 15 | 527 |
 
 ## Lemma rollup — earliest dated sense per lemma (500 lemmas with ≥1 dateable sense; sample = 500)
 
@@ -67,16 +68,16 @@ crossdict pilot's MW inventory column. Output: `sense_portraits.tsv` —
 
 | lemma | sense | first_era | count_all | sense_rank | bridge_mw_sense |
 |---|---|---|---|---|---|
-| yad | 2a | vedic | 61116 | 1 | mw:170148:1 |
-| ka | 2 | vedic | 13754 | 1 | mw:41332:1 |
-| rUpa | 1a | vedic | 8352 | 1 | mw:179062:1 |
-| yadi | 1a | epic-sutra | 6440 | 1 | mw:170219:1 |
-| puruza | 1b | classical | 6159 | 1 | mw:126438:1 |
-| soma | 1a | vedic | 5335 | 1 | mw:252716:1 |
-| yatra | 1a | vedic | 4733 | 1 | mw:169635:1 |
-| guru | 1a | vedic | 4522 | 1 | mw:65987:1 |
-| nara | 1a | vedic | 4520 | 1 | mw:104026:1 |
-| maDya | 1a | vedic | 3849 | 1 | mw:156344:1 |
+| rasa | 1a | vedic | 985 | 2 | mw:175486:1 |
+| yad | 2a | vedic | 983 | 1 | mw:170148:1 |
+| vana | 1a | vedic | 976 | 1 | mw:185717:1 |
+| nara | 1a | vedic | 533 | 1 | mw:104026:1 |
+| mUla | 10 | epic-sutra | 430 | 1 | mw:166324:1 |
+| guru | 1a | vedic | 357 | 1 | mw:65987:1 |
+| bARa | 1 | vedic | 352 | 1 | mw:144242:1 |
+| Sveta | 1 | vedic | 327 | 1 | mw:224516:1 |
+| rUpa | 1a | vedic | 327 | 1 | mw:179062:1 |
+| vIra | 1a | vedic | 295 | 1 | mw:203565:1 |
 
 ## Feeds
 
