@@ -24,7 +24,7 @@ Agama		60k	epic-sutra	2	hand:class	DATEABLE	8	8	bridge_unaligned
 Agama		3	late-medieval	5	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned									
 Agama		2k				UNDATEABLE	1	0	bridge_unaligned									
 Agama		60l				UNRESOLVED	1	0	bridge_unaligned									
-Agneya		1a	vedic	1	dcs	DATEABLE	24	18	joined	mw:22704:1	876	1		0			estimated	0.9211
+Agneya		1a	vedic	1	dcs	DATEABLE	24	18	joined	mw:22704:1	35	1	0.9211	10	ayurveda	0.6857	attested	
 Agneya		2a	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 Agneya		2c	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 Agneya		3b	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -108,7 +108,7 @@ Atman		9	classical	3	dharmamitra	DATEABLE	3	2	bridge_unaligned
 Atman		13	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 Atman		14	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 Atman		16				UNRESOLVED	1	0	bridge_unaligned									
-AvApa		1	epic-sutra	2	dharmamitra	DATEABLE	2	2	joined	mw:26979:1	71	1		0			estimated	0.8
+AvApa		1	epic-sutra	2	dharmamitra	DATEABLE	2	2	joined	mw:26979:1	16	1	0.8	6	rasasastra	1.0	attested	
 AvApa		2d	epic-sutra	2	hand:class	DATEABLE	12	12	bridge_unaligned									
 AvApa		2h	epic-sutra	2	dcs+dharmamitra	DATEABLE	4	3	bridge_unaligned									
 AvApa		2i	classical	3	dharmamitra	DATEABLE	4	3	bridge_unaligned									
@@ -180,7 +180,7 @@ BErava	1	2d	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 BErava	1	2g	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 BErava	1	3b	late-medieval	5	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned									
 BErava	1	2b				UNRESOLVED	1	0	bridge_unaligned									
-BIma		1	vedic	1	dcs	DATEABLE	45	33	joined	mw:150996:1	2200	1		0			estimated	0.6101
+BIma		1	vedic	1	dcs	DATEABLE	45	33	joined	mw:150996:1	133	1	0.6101	9	epic	0.8797	attested	
 BIma		2d	vedic	1	dcs	DATEABLE	30	16	bridge_unaligned									
 BIma		2b	epic-sutra	2	hand:class	DATEABLE	13	9	bridge_unaligned									
 BIma		2c	epic-sutra	2	dharmamitra	DATEABLE	7	5	bridge_unaligned									
@@ -255,7 +255,7 @@ BaNga		2g	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 BaNga		2i	early-medieval	4	hand:class	DATEABLE	3	2	bridge_unaligned									
 BaNga		2l	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 BaNga		3b	late-medieval	5	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned									
-Badra		1a	vedic	1	dcs+hand:class	DATEABLE	177	145	joined	mw:148263:1	1387	1		0			estimated	0.2887
+Badra		1a	vedic	1	dcs+hand:class	DATEABLE	177	145	joined	mw:148263:1	28	1	0.2887	4	veda	0.9643	attested	
 Badra		1b	vedic	1	dcs	DATEABLE	27	24	bridge_unaligned									
 Badra		4f	vedic	1	hand:class	DATEABLE	4	3	bridge_unaligned									
 Badra		2b	epic-sutra	2	dcs+dharmamitra	DATEABLE	10	9	bridge_unaligned									
@@ -442,7 +442,7 @@ Davala		5a	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 Davala		4a				UNDATEABLE	1	0	bridge_unaligned									
 Davala		4b				UNDATEABLE	2	0	bridge_unaligned									
 Davala		5b				UNDATEABLE	2	0	bridge_unaligned									
-Dfti		1a	vedic	1	dcs+hand:class	DATEABLE	17	15	joined	mw:101886:1	571	1		0			estimated	0.9231
+Dfti		1a	vedic	1	dcs+hand:class	DATEABLE	17	15	joined	mw:101886:1	12	1	0.9231	7	epic	0.5	attested	
 Dfti		1b	vedic	1	dcs	DATEABLE	24	14	bridge_unaligned									
 Dfti		1d	vedic	1	dcs	DATEABLE	8	7	bridge_unaligned									
 Dfti		1e	vedic	1	dcs	DATEABLE	5	2	bridge_unaligned									
@@ -493,7 +493,7 @@ Druva		4b	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 Druva		2d				UNDATEABLE	2	0	bridge_unaligned									
 Druva		2m				UNRESOLVED	1	0	bridge_unaligned									
 Druva		3d				UNDATEABLE	1	0	bridge_unaligned									
-Endra		1	vedic	1	dcs	DATEABLE	38	34	joined	mw:40424:1	809	1		0			estimated	1.0
+Endra		1	vedic	1	dcs	DATEABLE	38	34	joined	mw:40424:1	8	1	1.0	5	epic	0.5	attested	
 Endra		3a	vedic	1	dcs	DATEABLE	4	4	bridge_unaligned									
 Endra		2	epic-sutra	2	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 Endra		3b	classical	3	dharmamitra	DATEABLE	4	3	bridge_unaligned									
@@ -553,7 +553,7 @@ Gawa		3c	early-medieval	4	dcs	DATEABLE	4	2	bridge_unaligned
 Gawa		4b	early-medieval	4	dharmamitra	DATEABLE	5	2	bridge_unaligned									
 Gawa		2c	late-medieval	5	hand:class	DATEABLE-MARGINAL	7	2	bridge_unaligned									
 Gawa		4d				UNRESOLVED	1	0	bridge_unaligned									
-Gora		1a	vedic	1	dcs	DATEABLE	12	12	joined	mw:70170:1	2147	1		0			estimated	0.9243
+Gora		1a	vedic	1	dcs	DATEABLE	12	12	joined	mw:70170:1	171	1	0.9243	13	epic	0.8363	attested	
 Gora		1b	vedic	1	dcs	DATEABLE	50	38	bridge_unaligned									
 Gora		2b	vedic	1	dcs	DATEABLE	7	3	bridge_unaligned									
 Gora		4a	vedic	1	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -691,7 +691,7 @@ SAnti		1e	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned
 SAnti		2c	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 SAnti		2d	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 SAnti		2g	early-medieval	4	hand:class	DATEABLE	5	3	bridge_unaligned									
-SArada		1a	vedic	1	dcs	DATEABLE	47	41	joined	mw:215714:1	123	1		0			estimated	0.8214
+SArada		1a	vedic	1	dcs	DATEABLE	47	41	joined	mw:215714:1	23	1	0.8214	8	epic	0.7391	attested	
 SArada		1b	vedic	1	dcs	DATEABLE	3	3	bridge_unaligned									
 SArada		1c	classical	3	dharmamitra	DATEABLE	4	2	bridge_unaligned									
 SArada		1d	classical	3	dharmamitra	DATEABLE	5	4	bridge_unaligned									
@@ -709,7 +709,7 @@ SArada		5b	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 SArada		2d				UNDATEABLE	3	0	bridge_unaligned									
 SArada		3e				UNRESOLVED	1	0	bridge_unaligned									
 SArada		3f				UNRESOLVED	4	0	bridge_unaligned									
-SItala		1a	epic-sutra	2	dcs+dharmamitra	DATEABLE	52	24	joined	mw:218437:1	490	1		0			estimated	0.8904
+SItala		1a	epic-sutra	2	dcs+dharmamitra	DATEABLE	52	24	joined	mw:218437:1	65	1	0.8904	22	rasasastra	0.4769	attested	
 SItala		1d	classical	3	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 SItala		2a	classical	3	dharmamitra	DATEABLE	2	2	bridge_unaligned									
 SItala		2c	classical	3	dharmamitra	DATEABLE	8	4	bridge_unaligned									
@@ -738,7 +738,7 @@ SUnya		3b	early-medieval	4	dcs+dharmamitra	DATEABLE	9	2	bridge_unaligned
 SUnya		3d	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 SUnya		3e	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 SUnya		3f				UNDATEABLE	1	0	bridge_unaligned									
-SaNKa		1	vedic	1	dcs	DATEABLE	68	47	joined	mw:211534:1	1021	1		0			estimated	0.6263
+SaNKa		1	vedic	1	dcs	DATEABLE	68	47	joined	mw:211534:1	186	1	0.6263	39	rasasastra	0.4247	attested	
 SaNKa		8d	vedic	1	dcs	DATEABLE	39	13	bridge_unaligned									
 SaNKa		2e	epic-sutra	2	hand:class	DATEABLE	2	2	bridge_unaligned									
 SaNKa		2f	epic-sutra	2	dharmamitra	DATEABLE	4	4	bridge_unaligned									
@@ -768,7 +768,7 @@ SaNku		12				UNRESOLVED	1	0	bridge_unaligned
 SaNku		15				UNDATEABLE	1	0	bridge_unaligned									
 SaNku		16				UNDATEABLE	1	0	bridge_unaligned									
 SaNku		2				UNDATEABLE	2	0	bridge_unaligned									
-Sambara		1a	vedic	1	dcs	DATEABLE	61	55	joined	mw:213272:1	145	1		0			estimated	0.8095
+Sambara		1a	vedic	1	dcs	DATEABLE	61	55	joined	mw:213272:1	17	1	0.8095	6	veda	0.4118	attested	
 Sambara		1c	vedic	1	dcs	DATEABLE	2	2	bridge_unaligned									
 Sambara		3a	vedic	1	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 Sambara		1e	epic-sutra	2	dharmamitra	DATEABLE	9	5	bridge_unaligned									
@@ -1020,7 +1020,7 @@ Suci		1k				UNRESOLVED	2	0	bridge_unaligned
 Suci		1l				UNDATEABLE	1	0	bridge_unaligned									
 Suci		1m				UNDATEABLE	1	0	bridge_unaligned									
 Suci		2a				UNDATEABLE	2	0	bridge_unaligned									
-SudDa		1a	vedic	1	dcs	DATEABLE	56	39	joined	mw:219367:1	449	1		0			estimated	0.7213
+SudDa		1a	vedic	1	dcs	DATEABLE	56	39	joined	mw:219367:1	44	1	0.7213	19	rasasastra	0.5227	attested	
 SudDa		1c	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	13	4	bridge_unaligned									
 SudDa		1d	epic-sutra	2	hand:class	DATEABLE	10	5	bridge_unaligned									
 SudDa		1e	epic-sutra	2	dcs	DATEABLE	5	3	bridge_unaligned									
@@ -1077,7 +1077,7 @@ Sukra		3g	epic-sutra	2	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned
 Sukra		2a	classical	3	dharmamitra	DATEABLE	5	4	bridge_unaligned									
 Sukra		3e	classical	3	dharmamitra	DATEABLE	6	2	bridge_unaligned									
 Sukra		1e	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
-Sukti		1a	vedic	1	dcs	DATEABLE	25	13	joined	mw:218889:1	103	1		0			estimated	0.8
+Sukti		1a	vedic	1	dcs	DATEABLE	25	13	joined	mw:218889:1	32	1	0.8	16	rasasastra	0.5312	attested	
 Sukti		2a	vedic	1	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 Sukti		1d	epic-sutra	2	dcs	DATEABLE	6	5	bridge_unaligned									
 Sukti		1e	classical	3	dharmamitra	DATEABLE	6	5	bridge_unaligned									
@@ -1088,7 +1088,7 @@ Sukti		1c	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned
 Sukti		1g	early-medieval	4	hand:class	DATEABLE-MARGINAL	5	1	bridge_unaligned									
 Sukti		1h	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 Sukti		1f				UNDATEABLE	6	0	bridge_unaligned									
-Sveta		1	vedic	1	dcs+hand:class	DATEABLE	76	58	joined	mw:224516:1	989	1		0			estimated	0.9451
+Sveta		1	vedic	1	dcs+hand:class	DATEABLE	76	58	joined	mw:224516:1	327	1	0.9451	36	rasasastra	0.5688	attested	
 Sveta		2a	vedic	1	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 Sveta		4b	vedic	1	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 Sveta		2g	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	50	37	bridge_unaligned									
@@ -1116,7 +1116,7 @@ aBi		2g	vedic	1	dcs	DATEABLE	3	3	bridge_unaligned
 aBi		1b	epic-sutra	2	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 aBi		1c	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 aBi		2h	epic-sutra	2	hand:class	DATEABLE	6	5	bridge_unaligned									
-aDara		1a	vedic	1	dcs	DATEABLE	25	23	joined	mw:3971:1	390	1		0			estimated	0.6486
+aDara		1a	vedic	1	dcs	DATEABLE	25	23	joined	mw:3971:1	24	1	0.6486	14	rasasastra	0.375	attested	
 aDara		1b	vedic	1	dcs	DATEABLE	2	2	bridge_unaligned									
 aDara		2a	classical	3	dharmamitra+hand:class	DATEABLE	2	2	bridge_unaligned									
 aDara		2b	classical	3	dcs+dharmamitra+hand:class	DATEABLE	13	11	bridge_unaligned									
@@ -1213,7 +1213,7 @@ akzara		4h	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned
 akzara		2b	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 akzara		2c	late-medieval	5	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned									
 akzara		2d				UNDATEABLE	1	0	bridge_unaligned									
-alam		1	vedic	1	dcs	DATEABLE	23	20	joined	mw:16593:1	674	1		0			estimated	1.0
+alam		1	vedic	1	dcs	DATEABLE	23	20	joined	mw:16593:1	30	1	1.0	5	rasasastra	0.7	attested	
 alam		7a	vedic	1	dcs	DATEABLE	3	3	bridge_unaligned									
 alam		7b	vedic	1	dcs	DATEABLE	33	33	bridge_unaligned									
 alam		8	vedic	1	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -1271,7 +1271,7 @@ amfta		2d				UNDATEABLE	1	0	bridge_unaligned
 amfta		3d				UNRESOLVED	2	0	bridge_unaligned									
 amfta		3e				UNRESOLVED	1	0	bridge_unaligned									
 amoGa		2a	vedic	1	dcs	DATEABLE	2	2	bridge_unaligned									
-amoGa		1	epic-sutra	2	dcs+dharmamitra	DATEABLE	17	15	joined	mw:14351:1	154	1		0			estimated	1.0
+amoGa		1	epic-sutra	2	dcs+dharmamitra	DATEABLE	17	15	joined	mw:14351:1	4	1	1.0	2	epic	1.0	attested	
 amoGa		2d	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 amoGa		3d	epic-sutra	2	dcs+dharmamitra	DATEABLE	2	2	bridge_unaligned									
 amoGa		3h	epic-sutra	2	dharmamitra	DATEABLE	4	4	bridge_unaligned									
@@ -1284,7 +1284,7 @@ amoGa		2c	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 amoGa		2b				UNDATEABLE	1	0	bridge_unaligned									
 amoGa		3f				UNDATEABLE	1	0	bridge_unaligned									
 amoGa		3g				UNDATEABLE	1	0	bridge_unaligned									
-ananta		1	vedic	1	dcs	DATEABLE	24	22	joined	mw:4918:1	880	1		0			estimated	0.4884
+ananta		1	vedic	1	dcs	DATEABLE	24	22	joined	mw:4918:1	21	1	0.4884	13	epic	0.2857	attested	
 ananta		2a	epic-sutra	2	dharmamitra	DATEABLE	6	5	bridge_unaligned									
 ananta		2d	epic-sutra	2	dcs+dharmamitra	DATEABLE	10	9	bridge_unaligned									
 ananta		2f	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -1392,7 +1392,7 @@ anyatra		5	vedic	1	dcs	DATEABLE-MARGINAL	2	1	bridge_unaligned
 anyatra		6	vedic	1	dcs	DATEABLE	8	8	bridge_unaligned									
 anyatra		7a	vedic	1	dcs	DATEABLE	11	11	bridge_unaligned									
 anyatra		7e	vedic	1	dcs	DATEABLE	8	7	bridge_unaligned									
-anyatra		1	epic-sutra	2	dcs	DATEABLE	5	3	joined	mw:8654:1	961	1		0			estimated	0.6444
+anyatra		1	epic-sutra	2	dcs	DATEABLE	5	3	joined	mw:8654:1	29	1	0.6444	15	ayurveda	0.6207	attested	
 anyatra		7c	epic-sutra	2	dcs+dharmamitra	DATEABLE	4	2	bridge_unaligned									
 anyatra		7b	classical	3	dharmamitra	DATEABLE	3	2	bridge_unaligned									
 anyatra		7d	classical	3	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -1504,7 +1504,7 @@ arka		13	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 arka		7	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 arka		14				UNRESOLVED	1	0	bridge_unaligned									
 arka		16				UNRESOLVED	1	0	bridge_unaligned									
-aruRa		1a	vedic	1	dcs	DATEABLE	60	49	joined	mw:15417:1	489	1		0			estimated	0.693
+aruRa		1a	vedic	1	dcs	DATEABLE	60	49	joined	mw:15417:1	79	1	0.693	24	rasasastra	0.5443	attested	
 aruRa		2g	vedic	1	dcs+hand:class	DATEABLE	25	13	bridge_unaligned									
 aruRa		4a	vedic	1	dcs	DATEABLE	5	4	bridge_unaligned									
 aruRa		4b	vedic	1	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -1548,7 +1548,7 @@ asura		2c	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 asura		2e	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 asura		3a	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 asura		2g				UNDATEABLE	1	0	bridge_unaligned									
-bARa		1	vedic	1	dcs	DATEABLE	40	26	joined	mw:144242:1	1512	1		0			estimated	0.9539
+bARa		1	vedic	1	dcs	DATEABLE	40	26	joined	mw:144242:1	352	1	0.9539	13	epic	0.9631	attested	
 bARa		8	epic-sutra	2	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 bARa		9a	epic-sutra	2	dharmamitra	DATEABLE	32	26	bridge_unaligned									
 bARa		9b	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -1568,7 +1568,7 @@ badara		3d	epic-sutra	2	dcs+dharmamitra	DATEABLE	20	17	bridge_unaligned
 badara		2	classical	3	dharmamitra	DATEABLE	9	5	bridge_unaligned									
 badara		1c	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 badara		3b	early-medieval	4	hand:class	DATEABLE	3	2	bridge_unaligned									
-badara		1a	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	joined	mw:142420:1	112	1		0			estimated	0.7143
+badara		1a	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	joined	mw:142420:1	10	1	0.7143	9	rasasastra	0.6	attested	
 badara		3c	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 badara		4c	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 badara		1b				UNDATEABLE	1	0	bridge_unaligned									
@@ -1608,7 +1608,7 @@ bahurUpa		2l	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned
 bahurUpa		3	early-medieval	4	hand:class	DATEABLE	2	2	bridge_unaligned									
 bahurUpa		2b	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 bahurUpa		2e	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
-balin		1	vedic	1	dcs+hand:class	DATEABLE	28	20	joined	mw:143272:1	764	1		0			estimated	0.9531
+balin		1	vedic	1	dcs+hand:class	DATEABLE	28	20	joined	mw:143272:1	61	1	0.9531	13	epic	0.6557	attested	
 balin		2e	classical	3	dharmamitra	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 balin		2g	classical	3	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 balin		2f	early-medieval	4	hand:class	DATEABLE	3	2	bridge_unaligned									
@@ -1680,7 +1680,7 @@ boDana		2a				UNDATEABLE	4	0	bridge_unaligned
 boDana		2b				UNDATEABLE	1	0	bridge_unaligned									
 boDana		4f				UNDATEABLE	1	0	bridge_unaligned									
 boDana		4g				UNDATEABLE	1	0	bridge_unaligned									
-brAhma		1	vedic	1	dcs	DATEABLE	79	59	joined	mw:147279:1	426	1		0			estimated	1.0
+brAhma		1	vedic	1	dcs	DATEABLE	79	59	joined	mw:147279:1	17	1	1.0	5	epic	0.7647	attested	
 brAhma		2	vedic	1	dcs	DATEABLE	6	3	bridge_unaligned									
 brAhma		3a	epic-sutra	2	dharmamitra	DATEABLE	8	4	bridge_unaligned									
 brAhma		3b	epic-sutra	2	dharmamitra	DATEABLE	10	6	bridge_unaligned									
@@ -1773,7 +1773,7 @@ cakra		3	epic-sutra	2	dcs+dharmamitra	DATEABLE	6	5	bridge_unaligned
 cakra		4	epic-sutra	2	dcs+dharmamitra	DATEABLE	31	21	bridge_unaligned									
 cakra		7	epic-sutra	2	dcs+dharmamitra	DATEABLE	21	16	bridge_unaligned									
 cakra		8	epic-sutra	2	dharmamitra	DATEABLE	16	14	bridge_unaligned									
-cakra		10	classical	3	dharmamitra	DATEABLE	2	2	joined	mw:70328:1	1790	1		0			estimated	0.7368
+cakra		10	classical	3	dharmamitra	DATEABLE	2	2	joined	mw:70328:1	70	1	0.7368	23	epic	0.4286	attested	
 cakra		12	classical	3	dharmamitra	DATEABLE	5	4	bridge_unaligned									
 cakra		5	classical	3	dharmamitra	DATEABLE-MARGINAL	3	1	bridge_unaligned									
 cakra		9	classical	3	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -1835,7 +1835,7 @@ candraka		2c	late-medieval	5	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned
 candraka		3	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 candraka		2e				UNDATEABLE	3	0	bridge_unaligned									
 candraka		2h				UNRESOLVED	1	0	bridge_unaligned									
-capala		1	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	43	30	joined	mw:72001:1	221	1		0			estimated	0.8226
+capala		1	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	43	30	joined	mw:72001:1	51	1	0.8226	19	rasasastra	0.8431	attested	
 capala		2g	epic-sutra	2	dharmamitra	DATEABLE	2	2	bridge_unaligned									
 capala		3d	epic-sutra	2	hand:class	DATEABLE	5	4	bridge_unaligned									
 capala		2d	classical	3	dharmamitra	DATEABLE	6	4	bridge_unaligned									
@@ -1859,12 +1859,12 @@ car		5	vedic	1	dcs	DATEABLE	162	140	bridge_unaligned
 car		6	vedic	1	dcs	DATEABLE	76	70	bridge_unaligned									
 car		8	vedic	1	dcs	DATEABLE	12	12	bridge_unaligned									
 car		9	vedic	1	dcs	DATEABLE	13	11	bridge_unaligned									
-car		10	epic-sutra	2	dcs	DATEABLE	3	2	joined	mw:72173:1	3816	1		0			estimated	0.4242
+car		10	epic-sutra	2	dcs	DATEABLE	3	2	joined	mw:72173:1	84	1	0.4242	18	rasasastra	0.8929	attested	
 car		11	epic-sutra	2	dcs+dharmamitra	DATEABLE	6	6	bridge_unaligned									
 car		7	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	10	9	bridge_unaligned									
 car		2f	early-medieval	4	dcs	DATEABLE	3	2	bridge_unaligned									
 cara		4	vedic	1	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
-cara		1a	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	28	23	joined	mw:72174:1	390	1		0			estimated	0.6486
+cara		1a	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	28	23	joined	mw:72174:1	24	1	0.6486	11	epic	0.4583	attested	
 cara		1b	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	19	16	bridge_unaligned									
 cara		2a	epic-sutra	2	dcs+dharmamitra	DATEABLE	15	14	bridge_unaligned									
 cara		2d	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
@@ -1878,7 +1878,7 @@ caraRa		3a	vedic	1	dcs	DATEABLE	7	6	bridge_unaligned
 caraRa		3b	vedic	1	dcs	DATEABLE	2	2	bridge_unaligned									
 caraRa		3c	vedic	1	dcs	DATEABLE	9	9	bridge_unaligned									
 caraRa		3d	vedic	1	dcs	DATEABLE	7	6	bridge_unaligned									
-caraRa		1	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	joined	mw:72227:1	741	1		0			estimated	0.8636
+caraRa		1	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	joined	mw:72227:1	76	1	0.8636	10	epic	0.7895	attested	
 caraRa		2a	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	25	15	bridge_unaligned									
 caraRa		2b	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 caraRa		2f	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	17	12	bridge_unaligned									
@@ -1972,7 +1972,7 @@ daRqa		15	epic-sutra	2	dharmamitra	DATEABLE	7	4	bridge_unaligned
 daRqa		16	epic-sutra	2	dharmamitra	DATEABLE	7	5	bridge_unaligned									
 daRqa		5	epic-sutra	2	dcs	DATEABLE	10	6	bridge_unaligned									
 daRqa		8	epic-sutra	2	hand:class	DATEABLE	9	9	bridge_unaligned									
-daRqa		10	classical	3	dharmamitra	DATEABLE	5	3	joined	mw:89571:1	1893	1		0			estimated	0.3179
+daRqa		10	classical	3	dharmamitra	DATEABLE	5	3	joined	mw:89571:1	48	1	0.3179	15	epic	0.5	attested	
 daRqa		7	classical	3	dharmamitra	DATEABLE	6	4	bridge_unaligned									
 daRqa		9	classical	3	dharmamitra	DATEABLE-MARGINAL	4	1	bridge_unaligned									
 daRqa		4	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
@@ -2150,7 +2150,7 @@ gOra		5c	late-medieval	5	hand:class	DATEABLE-MARGINAL	5	1	bridge_unaligned
 gOra		5d	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 gOra		4n				UNDATEABLE	7	0	bridge_unaligned									
 gaRqa		1c	vedic	1	dcs	DATEABLE-MARGINAL	4	1	bridge_unaligned									
-gaRqa		1a	epic-sutra	2	dcs	DATEABLE	42	22	joined	mw:62750:1	89	1		0			estimated	0.7031
+gaRqa		1a	epic-sutra	2	dcs	DATEABLE	42	22	joined	mw:62750:1	45	1	0.7031	16	ayurveda	0.6667	attested	
 gaRqa		1b	classical	3	dharmamitra+hand:class	DATEABLE	8	5	bridge_unaligned									
 gaRqa		1d	classical	3	dharmamitra	DATEABLE	3	2	bridge_unaligned									
 gaRqa		1h	classical	3	dharmamitra	DATEABLE	3	2	bridge_unaligned									
@@ -2201,7 +2201,7 @@ ganDa		3b	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 ganDa		1f				UNDATEABLE	1	0	bridge_unaligned									
 ganDa		2d				UNDATEABLE	2	0	bridge_unaligned									
 ganDa		3a				UNDATEABLE	2	0	bridge_unaligned									
-ganDarva		1a	vedic	1	dcs	DATEABLE	34	34	joined	mw:63278:1	1548	1		0			estimated	0.9785
+ganDarva		1a	vedic	1	dcs	DATEABLE	34	34	joined	mw:63278:1	182	1	0.9785	23	epic	0.7088	attested	
 ganDarva		1b	vedic	1	dcs	DATEABLE	111	97	bridge_unaligned									
 ganDarva		1c	vedic	1	dcs	DATEABLE	16	9	bridge_unaligned									
 ganDarva		2f	vedic	1	dcs	DATEABLE-MARGINAL	4	1	bridge_unaligned									
@@ -2280,7 +2280,7 @@ gokarRa		2i	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 gokarRa		2k	early-medieval	4	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 gokarRa		1				UNDATEABLE	2	0	bridge_no_freq	mw:66901:1								
 gokarRa		2l				UNRESOLVED	1	0	bridge_unaligned									
-gola		1	epic-sutra	2	dharmamitra	DATEABLE	29	23	joined	mw:67991:1	94	1		0			estimated	0.9211
+gola		1	epic-sutra	2	dharmamitra	DATEABLE	29	23	joined	mw:67991:1	140	1	0.9211	15	rasasastra	0.8	attested	
 gola		6	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 gola		4	classical	3	dharmamitra	DATEABLE	5	2	bridge_unaligned									
 gola		7b	classical	3	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -2348,7 +2348,7 @@ grAhya		1l	classical	3	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned
 grAhya		1p	classical	3	dharmamitra	DATEABLE	3	3	bridge_unaligned									
 grAhya		1i	early-medieval	4	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 grAhya		2	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
-granTila		1	epic-sutra	2	hand:class	DATEABLE	3	2	joined	mw:68532:1	17	1		0			estimated	1.0
+granTila		1	epic-sutra	2	hand:class	DATEABLE	3	2	joined	mw:68532:1	7	1	1.0	6	rasasastra	1.0	attested	
 granTila		2a	classical	3	dharmamitra	DATEABLE	3	2	bridge_unaligned									
 granTila		2b	classical	3	dharmamitra	DATEABLE	3	2	bridge_unaligned									
 granTila		2g	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
@@ -2383,7 +2383,7 @@ guqa		1e	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 guqa		2a	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 guqa		1f	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 guqa		1h				UNDATEABLE	1	0	bridge_unaligned									
-guru		1a	vedic	1	dcs+hand:class	DATEABLE	32	20	joined	mw:65987:1	4522	1		0			estimated	0.5777
+guru		1a	vedic	1	dcs+hand:class	DATEABLE	32	20	joined	mw:65987:1	357	1	0.5777	46	epic	0.3697	attested	
 guru		1d	vedic	1	dcs	DATEABLE	24	21	bridge_unaligned									
 guru		1c	epic-sutra	2	hand:class	DATEABLE	11	6	bridge_unaligned									
 guru		1e	epic-sutra	2	dcs+dharmamitra	DATEABLE	24	20	bridge_unaligned									
@@ -2511,7 +2511,7 @@ hari	1	1e				UNDATEABLE	2	0	bridge_unaligned
 hari	1	1o				UNDATEABLE	2	0	bridge_unaligned									
 hari	1	1q				UNDATEABLE	1	0	bridge_unaligned									
 hari	1	1r				UNDATEABLE	2	0	bridge_unaligned									
-harita		1	vedic	1	dcs+hand:class	DATEABLE	89	74	joined	mw:261398:1	270	1		0			estimated	0.7
+harita		1	vedic	1	dcs+hand:class	DATEABLE	89	74	joined	mw:261398:1	21	1	0.7	11	ayurveda	0.4762	attested	
 harita		2c	vedic	1	dcs	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 harita		2d	vedic	1	dcs	DATEABLE	19	14	bridge_unaligned									
 harita		5a	vedic	1	dcs	DATEABLE	4	3	bridge_unaligned									
@@ -2535,7 +2535,7 @@ hasta		2b	classical	3	dharmamitra	DATEABLE	5	2	bridge_unaligned
 hasta		1g	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 hasta		1h				UNDATEABLE	1	0	bridge_unaligned									
 hasta		3				UNRESOLVED	2	0	bridge_unaligned									
-haya		1a	vedic	1	dcs	DATEABLE	38	32	joined	mw:260561:1	967	1		0			estimated	0.9909
+haya		1a	vedic	1	dcs	DATEABLE	38	32	joined	mw:260561:1	218	1	0.9909	23	epic	0.7798	attested	
 haya		1f	epic-sutra	2	dharmamitra	DATEABLE	4	4	bridge_unaligned									
 haya		2a	epic-sutra	2	dharmamitra+hand:class	DATEABLE	3	3	bridge_unaligned									
 haya		3a	epic-sutra	2	hand:class	DATEABLE	6	4	bridge_unaligned									
@@ -2582,7 +2582,7 @@ i	3	7	vedic	1	dcs	DATEABLE	34	33	bridge_unaligned
 i	3	8	vedic	1	dcs	DATEABLE	9	7	bridge_unaligned									
 i	3	9	vedic	1	dcs	DATEABLE	16	16	bridge_unaligned									
 i	3	1f	epic-sutra	2	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
-i	3	10				UNDATEABLE	1	0	joined	mw:28533:1	3520	1		0			estimated	0.3856
+i	3	10				UNDATEABLE	1	0	joined	mw:28533:1	59	1	0.3856	2	vyakarana	0.9831	attested	
 i	3	11				UNDATEABLE	3	0	bridge_unaligned									
 indra		1a	vedic	1	dcs+dharmamitra	DATEABLE	97	83	bridge_no_freq	mw:28925:1								
 indra		1c	vedic	1	dcs	DATEABLE	6	6	bridge_unaligned									
@@ -2703,7 +2703,7 @@ jagat		4	classical	3	dharmamitra	DATEABLE	3	2	bridge_unaligned
 jagat		5c	classical	3	dcs	DATEABLE-MARGINAL	3	1	bridge_unaligned									
 jagat		5d	early-medieval	4	hand:class	DATEABLE	3	2	bridge_unaligned									
 jagat		5h	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
-jayanta		1a	epic-sutra	2	dharmamitra	DATEABLE	16	15	joined	mw:77542:1	50	1		0			estimated	0.8
+jayanta		1a	epic-sutra	2	dharmamitra	DATEABLE	16	15	joined	mw:77542:1	8	1	0.8	7	purana	0.25	attested	
 jayanta		1c	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	3	1	bridge_unaligned									
 jayanta		1g	epic-sutra	2	dcs+dharmamitra	DATEABLE	10	6	bridge_unaligned									
 jayanta		1h	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -2719,7 +2719,7 @@ jayanta		2a	early-medieval	4	hand:class	DATEABLE	3	2	bridge_unaligned
 jayanta		2g	early-medieval	4	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 jayanta		1i	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 jayanta		2c				UNDATEABLE	1	0	bridge_unaligned									
-jyezWa		1a	vedic	1	dcs+hand:class	DATEABLE	51	47	joined	mw:80552:1	888	1		0			estimated	0.92
+jyezWa		1a	vedic	1	dcs+hand:class	DATEABLE	51	47	joined	mw:80552:1	69	1	0.92	12	epic	0.7101	attested	
 jyezWa		1b	vedic	1	dcs	DATEABLE	31	28	bridge_unaligned									
 jyezWa		3a	vedic	1	dcs+hand:class	DATEABLE	26	22	bridge_unaligned									
 jyezWa		3g	vedic	1	hand:class	DATEABLE	5	4	bridge_unaligned									
@@ -2754,7 +2754,7 @@ kARqa	1	3	epic-sutra	2	dharmamitra	DATEABLE	8	6	bridge_unaligned
 kARqa	1	6	epic-sutra	2	dcs+hand:class	DATEABLE	6	2	bridge_unaligned									
 kARqa	1	7	epic-sutra	2	hand:class	DATEABLE	2	2	bridge_unaligned									
 kARqa	1	8	epic-sutra	2	hand:class	DATEABLE	10	5	bridge_unaligned									
-kARqa	1	10	classical	3	dharmamitra	DATEABLE	3	2	joined	mw:47500:1	407	1		0			estimated	0.7059
+kARqa	1	10	classical	3	dharmamitra	DATEABLE	3	2	joined	mw:47500:1	12	1	0.7059	8	rasasastra	0.6667	attested	
 kARqa	1	11	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 kARqa	1	12	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 kARqa	1	5				UNDATEABLE	2	0	bridge_unaligned									
@@ -2768,7 +2768,7 @@ kAhala		2b				UNDATEABLE	1	0	bridge_unaligned
 kAhala		2d				UNDATEABLE	1	0	bridge_unaligned									
 kAhala		2e				UNRESOLVED	1	0	bridge_unaligned									
 kAhala		3b				UNDATEABLE	1	0	bridge_unaligned									
-kAka	1	1a	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	35	23	joined	mw:46945:1	286	1		0			estimated	1.0
+kAka	1	1a	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	35	23	joined	mw:46945:1	38	1	1.0	17	rasasastra	0.3947	attested	
 kAka	1	2a	epic-sutra	2	dharmamitra	DATEABLE	7	6	bridge_unaligned									
 kAka	1	2c	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 kAka	1	1b	classical	3	dharmamitra	DATEABLE	4	3	bridge_unaligned									
@@ -2870,7 +2870,7 @@ kUwa	1	4	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned
 kUwa	1	14	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 kUwa	1	16				UNDATEABLE	2	0	bridge_unaligned									
 kUwa	1	18				UNRESOLVED	3	0	bridge_unaligned									
-ka	1	2	vedic	1	dcs	DATEABLE	11	9	joined	mw:41332:1	13754	1		0			estimated	0.5319
+ka	1	2	vedic	1	dcs	DATEABLE	11	9	joined	mw:41332:1	25	1	0.5319	7	vyakarana	0.76	attested	
 ka	1	3a	vedic	1	dcs	DATEABLE	22	19	bridge_unaligned									
 ka	1	3b	vedic	1	dcs	DATEABLE	44	43	bridge_unaligned									
 ka	1	3c	vedic	1	dcs	DATEABLE	101	87	bridge_unaligned									
@@ -2880,7 +2880,7 @@ ka	1	7f	vedic	1	dcs	DATEABLE	12	12	bridge_unaligned
 ka	1	3d	epic-sutra	2	dcs	DATEABLE-MARGINAL	3	1	bridge_unaligned									
 ka	1	3e	epic-sutra	2	dcs	DATEABLE	27	17	bridge_unaligned									
 ka	1	7c	classical	3	dharmamitra+hand:class	DATEABLE	10	10	bridge_unaligned									
-kaNka		1a	vedic	1	dcs	DATEABLE	32	19	joined	mw:41603:1	117	1		0			estimated	1.0
+kaNka		1a	vedic	1	dcs	DATEABLE	32	19	joined	mw:41603:1	43	1	1.0	13	epic	0.4651	attested	
 kaNka		1d	epic-sutra	2	dharmamitra	DATEABLE	13	12	bridge_unaligned									
 kaNka		1e	epic-sutra	2	dharmamitra	DATEABLE	8	6	bridge_unaligned									
 kaNka		1f	epic-sutra	2	dharmamitra	DATEABLE	5	5	bridge_unaligned									
@@ -2966,7 +2966,7 @@ kalpa		2g	early-medieval	4	hand:class	DATEABLE	2	2	bridge_unaligned
 kalpa		2h	early-medieval	4	hand:class	DATEABLE	4	2	bridge_unaligned									
 kalpa		3	early-medieval	4	dharmamitra+hand:class	DATEABLE	3	2	bridge_unaligned									
 kalpa		2e				UNDATEABLE	6	0	bridge_unaligned									
-kalyARa		1	vedic	1	dcs	DATEABLE	57	52	joined	mw:46283:1	596	1		0			estimated	0.4242
+kalyARa		1	vedic	1	dcs	DATEABLE	57	52	joined	mw:46283:1	14	1	0.4242	5	epic	0.7857	attested	
 kalyARa		2	vedic	1	hand:class	DATEABLE	10	2	bridge_unaligned									
 kalyARa		4b	vedic	1	dcs	DATEABLE	5	3	bridge_unaligned									
 kalyARa		3f	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -3011,7 +3011,7 @@ kandala		1e	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 kandala		2b	late-medieval	5	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned									
 kandala		3c	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 kandala		3e				UNDATEABLE	1	0	bridge_unaligned									
-kapila		1	vedic	1	dcs	DATEABLE	53	34	joined	mw:43522:1	270	1		0			estimated	0.8857
+kapila		1	vedic	1	dcs	DATEABLE	53	34	joined	mw:43522:1	31	1	0.8857	19	purana	0.3226	attested	
 kapila		2b	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	66	39	bridge_unaligned									
 kapila		2d	epic-sutra	2	dharmamitra	DATEABLE	4	4	bridge_unaligned									
 kapila		3e	epic-sutra	2	dharmamitra	DATEABLE	3	2	bridge_unaligned									
@@ -3071,7 +3071,7 @@ karavIra		2	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned
 karavIra		3c	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 karavIra		1b				UNDATEABLE	1	0	bridge_unaligned									
 karkawa		3b	vedic	1	hand:class	DATEABLE	8	7	bridge_unaligned									
-karkawa		1a	epic-sutra	2	dcs	DATEABLE	21	10	joined	mw:44645:1	41	1		0			estimated	0.9286
+karkawa		1a	epic-sutra	2	dcs	DATEABLE	21	10	joined	mw:44645:1	13	1	0.9286	4	rasasastra	0.8462	attested	
 karkawa		3a	epic-sutra	2	dharmamitra	DATEABLE	6	2	bridge_unaligned									
 karkawa		3d	classical	3	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 karkawa		3e	classical	3	dharmamitra	DATEABLE-MARGINAL	2	1	bridge_unaligned									
@@ -3278,7 +3278,7 @@ kuSala		5c	classical	3	dharmamitra	DATEABLE	5	3	bridge_unaligned
 kuSala		4b	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 kuSala		2b				UNDATEABLE	1	0	bridge_unaligned									
 kuSala		2c				UNDATEABLE	3	0	bridge_unaligned									
-kuYjara		1a	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	33	25	joined	mw:51484:1	305	1		0			estimated	0.982
+kuYjara		1a	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	33	25	joined	mw:51484:1	109	1	0.982	18	epic	0.7798	attested	
 kuYjara		1b	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	14	14	bridge_unaligned									
 kuYjara		1d	epic-sutra	2	dharmamitra	DATEABLE	2	2	bridge_unaligned									
 kuYjara		1e	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -3309,7 +3309,7 @@ kumAra		2f				UNDATEABLE	1	0	bridge_unaligned
 kumAra		2g				UNDATEABLE	1	0	bridge_unaligned									
 kumAra		2k				UNDATEABLE	3	0	bridge_unaligned									
 kumAra		4				UNDATEABLE	1	0	bridge_unaligned									
-kumBa		1a	vedic	1	dcs	DATEABLE	47	37	joined	mw:52479:1	648	1		0			estimated	0.7945
+kumBa		1a	vedic	1	dcs	DATEABLE	47	37	joined	mw:52479:1	58	1	0.7945	20	rasasastra	0.5345	attested	
 kumBa		2a	vedic	1	dcs	DATEABLE	26	23	bridge_unaligned									
 kumBa		1c	epic-sutra	2	dcs	DATEABLE	5	3	bridge_unaligned									
 kumBa		1d	epic-sutra	2	dharmamitra	DATEABLE	14	11	bridge_unaligned									
@@ -3476,7 +3476,7 @@ lalita		2a				UNRESOLVED	1	0	bridge_unaligned
 lalita		3d				UNDATEABLE	9	0	bridge_unaligned									
 lalita		4c				UNDATEABLE	2	0	bridge_unaligned									
 latA		8a	epic-sutra	2	dharmamitra	DATEABLE	2	2	bridge_unaligned									
-latA		1a	classical	3	dcs+dharmamitra+hand:class	DATEABLE	8	5	joined	mw:181250:1	581	1		0			estimated	0.9429
+latA		1a	classical	3	dcs+dharmamitra+hand:class	DATEABLE	8	5	joined	mw:181250:1	33	1	0.9429	11	epic	0.5758	attested	
 latA		1b	classical	3	dcs+dharmamitra	DATEABLE	5	5	bridge_unaligned									
 latA		1f	classical	3	dcs	DATEABLE	4	3	bridge_unaligned									
 latA		2	classical	3	dharmamitra	DATEABLE	6	3	bridge_unaligned									
@@ -3500,7 +3500,7 @@ lava		2a	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 lava		2c	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 lava		1e				UNDATEABLE	5	0	bridge_unaligned									
 lava		1f				UNDATEABLE	1	0	bridge_unaligned									
-lohita		1a	vedic	1	dcs	DATEABLE	54	43	joined	mw:183900:1	603	1		0			estimated	0.5517
+lohita		1a	vedic	1	dcs	DATEABLE	54	43	joined	mw:183900:1	32	1	0.5517	19	ayurveda	0.3125	attested	
 lohita		1b	vedic	1	dcs	DATEABLE	3	3	bridge_unaligned									
 lohita		5a	vedic	1	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 lohita		5b	vedic	1	dcs+hand:class	DATEABLE	33	28	bridge_unaligned									
@@ -3575,7 +3575,7 @@ mAlatI		3				UNDATEABLE	2	0	bridge_unaligned
 mAlatI		8a				UNDATEABLE	2	0	bridge_unaligned									
 mAlatI		8b				UNDATEABLE	5	0	bridge_unaligned									
 mAlatI		8c				UNDATEABLE	2	0	bridge_unaligned									
-mAlin		1	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	28	25	joined	mw:163699:1	226	1		0			estimated	1.0
+mAlin		1	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	28	25	joined	mw:163699:1	19	1	1.0	3	epic	0.9474	attested	
 mAlin		2b	epic-sutra	2	dcs	DATEABLE	3	2	bridge_unaligned									
 mAlin		3c	epic-sutra	2	dcs	DATEABLE	2	2	bridge_unaligned									
 mAlin		3d	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	2	1	bridge_unaligned									
@@ -3663,7 +3663,7 @@ mAtra		1c	early-medieval	4	dcs+hand:class	DATEABLE	4	3	bridge_unaligned
 mAtra		2h	early-medieval	4	dharmamitra+hand:class	DATEABLE	5	2	bridge_unaligned									
 mEtra		1c	vedic	1	dcs+hand:class	DATEABLE	14	11	bridge_unaligned									
 mEtra		3a	vedic	1	dcs	DATEABLE	11	7	bridge_unaligned									
-mEtra		1a	epic-sutra	2	dcs	DATEABLE	2	2	joined	mw:168132:1	182	1		0			estimated	0.6
+mEtra		1a	epic-sutra	2	dcs	DATEABLE	2	2	joined	mw:168132:1	3	1	0.6	3	epic	0.6667	attested	
 mEtra		1b	epic-sutra	2	dcs+dharmamitra	DATEABLE	24	19	bridge_unaligned									
 mEtra		2a	epic-sutra	2	dcs+dharmamitra	DATEABLE	44	23	bridge_unaligned									
 mEtra		2b	epic-sutra	2	dcs+dharmamitra	DATEABLE	4	4	bridge_unaligned									
@@ -3678,7 +3678,7 @@ mEtra		2d				UNDATEABLE	1	0	bridge_unaligned
 mEtra		3e				UNDATEABLE	1	0	bridge_unaligned									
 mEtra		3f				UNDATEABLE	1	0	bridge_unaligned									
 mUla		8	vedic	1	dcs+hand:class	DATEABLE	39	28	bridge_unaligned									
-mUla		10	epic-sutra	2	dcs	DATEABLE	2	2	joined	mw:166324:1	3021	1		0			estimated	0.9053
+mUla		10	epic-sutra	2	dcs	DATEABLE	2	2	joined	mw:166324:1	430	1	0.9053	40	rasasastra	0.4884	attested	
 mUla		2	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	49	42	bridge_unaligned									
 mUla		3	epic-sutra	2	dcs	DATEABLE	7	5	bridge_unaligned									
 mUla		6	epic-sutra	2	dcs+dharmamitra	DATEABLE	6	5	bridge_unaligned									
@@ -3725,7 +3725,7 @@ maDu		4	classical	3	dharmamitra	DATEABLE	3	2	bridge_unaligned
 maDu		2f	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 maDu		5c				UNDATEABLE	2	0	bridge_unaligned									
 maDura		1b	vedic	1	dcs	DATEABLE	63	43	bridge_unaligned									
-maDura		1a	epic-sutra	2	dcs+hand:class	DATEABLE	34	12	joined	mw:156180:1	1790	1		0			estimated	0.9904
+maDura		1a	epic-sutra	2	dcs+hand:class	DATEABLE	34	12	joined	mw:156180:1	206	1	0.9904	26	ayurveda	0.7621	attested	
 maDura		2b	epic-sutra	2	dharmamitra+hand:class	DATEABLE	3	2	bridge_unaligned									
 maDura		3c	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	11	8	bridge_unaligned									
 maDura		3a	classical	3	dharmamitra	DATEABLE	15	7	bridge_unaligned									
@@ -3736,7 +3736,7 @@ maDura		5c	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 maDura		3d				UNRESOLVED	1	0	bridge_unaligned									
 maDura		4				UNDATEABLE	1	0	bridge_unaligned									
 maDura		5a				UNDATEABLE	2	0	bridge_unaligned									
-maDya		1a	vedic	1	dcs	DATEABLE	145	120	joined	mw:156344:1	3849	1		0			estimated	0.3414
+maDya		1a	vedic	1	dcs	DATEABLE	145	120	joined	mw:156344:1	155	1	0.3414	37	rasasastra	0.4387	attested	
 maDya		1b	vedic	1	dcs	DATEABLE	36	22	bridge_unaligned									
 maDya		2a	vedic	1	dcs	DATEABLE	12	10	bridge_unaligned									
 maDya		1d	epic-sutra	2	dcs+dharmamitra	DATEABLE	4	3	bridge_unaligned									
@@ -3782,7 +3782,7 @@ maNgala		4b	early-medieval	4	dharmamitra	DATEABLE-MARGINAL	3	1	bridge_unaligned
 maNgala		4c	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 maNgala		4d	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 maNgala		3a				UNDATEABLE	1	0	bridge_unaligned									
-maRqUka		1a	vedic	1	dcs+hand:class	DATEABLE	46	33	joined	mw:155009:1	120	1		0			estimated	1.0
+maRqUka		1a	vedic	1	dcs+hand:class	DATEABLE	46	33	joined	mw:155009:1	32	1	1.0	20	rasasastra	0.4062	attested	
 maRqUka		1b	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 maRqUka		1d	epic-sutra	2	hand:class	DATEABLE-MARGINAL	4	1	bridge_unaligned									
 maRqUka		1c	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
@@ -3819,7 +3819,7 @@ mada		2	early-medieval	4	hand:class	DATEABLE	3	2	bridge_unaligned
 mada		1f	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 mada		1g				UNDATEABLE	1	0	bridge_unaligned									
 mada		1k				UNDATEABLE	1	0	bridge_unaligned									
-madana		1	epic-sutra	2	hand:class	DATEABLE	2	2	joined	mw:155460:1	379	1		0			estimated	0.6071
+madana		1	epic-sutra	2	hand:class	DATEABLE	2	2	joined	mw:155460:1	17	1	0.6071	10	kavya	0.4118	attested	
 madana		2a	epic-sutra	2	dcs+dharmamitra	DATEABLE	35	26	bridge_unaligned									
 madana		5	epic-sutra	2	dcs+dharmamitra	DATEABLE	3	3	bridge_unaligned									
 madana		2e	classical	3	dharmamitra	DATEABLE	4	2	bridge_unaligned									
@@ -3844,7 +3844,7 @@ mah	3	2l	epic-sutra	2	dharmamitra	DATEABLE	10	4	bridge_unaligned
 mah	3	2h	classical	3	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 mah	3	2b				UNDATEABLE	1	0	bridge_unaligned									
 mah	3	2i				UNDATEABLE	2	0	bridge_unaligned									
-mahAkAla		1a	epic-sutra	2	dharmamitra	DATEABLE	38	12	joined	mw:159365:1	82	1		0			estimated	0.7778
+mahAkAla		1a	epic-sutra	2	dharmamitra	DATEABLE	38	12	joined	mw:159365:1	7	1	0.7778	3	rasasastra	0.8571	attested	
 mahAkAla		1b	epic-sutra	2	dharmamitra	DATEABLE	15	10	bridge_unaligned									
 mahAkAla		2a	epic-sutra	2	dharmamitra	DATEABLE	9	3	bridge_unaligned									
 mahAkAla		1f	classical	3	dharmamitra	DATEABLE	6	4	bridge_unaligned									
@@ -3875,7 +3875,7 @@ mahant		3d	classical	3	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned
 mahant		3c	early-medieval	4	dcs	DATEABLE	2	2	bridge_unaligned									
 mahant		3b	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 mahant		3a				UNRESOLVED	11	0	bridge_unaligned									
-makara		1a	vedic	1	dcs	DATEABLE	29	19	joined	mw:153912:1	200	1		0			estimated	0.75
+makara		1a	vedic	1	dcs	DATEABLE	29	19	joined	mw:153912:1	12	1	0.75	6	epic	0.6667	attested	
 makara		1d	epic-sutra	2	dcs+dharmamitra	DATEABLE	8	5	bridge_unaligned									
 makara		2b	epic-sutra	2	dharmamitra	DATEABLE	2	2	bridge_unaligned									
 makara		1c	classical	3	dharmamitra	DATEABLE	20	9	bridge_unaligned									
@@ -3886,7 +3886,7 @@ makara		1i	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned
 makara		1b				UNDATEABLE	1	0	bridge_unaligned									
 makara		1f				UNRESOLVED	2	0	bridge_unaligned									
 makara		1h				UNRESOLVED	1	0	bridge_unaligned									
-malla		1a	epic-sutra	2	dharmamitra+hand:class	DATEABLE	19	10	joined	mw:158872:1	72	1		0			estimated	0.9863
+malla		1a	epic-sutra	2	dharmamitra+hand:class	DATEABLE	19	10	joined	mw:158872:1	72	1	0.9863	17	rasasastra	0.6528	attested	
 malla		1b	epic-sutra	2	dcs+dharmamitra	DATEABLE	18	16	bridge_unaligned									
 malla		1e	classical	3	dharmamitra	DATEABLE	3	2	bridge_unaligned									
 malla		1g	classical	3	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -3911,7 +3911,7 @@ man		10d	epic-sutra	2	dcs	DATEABLE	2	2	bridge_unaligned
 man		10f	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	28	18	bridge_unaligned									
 man		9	epic-sutra	2	dharmamitra	DATEABLE	3	3	bridge_unaligned									
 man		10e				UNDATEABLE	2	0	bridge_unaligned									
-manda		1a	epic-sutra	2	dcs+dharmamitra	DATEABLE	49	34	joined	mw:157685:1	982	1		0			estimated	0.547
+manda		1a	epic-sutra	2	dcs+dharmamitra	DATEABLE	49	34	joined	mw:157685:1	64	1	0.547	18	rasasastra	0.4844	attested	
 manda		1b	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	54	35	bridge_unaligned									
 manda		1c	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 manda		1d	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	31	18	bridge_unaligned									
@@ -3928,7 +3928,7 @@ manda		2e	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 manda		3a	late-medieval	5	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned									
 manda		3b	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 manda		3c				UNRESOLVED	1	0	bridge_unaligned									
-marut		1a	vedic	1	dcs+hand:class	DATEABLE	78	62	joined	mw:158299:1	1321	1		0			estimated	0.8559
+marut		1a	vedic	1	dcs+hand:class	DATEABLE	78	62	joined	mw:158299:1	101	1	0.8559	10	veda	0.6238	attested	
 marut		1d	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 marut		4	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	8	4	bridge_unaligned									
 marut		1b	classical	3	dharmamitra	DATEABLE	3	3	bridge_unaligned									
@@ -3939,7 +3939,7 @@ marut		1g	late-medieval	5	dharmamitra+hand:class	DATEABLE	2	2	bridge_unaligned
 marut		2	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 marut		1e				UNRESOLVED	2	0	bridge_unaligned									
 marut		1f				UNDATEABLE	1	0	bridge_unaligned									
-mfga		1a	vedic	1	dcs+hand:class	DATEABLE	71	63	joined	mw:166792:1	1303	1		0			estimated	0.9946
+mfga		1a	vedic	1	dcs+hand:class	DATEABLE	71	63	joined	mw:166792:1	184	1	0.9946	32	epic	0.6467	attested	
 mfga		1b	vedic	1	dcs+hand:class	DATEABLE	44	36	bridge_unaligned									
 mfga		1c	vedic	1	dcs	DATEABLE	30	13	bridge_unaligned									
 mfga		1e	vedic	1	dcs	DATEABLE	4	4	bridge_unaligned									
@@ -3968,7 +3968,7 @@ mitra		1c	classical	3	dharmamitra	DATEABLE	10	5	bridge_unaligned
 mitra		1e	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 mitra		1f				UNDATEABLE	2	0	bridge_unaligned									
 mohana		5e	vedic	1	dcs	DATEABLE	7	5	bridge_unaligned									
-mohana		1	epic-sutra	2	dcs+dharmamitra	DATEABLE	19	14	joined	mw:168603:1	96	1		0			estimated	0.3333
+mohana		1	epic-sutra	2	dcs+dharmamitra	DATEABLE	19	14	joined	mw:168603:1	1	1	0.3333	1	epic	1.0	attested	
 mohana		5a	epic-sutra	2	dharmamitra+hand:class	DATEABLE	4	4	bridge_unaligned									
 mohana		5d	epic-sutra	2	dcs	DATEABLE	3	3	bridge_unaligned									
 mohana		5f	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -4133,7 +4133,7 @@ nIlakaRWa		2h	early-medieval	4	dharmamitra	DATEABLE-MARGINAL	15	1	bridge_unalign
 nIlakaRWa		3	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 nIlakaRWa		4				UNDATEABLE	1	0	bridge_unaligned									
 nIlakaRWa		5				UNRESOLVED	1	0	bridge_unaligned									
-nala		1a	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	22	11	joined	mw:104380:1	260	1		0			estimated	0.9808
+nala		1a	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	22	11	joined	mw:104380:1	51	1	0.9808	5	epic	0.9412	attested	
 nala		1b	epic-sutra	2	dharmamitra+hand:class	DATEABLE	21	11	bridge_unaligned									
 nala		1d	epic-sutra	2	dcs+dharmamitra	DATEABLE	10	9	bridge_unaligned									
 nala		1i	epic-sutra	2	dharmamitra	DATEABLE	4	3	bridge_unaligned									
@@ -4147,7 +4147,7 @@ nala		1f				UNDATEABLE	2	0	bridge_unaligned
 nala		1g				UNDATEABLE	2	0	bridge_unaligned									
 nala		1k				UNRESOLVED	1	0	bridge_unaligned									
 nala		3b				UNDATEABLE	1	0	bridge_unaligned									
-nalina		1a	epic-sutra	2	dcs+dharmamitra	DATEABLE	30	24	joined	mw:104436:1	56	1		0			estimated	1.0
+nalina		1a	epic-sutra	2	dcs+dharmamitra	DATEABLE	30	24	joined	mw:104436:1	5	1	1.0	3	epic	0.6	attested	
 nalina		2a	epic-sutra	2	dcs+dharmamitra	DATEABLE	57	47	bridge_unaligned									
 nalina		2b	epic-sutra	2	dcs+dharmamitra	DATEABLE	14	11	bridge_unaligned									
 nalina		2e	classical	3	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -4222,7 +4222,7 @@ nandana		2k	early-medieval	4	dcs	DATEABLE	3	2	bridge_unaligned
 nandana		2d	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 nandana		2h				UNDATEABLE	5	0	bridge_unaligned									
 nandana		3c				UNDATEABLE	2	0	bridge_unaligned									
-nandin		1a	epic-sutra	2	dcs+dharmamitra	DATEABLE	4	4	joined	mw:103648:1	205	1		0			estimated	0.5833
+nandin		1a	epic-sutra	2	dcs+dharmamitra	DATEABLE	4	4	joined	mw:103648:1	21	1	0.5833	5	rasasastra	0.9524	attested	
 nandin		1b	epic-sutra	2	dharmamitra	DATEABLE	5	3	bridge_unaligned									
 nandin		2e	epic-sutra	2	dcs+dharmamitra	DATEABLE	25	16	bridge_unaligned									
 nandin		3a	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	10	10	bridge_unaligned									
@@ -4241,7 +4241,7 @@ nandin		2f				UNDATEABLE	3	0	bridge_unaligned
 nandin		3c				UNDATEABLE	2	0	bridge_unaligned									
 nandin		3i				UNDATEABLE	3	0	bridge_unaligned									
 nandin		3k				UNDATEABLE	1	0	bridge_unaligned									
-nara		1a	vedic	1	dcs	DATEABLE	18	13	joined	mw:104026:1	4520	1		0			estimated	0.919
+nara		1a	vedic	1	dcs	DATEABLE	18	13	joined	mw:104026:1	533	1	0.919	41	epic	0.5497	attested	
 nara		1f	vedic	1	dcs	DATEABLE	42	36	bridge_unaligned									
 nara		1p	vedic	1	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 nara		1d	epic-sutra	2	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
@@ -4257,7 +4257,7 @@ nara		1i	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned
 nara		1o	early-medieval	4	dharmamitra	DATEABLE	3	3	bridge_unaligned									
 nara		2	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 nara		1b				UNDATEABLE	1	0	bridge_unaligned									
-nawa		1a	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	45	39	joined	mw:103177:1	71	1		0			estimated	1.0
+nawa		1a	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	45	39	joined	mw:103177:1	12	1	1.0	7	epic	0.25	attested	
 nawa		1b	epic-sutra	2	dcs	DATEABLE	5	4	bridge_unaligned									
 nawa		3c	classical	3	dharmamitra	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 nawa		1c	late-medieval	5	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned									
@@ -4345,7 +4345,7 @@ pAvana		3c	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 pAvana		4e	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 pAvana		4g	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 pAvana		4i				UNRESOLVED	1	0	bridge_unaligned									
-pAwala		1a	vedic	1	dcs	DATEABLE	20	16	joined	mw:121313:1	68	1		0			estimated	1.0
+pAwala		1a	vedic	1	dcs	DATEABLE	20	16	joined	mw:121313:1	1	1	1.0	1	ayurveda	1.0	attested	
 pAwala		1b	epic-sutra	2	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 pAwala		2	epic-sutra	2	dcs+dharmamitra	DATEABLE	42	23	bridge_unaligned									
 pAwala		3	classical	3	dharmamitra	DATEABLE	6	4	bridge_unaligned									
@@ -4354,7 +4354,7 @@ pAwala		6b	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned
 pAwala		5b	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 pAwala		5d	late-medieval	5	hand:class	DATEABLE-MARGINAL	4	1	bridge_unaligned									
 pAwala		5c				UNDATEABLE	1	0	bridge_unaligned									
-pItaka		1	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	14	9	joined	mw:124853:1	38	1		0			estimated	0.4
+pItaka		1	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	14	9	joined	mw:124853:1	6	1	0.4	5	rasasastra	0.5	attested	
 pItaka		3a	classical	3	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 pItaka		2b	late-medieval	5	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned									
 pItaka		2c	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
@@ -4400,7 +4400,7 @@ pUrva		2	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned
 pUrva		4a	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 pUrva		4b	early-medieval	4	hand:class	DATEABLE	4	2	bridge_unaligned									
 pUrva		3a				UNDATEABLE	1	0	bridge_unaligned									
-paYcama		1a	vedic	1	dcs+hand:class	DATEABLE	18	17	joined	mw:114157:1	1017	1		0			estimated	0.9737
+paYcama		1a	vedic	1	dcs+hand:class	DATEABLE	18	17	joined	mw:114157:1	74	1	0.9737	23	rasasastra	0.5946	attested	
 paYcama		1b	vedic	1	hand:class	DATEABLE	4	4	bridge_unaligned									
 paYcama		2a	epic-sutra	2	dharmamitra	DATEABLE	16	8	bridge_unaligned									
 paYcama		2d	epic-sutra	2	hand:class	DATEABLE	7	7	bridge_unaligned									
@@ -4455,7 +4455,7 @@ padmAvatI		5	late-medieval	5	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned
 padmAvatI		10				UNDATEABLE	1	0	bridge_no_freq	mw:115745:1								
 padmAvatI		11				UNDATEABLE	4	0	bridge_unaligned									
 padmAvatI		2				UNDATEABLE	2	0	bridge_unaligned									
-padma		10	epic-sutra	2	dcs+dharmamitra	DATEABLE	16	12	joined	mw:115507:1	1155	1		0			estimated	0.9244
+padma		10	epic-sutra	2	dcs+dharmamitra	DATEABLE	16	12	joined	mw:115507:1	208	1	0.9244	32	epic	0.6875	attested	
 padma		13	epic-sutra	2	dharmamitra	DATEABLE	7	5	bridge_unaligned									
 padma		17	epic-sutra	2	dcs+dharmamitra	DATEABLE	10	8	bridge_unaligned									
 padma		18	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -4486,7 +4486,7 @@ padma		12				UNDATEABLE	1	0	bridge_unaligned
 padma		16				UNDATEABLE	1	0	bridge_unaligned									
 padma		27				UNDATEABLE	1	0	bridge_unaligned									
 padma		7				UNDATEABLE	1	0	bridge_unaligned									
-padya		1a	vedic	1	dcs	DATEABLE-MARGINAL	3	1	joined	mw:115444:1	38	1		0			estimated	0.6
+padya		1a	vedic	1	dcs	DATEABLE-MARGINAL	3	1	joined	mw:115444:1	3	1	0.6	1	veda	1.0	attested	
 padya		1e	vedic	1	hand:class	DATEABLE	8	7	bridge_unaligned									
 padya		3a	vedic	1	dcs	DATEABLE	5	5	bridge_unaligned									
 padya		1b	epic-sutra	2	hand:class	DATEABLE	2	2	bridge_unaligned									
@@ -4583,7 +4583,7 @@ pavana		7a	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned
 pavana		8a	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 pavana		6	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 pavana		9	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
-pavana		10				UNRESOLVED	1	0	joined	mw:120356:1	486	1		0			estimated	0.8539
+pavana		10				UNRESOLVED	1	0	joined	mw:120356:1	76	1	0.8539	17	epic	0.4342	attested	
 pavana		7b				UNDATEABLE	1	0	bridge_unaligned									
 pavana		8b				UNDATEABLE	1	0	bridge_unaligned									
 pawala		6	vedic	1	dcs	DATEABLE	19	11	bridge_unaligned									
@@ -4597,7 +4597,7 @@ pawala		9	early-medieval	4	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned
 pawala		11	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 pawala		10				UNDATEABLE	1	0	joined	mw:114314:1	1	3	0.0667	1	kosa	1.0	attested	
 pawala		3				UNDATEABLE	4	0	bridge_unaligned									
-pfTu		1	vedic	1	dcs	DATEABLE	80	63	joined	mw:128523:1	572	1		0			estimated	0.5962
+pfTu		1	vedic	1	dcs	DATEABLE	80	63	joined	mw:128523:1	31	1	0.5962	8	veda	0.4839	attested	
 pfTu		2c	vedic	1	dcs	DATEABLE	45	40	bridge_unaligned									
 pfTu		4a	vedic	1	dcs	DATEABLE	17	10	bridge_unaligned									
 pfTu		3a	classical	3	dharmamitra	DATEABLE	3	2	bridge_unaligned									
@@ -4622,7 +4622,7 @@ piNga		5	early-medieval	4	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned
 piNga		2c	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 piNga		3d	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 piNga		3e	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
-piNgala		1	vedic	1	dcs	DATEABLE	54	43	joined	mw:123605:1	145	1		0			estimated	1.0
+piNgala		1	vedic	1	dcs	DATEABLE	54	43	joined	mw:123605:1	10	1	1.0	7	epic	0.4	attested	
 piNgala		3e	vedic	1	dcs	DATEABLE	7	2	bridge_unaligned									
 piNgala		2h	epic-sutra	2	dcs	DATEABLE	8	4	bridge_unaligned									
 piNgala		2k	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	3	1	bridge_unaligned									
@@ -4653,7 +4653,7 @@ piRqa		21i	epic-sutra	2	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned
 piRqa		3	epic-sutra	2	dcs	DATEABLE	6	6	bridge_unaligned									
 piRqa		4	epic-sutra	2	dcs+dharmamitra	DATEABLE	22	20	bridge_unaligned									
 piRqa		5	epic-sutra	2	dcs	DATEABLE-MARGINAL	2	1	bridge_unaligned									
-piRqa		10	classical	3	dharmamitra	DATEABLE	3	2	joined	mw:123763:1	910	1		0			estimated	0.7125
+piRqa		10	classical	3	dharmamitra	DATEABLE	3	2	joined	mw:123763:1	114	1	0.7125	19	rasasastra	0.8246	attested	
 piRqa		11	classical	3	dharmamitra	DATEABLE	4	3	bridge_unaligned									
 piRqa		21e	classical	3	dharmamitra	DATEABLE	3	2	bridge_unaligned									
 piRqa		7	classical	3	dharmamitra	DATEABLE	8	5	bridge_unaligned									
@@ -4670,7 +4670,7 @@ piRqa		13				UNDATEABLE	2	0	bridge_unaligned
 piRqa		14				UNDATEABLE	2	0	bridge_unaligned									
 piRqa		17				UNDATEABLE	1	0	bridge_unaligned									
 piRqa		21h				UNDATEABLE	1	0	bridge_unaligned									
-picCa		1	epic-sutra	2	dharmamitra+hand:class	DATEABLE	18	15	joined	mw:123509:1	12	1		0			estimated	1.0
+picCa		1	epic-sutra	2	dharmamitra+hand:class	DATEABLE	18	15	joined	mw:123509:1	1	1	1.0	1	ayurveda	1.0	attested	
 picCa		2a	epic-sutra	2	hand:class	DATEABLE	10	3	bridge_unaligned									
 picCa		2b	classical	3	dharmamitra	DATEABLE	3	2	bridge_unaligned									
 picCa		2e	classical	3	dharmamitra	DATEABLE-MARGINAL	2	1	bridge_unaligned									
@@ -4688,7 +4688,7 @@ pippala		3a	vedic	1	dcs	DATEABLE	2	2	bridge_unaligned
 pippala		4a	vedic	1	dcs	DATEABLE	9	8	bridge_unaligned									
 pippala		4b	vedic	1	dcs	DATEABLE	2	2	bridge_unaligned									
 pippala		4c	vedic	1	dcs	DATEABLE	6	4	bridge_unaligned									
-pippala		1a	epic-sutra	2	dcs+dharmamitra	DATEABLE	20	16	joined	mw:124345:1	91	1		0			estimated	0.75
+pippala		1a	epic-sutra	2	dcs+dharmamitra	DATEABLE	20	16	joined	mw:124345:1	12	1	0.75	6	ayurveda	0.75	attested	
 pippala		3b	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	34	15	bridge_unaligned									
 pippala		1b	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 pippala		1c	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -4790,7 +4790,7 @@ prati	1	4a	vedic	1	dcs	DATEABLE	13	12	bridge_unaligned
 prati	1	5	vedic	1	dcs	DATEABLE	33	32	bridge_unaligned									
 prati	1	8	vedic	1	dcs	DATEABLE	82	73	bridge_unaligned									
 prati	1	9	vedic	1	dcs	DATEABLE	5	4	bridge_unaligned									
-prati	1	10	epic-sutra	2	hand:class	DATEABLE	8	7	joined	mw:131398:1	2522	1		0			estimated	0.8936
+prati	1	10	epic-sutra	2	hand:class	DATEABLE	8	7	joined	mw:131398:1	42	1	0.8936	3	vyakarana	0.5	attested	
 prati	1	11	epic-sutra	2	dcs+hand:class	DATEABLE	14	9	bridge_unaligned									
 prati	1	1a	epic-sutra	2	dcs+dharmamitra	DATEABLE	13	11	bridge_unaligned									
 prati	1	1c	epic-sutra	2	hand:class	DATEABLE	2	2	bridge_unaligned									
@@ -4844,7 +4844,7 @@ priya		3c	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 priya		3d	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 priya		3e				UNDATEABLE	1	0	bridge_unaligned									
 priya		3f				UNDATEABLE	6	0	bridge_unaligned									
-puRqarIka		1a	vedic	1	dcs+hand:class	DATEABLE	39	27	joined	mw:125260:1	165	1		0			estimated	0.619
+puRqarIka		1a	vedic	1	dcs+hand:class	DATEABLE	39	27	joined	mw:125260:1	13	1	0.619	6	epic	0.3846	attested	
 puRqarIka		1e	epic-sutra	2	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 puRqarIka		2a	epic-sutra	2	dcs+dharmamitra	DATEABLE	8	8	bridge_unaligned									
 puRqarIka		2d	epic-sutra	2	dharmamitra	DATEABLE	3	2	bridge_unaligned									
@@ -4886,7 +4886,7 @@ pura		8	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 pura		10				UNDATEABLE	1	0	joined	mw:125868:1	2	3	0.0083	1	vyakarana	1.0	attested	
 pura		13c				UNRESOLVED	2	0	bridge_unaligned									
 pura		9				UNDATEABLE	1	0	bridge_unaligned									
-puras		1a	vedic	1	dcs	DATEABLE	31	30	joined	mw:125903:1	540	1		0			estimated	0.5652
+puras		1a	vedic	1	dcs	DATEABLE	31	30	joined	mw:125903:1	13	1	0.5652	5	veda	0.7692	attested	
 puras		2a	vedic	1	dcs	DATEABLE	14	14	bridge_unaligned									
 puras		2b	vedic	1	dcs	DATEABLE	8	8	bridge_unaligned									
 puras		2c	vedic	1	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -4910,11 +4910,11 @@ puruza		3	vedic	1	dcs	DATEABLE	9	6	bridge_unaligned
 puruza		1e	epic-sutra	2	hand:class	DATEABLE	3	3	bridge_unaligned									
 puruza		1h	epic-sutra	2	hand:class	DATEABLE	7	4	bridge_unaligned									
 puruza		1m	epic-sutra	2	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
-puruza		1b	classical	3	dharmamitra	DATEABLE-MARGINAL	1	1	joined	mw:126438:1	6159	1		0			estimated	0.7533
+puruza		1b	classical	3	dharmamitra	DATEABLE-MARGINAL	1	1	joined	mw:126438:1	287	1	0.7533	36	epic	0.662	attested	
 puruza		1k	early-medieval	4	dcs	DATEABLE	2	2	bridge_unaligned									
 puruza		1l	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 puruza		1n	late-medieval	5	hand:class	DATEABLE-MARGINAL	6	1	bridge_unaligned									
-putraka		1a	vedic	1	dcs+hand:class	DATEABLE	40	34	joined	mw:125603:1	271	1		0			estimated	0.9231
+putraka		1a	vedic	1	dcs+hand:class	DATEABLE	40	34	joined	mw:125603:1	36	1	0.9231	7	epic	0.8056	attested	
 putraka		1b	vedic	1	dcs	DATEABLE	3	2	bridge_unaligned									
 putraka		2a	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	21	18	bridge_unaligned									
 putraka		2b	classical	3	dharmamitra	DATEABLE	10	8	bridge_unaligned									
@@ -4945,7 +4945,7 @@ puzkara		26	epic-sutra	2	dharmamitra	DATEABLE	17	11	bridge_unaligned
 puzkara		27	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	21	14	bridge_unaligned									
 puzkara		28	epic-sutra	2	dharmamitra	DATEABLE	5	4	bridge_unaligned									
 puzkara		29	epic-sutra	2	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned									
-puzkara		10	classical	3	dharmamitra	DATEABLE	3	2	joined	mw:126767:1	434	1		0			estimated	0.5323
+puzkara		10	classical	3	dharmamitra	DATEABLE	3	2	joined	mw:126767:1	33	1	0.5323	17	epic	0.4545	attested	
 puzkara		4	classical	3	dharmamitra	DATEABLE	10	9	bridge_unaligned									
 puzkara		5	classical	3	dcs+dharmamitra+hand:class	DATEABLE	8	7	bridge_unaligned									
 puzkara		6	classical	3	dharmamitra	DATEABLE-MARGINAL	3	1	bridge_unaligned									
@@ -4964,7 +4964,7 @@ puzkara		20				UNDATEABLE	2	0	bridge_unaligned
 puzkara		21				UNDATEABLE	2	0	bridge_unaligned									
 puzkara		22				UNDATEABLE	2	0	bridge_unaligned									
 puzkara		24				UNDATEABLE	1	0	bridge_unaligned									
-puzpa		1a	vedic	1	dcs+hand:class	DATEABLE	42	36	joined	mw:126969:1	2020	1		0			estimated	0.9702
+puzpa		1a	vedic	1	dcs+hand:class	DATEABLE	42	36	joined	mw:126969:1	293	1	0.9702	40	rasasastra	0.3618	attested	
 puzpa		1i	vedic	1	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned									
 puzpa		1b	epic-sutra	2	hand:class	DATEABLE	10	7	bridge_unaligned									
 puzpa		1d	epic-sutra	2	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -5019,7 +5019,7 @@ rOdra		7	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned
 rOdra		12c				UNDATEABLE	1	0	bridge_unaligned									
 rOdra		13b				UNRESOLVED	1	0	bridge_unaligned									
 rOdra		3				UNRESOLVED	2	0	bridge_unaligned									
-rUpa		1a	vedic	1	dcs+hand:class	DATEABLE	179	157	joined	mw:179062:1	8352	1		0			estimated	0.6362
+rUpa		1a	vedic	1	dcs+hand:class	DATEABLE	179	157	joined	mw:179062:1	327	1	0.6362	56	rasasastra	0.2722	attested	
 rUpa		1c	vedic	1	dcs	DATEABLE	40	30	bridge_unaligned									
 rUpa		1d	vedic	1	dcs+hand:class	DATEABLE	47	40	bridge_unaligned									
 rUpa		1b	epic-sutra	2	dcs	DATEABLE	3	2	bridge_unaligned									
@@ -5110,7 +5110,7 @@ rocana		5e	late-medieval	5	dharmamitra	DATEABLE-MARGINAL	2	1	bridge_unaligned
 rocana		1c				UNDATEABLE	6	0	bridge_unaligned									
 rocana		2c				UNRESOLVED	1	0	bridge_unaligned									
 rocana		5f				UNDATEABLE	2	0	bridge_unaligned									
-rohita		1	vedic	1	dcs	DATEABLE	34	30	joined	mw:180126:1	251	1		0			estimated	0.6667
+rohita		1	vedic	1	dcs	DATEABLE	34	30	joined	mw:180126:1	10	1	0.6667	4	veda	0.7	attested	
 rohita		2a	vedic	1	dcs+hand:class	DATEABLE	15	14	bridge_unaligned									
 rohita		3a	vedic	1	dcs	DATEABLE	25	21	bridge_unaligned									
 rohita		3b	vedic	1	dcs+hand:class	DATEABLE	75	63	bridge_unaligned									
@@ -5288,7 +5288,7 @@ sAraNga		2e	late-medieval	5	hand:class	DATEABLE-MARGINAL	4	2	bridge_unaligned
 sAraNga		2f				UNDATEABLE	4	0	bridge_unaligned									
 sAraNga		2g				UNDATEABLE	1	0	bridge_unaligned									
 sAraNga		3b				UNDATEABLE	4	0	bridge_unaligned									
-sAvitra		1a	vedic	1	dcs	DATEABLE	15	15	joined	mw:243442:1	237	1		0			estimated	1.0
+sAvitra		1a	vedic	1	dcs	DATEABLE	15	15	joined	mw:243442:1	1	1	1.0	1	kavya	1.0	attested	
 sAvitra		2a	vedic	1	hand:class	DATEABLE	7	5	bridge_unaligned									
 sAvitra		2b	vedic	1	dcs	DATEABLE	3	3	bridge_unaligned									
 sAvitra		3a	vedic	1	dcs	DATEABLE	40	36	bridge_unaligned									
@@ -5459,7 +5459,7 @@ sTala		1b	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned
 sTala		4d	late-medieval	5	dharmamitra	DATEABLE	14	3	bridge_unaligned									
 sTala		1a				UNDATEABLE	1	0	bridge_no_freq	mw:255205:1								
 sTala		4e				UNRESOLVED	1	0	bridge_unaligned									
-sTira		1a	vedic	1	dcs	DATEABLE	32	26	joined	mw:255708:1	706	1		0			estimated	0.3662
+sTira		1a	vedic	1	dcs	DATEABLE	32	26	joined	mw:255708:1	26	1	0.3662	7	ayurveda	0.7692	attested	
 sTira		1b	vedic	1	dcs	DATEABLE	42	31	bridge_unaligned									
 sTira		1c	vedic	1	dcs	DATEABLE	120	78	bridge_unaligned									
 sTira		1d	epic-sutra	2	dcs+dharmamitra	DATEABLE	7	6	bridge_unaligned									
@@ -5497,7 +5497,7 @@ sTita		1r	classical	3	dcs	DATEABLE	2	2	bridge_unaligned
 sTita		1s	classical	3	dharmamitra	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 sTita		1g				UNDATEABLE	2	0	bridge_unaligned									
 sTita		1q				UNDATEABLE	1	0	bridge_unaligned									
-sTiti		10	vedic	1	dcs	DATEABLE	60	41	joined	mw:255660:1	744	1		0			estimated	0.4912
+sTiti		10	vedic	1	dcs	DATEABLE	60	41	joined	mw:255660:1	28	1	0.4912	6	tantra_yoga	0.6071	attested	
 sTiti		16	vedic	1	dcs	DATEABLE	35	29	bridge_unaligned									
 sTiti		4	vedic	1	dcs	DATEABLE	5	4	bridge_unaligned									
 sTiti		13	epic-sutra	2	dharmamitra	DATEABLE	5	4	bridge_unaligned									
@@ -5711,7 +5711,7 @@ sama	2	4c				UNDATEABLE	1	0	bridge_unaligned
 sama	2	4e				UNDATEABLE	1	0	bridge_unaligned									
 sama	2	4f				UNDATEABLE	2	0	bridge_unaligned									
 sama	2	4g				UNDATEABLE	1	0	bridge_unaligned									
-samanta		1a	vedic	1	dcs+hand:class	DATEABLE	6	6	joined	mw:233550:1	110	1		0			estimated	0.6667
+samanta		1a	vedic	1	dcs+hand:class	DATEABLE	6	6	joined	mw:233550:1	2	1	0.6667	1	veda	1.0	attested	
 samanta		1b	vedic	1	dcs	DATEABLE	3	3	bridge_unaligned									
 samanta		2a	vedic	1	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 samanta		4a	vedic	1	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -5732,13 +5732,13 @@ samudra	1	2	epic-sutra	2	dcs+dharmamitra	DATEABLE	36	22	bridge_unaligned
 samudra	1	8a	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 samudra	1	8c	classical	3	dharmamitra	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 samudra	1	12	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
-samudra	1	10				UNRESOLVED	2	0	joined	mw:235218:1	1418	1		0			estimated	0.9749
+samudra	1	10				UNRESOLVED	2	0	joined	mw:235218:1	233	1	0.9749	28	epic	0.6867	attested	
 samudra	1	11				UNDATEABLE	2	0	bridge_unaligned									
 samudra	1	7				UNDATEABLE	1	0	bridge_unaligned									
 samudra	1	8b				UNRESOLVED	1	0	bridge_unaligned									
 samudra	1	8d				UNDATEABLE	1	0	bridge_unaligned									
 samudra	1	9				UNRESOLVED	1	0	bridge_unaligned									
-samyaYc		1a	vedic	1	dcs+hand:class	DATEABLE	20	20	joined	mw:237298:1	131	1		0			estimated	0.5
+samyaYc		1a	vedic	1	dcs+hand:class	DATEABLE	20	20	joined	mw:237298:1	1	1	0.5	1	veda	1.0	attested	
 samyaYc		1b	vedic	1	dcs	DATEABLE	11	11	bridge_unaligned									
 samyaYc		1c	vedic	1	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 samyaYc		2a	vedic	1	hand:class	DATEABLE	4	4	bridge_unaligned									
@@ -5893,7 +5893,7 @@ sita	3	3e				UNRESOLVED	1	0	bridge_unaligned
 sita	3	4b				UNDATEABLE	1	0	bridge_unaligned									
 sita	3	4c				UNDATEABLE	1	0	bridge_unaligned									
 sita	3	4d				UNDATEABLE	1	0	bridge_unaligned									
-skanDa		1a	vedic	1	dcs	DATEABLE	72	44	joined	mw:254160:1	639	1		0			estimated	0.75
+skanDa		1a	vedic	1	dcs	DATEABLE	72	44	joined	mw:254160:1	27	1	0.75	4	epic	0.6296	attested	
 skanDa		1c	vedic	1	dcs	DATEABLE	26	13	bridge_unaligned									
 skanDa		1b	epic-sutra	2	dcs+dharmamitra	DATEABLE	36	24	bridge_unaligned									
 skanDa		1d	epic-sutra	2	dharmamitra+hand:class	DATEABLE	22	10	bridge_unaligned									
@@ -5904,7 +5904,7 @@ skanDa		1e	early-medieval	4	hand:class	DATEABLE-MARGINAL	4	1	bridge_unaligned
 skanDa		1g	early-medieval	4	hand:class	DATEABLE-MARGINAL	4	1	bridge_unaligned									
 skanDa		1f				UNDATEABLE	2	0	bridge_unaligned									
 skanDa		1h				UNDATEABLE	3	0	bridge_unaligned									
-sma	1	1	vedic	1	dcs	DATEABLE	18	17	joined	mw:257061:1	3120	1		0			estimated	1.0
+sma	1	1	vedic	1	dcs	DATEABLE	18	17	joined	mw:257061:1	4	1	1.0	1	vyakarana	1.0	attested	
 sma	1	2	vedic	1	dcs	DATEABLE	9	9	bridge_unaligned									
 sma	1	3	vedic	1	dcs	DATEABLE	4	4	bridge_unaligned									
 sma	1	4	vedic	1	dcs	DATEABLE	7	7	bridge_unaligned									
@@ -5919,7 +5919,7 @@ sma	1	9f	epic-sutra	2	dharmamitra+hand:class	DATEABLE	3	2	bridge_unaligned
 sma	1	9g	epic-sutra	2	dharmamitra	DATEABLE	3	2	bridge_unaligned									
 sma	1	9h	epic-sutra	2	dharmamitra	DATEABLE	2	2	bridge_unaligned									
 sma	1	9i	epic-sutra	2	dharmamitra	DATEABLE	8	8	bridge_unaligned									
-soma		1a	vedic	1	dcs	DATEABLE	83	72	joined	mw:252716:1	5335	1		0			estimated	0.7918
+soma		1a	vedic	1	dcs	DATEABLE	83	72	joined	mw:252716:1	232	1	0.7918	18	veda	0.7716	attested	
 soma		1b	vedic	1	dcs+hand:class	DATEABLE	117	94	bridge_unaligned									
 soma		2b	epic-sutra	2	dcs+dharmamitra	DATEABLE	4	3	bridge_unaligned									
 soma		3	epic-sutra	2	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -5995,7 +5995,7 @@ sudarSana		4	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned
 sudarSana		5b	early-medieval	4	dcs+hand:class	DATEABLE	3	2	bridge_unaligned									
 sudarSana		2b				UNDATEABLE	1	0	bridge_unaligned									
 sudarSana		5a				UNDATEABLE	1	0	bridge_unaligned									
-sumanas		1a	vedic	1	dcs	DATEABLE	16	15	joined	mw:248266:1	276	1		0			estimated	0.32
+sumanas		1a	vedic	1	dcs	DATEABLE	16	15	joined	mw:248266:1	8	1	0.32	2	veda	0.875	attested	
 sumanas		1b	vedic	1	dcs	DATEABLE	3	3	bridge_unaligned									
 sumanas		1c	vedic	1	dcs	DATEABLE	27	22	bridge_unaligned									
 sumanas		1d	epic-sutra	2	dcs+dharmamitra	DATEABLE	16	8	bridge_unaligned									
@@ -6084,7 +6084,7 @@ svastika		3	epic-sutra	2	dharmamitra	DATEABLE	9	2	bridge_unaligned
 svastika		4	epic-sutra	2	dcs	DATEABLE	13	3	bridge_unaligned									
 svastika		6	epic-sutra	2	dharmamitra	DATEABLE	6	5	bridge_unaligned									
 svastika		9	classical	3	dharmamitra	DATEABLE-MARGINAL	3	1	bridge_unaligned									
-svastika		10	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	joined	mw:259530:1	89	1		0			estimated	0.8667
+svastika		10	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	joined	mw:259530:1	13	1	0.8667	7	ayurveda	0.5385	attested	
 svastika		7	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 svastika		11	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 svastika		8	late-medieval	5	hand:class	DATEABLE-MARGINAL	6	1	bridge_unaligned									
@@ -6203,7 +6203,7 @@ tIrTa		4	epic-sutra	2	dharmamitra	DATEABLE	18	10	bridge_unaligned
 tIrTa		6	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	11	11	bridge_unaligned									
 tIrTa		8	epic-sutra	2	dcs+dharmamitra	DATEABLE	16	11	bridge_unaligned									
 tIrTa		9	epic-sutra	2	dcs+dharmamitra	DATEABLE	20	11	bridge_unaligned									
-tIrTa		10	classical	3	dcs	DATEABLE	4	3	joined	mw:85562:1	2483	1		0			estimated	0.9697
+tIrTa		10	classical	3	dcs	DATEABLE	4	3	joined	mw:85562:1	64	1	0.9697	16	purana	0.4375	attested	
 tIrTa		13	classical	3	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 tIrTa		11	early-medieval	4	hand:class	DATEABLE-MARGINAL	4	1	bridge_unaligned									
 tIrTa		12	early-medieval	4	hand:class	DATEABLE-MARGINAL	4	1	bridge_unaligned									
@@ -6244,7 +6244,7 @@ tala		11	classical	3	dharmamitra	DATEABLE-MARGINAL	2	1	bridge_unaligned
 tala		12	classical	3	dharmamitra	DATEABLE	4	2	bridge_unaligned									
 tala		7	early-medieval	4	hand:class	DATEABLE	3	2	bridge_unaligned									
 tala		8	early-medieval	4	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
-tala		10				UNDATEABLE	4	0	joined	mw:83503:1	1559	1		0			estimated	0.5112
+tala		10				UNDATEABLE	4	0	joined	mw:83503:1	114	1	0.5112	17	epic	0.614	attested	
 tala		14				UNDATEABLE	2	0	bridge_unaligned									
 tala		9				UNDATEABLE	2	0	bridge_unaligned									
 tantra		1b	vedic	1	dcs+hand:class	DATEABLE	12	10	bridge_unaligned									
@@ -6284,7 +6284,7 @@ tanu		4d				UNDATEABLE	3	0	bridge_unaligned
 tapana		1b	vedic	1	dcs	DATEABLE	9	9	bridge_unaligned									
 tapana		3a	vedic	1	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 tapana		4	vedic	1	hand:class	DATEABLE	9	4	bridge_unaligned									
-tapana		1a	epic-sutra	2	dcs+dharmamitra	DATEABLE	4	4	joined	mw:82648:1	97	1		0			estimated	0.8
+tapana		1a	epic-sutra	2	dcs+dharmamitra	DATEABLE	4	4	joined	mw:82648:1	12	1	0.8	8	epic	0.3333	attested	
 tapana		2a	epic-sutra	2	dcs+dharmamitra	DATEABLE	17	16	bridge_unaligned									
 tapana		2b	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 tapana		2c	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -6334,7 +6334,7 @@ tripuwa		1				UNDATEABLE	1	0	bridge_no_freq	mw:87954:1
 tripuwa		2b				UNDATEABLE	1	0	bridge_unaligned									
 tripuwa		2d				UNDATEABLE	2	0	bridge_unaligned									
 tripuwa		3d				UNDATEABLE	4	0	bridge_unaligned									
-tuNga		1	epic-sutra	2	dharmamitra	DATEABLE	40	34	joined	mw:85741:1	104	1		0			estimated	0.5
+tuNga		1	epic-sutra	2	dharmamitra	DATEABLE	40	34	joined	mw:85741:1	1	1	0.5	1	epic	1.0	attested	
 tuNga		2a	epic-sutra	2	dcs	DATEABLE	4	2	bridge_unaligned									
 tuNga		2f	epic-sutra	2	dcs+dharmamitra	DATEABLE	14	10	bridge_unaligned									
 tuNga		4a	classical	3	dharmamitra	DATEABLE	3	2	bridge_unaligned									
@@ -6416,7 +6416,7 @@ vAma	1	2e	early-medieval	4	dcs	DATEABLE-MARGINAL	3	1	bridge_unaligned
 vAma	1	3d	early-medieval	4	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 vAma	1	3b	late-medieval	5	hand:class	DATEABLE-MARGINAL	6	1	bridge_unaligned									
 vAma	1	5b	late-medieval	5	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned									
-vAmana		1a	vedic	1	dcs+hand:class	DATEABLE	51	40	joined	mw:191096:1	173	1		0			estimated	0.2759
+vAmana		1a	vedic	1	dcs+hand:class	DATEABLE	51	40	joined	mw:191096:1	8	1	0.2759	6	ayurveda	0.375	attested	
 vAmana		1b	epic-sutra	2	dcs+dharmamitra	DATEABLE	20	14	bridge_unaligned									
 vAmana		2a	epic-sutra	2	dcs+dharmamitra	DATEABLE	23	15	bridge_unaligned									
 vAmana		2f	epic-sutra	2	dcs+dharmamitra	DATEABLE	14	12	bridge_unaligned									
@@ -6537,7 +6537,7 @@ vEjayanta		2e	early-medieval	4	hand:class	DATEABLE	11	6	bridge_unaligned
 vEjayanta		2d				UNDATEABLE	1	0	bridge_unaligned									
 vEjayanta		2g				UNDATEABLE	2	0	bridge_unaligned									
 vEjayanta		3b				UNRESOLVED	2	0	bridge_unaligned									
-vIra		1a	vedic	1	dcs+hand:class	DATEABLE	67	55	joined	mw:203565:1	3766	1		0			estimated	0.9801
+vIra		1a	vedic	1	dcs+hand:class	DATEABLE	67	55	joined	mw:203565:1	295	1	0.9801	14	epic	0.8102	attested	
 vIra		1b	vedic	1	dcs	DATEABLE	18	15	bridge_unaligned									
 vIra		1c	vedic	1	dcs	DATEABLE	17	12	bridge_unaligned									
 vIra		1e	vedic	1	dcs+hand:class	DATEABLE	20	18	bridge_unaligned									
@@ -6553,7 +6553,7 @@ vIra		3	classical	3	dharmamitra	DATEABLE	11	7	bridge_unaligned
 vIra		2a	early-medieval	4	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned									
 vIra		2c	early-medieval	4	hand:class	DATEABLE	12	5	bridge_unaligned									
 vIra		1h	late-medieval	5	hand:class	DATEABLE-MARGINAL	6	1	bridge_unaligned									
-vaMSa		1a	vedic	1	dcs+hand:class	DATEABLE	55	37	joined	mw:184159:1	1092	1		0			estimated	0.589
+vaMSa		1a	vedic	1	dcs+hand:class	DATEABLE	55	37	joined	mw:184159:1	43	1	0.589	19	rasasastra	0.4651	attested	
 vaMSa		1g	vedic	1	dcs	DATEABLE	48	32	bridge_unaligned									
 vaMSa		1d	epic-sutra	2	dcs	DATEABLE	3	2	bridge_unaligned									
 vaMSa		1i	epic-sutra	2	dharmamitra	DATEABLE	8	5	bridge_unaligned									
@@ -6641,7 +6641,7 @@ vajra		18c				UNDATEABLE	1	0	bridge_unaligned
 vajra		19				UNDATEABLE	1	0	bridge_unaligned									
 vajra		6				UNRESOLVED	1	0	bridge_unaligned									
 vajra		9				UNDATEABLE	3	0	bridge_unaligned									
-vakra		1a	vedic	1	dcs	DATEABLE	56	36	joined	mw:184350:1	225	1		0			estimated	0.5556
+vakra		1a	vedic	1	dcs	DATEABLE	56	36	joined	mw:184350:1	10	1	0.5556	7	rasasastra	0.6	attested	
 vakra		1b	epic-sutra	2	dharmamitra	DATEABLE	10	5	bridge_unaligned									
 vakra		1d	epic-sutra	2	dharmamitra	DATEABLE	17	11	bridge_unaligned									
 vakra		2b	epic-sutra	2	dharmamitra	DATEABLE	3	2	bridge_unaligned									
@@ -6658,7 +6658,7 @@ vakra		2d				UNDATEABLE	1	0	bridge_unaligned
 vakra		2f				UNDATEABLE	1	0	bridge_unaligned									
 vakra		4b				UNDATEABLE	3	0	bridge_unaligned									
 vakra		4d				UNRESOLVED	1	0	bridge_unaligned									
-vana	1	1a	vedic	1	dcs	DATEABLE	78	64	joined	mw:185717:1	3046	1		0			estimated	0.9929
+vana	1	1a	vedic	1	dcs	DATEABLE	78	64	joined	mw:185717:1	976	1	0.9929	33	epic	0.918	attested	
 vana	1	1b	vedic	1	dcs	DATEABLE	13	13	bridge_unaligned									
 vana	1	1c	vedic	1	dcs	DATEABLE	9	9	bridge_unaligned									
 vana	1	1d	vedic	1	dcs	DATEABLE	4	4	bridge_unaligned									
@@ -6687,7 +6687,7 @@ vapra		11	late-medieval	5	hand:class	DATEABLE-MARGINAL	3	1	bridge_unaligned
 vapra		13b	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 vapra		9	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 vapra		5				UNRESOLVED	2	0	bridge_unaligned									
-varAha		1a	vedic	1	dcs+hand:class	DATEABLE	59	46	joined	mw:187084:1	312	1		0			estimated	0.7447
+varAha		1a	vedic	1	dcs+hand:class	DATEABLE	59	46	joined	mw:187084:1	35	1	0.7447	12	epic	0.5429	attested	
 varAha		1e	epic-sutra	2	dcs+dharmamitra	DATEABLE	27	10	bridge_unaligned									
 varAha		1f	epic-sutra	2	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 varAha		1g	epic-sutra	2	dcs+dharmamitra	DATEABLE	24	12	bridge_unaligned									
@@ -6821,7 +6821,7 @@ vfdDa	1	5	classical	3	dharmamitra	DATEABLE	3	2	bridge_unaligned
 vfdDa	1	2b	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 vfdDa	1	3a				UNDATEABLE	1	0	bridge_unaligned									
 vfdDa	1	4				UNDATEABLE	1	0	bridge_unaligned									
-vfka		1a	vedic	1	dcs	DATEABLE	54	51	joined	mw:204096:1	187	1		0			estimated	0.8261
+vfka		1a	vedic	1	dcs	DATEABLE	54	51	joined	mw:204096:1	19	1	0.8261	8	veda	0.4211	attested	
 vfka		1h	vedic	1	dcs	DATEABLE	3	3	bridge_unaligned									
 vfka		1k	vedic	1	dcs	DATEABLE	3	3	bridge_unaligned									
 vfka		3a	vedic	1	dcs	DATEABLE	10	9	bridge_unaligned									
@@ -6983,7 +6983,7 @@ viSAKa		2b	classical	3	dharmamitra	DATEABLE	3	2	bridge_unaligned
 viSAKa		2a	early-medieval	4	hand:class	DATEABLE-MARGINAL	4	1	bridge_unaligned									
 viSAKa		2c	late-medieval	5	hand:class	DATEABLE-MARGINAL	2	1	bridge_unaligned									
 viSAKa		2f				UNDATEABLE	4	0	bridge_unaligned									
-viSAla		1	vedic	1	dcs+hand:class	DATEABLE	71	53	joined	mw:200501:1	356	1		0			estimated	0.9362
+viSAla		1	vedic	1	dcs+hand:class	DATEABLE	71	53	joined	mw:200501:1	44	1	0.9362	12	epic	0.7273	attested	
 viSAla		2d	epic-sutra	2	hand:class	DATEABLE	2	2	bridge_unaligned									
 viSAla		2e	epic-sutra	2	dcs	DATEABLE	12	8	bridge_unaligned									
 viSAla		3b	epic-sutra	2	dcs+dharmamitra	DATEABLE	7	7	bridge_unaligned									
@@ -7012,7 +7012,7 @@ viSva		3g	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned
 viSva		3e	late-medieval	5	hand:class	DATEABLE-MARGINAL	3	2	bridge_unaligned									
 viSva		4c	late-medieval	5	hand:class	DATEABLE-MARGINAL	4	1	bridge_unaligned									
 viSva		4d				UNRESOLVED	1	0	bridge_unaligned									
-vijaya		1a	vedic	1	dcs+hand:class	DATEABLE	48	40	joined	mw:194989:1	594	1		0			estimated	0.6122
+vijaya		1a	vedic	1	dcs+hand:class	DATEABLE	48	40	joined	mw:194989:1	30	1	0.6122	4	epic	0.9	attested	
 vijaya		1b	epic-sutra	2	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 vijaya		1c	epic-sutra	2	dcs+dharmamitra	DATEABLE	3	3	bridge_unaligned									
 vijaya		1e	epic-sutra	2	dcs+dharmamitra	DATEABLE	6	2	bridge_unaligned									
@@ -7048,7 +7048,7 @@ vikalpa		1l	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned
 vikalpa		2	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 vikalpa		1c				UNDATEABLE	1	0	bridge_unaligned									
 vikalpa		1h				UNDATEABLE	1	0	bridge_unaligned									
-vikfti		1a	vedic	1	dcs	DATEABLE	38	31	joined	mw:194023:1	237	1		0			estimated	0.7143
+vikfti		1a	vedic	1	dcs	DATEABLE	38	31	joined	mw:194023:1	5	1	0.7143	5	ayurveda	0.8	attested	
 vikfti		3e	vedic	1	dcs	DATEABLE	2	2	bridge_unaligned									
 vikfti		1b	epic-sutra	2	dharmamitra+hand:class	DATEABLE	9	7	bridge_unaligned									
 vikfti		3d	epic-sutra	2	hand:class	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -7115,7 +7115,7 @@ viparyaya		2f	epic-sutra	2	dcs	DATEABLE	5	5	bridge_unaligned
 viparyaya		2g	epic-sutra	2	dcs	DATEABLE	10	5	bridge_unaligned									
 viparyaya		2h	epic-sutra	2	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 viparyaya		2i	epic-sutra	2	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
-viparyaya		1	early-medieval	4	dcs	DATEABLE	6	5	joined	mw:197702:1	418	1		0			estimated	0.2632
+viparyaya		1	early-medieval	4	dcs	DATEABLE	6	5	joined	mw:197702:1	5	1	0.2632	4	alamkara	0.4	attested	
 viparyaya		2a				UNDATEABLE	1	0	bridge_unaligned									
 viparyaya		2k				UNDATEABLE	2	0	bridge_unaligned									
 virUpAkza		2h	vedic	1	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
@@ -7156,7 +7156,7 @@ visarga		14	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned
 visarga		16	early-medieval	4	dcs+hand:class	DATEABLE	6	3	bridge_unaligned									
 visarga		2	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 visarga		8	early-medieval	4	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
-vizaya		10	vedic	1	dcs	DATEABLE	31	21	joined	mw:202020:1	1564	1		0			estimated	0.5323
+vizaya		10	vedic	1	dcs	DATEABLE	31	21	joined	mw:202020:1	33	1	0.5323	12	epic	0.6061	attested	
 vizaya		11	epic-sutra	2	dharmamitra	DATEABLE	7	4	bridge_unaligned									
 vizaya		13	epic-sutra	2	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 vizaya		2	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	38	33	bridge_unaligned									
@@ -7230,7 +7230,7 @@ yA	1	6d	epic-sutra	2	dcs+dharmamitra	DATEABLE	4	4	bridge_unaligned
 yA	1	8	epic-sutra	2	dharmamitra	DATEABLE	2	2	bridge_unaligned									
 yA	1	6e	classical	3	dharmamitra	DATEABLE	6	5	bridge_unaligned									
 yA	1	11	early-medieval	4	dharmamitra	DATEABLE	2	2	bridge_unaligned									
-yad		2a	vedic	1	dcs	DATEABLE	62	48	joined	mw:170148:1	61116	1		0			estimated	1.0
+yad		2a	vedic	1	dcs	DATEABLE	62	48	joined	mw:170148:1	983	1	1.0	18	veda	0.7813	attested	
 yad		2b	vedic	1	dcs	DATEABLE	6	5	bridge_unaligned									
 yad		2c	vedic	1	dcs	DATEABLE	3	3	bridge_unaligned									
 yad		2d	vedic	1	dcs	DATEABLE	13	13	bridge_unaligned									
@@ -7243,7 +7243,7 @@ yad		2l	epic-sutra	2	dharmamitra	DATEABLE	6	5	bridge_unaligned
 yad		2h	classical	3	dcs	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 yadi		8	vedic	1	dcs	DATEABLE	36	25	bridge_unaligned									
 yadi		9	vedic	1	dcs	DATEABLE	59	40	bridge_unaligned									
-yadi		1a	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	68	45	joined	mw:170219:1	6440	1		0			estimated	0.8889
+yadi		1a	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	68	45	joined	mw:170219:1	16	1	0.8889	7	epic	0.5	attested	
 yadi		1b	epic-sutra	2	dcs+dharmamitra	DATEABLE	13	11	bridge_unaligned									
 yadi		1c	epic-sutra	2	dharmamitra	DATEABLE-MARGINAL	1	1	bridge_unaligned									
 yadi		1d	epic-sutra	2	dcs+dharmamitra+hand:class	DATEABLE	76	54	bridge_unaligned									
@@ -7288,7 +7288,7 @@ yat		5d	epic-sutra	2	dcs+dharmamitra	DATEABLE	9	6	bridge_unaligned
 yat		5e	epic-sutra	2	dcs+dharmamitra	DATEABLE	3	3	bridge_unaligned									
 yat		5f	epic-sutra	2	dcs+dharmamitra	DATEABLE	15	13	bridge_unaligned									
 yat		5g	epic-sutra	2	dcs+dharmamitra	DATEABLE	24	21	bridge_unaligned									
-yatra		1a	vedic	1	dcs	DATEABLE	11	8	joined	mw:169635:1	4733	1		0			estimated	0.9787
+yatra		1a	vedic	1	dcs	DATEABLE	11	8	joined	mw:169635:1	92	1	0.9787	22	epic	0.3696	attested	
 yatra		1d	vedic	1	dcs	DATEABLE	5	5	bridge_unaligned									
 yatra		2	vedic	1	dcs	DATEABLE	49	38	bridge_unaligned									
 yatra		3	vedic	1	dcs	DATEABLE	2	2	bridge_unaligned									
