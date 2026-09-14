@@ -526,22 +526,22 @@
    "source_repo": "https://github.com/gasyoun/VisualDCS",
    "source_path": "derived-data/Lexical-Cores/Prilozhenie-7.-«Sintagmaticheskaya-tablica-dlya-vseh-lemm-korpusa»v/DCS_Sintagmatic.csv (tracked)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
-   "consumers": [],
-   "notes": "H291: a second, byte-different copy of the same data lives at derived-data/Sinonimy/S_P_D_F/Синтагматическая таблица DCS.csv (UTF-16LE, tab-delimited, Cyrillic header, 47 MB, 82,801 lines incl. blank separator rows) — same 'appendix table' family as this file, same underlying content verified by row-1 sample diff, both created 2026-06-05. This (semicolon-delimited, UTF-8, no BOM, 'Приложение 7' appendix numbering matching the Приложение-6 family below) is registered as canonical; the Sinonimy copy is left in place on disk as a raw/interim export, not separately registered.",
-   "status": "awaiting-consumer",
-   "consumer_candidates": [
+   "consumers": [
     {
      "repo": "SanskritLexicography",
-     "use": "pwg_ru portrait enrichment — per-lemma collocate context joined onto word-portrait pages",
-     "confidence": "medium"
-    },
+     "use": "pwg_ru collocate layer — per-lemma collocate profiles (top-12 iast:freq) joined onto headword_index k1 as the committed sidecar RussianTranslation/src/pwg_collocate_layer.tsv; 37,183 of 94,074 unique k1 covered (H4708, 15-09-2026)",
+     "confidence": "high"
+    }
+   ],
+   "notes": "H291: a second, byte-different copy of the same data lives at derived-data/Sinonimy/S_P_D_F/Синтагматическая таблица DCS.csv (UTF-16LE, tab-delimited, Cyrillic header, 47 MB, 82,801 lines incl. blank separator rows) — same 'appendix table' family as this file, same underlying content verified by row-1 sample diff, both created 2026-06-05. This (semicolon-delimited, UTF-8, no BOM, 'Приложение 7' appendix numbering matching the Приложение-6 family below) is registered as canonical; the Sinonimy copy is left in place on disk as a raw/interim export, not separately registered. H4708 (15-09-2026): first consumer landed — SanskritLexicography pwg_collocate_layer.tsv (39.5% of pwg_ru headwords carry a corpus collocate profile); selftest 10/10 + 10-portrait spot check 10/10.",
+   "regen_checked": "2026-09-04 (H4046: NOT-RUN)",
+   "consumer_candidates": [
     {
      "repo": "CommentaryStrategies",
      "use": "Sundara lexical-note QA — collocate profile per lemma as context for sense-note review",
      "confidence": "medium"
     }
-   ],
-   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
+   ]
   },
   {
    "id": "dcs-parallel-passages-full",
