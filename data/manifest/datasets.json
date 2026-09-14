@@ -838,9 +838,10 @@
    "source_repo": "https://github.com/gasyoun/VisualDCS",
    "source_path": "derived-data/Sochetaemost-sanskritskih-osnov/NEW/1-222342.csv (tracked)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
-   "consumers": [],
-   "notes": "H291 Step 4: checked for an older non-'NEW' sibling per the open question in this handoff — none found (Sochetaemost-sanskritskih-osnov/ has period-bucketed .txt files under Sochetaemost/ and a separate Ishodnye-dannye/ raw-inputs dir, neither is a prior version of this file); 'NEW' reads as this file's permanent name, not a superseded/current pair.",
-   "status": "awaiting-consumer",
+   "consumers": [
+    "SanskritLexicography — pwg-sense-attestation-window co-occurrence expansion (H4713, 15-09-2026: 53,003 senses, cooc_*/expanded_* fields; cooc_saturated filter recommended)"
+   ],
+   "notes": "H291 Step 4: checked for an older non-'NEW' sibling per the open question in this handoff — none found (Sochetaemost-sanskritskih-osnov/ has period-bucketed .txt files under Sochetaemost/ and a separate Ishodnye-dannye/ raw-inputs dir, neither is a prior version of this file); 'NEW' reads as this file's permanent name, not a superseded/current pair. H4713 (15-09-2026, OxAlpha z-ai/glm-5.3-flash): first consumer — stem co-occurrence expansion of SanskritLexicography's pwg-sense-attestation-window (held-out verified, non-saturated stratum 89.3% intersection).",
    "consumer_candidates": [
     {
      "repo": "SanskritSpellCheck",
