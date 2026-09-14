@@ -39,6 +39,7 @@ Outputs
 from __future__ import annotations
 
 import argparse
+import collections
 import json
 import math
 import os
@@ -134,10 +135,17 @@ def spearman(a, b):
 
 
 def cross_check(tsv, a6dir, to_slp1):
-    """Return (delta_rows, agg_rows, sample_rows, stats)."""
+    """Return (delta_rows, aggs, sample_rows, stats)."""
     delta_rows, aggs = [], []
     stats = {'slp_fail': 0, 'bad_bytes': 0, 'a6_only': 0}
     joined_by_period = {}
+    dup_counts = {fname: collections.Counter() for fname, _, _ in PERIOD_MAP}
+    for fname, _, _ in PERIOD_MAP:
+        with open(os.path.join(a6dir, fname), encoding='utf-8', errors='replace') as f:
+            for line in f:
+                r = parse_a6_row(line)
+                if r:
+                    dup_counts[fname][r[0]] += 1
     for fname, key, label in PERIOD_MAP:
         rows, bad = read_a6(os.path.join(a6dir, fname))
         stats['bad_bytes'] += bad
@@ -201,7 +209,8 @@ def cross_check(tsv, a6dir, to_slp1):
             cnt2 = int(''.join(fields[1]))
             slp = to_slp1(iast)
             t = tsv.get(slp, {}).get(key, 0)
-            sample_rows.append((label, key, slp, iast, cnt, t, cnt - t))
+            sample_rows.append((label, key, slp, iast, cnt, t, cnt - t,
+                                dup_counts[fname][iast], f'{iast};{cnt}'))
             assert (iast2, cnt2) == (iast, cnt), \
                 f'frozen-sample re-parse mismatch: {iast!r} {cnt} vs {iast2!r} {cnt2}'
             assert cnt2 == cnt, 'count mismatch'
@@ -217,9 +226,10 @@ def write_delta(path, delta_rows):
 
 def write_sample(path, sample_rows):
     with open(path, 'w', encoding='utf-8') as f:
-        f.write('period\tp period_key\tlemma_slp1\tlemma_iast\ta6_count\ttsv_count\tdelta\n')
-        for label, key, slp, iast, a, t, d in sample_rows:
-            f.write(f'{label}\t{key}\t{slp}\t{iast}\t{a}\t{t}\t{d}\n')
+        f.write('period\tperiod_key\tlemma_slp1\tlemma_iast\ta6_count\ttsv_count\t'
+                'delta\tdup_rows_in_file\traw_a6_line\n')
+        for label, key, slp, iast, a, t, d, dup, raw in sample_rows:
+            f.write(f'{label}\t{key}\t{slp}\t{iast}\t{a}\t{t}\t{d}\t{dup}\t{raw}\n')
 
 
 def print_summary(aggs, stats, sample_rows):
