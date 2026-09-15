@@ -50,7 +50,7 @@ It is a **two-tier** store:
 
 Every canonical dataset in **either** tier has one machine-readable row in
 [data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
-— currently <!-- dataset_count_start -->**130 datasets** (112 public · 15 restricted · 3 intermediate)<!-- dataset_count_end --> — the
+— currently <!-- dataset_count_start -->**131 datasets** (113 public · 15 restricted · 3 intermediate)<!-- dataset_count_end --> — the
 single source agents read to discover and fetch data; a new or changed derived
 dataset ends its session with a manifest row or it does not exist for reuse.
 
