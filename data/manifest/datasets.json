@@ -1,6 +1,6 @@
 {
  "manifest_version": "0.3.0",
- "generated": "2026-09-11",
+ "generated": "2026-09-15",
  "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
  "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
  "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
@@ -453,10 +453,12 @@
    "source_repo": "https://github.com/gasyoun/VisualDCS",
    "source_path": "visual/paradigm_nominal_class_split.json (tracked)",
    "builder": "src/DCS-data-2026/split_pooled_nominal_classes.py (H3984), over Sangram G2 lemma_cell_coverage.csv + the MW/PWG csl-json headword indexes",
-   "consumers": [],
+   "consumers": [
+    "zaliznyak-oddbank-drills (H4730: scripts/build_zaliznyak_oddbank_drills.py oddball bank, read at build time)"
+   ],
    "notes": "H3984 (03-09-2026, Opus 5 claude-opus-5), closing the NOUN half of SanskritLexicography GAPS §14; epistemic residue in FINDINGS §630, FEATURES_INDEX E51. An ADDITIVE SIDE-CAR to dcs-nominal-paradigm-grid: paradigm_nominal.json's own 14 buckets are unchanged and every G2 total is asserted unmoved (reconciles: true, six checks) — a moved total is a build failure, not a diff to accept. Two signals, both EXTERNAL to the corpus, because H1472 refused to guess a character rule: (A) the long-ī bucket splits on IAST vowel-nucleus count of the NFC citation form (ai/au count once) — 17 lemma_ids / 6,373 tokens monosyllabic (śrī, strī, dhī) vs 4,477 / 58,295 polysyllabic (devī, nadī); no dictionary and no segmenter needed, a Sanskrit syllable has exactly one nucleus. (B) the -ant/-at bucket splits on MW + PWG csl-json headword ENTRY-ID SETS, not headword presence — 191 lemma_ids / 8,851 tokens one lexeme two spellings, 0 two headwords, 51 / 2,384 at_only, 1 / 1 ant_only, 36 / 70 with no witness in either lexicon and therefore LEFT POOLED. Reach 243 of 279 = 87.1%. TRAP: a presence-only test ('is each spelling in the dictionary?') calls 191 lemmas two headwords and inverts the pair GAPS §14 pins by name — PWG files भगवत् and भगवन्त् under the identical ids 53806,80057. TRAP: the universe is Sangram G2's upos='NOUN' only; the ii pool is 99.0% NOUN by token mass but the ant pool only 23.5% (36,768 ADJ tokens), and that surplus has no per-lemma inventory outside the 921 MB pinned dcs_full.sqlite — it is declared UNREACHED, never estimated. Source dictionaries are sanskrit-lexicon/csl-json (mw.json 195,313 headwords, pwg.json 108,952), public-domain lexica; DCS is CC BY 4.0 and this derivative ships BY-SA with the public tier.",
    "rebuild": "python src/DCS-data-2026/split_pooled_nominal_classes.py (needs SanskritGrammar sangram/data/declension_cell_coverage/lemma_cell_coverage.csv and the csl-json mw.json + pwg.json; writes visual/paradigm_nominal_class_split.json plus reports/nominal_pooled_class_split.md and reports/nominal_g2_reconciliation_split.md — re-run it in the same PR as any change to the ii/ant membership test in gen_paradigm_nominal.py).",
-   "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
+   "regen_checked": "2026-09-04 (H4046: PASS); consumed-as-of 2026-09-15 (H4730 CHECK PASS)"
   },
   {
    "id": "dcs-nominal-class-split-adj",
@@ -471,8 +473,11 @@
    "source_repo": "https://github.com/gasyoun/VisualDCS",
    "source_path": "visual/paradigm_nominal_class_split_adj.json (tracked)",
    "builder": "src/DCS-data-2026/split_pooled_nominal_classes_adj.py (H4011), over dcs_full.sqlite read-only + the MW/PWG csl-json headword indexes; imports its membership test, dictionary loader, adjudicator and syllable counter from the H3984 builder",
-   "consumers": [],
-   "notes": "H4011 (06-09-2026, Opus 5 claude-opus-5), closing the ADJ half of SanskritLexicography GAPS §14 and graduating it in full; epistemic residue in the FINDINGS §630 addendum of 06-09-2026. An ADDITIVE SIBLING of dcs-nominal-class-split, which it does not modify: that row is the NOUN universe (Sangram G2), this one is the ADJ surplus G2's upos='NOUN' universe cannot see, taken per-lemma from the DCS master. Signal B is an entry-id SET comparison, never presence-only. 659 lemma_ids / 1,203 tokens stay pooled with no dictionary witness — a productivity artefact (528 productive -vat/-mat, 449 hapax), never split on a character rule."
+   "consumers": [
+    "zaliznyak-oddbank-drills (H4730: scripts/build_zaliznyak_oddbank_drills.py oddball bank, read at build time)"
+   ],
+   "notes": "H4011 (06-09-2026, Opus 5 claude-opus-5), closing the ADJ half of SanskritLexicography GAPS §14 and graduating it in full; epistemic residue in the FINDINGS §630 addendum of 06-09-2026. An ADDITIVE SIBLING of dcs-nominal-class-split, which it does not modify: that row is the NOUN universe (Sangram G2), this one is the ADJ surplus G2's upos='NOUN' universe cannot see, taken per-lemma from the DCS master. Signal B is an entry-id SET comparison, never presence-only. 659 lemma_ids / 1,203 tokens stay pooled with no dictionary witness — a productivity artefact (528 productive -vat/-mat, 449 hapax), never split on a character rule.",
+   "regen_checked": "2026-09-04 (H4046: PASS); consumed-as-of 2026-09-15 (H4730 CHECK PASS)"
   },
   {
    "id": "dcs-verbal-paradigm-attested",
@@ -2329,6 +2334,28 @@
    "notes": "H1461 (L4 surface, delta vs H1296). Different asset/repo/question than SanskritGrammar/sangram H1296 (corpus-ATTESTED-CELL drills, “is this cell attested?”) and kosha’s own H946 morphology drills (attested FORM of a specific lemma cell): this drills PARADIGM-CLASS MEMBERSHIP of a PWG headword (“which declension class, and which other words share it”) over the Zaliznyak-style class index, no corpus-attestation join. index_token grammar is <gender>·<section>[+N]; the +N compound-arity suffix does not change the declension pattern (e.g. m·1 and m·1+2 share stem_class=a-stem), so distractor bucketing keys on stem_class, verified empirically against headword_index.tsv. ind·* (indeclinable) tokens are excluded, no declension class to drill. Deterministic build (seeded RNG, seed 20260722).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-drills.meta.md",
    "regen_checked": "2026-09-04 (H4046: PASS)"
+  },
+  {
+   "id": "zaliznyak-oddbank-drills",
+   "title": "Zaliznyak -ant/-at oddball drills — split-verdict exception bank",
+   "tier": "public",
+   "license": "CC BY-SA 4.0",
+   "in_release": "not-applicable",
+   "release_asset": "data/zaliznyak/zaliznyak_oddbank_drills.json",
+   "format": "json",
+   "rows": 1722,
+   "size_bytes": 1384183,
+   "keying": "one item per row: id (ZOD-####), type (odd-one-out: 3 -ant/-at alternants + 1 oddball whose MW+PWG verdict does NOT unite the pair / classify-verdict: one item per resolved verdict row), question, answer, choices (4-way), verdict_refs (per-choice {source_dataset, lemma_id, lemma, verdict} — 1:1 traceability into the verdict banks), source_dataset, tags. 1,722 items = 1,464 classify-verdict + 258 odd-one-out over the 2,159 pooled-class lemma rows (695 unresolved verdicts excluded); also data/zaliznyak/zaliznyak_oddbank_drills.tsv flat fallback.",
+   "source_repo": "https://github.com/gasyoun/VisualDCS",
+   "source_path": "visual/paradigm_nominal_class_split.json + visual/paradigm_nominal_class_split_adj.json",
+   "builder": "scripts/build_zaliznyak_oddbank_drills.py (H4730), over dcs-nominal-class-split(-adj) read at build time (never vendored); --check re-resolves every verdict_refs entry against the live source JSONs",
+   "consumers": [
+    "zaliznyak_drills consumers (reading/zaliznyak/drills web quiz + apkg, future merge)",
+    "Systema/csl-guides quiz component (future, shared item schema)"
+   ],
+   "notes": "H4730 (15-09-2026, OxAlpha opencode/z-ai/glm-5.3-flash), closing census C3: first consumer of the H3984/H4011 pooled-class split verdicts. The pedagogy angle: words that LOOK like -ant/-at present participles but whose dictionary verdict says the -ant/-at pair is not one alternating lexeme (at_only/ant_only oddballs, e.g. jagat-type stems) vs the bhagavant/bhagavat-style alternants. Deterministic build (no RNG: pools sorted tokens-desc/lemma_id-asc, rotation-balanced answer positions). unresolved rows carry no teachable verdict and are excluded, not guessed.",
+   "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-oddbank-drills.meta.md",
+   "regen_checked": "2026-09-15 (H4730: CHECK PASS — 1,722 items, all verdict_refs re-resolve)"
   },
   {
    "id": "sense-crossdict-pilot",
