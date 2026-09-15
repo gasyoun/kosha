@@ -8,8 +8,9 @@ Census C2 join of three registered datasets into one upasarga dataset
    — DCS prefixed-verb decomposition, MG 2014 workbook, 6,425 rows. Keyed on the
    RESOLVED `prefix` column only (5,059 rows); the naive `prefix_guess` column
    (38 rows, demonstrably wrong where it disagrees, e.g. `abhigā` → guess
-   `prati`, resolved `abhi`) never keys the atlas. 1,350 unresolved-prefix rows
-   contribute root-level `(dhatu, '')` keys.
+   `prati`, resolved `abhi`) never keys the atlas. The 1,366 unresolved-prefix
+   rows (1,350 with no prefix at all + 16 carrying only the naive guess)
+   contribute root-level `(dhatu, '')` keys; 5,059 + 1,366 = 6,425.
 2. `sanskrit-upasarga-semantics` (kosha `data/gita/upasarga_semantics.tsv`, H876 W6)
    — Gita root x preverb senses, 214 rows. Root `√`-prefix stripped on join;
    `preverb` kept verbatim (comma-lists like `abhi-,pra-,vi-` are alternative
