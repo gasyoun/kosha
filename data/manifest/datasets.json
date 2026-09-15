@@ -1,6 +1,6 @@
 {
  "manifest_version": "0.3.0",
- "generated": "2026-09-11",
+ "generated": "2026-09-15",
  "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
  "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
  "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
@@ -3004,6 +3004,23 @@
    ],
    "notes": "H4731 (15-09-2026, OxAlpha glm-5.3-flash). Joins every Bloomfield Ṛgveda citation (36,680 pada-level rows, 10,374 distinct verse keys) to the published Elizarenkova Russian (SamudraManthanam H2863 digitization, mandalas I-II) and the addressable rvlinks per-verse anchor. Statuses: 8,988 joined / 27,674 elizarenkova_out_of_samudra_coverage (mandalas 3-10: volumes exist in print, not in the Samudra digitization) / 18 unjoined_no_surface (named residue: 16 verse numbers beyond the standard text's count + 2 RV.16.x khila/parishiṣṭa keys — table in the report). Verse-pair blocks handled: hymns 1.65-1.84 print verse PAIRS in one block (id=65.1 carries 1-2, range title authoritative), so even verses resolve. RIGHTS DISCIPLINE: pointer layer ONLY — the TSV deliberately carries no Elizarenkova translation text (in copyright, М.: Наука 1989+; every Elizarenkova-derived bulk layer in the estate is tier=restricted — see sa-ru-glossary, pwg-ru-mdf-export); consumers resolve refs/anchors at render time; bounded ≤160-char excerpts exist only in the report's 25-citation verification sample. Own-data canary: Samudra vs rvlinks are two independent Elizarenkova digitizations; on all 2,415 joined verse keys normalized RU-vs-RU similarity mean 0.973, 97.4% >= 0.85 (line-break/punctuation variants, neither side mutated). Pratika-vs-source substring check (H896 method) on 8,988 applicable rows: 87.5% y (7,866), remainder the documented orthographic variance (e.g. RV.1.1.1a īḍe vs Elizarenkova's īḷe). Full method + counts: data/concordance/BLOOMFIELD_RV_X_ELIZARENKOVA_RU_REPORT.md.",
    "regen_checked": "2026-09-15 (H4731: PASS — deterministic rerun, seed 42)"
+  },
+  {
+   "id": "bhs-mw-dcs-key2-crosswalk",
+   "title": "BHS (Edgerton) × MW/PWG × DCS Buddhist loci key2 crosswalk",
+   "tier": "public",
+   "license": "CC BY-SA 4.0",
+   "format": "tsv",
+   "rows": 18188,
+   "size_bytes": 981867,
+   "keying": "BHS key2 (SLP1) × MW/PWG key2 (tiered: exact → form_key → marker_strip) × DCS lemma_id attestation in 20 Buddhist texts; 3,171 BHS headwords DCS-attested (130,416 tokens)",
+   "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+   "source_path": "HeadwordLists/bhs_dcs_mw_key2_crosswalk.tsv",
+   "builder": "HeadwordLists/bhs_dcs_mw_key2_crosswalk.py (stdlib + sanskrit_util to_slp1; re-run regenerates byte-identical; stats JSON beside it)",
+   "consumers": [],
+   "status": "awaiting-consumer",
+   "consumer_candidates": [],
+   "notes": "H4744 (sibling census B8). First crosswalk for the BHS dictionary; the retired H4808 gap measure falls out of it: MW misses 13,604/18,188 BHS headwords (74.8%), PWG 13,305 (73.2%). DCS register classes (H1000 period-map pm-excluded / bhs-hybrid / buddhist-classical) travel per-row (dcs_bhs_loci), re-cuttable without rebuild. Landed via SanskritLexicography PR #2225 (product repo, PR-only) — source_path resolves on master once merged."
   }
  ]
 }
