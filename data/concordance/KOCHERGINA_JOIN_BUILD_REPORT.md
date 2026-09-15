@@ -4,7 +4,7 @@ _Created: 15-09-2026 · Last updated: 15-09-2026_
 
 Built by [scripts/build_kochergina_concordance.py](https://github.com/gasyoun/kosha/blob/main/scripts/build_kochergina_concordance.py) (H4748, OxAlpha `z-ai/glm-5.3-flash`), reusing the shared [concordance_core.py](https://github.com/gasyoun/kosha/blob/main/scripts/concordance_core.py) TieredMatcher + the verbatim B1 lemma_stats aggregation.
 
-Source: `SamudraManthanam/web/corpus_builder/jsonl/kochergina.jsonl` (SLP1-keyed headwords, consumed READ-ONLY — 29180 head records; 3 without an slp1 key, skipped; 271 dashed compound-member keys; 28584 unique comparison keys after folding 593 homograph records).
+Source: `SamudraManthanam/web/corpus_builder/jsonl/kochergina.jsonl` (SLP1-keyed headwords, consumed READ-ONLY — 29180 head records; 3 without an slp1 key, skipped; 29177 keyed records → 28371 raw keys (806 homograph records folded); 271 dashed compound-member records; stripped citation forms add 213 keys → 28584 unique comparison keys).
 
 ## Per-tier link counts (exit-check: no silent fuzzy blur)
 
@@ -29,7 +29,7 @@ Source: `SamudraManthanam/web/corpus_builder/jsonl/kochergina.jsonl` (SLP1-keyed
 
 DCS side: 98606 lemmas with tokens; 0 junk-string lemmas skipped; 74706 lemmas matched no Kochergina key (residue — mostly corpus-only vocabulary outside a RU learners' dictionary).
 
-**Compound-member keys:** 271 keys carry elision hyphens (Kochergina's compound-member mark, e.g. `-ākhyāyin`); the stripped citation form is registered as an exact-tier comparison key on the same anchor — the hyphen is an elision mark, not part of the word.
+**Compound-member keys:** 271 records (267 unique dashed keys) carry elision hyphens (Kochergina's compound-member mark, e.g. `-ākhyāyin`); the stripped citation form is registered as an exact-tier comparison key on the same anchor — the hyphen is an elision mark, not part of the word.
 
 **Rights fence (N10, human-gated):** the Russian gloss TEXT is deliberately NOT shipped. Kochergina 1987 is third-party and its RU glosses stay behind the human rights gate (ROADMAP_KOSHA_NEXT_PROGRAMME_2026H2.md N10); this layer carries links + counts only.
 
