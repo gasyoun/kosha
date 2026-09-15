@@ -189,6 +189,51 @@ def build_payload() -> dict:
     }
 
 
+def _internal_consistency(committed: dict, failures: list[str]) -> None:
+    """Sibling-absent mode: re-derive what the COMMITTED artifacts alone can prove.
+
+    The join itself cannot be re-derived without the sibling crosswalk, but a
+    hand-edited packet still gets caught: totals coherence, perDiscipline
+    re-derivation from the per-dataset rows, confidence = assignment x
+    crosswalkConfidence (both carried in the packet), and packet-vs-assignment-
+    layer agreement on mesoCode/confidence/rationale.
+    """
+    t = committed.get("totals", {})
+    datasets = committed.get("datasets", [])
+    if t.get("datasets") != len(datasets):
+        failures.append("totals.datasets != len(datasets[])")
+    assigned = [d for d in datasets if d.get("disciplines")]
+    if t.get("assigned") != len(assigned):
+        failures.append("totals.assigned != assigned rows")
+    if t.get("unassigned") != len(datasets) - len(assigned):
+        failures.append("totals.unassigned mismatch")
+    per: dict[str, set] = {}
+    for d in datasets:
+        for disc in d.get("disciplines", []):
+            expect = round4(min(1.0, d.get("assignmentConfidence", 0) * disc["crosswalkConfidence"]))
+            if disc["confidence"] != expect:
+                failures.append(f"{d['id']}: {disc['code']} confidence != assignment x crosswalk")
+            per.setdefault(disc["code"], set()).add(d["id"])
+    rebuilt_per = {
+        e["code"]: set(e["datasets"]) for e in committed.get("perDiscipline", [])
+    }
+    if {k: v for k, v in per.items()} != rebuilt_per:
+        failures.append("perDiscipline does not re-derive from datasets[]")
+    if not any(d.get("mesoCode") is None for d in datasets):
+        failures.append("no honest-null rows present")
+    assignments_doc = json.loads(ASSIGNMENTS_PATH.read_text(encoding="utf-8"))
+    by_id = {a["id"]: a for a in assignments_doc["assignments"]}
+    for d in datasets:
+        a = by_id.get(d["id"])
+        if a is None:
+            failures.append(f"{d['id']}: no assignment-layer row")
+            continue
+        if (a.get("mesoCode"), a.get("confidence"), a.get("rationale")) != (
+            d.get("mesoCode"), d.get("assignmentConfidence"), d.get("rationale")
+        ):
+            failures.append(f"{d['id']}: packet row disagrees with assignment layer")
+
+
 def check() -> int:
     failures: list[str] = []
     notes: list[str] = []
@@ -198,11 +243,21 @@ def check() -> int:
     committed = json.loads(JSON_OUT.read_text(encoding="utf-8"))
     source = json.loads(SOURCE_OUT.read_text(encoding="utf-8"))
 
-    rebuilt = build_payload()
-    if rebuilt != committed:
-        for key in rebuilt:
-            if rebuilt[key] != committed.get(key):
-                failures.append(f"payload section '{key}' does not re-derive from inputs")
+    degraded = False
+    try:
+        rebuilt = build_payload()
+    except FileNotFoundError as exc:
+        # Sibling checkout absent (CI runners): degrade to internal-consistency-only
+        # so the committed packet still gets audited and CI stays green.
+        degraded = True
+        notes.append(f"degraded mode: sibling crosswalk unreadable ({exc.filename}) — "
+                     "internal consistency only, no join re-derivation")
+        _internal_consistency(committed, failures)
+    else:
+        if rebuilt != committed:
+            for key in rebuilt:
+                if rebuilt[key] != committed.get(key):
+                    failures.append(f"payload section '{key}' does not re-derive from inputs")
     if source.get("dataset") != "dataset_disciplines":
         failures.append("source envelope dataset mismatch")
     if source.get("schemaVersion") != SCHEMA_VERSION:
@@ -225,8 +280,11 @@ def check() -> int:
     for n in notes:
         print(f"note: {n}")
     t = committed["totals"]
+    tail = (
+        "internal consistency (sibling absent)" if degraded else "byte-identical"
+    )
     print(
-        f"PASS: dataset-disciplines packet re-derives byte-identical "
+        f"PASS: dataset-disciplines packet re-derives {tail} "
         f"({t['datasets']} datasets, {t['assigned']} assigned, {t['unassigned']} honest nulls, "
         f"{t['disciplines']} disciplines)"
     )
