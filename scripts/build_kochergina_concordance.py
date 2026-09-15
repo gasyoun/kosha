@@ -75,6 +75,7 @@ def load_kochergina():
     n_records = 0
     no_key = 0
     dashed = 0
+    raw_keys = set()
     with open(KOCH, encoding="utf-8") as f:
         for line in f:
             r = json.loads(line)
@@ -87,6 +88,7 @@ def load_kochergina():
             if not slp1:
                 no_key += 1
                 continue
+            raw_keys.add(slp1)
             if slp1.startswith("-") or slp1.endswith("-"):
                 dashed += 1
             iast = ((r.get("forms") or {}).get("iast") or "").strip()
@@ -104,7 +106,7 @@ def load_kochergina():
                 if ia and ia not in a["iast_variants"]:
                     a["iast_variants"].add(ia)
                     a["iast"] = a["iast"] or ia
-    return anchors, n_records, no_key, dashed
+    return anchors, n_records, no_key, dashed, len(raw_keys)
 
 
 def lemma_stats(con):
@@ -125,9 +127,15 @@ def lemma_stats(con):
 
 def main():
     print("loading Kochergina headwords (read-only) ...")
-    anchors, n_records, no_key, dashed = load_kochergina()
-    print("  %d head records; %d without slp1 (skipped); %d dashed compound keys; "
-          "%d unique comparison keys" % (n_records, no_key, dashed, len(anchors)))
+    anchors, n_records, no_key, dashed, n_raw_keys = load_kochergina()
+    n_keyed = n_records - no_key
+    n_homographs = n_keyed - n_raw_keys
+    n_strip_new = len(anchors) - n_raw_keys
+    print("  %d head records; %d without slp1 (skipped); %d dashed compound records; "
+          "%d raw keys; %d homograph records folded; %d new stripped keys; "
+          "%d unique comparison keys"
+          % (n_records, no_key, dashed, n_raw_keys, n_homographs, n_strip_new,
+             len(anchors)))
 
     matcher = TieredMatcher()
     for key, a in anchors.items():
@@ -217,9 +225,11 @@ def main():
                 "TieredMatcher + the verbatim B1 lemma_stats aggregation.\n\n")
         f.write("Source: `SamudraManthanam/web/corpus_builder/jsonl/kochergina.jsonl` "
                 "(SLP1-keyed headwords, consumed READ-ONLY — %d head records; "
-                "%d without an slp1 key, skipped; %d dashed compound-member keys; "
-                "%d unique comparison keys after folding %d homograph records).\n\n"
-                % (n_records, no_key, dashed, n_keys, n_records - no_key - n_keys))
+                "%d without an slp1 key, skipped; %d keyed records → %d raw keys "
+                "(%d homograph records folded); %d dashed compound-member records; "
+                "stripped citation forms add %d keys → %d unique comparison keys).\n\n"
+                % (n_records, no_key, n_keyed, n_raw_keys, n_homographs, dashed,
+                   n_strip_new, n_keys))
         f.write("## Per-tier link counts (exit-check: no silent fuzzy blur)\n\n")
         f.write("| tier | confidence | links | status |\n|---|---|---|---|\n")
         for t in ASSERTED:
@@ -247,11 +257,14 @@ def main():
                 "%d lemmas matched no Kochergina key (residue — mostly "
                 "corpus-only vocabulary outside a RU learners' dictionary).\n\n"
                 % (len(stats), junk, unmatched_lemmas))
-        f.write("**Compound-member keys:** %d keys carry elision hyphens "
-                "(Kochergina's compound-member mark, e.g. `-ākhyāyin`); the "
-                "stripped citation form is registered as an exact-tier "
-                "comparison key on the same anchor — the hyphen is an elision "
-                "mark, not part of the word.\n\n" % dashed)
+        n_dashed_keys = sum(1 for k in anchors
+                            if k.startswith("-") or k.endswith("-"))
+        f.write("**Compound-member keys:** %d records (%d unique dashed keys) "
+                "carry elision hyphens (Kochergina's compound-member mark, e.g. "
+                "`-ākhyāyin`); the stripped citation form is registered as an "
+                "exact-tier comparison key on the same anchor — the hyphen is "
+                "an elision mark, not part of the word.\n\n"
+                % (dashed, n_dashed_keys))
         f.write("**Rights fence (N10, human-gated):** the Russian gloss TEXT is "
                 "deliberately NOT shipped. Kochergina 1987 is third-party and "
                 "its RU glosses stay behind the human rights gate "

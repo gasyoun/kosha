@@ -3023,7 +3023,7 @@
     "dict_corpus_concordance family (third-party sibling layer alongside the CDSL-union B1)",
     "future RU-facing product lanes — links/counts only"
    ],
-   "notes": "Sibling census B15 (H4748). Source consumed READ-ONLY: SamudraManthanam/web/corpus_builder/jsonl/kochergina.jsonl (29,180 head records; 3 without slp1 skipped; 271 dashed compound-member keys registered additionally via their stripped citation form; 28,584 unique comparison keys after folding 806 homograph records). Coverage sidecar kochergina_corpus_coverage.tsv (28,584 rows): 15,258 keys (53.4%) carry >=1 DCS attestation. RIGHTS FENCE (N10, human-gated): the Russian gloss TEXT is deliberately NOT shipped — links + counts only. Verification: 25-entry stratified sample (seed 20260915) 25/25 mechanical PASS; 20/20 asserted links same-lexeme; 5/5 relaxed candidates plausible but quarantined (minimal-pair axes). DCS is CC BY 4."
+   "notes": "Sibling census B15 (H4748). Source consumed READ-ONLY: SamudraManthanam/web/corpus_builder/jsonl/kochergina.jsonl (29,180 head records; 3 without slp1 skipped; 29,177 keyed records → 28,371 raw keys (806 homograph records folded); 271 dashed compound-member records whose stripped citation forms add 213 keys → 28,584 unique comparison keys). Coverage sidecar kochergina_corpus_coverage.tsv (28,584 rows): 15,258 keys (53.4%) carry >=1 DCS attestation. RIGHTS FENCE (N10, human-gated): the Russian gloss TEXT is deliberately NOT shipped — links + counts only. Verification: 25-entry stratified sample (seed 20260915) 25/25 mechanical PASS; 20/20 asserted links same-lexeme; 5/5 relaxed candidates plausible but quarantined (minimal-pair axes). DCS is CC BY 4."
   }
  ]
 }
