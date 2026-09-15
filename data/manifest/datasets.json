@@ -3004,6 +3004,26 @@
    ],
    "notes": "H4731 (15-09-2026, OxAlpha glm-5.3-flash). Joins every Bloomfield Ṛgveda citation (36,680 pada-level rows, 10,374 distinct verse keys) to the published Elizarenkova Russian (SamudraManthanam H2863 digitization, mandalas I-II) and the addressable rvlinks per-verse anchor. Statuses: 8,988 joined / 27,674 elizarenkova_out_of_samudra_coverage (mandalas 3-10: volumes exist in print, not in the Samudra digitization) / 18 unjoined_no_surface (named residue: 16 verse numbers beyond the standard text's count + 2 RV.16.x khila/parishiṣṭa keys — table in the report). Verse-pair blocks handled: hymns 1.65-1.84 print verse PAIRS in one block (id=65.1 carries 1-2, range title authoritative), so even verses resolve. RIGHTS DISCIPLINE: pointer layer ONLY — the TSV deliberately carries no Elizarenkova translation text (in copyright, М.: Наука 1989+; every Elizarenkova-derived bulk layer in the estate is tier=restricted — see sa-ru-glossary, pwg-ru-mdf-export); consumers resolve refs/anchors at render time; bounded ≤160-char excerpts exist only in the report's 25-citation verification sample. Own-data canary: Samudra vs rvlinks are two independent Elizarenkova digitizations; on all 2,415 joined verse keys normalized RU-vs-RU similarity mean 0.973, 97.4% >= 0.85 (line-break/punctuation variants, neither side mutated). Pratika-vs-source substring check (H896 method) on 8,988 applicable rows: 87.5% y (7,866), remainder the documented orthographic variance (e.g. RV.1.1.1a īḍe vs Elizarenkova's īḷe). Full method + counts: data/concordance/BLOOMFIELD_RV_X_ELIZARENKOVA_RU_REPORT.md.",
    "regen_checked": "2026-09-15 (H4731: PASS — deterministic rerun, seed 42)"
+  },
+  {
+   "id": "kochergina-corpus-concordance",
+   "title": "Kochergina 1987 (third-party RU-SA) headword ↔ DCS corpus concordance — read-only sibling of the B1 family (H4748)",
+   "tier": "public",
+   "license": "CC BY-SA 4.0",
+   "in_release": "not-applicable",
+   "release_asset": "kochergina_corpus_concordance.tsv",
+   "format": "tsv",
+   "rows": 20651,
+   "size_bytes": 1744607,
+   "keying": "concordance-core schema (anchor_type=dict-entry, anchor_id=kochergina:<eN>, anchor_key_slp1=comparison key, target_locus=lemma:<id>, source_dataset=kochergina, match_method/confidence per TIER_CONFIDENCE, evidence_count=DCS tokens); ASSERTED tiers exact 19,560 + floor 1,091 = 20,651 links; relaxed 3,256 QUARANTINED to kochergina_corpus_relaxed_candidates.tsv (golden-sample ruling inherited from B1); xref n/a (third-party dict, dcs-cdsl-xref validates CDSL unions only)",
+   "source_repo": "https://github.com/gasyoun/kosha",
+   "source_path": "data/concordance/kochergina_corpus_concordance.tsv",
+   "builder": "scripts/build_kochergina_concordance.py (concordance_core.py TieredMatcher + verbatim B1 lemma_stats pass, H4748)",
+   "consumers": [
+    "dict_corpus_concordance family (third-party sibling layer alongside the CDSL-union B1)",
+    "future RU-facing product lanes — links/counts only"
+   ],
+   "notes": "Sibling census B15 (H4748). Source consumed READ-ONLY: SamudraManthanam/web/corpus_builder/jsonl/kochergina.jsonl (29,180 head records; 3 without slp1 skipped; 271 dashed compound-member keys registered additionally via their stripped citation form; 28,584 unique comparison keys after folding 806 homograph records). Coverage sidecar kochergina_corpus_coverage.tsv (28,584 rows): 15,258 keys (53.4%) carry >=1 DCS attestation. RIGHTS FENCE (N10, human-gated): the Russian gloss TEXT is deliberately NOT shipped — links + counts only. Verification: 25-entry stratified sample (seed 20260915) 25/25 mechanical PASS; 20/20 asserted links same-lexeme; 5/5 relaxed candidates plausible but quarantined (minimal-pair axes). DCS is CC BY 4."
   }
  ]
 }
