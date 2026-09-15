@@ -556,19 +556,16 @@
    "source_repo": "https://github.com/gasyoun/VisualDCS",
    "source_path": "derived-data/Paralleli-v-tekstah-korpusa-SRC/PARA/Polnorazmernye/ (tracked, 245 files, *.csv per source passage)",
    "builder": "unknown (pre-2026 dump; see source_repo git history)",
-   "consumers": [],
-   "notes": "H291: a same-file-count, same-naming sibling directory PARA/Polnorazmernye-2022-archive/ (245 files, 56 MB) is a superseded 2022 snapshot — sample diff on 104_1--20.csv shows the archive uses a flat '!' match flag where the live version has richer PARTLY/+term-delta annotations. Archive left on disk as a historical snapshot, not separately registered. H4472 (10-09-2026): the personal yadisk folder `kRtam/Параллели в Санскритских текстах/Параллели в текстах Корпуса (SRC)/PARA/Full_NEW/` is byte-identical to this dataset (245 files, 58,908,613 bytes total, confirmed via `rclone size`) — it is this dataset's origin/staging copy, not a separate corpus; no `gasuns-krtam-parallels` row was registered because the scope is identical. `PARA/Полноразмерные/` on the same yadisk folder (245 files, 55,812,085 bytes) matches the PARA/Polnorazmernye-2022-archive/ superseded snapshot referenced above. Full report: https://github.com/gasyoun/SanskritLexicography/blob/h4472-drain/H4472_KRTAM_PARALLELS_CSV_CENSUS_09-09-2026.md",
-   "status": "awaiting-consumer",
+   "consumers": [
+    "Parallel-Sanskrit-Corpora (alignment QA/recall baseline, H4707 15-09-2026)"
+   ],
+   "notes": "H291: a same-file-count, same-naming sibling directory PARA/Polnorazmernye-2022-archive/ (245 files, 56 MB) is a superseded 2022 snapshot — sample diff on 104_1--20.csv shows the archive uses a flat '!' match flag where the live version has richer PARTLY/+term-delta annotations. Archive left on disk as a historical snapshot, not separately registered. H4472 (10-09-2026): the personal yadisk folder `kRtam/Параллели в Санскритских текстах/Параллели в текстах Корпуса (SRC)/PARA/Full_NEW/` is byte-identical to this dataset (245 files, 58,908,613 bytes total, confirmed via `rclone size`) — it is this dataset's origin/staging copy, not a separate corpus; no `gasuns-krtam-parallels` row was registered because the scope is identical. `PARA/Полноразмерные/` on the same yadisk folder (245 files, 55,812,085 bytes) matches the PARA/Polnorazmernye-2022-archive/ superseded snapshot referenced above. Full report: https://github.com/gasyoun/SanskritLexicography/blob/h4472-drain/H4472_KRTAM_PARALLELS_CSV_CENSUS_09-09-2026.md H4707 (15-09-2026): consumed as the alignment QA/recall baseline of Parallel-Sanskrit-Corpora — 154,033 candidates parsed (GOOD 14,557/PARTLY 139,476), frozen-sample round-trip recall 1.00, archive-overlap 0.985 vs the 2022 snapshot; joined metrics + frozen sample committed in Parallel-Sanskrit-Corpora data/dcs-parallels-baseline/ (registry `rows` 506,787 = raw file lines; precise source-segment count 501,231). Report: https://github.com/gasyoun/Parallel-Sanskrit-Corpora/blob/master/H4707_DCS_PARALLELS_QA_BASELINE_15-09-2026.md",
+   "status": null,
    "consumer_candidates": [
     {
      "repo": "RussianRamayana",
      "use": "translator-env context layers — parallel-passage context for auto-footnote sheets",
      "confidence": "medium-high"
-    },
-    {
-     "repo": "Parallel-Sanskrit-Corpora",
-     "use": "alignment QA / recall baseline for the parallel-corpora programme",
-     "confidence": "medium"
     }
    ],
    "regen_checked": "2026-09-04 (H4046: NOT-RUN)"
