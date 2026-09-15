@@ -23,7 +23,7 @@ csl-atlas precedent (H4178 flip 3, `dict_meso_assignments.json`) so both consume
 | Honest nulls (no facet, never forced) | 6 (incl. the packet's own self-row) |
 | Distinct disciplines reached | 4 |
 | NOT-MAPPED sentinels surfaced from the crosswalk | 8 |
-| Per-discipline confidence rows | 137 (min 0.3, max 0.9025) |
+| Per-discipline confidence rows | 138 (min 0.3, max 0.9025) |
 
 Per-discipline dataset coverage: sanskritology 115 · literature 20 · linguistics 2 · dravidology 1
 (literature exceeds the 8 literary-subject datasets because the crosswalk gives
@@ -33,7 +33,7 @@ Per-discipline dataset coverage: sanskritology 115 · literature 20 · linguisti
 ## Assignment layer — the honest parts
 
 - **General Sanskrit lexicography has no meso code.** The ratified precedent (csl-atlas) routes it to
-  `sanskrit_grammar_panini` (crosswalk target sanskritology) at deliberately ≤ 0.6. 100 of 130 kosha
+  `sanskrit_grammar_panini` (crosswalk target sanskritology) at deliberately ≤ 0.6. 101 of 132 kosha
   datasets take that nearest-facet route — kosha is a lexicography hub, and the packet says so.
 - **Text-apparatus vs phenomenon.** Datasets whose subject is a text take the text's facet (Gita/Nala/MBh →
   `epic_ramayana_mahabharata` ×10; Hitopadeśa/Kirātārjunīya/subhāṣita → `literary_studies` ×6); datasets
