@@ -1,0 +1,27 @@
+stratum	anchor_key_slp1	anchor_key_iast	anchor_id	dcs_lemma_id	dcs_lemma_iast	evidence_count	check_lemma_exists	check_token_count	check_key_in_source	compound_stripped	adjudication
+stratum	anchor_key_slp1	anchor_key_iast	anchor_id	dcs_lemma_id	dcs_lemma_iast	evidence_count	check_lemma_exists	check_token_count	check_key_in_source	compound_stripped	adjudication
+exact	vivAsana	vivāsana	kochergina:e28421	138668	vivāsana	2	PASS	PASS	PASS	no	same lexeme (identity)
+exact	akzara	akṣara	kochergina:e1304	5483	akṣara	2	PASS	PASS	PASS	no	same lexeme (identity)
+exact	heman	heman	kochergina:e8591	110826	heman	1955	PASS	PASS	PASS	no	same lexeme (identity)
+exact	akftsna	akṛtsna	kochergina:e1286	5326	akṛtsna	5	PASS	PASS	PASS	no	same lexeme (identity)
+exact	nu	nu	kochergina:e14689	170168	nu	1967	PASS	PASS	PASS	no	same lexeme (identity)
+exact	Avarta	āvarta	kochergina:e3446	62516	āvarta	3	PASS	PASS	PASS	no	same lexeme (identity)
+exact	pratyapakAra	pratyapakāra	kochergina:e17625	211008	pratyapakāra	1	PASS	PASS	PASS	no	same lexeme (identity)
+exact	mudraRa	mudraṇa	kochergina:e12717	136140	mudraṇa	2	PASS	PASS	PASS	no	same lexeme (identity)
+exact	asuKa	asukha	kochergina:e2908	61080	asukha	45	PASS	PASS	PASS	no	same lexeme (identity)
+exact	vigAha	vigāha	kochergina:e27394	217691	vigāha	1	PASS	PASS	PASS	no	same lexeme (identity)
+exact	sahita	sahita	kochergina:e19498	111330	sahita	1737	PASS	PASS	PASS	no	same lexeme (identity)
+exact	cezwA	ceṣṭā	kochergina:e5027	52206	ceṣṭā	286	PASS	PASS	PASS	no	same lexeme (identity)
+exact	Dfti	dhṛti	kochergina:e6324	43020	dhṛti	24	PASS	PASS	PASS	no	same lexeme (identity)
+exact	Sakuna	śakuna	kochergina:e19680	116357	śakuna	3	PASS	PASS	PASS	no	same lexeme (identity)
+exact	anukANkz	anukāṅkṣ	kochergina:e1931	157680	anukāṅkṣ	6	PASS	PASS	PASS	no	same lexeme (identity)
+floor	pravapaRa	pravapaṇa	kochergina:e17739	222813	pravapana	2	PASS	PASS	PASS	no	same lexeme; retroflex/dental nasal spelling variant
+floor	saNSraya	saṅśraya	kochergina:e21009	8233	saṃśraya	234	PASS	PASS	PASS	no	same lexeme; homorganic-nasal anusvāra fold
+floor	saNkleda	saṅkleda	kochergina:e20797	8908	saṃkleda	9	PASS	PASS	PASS	no	same lexeme; homorganic-nasal anusvāra fold
+floor	Dvaṁsin	dhvaṁsin	kochergina:e6404	43315	dhvaṃsin	29	PASS	PASS	PASS	no	same lexeme; anusvāra transliteration variant
+floor	saNnikASa	saṅnikāśa	kochergina:e20880	17807	saṃnikāśa	26	PASS	PASS	PASS	no	same lexeme; homorganic-nasal anusvāra fold
+relaxed	vasati	vasati	-	75559	vasatī	1	PASS	PASS	PASS	no	plausible (Vedic f. of vas-prtp) but length-fold axis — stays quarantined
+relaxed	paridAha	paridāha	-	19852	parīdāha	4	PASS	PASS	PASS	no	plausible (same root dhā, near senses) but length-fold axis — stays quarantined
+relaxed	pASaka	pāśaka	-	170870	pāsaka	2	PASS	PASS	PASS	no	plausible (s/ś variant) but sibilant-fold axis — stays quarantined
+relaxed	svacCa	svaccha	-	120826	svacchā	2	PASS	PASS	PASS	no	plausible (m/f same lexeme) but length-fold axis — stays quarantined
+relaxed	vamra	vamra	-	76899	vāmra	2	PASS	PASS	PASS	no	plausible (bee-lexeme pair) but length-fold axis — stays quarantined
