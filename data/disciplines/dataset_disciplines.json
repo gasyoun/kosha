@@ -1,0 +1,2654 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-4.0 (IndologyScholars derived exports; archive attribution)",
+  "generatedBy": "scripts/build_dataset_disciplines.py",
+  "sourceFiles": [
+    "IndologyScholars/curation/meso_discipline_crosswalk.csv",
+    "IndologyScholars/curation/disciplines.csv",
+    "data/manifest/dataset_meso_assignments.json",
+    "scripts/build_dataset_disciplines.py"
+  ],
+  "method": "kosha dataset-registry -> meso_code assignments joined through the sibling IndologyScholars crosswalk to the ratified discipline taxonomy; taxonomy never re-derived (H3567 F5 / F5c); csl-atlas assignment precedent mirrored (H4178).",
+  "totals": {
+    "datasets": 132,
+    "assigned": 126,
+    "unassigned": 6,
+    "disciplines": 4
+  },
+  "perDiscipline": [
+    {
+      "code": "sanskritology",
+      "labelEn": "Sanskritology",
+      "labelRu": "Санскритология",
+      "datasets": [
+        "mw-roots",
+        "dcs-cdsl-xref",
+        "union-headwords",
+        "mw-heritage-crosswalk",
+        "kosha-lemma-frequency",
+        "kosha-sense-frequency",
+        "zaliznyak-grammar-index",
+        "corpus-lexicon",
+        "stenogrammy-teaching-glossary",
+        "sa-ru-glossary",
+        "kosha-db",
+        "dcs-full-sqlite",
+        "samudra-corpus-db",
+        "heritage-mirror",
+        "dcs-grapheme-frequency",
+        "dcs-nominal-paradigm-grid",
+        "dcs-nominal-class-split",
+        "dcs-nominal-class-split-adj",
+        "dcs-verbal-paradigm-attested",
+        "varga-series-diachrony",
+        "dcs-sintagmatic-appendix7",
+        "dcs-parallel-passages-full",
+        "dcs-verb-roots-by-class",
+        "dcs-verb-class-prefix-frequency",
+        "dcs-sintagmatic-appendix6-periods",
+        "stopovye-parallel-passages",
+        "dcs-verb-example-ids",
+        "heritage-forms-crosswalk-extras",
+        "dcs-verb-form-frequency-prelim",
+        "dcs-compound-dictionary",
+        "uttarapada-dict-vs-corpus",
+        "dcs-stem-cooccurrence-full",
+        "which-dictionary-routing-benchmark",
+        "correction-loci",
+        "dict-corpus-concordance",
+        "parallel-passage-concordance",
+        "bloomfield-rv-citations",
+        "sundarakanda-two-tier-apparatus",
+        "markup-tag-census",
+        "dcs-lsc-pilot",
+        "archive-stopword-sqlite",
+        "samudra-offline-packs",
+        "kosha-raw-sqlite",
+        "correction-events-log",
+        "kompozity-names-compound-splits",
+        "cdsl-headword-ngram-oracle",
+        "headword-overlap-matrix",
+        "headword-overlap-matrix-ext",
+        "mdf-pilot-cdsl",
+        "lift-pilot-cdsl",
+        "pwg-ru-mdf-export",
+        "semdom-amarakosha-crosswalk",
+        "mw-defgen-eval-sample",
+        "dcs-reading-pack-nala-1",
+        "kosha-srs-deck-b1-demo",
+        "gita-gold-master",
+        "gita-morphology-gold",
+        "gita-inflection-qa",
+        "gita-reading-pack",
+        "gita-sandhi",
+        "sandhi-curriculum",
+        "vocab-curriculum",
+        "vocab-drills",
+        "thematic-vocabulary",
+        "thematic-vocab-drills",
+        "morphology-curriculum",
+        "morphology-drills",
+        "sandhi-drills",
+        "corpus-sandhi",
+        "roots-frequency-curriculum",
+        "upasarga-atlas",
+        "sanskrit-upasarga-semantics",
+        "pronoun-corrections",
+        "samasa-trainer",
+        "gita-reading-pack-difficulty",
+        "reading-pack-metre",
+        "vidyut-chandas-meters",
+        "morph-signature-freq",
+        "dcs-reading-pack-nala-2",
+        "dcs-reading-pack-nala-3",
+        "morphology-attestation-audit",
+        "morphology-attestation-audit-inflections",
+        "morphology-giveback-candidates",
+        "panini-derivation-status",
+        "paninian-corpus-concordance",
+        "scherzl-government-dcs-adjudication",
+        "pd-dcs-coverage",
+        "sense-corpus-concordance",
+        "sense-alignment-pilot",
+        "paninian-sutra-coverage-map",
+        "zaliznyak-drills",
+        "sense-crossdict-pilot",
+        "gita-prose",
+        "pwg-scan-index-campaign",
+        "pwg-ls-counts",
+        "pwg-ru-data-workingset",
+        "defgen-heritage-second-reference",
+        "pwg-tm-canonical-v1",
+        "pwg-de-edition-v1",
+        "mbh-vulgate-critical-presence",
+        "grammar-lab-g1",
+        "pwg-mw-ap-sense-coverage",
+        "pwg-work-dating-table",
+        "pwg-sense-attestation-window",
+        "pwg-print-anchors",
+        "wisdomlib-sanskrit-layers",
+        "kosha-mastery-schedule",
+        "cyrillic-proper-noun-slp1",
+        "sense-dating",
+        "sense-portraits",
+        "shiva-sutras-machine",
+        "sanskrityatina-reverse-index",
+        "sanskrityatina-sch-cases",
+        "dcs-upasarga-prefixus",
+        "bloomfield-rv-x-elizarenkova-ru"
+      ]
+    },
+    {
+      "code": "literature",
+      "labelEn": "Literary studies",
+      "labelRu": "Литературоведение",
+      "datasets": [
+        "indische-sprueche",
+        "russiantranslation-src-raw-ingests",
+        "sundarakanda-two-tier-apparatus",
+        "dcs-reading-pack-nala-1",
+        "kosha-srs-deck-b1-demo",
+        "gita-gold-master",
+        "gita-reading-pack",
+        "gita-reading-pack-difficulty",
+        "reading-pack-metre",
+        "vidyut-chandas-meters",
+        "dcs-reading-pack-nala-2",
+        "dcs-reading-pack-nala-3",
+        "dcs-reading-pack-hitopadesa-0",
+        "dcs-reading-pack-kiratarjuniya-1",
+        "ru-gloss-layer",
+        "subhashita-reader-pack",
+        "cohort-start-chteniya-pack-freeze",
+        "gita-prose",
+        "mbh-vulgate-critical-presence",
+        "hitopadesa-text-concordance"
+      ]
+    },
+    {
+      "code": "linguistics",
+      "labelEn": "Linguistics and philology",
+      "labelRu": "Лингвистика и филология",
+      "datasets": [
+        "mw-etymology",
+        "gita-etymology"
+      ]
+    },
+    {
+      "code": "dravidology",
+      "labelEn": "Dravidology",
+      "labelRu": "Тамилология и дравидология",
+      "datasets": [
+        "tamil-fold"
+      ]
+    }
+  ],
+  "notMappedSentinels": [
+    {
+      "mesoCode": "comparative_analysis",
+      "confidence": 0.0,
+      "note": "НЕ МАППИТСЯ: методологический код, а не предметная область."
+    },
+    {
+      "mesoCode": "bengal",
+      "confidence": 0.0,
+      "note": "НЕ МАППИТСЯ: региональный код. Бенгалия сама по себе не определяет дисциплину."
+    },
+    {
+      "mesoCode": "nepal_newar_kathmandu",
+      "confidence": 0.0,
+      "note": "НЕ МАППИТСЯ: региональный код. Невары — тибето-бирманцы, отнесение к tibetology было бы натяжкой."
+    },
+    {
+      "mesoCode": "china_mongolia_inner_asia",
+      "confidence": 0.0,
+      "note": "НЕ МАППИТСЯ: региональный код, к тому же за пределами Индии."
+    },
+    {
+      "mesoCode": "himalaya",
+      "confidence": 0.0,
+      "note": "НЕ МАППИТСЯ: региональный код; tibetology_himalaya несёт дисциплину отдельно."
+    },
+    {
+      "mesoCode": "assam",
+      "confidence": 0.0,
+      "note": "НЕ МАППИТСЯ: региональный код."
+    },
+    {
+      "mesoCode": "twentieth_century",
+      "confidence": 0.0,
+      "note": "НЕ МАППИТСЯ: хронологический код."
+    },
+    {
+      "mesoCode": "board_games",
+      "confidence": 0.0,
+      "note": "НЕ МАППИТСЯ: предметный микро-код без дисциплинарной привязки."
+    }
+  ],
+  "datasets": [
+    {
+      "id": "mw-roots",
+      "title": "MW verbal-root inventory",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.6,
+      "rationale": "MW verbal-root inventory; dhatu inventories are grammar-adjacent lexicography; nearest Sanskrit facet (no general-lexicography meso code).",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.57,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "mw-etymology",
+      "title": "Headword→root derivation table (Pāṇinian, 10 dicts)",
+      "mesoCode": "etymology",
+      "assignmentConfidence": 0.75,
+      "rationale": "Headword->root Paninian derivation table across 10 dicts - the etymological layer of the dictionaries; etymology facet direct.",
+      "disciplines": [
+        {
+          "code": "linguistics",
+          "labelEn": "Linguistics and philology",
+          "labelRu": "Лингвистика и филология",
+          "parentCode": "indology",
+          "confidence": 0.6375,
+          "crosswalkConfidence": 0.85,
+          "crosswalkNote": "Прямое соответствие (код linguistics ратифицирован решением D1, 10-07-2026)."
+        }
+      ]
+    },
+    {
+      "id": "dcs-cdsl-xref",
+      "title": "DCS lemma ↔ CDSL headword crosswalk",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "DCS lemma <-> CDSL headword crosswalk; general-lexicography infra, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "union-headwords",
+      "title": "Cross-dictionary union headword index",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Cross-dictionary union headword index; lexicographic infra, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "mw-heritage-crosswalk",
+      "title": "MW ↔ Heritage (INRIA) entry-level crosswalk",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "MW <-> Heritage entry-level crosswalk; lexicographic infra, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "kosha-lemma-frequency",
+      "title": "DCS lemma frequency sidecar (whole-corpus + per-period)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "DCS lemma frequency sidecar; corpus-linguistic over general Sanskrit texts, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "kosha-sense-frequency",
+      "title": "DCS per-sense frequency sidecar (3-layer: WN synset / MW sense / semdom; attested WordSem + estimated MFS)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Per-sense frequency sidecar; lexicographic semantics infra, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "zaliznyak-grammar-index",
+      "title": "Zaliznyak-style compact grammar-token index over all PWG",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Grammar-token index over PWG entries; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "corpus-lexicon",
+      "title": "Sa→Ru word-aligned corpus lexicon",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Sa->Ru word-aligned corpus lexicon; bilingual lexicography, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "stenogrammy-teaching-glossary",
+      "title": "Sanskrit terminology glossary of the устный корпус (taught-term frequency)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Taught Sanskrit terminology glossary; no pedagogy facet in the meso vocabulary, content is Sanskrit terminology - nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "sa-ru-glossary",
+      "title": "Ranked Sa→Ru glossary (surface/lemma/root layers)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Ranked Sa->Ru glossary; bilingual lexicography, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "kosha-db",
+      "title": "kosha unified lookup database",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "kosha unified lookup database; lexicographic infra, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-full-sqlite",
+      "title": "DCS 2026 full corpus database",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "DCS 2026 full corpus database; Sanskrit-texts facet (crosswalk sanskritology scope includes 'Sanskrit texts').",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "samudra-corpus-db",
+      "title": "SamudraManthanam Sa↔Ru verse-parallel corpus",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Sa<->Ru verse-parallel corpus; bilingual lexicography infra, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "heritage-mirror",
+      "title": "Sanskrit Heritage (INRIA) local mirror",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Heritage (INRIA) local mirror; lexicographic infra, nearest Sanskrit facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "indische-sprueche",
+      "title": "Böhtlingk Indische Sprüche subhāṣitas",
+      "mesoCode": "literary_studies",
+      "assignmentConfidence": 0.85,
+      "rationale": "Boehtlingk Indische Sprueche - subhashita anthology; literary facet direct.",
+      "disciplines": [
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.8075,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие (код literature ратифицирован решением D1, 10-07-2026)."
+        }
+      ]
+    },
+    {
+      "id": "dcs-grapheme-frequency",
+      "title": "DCS akshara/varṇa/ligature frequency tables",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Akshara/varna frequency tables; corpus-linguistic, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-nominal-paradigm-grid",
+      "title": "DCS nominal paradigm — case × number grid per declension class",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Nominal case x number paradigm grid; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-nominal-class-split",
+      "title": "DCS nominal pooled-class split — long-ī and -ant/-at, on an external lexical signal",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Nominal declension-class split; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-nominal-class-split-adj",
+      "title": "DCS nominal pooled-class split, ADJ half — the -ant surplus G2 could not see",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Nominal class split, adjectival half; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-verbal-paradigm-attested",
+      "title": "DCS verbal paradigm — per-root attested finite + non-finite cells",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Per-root attested verbal paradigms; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "varga-series-diachrony",
+      "title": "Consonant series (varga) by DCS period + Cramér's V",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Consonant-series diachrony; corpus phonotactics, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-sintagmatic-appendix7",
+      "title": "DCS syntagmatic table — all corpus lemmas (Приложение 7)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Syntagmatic lemma table; corpus-linguistic, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-parallel-passages-full",
+      "title": "DCS parallel-passage alignments, full-size export (PARA/Polnorazmernye)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Parallel-passage alignments over DCS; corpus infra, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-verb-roots-by-class",
+      "title": "DCS verb roots grouped by class (with attested forms)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Verb roots by present-class; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-verb-class-prefix-frequency",
+      "title": "DCS verb-form frequency by class, with prefixed forms",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Verb-form frequency by class with prefixed forms; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-sintagmatic-appendix6-periods",
+      "title": "DCS syntagmatic tables of frequent lexical cores, by historical period (Приложение 6)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Syntagmatic tables by historical period; corpus-linguistic, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "stopovye-parallel-passages",
+      "title": "DCS parallel-passage alignments, 'stop-word' variant export (PARA/Stopovye)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Stop-word parallel-passage variant; corpus infra, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "russiantranslation-src-raw-ingests",
+      "title": "RussianTranslation raw/working translation-source ingests (all *.jsonl except corpus_lexicon)",
+      "mesoCode": "translation_reception",
+      "assignmentConfidence": 0.5,
+      "rationale": "Raw translation-source ingests for the Sa->Ru translation project; methodological translation facet (crosswalk scopes translation_reception as methodological).",
+      "disciplines": [
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.3,
+          "crosswalkConfidence": 0.6,
+          "crosswalkNote": "Перевод и рецепция — по большей части литературный сюжет, но код методологический."
+        }
+      ]
+    },
+    {
+      "id": "dcs-verb-example-ids",
+      "title": "DCS verb-form example-ID lookup table",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.6,
+      "rationale": "Verb-form example-ID lookup; grammar infra, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.57,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "heritage-forms-crosswalk-extras",
+      "title": "Heritage (INRIA) form-level crosswalk extras (gloss, disagreements, forms-only)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Heritage form-level crosswalk extras; lexicographic infra, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-verb-form-frequency-prelim",
+      "title": "DCS verb-form frequency in corpus (preliminary)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.6,
+      "rationale": "Verb-form frequency; grammar-adjacent corpus statistic, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.57,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-compound-dictionary",
+      "title": "DCS compound (samāsa) dictionary derivation",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Samasa (compound) derivation dictionary; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "uttarapada-dict-vs-corpus",
+      "title": "MW uttarapada index × DCS Kompozity — dictionary productivity vs corpus attestation",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.6,
+      "rationale": "Compound-member productivity, dictionary vs corpus; grammar facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.57,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-stem-cooccurrence-full",
+      "title": "Sanskrit-stem co-occurrence table (full)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Stem co-occurrence table; corpus-linguistic, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "which-dictionary-routing-benchmark",
+      "title": "Which-dictionary routing shared-task benchmark (v1.0)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.45,
+      "rationale": "Dictionary-routing NLP benchmark; lexicographic-infra nearest facet, deliberately low.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.4275,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "correction-loci",
+      "title": "Correction loci — locus-resolved correction records across all csl-corrections change files (v1.0)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Correction records across csl-corpus dictionaries; lexicographic curation, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dict-corpus-concordance",
+      "title": "CDSL headword ↔ DCS corpus concordance (B1, concordance core)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "CDSL headword <-> DCS corpus concordance; core lexicography, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "parallel-passage-concordance",
+      "title": "Bloomfield-style parallel-passage concordance across the DCS corpus (B3)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Bloomfield-style concordance across DCS (general corpus, not RV-specific); corpus infra, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "bloomfield-rv-citations",
+      "title": "Bloomfield 1906 Vedic Concordance — direct Ṛgveda citations (pratīka index)",
+      "mesoCode": "vedic_studies",
+      "assignmentConfidence": 0.95,
+      "rationale": "Bloomfield 1906 Vedic Concordance - direct Rigveda citations; Vedic facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.9025,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Ведийский корпус — санскритский."
+        }
+      ]
+    },
+    {
+      "id": "sundarakanda-two-tier-apparatus",
+      "title": "Sundarakāṇḍa two-tier commentary apparatus (Leonov LP volume)",
+      "mesoCode": "epic_ramayana_mahabharata",
+      "assignmentConfidence": 0.95,
+      "rationale": "Sundarakanda = Ramayana book 5 commentary apparatus; epic facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.76,
+          "crosswalkConfidence": 0.8,
+          "crosswalkNote": "Эпосы — санскритские тексты."
+        },
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.7,
+          "crosswalkNote": "Эпос изучается и как литература; двойная принадлежность ожидаема."
+        }
+      ]
+    },
+    {
+      "id": "markup-tag-census",
+      "title": "Markup-tag frequency census (44 Cologne v02 dicts)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.45,
+      "rationale": "Markup-tag census over 44 Cologne dicts; lexicographic-infra nearest facet, deliberately low.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.4275,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-lsc-pilot",
+      "title": "Sanskrit lexical semantic change scores (PPMI-cosine, DCS 5-slot chronology)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Lexical semantic change scores over DCS; corpus-linguistic diachrony, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "archive-stopword-sqlite",
+      "title": "DCS parallel-passage stop-word run, queryable DB (M9 D2)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Stop-word run database; corpus infra, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "samudra-offline-packs",
+      "title": "SamudraManthanam offline app packs (base + dict)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "SamudraManthanam offline app packs; bilingual lexicography infra, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "kosha-raw-sqlite",
+      "title": "kosha raw per-dict SQLite inputs (mw, pwg, ap90)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Raw per-dict SQLite inputs; lexicographic infra, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "correction-events-log",
+      "title": "Correction-event log, full trio (all/typed/final)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Correction-event log over csl dictionaries; lexicographic curation, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "kompozity-names-compound-splits",
+      "title": "DCS proper-name compound splits with frequency vectors (Kompozity names.csv)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.6,
+      "rationale": "Proper-name compound splits; compound morphology, nearest facet (no onomastics code).",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.57,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "cdsl-headword-ngram-oracle",
+      "title": "Pan-CDSL headword character-n-gram oracle (allngramtxt.txt)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.45,
+      "rationale": "Headword character-n-gram oracle; lexicographic-infra nearest facet, deliberately low.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.4275,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "headword-overlap-matrix",
+      "title": "Headword pairwise-overlap matrix (15-dict union)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Headword pairwise overlap across 15 dicts; lexicographic infra, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "headword-overlap-matrix-ext",
+      "title": "Headword pairwise-overlap matrix, Tamil-fold extension (18 dicts)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Overlap matrix extended with the csl-santam Tamil fold; still a CDSL cross-dictionary overlap artifact at core - nearest Sanskrit facet (the Tamil-fold extension gives a secondary dravidology face the single-meso layer cannot carry).",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "mdf-pilot-cdsl",
+      "title": "CDSL MDF pilot export (50-case neutral-model slice, MW-focused)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.4,
+      "rationale": "MDF serialization pilot; pure serialization infra, nearest facet, deliberately low.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.38,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "lift-pilot-cdsl",
+      "title": "CDSL LIFT pilot export (fourth serialization, H721)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.4,
+      "rationale": "LIFT serialization pilot; pure serialization infra, nearest facet, deliberately low.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.38,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "pwg-ru-mdf-export",
+      "title": "PWG->RU translation cards as MDF (bilingual \\de RU / \\ge EN records)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "PWG->RU translation cards as MDF; lexicographic translation of a Sanskrit dictionary - nearest Sanskrit facet (translation_reception is scoped to the literary-translation plot).",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "semdom-amarakosha-crosswalk",
+      "title": "semdom <-> Amarakosha crosswalk (SIL semantic domains <-> AK vargas + synsets, ID pairs)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Amarakosha varga facet - Sanskrit synonym kosha, per the csl-atlas koSha precedent (ARMH/ABCH -> sanskrit_grammar_panini 0.55).",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "mw-defgen-eval-sample",
+      "title": "MW definition-generation eval — frozen 500-headword sample + attestations + scored baseline outputs (H730)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "MW definition-generation eval; lexicographic NLP, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-reading-pack-nala-1",
+      "title": "DCS reading pack — Nala 1 (Nalopākhyāna, Mahābhārata 3.50)",
+      "mesoCode": "epic_ramayana_mahabharata",
+      "assignmentConfidence": 0.85,
+      "rationale": "Nalopakhyan = Mahabharata 3.50; epic text subject, pedagogy use.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.68,
+          "crosswalkConfidence": 0.8,
+          "crosswalkNote": "Эпосы — санскритские тексты."
+        },
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.595,
+          "crosswalkConfidence": 0.7,
+          "crosswalkNote": "Эпос изучается и как литература; двойная принадлежность ожидаема."
+        }
+      ]
+    },
+    {
+      "id": "kosha-srs-deck-b1-demo",
+      "title": "SRS deck — Rung B1 demo (Nala 1 content vocabulary, frequency-ordered)",
+      "mesoCode": "epic_ramayana_mahabharata",
+      "assignmentConfidence": 0.7,
+      "rationale": "SRS deck over Nala 1 content vocabulary; epic subject, pedagogy wrapper.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.56,
+          "crosswalkConfidence": 0.8,
+          "crosswalkNote": "Эпосы — санскритские тексты."
+        },
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.49,
+          "crosswalkConfidence": 0.7,
+          "crosswalkNote": "Эпос изучается и как литература; двойная принадлежность ожидаема."
+        }
+      ]
+    },
+    {
+      "id": "gita-gold-master",
+      "title": "Bhagavadgita gold word-by-word analysis (all 18 adhyayas)",
+      "mesoCode": "epic_ramayana_mahabharata",
+      "assignmentConfidence": 0.85,
+      "rationale": "Bhagavadgita word-by-word gold; the Gita is Mahabharata Bhishma-parvan - epic text apparatus.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.68,
+          "crosswalkConfidence": 0.8,
+          "crosswalkNote": "Эпосы — санскритские тексты."
+        },
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.595,
+          "crosswalkConfidence": 0.7,
+          "crosswalkNote": "Эпос изучается и как литература; двойная принадлежность ожидаема."
+        }
+      ]
+    },
+    {
+      "id": "gita-morphology-gold",
+      "title": "Bhagavadgita gold morphology + compound dataset",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Gita gold morphology; the linguistic phenomenon (morphology) takes the grammar facet, epic-sourced.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "gita-inflection-qa",
+      "title": "Gita inflection-engine QA — divergence ledger (E1 attested-corpus check)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Inflection-engine QA ledger; grammar phenomenon, epic-sourced.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "gita-reading-pack",
+      "title": "Bhagavadgita reading packs — all 18 adhyayas (gold)",
+      "mesoCode": "epic_ramayana_mahabharata",
+      "assignmentConfidence": 0.85,
+      "rationale": "Reading packs over the Gita text; epic text subject, pedagogy use.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.68,
+          "crosswalkConfidence": 0.8,
+          "crosswalkNote": "Эпосы — санскритские тексты."
+        },
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.595,
+          "crosswalkConfidence": 0.7,
+          "crosswalkNote": "Эпос изучается и как литература; двойная принадлежность ожидаема."
+        }
+      ]
+    },
+    {
+      "id": "gita-sandhi",
+      "title": "Bhagavadgita sandhi — frequency-ranked rules",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Gita sandhi rules; the linguistic phenomenon (sandhi) takes the grammar facet, epic-sourced.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "sandhi-curriculum",
+      "title": "Graded sandhi curriculum — ordered teaching syllabus",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Graded sandhi syllabus; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "vocab-curriculum",
+      "title": "Frequency-graded vocabulary curriculum — ordered teaching syllabus",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Frequency-graded corpus vocabulary syllabus; general Sanskrit vocabulary, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "vocab-drills",
+      "title": "Vocabulary drills — recognition/recall practice items",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Corpus vocabulary drills; nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "thematic-vocabulary",
+      "title": "Thematic vocabulary axis — corpus vocabulary grouped by Amarakosa varga",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Vocabulary by Amarakosa vargas; Sanskrit synonym kosha facet, per the csl-atlas koSha precedent.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "thematic-vocab-drills",
+      "title": "Thematic vocabulary drills — recognition/recall items grouped by Amarakosa theme",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Amarakosa-grouped drills; kosha facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "morphology-curriculum",
+      "title": "Graded morphology curriculum — corpus-attested paradigms, ordered teaching syllabus",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Corpus-attested paradigm syllabus; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "morphology-drills",
+      "title": "Morphology drills — fill/match practice items, evidence-linked to a DCS corpus locus",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Morphology practice items; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "sandhi-drills",
+      "title": "Sandhi drills — join/split/identify practice items",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Sandhi practice items; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "corpus-sandhi",
+      "title": "Corpus sandhi — frequency-ranked rules across 41 texts",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Frequency-ranked corpus sandhi rules; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "roots-frequency-curriculum",
+      "title": "Roots frequency + attestation curriculum (W2b)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.65,
+      "rationale": "Dhatu frequency + attestation curriculum; grammar facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.6175,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "gita-etymology",
+      "title": "Bhagavadgita etymology notes",
+      "mesoCode": "etymology",
+      "assignmentConfidence": 0.75,
+      "rationale": "Gita etymology notes; etymology facet, epic-sourced.",
+      "disciplines": [
+        {
+          "code": "linguistics",
+          "labelEn": "Linguistics and philology",
+          "labelRu": "Лингвистика и филология",
+          "parentCode": "indology",
+          "confidence": 0.6375,
+          "crosswalkConfidence": 0.85,
+          "crosswalkNote": "Прямое соответствие (код linguistics ратифицирован решением D1, 10-07-2026)."
+        }
+      ]
+    },
+    {
+      "id": "upasarga-atlas",
+      "title": "Unified upasarga atlas — prefixed-verb decomposition x Gita semantics x verb-class frequencies",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Preverb (upasarga) decomposition x semantics; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "sanskrit-upasarga-semantics",
+      "title": "Sanskrit root x preverb (upasarga) semantics",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Root x preverb semantics; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "pronoun-corrections",
+      "title": "Curated pronoun-paradigm corrections (E1/W4 fix)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Pronoun-paradigm corrections; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "samasa-trainer",
+      "title": "Samasa (compound) analysis trainer",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Compound-analysis trainer; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "reading-pack-difficulty",
+      "title": "Reading-pack difficulty scores + graded ordering (W2a)",
+      "mesoCode": null,
+      "assignmentConfidence": 0,
+      "rationale": "Difficulty scores over MIXED-text reading packs (Nala + Hitopadesa + Kiratarjuniya); no single facet in the meso vocabulary - left unassigned rather than forced. (Subject-specific sibling gita-reading-pack-difficulty takes the epic facet.)",
+      "disciplines": []
+    },
+    {
+      "id": "gita-reading-pack-difficulty",
+      "title": "Gita reading-pack difficulty -- reduced 3-axis ordering (W2a follow-up)",
+      "mesoCode": "epic_ramayana_mahabharata",
+      "assignmentConfidence": 0.7,
+      "rationale": "Difficulty ordering over Gita reading packs; epic subject, pedagogy wrapper.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.56,
+          "crosswalkConfidence": 0.8,
+          "crosswalkNote": "Эпосы — санскритские тексты."
+        },
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.49,
+          "crosswalkConfidence": 0.7,
+          "crosswalkNote": "Эпос изучается и как литература; двойная принадлежность ожидаема."
+        }
+      ]
+    },
+    {
+      "id": "reading-pack-metre",
+      "title": "Reading-pack per-verse metre annotation (W3a)",
+      "mesoCode": "prosody",
+      "assignmentConfidence": 0.7,
+      "rationale": "Per-verse metre annotation; prosody facet direct.",
+      "disciplines": [
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.49,
+          "crosswalkConfidence": 0.7,
+          "crosswalkNote": "Просодия — литературоведческий разбор."
+        },
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.35,
+          "crosswalkConfidence": 0.5,
+          "crosswalkNote": "Часть просодических докладов о санскритской метрике; уверенность низкая."
+        }
+      ]
+    },
+    {
+      "id": "vidyut-chandas-meters",
+      "title": "vidyut-chandas metre definitions (vendored)",
+      "mesoCode": "prosody",
+      "assignmentConfidence": 0.75,
+      "rationale": "Metre definitions (vendored chandas engine); prosody facet direct.",
+      "disciplines": [
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.525,
+          "crosswalkConfidence": 0.7,
+          "crosswalkNote": "Просодия — литературоведческий разбор."
+        },
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.375,
+          "crosswalkConfidence": 0.5,
+          "crosswalkNote": "Часть просодических докладов о санскритской метрике; уверенность низкая."
+        }
+      ]
+    },
+    {
+      "id": "morph-signature-freq",
+      "title": "DCS morphological-form frequency table (difficulty-scorer signal)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.6,
+      "rationale": "Morphological-form frequency table; grammar-adjacent corpus statistic.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.57,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-reading-pack-nala-2",
+      "title": "DCS reading pack — Nala 2 (Nalopakhyana, Mahabharata 3.51)",
+      "mesoCode": "epic_ramayana_mahabharata",
+      "assignmentConfidence": 0.85,
+      "rationale": "Nalopakhyan = Mahabharata 3.51; epic text subject.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.68,
+          "crosswalkConfidence": 0.8,
+          "crosswalkNote": "Эпосы — санскритские тексты."
+        },
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.595,
+          "crosswalkConfidence": 0.7,
+          "crosswalkNote": "Эпос изучается и как литература; двойная принадлежность ожидаема."
+        }
+      ]
+    },
+    {
+      "id": "dcs-reading-pack-nala-3",
+      "title": "DCS reading pack — Nala 3 (Nalopakhyana, Mahabharata 3.52)",
+      "mesoCode": "epic_ramayana_mahabharata",
+      "assignmentConfidence": 0.85,
+      "rationale": "Nalopakhyan = Mahabharata 3.52; epic text subject.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.68,
+          "crosswalkConfidence": 0.8,
+          "crosswalkNote": "Эпосы — санскритские тексты."
+        },
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.595,
+          "crosswalkConfidence": 0.7,
+          "crosswalkNote": "Эпос изучается и как литература; двойная принадлежность ожидаема."
+        }
+      ]
+    },
+    {
+      "id": "dcs-reading-pack-hitopadesa-0",
+      "title": "DCS reading pack — Hitopadesa, Prastavika (opening)",
+      "mesoCode": "literary_studies",
+      "assignmentConfidence": 0.85,
+      "rationale": "Hitopadesa fable literature; literary facet direct.",
+      "disciplines": [
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.8075,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие (код literature ратифицирован решением D1, 10-07-2026)."
+        }
+      ]
+    },
+    {
+      "id": "dcs-reading-pack-kiratarjuniya-1",
+      "title": "DCS reading pack — Kiratarjuniya 1 (Bharavi)",
+      "mesoCode": "literary_studies",
+      "assignmentConfidence": 0.85,
+      "rationale": "Kiratarjuniya (Bharavi) mahakavya; literary facet direct.",
+      "disciplines": [
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.8075,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие (код literature ратифицирован решением D1, 10-07-2026)."
+        }
+      ]
+    },
+    {
+      "id": "handoff-lifecycle-gold",
+      "title": "Handoff lifecycle gold standard (170 adversarially-verified verdicts)",
+      "mesoCode": null,
+      "assignmentConfidence": 0,
+      "rationale": "Uprava handoff-lifecycle gold standard - org-process meta, not Indology subject matter; no facet, left unassigned.",
+      "disciplines": []
+    },
+    {
+      "id": "morphology-attestation-audit",
+      "title": "Generated↔attested morphology audit (A3, W1b)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Generated vs attested morphology audit; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "morphology-attestation-audit-inflections",
+      "title": "Generated↔attested morphology audit over `inflections` — the non-circular side (A3, H3782)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Attestation audit over the inflections DB; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "morphology-giveback-candidates",
+      "title": "csl-inflect give-back candidates — the defensible subset of A¬G (A3, H3782)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "csl-inflect give-back candidates; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "panini-derivation-status",
+      "title": "vidyut-prakriya derivation harness over the AG bucket (A4, W2a)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.9,
+      "rationale": "vidyut-prakriya Paninian derivation harness; Paninian facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.855,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "paninian-corpus-concordance",
+      "title": "Pāṇinian sūtra ↔ DCS corpus concordance (A4, W2b)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.9,
+      "rationale": "Ashtadhyayi sutra <-> DCS corpus concordance; Paninian facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.855,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "ru-gloss-layer",
+      "title": "Inline Sanskrit→Russian gloss layer (reading packs, W-RU-a)",
+      "mesoCode": "translation_reception",
+      "assignmentConfidence": 0.5,
+      "rationale": "Inline Sa->Ru gloss layer over reading packs; methodological translation facet (crosswalk scopes translation_reception as methodological).",
+      "disciplines": [
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.3,
+          "crosswalkConfidence": 0.6,
+          "crosswalkNote": "Перевод и рецепция — по большей части литературный сюжет, но код методологический."
+        }
+      ]
+    },
+    {
+      "id": "subhashita-reader-pack",
+      "title": "Beginner subhāṣita reader pack — graded Indische Sprüche band (W-RU-b + gloss.ru)",
+      "mesoCode": "literary_studies",
+      "assignmentConfidence": 0.75,
+      "rationale": "Graded Indische Sprueche reader; subhashita literary subject, pedagogy wrapper.",
+      "disciplines": [
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.7125,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие (код literature ратифицирован решением D1, 10-07-2026)."
+        }
+      ]
+    },
+    {
+      "id": "cohort-start-chteniya-pack-freeze",
+      "title": "Start chteniya cohort pack freeze (Hitopadesa-0 + subhashita-beginner + sandhi L1-3)",
+      "mesoCode": "literary_studies",
+      "assignmentConfidence": 0.7,
+      "rationale": "Freeze bundle of Hitopadesa-0 + subhashita-beginner packs; literary subject, pedagogy wrapper.",
+      "disciplines": [
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие (код literature ратифицирован решением D1, 10-07-2026)."
+        }
+      ]
+    },
+    {
+      "id": "scherzl-government-dcs-adjudication",
+      "title": "Scherzl case-government relations × DCS-treebank adjudication",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Case-government relations adjudication; syntax/grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "pd-dcs-coverage",
+      "title": "Poona Dictionary × DCS corpus coverage crosswalk (H1336)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Poona Dictionary coverage crosswalk; general lexicography, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "sense-corpus-concordance",
+      "title": "Per-sense corpus attestation (नागदन्त layer, H1455 wave-1)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Per-sense corpus attestation; lexicographic semantics, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "sense-alignment-pilot",
+      "title": "Cross-dictionary aligned senses, PWG · MW · Apte · ŚKDR · VCP (H3744 slice 1 + H3862 slice 2)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Cross-dictionary sense alignment; lexicographic semantics, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "paninian-sutra-coverage-map",
+      "title": "Aṣṭādhyāyī sūtra-coverage / dark-class map (A4, W3a)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.9,
+      "rationale": "Ashtadhyayi sutra-coverage / dark-class map; Paninian facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.855,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "zaliznyak-drills",
+      "title": "Zaliznyak declension-class drills — classify a headword or spot the odd one out",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Declension-class drills; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "sense-crossdict-pilot",
+      "title": "Pilot cross-dictionary sense view (PWG · MW · Apte) — 500 headwords",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Cross-dictionary sense view; lexicographic semantics, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "gita-prose",
+      "title": "Bhagavadgita interlinear prose paraphrase (Prose sheet)",
+      "mesoCode": "epic_ramayana_mahabharata",
+      "assignmentConfidence": 0.8,
+      "rationale": "Gita interlinear prose paraphrase; epic text subject.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.64,
+          "crosswalkConfidence": 0.8,
+          "crosswalkNote": "Эпосы — санскритские тексты."
+        },
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.56,
+          "crosswalkConfidence": 0.7,
+          "crosswalkNote": "Эпос изучается и как литература; двойная принадлежность ожидаема."
+        }
+      ]
+    },
+    {
+      "id": "pwg-scan-index-campaign",
+      "title": "PWG literary-source scan-indexing campaign registry (2025-2026)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "PWG scan-indexing campaign registry; lexicographic publication infra, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "pwg-ls-counts",
+      "title": "PWG <ls> citation counts per bibliography abbreviation (work-family rollup)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "PWG citation counts per bibliography abbreviation; lexicographic apparatus, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "pwg-ru-data-workingset",
+      "title": "PWG→RU nonstop-pipeline working set (TM store, layers, manifests, raws, gate logs)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "PWG->RU pipeline working set; lexicographic translation infra, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "defgen-heritage-second-reference",
+      "title": "Definition-generation eval: Heritage (Huet) French glosses as an independent second reference (H2408)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Definition-generation second reference; lexicographic NLP, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "pwg-tm-canonical-v1",
+      "title": "PWG German–Russian translation memory (canonical v1 four-format pack)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "PWG German-Russian dictionary translation memory; lexicographic translation, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "pwg-de-edition-v1",
+      "title": "PWG DE edition graph — OntoLex-Lemon + TEI Lex-0 sidecars",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "PWG DE edition graph (OntoLex/TEI); lexicographic serialization, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "mbh-vulgate-critical-presence",
+      "title": "MBh Nīlakaṇṭha vulgate × BORI critical-edition presence verdicts (H2845)",
+      "mesoCode": "epic_ramayana_mahabharata",
+      "assignmentConfidence": 0.95,
+      "rationale": "Mahabharata Nilakantha vulgate x BORI critical edition presence; epic philology direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.76,
+          "crosswalkConfidence": 0.8,
+          "crosswalkNote": "Эпосы — санскритские тексты."
+        },
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.7,
+          "crosswalkNote": "Эпос изучается и как литература; двойная принадлежность ожидаема."
+        }
+      ]
+    },
+    {
+      "id": "grammar-lab-g1",
+      "title": "Grammar Lab Wave-1 topic graph (Whitney + Zalizniak root alternation / verbal morphology)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Whitney + Zalizniak root alternation topic graph; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "pwg-mw-ap-sense-coverage",
+      "title": "MW/AP90 sense units vs the PWG-family store: matched / unalignable / absent-candidate verdicts (wave 4)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.55,
+      "rationale": "Sense-unit coverage across dictionaries; lexicographic semantics, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.5225,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "pwg-work-dating-table",
+      "title": "Curated per-work dating table for PWG's cited works (Ceiling C2 phase 2)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Per-work dating of PWG-cited works; Sanskrit philology, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "pwg-sense-attestation-window",
+      "title": "PWG per-sense attestation window (Ceiling C2 phase 1)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Per-sense attestation windows; Sanskrit philology, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "akshara-mt-benchmark-pilot",
+      "title": "akshara.ru MT benchmark pilot corpus (H3455 lane A)",
+      "mesoCode": null,
+      "assignmentConfidence": 0,
+      "rationale": "MT benchmark corpus - NLP evaluation artifact; the meso vocabulary has no NLP facet and translation_reception is scoped to the literary-translation plot; left unassigned.",
+      "disciplines": []
+    },
+    {
+      "id": "pwg-print-anchors",
+      "title": "PWG entry L → printed volume/column (print-scan anchor table, H3457)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Entry -> printed volume/column anchors; lexicographic publication infra, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "wisdomlib-sanskrit-layers",
+      "title": "Layered Sanskrit corpus extracts of the wisdomlib.org Sanskrit portal (full store, L3-L8, 2026)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Wisdomlib Sanskrit portal extracts; Sanskrit texts/lexicography, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "akshara-mt-benchmark-full",
+      "title": "akshara.ru MT benchmark FULL corpus (H3597)",
+      "mesoCode": null,
+      "assignmentConfidence": 0,
+      "rationale": "MT benchmark corpus - NLP evaluation artifact; no facet, left unassigned (see pilot rationale).",
+      "disciplines": []
+    },
+    {
+      "id": "kosha-mastery-schedule",
+      "title": "kosha combined mastery schedule (five drill families, H3742)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Combined schedule over five drill families; content facets are grammar/vocabulary, pedagogy wrapper, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "cyrillic-proper-noun-slp1",
+      "title": "Cyrillic proper-noun -> SLP1 validated lookup table (H3985, SL GAPS §6)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.45,
+      "rationale": "Cyrillic proper-noun -> SLP1 transliteration lookup; lexicographic infra, nearest facet, deliberately low.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.4275,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "sense-dating",
+      "title": "Per-sense first-attestation era buckets (PWG v1, H4019, additive)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Per-sense first-attestation era buckets; Sanskrit philology, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "sense-portraits",
+      "title": "Diachronic sense portraits — per-sense frequency x first-era buckets (H4735 join)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Diachronic sense portraits; Sanskrit philology, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dataset-disciplines",
+      "title": "Dataset x discipline join — kosha registry through the IndologyScholars meso crosswalk (H4737)",
+      "mesoCode": null,
+      "assignmentConfidence": 0,
+      "rationale": "The discipline packet itself; a self-referential discipline assignment is not meaningful - carried as an honest null to keep the every-registered-dataset-has-a-row invariant strict.",
+      "disciplines": []
+    },
+    {
+      "id": "hitopadesa-text-concordance",
+      "title": "Hitopadeśa per-text word concordance pilot — every word of the text feeding the dictionary (Tamilex corpus-dictionary pattern, H4034)",
+      "mesoCode": "literary_studies",
+      "assignmentConfidence": 0.8,
+      "rationale": "Hitopadesa per-text word concordance; literary subject direct.",
+      "disciplines": [
+        {
+          "code": "literature",
+          "labelEn": "Literary studies",
+          "labelRu": "Литературоведение",
+          "parentCode": "indology",
+          "confidence": 0.76,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие (код literature ратифицирован решением D1, 10-07-2026)."
+        }
+      ]
+    },
+    {
+      "id": "tamil-fold",
+      "title": "csl-santam Tamil/Capeller/MW corpus fold (mwd+cap+otl, Pahlavi separate)",
+      "mesoCode": "dravidology_south_india",
+      "assignmentConfidence": 0.75,
+      "rationale": "csl-santam Tamil/Capeller fold; Dravidian facet direct.",
+      "disciplines": [
+        {
+          "code": "dravidology",
+          "labelEn": "Dravidology",
+          "labelRu": "Тамилология и дравидология",
+          "parentCode": "indology",
+          "confidence": 0.7125,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "shiva-sutras-machine",
+      "title": "Śiva Sūtras (Māheśvara Sūtras) + pratyāhāra table, machine-readable",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.9,
+      "rationale": "Shiva Sutras + pratyahara table; Paninian metalanguage facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.855,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "zaliznyak-lectures-transcripts",
+      "title": "А.А.Зализняк public-lecture transcript census (Sanskrit/Vedic + Slavic linguistics)",
+      "mesoCode": null,
+      "assignmentConfidence": 0,
+      "rationale": "Public-lecture transcript census - teaching material; no pedagogy facet in the meso vocabulary, and history_of_indology would be a stretch for transcripts; left unassigned.",
+      "disciplines": []
+    },
+    {
+      "id": "sanskrityatina-reverse-index",
+      "title": "Sanskrityatina 04_Reverse coding legend — 187,992-headword reverse-dictionary stock taxonomy (H4475)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Reverse-dictionary index; general lexicography, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "sanskrityatina-sch-cases",
+      "title": "Sanskrityatina 04_Reverse/Experimental SCH research cases — six-file keyed TSV with L/pc page refs (H4533)",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.5,
+      "rationale": "Sanskritology research-case workbooks; general lexicography, nearest facet.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.475,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "dcs-upasarga-prefixus",
+      "title": "DCS prefixed-verb decomposition (MG 2014 workbook) — in-form × prefix × dhātu × Palsule №",
+      "mesoCode": "sanskrit_grammar_panini",
+      "assignmentConfidence": 0.7,
+      "rationale": "Prefixed-verb decomposition; grammar facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.665,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Прямое соответствие."
+        }
+      ]
+    },
+    {
+      "id": "bloomfield-rv-x-elizarenkova-ru",
+      "title": "Bloomfield 1906 RV citations × Elizarenkova Russian RV — citation-to-translation pointer join",
+      "mesoCode": "vedic_studies",
+      "assignmentConfidence": 0.95,
+      "rationale": "Bloomfield RV citations x Elizarenkova Russian RV; Vedic facet direct.",
+      "disciplines": [
+        {
+          "code": "sanskritology",
+          "labelEn": "Sanskritology",
+          "labelRu": "Санскритология",
+          "parentCode": "indology",
+          "confidence": 0.9025,
+          "crosswalkConfidence": 0.95,
+          "crosswalkNote": "Ведийский корпус — санскритский."
+        }
+      ]
+    }
+  ]
+}
