@@ -534,7 +534,7 @@
     },
     {
      "repo": "CommentaryStrategies",
-     "use": "Sundara lexical-note sense-QA context — tier-labelled lemma join (exact 433/folded 5/annotation 10/hyphen-join 1) of all 685 kept lexical notes (68 sargas) onto per-lemma collocate profiles, data/analysis/appendix7_sense_qa/sundara_sense_qa_context.json; 449 covered (65.5%), 10-note stratified hand sample 10/10 corroborated (H4709, 15-09-2026)",
+     "use": "Sundara lexical-note sense-QA context — tier-labelled lemma join (exact 410/folded 28/annotation 10/hyphen-join 1; tier counts relabelled by the H4709 verifier pass — fold-index hits are folded, not exact) of all 685 kept lexical notes (68 sargas) onto per-lemma collocate profiles, data/analysis/appendix7_sense_qa/sundara_sense_qa_context.json; 449 covered (65.5%), 10-note stratified hand sample 10/10 corroborated (H4709, 15-09-2026)",
      "confidence": "high"
     }
    ],
