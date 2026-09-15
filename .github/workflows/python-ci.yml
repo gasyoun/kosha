@@ -45,6 +45,14 @@ jobs:
         # auto-merge (same job as Fixture build + tests).
         run: python scripts/validate_surfaces.py
 
+      - name: Dataset-disciplines packet gate
+        # H4737 — the committed discipline packet must audit green. CI runners
+        # have no IndologyScholars sibling checkout, so this exercises the
+        # documented degraded path (internal-consistency-only) AND the
+        # hand-edited-packet tripwire; locally with the sibling present the
+        # same command re-derives the join byte-identically.
+        run: python scripts/build_dataset_disciplines.py --check
+
       - name: Release archive gate
         # W2A (H2346/H2870) — the citation-archive release gate. It shipped as
         # a script no release path ever ran, so "fails closed" was a claim in a
