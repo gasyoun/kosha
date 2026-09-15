@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="112 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="114 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="112 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="114 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -1054,6 +1054,34 @@
         "@type": "DataDownload",
         "encodingFormat": "tsv",
         "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Headword pairwise-overlap matrix, Tamil-fold extension (18 dicts)",
+      "description": "H4732 (census C5, 15-09-2026, OxAlpha opencode/z-ai/glm-5.3-flash). Registered 15-dict headword-overlap-matrix predates the 06-09 tamil fold (H4178); this extends it to 18 dicts / 153 cells. Extension-invariance PASS (105 base cells identical with and without the fold); cpd/Pahlavi excluded as in csl-santam's UI. Canaries: cap x CAE J=0.7957, mwd x MW J=0.7838 validate HK->SLP1; otl contributes its Sanskrit layer only (1,593 keys into the union, 32.5% expected Tamil-phonology residue). 27/105 registered cells drift <=3 union vs the H684 baseline from the 04-09 H4075 union regen — per-cell record in data/tamil/overlap_matrix_ext_stats.json. Delta report: data/tamil/OVERLAP_MATRIX_EXT_DELTA_14-09-2026.md.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "headword-overlap-matrix-ext"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha"
       }
     },
     {
@@ -2962,6 +2990,34 @@
     },
     {
       "@type": "Dataset",
+      "name": "Dataset x discipline join — kosha registry through the IndologyScholars meso crosswalk (H4737)",
+      "description": "H4737 (H3567 ruling F5 consumer leg, kosha half; released by F5c MG 29-08-2026). The discipline taxonomy is NEVER re-derived kosha-side: the consumer reads the sibling crosswalk + disciplines.csv read-only and pins the sibling feedCommit in dataset_disciplines.source.json. kosha contributes only the reviewed assignment layer data/manifest/dataset_meso_assignments.json (131 rows, csl-atlas H4178 precedent mirrored: general lexicography -> sanskrit_grammar_panini <= 0.6 nearest facet; text subjects take the text facet, linguistic phenomena take the grammar facet; 6 honest nulls never forced, incl. the packet's self-row). Coverage at build: 131 datasets, 125 assigned, 6 nulls, 4 disciplines (sanskritology 114 / literature 20 / linguistics 2 / dravidology 1), 8 NOT-MAPPED sentinels surfaced. See data/disciplines/DATASET_DISCIPLINES_REPORT.md.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "dataset-disciplines"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "json",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/not-applicable/dataset_disciplines.json"
+      }
+    },
+    {
+      "@type": "Dataset",
       "name": "Hitopadeśa per-text word concordance pilot — every word of the text feeding the dictionary (Tamilex corpus-dictionary pattern, H4034)",
       "description": "Pilot (H4034). Source DCS 2026, CC BY 4.0 — license-gated ingest: derived measurements free, bulk corpus redistribution gated; attribution in MANIFEST.json. Era tie-in: early-medieval (DM canon_dm, core c. 9th-10th c. CE disputed) via data/dating/work_dates.json; the concordance page carries the H4026 .ls-era badge. Residue: 4.5% no headword join (DCS -ay causative stems kosha keys under the root, indeclinables); 87% sense-id absence = H1455 frame width, not PWG sense absence. Spot check 10/10 (independent SQL recount) in SPOT_CHECK_SAMPLE.md. Additive fold only — no existing surface touched (H4034 gate).",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -3253,7 +3309,7 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>112</b><span>public datasets</span></div>
+      <div class="tally"><b>114</b><span>public datasets</span></div>
       <div class="tally"><b>15</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
@@ -3630,6 +3686,16 @@
       <p class="meta">105 rows · 2.8 KB · TSV</p>
       <div class="chips"><span class="chip">SanskritLexicography FEATURES_INDEX (E40)</span><span class="chip">Uprava DATA_LAYERS_CENSUS section 3</span><span class="chip">A40 headword-inventory paper (H675)</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Headword pairwise-overlap matrix, Tamil-fold extension (18 dicts)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">dict_a x dict_b (unordered pair) -&gt; shared / union / Jaccard; 15 union codes on the union&#x27;s SLP1 &lt;k1&gt; key + mwd/cap/otl fold keys HK-&gt;IAST-&gt;SLP1 (sanskrit-util table imported, never re-typed)</p>
+      <p class="meta">153 rows · 4.3 KB · TSV</p>
+      
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/kosha">In source repo ↗</a></div>
     </article>
     <article class="card">
       <div class="card-h">
@@ -4310,6 +4376,16 @@
       <p class="meta">7,349 rows · 537.6 KB · TSV</p>
       <div class="chips"><span class="chip">sense-resolved LSC (A57 next): era axis x per-sense frequency weight</span><span class="chip">diachronic lexicon views over the H1455 500-headword frame</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/sense_portraits.tsv">Download ↓</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>Dataset x discipline join — kosha registry through the IndologyScholars meso crosswalk (H4737)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">one row per registered dataset id: id/title/mesoCode/assignmentConfidence/rationale + disciplines[] (code/labelEn/labelRu/parentCode/confidence=assignment x crosswalk capped at 1/crosswalkConfidence/crosswalkNote) + perDiscipline coverage + notMappedSentinels (the crosswalk&#x27;s 8 deliberate НЕ МАППИТСЯ rows, verbatim).</p>
+      <p class="meta">131 rows · 96.8 KB · JSON</p>
+      <div class="chips"><span class="chip">kosha directory / data-hub discipline filtering</span><span class="chip">cross-repo discipline coverage compared with csl-atlas /tools/discipline-coverage (H4178 sibling leg)</span></div>
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/dataset_disciplines.json">Download ↓</a></div>
     </article>
     <article class="card">
       <div class="card-h">

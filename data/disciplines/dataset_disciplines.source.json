@@ -1,0 +1,15 @@
+{
+  "dataset": "dataset_disciplines",
+  "commit": "0df2cfa2510bed9c8372108b2926610eb3ad5431",
+  "feedRepo": "https://github.com/gasyoun/IndologyScholars",
+  "feedCommit": "54956b529c369d4e687dc7a4e6b569ecc4da9b86",
+  "generatedAt": "2026-09-15T00:18:52+00:00",
+  "generatedBy": "scripts/build_dataset_disciplines.py",
+  "sourceFiles": [
+    "IndologyScholars/curation/meso_discipline_crosswalk.csv",
+    "IndologyScholars/curation/disciplines.csv",
+    "data/manifest/dataset_meso_assignments.json",
+    "scripts/build_dataset_disciplines.py"
+  ],
+  "schemaVersion": "1.0.0"
+}
