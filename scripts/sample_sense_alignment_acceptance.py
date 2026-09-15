@@ -132,7 +132,12 @@ def main():
     ap.add_argument("--seed", type=int, default=SEED)
     ap.add_argument("--target", type=int, default=TARGET)
     ap.add_argument("--src", type=Path, default=SRC)
+    # H4751: the same frozen strata rule over a scaled table, written ELSEWHERE,
+    # so the frozen H3910 sample stays byte-stable (H1670 --out pattern).
+    ap.add_argument("--out-tsv", type=Path, default=OUT_TSV)
+    ap.add_argument("--out-json", type=Path, default=OUT_JSON)
     args = ap.parse_args()
+    out_tsv, out_json = args.out_tsv, args.out_json
 
     with args.src.open(encoding="utf-8") as fh:
         rows = [r for r in csv.DictReader(fh, delimiter="\t") if r["method"] != "singleton"]
@@ -184,8 +189,8 @@ def main():
         "population_share",
         "sample_weight",
     ]
-    OUT_TSV.parent.mkdir(parents=True, exist_ok=True)
-    with OUT_TSV.open("w", encoding="utf-8", newline="") as fh:
+    out_tsv.parent.mkdir(parents=True, exist_ok=True)
+    with out_tsv.open("w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=fields, delimiter="\t", lineterminator="\n")
         w.writeheader()
         w.writerows(picked)
@@ -201,7 +206,7 @@ def main():
         "oversample": OVERSAMPLE,
         "strata": meta,
     }
-    OUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    out_json.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     print(f"population (aligned rows): {population}")
     print(f"sampled:                   {len(picked)}  (seed {args.seed})")
@@ -213,8 +218,11 @@ def main():
             f"{m['sampled']:4d}  {'CENSUS' if m['census'] else ''}"
         )
     print()
-    print(f"wrote {OUT_TSV.relative_to(ROOT)}")
-    print(f"wrote {OUT_JSON.relative_to(ROOT)}")
+    for p in (out_tsv, out_json):
+        try:
+            print(f"wrote {p.resolve().relative_to(ROOT)}")
+        except ValueError:  # outside the repo (tmp canary) — print as-is
+            print(f"wrote {p}")
     by_method = Counter(r["method"] for r in picked)
     print("by method:", dict(sorted(by_method.items())))
 
