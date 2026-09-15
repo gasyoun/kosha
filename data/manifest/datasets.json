@@ -2799,6 +2799,27 @@
    "regen_checked": "2026-09-15 (H4735: PASS)"
   },
   {
+   "id": "dataset-disciplines",
+   "title": "Dataset x discipline join — kosha registry through the IndologyScholars meso crosswalk (H4737)",
+   "tier": "public",
+   "license": "CC-BY-4.0 (IndologyScholars derived exports; archive attribution)",
+   "in_release": "not-applicable",
+   "release_asset": "dataset_disciplines.json",
+   "format": "json",
+   "rows": 132,
+   "size_bytes": 100015,
+   "keying": "one row per registered dataset id: id/title/mesoCode/assignmentConfidence/rationale + disciplines[] (code/labelEn/labelRu/parentCode/confidence=assignment x crosswalk capped at 1/crosswalkConfidence/crosswalkNote) + perDiscipline coverage + notMappedSentinels (the crosswalk's 8 deliberate НЕ МАППИТСЯ rows, verbatim).",
+   "source_repo": "https://github.com/gasyoun/IndologyScholars",
+   "source_path": "curation/meso_discipline_crosswalk.csv",
+   "builder": "scripts/build_dataset_disciplines.py (--check: byte-identical payload re-derivation + source-pin invariants, sibling-absent degradation to internal consistency, exit 0)",
+   "consumers": [
+    "kosha directory / data-hub discipline filtering",
+    "cross-repo discipline coverage compared with csl-atlas /tools/discipline-coverage (H4178 sibling leg)"
+   ],
+   "notes": "H4737 (H3567 ruling F5 consumer leg, kosha half; released by F5c MG 29-08-2026). The discipline taxonomy is NEVER re-derived kosha-side: the consumer reads the sibling crosswalk + disciplines.csv read-only and pins the sibling feedCommit in dataset_disciplines.source.json. kosha contributes only the reviewed assignment layer data/manifest/dataset_meso_assignments.json (132 rows, csl-atlas H4178 precedent mirrored: general lexicography -> sanskrit_grammar_panini <= 0.6 nearest facet; text subjects take the text facet, linguistic phenomena take the grammar facet; 6 honest nulls never forced, incl. the packet's self-row). Coverage at build: 132 datasets, 126 assigned, 6 nulls, 4 disciplines (sanskritology 115 / literature 20 / linguistics 2 / dravidology 1), 8 NOT-MAPPED sentinels surfaced. See data/disciplines/DATASET_DISCIPLINES_REPORT.md.",
+   "regen_checked": "2026-09-15 (H4737: PASS)"
+  },
+  {
    "id": "hitopadesa-text-concordance",
    "title": "Hitopadeśa per-text word concordance pilot — every word of the text feeding the dictionary (Tamilex corpus-dictionary pattern, H4034)",
    "tier": "public",
