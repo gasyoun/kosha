@@ -1,5 +1,4 @@
 stratum	anchor_key_slp1	anchor_key_iast	anchor_id	dcs_lemma_id	dcs_lemma_iast	evidence_count	check_lemma_exists	check_token_count	check_key_in_source	compound_stripped	adjudication
-stratum	anchor_key_slp1	anchor_key_iast	anchor_id	dcs_lemma_id	dcs_lemma_iast	evidence_count	check_lemma_exists	check_token_count	check_key_in_source	compound_stripped	adjudication
 exact	vivAsana	vivāsana	kochergina:e28421	138668	vivāsana	2	PASS	PASS	PASS	no	same lexeme (identity)
 exact	akzara	akṣara	kochergina:e1304	5483	akṣara	2	PASS	PASS	PASS	no	same lexeme (identity)
 exact	heman	heman	kochergina:e8591	110826	heman	1955	PASS	PASS	PASS	no	same lexeme (identity)
