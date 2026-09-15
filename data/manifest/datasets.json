@@ -2704,7 +2704,9 @@
    "source_repo": "https://github.com/gasyoun/kosha",
    "source_path": "data/mastery/combined_schedule.json",
    "builder": "scripts/build_mastery_schedule.py (reads data/{sandhi,samasa,morphology,frequency}/*drill_weights.json + each family's items file)",
-   "consumers": [],
+   "consumers": [
+    "SanskritKaraoke (H4719: build_mastery_layer.py digest -> verses/mastery/schedule_summary.json + mastery.html render; PR #131)"
+   ],
    "notes": "Data layer only, no UI. Deliberately excludes data/cohort_start_chteniya/ (a frozen lesson<=3 subset of sandhi_drills.json, not a distinct family -- see data/MASTERY_WEIGHTS_SPEC.md). Not a duplicate of Systema-Sanscriticum's Saraswati FSRS review engine -- this schedules kosha's own static reader surfaces only, holds no per-learner review state, and has no export path into Systema.",
    "size_note": "size_bytes filled once the schedule ships in a tagged release",
    "regen_checked": "2026-09-04 (H4046: PASS)",
