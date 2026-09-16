@@ -1,6 +1,6 @@
 # ROADMAP — kosha sense-reconciliation layer (2026 H2)
 
-_Created: 22-07-2026 · Last updated: 02-09-2026_
+_Created: 22-07-2026 · Last updated: 16-09-2026_
 
 Index: [PLAN_KOSHA_SENSE_RECONCILIATION_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_SENSE_RECONCILIATION_2026H2.md).
 Origin: the [नागदन्त thread](https://groups.google.com/g/nagari/c/NOWqiBQl1Xc/m/_R8O4-39CAAJ) — a
@@ -62,6 +62,17 @@ attestation; deterministic round-trip green).
   figure may be quoted until it runs) and the lemma-variant/homonym graph, which is what would
   fix the known `attrib` false-positive class (a lemma-level join onto a ŚKDR verbal-root entry:
   `kaṭa`, `bhū`).
+  **W2 scaling wave — ✅ shipped 15-09-2026 (H4751, OxAlpha).** Frame grown 500→1,487 lemmas
+  (frozen H1670 selection rule); aligned 3,013/32,399 (9.3%) → 7,009/65,987 (10.6%); frozen
+  H3910 acceptance strata/kappa reproduced byte-identically on the scaled table.
+  **Slice 3 — ✅ shipped 16-09-2026 (H4745, OxAlpha), sibling census B9.** MD (Macdonell) added
+  as a sixth column — reachable via csl-sqlite `md.zip` (20,749 entries), scored on the MW/Apte
+  English gloss channel plus a real `<ls>` witness channel (it cites sources, unlike ŚKDR/VCP).
+  PWK asked for by the same census pick is **NOT reachable** — no `pwk` csl-orig directory, no
+  `pwk.zip` csl-sqlite asset (`pwkvn` is a different dict); its 151,314 figure is a headword-only
+  union-`lemmas` count, joining Medinī/Amara as a recorded absence rather than a column. On the
+  W2 1,487-lemma frame: aligned 7,009→7,087 of 65,987→67,230 rows. `shape` now six positions
+  (`pwg-mw-apte-md-skd-vcp`).
 - **Lemma-variant graph** — full `nāgadanta`↔`nāgadantaka`-class normalisation across all dictionaries.
 - **Second acceptance pass** — the deferred (~6-month) sample + LLM-judge + `/review-sheet` human vote.
 - **pwg_ru RU-sense-structure deliverable** — carry PWG's ordered a)/b) hierarchy + per-sense loci
