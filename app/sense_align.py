@@ -157,12 +157,16 @@ MAX_GLOSS = 260         # gloss truncation for the table / viewer
 # German↔English measured nothing in slice 1; Sanskrit↔Sanskrit would measure
 # even less, since ŚKDR and VCP share a scholastic idiom in which two unrelated
 # senses routinely repeat `ityamaraḥ`, `ityarthaḥ`, `iti purāṇam`.
-GLOSS_LANG = {"pwg": "de", "mw": "en", "ap90": "en", "skd": "sa", "vcp": "sa"}
+GLOSS_LANG = {"pwg": "de", "mw": "en", "ap90": "en", "md": "en", "skd": "sa", "vcp": "sa"}
 GLOSS_CHANNEL_LANG = "en"
 ENGLISH_DICTS = tuple(d for d, lg in GLOSS_LANG.items() if lg == GLOSS_CHANNEL_LANG)
 
 SASA_DICTS = ("skd", "vcp")      # Sanskrit-to-Sanskrit kośas (H3862)
-DICTS = ("pwg", "mw", "ap90", "skd", "vcp")
+#: "md" is Macdonell's Practical Sanskrit-English Dictionary (English gloss,
+#: not loaded into kosha.db) — a WESTERN dict like pwg/mw/ap90, read the same
+#: way as the Sa->Sa kosas (straight from csl-sqlite) but scored on the English
+#: gloss channel like mw/ap90 (H4745 slice 3).
+DICTS = ("pwg", "mw", "ap90", "md", "skd", "vcp")
 
 # The abbreviation table for the `attrib` channel: which witness keys, as the
 # WESTERN dictionaries spell them in `<ls>`, name each Sa→Sa kośa. Written out
