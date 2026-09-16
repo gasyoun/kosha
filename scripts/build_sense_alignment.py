@@ -35,9 +35,22 @@ Step-1 reachability verdict (H3862; the counts behind it are in the report):
            cites it as a witness (`AK.`, 2,052 times in the pilot), but a
            citation is not entry text and there is nothing to align against.
 
-Scope fences (H3744 + H3862; restated in every artifact this writes):
-  IN  — PWG, MW, Apte (ap90), ŚKDR (skd), VCP (vcp).
-  OUT — Medinī and Amara: not in CDSL, no source to load (H3862 step 1).
+Step-1 reachability verdict, round 2 (H4745 — the `md`/PWK sibling-census pick):
+  MD (Macdonell) — reachable, `md.zip` in csl-sqlite (20,749 entries, no `<div>`
+           divisions — one sense per entry, same granularity as ŚKDR/VCP).
+           Shipped as a column: English gloss, scored on the mw/ap90 gloss
+           channel (H4745), not the Sa->Sa `<s>`-text channel skd/vcp use.
+  PWK    — NOT reachable. No `pwk` directory exists in csl-orig/v02 at all and
+           no `pwk.zip` asset exists in any csl-sqlite release (checked against
+           the 2026-08-09 release manifest) — `pwkvn` is a different, separate
+           dict code (Böhtlingk-Roth Nachträge), not this one. PWK's 151,314
+           figure lives only in the union `lemmas` headword layer (key1
+           presence, no entry/sense text) — same absent-source class as
+           Medinī and Amara: cited as a fact, nothing to align against.
+
+Scope fences (H3744 + H3862 + H4745; restated in every artifact this writes):
+  IN  — PWG, MW, Apte (ap90), MD (md), ŚKDR (skd), VCP (vcp).
+  OUT — Medinī, Amara and PWK: not in CDSL, no source to load (H3862/H4745 step 1).
   OUT — the lemma-variant graph (nAgadanta↔nAgadantaka normalisation).
   OUT — wave 2's second acceptance pass (needs a review sheet + a human vote).
   OUT — the pwg_ru RU-sense-structure deliverable (its own handoff).
@@ -105,9 +118,13 @@ OUT_FAIL = ROOT / "data" / "concordance" / "sense_alignment_failures.tsv"
 OUT_REPORT = ROOT / "data" / "concordance" / "SENSE_ALIGNMENT_BUILD_REPORT.md"
 STAGING = ROOT / "dist" / "sense-align-staging"
 
-DICT_LABEL = {"pwg": "PWG", "mw": "MW", "ap90": "Apte", "skd": "ŚKDR", "vcp": "VCP"}
+DICT_LABEL = {"pwg": "PWG", "mw": "MW", "ap90": "Apte", "md": "MD", "skd": "ŚKDR", "vcp": "VCP"}
 #: TSV/JS column stem per dict code — `ap90` has shipped as `apte` since slice 1.
-DICT_COL = {"pwg": "pwg", "mw": "mw", "ap90": "apte", "skd": "skd", "vcp": "vcp"}
+DICT_COL = {"pwg": "pwg", "mw": "mw", "ap90": "apte", "md": "md", "skd": "skd", "vcp": "vcp"}
+#: Dicts read straight from csl-sqlite (never loaded into kosha.db) — the
+#: Sa->Sa kosas (H3862) plus MD Macdonell (H4745): a 1.7 GB shared database
+#: should not be rebuilt to add one more column to a sidecar table.
+EXTRA_DICTS = SASA_DICTS + ("md",)
 SMOKE_LEMMA = "nAgadanta"
 
 #: Sa→Sa kośas asked for by H3862 that have no CDSL source at all. Named here so
@@ -120,6 +137,10 @@ SASA_ABSENT = {
     "Amara": "not in CDSL — no amara asset in any csl-sqlite release. PWG cites "
              "`AK.` 2,052× in the pilot; a citation is not entry text, so there "
              "is nothing to align against.",
+    "PWK": "not in CDSL — no `pwk` directory in csl-orig/v02 and no `pwk.zip` "
+           "in any csl-sqlite release (`pwkvn` is a separate dict, not this "
+           "one). The 151,314 figure is a union `lemmas` headword count "
+           "(key1 presence only) — no entry/sense text exists to align.",
 }
 
 #: H3744's published slice-1 numbers on the SAME 500-headword pilot. Every figure
@@ -136,8 +157,8 @@ BASELINE_H3744 = {
 }
 
 FENCES = [
-    "IN: PWG, MW, Apte (ap90), ŚKDR (skd), VCP (vcp).",
-    "OUT: Medinī and Amara — not in CDSL, no source to load (H3862 step 1).",
+    "IN: PWG, MW, Apte (ap90), MD (md), ŚKDR (skd), VCP (vcp).",
+    "OUT: Medinī, Amara and PWK — not in CDSL, no source to load (H3862/H4745 step 1).",
     "OUT: the lemma-variant graph (nAgadanta↔nAgadantaka-class normalisation).",
     "OUT: wave 2's second acceptance pass — it needs a review sheet and a human vote.",
     "OUT: the pwg_ru RU-sense-structure deliverable — its own handoff.",
@@ -214,9 +235,11 @@ def load_sasa_senses(handles: dict, lemma: str):
     against one ŚKDR entry reads `9-…-1-…`, and eight of those nine are recorded
     as `outranked` instead of being folded into the row.
 
-    `ls` is `[]` for every one of them, because the kośas contain no `<ls>` — 0
-    occurrences in either release. That is not a parsing gap; it is why the
-    `attrib` channel exists.
+    `ls` is `[]` for the Sa->Sa kośas (skd/vcp), because they contain no `<ls>`
+    — 0 occurrences in either release. That is not a parsing gap; it is why the
+    `attrib` channel exists. MD (Macdonell, H4745) is a WESTERN dict like
+    pwg/mw/ap90 and does cite witnesses, so its `<ls>` is extracted for real —
+    it scores on the `ls` channel exactly as pwg/mw/ap90 do.
     """
     senses, present = [], set()
     for code, (con, _tag) in handles.items():
@@ -224,12 +247,13 @@ def load_sasa_senses(handles: dict, lemma: str):
                                    (lemma,)):
             present.add(code)
             for n, (a, b) in enumerate(segment(code, body), 1):
+                span = body[a:b]
                 senses.append({
                     "dict": code,
                     "sense_id": f"{code}:{L}:{n}",
                     "label": f"{DICT_LABEL[code]} {L}·{n}",
-                    "gloss": sense_gloss(body[a:b], code),
-                    "ls": [],
+                    "gloss": sense_gloss(span, code),
+                    "ls": [] if code in SASA_DICTS else extract_ls(span),
                 })
     return senses, present
 
@@ -509,8 +533,9 @@ def write_report(stats: dict, fail_counts: Counter, shape_counts: Counter,
         "| dictionary | metalanguage | gloss channel |",
         "|---|---|---|",
     ]
+    _en_label = "open (" + "↔".join(DICT_LABEL[d] for d in DICTS if GLOSS_LANG[d] == "en") + ")"
     lines += [f"| {DICT_LABEL[d]} | `{GLOSS_LANG[d]}` | "
-              f"{'open (MW↔Apte)' if GLOSS_LANG[d] == 'en' else 'closed'} |" for d in DICTS]
+              f"{_en_label if GLOSS_LANG[d] == 'en' else 'closed'} |" for d in DICTS]
     lines += [
         "",
         "A Sanskrit↔Sanskrit Jaccard would not be a weak signal, it would be a number with",
@@ -739,7 +764,7 @@ def main() -> None:
     print(f"headwords: {len(heads)} (tau={args.tau})")
 
     con = sqlite3.connect(f"file:{find_db().as_posix()}?mode=ro", uri=True)
-    sasa = {} if args.no_sasa else open_sasa(SASA_DICTS)
+    sasa = {} if args.no_sasa else open_sasa(EXTRA_DICTS)
     for name, why in SASA_ABSENT.items():
         print(f"[sasa] {name}: ABSENT — {why.split(';')[0]}")
     rows, fails, payload = [], [], {}
