@@ -1,5 +1,5 @@
-"""Cross-dictionary sense alignment — PWG ↔ MW ↔ Apte ↔ ŚKDR ↔ VCP
-(H3744 wave-2 slice 1; the Sa→Sa columns are H3862, slice 2).
+"""Cross-dictionary sense alignment — PWG ↔ MW ↔ Apte ↔ MD ↔ ŚKDR ↔ VCP
+(H3744 wave-2 slice 1; the Sa→Sa columns are H3862, slice 2; MD is H4745).
 
 STAGING ONLY. Nothing here changes a public page: the render organ fires only
 when `ux={"sense_align": True}`, which only `build_word_pages.py --ux-staging`
@@ -157,12 +157,23 @@ MAX_GLOSS = 260         # gloss truncation for the table / viewer
 # German↔English measured nothing in slice 1; Sanskrit↔Sanskrit would measure
 # even less, since ŚKDR and VCP share a scholastic idiom in which two unrelated
 # senses routinely repeat `ityamaraḥ`, `ityarthaḥ`, `iti purāṇam`.
-GLOSS_LANG = {"pwg": "de", "mw": "en", "ap90": "en", "skd": "sa", "vcp": "sa"}
+GLOSS_LANG = {"pwg": "de", "mw": "en", "ap90": "en", "md": "en", "skd": "sa",
+              "vcp": "sa"}
 GLOSS_CHANNEL_LANG = "en"
 ENGLISH_DICTS = tuple(d for d, lg in GLOSS_LANG.items() if lg == GLOSS_CHANNEL_LANG)
 
 SASA_DICTS = ("skd", "vcp")      # Sanskrit-to-Sanskrit kośas (H3862)
-DICTS = ("pwg", "mw", "ap90", "skd", "vcp")
+#: Dictionaries read from their csl-sqlite release rather than `kosha.db`.
+#: H4745 adds MD (Macdonell's Practical) — a WESTERN dictionary on the release
+#: path, not a Sa→Sa kośa: it carries `<ls>` (58 in 20,749 records, measured)
+#: and an English metalanguage, so its channel is `gloss` against MW/Apte with
+#: `ls` as a trickle. PWK is NOT here: see the step-1 verdict in the build
+#: script — no `pwk.zip` exists in csl-sqlite.
+RELEASE_DICTS = ("skd", "vcp", "md")
+#: The H3744 headline metric pins to exactly these three (see `clean_111`):
+#: adding columns must not redefine the metric the earlier slices were judged by.
+WESTERN_CORE = ("pwg", "mw", "ap90")
+DICTS = ("pwg", "mw", "ap90", "md", "skd", "vcp")
 
 # The abbreviation table for the `attrib` channel: which witness keys, as the
 # WESTERN dictionaries spell them in `<ls>`, name each Sa→Sa kośa. Written out
