@@ -193,7 +193,7 @@ def test_skdr_aligns_on_the_attribution_pwg_prints():
     assert aligned[0]["method"] == "attrib"
     assert aligned[0]["witnesses"] == ["skdr"]
     assert aligned[0]["score"] == 1.0, "one sense of the lemma cited it — df is 1"
-    assert aligned[0]["shape"] == "1-0-0-1-0"
+    assert aligned[0]["shape"] == "1-0-0-0-1-0"
 
 
 def test_attribution_shared_by_everything_carries_no_edge():
