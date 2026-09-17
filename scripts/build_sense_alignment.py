@@ -69,8 +69,8 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from sense_align import (  # noqa: E402
-    ATTRIB_KEYS, DICTS, GLOSS_FLOOR, GLOSS_LANG, PREFIX_MIN, SASA_DICTS, TAU,
-    align_lemma, extract_ls, sense_gloss,
+    ATTRIB_KEYS, DICTS, GLOSS_FLOOR, GLOSS_LANG, PREFIX_MIN, RELEASE_DICTS,
+    SASA_DICTS, TAU, WESTERN_CORE, align_lemma, extract_ls, sense_gloss,
 )
 from segment import segment  # noqa: E402
 from build_entries import fetch_release_sqlite  # noqa: E402
@@ -105,9 +105,11 @@ OUT_FAIL = ROOT / "data" / "concordance" / "sense_alignment_failures.tsv"
 OUT_REPORT = ROOT / "data" / "concordance" / "SENSE_ALIGNMENT_BUILD_REPORT.md"
 STAGING = ROOT / "dist" / "sense-align-staging"
 
-DICT_LABEL = {"pwg": "PWG", "mw": "MW", "ap90": "Apte", "skd": "ŚKDR", "vcp": "VCP"}
+DICT_LABEL = {"pwg": "PWG", "mw": "MW", "ap90": "Apte", "md": "MD",
+              "skd": "ŚKDR", "vcp": "VCP"}
 #: TSV/JS column stem per dict code — `ap90` has shipped as `apte` since slice 1.
-DICT_COL = {"pwg": "pwg", "mw": "mw", "ap90": "apte", "skd": "skd", "vcp": "vcp"}
+DICT_COL = {"pwg": "pwg", "mw": "mw", "ap90": "apte", "md": "md",
+            "skd": "skd", "vcp": "vcp"}
 SMOKE_LEMMA = "nAgadanta"
 
 #: Sa→Sa kośas asked for by H3862 that have no CDSL source at all. Named here so
@@ -120,6 +122,24 @@ SASA_ABSENT = {
     "Amara": "not in CDSL — no amara asset in any csl-sqlite release. PWG cites "
              "`AK.` 2,052× in the pilot; a citation is not entry text, so there "
              "is nothing to align against.",
+    "PWK (Kielhorn's shorter PW)": "NOT reachable via csl-sqlite — no `pwk.zip` in the "
+             "release. The similarly-named `pwkvn.zip` is the Verzeichnis der "
+             "Namen (24,976 records, inspected 15-09-2026), not the 151,349-key1 "
+             "dictionary; the encoded source lives in the sanskrit-lexicon/PWK "
+             "repo and needs its own ingestion slice. Recorded absence (H4745 "
+             "step 1) rather than a header with nothing under it.",
+}
+
+#: H3862's published slice-2 numbers on the SAME pilot (committed report,
+#: 02-09-2026) — the baseline THIS wave reports its delta against, reproducible
+#: with `--no-md`.
+BASELINE_H3862 = {
+    "label": "H3862 slice 2 (PWG · MW · Apte · ŚKDR · VCP)",
+    #: 35,759 = H3862's published "senses considered" (02-09-2026 report, Counts
+    #: table); 32,399 is that build's *meaning groups* — the two must not be
+    #: swapped in the delta table, or MD's contribution reads +3,360 phantom
+    #: senses (caught and fixed in H4745).
+    "n_senses": 35759, "n_aligned": 3013,
 }
 
 #: H3744's published slice-1 numbers on the SAME 500-headword pilot. Every figure
@@ -136,7 +156,9 @@ BASELINE_H3744 = {
 }
 
 FENCES = [
-    "IN: PWG, MW, Apte (ap90), ŚKDR (skd), VCP (vcp).",
+    "IN: PWG, MW, Apte (ap90), MD (md), ŚKDR (skd), VCP (vcp).",
+    "OUT: PWK — no csl-sqlite source (`pwkvn` is the names index, not the "
+    "dictionary); recorded absence, its own ingestion slice (H4745 step 1).",
     "OUT: Medinī and Amara — not in CDSL, no source to load (H3862 step 1).",
     "OUT: the lemma-variant graph (nAgadanta↔nAgadantaka-class normalisation).",
     "OUT: wave 2's second acceptance pass — it needs a review sheet and a human vote.",
@@ -214,9 +236,12 @@ def load_sasa_senses(handles: dict, lemma: str):
     against one ŚKDR entry reads `9-…-1-…`, and eight of those nine are recorded
     as `outranked` instead of being folded into the row.
 
-    `ls` is `[]` for every one of them, because the kośas contain no `<ls>` — 0
-    occurrences in either release. That is not a parsing gap; it is why the
-    `attrib` channel exists.
+    `ls` is extracted from the same span for every release dictionary (H4745).
+    For the kośas that extraction still yields `[]` — 0 `<ls>` in 42,531 ŚKDR
+    and 50,135 VCP records, measured twice — which is why the `attrib` channel
+    exists for them. MD is the opposite case: it is a WESTERN dictionary on the
+    release path and its 20,749 records carry 58 `<ls>` citations, which now
+    enter the per-lemma witness pool like any western sense's.
     """
     senses, present = [], set()
     for code, (con, _tag) in handles.items():
@@ -229,7 +254,7 @@ def load_sasa_senses(handles: dict, lemma: str):
                     "sense_id": f"{code}:{L}:{n}",
                     "label": f"{DICT_LABEL[code]} {L}·{n}",
                     "gloss": sense_gloss(body[a:b], code),
-                    "ls": [],
+                    "ls": extract_ls(body[a:b]),
                 })
     return senses, present
 
@@ -299,7 +324,7 @@ VIEWER_HTML = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>kosha — aligned senses (PWG · MW · Apte · ŚKDR · VCP) — STAGED, NOT PUBLISHED</title>
+<title>kosha — aligned senses (PWG · MW · Apte · MD · ŚKDR · VCP) — STAGED, NOT PUBLISHED</title>
 <style>
 :root{--ink:#1f2328;--mut:#656d76;--line:#d8dee4;--bg:#f6f8fa;--card:#fff;
       --pwg:#0a7a2f;--mw:#1a6fb0;--apte:#a05a00;--sasa:#7a3a8a;--ok:#0a7a2f;--warn:#8a6d00}
@@ -451,20 +476,21 @@ def write_report(stats: dict, fail_counts: Counter, shape_counts: Counter,
                  method_counts: Counter, smoke: str) -> None:
     today = date.today().strftime("%d-%m-%Y")
     lines = [
-        "# Build report — aligned-sense table (PWG · MW · Apte · ŚKDR · VCP)",
+        "# Build report — aligned-sense table (PWG · MW · Apte · MD · ŚKDR · VCP)",
         "",
         f"_Created: {today} · Last updated: {today}_",
         "",
         "Generated by [scripts/build_sense_alignment.py](https://github.com/gasyoun/kosha/blob/main/scripts/build_sense_alignment.py).",
         "H3744 built the western three (wave-2 slice 1); **H3862** adds the Sa→Sa columns",
-        "(slice 2). Algorithm and failure taxonomy:",
+        "(slice 2); **H4745** adds MD Macdonell and records the PWK verdict (slice 3).",
+        "Algorithm and failure taxonomy:",
         "[app/sense_align.py](https://github.com/gasyoun/kosha/blob/main/app/sense_align.py).",
         "",
-        "## Step-1 reachability verdict (H3862)",
+        "## Step-1 reachability verdict (H3862 + H4745)",
         "",
-        "The slice was asked for four Sa→Sa dictionaries. Two exist as CDSL sources and two",
-        "do not, so two columns ship and two absences are recorded with their reason — the",
-        "handoff's own instruction, and the alternative would have been a header with nothing",
+        "Slice 2 was asked for four Sa→Sa dictionaries and found two; slice 3 was asked for",
+        "PWK and MD and found one. Both waves record their absences with their reason — the",
+        "handoffs' own instruction, and the alternative would have been a header with nothing",
         "under it.",
         "",
         "| dictionary | reachable | verdict |",
@@ -535,6 +561,23 @@ def write_report(stats: dict, fail_counts: Counter, shape_counts: Counter,
         f"| VCP senses loaded | {stats['n_sasa_senses'].get('vcp', 0)} |",
         f"| aligned groups touching ŚKDR | {stats['n_sasa_aligned'].get('skd', 0)} |",
         f"| aligned groups touching VCP | {stats['n_sasa_aligned'].get('vcp', 0)} |",
+        f"| MD senses loaded | {stats['n_sasa_senses'].get('md', 0)} |",
+        f"| aligned groups touching MD | {stats['n_sasa_aligned'].get('md', 0)} |",
+        "",
+        "## Delta against the H3862 slice-2 baseline (H4745)",
+        "",
+        f"Baseline: **{BASELINE_H3862['label']}**, as published in this file on 02-09-2026",
+        "and reproducible here with `--no-md`. MD is a WESTERN dictionary on the release",
+        "path: 20,749 records, 20,103 unique slp1 keys, **58 `<ls>` citations in 53 records**",
+        "(measured at ingest, 15-09-2026) — so unlike the kośas it does add a trickle of",
+        "witnesses to the per-lemma pool, and unlike PWG it has almost none. Its alignment",
+        "channel is therefore the English gloss fence (md↔MW↔Apte Jaccard, `GLOSS_FLOOR` as",
+        "for Apte), with `ls` as a trickle.",
+        "",
+        "| metric | H3862 | this build | Δ |",
+        "|---|---:|---:|---:|",
+        f"| senses considered | {BASELINE_H3862['n_senses']:,} | {stats['n_senses']:,} | {stats['n_senses'] - BASELINE_H3862['n_senses']:+,} |",
+        f"| aligned groups | {BASELINE_H3862['n_aligned']:,} | {stats['n_aligned']:,} | {stats['n_aligned'] - BASELINE_H3862['n_aligned']:+,} |",
         "",
         "## Delta against the H3744 baseline (same 500-headword pilot)",
         "",
@@ -728,8 +771,11 @@ def main() -> None:
     ap.add_argument("--staging-root", default=None,
                     help="staging output root (default dist/sense-align-staging; never docs/)")
     ap.add_argument("--no-sasa", action="store_true",
-                    help="skip the Sa→Sa kośas — reproduces the H3744 slice-1 baseline "
-                         "the delta table in the build report is measured against")
+                    help="skip the Sa→Sa kośas (skd, vcp) only — together with "
+                         "--no-md reproduces the H3744 slice-1 baseline")
+    ap.add_argument("--no-md", action="store_true",
+                    help="skip Macdonell (md) — reproduces the H3862 slice-2 "
+                         "baseline the H4745 delta is measured against")
     args = ap.parse_args()
 
     heads = ([h.strip() for h in args.heads.split(",") if h.strip()] if args.heads
@@ -739,7 +785,12 @@ def main() -> None:
     print(f"headwords: {len(heads)} (tau={args.tau})")
 
     con = sqlite3.connect(f"file:{find_db().as_posix()}?mode=ro", uri=True)
-    sasa = {} if args.no_sasa else open_sasa(SASA_DICTS)
+    release = RELEASE_DICTS
+    if args.no_sasa:
+        release = tuple(d for d in release if d not in SASA_DICTS)
+    if args.no_md:
+        release = tuple(d for d in release if d != "md")
+    sasa = open_sasa(release)
     for name, why in SASA_ABSENT.items():
         print(f"[sasa] {name}: ABSENT — {why.split(';')[0]}")
     rows, fails, payload = [], [], {}
@@ -749,10 +800,11 @@ def main() -> None:
     n_sasa_senses = Counter()
     n_sasa_aligned = Counter()
     #: the H3744 headline metric: an aligned row that is exactly one sense from
-    #: each of PWG, MW and Apte. Read off the WESTERN prefix of `shape`, so the
-    #: number stays comparable now that `shape` has five positions.
+    #: each of PWG, MW and Apte. Read off the pinned WESTERN-CORE prefix of
+    #: `shape`, so the number stays comparable now that `shape` has six positions
+    #: (H4745 added MD after the core; the metric must not drift with it).
     clean_111 = 0
-    _west_n = sum(1 for d in DICTS if d not in SASA_DICTS)
+    _west_n = len(WESTERN_CORE)
     smoke_lines: list[str] = []
 
     for lemma in heads:
@@ -768,7 +820,7 @@ def main() -> None:
         for g in res["groups"]:
             if g["status"] != "aligned":
                 continue
-            for d in SASA_DICTS:
+            for d in sasa:
                 if g["by_dict"].get(d):
                     n_sasa_aligned[d] += 1
         st = res["stats"]
@@ -838,7 +890,7 @@ def main() -> None:
         "tau": args.tau,
         "failure_classes": ", ".join(f"{k} {v}" for k, v in fail_counts.most_common()),
         "fences": FENCES,
-        "dicts": [d for d in DICTS if d not in SASA_DICTS or d in sasa],
+        "dicts": [d for d in DICTS if d not in RELEASE_DICTS or d in sasa],
         "n_sasa_senses": dict(n_sasa_senses),
         "n_sasa_aligned": dict(n_sasa_aligned),
         "clean_111": clean_111,
