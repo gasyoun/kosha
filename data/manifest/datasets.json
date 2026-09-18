@@ -2764,16 +2764,12 @@
    "source_path": "RussianTranslation/data/cyrillic_proper_noun_slp1.tsv",
    "builder": "RussianTranslation/tools/h3985_cyr_slp1_table.py (seeds: IAST-bearing Russian name indices; validation: csl-orig v02 inm + pui)",
    "consumers": [
-    "RussianTranslation pwg_ru / mw_ru name handling"
+    "RussianTranslation pwg_ru / mw_ru name handling",
+    "SamudraManthanam name glossaries (H4715; edge queued->live 18-09-2026, PR #358 merged)"
    ],
    "notes": "This is the ONE sanctioned Cyrillic->SLP1 mapping: FINDINGS §60 stands, reverse-transliteration character rules remain unsafe, so a session needing a key looks it up here instead of inventing rules. Coverage of the seed indices is partial by design -- Erman-Temkin 174/478 (36.4%), Kadambari 130/393 (33.1%), Potapova 128/326 (39.3%); the 20 purely-Cyrillic seed files carry no IAST witness and are deliberately unkeyed. Metadoc: RussianTranslation/data/cyrillic_proper_noun_slp1.meta.md.",
    "regen_checked": "2026-09-04 (H4046: PASS)",
    "consumer_candidates": [
-    {
-     "repo": "SamudraManthanam",
-     "use": "name glossaries",
-     "confidence": "low"
-    },
     {
      "repo": "csl-atlas",
      "use": "proper-noun handling",
