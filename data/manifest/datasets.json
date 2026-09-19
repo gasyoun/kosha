@@ -1534,10 +1534,11 @@
    "source_repo": "https://github.com/gasyoun/kosha",
    "source_path": "data/frequency/vocab_curriculum.tsv",
    "builder": "scripts/build_vocab_curriculum.py over lemma_frequency.tsv (core_rank/coverage_pct) + docs/cards/",
-   "consumers": [
-    "reading/vocabulary/curriculum/ page",
-    "vocab-drills dataset"
-   ],
+    "consumers": [
+     "reading/vocabulary/curriculum/ page",
+     "vocab-drills dataset",
+     "Uprava stenogrammy-teaching-glossary crosswalk (H4813 Pair 13 taught-vs-corpus axis, 19-09-2026)"
+    ],
    "notes": "H947 Wave-1 pedagogy build (W1b). Public/MIT pedagogy layer, credit Dr. Marcis Gasuns. Applies the sandhi-curriculum method to words; gloss is the lemma's own dictionary card teaser (MW preferred), not DCS's lemma.meanings (only ~23% coverage on this lemma set, rejected as primary source).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/data-v0.2.0-batch.meta.md",
    "regen_checked": "2026-09-04 (H4046: PASS)"
