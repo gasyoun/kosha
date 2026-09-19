@@ -228,7 +228,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 1	1.20	kapi-dhvajaḥ	kapi-dhvaja	nominal	kapidhvajaḥ	kapidhvaja	nominal	MATCH	yes	yes		1	1
 1	1.20	pravṛtte	pra-vṛtta	nominal	pravṛtte	pravṛt	verb	LEMMA+POS_DIVERGE	no	no		1	1
 1	1.20	śastra-saṁpāte	śastra-saṁpāta	nominal	śastra	śastra	nominal	LEMMA_DIVERGE	no	yes		1	1
-1					sampāte	sampāta	nominal	GOLD_ONLY				0	1
+1	sent:230617				sampāte	sampāta	nominal	DCS_ONLY				0	1
 1	1.20	dhanuḥ	dhanuḥ	nominal	dhanuḥ	dhanus	nominal	LEMMA_CONVENTION	no	yes	adverb--tas/-taḥ	1	1
 1	1.20	udyamya	ud-√yam	unknown	udyamya	udyam	verb	POS_DIVERGE	yes	no		1	1
 1	1.20	pāṇḍavaḥ	pāṇḍava	nominal	pāṇḍavaḥ	pāṇḍava	nominal	MATCH	yes	yes		1	1
@@ -251,7 +251,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 1	1.22	etān	etat	nominal	'haṃ	mad	nominal	LEMMA_DIVERGE	no	yes		1	1
 1	1.22	nirīkṣe	nir-√īkṣ	verb	yoddhu	yoddhu	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 1	1.22	aham	asmat	nominal	kāmān	kāma	nominal	LEMMA_DIVERGE	no	yes		1	1
-1	1.22	yoddhu-kāmān	yoddhu-kāma	nominal				DCS_ONLY				1	0
+1	1.22	yoddhu-kāmān	yoddhu-kāma	nominal				GOLD_ONLY				1	0
 1	1.22	avasthitān	ava-sthita	nominal	avasthitān	avasthā	verb	LEMMA+POS_DIVERGE	no	no		1	1
 1	1.22	kaiḥ	kim	nominal	kaiḥ	ka	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 1	1.22	mayā	asmat	nominal	mayā	mad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
@@ -280,7 +280,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 1	1.24	ubhayoḥ	ubhā	nominal	sthāpayitvā	sthāpay	verb	LEMMA+POS_DIVERGE	no	no		1	1
 1	1.24	madhye	madhya	nominal	ratha	ratha	nominal	LEMMA_DIVERGE	no	yes		1	1
 1	1.24	sthāpayitvā	√sthā	unknown	uttamam	uttama	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-1	1.24	rathottamam	ratha-uttama	nominal				DCS_ONLY				1	0
+1	1.24	rathottamam	ratha-uttama	nominal				GOLD_ONLY				1	0
 1	1.25	bhīṣma-droṇa-pramukhataḥ	bhīṣma-droṇa-pramukhatas	indecl	bhīṣma|droṇa|pramukhatas	bhīṣma|droṇa|pramukhatas	nominal|nominal|indecl	COMPOUND_SPLIT	n/a	n/a		1	3
 1	1.25	sarveṣām	sarva	nominal	sarveṣāṃ	sarva	nominal	MATCH	yes	yes		1	1
 1	1.25	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
@@ -330,7 +330,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 1	1.28	abravīt	√brū	verb	imān	idam	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 1	1.28	dṛṣṭvā	√dṛś	unknown	sva	sva	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 1	1.28	imān	idam	nominal	janān	jana	nominal	LEMMA_DIVERGE	no	yes		1	1
-1	1.28	sva-janān	sva-jana	nominal				DCS_ONLY				1	0
+1	1.28	sva-janān	sva-jana	nominal				GOLD_ONLY				1	0
 1	1.28	kṛṣṇa	kṛṣṇa	nominal	kṛṣṇa	kṛṣṇa	nominal	MATCH	yes	yes		1	1
 1	1.28	yuyutsūn	yuyutsu	nominal	yuyutsūn	yuyutsu	indecl	POS_DIVERGE	yes	no		1	1
 1	1.28	samupasthitān	sam-upa-sthita	nominal	samavasthitān	samavasthā	verb	LEMMA+POS_DIVERGE	no	no		1	1
@@ -567,7 +567,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 1	1.47	sa-śaram	sa-śara	nominal	saṃkhye	saṃkhya	nominal	LEMMA_DIVERGE	no	yes		1	1
 1	1.47	cāpam	cāpa	nominal	rathopastha	rathopastha	nominal	LEMMA_DIVERGE	no	yes		1	1
 1	1.47	śoka-saṁvigna-mānasaḥ	śoka-saṁvigna-mānasa	nominal	upāviśat	upaviś	verb	LEMMA+POS_DIVERGE	no	no		1	1
-1					visṛjya|sa|śaram|cāpaṃ|śoka|saṃvigna|mānasaḥ	visṛj|sa|śara|cāpa|śoka|saṃvij|mānasa	verb|indecl|nominal|nominal|nominal|verb|nominal	GOLD_ONLY				0	7
+1	sent:230671				visṛjya|sa|śaram|cāpaṃ|śoka|saṃvigna|mānasaḥ	visṛj|sa|śara|cāpa|śoka|saṃvij|mānasa	verb|indecl|nominal|nominal|nominal|verb|nominal	DCS_ONLY				0	7
 2	2.01	saṁjayaḥ	sam-jaya	nominal	saṃjayaḥ	saṃjaya	nominal	LEMMA_CONVENTION	no	yes	nasal-class	1	1
 2	2.01	uvāca	√vac	verb	uvāca	vac	verb	MATCH	yes	yes		1	1
 2	2.01	tam	tat	nominal	tam	tad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
@@ -784,7 +784,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 2	2.15	ete	etat	nominal	ete	etad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 2	2.15	puruṣam	puruṣa	nominal	puruṣaṃ	puruṣa	nominal	MATCH	yes	yes		1	1
 2	2.15	puruṣa-rṣabha	puruṣa-rṣabha	nominal	puruṣa	puruṣa	nominal	LEMMA_DIVERGE	no	yes		1	1
-2					ṛṣabha	ṛṣabha	nominal	GOLD_ONLY				0	1
+2	sent:230705				ṛṣabha	ṛṣabha	nominal	DCS_ONLY				0	1
 2	2.15	sama-duḥkha-sukham	sama-duḥkha-sukha	nominal	sama|duḥkha|sukham	sama|duḥkha|sukha	nominal|nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	3
 2	2.15	dhīram	dhīra	nominal	dhīraṃ	dhīra	indecl	POS_DIVERGE	yes	no		1	1
 2	2.15	saḥ|amṛtatvāya	tat|amṛtatva	nominal|nominal	so|amṛta|tvāya	tad|amṛta|tva	nominal|indecl|nominal	RESEGMENTED	n/a	n/a		2	3
@@ -900,9 +900,9 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 2	2.22	saṁyāti	sam-√yā	verb	na	na	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.22	navāni	nava	nominal	enam	enad	nominal	LEMMA_DIVERGE	no	yes		1	1
 2	2.22	dehī	dehin	nominal	dahati	dah	verb	LEMMA+POS_DIVERGE	no	no		1	1
-2					pāvakaḥ	pāvaka	nominal	GOLD_ONLY				0	1
+2	sent:230721_2				pāvakaḥ	pāvaka	nominal	DCS_ONLY				0	1
 2	2.23	na	na	indecl	na	na	indecl	MATCH	yes	yes		1	1
-2					ca	ca	indecl	GOLD_ONLY				0	1
+2	sent:230722				ca	ca	indecl	DCS_ONLY				0	1
 2	2.23	enam	etat	nominal	enam	enad	nominal	LEMMA_DIVERGE	no	yes		1	1
 2	2.23	chindanti	√chid	verb	kledayanti	kleday	verb	LEMMA_DIVERGE	no	yes		1	1
 2	2.23	śastrāṇi	śastra	nominal	āpaḥ	ap	nominal	LEMMA_DIVERGE	no	yes		1	1
@@ -929,13 +929,13 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 2	2.24	nityaḥ	nitya	nominal	'yaṃ	idam	nominal	LEMMA_DIVERGE	no	yes		1	1
 2	2.24	sarvagataḥ	sarva-gata	nominal	sanātanaḥ	sanātana	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.24	sthāṇuḥ	sthāṇu	nominal	avyakto	avyakta	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-2	2.24	acalaḥ	a-cala	nominal				DCS_ONLY				1	0
+2	2.24	acalaḥ	a-cala	nominal				GOLD_ONLY				1	0
 2	2.24	ayam	idam	nominal	'yam	idam	nominal	MATCH	yes	yes		1	1
 2	2.24	sanātanaḥ	sanātana	nominal	a	a	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.25	avyaktaḥ	a-vyakta	nominal	cintyaḥ	cintay	verb	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.25	ayam	idam	nominal	'yam	idam	nominal	MATCH	yes	yes		1	1
 2	2.25	acintyaḥ	a-cintya	nominal	a	a	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-2					vikāryaḥ	vikṛ	verb	GOLD_ONLY				0	1
+2	sent:230725				vikāryaḥ	vikṛ	verb	DCS_ONLY				0	1
 2	2.25	ayam	idam	nominal	ayam	idam	nominal	MATCH	yes	yes		1	1
 2	2.25	avikāryaḥ	a-vikārya	nominal	ucyate	vac	verb	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.25	ayam	idam	nominal	tasmāt	tasmāt	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -951,7 +951,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 2	2.26	ca	ca	indecl	nitya	nitya	indecl	LEMMA_DIVERGE	no	yes		1	1
 2	2.26	enam	etat	nominal	jātam	jan	verb	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.26	nitya-jātam	nitya-jāta	nominal	nityaṃ	nitya	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-2	2.26	nityam	nityam	indecl				DCS_ONLY				1	0
+2	2.26	nityam	nityam	indecl				GOLD_ONLY				1	0
 2	2.26	vā	vā	indecl	vā	vā	indecl	MATCH	yes	yes		1	1
 2	2.26	manyase	√man	verb	manyase	man	verb	MATCH	yes	yes		1	1
 2	2.26	mṛtam	mṛta	nominal	mṛtam	mṛ	verb	LEMMA+POS_DIVERGE	no	no		1	1
@@ -1151,9 +1151,9 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 2	2.40	na	na	indecl	na	na	indecl	MATCH	yes	yes		1	1
 2	2.40	vidyate	√vid	verb	vidyate	vid	verb	MATCH	yes	yes		1	1
 2	2.40	svalpam	sv-alpa	nominal	su	su	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-2					alpam	alpa	indecl	GOLD_ONLY				0	1
+2	sent:230756				alpam	alpa	indecl	DCS_ONLY				0	1
 2	2.40	api|asya	api|idam	indecl|nominal	apy	api	indecl	MERGE	n/a	n/a		2	1
-2					asya	idam	nominal	GOLD_ONLY				0	1
+2	sent:230756				asya	idam	nominal	DCS_ONLY				0	1
 2	2.40	dharmasya	dharma	nominal	dharmasya	dharma	nominal	MATCH	yes	yes		1	1
 2	2.40	trāyate	√trai	verb	trāyate	trā	verb	LEMMA_CONVENTION	no	yes	vowel-sandhi/contraction	1	1
 2	2.40	mahataḥ	mahant	nominal	mahato	mahat	indecl	LEMMA_CONVENTION+POS_DIVERGE	no	no	final-t/d+n	1	1
@@ -1313,7 +1313,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 2	2.55	śrī-bhagavān	śrī-bhagavant	nominal	ca	ca	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.55	uvāca	√vac	verb	śruti	śruti	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.55	prajahāti	pra-√hā	verb	vipratipannā	vipratipad	verb	LEMMA_DIVERGE	no	yes		1	1
-2					te	tvad	nominal	GOLD_ONLY				0	1
+2	sent:230781				te	tvad	nominal	DCS_ONLY				0	1
 2	2.55	yadā	yadā	indecl	yadā	yadā	indecl	MATCH	yes	yes		1	1
 2	2.55	kāmān	kāma	nominal	sthāsyati	sthā	verb	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.55	sarvān	sarva	nominal	niścalā	niścala	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -1331,7 +1331,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 2	2.56	sukheṣu	su-kha	nominal	bhāṣā	bhāṣā	nominal	LEMMA_DIVERGE	no	yes		1	1
 2	2.56	vigata-spṛhaḥ	vigata-spṛha	nominal	samādhi	samādhi	nominal	LEMMA_DIVERGE	no	yes		1	1
 2	2.56	vīta-rāga-bhaya-krodhaḥ	vīta-rāga-bhaya-krodha	nominal	sthasya	stha	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-2					keśava	keśava	nominal	GOLD_ONLY				0	1
+2	sent:230784				keśava	keśava	nominal	DCS_ONLY				0	1
 2	2.56	sthita-dhīḥ	sthita-dhī	nominal	sthita|dhīḥ	sthā|dhī	verb|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 2	2.56	muniḥ	muni	nominal	kiṃ	ka	nominal	LEMMA_DIVERGE	no	yes		1	1
 2	2.56	ucyate	√vac	verb	prabhāṣeta	prabhāṣ	verb	LEMMA_DIVERGE	no	yes		1	1
@@ -1431,7 +1431,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 2	2.65	hāniḥ	hāni	nominal	mad	mad	nominal	LEMMA_DIVERGE	no	yes		1	1
 2	2.65	asya	idam	nominal	paraḥ	para	nominal	LEMMA_DIVERGE	no	yes		1	1
 2	2.65	upajāyate	upa-√jan	verb	vaśe	vaśa	nominal	LEMMA+POS_DIVERGE	no	no		1	1
-2	2.65	prasanna-cetasaḥ	prasanna-cetas	nominal				DCS_ONLY				1	0
+2	2.65	prasanna-cetasaḥ	prasanna-cetas	nominal				GOLD_ONLY				1	0
 2	2.65	hi	hi	indecl	hi	hi	indecl	MATCH	yes	yes		1	1
 2	2.65	āśu	āśu	indecl	yasya	yad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.65	buddhiḥ	buddhi	nominal	indriyāṇi	indriya	nominal	LEMMA_DIVERGE	no	yes		1	1
@@ -1499,7 +1499,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 2	2.70	yam	yat	nominal	na	na	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.70	praviśanti	pra-√viś	verb	ca	ca	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.70	sarve	sarva	nominal	abhāvayataḥ	abhāvayat	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-2					śāntir	śānti	nominal	GOLD_ONLY				0	1
+2	sent:230810				śāntir	śānti	nominal	DCS_ONLY				0	1
 2	2.70	saḥ	tat	nominal	a	a	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.70	śāntim	śānti	nominal	śāntasya	śam	verb	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.70	āpnoti	√āp	verb	kutaḥ	kutas	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -1531,7 +1531,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 2	2.72	api	api	indecl	prajñā	prajñā	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.72	brahma-nirvāṇam	brahma-nirvāṇa	nominal	pratiṣṭhitā	pratiṣṭhā	verb	LEMMA+POS_DIVERGE	no	no		1	1
 2	2.72	ṛcchati	√ṛ	verb	yā	yad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
-2					niśā|sarva|bhūtānām|tasyāṃ|jāgarti|saṃyamī|yasyāṃ|jāgrati|bhūtāni|sā|niśā|paśyato|muneḥ|āpūryamāṇam|acala|pratiṣṭham|samudram|āpaḥ|praviśanti|yadvat|tadvat|kāmāḥ|yaṃ|praviśanti|sarve|sa|śāntim|āpnoti|na|kāma|kāmī|vihāya|kāmān|yaḥ|sarvān|pumān|carati|niḥspṛhaḥ|nirmamo|nirahaṃkāraḥ|sa|śāntim|adhigacchati|eṣā|brāhmī|sthitiḥ|pārtha|na|enām|prāpya|vimuhyati|sthitvā|asyām|anta|kāle|'pi|brahma|nirvāṇam|ṛcchati	niśā|sarva|bhūta|tad|jāgṛ|saṃyamin|yad|jāgṛ|bhūta|tad|niśā|dṛś|muni|āp￞|acala|pratiṣṭhā|samudra|ap|praviś|yadvat|tadvat|kāma|yad|praviś|sarva|tad|śānti|āp|na|kāma|kāmin|vihā|kāma|yad|sarva|puṃs|car|niḥspṛha|nirmama|nirahaṃkāra|tad|śānti|adhigam|etad|brāhma|sthiti|pārtha|na|enad|prāp|vimuh|sthā|idam|anta|kāla|api|brahman|nirvāṇa|ṛch	nominal|nominal|nominal|nominal|verb|indecl|nominal|verb|nominal|nominal|nominal|verb|nominal|verb|indecl|nominal|nominal|nominal|verb|indecl|indecl|nominal|nominal|verb|nominal|nominal|nominal|verb|indecl|nominal|nominal|verb|nominal|nominal|nominal|nominal|verb|indecl|indecl|indecl|nominal|nominal|verb|nominal|indecl|nominal|nominal|indecl|nominal|verb|verb|verb|nominal|nominal|nominal|indecl|nominal|nominal|verb	GOLD_ONLY				0	59
+2	sent:230815				niśā|sarva|bhūtānām|tasyāṃ|jāgarti|saṃyamī|yasyāṃ|jāgrati|bhūtāni|sā|niśā|paśyato|muneḥ|āpūryamāṇam|acala|pratiṣṭham|samudram|āpaḥ|praviśanti|yadvat|tadvat|kāmāḥ|yaṃ|praviśanti|sarve|sa|śāntim|āpnoti|na|kāma|kāmī|vihāya|kāmān|yaḥ|sarvān|pumān|carati|niḥspṛhaḥ|nirmamo|nirahaṃkāraḥ|sa|śāntim|adhigacchati|eṣā|brāhmī|sthitiḥ|pārtha|na|enām|prāpya|vimuhyati|sthitvā|asyām|anta|kāle|'pi|brahma|nirvāṇam|ṛcchati	niśā|sarva|bhūta|tad|jāgṛ|saṃyamin|yad|jāgṛ|bhūta|tad|niśā|dṛś|muni|āp￞|acala|pratiṣṭhā|samudra|ap|praviś|yadvat|tadvat|kāma|yad|praviś|sarva|tad|śānti|āp|na|kāma|kāmin|vihā|kāma|yad|sarva|puṃs|car|niḥspṛha|nirmama|nirahaṃkāra|tad|śānti|adhigam|etad|brāhma|sthiti|pārtha|na|enad|prāp|vimuh|sthā|idam|anta|kāla|api|brahman|nirvāṇa|ṛch	nominal|nominal|nominal|nominal|verb|indecl|nominal|verb|nominal|nominal|nominal|verb|nominal|verb|indecl|nominal|nominal|nominal|verb|indecl|indecl|nominal|nominal|verb|nominal|nominal|nominal|verb|indecl|nominal|nominal|verb|nominal|nominal|nominal|nominal|verb|indecl|indecl|indecl|nominal|nominal|verb|nominal|indecl|nominal|nominal|indecl|nominal|verb|verb|verb|nominal|nominal|nominal|indecl|nominal|nominal|verb	DCS_ONLY				0	59
 3	3.01	arjunaḥ	arjuna	nominal	arjuna	arjuna	nominal	MATCH	yes	yes		1	1
 3	3.01	uvāca	√vac	verb	uvāca	vac	verb	MATCH	yes	yes		1	1
 3	3.01	jyāyasī	jyāyasī	nominal	jyāyasī	jyāyas	indecl	LEMMA_CONVENTION+POS_DIVERGE	no	no	vowel-sandhi/contraction	1	1
@@ -1882,7 +1882,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 3	3.27	iti	iti	indecl	iti	iti	indecl	MATCH	yes	yes		1	1
 3	3.27	manyate	√man	verb	manyate	man	verb	MATCH	yes	yes		1	1
 3	3.28	tattva-vit	tattva-vit	nominal	tattva	tattva	nominal	LEMMA_DIVERGE	no	yes		1	1
-3					vid	vid	indecl	GOLD_ONLY				0	1
+3	sent:230879				vid	vid	indecl	DCS_ONLY				0	1
 3	3.28	tu	tu	indecl	tu	tu	indecl	MATCH	yes	yes		1	1
 3	3.28	mahā-bāho	mahā-bāhu	nominal	mahā|bāho	mahat|bāhu	indecl|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 3	3.28	guṇa-karma-vibhāgayoḥ	guṇa-karma-vibhāga	nominal	guṇa|karma|vibhāgayoḥ	guṇa|karman|vibhāga	nominal|nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	3
@@ -1901,7 +1901,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 3	3.29	akṛtsna-vidaḥ	akṛtsna-vit	nominal	akṛtsna|vidaḥ	akṛtsna|vid	indecl|indecl	COMPOUND_SPLIT	n/a	n/a		1	2
 3	3.29	mandān	manda	nominal	mandān	manda	indecl	POS_DIVERGE	yes	no		1	1
 3	3.29	kṛtsna-vit	kṛtsna-vit	nominal	kṛtsna	kṛtsna	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-3					vid	vid	indecl	GOLD_ONLY				0	1
+3	sent:230882				vid	vid	indecl	DCS_ONLY				0	1
 3	3.29	na	na	indecl	na	na	indecl	MATCH	yes	yes		1	1
 3	3.29	vicālayet	vi-√cal	verb	vicālayet	vicālay	verb	LEMMA_DIVERGE	no	yes		1	1
 3	3.30	mayi	asmat	nominal	mayi	mad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
@@ -1969,7 +1969,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 3	3.35	viguṇaḥ	vi-guṇa	nominal	viguṇaḥ	viguṇa	indecl	POS_DIVERGE	yes	no		1	1
 3	3.35	para-dharmāt	para-dharma	nominal	para|dharmāt	para|dharma	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 3	3.35	svanuṣṭhitāt	su-anu-ṣṭhita	nominal	su	su	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-3					anuṣṭhitāt	anuṣṭhā	verb	GOLD_ONLY				0	1
+3	sent:230893				anuṣṭhitāt	anuṣṭhā	verb	DCS_ONLY				0	1
 3	3.35	sva-dharme	sva-dharma	nominal	svadharme	svadharma	nominal	MATCH	yes	yes		1	1
 3	3.35	nidhanam	nidhana	nominal	nidhanaṃ	nidhana	nominal	MATCH	yes	yes		1	1
 3	3.35	śreyaḥ	śreyas	nominal	śreyaḥ	śreyas	indecl	POS_DIVERGE	yes	no		1	1
@@ -2047,7 +2047,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 3	3.41	niyamya	ni-√yam	unknown	niyamya	niyam	verb	POS_DIVERGE	yes	no		1	1
 3	3.41	bharata-rṣabha	bharata-rṣabha	nominal	bharata	bharata	nominal	LEMMA_DIVERGE	no	yes		1	1
 3	3.41	pāpmānam	pāpman	nominal	ṛṣabha	ṛṣabha	nominal	LEMMA_DIVERGE	no	yes		1	1
-3					pāpmānaṃ	pāpman	indecl	GOLD_ONLY				0	1
+3	sent:230908				pāpmānaṃ	pāpman	indecl	DCS_ONLY				0	1
 3	3.41	prajahi|hi	pra-√han|hi	verb|indecl	prajahihi	prahā	verb	MERGE	n/a	n/a		2	1
 3	3.41	enam	etat	nominal	enam	enad	nominal	LEMMA_DIVERGE	no	yes		1	1
 3	3.41	jñāna-vijñāna-nāśanam	jñāna-vijñāna-nāśana	nominal	jñāna|vijñāna|nāśanam	jñāna|vijñāna|nāśana	nominal|nominal|indecl	COMPOUND_SPLIT	n/a	n/a		1	3
@@ -2205,7 +2205,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 4	4.09	saḥ|arjuna	tat|arjuna	nominal|nominal	so|'rjuna	tad|arjuna	nominal|nominal	RESEGMENTED	n/a	n/a		2	2
 4	4.10	vīta-rāga-bhaya-krodhāḥ	vīta-rāga-bhaya-krodha	nominal	vīta|rāga|bhaya|krodhāḥ	vī|rāga|bhaya|krodha	verb|nominal|nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	4
 4	4.10	man-mayāḥ	mat-maya	nominal	mad	mad	nominal	LEMMA_DIVERGE	no	yes		1	1
-4					mayāḥ	maya	indecl	GOLD_ONLY				0	1
+4	sent:230934				mayāḥ	maya	indecl	DCS_ONLY				0	1
 4	4.10	mām	asmat	nominal	mām	mad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 4	4.10	upāśritāḥ	upāśrita	nominal	upāśritāḥ	upāśri	verb	LEMMA+POS_DIVERGE	no	no		1	1
 4	4.10	bahavaḥ	bahu	nominal	bahavo	bahu	indecl	POS_DIVERGE	yes	no		1	1
@@ -2354,7 +2354,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 4	4.21	kevalam	kevalam	indecl	kevalaṃ	kevala	indecl	LEMMA_CONVENTION	no	yes	final-t/d+n	1	1
 4	4.21	karma	karman	nominal	karma	karman	nominal	MATCH	yes	yes		1	1
 4	4.21	kurvan	kurvant	nominal	kurvan	kṛ	verb	LEMMA+POS_DIVERGE	no	no		1	1
-4	4.21	na	na	indecl				DCS_ONLY				1	0
+4	4.21	na	na	indecl				GOLD_ONLY				1	0
 4	4.21	āpnoti	√āp	verb	āpnoti	āp	verb	MATCH	yes	yes		1	1
 4	4.21	kilbiṣam	kilbiṣa	nominal	kilbiṣam	kilbiṣa	nominal	MATCH	yes	yes		1	1
 4	4.22	yadṛcchā-lābha-saṁtuṣṭaḥ	yadṛcchā-lābha-saṁtuṣṭa	nominal	yadṛcchā|lābha|saṃtuṣṭaḥ	yadṛcchā|lābha|saṃtuṣ	nominal|nominal|verb	COMPOUND_SPLIT	n/a	n/a		1	3
@@ -2429,10 +2429,10 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 4	4.28	saṁśita-vratāḥ	saṁśita-vrata	nominal	saṃśita|vratāḥ	saṃśita|vrata	indecl|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 4	4.29	apāne	apāna	nominal	apāne	apāna	nominal	MATCH	yes	yes		1	1
 4	4.29	juhvati	√hu	verb	juhvati	hu	verb	MATCH	yes	yes		1	1
-4	4.29	prāṇam	prāṇa	nominal				DCS_ONLY				1	0
+4	4.29	prāṇam	prāṇa	nominal				GOLD_ONLY				1	0
 4	4.29	prāṇe	prāṇa	nominal	prāṇaṃ	prāṇa	nominal	MATCH	yes	yes		1	1
 4	4.29	apānam	apāna	nominal	prāṇe	prāṇa	nominal	LEMMA_DIVERGE	no	yes		1	1
-4					'pānaṃ	apāna	nominal	GOLD_ONLY				0	1
+4	sent:230972				'pānaṃ	apāna	nominal	DCS_ONLY				0	1
 4	4.29	tathā	tathā	indecl	tathā	tathā	indecl	MATCH	yes	yes		1	1
 4	4.29	apare	a-para	nominal	apare	apara	nominal	MATCH	yes	yes		1	1
 4	4.29	prāṇāpāna-gatī	prāṇa-apāna-gati	nominal	prāṇa|apāna|gatī	prāṇa|apāna|gati	nominal|nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	3
@@ -2549,7 +2549,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 4	4.39	labhate	√labh	verb	labhate	labh	verb	MATCH	yes	yes		1	1
 4	4.39	jñānam	jñāna	nominal	jñānaṃ	jñāna	nominal	MATCH	yes	yes		1	1
 4	4.39	tat-paraḥ	tat-para	nominal	tad	tad	nominal	LEMMA_DIVERGE	no	yes		1	1
-4					paraḥ	para	nominal	GOLD_ONLY				0	1
+4	sent:230992				paraḥ	para	nominal	DCS_ONLY				0	1
 4	4.39	saṁyatendriyaḥ	saṁyata-indriya	nominal	saṃyata|indriyaḥ	saṃyam|indriya	verb|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 4	4.39	jñānam	jñāna	nominal	jñānaṃ	jñāna	nominal	MATCH	yes	yes		1	1
 4	4.39	labdhvā	√labh	unknown	labdhvā	labh	verb	POS_DIVERGE	yes	no		1	1
@@ -2591,7 +2591,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 4	4.42	ātiṣṭha	ā-√sthā	verb	enam	enad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 4	4.42	uttiṣṭha	ut-√sthā	verb	saṃśayaṃ	saṃśaya	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 4	4.42	bhārata	bhārata	nominal	yogam	yoga	nominal	LEMMA_DIVERGE	no	yes		1	1
-4					ātiṣṭha|uttiṣṭha|bhārata	āsthā|utthā|bhārata	verb|verb|nominal	GOLD_ONLY				0	3
+4	sent:230999				ātiṣṭha|uttiṣṭha|bhārata	āsthā|utthā|bhārata	verb|verb|nominal	DCS_ONLY				0	3
 5	5.01	arjunaḥ	arjuna	nominal	arjuna	arjuna	nominal	MATCH	yes	yes		1	1
 5	5.01	uvāca	√vac	verb	uvāca	vac	verb	MATCH	yes	yes		1	1
 5	5.01	saṁnyāsam	saṁnyāsa	nominal	saṃnyāsaṃ	saṃnyāsa	nominal	MATCH	yes	yes		1	1
@@ -2692,7 +2692,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 5	5.08	yuktaḥ	yukta	nominal	yukto	yuj	verb	LEMMA+POS_DIVERGE	no	no		1	1
 5	5.08	manyeta	√man	verb	manyeta	man	verb	MATCH	yes	yes		1	1
 5	5.08	tattva-vit	tattva-vit	nominal	tattva	tattva	nominal	LEMMA_DIVERGE	no	yes		1	1
-5					vid	vid	indecl	GOLD_ONLY				0	1
+5	sent:231016				vid	vid	indecl	DCS_ONLY				0	1
 5	5.08	paśyan	paśyant	nominal	paśyan	dṛś	verb	LEMMA+POS_DIVERGE	no	no		1	1
 5	5.08	śṛṇvan	śṛṇvant	nominal	śṛṇvan	śru	verb	LEMMA+POS_DIVERGE	no	no		1	1
 5	5.08	spṛśan	spṛśant	nominal	spṛśan	spṛś	verb	LEMMA+POS_DIVERGE	no	no		1	1
@@ -2846,7 +2846,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 5	5.20	udvijet	ud-√vij	verb	te	tad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 5	5.20	prāpya	pra-√āp	unknown	sthitāḥ	sthā	verb	LEMMA+POS_DIVERGE	no	no		1	1
 5	5.20	ca	ca	indecl	na	na	indecl	LEMMA_DIVERGE	no	yes		1	1
-5					prahṛṣyet	prahṛṣ	verb	GOLD_ONLY				0	1
+5	sent:231040				prahṛṣyet	prahṛṣ	verb	DCS_ONLY				0	1
 5	5.20	apriyam	a-priya	nominal	priyam	priya	indecl	LEMMA_CONVENTION+POS_DIVERGE	no	no	vowel-sandhi/contraction	1	1
 5	5.20	sthira-buddhiḥ	sthira-buddhi	nominal	prāpya	prāp	verb	LEMMA+POS_DIVERGE	no	no		1	1
 5	5.20	asaṁmūḍhaḥ	a-saṁ-mūḍha	nominal	na	na	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -2949,7 +2949,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 5	5.29	mām	asmat	nominal	cetasām	cetas	nominal	LEMMA_DIVERGE	no	yes		1	1
 5	5.29	śāntim	śānti	nominal	abhito	abhitas	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 5	5.29	ṛcchati	√ṛ	verb	brahma	brahman	nominal	LEMMA+POS_DIVERGE	no	no		1	1
-5					nirvāṇam|vartate|vidita|ātmanām|sparśān|kṛtvā|bahis|bāhyān|cakṣuḥ|ca|eva|antare|bhruvoḥ|prāṇa|apānau|samau|kṛtvā|nāsā|abhyantara|cāriṇau|yata|indriya|manaḥ|buddhiḥ|muniḥ|mokṣa|parāyaṇaḥ|vigata|icchā|bhaya|krodhaḥ|yaḥ|sadā|mukta|eva|saḥ|bhoktāraṃ|yajña|tapasām|sarva|loka|mahā|īśvaram|suhṛdaṃ|sarva|bhūtānām|jñātvā|māṃ|śāntim|ṛcchati	nirvāṇa|vṛt|vid|ātman|sparśa|kṛ|bahis|bāhya|cakṣus|ca|eva|antara|bhrū|prāṇa|apāna|sama|kṛ|nāsā|abhyantara|cārin|yam|indriya|manas|buddhi|muni|mokṣa|parāyaṇa|vigam|icchā|bhaya|krodha|yad|sadā|muc|eva|tad|bhoktṛ|yajña|tapas|sarva|loka|mahat|īśvara|suhṛd|sarva|bhūta|jñā|mad|śānti|ṛch	nominal|verb|verb|nominal|nominal|verb|indecl|indecl|nominal|indecl|indecl|nominal|nominal|nominal|nominal|nominal|verb|nominal|nominal|indecl|verb|nominal|nominal|nominal|nominal|nominal|nominal|verb|nominal|nominal|nominal|nominal|indecl|verb|indecl|nominal|nominal|nominal|nominal|nominal|nominal|indecl|nominal|nominal|nominal|nominal|verb|nominal|nominal|verb	GOLD_ONLY				0	50
+5	sent:231053				nirvāṇam|vartate|vidita|ātmanām|sparśān|kṛtvā|bahis|bāhyān|cakṣuḥ|ca|eva|antare|bhruvoḥ|prāṇa|apānau|samau|kṛtvā|nāsā|abhyantara|cāriṇau|yata|indriya|manaḥ|buddhiḥ|muniḥ|mokṣa|parāyaṇaḥ|vigata|icchā|bhaya|krodhaḥ|yaḥ|sadā|mukta|eva|saḥ|bhoktāraṃ|yajña|tapasām|sarva|loka|mahā|īśvaram|suhṛdaṃ|sarva|bhūtānām|jñātvā|māṃ|śāntim|ṛcchati	nirvāṇa|vṛt|vid|ātman|sparśa|kṛ|bahis|bāhya|cakṣus|ca|eva|antara|bhrū|prāṇa|apāna|sama|kṛ|nāsā|abhyantara|cārin|yam|indriya|manas|buddhi|muni|mokṣa|parāyaṇa|vigam|icchā|bhaya|krodha|yad|sadā|muc|eva|tad|bhoktṛ|yajña|tapas|sarva|loka|mahat|īśvara|suhṛd|sarva|bhūta|jñā|mad|śānti|ṛch	nominal|verb|verb|nominal|nominal|verb|indecl|indecl|nominal|indecl|indecl|nominal|nominal|nominal|nominal|nominal|verb|nominal|nominal|indecl|verb|nominal|nominal|nominal|nominal|nominal|nominal|verb|nominal|nominal|nominal|nominal|indecl|verb|indecl|nominal|nominal|nominal|nominal|nominal|nominal|indecl|nominal|nominal|nominal|nominal|verb|nominal|nominal|verb	DCS_ONLY				0	50
 6	6.01	śrī-bhagavān	śrī-bhagavant	nominal	śrī|bhagavān	śrī|bhagavant	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 6	6.01	uvāca	√vac	verb	uvāca	vac	verb	MATCH	yes	yes		1	1
 6	6.01	anāśritaḥ	an-ā-śrita	nominal	anāśritaḥ	anāśrita	indecl	POS_DIVERGE	yes	no		1	1
@@ -3139,7 +3139,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 6	6.17	yukta-ceṣṭasya	yukta-ceṣṭa	nominal	yuñjan	yuj	verb	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.17	karmasu	karman	nominal	evam	evam	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.17	yukta-svapnāvabodhasya	yukta-svapna-avabodha	nominal	sadā	sadā	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-6					ātmānam	ātman	nominal	GOLD_ONLY				0	1
+6	sent:231089				ātmānam	ātman	nominal	DCS_ONLY				0	1
 6	6.17	yogaḥ	yoga	nominal	yogī	yogin	nominal	LEMMA_DIVERGE	no	yes		1	1
 6	6.17	bhavati	√bhū	verb	niyata	niyam	verb	LEMMA_DIVERGE	no	yes		1	1
 6	6.17	duḥkha-hā	duḥkha-han	nominal	mānasaḥ	mānasa	nominal	LEMMA_DIVERGE	no	yes		1	1
@@ -3152,7 +3152,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 6	6.18	niḥspṛhaḥ	nir-spṛha	nominal	na	na	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.18	sarva-kāmebhyaḥ	sarva-kāma	nominal	atyaśnataḥ	atyaś	verb	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.18	yuktaḥ	yukta	nominal	tu	tu	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-6					yogo	yoga	nominal	GOLD_ONLY				0	1
+6	sent:231091				yogo	yoga	nominal	DCS_ONLY				0	1
 6	6.18	iti	iti	indecl	'sti	as	verb	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.18	ucyate	√vac	verb	na	na	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.18	tadā	tadā	indecl	ca	ca	indecl	LEMMA_DIVERGE	no	yes		1	1
@@ -3298,7 +3298,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 6	6.30	na	na	indecl	yato	yatas	indecl	LEMMA_DIVERGE	no	yes		1	1
 6	6.30	praṇaśyāmi	pra–√naś	verb	yato	yatas	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.30	saḥ	tat	nominal	niścarati	niścar	verb	LEMMA+POS_DIVERGE	no	no		1	1
-6	6.30	ca	ca	indecl				DCS_ONLY				1	0
+6	6.30	ca	ca	indecl				GOLD_ONLY				1	0
 6	6.30	me|na	asmat|na	nominal|indecl	manaḥ	manas	nominal	MERGE	n/a	n/a		2	1
 6	6.30	praṇaśyati	pra–√naś	verb	cañcalam	cañcala	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.31	sarva-bhūta-sthitam	sarva-bhūta-sthita	nominal	asthiram	asthira	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -3326,7 +3326,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 6	6.32	vā	vā	indecl	yuñjan	yuj	verb	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.32	duḥkham	duḥkha	nominal	evam	evam	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.32	saḥ	tat	nominal	sadā	sadā	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-6					ātmānam	ātman	nominal	GOLD_ONLY				0	1
+6	sent:231115				ātmānam	ātman	nominal	DCS_ONLY				0	1
 6	6.32	yogī	yogin	nominal	yogī	yogin	nominal	MATCH	yes	yes		1	1
 6	6.32	paramaḥ	parama	nominal	vigata	vigam	verb	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.32	mataḥ	mata	nominal	kalmaṣaḥ	kalmaṣa	nominal	LEMMA_DIVERGE	no	yes		1	1
@@ -3364,7 +3364,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 6	6.35	uvāca	√vac	verb	na	na	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.35	asaṁśayam	asaṁśayam	indecl	praṇaśyāmi	praṇaś	verb	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.35	mahābāho	mahā-bāhu	nominal	sa	tad	nominal	LEMMA_DIVERGE	no	yes		1	1
-6					ca	ca	indecl	GOLD_ONLY				0	1
+6	sent:231120				ca	ca	indecl	DCS_ONLY				0	1
 6	6.35	manaḥ	manas	nominal	me|na	mad|na	nominal|indecl	COMPOUND_SPLIT	n/a	n/a		1	2
 6	6.35	durnigraham	dur-ni-graha	nominal	praṇaśyati	praṇaś	verb	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.35	calam	cala	nominal	sarva	sarva	nominal	LEMMA_DIVERGE	no	yes		1	1
@@ -3529,7 +3529,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 6	6.47	me	asmat	nominal	puṇya	puṇya	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.47	yuktatamaḥ	yukta-tama	nominal	kṛtām	kṛt	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 6	6.47	mataḥ	mata	nominal	lokān	loka	nominal	LEMMA_DIVERGE	no	yes		1	1
-6					uṣitvā|śāśvatīḥ|samāḥ|śucīnāṃ|śrīmatāṃ|gehe|yoga|bhraṣṭaḥ|'bhijāyate|athavā|yoginām|eva|kule|bhavati|dhīmatām|etat|hi|durlabhataraṃ|loke|janma|yat|īdṛśam|tatra|taṃ|buddhi|saṃyogam|labhate|paurvadehikam|yatate|ca|tato|bhūyaḥ|saṃsiddhau|kuru|nandana|pūrva|abhyāsena|tena|eva|hriyate|hi|avaśaḥ|'pi|saḥ|jijñāsuḥ|api|yogasya|śabdabrahma|ativartate|prayatnāt|yatamānaḥ|tu|yogī|saṃśuddha|kilbiṣaḥ|aneka|janma|saṃsiddhaḥ|tatas|yāti|parāṃ|gatim|tapasvibhyo|'dhiko|yogī|jñānibhyo|'pi|mato|'dhikaḥ|karmibhyaḥ|ca|adhikaḥ|yogī|tasmāt|yogī|bhava|arjuna|yoginām|api|sarveṣāṃ|mad|gatena|antarātmanā|śraddhāvān|bhajate|yo|māṃ|sa|me|yuktatamo|mataḥ	vas|śāśvata|samā|śuci|śrīmat|geha|yoga|bhraṃś|abhijan|athavā|yogin|eva|kula|bhū|dhīmat|etad|hi|durlabhatara|loka|janman|yad|īdṛśa|tatra|tad|buddhi|saṃyoga|labh|paurvadehika|yat|ca|tatas|bhūyas|saṃsiddhi|kuru|nandana|pūrva|abhyāsa|tad|eva|hṛ|hi|avaśa|api|tad|jijñāsu|api|yoga|śabdabrahman|ativṛt|prayatna|yat|tu|yogin|saṃśudh|kilbiṣa|aneka|janman|saṃsidh|tatas|yā|para|gati|tapasvin|adhika|yogin|jñānin|api|man|adhika|karmin|ca|adhika|yogin|tasmāt|yogin|bhū|arjuna|yogin|api|sarva|mad|gam|antarātman|śraddhāvat|bhaj|yad|mad|tad|mad|yuktatama|man	verb|indecl|nominal|indecl|indecl|nominal|nominal|verb|verb|indecl|nominal|indecl|nominal|verb|indecl|nominal|indecl|indecl|nominal|nominal|nominal|indecl|indecl|nominal|nominal|nominal|verb|indecl|verb|indecl|indecl|indecl|nominal|nominal|nominal|nominal|nominal|nominal|indecl|verb|indecl|indecl|indecl|nominal|indecl|indecl|nominal|nominal|verb|nominal|verb|indecl|nominal|verb|nominal|nominal|nominal|verb|indecl|verb|nominal|nominal|nominal|indecl|nominal|indecl|indecl|verb|indecl|indecl|indecl|indecl|nominal|indecl|nominal|verb|nominal|nominal|indecl|nominal|nominal|verb|nominal|indecl|verb|nominal|nominal|nominal|nominal|indecl|verb	GOLD_ONLY				0	91
+6	sent:231145				uṣitvā|śāśvatīḥ|samāḥ|śucīnāṃ|śrīmatāṃ|gehe|yoga|bhraṣṭaḥ|'bhijāyate|athavā|yoginām|eva|kule|bhavati|dhīmatām|etat|hi|durlabhataraṃ|loke|janma|yat|īdṛśam|tatra|taṃ|buddhi|saṃyogam|labhate|paurvadehikam|yatate|ca|tato|bhūyaḥ|saṃsiddhau|kuru|nandana|pūrva|abhyāsena|tena|eva|hriyate|hi|avaśaḥ|'pi|saḥ|jijñāsuḥ|api|yogasya|śabdabrahma|ativartate|prayatnāt|yatamānaḥ|tu|yogī|saṃśuddha|kilbiṣaḥ|aneka|janma|saṃsiddhaḥ|tatas|yāti|parāṃ|gatim|tapasvibhyo|'dhiko|yogī|jñānibhyo|'pi|mato|'dhikaḥ|karmibhyaḥ|ca|adhikaḥ|yogī|tasmāt|yogī|bhava|arjuna|yoginām|api|sarveṣāṃ|mad|gatena|antarātmanā|śraddhāvān|bhajate|yo|māṃ|sa|me|yuktatamo|mataḥ	vas|śāśvata|samā|śuci|śrīmat|geha|yoga|bhraṃś|abhijan|athavā|yogin|eva|kula|bhū|dhīmat|etad|hi|durlabhatara|loka|janman|yad|īdṛśa|tatra|tad|buddhi|saṃyoga|labh|paurvadehika|yat|ca|tatas|bhūyas|saṃsiddhi|kuru|nandana|pūrva|abhyāsa|tad|eva|hṛ|hi|avaśa|api|tad|jijñāsu|api|yoga|śabdabrahman|ativṛt|prayatna|yat|tu|yogin|saṃśudh|kilbiṣa|aneka|janman|saṃsidh|tatas|yā|para|gati|tapasvin|adhika|yogin|jñānin|api|man|adhika|karmin|ca|adhika|yogin|tasmāt|yogin|bhū|arjuna|yogin|api|sarva|mad|gam|antarātman|śraddhāvat|bhaj|yad|mad|tad|mad|yuktatama|man	verb|indecl|nominal|indecl|indecl|nominal|nominal|verb|verb|indecl|nominal|indecl|nominal|verb|indecl|nominal|indecl|indecl|nominal|nominal|nominal|indecl|indecl|nominal|nominal|nominal|verb|indecl|verb|indecl|indecl|indecl|nominal|nominal|nominal|nominal|nominal|nominal|indecl|verb|indecl|indecl|indecl|nominal|indecl|indecl|nominal|nominal|verb|nominal|verb|indecl|nominal|verb|nominal|nominal|nominal|verb|indecl|verb|nominal|nominal|nominal|indecl|nominal|indecl|indecl|verb|indecl|indecl|indecl|indecl|nominal|indecl|nominal|verb|nominal|nominal|indecl|nominal|nominal|verb|nominal|indecl|verb|nominal|nominal|nominal|nominal|indecl|verb	DCS_ONLY				0	91
 7	7.01	śrī-bhagavān	śrī-bhagavant	nominal	śrī|bhagavān	śrī|bhagavant	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 7	7.01	uvāca	√vac	verb	uvāca	vac	verb	MATCH	yes	yes		1	1
 7	7.01	mayi	asmat	nominal	mayi	mad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
@@ -3540,7 +3540,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 7	7.01	mad-āśrayaḥ	mad-āśraya	nominal	mad|āśrayaḥ	mad|āśraya	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 7	7.01	asaṁśayam	asaṁśayam	indecl	asaṃśayaṃ	asaṃśayam	indecl	MATCH	yes	yes		1	1
 7	7.01	samagram	samagra	nominal	samagraṃ|māṃ	samagra|mad	indecl|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
-7	7.01	mām	asmat	nominal				DCS_ONLY				1	0
+7	7.01	mām	asmat	nominal				GOLD_ONLY				1	0
 7	7.01	yathā	yathā	indecl	yathā	yathā	indecl	MATCH	yes	yes		1	1
 7	7.01	jñāsyasi	√jñā	verb	jñāsyasi	jñā	verb	MATCH	yes	yes		1	1
 7	7.01	tat	tat	nominal	tat	tad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
@@ -3656,7 +3656,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 7	7.09	asmi	√as	verb	asmi	as	verb	MATCH	yes	yes		1	1
 7	7.09	tapasviṣu	tapasvin	nominal	tapasviṣu	tapasvin	nominal	MATCH	yes	yes		1	1
 7	7.10	bījam	bīja	nominal	bījaṃ|māṃ	bīja|mad	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
-7	7.10	mām	asmat	nominal				DCS_ONLY				1	0
+7	7.10	mām	asmat	nominal				GOLD_ONLY				1	0
 7	7.10	sarva-bhūtānām	sarva-bhūta	nominal	sarva|bhūtānām	sarva|bhūta	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 7	7.10	viddhi	√vid	verb	viddhi	vid	verb	MATCH	yes	yes		1	1
 7	7.10	pārtha	pārtha	nominal	pārtha	pārtha	nominal	MATCH	yes	yes		1	1
@@ -3677,7 +3677,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 7	7.11	kāmaḥ	kāma	nominal	kāmo	kāma	nominal	MATCH	yes	yes		1	1
 7	7.11	asmi	√as	verb	'smi	as	verb	MATCH	yes	yes		1	1
 7	7.11	bharata-rṣabha	bharata-rṣabha	nominal	bharata	bharata	nominal	LEMMA_DIVERGE	no	yes		1	1
-7					ṛṣabha	ṛṣabha	nominal	GOLD_ONLY				0	1
+7	sent:231181				ṛṣabha	ṛṣabha	nominal	DCS_ONLY				0	1
 7	7.12	ye	yat	nominal	ye	yad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 7	7.12	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 7	7.12	eva	eva	indecl	eva	eva	indecl	MATCH	yes	yes		1	1
@@ -3751,7 +3751,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 7	7.16	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 7	7.16	bharata-rṣabha	bharata-rṣabha	nominal	bharata	bharata	nominal	LEMMA_DIVERGE	no	yes		1	1
 7	7.17	teṣām	tat	nominal	ṛṣabha	ṛṣabha	nominal	LEMMA_DIVERGE	no	yes		1	1
-7					teṣāṃ	tad	nominal	GOLD_ONLY				0	1
+7	sent:231192				teṣāṃ	tad	nominal	DCS_ONLY				0	1
 7	7.17	jñānī	jñānin	nominal	jñānī	jñānin	indecl	POS_DIVERGE	yes	no		1	1
 7	7.17	nitya-yuktaḥ	nitya-yukta	nominal	nitya|yuktaḥ	nitya|yuj	indecl|verb	COMPOUND_SPLIT	n/a	n/a		1	2
 7	7.17	eka-bhaktiḥ	eka-bhakti	nominal	eka|bhaktiḥ	eka|bhakti	indecl|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
@@ -3801,7 +3801,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 7	7.20	prapadyante	pra-√pad	verb	prapadyante	prapad	verb	MATCH	yes	yes		1	1
 7	7.20	anya-devatāḥ	anya-devatā	nominal	anya|devatāḥ	anya|devatā	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 7	7.20	tam tam	tat	nominal	taṃ	tad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
-7					taṃ	tad	nominal	GOLD_ONLY				0	1
+7	sent:231199				taṃ	tad	nominal	DCS_ONLY				0	1
 7	7.20	niyamam	niyama	nominal	niyamam	niyama	nominal	MATCH	yes	yes		1	1
 7	7.20	āsthāya	ā-√sthā	unknown	āsthāya	āsthā	verb	POS_DIVERGE	yes	no		1	1
 7	7.20	prakṛtyā	prakṛti	nominal	prakṛtyā	prakṛti	nominal	MATCH	yes	yes		1	1
@@ -3824,7 +3824,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 7	7.22	saḥ	tat	nominal	eva	eva	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 7	7.22	tayā	tat	nominal	vidadhāmi	vidhā	verb	LEMMA+POS_DIVERGE	no	no		1	1
 7	7.22	śraddhayā	śraddhā	nominal	aham	mad	nominal	LEMMA_DIVERGE	no	yes		1	1
-7	7.22	yuktaḥ	yukta	nominal				DCS_ONLY				1	0
+7	7.22	yuktaḥ	yukta	nominal				GOLD_ONLY				1	0
 7	7.22	tasyāḥ	tat	nominal	sa|tayā	tad|tad	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 7	7.22	rādhanam	rādhana	nominal	śraddhayā	śraddhā	nominal	LEMMA_DIVERGE	no	yes		1	1
 7	7.22	īhate	√īh	verb	yuktaḥ	yuj	verb	LEMMA_DIVERGE	no	yes		1	1
@@ -3860,7 +3860,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 7	7.24	param	para	nominal	avyaktaṃ	avyakta	nominal	LEMMA_DIVERGE	no	yes		1	1
 7	7.24	bhāvam	bhāva	nominal	vyaktim	vyakti	nominal	LEMMA_DIVERGE	no	yes		1	1
 7	7.24	ajānantaḥ	a-jānant	nominal	āpannam	āpad	verb	LEMMA+POS_DIVERGE	no	no		1	1
-7					manyante	man	verb	GOLD_ONLY				0	1
+7	sent:231206				manyante	man	verb	DCS_ONLY				0	1
 7	7.24	mama	asmat	nominal	mām	mad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 7	7.24	avyayam	a-vyaya	nominal	abuddhayaḥ	abuddhi	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 7	7.24	anuttamam	an-uttama	nominal	paraṃ	para	nominal	LEMMA_DIVERGE	no	yes		1	1
@@ -3870,7 +3870,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 7	7.25	sarvasya	sarva	nominal	mama	mad	nominal	LEMMA_DIVERGE	no	yes		1	1
 7	7.25	yoga-māyā-samāvṛtaḥ	yoga-māyā-samāvṛta	nominal	avyayam	avyaya	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 7	7.25	mūḍhaḥ	mūḍha	nominal	anuttamam	anuttama	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-7	7.25	ayam	idam	nominal				DCS_ONLY				1	0
+7	7.25	ayam	idam	nominal				GOLD_ONLY				1	0
 7	7.25	na	na	indecl	na	na	indecl	MATCH	yes	yes		1	1
 7	7.25	abhijānāti	abhi-√jñā	verb	aham	mad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 7	7.25	lokaḥ	loka	nominal	prakāśaḥ	prakāśa	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -3934,11 +3934,11 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 7	7.30	api	api	indecl	mām	mad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 7	7.30	ca	ca	indecl	āśritya	āśri	verb	LEMMA+POS_DIVERGE	no	no		1	1
 7	7.30	mām	asmat	nominal	yatanti	yat	verb	LEMMA+POS_DIVERGE	no	no		1	1
-7					ye	yad	nominal	GOLD_ONLY				0	1
+7	sent:231216				ye	yad	nominal	DCS_ONLY				0	1
 7	7.30	te	tat	nominal	te	tad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 7	7.30	viduḥ	√vid	verb	brahma	brahman	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 7	7.30	yukta-cetasaḥ	yukta-cetas	nominal	tat	tad	nominal	LEMMA_DIVERGE	no	yes		1	1
-7					viduḥ|kṛtsnam|adhyātmam|karma|ca|akhilam|sa|adhibhūta|adhidaivam|māṃ|sa|adhiyajñam|ca|ye|viduḥ|prayāṇa|kāle|'pi|ca|māṃ|te|viduḥ|yukta|cetasaḥ	vid|kṛtsna|adhyātma|karman|ca|akhila|sa|adhibhūta|adhidaiva|mad|sa|adhiyajña|ca|yad|vid|prayāṇa|kāla|api|ca|mad|tad|vid|yuj|cetas	verb|indecl|nominal|nominal|indecl|indecl|indecl|nominal|nominal|nominal|indecl|nominal|indecl|nominal|verb|nominal|nominal|indecl|indecl|nominal|nominal|verb|verb|nominal	GOLD_ONLY				0	24
+7	sent:231217				viduḥ|kṛtsnam|adhyātmam|karma|ca|akhilam|sa|adhibhūta|adhidaivam|māṃ|sa|adhiyajñam|ca|ye|viduḥ|prayāṇa|kāle|'pi|ca|māṃ|te|viduḥ|yukta|cetasaḥ	vid|kṛtsna|adhyātma|karman|ca|akhila|sa|adhibhūta|adhidaiva|mad|sa|adhiyajña|ca|yad|vid|prayāṇa|kāla|api|ca|mad|tad|vid|yuj|cetas	verb|indecl|nominal|nominal|indecl|indecl|indecl|nominal|nominal|nominal|indecl|nominal|indecl|nominal|verb|nominal|nominal|indecl|indecl|nominal|nominal|verb|verb|nominal	DCS_ONLY				0	24
 8	8.01	arjunaḥ	arjuna	nominal	arjuna	arjuna	nominal	MATCH	yes	yes		1	1
 8	8.01	uvāca	√vac	verb	uvāca	vac	verb	MATCH	yes	yes		1	1
 8	8.01	kim	kim	nominal	kiṃ	ka	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
@@ -4009,7 +4009,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 8	8.05	atra	atra	indecl	atra	atra	indecl	MATCH	yes	yes		1	1
 8	8.05	saṁśayaḥ	saṁśaya	nominal	saṃśayaḥ	saṃśaya	nominal	MATCH	yes	yes		1	1
 8	8.06	yam yam	yat	nominal	yaṃ	yad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
-8					yaṃ	yad	nominal	GOLD_ONLY				0	1
+8	sent:231232				yaṃ	yad	nominal	DCS_ONLY				0	1
 8	8.06	vā	vā	indecl	vā	vā	indecl	MATCH	yes	yes		1	1
 8	8.06	api	api	indecl	api	api	indecl	MATCH	yes	yes		1	1
 8	8.06	smaran	smarant	nominal	smaran	smṛ	verb	LEMMA+POS_DIVERGE	no	no		1	1
@@ -4018,7 +4018,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 8	8.06	ante	anta	nominal	ante	anta	nominal	MATCH	yes	yes		1	1
 8	8.06	kalevaram	kalevara	nominal	kalevaram	kalevara	nominal	MATCH	yes	yes		1	1
 8	8.06	tam tam	tat	nominal	taṃ	tad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
-8					tam	tad	nominal	GOLD_ONLY				0	1
+8	sent:231233				tam	tad	nominal	DCS_ONLY				0	1
 8	8.06	eva	eva	indecl	eva	eva	indecl	MATCH	yes	yes		1	1
 8	8.06	eti	√i	verb	eti	i	verb	MATCH	yes	yes		1	1
 8	8.06	kaunteya	kaunteya	nominal	kaunteya	kaunteya	nominal	MATCH	yes	yes		1	1
@@ -4178,7 +4178,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 8	8.18	eva	eva	indecl	rātri	rātri	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 8	8.18	avyakta-saṁjñake	avyakta-saṁjñaka	nominal	āgame	āgama	nominal	LEMMA_DIVERGE	no	yes		1	1
 8	8.19	bhūta-grāmaḥ	bhūta-grāma	nominal	pralīyante	pralī	verb	LEMMA+POS_DIVERGE	no	no		1	1
-8					tatra	tatra	indecl	GOLD_ONLY				0	1
+8	sent:231257				tatra	tatra	indecl	DCS_ONLY				0	1
 8	8.19	saḥ|eva	tat|eva	nominal|indecl	eva	eva	indecl	MERGE	n/a	n/a		2	1
 8	8.19	ayam	idam	nominal	avyakta	avyakta	nominal	LEMMA_DIVERGE	no	yes		1	1
 8	8.19	bhūtvā bhūtvā	√bhū	unknown	saṃjñake	saṃjñaka	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -4202,7 +4202,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 8	8.20	bhūteṣu	bhūta	nominal	tu	tu	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 8	8.20	naśyatsu	naśyant	nominal	bhāvo	bhāva	nominal	LEMMA_DIVERGE	no	yes		1	1
 8	8.20	na	na	indecl	'nyo	anya	nominal	LEMMA+POS_DIVERGE	no	no		1	1
-8	8.20	vinaśyati	vi-√naś	verb				DCS_ONLY				1	0
+8	8.20	vinaśyati	vi-√naś	verb				GOLD_ONLY				1	0
 8	8.21	avyaktaḥ	a-vyakta	nominal	'vyakto	avyakta	indecl	POS_DIVERGE	yes	no		1	1
 8	8.21	akṣaraḥ	a-kṣara	nominal	avyaktāt	avyakta	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 8	8.21	iti	iti	indecl	sanātanaḥ	sanātana	indecl	LEMMA_DIVERGE	no	yes		1	1
@@ -4235,7 +4235,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 8	8.22	idam	idam	nominal	pārtha	pārtha	nominal	LEMMA_DIVERGE	no	yes		1	1
 8	8.22	tatam	tata	nominal	bhaktyā	bhakti	nominal	LEMMA_DIVERGE	no	yes		1	1
 8	8.23	yatra	yatra	indecl	labhyaḥ	labh	verb	LEMMA+POS_DIVERGE	no	no		1	1
-8	8.23	kāle	kāla	nominal				DCS_ONLY				1	0
+8	8.23	kāle	kāla	nominal				GOLD_ONLY				1	0
 8	8.23	tu	tu	indecl	tu	tu	indecl	MATCH	yes	yes		1	1
 8	8.23	an-āvṛttim	an-ā-vṛtti	nominal	an	an	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 8	8.23	āvṛttim	ā-vṛtti	nominal	anyayā	anya	nominal	LEMMA_DIVERGE	no	yes		1	1
@@ -4313,14 +4313,14 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 8	8.28	sarvam	sarva	nominal	kaścana	kaścana	nominal	LEMMA_DIVERGE	no	yes		1	1
 8	8.28	idam	idam	nominal	tasmāt	tasmāt	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 8	8.28	viditvā	√vid	unknown	sarveṣu	sarva	nominal	LEMMA+POS_DIVERGE	no	no		1	1
-8					kāleṣu	kāla	nominal	GOLD_ONLY				0	1
+8	sent:231275				kāleṣu	kāla	nominal	DCS_ONLY				0	1
 8	8.28	yogī	yogin	nominal	yoga	yoga	nominal	LEMMA_DIVERGE	no	yes		1	1
 8	8.28	param	para	nominal	yuktaḥ	yuj	verb	LEMMA+POS_DIVERGE	no	no		1	1
 8	8.28	sthānam	sthāna	nominal	bhava	bhū	verb	LEMMA+POS_DIVERGE	no	no		1	1
 8	8.28	upaiti	upa-√i	verb	arjuna	arjuna	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 8	8.28	ca	ca	indecl	vedeṣu	veda	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 8	8.28	ādyam	ādya	nominal	yajñeṣu	yajña	nominal	LEMMA_DIVERGE	no	yes		1	1
-8					tapaḥsu|ca|eva|dāneṣu|yat|puṇya|phalam|pradiṣṭam|atyeti|tat|sarvam|idam|viditvā|yogī|paraṃ|sthānam|upaiti|ca|ādyam	tapas|ca|eva|dāna|yad|puṇya|phala|pradiś|atī|tad|sarva|idam|vid|yogin|para|sthāna|upe|ca|ādya	nominal|indecl|indecl|nominal|nominal|indecl|nominal|verb|verb|nominal|nominal|nominal|verb|nominal|nominal|nominal|verb|indecl|indecl	GOLD_ONLY				0	19
+8	sent:231276				tapaḥsu|ca|eva|dāneṣu|yat|puṇya|phalam|pradiṣṭam|atyeti|tat|sarvam|idam|viditvā|yogī|paraṃ|sthānam|upaiti|ca|ādyam	tapas|ca|eva|dāna|yad|puṇya|phala|pradiś|atī|tad|sarva|idam|vid|yogin|para|sthāna|upe|ca|ādya	nominal|indecl|indecl|nominal|nominal|indecl|nominal|verb|verb|nominal|nominal|nominal|verb|nominal|nominal|nominal|verb|indecl|indecl	DCS_ONLY				0	19
 9	9.01	śrī-bhagavān	śrī-bhagavant	nominal	śrī|bhagavān	śrī|bhagavant	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 9	9.01	uvāca	√vac	verb	uvāca	vac	verb	MATCH	yes	yes		1	1
 9	9.01	idam	idam	nominal	idaṃ	idam	nominal	MATCH	yes	yes		1	1
@@ -4361,7 +4361,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 9	9.04	jagat	jagat	nominal	jagat	jagant	nominal	LEMMA_CONVENTION	no	yes	final-t/d+n	1	1
 9	9.04	avyakta-mūrtinā	a-vyakta-mūrti	nominal	avyakta|mūrtinā	avyakta|mūrti	indecl|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 9	9.04	mat-sthāni	mat-stha	nominal	mad	mad	nominal	LEMMA_DIVERGE	no	yes		1	1
-9					sthāni	stha	indecl	GOLD_ONLY				0	1
+9	sent:231286				sthāni	stha	indecl	DCS_ONLY				0	1
 9	9.04	sarva-bhūtāni	sarva-bhūta	nominal	sarva|bhūtāni	sarva|bhūta	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 9	9.04	na	na	indecl	na	na	indecl	MATCH	yes	yes		1	1
 9	9.04	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
@@ -4371,7 +4371,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 9	9.05	na	na	indecl	na	na	indecl	MATCH	yes	yes		1	1
 9	9.05	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 9	9.05	mat-sthāni	mat-stha	nominal	mad	mad	nominal	LEMMA_DIVERGE	no	yes		1	1
-9					sthāni	stha	indecl	GOLD_ONLY				0	1
+9	sent:231287				sthāni	stha	indecl	DCS_ONLY				0	1
 9	9.05	bhūtāni	bhūta	nominal	bhūtāni	bhūta	nominal	MATCH	yes	yes		1	1
 9	9.05	paśya	√dṛś	verb	paśya	paś	verb	LEMMA_DIVERGE	no	yes		1	1
 9	9.05	me	asmat	nominal	me	mad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
@@ -4394,7 +4394,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 9	9.06	sarvāṇi	sarva	nominal	sarvāṇi	sarva	nominal	MATCH	yes	yes		1	1
 9	9.06	bhūtāni	bhūta	nominal	bhūtāni	bhūta	nominal	MATCH	yes	yes		1	1
 9	9.06	mat-sthāni	mat-stha	nominal	mad	mad	nominal	LEMMA_DIVERGE	no	yes		1	1
-9					sthāni	stha	indecl	GOLD_ONLY				0	1
+9	sent:231290				sthāni	stha	indecl	DCS_ONLY				0	1
 9	9.06	iti	iti	indecl	iti	iti	indecl	MATCH	yes	yes		1	1
 9	9.06	upadhāraya	upa-√dhṛ	verb	upadhāraya	upadhāray	verb	LEMMA_DIVERGE	no	yes		1	1
 9	9.07	sarva-bhūtāni	sarva-bhūta	nominal	sarva|bhūtāni	sarva|bhūta	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
@@ -4450,7 +4450,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 9	9.11	param	para	nominal	paraṃ	para	nominal	MATCH	yes	yes		1	1
 9	9.11	bhāvam	bhāva	nominal	bhāvam	bhāva	nominal	MATCH	yes	yes		1	1
 9	9.11	ajānantah	a-jānant	nominal	a	a	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-9					jānantaḥ	jñā	verb	GOLD_ONLY				0	1
+9	sent:231300				jānantaḥ	jñā	verb	DCS_ONLY				0	1
 9	9.11	mama	asmat	nominal	mama	mad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 9	9.11	bhūta-maheśvaram	bhūta-maha-īśvara	nominal	bhūta|maheśvaram	bhūta|maheśvara	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 9	9.12	moghāśāḥ	moghāśa	nominal	mogha|āśāḥ	mogha|āśā	indecl|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
@@ -4590,7 +4590,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 9	9.21	trayī-dharmam	trayī-dharma	nominal	trayī|dharmam	trayī|dharma	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 9	9.21	anuprapannāḥ	anu-pra-panna	nominal	anuprapannāḥ	anuprapad	verb	LEMMA+POS_DIVERGE	no	no		1	1
 9	9.21	gatāgataṁ	gata-āgata	nominal	gata	gam	verb	LEMMA+POS_DIVERGE	no	no		1	1
-9					āgatam	āgam	verb	GOLD_ONLY				0	1
+9	sent:231320				āgatam	āgam	verb	DCS_ONLY				0	1
 9	9.21	kāma-kāmāḥ	kāma-kāma	nominal	kāma|kāmāḥ	kāma|kāma	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 9	9.21	labhante	√labh	verb	labhante	labh	verb	MATCH	yes	yes		1	1
 9	9.22	ananyāḥ	an-anya	nominal	an|anyāḥ	an|anya	indecl|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
@@ -4656,7 +4656,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 9	9.26	tat	tat	nominal	tat	tad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 9	9.26	aham	asmat	nominal	aham	mad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 9	9.26	bhakty-upahṛtam	bhakty-upahṛta	nominal	bhakti	bhakti	nominal	LEMMA_DIVERGE	no	yes		1	1
-9					upahṛtam	upahṛ	verb	GOLD_ONLY				0	1
+9	sent:231330				upahṛtam	upahṛ	verb	DCS_ONLY				0	1
 9	9.26	aśnāmi	√aś	verb	aśnāmi	aś	verb	MATCH	yes	yes		1	1
 9	9.26	prayatātmanaḥ	prayata-ātman	nominal	prayata|ātmanaḥ	prayam|ātman	verb|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 9	9.27	yat	yat	nominal	yat	yad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
@@ -4710,7 +4710,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 9	9.30	sādhuḥ	sādhu	nominal	anya	anya	nominal	LEMMA_DIVERGE	no	yes		1	1
 9	9.30	eva	eva	indecl	bhāj	bhāj	indecl	LEMMA_DIVERGE	no	yes		1	1
 9	9.30	saḥ	tat	nominal	sādhuḥ	sādhu	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-9					eva	eva	indecl	GOLD_ONLY				0	1
+9	sent:231338				eva	eva	indecl	DCS_ONLY				0	1
 9	9.30	mantavyaḥ	mantavya	nominal	sa|mantavyaḥ	tad|man	nominal|verb	COMPOUND_SPLIT	n/a	n/a		1	2
 9	9.30	samyak	samyak	indecl	samyak	samyak	indecl	MATCH	yes	yes		1	1
 9	9.30	vyavasitaḥ	vi-ava-sita	nominal	vyavasitaḥ	vyavasā	verb	LEMMA+POS_DIVERGE	no	no		1	1
@@ -4720,7 +4720,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 9	9.31	bhavati	√bhū	verb	bhavati	bhū	verb	MATCH	yes	yes		1	1
 9	9.31	dharmātmā	dharma-ātman	nominal	dharma|ātmā	dharma|ātman	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 9	9.31	śaśvac-chāntim	śaśvac-chānti	nominal	śaśvat	śaśvat	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-9					śāntim	śānti	nominal	GOLD_ONLY				0	1
+9	sent:231339				śāntim	śānti	nominal	DCS_ONLY				0	1
 9	9.31	nigacchati	ni-√gam	verb	nigacchati	nigam	verb	MATCH	yes	yes		1	1
 9	9.31	kaunteya	kaunteya	nominal	kaunteya	kaunteya	nominal	MATCH	yes	yes		1	1
 9	9.31	pratijānīhi	prati-√jñā	verb	pratijānīhi	pratijñā	verb	MATCH	yes	yes		1	1
@@ -4746,7 +4746,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 9	9.32	parām	para	nominal	parāṃ	para	nominal	MATCH	yes	yes		1	1
 9	9.32	gatim	gati	nominal	gatim	gati	nominal	MATCH	yes	yes		1	1
 9	9.33	kim punaḥ	kim punaḥ	indecl	kiṃ	kim	indecl	LEMMA_DIVERGE	no	yes		1	1
-9					punar	punar	indecl	GOLD_ONLY				0	1
+9	sent:231343				punar	punar	indecl	DCS_ONLY				0	1
 9	9.33	brāhmaṇāḥ	brāhmaṇa	nominal	brāhmaṇāḥ	brāhmaṇa	nominal	MATCH	yes	yes		1	1
 9	9.33	puṇyāḥ	puṇya	nominal	puṇyā	puṇya	indecl	POS_DIVERGE	yes	no		1	1
 9	9.33	bhaktāḥ	bhakta	nominal	bhaktā	bhakta	nominal	MATCH	yes	yes		1	1
@@ -4760,7 +4760,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 9	9.33	bhajasva	√bhaj	verb	bhajasva	bhaj	verb	MATCH	yes	yes		1	1
 9	9.33	mām	asmat	nominal	mām	mad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 9	9.34	man-manāḥ	man-manas	nominal	mad	mad	nominal	LEMMA_DIVERGE	no	yes		1	1
-9					manāḥ	manas	nominal	GOLD_ONLY				0	1
+9	sent:231345				manāḥ	manas	nominal	DCS_ONLY				0	1
 9	9.34	bhava	√bhū	verb	bhava	bhū	verb	MATCH	yes	yes		1	1
 9	9.34	mad-bhaktaḥ	mad-bhakta	nominal	mad|bhaktaḥ	mad|bhakta	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 9	9.34	mad-yājī	mad-yājin	nominal	mad|yājī	mad|yājin	nominal|indecl	COMPOUND_SPLIT	n/a	n/a		1	2
@@ -4773,7 +4773,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 9	9.34	evam	evam	indecl	evam	evam	indecl	MATCH	yes	yes		1	1
 9	9.34	ātmānam	ātman	nominal	ātmānam	ātman	nominal	MATCH	yes	yes		1	1
 9	9.34	mat-parāyaṇaḥ	mat-parāyaṇa	nominal	mad	mad	nominal	LEMMA_DIVERGE	no	yes		1	1
-9					parāyaṇaḥ	parāyaṇa	nominal	GOLD_ONLY				0	1
+9	sent:231346				parāyaṇaḥ	parāyaṇa	nominal	DCS_ONLY				0	1
 10	10.01	śrī-bhagavān	śrī-bhagavant	nominal	śrī|bhagavān	śrī|bhagavant	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 10	10.01	uvāca	√vac	verb	uvāca	vac	verb	MATCH	yes	yes		1	1
 10	10.01	bhūyaḥ	bhūyaḥ	indecl	bhūya	bhūyas	indecl	LEMMA_CONVENTION	no	yes	adverb--tas/-taḥ	1	1
@@ -4796,13 +4796,13 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 10	10.02	prabhavam	prabhava	nominal	prabhavaṃ	prabhava	nominal	MATCH	yes	yes		1	1
 10	10.02	na	na	indecl	na	na	indecl	MATCH	yes	yes		1	1
 10	10.02	maha-rṣayaḥ	maha-rṣi	nominal	mahā	mahat	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-10					ṛṣayaḥ	ṛṣi	nominal	GOLD_ONLY				0	1
+10	sent:231350				ṛṣayaḥ	ṛṣi	nominal	DCS_ONLY				0	1
 10	10.02	aham	asmat	nominal	aham	mad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 10	10.02	ādiḥ	ādi	nominal	ādiḥ	ādi	nominal	MATCH	yes	yes		1	1
 10	10.02	hi	hi	indecl	hi	hi	indecl	MATCH	yes	yes		1	1
 10	10.02	devānām	deva	nominal	devānāṃ	deva	nominal	MATCH	yes	yes		1	1
 10	10.02	maha-rṣīṇām	maha-rṣi	nominal	mahā	mahat	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-10					ṛṣīṇām	ṛṣi	nominal	GOLD_ONLY				0	1
+10	sent:231351				ṛṣīṇām	ṛṣi	nominal	DCS_ONLY				0	1
 10	10.02	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 10	10.02	sarvaśaḥ	sarvaśaḥ	indecl	sarvaśaḥ	sarvaśas	indecl	LEMMA_CONVENTION	no	yes	adverb--tas/-taḥ	1	1
 10	10.03	yaḥ|mām	yat|asmat	nominal|nominal	yo|mām	yad|mad	nominal|nominal	RESEGMENTED	n/a	n/a		2	2
@@ -4846,7 +4846,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 10	10.05	eva	eva	indecl	eva	eva	indecl	MATCH	yes	yes		1	1
 10	10.05	pṛthag-vidhāḥ	pṛthag-vidha	nominal	pṛthagvidhāḥ	pṛthagvidha	indecl	POS_DIVERGE	yes	no		1	1
 10	10.06	maha-rṣayaḥ	maha-rṣi	nominal	mahā	mahat	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-10					ṛṣayaḥ	ṛṣi	nominal	GOLD_ONLY				0	1
+10	sent:231358				ṛṣayaḥ	ṛṣi	nominal	DCS_ONLY				0	1
 10	10.06	sapta	sapta	nominal	sapta	saptan	indecl	LEMMA_CONVENTION+POS_DIVERGE	no	no	final-t/d+n	1	1
 10	10.06	pūrve	pūrva	nominal	pūrve	pūrva	nominal	MATCH	yes	yes		1	1
 10	10.06	catvāraḥ	catur	nominal	catvāro	catur	indecl	POS_DIVERGE	yes	no		1	1
@@ -4885,7 +4885,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 10	10.08	budhāḥ	budha	nominal	budhā	budha	indecl	POS_DIVERGE	yes	no		1	1
 10	10.08	bhāva-samanvitāḥ	bhāva-samanvita	nominal	bhāva|samanvitāḥ	bhāva|samanvita	nominal|indecl	COMPOUND_SPLIT	n/a	n/a		1	2
 10	10.09	mac-cittāḥ	mac-citta	nominal	mad	mad	nominal	LEMMA_DIVERGE	no	yes		1	1
-10					cittāḥ	citta	nominal	GOLD_ONLY				0	1
+10	sent:231364				cittāḥ	citta	nominal	DCS_ONLY				0	1
 10	10.09	mad-gata-prāṇāḥ	mad-gata-prāṇa	nominal	mad|gata|prāṇāḥ	mad|gam|prāṇa	nominal|verb|nominal	COMPOUND_SPLIT	n/a	n/a		1	3
 10	10.09	bodhayantaḥ	bodhayant	nominal	bodhayantaḥ	bodhay	verb	LEMMA+POS_DIVERGE	no	no		1	1
 10	10.09	paras-param	paras-param	indecl	parasparam	paraspara	nominal	LEMMA_CONVENTION+POS_DIVERGE	no	no	final-t/d+n	1	1
@@ -4938,7 +4938,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 10	10.13	ṛṣayaḥ	ṛṣi	nominal	ṛṣayaḥ	ṛṣi	nominal	MATCH	yes	yes		1	1
 10	10.13	sarve	sarva	nominal	sarve	sarva	nominal	MATCH	yes	yes		1	1
 10	10.13	deva-rṣiḥ	deva-rṣi	nominal	deva	deva	nominal	LEMMA_DIVERGE	no	yes		1	1
-10					ṛṣiḥ	ṛṣi	nominal	GOLD_ONLY				0	1
+10	sent:231373				ṛṣiḥ	ṛṣi	nominal	DCS_ONLY				0	1
 10	10.13	nāradaḥ	nāra-da	nominal	nāradaḥ	nārada	nominal	MATCH	yes	yes		1	1
 10	10.13	tathā	tathā	indecl	tathā	tathā	indecl	MATCH	yes	yes		1	1
 10	10.13	asitaḥ	a-sita	nominal	asito	asita	nominal	MATCH	yes	yes		1	1
@@ -5088,7 +5088,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 10	10.24	purodhasām	purodhas	nominal	purodhasāṃ	purodhas	nominal	MATCH	yes	yes		1	1
 10	10.24	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 10	10.24	mukhyam	mukhya	nominal	mukhyaṃ|māṃ	mukhya|mad	indecl|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
-10	10.24	mām	asmat	nominal				DCS_ONLY				1	0
+10	10.24	mām	asmat	nominal				GOLD_ONLY				1	0
 10	10.24	viddhi	√vid	verb	viddhi	vid	verb	MATCH	yes	yes		1	1
 10	10.24	pārtha	pārtha	nominal	pārtha	pārtha	nominal	MATCH	yes	yes		1	1
 10	10.24	bṛhaspatim	bṛhas-pati	nominal	bṛhaspatim	bṛhaspati	nominal	MATCH	yes	yes		1	1
@@ -5099,7 +5099,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 10	10.24	asmi	√as	verb	asmi	as	verb	MATCH	yes	yes		1	1
 10	10.24	sāgaraḥ	sāgara	nominal	sāgaraḥ	sāgara	nominal	MATCH	yes	yes		1	1
 10	10.25	maha-rṣīṇām	maha-rṣi	nominal	mahā	mahat	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-10					ṛṣīṇām	ṛṣi	nominal	GOLD_ONLY				0	1
+10	sent:231398				ṛṣīṇām	ṛṣi	nominal	DCS_ONLY				0	1
 10	10.25	bhṛguḥ	bhṛgu	nominal	bhṛguḥ	bhṛgu	nominal	MATCH	yes	yes		1	1
 10	10.25	aham	asmat	nominal	aham	mad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 10	10.25	girām	gir	nominal	girām	gir	nominal	MATCH	yes	yes		1	1
@@ -5114,7 +5114,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 10	10.26	aśvatthaḥ	aśvattha	nominal	aśvatthaḥ	aśvattha	nominal	MATCH	yes	yes		1	1
 10	10.26	sarva-vṛkṣāṇām	sarva-vṛkṣa	nominal	sarva|vṛkṣāṇām	sarva|vṛkṣa	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 10	10.26	deva-rṣīṇām	deva-rṣi	nominal	deva	deva	nominal	LEMMA_DIVERGE	no	yes		1	1
-10					ṛṣīṇām	ṛṣi	nominal	GOLD_ONLY				0	1
+10	sent:231400				ṛṣīṇām	ṛṣi	nominal	DCS_ONLY				0	1
 10	10.26	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 10	10.26	nāradaḥ	nāra-da	nominal	nāradaḥ	nārada	nominal	MATCH	yes	yes		1	1
 10	10.26	gandharvāṇām	gandharva	nominal	gandharvāṇāṃ	gandharva	nominal	MATCH	yes	yes		1	1
@@ -5311,7 +5311,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 10	10.40	vistaraḥ	vistara	nominal	vistaraḥ	vistara	nominal	MATCH	yes	yes		1	1
 10	10.40	mayā	asmat	nominal	mayā	mad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 10	10.41	yad yad	yat	nominal	yat	yad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
-10					yat	yad	nominal	GOLD_ONLY				0	1
+10	sent:231430				yat	yad	nominal	DCS_ONLY				0	1
 10	10.41	vibhūtimat	vibhūti-mant	nominal	vibhūtimat	vibhūtimat	indecl	LEMMA_CONVENTION+POS_DIVERGE	no	no	final-t/d+n	1	1
 10	10.41	sattvam	sattva	nominal	sattvam	sattva	nominal	MATCH	yes	yes		1	1
 10	10.41	śrīmat	śrī-mant	nominal	śrīmat	śrīmat	indecl	LEMMA_CONVENTION+POS_DIVERGE	no	no	final-t/d+n	1	1
@@ -5625,7 +5625,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 11	11.22	sādhyāḥ	sādhya	nominal	ādityāḥ	āditya	nominal	LEMMA_DIVERGE	no	yes		1	1
 11	11.22	viśve	viśva	nominal	vasavo	vasu	nominal	LEMMA_DIVERGE	no	yes		1	1
 11	11.22	aśvinau	aśvin	nominal	ye	yad	nominal	LEMMA_DIVERGE	no	yes		1	1
-11	11.22	marutaḥ	mārut	nominal				DCS_ONLY				1	0
+11	11.22	marutaḥ	mārut	nominal				GOLD_ONLY				1	0
 11	11.22	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 11	11.22	uṣma-pāḥ	uṣma-pa	nominal	sādhyā	sādhya	nominal	LEMMA_DIVERGE	no	yes		1	1
 11	11.22	ca	ca	indecl	viśve	viśva	indecl	LEMMA_DIVERGE	no	yes		1	1
@@ -5715,7 +5715,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 11	11.28	nadīnām	nadī	nominal	putrāḥ	putra	nominal	LEMMA_DIVERGE	no	yes		1	1
 11	11.28	bahavaḥ	bahu	nominal	sarve	sarva	nominal	LEMMA_DIVERGE	no	yes		1	1
 11	11.28	ambu-vegāḥ	ambu-vega	nominal	saha	saha	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-11	11.28	samudram	sam-udra	nominal				DCS_ONLY				1	0
+11	11.28	samudram	sam-udra	nominal				GOLD_ONLY				1	0
 11	11.28	eva	eva	indecl	eva	eva	indecl	MATCH	yes	yes		1	1
 11	11.28	abhimukhāḥ	abhi-mukha	nominal	avanipāla	avanipāla	nominal	LEMMA_DIVERGE	no	yes		1	1
 11	11.28	dravanti	√dru	verb	saṃghaiḥ	saṃgha	nominal	LEMMA+POS_DIVERGE	no	no		1	1
@@ -5753,7 +5753,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 11	11.30	āpūrya	ā-√pṝ	unknown	abhimukhāḥ	abhimukha	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 11	11.30	jagat	jagat	nominal	dravanti	dru	verb	LEMMA+POS_DIVERGE	no	no		1	1
 11	11.30	samagram	samagra	nominal	tathā	tathā	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-11	11.30	bhāsaḥ	bhās	nominal				DCS_ONLY				1	0
+11	11.30	bhāsaḥ	bhās	nominal				GOLD_ONLY				1	0
 11	11.30	tava	yuṣmat	nominal	tava	tvad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 11	11.30	ugrāḥ	ugra	nominal	amī	adas	nominal	LEMMA_DIVERGE	no	yes		1	1
 11	11.30	pratapanti	pra-√tap	verb	nara	nara	nominal	LEMMA+POS_DIVERGE	no	no		1	1
@@ -5863,7 +5863,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 11	11.36	prakīrtyā	prakīrti	nominal	droṇaṃ	droṇa	nominal	LEMMA_DIVERGE	no	yes		1	1
 11	11.36	jagat	jagat	nominal	ca	ca	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 11	11.36	prahṛṣyati	pra-√hṛṣ	verb	bhīṣmaṃ	bhīṣma	nominal	LEMMA+POS_DIVERGE	no	no		1	1
-11	11.36	anurajyate	anu-√rañj	verb				DCS_ONLY				1	0
+11	11.36	anurajyate	anu-√rañj	verb				GOLD_ONLY				1	0
 11	11.36	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 11	11.36	rakṣāṁsi	rakṣas	nominal	jayadrathaṃ	jayadratha	nominal	LEMMA_DIVERGE	no	yes		1	1
 11	11.36	bhītāni	bhīta	nominal	ca	ca	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -5922,7 +5922,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 11	11.39	prapitāmahaḥ	pra-pitā-maha	nominal	siddha	siddha	nominal	LEMMA_DIVERGE	no	yes		1	1
 11	11.39	ca	ca	indecl	saṃghāḥ	saṃgha	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 11	11.39	namaḥ namaḥ	namaḥ	nominal	kasmāt	kasmāt	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-11					ca	ca	indecl	GOLD_ONLY				0	1
+11	sent:231513				ca	ca	indecl	DCS_ONLY				0	1
 11	11.39	te	yuṣmat	nominal	te	tvad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 11	11.39	astu	√as	verb	na	na	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 11	11.39	sahasra-kṛtvaḥ	sahasra-kṛtvaḥ	indecl	nameran	nam	verb	LEMMA+POS_DIVERGE	no	no		1	1
@@ -5937,7 +5937,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 11	11.40	atha	atha	indecl	tvam	tvad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 11	11.40	pṛṣṭhataḥ	pṛṣṭhataḥ	indecl	akṣaram	akṣara	indecl	LEMMA_DIVERGE	no	yes		1	1
 11	11.40	te	yuṣmat	nominal	sat	as	verb	LEMMA+POS_DIVERGE	no	no		1	1
-11	11.40	namaḥ	namaḥ	nominal				DCS_ONLY				1	0
+11	11.40	namaḥ	namaḥ	nominal				GOLD_ONLY				1	0
 11	11.40	astu	√as	verb	asat	asat	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 11	11.40	te	yuṣmat	nominal	tatparam	tatpara	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 11	11.40	sarvataḥ	sarvataḥ	indecl	yat	yad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
@@ -6118,7 +6118,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 11	11.49	punaḥ	punaḥ	indecl	tvāṃ	tvad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 11	11.49	tvam	yuṣmat	nominal	draṣṭum	dṛś	verb	LEMMA+POS_DIVERGE	no	no		1	1
 11	11.49	tat	tat	nominal	aham	mad	nominal	LEMMA_DIVERGE	no	yes		1	1
-11					tathā	tathā	indecl	GOLD_ONLY				0	1
+11	sent:231531				tathā	tathā	indecl	DCS_ONLY				0	1
 11	11.49	eva	eva	indecl	eva	eva	indecl	MATCH	yes	yes		1	1
 11	11.49	me	asmat	nominal	tena	tad	nominal	LEMMA_DIVERGE	no	yes		1	1
 11	11.49	rūpam	rūpa	nominal	eva	eva	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -6215,7 +6215,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 11	11.55	mām	asmat	nominal	ca	ca	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 11	11.55	eti	√i	verb	bhītam	bhī	verb	LEMMA_DIVERGE	no	yes		1	1
 11	11.55	pāṇḍava	pāṇḍava	nominal	enam	enad	nominal	LEMMA_DIVERGE	no	yes		1	1
-11					bhūtvā|punaḥ|saumya|vapuḥ|mahātmā|arjuna|uvāca|dṛṣṭvā|idam|mānuṣaṃ|rūpaṃ|tava|saumyaṃ|janārdana|idānīm|asmi|saṃvṛttaḥ|sa|cetāḥ|prakṛtiṃ|gataḥ|śrī|bhagavān|uvāca|su|durdarśam|idam|rūpaṃ|dṛṣṭavān|asi|yat|mama|devā|api|asya|rūpasya|nityaṃ|darśana|kāṅkṣiṇaḥ|na|aham|vedaiḥ|na|tapasā|na|dānena|na|ca|ijyayā|śakya|evaṃvidho|draṣṭuṃ|dṛṣṭavān|asi|māṃ|yathā|bhaktyā|tu|an|anyayā|śakya|aham|evaṃvidhaḥ|'rjuna|jñātuṃ|draṣṭuṃ|ca|tattvena|praveṣṭuṃ|ca|paraṃtapa|mad|karma|kṛt|mad|paramaḥ|mad|bhaktaḥ|saṅga|varjitaḥ|nirvairaḥ|sarva|bhūteṣu|yaḥ|sa|mām|eti|pāṇḍava	bhū|punar|saumya|vapus|mahātman|arjuna|vac|dṛś|idam|mānuṣa|rūpa|tvad|saumya|janārdana|idānīm|as|saṃvṛt|sa|cetas|prakṛti|gam|śrī|bhagavant|vac|su|durdarśa|idam|rūpa|dṛś|as|yad|mad|deva|api|idam|rūpa|nityam|darśana|kāṅkṣin|na|mad|veda|na|tapas|na|dāna|na|ca|ijyā|śakya|evaṃvidha|dṛś|dṛś|as|mad|yathā|bhakti|tu|an|anya|śakya|mad|evaṃvidha|arjuna|jñā|dṛś|ca|tattva|praviś|ca|paraṃtapa|mad|karman|kṛt|mad|parama|mad|bhakta|saṅga|varjay|nirvaira|sarva|bhūta|yad|tad|mad|i|pāṇḍava	verb|indecl|indecl|nominal|indecl|nominal|verb|verb|nominal|indecl|nominal|nominal|indecl|nominal|indecl|verb|verb|indecl|nominal|nominal|verb|nominal|nominal|verb|indecl|indecl|nominal|nominal|verb|verb|nominal|nominal|nominal|indecl|nominal|nominal|indecl|nominal|indecl|indecl|nominal|nominal|indecl|nominal|indecl|nominal|indecl|indecl|nominal|indecl|indecl|verb|verb|verb|nominal|indecl|nominal|indecl|indecl|nominal|indecl|nominal|indecl|nominal|verb|verb|indecl|nominal|verb|indecl|indecl|nominal|nominal|indecl|nominal|indecl|nominal|nominal|nominal|verb|indecl|nominal|nominal|nominal|nominal|nominal|verb|nominal	GOLD_ONLY				0	88
+11	sent:231542				bhūtvā|punaḥ|saumya|vapuḥ|mahātmā|arjuna|uvāca|dṛṣṭvā|idam|mānuṣaṃ|rūpaṃ|tava|saumyaṃ|janārdana|idānīm|asmi|saṃvṛttaḥ|sa|cetāḥ|prakṛtiṃ|gataḥ|śrī|bhagavān|uvāca|su|durdarśam|idam|rūpaṃ|dṛṣṭavān|asi|yat|mama|devā|api|asya|rūpasya|nityaṃ|darśana|kāṅkṣiṇaḥ|na|aham|vedaiḥ|na|tapasā|na|dānena|na|ca|ijyayā|śakya|evaṃvidho|draṣṭuṃ|dṛṣṭavān|asi|māṃ|yathā|bhaktyā|tu|an|anyayā|śakya|aham|evaṃvidhaḥ|'rjuna|jñātuṃ|draṣṭuṃ|ca|tattvena|praveṣṭuṃ|ca|paraṃtapa|mad|karma|kṛt|mad|paramaḥ|mad|bhaktaḥ|saṅga|varjitaḥ|nirvairaḥ|sarva|bhūteṣu|yaḥ|sa|mām|eti|pāṇḍava	bhū|punar|saumya|vapus|mahātman|arjuna|vac|dṛś|idam|mānuṣa|rūpa|tvad|saumya|janārdana|idānīm|as|saṃvṛt|sa|cetas|prakṛti|gam|śrī|bhagavant|vac|su|durdarśa|idam|rūpa|dṛś|as|yad|mad|deva|api|idam|rūpa|nityam|darśana|kāṅkṣin|na|mad|veda|na|tapas|na|dāna|na|ca|ijyā|śakya|evaṃvidha|dṛś|dṛś|as|mad|yathā|bhakti|tu|an|anya|śakya|mad|evaṃvidha|arjuna|jñā|dṛś|ca|tattva|praviś|ca|paraṃtapa|mad|karman|kṛt|mad|parama|mad|bhakta|saṅga|varjay|nirvaira|sarva|bhūta|yad|tad|mad|i|pāṇḍava	verb|indecl|indecl|nominal|indecl|nominal|verb|verb|nominal|indecl|nominal|nominal|indecl|nominal|indecl|verb|verb|indecl|nominal|nominal|verb|nominal|nominal|verb|indecl|indecl|nominal|nominal|verb|verb|nominal|nominal|nominal|indecl|nominal|nominal|indecl|nominal|indecl|indecl|nominal|nominal|indecl|nominal|indecl|nominal|indecl|indecl|nominal|indecl|indecl|verb|verb|verb|nominal|indecl|nominal|indecl|indecl|nominal|indecl|nominal|indecl|nominal|verb|verb|indecl|nominal|verb|indecl|indecl|nominal|nominal|indecl|nominal|indecl|nominal|nominal|nominal|verb|indecl|nominal|nominal|nominal|nominal|nominal|verb|nominal	DCS_ONLY				0	88
 12	12.01	arjunaḥ	arjuna	nominal	arjuna	arjuna	nominal	MATCH	yes	yes		1	1
 12	12.01	uvāca	√vac	verb	uvāca	vac	verb	MATCH	yes	yes		1	1
 12	12.01	evam	evam	indecl	evaṃ	evam	indecl	MATCH	yes	yes		1	1
@@ -6287,7 +6287,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 12	12.06	mayi	asmat	nominal	mayi	mad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 12	12.06	saṁnyasya	sam-ni-√as	unknown	saṃnyasya	saṃnyas	verb	LEMMA+POS_DIVERGE	no	no		1	1
 12	12.06	mat-parāḥ	mat-para	nominal	mad	mad	nominal	LEMMA_DIVERGE	no	yes		1	1
-12					parāḥ	para	nominal	GOLD_ONLY				0	1
+12	sent:231567				parāḥ	para	nominal	DCS_ONLY				0	1
 12	12.06	ananyena	an-anyā	nominal	an|anyena	an|anya	indecl|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 12	12.06	eva	eva	indecl	eva	eva	indecl	MATCH	yes	yes		1	1
 12	12.06	yogena	yoga	nominal	yogena	yoga	nominal	MATCH	yes	yes		1	1
@@ -6385,7 +6385,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 12	12.14	arpita-mano-buddhiḥ	arpita-mano-buddhi	nominal	eva	eva	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 12	12.14	yaḥ	yat	nominal	ca	ca	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 12	12.14	mad-bhaktaḥ	mad-bhakta	nominal	nirmamo	nirmama	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-12					nirahaṃkāraḥ	nirahaṃkāra	indecl	GOLD_ONLY				0	1
+12	sent:231582				nirahaṃkāraḥ	nirahaṃkāra	indecl	DCS_ONLY				0	1
 12	12.14	saḥ|me	tat|asmat	nominal|nominal	sama	sama	nominal	MERGE	n/a	n/a		2	1
 12	12.14	priyaḥ	priya	nominal	duḥkha	duḥkha	nominal	LEMMA_DIVERGE	no	yes		1	1
 12	12.15	yasmāt	yat	nominal	sukhaḥ	sukha	nominal	LEMMA_DIVERGE	no	yes		1	1
@@ -6465,18 +6465,18 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 12	12.20	atīva	atīva	indecl	tathā	tathā	indecl	LEMMA_DIVERGE	no	yes		1	1
 12	12.20	me	asmat	nominal	māna	māna	nominal	LEMMA_DIVERGE	no	yes		1	1
 12	12.20	priyāḥ	priya	nominal	avamānayoḥ	avamāna	nominal	LEMMA_DIVERGE	no	yes		1	1
-12					śīta|uṣṇa|sukha|duḥkheṣu|samaḥ|saṅga|vivarjitaḥ|tulya|nindā|stutiḥ|maunī|saṃtuṣṭo|yena|kenacit|aniketaḥ|sthira|matiḥ|bhaktimān|me|priyo|naraḥ|ye|tu|dharmya|amṛtam|idam|yathā|uktam|paryupāsate|śraddadhānā|mad|paramāḥ|bhaktāḥ|te|'tīva|me|priyāḥ	śīta|uṣṇa|sukha|duḥkha|sama|saṅga|vivarjay|tulya|nindā|stuti|maunin|saṃtuṣ|yad|kaścit|aniketa|sthira|mati|bhaktimat|mad|priya|nara|yad|tu|dharmya|amṛta|idam|yathā|vac|paryupās|śraddhā|mad|parama|bhakta|tad|atīva|mad|priya	nominal|nominal|nominal|nominal|nominal|nominal|verb|indecl|nominal|nominal|indecl|verb|nominal|nominal|indecl|indecl|nominal|indecl|nominal|indecl|nominal|nominal|indecl|indecl|nominal|nominal|indecl|verb|verb|verb|nominal|indecl|nominal|nominal|indecl|nominal|indecl	GOLD_ONLY				0	37
+12	sent:231592				śīta|uṣṇa|sukha|duḥkheṣu|samaḥ|saṅga|vivarjitaḥ|tulya|nindā|stutiḥ|maunī|saṃtuṣṭo|yena|kenacit|aniketaḥ|sthira|matiḥ|bhaktimān|me|priyo|naraḥ|ye|tu|dharmya|amṛtam|idam|yathā|uktam|paryupāsate|śraddadhānā|mad|paramāḥ|bhaktāḥ|te|'tīva|me|priyāḥ	śīta|uṣṇa|sukha|duḥkha|sama|saṅga|vivarjay|tulya|nindā|stuti|maunin|saṃtuṣ|yad|kaścit|aniketa|sthira|mati|bhaktimat|mad|priya|nara|yad|tu|dharmya|amṛta|idam|yathā|vac|paryupās|śraddhā|mad|parama|bhakta|tad|atīva|mad|priya	nominal|nominal|nominal|nominal|nominal|nominal|verb|indecl|nominal|nominal|indecl|verb|nominal|nominal|indecl|indecl|nominal|indecl|nominal|indecl|nominal|nominal|indecl|indecl|nominal|nominal|indecl|verb|verb|verb|nominal|indecl|nominal|nominal|indecl|nominal|indecl	DCS_ONLY				0	37
 13	13.00	arjunaḥ	arjuna	nominal	śrī	śrī	nominal	LEMMA_DIVERGE	no	yes		1	1
-13					bhagavān	bhagavant	nominal	GOLD_ONLY				0	1
+13	sent:231597				bhagavān	bhagavant	nominal	DCS_ONLY				0	1
 13	13.00	uvāca	√vac	verb	uvāca	vac	verb	MATCH	yes	yes		1	1
 13	13.00	prakṛtim	prakṛti	nominal	idaṃ	idam	nominal	LEMMA_DIVERGE	no	yes		1	1
 13	13.00	puruṣam	puruṣa	nominal	śarīraṃ	śarīra	nominal	LEMMA_DIVERGE	no	yes		1	1
 13	13.00	ca	ca	indecl	kaunteya	kaunteya	nominal	LEMMA+POS_DIVERGE	no	no		1	1
-13	13.00	eva	eva	indecl				DCS_ONLY				1	0
+13	13.00	eva	eva	indecl				GOLD_ONLY				1	0
 13	13.00	kṣetram	kṣetra	nominal	kṣetram	kṣetra	nominal	MATCH	yes	yes		1	1
 13	13.00	kṣetra-jñam	kṣetra-jña	nominal	iti	iti	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.00	eva	eva	indecl	abhidhīyate	abhidhā	verb	LEMMA+POS_DIVERGE	no	no		1	1
-13	13.00	ca	ca	indecl				DCS_ONLY				1	0
+13	13.00	ca	ca	indecl				GOLD_ONLY				1	0
 13	13.00	etat	etat	nominal	etat	etad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 13	13.00	veditum	√vid	unknown	yaḥ	yad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.00	icchāmi	√iṣ	verb	vetti	vid	verb	LEMMA_DIVERGE	no	yes		1	1
@@ -6508,7 +6508,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 13	13.02	sarva-kṣetreṣu	sarva-kṣetra	nominal	ca	ca	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.02	bhārata	bhārata	nominal	yādṛś	yādṛś	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.02	kṣetra-kṣetrajñayoḥ	kṣetra-kṣetra-jña	nominal	ca	ca	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-13	13.02	jñānam	jñāna	nominal				DCS_ONLY				1	0
+13	13.02	jñānam	jñāna	nominal				GOLD_ONLY				1	0
 13	13.02	yat	yat	nominal	yat	yad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 13	13.02	tat	tat	nominal	vikāri	vikārin	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.02	jñānam	jñāna	nominal	yatas	yatas	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -6540,7 +6540,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 13	13.04	vividhaiḥ	vi-vidha	nominal	ahaṃkāraḥ	ahaṃkāra	nominal	LEMMA_DIVERGE	no	yes		1	1
 13	13.04	pṛthak	pṛthak	indecl	buddhiḥ	buddhi	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.04	brahma-sūtra-padaiḥ	brahma-sūtra-pada	nominal	avyaktam	avyakta	nominal	LEMMA_DIVERGE	no	yes		1	1
-13					eva	eva	indecl	GOLD_ONLY				0	1
+13	sent:231606				eva	eva	indecl	DCS_ONLY				0	1
 13	13.04	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 13	13.04	eva	eva	indecl	indriyāṇi	indriya	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.04	hetu-madbhiḥ	hetu-mant	nominal	daśa	daśan	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -6578,7 +6578,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 13	13.07	ācāryopāsanam	ācārya-upāsana	nominal	sthairyam	sthairya	nominal	LEMMA_DIVERGE	no	yes		1	1
 13	13.07	śaucam	śauca	nominal	ātma	ātman	nominal	LEMMA_DIVERGE	no	yes		1	1
 13	13.07	sthairyam	sthairya	nominal	vinigrahaḥ	vinigraha	nominal	LEMMA_DIVERGE	no	yes		1	1
-13	13.07	ātma-vinigrahaḥ	ātma-vinigraha	nominal				DCS_ONLY				1	0
+13	13.07	ātma-vinigrahaḥ	ātma-vinigraha	nominal				GOLD_ONLY				1	0
 13	13.08	indriyārtheṣu	indriya-artha	nominal	indriya|artheṣu	indriya|artha	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 13	13.08	vairāgyam	vai-rāgya	nominal	vairāgyam	vairāgya	nominal	MATCH	yes	yes		1	1
 13	13.08	anahaṁ-kāraḥ	an-ahaṁ-kāra	nominal	anahaṃkāraḥ	anahaṃkāra	nominal	MATCH	yes	yes		1	1
@@ -6628,7 +6628,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 13	13.12	asat	a-sant	nominal	jñāna	jñāna	nominal	LEMMA_DIVERGE	no	yes		1	1
 13	13.12	ucyate	√vac	nominal	artha	artha	nominal	LEMMA_DIVERGE	no	yes		1	1
 13	13.13	sarvataḥ	sarvataḥ	indecl	darśanam	darśana	nominal	LEMMA+POS_DIVERGE	no	no		1	1
-13	13.13	pāṇi-pādam	pāṇi-pāda	nominal				DCS_ONLY				1	0
+13	13.13	pāṇi-pādam	pāṇi-pāda	nominal				GOLD_ONLY				1	0
 13	13.13	tat	tat	nominal	etat	etad	nominal	LEMMA_DIVERGE	no	yes		1	1
 13	13.13	sarvataḥ	sarvataḥ	indecl	jñānam	jñāna	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.13	akṣi-śiro-mukham	akṣi-śiro-mukha	nominal	iti	iti	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -6655,7 +6655,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 13	13.15	caram	cara	nominal	sarvatas	sarvatas	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.15	eva	eva	indecl	pāṇi	pāṇi	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.15	ca	ca	indecl	pādam	pāda	nominal	LEMMA+POS_DIVERGE	no	no		1	1
-13	13.15	sūkṣmatvāt	sūkṣmatva	nominal				DCS_ONLY				1	0
+13	13.15	sūkṣmatvāt	sūkṣmatva	nominal				GOLD_ONLY				1	0
 13	13.15	tat	tat	nominal	tat	tad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 13	13.15	avijñeyam	a-vijñeya	nominal	sarvatas	sarvatas	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.15	dūra-stham	dūra-stha	nominal	akṣi	akṣi	nominal	LEMMA_DIVERGE	no	yes		1	1
@@ -6704,7 +6704,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 13	13.18	mad-bhāvāya	mad-bhāva	nominal	ca	ca	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.18	upapadyate	upa-√pad	verb	tat	tad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.19	prakṛtim	prakṛti	nominal	avibhaktaṃ	avibhakta	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-13	13.19	puruṣam	puruṣa	nominal				DCS_ONLY				1	0
+13	13.19	puruṣam	puruṣa	nominal				GOLD_ONLY				1	0
 13	13.19	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 13	13.19	eva	eva	indecl	bhūteṣu	bhūta	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.19	viddhi	√vid	verb	vibhaktam	vibhaj	verb	LEMMA_DIVERGE	no	yes		1	1
@@ -6712,7 +6712,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 13	13.19	ubhau	ubha	nominal	ca	ca	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.19	api	api	indecl	sthitam	sthā	verb	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.19	vikārān	vikāra	nominal	bhūta	bhūta	nominal	LEMMA_DIVERGE	no	yes		1	1
-13					bhartṛ	bhartṛ	indecl	GOLD_ONLY				0	1
+13	sent:231629				bhartṛ	bhartṛ	indecl	DCS_ONLY				0	1
 13	13.19	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 13	13.19	guṇān	guṇa	nominal	tat	tad	nominal	LEMMA_DIVERGE	no	yes		1	1
 13	13.19	ca	ca	indecl	jñeyam	jñā	verb	LEMMA+POS_DIVERGE	no	no		1	1
@@ -6746,7 +6746,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 13	13.22	maheśvaraḥ	mahā-īśvara	nominal	bhāvāya	bhāva	nominal	LEMMA_DIVERGE	no	yes		1	1
 13	13.22	paramātmā	parama-ātman	nominal	upapadyate	upapad	verb	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.22	iti	iti	indecl	prakṛtiṃ	prakṛti	nominal	LEMMA+POS_DIVERGE	no	no		1	1
-13					puruṣaṃ	puruṣa	nominal	GOLD_ONLY				0	1
+13	sent:231634				puruṣaṃ	puruṣa	nominal	DCS_ONLY				0	1
 13	13.22	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 13	13.22	api	api	indecl	eva	eva	indecl	LEMMA_DIVERGE	no	yes		1	1
 13	13.22	uktaḥ	ukta	nominal	viddhi	vid	verb	LEMMA+POS_DIVERGE	no	no		1	1
@@ -6822,7 +6822,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 13	13.28	samavasthitam	sam-ava-sthita	nominal	bhūyo	bhūyas	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.28	īśvaram	īśvara	nominal	'bhijāyate	abhijan	verb	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.28	na	na	indecl	dhyānena	dhyāna	nominal	LEMMA+POS_DIVERGE	no	no		1	1
-13	13.28	hinasti	√hiṁs	verb				DCS_ONLY				1	0
+13	13.28	hinasti	√hiṁs	verb				GOLD_ONLY				1	0
 13	13.28	ātmanā	ātman	nominal	ātmani	ātman	nominal	MATCH	yes	yes		1	1
 13	13.28	ātmānam	ātman	nominal	paśyanti	dṛś	verb	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.28	tataḥ	tataḥ	indecl	kecid	kaścit	nominal	LEMMA+POS_DIVERGE	no	no		1	1
@@ -6902,7 +6902,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 13	13.34	yānti	√yā	verb	akartāram	akartṛ	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 13	13.34	te	tat	nominal	sa	tad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 13	13.34	param	para	nominal	paśyati	dṛś	verb	LEMMA+POS_DIVERGE	no	no		1	1
-13					yadā|bhūta|pṛthagbhāvam|ekastham|anupaśyati|tata|eva|ca|vistāraṃ|brahma|sampadyate|tadā|anādi|tvāt|nirguṇa|tvāt|paramātmā|ayam|avyayaḥ|śarīra|sthaḥ|'pi|kaunteya|na|karoti|na|lipyate|yathā|sarva|gatam|saukṣmyāt|ākāśam|na|upalipyate|sarvatra|avasthitaḥ|dehe|tathā|ātmā|na|upalipyate|yathā|prakāśayati|ekaḥ|kṛtsnaṃ|lokam|imam|raviḥ|kṣetraṃ|kṣetrī|tathā|kṛtsnaṃ|prakāśayati|bhārata|kṣetra|kṣetrajñayoḥ|evam|antaram|jñāna|cakṣuṣā|bhūta|prakṛti|mokṣam|ca|ye|viduḥ|yānti|te|param	yadā|bhūta|pṛthagbhāva|ekastha|anupaś|tatas|eva|ca|vistāra|brahman|sampad|tadā|anādi|tva|nirguṇa|tva|paramātman|idam|avyaya|śarīra|stha|api|kaunteya|na|kṛ|na|lip|yathā|sarva|gam|saukṣmya|ākāśa|na|upalip|sarvatra|avasthā|deha|tathā|ātman|na|upalip|yathā|prakāśay|eka|kṛtsna|loka|idam|ravi|kṣetra|kṣetrin|tathā|kṛtsna|prakāśay|bhārata|kṣetra|kṣetrajña|evam|antara|jñāna|cakṣus|bhūta|prakṛti|mokṣa|ca|yad|vid|yā|tad|para	indecl|nominal|nominal|indecl|verb|indecl|indecl|indecl|nominal|nominal|verb|indecl|indecl|nominal|indecl|nominal|nominal|nominal|indecl|nominal|indecl|indecl|nominal|indecl|verb|indecl|verb|indecl|nominal|verb|nominal|nominal|indecl|verb|indecl|verb|nominal|indecl|nominal|indecl|verb|indecl|verb|indecl|indecl|nominal|nominal|nominal|nominal|nominal|indecl|indecl|verb|nominal|nominal|nominal|indecl|nominal|nominal|nominal|nominal|nominal|nominal|indecl|nominal|verb|verb|nominal|nominal	GOLD_ONLY				0	69
+13	sent:231656				yadā|bhūta|pṛthagbhāvam|ekastham|anupaśyati|tata|eva|ca|vistāraṃ|brahma|sampadyate|tadā|anādi|tvāt|nirguṇa|tvāt|paramātmā|ayam|avyayaḥ|śarīra|sthaḥ|'pi|kaunteya|na|karoti|na|lipyate|yathā|sarva|gatam|saukṣmyāt|ākāśam|na|upalipyate|sarvatra|avasthitaḥ|dehe|tathā|ātmā|na|upalipyate|yathā|prakāśayati|ekaḥ|kṛtsnaṃ|lokam|imam|raviḥ|kṣetraṃ|kṣetrī|tathā|kṛtsnaṃ|prakāśayati|bhārata|kṣetra|kṣetrajñayoḥ|evam|antaram|jñāna|cakṣuṣā|bhūta|prakṛti|mokṣam|ca|ye|viduḥ|yānti|te|param	yadā|bhūta|pṛthagbhāva|ekastha|anupaś|tatas|eva|ca|vistāra|brahman|sampad|tadā|anādi|tva|nirguṇa|tva|paramātman|idam|avyaya|śarīra|stha|api|kaunteya|na|kṛ|na|lip|yathā|sarva|gam|saukṣmya|ākāśa|na|upalip|sarvatra|avasthā|deha|tathā|ātman|na|upalip|yathā|prakāśay|eka|kṛtsna|loka|idam|ravi|kṣetra|kṣetrin|tathā|kṛtsna|prakāśay|bhārata|kṣetra|kṣetrajña|evam|antara|jñāna|cakṣus|bhūta|prakṛti|mokṣa|ca|yad|vid|yā|tad|para	indecl|nominal|nominal|indecl|verb|indecl|indecl|indecl|nominal|nominal|verb|indecl|indecl|nominal|indecl|nominal|nominal|nominal|indecl|nominal|indecl|indecl|nominal|indecl|verb|indecl|verb|indecl|nominal|verb|nominal|nominal|indecl|verb|indecl|verb|nominal|indecl|nominal|indecl|verb|indecl|verb|indecl|indecl|nominal|nominal|nominal|nominal|nominal|indecl|indecl|verb|nominal|nominal|nominal|indecl|nominal|nominal|nominal|nominal|nominal|nominal|indecl|nominal|verb|verb|nominal|nominal	DCS_ONLY				0	69
 14	14.01	śrī-bhagavān	śrī-bhagavant	nominal	śrī|bhagavān	śrī|bhagavant	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
 14	14.01	uvāca	√vac	verb	uvāca	vac	verb	MATCH	yes	yes		1	1
 14	14.01	param	para	nominal	paraṃ	para	nominal	MATCH	yes	yes		1	1
@@ -7051,7 +7051,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 14	14.12	jāyante	√jan	verb	jāyante	jan	verb	MATCH	yes	yes		1	1
 14	14.12	vivṛddhe	vi-vṛddha	nominal	vivṛddhe	vivṛdh	verb	LEMMA+POS_DIVERGE	no	no		1	1
 14	14.12	bharata-rṣabha	bharata-rṣabha	nominal	bharata	bharata	nominal	LEMMA_DIVERGE	no	yes		1	1
-14					ṛṣabha	ṛṣabha	nominal	GOLD_ONLY				0	1
+14	sent:231690				ṛṣabha	ṛṣabha	nominal	DCS_ONLY				0	1
 14	14.13	aprakāśaḥ	a-prakāśa	nominal	aprakāśo	aprakāśa	indecl	POS_DIVERGE	yes	no		1	1
 14	14.13	apravṛttiḥ	a-pravṛtti	nominal	apravṛttiḥ	apravṛtti	nominal	MATCH	yes	yes		1	1
 14	14.13	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
@@ -7244,7 +7244,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 15	15.01	veda	√vid	verb	veda	vid	verb	MATCH	yes	yes		1	1
 15	15.01	saḥ	tat	nominal	sa	tad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 15	15.01	vedavit	veda-vit	nominal	veda	veda	nominal	LEMMA_DIVERGE	no	yes		1	1
-15					vid	vid	indecl	GOLD_ONLY				0	1
+15	sent:231725				vid	vid	indecl	DCS_ONLY				0	1
 15	15.02	adhaḥ	adhaḥ	indecl	adhas	adhas	indecl	LEMMA_CONVENTION	no	yes	adverb--tas/-taḥ	1	1
 15	15.02	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 15	15.02	urdhvam	urdhvam	indecl	ūrdhvam	ūrdhvam	indecl	LEMMA_CONVENTION	no	yes	vowel-sandhi/contraction	1	1
@@ -7299,7 +7299,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 15	15.04	prasṛtā	pra-sṛtā	nominal	prasṛtā	prasṛ	verb	LEMMA+POS_DIVERGE	no	no		1	1
 15	15.04	purāṇī	purāṇī	nominal	purāṇī	purāṇa	indecl	LEMMA_CONVENTION+POS_DIVERGE	no	no	vowel-sandhi/contraction	1	1
 15	15.05	nirmāṇa-mohāḥ	nir-māṇa-moha	nominal	nirmāna	nirmāna	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-15					mohāḥ	moha	nominal	GOLD_ONLY				0	1
+15	sent:231732				mohāḥ	moha	nominal	DCS_ONLY				0	1
 15	15.05	jita-saṅga-doṣāḥ	jita-saṅga-doṣa	nominal	jita|saṅga|doṣāḥ	ji|saṅga|doṣa	verb|nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	3
 15	15.05	adhy-ātma-nityāḥ	adhi-ātma-nitya	nominal	adhyātma|nityāḥ	adhyātma|nitya	nominal|indecl	COMPOUND_SPLIT	n/a	n/a		1	2
 15	15.05	vinivṛtta-kāmāḥ	vinivṛtta-kāma	nominal	vinivṛtta|kāmāḥ	vinivṛt|kāma	verb|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
@@ -7449,7 +7449,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 15	15.15	vedyaḥ	vedya	nominal	vedyo	vid	verb	LEMMA+POS_DIVERGE	no	no		1	1
 15	15.15	vedānta-kṛt	vedānta-kṛt	nominal	vedānta|kṛt	vedānta|kṛt	nominal|indecl	COMPOUND_SPLIT	n/a	n/a		1	2
 15	15.15	veda-vit	veda-vit	nominal	veda	veda	nominal	LEMMA_DIVERGE	no	yes		1	1
-15					vid	vid	indecl	GOLD_ONLY				0	1
+15	sent:231753				vid	vid	indecl	DCS_ONLY				0	1
 15	15.15	eva	eva	indecl	eva	eva	indecl	MATCH	yes	yes		1	1
 15	15.15	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 15	15.15	aham	asmat	nominal	aham	mad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
@@ -7502,7 +7502,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 15	15.19	puruṣottamam	puruṣa-uttama	nominal	puruṣottamam	puruṣottama	nominal	LEMMA_CONVENTION	no	yes	vowel-sandhi/contraction	1	1
 15	15.19	saḥ	tat	nominal	sa	tad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 15	15.19	sarva-vit	sarva-vit	nominal	sarva	sarva	nominal	LEMMA_DIVERGE	no	yes		1	1
-15					vid	vid	indecl	GOLD_ONLY				0	1
+15	sent:231761				vid	vid	indecl	DCS_ONLY				0	1
 15	15.19	bhajati	√bhaj	verb	bhajati	bhaj	verb	MATCH	yes	yes		1	1
 15	15.19	mām	asmat	nominal	māṃ	mad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 15	15.19	sarva-bhāvena	sarva-bhāva	nominal	sarva|bhāvena	sarva|bhāva	nominal|nominal	COMPOUND_SPLIT	n/a	n/a		1	2
@@ -7810,7 +7810,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 16	16.24	kartum	√kṛ	unknown	etat	etad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 16	16.24	iha	iha	indecl	trayam	traya	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 16	16.24	arhasi	√arh	verb	tyajet	tyaj	verb	LEMMA_DIVERGE	no	yes		1	1
-16					etaiḥ|vimuktaḥ|kaunteya|tamaḥ|dvāraiḥ|tribhiḥ|naraḥ|ācarati|ātmanaḥ|śreyas|tato|yāti|parāṃ|gatim|yaḥ|śāstra|vidhim|utsṛjya|vartate|kāmakārataḥ|na|sa|siddhim|avāpnoti|na|sukhaṃ|na|parāṃ|gatim|tasmāt|śāstram|pramāṇaṃ|te|kārya|akārya|vyavasthitau|jñātvā|śāstra|vidhāna|uktam|karma|kartum|iha|arhasi	etad|vimuc|kaunteya|tamas|dvāra|tri|nara|ācar|ātman|śreyas|tatas|yā|para|gati|yad|śāstra|vidhi|utsṛj|vṛt|kāmakāra|na|tad|siddhi|avāp|na|sukha|na|para|gati|tasmāt|śāstra|pramāṇa|tvad|kārya|akārya|vyavasthiti|jñā|śāstra|vidhāna|vac|karman|kṛ|iha|arh	nominal|verb|nominal|nominal|nominal|indecl|nominal|verb|nominal|nominal|indecl|verb|nominal|nominal|nominal|nominal|nominal|verb|verb|nominal|indecl|nominal|nominal|verb|indecl|nominal|indecl|nominal|nominal|indecl|nominal|nominal|nominal|nominal|nominal|nominal|verb|nominal|nominal|verb|nominal|verb|indecl|verb	GOLD_ONLY				0	44
+16	sent:231807				etaiḥ|vimuktaḥ|kaunteya|tamaḥ|dvāraiḥ|tribhiḥ|naraḥ|ācarati|ātmanaḥ|śreyas|tato|yāti|parāṃ|gatim|yaḥ|śāstra|vidhim|utsṛjya|vartate|kāmakārataḥ|na|sa|siddhim|avāpnoti|na|sukhaṃ|na|parāṃ|gatim|tasmāt|śāstram|pramāṇaṃ|te|kārya|akārya|vyavasthitau|jñātvā|śāstra|vidhāna|uktam|karma|kartum|iha|arhasi	etad|vimuc|kaunteya|tamas|dvāra|tri|nara|ācar|ātman|śreyas|tatas|yā|para|gati|yad|śāstra|vidhi|utsṛj|vṛt|kāmakāra|na|tad|siddhi|avāp|na|sukha|na|para|gati|tasmāt|śāstra|pramāṇa|tvad|kārya|akārya|vyavasthiti|jñā|śāstra|vidhāna|vac|karman|kṛ|iha|arh	nominal|verb|nominal|nominal|nominal|indecl|nominal|verb|nominal|nominal|indecl|verb|nominal|nominal|nominal|nominal|nominal|verb|verb|nominal|indecl|nominal|nominal|verb|indecl|nominal|indecl|nominal|nominal|indecl|nominal|nominal|nominal|nominal|nominal|nominal|verb|nominal|nominal|verb|nominal|verb|indecl|verb	DCS_ONLY				0	44
 17	17.01	arjunaḥ	arjuna	nominal	arjuna	arjuna	nominal	MATCH	yes	yes		1	1
 17	17.01	uvāca	√vac	verb	uvāca	vac	verb	MATCH	yes	yes		1	1
 17	17.01	ye	yat	nominal	ye	yad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
@@ -7855,7 +7855,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 17	17.03	puruṣaḥ	puruṣa	nominal	puruṣo	puruṣa	nominal	MATCH	yes	yes		1	1
 17	17.03	yaḥ	yat	nominal	yo	yad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 17	17.03	yac-chraddhaḥ	yac-chraddha	nominal	yad	yad	nominal	LEMMA_DIVERGE	no	yes		1	1
-17					śraddhaḥ	śraddhā	nominal	GOLD_ONLY				0	1
+17	sent:231820				śraddhaḥ	śraddhā	nominal	DCS_ONLY				0	1
 17	17.03	saḥ	tat	nominal	sa	tad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 17	17.03	eva	eva	indecl	eva	eva	indecl	MATCH	yes	yes		1	1
 17	17.03	saḥ	tat	nominal	saḥ	tad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
@@ -8105,10 +8105,10 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 17	17.25	mokṣa-kāṅkṣibhiḥ	mokṣa-kāṅkṣin	nominal	uddiśya	uddiś	verb	LEMMA+POS_DIVERGE	no	no		1	1
 17	17.26	sad-bhāve	sad-bhāva	nominal	vā	vā	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 17	17.26	sādhu-bhāve	sādhu-bhāva	nominal	punaḥ	punar	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-17					dīyate	dā	verb	GOLD_ONLY				0	1
+17	sent:231856				dīyate	dā	verb	DCS_ONLY				0	1
 17	17.26	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 17	17.26	sat	sant	nominal	parikliṣṭaṃ	parikliś	verb	LEMMA+POS_DIVERGE	no	no		1	1
-17	17.26	iti	iti	indecl				DCS_ONLY				1	0
+17	17.26	iti	iti	indecl				GOLD_ONLY				1	0
 17	17.26	etat	etat	nominal	tat	tad	nominal	LEMMA_DIVERGE	no	yes		1	1
 17	17.26	prayujyate	pra-√yuj	verb	dānam	dāna	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 17	17.26	praśaste	praśasta	nominal	rājasaṃ	rājasa	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -8119,7 +8119,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 17	17.26	yujyate	√yuj	verb	yat	yad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 17	17.27	yajñe	yajña	nominal	dānam	dāna	nominal	LEMMA_DIVERGE	no	yes		1	1
 17	17.27	tapasi	tapas	nominal	apātrebhyaḥ	apātra	nominal	LEMMA_DIVERGE	no	yes		1	1
-17	17.27	dāne	dāna	nominal				DCS_ONLY				1	0
+17	17.27	dāne	dāna	nominal				GOLD_ONLY				1	0
 17	17.27	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 17	17.27	sthitiḥ	sthiti	nominal	dīyate	dā	verb	LEMMA+POS_DIVERGE	no	no		1	1
 17	17.27	sat	sant	nominal	asatkṛtam	asatkṛ	verb	LEMMA+POS_DIVERGE	no	no		1	1
@@ -8129,7 +8129,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 17	17.27	karma	karman	nominal	udāhṛtam	udāhṛ	verb	LEMMA+POS_DIVERGE	no	no		1	1
 17	17.27	ca	ca	indecl	oṃ	oṃ	indecl	LEMMA_DIVERGE	no	yes		1	1
 17	17.27	eva	eva	indecl	tat	tad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
-17	17.27	tad-arthīyam	tad-arthīya	nominal				DCS_ONLY				1	0
+17	17.27	tad-arthīyam	tad-arthīya	nominal				GOLD_ONLY				1	0
 17	17.27	sat	sant	nominal	sat	as	verb	LEMMA+POS_DIVERGE	no	no		1	1
 17	17.27	iti	iti	indecl	iti	iti	indecl	MATCH	yes	yes		1	1
 17	17.27	eva	eva	indecl	nirdeśo	nirdeśa	nominal	LEMMA+POS_DIVERGE	no	no		1	1
@@ -8139,7 +8139,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 17	17.28	dattam	datta	nominal	brāhmaṇāḥ	brāhmaṇa	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 17	17.28	tapaḥ	tapas	nominal	tena	tad	nominal	LEMMA_DIVERGE	no	yes		1	1
 17	17.28	taptam	√tap	nominal	vedāḥ	veda	nominal	LEMMA_DIVERGE	no	yes		1	1
-17	17.28	kṛtam	kṛta	nominal				DCS_ONLY				1	0
+17	17.28	kṛtam	kṛta	nominal				GOLD_ONLY				1	0
 17	17.28	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 17	17.28	yat	yat	nominal	yajñāḥ	yajña	nominal	LEMMA_DIVERGE	no	yes		1	1
 17	17.28	asat	a-sant	nominal	ca	ca	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -8152,7 +8152,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 17	17.28	pretya	pra-√i	unknown	yajña	yajña	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 17	17.28	na	na	indecl	dāna	dāna	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 17	17.28	iha	iha	indecl	tapaḥ	tapas	nominal	LEMMA+POS_DIVERGE	no	no		1	1
-17					kriyāḥ|pravartante|vidhāna|uktāḥ|satataṃ|brahma|vādinām|tat|iti|an|abhisaṃdhāya|phalaṃ|yajña|tapaḥ|kriyāḥ|dāna|kriyāḥ|ca|vividhāḥ|kriyante|mokṣa|kāṅkṣibhiḥ|sadbhāve|sādhu|bhāve|ca|sat|iti|etat|prayujyate|praśaste|karmaṇi|tathā|sat|śabdaḥ|pārtha|yujyate|yajñe|tapasi|dāne|ca|sthitiḥ|sat|iti|ca|ucyate|karma|ca|eva|tad|arthīyam|sat|iti|eva|abhidhīyate|aśraddhayā|hutaṃ|dattaṃ|tapaḥ|taptam|kṛtaṃ|ca|yat|asat|iti|ucyate|pārtha|na|ca|tat|pretya|no|iha	kriyā|pravṛt|vidhāna|vac|satatam|brahman|vādin|tad|iti|an|abhisaṃdhā|phala|yajña|tapas|kriyā|dāna|kriyā|ca|vividha|kṛ|mokṣa|kāṅkṣin|sadbhāva|sādhu|bhāva|ca|sat|iti|etad|prayuj|praśaṃs|karman|tathā|sat|śabda|pārtha|yuj|yajña|tapas|dāna|ca|sthiti|sat|iti|ca|vac|karman|ca|eva|tad|arthīya|sat|iti|eva|abhidhā|aśraddhā|hu|dā|tapas|tap|kṛ|ca|yad|asat|iti|vac|pārtha|na|ca|tad|pre|no|iha	nominal|verb|nominal|verb|indecl|nominal|indecl|nominal|indecl|indecl|verb|nominal|nominal|nominal|nominal|nominal|nominal|indecl|indecl|verb|nominal|indecl|nominal|indecl|nominal|indecl|indecl|indecl|nominal|verb|verb|nominal|indecl|indecl|nominal|nominal|verb|nominal|nominal|nominal|indecl|nominal|indecl|indecl|indecl|verb|nominal|indecl|indecl|nominal|indecl|indecl|indecl|indecl|verb|nominal|verb|verb|nominal|verb|verb|indecl|nominal|indecl|indecl|verb|nominal|indecl|indecl|nominal|verb|indecl|indecl	GOLD_ONLY				0	73
+17	sent:231861				kriyāḥ|pravartante|vidhāna|uktāḥ|satataṃ|brahma|vādinām|tat|iti|an|abhisaṃdhāya|phalaṃ|yajña|tapaḥ|kriyāḥ|dāna|kriyāḥ|ca|vividhāḥ|kriyante|mokṣa|kāṅkṣibhiḥ|sadbhāve|sādhu|bhāve|ca|sat|iti|etat|prayujyate|praśaste|karmaṇi|tathā|sat|śabdaḥ|pārtha|yujyate|yajñe|tapasi|dāne|ca|sthitiḥ|sat|iti|ca|ucyate|karma|ca|eva|tad|arthīyam|sat|iti|eva|abhidhīyate|aśraddhayā|hutaṃ|dattaṃ|tapaḥ|taptam|kṛtaṃ|ca|yat|asat|iti|ucyate|pārtha|na|ca|tat|pretya|no|iha	kriyā|pravṛt|vidhāna|vac|satatam|brahman|vādin|tad|iti|an|abhisaṃdhā|phala|yajña|tapas|kriyā|dāna|kriyā|ca|vividha|kṛ|mokṣa|kāṅkṣin|sadbhāva|sādhu|bhāva|ca|sat|iti|etad|prayuj|praśaṃs|karman|tathā|sat|śabda|pārtha|yuj|yajña|tapas|dāna|ca|sthiti|sat|iti|ca|vac|karman|ca|eva|tad|arthīya|sat|iti|eva|abhidhā|aśraddhā|hu|dā|tapas|tap|kṛ|ca|yad|asat|iti|vac|pārtha|na|ca|tad|pre|no|iha	nominal|verb|nominal|verb|indecl|nominal|indecl|nominal|indecl|indecl|verb|nominal|nominal|nominal|nominal|nominal|nominal|indecl|indecl|verb|nominal|indecl|nominal|indecl|nominal|indecl|indecl|indecl|nominal|verb|verb|nominal|indecl|indecl|nominal|nominal|verb|nominal|nominal|nominal|indecl|nominal|indecl|indecl|indecl|verb|nominal|indecl|indecl|nominal|indecl|indecl|indecl|indecl|verb|nominal|verb|verb|nominal|verb|verb|indecl|nominal|indecl|indecl|verb|nominal|indecl|indecl|nominal|verb|indecl|indecl	DCS_ONLY				0	73
 18	18.01	arjunaḥ	arjuna	nominal	arjuna	arjuna	nominal	MATCH	yes	yes		1	1
 18	18.01	uvāca	√vac	verb	uvāca	vac	verb	MATCH	yes	yes		1	1
 18	18.01	saṁnyāsasya	saṁnyāsa	nominal	saṃnyāsasya	saṃnyāsa	nominal	MATCH	yes	yes		1	1
@@ -8360,7 +8360,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 18	18.16	yaḥ	yat	nominal	kevalaṃ	kevalam	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.16	paśyati	√dṛś	verb	tu	tu	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.16	akṛta-buddhitvāt	akṛta-buddhitva	nominal	yaḥ	yad	nominal	LEMMA_DIVERGE	no	yes		1	1
-18	18.16	na	na	indecl				DCS_ONLY				1	0
+18	18.16	na	na	indecl				GOLD_ONLY				1	0
 18	18.16	saḥ|paśyati	tat|√dṛś	nominal|verb	paśyati	dṛś	verb	MERGE	n/a	n/a		2	1
 18	18.16	durmatiḥ	dur-mati	nominal	akṛtabuddhi	akṛtabuddhi	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.17	yasya	yat	nominal	tvāt	tva	nominal	LEMMA_DIVERGE	no	yes		1	1
@@ -8388,13 +8388,13 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 18	18.18	karaṇam	karaṇa	nominal	jñānaṃ	jñāna	nominal	LEMMA_DIVERGE	no	yes		1	1
 18	18.18	karma	karman	nominal	jñeyaṃ	jñā	verb	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.18	kartā	kartṛ	nominal	parijñātā	parijñātṛ	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-18	18.18	iti	iti	indecl				DCS_ONLY				1	0
+18	18.18	iti	iti	indecl				GOLD_ONLY				1	0
 18	18.18	tri-vidhaḥ	tri-vidha	nominal	trividhā	trividha	indecl	POS_DIVERGE	yes	no		1	1
 18	18.18	karma-saṁgrahaḥ	karma-saṁgraha	nominal	karma	karman	nominal	LEMMA_DIVERGE	no	yes		1	1
 18	18.19	jñānam	jñāna	nominal	codanā	codana	nominal	LEMMA_DIVERGE	no	yes		1	1
-18					karaṇaṃ	karaṇa	nominal	GOLD_ONLY				0	1
+18	sent:231908				karaṇaṃ	karaṇa	nominal	DCS_ONLY				0	1
 18	18.19	karma	karman	nominal	karma	karman	nominal	MATCH	yes	yes		1	1
-18	18.19	ca	ca	indecl				DCS_ONLY				1	0
+18	18.19	ca	ca	indecl				GOLD_ONLY				1	0
 18	18.19	kartā	kartṛ	nominal	kartā	kartṛ	nominal	MATCH	yes	yes		1	1
 18	18.19	ca	ca	indecl	iti	iti	indecl	LEMMA_DIVERGE	no	yes		1	1
 18	18.19	tri-dhā	tri-dhā	indecl	trividhaḥ	trividha	indecl	LEMMA_DIVERGE	no	yes		1	1
@@ -8474,7 +8474,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 18	18.25	pauruṣam	pauruṣa	nominal	tat	tad	nominal	LEMMA_DIVERGE	no	yes		1	1
 18	18.25	mohāt	moha	nominal	sāttvikam	sāttvika	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.25	ārabhyate	ā-√rabh	verb	ucyate	vac	verb	LEMMA_DIVERGE	no	yes		1	1
-18	18.25	karma	karman	nominal				DCS_ONLY				1	0
+18	18.25	karma	karman	nominal				GOLD_ONLY				1	0
 18	18.25	yat	yat	nominal	yat	yad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 18	18.25	tat	tat	nominal	tu	tu	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.25	tāmasam	tāmasa	nominal	kāma	kāma	nominal	LEMMA_DIVERGE	no	yes		1	1
@@ -8538,7 +8538,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 18	18.31	yayā	yat	nominal	naikṛtiko	naikṛtika	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.31	dharmam	dharma	nominal	'lasaḥ	alasa	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.31	adharmam	adharma	nominal	viṣādī	viṣādin	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-18					dīrghasūtrī	dīrghasūtrin	indecl	GOLD_ONLY				0	1
+18	sent:231928				dīrghasūtrī	dīrghasūtrin	indecl	DCS_ONLY				0	1
 18	18.31	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 18	18.31	kāryam	kārya	nominal	kartā	kartṛ	nominal	LEMMA_DIVERGE	no	yes		1	1
 18	18.31	ca	ca	indecl	tāmasa	tāmasa	indecl	LEMMA_DIVERGE	no	yes		1	1
@@ -8638,7 +8638,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 18	18.38	rājasam	rājasa	nominal	viṣādaṃ	viṣāda	nominal	LEMMA_DIVERGE	no	yes		1	1
 18	18.38	smṛtam	smṛta	nominal	madam	mada	nominal	LEMMA_DIVERGE	no	yes		1	1
 18	18.39	yat	yat	nominal	eva	eva	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-18	18.39	agre	agre	indecl				DCS_ONLY				1	0
+18	18.39	agre	agre	indecl				GOLD_ONLY				1	0
 18	18.39	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 18	18.39	anubandhe	anu-bandha	nominal	na	na	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.39	ca	ca	indecl	vimuñcati	vimuc	verb	LEMMA+POS_DIVERGE	no	no		1	1
@@ -8661,7 +8661,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 18	18.40	sattvam	sattva	nominal	duḥkha	duḥkha	nominal	LEMMA_DIVERGE	no	yes		1	1
 18	18.40	prakṛti-jaiḥ	prakṛti-ja	nominal	antam	anta	nominal	LEMMA_DIVERGE	no	yes		1	1
 18	18.40	muktam	mukta	nominal	ca	ca	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-18					nigacchati	nigam	verb	GOLD_ONLY				0	1
+18	sent:231944				nigacchati	nigam	verb	DCS_ONLY				0	1
 18	18.40	yat	yat	nominal	yat	yad	nominal	LEMMA_CONVENTION	no	yes	pronoun-stem	1	1
 18	18.40	ebhiḥ	idam	nominal	tat	tad	nominal	LEMMA_DIVERGE	no	yes		1	1
 18	18.40	syāt	√as	verb	agre	agra	nominal	LEMMA+POS_DIVERGE	no	no		1	1
@@ -8697,7 +8697,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 18	18.43	api	api	indecl	agre	agra	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.43	apalāyanam	a-palāyana	nominal	ca	ca	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.43	dānam	dāna	nominal	anubandhe	anubandha	nominal	LEMMA_DIVERGE	no	yes		1	1
-18	18.43	īśvara-bhāvaḥ	īśvara-bhāva	nominal				DCS_ONLY				1	0
+18	18.43	īśvara-bhāvaḥ	īśvara-bhāva	nominal				GOLD_ONLY				1	0
 18	18.43	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 18	18.43	kṣatra-karma	kṣatra-karma	nominal	sukhaṃ	sukha	nominal	LEMMA_DIVERGE	no	yes		1	1
 18	18.43	sva-bhāva-jam	sva-bhāva-ja	nominal	mohanam	mohana	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -8721,7 +8721,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 18	18.45	vindati	√vid	verb	sattvaṃ	sattva	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.45	tat	tat	nominal	prakṛti	prakṛti	nominal	LEMMA_DIVERGE	no	yes		1	1
 18	18.45	śṛṇu	√śru	verb	jaiḥ	ja	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-18					muktam	muc	verb	GOLD_ONLY				0	1
+18	sent:231952				muktam	muc	verb	DCS_ONLY				0	1
 18	18.46	yataḥ	yataḥ	indecl	yat	yad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.46	pravṛttiḥ	pravṛtti	nominal	ebhiḥ	idam	nominal	LEMMA_DIVERGE	no	yes		1	1
 18	18.46	bhūtānām	bhūta	nominal	syāt	as	verb	LEMMA+POS_DIVERGE	no	no		1	1
@@ -8984,7 +8984,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 18	18.67	na	na	indecl	vinaṅkṣyasi	vinaś	verb	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.67	abhaktāya	a-bhakta	nominal	yat	yat	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.67	kadā-cana	kadā-cana	indecl	ahaṃkāram	ahaṃkāra	nominal	LEMMA+POS_DIVERGE	no	no		1	1
-18					āśritya	āśri	verb	GOLD_ONLY				0	1
+18	sent:231989				āśritya	āśri	verb	DCS_ONLY				0	1
 18	18.67	na	na	indecl	na	na	indecl	MATCH	yes	yes		1	1
 18	18.67	ca	ca	indecl	yotsya	yudh	verb	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.67	aśuśrūṣave	a-śuśrūṣu	nominal	iti	iti	indecl	LEMMA+POS_DIVERGE	no	no		1	1
@@ -9088,7 +9088,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 18	18.74	ca	ca	indecl	me	mad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.74	mahātmanaḥ	mahā-ātman	nominal	sarva	sarva	nominal	LEMMA_DIVERGE	no	yes		1	1
 18	18.74	saṁvādam	sam-vāda	nominal	dharmān	dharma	nominal	LEMMA_DIVERGE	no	yes		1	1
-18					parityajya	parityaj	verb	GOLD_ONLY				0	1
+18	sent:232003				parityajya	parityaj	verb	DCS_ONLY				0	1
 18	18.74	imam	idam	nominal	mām	mad	nominal	LEMMA_DIVERGE	no	yes		1	1
 18	18.74	aśrauṣam	√śru	verb	ekam	eka	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.74	adbhutam	ad-bhuta	nominal	śaraṇaṃ	śaraṇa	nominal	LEMMA_DIVERGE	no	yes		1	1
@@ -9112,7 +9112,7 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 18	18.76	adbhutam	ad-bhuta	nominal	aśuśrūṣave	aśuśrūṣu	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.76	keśavārjunayoḥ	keśava-arjuna	nominal	vācyaṃ	vac	verb	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.76	puṇyam	puṇya	nominal	na	na	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-18	18.76	hṛṣyāmi	√hṛṣ	verb				DCS_ONLY				1	0
+18	18.76	hṛṣyāmi	√hṛṣ	verb				GOLD_ONLY				1	0
 18	18.76	ca	ca	indecl	ca	ca	indecl	MATCH	yes	yes		1	1
 18	18.76	muhuḥ muhuḥ	muhuḥ muhuḥ	indecl	māṃ	mad	nominal	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.77	tat	tat	nominal	yo	yad	nominal	LEMMA_DIVERGE	no	yes		1	1
@@ -9142,4 +9142,4 @@ adhyaya	verse	gold_form	gold_lemma	gold_pos	dcs_form	dcs_lemma	dcs_upos	class	le
 18	18.78	nītiḥ	nīti	nominal	kṛttamaḥ	kṛttama	indecl	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.78	matiḥ	mati	nominal	bhavitā	bhū	verb	LEMMA+POS_DIVERGE	no	no		1	1
 18	18.78	mama	asmat	nominal	na	na	indecl	LEMMA+POS_DIVERGE	no	no		1	1
-18					ca|me|tasmāt|anyaḥ|priyataro|bhuvi|adhyeṣyate|ca|ya|imaṃ|dharmyaṃ|saṃvādam|āvayoḥ|jñāna|yajñena|tena|aham|iṣṭaḥ|syām|iti|me|matiḥ|śraddhāvān|an|asūyaḥ|ca|śṛṇuyāt|api|yo|naraḥ|so|'pi|muktaḥ|śubhān|lokān|prāpnuyāt|puṇya|karmaṇām|kaccit|etat|śrutam|pārtha|tvayā|ekāgreṇa|cetasā|kaccit|ajñāna|saṃmohaḥ|pranaṣṭaḥ|te|dhanaṃjaya|arjuna|uvāca|naṣṭo|mohaḥ|smṛtiḥ|labdhā|tvad|prasādāt|mayā|acyuta|sthito|'smi|gata|saṃdehaḥ|kariṣye|vacanaṃ|tava|saṃjaya|uvāca|iti|aham|vāsudevasya|pārthasya|ca|mahātmanaḥ|saṃvādam|imam|aśrauṣam|adbhutam|roma|harṣaṇam|vyāsa|prasādāt|śrutavān|etat|guhyam|aham|param|yogaṃ|yogeśvarāt|kṛṣṇāt|sākṣāt|kathayataḥ|svayam|rājan|saṃsmṛtya|saṃsmṛtya|saṃvādam|imam|adbhutam|keśava|arjunayoḥ|puṇyaṃ|hṛṣyāmi|ca|muhur|muhur|tat|ca|saṃsmṛtya|saṃsmṛtya|rūpam|ati|adbhutam|hareḥ|vismayo|me|mahān|rājan|hṛṣyāmi|ca|punaḥ|punaḥ|yatra|yogeśvaraḥ|kṛṣṇo|yatra|pārtho|dhanuḥ|dharaḥ|tatra|śrīḥ|vijayaḥ|bhūtiḥ|dhruvā|nītiḥ|matiḥ|mama	ca|mad|tasmāt|anya|priyatara|bhū|adhī|ca|yad|idam|dharmya|saṃvāda|mad|jñāna|yajña|tad|mad|yaj|as|iti|mad|mati|śraddhāvat|an|asūya|ca|śru|api|yad|nara|tad|api|muc|śubha|loka|prāp|puṇya|karman|kaccit|etad|śru|pārtha|tvad|ekāgra|cetas|kaccit|ajñāna|sammoha|praṇaś|tvad|dhanaṃjaya|arjuna|vac|naś|moha|smṛti|labh|tvad|prasāda|mad|acyuta|sthā|as|gam|saṃdeha|kṛ|vacana|tvad|saṃjaya|vac|iti|mad|vāsudeva|pārtha|ca|mahātman|saṃvāda|idam|śru|adbhuta|roman|harṣaṇa|vyāsa|prasāda|śru|etad|guhya|mad|para|yoga|yogeśvara|kṛṣṇa|sākṣāt|kathay|svayam|rājan|saṃsmṛ|saṃsmṛ|saṃvāda|idam|adbhuta|keśava|arjuna|puṇya|hṛṣ|ca|muhur|muhur|tad|ca|saṃsmṛ|saṃsmṛ|rūpa|ati|adbhuta|hari|vismaya|mad|mahat|rājan|hṛṣ|ca|punar|punar|yatra|yogeśvara|kṛṣṇa|yatra|pārtha|dhanus|dhara|tatra|śrī|vijaya|bhūti|dhruva|nīti|mati|mad	indecl|nominal|indecl|nominal|indecl|nominal|verb|indecl|nominal|nominal|indecl|nominal|nominal|nominal|nominal|nominal|nominal|verb|verb|indecl|nominal|nominal|indecl|indecl|indecl|indecl|verb|indecl|nominal|nominal|nominal|indecl|verb|indecl|nominal|verb|indecl|nominal|indecl|nominal|verb|nominal|nominal|indecl|nominal|indecl|nominal|nominal|verb|nominal|nominal|nominal|verb|verb|nominal|nominal|verb|nominal|nominal|nominal|nominal|verb|verb|verb|nominal|verb|nominal|nominal|nominal|verb|indecl|nominal|nominal|nominal|indecl|indecl|nominal|nominal|verb|indecl|nominal|indecl|nominal|nominal|verb|nominal|indecl|nominal|nominal|nominal|nominal|nominal|indecl|verb|indecl|nominal|verb|verb|nominal|nominal|indecl|nominal|nominal|indecl|verb|indecl|indecl|indecl|nominal|indecl|verb|verb|nominal|indecl|indecl|nominal|nominal|nominal|indecl|nominal|verb|indecl|indecl|indecl|indecl|nominal|nominal|indecl|nominal|nominal|indecl|indecl|nominal|nominal|nominal|indecl|nominal|nominal|nominal	GOLD_ONLY				0	139
+18	sent:232010				ca|me|tasmāt|anyaḥ|priyataro|bhuvi|adhyeṣyate|ca|ya|imaṃ|dharmyaṃ|saṃvādam|āvayoḥ|jñāna|yajñena|tena|aham|iṣṭaḥ|syām|iti|me|matiḥ|śraddhāvān|an|asūyaḥ|ca|śṛṇuyāt|api|yo|naraḥ|so|'pi|muktaḥ|śubhān|lokān|prāpnuyāt|puṇya|karmaṇām|kaccit|etat|śrutam|pārtha|tvayā|ekāgreṇa|cetasā|kaccit|ajñāna|saṃmohaḥ|pranaṣṭaḥ|te|dhanaṃjaya|arjuna|uvāca|naṣṭo|mohaḥ|smṛtiḥ|labdhā|tvad|prasādāt|mayā|acyuta|sthito|'smi|gata|saṃdehaḥ|kariṣye|vacanaṃ|tava|saṃjaya|uvāca|iti|aham|vāsudevasya|pārthasya|ca|mahātmanaḥ|saṃvādam|imam|aśrauṣam|adbhutam|roma|harṣaṇam|vyāsa|prasādāt|śrutavān|etat|guhyam|aham|param|yogaṃ|yogeśvarāt|kṛṣṇāt|sākṣāt|kathayataḥ|svayam|rājan|saṃsmṛtya|saṃsmṛtya|saṃvādam|imam|adbhutam|keśava|arjunayoḥ|puṇyaṃ|hṛṣyāmi|ca|muhur|muhur|tat|ca|saṃsmṛtya|saṃsmṛtya|rūpam|ati|adbhutam|hareḥ|vismayo|me|mahān|rājan|hṛṣyāmi|ca|punaḥ|punaḥ|yatra|yogeśvaraḥ|kṛṣṇo|yatra|pārtho|dhanuḥ|dharaḥ|tatra|śrīḥ|vijayaḥ|bhūtiḥ|dhruvā|nītiḥ|matiḥ|mama	ca|mad|tasmāt|anya|priyatara|bhū|adhī|ca|yad|idam|dharmya|saṃvāda|mad|jñāna|yajña|tad|mad|yaj|as|iti|mad|mati|śraddhāvat|an|asūya|ca|śru|api|yad|nara|tad|api|muc|śubha|loka|prāp|puṇya|karman|kaccit|etad|śru|pārtha|tvad|ekāgra|cetas|kaccit|ajñāna|sammoha|praṇaś|tvad|dhanaṃjaya|arjuna|vac|naś|moha|smṛti|labh|tvad|prasāda|mad|acyuta|sthā|as|gam|saṃdeha|kṛ|vacana|tvad|saṃjaya|vac|iti|mad|vāsudeva|pārtha|ca|mahātman|saṃvāda|idam|śru|adbhuta|roman|harṣaṇa|vyāsa|prasāda|śru|etad|guhya|mad|para|yoga|yogeśvara|kṛṣṇa|sākṣāt|kathay|svayam|rājan|saṃsmṛ|saṃsmṛ|saṃvāda|idam|adbhuta|keśava|arjuna|puṇya|hṛṣ|ca|muhur|muhur|tad|ca|saṃsmṛ|saṃsmṛ|rūpa|ati|adbhuta|hari|vismaya|mad|mahat|rājan|hṛṣ|ca|punar|punar|yatra|yogeśvara|kṛṣṇa|yatra|pārtha|dhanus|dhara|tatra|śrī|vijaya|bhūti|dhruva|nīti|mati|mad	indecl|nominal|indecl|nominal|indecl|nominal|verb|indecl|nominal|nominal|indecl|nominal|nominal|nominal|nominal|nominal|nominal|verb|verb|indecl|nominal|nominal|indecl|indecl|indecl|indecl|verb|indecl|nominal|nominal|nominal|indecl|verb|indecl|nominal|verb|indecl|nominal|indecl|nominal|verb|nominal|nominal|indecl|nominal|indecl|nominal|nominal|verb|nominal|nominal|nominal|verb|verb|nominal|nominal|verb|nominal|nominal|nominal|nominal|verb|verb|verb|nominal|verb|nominal|nominal|nominal|verb|indecl|nominal|nominal|nominal|indecl|indecl|nominal|nominal|verb|indecl|nominal|indecl|nominal|nominal|verb|nominal|indecl|nominal|nominal|nominal|nominal|nominal|indecl|verb|indecl|nominal|verb|verb|nominal|nominal|indecl|nominal|nominal|indecl|verb|indecl|indecl|indecl|nominal|indecl|verb|verb|nominal|indecl|indecl|nominal|nominal|nominal|indecl|nominal|verb|indecl|indecl|indecl|indecl|nominal|nominal|indecl|nominal|nominal|indecl|indecl|nominal|nominal|nominal|indecl|nominal|nominal|nominal	DCS_ONLY				0	139

@@ -131,7 +131,7 @@ def load_dcs():
     rows = cur.execute(
         """
         select cast(substr(c.ref, 14) as int) as adj,
-               t.form, t.lemma, t.upos
+               t.form, t.lemma, t.upos, s.sent_id
         from chapter c
         join sentence s on s.chapter_id = c.chapter_id
         join token t on t.sentence_id = s.id
@@ -141,8 +141,8 @@ def load_dcs():
     ).fetchall()
     db.close()
     by_adj = {}
-    for adj, form, lemma, upos in rows:
-        by_adj.setdefault(adj, []).append((form, lemma, upos))
+    for adj, form, lemma, upos, sent_id in rows:
+        by_adj.setdefault(adj, []).append((form, lemma, upos, sent_id))
     return by_adj
 
 
@@ -162,7 +162,7 @@ def _find_group(g, d, gold_rows, dcs_rows):
             if g + m > len(gold_rows) or d + n > len(dcs_rows):
                 continue
             gk = join_key(r["iast"] for r in gold_rows[g:g + m])
-            dk = join_key(f for f, _, _ in dcs_rows[d:d + n])
+            dk = join_key(f for f, _, _, _ in dcs_rows[d:d + n])
             if gk == dk:
                 return m, n
             if tier == "skeleton" and skeleton(gk) == skeleton(dk) and \
@@ -213,13 +213,13 @@ def classify(gold_rows, dcs_rows):
     m, n = len(gold_rows), len(dcs_rows)
     gold_lemmas = "|".join(r["lemma"] for r in gold_rows)
     gold_forms = "|".join(r["iast"] for r in gold_rows)
-    dcs_forms = "|".join(f for f, _, _ in dcs_rows)
-    dcs_lemmas = "|".join(l for _, l, _ in dcs_rows)
-    dcs_upos = "|".join(u for _, _, u in dcs_rows)
+    dcs_forms = "|".join(f for f, _, _, _ in dcs_rows)
+    dcs_lemmas = "|".join(l for _, l, _, _ in dcs_rows)
+    dcs_upos = "|".join(u for _, _, u, _ in dcs_rows)
     gpos = gold_pos(gold_rows[0]) if m == 1 else "|".join(gold_pos(r) for r in gold_rows)
-    dpos = dcs_pos(dcs_rows[0][2]) if n == 1 else "|".join(dcs_pos(u) for _, _, u in dcs_rows)
+    dpos = dcs_pos(dcs_rows[0][2]) if n == 1 else "|".join(dcs_pos(u) for _, _, u, _ in dcs_rows)
     if not dcs_rows or not gold_rows:
-        cls = "DCS_ONLY" if gold_rows else "GOLD_ONLY"
+        cls = "GOLD_ONLY" if gold_rows else "DCS_ONLY"
         lemma_match = pos_match = conv = ""
     elif m == 1 and n == 1:
         gk, dk = gold_lemma_key(gold_rows[0]["lemma"]), norm(dcs_rows[0][1])
@@ -246,7 +246,9 @@ def classify(gold_rows, dcs_rows):
         lemma_match = pos_match = "n/a"
         conv = ""
     return {
-        "adhyaya": "", "verse": gold_rows[0]["verse"] if gold_rows else "",
+        "adhyaya": "",
+        "verse": gold_rows[0]["verse"] if gold_rows else
+                 (f"sent:{dcs_rows[0][3]}" if dcs_rows else ""),
         "gold_form": gold_forms, "gold_lemma": gold_lemmas, "gold_pos": gpos,
         "dcs_form": dcs_forms, "dcs_lemma": dcs_lemmas, "dcs_upos": dpos,
         "class": cls, "lemma_match": lemma_match, "pos_match": pos_match,
