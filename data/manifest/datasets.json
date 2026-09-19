@@ -1446,13 +1446,13 @@
       "release_asset": "data/gita/gita_gold_vs_dcs_tagging.tsv",
       "format": "tsv",
       "rows": 9144,
-      "size_bytes": 766573,
+      "size_bytes": 767465,
       "keying": "9,144 aligned word groups (gold word 1..3 x DCS token 1..6) over the 18 adhyayas. Cols: adhyaya, verse, gold_form/lemma/pos, dcs_form/lemma/upos, class (MATCH/LEMMA_DIVERGE/LEMMA_CONVENTION/POS_DIVERGE/COMPOUND_SPLIT/MERGE/RESEGMENTED/GOLD_ONLY/DCS_ONLY), convention family, n_gold, n_dcs.",
       "source_repo": "https://github.com/gasyoun/kosha",
       "source_path": "data/gita/gita_gold_vs_dcs_tagging.tsv",
       "builder": "scripts/gita_gold_vs_dcs_tagging.py (gold master H848 vs dcs_full.sqlite 'MBh, 6, BhaGī 1..18', H4799)",
       "consumers": [],
-      "notes": "H4799 — third Gita QA leg, distinct from gita-inflection-qa (gold vs kosha's OWN engine, H874): here the counterpart is DCS's own hand tagging. 1:1 lemma string agreement 40.0%, +known conventions (pronoun-stem asmat/mad, preverb contraction ava-√āp/avāp, final-t/d+n, -taḥ/-tas, nasal-class) 50.7%; POS (coarse) 64.1% (floor: gold form_type sparsely filled + participle verb-vs-ADJ treatment). Compound-aware sandhi-neutral group join — NEVER align positionally (DCS splits compounds, 584+ groups). Report: docs/GITA_GOLD_VS_DCS_TAGGING_H4799_19.09.26.md. Gold MIT (MG); DCS upstream CC BY 4.0. Divergences are a candidate feed for adjudication, NOT auto-applied.",
+      "notes": "H4799 — third Gita QA leg, distinct from gita-inflection-qa (gold vs kosha's OWN engine, H874): here the counterpart is DCS's own hand tagging. 1:1 lemma string agreement 40.0%, +known conventions (pronoun-stem asmat/mad, preverb contraction ava-√āp/avāp, final-t/d+n, -taḥ/-tas, nasal-class) 50.7%; POS (coarse) 64.1% (floor: gold form_type sparsely filled + participle verb-vs-ADJ treatment). Compound-aware sandhi-neutral group join — NEVER align positionally (DCS splits compounds, 584+ groups). Report: docs/GITA_GOLD_VS_DCS_TAGGING_H4799_19.09.26.md. Gold MIT (MG); DCS upstream CC BY 4.0. Divergences are a candidate feed for adjudication, NOT auto-applied. Verifier-pass 19-09: GOLD_ONLY/DCS_ONLY labels corrected (were swapped), DCS_ONLY rows carry sent:<sent_id> locators, convention-family sum corrected 975->899.",
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/gita-gold.meta.md"
     },
     {
