@@ -29,8 +29,9 @@ groups, one row per gold word / DCS token group.
   handled by a consonant-skeleton tier with a 0.55 difflib guard.
 - Word-count drift recovered by minimal single-side drops with realignment
   proof (a blind drop-both freezes the offset — first version's defect).
-- Residue: 85 `GOLD_ONLY` + 40 `DCS_ONLY` rows (1.4% of groups) — the two
-  editions genuinely segment ~125 places differently.
+- Residue: 40 `GOLD_ONLY` + 85 `DCS_ONLY` rows (1.4% of groups) — the two
+  editions genuinely segment ~125 places differently. `DCS_ONLY` rows carry
+  a `sent:<sent_id>` locator (their verse is not numbered in the DCS DB).
 
 ## Headline numbers
 
@@ -46,7 +47,7 @@ groups, one row per gold word / DCS token group.
 ## Findings
 
 1. **The lemma gap is dominated by lemmatization conventions, not errors.**
-   Five systematic families (975 rows):
+   Five systematic families (899 rows):
    - `pronoun-stem` (615): gold cites the pronominal stem (asmat, yuṣmat,
      tat, yat, etat, kim), DCS the anaphoric form (mad, tvad, tad, yad,
      etad, ka).
