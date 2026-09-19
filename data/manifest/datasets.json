@@ -1204,6 +1204,26 @@
    "regen_checked": "2026-09-04 (H4046: PASS)"
   },
   {
+   "id": "union-headwords-16dicts",
+   "title": "Cross-dictionary union headword index, 16 dicts (now-2026 key1+key2)",
+   "tier": "public",
+   "license": "CC BY-SA 4.0",
+   "in_release": "not-applicable",
+   "format": "tsv",
+   "rows": 417184,
+   "size_bytes": 8854601,
+   "keying": "bare SLP1 headword + per-dict provenance flags; key1 as-is, key2 print forms normalized to the k1 key space (parens stripped, marks removed), residue counted per class",
+   "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+   "source_path": "HeadwordLists/union-16dicts/union_headwords_16.tsv (+ headword_overlap_matrix.tsv 120 pairs, per_dict_profile.tsv, unique counts, dated report)",
+   "builder": "HeadwordLists/build_union16.py (+ data/headword_overlap_matrix.py --outdir)",
+   "consumers": [
+    "H4802 full-csl-orig xwalk (s2d jaccard)",
+    "routing-bench overlap analysis",
+    "A40 headword-inventory paper"
+   ],
+   "notes": "H4797 (19-09-2026, OxAlpha opencode/z-ai/glm-5.3-flash). 16 dicts incl. PD for the first time (104,962 keys, 89.0% single-dict unique); 15-dict baseline 323,425. Corroboration n=1: 232,375; aNga/aRu in all 16. Top pairs CAE-CCS J=0.672, PWG-PWK J=0.630, MW-PWK J=0.596; bottom PD-VEI J=0.001. Residue 1,997/1,676,661 raw lines (0.12%). The 15-dict union + matrix rows remain valid for their artifacts."
+  },
+  {
    "id": "headword-overlap-matrix-ext",
    "title": "Headword pairwise-overlap matrix, Tamil-fold extension (18 dicts)",
    "tier": "public",
