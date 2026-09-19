@@ -3157,6 +3157,26 @@
    ]
   },
   {
+   "id": "pw-pwg-kurzfassung-cut",
+   "title": "PW × PWG Kurzfassung cut measure — sense-block diff + pwg_ru cut queue (H4805)",
+   "tier": "public",
+   "license": "CC BY-SA 4.0",
+   "in_release": "unreleased",
+   "format": "tsv",
+   "rows": 200234,
+   "size_bytes": 9200000,
+   "keying": "grid tsv: form_key(k1, `*`/`˚` marks stripped, case preserved); diff tsv: k1 + pw <L> + sense_ord. CUT = PW sense block with no PWG partner (greedy best-match: folded <ls> witnesses, frozen τ=0.30, or de gloss Jaccard ≥ 0.50)",
+   "source_repo": "https://github.com/gasyoun/kosha",
+   "source_path": "data/concordance/pw_pwg_cut_diff.tsv",
+   "builder": "scripts/build_pw_kurzfassung_cut.py (stdlib, 17 s; reuses app/sense_align.py witness_key/fold_witnesses/gloss_tokens; csl-orig v02/pw + v02/pwg read straight from disk)",
+   "consumers": [
+    "pwg_ru queue prioritization (headwords whose RU translation keyed to PWG would miss PW-only content)",
+    "kosha sense-alignment programme (first PW ingest; pw was the largest single absence in KOSHA_DB_COMPLETENESS_AUDIT)"
+   ],
+   "notes": "H4805. 158,370 pw entries (170,556 <L> minus 12,186 {{Lbody}} stubs) → 289,813 blocks; 123,357 pwg entries → 223,437; grid 151,461 keys (45,382 pw-only, 9,774 pwg-only, 96,305 shared). CUT = 200,234 blocks = 69.1% of PW block mass over 105,410 headwords — upper-bound-flavoured (merged/reworded pairs without shared witnesses count as cut; one-to-one claim discipline). Companion grid: pw_pwg_headword_grid.tsv; report: PW_KURZFASSUNG_CUT_REPORT.md. Verify: independent recount (raw ^<L> minus stubs, raw <div occurrences, grid sums) PASS + printed canaries.",
+   "regen_checked": "2026-09-19 (H4805: VERIFY PASS on build)"
+  },
+  {
    "id": "amarakosa-mw-pwg-sense-crosswalk",
    "title": "Amarakosha varga/synsets x MW/PWG sense-unit inventories (structural split envelope)",
    "tier": "public",
