@@ -2103,7 +2103,8 @@
    "consumers": [
     "A4 sūtra->corpus inversion (W2b DONE, H1390 — data/concordance/paninian_concordance.tsv)",
     "W3a sūtra-coverage map (H1468 DONE — data/concordance/sutra_coverage_map.tsv)",
-    "data-v0.3.0 release asset"
+    "data-v0.3.0 release asset",
+    "grammar-lab-derivation-gaps join (H4795 DONE 19-09-2026 — engine-error roster by alternation class)"
    ],
    "notes": "Full run over all 401,368 AG rows (883.8s, 454.1 forms/s, cached per-lemma vidyut derivation — 90,690 distinct lemmas). Status distribution: ok 72,764 (18.13%) · no-derivation 237,447 (59.16%) · ambiguous 86,857 (21.64%) · engine-error 4,300 (1.07%) — all four buckets always reported (2a-4), never only successes. 2,815 distinct sūtra chains recorded; chain length min 6 / median 12 / max 37 among ok rows. R-C3: engine-error is dominated by the verbal dhātu+gaṇa+lakāra mapping (new work here; the nominal mapping is E1-proven). R-C4: 256 ok rows are verb-derived AND carry tense_caveat=1 (DCS Tense=Past conflates aorist/perfect) — sūtra attribution for tense-specific rules on those rows may be off, flagged not silently counted. Full detail + 30-example sampled human-verification section: data/concordance/DERIVATION_HARNESS_BUILD_REPORT.md. Deliberately excludes W2b's sūtra->form inversion and the /concordance/panini/ web page — out of scope for this handoff. Released data-v0.3.0 (H1574 / W3b).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/panini-derivation-status.meta.md",
@@ -2569,11 +2570,32 @@
    "source_path": "data/grammar_lab/export/",
    "builder": "scripts/build_grammar_lab.py (H2492, Grok 4.6 grok-4.6, 13-08-2026)",
    "consumers": [
-    "Systema-Sanscriticum Grammar Lab import (H2493 G2)"
+    "Systema-Sanscriticum Grammar Lab import (H2493 G2)",
+    "kosha grammar-lab-derivation-gaps join (H4795 DONE 19-09-2026 — data/concordance/grammar_lab_vidyut_gaps.tsv)"
    ],
    "notes": "32 published topics, 182 Type-D edges, 192 frozen queries. Evidence contract: Whitney + Zalizniak + dictionary + corpus-or-not_attested + deterministic exercise. Semantic vectors are char-ngram hash projection (semantic_ready false) until G2 MiniLM sidecar. Sandhi fenced. PR https://github.com/gasyoun/SanskritGrammar/pull/857 v0.121.6.",
    "data_statement": "https://github.com/gasyoun/SanskritGrammar/blob/main/data/grammar_lab/README.md",
    "regen_checked": "2026-09-04 (H4046: PASS)"
+  },
+  {
+   "id": "grammar-lab-derivation-gaps",
+   "title": "Grammar Lab g1 topics x vidyut derivation failures, corpus-frequency weighted (H4795)",
+   "tier": "public",
+   "license": "CC BY-SA 4.0",
+   "in_release": "not-applicable",
+   "format": "tsv + md",
+   "rows": 32,
+   "size_bytes": 3622,
+   "keying": "one row per grammar-lab-g1 topic; roots column joins derivation_status.lemma_slp1",
+   "source_repo": "https://github.com/gasyoun/kosha",
+   "source_path": "data/concordance/grammar_lab_vidyut_gaps.tsv",
+   "builder": "scripts/grammar_lab_vidyut_gaps.py (H4795, OxAlpha opencode/z-ai/glm-5.3-flash, 19-09-2026)",
+   "consumers": [
+    "Grammar Lab vidyut-gap remediation lane (engine-error roots 69, w-vipyut backlog)"
+   ],
+   "notes": "Join of SanskritGrammar grammar-lab-g1 (32 topics, 14 distinct whitney-root exemplars) to derivation_status.tsv verbal rows by root/lemma, weighted by lemma_frequency.tsv. Headline: 4 of 14 exemplar roots are total vidyut failures spanning 6 of 32 topics (engine-error with ok=0 AND ambiguous=0 — root-level, all 4,300 engine-error rows / 69 roots share this shape); top corpus-weighted failing exemplars vac (w 9.29M, samprasarana) > Sru (3.08M, 3 topics) > hu (568K, present-reduplicating) > krI (12.8K, present-na-class). Roster clusters in set/nasal roots (grah/banD/laB/lamb/spand), vocalic-r roots (pf/spf), class-IX na- and class-V svAdi roots. Report: data/concordance/GRAMMAR_LAB_VIDYUT_GAPS_REPORT.md.",
+   "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/grammar-lab-derivation-gaps.meta.md",
+   "regen_checked": "2026-09-19 (H4795: PASS)"
   },
   {
    "id": "pwg-mw-ap-sense-coverage",
