@@ -1442,7 +1442,7 @@
    "title": "Gita gold master lemma/POS vs DCS own tagging — divergence map",
    "tier": "public",
    "license": "CC BY-SA 4.0",
-   "in_release": "not-in-release",
+   "in_release": "unreleased",
    "release_asset": "data/gita/gita_gold_vs_dcs_tagging.tsv",
    "format": "tsv",
    "rows": 9144,
