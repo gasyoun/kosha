@@ -1,0 +1,157 @@
+{
+  "handoff": "H5070",
+  "source_sha256": "9b589b2b286badbbb87e76effee3bfb1b0c721ab9d0752faf20a0b0282e2563b",
+  "population_aligned": 7087,
+  "population_unaligned": 60143,
+  "candidate_groups": 67230,
+  "coverage": 0.105414,
+  "abstention": 0.894586,
+  "abstention_taxonomy": {
+    "no-shared-witness": 37262,
+    "witness-too-common": 12261,
+    "cross-language-gap": 4317,
+    "no-citation-apparatus": 3262,
+    "outranked": 2549,
+    "absent-dictionary": 492
+  },
+  "unreachable_pairs_absent_dictionary": 492,
+  "gold_excluded_cards": 219,
+  "gold_files": {
+    "sense_alignment_acceptance_sample.tsv": {
+      "cards": 120,
+      "sha256": "d32a7a2e203d365a29335b6c19e38f1e4fc5b0321949c1b767df65cdbf6f040c"
+    },
+    "sense_alignment_acceptance_sample_w2.tsv": {
+      "cards": 152,
+      "sha256": "4ad26746b66bb2e0fa2314259fdf0f69dec5c83717239cc4ac86d8fa8e54848a"
+    }
+  },
+  "newly_adjudicated_cards": 60,
+  "adjudicator": "Claude Opus 5 (claude-opus-5), single adjudicator, H5070",
+  "unsure_cards": 1,
+  "risk_coverage": [
+    {
+      "scope": "all aligned",
+      "threshold": 0.0,
+      "eligible_population": 6860,
+      "coverage_of_all_groups": 0.102038,
+      "abstention_of_all_groups": 0.897962,
+      "cards_adjudicated": 60,
+      "strict_wrong_rate": 0.1996,
+      "strict_ci95": [
+        0.0997,
+        0.3544
+      ],
+      "lenient_wrong_rate": 0.1005,
+      "lenient_ci95": [
+        0.0296,
+        0.2417
+      ],
+      "strata_without_cards": []
+    },
+    {
+      "scope": "score >= 0.40",
+      "threshold": 0.4,
+      "eligible_population": 5388,
+      "coverage_of_all_groups": 0.080143,
+      "abstention_of_all_groups": 0.919857,
+      "cards_adjudicated": 40,
+      "strict_wrong_rate": 0.1845,
+      "strict_ci95": [
+        0.0677,
+        0.3476
+      ],
+      "lenient_wrong_rate": 0.1015,
+      "lenient_ci95": [
+        0.0156,
+        0.2611
+      ],
+      "strata_without_cards": []
+    },
+    {
+      "scope": "score >= 0.70",
+      "threshold": 0.7,
+      "eligible_population": 2132,
+      "coverage_of_all_groups": 0.031712,
+      "abstention_of_all_groups": 0.968288,
+      "cards_adjudicated": 20,
+      "strict_wrong_rate": 0.1259,
+      "strict_ci95": [
+        0.0034,
+        0.3604
+      ],
+      "lenient_wrong_rate": 0.0743,
+      "lenient_ci95": [
+        0.0,
+        0.301
+      ],
+      "strata_without_cards": []
+    }
+  ],
+  "error_concentration_by_channel": [
+    {
+      "channel": "pwg",
+      "cards": 31,
+      "wrong": 10,
+      "raw_rate": 0.3226,
+      "ci95": [
+        0.1857,
+        0.4986
+      ],
+      "aligned_rows_with_channel": 3744
+    },
+    {
+      "channel": "mw",
+      "cards": 55,
+      "wrong": 10,
+      "raw_rate": 0.1818,
+      "ci95": [
+        0.1019,
+        0.3033
+      ],
+      "aligned_rows_with_channel": 6842
+    },
+    {
+      "channel": "apte",
+      "cards": 35,
+      "wrong": 7,
+      "raw_rate": 0.2,
+      "ci95": [
+        0.1004,
+        0.3589
+      ],
+      "aligned_rows_with_channel": 4071
+    },
+    {
+      "channel": "md",
+      "cards": 1,
+      "wrong": 0,
+      "raw_rate": 0.0,
+      "ci95": [
+        0.0,
+        0.7935
+      ],
+      "aligned_rows_with_channel": 180
+    },
+    {
+      "channel": "skd",
+      "cards": 3,
+      "wrong": 3,
+      "raw_rate": 1.0,
+      "ci95": [
+        0.4385,
+        1.0
+      ],
+      "aligned_rows_with_channel": 160
+    }
+  ],
+  "positive_control": {
+    "group_id": "rajas#9",
+    "construction": "PWG sense of one lemma paired with MW/Apte senses of an unrelated lemma",
+    "declared_score": "0.930",
+    "expected": "different",
+    "observed": "different",
+    "verdict": "PASS",
+    "blind": true
+  }
+}

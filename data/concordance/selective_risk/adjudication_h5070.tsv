@@ -1,0 +1,62 @@
+card	group_id	lemma_slp1	method	score	stratum	population_share	verdict	near_miss	note
+C001	drAvaka#1	drAvaka	gloss	1.000	hi >=0.70|gloss	0.192420	same	no	
+C002	ci#6	ci	gloss	0.500	mid 0.40-0.69|gloss	0.185569	same	no	
+C003	vikawa#3	vikawa	gloss	1.000	hi >=0.70|gloss	0.192420	same	no	
+C004	SacI#2	SacI	gloss+ls	0.500	mid 0.40-0.69|gloss+ls	0.051020	same	no	PWG gloss truncated to 'Gattin'; MW/Apte both Indra's wife
+C005	loha#7	loha	ls	0.500	mid 0.40-0.69|ls	0.233236	same	no	
+C006	malimluca#1	malimluca	ls	1.000	hi >=0.70|ls	0.078426	same	no	
+C007	kAhala#3	kAhala	gloss	1.000	hi >=0.70|gloss	0.192420	same	no	
+C008	nI#5	nI	ls	0.500	mid 0.40-0.69|ls	0.233236	different	no	PWG 'hervorbringen/vollbringen' (accomplish) vs MW desiderative 'to wish to spend time'
+C009	piRqaka#1	piRqaka	ls	0.833	hi >=0.70|ls	0.078426	same	no	
+C010	kal#8	kal	gloss	0.429	mid 0.40-0.69|gloss	0.185569	same	no	
+C011	vfzan#4	vfzan	ls	0.333	lo <0.40|ls	0.105248	unsure	no	PWG gloss is a contentless scholium stub ('f. Schol. zu'); gender f. vs MW n. — nothing to compare
+C012	kAla#15	kAla	gloss	0.750	hi >=0.70|gloss	0.192420	same	no	
+C013	saMtAnaka#2	saMtAnaka	ls	0.333	lo <0.40|ls	0.105248	different	no	PWG: a mother in Skanda's retinue vs MW: a tree of Indra's heaven
+C014	pura#3	pura	gloss	1.000	hi >=0.70|gloss	0.192420	different	yes	both sides are compositional stubs ('in comp. for' / 'Comp'); an alignment of two non-senses
+C015	hastin#3	hastin	gloss	0.667	mid 0.40-0.69|gloss	0.185569	different	yes	MW: the elephant itself vs Apte: the elephant's trunk (metonymy)
+C016	aRu#5	aRu	gloss	0.333	lo <0.40|gloss	0.100292	different	yes	MW m. 'an atom' vs Apte a. 'of the size of an atom' — substantive vs attributive
+C017	ahi#3	ahi	gloss	1.000	hi >=0.70|gloss	0.192420	same	no	
+C018	sita#9	sita	gloss	0.364	lo <0.40|gloss	0.100292	same	no	MD channel (H4745) — white/pale/bright, waxing-moon period on both sides
+C019	pAvana#7	pAvana	gloss	0.500	mid 0.40-0.69|gloss	0.185569	same	no	
+C020	pratizWA#9	pratizWA	ls	0.333	lo <0.40|ls	0.105248	same	no	
+C021	pAda#3	pAda	ls	0.311	lo <0.40|ls	0.105248	same	no	
+C022	sAra#14	sAra	ls	0.500	mid 0.40-0.69|ls	0.233236	same	no	
+C023	sUkzma#1	sUkzma	gloss+ls	0.400	mid 0.40-0.69|gloss+ls	0.051020	same	no	
+C024	DaraRa#4	DaraRa	gloss	1.000	hi >=0.70|gloss	0.192420	same	no	
+C025	vac#3	vac	ls	0.583	mid 0.40-0.69|ls	0.233236	same	no	
+C026	kala#8	kala	attrib	0.500	mid 0.40-0.69|attrib*	0.004810	different	no	PWG 'Judendorn' (jujube shrub) vs SKD dhatu entry 'kala ... ganayati' (to count)
+C027	nAgara#12	nAgara	gloss	0.421	mid 0.40-0.69|gloss	0.185569	same	no	
+C028	kriyA#11	kriyA	gloss	0.333	lo <0.40|gloss	0.100292	same	no	
+C029	sTala#4	sTala	ls	0.333	lo <0.40|ls	0.105248	different	yes	PWG 'Erdaufschuettung' (heaped mound) vs MW 'dry land, firm earth'
+C030	kfta#11	kfta	ls	0.500	mid 0.40-0.69|ls	0.233236	different	no	PWG gloss is a grammatical note on compounds vs Apte 'the Krta Yuga'
+C031	niSAcara#2	niSAcara	ls	0.333	lo <0.40|ls	0.105248	same	no	
+C032	vIra#2	vIra	gloss+ls	0.367	lo <0.40|gloss+ls	0.006268	different	no	PWG/MW 'male child, son' but Apte member is 'the mother of a male child' — one group member is wrong
+C033	kesara#2	kesara	ls	0.750	hi >=0.70|ls	0.078426	same	no	
+C034	sita#1	sita	gloss	1.000	hi >=0.70|gloss	0.192420	same	no	
+C035	viSAKa#4	viSAKa	ls	0.333	lo <0.40|ls	0.105248	same	no	
+C036	tad#1	tad	gloss+ls	1.000	hi >=0.70|gloss+ls	0.033673	same	no	
+C037	paruza#1	paruza	ls	0.667	mid 0.40-0.69|ls	0.233236	same	no	
+C038	suraBi#14	suraBi	gloss	0.333	lo <0.40|gloss	0.100292	same	no	
+C039	dIpana#5	dIpana	ls	0.500	mid 0.40-0.69|ls	0.233236	same	no	
+C040	arha#3	arha	gloss	1.000	hi >=0.70|gloss	0.192420	same	no	
+C041	rajas#9	rajas	gloss+ls	0.930	hi >=0.70|gloss+ls	0.000000	different	no	PWG 'Dunst, Staub' (dust) vs MW 'close union, collection, cluster, heap, mass'
+C042	rAma#2	rAma	gloss	1.000	hi >=0.70|gloss	0.192420	same	no	
+C043	sevya#8	sevya	gloss	0.375	lo <0.40|gloss	0.100292	same	no	
+C044	varUTa#3	varUTa	ls	0.333	lo <0.40|ls	0.105248	same	no	
+C045	AvApa#10	AvApa	gloss	0.600	mid 0.40-0.69|gloss	0.185569	same	no	
+C046	Gawa#3	Gawa	attrib	0.333	lo <0.40|attrib*	0.002770	different	no	PWG 'Menge, Masse' vs SKD dhatu entry 'ghata ... dyutau' (to shine)
+C047	deva#10	deva	gloss	0.375	lo <0.40|gloss	0.100292	same	no	
+C048	harita#2	harita	ls	0.533	mid 0.40-0.69|ls	0.233236	different	yes	PWG colour range 'falb/gelblich/gruen' vs MW 'gold' (substance)
+C049	sahas#1	sahas	gloss+ls	1.000	hi >=0.70|gloss+ls	0.033673	different	no	PWG 'Gewalt, Macht, Kraft' (force) vs MW/Apte 'water'
+C050	jizRu#4	jizRu	gloss	1.000	hi >=0.70|gloss	0.192420	same	no	
+C051	SUnya#7	SUnya	ls	0.500	mid 0.40-0.69|ls	0.233236	same	no	
+C052	sADana#4	sADana	ls	0.750	hi >=0.70|ls	0.078426	same	no	
+C053	vid#4	vid	gloss	0.667	mid 0.40-0.69|gloss	0.185569	same	no	
+C054	kamala#7	kamala	ls	0.333	lo <0.40|ls	0.105248	same	no	
+C055	kfzRa#17	kfzRa	gloss	0.333	lo <0.40|gloss	0.100292	different	yes	MW 'black Agallochum' vs Apte 'black pepper' — different plants joined by the colour term
+C056	kuwa#1	kuwa	attrib	1.000	hi >=0.70|attrib*	0.006268	different	no	PWG 'Baum' (tree) vs SKD dhatu entry 'kuta ... vaikalye' (to be crooked)
+C057	mudrA#5	mudrA	gloss	0.571	mid 0.40-0.69|gloss	0.185569	same	no	
+C058	amfta#24	amfta	gloss	0.333	lo <0.40|gloss	0.100292	same	no	
+C059	jIvaka#6	jIvaka	gloss	0.333	lo <0.40|gloss	0.100292	same	no	
+C060	avi#4	avi	gloss	1.000	hi >=0.70|gloss	0.192420	same	no	
+C061	pataMga#1	pataMga	ls	1.000	hi >=0.70|ls	0.078426	same	no	
