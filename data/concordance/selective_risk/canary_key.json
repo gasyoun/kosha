@@ -1,0 +1,9 @@
+{
+  "canary_group_id": "rajas#9",
+  "construction": "PWG sense of one lemma paired with MW/Apte senses of an unrelated lemma",
+  "pwg_from_lemma": "rajas",
+  "mw_apte_from_lemma": "saMGAta",
+  "declared_score": "0.930",
+  "expected_verdict": "different",
+  "blinding": "the adjudicator never sees which card is synthetic: this file is written separately and is not opened until the verdicts are recorded"
+}
