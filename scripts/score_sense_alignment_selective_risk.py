@@ -606,8 +606,8 @@ def write_channel_report(d, p, freeze):
     L += ["", f"**{dv['k']} of {dv['n']} {N} wrong matches ({_pct(dv['share'])}, Wilson {_ci(dv['wilson95'])}) set a "
           "ŚKDR root (dhātu) entry against a non-verbal PWG sense** — the Kavikalpadruma root entry for the same",
           "letter string (*kūṭa ... aprasāde*, *puṭa ... saṃsarge*). "
-          f"**{strict_k} of the {dv['n']} ({_pct(strict_k / dv['n'])}, Wilson {_ci([slo, shi])}) are strictly root-vs-noun** "
-          "(a plant, a stone, a house, an adjective)"
+          f"**{strict_k} of the {dv['n']} ({_pct(strict_k / dv['n'])}, Wilson {_ci([slo, shi])}) are strictly root-vs-nominal** "
+          "(a noun or an adjective: a plant, a stone, a house, *weiss*)"
           + (f"; {', '.join(recl)} carries the rubric's `dhatu-vs-noun` label from both adjudicators, but its PWG "
              "side is the preverb *ava* ('herab; weg'), not a noun (Astra review, 22-09-2026 — the verdict files "
              "are left as frozen, the label is re-read here)." if recl else "."),
