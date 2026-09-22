@@ -3236,6 +3236,26 @@
    "status": "awaiting-consumer",
    "consumer_candidates": [],
    "notes": "H4744 (sibling census B8). First crosswalk for the BHS dictionary; the retired H4808 gap measure falls out of it: MW misses 13,604/18,188 BHS headwords (74.8%), PWG 13,305 (73.2%). DCS register classes (H1000 period-map pm-excluded / bhs-hybrid / buddhist-classical) travel per-row (dcs_bhs_loci), re-cuttable without rebuild. Landed via SanskritLexicography PR #2225 (product repo, PR-only) — source_path resolves on master once merged."
+  },
+  {
+   "id": "csl-observatory-a15-gh-ecosystem-inputs",
+   "title": "CDSL GitHub maintenance ecosystem: A15 analysis inputs (76-repo snapshot, issue/commit ledgers, 52,498-event correction ledger)",
+   "tier": "public",
+   "license": "CC BY 4.0",
+   "in_release": "not-applicable",
+   "format": "csv+json (67-file catalog)",
+   "rows": 52498,
+   "size_bytes": 306082101,
+   "keying": "multi-file analysis catalog, no single key — rows above = correction_events_release.csv; per-file format/rows/generating-script/caveats live in data_index.csv",
+   "source_repo": "https://github.com/sanskrit-lexicon/csl-observatory",
+   "source_path": "observatory/site/src/data/ (the data_index.csv catalog: 76-repo snapshot ledgers, sustainability/bus-factor, issue lifecycle+taxonomy, activity/velocity, external reach, citation sweep, dictionary inventories, correction_events_release.csv + .meta.json)",
+   "builder": "observatory/fetch.py + observatory/transform.py + scripts/* (per-file source_script column in data_index.csv)",
+   "consumers": [
+    "A15 JOHD Discussion Paper (Measuring the Cologne Digital Sanskrit Dictionaries as a GitHub Maintenance Ecosystem) — archived-snapshot DOI required by the venue"
+   ],
+   "doi": "10.5281/zenodo.22853818",
+   "notes": "H5170 (20-09-2026, mint lane): minted via the legacy Zenodo deposit API (FINDINGS §594 recipe), 67/67 uploads MD5-verified, record live-verified logged-out. Concept DOI 10.5281/zenodo.22853817; version DOI 10.5281/zenodo.22853818 (v1.0.0, 2026-09-20). The OBS-T correction-event corpus also circulates as repo-archive Zenodo releases (concept DOI 10.5281/zenodo.21346705). Wired into csl-observatory CITATION.cff + README + the A15 manuscript (PR sanskrit-lexicon/csl-observatory#224, merged).",
+   "regen_checked": "not yet (deposited blob-exact from committed files; catalog snapshot dated 2026-08-31)"
   }
  ]
 }
