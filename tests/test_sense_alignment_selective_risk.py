@@ -162,3 +162,95 @@ def test_every_deck_card_carries_a_verdict():
     adj = _read_tsv(SR / "adjudication_h5070.tsv")
     assert {r["card"] for r in adj} == deck
     assert all(r["verdict"] in {"same", "different", "unsure"} for r in adj)
+
+
+# ============================================================ H5252 channel mode
+#
+# The SKD-stratified deck (H5252) sizes one channel the H5070 draw left at 3 cards.
+# What can go wrong: the channel budget silently leaking to the complement, the
+# earlier deck's cards being judged twice, the synthetic control naming a real row
+# (H5070's `rajas#9` did), and the new options changing the H5070 artifacts.
+
+SKD = ROOT / "data" / "concordance" / "selective_risk_skd"
+needs_skd = pytest.mark.skipif(not (SKD / "review_deck.tsv").exists(), reason="H5252 deck absent")
+SKD_CMD = ["--seed", "5252", "--target", "60", "--stratify-channel", "skd", "--channel-budget", "45",
+           "--exclude-deck", str(SR / "review_deck.tsv"), "--handoff", "H5252"]
+
+
+@needs_table
+@needs_skd
+def test_skd_deck_reproduces_byte_for_byte(tmp_path):
+    out = tmp_path / "skd"
+    subprocess.run([sys.executable, str(SAMPLER), "--out-dir", str(out), *SKD_CMD],
+                   check=True, capture_output=True, encoding="utf-8", cwd=ROOT)
+    for name in ("review_deck.tsv", "canary_key.json", "population_freeze.json"):
+        assert (out / name).read_bytes() == (SKD / name).read_bytes(), name
+
+
+@needs_skd
+def test_skd_budget_lands_on_the_channel_and_only_there():
+    key = json.loads((SKD / "canary_key.json").read_text(encoding="utf-8"))
+    deck = [r for r in _read_tsv(SKD / "review_deck.tsv") if r["group_id"] != key["canary_group_id"]]
+    skd = [r for r in deck if r["stratum"].endswith("|skd")]
+    assert len(skd) == 45 and len(deck) == 60
+    assert all(r["skd_gloss"].strip() for r in skd)
+    assert not any(r["skd_gloss"].strip() for r in deck if r not in skd)
+
+
+@needs_table
+@needs_skd
+def test_skd_deck_never_rereads_h5070_and_its_canary_names_no_real_row():
+    table = _read_tsv(TABLE)
+    real_ids = {r["group_id"] for r in table}
+    key = json.loads((SKD / "canary_key.json").read_text(encoding="utf-8"))
+    assert key["canary_group_id"] not in real_ids
+    old_key = json.loads((SR / "canary_key.json").read_text(encoding="utf-8"))
+    judged = {r["group_id"] for r in _read_tsv(SR / "review_deck.tsv")} - {old_key["canary_group_id"]}
+    new = {r["group_id"] for r in _read_tsv(SKD / "review_deck.tsv")}
+    assert new.isdisjoint(judged), "an H5070 card was drawn again"
+    freeze = json.loads((SKD / "population_freeze.json").read_text(encoding="utf-8"))
+    prior = next(iter(freeze["prior_decks_excluded"].values()))
+    assert prior["canary_skipped"] == old_key["canary_group_id"]
+    assert prior["cards_excluded"] == 60
+
+
+@needs_skd
+def test_skd_scoring_excludes_the_canary_and_reweights():
+    scored = json.loads((SKD / "channel_risk.json").read_text(encoding="utf-8"))
+    key = json.loads((SKD / "canary_key.json").read_text(encoding="utf-8"))
+    assert key["canary_group_id"] not in {c["group_id"] for c in scored["cards"]}
+    assert scored["newly_adjudicated_cards"] == 60
+    assert scored["positive_control"]["adjudicator_1"]["verdict"] == "PASS"
+    rates = {x["scope"]: x for x in scored["rates"]}
+    ch = rates["skd channel, all bands"]
+    assert ch["eligible_population"] == 90 and ch["cards_adjudicated"] == 45
+    for x in scored["rates"]:
+        assert x["strict_wrong_rate"] >= x["lenient_wrong_rate"], x["scope"]
+        assert x["unsure_as_wrong_rate"] >= x["strict_wrong_rate"], x["scope"]
+        lo, hi = x["strict_ci95"]
+        assert lo <= x["strict_wrong_rate"] <= hi
+
+
+def test_dhatu_marker_reads_root_entries_and_spares_nominal_ones():
+    sys.path.insert(0, str(SCORER.parent))
+    try:
+        from score_sense_alignment_selective_risk import dhatu_marked
+    finally:
+        sys.path.pop(0)
+    assert dhatu_marked("kūṭa ka ṅa aprasādāpradoḥ . iti kavikalpadrumaḥ .. (curāṃ-ātmaṃ-akaṃ-seṭ .)")
+    assert dhatu_marked("śaṭha , ka ālasye . iti kavi- kalpadrumaḥ ..")  # line-break hyphen
+    assert dhatu_marked("ava rakṣaṇe . (yathāyathaṃ sakaṃ-akaṃ-ca, bhvādiṃ- paraṃ-seṭ .) gatau")
+    assert not dhatu_marked("mudrā , strī, (modate anayeti . mud + sphāyi- tañcītyādi .) pratyayakāriṇī")
+    assert not dhatu_marked("marut , puṃ, vāyuḥ . ityamaraḥ")
+
+
+@needs_deck
+def test_h5070_report_regenerates_unchanged(tmp_path):
+    d = tmp_path / "sr"
+    d.mkdir()
+    for f in SR.iterdir():
+        (d / f.name).write_bytes(f.read_bytes())
+    subprocess.run([sys.executable, str(SCORER), "--dir", str(d)], check=True,
+                   capture_output=True, encoding="utf-8")
+    for name in ("selective_risk.json", "SELECTIVE_RISK_REPORT.md"):
+        assert (d / name).read_bytes() == (SR / name).read_bytes(), name

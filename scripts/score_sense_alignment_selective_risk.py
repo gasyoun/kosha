@@ -311,12 +311,369 @@ def write_report(d, payload, freeze):
     (d / "SELECTIVE_RISK_REPORT.md").write_text("\n".join(L) + "\n", encoding="utf-8")
 
 
+# ---------------------------------------------------------------- H5252 channel mode
+#
+# A deck frozen with `--stratify-channel <dict>` (H5252) is scored here instead of
+# by the H5070 path above, which stays byte-for-byte what it was. Strata are score
+# band x (carries the channel / does not); verdict files carry only
+# card/verdict/near_miss/failure_shape/note and are joined to the deck by card, so
+# the adjudicator never needed a single metadata column.
+
+import re as _re
+
+DHATU_MARKERS = _re.compile(
+    r"kavikalpa|\((?:adanta-?\s*)?(?:bhvā|curā|adā|divā|tudā|rudhā|tanā|kryā|svā|juhotyā)"
+    r"|\b(?:seṭ|aniṭ|veṭ)\b")
+
+
+def dhatu_marked(gloss):
+    """Mechanical second lens: does the SKD text read as a dhātupāṭha entry?
+    Line-break hyphens are closed first (`kavi- kalpadrumaḥ`)."""
+    return bool(DHATU_MARKERS.search(_re.sub(r"-\s+", "", gloss or "")))
+
+
+def _channel_eligible(freeze, name):
+    """Re-derive the channel's eligible rows from the primary table, guarded by
+    the frozen hash, with the same group_id exclusions the sampler applied."""
+    src = ROOT / freeze["source"]
+    import hashlib
+    if hashlib.sha256(src.read_bytes()).hexdigest() != freeze["source_sha256"]:
+        return None, None
+    rows = [r for r in load(src) if r["method"] != "singleton"]
+    excluded = set()
+    for g in freeze["gold_files"]:
+        excluded |= {r["group_id"] for r in load(ROOT / "data/concordance" / g)}
+    for p, meta in freeze.get("prior_decks_excluded", {}).items():
+        ids = {r["group_id"] for r in load(ROOT / p)}
+        ids.discard(meta.get("canary_skipped"))
+        excluded |= ids
+    chan = [r for r in rows if (r.get(f"{name}_gloss") or "").strip()]
+    return chan, [r for r in chan if r["group_id"] not in excluded]
+
+
+def _rate_block(label, weights, by_stratum, rules):
+    strict, lenient, unsure_wrong = rules
+    n_pop = sum(weights.values())
+    sp, slo, shi, n_used, empty = stratified(by_stratum, weights, strict)
+    lp, llo, lhi, _, _ = stratified(by_stratum, weights, lenient)
+    up, ulo, uhi, _, _ = stratified(by_stratum, weights, unsure_wrong)
+    return {"scope": label, "eligible_population": n_pop, "cards_adjudicated": n_used,
+            "strict_wrong_rate": round(sp, 4), "strict_ci95": [round(slo, 4), round(shi, 4)],
+            "lenient_wrong_rate": round(lp, 4), "lenient_ci95": [round(llo, 4), round(lhi, 4)],
+            "unsure_as_wrong_rate": round(up, 4), "unsure_as_wrong_ci95": [round(ulo, 4), round(uhi, 4)],
+            "strict_half_width_points": round((shi - slo) * 50, 1),
+            "interval_method": "heuristic envelope, nominal coverage not established; "
+                               "no finite-population correction (conservative)",
+            "strata_without_cards": empty}
+
+
+def score_channel(d, freeze, adj_path, blind2_path):
+    name = freeze["stratify_channel"]
+    canary = (json.loads((d / "canary_key.json").read_text(encoding="utf-8"))
+              if (d / "canary_key.json").exists() else None)
+    deck = {r["card"]: r for r in load(d / "review_deck.tsv")}
+    verdicts = load(adj_path)
+    assert {r["card"] for r in verdicts} == set(deck), "verdicts must cover the deck exactly"
+    for r in verdicts:
+        r.update({k: deck[r["card"]][k] for k in ("group_id", "stratum", "lemma_slp1", "skd_gloss")
+                  if k in deck[r["card"]]})
+    is_canary = lambda r: canary is not None and r["group_id"] == canary["canary_group_id"]
+    real = [r for r in verdicts if not is_canary(r)]
+    canary_rows = [r for r in verdicts if is_canary(r)]
+
+    rules = (lambda r: r["verdict"] == "different",
+             lambda r: r["verdict"] == "different" and r["near_miss"] != "yes",
+             lambda r: r["verdict"] in ("different", "unsure"))
+    weights_all = {m["stratum"]: m["eligible"] for m in freeze["strata"]}
+    by_stratum = defaultdict(list)
+    for r in real:
+        by_stratum[r["stratum"]].append(r)
+
+    own = {s: n for s, n in weights_all.items() if s.split("|")[1] == name}
+    rest = {s: n for s, n in weights_all.items() if s.split("|")[1] != name}
+    scopes = [_rate_block(f"{name} channel, all bands", own, by_stratum, rules)]
+    for b in BANDS:
+        scopes.append(_rate_block(f"{name} | {b}", {s: n for s, n in own.items() if s.startswith(b)},
+                                  by_stratum, rules))
+    scopes.append(_rate_block(f"non-{name} comparison, all bands", rest, by_stratum, rules))
+    scopes.append(_rate_block("all eligible (pooled, re-weighted)", weights_all, by_stratum, rules))
+
+    # failure shapes among the channel's strict wrong matches
+    chan_cards = [r for r in real if r["stratum"].split("|")[1] == name]
+    wrong = [r for r in chan_cards if r["verdict"] == "different"]
+    shapes = defaultdict(int)
+    for r in wrong:
+        shapes[r.get("failure_shape") or "n/a"] += 1
+    k = shapes.get("dhatu-vs-noun", 0)
+    lo, hi = wilson(k, len(wrong))
+    dhatu_rate = _rate_block(f"{name} rows that are dhatu-vs-noun wrong matches", own, by_stratum,
+                             (lambda r: r["verdict"] == "different" and r.get("failure_shape") == "dhatu-vs-noun",) * 3)
+
+    # mechanical second lens over the population and against the verdicts
+    chan_all, chan_elig = _channel_eligible(freeze, name)
+    marker = None
+    if chan_all is not None:
+        conf = defaultdict(int)
+        for r in chan_cards:
+            conf[f"{'marked' if dhatu_marked(r.get('skd_gloss')) else 'unmarked'}->{r['verdict']}"] += 1
+        marker = {"pattern": DHATU_MARKERS.pattern,
+                  "channel_rows_all": len(chan_all),
+                  "channel_rows_marked_all": sum(dhatu_marked(r[f"{name}_gloss"]) for r in chan_all),
+                  "channel_rows_eligible": len(chan_elig),
+                  "channel_rows_marked_eligible": sum(dhatu_marked(r[f"{name}_gloss"]) for r in chan_elig),
+                  "deck_marker_vs_verdict": dict(sorted(conf.items()))}
+
+    blind2 = load(blind2_path) if blind2_path and blind2_path.exists() else None
+    agree = agree_chan = shape_agree = None
+    if blind2 is not None:
+        agree = agreement(real, blind2)
+        agree_chan = agreement(chan_cards, blind2)
+        b2 = {r["card"]: r for r in blind2}
+        both = [r for r in wrong if b2.get(r["card"], {}).get("verdict") == "different"]
+        shape_agree = {"cards_both_different": len(both),
+                       "same_failure_shape": sum(1 for r in both
+                                                 if r.get("failure_shape") == b2[r["card"]].get("failure_shape"))}
+    b2_by_card = {r["card"]: r for r in blind2} if blind2 else {}
+    sens2 = None
+    if blind2:
+        # sensitivity: the same estimator over adjudicator 2's verdicts
+        by2 = defaultdict(list)
+        for r in real:
+            v = b2_by_card[r["card"]]
+            by2[r["stratum"]].append({"verdict": v["verdict"], "near_miss": v["near_miss"]})
+        sens2 = _rate_block(f"{name} channel, all bands (adjudicator 2 verdicts)", own, by2, rules)
+    pc = None
+    if canary:
+        obs1 = canary_rows[0]["verdict"] if canary_rows else None
+        obs2 = b2_by_card.get(canary_rows[0]["card"], {}).get("verdict") if canary_rows and blind2 else None
+        pc = {"group_id": canary["canary_group_id"], "card": canary_rows[0]["card"] if canary_rows else None,
+              "construction": canary["construction"], "declared_score": canary["declared_score"],
+              "expected": canary["expected_verdict"],
+              "adjudicator_1": {"observed": obs1, "verdict": "PASS" if obs1 == canary["expected_verdict"] else "FAIL"},
+              "adjudicator_2": ({"observed": obs2, "verdict": "PASS" if obs2 == canary["expected_verdict"] else "FAIL"}
+                                if blind2 else None)}
+
+    payload = {
+        "handoff": freeze["handoff"],
+        "source_sha256": freeze["source_sha256"],
+        "seed": freeze["seed"],
+        "stratify_channel": name,
+        "population_aligned": freeze["population_aligned"],
+        "eligible_after_exclusions": freeze["eligible_after_gold_exclusion"],
+        "prior_decks_excluded": freeze.get("prior_decks_excluded"),
+        "newly_adjudicated_cards": len(real),
+        "channel_cards": len(chan_cards),
+        "unsure_cards": sum(1 for r in real if r["verdict"] == "unsure"),
+        "rates": scopes,
+        "failure_shapes_among_channel_wrong": dict(sorted(shapes.items())),
+        "dhatu_vs_noun_share_of_channel_wrong": {"k": k, "n": len(wrong),
+                                                 "share": round(k / len(wrong), 4) if wrong else None,
+                                                 "wilson95": [round(lo, 4), round(hi, 4)]},
+        "dhatu_vs_noun_rate_of_channel_rows": dhatu_rate,
+        "dhatu_marker_lens": marker,
+        "adjudicator_2_sensitivity": sens2,
+        "inter_adjudicator_agreement_all": agree,
+        "inter_adjudicator_agreement_channel": agree_chan,
+        "failure_shape_agreement": shape_agree,
+        "positive_control": pc,
+        "cards": [{k2: r.get(k2) for k2 in ("card", "group_id", "stratum", "verdict", "near_miss",
+                                             "failure_shape")} for r in real],
+    }
+    (d / "channel_risk.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+                                         encoding="utf-8")
+    for x in scopes + [dhatu_rate]:
+        print(f"{x['scope']:44s} N={x['eligible_population']:5d} n={x['cards_adjudicated']:3d} "
+              f"strict {x['strict_wrong_rate']*100:5.1f}% [{x['strict_ci95'][0]*100:5.1f},{x['strict_ci95'][1]*100:5.1f}] "
+              f"lenient {x['lenient_wrong_rate']*100:5.1f}% unsure->wrong {x['unsure_as_wrong_rate']*100:5.1f}%")
+    print("shapes", dict(shapes), "marker", marker and {k2: v for k2, v in marker.items() if k2 != "pattern"})
+    print("agreement", agree, agree_chan, shape_agree)
+    print("control", pc)
+    return payload
+
+
+ADJ1 = "Claude Opus 5.5 (claude-opus-5-5), executor"
+ADJ2 = "Claude Fable 5.1 (claude-fable-5-1), fresh context, rendered cards only"
+
+
+def _pct(x):
+    return f"{x*100:.1f} %"
+
+
+def _ci(c):
+    return f"{c[0]*100:.1f}–{c[1]*100:.1f} %"
+
+
+def _cell(t):
+    return str(t).replace("|", "\\|")
+
+
+def write_channel_report(d, p, freeze):
+    """Human-readable twin of channel_risk.json (H5252 channel mode)."""
+    name = p["stratify_channel"]
+    N = name.upper()
+    rates = {x["scope"]: x for x in p["rates"]}
+    ch = rates[f"{name} channel, all bands"]
+    comp = rates[f"non-{name} comparison, all bands"]
+    pooled = rates["all eligible (pooled, re-weighted)"]
+    dv = p["dhatu_vs_noun_share_of_channel_wrong"]
+    dr = p["dhatu_vs_noun_rate_of_channel_rows"]
+    mk = p["dhatu_marker_lens"]
+    pc = p["positive_control"]
+    ag, agc, sa = (p["inter_adjudicator_agreement_all"], p["inter_adjudicator_agreement_channel"],
+                   p["failure_shape_agreement"])
+    prior = next(iter((p.get("prior_decks_excluded") or {}).values()), None)
+    L = []
+    L += ["# ŚKDR (skd) channel wrong-match rate — SKD-stratified sense-alignment deck", "",
+          "_Created: 22-09-2026 · Last updated: 22-09-2026_", "",
+          f"Generated by `scripts/score_sense_alignment_selective_risk.py` ({p['handoff']}, channel mode). "
+          "Do not hand-edit: re-run the script. Machine twin: `channel_risk.json`.", "",
+          "## What this is, and what it is not", "",
+          "An **agent-adjudicated** size of one known defect: the ŚKDR (Śabdakalpadruma) channel of the",
+          "aligned-sense table, where the H5070 deck found 3 of 3 cards wrong. It is **not** the family's",
+          "acceptance precision (that stays behind the human-vote fence in `SENSE_ALIGNMENT_BUILD_REPORT.md`),",
+          "and it changes no serving threshold and no aligner constant.", "",
+          f"- population hash `{p['source_sha256']}` (same table as H5070), seed {p['seed']}",
+          f"- {N} channel: {mk['channel_rows_all'] if mk else '—'} aligned rows carry an {N} gloss; "
+          f"**{ch['eligible_population']}** remain after excluding the H3910/W2 gold cards"
+          + (f" and the {prior['cards_excluded']} real H5070 deck cards" if prior else "")
+          + ". Every one is a PWG + ŚKDR pair joined by `attrib` (PWG cites *skdr*).",
+          f"- {p['newly_adjudicated_cards']} newly adjudicated cards: {p['channel_cards']} {N} "
+          f"+ {p['newly_adjudicated_cards'] - p['channel_cards']} non-{N} comparison, plus one blind canary",
+          f"- adjudicators: {ADJ1}; {ADJ2}", "",
+          "## Design, frozen before any card was read", "",
+          f"Strata = score band × (carries an {N} gloss / does not). The {N} stratum got a fixed budget",
+          f"of {freeze['channel_budget']} cards spread over bands in proportion to size; the remaining",
+          f"{freeze['target'] - freeze['channel_budget']} went to the complement, also proportionally. The freeze (population hash, seed,",
+          "allocation, deck, sealed canary key) was committed before rendering; the verdicts of adjudicator 1",
+          "were committed before the canary key was opened. Adjudicators saw only",
+          "`render_selective_risk_deck.py --width 400` output — no score, stratum, method or group id.",
+          f"The {N} channel is visible on the card by construction (an `SKD (sa)` line); that cannot be",
+          "blinded and is why the canary and the second adjudicator matter.", "",
+          "| stratum | eligible rows | cards |", "|---|---:|---:|"]
+    for m in sorted(freeze["strata"], key=lambda m: (m["channel"] != name, BANDS.index(m["score_band"]))):
+        L.append(f"| {_cell(m['stratum'])} | {m['eligible']:,} | {m['sampled']} |")
+    L += ["", f"## {N} channel wrong-match rate", "",
+          "`strict` counts every `different`; `lenient` drops `near_miss` ones (POS variant, sibling sense);",
+          "`unsure→wrong` also counts every `unsure`. Stratified estimates re-weighted to eligible rows.",
+          "Intervals are the H5070 heuristic envelope (wider of a plug-in stratified normal and a pooled",
+          "Wilson); they ignore the finite-population correction, which here (45 of 90 rows read) would",
+          "narrow them — so they are conservative, and still **not** shown to reach nominal 95 % coverage.", "",
+          "| scope | eligible rows | cards | strict | ~95 % CI | lenient | ~95 % CI | unsure→wrong | ~95 % CI |",
+          "|---|---:|---:|---:|---|---:|---|---:|---|"]
+    for key in [f"{name} channel, all bands"] + [f"{name} | {b}" for b in BANDS] + \
+               [f"non-{name} comparison, all bands", "all eligible (pooled, re-weighted)"]:
+        x = rates[key]
+        L.append(f"| {_cell(key)} | {x['eligible_population']:,} | {x['cards_adjudicated']} | "
+                 f"{_pct(x['strict_wrong_rate'])} | {_ci(x['strict_ci95'])} | "
+                 f"{_pct(x['lenient_wrong_rate'])} | {_ci(x['lenient_ci95'])} | "
+                 f"{_pct(x['unsure_as_wrong_rate'])} | {_ci(x['unsure_as_wrong_ci95'])} |")
+    hw = ch["strict_half_width_points"]
+    s2 = p.get("adjudicator_2_sensitivity")
+    if s2:
+        L.append(f"| *sensitivity: {name} channel on adjudicator 2's verdicts* | {s2['eligible_population']:,} | "
+                 f"{s2['cards_adjudicated']} | {_pct(s2['strict_wrong_rate'])} | {_ci(s2['strict_ci95'])} | "
+                 f"{_pct(s2['lenient_wrong_rate'])} | {_ci(s2['lenient_ci95'])} | "
+                 f"{_pct(s2['unsure_as_wrong_rate'])} | {_ci(s2['unsure_as_wrong_ci95'])} |")
+    L += ["", f"**The {N} channel is wrong about {_pct(ch['strict_wrong_rate'])} of the time** (strict; "
+          f"{_ci(ch['strict_ci95'])}), against {_pct(comp['strict_wrong_rate'])} for the rest of the table in this deck "
+          f"and 18.4 % pooled in H5070. The strict interval is ±{hw} points — "
+          + ("inside" if hw < 15 else "**outside**") + " the ±15-point target.", "",
+          "Within the channel the score does not help: "
+          + ", ".join(f"{b.split()[0]} band {_pct(rates[f'{name} | {b}']['strict_wrong_rate'])}" for b in BANDS)
+          + ". The attribution score measures the witness, not whether the ŚKDR entry is the right lexeme.", "",
+          f"The pooled row is reported for continuity with H5070 only: the deck spends 3/4 of its cards on 1.3 % of",
+          "the population, so the pooled Wilson half of the envelope describes the deck, not the table, and is",
+          f"uninformative ({_ci(pooled['strict_ci95'])}). Its point estimate ({_pct(pooled['strict_wrong_rate'])}) agrees with H5070.", "",
+          "## What shape the wrong matches take", ""]
+    L.append("| failure shape | cards |")
+    L.append("|---|---:|")
+    for k2, v in p["failure_shapes_among_channel_wrong"].items():
+        L.append(f"| {k2} | {v} |")
+    L += ["", f"**{dv['k']} of {dv['n']} {N} wrong matches ({_pct(dv['share'])}, Wilson {_ci(dv['wilson95'])}) are the "
+          "dhātu-vs-noun shape**: PWG gives a nominal sense (a plant, a stone, a house) and the ŚKDR text is",
+          "the Kavikalpadruma root entry for the same letter string (*kūṭa ... aprasāde*, *puṭa ... saṃsarge*).",
+          f"Re-weighted, dhātu-vs-noun wrong matches are {_pct(dr['strict_wrong_rate'])} ({_ci(dr['strict_ci95'])}) of "
+          f"all eligible {N} rows. The other wrong matches sit on indeclinables: a sibling sense of *antareṇa*,",
+          "and a compound's gloss (*one who loathes study*) set against the prefix entry *pari*.", "",
+          "Not every dhātu card is wrong: where the PWG sense is itself the root's verbal meaning",
+          "(*dhvaj* 'hin und her bewegen' ↔ *dhvaja gatau*) the pair is a true match.", "",
+          f"{sum(1 for c in p['cards'] if c['verdict'] == 'unsure' and c['stratum'].endswith('|' + name))} of the "
+          f"{p['unsure_cards']} `unsure` verdicts sit in the {N} channel: letter entries (*ā*, *sa*, *u*),",
+          "the indeclinable *saha* (two rows with identical text), and *sudhā*, where the PWG gloss is contentless",
+          "or the ŚKDR text is cut before the claimed sense. They are counted in `unsure→wrong` only.", ""]
+    if mk:
+        c = mk["deck_marker_vs_verdict"]
+        L += ["## Mechanical second lens: the dhātu marker", "",
+              "A regular expression over the ŚKDR text (Kavikalpadruma citation, a gaṇa tag such as `(bhvā`/`(curā`,",
+              "or `seṭ`/`aniṭ`/`veṭ`; line-break hyphens closed) flags a dhātupāṭha entry without reading the",
+              "PWG side. It is a lens, not a verdict, and feeds no rate. **It was written after adjudicator 1 had",
+              "read this deck** (the closed line-break hyphen comes from one of its cards), so its deck figures below",
+              "are in-sample; only the population counts are an out-of-deck reading.", "",
+              "| | rows | marked as dhātu entry |", "|---|---:|---:|",
+              f"| all aligned {N} rows | {mk['channel_rows_all']} | {mk['channel_rows_marked_all']} |",
+              f"| eligible {N} rows | {mk['channel_rows_eligible']} | {mk['channel_rows_marked_eligible']} |", "",
+              "On the deck, marker × adjudicator-1 verdict: "
+              + ", ".join(f"{k2.replace('->', ' → ')} {v}" for k2, v in c.items()) + ".", ""]
+    L += ["## Controls and agreement", ""]
+    if pc:
+        L.append(f"1. **Seeded confident wrong match (blind) — adjudicator 1 {pc['adjudicator_1']['verdict']}"
+                 + (f", adjudicator 2 {pc['adjudicator_2']['verdict']}" if pc.get("adjudicator_2") else "")
+                 + f".** `{pc['group_id']}` ({pc['card']}): {pc['construction'].lower()}, dressed at score "
+                 f"{pc['declared_score']} in the metadata of the stratum it imitates (the H5070 fix). Its id is chosen "
+                 "so it names no real row — H5070's `rajas#9` did, which the sampler now guards against. "
+                 "Excluded from every rate.")
+    L.append("2. **H5070 reproduction.** The H5070 deck, canary key and freeze reproduce byte-for-byte with "
+             "`--legacy-canary-metadata`, and its report regenerates unchanged — the new options are additive.")
+    L.append(f"3. **No double reading.** The {prior['cards_excluded'] if prior else 0} real H5070 cards are excluded by "
+             "group_id (as the gold fence is); `group_id` is not unique in the table, so "
+             f"{prior['aligned_rows_removed'] - prior['cards_excluded'] if prior else 0} sibling rows sharing a judged id left too, "
+             "and the H5070 canary id was skipped so the real row it collides with stays eligible.")
+    if ag:
+        L.append(f"4. **Two blind adjudicators.** Over all {ag['cards']} real cards: raw agreement "
+                 f"{ag['raw_agreement']*100:.0f} %, Cohen's κ = {ag['cohen_kappa']:.2f}; over the {agc['cards']} {N} cards: "
+                 f"{agc['raw_agreement']*100:.0f} %, κ = {agc['cohen_kappa']:.2f} (confusion in the JSON). "
+                 f"Where both said `different` on an {N} card ({sa['cards_both_different']}), they named the same "
+                 f"failure shape on {sa['same_failure_shape']}. Rates above rest on adjudicator 1.")
+    else:
+        L.append("4. **Second adjudicator: PENDING** — no blind second verdict file yet.")
+    L += ["", "## Recommendation (not applied)", "",
+          f"The evidence supports one remedy, **recommended, not applied**: at alignment time, do not attach an",
+          f"{N} sense whose text is a dhātupāṭha root entry to a PWG sense that is not itself verbal. On this deck the",
+          "marker alone would have removed "
+          + (f"{mk['deck_marker_vs_verdict'].get('marked->different', 0)} wrong matches and "
+             f"{mk['deck_marker_vs_verdict'].get('marked->same', 0)} right one" if mk else "the dhātu wrong matches")
+          + ". The one right match it would remove (*dhvaj*) has a PWG sense that is itself a root meaning, so the "
+          "rule should fire only when the PWG side is nominal — a test this handoff does not build. "
+          + (f"It would touch {mk['channel_rows_marked_all']} of {mk['channel_rows_all']} {N} rows, including gold-sample rows, "
+             "so it needs the human acceptance vote's eyes before it changes the table." if mk else ""), "",
+          "## Limitations", "",
+          "1. **Agents, not the human vote.** Both adjudicators are models; neither is acceptance precision.",
+          "2. **Evidence is the card.** Glosses are truncated at 400 characters; letter and indeclinable",
+          "   entries are cut before the claimed sense and stay `unsure`.",
+          f"3. **The channel is visible.** Adjudicators knew which cards were {N} cards; blindness covers score,",
+          "   stratum and the canary, not the channel.",
+          "4. **Heuristic intervals.** See above; no finite-population correction, nominal coverage unproven.",
+          "5. **Precision only.** Cards come from rows the aligner aligned; nothing here measures recall.", "",
+          "_Гасунс_"]
+    (d / f"{N}_CHANNEL_RISK_REPORT.md").write_text("\n".join(L) + "\n", encoding="utf-8")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--dir", type=Path, default=SR)
+    ap.add_argument("--adjudication", type=Path, default=None,
+                    help="H5252 channel mode: verdict TSV (default adjudication_<handoff>.tsv)")
+    ap.add_argument("--blind2", type=Path, default=None,
+                    help="H5252 channel mode: second-adjudicator TSV (default adjudication_<handoff>_blind2.tsv)")
     a = ap.parse_args()
     d = a.dir
     freeze = json.loads((d / "population_freeze.json").read_text(encoding="utf-8"))
+    if freeze.get("stratify_channel"):
+        tag = freeze["handoff"].lower()
+        payload = score_channel(d, freeze, a.adjudication or d / f"adjudication_{tag}.tsv",
+                                a.blind2 or d / f"adjudication_{tag}_blind2.tsv")
+        write_channel_report(d, payload, freeze)
+        return
     canary = json.loads((d / "canary_key.json").read_text(encoding="utf-8")) if (d / "canary_key.json").exists() else None
     verdicts = load(d / "adjudication_h5070.tsv")
 
