@@ -254,3 +254,16 @@ def test_h5070_report_regenerates_unchanged(tmp_path):
                    capture_output=True, encoding="utf-8")
     for name in ("selective_risk.json", "SELECTIVE_RISK_REPORT.md"):
         assert (d / name).read_bytes() == (SR / name).read_bytes(), name
+
+
+@needs_skd
+def test_skd_shape_relabel_reads_the_label_not_the_frozen_verdicts():
+    """Astra review of H5252: C019's PWG side is a preverb, so it is not a
+    root-vs-NOUN case. The fix re-reads the label in the report; the verdict
+    files stay exactly as adjudicated."""
+    scored = json.loads((SKD / "channel_risk.json").read_text(encoding="utf-8"))
+    assert scored["shape_reclassified_after_review"] == {"C019": "dhatu-vs-indeclinable"}
+    assert scored["failure_shapes_among_channel_wrong"]["dhatu-vs-noun"] == 33
+    assert scored["dhatu_vs_noun_strict_count"] == 32
+    adj = {r["card"]: r for r in _read_tsv(SKD / "adjudication_h5252.tsv")}
+    assert adj["C019"]["failure_shape"] == "dhatu-vs-noun"
