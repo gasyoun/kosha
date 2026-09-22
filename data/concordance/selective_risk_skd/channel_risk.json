@@ -1,0 +1,758 @@
+{
+  "handoff": "H5252",
+  "source_sha256": "9b589b2b286badbbb87e76effee3bfb1b0c721ab9d0752faf20a0b0282e2563b",
+  "seed": 5252,
+  "stratify_channel": "skd",
+  "population_aligned": 7087,
+  "eligible_after_exclusions": 6797,
+  "prior_decks_excluded": {
+    "data/concordance/selective_risk/review_deck.tsv": {
+      "cards_excluded": 60,
+      "canary_skipped": "rajas#9",
+      "sha256": "4384f766691d5fa15e57b24b6dab56c102a54ae09d66b9b19d5ede300bbb7052",
+      "aligned_rows_removed": 63,
+      "note": "exclusion is by group_id, like the gold fence; group_id is not unique, so sibling rows sharing a judged id leave too"
+    }
+  },
+  "newly_adjudicated_cards": 60,
+  "channel_cards": 45,
+  "unsure_cards": 7,
+  "rates": [
+    {
+      "scope": "skd channel, all bands",
+      "eligible_population": 90,
+      "cards_adjudicated": 45,
+      "strict_wrong_rate": 0.7778,
+      "strict_ci95": [
+        0.6373,
+        0.895
+      ],
+      "lenient_wrong_rate": 0.6889,
+      "lenient_ci95": [
+        0.5433,
+        0.8241
+      ],
+      "unsure_as_wrong_rate": 0.9111,
+      "unsure_as_wrong_ci95": [
+        0.7927,
+        0.9936
+      ],
+      "strict_half_width_points": 12.9,
+      "interval_method": "heuristic envelope, nominal coverage not established; no finite-population correction (conservative)",
+      "strata_without_cards": []
+    },
+    {
+      "scope": "skd | lo <0.40",
+      "eligible_population": 18,
+      "cards_adjudicated": 9,
+      "strict_wrong_rate": 0.6667,
+      "strict_ci95": [
+        0.3542,
+        0.9747
+      ],
+      "lenient_wrong_rate": 0.6667,
+      "lenient_ci95": [
+        0.3542,
+        0.9747
+      ],
+      "unsure_as_wrong_rate": 0.8889,
+      "unsure_as_wrong_ci95": [
+        0.565,
+        1.0
+      ],
+      "strict_half_width_points": 31.0,
+      "interval_method": "heuristic envelope, nominal coverage not established; no finite-population correction (conservative)",
+      "strata_without_cards": []
+    },
+    {
+      "scope": "skd | mid 0.40-0.69",
+      "eligible_population": 32,
+      "cards_adjudicated": 16,
+      "strict_wrong_rate": 0.6875,
+      "strict_ci95": [
+        0.444,
+        0.9146
+      ],
+      "lenient_wrong_rate": 0.6875,
+      "lenient_ci95": [
+        0.444,
+        0.9146
+      ],
+      "unsure_as_wrong_rate": 0.875,
+      "unsure_as_wrong_ci95": [
+        0.6398,
+        1.0
+      ],
+      "strict_half_width_points": 23.5,
+      "interval_method": "heuristic envelope, nominal coverage not established; no finite-population correction (conservative)",
+      "strata_without_cards": []
+    },
+    {
+      "scope": "skd | hi >=0.70",
+      "eligible_population": 40,
+      "cards_adjudicated": 20,
+      "strict_wrong_rate": 0.9,
+      "strict_ci95": [
+        0.699,
+        1.0
+      ],
+      "lenient_wrong_rate": 0.7,
+      "lenient_ci95": [
+        0.481,
+        0.9008
+      ],
+      "unsure_as_wrong_rate": 0.95,
+      "unsure_as_wrong_ci95": [
+        0.7639,
+        1.0
+      ],
+      "strict_half_width_points": 15.1,
+      "interval_method": "heuristic envelope, nominal coverage not established; no finite-population correction (conservative)",
+      "strata_without_cards": []
+    },
+    {
+      "scope": "non-skd comparison, all bands",
+      "eligible_population": 6707,
+      "cards_adjudicated": 15,
+      "strict_wrong_rate": 0.1425,
+      "strict_ci95": [
+        0.0285,
+        0.3788
+      ],
+      "lenient_wrong_rate": 0.0713,
+      "lenient_ci95": [
+        0.0,
+        0.2982
+      ],
+      "unsure_as_wrong_rate": 0.2108,
+      "unsure_as_wrong_ci95": [
+        0.0424,
+        0.4519
+      ],
+      "strict_half_width_points": 17.5,
+      "interval_method": "heuristic envelope, nominal coverage not established; no finite-population correction (conservative)",
+      "strata_without_cards": []
+    },
+    {
+      "scope": "all eligible (pooled, re-weighted)",
+      "eligible_population": 6797,
+      "cards_adjudicated": 60,
+      "strict_wrong_rate": 0.1509,
+      "strict_ci95": [
+        0.0384,
+        0.7291
+      ],
+      "lenient_wrong_rate": 0.0794,
+      "lenient_ci95": [
+        0.0,
+        0.6537
+      ],
+      "unsure_as_wrong_rate": 0.22,
+      "unsure_as_wrong_ci95": [
+        0.0539,
+        0.8287
+      ],
+      "strict_half_width_points": 34.5,
+      "interval_method": "heuristic envelope, nominal coverage not established; no finite-population correction (conservative)",
+      "strata_without_cards": []
+    }
+  ],
+  "failure_shapes_among_channel_wrong": {
+    "dhatu-vs-noun": 33,
+    "other-homonym": 2
+  },
+  "dhatu_vs_noun_share_of_channel_wrong": {
+    "k": 33,
+    "n": 35,
+    "share": 0.9429,
+    "wilson95": [
+      0.8139,
+      0.9842
+    ]
+  },
+  "dhatu_vs_noun_rate_of_channel_rows": {
+    "scope": "skd rows that are dhatu-vs-noun wrong matches",
+    "eligible_population": 90,
+    "cards_adjudicated": 45,
+    "strict_wrong_rate": 0.7333,
+    "strict_ci95": [
+      0.5896,
+      0.8613
+    ],
+    "lenient_wrong_rate": 0.7333,
+    "lenient_ci95": [
+      0.5896,
+      0.8613
+    ],
+    "unsure_as_wrong_rate": 0.7333,
+    "unsure_as_wrong_ci95": [
+      0.5896,
+      0.8613
+    ],
+    "strict_half_width_points": 13.6,
+    "interval_method": "heuristic envelope, nominal coverage not established; no finite-population correction (conservative)",
+    "strata_without_cards": []
+  },
+  "dhatu_marker_lens": {
+    "pattern": "kavikalpa|\\((?:adanta-?\\s*)?(?:bhvā|curā|adā|divā|tudā|rudhā|tanā|kryā|svā|juhotyā)|\\b(?:seṭ|aniṭ|veṭ)\\b",
+    "channel_rows_all": 160,
+    "channel_rows_marked_all": 113,
+    "channel_rows_eligible": 90,
+    "channel_rows_marked_eligible": 60,
+    "deck_marker_vs_verdict": {
+      "marked->different": 33,
+      "marked->same": 1,
+      "unmarked->different": 2,
+      "unmarked->same": 3,
+      "unmarked->unsure": 6
+    }
+  },
+  "adjudicator_2_sensitivity": {
+    "scope": "skd channel, all bands (adjudicator 2 verdicts)",
+    "eligible_population": 90,
+    "cards_adjudicated": 45,
+    "strict_wrong_rate": 0.8,
+    "strict_ci95": [
+      0.6618,
+      0.9101
+    ],
+    "lenient_wrong_rate": 0.6889,
+    "lenient_ci95": [
+      0.5433,
+      0.8225
+    ],
+    "unsure_as_wrong_rate": 0.8667,
+    "unsure_as_wrong_ci95": [
+      0.7382,
+      0.9611
+    ],
+    "strict_half_width_points": 12.4,
+    "interval_method": "heuristic envelope, nominal coverage not established; no finite-population correction (conservative)",
+    "strata_without_cards": []
+  },
+  "inter_adjudicator_agreement_all": {
+    "cards": 60,
+    "raw_agreement": 0.95,
+    "cohen_kappa": 0.9042,
+    "confusion_adj1_to_adj2": {
+      "different->different": 37,
+      "same->same": 16,
+      "unsure->different": 1,
+      "unsure->same": 2,
+      "unsure->unsure": 4
+    }
+  },
+  "inter_adjudicator_agreement_channel": {
+    "cards": 45,
+    "raw_agreement": 0.9333,
+    "cohen_kappa": 0.8133,
+    "confusion_adj1_to_adj2": {
+      "different->different": 35,
+      "same->same": 4,
+      "unsure->different": 1,
+      "unsure->same": 2,
+      "unsure->unsure": 3
+    }
+  },
+  "failure_shape_agreement": {
+    "cards_both_different": 35,
+    "same_failure_shape": 34
+  },
+  "positive_control": {
+    "group_id": "sAra#103",
+    "card": "C025",
+    "construction": "PWG sense of one lemma paired with MW/Apte senses of an unrelated lemma",
+    "declared_score": "0.930",
+    "expected": "different",
+    "adjudicator_1": {
+      "observed": "different",
+      "verdict": "PASS"
+    },
+    "adjudicator_2": {
+      "observed": "different",
+      "verdict": "PASS"
+    }
+  },
+  "cards": [
+    {
+      "card": "C001",
+      "group_id": "A#1",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "unsure",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C002",
+      "group_id": "cara#7",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C003",
+      "group_id": "meDya#2",
+      "stratum": "lo <0.40|non-skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C004",
+      "group_id": "pAra#2",
+      "stratum": "lo <0.40|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C005",
+      "group_id": "kula#1",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C006",
+      "group_id": "DA#4",
+      "stratum": "mid 0.40-0.69|non-skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C007",
+      "group_id": "manTa#3",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C008",
+      "group_id": "suvarRa#1",
+      "stratum": "hi >=0.70|non-skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C009",
+      "group_id": "as#8",
+      "stratum": "lo <0.40|non-skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C010",
+      "group_id": "vara#9",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C011",
+      "group_id": "marut#4",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C012",
+      "group_id": "aNga#1",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C013",
+      "group_id": "Dvaja#1",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C014",
+      "group_id": "sAhasa#4",
+      "stratum": "lo <0.40|non-skd",
+      "verdict": "different",
+      "near_miss": "yes",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C015",
+      "group_id": "mA#3",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "yes",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C016",
+      "group_id": "saha#5",
+      "stratum": "lo <0.40|skd",
+      "verdict": "unsure",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C017",
+      "group_id": "cara#8",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C018",
+      "group_id": "vaSa#3",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "yes",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C019",
+      "group_id": "ava#1",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C020",
+      "group_id": "Gawa#2",
+      "stratum": "lo <0.40|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C021",
+      "group_id": "yakza#2",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C022",
+      "group_id": "lAsaka#2",
+      "stratum": "hi >=0.70|non-skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C023",
+      "group_id": "jIva#6",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C024",
+      "group_id": "parRa#2",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C026",
+      "group_id": "vawa#3",
+      "stratum": "lo <0.40|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C027",
+      "group_id": "vAla#1",
+      "stratum": "mid 0.40-0.69|non-skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C028",
+      "group_id": "vfza#2",
+      "stratum": "lo <0.40|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C029",
+      "group_id": "guRa#1",
+      "stratum": "hi >=0.70|non-skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C030",
+      "group_id": "Suka#1",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C031",
+      "group_id": "cUqa#1",
+      "stratum": "mid 0.40-0.69|non-skd",
+      "verdict": "unsure",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C032",
+      "group_id": "laNG#1",
+      "stratum": "hi >=0.70|non-skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C033",
+      "group_id": "suDA#9",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "unsure",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C034",
+      "group_id": "SUla#1",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C035",
+      "group_id": "pari#1",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "other-homonym"
+    },
+    {
+      "card": "C036",
+      "group_id": "nawa#3",
+      "stratum": "lo <0.40|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C037",
+      "group_id": "picCa#1",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C038",
+      "group_id": "cala#4",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C039",
+      "group_id": "taviza#3",
+      "stratum": "mid 0.40-0.69|non-skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C040",
+      "group_id": "saha#5",
+      "stratum": "lo <0.40|skd",
+      "verdict": "unsure",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C041",
+      "group_id": "puwa#3",
+      "stratum": "lo <0.40|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C042",
+      "group_id": "tIkzRa#12",
+      "stratum": "mid 0.40-0.69|non-skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C043",
+      "group_id": "antareRa#1",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "yes",
+      "failure_shape": "other-homonym"
+    },
+    {
+      "card": "C044",
+      "group_id": "mudrA#6",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C045",
+      "group_id": "rADa#2",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C046",
+      "group_id": "skanda#1",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C047",
+      "group_id": "viSeza#1",
+      "stratum": "mid 0.40-0.69|non-skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C048",
+      "group_id": "sa#10",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "unsure",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C049",
+      "group_id": "kIla#2",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C050",
+      "group_id": "padmAvatI#8",
+      "stratum": "lo <0.40|skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C051",
+      "group_id": "SaWa#4",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C052",
+      "group_id": "aja#8",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C053",
+      "group_id": "SaMsa#1",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "yes",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C054",
+      "group_id": "pUra#1",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C055",
+      "group_id": "liK#2",
+      "stratum": "mid 0.40-0.69|non-skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C056",
+      "group_id": "kUwa#11",
+      "stratum": "mid 0.40-0.69|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C057",
+      "group_id": "Cattra#1",
+      "stratum": "hi >=0.70|non-skd",
+      "verdict": "same",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    },
+    {
+      "card": "C058",
+      "group_id": "pakza#1",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C059",
+      "group_id": "sPuwa#4",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C060",
+      "group_id": "naya#2",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "different",
+      "near_miss": "no",
+      "failure_shape": "dhatu-vs-noun"
+    },
+    {
+      "card": "C061",
+      "group_id": "u#1",
+      "stratum": "hi >=0.70|skd",
+      "verdict": "unsure",
+      "near_miss": "no",
+      "failure_shape": "n/a"
+    }
+  ]
+}
