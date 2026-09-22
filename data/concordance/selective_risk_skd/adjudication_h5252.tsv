@@ -1,0 +1,62 @@
+card	verdict	near_miss	failure_shape	note
+C001	unsure	no	n/a	PWG 3. ā m. gloss is contentless ('angeblich auch = und'); SKD shows the letter ā, truncated
+C002	different	no	dhatu-vs-noun	PWG 'Bachstelze' (wagtail) vs SKD dhātu car 'gamane, adane' (kavikalpadruma)
+C003	same	no	n/a	fit for sacrifice / pure; Apte 'relating to a sacrifice' is the same sense
+C004	different	no	dhatu-vs-noun	PWG 'Quecksilber' (mercury) vs SKD dhātu pāra 'karmasamāptau'
+C005	different	no	dhatu-vs-noun	PWG a stone / guild head / noble vs SKD dhātu kul 'bandhau, saṃhatau'
+C006	same	no	n/a	MW and Apte both: to fix/direct the mind upon
+C007	different	no	dhatu-vs-noun	PWG an eye disease vs SKD dhātu manth 'gāhe' (to churn)
+C008	same	no	n/a	beautifully coloured, bright, golden in all three
+C009	different	no	n/a	PWG as 'to throw down' vs Apte as sense 'to shine': different lexemes
+C010	different	no	dhatu-vs-noun	PWG 'Bdellion' vs SKD dhātu var 'īpse'
+C011	same	no	n/a	PWG 'a certain plant'; SKD nominal marut lists 'maruvakaḥ' (a plant) per Bhāvaprakāśa
+C012	different	no	dhatu-vs-noun	PWG 'Geist (?)' vs SKD dhātu aṅg 'pade lakṣmaṇi'
+C013	same	no	n/a	PWG verb 'hin und her bewegen' vs SKD dhātu dhvaj 'gatau': both the root's motion sense
+C014	different	yes	n/a	PWG 'Gewaltthat' (violence) vs MW 'punishment, fine' for it: sibling sense of sāhasa
+C015	different	yes	dhatu-vs-noun	PWG noun 'Maass' vs SKD dhātu mā 'māne' (to measure): POS variant
+C016	unsure	no	n/a	PWG 1. saha gloss is garbled ('indecl. gaṇa zu = u.s.w.'); SKD avyaya saha 'sahitam'; plausibly same, not decidable from text
+C017	different	no	dhatu-vs-noun	PWG a cowrie shell vs SKD dhātu car 'saṃśaye'
+C018	different	yes	dhatu-vs-noun	PWG noun 'Willen, Wunsch' vs SKD dhātu vaś 'spṛhi' (to desire): POS variant
+C019	different	no	dhatu-vs-noun	PWG indeclinable 'herab; weg' vs SKD dhātu av 'rakṣaṇe'
+C020	different	no	dhatu-vs-noun	PWG a measure of capacity vs SKD dhātu ghaṭ 'hiṃse, saṃghāte'
+C021	different	no	dhatu-vs-noun	PWG 'Palast' vs SKD dhātu yakṣ 'pūjāyām'
+C022	same	no	n/a	peacock = peacock
+C023	different	no	dhatu-vs-noun	PWG epithet of Karṇa vs SKD dhātu jīv 'prāṇe'
+C024	different	no	dhatu-vs-noun	PWG 'Betelblatt' vs SKD dhātu parṇ 'hāritye'
+C025	different	no	n/a	PWG 'Kernholz' (heartwood) vs MW 'Tranquillity personified': unrelated
+C026	different	no	dhatu-vs-noun	PWG a position in a game vs SKD dhātu vaṭ 'vaṇṭane'
+C027	same	no	n/a	tail hair / horse-hair in PWG, MW and MD
+C028	different	no	dhatu-vs-noun	PWG a lustful / strong man vs SKD dhātu vṛṣ 'secane, prajanaiśvarye'
+C029	same	no	n/a	the three guṇas of Sāṃkhya in both
+C030	different	no	dhatu-vs-noun	PWG a plant (Acacia sirissa) vs SKD dhātu śuk 'sarpe' (to go)
+C031	unsure	no	n/a	MW gloss is contentless ('m. or n. =')
+C032	same	no	n/a	to frustrate, prevent in both
+C033	unsure	no	n/a	PWG a plant (myrobalan) vs SKD nominal sudhā (amṛta, plaster, ...), truncated before any plant sense
+C034	different	no	dhatu-vs-noun	PWG an astrological yoga vs SKD dhātu śūl 'rujāyām'
+C035	different	no	other-homonym	PWG 'one who loathes study' vs SKD the indeclinable pari and its meanings
+C036	different	no	dhatu-vs-noun	PWG gloss garbled but a masc. noun sense vs SKD dhātu naṭ 'bhraṃśe'
+C037	different	no	dhatu-vs-noun	PWG Dalbergia sissoo vs SKD dhātu picch 'bādhe'
+C038	different	no	dhatu-vs-noun	PWG 'Weihrauch' vs SKD dhātu cal 'bhṛtau'
+C039	same	no	n/a	strength in both
+C040	unsure	no	n/a	same text as C016: PWG garbled indecl. saha vs SKD avyaya 'sahitam'
+C041	different	no	dhatu-vs-noun	PWG 'Muskatnuss' vs SKD dhātu puṭ 'saṃsarge'
+C042	same	no	n/a	sharp, keen
+C043	different	yes	other-homonym	PWG antareṇa 'with regard to' vs SKD antareṇa 'madhya, vinā, vyatireka': sibling sense of the same indeclinable
+C044	same	no	n/a	seal / signet ring: SKD pratyayakāriṇī, aṅgulimudrā
+C045	different	no	dhatu-vs-noun	PWG Rādhā / epithet of Kṛṣṇa vs SKD dhātu rādh 'siddhau'
+C046	different	no	dhatu-vs-noun	PWG 'Fürst' vs SKD dhātu skand 'śoṣaṇe, gatyām'
+C047	same	no	n/a	favourable turn of a sickness in all three
+C048	unsure	no	n/a	PWG 4. sa m. gloss contentless; SKD shows the letter sa, truncated
+C049	different	no	dhatu-vs-noun	PWG a blow with the elbow vs SKD dhātu kīl 'bandhe'
+C050	same	no	n/a	PWG Hibiscus mutabilis; SKD lists 'padmacāriṇī' (land-lotus, Hibiscus mutabilis) per Jaṭādhara
+C051	different	no	dhatu-vs-noun	PWG 'Eisen' vs SKD dhātu śaṭh 'ālasye'
+C052	different	no	dhatu-vs-noun	PWG ajā = Māyā vs SKD dhātu aj 'bhāsi'
+C053	different	yes	dhatu-vs-noun	PWG noun 'das Rühmen, Preisen' vs SKD dhātu śaṃs 'stutau': POS variant
+C054	different	no	dhatu-vs-noun	PWG a kind of incense vs SKD dhātu pūr 'pūrttau'
+C055	same	no	n/a	to scratch / draw a line / write
+C056	different	no	dhatu-vs-noun	PWG 'Haus' vs SKD dhātu kūṭ 'aprasāde'
+C057	same	no	n/a	parasol
+C058	different	no	dhatu-vs-noun	PWG wall / side / wing etc. vs SKD dhātu pakṣ 'parigrahe'
+C059	different	no	dhatu-vs-noun	PWG 'weiss' vs SKD dhātu sphuṭ 'narmaṇi'
+C060	different	no	dhatu-vs-noun	PWG adj. 'leading; suitable' vs SKD dhātu nay 'gatau'
+C061	unsure	no	n/a	PWG u m. epithet of Śiva / Brahman; SKD shows the letter u, truncated before any such sense

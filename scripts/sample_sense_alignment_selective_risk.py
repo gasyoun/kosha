@@ -27,6 +27,14 @@ What it freezes, before any card is read:
      The 20-09-2026 frozen deck predates this and reproduces only with
      --legacy-canary-metadata (its canary carried zero stratum metadata).
 
+H5252 channel-stratified mode (additive; the default path is unchanged).
+`--stratify-channel skd` replaces the method channel with "carries a skd gloss"
+vs "does not", keeps the score band, and gives the named channel a fixed budget
+(`--channel-budget`) spread across bands in proportion to stratum size. The rest
+of the target goes to the complement, also proportionally. `--exclude-deck`
+removes the group_ids of an earlier deck (the H5070 60) so no card is judged
+twice. A small channel falls out of a general draw; this mode sizes it.
+
 Strata: score band (lo <0.40 / mid 0.40-0.69 / hi >=0.70) x channel
 (attrib* / gloss+ls / gloss / ls). Allocation is EQUAL across the three score
 bands rather than proportional: a risk-coverage curve is read at its high end,
@@ -72,6 +80,33 @@ def band(score):
 
 def channel(method):
     return "attrib*" if method.startswith("attrib") else method
+
+
+def dict_channel(row, name):
+    """H5252: the stratification channel is whether the row carries `name`."""
+    return name if (row.get(f"{name}_gloss") or "").strip() else f"non-{name}"
+
+
+def proportional(strata, keys, budget):
+    """Spread `budget` over `keys` in proportion to stratum size, floor 1,
+    capped by the stratum size, then correct rounding drift largest-first."""
+    pool = sum(len(strata[k]) for k in keys)
+    take = {}
+    if not pool or budget <= 0:
+        return take
+    for k in keys:
+        take[k] = min(len(strata[k]), max(1, round(budget * len(strata[k]) / pool)))
+    drift = sum(take.values()) - min(budget, pool)
+    order = sorted(keys, key=lambda k: (-len(strata[k]), k))
+    i = 0
+    while drift != 0 and i < 10_000:
+        k = order[i % len(order)]
+        if drift > 0 and take[k] > 1:
+            take[k] -= 1; drift -= 1
+        elif drift < 0 and take[k] < len(strata[k]):
+            take[k] += 1; drift += 1
+        i += 1
+    return take
 
 
 def sha256(path):
@@ -129,7 +164,16 @@ def main():
                     help=("reproduce the 20-09-2026 frozen deck, whose canary carried "
                           "stratum_eligible=0 / population_share=0 — a tell the H5070 "
                           "verifier caught; the default now copies its stratum's values"))
+    ap.add_argument("--stratify-channel", choices=DICTS, default=None,
+                    help="H5252: strata = score band x (carries this dictionary / does not)")
+    ap.add_argument("--channel-budget", type=int, default=None,
+                    help="cards for the named channel (rest of --target to its complement)")
+    ap.add_argument("--exclude-deck", type=Path, action="append", default=[],
+                    help="exclude every group_id of an earlier deck TSV (repeatable)")
+    ap.add_argument("--handoff", default="H5070", help="handoff id written to the freeze")
     args = ap.parse_args()
+    if args.channel_budget is not None and not args.stratify_channel:
+        ap.error("--channel-budget needs --stratify-channel")
     out = args.out_dir
     out.mkdir(parents=True, exist_ok=True)
 
@@ -145,17 +189,40 @@ def main():
         gold_files[g.name] = {"cards": len(ids), "sha256": sha256(g)}
         excluded |= ids
 
+    gold_ids = len(excluded)
+    gold_eligible = len([r for r in aligned if r["group_id"] not in excluded])
+    prior_decks = {}
+    for deck_path in args.exclude_deck:
+        ids = {r["group_id"] for r in load(deck_path)}
+        # an earlier deck's synthetic control is not a judged row; its id may even
+        # name a real row (H5070's `rajas#9` does), which must stay eligible
+        key_path = deck_path.parent / "canary_key.json"
+        prior_canary = (json.loads(key_path.read_text(encoding="utf-8"))["canary_group_id"]
+                        if key_path.exists() else None)
+        ids.discard(prior_canary)
+        rel = deck_path.resolve()
+        rel = str(rel.relative_to(ROOT)) if rel.is_relative_to(ROOT) else str(deck_path)
+        fresh = ids - excluded
+        prior_decks[rel] = {"cards_excluded": len(ids), "canary_skipped": prior_canary,
+                            "sha256": sha256(deck_path),
+                            "aligned_rows_removed": sum(1 for r in aligned if r["group_id"] in fresh),
+                            "note": "exclusion is by group_id, like the gold fence; group_id is not "
+                                    "unique, so sibling rows sharing a judged id leave too"}
+        excluded |= ids
+
     eligible = [r for r in aligned if r["group_id"] not in excluded]
 
+    chan = ((lambda r: dict_channel(r, args.stratify_channel)) if args.stratify_channel
+            else (lambda r: channel(r["method"])))
     strata = defaultdict(list)
     for r in eligible:
-        strata[(band(r["score"]), channel(r["method"]))].append(r)
+        strata[(band(r["score"]), chan(r))].append(r)
     strata = {k: sorted(v, key=lambda r: r["group_id"]) for k, v in sorted(strata.items())}
 
     # equal budget per score band; inside a band, proportional to stratum size, floor 1
     per_band = args.target // len(BANDS)
     take = {}
-    for b in BANDS:
+    for b in ([] if args.stratify_channel else BANDS):
         keys = [k for k in strata if k[0] == b]
         pool = sum(len(strata[k]) for k in keys)
         if not pool:
@@ -172,6 +239,14 @@ def main():
             elif drift < 0 and take[k] < len(strata[k]):
                 take[k] += 1; drift += 1
             i += 1
+    if args.stratify_channel:
+        # H5252: the named channel gets its own budget, spread over bands by size
+        name = args.stratify_channel
+        own = [k for k in strata if k[1] == name]
+        rest = [k for k in strata if k[1] != name]
+        budget = args.channel_budget if args.channel_budget is not None else args.target // 2
+        take.update(proportional(strata, own, budget))
+        take.update(proportional(strata, rest, args.target - sum(take.values())))
 
     rng = random.Random(args.seed)
     picked, meta = [], []
@@ -196,7 +271,14 @@ def main():
     canary_key = None
     if not args.no_canary:
         card, canary_key = make_canary(aligned, rng, fields)
-        skey = (band(card["score"]), channel(card["method"]))
+        if args.stratify_channel:
+            # H5252: never let the synthetic id name a real row (H5070's did)
+            taken = {r["group_id"] for r in all_rows}
+            n, lemma = 9, card["lemma_slp1"]
+            while f"{lemma}#{n}" in taken:
+                n += 1
+            card["group_id"] = canary_key["canary_group_id"] = f"{lemma}#{n}"
+        skey = (band(card["score"]), chan(card))
         if args.legacy_canary_metadata:
             elig, share = 0, "0.000000"
         else:
@@ -221,7 +303,7 @@ def main():
 
     fail = Counter(r["failure_class"] for r in unaligned)
     freeze = {
-        "handoff": "H5070",
+        "handoff": args.handoff,
         "source": str(args.src.relative_to(ROOT)) if args.src.is_relative_to(ROOT) else str(args.src),
         "source_sha256": sha256(args.src),
         "source_rows": len(all_rows),
@@ -233,9 +315,16 @@ def main():
         "abstention": round(len(unaligned) / len(all_rows), 6),
         "abstention_taxonomy": dict(fail.most_common()),
         "unreachable_pairs_absent_dictionary": fail.get("absent-dictionary", 0),
-        "gold_excluded_cards": len(excluded),
+        "gold_excluded_cards": gold_ids,
         "gold_files": gold_files,
         "eligible_after_gold_exclusion": len(eligible),
+        **({"stratify_channel": args.stratify_channel,
+            "channel_budget": sum(v for k, v in take.items() if k[1] == args.stratify_channel),
+            "eligible_after_gold_only": gold_eligible,
+            "prior_decks_excluded": prior_decks,
+            "allocation": "named channel: fixed budget, proportional over bands; "
+                          "complement: remainder, proportional over bands"}
+           if args.stratify_channel else {}),
         "deck_cards": len(picked),
         "canary_included": canary_key is not None,
         "dictionary_reachability": {
