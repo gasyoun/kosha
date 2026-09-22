@@ -193,6 +193,10 @@
     "interval_method": "heuristic envelope, nominal coverage not established; no finite-population correction (conservative)",
     "strata_without_cards": []
   },
+  "shape_reclassified_after_review": {
+    "C019": "dhatu-vs-indeclinable"
+  },
+  "dhatu_vs_noun_strict_count": 32,
   "dhatu_marker_lens": {
     "pattern": "kavikalpa|\\((?:adanta-?\\s*)?(?:bhvā|curā|adā|divā|tudā|rudhā|tanā|kryā|svā|juhotyā)|\\b(?:seṭ|aniṭ|veṭ)\\b",
     "channel_rows_all": 160,

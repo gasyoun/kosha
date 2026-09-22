@@ -69,9 +69,9 @@ uninformative (3.8–72.9 %). Its point estimate (15.1 %) agrees with H5070.
 | dhatu-vs-noun | 33 |
 | other-homonym | 2 |
 
-**33 of 35 SKD wrong matches (94.3 %, Wilson 81.4–98.4 %) are the dhātu-vs-noun shape**: PWG gives a nominal sense (a plant, a stone, a house) and the ŚKDR text is
-the Kavikalpadruma root entry for the same letter string (*kūṭa ... aprasāde*, *puṭa ... saṃsarge*).
-Re-weighted, dhātu-vs-noun wrong matches are 73.3 % (59.0–86.1 %) of all eligible SKD rows. The other wrong matches sit on indeclinables: a sibling sense of *antareṇa*,
+**33 of 35 SKD wrong matches (94.3 %, Wilson 81.4–98.4 %) set a ŚKDR root (dhātu) entry against a non-verbal PWG sense** — the Kavikalpadruma root entry for the same
+letter string (*kūṭa ... aprasāde*, *puṭa ... saṃsarge*). **32 of the 35 (91.4 %, Wilson 77.6–97.0 %) are strictly root-vs-noun** (a plant, a stone, a house, an adjective); C019 carries the rubric's `dhatu-vs-noun` label from both adjudicators, but its PWG side is the preverb *ava* ('herab; weg'), not a noun (Astra review, 22-09-2026 — the verdict files are left as frozen, the label is re-read here).
+Re-weighted, root-vs-non-verbal wrong matches are 73.3 % (59.0–86.1 %) of all eligible SKD rows. The other wrong matches sit on indeclinables: a sibling sense of *antareṇa*,
 and a compound's gloss (*one who loathes study*) set against the prefix entry *pari*.
 
 Not every dhātu card is wrong: where the PWG sense is itself the root's verbal meaning
@@ -101,7 +101,7 @@ On the deck, marker × adjudicator-1 verdict: marked → different 33, marked �
 1. **Seeded confident wrong match (blind) — adjudicator 1 PASS, adjudicator 2 PASS.** `sAra#103` (C025): pwg sense of one lemma paired with mw/apte senses of an unrelated lemma, dressed at score 0.930 in the metadata of the stratum it imitates (the H5070 fix). Its id is chosen so it names no real row — H5070's `rajas#9` did, which the sampler now guards against. Excluded from every rate.
 2. **H5070 reproduction.** The H5070 deck, canary key and freeze reproduce byte-for-byte with `--legacy-canary-metadata`, and its report regenerates unchanged — the new options are additive.
 3. **No double reading.** The 60 real H5070 cards are excluded by group_id (as the gold fence is); `group_id` is not unique in the table, so 3 sibling rows sharing a judged id left too, and the H5070 canary id was skipped so the real row it collides with stays eligible.
-4. **Two blind adjudicators.** Over all 60 real cards: raw agreement 95 %, Cohen's κ = 0.90; over the 45 SKD cards: 93 %, κ = 0.81 (confusion in the JSON). Where both said `different` on an SKD card (35), they named the same failure shape on 34. Rates above rest on adjudicator 1.
+4. **Two blind adjudicators.** Over all 60 real cards: raw agreement 95 %, Cohen's κ = 0.90 (the whole deck); over the 45 SKD cards alone: 93 %, κ = 0.81 (confusion in the JSON). Where both said `different` on an SKD card (35), they named the same failure shape on 34. Rates above rest on adjudicator 1.
 
 ## Recommendation (not applied)
 
@@ -116,7 +116,11 @@ marker alone would have removed 33 wrong matches and 1 right one. The one right 
    entries are cut before the claimed sense and stay `unsure`.
 3. **The channel is visible.** Adjudicators knew which cards were SKD cards; blindness covers score,
    stratum and the canary, not the channel.
-4. **Heuristic intervals.** See above; no finite-population correction, nominal coverage unproven.
-5. **Precision only.** Cards come from rows the aligner aligned; nothing here measures recall.
+4. **The canary tests a non-SKD mismatch.** It shows the adjudicators do not wave through a confident
+   wrong PWG/MW/Apte card; it does not test their SKD judgments. Adjudicator 1 is also the executor and
+   knew how the canary is built — its blindness is procedural (verdicts committed before the key was
+   opened), not provable. Adjudicator 2's is: it saw only the rubric and the rendered cards.
+5. **Heuristic intervals.** See above; no finite-population correction, nominal coverage unproven.
+6. **Precision only.** Cards come from rows the aligner aligned; nothing here measures recall.
 
 _Гасунс_
