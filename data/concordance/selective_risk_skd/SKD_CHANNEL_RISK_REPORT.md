@@ -70,7 +70,7 @@ uninformative (3.8–72.9 %). Its point estimate (15.1 %) agrees with H5070.
 | other-homonym | 2 |
 
 **33 of 35 SKD wrong matches (94.3 %, Wilson 81.4–98.4 %) set a ŚKDR root (dhātu) entry against a non-verbal PWG sense** — the Kavikalpadruma root entry for the same
-letter string (*kūṭa ... aprasāde*, *puṭa ... saṃsarge*). **32 of the 35 (91.4 %, Wilson 77.6–97.0 %) are strictly root-vs-noun** (a plant, a stone, a house, an adjective); C019 carries the rubric's `dhatu-vs-noun` label from both adjudicators, but its PWG side is the preverb *ava* ('herab; weg'), not a noun (Astra review, 22-09-2026 — the verdict files are left as frozen, the label is re-read here).
+letter string (*kūṭa ... aprasāde*, *puṭa ... saṃsarge*). **32 of the 35 (91.4 %, Wilson 77.6–97.0 %) are strictly root-vs-nominal** (a noun or an adjective: a plant, a stone, a house, *weiss*); C019 carries the rubric's `dhatu-vs-noun` label from both adjudicators, but its PWG side is the preverb *ava* ('herab; weg'), not a noun (Astra review, 22-09-2026 — the verdict files are left as frozen, the label is re-read here).
 Re-weighted, root-vs-non-verbal wrong matches are 73.3 % (59.0–86.1 %) of all eligible SKD rows. The other wrong matches sit on indeclinables: a sibling sense of *antareṇa*,
 and a compound's gloss (*one who loathes study*) set against the prefix entry *pari*.
 
