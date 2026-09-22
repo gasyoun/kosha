@@ -4,8 +4,8 @@ _Built 2026-09-19 · OxAlpha (opencode/z-ai/glm-5.3-flash) · script: scripts/bu
 
 ## What was measured
 
-- **PW** (csl-orig v02/pw, Böhtlingk–Roth 7-vol): 158,370 entries, 131,443 `<div>` boundaries, 289,813 sense blocks.
-- **PWG** (v02/pwg, Kurzfassung): 123,357 entries, 100,080 `<div>` boundaries, 223,437 sense blocks.
+- **PW** (csl-orig v02/pw = Böhtlingk's *Sanskrit-Wörterbuch in kürzerer Fassung* 1879-1889, **the Kurzfassung** — naming corrected, see Verifier addendum): 158,370 entries, 131,443 `<div>` boundaries, 289,813 sense blocks.
+- **PWG** (v02/pwg = Böhtlingk/Roth *Sanskrit-Wörterbuch* 1855-1875, **the 7-volume original** — the German dictionary kosha serves): 123,357 entries, 100,080 `<div>` boundaries, 223,437 sense blocks.
 - Headword grid (form_key of k1, `*`/`˚` stripped, case preserved): 151,461 keys.
 - `{{Lbody}}` stubs excluded: pw 12,186, pwg 9.
 
@@ -14,8 +14,8 @@ _Built 2026-09-19 · OxAlpha (opencode/z-ai/glm-5.3-flash) · script: scripts/bu
 | metric | value |
 |---|---|
 | shared headwords | 96,305 |
-| headwords living only in PW (whole-entry cut) | 45,382 |
-| headwords only in PWG (Kurzfassung additions/splits) | 9,774 |
+| headwords living only in PW (Kurzfassung-only: original article not on disk, or 1879 addition — **not** a "cut"; see addendum) | 45,382 |
+| headwords only in PWG (original-only: dropped or split by the Kurzfassung keying) | 9,774 |
 | PW sense blocks with a PWG partner | 89,579 |
 | **PW sense blocks CUT (no PWG partner)** | **200,234** |
 | cut share of PW block mass | 69.1% |
@@ -56,6 +56,51 @@ The build hard-fails unless an independent recount (raw `^<L>` lines minus `{{Lb
 - Block pairing is evidence-based, not a philological reading: a PW block whose PWG counterpart was merged or reworded without shared witnesses or shared German wording counts as cut (over-count risk); the diff TSV keeps the gloss of every such block so a human can eyeball the queue tops.
 - Footnote (`<F>`) text stays inside its block; witness keys are folded with the house prefix rule (≥4 chars).
 - One-to-one claim discipline: a PWG merge of several PW senses leaves the surplus PW blocks in the cut — the conservative direction for a queue.
+
+## Verifier addendum (19-09-2026, second drain session — naming corrected, headline re-read)
+
+The build above and the H4805 handoff both carried the two dictionary labels
+swapped. The sources' own header files settle it:
+
+- `v02/pw/pwheader.xml` titleStmt: *"Böhtlingk's Sanskrit-Wörterbuch in
+  **Kürzerer Fassung**"*, key "Böhtlingk 1879-1889" → **pw = the Kurzfassung**.
+- `v02/pwg/pwgheader.xml` titleStmt: *"Böhtlingk and Roth's Sanskrit
+  **Wörterbuch**"*, 1855-1875 → **pwg = the 7-volume original** (the one
+  kosha serves; the csl-orig README agrees: "PWG (large), PW (small)").
+
+The data confirms it: per shared headword the pwg article is the massive one
+(`gam` body ≈ 114.9 KB vs pw's ≈ 33.4 KB; `deva` 16.5 KB vs 3.3 KB) and pwg
+carries 2.25× the `<ls>` citations (180,048 vs 76,032) — a Kurzfassung
+article can never exceed its original.
+
+What the correction does to the reading (numbers unchanged, meaning moved):
+
+1. **The "69.1% cut share" is not "what the Kurzfassung removed".** CUT here =
+   a Kurzfassung (pw) block with no partner in the original — the pairing
+   runs Kurzfassung→original, so the "cut" side is the *shorter* dictionary's
+   mass. The original's on-disk keying is itself thin (106,082 distinct raw
+   `k1` vs pw's 151,349; bare roots can be missing from both inventories —
+   `kf` = √kṛ has no `<k1>kf<` in either file), so a large share of the
+   200,234 unmatched blocks are "original counterpart not on disk", not
+   philological cuts. Treat 69.1% as an upper-bound-flavoured *non-match*
+   rate, exactly as the Limitations section already advises — but for the
+   digitization-completeness reason as well as the merge/reword reason.
+2. **The 45,382 pw-only headwords are not "whole-entry cuts"** — they are
+   Kurzfassung-only keys (1879 additions/splits and/or original articles not
+   on disk). Conversely the 9,774 pwg-only keys ARE the closest thing to a
+   genuine cut signal: keys the original carries that the Kurzfassung
+   dropped or merged.
+3. **pwg_ru queue direction corrected**: pwg_ru translates the ORIGINAL
+   (pwg), so it cannot "miss PW-only content" of its own source. The queue's
+   value is the inverse — Kurzfassung blocks with no on-disk original
+   partner are candidate *extra* German material (1879-era) alongside the
+   original article.
+4. Independent re-measure (second builder, raw `k1`-token regex, exact-k1
+   join, no form_key folding): pw 151,349 / pwg 106,082 distinct k1, both
+   99,455, union 157,976; numbered `<div n=` totals pw 131,443 / pwg
+   100,080 — matching this build's `<div` boundary counts exactly. Body-byte
+   compression on shared headwords: original/Kurzfassung geometric mean
+   **2.10×**, 12,913 headwords (13.2%) ≥4× longer in the original.
 
 ## Registration
 
