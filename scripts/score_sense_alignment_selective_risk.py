@@ -332,6 +332,13 @@ def dhatu_marked(gloss):
     return bool(DHATU_MARKERS.search(_re.sub(r"-\s+", "", gloss or "")))
 
 
+# Post-review reclassification of the rubric's failure-shape LABEL (never the verdict).
+# The frozen verdict files stay as written; the report counts both readings.
+# C019 — Astra review of H5252 (22-09-2026): both adjudicators labelled it
+# dhatu-vs-noun, but its PWG side is the preverb *ava* ('herab; weg'), not a noun.
+SHAPE_RECLASSIFIED = {"C019": "dhatu-vs-indeclinable"}
+
+
 def _channel_eligible(freeze, name):
     """Re-derive the channel's eligible rows from the primary table, guarded by
     the frozen hash, with the same group_id exclusions the sampler applied."""
@@ -470,6 +477,10 @@ def score_channel(d, freeze, adj_path, blind2_path):
                                                  "share": round(k / len(wrong), 4) if wrong else None,
                                                  "wilson95": [round(lo, 4), round(hi, 4)]},
         "dhatu_vs_noun_rate_of_channel_rows": dhatu_rate,
+        "shape_reclassified_after_review": {c: SHAPE_RECLASSIFIED[c] for c in SHAPE_RECLASSIFIED
+                                            if any(r["card"] == c for r in wrong)},
+        "dhatu_vs_noun_strict_count": sum(1 for r in wrong if r.get("failure_shape") == "dhatu-vs-noun"
+                                          and r["card"] not in SHAPE_RECLASSIFIED),
         "dhatu_marker_lens": marker,
         "adjudicator_2_sensitivity": sens2,
         "inter_adjudicator_agreement_all": agree,
@@ -589,10 +600,18 @@ def write_channel_report(d, p, freeze):
     L.append("|---|---:|")
     for k2, v in p["failure_shapes_among_channel_wrong"].items():
         L.append(f"| {k2} | {v} |")
-    L += ["", f"**{dv['k']} of {dv['n']} {N} wrong matches ({_pct(dv['share'])}, Wilson {_ci(dv['wilson95'])}) are the "
-          "dhātu-vs-noun shape**: PWG gives a nominal sense (a plant, a stone, a house) and the ŚKDR text is",
-          "the Kavikalpadruma root entry for the same letter string (*kūṭa ... aprasāde*, *puṭa ... saṃsarge*).",
-          f"Re-weighted, dhātu-vs-noun wrong matches are {_pct(dr['strict_wrong_rate'])} ({_ci(dr['strict_ci95'])}) of "
+    strict_k = p["dhatu_vs_noun_strict_count"]
+    slo, shi = wilson(strict_k, dv["n"])
+    recl = p["shape_reclassified_after_review"]
+    L += ["", f"**{dv['k']} of {dv['n']} {N} wrong matches ({_pct(dv['share'])}, Wilson {_ci(dv['wilson95'])}) set a "
+          "ŚKDR root (dhātu) entry against a non-verbal PWG sense** — the Kavikalpadruma root entry for the same",
+          "letter string (*kūṭa ... aprasāde*, *puṭa ... saṃsarge*). "
+          f"**{strict_k} of the {dv['n']} ({_pct(strict_k / dv['n'])}, Wilson {_ci([slo, shi])}) are strictly root-vs-noun** "
+          "(a plant, a stone, a house, an adjective)"
+          + (f"; {', '.join(recl)} carries the rubric's `dhatu-vs-noun` label from both adjudicators, but its PWG "
+             "side is the preverb *ava* ('herab; weg'), not a noun (Astra review, 22-09-2026 — the verdict files "
+             "are left as frozen, the label is re-read here)." if recl else "."),
+          f"Re-weighted, root-vs-non-verbal wrong matches are {_pct(dr['strict_wrong_rate'])} ({_ci(dr['strict_ci95'])}) of "
           f"all eligible {N} rows. The other wrong matches sit on indeclinables: a sibling sense of *antareṇa*,",
           "and a compound's gloss (*one who loathes study*) set against the prefix entry *pari*.", "",
           "Not every dhātu card is wrong: where the PWG sense is itself the root's verbal meaning",
@@ -630,7 +649,7 @@ def write_channel_report(d, p, freeze):
              "and the H5070 canary id was skipped so the real row it collides with stays eligible.")
     if ag:
         L.append(f"4. **Two blind adjudicators.** Over all {ag['cards']} real cards: raw agreement "
-                 f"{ag['raw_agreement']*100:.0f} %, Cohen's κ = {ag['cohen_kappa']:.2f}; over the {agc['cards']} {N} cards: "
+                 f"{ag['raw_agreement']*100:.0f} %, Cohen's κ = {ag['cohen_kappa']:.2f} (the whole deck); over the {agc['cards']} {N} cards alone: "
                  f"{agc['raw_agreement']*100:.0f} %, κ = {agc['cohen_kappa']:.2f} (confusion in the JSON). "
                  f"Where both said `different` on an {N} card ({sa['cards_both_different']}), they named the same "
                  f"failure shape on {sa['same_failure_shape']}. Rates above rest on adjudicator 1.")
@@ -652,8 +671,12 @@ def write_channel_report(d, p, freeze):
           "   entries are cut before the claimed sense and stay `unsure`.",
           f"3. **The channel is visible.** Adjudicators knew which cards were {N} cards; blindness covers score,",
           "   stratum and the canary, not the channel.",
-          "4. **Heuristic intervals.** See above; no finite-population correction, nominal coverage unproven.",
-          "5. **Precision only.** Cards come from rows the aligner aligned; nothing here measures recall.", "",
+          f"4. **The canary tests a non-{N} mismatch.** It shows the adjudicators do not wave through a confident",
+          f"   wrong PWG/MW/Apte card; it does not test their {N} judgments. Adjudicator 1 is also the executor and",
+          "   knew how the canary is built — its blindness is procedural (verdicts committed before the key was",
+          "   opened), not provable. Adjudicator 2's is: it saw only the rubric and the rendered cards.",
+          "5. **Heuristic intervals.** See above; no finite-population correction, nominal coverage unproven.",
+          "6. **Precision only.** Cards come from rows the aligner aligned; nothing here measures recall.", "",
           "_Гасунс_"]
     (d / f"{N}_CHANNEL_RISK_REPORT.md").write_text("\n".join(L) + "\n", encoding="utf-8")
 
