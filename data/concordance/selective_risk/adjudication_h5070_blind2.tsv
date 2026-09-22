@@ -1,0 +1,62 @@
+card	verdict	near_miss	note
+C001	same	no	MW "a thief" matches Apte "4 A thief".
+C002	same	no	MW "be intent upon" matches Apte "3 To be intent upon".
+C003	same	no	MW "large-toothed" matches Apte "9 Large-toothed" verbatim.
+C004	same	no	PWG "Gattin" (wife) aligns with MW/Apte "the wife of Indra".
+C005	same	no	PWG lists "Kupfer" (copper) which matches MW "copper" directly.
+C006	same	no	PWG "Dieb, Räuber" (thief, robber) matches MW "a thief, robber".
+C007	same	no	MW "dry, withered" matches Apte "1 Dry, withered".
+C008	different	no	PWG "vollbringen, ausführen" (to accomplish/carry out) vs MW "to wish to spend or pass (time)" are different verb senses of nI.
+C009	same	no	PWG "Klumpen, Kloss...Knöpfchen" (lump, ball, knob) matches MW "a lump, ball, knob".
+C010	same	no	MW "to observe, perceive, take notice of" matches Apte "observe, take notice of".
+C011	unsure	no	PWG is a bare scholium stub "f. Schol. zu" with no named target, too thin to compare with MW "N. of a Sāman".
+C012	same	no	MW "measure of time, prosody" matches Apte "measure of time (in music or prosody)".
+C013	different	no	PWG "einer der Mütter im Gefolge Skanda's" (a mother in Skanda's retinue) vs MW "one of the five trees of Indra's heaven" are unrelated referents.
+C014	unsure	no	Both entries are bare stubs, MW "in comp. for" and Apte "Comp", too contentless to judge.
+C015	different	yes	MW defines the whole animal "an elephant" (the trunk-possessor) while Apte gives "an elephant's trunk" itself, a part-for-whole shift.
+C016	different	yes	MW's noun sense "an atom of matter" vs Apte's adjective "of the size of an atom" is a POS variant of the same concept.
+C017	same	no	MW "water" matches Apte "9 Water".
+C018	same	no	Both describe "white, pale, bright, light" of the light half/waxing moon.
+C019	same	no	MW "penance, atonement" matches Apte "2 Penance".
+C020	same	no	PWG "das Stehenbleiben, Stillstand...Beharren" matches MW "standing still, resting...perseverance".
+C021	same	no	PWG "Viertel (Fuss des vierfüssigen Thieres)" matches MW "a quarter...the f˚ of a quadruped being one out of 4".
+C022	same	no	PWG "Werth" (worth) matches MW "worth, value".
+C023	same	no	PWG "Atom" matches MW "atomic" and Apte "atomic".
+C024	same	no	MW "rice-corn" matches Apte "5 Rice, corn".
+C025	same	no	PWG opens "gemeint sein" (to be meant) matching MW "(Pass.) to be meant".
+C026	different	no	PWG "Judendorn" (Christ's-thorn plant) vs SKD's dhatu entry for root kal meaning "to count" (kalate divasam) are unrelated senses.
+C027	same	no	Both describe "a prince engaged in war under particular circumstances" and use for planets in opposition.
+C028	same	no	MW "religious action, worship" matches Apte "11 Worship".
+C029	same	no	PWG "Erdaufschüttung" (raised earth/mound) aligns with MW "dry land...firm earth (opp. to water)".
+C030	different	no	PWG is a grammatical note on compound formation ("am Ende eines comp...") vs Apte's "N. of the first of the four Yugas", unrelated senses.
+C031	same	no	PWG "Schakal" matches MW "a jackal".
+C032	different	yes	PWG/MW agree on "a male child, son" but Apte instead glosses "the mother of a male child", a kinship-referent shift.
+C033	same	no	PWG "Mähne" matches MW "the mane (of a horse or lion)".
+C034	same	no	MW "white (the colour)" matches Apte "White colour".
+C035	same	no	Both describe "a demon dangerous to children," a manifestation of another deity.
+C036	same	no	All three converge on "therefore, for that reason" (PWG "darum, deshalb"; MW/Apte "for that reason, therefore").
+C037	same	no	PWG "rauh, hart, barsch...Reden" (harsh speech) matches Apte "Harsh, abusive...as words".
+C038	same	no	MW "any cow" matches Apte "7 A cow".
+C039	same	no	Both specify "a particular process to which minerals are subjected".
+C040	same	no	MW "N. of Indra" matches Apte "1 N. of Indra".
+C041	different	no	PWG "Dunst, Staub...Partikeln" (dust, particles) vs MW "close union...collection, cluster, heap, mass, multitude" are different core senses.
+C042	same	no	MW "a kind of deer" matches Apte "2 A kind of deer".
+C043	same	no	MW "to be served or waited upon" matches Apte "To be served or waited upon".
+C044	same	no	MW "N. of a Grāma" matches PWG "N. pr. eines Grāma".
+C045	same	no	Both specify "throwing additional ingredients into a...mixture/compound in course of preparation".
+C046	different	no	PWG "Menge, Masse" (quantity, mass) vs SKD's dhatu entry for root ghaṭ meaning "dyuti" (to shine) are unrelated senses.
+C047	same	no	Both identify Indra "the god of rain" ("god of the sky and giver of rain" / "The god of rain, an epithet of Indra").
+C048	different	yes	PWG lists only color adjectives ("gelb, grünlich, gelbbraun") while MW gives the noun sense "gold", a POS/referent variant tied to the color.
+C049	different	no	PWG "Gewalt, Macht...Kraft" (force, power, strength) vs MW/Apte "water" are unrelated senses.
+C050	same	no	MW "Indra" matches Apte "2 N. of Indra".
+C051	same	no	PWG "Null" (zero) matches MW "nought, a cypher".
+C052	same	no	PWG "Bewältigen, Besiegen" (overpowering, defeating) matches MW "mastering, overpowering, subduing".
+C053	same	no	MW "to feel, experience" matches Apte "To feel, experience".
+C054	same	no	MW "N. of a town built by Kamalā" matches PWG "N. pr. einer von Kamalā erbauten Stadt".
+C055	different	yes	MW "black Agallochum" (aloeswood) vs Apte "Black pepper" name two different plants sharing the "black" epithet.
+C056	different	no	PWG "Baum" (tree) vs SKD's dhatu entry for root kuṭ meaning "vaikalya" (deficiency/affliction) are unrelated senses.
+C057	same	no	MW "a stamped coin" matches Apte "4 A stamped coin, coin".
+C058	same	no	MW "anything sweet, a sweetmeat" matches Apte "Any thing sweet...a sweetmeat".
+C059	same	no	MW "a servant" matches Apte "2 A servant".
+C060	same	no	MW "a wall or enclosure" matches Apte "11 A wall, enclosure".
+C061	same	no	PWG "Funke" matches MW "a spark".

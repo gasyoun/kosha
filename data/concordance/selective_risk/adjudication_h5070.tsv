@@ -12,7 +12,7 @@ C010	kal#8	kal	gloss	0.429	mid 0.40-0.69|gloss	0.185569	same	no
 C011	vfzan#4	vfzan	ls	0.333	lo <0.40|ls	0.105248	unsure	no	PWG gloss is a contentless scholium stub ('f. Schol. zu'); gender f. vs MW n. — nothing to compare
 C012	kAla#15	kAla	gloss	0.750	hi >=0.70|gloss	0.192420	same	no	
 C013	saMtAnaka#2	saMtAnaka	ls	0.333	lo <0.40|ls	0.105248	different	no	PWG: a mother in Skanda's retinue vs MW: a tree of Indra's heaven
-C014	pura#3	pura	gloss	1.000	hi >=0.70|gloss	0.192420	different	yes	both sides are compositional stubs ('in comp. for' / 'Comp'); an alignment of two non-senses
+C014	pura#3	pura	gloss	1.000	hi >=0.70|gloss	0.192420	unsure	no	both sides are compositional stubs ('in comp. for' / 'Comp'); no meaning to compare (relabelled from different/near_miss after the H5070 Astra review, 22-09-2026)
 C015	hastin#3	hastin	gloss	0.667	mid 0.40-0.69|gloss	0.185569	different	yes	MW: the elephant itself vs Apte: the elephant's trunk (metonymy)
 C016	aRu#5	aRu	gloss	0.333	lo <0.40|gloss	0.100292	different	yes	MW m. 'an atom' vs Apte a. 'of the size of an atom' — substantive vs attributive
 C017	ahi#3	ahi	gloss	1.000	hi >=0.70|gloss	0.192420	same	no	

@@ -44,10 +44,28 @@ def _read_tsv(path):
 @needs_deck
 def test_deck_reproduces_byte_for_byte(tmp_path):
     out = tmp_path / "redraw"
-    subprocess.run([sys.executable, str(SAMPLER), "--out-dir", str(out)],
+    # the frozen 20-09-2026 deck predates the canary-metadata fix
+    subprocess.run([sys.executable, str(SAMPLER), "--out-dir", str(out), "--legacy-canary-metadata"],
                    check=True, capture_output=True, encoding="utf-8")
     assert (out / "review_deck.tsv").read_bytes() == (SR / "review_deck.tsv").read_bytes()
     assert (out / "canary_key.json").read_bytes() == (SR / "canary_key.json").read_bytes()
+
+
+@needs_table
+@needs_deck
+def test_default_canary_carries_its_strata_metadata(tmp_path):
+    """H5070 verifier FAIL (22-09-2026): the frozen canary was the only card with
+    stratum_eligible=0, which named it in the TSV. A fresh draw must not."""
+    out = tmp_path / "fresh"
+    subprocess.run([sys.executable, str(SAMPLER), "--out-dir", str(out)],
+                   check=True, capture_output=True, encoding="utf-8")
+    key = json.loads((out / "canary_key.json").read_text(encoding="utf-8"))
+    deck = _read_tsv(out / "review_deck.tsv")
+    canary = next(r for r in deck if r["group_id"] == key["canary_group_id"])
+    peers = [r for r in deck if r["stratum"] == canary["stratum"] and r is not canary]
+    assert peers, "the canary must imitate a stratum that has real cards"
+    for col in ("stratum_eligible", "population_share", "synthetic"):
+        assert {r[col] for r in peers} == {canary[col]}, f"{col} tells the canary apart"
 
 
 @needs_deck
@@ -86,6 +104,10 @@ def test_canary_is_blind_in_the_deck_and_absent_from_every_rate():
 
     scored = json.loads((SR / "selective_risk.json").read_text(encoding="utf-8"))
     assert scored["positive_control"]["verdict"] == "PASS"
+    # the blind re-test on rendered cards only (added after the 22-09-2026 Astra FAIL)
+    b2 = scored["positive_control"].get("blind_adjudicator_2")
+    if (SR / "adjudication_h5070_blind2.tsv").exists():
+        assert b2 and b2["verdict"] == "PASS"
     assert scored["newly_adjudicated_cards"] == len(deck) - 1, (
         "the synthetic control must be excluded from the adjudicated population")
 
