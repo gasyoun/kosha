@@ -21,6 +21,11 @@ What it freezes, before any card is read:
      unrelated lemmas, shuffled into the deck at a seeded position with its
      identity written to a separate key file the adjudicator does not open
      until the verdicts are recorded (a seeded confident wrong match).
+     It carries the stratum metadata of the stratum it imitates. The deck TSV is
+     still NOT a blind surface — its group_id can be looked up in the population —
+     so adjudicators work from `render_selective_risk_deck.py` output only.
+     The 20-09-2026 frozen deck predates this and reproduces only with
+     --legacy-canary-metadata (its canary carried zero stratum metadata).
 
 Strata: score band (lo <0.40 / mid 0.40-0.69 / hi >=0.70) x channel
 (attrib* / gloss+ls / gloss / ls). Allocation is EQUAL across the three score
@@ -120,6 +125,10 @@ def main():
     ap.add_argument("--src", type=Path, default=SRC)
     ap.add_argument("--out-dir", type=Path, default=OUT)
     ap.add_argument("--no-canary", action="store_true", help="omit the positive control")
+    ap.add_argument("--legacy-canary-metadata", action="store_true",
+                    help=("reproduce the 20-09-2026 frozen deck, whose canary carried "
+                          "stratum_eligible=0 / population_share=0 — a tell the H5070 "
+                          "verifier caught; the default now copies its stratum's values"))
     args = ap.parse_args()
     out = args.out_dir
     out.mkdir(parents=True, exist_ok=True)
@@ -187,8 +196,16 @@ def main():
     canary_key = None
     if not args.no_canary:
         card, canary_key = make_canary(aligned, rng, fields)
-        card.update({"stratum": f"{band(card['score'])}|{channel(card['method'])}",
-                     "stratum_eligible": 0, "population_share": "0.000000", "synthetic": "no"})
+        skey = (band(card["score"]), channel(card["method"]))
+        if args.legacy_canary_metadata:
+            elig, share = 0, "0.000000"
+        else:
+            # dress the control in the metadata of the stratum it imitates, so no
+            # deck column tells it apart from the real cards drawn from that stratum
+            n = len(strata.get(skey, []))
+            elig, share = n, f"{n / len(eligible):.6f}"
+        card.update({"stratum": "|".join(skey), "stratum_eligible": elig,
+                     "population_share": share, "synthetic": "no"})
         picked.append(card)
 
     # seeded shuffle so the control does not sit in a predictable place
