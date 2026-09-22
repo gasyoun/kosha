@@ -1,6 +1,6 @@
 {
  "manifest_version": "0.3.0",
- "generated": "2026-09-15",
+ "generated": "2026-09-22",
  "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
  "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
  "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
@@ -3198,6 +3198,24 @@
    "notes": "H4806 (shortlist cand.6). Coverage: 98.60% of 5,590 AK synsets have >=1 MW sense unit, 93.97% >=1 PWG; 108,242 units attach to AK members (26.4% of all MW+PWG records); mean 19.6 units/covered synset; only 1.02% of synsets = exactly 1 unit, 60.37% split 11+. Language fence (sense-alignment-pilot trap): NO gloss-Jaccard, no gloss text read or emitted - keys+counts only. AK side consumed as-is from SanskritLexicography ak_lemma_cdsl_crosswalk.tsv (H4746); csl-orig mw/pwg headword lists read-only, never committed. Envelope measure: conflates semantic split with polysemy/homonymy and proper-noun entry mass (Siva/haMsa/kfzRa top).",
    "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/amarakosa-mw-pwg-sense-crosswalk.meta.md",
    "regen_checked": "2026-09-19 (H4806: builder rerun deterministic 5,590 synset rows; selftest exit 0)"
+  },
+  {
+   "id": "bhs-mw-dcs-key2-crosswalk",
+   "title": "BHS (Edgerton) × MW/PWG × DCS Buddhist loci key2 crosswalk",
+   "tier": "public",
+   "in_release": "unreleased",
+   "license": "CC BY-SA 4.0",
+   "format": "tsv",
+   "rows": 18188,
+   "size_bytes": 981867,
+   "keying": "BHS key2 (SLP1) × MW/PWG key2 (tiered: exact → form_key → marker_strip) × DCS lemma_id attestation in 20 Buddhist texts; 3,171 BHS headwords DCS-attested (130,416 tokens)",
+   "source_repo": "https://github.com/gasyoun/SanskritLexicography",
+   "source_path": "HeadwordLists/bhs_dcs_mw_key2_crosswalk.tsv",
+   "builder": "HeadwordLists/bhs_dcs_mw_key2_crosswalk.py (stdlib + sanskrit_util to_slp1; re-run regenerates byte-identical; stats JSON beside it)",
+   "consumers": [],
+   "status": "awaiting-consumer",
+   "consumer_candidates": [],
+   "notes": "H4744 (sibling census B8). First crosswalk for the BHS dictionary; the retired H4808 gap measure falls out of it: MW misses 13,604/18,188 BHS headwords (74.8%), PWG 13,305 (73.2%). DCS register classes (H1000 period-map pm-excluded / bhs-hybrid / buddhist-classical) travel per-row (dcs_bhs_loci), re-cuttable without rebuild. Landed via SanskritLexicography PR #2225 (product repo, PR-only) — source_path resolves on master once merged."
   }
  ]
 }
