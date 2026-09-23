@@ -1,0 +1,62 @@
+card	verdict	near_miss	failure_shape	note
+C001	unsure	no	n/a	PWG line is stripped to "3. m. angeblich auch = und _im_" and cannot be checked against SKD's letter-ā entry (ākāraḥ, dvitīyasvaravarṇaḥ).
+C002	different	no	dhatu-vs-noun	SKD is the dhātupāṭha entry cara "gamane. adane. ācāre" (carati) while PWG means the wagtail bird.
+C003	same	no	n/a	PWG "zum Opfer geeignet, opferrein", MW "fit for a sacrifice... clean, pure" and Apte "Relating to a sacrifice" all gloss sacrificial purity.
+C004	different	no	dhatu-vs-noun	SKD gives the root entry pāra "karmmasamāptau" (iti kavikalpadrumaḥ) while PWG means Quecksilber (mercury).
+C005	different	no	dhatu-vs-noun	SKD entry is root kula (ja gaṇa) "bandhau. saṃhatau", not PWG's stone/guild-head/noble senses.
+C006	same	no	n/a	MW "to direct or fix the mind or attention upon" and Apte "To fix upon, direct (the mind...)" are the same verbal sense.
+C007	different	no	dhatu-vs-noun	SKD prints the root mantha dhātupāṭha entry ("gāho viloḍanam", mathāti dadhi) while PWG means an eye disease/salve (manta).
+C008	same	no	n/a	All three gloss "of good or beautiful colour, brilliant, golden" (PWG "schönfarbig... Gold").
+C009	different	no	n/a	Apte's sense 3 "To shine" is flagged by Apte itself as far-fetched, and PWG's printed senses (niederwerfen, niederlegen, gestorben...) contain no shining.
+C010	different	no	dhatu-vs-noun	SKD is the dhātu entry vara "īpse" (varayati) while PWG means the plant Bdellion.
+C011	same	no	n/a	SKD's nominal entry lists maruvakaḥ (a plant, per bhāvaprakāśa) besides vāyuḥ, covering PWG's "eine best. Pflanze".
+C012	different	no	dhatu-vs-noun	SKD is root aṅga "pade... lakṣmaṇi" (aṅgayati, ṇic) vs PWG's nominal "Geist (?)".
+C013	same	no	n/a	Both sides give the motion sense of the root: PWG "hinundherbewegen" vs SKD dhātu dhvaja "gatau" (dhvajati).
+C014	different	yes	n/a	PWG "Gewaltthat" (violence) vs MW "punishment, fine" — the fine is a metonymic legal offshoot of the force idea.
+C015	different	yes	dhatu-vs-noun	SKD is the dhātupāṭha entry mā "māne" (māyate, aniṭ) while PWG prints the noun "Maass" — a POS variant of the same meaning.
+C016	same	no	n/a	SKD glosses saha as sahitam, sākam, sārddham, samam ("together with"), matching PWG's indeclinable "with" entry.
+C017	different	no	dhatu-vs-noun	SKD gives root cara (curādi gaṇa) "saṃśītyasaṃśītyoḥ" (vicārayati) while PWG means the cowrie Cypraea moneta.
+C018	different	yes	dhatu-vs-noun	SKD is root vaśa "spṛhi" (vaṣṭi) while PWG prints the nominal "Willen, Wunsch, Belieben" — POS variant of desiring.
+C019	different	no	dhatu-vs-noun	SKD entry is a root ("rakṣaṇe. gatau. kāntau...", bhvādiṃ-paraṃ-seṭ) while PWG has the prefix "herab, weg".
+C020	different	no	dhatu-vs-noun	SKD prints the root ghaṭa entry ("hiṃse. saṃghāte. dyutau") while PWG means a dry measure (lemma ghava).
+C021	different	no	dhatu-vs-noun	SKD is root yakṣa "ṅa mahi... pūjāyām" (yakṣayate) vs PWG's nominal "Palast".
+C022	same	no	n/a	MW and Apte both print exactly "a peacock".
+C023	different	no	dhatu-vs-noun	SKD is the dhātupāṭha entry jīv "prāṇe" (ajījivat) while PWG prints a nominal (m. "Bein. Karṇa's...").
+C024	different	no	dhatu-vs-noun	SKD is root parṇa "hāritye" (parṇayati campakam) while PWG means the betel leaf.
+C025	different	no	n/a	PWG glosses essence/heartwood ("inneren festen Bestandtheile... Kernholz") while MW prints the personified goddess (daughter of Dakṣa, wife of Dharma).
+C026	different	no	dhatu-vs-noun	SKD is root vaṭa "vaṇṭane" (vaṇṭayati) while PWG means a position in a game.
+C027	same	no	n/a	PWG "Schweifhaar/Rosshaar", MW "hair of any animal's tail (esp. horse's)" and MD "hair of the tail, horse-hair" agree.
+C028	different	no	dhatu-vs-noun	SKD is root vṛṣa "secane. prajanaiśye" (varṣitvā vṛṣṭvā) vs PWG's nominal "ein geiler Mensch... kräftiger Mann".
+C029	same	no	n/a	PWG's "drei Grundeigenschaften alles Seienden" and MW's "constituent of Prakṛti... goodness, passion, darkness" are the Sāṃkhya guṇas.
+C030	different	no	dhatu-vs-noun	SKD is root śuka "sarpe" (śokati) while PWG lists plants (Acacia Sirissa, Zizyphus scandens).
+C031	unsure	no	n/a	MW's gloss is truncated to a bare "m. or n. =" with no content, so it cannot be compared with PWG's tonsure ceremony.
+C032	same	no	n/a	Both sides print the frustrate/prevent sense (PWG "hintertreiben, vereiteln, hemmen"; MW "to frustrate, prevent, avert").
+C033	different	no	other-homonym	SKD prints the nominal entry for sudhā "amṛtam" (nectar, per amara), a different lexeme from sudā "Myrobalane".
+C034	different	no	dhatu-vs-noun	SKD is root śūla "rujāyām" (śūlati lokaṃ rogaḥ) vs PWG's astrological constellation sense.
+C035	different	no	other-homonym	SKD's nominal kośa list (sarvvatobhāvaḥ, varjjanam, vyādhiḥ, āliṅganam...) contains nothing like PWG's "one who loathes study".
+C036	different	no	dhatu-vs-noun	SKD is root naṭa "bhraṃśe" (nāṭayati) while PWG prints nominal glosses ("als masc.") largely stripped from the card.
+C037	different	no	dhatu-vs-noun	SKD is root piccha (tudādi gaṇa) "bādhe" (picchantī) while PWG means the Dalbergia Sissoo tree.
+C038	different	no	dhatu-vs-noun	SKD is root cala "bhṛtau" (cālayati) vs PWG's nominal "Weihrauch" (frankincense).
+C039	same	no	n/a	MW "power, strength" and Apte "Strength" agree.
+C040	same	no	n/a	SKD's sahitam/sākam/sārddham/samam list matches PWG's indeclinable "with" sense (duplicate of C016).
+C041	different	no	dhatu-vs-noun	SKD is root puṭa "saṃsarge" (puṭayati puṣpaṃ sūtreṇa) while PWG means nutmeg.
+C042	same	no	n/a	MW "sharp, keen" and Apte "Keen" agree.
+C043	different	no	other-homonym	SKD's nominal entry glosses antareṇa as madhyaṃ/vinā/vyatirekaḥ (between, without, except), not PWG's "in Bezug auf, wegen".
+C044	same	no	n/a	SKD's nominal entry (pratyayakāriṇī, mohara, svarṇaraupyādimudrikā) is the seal sense matching PWG's "Siegelring, Siegel, Petschaft".
+C045	different	no	dhatu-vs-noun	SKD is root rādha "siddhau" (rādhnoti/rādhyati) while PWG means Kṛṣṇa's gopī beloved.
+C046	different	no	dhatu-vs-noun	SKD is root skanda "śoṣaṇe. gatyām" (askadat) vs PWG's nominal "Fürst".
+C047	same	no	n/a	All three print the medical sense: PWG "Milderung, Erleichterung", MW "a favourable turn or crisis of a sickness", Apte likewise.
+C048	unsure	no	n/a	PWG's line is stripped to "= und _im_ = = _im_ nach Abkürzung von (warum nicht ?)" and cannot be aligned with SKD's consonant-letter (dantyasakāraḥ) entry.
+C049	different	no	dhatu-vs-noun	SKD is root kīla "bandhe" (kīlati) while PWG means a push with the elbow/in coitus.
+C050	different	no	other-homonym	SKD's nominal entry lists Manasādevī, a river (nadīviśeṣaḥ) and Jayadeva's wife, but no plant like PWG's Hibiscus mutabilis.
+C051	different	no	dhatu-vs-noun	SKD is root śaṭha "ālasye" (śāṭhayati vṛddhaḥ) vs PWG's nominal "Eisen" (iron).
+C052	different	no	dhatu-vs-noun	SKD is the root entry aja/añj "bhāsi" (añjayati) while PWG means Māyā as first Śakti.
+C053	different	yes	dhatu-vs-noun	SKD is the dhātupāṭha entry śaṃsa "hiṃsāstutyoḥ" (śaṃsati) while PWG prints the nominal "das Rühmen, Preisen" — POS variant of praising.
+C054	different	no	dhatu-vs-noun	SKD is root pūra "pūrttau" (pūryyante pitaras) while PWG means a kind of incense.
+C055	same	no	n/a	All three gloss scratching/inscribing: PWG "aufritzen... eine Linie ziehen", MW "draw a line, engrave, inscribe, write", Apte "To write... engrave".
+C056	different	no	dhatu-vs-noun	SKD is root kūṭa "aprasādāpradoḥ" (kūṭayate khalaḥ) vs PWG's nominal "Haus".
+C057	same	no	n/a	PWG "Sonnenschirm" and MW "a parasol" agree.
+C058	different	no	dhatu-vs-noun	SKD is root pakṣa "parigrahe" (pakṣayati) while PWG prints a long nominal list (Wand, Heer, Vogel, Seite...).
+C059	different	no	dhatu-vs-noun	SKD is root sphuṭa "narmmaṇi" (sphuṇṭayati) vs PWG's nominal "weiss" (white).
+C060	different	yes	dhatu-vs-noun	SKD is the dhātupāṭha entry naya "gatau" (nayate) while PWG prints "führend, leitend" — a participial POS variant of the motion sense.
+C061	different	no	other-homonym	SKD is the vowel-letter entry (ukāraḥ, pañcamasvaravarṇaḥ) while PWG prints a m. Śiva/Brahman designation ("ein Bein. Śiva's... Brahman's").
