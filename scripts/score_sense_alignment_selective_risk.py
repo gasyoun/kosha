@@ -319,17 +319,10 @@ def write_report(d, payload, freeze):
 # card/verdict/near_miss/failure_shape/note and are joined to the deck by card, so
 # the adjudicator never needed a single metadata column.
 
-import re as _re
-
-DHATU_MARKERS = _re.compile(
-    r"kavikalpa|\((?:adanta-?\s*)?(?:bhvā|curā|adā|divā|tudā|rudhā|tanā|kryā|svā|juhotyā)"
-    r"|\b(?:seṭ|aniṭ|veṭ)\b")
-
-
-def dhatu_marked(gloss):
-    """Mechanical second lens: does the SKD text read as a dhātupāṭha entry?
-    Line-break hyphens are closed first (`kavi- kalpadrumaḥ`)."""
-    return bool(DHATU_MARKERS.search(_re.sub(r"-\s+", "", gloss or "")))
+# The dhātupāṭha lens lives in app/sense_align.py since H5273, so the build's
+# root-vs-nominal gate and this report read ONE regex.
+sys.path.insert(0, str(ROOT / "app"))
+from sense_align import DHATU_MARKERS, dhatu_marked  # noqa: E402,F401
 
 
 # Post-review reclassification of the rubric's failure-shape LABEL (never the verdict).

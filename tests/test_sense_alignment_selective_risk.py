@@ -33,6 +33,35 @@ needs_table = pytest.mark.skipif(not TABLE.exists(), reason="sense_alignment.tsv
 needs_deck = pytest.mark.skipif(not (SR / "review_deck.tsv").exists(), reason="H5070 deck absent")
 
 
+# H5273 rebuilt sense_alignment.tsv (root-vs-nominal gate), so the decks are
+# re-drawn from the table they were FROZEN on: this git blob, whose sha256 both
+# population_freeze.json files pin. A shallow clone lacks the blob → skip.
+FROZEN_TABLE_BLOB = "4d08aa34015c8c538bb6b8b29a39d6b9f5eb5a65"
+
+
+@pytest.fixture
+def frozen_table(tmp_path):
+    import hashlib
+    got = subprocess.run(["git", "-C", str(ROOT), "cat-file", "blob", FROZEN_TABLE_BLOB],
+                         capture_output=True)
+    if got.returncode:
+        pytest.skip("frozen table blob not in this clone (shallow checkout)")
+    path = tmp_path / "sense_alignment_frozen.tsv"
+    path.write_bytes(got.stdout)
+    freeze = json.loads((SR / "population_freeze.json").read_text(encoding="utf-8"))
+    assert hashlib.sha256(got.stdout).hexdigest() == freeze["source_sha256"]
+    return path
+
+
+def _same_freeze(redrawn, frozen, src):
+    """Byte-equal except `source`, which names wherever the redraw read from."""
+    a = json.loads(redrawn.read_text(encoding="utf-8"))
+    b = json.loads(frozen.read_text(encoding="utf-8"))
+    assert a.pop("source") == str(src)
+    b.pop("source")
+    return a == b
+
+
 def _read_tsv(path):
     with path.open(encoding="utf-8") as fh:
         return list(csv.DictReader(fh, delimiter="\t"))
@@ -42,10 +71,11 @@ def _read_tsv(path):
 
 @needs_table
 @needs_deck
-def test_deck_reproduces_byte_for_byte(tmp_path):
+def test_deck_reproduces_byte_for_byte(tmp_path, frozen_table):
     out = tmp_path / "redraw"
     # the frozen 20-09-2026 deck predates the canary-metadata fix
-    subprocess.run([sys.executable, str(SAMPLER), "--out-dir", str(out), "--legacy-canary-metadata"],
+    subprocess.run([sys.executable, str(SAMPLER), "--out-dir", str(out), "--legacy-canary-metadata",
+                    "--src", str(frozen_table)],
                    check=True, capture_output=True, encoding="utf-8")
     assert (out / "review_deck.tsv").read_bytes() == (SR / "review_deck.tsv").read_bytes()
     assert (out / "canary_key.json").read_bytes() == (SR / "canary_key.json").read_bytes()
@@ -179,12 +209,14 @@ SKD_CMD = ["--seed", "5252", "--target", "60", "--stratify-channel", "skd", "--c
 
 @needs_table
 @needs_skd
-def test_skd_deck_reproduces_byte_for_byte(tmp_path):
+def test_skd_deck_reproduces_byte_for_byte(tmp_path, frozen_table):
     out = tmp_path / "skd"
-    subprocess.run([sys.executable, str(SAMPLER), "--out-dir", str(out), *SKD_CMD],
+    subprocess.run([sys.executable, str(SAMPLER), "--out-dir", str(out), *SKD_CMD,
+                    "--src", str(frozen_table)],
                    check=True, capture_output=True, encoding="utf-8", cwd=ROOT)
-    for name in ("review_deck.tsv", "canary_key.json", "population_freeze.json"):
+    for name in ("review_deck.tsv", "canary_key.json"):
         assert (out / name).read_bytes() == (SKD / name).read_bytes(), name
+    assert _same_freeze(out / "population_freeze.json", SKD / "population_freeze.json", frozen_table)
 
 
 @needs_skd
