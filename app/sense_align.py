@@ -85,6 +85,22 @@ METHODS (each edge records which one carried it)
 `ls+gloss` both fired; score is the max, and the pair is the most trustworthy
           class in the table.
 
+THE ROOT-VS-NOMINAL GATE (H5273)
+--------------------------------
+`attrib` is lemma-level: PWG prints `ŚKDR.` under a noun, and ŚKDR's entry for
+the same string is often a Kavikalpadruma verb-root (dhātu) record. H5252
+measured the ŚKDR channel at 77.8 % wrong, 32 of 35 wrong matches being exactly
+that shape. So a ŚKDR sense that reads as a dhātupāṭha entry (`dhatu_marked`)
+never attaches to a PWG sense that PWG itself marks non-verbal. The PWG side is
+decided from PWG's grammar, not from ŚKDR's text: a sense governed by a `<lex>`
+(every PWG `<lex>` value is non-verbal — gender, `adj.`, `adv.`, `indecl.`,
+`interj.`; roots carry none) is non-verbal, UNLESS its own gloss is a German
+infinitive, PWG's form for a verbal meaning (the *dhvaja* etymology line
+*hinundherbewegen* under `<lex>m.</lex>`, H5252 card C013, a true match). The
+build driver stamps `dhatu` on ŚKDR senses and `pwg_pos` on PWG senses; a sense
+without the stamp is never gated. No constant moves: the edge is simply not a
+candidate, and `n_root_vs_nominal_gated` counts what was withheld.
+
 GROUPING: BEST MATCH, NOT REACHABILITY
 --------------------------------------
 Edges at or above `TAU` are candidates. They are then resolved by a greedy best
@@ -126,6 +142,10 @@ FAILURE CLASSES — recorded, never hidden
                       and its gloss is Sanskrit, so both bridges are closed for
                       it. The Sa→Sa counterpart of `cross-language-gap` — a
                       property of the source format, not a tuning failure.
+`root-vs-nominal`       the sense's only cross-dictionary edge was the H5273 gate's:
+                      a dhātu-marked ŚKDR record against a PWG sense PWG marks
+                      non-verbal (see THE ROOT-VS-NOMINAL GATE). Recorded on both
+                      sides, so the withheld attachment stays visible.
 On the group side, `granularity-many-to-many` marks a component in which two or
 more senses of one dictionary land in the same meaning as two or more of
 another — a real alignment, at a coarser grain than either dictionary's own.
@@ -182,6 +202,68 @@ ATTRIB_KEYS = {
     "skd": ("skdr", "sabdak", "sabdakalpadr"),
     "vcp": ("vcp", "vacaspatya", "vacasp"),
 }
+
+# H5252's dhātupāṭha lens, moved here from scripts/score_sense_alignment_selective_risk.py
+# (which re-imports it) so the build and the scorer share ONE regex. It reads the
+# IAST display form of a ŚKDR gloss. Written after reading the H5252 deck, so its
+# deck numbers are in-sample.
+DHATU_MARKERS = re.compile(
+    r"kavikalpa|\((?:adanta-?\s*)?(?:bhvā|curā|adā|divā|tudā|rudhā|tanā|kryā|svā|juhotyā)"
+    r"|\b(?:seṭ|aniṭ|veṭ)\b")
+
+
+def dhatu_marked(gloss):
+    """Mechanical second lens: does the SKD text read as a dhātupāṭha entry?
+    Line-break hyphens are closed first (`kavi- kalpadrumaḥ`)."""
+    return bool(DHATU_MARKERS.search(re.sub(r"-\s+", "", gloss or "")))
+
+
+_LEX = re.compile(r"<lex>(.*?)</lex>", re.S)
+# A German infinitive: lower-case run whose last word ends -en/-ern/-eln and is
+# not a `ge-` participle (`geworden`). German nouns are capitalised, so a noun
+# gloss never matches; an adjective in -en (`eigen`, `rothen`) still does — the
+# residual this lens cannot see, and it only ever KEEPS an attachment.
+_DE_INFINITIVE = re.compile(r"^(?:[a-zäöüß]+ )*(?!ge)[a-zäöüß]+(?:en|ern|eln)$")
+# An article-led gloss (`eine Art …`, `der mittleren`) is nominal German.
+_DE_ARTICLE = re.compile(r"^(?:der|die|das|des|dem|den|ein|eine|eines|einer|einem|einen)\b")
+# Capitalised words that open a VERB gloss (`Jmd umgehen`, `Etwas halten`).
+_DE_PRONOUN_ABBR = re.compile(r"^(?:Jmd|Jmdm|Jmdn|Jmds|Jemand\w*|Etwas|Etw)\b")
+
+
+def pwg_pos(body_upto_sense_end: str, gloss: str) -> str:
+    """`"nonverbal"` or `"verbal"` for one PWG sense, from PWG's own grammar.
+
+    `body_upto_sense_end` is the entry body from its start through the end of
+    the sense span: the governing `<lex>` is the last one printed before the
+    sense closes. Every PWG `<lex>` value is non-verbal; a root entry carries
+    none. An addendum entry carries none either, so without a `<lex>` the
+    German gloss decides: a capitalised (noun) or article-led gloss is
+    non-verbal, anything else is read as verbal. Under a `<lex>`, a gloss that
+    is a German infinitive is still verbal (H5252 card C013, *dhvaja* →
+    *hinundherbewegen*).
+    """
+    lex = _LEX.findall(body_upto_sense_end or "")
+    first = (gloss or "").split(";")[0].strip()
+    if _DE_ARTICLE.match(first):
+        return "nonverbal"
+    if _DE_INFINITIVE.match(first):
+        return "verbal"
+    if lex:
+        return "nonverbal"
+    if first[:1].isupper() and not _DE_PRONOUN_ABBR.match(first):
+        return "nonverbal"
+    return "verbal"
+
+
+def root_vs_nominal(s1: dict, s2: dict) -> bool:
+    """True when one side is a dhātu-marked ŚKDR sense and the other a PWG sense
+    PWG marks non-verbal — the H5273 gate (see the module docstring)."""
+    for a, b in ((s1, s2), (s2, s1)):
+        if (a["dict"] == "skd" and a.get("dhatu")
+                and b["dict"] == "pwg" and b.get("pwg_pos") == "nonverbal"):
+            return True
+    return False
+
 
 _TAG = re.compile(r"<[^>]+>")
 _WS = re.compile(r"\s+")
@@ -449,11 +531,17 @@ def align_lemma(senses: list[dict], present_dicts=None, tau: float = TAU) -> dic
             df[w] += 1
 
     candidates, near_miss = defaultdict(list), defaultdict(list)
+    n_gated, gated = 0, set()
     for i in range(len(live)):
         for j in range(i + 1, len(live)):
             if live[i]["dict"] == live[j]["dict"]:
                 continue
             sc, method, shared = score_pair(live[i], live[j], df)
+            if sc >= tau and method and root_vs_nominal(live[i], live[j]):
+                # H5273: a would-be candidate edge, withheld — never a near miss.
+                n_gated += 1
+                gated.update((i, j))
+                continue
             if sc >= tau and method:
                 pair = tuple(sorted((live[i]["dict"], live[j]["dict"])))
                 candidates[pair].append({"i": i, "j": j, "score": round(sc, 3),
@@ -520,6 +608,8 @@ def align_lemma(senses: list[dict], present_dicts=None, tau: float = TAU) -> dic
                 failure = "outranked"
             elif near_miss.get(comp[0]):
                 failure = "witness-too-common"
+            elif comp[0] in gated:
+                failure = "root-vs-nominal"
             elif m["dict"] in SASA_DICTS:
                 # ŚKDR/VCP never have `<ls>` — the format has none — and their
                 # gloss is Sanskrit, so both bridges are shut. The only one that
@@ -560,6 +650,7 @@ def align_lemma(senses: list[dict], present_dicts=None, tau: float = TAU) -> dic
         "n_groups": len(groups),
         "n_aligned": sum(1 for g in groups if g["status"] == "aligned"),
         "n_unaligned": sum(1 for g in groups if g["status"] == "unaligned"),
+        "n_root_vs_nominal_gated": n_gated,
         "present_dicts": sorted(present),
     }
     return {"groups": groups, "senses": live, "dropped": dropped, "stats": stats}
