@@ -5305,6 +5305,8 @@ antara	pwg	pwg:63870:3	no-gloss	1
 rasa	vcp	vcp:39393:1	no-citation-apparatus	0	rasa svane BvA0 pa0 aka0 sew . rasati arAsIt arasIt . rarAsa resatuH
 rasa	vcp	vcp:39394:1	no-citation-apparatus	0	rasa AsvAde a0 cu0 u0 saka0 sew . rasayati te ararasat ta
 rasa	vcp	vcp:39395:1	no-citation-apparatus	0	rasa pu0 rasyate rasa ac . AsvAdye rasanendriyagrAhye 1 maDu- ryyAdiguRaBede 2 dehasTe BuktAnnAdeH praTamapariRAme 3 sAre ca ozaDInAM rasaH iti tARqyabrA0 rasaH sAraH BA0 . 4 DAtuBede pArade 5 mADuryyA darasavati guqAdO tri0 6 puzpasya maDuni 7 alaNkArokte vi…
+rasa	skd	skd:29253:1	root-vs-nominal	0	rasa , Sabde . iti kavikalpadrumaH .. (BvA0-para0- aka0-sew .) rasati . iti durgAdAsaH
+rasa	skd	skd:29254:1	root-vs-nominal	0	rasa , t ka AsvAde . snehe . iti kavikalpadrumaH .. (adantacurA0-para0-saka0-sew .) dantyopaDaH . rasayati maDu dvirePaH . iti durgAdAsaH
 rasa	md	md:15104:1	no-shared-witness	0	ras-a, m. [√ 2. ras], sap, juice ( of plants ), fruit-syrup; fluid, liquid; water; essence, pith ( of anything ); quicksilver; potion, elixir; poisonous draught; taste, flavour ( as distinctive quality of fluids : six kinds are distinguished, viz. sweet, salt…
 rasa	mw	mw:175486:1	witness-too-common	1	m. ( ifc. f( ). ) the sap or juice of plants, juice of fruit, any liquid or fluid, the best or finest or prime part of anything, essence, marrow, &amp;c. &amp;c
 rasa	mw	mw:175487:1	witness-too-common	2	water, liquor, drink, ; &amp;c
@@ -5356,6 +5358,8 @@ rasa	pwg	pwg:83706:25	witness-too-common	2	ein mythischer Strom, der die Erde un
 rasa	pwg	pwg:83706:26	witness-too-common	3	die Unterwelt
 rasa	pwg	pwg:83706:27	no-shared-witness	8	die Erde, Land
 rasa	pwg	pwg:83706:28	no-shared-witness	4	Zunge
+rasa	pwg	pwg:83706:29	root-vs-nominal	6	Weinstock
+rasa	pwg	pwg:83706:31	root-vs-nominal	2	Myrrhe
 rasa	pwg	pwg:83706:32	cross-language-gap	0	Milch
 rasa	pwg	pwg:83706:33	cross-language-gap	0	s. oben u. 1〉a〉(ζ)
 rasa	pwg	pwg:83706:34	no-shared-witness	1	Geschmack
@@ -5443,6 +5447,7 @@ karaRa	pwg	pwg:69747:8	no-gloss	1
 kumAra	vcp	vcp:14097:1	no-citation-apparatus	0	kumAra kelO ada0 curA0 uBa0 aka0 sew . kumArayati te acukumArat ta . kumarayAm baBUva Asa cakAra cakre
 kumAra	vcp	vcp:14098:1	no-citation-apparatus	0	kumAra pu0 kumArayati krIqota, kutsito mAro yasmAt, kO- mArayati duzwAn mf Ric ac vA . 1 kArttikeye, nAwyIktO 2 yuvarAje, ama0 3 Suke pakziRi 4 aSvavArake, 5 varuRavfkze 6 paYcavarzIye, bAlake ca medi0 . kOnAraM paYcamAbdAntaM pOgaRqaM daSamAvaDi BAga0 10 SrI…
 kumAra	vcp	vcp:14098:2	no-citation-apparatus	0	viSvasAre nibanDe ca . CinnorudDaH SaktihInaH parANmuKa udIritaH . baDironetrahInaSca kIlitaH stamBitastaTA . dagDaHsrastaSca BItaSca malinaSca tiraskftaH . BeditaSca suzuptaSca madonmattaSca mUrcCitaH . hftavIryyaSca BImaSca praDvastobAlakaH punaH . kumAraSc…
+kumAra	skd	skd:8100:1	root-vs-nominal	0	kumAra , t ka kelO . iti kavikalpadrumaH .. (adanta- curAM-paraM-akaM-sew .) hrasvI . acukumArat . iti durgAdAsaH
 kumAra	md	md:6042:1	no-shared-witness	0	ku-māra, m. [dying easily], (newborn) child; boy; youth, son; prince; ep. of Skanda; ( a ) -kā, m. little boy, boy, youth; —˚ , a young —; -tva, n. boyhood, youth; sonship; -datta, m. N. ; ( a ) -deṣṇa, a. giving but fleeting gifts; -dhārā, f. N. of a river ;…
 kumAra	mw	mw:52275:1	no-shared-witness	1	m. ( fr. 1. + , √ ? ‘easily dying’; fr. √ 2. , ) a child, boy, youth
 kumAra	mw	mw:52278:1	no-shared-witness	1	a groom
@@ -5462,10 +5467,11 @@ kumAra	pwg	pwg:17828:5	no-shared-witness	3	Pferdeknecht, Stallknecht
 kumAra	pwg	pwg:17828:8	witness-too-common	1	pl. N. pr. eines Volkes . . Vgl. . [Page2-0337]
 kumAra	pwg	pwg:17828:9	no-shared-witness	2	Papagei
 kumAra	pwg	pwg:17828:10	no-shared-witness	2	N. eines Baumes, Capparis trifoliata Roxb. ( ) Vgl
+kumAra	pwg	pwg:17828:11	root-vs-nominal	2	ein Bein. des Flusses Sindhu _im_
 kumAra	pwg	pwg:17828:13	outranked	11	Mädchen, Jungfrau, Tochter; ein Mädchen
 kumAra	pwg	pwg:17828:14	outranked	3	N. pr. der Gemahlin Bhīmasena ʼs, Sohnes von Parīkṣit , . einer Tochter Vasudeva ʼs von der Rohiṇī . ein Bein. der Sītā , der Gemahlin Rāma ʼs
 kumAra	pwg	pwg:17828:15	witness-too-common	4	ein Bein. der Durgā
-kumAra	pwg	pwg:17828:16	outranked	2	ein best. Vogel
+kumAra	pwg	pwg:17828:16	root-vs-nominal	2	ein best. Vogel
 kumAra	pwg	pwg:17828:17	no-shared-witness	1	N. verschiedener Pflanzen
 kumAra	pwg	pwg:17828:18	no-shared-witness	3	α〉 Aloe perfoliata Lin
 kumAra	pwg	pwg:17828:19	no-shared-witness	1	β〉 = ( Clitoria ternatea Lin. )
@@ -5490,6 +5496,8 @@ kumAra	pwg	pwg:71029:4	no-gloss	1	⏑ ⏑ ⏑ ⏑ – ⏑ – ⏑ ⏑ – ⏑ �
 vfza	vcp	vcp:42258:1	no-citation-apparatus	0	vfza secane saka0 BvA0 para0 prajananasAmarTye ESvaryye aka0 sew . varzAta avarzIt . udit ktvA vew
 vfza	vcp	vcp:42259:1	no-citation-apparatus	0	vfza prajananasAmarTye ESvaryye curA0 Atma0 saka0 sew . varza- yate avIvfzata avavarzata
 vfza	vcp	vcp:42260:1	no-citation-apparatus	0	vfza pu0 vfza ka . 1 vfzaBe puNgave amaraH 2 mezAdito dvitIye rASO jye0 ta0 . 3 puruzaBede 4 ekAdaSamanukAlIne 5 indre 6 Darme garuqapu0 81 a0 . 7 SfNgimAtre 8 mUzike 9 Sukra- yukte 10 vAstusTAnaBede 11 vAsakavfkze medi0 . 12 SatrO jawA0 . 13 kAme 14 balayukt…
+vfza	skd	skd:33854:1	root-vs-nominal	0	vfza , u secane . prajanESye . iti kavikalpadrumaH .. (BvA0-para0-saka0-aka0 ca-sew . ktvAvew .) u, varzitvA vfzwvA . iti durgAdAsaH
+vfza	skd	skd:33855:1	root-vs-nominal	0	vfza , ka Na prajanESye . iti kavikalpadrumaH .. (curA0-Atma0-aka0-sew .) ka Na, varzayate . asya paYcamasvarAnubanDo leKakaSramakftaH suDIBirheyaH . YyanteByaH sarvvatra nityem sAmpra- dAyikatvAt . na ca prAcAmanuroDAt pAWya iti vAcyam . tarhi anfk vyaktO . …
 vfza	md	md:16980:1	no-shared-witness	0	vṛṣ-a, m. bull ( in V. only —˚ ); Taurus ( sign of the zodiac ); male of an anim ( only —˚ ); man, husband ( rare ); best of its kind , chief of ( g. , —˚ ); bull of justice or virtue; virtuous act; ep. of Viṣṇu or Kṛṣṇa; N. of an Asura ; semen virile ; N. of…
 vfza	mw	mw:204863:1	no-shared-witness	0	the male of any animal (see )
 vfza	mw	mw:204864:1	witness-too-common	2	a bull (in older language only ifc. ), ; &amp;c
@@ -5528,9 +5536,11 @@ vfza	mw	mw:204993:1	no-shared-witness	0	2. (not always separable from 1. ), in c
 vfza	pwg	pwg:94971:1	no-shared-witness	3	Hengst
 vfza	pwg	pwg:94971:3	witness-too-common	17	Stier; Bock
 vfza	pwg	pwg:94971:4	no-shared-witness	11	der Stier im Thierkreise
+vfza	pwg	pwg:94971:5	root-vs-nominal	6	ein geiler Mensch (— Bock); ein kräftiger Mann
 vfza	pwg	pwg:94971:6	outranked	11	die Gerechtigkeit; Tugend als Stier; Pflicht, moralisches Verdienst
 vfza	pwg	pwg:94971:7	witness-too-common	10	der Beste in seiner Art; der Daumen; sich in den Hauptwürfel verwandelnd
 vfza	pwg	pwg:94971:8	no-shared-witness	1	Aphrodisiacum
+vfza	pwg	pwg:94971:9	witness-too-common	9	Bez. verschiedener göttlicher Wesen: Viṣṇu ʼs oder Kṛṣṇa ʼs . . . . . Śiva ʼs . (zwei Mal neben !). . Indra ʼs ( pl. ). der Sonne 107,4. des Liebesgottes _im_ des Regenten des Karaṇa Catuṣpada
 vfza	pwg	pwg:94971:10	no-shared-witness	1	N. pr
 vfza	pwg	pwg:94971:11	no-shared-witness	2	α〉 des Indra im 11ten Manvantara
 vfza	pwg	pwg:94971:12	witness-too-common	1	β〉 eines Sādhya . die neuere Ausg
@@ -5545,7 +5555,7 @@ vfza	pwg	pwg:94971:20	no-shared-witness	2	ϰ〉 eines der 10 Rosse des Mondes be
 vfza	pwg	pwg:94971:22	no-shared-witness	2	des 15ten Jahres im 60jährigen Jupiter-Cyclus
 vfza	pwg	pwg:94971:23	no-shared-witness	2	eine best. Tempelform; ein zum Aufbau eines Hauses besonders zugerichteter Platz
 vfza	pwg	pwg:94971:24	no-shared-witness	4	Maus; Ratte
-vfza	pwg	pwg:94971:25	outranked	2	Feind
+vfza	pwg	pwg:94971:25	root-vs-nominal	2	Feind
 vfza	pwg	pwg:94971:26	no-shared-witness	4	f. Gendarussa vulgaris oder Adhadota . Salvinia cucullata Roxb. . Mucuna pruritus Hook
 vfza	pwg	pwg:94971:27	no-shared-witness	1	Myrobalane
 vfza	pwg	pwg:94971:28	no-shared-witness	1	Vgl. (auch ), (in der 1ten Bed. auch ), 2. und
@@ -5555,8 +5565,10 @@ kawa	vcp	vcp:11384:1	no-citation-apparatus	0	kawa gatO BvAdi0 idit para0 saka0 s
 kawa	vcp	vcp:11385:1	no-citation-apparatus	0	kawa gatO BvAdi0 para0 saka0 sew . kawati akawIt akA- wIt cakAwa Idit tena new kawwaH . pranikawati na Ratvam
 kawa	vcp	vcp:11386:1	no-citation-apparatus	0	kawa vftO varzaRe ca BvAdi0 para0 saka0 sew . kawati edit akawIt cakAwa . kawaH kawuH pra + prakASe aka0 prakawiva prakawaH . Ric pra + prakASane saka0 . GawAdi0 pakawayati prakawitaH prakawayan . yuc prakawanA . nAmaDAturityanye
 kawa	vcp	vcp:11387:1	no-citation-apparatus	0	kawa pu0 kawa karmmaRi Da karttari ac vA . 1 hastigaRqe madavarzaRAt taTAtvam yaddantinaH kawakawAhatadaM mimaNkzo mAGaH kaRqUyamAnena kawaM kadAcit va- nyadvipenonmaTitA tvagasya kawapraBedena karIva pArTivaH 2 gaRqamAtre svedavarzaRAt taTAtvam tulyaganDizu …
-kawa	skd	skd:5893:1	outranked	0	kawa I gatyAM . iti kavikalpadrumaH .. (BvAM-paraM-sakaM- sew . kawati akawIt akAwIt cakAwa . I kawwaH iti durgAdAsaH
-kawa	skd	skd:5894:1	outranked	0	kawa e vftO . vfzi . vftirAvaraRam . vfw varzaRam . (BvAM-paraM-sakaM-akaM ca sew .) kawati . edit akawIt cakAwa .) e akawIt pawo gAtram . kawati meGaH . iti durgAdAsaH
+kawa	skd	skd:5891:1	root-vs-nominal	0	kawa gatyAM . iti kavikalpadrumaH .. (BvAM paraM sakaM sew .) kawati . iti durgAdAsaH
+kawa	skd	skd:5892:1	root-vs-nominal	0	kawa i gatyAM . iti kavikalpadrumaH .. (BvAM paraM sakaM sew idit . i-kaRwyate . iti durgAdAsaH
+kawa	skd	skd:5893:1	root-vs-nominal	0	kawa I gatyAM . iti kavikalpadrumaH .. (BvAM-paraM-sakaM- sew . kawati akawIt akAwIt cakAwa . I kawwaH iti durgAdAsaH
+kawa	skd	skd:5894:1	root-vs-nominal	0	kawa e vftO . vfzi . vftirAvaraRam . vfw varzaRam . (BvAM-paraM-sakaM-akaM ca sew .) kawati . edit akawIt cakAwa .) e akawIt pawo gAtram . kawati meGaH . iti durgAdAsaH
 kawa	md	md:5347:1	no-shared-witness	0	káṭa, m. mat; elephantʼs temple; a. certain throw in a game of dice ; corpse; -ka, m. mat; m. n. rope; bracelet; valley; royal camp; caravan; collection; -karaṇa, n. , -kriyā, f. platting of mats
 kawa	mw	mw:41897:1	no-shared-witness	0	the hollow above the hip or the loins, the hip and loins
 kawa	mw	mw:41899:1	no-shared-witness	1	a glance or side look, ( cf. )
@@ -5586,6 +5598,8 @@ kawa	pwg	pwg:14332:14	no-shared-witness	3	Zeitpunkt
 kawa	pwg	pwg:14332:15	no-shared-witness	3	Uebermaass
 kawa	pwg	pwg:14332:16	no-shared-witness	2	Saccharum Sara ( ) Roxb. . Vgl. 2,b
 kawa	pwg	pwg:14332:17	no-shared-witness	1	eine einjährige Pflanze
+kawa	pwg	pwg:14332:18	root-vs-nominal	2	Gras
+kawa	pwg	pwg:14332:19	root-vs-nominal	2	Brett
 kawa	pwg	pwg:14332:21	no-shared-witness	1	gaṇa zu
 kawa	pwg	pwg:14332:23	no-shared-witness	2	Blüthenstaub; Menge
 kawa	pwg	pwg:14332:24	no-shared-witness	2	eine Handlung vollziehend
@@ -5850,6 +5864,7 @@ candra	pwg	pwg:24710:3	no-gloss	0	m
 candra	pwg	pwg:24710:20	no-gloss	0	f
 candra	pwg	pwg:24710:25	no-gloss	0	n
 plava	vcp	vcp:34977:1	no-citation-apparatus	0	plava na0 plu ac . 1 kEvarttImustake 2 ganDatfRe medi0 . plutvA 3 gantari tri0 . BAve ap . 4 plavane (BAsA) karttari ka- raRe vA ap . 5 Beke 6 Belake (BelA) 7 meze 8 Svapace 9 vAnare 10 jalakAke 11 kulake 12 pravaRe 13 parkawIvfkze 14 kAraraRqavaKage 15 Sabde…
+plava	skd	skd:23649:1	root-vs-nominal	0	plava , Na gatyAm . (BvA0-Atma0-saka0-sew .) antaHsTatftIyayuktaH . Na, plavate . plu Na ityane- nEvezwasidDe asya pAWaH plavizyate plavyate ityAdi sidDyarTaH . iti durgAdAsaH
 plava	md	md:12580:1	no-shared-witness	0	plav-á, a. [√ plu] swimming, floating; inclined or sloping, towards ( —˚ ); transient; m. n. boat, skiff; m. kind of duck (Kāraṇḍava); swimming; bathing; overflowing of a river , flood; leaping, bound: -ga, m. (moving by leaps), frog; monkey: -indra, m. Lord …
 plava	ap90	ap90:21423:3	no-shared-witness	0	2 Jumping, leaping
 plava	ap90	ap90:21423:4	no-shared-witness	0	3 Ved. Superior, excellent
@@ -5889,7 +5904,7 @@ plava	pwg	pwg:51326:9	no-shared-witness	5	Frosch
 plava	pwg	pwg:51326:10	no-shared-witness	3	Affe
 plava	pwg	pwg:51326:11	no-shared-witness	1	Schaf
 plava	pwg	pwg:51326:12	no-shared-witness	5	ein
-plava	pwg	pwg:51326:13	outranked	2	Feind
+plava	pwg	pwg:51326:13	root-vs-nominal	2	Feind
 plava	pwg	pwg:51326:14	no-shared-witness	3	= Ficus infectoria Willd. in ist wohl nur ein Druckfehler für
 plava	pwg	pwg:51326:15	witness-too-common	1	eine best. Waffe
 plava	pwg	pwg:51326:16	no-shared-witness	2	das 35te (9te) Jahr im Jupitercyclus
@@ -5901,7 +5916,7 @@ plava	pwg	pwg:51326:22	no-shared-witness	1	ein best. Metrum
 plava	pwg	pwg:51326:23	witness-too-common	4	abschüssige Lage, Neigung, proclivitas
 plava	pwg	pwg:51326:24	cross-language-gap	0	das Springen, Sprung
 plava	pwg	pwg:51326:25	no-shared-witness	1	Zurückkunft
-plava	pwg	pwg:51326:26	outranked	2	das Antreiben
+plava	pwg	pwg:51326:26	root-vs-nominal	2	das Antreiben
 plava	pwg	pwg:51326:27	witness-too-common	4	ein best. wohlriechendes Gras
 plava	pwg	pwg:51326:28	no-shared-witness	1	Vgl. (auch )
 plava	pwg	pwg:79733:1	no-shared-witness	2	n. _in_
@@ -7307,8 +7322,9 @@ BU	vcp	vcp:36708:12	no-citation-apparatus	0	vi + vyAptO viBuH
 BU	vcp	vcp:36708:13	no-citation-apparatus	0	vi + ati parasparaBavane Atma0 saka0 vyaBiBavate'rkaminduH . bopadevaH
 BU	vcp	vcp:36708:14	no-citation-apparatus	0	sam + yogyatve aka0 . samBavati sam + BU Ric samBAvanA- rUpajYAnavizayatve samBAvyate
 BU	vcp	vcp:36709:1	no-citation-apparatus	0	BU strI BU ADAre karttari apAdAne vA yaTAyaTam kvip . 1 BUmO amaraH 2 sTAnamAtre medi0 3 yajYAgnO pu0 jawA0 4 utpadyamAna tri0 5 parameSvare pu0 anirviRRaH sTavizWo BUH vizRu sa0
+BU	skd	skd:25175:1	outranked	0	BU , ka SudDicintayoH . miSraRe . iti kavikalpa- drumaH . (curA0-para0-saka0-sew .) ka, tfRa- vadBAvayati dvizaH sarvvAn . trayo'rTAH . iti durgAdAsaH
+BU	skd	skd:25176:1	outranked	0	BU , ka Na prAptO . iti kavikalpadrumaH .. (curA0- Atma0-saka0-sew .) ka Na, BAvayate . iti durgAdAsaH
 BU	skd	skd:25177:1	outranked	0	BU , Ya prAptO . iti kavikalpadrumaH . (BvA0-uBa0- saka0-sew .) Ya, Bavati Bavate DanaM DIraH . Bavatyeva sattAyAM prAptisampannajanmasviti Bawwa- mallaH . Bavate duritakzayaM yaToktakratuBirBAvayate ca nAkalokamiti halAyuDaH . kecidamuM BvAdyAtmanepadinaM ma…
-BU	skd	skd:25178:1	outranked	0	BU , vya, (BU + kvip .) rasAtalam . iti hemacandraH
 BU	md	md:13295:1	no-shared-witness	0	BHŪ, Ⅰ. P. ( rarely Ā. ) bháva, become, anything ( nm. or —˚ with ad. in ī or ū ); arise, happen, occur; come forth, from ( ab. ); be found anywhere ( lc. ); exist; come into being, spring from ( ab. ); be or remain alive; be in any condition, fare; stay, rem…
 BU	md	md:13296:1	no-shared-witness	0	bhū́, a. ( —˚ ) becoming, arising, proceeding or produced from; being, existing; f. place of being, space ( pl. spaces, worlds: V. ); earth; ground; floor; land, landed property; earth ( as a substance ); place, spot; subject ( of dispute etc. ): lc. on earth…
 BU	ap90	ap90:22244:1	no-shared-witness	0	I. 1 P. (rarely Ā.) ( , )
@@ -7538,6 +7554,7 @@ BU	pwg	pwg:55167:7	no-shared-witness	1	die Basis eines Dreiecks; einer anderen F
 BU	pwg	pwg:55167:8	no-shared-witness	1	Gegenstand; des Streites und der Uebereinstimmung
 BU	pwg	pwg:55167:9	no-shared-witness	1	Erde; der Zahl Eins
 BU	pwg	pwg:55167:10	no-shared-witness	2	des Buchstabens
+BU	pwg	pwg:55167:11	outranked	2	Opfer- feuer
 BU	pwg	pwg:55167:12	no-shared-witness	2	m. N. eines Ekāha
 BU	pwg	pwg:80224:1	cross-language-gap	0	1. Z. 14 füge 10,112,10 nach 1,76,4 hinzu
 BU	pwg	pwg:80224:3	witness-too-common	1	wenn die Anstrengung Etwas vermöchte, wenn die Anstrengung es thäte, wenn es auf die Anstrengung ankäme
@@ -9677,6 +9694,7 @@ daRqa	vcp	vcp:24169:45	no-citation-apparatus	0	rAjaSAsanakUwakaraRAdO manunokto 
 daRqa	vcp	vcp:24169:46	no-citation-apparatus	0	sAmAnyatodamaviDiH pitAcAryyaH suhfnmAtA BAryyA putraH purohitaH . nAdaRqyo nAma rAjYo'sti yaH svaDarme na tizWati . kArzApaRaM BaveddaRqyo yatrAnyaH prAkfto janaH . tatra rAjA BaveddaRqyaH sahasramiti DAraRA . azwApAdyantu SUdrasya steye Bavati kilvizam . zo…
 daRqa	vcp	vcp:24169:47	no-citation-apparatus	0	ftvijaM yastyajedyAjyo yAjyaYcartvik tyajedyadi . SaktaM karmmaRyaduzwaYca tayordaRqaH SataM Satam . na mAtA na pitA na strI na putrastyAgamarhati . tyajannapatitA- netAn rAjYA daRqyaH SatAni zaw manUkto damaH
 daRqa	vcp	vcp:24169:48	no-citation-apparatus	0	agnipu0 226 a0 sarvavizaye damaBeda ukto yaTA cOrEraBUzito yastu mUzito'smIti BAzate . tatpradA- tari BUpAle sa daRqyastAvadeva tu . yo yAvadvipa- rItArTaM miTyA vA yo vadettu tam . tO nfpeRa hyaDarmajYO dApyO taddviguRaM damam . kUwasAkzyaM tu kurvA- RAMstrI…
+daRqa	skd	skd:15826:1	root-vs-nominal	0	daRqa , t ka tatpAte . iti kavikalpadrumaH .. (adanta- curAM-paraM-sakaM-sew .) tatpAtastaddaRqapAtanam . ka, daRqayati daRqApayati aparADinaM rAjA . iti durgAdAsaH
 daRqa	md	md:9005:1	no-shared-witness	0	daṇḍá, m. ( n. ) staff, stick; mace, club [Page115a-3] ( to which the elephantʼs trunk and human arms and thighs are often compared ); stalk; handle; flagstaff ( on a carriage ); pole ( as a measure of length = 4 cubits ); red = symbol of violence, force of a…
 daRqa	mw	mw:89571.04:1	no-shared-witness	1	a stalk, stem (of a tree; cf. , , )
 daRqa	mw	mw:89571.06:1	witness-too-common	2	the staff of a banner
@@ -9710,6 +9728,7 @@ daRqa	pwg	pwg:31704:3	witness-too-common	6	Stengel, Stamm
 daRqa	pwg	pwg:31704:4	witness-too-common	12	Stiel; Fahnenstock; Deichsel; Stab an dem Saiteninstrument; durch welchen die Saiten durchgelassen sind
 daRqa	pwg	pwg:31704:5	no-shared-witness	2	Butterstössel
 daRqa	pwg	pwg:31704:6	no-shared-witness	7	ein Stab als best. Längenmaass; Fingerbreiten
+daRqa	pwg	pwg:31704:7	root-vs-nominal	4	ein best. Zeitmaass; Athemzüge; Sterntag
 daRqa	pwg	pwg:31704:8	no-shared-witness	4	Winkel; das Stäbchen, mit dem ein Saiteninstrument gespielt wird
 daRqa	pwg	pwg:31704:9	no-shared-witness	3	eine best. stabähnliche Lichterscheinung am Himmel; Nordlicht und andere Himmelserscheinungen; ein best. Planet
 daRqa	pwg	pwg:31704:11	no-shared-witness	5	in Form eines Stabes; Kolonnenweise aufgestellte Truppen, Heersäule
@@ -10742,6 +10761,8 @@ sumuKa	pwg	pwg:111000:9	no-gloss	0	m
 sumuKa	pwg	pwg:111000:20	no-gloss	0	f
 akza	vcp	vcp:113:1	no-citation-apparatus	0	akza vyAptO saMhatO ca BvA0 pa0 vew . akzati akzRoti AkzIt AzwAm AkzizwAm Anakze . kta azwaH ktin azwiH Satf akzRuvan i akzi kanin akza
 akza	vcp	vcp:114:1	no-citation-apparatus	0	akza na0 aSnute vyApnoti vizayAn svavfttyA saMyogena vA aSa sa . indriye, akzARi paRqitajanA vidurindri- yARi u0 netre, aDokzaja iti . tutTe (tu~te) sOvarcale ca . jyotizokte rASicakrAvayavaBede . SaNkurnaronA kaTitaH saeva svArdDAdraveryA vizuvaddinArdDe . n…
+akza	skd	skd:103:1	root-vs-nominal	0	akza , na U vyAptO . saMhatO . iti kavikalpadrumaH . na akzRoti DanaM lokaH . vyApnoti rASIkaroti vA ityarTaH . U AkzizwAM . AzwAM . iti durgAdAsaH
+akza	skd	skd:104:1	root-vs-nominal	0	akza , U vyAptO . saMhatO . iti kavikalpadrumaH . akzati DanaM lokaH . vyApnoti rASIkaroti vA ityarTaH . U AkzizwAM . AzwAM . iti durgAdAsaH
 akza	md	md:160:1	no-shared-witness	0	1. akṣá, m. die for playing
 akza	md	md:161:1	no-shared-witness	0	2. ákṣa, m. axle; bone of the temples
 akza	md	md:163:1	no-shared-witness	0	4. akṣa, m. -kṣapaṇa, -ka, m. N. of a gambler
@@ -10786,11 +10807,13 @@ akza	pwg	pwg:167:11	no-shared-witness	1	der Saame dieser Pflanze
 akza	pwg	pwg:167:12	no-shared-witness	1	der Saame einer anderen Pflanze
 akza	pwg	pwg:167:13	no-shared-witness	3	12〉 Name eines Gewichts, ein karṣa = 16 māṣaka
 akza	pwg	pwg:167:14	no-shared-witness	1	Schlange
+akza	pwg	pwg:167:15	root-vs-nominal	2	14〉 Garuḍa , _im_
 akza	pwg	pwg:167:16	no-shared-witness	3	Process
 akza	pwg	pwg:167:17	no-shared-witness	4	Kenntniss; affaire, transaction
 akza	pwg	pwg:167:18	no-shared-witness	1	Seele
+akza	pwg	pwg:167:19	root-vs-nominal	2	ein Blindgeborner
 akza	pwg	pwg:167:20	no-shared-witness	4	19〉 Nom. pr. eines Mannes, Rāvaṇa ʼs Sohn . . . ein König, Sohn Nara ʼs
-akza	pwg	pwg:167:21	outranked	2	terrestrial latitude
+akza	pwg	pwg:167:21	root-vs-nominal	2	terrestrial latitude
 akza	pwg	pwg:168:2	no-shared-witness	3	Sinnesorgan
 akza	pwg	pwg:168:3	no-shared-witness	8	Auge
 akza	pwg	pwg:168:4	no-shared-witness	3	Sochal-Salz
@@ -10854,9 +10877,9 @@ i	vcp	vcp:8053:1	no-citation-apparatus	0	i pu0 asya vizRorapatyam a + iY . 1 kAm
 i	vcp	vcp:8054:1	no-citation-apparatus	0	i gatO BbAdi0 para0 saka0 aniw . ayati EzIt iyAya iyatuH iyuH iyayiTa iyeTa . ayan itaH itiH aya- nam . AyaH itvA . udayati sma tadadButamAliBiH nEza0 ayamudayati mudrABaYjanaH padminInAm udBawaH . udayati vitatordDaraSmirajvO mAGaH . ayaYca DAtaH kawI gatO i…
 i	vcp	vcp:11198:1	no-citation-apparatus	0	i iHsU kzmA SAlmalI vidyA candraH pUzA suguhyakaH . sumitraH sundaroDIraH kowarI kowaraHpayaH . BrumaDyomADavastuzwi- rdakzanetraYca nAsikA . SAntaH kAntiH kAminI ca kA- moviGnavinAyakaH . nepAlo BaraRIrudronityaklinnA ca povakaH
 i	vcp	vcp:11208:1	no-citation-apparatus	0	i ikAraM paramAnandaM suganDakusumacCavim . haribrahmamayaM varRaM sadArudrayutaM priye .. sadA SaktimayaM devi! gurubrahma mayaM taTA . sadASivamayaM varRaM paraM brahmasamanvitam . haribrahmAtmakaM varRaM guRatrayasamanvitam . ikAraM parame- SAni! svayaM ku…
-i	skd	skd:4015:1	outranked	0	i , gatO . (BvAdiM-ilapakze adAM-paraM-sakaM-aniw .) ayati . la eti . pfTakpAWasAmarTyAt pUrvvo na lit . Sezastu ina gatAviti prasidDaH . yino- 'cyaRAvityAdizu grahaRamasyEva . iti durgAdAsaH .. (ut .) udaye . samunnatO . yaTA, udayati yadi BAnuH paScime digv…
-i	skd	skd:4016:1	outranked	0	i , la, smftyAM . (adAM-paraM-sakaM-aniw .) aDi- pUrvvo'yaM . aDigrahaRaM anyapUrvvasya . kevalasya ca prayoganirAsArTaM . evaM sarvvatra . la aDyeti tava lakzmaRaH . ika smaraRe iti prasidDo'yaM . inva- dika ityatrAsyEva grahaRam . iti durgAdAsaH
-i	skd	skd:4017:1	outranked	0	i Na la aDyayane . (adA0-A0 -saka0 -aniw .) aDipUrvvo'yaM . aDyayanamarTataH SabdataSca guruto grahaRaM . Na la vedamaDIte vipraH . iti durgAdAsaH .. ( yaH svADyAyamaDIte'bdaM viDinA niyataH SuciH iti manuH . 2 . 137 .)
+i	skd	skd:4015:1	root-vs-nominal	0	i , gatO . (BvAdiM-ilapakze adAM-paraM-sakaM-aniw .) ayati . la eti . pfTakpAWasAmarTyAt pUrvvo na lit . Sezastu ina gatAviti prasidDaH . yino- 'cyaRAvityAdizu grahaRamasyEva . iti durgAdAsaH .. (ut .) udaye . samunnatO . yaTA, udayati yadi BAnuH paScime digv…
+i	skd	skd:4016:1	root-vs-nominal	0	i , la, smftyAM . (adAM-paraM-sakaM-aniw .) aDi- pUrvvo'yaM . aDigrahaRaM anyapUrvvasya . kevalasya ca prayoganirAsArTaM . evaM sarvvatra . la aDyeti tava lakzmaRaH . ika smaraRe iti prasidDo'yaM . inva- dika ityatrAsyEva grahaRam . iti durgAdAsaH
+i	skd	skd:4017:1	root-vs-nominal	0	i Na la aDyayane . (adA0-A0 -saka0 -aniw .) aDipUrvvo'yaM . aDyayanamarTataH SabdataSca guruto grahaRaM . Na la vedamaDIte vipraH . iti durgAdAsaH .. ( yaH svADyAyamaDIte'bdaM viDinA niyataH SuciH iti manuH . 2 . 137 .)
 i	skd	skd:4018:1	outranked	0	i , vya, BedaH . kroDoktiH . apAkaraRaM . anukampA . iti medino .. KedaH . iti hemacandraH
 i	md	md:4072:1	no-shared-witness	0	i, prn. stem of the 3rd prs
 i	md	md:4073:1	no-shared-witness	0	I, Ⅱ. P. é-ti ( —˚ Ā. ); + Ⅰ. P. Ā. áya ; Ⅳ. P. íya, go, come ( punar, return); go to, attain, undergo ( ac. ); accrue to ( ac. ); ask for ( ac. , ab. ); come from ( ab. ); go away, pass; undertake; continue ( w. pt. pr. ): ps. -īyate ; pp. ita; intv. -īyate,…
@@ -11841,6 +11864,9 @@ Gawa	vcp	vcp:18635:2	no-citation-apparatus	0	ud + nirAvaraRe udGAwayati dvAram u
 Gawa	vcp	vcp:18636:1	no-citation-apparatus	0	Gawa dyu tO vA cu0 uBa0 pakze BvA0 para0 aka0 sew . GAwa- yati te Gawati . ajIGawata-ta aGAwIt aGawIt
 Gawa	vcp	vcp:18637:1	no-citation-apparatus	0	Gawa SabdakaraRe curA0 uBa0 aka0 sew idit . GaRwayati te ajaGaRwat ta . GaRwA niGaRwuH
 Gawa	vcp	vcp:18638:1	no-citation-apparatus	0	Gawa pu0 Gawate ac . kambugrIvAdimati pfTubuDnodarAkftiyuktaM padArTe amaraH kumBatulyaniScalatAhetutvAt prARAyAma- Bede 2 kumBake . 3 hastikumBa ca medi0 . kumBastu dro- RaviMSatiH kAtyAyanokte droRaviMSatiparimARe iti Sabdaka0 . taccintyam kumBaSabdasyEva t…
+Gawa	skd	skd:11672:1	root-vs-nominal	0	Gawa , ka hiMse . saMGAte . dyutO . iti kavikalpa- drumaH .. (curAM-paraM-sakaM-akaMca-sew .) ka, GAwa- yati kavAwaM dvAri janaH saMyojayatItyarTaH . iti durgAdAsaH
+Gawa	skd	skd:11673:1	root-vs-nominal	0	Gawa , i ki dyutO . iti kavikalpadrumaH .. (curAM- pakze BvAM-paraM-akaM-sew .) i, BAve GaRwyate . ki, GaRwayati GaRwati . dyutirdIptiH . dyutyarTatvena pAkzikacurAditve sidDe ki karaRamarTAntare'pi pAkzikacurAditvArTam . taTAca, kriyAvAcitvamAKyAtuM prasidDo…
+Gawa	skd	skd:11674:1	root-vs-nominal	0	Gawa , za Na ma cezwe . iti kavikalpadrumaH .. (BvAM- AtmaM-akaM-sew .) za, GawA . Na, Gawate paWituM SizyaH . ma, Gawayati . GawatIti Gawo jYeyo nAGawan GawatAmiyAditi tu Gawate GawaH pacAditvAdan . tato Gawa ivAcaratIti kvO sADyam . iti durgAdAsaH .. (yaTA,…
 Gawa	md	md:7222:1	no-shared-witness	0	ghaṭ-a, a. zealous, active (in, lc. ); m. jar, pitcher, pot: -ka, a. performing, promoting; procuring; m. pot, jar, pitcher; -karpara, m. N. of a poet; n. title of a poem composed by him ; potsherd; -kāra, -kṛt, m. potter
 Gawa	mw	mw:69220:1	no-shared-witness	1	mfn. intently occupied or busy with ( loc. )
 Gawa	mw	mw:69223:1	no-shared-witness	1	the sign Aquarius
@@ -11855,6 +11881,7 @@ Gawa	mw	mw:69231:1	witness-too-common	1	(along with cf. ) N. of a thief
 Gawa	pwg	pwg:23884:1	no-shared-witness	1	(Accent eines auf ausgehenden comp. v. l. im gaṇa zu )
 Gawa	pwg	pwg:23884:2	no-shared-witness	1	sich abmühend, eifrig womit beschäftigt
 Gawa	pwg	pwg:23884:5	no-shared-witness	1	der Wassermann im Thierkreise
+Gawa	pwg	pwg:23884:6	root-vs-nominal	4	ein best. Hohlmaass
 Gawa	pwg	pwg:23884:7	no-shared-witness	1	ein best. Theil einer Säule
 Gawa	pwg	pwg:23884:8	no-shared-witness	1	eine best. Tempelform
 Gawa	pwg	pwg:23884:9	no-shared-witness	2	die Erhöhungen auf der Stirn des Elephanten
@@ -11863,8 +11890,10 @@ Gawa	pwg	pwg:23884:11	no-shared-witness	2	eine best. religiöse Uebung
 Gawa	pwg	pwg:23884:12	no-shared-witness	2	f. gaṇa zu . zu . zu
 Gawa	pwg	pwg:23884:13	no-shared-witness	2	Anstrengung
 Gawa	pwg	pwg:23884:14	no-shared-witness	3	Versammlung
+Gawa	pwg	pwg:23884:15	root-vs-nominal	3	Menge, Masse
 Gawa	pwg	pwg:23884:16	witness-too-common	8	ein zur Schlacht geordneter Elephantentrupp
 Gawa	pwg	pwg:23884:18	no-shared-witness	5	Krug, Topf
+Gawa	pwg	pwg:23884:19	root-vs-nominal	4	ein best. Zeitabschnitt, 24 Minuten
 Gawa	pwg	pwg:23884:20	no-shared-witness	1	eine metallene Platte, auf der die Stunden angeschlagen werden
 Gawa	pwg	pwg:23884:21	cross-language-gap	0	Vgl. und
 Gawa	pwg	pwg:73249:1	no-shared-witness	3	hierher stellt ; vgl. jedoch
@@ -13062,6 +13091,8 @@ kva	pwg	pwg:71969:2	no-gloss	1
 kUwa	vcp	vcp:14542:1	no-citation-apparatus	0	kUwa apavAde dAnABAve ca curA0 Atma0 saka0 sew . kUwayate acukUwat ta . kUwayAM baBUva Asa cakAra cakre
 kUwa	vcp	vcp:14543:1	no-citation-apparatus	0	kUwa dAhe mantraRe pracCAdane ca awa0 curA0 uBaya0 saka0 sew . kUwayati te acukUwat ta . kUwayAM baBUva Asa cakAra cakre
 kUwa	vcp	vcp:14544:1	no-citation-apparatus	0	kUwa pu0 kUwa ac yaTAyaTaM karmmAdO GaY vA . 1 agastyamunO SabdaratnA0 . 2 gfhe puMstrI SabdaratnA0 3 niScale rASO (QerI) annakUwASca dfSyante vahavaH parvatopamAH rAmA0 . 4 lOhamudgare 5 damBe 6 mAyAyAm nEva DarmmeRa tadrAjyaM nArjjavena nacOjasA . akzakUtap…
+kUwa	skd	skd:8453:1	root-vs-nominal	0	kUwa ka Na aprasAdApradoH . iti kavikalpadrumaH .. (curAM-AtmaM-akaM-sew .) apradA dAnABAvaH . ka Na kUwayate KalaH sPuwamapyarTaM prasannaM na karoti . kiYcinna dadAti vetyarTaH . iti durgAdAsa
+kUwa	skd	skd:8454:1	root-vs-nominal	0	kUwa t ka dAhe . mantre . iti kavikalpadrumaH .. (adantacurAM-paraM-sakaM-sew .) dIrGo . acukUwat . iti durgAdAsaH
 kUwa	md	md:6161:1	no-shared-witness	0	1. kū́ṭa, n. forehead; horn; m. n. peak, top; heap, multitude; n. deception, fraud, falsehood
 kUwa	md	md:6162:1	no-shared-witness	0	2. kūṭá, a. hornless ( cattle ); deceptive; spurious; concealed; invidious; -ka, a. false ( coin ); n. prominence; -karman, n. fraud; -kāraka, m. forger, false-witness; -kṛt, m. forger (of g. ); briber; -cchadman, m. sharper, cheat; -tāpasa, m. counterfeit as…
 kUwa	ap90	ap90:11328:2	no-shared-witness	1	1 False; as in
@@ -13127,9 +13158,11 @@ kUwa	pwg	pwg:18427:11	witness-too-common	8	Täuschung, Trug, Unwahrheit; der Red
 kUwa	pwg	pwg:18427:12	no-shared-witness	4	Unbewegliches; uniform substance (as the etherial element, etc. )
 kUwa	pwg	pwg:18427:13	cross-language-gap	0	Wasserkrug
 kUwa	pwg	pwg:18427:14	no-shared-witness	2	eine best. Pflanze
+kUwa	pwg	pwg:18427:15	root-vs-nominal	2	Haus
 kUwa	pwg	pwg:18427:16	no-shared-witness	1	15〉 m. ein Bein. Agastya ʼs ( vgl. )
 kUwa	pwg	pwg:18427:17	no-shared-witness	1	Vgl. , [Page2-0380] u. s. w. Accent eines auf ausg. comp. gaṇa zu
 kUwa	pwg	pwg:18428:1	outranked	6	ungehörnt; welches nur unvollkommene Fortsätze des Stirnbeins hat; ein Bull mit abgebrochenen Hörnern
+kUwa	pwg	pwg:71264:1	witness-too-common	2	Augapfel
 kUwa	pwg	pwg:71264:2	witness-too-common	3	Zerbröckeltes
 kUwa	pwg	pwg:71264:3	no-shared-witness	2	hierher vielleicht Schol. zu ; vgl
 kUwa	pwg	pwg:71264:4	witness-too-common	5	falsches Gold
@@ -14314,6 +14347,8 @@ kuSa	vcp	vcp:14401:1	no-citation-apparatus	0	kuSa pu0 na0 kO Sete SI ka, kuM pAp
 kuSa	vcp	vcp:14401:2	no-citation-apparatus	0	brahmapurARe sapiYjalASca haritAH puzwAH snigDAH samAhitAH . gokarRamAtrASca kuSAH sakfcCinnAH samUla- kAH . pitftIrTena deyAH syurdUrvvA SyAmAka eva ca . kASAH kuSA balvajASca taTAnye tIkzRaromaSAH . mOYjA- Sca SAdvalAScEva zaqdarBAH parikIrttitAH . tIkzRaro…
 kuSa	vcp	vcp:14401:3	no-citation-apparatus	0	surodakaH parivftaH kuSadvIpena sarvvataH . SAlma- lasya tu vistArAddviguRena samantataH . jyotizmataH kuSadvIpe sapta putrAH SfRuzva tAn . udBidoreRumAMScEva suraTolambano DftiH . praBAkaro'Ta kapilastannAmnA varzaviSrutiH . tasmin vasanti manujAH saha dEtey…
 kuSa	vcp	vcp:14401:4	no-citation-apparatus	0	evaM surodAdbahistaddviguRaH samAnenAvfto Gftodena yaTA pUrvvaH kuSadvIpo yasmin kuSastambo devakftastaddvIpA- KyApano jvalana ivAparaH suSasparocizastA diSovirA- jayati . taddvIpapatiH priyabrato rAjan! hiraRyaretA nAma svaMdvIpaM saptaByaH svaputreByo yaTAB…
+kuSa	skd	skd:8332:1	root-vs-nominal	0	kuSa i ki dyutO . iti kavikalpadrumaH .. (curAM pakze BvAM paraM-akaM-sew-idit .) paYcamasvarI . i kuMSyate . ki kuMSayati kuMSati . iti durgA- dAsaH
+kuSa	skd	skd:8333:1	root-vs-nominal	0	kuSa ya ir Slizi . AliNgana iti yAvat . iti kavikalpadrumaH .. (divAM-paraM-sakaM-sew .) ya kuSyati bAlA kAntam . ir akuSat akoSIt . asmAt pUzAditvAnnityaM Na ityanye . iti durgA- dAsaH
 kuSa	md	md:6116:1	no-shared-witness	0	kuś-á, m. grass, esp. sacrificial grass; N. : -nābha, m. N
 kuSa	mw	mw:53295:1	no-shared-witness	4	m. grass
 kuSa	mw	mw:53296:1	no-shared-witness	0	(the Brāhmaṇa s commonly call it )
@@ -14335,7 +14370,7 @@ kuSa	pwg	pwg:18235:8	no-shared-witness	1	f. , Sch. ein im comp. vorang. Wort auf
 kuSa	pwg	pwg:18235:9	no-shared-witness	1	Deckbrett
 kuSa	pwg	pwg:18235:10	no-shared-witness	2	Holz
 kuSa	pwg	pwg:18235:11	no-shared-witness	3	Strick; Zügel
-kuSa	pwg	pwg:18235:12	outranked	2	N. einer Pflanze ( s. ) [Page2-0365] _im_
+kuSa	pwg	pwg:18235:12	root-vs-nominal	2	N. einer Pflanze ( s. ) [Page2-0365] _im_
 kuSa	pwg	pwg:18235:14	no-shared-witness	2	a sort of boat or spoon, used in making libations
 kuSa	pwg	pwg:18235:15	no-shared-witness	4	verarbeitetes Eisen
 kuSa	pwg	pwg:18235:16	no-shared-witness	1	Pflugschar
@@ -16424,6 +16459,7 @@ samudra	pwg	pwg:122522:2	no-gloss	1
 mUla	vcp	vcp:38480:1	no-citation-apparatus	0	mUla pratizWAyAM BvA0 uBa0 aka0 sew . mUlati te amUlIt amUlizwa
 mUla	vcp	vcp:38481:1	no-citation-apparatus	0	mUla ropaRe curA0 uBa0 saka0 sew . mUlayati te amUmulat ta
 mUla	vcp	vcp:38482:1	no-citation-apparatus	0	mUla na0 mUla ka . 1 SiPAyAm (jaqa) (Sikaqa) amaraH 2 Adye 3 nikuYje 4 nakzatraBede 5 antike viSvaH 6 bARi- jyAdyupayonini 7 mUlaDane, medi0 . 8 nije ajayaH . 9 caraRe 10 SUraRe SabdamA0 11 pippalImUle 12 puzkaramUle rAjani0 . 13 wIkAdinA vyAKyeyagranTe ca aS…
+mUla	skd	skd:27733:1	outranked	0	mUla Ya pratizWAyAm . iti kavikalpadrumaH .. (BvA0- uBa0-aka0-sew .) pavargaSezAdirdIrGI . pratizWA sTitiriti govindaBawwaH . Ya mUlati mUlate yaSaH . ayaM parasmEpadItyanye . iti durgAdAsaH
 mUla	md	md:14365:1	no-shared-witness	0	mū́l-a [= mū́r-a, rigid, fixed part ], n. ( —˚ a. ā, ī ) root; edible root; root = end by which anything ( e. g. tooth, finger, arm, tail , etc. ) is fixed; foot ( of a mountain ); base, lower part; edge of the horizon; bottom; immediate neighbourhood; founda…
 mUla	mw	mw:166325:1	no-shared-witness	1	a radish or the root of various other plants ( esp. of Arum Campanulatum , of long pepper, and of Costus Speciosus or Arabicus )
 mUla	mw	mw:166326:1	outranked	1	the edge (of the horizon)
@@ -16447,11 +16483,11 @@ mUla	pwg	pwg:61308:7	witness-too-common	6	Hauptplatz, Hauptstadt
 mUla	pwg	pwg:61308:10	no-shared-witness	1	Gebüsch, Dickicht
 mUla	pwg	pwg:61308:11	no-shared-witness	2	Verkäufer; der Veranlasser
 mUla	pwg	pwg:61308:13	no-shared-witness	1	12〉 m. Bein. Sadāśiva ʼs
+mUla	pwg	pwg:61308:15	root-vs-nominal	2	Asparagus racemosus Willd. _im_
 mUla	pwg	pwg:61308:16	no-shared-witness	1	das Sternbild
 mUla	pwg	pwg:61308:17	no-shared-witness	1	eine kleine Hauseidechse
 mUla	pwg	pwg:61308:18	cross-language-gap	0	15〉 adj. f
 mUla	pwg	pwg:61308:19	no-shared-witness	1	der erste
-mUla	pwg	pwg:61308:20	outranked	2	eigen
 mUla	pwg	pwg:61308:21	witness-too-common	2	Vgl. und (auch . )
 mUla	pwg	pwg:61308:14	no-gloss	0	13〉 f
 jaya	vcp	vcp:20676:1	no-citation-apparatus	0	jaya pu0 ji BAve ac . parApekzayA 1 utkarzalABe (jita haoyA) 2 vaSikaraRe indriyajayaH . mOnaM sadAsanajayaH sTEryyaM prARajayaH SanEH BAga0 32 8 . 6 . 3 SatruparANmuKI- karaRe 4 saMgrAmAdijaye . sapta vittAgamA DarmmyA dAyo lABaH krayo jayaH . viBAgaH saMpra…
@@ -16597,6 +16633,7 @@ jIva	vcp	vcp:21293:6	no-citation-apparatus	0	prati + ud + pratirUpojjIvane
 jIva	vcp	vcp:21293:7	no-citation-apparatus	0	upa + ASritya varttane saka0 . pUrvayase putrAH pitara- mupajIvanti uttaravayase putrAn pitA Sata0 brA0 12 . 2 . 3 . 1 . SezAstamupajIveyuryaTEva pitaraM taTA manuH . upajIvI upajIvyaH
 jIva	vcp	vcp:21294:1	no-citation-apparatus	0	jIva pu0 jIva karttari ka . 1 prARini 2 jIvantIvfkze 3 vfha- spatO ca medi0 . 4 karRe 5 kzetrajYe trikA0 . BAve GaY . 6 asuDAraRe amaraH karaRe GaY . 7 vfttO AjIvikAyAM medi0 . manuzyAdikIwaparyante 8 prARimAtre 9 kAryyakAraRa- saNGAte . anekAntavAdinAM jIvAs…
 jIva	vcp	vcp:21294:2	no-citation-apparatus	0	jIvaH saptanavadvipaYcamagataH jIvArkiBAnujyejyAnAM kzetrARi syurajAdayaH jyoti0 18 puzyanakzatre ca . tasya jIvADizWAtfkatvAt taTAtvam aSlezASabde 498 pf0 dfSyam . GawasaMvfta AkASe nIyamAne yaTA Gawe . Gawo nIveta nAkASaM tadvat jIvo naBopamaH . Arhatamatas…
+jIva	skd	skd:13708:1	root-vs-nominal	0	jIva , f prARe . iti kavikalpadrumaH .. (BvAM-paraM- akaM-sew .) f, ajIjivat ajijIvat . prARaH prARaDAraRam . jIvati lokaH . iti durgAdAsaH
 jIva	md	md:8080:1	no-shared-witness	0	jīv-á, a. living, alive; living on ( —˚ ); causing life; m. principle of life, (individual) soul; N. of one of the Maruts ; m. n. living being, creature
 jIva	ap90	ap90:13981:4	no-shared-witness	2	2 The individual or personal soul enshrined in the human body and imparting to it life, motion and sensation (called as opposed to the Supreme soul)
 jIva	ap90	ap90:13981:7	no-shared-witness	0	5 Livelihood, profession
@@ -16653,6 +16690,7 @@ jIva	pwg	pwg:27573:1	cross-language-gap	0	(von )
 jIva	pwg	pwg:27573:5	no-shared-witness	1	Lebensunterhalt, Gewerbe; lebend von
 jIva	pwg	pwg:27573:6	no-shared-witness	2	eine best. Pflanze
 jIva	pwg	pwg:27573:8	no-shared-witness	1	N. eines der 8 Marut
+jIva	pwg	pwg:27573:9	root-vs-nominal	2	m. Bein. Karṇa ʼs _im_
 jIva	pwg	pwg:27573:10	no-shared-witness	1	am Ende von Mannsnamen
 jIva	pwg	pwg:27573:12	no-shared-witness	1	das lebendige; lebenbringende Element, Wasser
 jIva	pwg	pwg:27573:13	no-shared-witness	1	die Erde
@@ -19202,6 +19240,7 @@ saMDya	pwg	pwg:104762:6	no-gloss	0	f
 saMDya	pwg	pwg:104762:16	no-gloss	1	=
 arka	vcp	vcp:4333:1	no-citation-apparatus	0	arka tApe, stutO ca curA0 uBa0 saka0 sew . arkayati te Arcikat ta . arkayAmAsa arkitaH arkayitum
 arka	vcp	vcp:4334:1	no-citation-apparatus	0	arka pu0 arca karmaRi GaY kutvam . 1 sUryye, 2 indre, 3 tAmre, 4 sPawike, 5 vizRO, 6 paRqite, (Akanda,) iti KyAte 7 vfkze, (AraKa) iti KyAte 8 kvATaviSeze ca . 9 arcanIye tri0 . A sUryyo na BAnumadBirarkEH f0 6, 5, 6 arkEH arcanIyEH BA0 brahmAdiBiH pUjyamAnEr…
+arka	skd	skd:2149:1	root-vs-nominal	0	arka , ka, tApe . (curAdi uBayapadI sew .) stutO . iti kavikalpadrumaH .. ekakakAraH prakftiH paScA- drePanimittakadvitvaM viBAzayA vaktavyaM . tena ka arkayati arkkayati evaM sarvvatra . iti durgAdAsaH
 arka	md	md:2601:1	no-shared-witness	0	ark-á, m. ray; sun; sun-god; hymn; singer; kind of tree or shrub ; -nandana, m. planet Saturn; -pattra, n. leaf of the Arka; [Page27-2] -prabhā-jāla, n. sun-beams; -ripu, m. Rāhu; -vrata, n. manner of the sun
 arka	ap90	ap90:4116:10	no-shared-witness	2	8 N. of the sun-plant, Calatropis Gigantea ( Mar. ), a small tree with medicinal sap and rind
 arka	ap90	ap90:4116:12	no-shared-witness	0	10 A sort of religious ceremony
@@ -19264,12 +19303,13 @@ arka	pwg	pwg:5770:4	witness-too-common	3	Feuer
 arka	pwg	pwg:5770:5	no-shared-witness	3	Krystall
 arka	pwg	pwg:5770:6	no-shared-witness	2	Kupfer
 arka	pwg	pwg:5770:7	no-shared-witness	3	ein Bein. Indra ʼs . . . Vgl. u. 10
+arka	pwg	pwg:5770:8	root-vs-nominal	2	Sonntag
 arka	pwg	pwg:5770:9	witness-too-common	1	das aufgerichtete Glied; Blitztrahl = Donnerkeil, Keil
 arka	pwg	pwg:5770:10	no-shared-witness	16	Keil
 arka	pwg	pwg:5770:11	witness-too-common	6	Blitzstrahl
 arka	pwg	pwg:5770:12	witness-too-common	2	Lobpreis, Lied; Singen
 arka	pwg	pwg:5770:13	witness-too-common	1	Preisender, Sänger
-arka	pwg	pwg:5770:14	outranked	2	ein Gelehrter
+arka	pwg	pwg:5770:14	root-vs-nominal	2	ein Gelehrter
 arka	pwg	pwg:5770:15	no-shared-witness	1	ein älterer Bruder
 arka	pwg	pwg:65031:1	outranked	1	(nach dem Schol. )
 arka	pwg	pwg:65031:4	no-shared-witness	1	11〉 und und auch Namen von Sāman
@@ -20094,6 +20134,7 @@ jIvana	pwg	pwg:74449:6	no-gloss	2
 jIvana	pwg	pwg:74449:9	no-gloss	2	
 puzpa	vcp	vcp:32773:1	no-citation-apparatus	0	puzpa vikASe di0 para0 aka0 sew . puzpyati apuzpIt . pupuzpa Saradi puzpyanti saptacCadAH . kaRqvA0 apuzpyIt
 puzpa	vcp	vcp:32774:1	no-citation-apparatus	0	puzpa na0 puzpyati puzpa vikASe ac . (Pula) KyAte 1 kusume 2 strIrajasi . BAve GaY . 1 vikASe pu0 medi0 4 kuveravimAne na0 netrarogaBede hemaca0 . puzpaYca patraM ca PalaM taTEva yaTottaraM te laGavaH pradizwAH tezAM tu puzpaM kaPapittahantf PalaM nihanyAt ka…
+puzpa	skd	skd:22042:1	root-vs-nominal	0	puzpa , ya Pullane . iti kavikalpadrumaH .. (divA0- para0-aka0-sew .) paYcamasvarI . mUrdDanyopaDaH . pullanaM vikasanam . ya, puzpyati kundakorakam . iti durgAdAsaH
 puzpa	md	md:11806:1	no-shared-witness	0	púṣ-pa, n. flower, blossom ( —˚ , a. f. ā, after names of plants generally ī ); flowers = menses; flowery speeches, gallantry, declaration of love; m. topaz
 puzpa	mw	mw:126970:1	witness-too-common	1	the menstrual flux
 puzpa	mw	mw:126971:1	witness-too-common	1	a partic. disease of the eye, albugo
@@ -20109,6 +20150,7 @@ puzpa	mw	mw:126985:1	no-shared-witness	1	of a book ( prob. = )
 puzpa	pwg	pwg:46409:1	cross-language-gap	0	(von 1. )
 puzpa	pwg	pwg:46409:4	witness-too-common	8	Menstrualblut, les fleurs
 puzpa	pwg	pwg:46409:5	witness-too-common	2	eine best. Krankheit des Auges, albugo
+puzpa	pwg	pwg:46409:8	root-vs-nominal	3	das Aufblühen
 puzpa	pwg	pwg:46409:9	no-shared-witness	1	Wagen
 puzpa	pwg	pwg:46409:10	no-shared-witness	3	eine Art Parfum
 puzpa	pwg	pwg:46409:12	cross-language-gap	0	m. N. pr
@@ -20175,6 +20217,8 @@ cara	vcp	vcp:19416:25	no-citation-apparatus	0	vi + viSezaRa gatO vicaranti mahIp
 cara	vcp	vcp:19416:26	no-citation-apparatus	0	sam + samyaggatO nEva vAtAH pratAyante na meGAH saYcaranti ca hariva0 10758 . AmeKalaM saYcaratAM GanA- nAm kumA0 saYcAroratimandivAvaDi ratimaYjarI karaRaviBaktisahakAre Atma0 . raTena saYcarate si0 kO0 . padByAM nfpaH saYcaramARa eva nEza0
 cara	vcp	vcp:19417:1	no-citation-apparatus	0	cara saMSaye asaMSaye ca curA0 uBa0 saka0 sew . cArayatite acIcarat ta vicArayati vicAraRA vicAritaH
 cara	vcp	vcp:19418:1	no-citation-apparatus	0	cara pu0 cara ac . svapararAzwravfttAntajYAnArTaM rAjaniyogena itastato BramaRakarttari cAre 1 praRiDO, amaraH 2 kapa- rddake, rAjani0 . jyotizoktezu 3 mezakarkawatulAmakara- rASizu 4 svAtipunarvasuSravaRAditrikarUpe nakzatraBede 5 BOmavAre 6 akzadyUtaBede . …
+cara	skd	skd:12237:1	root-vs-nominal	0	cara , gamane . adane . AcAre . iti kavikalpa- drumaH .. (BvAM-paraM-sakaM-sew .) carati . iti durgAdAsaH
+cara	skd	skd:12238:1	root-vs-nominal	0	cara , ka saMSItyasaMSItyoH . iti kavikalpadrumaH .. (curAM-paraM-sakaM-sew .) saMSItiH saMSayaH . asaM- SItirasaMSayaH . ka, vicArayati yo Darmmamiti halAyuDaH . cara asaMSaye . iti prAYcaH . kecittu saMSaye iti paWitvA saMSaye hi vicA- raRA syAdityAhuH . it…
 cara	ap90	ap90:13122:3	no-shared-witness	0	2 Following, practising (at the end of comp. )
 cara	ap90	ap90:13122:4	no-shared-witness	0	3 Trembling, shaking
 cara	ap90	ap90:13122:5	no-shared-witness	2	4 Moveable; see below
@@ -20213,6 +20257,8 @@ cara	pwg	pwg:24903:5	outranked	5	gehend, wandelnd, sich aufhaltend, lebend; nach
 cara	pwg	pwg:24903:6	no-shared-witness	1	übend, vollziehend
 cara	pwg	pwg:24903:7	no-shared-witness	2	früher gewesen; der früher reich gewesen ist; früher im Besitz des D. gewesen
 cara	pwg	pwg:24903:8	outranked	1	nicht gehbar, nicht wandelbar
+cara	pwg	pwg:24903:11	root-vs-nominal	2	Bachstelze
+cara	pwg	pwg:24903:12	root-vs-nominal	2	eine best. kleine Muschel, Cypraea moneta
 cara	pwg	pwg:24903:13	no-shared-witness	2	eine Art Würfelspiel
 cara	pwg	pwg:24903:14	no-shared-witness	2	der Planet Mars; the seventh Karana; the Karanas collectively; beweglich
 cara	pwg	pwg:24903:15	no-shared-witness	1	eine junge Frau
@@ -21703,6 +21749,7 @@ maNgala	pwg	pwg:56235:12	no-gloss	0	f
 maNgala	pwg	pwg:80305:2	no-gloss	1	
 sparSa	vcp	vcp:47333:1	no-citation-apparatus	0	sparSa grahaRe steye ca cu0 A0 saka0 sew . sparSayate apa sparSa ta
 sparSa	vcp	vcp:47334:1	no-citation-apparatus	0	sparSa pu0 sparSa spfSa vA ac GaY vA . nyAvokte 1 tvagi ndriyagrAhye guRaBede 2 grahaRe mAtrAsparSAstu kOnteyaM gItA . 3 roge 4 yudDe 5 guptacare medi0 6 upatapte amaraH . 7 vAyO pu0 8 sparSake tri0 medi0 . smfRa- Rica ac . 9 dAne medi0 spfSyante vAyunA jihvA…
+sparSa	skd	skd:40785:1	root-vs-nominal	0	sparSa , ka Na grahaRe . Sleze . iti kavikalpadrumaH .. (curA0-Atma0-saka0-sew .) ka Na, sparSayate . iti durgAdAsaH
 sparSa	md	md:20028:1	no-shared-witness	0	sparś-á, a. ( —˚ ); [√ spṛś] touching ( rare ); m. touch, contact; feeling, sensation, of ( —˚ , headache, jealousy ); pleasant feeling ( rare ); sense of touch; (contact =) mute or nasal letter ( gr. ); sts. incorr. for spaśa: -kliṣṭa, pp. painful to the tou…
 sparSa	mw	mw:256548:1	no-shared-witness	0	&amp;c. See p. 1269
 sparSa	mw	mw:256604:1	no-shared-witness	0	mfn. touching (in , , q.v. )
@@ -21729,10 +21776,11 @@ sparSa	pwg	pwg:114358:8	no-shared-witness	1	ein angenehmes Gefühl; Zartheit der
 sparSa	pwg	pwg:114358:9	no-shared-witness	5	ein krankhaftes Gefühl, Krankheit
 sparSa	pwg	pwg:114358:10	no-shared-witness	3	Gefühlssinn
 sparSa	pwg	pwg:114358:11	no-shared-witness	3	Gabe, Geschenk
-sparSa	pwg	pwg:114358:13	outranked	2	Wind
+sparSa	pwg	pwg:114358:12	root-vs-nominal	2	quidam coeundi modus
+sparSa	pwg	pwg:114358:13	root-vs-nominal	2	Wind
 sparSa	pwg	pwg:114358:14	no-shared-witness	9	eine Muta
 sparSa	pwg	pwg:114358:15	witness-too-common	2	fehlerhaft für
-sparSa	pwg	pwg:114358:16	outranked	3	ein untreues Weib
+sparSa	pwg	pwg:114358:16	root-vs-nominal	3	ein untreues Weib
 sparSa	pwg	pwg:114358:17	cross-language-gap	0	Vgl
 parvata	vcp	vcp:31230:1	no-citation-apparatus	0	parvata pu0 parva atac parvARi mAgAH suntyaspa ta vA . 1 girO amaraH dAnArTaM kalpite parvatAkAre 2 DAnyAdirSa- ladaSake 3 muniBede kaSyapAt nAradaScEva parvato'runDatI taTA tasya nAradasodaratvamuktam . mA0 SA0 30 a0 tu tasya nAradaBAgineyatvamuktam tacca ka…
 parvata	vcp	vcp:31230:2	no-citation-apparatus	0	sumeroH pUrve parvatA yaTA SItAktaScakramuYjaSca kulIro'SvaSca kaNgavAn . maRiSElo'Ta vfzavAn mahA- nIlo BavAcalaH . suvinduH mandasye veRuH sumezo ni- mipastaTA . devaSElasya pUrveRa mandaraSca mahAvalAH sumeroH dakziRe parvatA yaTA trikUwaH SiKarAdriSca kal…
@@ -21907,9 +21955,10 @@ vana	vcp	vcp:40479:1	no-citation-apparatus	0	vana vyApAre BvA0 para0 saka0 sew .
 vana	vcp	vcp:40480:1	no-citation-apparatus	0	vana yAcane dvika0 tanA0 A0 sew ktvA vew . vanute avanizwa
 vana	vcp	vcp:40481:1	no-citation-apparatus	0	vana upakAre upatApe ca saka0 Sabde aka0 vA cu0 uBa0 pakze BvA0 para0 sew . vAnayati te vanati . avIvanat ta . avanIt avAnIt
 vana	vcp	vcp:40482:1	no-citation-apparatus	0	vana na0 strI vana ac . 1 vfkzasamudAyAtmake araRye amaraH strotve NIz . suvanI samprazadatpikApi kA nEza0 . 2 jale 3 nivAse 4 Alaye ca medi0 . 5 prastaraRe hemaca0
-vana	skd	skd:31000:1	outranked	0	vana , u ma vyApftO . iti kavikalpadrumaH . (BvA0- para0-aka0-sew . udittvAt ktvAvew .) u, vanitvA vatvA . ma, pravanayati . mittve'pi asya YO jvalahvaletyAdinA kevalasya hrasvavi- kalpanAt sopasargasyEva nityaM hrasvaH . vanayati vAnayati . vyApftirvyApAraH …
-vana	skd	skd:31001:1	outranked	0	vana , ki upakftiSradDAGAtaSabdopatApezu . iti kavikalpadrumaH .. (curA0-pakze BvA0-para0-saka0- aka0 ca-sew .) ki, vAnayati vanati . ayaM kEScinna manyate . iti durgAdAsaH
-vana	skd	skd:31002:1	outranked	0	vana , da Na u yAce . iti kavikalpadrumaH .. (tanA0- Atma0-dvika0-sew . udittvAt ktvAvew .) da Na, vanute . u, vanitvA vatvA . iti durgAdAsaH
+vana	skd	skd:30999:1	root-vs-nominal	0	vana , samBaktiSabdayoH . iti kavikalpadrumaH .. (BvA0-para0-saka0-sew .) vanati . saMBaktiH sevanam . iti durgAdAsaH
+vana	skd	skd:31000:1	root-vs-nominal	0	vana , u ma vyApftO . iti kavikalpadrumaH . (BvA0- para0-aka0-sew . udittvAt ktvAvew .) u, vanitvA vatvA . ma, pravanayati . mittve'pi asya YO jvalahvaletyAdinA kevalasya hrasvavi- kalpanAt sopasargasyEva nityaM hrasvaH . vanayati vAnayati . vyApftirvyApAraH …
+vana	skd	skd:31001:1	root-vs-nominal	0	vana , ki upakftiSradDAGAtaSabdopatApezu . iti kavikalpadrumaH .. (curA0-pakze BvA0-para0-saka0- aka0 ca-sew .) ki, vAnayati vanati . ayaM kEScinna manyate . iti durgAdAsaH
+vana	skd	skd:31002:1	root-vs-nominal	0	vana , da Na u yAce . iti kavikalpadrumaH .. (tanA0- Atma0-dvika0-sew . udittvAt ktvAvew .) da Na, vanute . u, vanitvA vatvA . iti durgAdAsaH
 vana	md	md:15860:1	no-shared-witness	0	ván-a, n. tree ( V. ); forest ( V. , C. ); thicket ( of reeds ), cluster, group ( of lotuses ), quantity ( C. ); wood ( RV. ); (wooden) trough for Soma ( RV. ); (trough of the sky ), cloud ( V. ); water ( C. , rare ); abode ( C. , very rare )
 vana	mw	mw:185717:1	witness-too-common	2	1. n. (once m. , ; for 2. See p. 919, col. 1 ) a forest, wood, grove, thicket, quantity of lotuses or other plants growing in a thick cluster (but in older language also applied to a single tree), &amp;c. &amp;c
 vana	mw	mw:185719:1	no-shared-witness	1	a foreign or distant land, ( cf. )
@@ -21936,6 +21985,7 @@ vana	pwg	pwg:87738:12	no-shared-witness	1	Cyperus rotundus ( v. l. und )
 vana	pwg	pwg:87738:15	no-shared-witness	1	N. pr. eines Sohnes des Uśīnara
 vana	pwg	pwg:87738:16	no-shared-witness	2	anfügen
 vana	pwg	pwg:87738:17	witness-too-common	1	das Reibholz
+vana	pwg	pwg:87738:18	root-vs-nominal	4	Wald
 vana	pwg	pwg:87738:19	cross-language-gap	0	Vgl
 vana	pwg	pwg:87739:1	no-shared-witness	2	Verlangen, Sehnsucht
 vana	pwg	pwg:87740:1	no-shared-witness	1	3. indecl. gaṇa zu
@@ -22570,6 +22620,7 @@ nala	vcp	vcp:27853.1:1	no-citation-apparatus	0	naqa(la) pu0 nala banDe ac vA qas
 nala	vcp	vcp:28125:1	no-citation-apparatus	0	nala pu0 nala banDe ac . 1 tfRaBede powagale amaraH . nalastu maDurastiktaH kazAyaH kaParaktajit . uzRo hfdvastiyonyarttidAhapittavisarpajit BAvapra0 tadguRAH . jaraWacCedA nalagranTayaH sA0 da0 . 2 sUryavaMSye nfpa- Bede rAmasya tanayo jajYe kuSa ityaBiviSru…
 nala	vcp	vcp:28125:2	no-citation-apparatus	0	BA0 va0 52 aDyAvaDi 79 a0 paryante nalopAKyAnaM dfSyam . tata0 saMkzipya diNmAtramatra taccaritaM prada- rSyate . purA kila vIrasenasutaH nizaDadeSADipo nala- nAmA AsIt . sa ca kuRqineSvaraBImanfpasutAM dama- yantIM svayaMvaraviDinA ubDAmupayeme tasya indrase…
 nala	vcp	vcp:28125:3	no-citation-apparatus	0	rAmasya varadAnAcca SivaH panTA baBUva ha . tasmin datte tadA kukzO samudraH saritAM patiH . rATavaM sarvaSAstra- jYamidaM vacanamabravIt . ayaM somya! nalonAma tanayo viSvakarmaRaH . pitrA dattavaraH SrImAn prItimAn viSva- karmaRaH . eza setuM mahotsAhI karo…
+nala	skd	skd:18425:1	root-vs-nominal	0	nala , ja banDe . iti nalaSabdasya vyutpattO BarataH .. (BvAM-paraM-sakaM-sew ..)
 nala	md	md:10337:1	no-shared-witness	0	nala, m. kind of reed ( Amphidonax karka ); N. of a king, husband of Damayantī
 nala	mw	mw:104381:1	witness-too-common	1	a measure of length, ( v.l. )
 nala	mw	mw:104382:1	no-shared-witness	1	a partic. form of constellation in which all the planets or stars are grouped in double mansions
@@ -22927,6 +22978,7 @@ gopa	pwg	pwg:23165:11	no-gloss	0	10〉 f
 gopa	pwg	pwg:23165:14	no-gloss	0	11〉 f
 picCa	vcp	vcp:32039:1	no-citation-apparatus	0	picCa bADe tu0 para0 saka0 sewa . picCati apicCIt pipicCa
 picCa	vcp	vcp:32040:1	no-citation-apparatus	0	picCa na0 picCa ac . 1 mayUrapucCe 2 cUqAyAM 3 lA- NgUle pu0 medi0 4 SAlmalIvezwe strI amaraH . 5 pUge 6 CawAyAM 7 koze 8 mocAyAM 9 paNktO 10 BaktamaRqe 11 hayapadAmaye ca strI medi0 12 kolikAyAM 13 PaRi- nAlAyAM hArA0 . 14 SiMSapAvfkze ca strI Sabdaca0
+picCa	skd	skd:21455:1	root-vs-nominal	0	picCa , Sa bADe . iti kavikalpadrumaH .. (tudAM- paraM-sakaM-sew .) Sa, picCatI picCantI . bADo vihitiH . iti durgAdAsaH
 picCa	md	md:11589:1	no-shared-witness	0	piccha, n. tail-feather, esp. of a peacock : -ka, m. id. ; i-kā, f. bunch of peacockʼs tail-feathers ( used by jugglers )
 picCa	mw	mw:123510:1	no-shared-witness	1	( pl. ) the feathers of an arrow, , Sch
 picCa	mw	mw:123511:1	no-shared-witness	1	a tail (also m. )
@@ -22944,6 +22996,7 @@ picCa	pwg	pwg:45086:9	no-shared-witness	3	Betelnuss
 picCa	pwg	pwg:45086:10	cross-language-gap	0	Reihe
 picCa	pwg	pwg:45086:11	no-shared-witness	2	eine best. Krankheit der Füsse bei den Pferden
 picCa	pwg	pwg:45086:12	no-shared-witness	3	= Musa sapientum
+picCa	pwg	pwg:45086:13	root-vs-nominal	2	= Dalbergia Sissoo Roxb. _im_
 picCa	pwg	pwg:45086:14	no-shared-witness	1	Harnisch
 picCa	pwg	pwg:45086:2	no-gloss	1	f
 picCa	pwg	pwg:45086:15	no-gloss	1	=
@@ -24131,6 +24184,7 @@ ruh	ap90	ap90:24248:1	no-gloss	0	1 P. ( , )
 ruh	pwg	pwg:85093:119	no-gloss	0	s
 arTa	vcp	vcp:4412:1	no-citation-apparatus	0	arTa yAcane ada0 cu0 Atma0 dvika0 sew . arTayate ArttiTata . arTayAmAsa . arTakaH arTI arTitaH arTyaH arTanIyaH arTa- yitum arTanam arTanA . arTayitvA arTayitA surAH sapaByaryyayitAra ete kumA0 . avakASaM kilo- danyAn rAmAyAByarTito dadO raGuH aglopitvaM sTAn…
 arTa	vcp	vcp:4413:1	no-citation-apparatus	0	arTa pu0 arTa BAvakarmmAdO yayAyaTam ac . 1 aBiDeye 2 Sabda- SaktyA voDyepadArTe ca tadadozO SabdArTAvanalaNkftI punaH kvApi kA0 pra0 AlaNkArikamate sa ca arTastriviDaH vAcyo lakzyovyaNgyaSceti BedAt . arTovAcyaSca lakzyaSca vyaNgyaSceti triDA mataH . vAcyo'r…
+arTa	skd	skd:2217:1	root-vs-nominal	0	arTa t ka Na yAcane . iti kavikalpadrumaH .. Na arTayate arTApayate . prArTayatyalpamUlyAnItyAdO prArTanaM prArTaH paScAt prArTaM karoti iti YO parasmEpadaM . iti durgAdAsaH
 arTa	md	md:2625:1	no-shared-witness	0	ar-tha, n. ( V. ), m. business, work; aim, purpose; cause; meaning; advantage, profit, use, utility, the useful; reward; gain; property, wealth, money; thing, object; matter, affair; case, suit; a. —˚ , hvg. in view, serviceable for: -m, in. , d. , lc. on acc…
 arTa	mw	mw:15840:1	witness-too-common	3	m. n. [in - only n. ; in , six times n. and thrice m. ; in later Sanskṛt only m. ] aim, purpose (very often , , , and ifc. or with gen. ‘for the sake of, on account of, in behalf of, for’)
 arTa	mw	mw:15841:1	no-shared-witness	1	cause, motive, reason, , &amp;c
@@ -24165,12 +24219,13 @@ arTa	pwg	pwg:65094:1	no-shared-witness	2	wegen
 arTa	pwg	pwg:65094:2	no-shared-witness	4	eines Vortheils wegen
 arTa	pwg	pwg:65094:3	no-shared-witness	1	Object der Sinne
 arTa	pwg	pwg:65094:4	no-shared-witness	1	wer ihre Sache —, ihre Angelegenheit vollbringt
+arTa	pwg	pwg:65094:5	root-vs-nominal	4	dem Sinne nach; das ist, nämlich, scilicet
 arTa	pwg	pwg:65094:6	no-shared-witness	3	das Aufhören, Unterbleiben; Verbot; Rauch zur Vertreibung der Mücken
 arTa	pwg	pwg:65094:7	no-shared-witness	1	der Zahl fünf
 arTa	pwg	pwg:65094:8	no-shared-witness	2	des zweiten Hauses, des Hauses des Reichthums
 hi	vcp	vcp:48031:1	no-citation-apparatus	0	hi bardDane gatO ca svA0 para0 saka0 aniw . hinoti ahEpIt jiGAya
 hi	vcp	vcp:48032:1	no-citation-apparatus	0	hi avya0 hA hi vA qi . 1 hetO 2 avaDAraRe amaraH . 3 viSeze 4 praSne 5 samBrame 6 hetUpadeSe 7 asUyAyAM ca medi0 8 pAdapUraRe 9 Soke ca Sabdara0
-hi	skd	skd:41735:1	outranked	0	hi , vya, hetuH . (yaTA, SAkuntale . 1 aNke . aSaMsayaM kzattraparigrahakzamA yadAryyamasyAmaBilAzi me manaH . satAM hi sandehapadezu vastuzu pramARamantaHkaraRapravfttayaH .. ) avaDAraRam . ityamaraH . 3 . 4 . 256 ; 3 . 4 . 5 .. pAdapUraRam . viSezaH . praSn…
+hi	skd	skd:41734:1	root-vs-nominal	0	hi , na vardDane . gatO iti kavikalpadrumaH . (BvA0- para0-saka0-aniw .) gatiriha antarBUta- YyarTatvAt gatipreraRam . na, prahiRu svasUnu- miti BawwiH . vardDane viralaprayogaH . iti durgA- dAsaH
 hi	md	md:20508:1	no-shared-witness	0	HI, V. hinó, hinu, V. : set in motion, urge on, further; be set in motion or urged on, hasten ( Ā. ); incite or assist to ( d. ); convey; V. , C. : cast, hurl; P. (= √ 2. hā): forsake, abandon; get rid of: pr. pt. hinvāná, speeding etc. ; pp. hitá, ( V. ) urg…
 hi	md	md:20509:1	no-shared-witness	0	hí, pcl. ( never at beg. of a sentence, but gnly. following the first word ; also in other positions after the emphatic word ; the vb. of the sentence is always accented ), V. , C. : for, because ( aften after demonstratives, relatives, interrogatives ); just…
 hi	ap90	ap90:31397:1	no-shared-witness	0	ind. (Never used at the beginning of a sentence) It has the following senses:-
@@ -24240,6 +24295,8 @@ dakza	vcp	vcp:24096:2	no-citation-apparatus	0	dakzastvajAyatANguzWAddakziRAdBaga
 dakza	vcp	vcp:24096:3	no-citation-apparatus	0	upagamyAbravIdetAnaTa somaH prajApatIya . kopaM yacCata rAjAnaH! sarve prAcInabarhizaH! . vfkzaSUnyA kftA pfTvI SAmyetAmagnimArutO . ratnaBUtA ca kanyeyaM vfkzARAM varavarRinI . BavizyaM jAnatA tattvaM DftA garBeRa vE mayA . mArizA nAma kanyeyaM vfkzARAmiti n…
 dakza	vcp	vcp:24096:4	no-citation-apparatus	0	anayorviroDamASaNkya kalpaBedAdaviroDaH BeNgyA tatrEva samAhito yaTA
 dakza	vcp	vcp:24096:5	no-citation-apparatus	0	janamejaya uvAca . devAnAM dAnavAnAYca ganDarvoraga- rakzasAm . samBavaH kaTitaH pUrvaM dakzasya ca mahAtmanaH . aNguzWAd brahmaRo jAto dakzaH proktastvayA'naGa! vAmANgazWAttaTA cEva tasya patnI vyajAyata . kaTaM prAce tasatva sa punarleBe mahAtapAH . etanme …
+dakza	skd	skd:15783:1	root-vs-nominal	0	dakza , Na syade . vfdDO . iti kavikalpadrumaH .. (BvAM-AtmaM-sakaM-sew .) syada iha SIGrakara- Ram . Na, dakzate DanamudyogI . SIGramutpAda- yati ityarTaH . iti durgAdAsaH .. (sAmarTye akarmmako'yam . yaTA, fgvede . 2 . 1 . 11 . tamiLA SatamihAsi dakzase .. …
+dakza	skd	skd:15784:1	root-vs-nominal	0	dakza , za ma Na hantyarTe . iti kavikalpadrumaH .. (BvAM-AtmaM-sakaM-sew .) ma, adakzi adAkzi . dakzaM dakzam . dAkzaM dAkzam . mAnubanDabalA- danupaDayorapi dIrGaH . svamate tu dIrGaviDi- rupaDAM nApekzate . za, dakzA . semaktAt saro- rityanenEvezwasidDe'sy…
 dakza	md	md:8976:1	no-shared-witness	0	dákṣ-a, a. able, active, dexterous, skilful, clever ( with lc. , —˚ ); suitable for ( —˚ ); right ( not left ); m. activity, capacity, power, aptitude; will; N. of an Āditya; N. of a Prajāpati; N. of a legislator : -sys‿ayana, n. (sacrifice of the) winter sol…
 dakza	ap90	ap90:15134:2	witness-too-common	3	1 Able, competent, expert, clever, skilful
 dakza	ap90	ap90:15134:4	no-shared-witness	1	3 Ready, care ful, attentive, prompt
@@ -24284,7 +24341,7 @@ dakza	pwg	pwg:31601:9	witness-too-common	1	N. pr. eines Sohnes des Garuḍa
 dakza	pwg	pwg:31601:11	cross-language-gap	0	Stier
 dakza	pwg	pwg:31601:12	no-shared-witness	4	Hahn
 dakza	pwg	pwg:31601:13	no-shared-witness	2	eine best. Pflanze
-dakza	pwg	pwg:31601:14	outranked	2	Feuer
+dakza	pwg	pwg:31601:14	root-vs-nominal	2	Feuer
 dakza	pwg	pwg:31601:15	no-shared-witness	2	die Erde
 dakza	pwg	pwg:31601:16	cross-language-gap	0	Vgl
 dakza	pwg	pwg:75437:1	witness-too-common	5	rührig, fleissig; recht; link
@@ -25513,9 +25570,10 @@ puras	ap90	ap90:19129:54	no-gloss	0
 puras	pwg	pwg:78738:3	no-gloss	1	
 SAKa	vcp	vcp:43270:1	no-citation-apparatus	0	SAKa vyAptO BvA0 para0 saka0 sew fdit caNi na hrasvaH . SAKati aSAKot
 SAKa	vcp	vcp:43271:1	no-citation-apparatus	0	SAKa pu0 SAKa ac . kfttikAputre skandAnuje 1 kumArAnu- caragaRaBede agniputraH kumArastu Sarastambe vyajAyata . tasya SAKo viSAKaSca nEgameyaSca pfzWajAH matsyapu0 5 a0 . 2 granTaparicCede sargasTAnIve granTAMSaBede Sabdaca0 . vfkza- syAMSaBede (qAla) strI am…
+SAKa	skd	skd:35276:1	root-vs-nominal	0	SAKa , f vyAptO . iti kavikalpadrumaH .. (BvA0- para0-saka0-sew .) f, aSaSAKat . iti durgAdAsaH
 SAKa	mw	mw:214947:1	no-shared-witness	1	Pongamia Glabra
 SAKa	mw	mw:214948:1	no-shared-witness	1	m. n. N. of a place
-SAKa	pwg	pwg:98647:3	outranked	2	Pongamia glabra Vent. _im_
+SAKa	pwg	pwg:98647:3	root-vs-nominal	2	Pongamia glabra Vent. _im_
 SAKa	pwg	pwg:98647:4	no-shared-witness	1	N. pr. einer Oertlichkeit . könnte auch n. sein
 SAKa	pwg	pwg:98647:5	witness-too-common	4	f. ; am Ende eines adj. comp. f
 SAKa	pwg	pwg:98647:6	no-shared-witness	28	Ast, Zweig
@@ -25770,7 +25828,8 @@ tAraka	ap90	ap90:14923:10	no-gloss	0
 tAraka	pwg	pwg:29356:12	no-gloss	1	10〉 f. = (?)
 tala	vcp	vcp:22355:1	no-citation-apparatus	0	tala pratizWAyAM vA curA0 uBa0 pakze BvA0 para0 aka0 sew . tAlayati te talati . atItalat ta atAlIt . tAlayAm baBUya Asa cakAra . tatAla telatuH talam
 tala	vcp	vcp:22356:1	no-citation-apparatus	0	tala pu0 na0 tala ac . svarUpe SEleyanadDezu SilAtalezu kumA0 . himaDAmni darpaRatale ca muhuH mAGaH . vidANgurvantu mahatastalaM vidvizadamBasaH talaM svarUpaM pramARaM veti mallinA0 . 2 jyAGAtavAraRe . 3 kAnane 4 kAryyavIje na0 medi0 . 5 gartte pu0 trikA0 .…
-tala	skd	skd:14561:1	outranked	0	tala , ki pratizWitO . iti kavikalpadrumaH .. (curAM- pakze BvAM-paraM-akaM-sew .) ki, tAlayati talati vratam . saMpUrRaM syAdityarTaH . iti durgAdAsaH
+tala	skd	skd:14560:1	root-vs-nominal	0	tala , gatO . (BvAM-paraM-sakaM-sew .) sOtraDAtu- rayam . tAliSaH . iti durgAdAsaH
+tala	skd	skd:14561:1	root-vs-nominal	0	tala , ki pratizWitO . iti kavikalpadrumaH .. (curAM- pakze BvAM-paraM-akaM-sew .) ki, tAlayati talati vratam . saMpUrRaM syAdityarTaH . iti durgAdAsaH
 tala	md	md:8466:1	no-shared-witness	0	tala, m. n. surface, plane; sole ( foot ), palm, ( hand ); flat space below; —˚ often not to be translated : lc. = at, on, under ( —˚ or g. ); -tas, ad. from the bottom; -prahāra, m. slap; blow with the paw; -loka, m. lower regions
 tala	mw	mw:83503:1	witness-too-common	3	( m. , ) n. (√ ) surface, level, flat roof (of a house), &amp;c. (chiefly ifc. [ f( ). , ] cf. , &amp;c.)
 tala	mw	mw:83503.12:1	no-shared-witness	2	the sole (of the foot, , )
@@ -25788,6 +25847,7 @@ tala	pwg	pwg:29046:8	no-shared-witness	3	Fächerpalme
 tala	pwg	pwg:29046:9	no-shared-witness	2	der Griff eines Schwertes
 tala	pwg	pwg:29046:10	no-shared-witness	2	das Anschlagen der Saiten; pressing the strings of a lute; mit der linken Hand
 tala	pwg	pwg:29046:12	no-shared-witness	2	Wald
+tala	pwg	pwg:29046:13	root-vs-nominal	4	Grube
 tala	pwg	pwg:29046:14	witness-too-common	1	13〉 n. = Sch. zu . Vgl
 tala	pwg	pwg:29046:15	no-shared-witness	2	die Veranlassung —, das Motiv einer Handlung; ausbreiten; Boden
 tala	pwg	pwg:74928:1	no-shared-witness	2	Ebene
@@ -26382,6 +26442,8 @@ svaka	pwg	pwg:114821:1	no-gloss	0	=
 guqa	vcp	vcp:17604:1	no-citation-apparatus	0	guqa vezwane rakzaRe cUrRane ca curA0 uBa0 idita saka0 sew . guRqayati te ajuguRqat ta . guRqaH guRqitA . guRqanaM guRqA
 guqa	vcp	vcp:17605:1	no-citation-apparatus	0	guqa rakzaRe vyAzAta ca tudA0 kawA0 para0 saka0 sew . guqati . aguqota . jugoqa
 guqa	vcp	vcp:17606:1	no-citation-apparatus	0	guqa pu0 gu qa kit . 1 ikzuvikAre ikzuSabde 909 pf0 vivftiH . EkzavaM guqavarjitam ti0 ta0 . guqena nirvfttAdi guqa + aSmA0 ra . guqara guqanirvftte tri0 . guqAyasADu guqA0 WaY . gOqika guqasADane ikzO . BakzyeRa miSraRe sa0 guqaDAnA guqOdana guqamiSritaDAnAd…
+guqa	skd	skd:10969:1	root-vs-nominal	0	guqa , i ka vezwe . rakze . iti kavikalpadrumaH .. (curAM-paraM-sakaM-sew .) paYcamasvarI . i ka, guRqayati . anekArTatvAccUrRIkaraRe'pi . guRqa- yati hiNgulaM lokaH . iti durgAdAsaH
+guqa	skd	skd:10970:1	root-vs-nominal	0	guqa , Si rakze . vyAGAte . iti kavikalpadrumaH .. (tudAM-(kuwAM)-paraM-sakaM-sew .) Si, guqati aguqIt . iti durgAdAsaH
 guqa	md	md:6992:1	no-shared-witness	0	guḍa, m. ball; molasses; pill: pl. N. of a people : -ka, m. ball; -jihviká-nyāya, m. the manner of sugar and the tongue = first but fleeting impression, opinion recommending itself for the moment ; -piṣṭa, n. pastry made of flower and sugar; * -dhānā, f. pl. …
 guqa	mw	mw:65423:1	witness-too-common	3	m. ( cf. , ; √ , ) a globe or ball
 guqa	mw	mw:65424:1	no-shared-witness	1	a ball to play with ( cf. )
@@ -26395,6 +26457,7 @@ guqa	pwg	pwg:22528:2	witness-too-common	5	Kugel; Kuppel
 guqa	pwg	pwg:22528:3	no-shared-witness	1	Spielball
 guqa	pwg	pwg:22528:4	cross-language-gap	0	Bissen, Mundvoll (in Kugelgestalt gekneteter Reis?)
 guqa	pwg	pwg:22528:6	no-shared-witness	2	die (aus Kügelchen gebildete?) Rüstung des Elephanten
+guqa	pwg	pwg:22528:7	root-vs-nominal	2	Baumwollenstaude
 guqa	pwg	pwg:22528:8	no-shared-witness	1	= Tithymalus antiquorum Moench. , Sch
 guqa	pwg	pwg:22528:10	no-shared-witness	1	pl. N. pr. eines Volkes in Madhyadeśa
 guqa	pwg	pwg:22528:12	no-shared-witness	2	Kügelchen, Pille
@@ -29099,6 +29162,7 @@ ruci	pwg	pwg:84878:17	no-shared-witness	3	Vgl. (auch . _zu_ )
 ruci	pwg	pwg:84878:2	no-gloss	1	f
 Suka	vcp	vcp:43708:1	no-citation-apparatus	0	Suka gatO BvA0 para0 saka0 sew . Sokati aSokIt
 Suka	vcp	vcp:43709:1	no-citation-apparatus	0	Suka na0 Suka ka . 1 granTiparRe amaraH . 2 vastre 3 vastrAYcale 4 SirastrARe hemaca0 . 5 vyAsasute parASarakulotpannaH SukonAma mahAyaSAH . vyAsAdaraRyAM saMBUto viDUmo'- gniriva jvalan vahnipu0 . (SuyA) iti KyAte 6 KagaBede pu0 strI striyAM NIz . SukadarSan…
+Suka	skd	skd:35915:1	root-vs-nominal	0	Suka , sarpe . iti kavikalpadrumaH .. (BvA0-para0- saka0-sew .) Sokati . sarpo gamanam . iti durgAdAsaH
 Suka	md	md:17984:1	no-shared-witness	0	śúk-a, m. [bright, gaudy: √ śuc] parrot ( V. , C. ); poet ( C. , rare ); N. of a son of Vyāsa
 Suka	mw	mw:218750:1	no-shared-witness	1	a poet (?)
 Suka	mw	mw:218751:1	no-shared-witness	1	Acacia Sirissa
@@ -29115,6 +29179,7 @@ Suka	mw	mw:218764:1	no-shared-witness	1	cloth, clothes
 Suka	mw	mw:218765:1	no-shared-witness	1	a helmet or turban
 Suka	mw	mw:218766:1	witness-too-common	1	N. of a mythical weapon
 Suka	pwg	pwg:100072:1	no-shared-witness	1	( oxyt. )
+Suka	pwg	pwg:100072:4	root-vs-nominal	3	Acacia Sirissa ( ) Buch. Zizyphus scandens Roxb. _im_
 Suka	pwg	pwg:100072:5	cross-language-gap	0	N. pr
 Suka	pwg	pwg:100072:7	witness-too-common	1	β〉 eines Kriegers
 Suka	pwg	pwg:100072:8	outranked	1	γ〉 eines Asura . die neuere Ausg
@@ -29122,7 +29187,7 @@ Suka	pwg	pwg:100072:9	witness-too-common	4	δ〉 eines Ministers des Rāvaṇa
 Suka	pwg	pwg:100072:10	no-shared-witness	1	ε〉 eines brahmanischen Asketen
 Suka	pwg	pwg:100072:12	witness-too-common	4	Papageienweibchen; die Urmutter der Papageien
 Suka	pwg	pwg:100072:13	no-shared-witness	1	N. pr. der Gattin der Saptarṣi (nach dem Comm. ), die Agni liebte
-Suka	pwg	pwg:100072:15	outranked	5	eine best. Pflanze
+Suka	pwg	pwg:100072:15	root-vs-nominal	5	eine best. Pflanze
 Suka	pwg	pwg:100072:16	no-shared-witness	1	Gewand, Zeug; Saum eines Gewandes; Helm
 Suka	pwg	pwg:100072:17	witness-too-common	1	N. eines mythischen Geschosses
 Suka	pwg	pwg:100072:18	cross-language-gap	0	Vgl
@@ -30683,6 +30748,8 @@ kAYcana	pwg	pwg:16148:11	no-gloss	0	f
 aja	vcp	vcp:664:1	no-citation-apparatus	0	aja zatO kzepaRe ca BvAdi0 para0 saka0 sew . ajati . avEzIt AjIt . tfc ajitA vetA . GaY . AjaH . ajanti vahniM sadanAnyacCa iti vedaH
 aja	vcp	vcp:665:1	no-citation-apparatus	0	aja dIptO idit curAdi0 uBaya0 sew aka0 . aYjayati te . AYjijat ta
 aja	vcp	vcp:666:1	no-citation-apparatus	0	aja pu0 na jAyate jana qa na0 ta0 . ISvare, na jAto na janizyate iti SruteH na hi jAto na jAye'haM na janizye kadAcana . kzetrajYaH sarvaBUtAnAM tasmAdahamajaHsmftaH iti BAra0 . jIve ca ajonityaH SASvato'yaM purARo na hanyate hanyamAne SarIre iti gItA . jahAt…
+aja	skd	skd:460:1	root-vs-nominal	0	aja kzepe . gatO . iti kavikalpadrumaH .. ajati . iti durgAdAsaH
+aja	skd	skd:461:1	root-vs-nominal	0	aja ika BAsi (aji dIptO curA iditvAnnum .) iti kavikalpadrumaH .. ika aYjayati . BAsi doptO . iti durgAdAsaH
 aja	md	md:451:1	no-shared-witness	0	1. aj-á, m. herding; drover; he-goat
 aja	md	md:453:1	no-shared-witness	0	3. aj-a, the √ aj
 aja	ap90	ap90:352:4	no-shared-witness	1	2 The (individual) soul ( )
@@ -30748,6 +30815,7 @@ aja	pwg	pwg:62800:4	no-shared-witness	1	die Zeit
 aja	pwg	pwg:62800:5	no-shared-witness	1	n. N. eines Sāman
 aja	pwg	pwg:872:1	cross-language-gap	0	1. (von )
 aja	pwg	pwg:872:3	witness-too-common	1	Treiben, Zug
+aja	pwg	pwg:872:6	root-vs-nominal	3	Widder
 aja	pwg	pwg:872:7	witness-too-common	1	Name eines Volkes
 aja	pwg	pwg:872:8	no-shared-witness	1	m. pl. eine Art Ṛṣi in der Welt Brahman ʼs
 aja	pwg	pwg:872:9	outranked	7	N. pr. ein Abkömmling Viśvāmitra ʼs . ein König . Sohn Nābhāga ʼs und Vater Daśaratha ʼs . . Sohn Raghu ʼs und Vater Daśaratha ʼs . . . Sohn Dilīpa ʼs und Vater Dīrghabāhu ʼs _im_
@@ -30761,6 +30829,7 @@ aja	pwg	pwg:873:7	no-shared-witness	3	Śiva
 aja	pwg	pwg:873:8	no-shared-witness	3	Kāmadeva
 aja	pwg	pwg:873:9	no-shared-witness	1	eine Art Getreide
 aja	pwg	pwg:873:12	no-shared-witness	2	die unerzeugte ewige Natur
+aja	pwg	pwg:873:13	root-vs-nominal	4	Māyā , als erste Śakti , _im_ ; vgl. _zu_
 aja	ap90	ap90:352:2	no-gloss	0	
 aja	ap90	ap90:352:23	no-gloss	0	
 aja	ap90	ap90:352:27	no-gloss	0	= q. v
@@ -32927,8 +32996,10 @@ mada	vcp	vcp:37437:1	no-citation-apparatus	0	mada garve dEnye ca BvA0 para0 aka0
 mada	vcp	vcp:37438:1	no-citation-apparatus	0	mada tarzaRe cu0 A0 saka0 sew . mAdayate . amImadata
 mada	vcp	vcp:37439:1	no-citation-apparatus	0	mada jAqye svapne made Amode stutO dIptO ca yaTAyaTaM aka0 saka0 ca BvA0 Atma0 idit . mandate amandizwa . tatra stutO mandamAnaH sumanmaBiH tARqya0 bra0 1 . 7 . 6 . mandamAnaH stUyamAnaH madi stutO karBaRi yaki prApte vyatyayena Sap BA0
 mada	vcp	vcp:37440:1	no-citation-apparatus	0	mada pu0 mada ac . 1 hastigaRqAdisnutajale dAnajale amaraH 2 garve harze 3 retasi 4 mfgamade medi0 5 mattatAyAm hemaca0 . 4 nade 5 kalyARakare vastuni ca DaraRiH
-mada	skd	skd:25880:1	outranked	0	mada , ka Na tfptiyoge . iti kavikalpadrumaH .. (curA0-Atma0-saka0-sew .) ka Na mano mAda- yate yasya SAstrAByAsarasAyanAt . iti durgA- dAsaH
-mada	skd	skd:25881:1	outranked	0	mada , ma garvve . mlepane . iti kavikalpadrumaH .. (BvA0-para0-aka0-sew .) garvvo'haNkAraH . glepanaM dEnyam . ma madayati nIcaM sampattiH . madayati SatruM SUraH . iti durgAdAsaH
+mada	skd	skd:25878:1	root-vs-nominal	0	mada , i Na svapne . jAqye . made . mode . stutO . gatO . iti kavikalpadrumaH .. (BvA0-Atma0- svapne jAqye mada mode aka0-stutO gatO ca saka0-sew .) mandyate . Na mandate janaH svapiti jaqo Bavati mAdyati modate stOti gacCati vA ityarTaH . iti durgAdAsaH
+mada	skd	skd:25879:1	root-vs-nominal	0	mada , I Ba ya ir Yi harze . iti kavikalpadrumaH .. divA0-para0-aka0-sew .) I Yi matto'sti . Ba ya mAdyati . ir amadat amAdIt . asmAt puzAditvAt nityaM Na ityanye . iti durgAdAsaH
+mada	skd	skd:25880:1	root-vs-nominal	0	mada , ka Na tfptiyoge . iti kavikalpadrumaH .. (curA0-Atma0-saka0-sew .) ka Na mano mAda- yate yasya SAstrAByAsarasAyanAt . iti durgA- dAsaH
+mada	skd	skd:25881:1	root-vs-nominal	0	mada , ma garvve . mlepane . iti kavikalpadrumaH .. (BvA0-para0-aka0-sew .) garvvo'haNkAraH . glepanaM dEnyam . ma madayati nIcaM sampattiH . madayati SatruM SUraH . iti durgAdAsaH
 mada	md	md:13604:1	no-shared-witness	0	mád-a, m. hilarity, exhilaration, rapture, intoxication; passion for ( —˚ ); wantonness, lust; rut; pride, arrogance, presumption, conceit (of, about, g. or —˚ ); intoxicating draught; honey; temple-juice of elephants
 mada	mw	mw:155332:1	witness-too-common	1	m. hilarity, rapture, excitement, inspiration, intoxication, &amp;c. &amp;c
 mada	mw	mw:155333:1	no-shared-witness	1	( du. with N. of 2 Sāman s, )
@@ -32952,9 +33023,11 @@ mada	pwg	pwg:56707:4	witness-too-common	6	erheiternder —, begeisternder —, b
 mada	pwg	pwg:56707:5	witness-too-common	15	Brunstsaft eines Elephanten
 mada	pwg	pwg:56707:6	no-shared-witness	3	der männliche Same
 mada	pwg	pwg:56707:7	no-shared-witness	4	Moschus
+mada	pwg	pwg:56707:8	root-vs-nominal	2	ein schönes Ding
 mada	pwg	pwg:56707:9	no-shared-witness	1	Fluss
 mada	pwg	pwg:56707:11	outranked	2	N. pr. eines Dānava . . . eines Dieners des Śiva
 mada	pwg	pwg:56707:12	no-shared-witness	1	N. eines Sāman
+mada	pwg	pwg:56707:13	root-vs-nominal	3	f. = = _im_
 mada	pwg	pwg:56707:14	cross-language-gap	0	Vgl. , 2
 mada	pwg	pwg:80355:2	cross-language-gap	0	Vgl
 mada	pwg	pwg:80355:1	no-gloss	2	
@@ -33086,6 +33159,7 @@ vfdDa	pwg	pwg:94840:11	no-gloss	0	m
 vfdDa	pwg	pwg:94840:14	no-gloss	2	= _im_
 vara	vcp	vcp:40576:1	no-citation-apparatus	0	vara Ipse ada0 cu0 uBa0 saka0 sew . varayati te avavarat ta
 vara	vcp	vcp:40577:1	no-citation-apparatus	0	vara na0 vriyate vf karmaRi ap vari ac vA . 1 kuNkume 2 manA- gaBIzwe amaraH varaM prARAn parityakzye iti tantram . mAve ap ac vA . 3 icCAyAm 4 yAcane 5 AvaraRe 6 vezwane ca . vf karmaRi ap . 7 aBIzwe 8 SrezWe ca tri0 amaraH . 9 jAre 10 jAmAtari Sabdara0 11 g…
+vara	skd	skd:31179:1	root-vs-nominal	0	vara , t ka Ipse . iti kavikalpadrumaH .. (adanta- curA0-para0-saka0-sew .) rePopaDaH . varayati . iti durgAdAsaH
 vara	md	md:15930:1	no-shared-witness	0	1. vár-a, a. [select: √ 2. vṛ] best, choicest, most excellent or beautiful, among ( ab. , g. , lc. , —˚ ); better, more excellent, than ( ab. , rarely g. ), among ( ab. , v. r. ); n. váram, ad. specially, rather, better, than ( ab. ± ā́ ; RV. ); with pr. or i…
 vara	md	md:15931:1	no-shared-witness	0	2. vár-a, m. [√ 2. vṛ] choice, wish; object to be chosen as a gift or reward, boon; privilege ( rare ); dowry ( rare ): -ṃ vṛ, choose a boon; -ṃ pra‿arth or yāc, express a wish; supplicate a blessing; -ṃ dā, grant a boon or blessing; -ṃ pra-yam, grant a wish;…
 vara	ap90	ap90:25042:6	no-shared-witness	0	2 Choice, selection
@@ -33190,8 +33264,9 @@ vara	pwg	pwg:88106:2	cross-language-gap	0	adj. ( f. )
 vara	pwg	pwg:88106:3	witness-too-common	32	erwünscht; der vorzüglichste, beste, schönste; am Besten für; der beste, vorzüglichste unter; die schönste unter den Frauen
 vara	pwg	pwg:88106:4	witness-too-common	7	vorzüglicher, besser
 vara	pwg	pwg:88106:6	no-shared-witness	1	eine best. Körnerfrucht
+vara	pwg	pwg:88106:7	root-vs-nominal	2	Bdellion
 vara	pwg	pwg:88106:8	no-shared-witness	2	Sperling
-vara	pwg	pwg:88106:10	outranked	6	die drei Myrobalanen; Gelbwurz
+vara	pwg	pwg:88106:10	root-vs-nominal	6	die drei Myrobalanen; Gelbwurz
 vara	pwg	pwg:88106:11	no-shared-witness	1	Bein. der Pārvatī
 vara	pwg	pwg:88106:13	no-shared-witness	1	f. gaṇa zu
 vara	pwg	pwg:88106:14	no-shared-witness	4	Asparagus racemosus
@@ -34729,6 +34804,7 @@ kARqa	pwg	pwg:70271:4	no-gloss	1
 kARqa	pwg	pwg:70271:5	no-gloss	1	
 rADa	vcp	vcp:39581:1	no-citation-apparatus	0	rADa sidDO aka0 nizpAdane pAke ca saka0 svAdi0 divA0 ca para0 aniw . rADnoti rADyati arAtsIt arAdDa reDatuH rarADatuH . SuBASuBAlocane ca . tadyoge SuBA- SuBasvAminaH sampradAnatA . gargo rADyati rAmAya vopadevaH . apa + dozakaraRe yanmahyamaparADyati maGaH
 rADa	vcp	vcp:39582:1	no-citation-apparatus	0	rADa pu0 rADA viSAKA tatsamIpasTA anurADA ca tadyuktA pOrRamAsI aR NIp rADo sA yatra mAse punaraR . 1 cAndre vESAsve mAsi . tAdfSe 2 pakze 3 guruvarze ca kArttikaSabde dfSyam . 4 tatpUrRimAyAM strI NIp
+rADa	skd	skd:29554:1	root-vs-nominal	0	rADa , na O ya sidDO . iti kavikalpadrumaH .. (svA0-divA0-ca-para0-svAdipakze saka0-divA- dipakze aka0-aniw .) rePAdiH . na, rADnoti . ya, rADyati . O, arAtsIt . sidDiriha svAdipakze nizpAdanA . divAdipakze nizpattiH . annaM rADnoti viprARAM ya iti halAyuDaH …
 rADa	mw	mw:177166:1	no-shared-witness	1	of a man
 rADa	mw	mw:177167:1	no-shared-witness	1	(with ) N. of two teachers
 rADa	pwg	pwg:84434:2	cross-language-gap	0	m. (von )
@@ -34740,6 +34816,7 @@ rADa	pwg	pwg:84434:9	no-shared-witness	1	= Schol. zu ; vgl
 rADa	pwg	pwg:84434:10	no-shared-witness	2	Myrobalanenbaum
 rADa	pwg	pwg:84434:11	cross-language-gap	0	N. pr
 rADa	pwg	pwg:84434:12	no-shared-witness	2	α〉 der Gattin Adhiratha ʼs und Pflegemutter Karṇa ʼs . . d. i. Karṇa
+rADa	pwg	pwg:84434:13	root-vs-nominal	14	β〉 einer Hirtin, die als Geliebte Kṛṣṇa ʼs später göttlich verehrt wurde, . . . . . . . . . (mit Dākṣāyaṇī identificirt). . . u. s. w. . . . _in_ . . . m. Bein. Kṛṣṇa ʼs _im_ m. desgl. . ( vgl. ). und desgl
 rADa	pwg	pwg:84434:14	no-shared-witness	2	γ〉 einer Sclavin
 rADa	pwg	pwg:84434:15	cross-language-gap	0	Vgl
 rADa	pwg	pwg:84434:5	no-gloss	1	f
@@ -34946,6 +35023,9 @@ giri	pwg	pwg:22376:10	no-gloss	0	f
 nawa	vcp	vcp:27838:1	no-citation-apparatus	0	nawa Rawa DAtuvat sarvaM viSezastu RawaDAtO 319 pf0 dfSyaH . nawa avaskandane (nawakftye) Rici nAwayati anukarotI- tyarTaH navanagavanaleKASyAmamaDyABirABiH sPawikaka- wakaBUmIrnAwayatyeza SElaH mAGaH
 nawa	vcp	vcp:27839:1	no-citation-apparatus	0	nawa BraMSe tvizi cu0 uBa0 aka0 sew . nAwayati te anInanawat ta na Ratvam
 nawa	vcp	vcp:27840:1	no-citation-apparatus	0	nawa puMstrI nama uRA0 qawa nawa ac vA . 1 SElUze striyAM gOrA0 NIz . nawI vidUzako vApi pAripArSvika eva vA sA0 da0 . 2 nalInAmaganDadravye strI NIz . 3 veSyAyAM ca Sabdara0 . 4 dfSyakAvyArTABinayakarttari narttake tri0 prakfterviButvayogAnnawavad vyavatizWa…
+nawa	skd	skd:18218:1	root-vs-nominal	0	nawa , nftye . hiMse ! iti kavikalpadrumaH .. (BvAM- paraM-nftye akaM-hiMse sakaM-sew .) nawati . iti durgAdAsaH
+nawa	skd	skd:18219:1	root-vs-nominal	0	nawa , ka BraMSe . tvizi . iti kavikalpadrumaH .. (curAM-paraM-akaM-sew .) BraMSo'DaHpatanam . spandanArTo'yamiti rAmaH . ka, nAwayati . iti durgAdAsaH
+nawa	skd	skd:18220:1	root-vs-nominal	0	nawa , ma nftO . iti kavikalpadrumaH .. (BvAM-paraM- akaM-sew .) ma, praRawayati . iti durgAdAsaH
 nawa	md	md:10243:1	no-shared-witness	0	naṭ-a, m. dancer, actor, mime; -ī, f. actress; -ana, n. dancing; dance, acting; -anīya, fp. impl. one must dance
 nawa	mw	mw:103178:1	no-shared-witness	1	N. of a partic. caste (sons of degraded Kṣatriya s, )
 nawa	mw	mw:103179:1	no-shared-witness	1	Calosanthes Indica
@@ -34954,9 +35034,12 @@ nawa	mw	mw:103181:1	no-shared-witness	1	a sort of reed (= )
 nawa	mw	mw:103182:1	no-shared-witness	0	(in music) N. of a Rāga
 nawa	mw	mw:103183:1	no-shared-witness	1	N. of a man (who with his brother Bhaṭa built a Vihāra )
 nawa	pwg	pwg:37457:4	no-shared-witness	4	N. eines Baumes, Calosanthes indica ( vgl. ) . Jonesia Asoca ( ) . . —
+nawa	pwg	pwg:37457:5	root-vs-nominal	3	eine Rohrart
+nawa	pwg	pwg:37457:6	root-vs-nominal	3	nach _im_ = (als masc. !); nach dem = ; vgl. und e
 nawa	pwg	pwg:37457:7	no-shared-witness	4	N. pr. eines Mannes, der mit seinem Bruder Bhaṭa einen Vihāra erbaute, . . Bei heissen die Nāgarāja — Nāṭa und Bhaṭa ; nach sind sie
 nawa	pwg	pwg:37457:8	no-shared-witness	1	f. N. einer Staude, Caesalpina Banducella
 nawa	pwg	pwg:37457:10	cross-language-gap	0	Schauspielerin
+nawa	pwg	pwg:37457:11	root-vs-nominal	2	Hure
 nawa	pwg	pwg:37457:12	no-shared-witness	2	eine best. wohlriechende Pflanze
 nawa	pwg	pwg:37457:13	cross-language-gap	0	rothes Rauschgelb
 nawa	pwg	pwg:37457:14	no-shared-witness	1	N. einer Rāgiṇī
@@ -35020,6 +35103,7 @@ Asura	pwg	pwg:9779:10	no-gloss	0	f
 Asura	pwg	pwg:9779:13	no-gloss	0	n
 haya	vcp	vcp:47791:1	no-citation-apparatus	0	haya gatO saka0 klAnto aka0 BvA0 pa0 sewa . hayati ahayIt
 haya	vcp	vcp:47792:1	no-citation-apparatus	0	haya puMstrI0 haya hi vA ac . 1 Towake amaraH striyAM yopaDatve'pi hayagavayetyAdinA NIz . aSvaSabde dfSyam . tatra varRyapadArTAH kavisa0 uktA yaTA O- nanyaM vegastejaSca taTA sallakzaRasTitiH . KurotKAtarajo rUpaM jAtirgativicitratA . tasya SakunAdyuktaM va…
+haya	skd	skd:41398:1	root-vs-nominal	0	haya , klame . gatO . iti kavikalpadrumaH .. (BvA0- para0-klame aka0-gatO saka0-sew .) hayati . klamo glAniH . iti durgAdAsaH
 haya	md	md:20388:1	no-shared-witness	0	háy-a, m. [speeder: √ hi] steed, horse; a. urging on ( in aśva-hayá); -kovida, a. skilled in horses; -grīva, a. having the mane of a horse; m. a form of Viṣṇu; N. of an Asura and of various men ; -jña, a. skilled in horses: -tā, f. knowledge of horses; -jñāna…
 haya	mw	mw:260563:1	no-shared-witness	1	the zodiacal sign Sagittarius
 haya	mw	mw:260564:1	no-shared-witness	1	(in prosody) a foot of four short syllables, proceleusmaticus
@@ -35038,6 +35122,7 @@ haya	pwg	pwg:116034:4	no-shared-witness	2	Rosse
 haya	pwg	pwg:116034:6	no-shared-witness	2	der Schütze im Thierkreise
 haya	pwg	pwg:116034:7	no-shared-witness	1	ein Fuss von vier Moren
 haya	pwg	pwg:116034:9	no-shared-witness	2	a man of particular class; Bos grunniens
+haya	pwg	pwg:116034:15	root-vs-nominal	5	Stute
 haya	pwg	pwg:116034:16	no-shared-witness	1	= Physalis flexuosa
 haya	pwg	pwg:116034:17	cross-language-gap	0	Vgl
 haya	pwg	pwg:116034:10	no-gloss	0	f
@@ -36755,7 +36840,8 @@ Bid	pwg	pwg:80199:3	no-gloss	1
 pakza	vcp	vcp:29948:1	no-citation-apparatus	0	pakza parigrahe ada0 cu0 uBa0 saka0 sew . pakzayati te apapakzat ta
 pakza	vcp	vcp:29949:1	no-citation-apparatus	0	pakza parigrahe cu0 uBa0 saka0 sew ayaM ByAdiSca para0 pakzati pakzayati te apapakzat ta apakzIt
 pakza	vcp	vcp:29950:1	no-citation-apparatus	0	pakza pu0 pakza ac . 1 SuklakfzRapratipadAdipaYcadaSyantapaYca- daSatiTyAtmake kAle 2 KagAnAM patattre (pAkA) 3 Sarasya puNKasTe pattre . keSAt paraH samUhArTe pakzapratyayAntaH . 4 keSasamUhArTe yaTA keSapakza ityAdi 5 pArSve 6 gfhe nyAyokte 7 sandigDasADyav…
-pakza	skd	skd:19747:1	outranked	0	pakza , t ka parigrahe . iti kavikalpadrumaH .. (adanta curAM-paraM-sakaM-sew .) pakzayati pakzApayati . iti durgAdAsaH
+pakza	skd	skd:19746:1	root-vs-nominal	0	pakza , ka parigrahe . iti kavikalpadrumaH .. (curAM- paraM-sakaM-sew .) ka, pakzayati . iti durgAdAsaH
+pakza	skd	skd:19747:1	root-vs-nominal	0	pakza , t ka parigrahe . iti kavikalpadrumaH .. (adanta curAM-paraM-sakaM-sew .) pakzayati pakzApayati . iti durgAdAsaH
 pakza	md	md:10962:1	no-shared-witness	0	pakṣá, m. ( n.¹ ) wing, pinion; feathers of an arrow ; flank, side; half; half-month, fortnight (15 days); side, party, following, ally, partisans ( sg. &amp; pl. ); host, troop, class; quantity ( of hair ); place; alternative; case; [Page149-1] opinion, prop…
 pakza	md	md:20721:1	no-shared-witness	0	pakṣá, m. after partisans add ; family, race
 pakza	mw	mw:113061:1	witness-too-common	1	m. ( ifc. f( or ). ) a wing, pinion (in one passage n. ), &amp;c. &amp;c
@@ -36794,6 +36880,7 @@ pakza	pwg	pwg:41185:6	outranked	27	Seite, Partei, Anhang; Angehörige; Schaar, K
 pakza	pwg	pwg:41185:7	witness-too-common	5	Stelle, Statt; locum occupavit notae frontalis, auripigmento pictae
 pakza	pwg	pwg:41185:8	no-shared-witness	11	der eine von zwei Fällen, Fall; im andern Falle; es sind hier vier Fälle möglich; und; haben die Bedeutung falls; im andern Falle; dans lʼhypothese favorable
 pakza	pwg	pwg:41185:10	no-shared-witness	3	die Untersuchung, mit der man so eben beschäftigt ist; in our text, in the text; in the course of discussion
+pakza	pwg	pwg:41185:12	root-vs-nominal	11	Hauswand; Wand, Mauer; Heer (Flügel eines Heeres?); Gunst; Widerspruch; Ofenloch; ein königlicher Elephant; ein Glied des Körpers; Seite; die Schwanzfedern beim Pfauen, Schwanz; Nähe; Vogel; Armband; rein; Reinheit; in algebra; a primary division; in arithmet…
 pakza	pwg	pwg:41185:13	cross-language-gap	0	Vgl
 pakza	pwg	pwg:77781:1	cross-language-gap	0	vgl
 pakza	pwg	pwg:77781:3	no-shared-witness	1	das Stellen —, das Rechnen zu
@@ -38115,6 +38202,7 @@ vfzaBa	pwg	pwg:95024:14	cross-language-gap	0	Vgl. und
 vfzaBa	pwg	pwg:95024:11	no-gloss	0	f
 pAra	vcp	vcp:31778:1	no-citation-apparatus	0	pAra karmasamAptO ada0 cu0 uBa0 saka0 sew . pArayati te apa- pArat ta
 pAra	vcp	vcp:31779:1	no-citation-apparatus	0	pAra na0 paraM tIraM parameva aR, pf GaY vA . nadIlaNGanena prApye 1 pare tIre amaraH . 2 prAntaBAge SezAvaDO medi0
+pAra	skd	skd:21224:1	root-vs-nominal	0	pAra , t ka karmmasamAptO . iti kavikalpadrumaH .. (adanta curAM-paraM-sakaM-sew .) apapArat . iti durgAdAsaH
 pAra	md	md:11500:1	no-shared-witness	0	pār-á, a. [√ 2. pṛ] taking across; ( m. ) n. opposite or farther bank or boundary; bank; extreme limit, extremity, end, goal: -kāma, a. wishing to reach the other bank
 pAra	mw	mw:122388:1	no-shared-witness	1	1. mfn. ( fr. √ ; in some meanings also fr. √ ) bringing across
 pAra	mw	mw:122390:1	no-shared-witness	0	a kind of Tuṣṭi ( s.v. ), Sāṃkhya s. Sch
@@ -38131,11 +38219,12 @@ pAra	pwg	pwg:120869:1	outranked	2	hinüberbringend, übersetzend; eine best. Per
 pAra	pwg	pwg:120870:1	no-shared-witness	1	Hüter
 pAra	pwg	pwg:44592:2	cross-language-gap	0	das Ueberschiffen
 pAra	pwg	pwg:44592:3	cross-language-gap	0	das jenseitige Ufer
+pAra	pwg	pwg:44592:4	root-vs-nominal	3	Quecksilber
 pAra	pwg	pwg:44592:6	outranked	4	f. N. pr. eines Flusses . . . ( v. l. für )
 pAra	pwg	pwg:44592:8	no-shared-witness	2	Wassermasse; Stadt
-pAra	pwg	pwg:44592:9	outranked	8	Wasserkrug; Trinkgeschirr; Schüssel; Melkkübel
+pAra	pwg	pwg:44592:9	root-vs-nominal	8	Wasserkrug; Trinkgeschirr; Schüssel; Melkkübel
 pAra	pwg	pwg:44592:10	no-shared-witness	2	ein Strick zum Binden der Füsse des Elephanten
-pAra	pwg	pwg:44592:11	outranked	3	Blüthenstaub
+pAra	pwg	pwg:44592:11	root-vs-nominal	3	Blüthenstaub
 pAra	pwg	pwg:44592:13	cross-language-gap	0	Vgl
 pAra	pwg	pwg:44592:1	no-gloss	0	m
 pAra	pwg	pwg:44592:7	no-gloss	1	f
@@ -39194,8 +39283,9 @@ BU	vcp	vcp:36708:12	no-citation-apparatus	0	vi + vyAptO viBuH
 BU	vcp	vcp:36708:13	no-citation-apparatus	0	vi + ati parasparaBavane Atma0 saka0 vyaBiBavate'rkaminduH . bopadevaH
 BU	vcp	vcp:36708:14	no-citation-apparatus	0	sam + yogyatve aka0 . samBavati sam + BU Ric samBAvanA- rUpajYAnavizayatve samBAvyate
 BU	vcp	vcp:36709:1	no-citation-apparatus	0	BU strI BU ADAre karttari apAdAne vA yaTAyaTam kvip . 1 BUmO amaraH 2 sTAnamAtre medi0 3 yajYAgnO pu0 jawA0 4 utpadyamAna tri0 5 parameSvare pu0 anirviRRaH sTavizWo BUH vizRu sa0
+BU	skd	skd:25175:1	outranked	0	BU , ka SudDicintayoH . miSraRe . iti kavikalpa- drumaH . (curA0-para0-saka0-sew .) ka, tfRa- vadBAvayati dvizaH sarvvAn . trayo'rTAH . iti durgAdAsaH
+BU	skd	skd:25176:1	outranked	0	BU , ka Na prAptO . iti kavikalpadrumaH .. (curA0- Atma0-saka0-sew .) ka Na, BAvayate . iti durgAdAsaH
 BU	skd	skd:25177:1	outranked	0	BU , Ya prAptO . iti kavikalpadrumaH . (BvA0-uBa0- saka0-sew .) Ya, Bavati Bavate DanaM DIraH . Bavatyeva sattAyAM prAptisampannajanmasviti Bawwa- mallaH . Bavate duritakzayaM yaToktakratuBirBAvayate ca nAkalokamiti halAyuDaH . kecidamuM BvAdyAtmanepadinaM ma…
-BU	skd	skd:25178:1	outranked	0	BU , vya, (BU + kvip .) rasAtalam . iti hemacandraH
 BU	md	md:13295:1	no-shared-witness	0	BHŪ, Ⅰ. P. ( rarely Ā. ) bháva, become, anything ( nm. or —˚ with ad. in ī or ū ); arise, happen, occur; come forth, from ( ab. ); be found anywhere ( lc. ); exist; come into being, spring from ( ab. ); be or remain alive; be in any condition, fare; stay, rem…
 BU	md	md:13296:1	no-shared-witness	0	bhū́, a. ( —˚ ) becoming, arising, proceeding or produced from; being, existing; f. place of being, space ( pl. spaces, worlds: V. ); earth; ground; floor; land, landed property; earth ( as a substance ); place, spot; subject ( of dispute etc. ): lc. on earth…
 BU	ap90	ap90:22244:1	no-shared-witness	0	I. 1 P. (rarely Ā.) ( , )
@@ -39425,6 +39515,7 @@ BU	pwg	pwg:55167:7	no-shared-witness	1	die Basis eines Dreiecks; einer anderen F
 BU	pwg	pwg:55167:8	no-shared-witness	1	Gegenstand; des Streites und der Uebereinstimmung
 BU	pwg	pwg:55167:9	no-shared-witness	1	Erde; der Zahl Eins
 BU	pwg	pwg:55167:10	no-shared-witness	2	des Buchstabens
+BU	pwg	pwg:55167:11	outranked	2	Opfer- feuer
 BU	pwg	pwg:55167:12	no-shared-witness	2	m. N. eines Ekāha
 BU	pwg	pwg:80224:1	cross-language-gap	0	1. Z. 14 füge 10,112,10 nach 1,76,4 hinzu
 BU	pwg	pwg:80224:3	witness-too-common	1	wenn die Anstrengung Etwas vermöchte, wenn die Anstrengung es thäte, wenn es auf die Anstrengung ankäme
@@ -40497,6 +40588,7 @@ gaRa	vcp	vcp:16796:2	no-citation-apparatus	0	ava + avajYAyAm . nArTanUnErnAvagaR
 gaRa	vcp	vcp:16796:3	no-citation-apparatus	0	vi + viSezeRa saMKyAne adUravarttinIM sidDiM rAjan! viga- RayAtmanaH raGuH
 gaRa	vcp	vcp:16797:1	no-citation-apparatus	0	gaRa pu0 gaRa karmaRi aca karttari ac vA . 1 samUhe . gaRAnAM tvAM gaRapatim yaju0 23, 19 . gaRapatiM gaRAnAM samUhAnAM pAlakam yedadI0 . 2 pramaTe sakalahaMsagaRaM Suci mAnasam SivamagAtmajayA ca kfterzyayA sakalahaM sagaRaM SucimAnasam gaRAnameruprasavAvata…
 gaRa	vcp	vcp:16797:2	no-citation-apparatus	0	prAptasaMjYAM paraSunA hanti sma naM ruzA viBuH . dfzwavAn paraSuM vIramuKyaH sUryamivA'param . sutIkzRaM jvAlayA vyAptaM kAlacakraniBaM SuBam . dahantaM daSa- digBAgAn pralayAnalasanniBam . yadA tatsAdaraM drazwu mupacakrAma dEtyarAw . tadEvApAtayacCitvA par…
+gaRa	skd	skd:10369:1	root-vs-nominal	0	gaRa , t ka saMKyAne . iti kavikalpadrumaH .. (adantacurAM-paraM-sakaM-sew .) mUrdDanyopaDaH . gaRayati . iti durgAdAsaH
 gaRa	md	md:6786:1	no-shared-witness	0	gaṇ-á, m. host, multitude; class; troop, retinue; inferior deities appearing in troops ( esp. Śivaʼs retinue, under the special rule of Gaṇeśa ); member of Śivaʼs following; community, association, corporation; metrical foot; group of roots or words to which …
 gaRa	mw	mw:62527:1	no-shared-witness	1	N. of Gaṇeśa
 gaRa	mw	mw:62528:1	outranked	3	a company, any assemblage or association of men formed for the attainment of the same aims
@@ -40514,7 +40606,7 @@ gaRa	mw	mw:62539:1	no-shared-witness	0	N. of an author
 gaRa	pwg	pwg:21460:1	no-shared-witness	2	m. am Ende eines adj. comp. f
 gaRa	pwg	pwg:21460:4	witness-too-common	6	eine zur Verfolgung bestimmter [Page2-0636] Zwecke zusammengetretene Anzahl von Menschen, Versammlung, Verein, Körperschaft; die; Versammlungen des; a sect in philosophy or religion
 gaRa	pwg	pwg:21460:5	no-shared-witness	4	eine kleinere Heeresabtheilung; 27 Wagen, 27 Elephanten, 81 Pferde und 135 Fusssoldaten
-gaRa	pwg	pwg:21460:6	outranked	2	eine Gruppe von Mondhäusern, deren drei angenommen werden: die menschliche, die göttliche und die der
+gaRa	pwg	pwg:21460:6	root-vs-nominal	2	eine Gruppe von Mondhäusern, deren drei angenommen werden: die menschliche, die göttliche und die der
 gaRa	pwg	pwg:21460:7	no-shared-witness	2	Zahl
 gaRa	pwg	pwg:21460:8	no-shared-witness	1	Versfuss
 gaRa	pwg	pwg:21460:9	no-shared-witness	1	eine Reihe von Wurzeln oder Wörtern, welche unter eine und dieselbe Regel fallen
@@ -41267,6 +41359,7 @@ devana	pwg	pwg:34502:1	no-shared-witness	4	Jammer; Kummer
 devana	pwg	pwg:34501:3	no-gloss	0	f
 karka	vcp	vcp:12193:1	no-citation-apparatus	0	karka hAme sOtraH para0 aka0 sew . karkati akakIMt . cakarka pranikarkati
 karka	vcp	vcp:12194:1	no-citation-apparatus	0	karka pu0 kfnoti karoti kriyate vA kf ka tasya nettvam karka ac vA . 1 vahnO 2 SvetASve amaraH 3 darpaRe 4 Gawe 5 mezA- vaDicaturTe rASO 6 kulIre 7 karkawavfkze (kA~kaqASiNA) ca hema0 . 8 kAtyAyanaSrOtasUtraBAzyakAre pu0
+karka	skd	skd:6555:1	root-vs-nominal	0	karka , hAse . sOtraDAturayam . iti kavikalpadrumaH .. (mvAM paraM akaM sew .) karkkaSaH . iti durgAdAsaH
 karka	ap90	ap90:10368:11	no-shared-witness	0	Comp
 karka	ap90	ap90:10368:12	no-shared-witness	0	small cucumber
 karka	mw	mw:44629:1	no-shared-witness	1	a younger brother of the father
@@ -41275,10 +41368,11 @@ karka	mw	mw:44631:1	no-shared-witness	1	a particular gem
 karka	mw	mw:44632:1	no-shared-witness	1	N. of a plant (= )
 karka	mw	mw:44633:1	no-shared-witness	0	N. of a commentator
 karka	pwg	pwg:119343:1	no-shared-witness	1	als Beiw. der Eule , v. l
+karka	pwg	pwg:15267:3	root-vs-nominal	5	Krabbe, Krebs; der Krebs im Thierkreise
 karka	pwg	pwg:15267:4	cross-language-gap	0	Wasserkrug
 karka	pwg	pwg:15267:5	cross-language-gap	0	Feuer
-karka	pwg	pwg:15267:6	outranked	4	Spiegel
-karka	pwg	pwg:15267:7	outranked	2	N. einer Pflanze, = _im_
+karka	pwg	pwg:15267:6	root-vs-nominal	4	Spiegel
+karka	pwg	pwg:15267:7	root-vs-nominal	2	N. einer Pflanze, = _im_
 karka	pwg	pwg:15267:9	no-shared-witness	1	beauty
 karka	pwg	pwg:15267:10	no-shared-witness	4	N. pr. eines Commentat. _zu_ . . . . —
 karka	pwg	pwg:15267:11	no-shared-witness	3	eine weisse Kuh; weiss; gut, ausgezeichnet
@@ -43133,9 +43227,9 @@ mA	vcp	vcp:38041:1	no-citation-apparatus	0	mA Sabde aka0 mAne saka0 ju0 A0 aniw 
 mA	vcp	vcp:38042:1	no-citation-apparatus	0	mA mAne adA0 pa0 saka0 aniw . mAti amAsIt
 mA	vcp	vcp:38043:1	no-citation-apparatus	0	mA mAne di0 Nit A0 saka0 aniw . mAyate amAsta
 mA	vcp	vcp:38044:1	no-citation-apparatus	0	mA avya0 NidanubanDAt dEvAdikAt AdAdikAdvA mADAtoH kip . 1 vAraRe . DAtorNittvena Sabde NittvavyavahA- rAt na mANyoge pA0 NidanubanDaDAtunizpanna yoge na aqAgamaH tadBinnayoge tu syAdeva mA nizAda . pratizWAM tvamagamaH iti rAmAyaRam . mA ka wAp . 2 la- kzmyA…
-mA	skd	skd:26963:1	outranked	0	mA Na li Sabde . mAne . iti kavikalpadrumaH .. (hvA0-Atma0-saka0-aniw .) Na li mimIte . SrutyA DarmmaM mimIte yaH . iti halAyuDaH .. iti tawwIkAyAM durgAdAsaH
-mA	skd	skd:26964:1	outranked	0	mA la mAne . iti kavikalpadrumaH .. (adA0-para0- saka0-aniwu .) la mAti BUmiM nalena rAjA . na mAnti mAnino yasya yaSastriBuvanodare .. iti halAyuDaH .. iti durgAdAsaH
-mA	skd	skd:26965:1	outranked	0	mA , vya (mA + kvip .) vAraRam . (yaTA rAmAyaRe . 1 . 2 . 15 . mA nizAda ! pratizWAM tvamagamaH SASvatIH samAH .. ) vikalpaH . iti medinI . avyayavarge, 49
+mA	skd	skd:26962:1	root-vs-nominal	0	mA Na ya mAne . iti kavikalpadrumaH .. (divA0- Atma0-saka0-aniw .) Na ya mAyate . iti durgAdAsaH
+mA	skd	skd:26963:1	root-vs-nominal	0	mA Na li Sabde . mAne . iti kavikalpadrumaH .. (hvA0-Atma0-saka0-aniw .) Na li mimIte . SrutyA DarmmaM mimIte yaH . iti halAyuDaH .. iti tawwIkAyAM durgAdAsaH
+mA	skd	skd:26964:1	root-vs-nominal	0	mA la mAne . iti kavikalpadrumaH .. (adA0-para0- saka0-aniwu .) la mAti BUmiM nalena rAjA . na mAnti mAnino yasya yaSastriBuvanodare .. iti halAyuDaH .. iti durgAdAsaH
 mA	skd	skd:26966:1	outranked	0	mA , strI, (mA + kvip . yadbA, mA + ka . tata zwAp .) lakzmIH . iti medinI . me, 1 .. mAtA . (yaTA, sAhityadarpaRe . 10 ma . mAramA suzamA cArurucA mArabaDUttamA . mAttaDUrttatamAvAsA sA vAmA me'stu mA ramA .. ) mAnam . ityekAkzarakozaH SabdaratnAvalI ca
 mA	skd	skd:26967:1	outranked	0	mA , tri, (asmad + dvitIyEkavacane . tvA mO dvitIyAyAyAH . 8 . 1 . 23 . iti mAmityasya sTAne vikalpena mAdeSaH .)
 mA	md	md:13919:1	no-shared-witness	0	1. MĀ, Ⅱ. P. mā-ti ( C. ), Ⅲ. Ā. mímīte, measure; mete out, mark off; traverse; measure with, compare with ( in. ); be large or long enough for ( g. ), find space or room in, be contained in ( lc. ; Ⅱ. P. ); mete out to, bestow ( RV. ); fashion, form, make, b…
@@ -43846,7 +43940,8 @@ cit	pwg	pwg:73755:1	no-gloss	2	5. √
 yama	vcp	vcp:38875:1	no-citation-apparatus	0	yama uparatO BvA0 para0 saka0 aniw yacCati ayaMsIt udit ktvA vew . yamitvA yatvA yattaH . A + dIrGIkaraRe Atma0 . upa + vivAhe Atma0
 yama	vcp	vcp:38876:1	no-citation-apparatus	0	yama parivezaRe cu0 u0 saka0 sew vA GawA0 . yamayati yAmavati ayIyamat ta ayayAmat ta
 yama	vcp	vcp:38877:1	no-citation-apparatus	0	yama pu yama GaY . ahiMsA satyavacanaM brahmacaryyamakalkatA . asteyamiti paYcEte yamAKyAni vratAni ca ityukte 1 ahiMsAdO tacca dehamAtrasADyam AvaSyakamavaSyakAryyaM nityaM kAryyamiti amaraH indriyAdInAM 2 saMyamane ca . yamayati ac . prARinAM SuBASuBakarmAn…
-yama	skd	skd:28392:1	outranked	0	yama , ka mi parivezaRe . tadaBAve . iti kavi- kalpadrumaH .. (curA0-para0-saka0-sew .) ka mi, yamayati yAmayati . parivezaRaM annAdera- rpaRam . vezwanamityeke . vizatyavyAptAvityasya rUpamiti ramAnATaH . kecittu parivezaRa evAyaM mAnubanDaH . yamayatyannaM …
+yama	skd	skd:28391:1	root-vs-nominal	0	yama , O u viratO . iti kavikalpadrumaH .. (BvA0-para0-aka0-aniw . ktvAvew .) O, yantA . u, yamitvA yantvA . viratirnivfttiH . yacCati pApAt sADuH . iti durgAdAsaH
+yama	skd	skd:28392:1	root-vs-nominal	0	yama , ka mi parivezaRe . tadaBAve . iti kavi- kalpadrumaH .. (curA0-para0-saka0-sew .) ka mi, yamayati yAmayati . parivezaRaM annAdera- rpaRam . vezwanamityeke . vizatyavyAptAvityasya rUpamiti ramAnATaH . kecittu parivezaRa evAyaM mAnubanDaH . yamayatyannaM …
 yama	md	md:14718:1	no-shared-witness	0	1. yám-a, m. (restrainer), rein ( RV.¹ ); driver ( RV.¹ ); suppression, restraint; self-restraint; general law of morality, paramount duty ( opp. niyama, minor duty); observance, rule
 yama	md	md:14719:1	no-shared-witness	0	2. yam-á, a. ( ā́, ī́ ) forming a pair; m. twin ( du. twins; designation of the Aśvins); N. of the male Twin of Yamī, the first man, son of Vivasvat ( RV. ); in the Veda Yama is the god who rules over the departed fathers in heaven ; in C. he is regarded as t…
 yama	ap90	ap90:23695:2	no-shared-witness	0	1 Twin, twinborn
@@ -44263,9 +44358,9 @@ mA	vcp	vcp:38041:1	no-citation-apparatus	0	mA Sabde aka0 mAne saka0 ju0 A0 aniw 
 mA	vcp	vcp:38042:1	no-citation-apparatus	0	mA mAne adA0 pa0 saka0 aniw . mAti amAsIt
 mA	vcp	vcp:38043:1	no-citation-apparatus	0	mA mAne di0 Nit A0 saka0 aniw . mAyate amAsta
 mA	vcp	vcp:38044:1	no-citation-apparatus	0	mA avya0 NidanubanDAt dEvAdikAt AdAdikAdvA mADAtoH kip . 1 vAraRe . DAtorNittvena Sabde NittvavyavahA- rAt na mANyoge pA0 NidanubanDaDAtunizpanna yoge na aqAgamaH tadBinnayoge tu syAdeva mA nizAda . pratizWAM tvamagamaH iti rAmAyaRam . mA ka wAp . 2 la- kzmyA…
-mA	skd	skd:26963:1	outranked	0	mA Na li Sabde . mAne . iti kavikalpadrumaH .. (hvA0-Atma0-saka0-aniw .) Na li mimIte . SrutyA DarmmaM mimIte yaH . iti halAyuDaH .. iti tawwIkAyAM durgAdAsaH
-mA	skd	skd:26964:1	outranked	0	mA la mAne . iti kavikalpadrumaH .. (adA0-para0- saka0-aniwu .) la mAti BUmiM nalena rAjA . na mAnti mAnino yasya yaSastriBuvanodare .. iti halAyuDaH .. iti durgAdAsaH
-mA	skd	skd:26965:1	outranked	0	mA , vya (mA + kvip .) vAraRam . (yaTA rAmAyaRe . 1 . 2 . 15 . mA nizAda ! pratizWAM tvamagamaH SASvatIH samAH .. ) vikalpaH . iti medinI . avyayavarge, 49
+mA	skd	skd:26962:1	root-vs-nominal	0	mA Na ya mAne . iti kavikalpadrumaH .. (divA0- Atma0-saka0-aniw .) Na ya mAyate . iti durgAdAsaH
+mA	skd	skd:26963:1	root-vs-nominal	0	mA Na li Sabde . mAne . iti kavikalpadrumaH .. (hvA0-Atma0-saka0-aniw .) Na li mimIte . SrutyA DarmmaM mimIte yaH . iti halAyuDaH .. iti tawwIkAyAM durgAdAsaH
+mA	skd	skd:26964:1	root-vs-nominal	0	mA la mAne . iti kavikalpadrumaH .. (adA0-para0- saka0-aniwu .) la mAti BUmiM nalena rAjA . na mAnti mAnino yasya yaSastriBuvanodare .. iti halAyuDaH .. iti durgAdAsaH
 mA	skd	skd:26966:1	outranked	0	mA , strI, (mA + kvip . yadbA, mA + ka . tata zwAp .) lakzmIH . iti medinI . me, 1 .. mAtA . (yaTA, sAhityadarpaRe . 10 ma . mAramA suzamA cArurucA mArabaDUttamA . mAttaDUrttatamAvAsA sA vAmA me'stu mA ramA .. ) mAnam . ityekAkzarakozaH SabdaratnAvalI ca
 mA	skd	skd:26967:1	outranked	0	mA , tri, (asmad + dvitIyEkavacane . tvA mO dvitIyAyAyAH . 8 . 1 . 23 . iti mAmityasya sTAne vikalpena mAdeSaH .)
 mA	md	md:13919:1	no-shared-witness	0	1. MĀ, Ⅱ. P. mā-ti ( C. ), Ⅲ. Ā. mímīte, measure; mete out, mark off; traverse; measure with, compare with ( in. ); be large or long enough for ( g. ), find space or room in, be contained in ( lc. ; Ⅱ. P. ); mete out to, bestow ( RV. ); fashion, form, make, b…
@@ -44475,7 +44570,7 @@ u	vcp	vcp:8576:1	no-citation-apparatus	0	u- Sabde BvAdi0 aka0 A0 aniw . avate Oz
 u	vcp	vcp:8577:1	no-citation-apparatus	0	u avya0 u kvip na tuk . 1 samboDane 2 kopavacane, 3 anuka- mpAyAM, 4 niyoge (avaDAraRe) umeti mAtrA tapase nizidDA paScAdumAKyAM sumuKI jagAma kumA0 . udu zya devaH savitA sa, vAya f0 2, 38, 1 . upo ruruce yuvatirna yozA f0 7, 77, 1 . vetTo yaTemaM lokaM puna…
 u	vcp	vcp:11200:1	no-citation-apparatus	0	u uH SaNkarovarttulAkzo BUtaHkalyARavAcakaH . amareSodakza- karRRaH zaqvaktromohanaH SivaH . ugraHpraBurDftirvizRuH viSva- karmmA maheSvaraH . SatruGnaSca kawiH puzwiH paYcamI vahnivA- sinI . kAmaGnaH kamalAveSo mohinI viGnahfnmahI . tawasUH kuwilA SrotraM pA…
 u	vcp	vcp:11210:1	no-citation-apparatus	0	u ukAraM parameSAni! aDaHkuRqalinIM svayam . pItacampaka- saNkASaM paYcadevamayaMsadA . paYcaprARamayaM devi! catu- rvargapradAyakam
-u	skd	skd:4348:1	outranked	0	u , Na, Sabde . iti kavikalpadrumaH .. (BvAdiM-AtmaM akaM-aniw .) Na avate gOH . iti durgAdAsaH
+u	skd	skd:4348:1	root-vs-nominal	0	u , Na, Sabde . iti kavikalpadrumaH .. (BvAdiM-AtmaM akaM-aniw .) Na avate gOH . iti durgAdAsaH
 u	skd	skd:4349:1	outranked	0	u , vya, (u Sabwe + kvip + tuk na .) samboDanam . rIzoktiH . anukampA . niyogaH . padapUraRaM . pAdapUraRaM . iti medinI .. praSnaH . aNgIkAraH . iti hemacandraH .. idameva uN iti KyAtaM .. ( umeti mAtrA tapaso nizidDA, paScAdumAKyAM sumuKI jagAma .. iti kumA…
 u	md	md:4260:1	no-shared-witness	0	1. u, ij. (not liable to Sandhi) of anger or command
 u	md	md:4261:1	no-shared-witness	0	2. u, ū, encl. pcl. and, also; but, whereas; now, just; forthwith: u-u, bothand; it is used after pronouns, relatives, interr. , some pcls. , and the inf. in -tavai ; in C. it occurs only in atha‿u, na‿u, and kim-u
@@ -44889,6 +44984,7 @@ kevala	pwg	pwg:19090:11	no-gloss	0	n
 kevala	pwg	pwg:71527:5	no-gloss	4	
 sTUla	vcp	vcp:47246:1	no-citation-apparatus	0	sTUla vfMhaRe ada0 cu0 uBa0 aka0 sew . syUlayati te atusTUlat ta . vahvackatvAnna sopadeSaH
 sTUla	vcp	vcp:47247:1	no-citation-apparatus	0	sTUla tri0 sTla ac . 1 pIvare (mowA) amaraH 2 kUwe 3 sa- mahe ca na0 medi0 . 4 panase pu0 rAjani0 . 5 gajapi- ppalyAm strI Sabdaca0 . evaM 6 evAMrO rAjani0 . 7 vfhadelAyAYca ratnamA0 svArTe ka . pIvare tri0 . saMjYAyAM kan (uluqa) tfRaBede pu0 ratnamAlAkozaH
+sTUla	skd	skd:40655:1	root-vs-nominal	0	sTUla , t ka Na vfMhaRe . iti kavikalpadrumaH .. (adantacurA0-Atma0 aka0-sew .) dIrGI Na, atusTUlat . vfMhaRaM vfdDiH . iti durgAdAsaH
 sTUla	md	md:19986:1	no-shared-witness	0	sthū-lá, a. thick, bulky, big, large, stout, massive; coarse, gross ( also fig. , e. g. crime ); dull, stupid; material, tangible ( phil. ; opp. sūkṣma); n. gross or material body: -keśa, m. N. of a Ṛṣi ; -tā, f. largeness, fulness, bulkiness; clumsiness; stu…
 sTUla	ap90	ap90:30887:1	no-shared-witness	0	a. ( compar. , superl. )
 sTUla	ap90	ap90:30887:3	no-shared-witness	0	2 Fat, corpulent, stout
@@ -44955,6 +45051,7 @@ sTUla	pwg	pwg:114114:5	witness-too-common	11	grob; materiell, für die Sinne wah
 sTUla	pwg	pwg:114114:7	no-shared-witness	1	Artocarpus integrifolia Lin. ( )
 sTUla	pwg	pwg:114114:8	no-shared-witness	2	N. pr. eines Wesens im Gefolge Śiva ʼs beim Schol. zu . wohl fehlerhaft für
 sTUla	pwg	pwg:114114:10	no-shared-witness	1	m.n. gaṇa zu
+sTUla	pwg	pwg:114114:11	root-vs-nominal	4	grosse Kardamomen
 sTUla	pwg	pwg:114114:12	outranked	3	fehlerhaft für ; vgl. . fehlerhaft für
 sTUla	pwg	pwg:114114:13	cross-language-gap	0	Vgl. und
 sTUla	ap90	ap90:30887:12	no-gloss	0	
@@ -44972,6 +45069,7 @@ sTUla	pwg	pwg:114114:9	no-gloss	1	n. =
 sTUla	pwg	pwg:122689:1	no-gloss	1	
 sUtra	vcp	vcp:46775:1	no-citation-apparatus	0	sUtra granTane vezwane ca ada0 cu0 uBa0 saka0 sew . sUtrayati te asusUtrat ta . bahvackatvAt na popadeSaH
 sUtra	vcp	vcp:46776:1	no-citation-apparatus	0	sUtra na0 sUtra ac . 1 vastrasADane tantO 2 vyavasTAyAM 3 nAwa- kopakaraRe prastAve svalpAkzaramasandigDaM sAravat viSva- tomuKam . astoBamanavadyaYca sUtraM sUtravido viduH ityukte SAstravAkyaBede ca
+sUtra	skd	skd:39977:1	root-vs-nominal	0	sUtra , t ka granTane . iti kavikalpadrumaH .. (adanta curA0-para0-saka0-sew .) dIrGI dantyavargAdya- maDyaH . vezwane ityanye . sUtrayati sUtrApayati sUtreRa hastaM lokaH . iti durgAdAsaH
 sUtra	md	md:19627:1	no-shared-witness	0	sū́-tra, n. [√ sīv] V. , C. : thread, string, cor ( ord. mg. ); C. ; sacred cord ( worn over the left shoulder by the three upper castes ); measuring line; fibre; line; sketch, plan; (thread running through and holding together =) concise rule or aphorism; ma…
 sUtra	mw	mw:251187:1	no-shared-witness	1	the sacred thread or cord worn by the first three classes ( cf. )
 sUtra	mw	mw:251188:1	no-shared-witness	1	a girdle
@@ -44986,6 +45084,7 @@ sUtra	pwg	pwg:112180:5	no-shared-witness	1	Gürtel
 sUtra	pwg	pwg:112180:6	no-shared-witness	3	Faser
 sUtra	pwg	pwg:112180:7	witness-too-common	5	Linie; welche das; darstellen; bei den Gegenfüsslern
 sUtra	pwg	pwg:112180:9	no-shared-witness	4	das Durchlaufende, Alles Zusammenhaltende, — Regelnde
+sUtra	pwg	pwg:112180:10	witness-too-common	23	kurzgefasste Regel, Lehrsatz; ein in solchen Regeln abgefasstes Lehrbuch; kurze Darstellung des; Textbuch
 sUtra	pwg	pwg:112180:11	no-shared-witness	2	Vgl. (auch ), (auch )
 mahAdeva	vcp	vcp:37888:1	no-citation-apparatus	0	mahAdeva pu0 karma0 . brahmAdInAM surARAYca munInAM brahma- vAdinAm . tezAM mahattvAt devo'yaM mahAdevaH prakI- rttitaH ityukte mahatI pUjitA viSve mUlaprakftirI- SvarI . tasyAH devaH pUjitaSca mahAdevastataH smftaH ityukte ca Sive
 mahAdeva	mw	mw:159734:1	no-shared-witness	1	of one of the 8 forms of R˚ or Ś˚
@@ -46160,6 +46259,7 @@ bAhu	pwg	pwg:52580:12	cross-language-gap	0	Vgl. , [Page5-0080]
 bAhu	pwg	pwg:79934:1	no-shared-witness	1	Seite einer geometrischen Figur
 laya	vcp	vcp:40025:1	no-citation-apparatus	0	laya gatO BvA0 Atma0 saka0 sew . layate alavizwa . alaviQvam alayiDvam
 laya	vcp	vcp:40026:1	no-citation-apparatus	0	laya pu0 lI aca . 1 saMSleze 2 vimASe 3 nftyagItavAdyAnA- mekatAnatArUpe sAmye ca medi0 . lIyate'tra . sarvaBUta- kzarakare 4 pralayakAle Sabdara0 5 ISvare ca . RasyalayaBedASca dvipadI syAdbalatikA JallikA CinnaKaRqikA . vAma BruvastataSCinnA KaRqaDArA Paqak…
+laya	skd	skd:30243:1	root-vs-nominal	0	laya , Na gatyAm . iti kavikalpadrumaH .. (BvA0- Atma0-saka0-sew .) Na, layate . iti durgAdAsaH
 laya	md	md:15516:1	no-shared-witness	0	láy-a, m. [√ 1. lī] adherence; disappearance or absorption in ( lc. , —˚ ); extinction, dissolution, destruction, death; rest, repose ( rare ); mental lethargy or inactivity; sport; time in music ( of which there are three : druta, madhya, and vilambita): -ṃ …
 laya	mw	mw:181584:1	no-shared-witness	0	&amp;c. See p. 903, col. 2
 laya	mw	mw:182755:1	witness-too-common	1	lying down, cowering
@@ -46532,7 +46632,7 @@ aNga	vcp	vcp:500:3	no-citation-apparatus	0	taTA jyotizasyANgAni nAnAviDAni tatra
 aNga	vcp	vcp:500:4	no-citation-apparatus	0	narapatijayacaryyAyAntu zaqviDAnyANgAni samAsenoktvA tezAM vistAro darSito yaTA svaracakrARi cakrARi BUbalAni balAni ca . jyotizaM SakunaYcEva zaqaNgAnyatra vacmyaham .. yAmalezu ca sarvezu yAnyu- ktAni svarodaye . viMSatiHsvaracakrARi tannAmAni vadA- myaham …
 aNga	vcp	vcp:500:5	no-citation-apparatus	0	gargasaMhitAyAM tu caturviMSatisaMKyAni aNgAni upA- NgAni catvAriMSaditi jyotiraNgAni catuHzazwiviDAnyuktAni yaTA yaTEva vedasyANgAni zaquktAni manIziBiH . catuHzazwi- staTANgAni jyotizasya vidurbuDA ityupakramya gaRitajYAna- pUrvvakaM tajjYAnamAvaSyakamityuk…
 aNga	vcp	vcp:500:6	no-citation-apparatus	0	dfSyakAvye muKapratigarBavimarzopasaMhftirUpasanDipaYcakasya catuHzazwiraNgAni yaToktaM sAhityadarpaRe upakzepaH parikaraH parinyAso viloBanaM . yuktiH prAptiH samADAnaM viDAnaM pari- BAvanA .. udBedaH karaRaM BedaH etAnyaNgAni vE muKe (iti muKasya 12) vilAsa…
-aNga	skd	skd:349:1	outranked	0	aNga , vya samboDanaM . ityamaraH .. (rAmAyaRe, aNgAvekzasva sOmitre kasyemAM manyase camUM . punararTaH
+aNga	skd	skd:348:1	root-vs-nominal	0	aNga , t ka pade . (aNgayati cezwayati aNga + Ric ac .) lakzmaRi . iti kavikalpadrumaH .. kaRWya- vargatftIyopaDaH . padaM saNKyAsaMsTAnaM . lakzma cihnayuktakriyA . taTA ca . arTakriyEva DAtUnAM kartfvyApAralakzmaRA . AtmanizWaM kriyArTatvaM DAtvarTezvakriyA…
 aNga	md	md:361:1	no-shared-witness	0	1. aṅgá, pcl. 〈1.〉 emphatic : just, only; especially; 〈2.〉 exhortative : w. voc. or impv. ; 〈3.〉 intr. : kim aṅga, how much more?
 aNga	md	md:362:1	no-shared-witness	0	2. áṅga, m. pl. N. of a people and their country
 aNga	md	md:363:1	no-shared-witness	0	3. áṅg-a, n. ( a. —˚ f. ī) limb, member, part, membrum virile ; body; constituent; secondary part; supplement ( esp. the six of the Veda ); resource; base ( gr. ); -ka, n. member, part; body
@@ -46588,6 +46688,8 @@ aNga	pwg	pwg:670:1	no-gloss	0	3. n
 aja	vcp	vcp:664:1	no-citation-apparatus	0	aja zatO kzepaRe ca BvAdi0 para0 saka0 sew . ajati . avEzIt AjIt . tfc ajitA vetA . GaY . AjaH . ajanti vahniM sadanAnyacCa iti vedaH
 aja	vcp	vcp:665:1	no-citation-apparatus	0	aja dIptO idit curAdi0 uBaya0 sew aka0 . aYjayati te . AYjijat ta
 aja	vcp	vcp:666:1	no-citation-apparatus	0	aja pu0 na jAyate jana qa na0 ta0 . ISvare, na jAto na janizyate iti SruteH na hi jAto na jAye'haM na janizye kadAcana . kzetrajYaH sarvaBUtAnAM tasmAdahamajaHsmftaH iti BAra0 . jIve ca ajonityaH SASvato'yaM purARo na hanyate hanyamAne SarIre iti gItA . jahAt…
+aja	skd	skd:460:1	root-vs-nominal	0	aja kzepe . gatO . iti kavikalpadrumaH .. ajati . iti durgAdAsaH
+aja	skd	skd:461:1	root-vs-nominal	0	aja ika BAsi (aji dIptO curA iditvAnnum .) iti kavikalpadrumaH .. ika aYjayati . BAsi doptO . iti durgAdAsaH
 aja	md	md:451:1	no-shared-witness	0	1. aj-á, m. herding; drover; he-goat
 aja	md	md:453:1	no-shared-witness	0	3. aj-a, the √ aj
 aja	ap90	ap90:352:4	no-shared-witness	1	2 The (individual) soul ( )
@@ -46653,6 +46755,7 @@ aja	pwg	pwg:62800:4	no-shared-witness	1	die Zeit
 aja	pwg	pwg:62800:5	no-shared-witness	1	n. N. eines Sāman
 aja	pwg	pwg:872:1	cross-language-gap	0	1. (von )
 aja	pwg	pwg:872:3	witness-too-common	1	Treiben, Zug
+aja	pwg	pwg:872:6	root-vs-nominal	3	Widder
 aja	pwg	pwg:872:7	witness-too-common	1	Name eines Volkes
 aja	pwg	pwg:872:8	no-shared-witness	1	m. pl. eine Art Ṛṣi in der Welt Brahman ʼs
 aja	pwg	pwg:872:9	outranked	7	N. pr. ein Abkömmling Viśvāmitra ʼs . ein König . Sohn Nābhāga ʼs und Vater Daśaratha ʼs . . Sohn Raghu ʼs und Vater Daśaratha ʼs . . . Sohn Dilīpa ʼs und Vater Dīrghabāhu ʼs _im_
@@ -46666,6 +46769,7 @@ aja	pwg	pwg:873:7	no-shared-witness	3	Śiva
 aja	pwg	pwg:873:8	no-shared-witness	3	Kāmadeva
 aja	pwg	pwg:873:9	no-shared-witness	1	eine Art Getreide
 aja	pwg	pwg:873:12	no-shared-witness	2	die unerzeugte ewige Natur
+aja	pwg	pwg:873:13	root-vs-nominal	4	Māyā , als erste Śakti , _im_ ; vgl. _zu_
 aja	ap90	ap90:352:2	no-gloss	0	
 aja	ap90	ap90:352:23	no-gloss	0	
 aja	ap90	ap90:352:27	no-gloss	0	= q. v
@@ -46709,6 +46813,8 @@ gAnDAra	pwg	pwg:72731:1	no-gloss	1
 manTa	vcp	vcp:37670:1	no-citation-apparatus	0	manTa kleSe aka0 viloqane saka0 BvA0 para0 sew . manTati amanTIt . maTyate
 manTa	vcp	vcp:37671:1	no-citation-apparatus	0	manTa viloqe kyrA0 para0 dvika0 sezw . maTnAti amanTIt . maTyate
 manTa	vcp	vcp:37672:1	no-citation-apparatus	0	manTa pu0 manTa karaRe GaY . 1 manTAnadaRqe . saktuBiH sarpizAByaktEH SItavAripariplutEH . nAtyuzRo nAti- sAndraSca manTa ityaBiDIyate ityukte 2 peyaBede, cUrRe catuzpale SIte kzuRRadravyaM palaM kzipet . mftpAtre manTayet samyak tasmAcca dvipalaM pibet BAvap…
+manTa	skd	skd:26229:1	root-vs-nominal	0	manTa , kunTe . gAhe . iti kavikalpadrumaH .. (BvA0- para0-saka0-sew .) manTati . kunTaH kEScinna manyate . iti durgAdAsaH
+manTa	skd	skd:26230:1	root-vs-nominal	0	manTa , ga gAhe . iti kavikalpadrumaH .. (kryA0-para0- saka0-sew .) gAho viloqanam . ga, maTAti daDi vallavI . raTaM mamanTa sahayam . iti durgA- dAsaH
 manTa	md	md:13721:1	no-shared-witness	0	manth-á, m. churning; killing; mixed beverage ( gnly. milk with parched barleymeal ); stirring-spoon; churning-stick; instrument for kindling fire by attrition: ( a )- daṇḍa : -ka, m. churning-stick
 manTa	mw	mw:155218:1	no-shared-witness	0	&amp;c. See under √
 manTa	mw	mw:157545:1	outranked	2	m. stirring round, churning
@@ -46723,6 +46829,8 @@ manTa	pwg	pwg:57557:3	cross-language-gap	0	nom. act
 manTa	pwg	pwg:57557:5	no-shared-witness	1	das Tödten
 manTa	pwg	pwg:57557:8	witness-too-common	8	Butterstössel
 manTa	pwg	pwg:57557:9	no-shared-witness	2	eine Art Gazelle
+manTa	pwg	pwg:57557:10	root-vs-nominal	5	die Sonne; Strahl
+manTa	pwg	pwg:57557:11	root-vs-nominal	4	eine best. Augenkrankheit; Augenschmalz
 manTa	pwg	pwg:57557:12	witness-too-common	5	ein best. Werkzeug zum Reiben des Feuers
 manTa	pwg	pwg:57557:13	cross-language-gap	0	Vgl
 manTa	pwg	pwg:80448:1	no-shared-witness	1	ein Geschirr, in welchem die saure Milch gequirlt wird
@@ -46980,6 +47088,7 @@ SfNgAra	pwg	pwg:100744:11	no-shared-witness	2	frischer Ingwer
 SfNgAra	pwg	pwg:100744:12	no-shared-witness	2	schwarzes Agallochum
 SfNgAra	pwg	pwg:100744:3	no-gloss	0	m
 SfNgAra	pwg	pwg:100744:7	no-gloss	0	n
+baka	skd	skd:23889:1	root-vs-nominal	0	ba(va)ka , i Na kOwilye . gatO . iti kavikalpadrumaH .. (BvA0-Atma0-aka0-saka0 ca-sew .) kOwilya- miha kuwilIBAvaH kuwilIkaraRaYca . i, vaNkyate . Na, vaNkate kAzWaM kuwilaM syAdityarTaH . vaNkate kAzWaM kuwilaM karotItyarTaH . iti durgAdAsaH
 baka	mw	mw:142303:1	no-shared-witness	1	Sesbana Grandiflora
 baka	mw	mw:142304:1	no-shared-witness	1	an apparatus for calcining or subliming metals or minerals
 baka	mw	mw:142305:1	no-shared-witness	1	N. of Kubera
@@ -46988,10 +47097,11 @@ baka	mw	mw:142307:1	no-shared-witness	1	of an Asura (said to have assumed the fo
 baka	mw	mw:142308:1	witness-too-common	1	of a Rākṣasa killed by Bhīma-sena
 baka	mw	mw:142310:1	no-shared-witness	1	of a peasant
 baka	mw	mw:142312:1	witness-too-common	1	( pl. ) of a people
+baka	pwg	pwg:121214:1	root-vs-nominal	2	von best. fünf heiligen Tagen, an denen sogar der Reiher keine Fische verzehrt
 baka	pwg	pwg:121214:2	cross-language-gap	0	Vgl
 baka	pwg	pwg:79778:1	no-shared-witness	1	( ved. ) und
 baka	pwg	pwg:79778:4	no-shared-witness	5	eine best. Pflanze
-baka	pwg	pwg:79778:5	outranked	3	ein best. Apparat zum Calciniren oder Sublimiren von Metallen; Glasretorte
+baka	pwg	pwg:79778:5	root-vs-nominal	3	ein best. Apparat zum Calciniren oder Sublimiren von Metallen; Glasretorte
 baka	pwg	pwg:79778:6	outranked	3	N. pr. eines [Page5-1641] Weisen mit dem patron. Dālbhi oder Dālbhya
 baka	pwg	pwg:79778:7	witness-too-common	6	Reihers
 baka	pwg	pwg:79778:8	witness-too-common	3	pl. N. pr. eines Volkes . st. der
@@ -47372,6 +47482,7 @@ vEkfta	pwg	pwg:95612:8	no-gloss	0	n. =
 BAsa	vcp	vcp:36499:1	no-citation-apparatus	0	BAsa dIptO BvA0 Atma0 seka0 sew . BAsate aBAsizwa . caNi vA hrasvaH . abIBasat ta anaBAsat ta . jYAnavizayatve ca prakArIBUya BAvate
 BAsa	vcp	vcp:36500:1	no-citation-apparatus	0	BAsa strI BAsa sampa0 BAve kvip . 1 praBAyAm amaraH 2 mayUKe medi0 3 icCAyAM DaraRiH
 BAsa	vcp	vcp:36501:1	no-citation-apparatus	0	BAsa pu0 BAsa BAve GaY . 1 dIptO viSvaH ADAre GaY 2 gozWe . karttari ac . 3 kukkure 4 Sukre ca 5 Sakunte gfDraKage hemaca0 yajYArTamadadat vastu BAsaH kAko'TavA Bavet smftiH . 6 kaviBede BAso hAmaH kavikulaguruH kAlidAso vilAsaH prasannarA0
+BAsa	skd	skd:25023:1	root-vs-nominal	0	BAsa f Na BAsi . dIptO . iti kavikalpa- drumaH .. (BvA0-Atma0-aka0-sew .) f avIBasat abaBAsat . Na BAsate . iti durgAdAsaH
 BAsa	md	md:13213:1	no-shared-witness	0	bhās-á, m. lustre, brightness, light; a bird of prey ; N. : ( a ) -ka, a. showing, [Page205-2] making evident; m. N. of a poet , -tā, f. condition of a Bhāsa; -ana, n. shining, glittering; brilliance, distinction
 BAsa	ap90	ap90:32018:1	no-shared-witness	0	Mentioned by Bāṇa and Kālidāsa as their predecessor. Flourished before the 7th century
 BAsa	mw	mw:150602:1	no-shared-witness	1	impression made on the mind, fancy
@@ -48203,7 +48314,8 @@ jana	vcp	vcp:20539:6	no-citation-apparatus	0	aBi + aBilakzyIkftya janane saka0 B
 jana	vcp	vcp:20539:7	no-citation-apparatus	0	prati + pratirUpajanane aka0 . prajApatiScarasi garBe tvameva pratijAyase praSno0
 jana	vcp	vcp:20539:8	no-citation-apparatus	0	vi + viSezeRa janane virudDajanane vikAre ca patinA rahitA tasmAt putraM devI vyajAyata rAmA0 Adi0 70 a0 . garBamocane saka0 yUnAM mattA praTamaM vijajYatuH f0 9 . 68 . 5 . paSustizWan garBaM DftvAnupa viSya vijAyate Sata0 brA0 7 . 4 . 1 . 1 . kAmamAvija- nit…
 jana	vcp	vcp:20540:1	no-citation-apparatus	0	jana pu0 jana ac . 1 loke janastuzArAYjanaparvatAviva mAvaH 2 maharlokAdUrdDaloke 3 asuraBede ca janArddanaH . tallokaprAptihetukaTanaM BUmeruccatoktiSca itTaM kaTAM kaTayatorBagavadgaRayoH priye! . kzaRArdDena vimAnaM tajjana- loka ninAya tAn . nivasantyamal…
-jana	skd	skd:13140:1	outranked	0	jana , ma li ra janO . iti kavikalpadrumaH .. (hvAM-paraM-akaM-sew .) ma, janayati . li, jajanti . ravEdikaH . iti durgAdAsaH
+jana	skd	skd:13139:1	root-vs-nominal	0	jana , I ma ya Na janO . iti kavikalpadrumaH .. (divAM-AtmaM-akaM-sew .) I, jAtaH . ma, janayati . ya Na, jAyate janyate . janirjjanma . prAdurBAve iti prAYcaH . prAdurBAvaH sPuwIBAvaH . prAkASye prAdurAviH syAdityamaraH . bIjA- daNkuro jAyate patrakARqAdiBed…
+jana	skd	skd:13140:1	root-vs-nominal	0	jana , ma li ra janO . iti kavikalpadrumaH .. (hvAM-paraM-akaM-sew .) ma, janayati . li, jajanti . ravEdikaH . iti durgAdAsaH
 jana	md	md:7843:1	no-shared-witness	0	ján-a, m. creature; man; person; race, tribe; people, subjects; folks, -kind ( often —˚ with coll. mg. ); low person; this person; ayaṃ-, eṣa-, or asau-, = we, I, my lover here
 jana	mw	mw:76736:1	no-shared-witness	0	mf( )n. ‘generating’, see
 jana	mw	mw:76739:1	no-shared-witness	1	a common person, one of the people, and
@@ -48699,7 +48811,8 @@ pariGa	pwg	pwg:78140:2	no-gloss	2
 pUra	vcp	vcp:32942:1	no-citation-apparatus	0	pUra pUrttO prIRane ca divA0 Atma0 saka0 sew . pUryyate apUri- apUrizwa . pupUre Idit . pUrRaH
 pUra	vcp	vcp:32943:1	no-citation-apparatus	0	pUra pUrttO prIRane cu0 uBa0 saka0 sew . pUrayati apUpurat ta . pUritaH
 pUra	vcp	vcp:32944:1	no-citation-apparatus	0	pUra pu0 pUra ka . 1 jalasamUhe 2 KAdyaBede 3 vraRaSudDO ca medi0 4 dAhAguruRi na0 rAjani0
-pUra	skd	skd:22192:1	outranked	0	pUra , ka pUrttO . iti kavikalpadrumaH .. (curA0- para0-saka0-sew .) dIrGI . ka, pitFn pUrayati SrAdDe havyEH kavyESca yaH sadA . iti halAyuDaH .. iti durgAdAsaH
+pUra	skd	skd:22191:1	root-vs-nominal	0	pUra , I ya Na pUrttO . iti kavikalpadrumaH .. (divA0- Atma0-saka0-sew . nizWAyAmaniw .) dIrGI . I, pUrRaH . ya Na, pUryyante pitarastaYceti halA- yuDaH . pUrttirihApyAyanam . iti durgAdAsaH
+pUra	skd	skd:22192:1	root-vs-nominal	0	pUra , ka pUrttO . iti kavikalpadrumaH .. (curA0- para0-saka0-sew .) dIrGI . ka, pitFn pUrayati SrAdDe havyEH kavyESca yaH sadA . iti halAyuDaH .. iti durgAdAsaH
 pUra	md	md:11840:1	no-shared-witness	0	pūr-a, a. filling; satisfying; m. filling; satisfying; swelling of a river or of the ocean; volume of of water, flood, stream ( often —˚ with words denoting water or other fluid ); superabundance, high degree of ( —˚ ); cake; slow inhalation of breath the nos…
 pUra	mw	mw:127548:1	no-shared-witness	0	mfn. (√ , Caus. ) filling, making full ( cf. )
 pUra	mw	mw:127549:1	no-shared-witness	0	fulfilling, satisfying ( cf. )
@@ -48719,6 +48832,7 @@ pUra	pwg	pwg:46674:6	no-shared-witness	6	Kuchen, Gebäck
 pUra	pwg	pwg:46674:7	no-shared-witness	1	langsames Einziehen des Athems durch die Nase
 pUra	pwg	pwg:46674:8	no-shared-witness	2	Reinigung einer Wunde
 pUra	pwg	pwg:46674:9	no-shared-witness	1	Citronenbaum
+pUra	pwg	pwg:46674:10	root-vs-nominal	2	eine Art Räucherwerk
 pUra	pwg	pwg:46674:11	no-shared-witness	2	Vgl. (auch . )
 pUra	pwg	pwg:78848:1	no-shared-witness	3	Strom
 pUra	pwg	pwg:78848:3	no-shared-witness	1	f. N. pr. eines Frauenzimmers
@@ -49482,12 +49596,14 @@ cAndra	pwg	pwg:25167:7	no-gloss	0	f
 cAndra	pwg	pwg:73696:4	no-gloss	3	( sg. )
 kUpa	vcp	vcp:14568:1	no-citation-apparatus	0	kU(ku)pa dOrbalye ada0 curA0 uBa0 aka0 sew . kU(ku)paya- ti te acukU(ku)pat ta . kU(ku)payAM baBUpa Asa ca- kAra cakre
 kUpa	vcp	vcp:14569:1	no-citation-apparatus	0	kUpa pu0 Izat Apo yatra ac samA0, kuvanti maRqUkAH asmin kU paka dIrGaSca vA . 1 KanAmaKyAte jalADAra, amaraH tallakzaRaM BAvapra0 uktaM yaTA . BUmO KAto'lpavistAro gamBIro maRqalAkftiH . badDo- 'badDaH sa kUpaH syAt tadamBaH kOpamucyate . kOpaM payoyadi svAd…
+kUpa	skd	skd:8480:1	root-vs-nominal	0	kUpa , t ka dOrbbalye . (adantacurAM paraM akaM sew .) ayaM zazWasvarI . iti trilocanaH .. saptamaKarI . iti kavikalpadrumawIkAyAM durgAdAsaH
 kUpa	md	md:6167:1	no-shared-witness	0	kū́pa, m. [ku ap-a], pit, hole; well: -ka, m. little well; -kāra, m. well-digger; -kūrma, m. tortoise in a well = unsophisticated person ; -khanana, n. digging of a well; -khānaka, m. well-digger; -cakra, n. water-wheel; -dardura, m. frog in well = unsophisti…
 kUpa	mw	mw:53939:1	no-shared-witness	1	a post to which a boat or ship is moored
 kUpa	mw	mw:53940:1	no-shared-witness	1	a mast
 kUpa	mw	mw:53941:1	no-shared-witness	1	a tree or rock in the midst of a river
 kUpa	mw	mw:53942:1	no-shared-witness	1	a leather oil vessel
 kUpa	pwg	pwg:18475:4	no-shared-witness	3	ein Pfosten, an dem ein Boot, ein Schiff angebunden wird; Mast
+kUpa	pwg	pwg:18475:5	root-vs-nominal	2	ein Fels; Baumstamm in einem Flusse
 kUpa	pwg	pwg:18475:6	cross-language-gap	0	Oelschlauch
 kUpa	pwg	pwg:18475:9	cross-language-gap	0	ein kleiner Brunnen
 kUpa	pwg	pwg:18475:10	cross-language-gap	0	Nabel
@@ -50743,8 +50859,11 @@ vawa	vcp	vcp:40419:1	no-citation-apparatus	0	vawa viBAjane vA curA0 uBa0 pakze B
 vawa	vcp	vcp:40420:1	no-citation-apparatus	0	vawa kaTane BvA0 para0 dvika0 sew GawA0 . vawayati avAwIt avawIt . vavawatuH
 vawa	vcp	vcp:40421:1	no-citation-apparatus	0	vawa steye lO0 para0 saka0 sew idit . vaRwati avaRwIt
 vawa	vcp	vcp:40422:1	no-citation-apparatus	0	vawa pu0 vawa ac . 1 svanAmaKyAte vfkze amaraH 2 SaRa- nirmitatantO ca tri0 . (ve~we) medi0 . vawavfkzasya rudrarUpatvamaSvatTaSabde 517 pf0 uktam . vawaH SIto gururgrAhI kaPapittavraRApahaH . varRyo visarpadAhaGnaH kazAyo yonidozakft BAvapra0 . 3 sAmye hemac…
-vawa	skd	skd:30907:1	outranked	0	vawa , t ka vezwe . BAge . iti kavikalpadrumaH .. (adantacurA0-para0-saka0-sew .) vawayati . iti durgAdAsaH
-vawa	skd	skd:30908:1	outranked	0	vawa , ma uktO . iti kavikalpadrumaH .. (BvA0- para0-saka0-sew .) ma, vawayati . iti durgA- dAsaH
+vawa	skd	skd:30904:1	root-vs-nominal	0	vawa , vezwe . iti kavikalpadrumaH .. (BvA0-para0- saka0-sew .) vawati vfkzaM latA . iti durgA- dAsaH
+vawa	skd	skd:30905:1	root-vs-nominal	0	vawa , i steye . sOtraDAturayam . iti kavikalpa- drumaH .. (BvA0-para0-saka0-sew . idit .) i, vaRwakaH . iti durgAdAsaH
+vawa	skd	skd:30906:1	root-vs-nominal	0	vawa , i ki vaRwane . iti kavikalpadrumaH .. (curA0- pakze BvA0-para0-saka0-sew .) vaRwanaM viBAgaH . i, vaRwyate . ki, vaRwayati vaRwati . vaRwanti hAwakaM yasmAt prApya viprAH parasparam . iti halAyuDaH . ayaM curAdO kEScinna paWyate . iti durgasiMhAdayaH .…
+vawa	skd	skd:30907:1	root-vs-nominal	0	vawa , t ka vezwe . BAge . iti kavikalpadrumaH .. (adantacurA0-para0-saka0-sew .) vawayati . iti durgAdAsaH
+vawa	skd	skd:30908:1	root-vs-nominal	0	vawa , ma uktO . iti kavikalpadrumaH .. (BvA0- para0-saka0-sew .) ma, vawayati . iti durgA- dAsaH
 vawa	md	md:15792:1	no-shared-witness	0	vaṭa, m. Indian fig-tree ( Ficus indica ); cowrie ( rare ); pawn in chess ( rare ): ī, f. globule, pill ( rare )
 vawa	mw	mw:185176:1	witness-too-common	3	m. (perhaps Prākṛt for , ‘surrounded, covered’; cf. ) the Banyan or Indian fig tree ( Ficus Indica ), ; &amp;c., (also said to be n. )
 vawa	mw	mw:185177:1	no-shared-witness	1	a sort of bird
@@ -50761,7 +50880,10 @@ vawa	pwg	pwg:87512:2	witness-too-common	29	m. Ficus indica ( vgl. ) . . . . . . 
 vawa	pwg	pwg:87512:3	no-shared-witness	2	ein best. Vogel
 vawa	pwg	pwg:87512:4	no-shared-witness	7	Strick
 vawa	pwg	pwg:87512:5	no-shared-witness	3	Otterköpfchen
+vawa	pwg	pwg:87512:6	root-vs-nominal	5	Kügelchen, Pille; Klosschen, Knöpfchen
 vawa	pwg	pwg:87512:9	witness-too-common	1	m. N. pr. eines Wesens im Gefolge Skanda ʼs
+vawa	pwg	pwg:87512:10	root-vs-nominal	2	ein best. Baum
+vawa	pwg	pwg:87512:11	root-vs-nominal	2	einer best. Lage im Spiel
 vawa	pwg	pwg:87512:12	cross-language-gap	0	Vgl. ( in dieser Zusammensetzung ist Ficus indica )
 vawa	mw	mw:185181:1	no-gloss	1	=
 vawa	pwg	pwg:87512:1	no-gloss	1	n. (?)
@@ -51062,6 +51184,7 @@ DIra	pwg	pwg:36776:2	no-gloss	0	m
 DIra	pwg	pwg:36776:8	no-gloss	0	f
 druRa	vcp	vcp:26458:1	no-citation-apparatus	0	druRa kuwilIBavane tu0 para0 aka0 sew kuwAdi . druRati adruRIt . dudroRa . gatO kuwilIcaraRe hiMsA- yAYca saka0 pA0
 druRa	vcp	vcp:26459:1	no-citation-apparatus	0	druRa na0 druRati hinasti kuwilIBavati vA druRa ka . Danuzi 2 Kaqge ca hemaca0 3 vfScike 4 BfNge ca puMstrI0 striyAM jAtitvAt NIz . 5 piSune tri0 SabdamAlA
+druRa	skd	skd:17289:1	root-vs-nominal	0	druRa , Sa jEhmye . gatO . vaDe . iti kavikalpadrumaH .. (tudAM-paraM-sakaM-sew .) dantyavargatftIyAdiH . Sa, druRati dudroRizati . jEhmyaM kuwilIkara- Ram . iti durgAdAsaH
 druRa	mw	mw:97947:1	no-shared-witness	1	m. (only ) a scorpion
 druRa	mw	mw:97947.1:1	no-shared-witness	0	a bee
 druRa	mw	mw:97947.2:1	no-shared-witness	0	a defamer
@@ -51069,10 +51192,11 @@ druRa	mw	mw:97947.7:1	no-shared-witness	0	n. bow
 druRa	mw	mw:97947.8:1	no-shared-witness	0	sword
 druRa	pwg	pwg:35369:2	no-shared-witness	4	Scorpion
 druRa	pwg	pwg:35369:3	no-shared-witness	1	Biene
+druRa	pwg	pwg:35369:4	root-vs-nominal	2	Verläumder u. s. w.
 druRa	pwg	pwg:35369:5	no-shared-witness	2	f. gaṇa zu
 druRa	pwg	pwg:35369:6	no-shared-witness	3	eine kleine Schildkrötenart
 druRa	pwg	pwg:35369:7	no-shared-witness	2	Wassereimer
-druRa	pwg	pwg:35369:8	outranked	3	Hundertfuss, Julus
+druRa	pwg	pwg:35369:8	root-vs-nominal	3	Hundertfuss, Julus
 druRa	pwg	pwg:35369:9	no-shared-witness	1	Bogensehne
 druRa	pwg	pwg:35369:11	no-shared-witness	3	Bogen
 druRa	pwg	pwg:35369:12	no-shared-witness	1	Schwert
@@ -52009,6 +52133,7 @@ svap	pwg	pwg:114981:40	cross-language-gap	0	Vgl
 svap	pwg	pwg:114982:1	witness-too-common	1	gutes Wasser habend
 vaSa	vcp	vcp:40808:1	no-citation-apparatus	0	vaSa spfhAyAm adA0 para0 saka0 sewa . vazwi uzwaH uSanti . avaw avASIt avaSIt uvASa USatuH
 vaSa	vcp	vcp:40809:1	no-citation-apparatus	0	vaSa puMna0 vaSa BAve ap, karttari ac vA . 1 Ayattatve 2 praButve ca Ayatte tri0 Sabdara0
+vaSa	skd	skd:31558:1	root-vs-nominal	0	vaSa , lu spfhi . iti kavikalpadrumaH .. (adA0- para0-saka0-sew .) lu, vazwi DanaM lokaH . iti durgAdAsaH
 vaSa	md	md:16089:1	no-shared-witness	0	1. váś-a, m. will, wish, desire; power, control, authority, dominion; N. of a protégé of the Aśvins ; N. of a people ( pl. ): —˚ , a. subject to, under the influence of, overcome by; in. , ab. , -tas, by command of, by force of, on account of, by means of, in…
 vaSa	ap90	ap90:25250:2	no-shared-witness	0	1 Subject to, influenced by, under the influence or control of, usually in comp. ; &amp;c
 vaSa	ap90	ap90:25250:3	no-shared-witness	0	2 Obedient, submissive, compliant
@@ -52033,6 +52158,7 @@ vaSa	mw	mw:188407:1	no-shared-witness	1	docile
 vaSa	mw	mw:188408:1	no-shared-witness	1	free, licentious
 vaSa	pwg	pwg:121964:1	cross-language-gap	0	1. Z. 9 streiche „und Verkürzung des Vocals‟
 vaSa	pwg	pwg:88840:1	cross-language-gap	0	1. (von )
+vaSa	pwg	pwg:88840:3	witness-too-common	14	Willen, Wunsch, Belieben; wenn der; will; so lange er mag
 vaSa	pwg	pwg:88840:5	witness-too-common	1	die personificirte Herrschaft
 vaSa	pwg	pwg:88840:6	no-shared-witness	1	Geburt, Ursprung
 vaSa	pwg	pwg:88840:7	no-shared-witness	1	Hurenhaus
@@ -52827,6 +52953,7 @@ pratyaya	pwg	pwg:79293:3	outranked	2	in der Medicin = u. s. w. . . Z. 4. fg
 pratyaya	pwg	pwg:79293:4	cross-language-gap	0	mitwirkende Ursache
 svara	vcp	vcp:47563:1	no-citation-apparatus	0	svara Akzepe ada0 curA0 uBa0 saka0 sew . svarayati te asasvarat ta
 svara	vcp	vcp:47565:1	no-citation-apparatus	0	svara pu0 svara ac svf ap vA . 1 udAttAnudAttasvaritarUpe varRoccAraRayatnaBede tAdfSasvaravattvAcca 2 vyaYjanaBinnavarRezu akArAdizu SikzA . tantrokte 2 prARAdivAyorvyApAraBede 3 kAkvAdikfte varRAdyuccAraRaDvaniviSeze 4 nizAdAdizu tantrIkaRWotTezu gAnajaDvan…
+svara	skd	skd:41098:1	root-vs-nominal	0	svara , t ka Akzepe . iti kavikalpadrumaH .. (adanta-curA0-para0-saka0-sew .) vakArayuktaH rePopaDaH . svarayatyatiruzwo'pi na kaYcana pari- graham . iti halAyuDaH . paYcamasvarayuktaH . iti caturBujaH . svarayati . iti durgAdAsaH
 svara	md	md:20220:1	no-shared-witness	0	svár-a, ( or á), m. V. , C. : sound, noise; C. : voice; S. , C. : tone ( in recitation etc. , distinguished according to strength or pitch ); accent; musical note ( there being seven or six ); vowel
 svara	mw	mw:259255:1	no-shared-witness	0	&amp;c. See p. 1285
 svara	mw	mw:259870:1	witness-too-common	2	voice, ; &amp;c
@@ -52843,6 +52970,7 @@ svara	pwg	pwg:115162:5	witness-too-common	12	Ton; Accent
 svara	pwg	pwg:115162:6	no-shared-witness	17	ein musikalischer Ton, Note
 svara	pwg	pwg:115162:7	witness-too-common	17	Vocal
 svara	pwg	pwg:115162:8	no-shared-witness	2	der Zahl sieben; ein Siebentel
+svara	pwg	pwg:115162:9	root-vs-nominal	3	f. N. der ersten Gemahlin Brahman ʼs _im_
 svara	pwg	pwg:115162:10	no-shared-witness	6	n. Bez. gewisser Sāman ( vgl. ) . . . . Schol. zu . . . . . ( v. l. )
 svara	pwg	pwg:115162:11	cross-language-gap	0	Vgl
 svara	pwg	pwg:115162:2	no-gloss	0	m
@@ -53322,12 +53450,13 @@ sPuwa	vcp	vcp:47385:1	no-citation-apparatus	0	sPuwa parIhAse curA0 uBa0 aka0 sew
 sPuwa	vcp	vcp:47386:1	no-citation-apparatus	0	sPuwa hiMse cu0 uBa0 saka0 sew prAyeRANpUrvaH . AsPowa- yati te ApusPuwat ta
 sPuwa	vcp	vcp:47387:1	no-citation-apparatus	0	sPuwa vikASe ada0 cu0 uBa0 saka0 sew . sPuwayati te apusPuwat ta
 sPuwa	vcp	vcp:47388:1	no-citation-apparatus	0	sPuwa tri0 sPuwa ka . 1 vikaSite 2 vyakte medi0 . 3 Binne 4 Sukle ca ajayaH . 5 jyotizoktezu mezAdirASizu aMSaviSezasTi tezu sUryyAdigrahezu pu0 tezAM 6 tattardaSakasAdizu gatO strI . 7 utprekzAyA dyotane na0 . 8 sarpaPaRAyAM strI rAmASrayAH grahARAM sPuwatAk…
-sPuwa	skd	skd:40850:1	outranked	0	sPuwa , ir viSa(sa)raRe . iti kavikalpadrumaH .. (BvA0-para0-aka0-Bedane saka0-sew .) ira, asPuwat asPowIt . viSaraRaM Bedanam . sPowayati gAtraM bARaH . visaraRa iti dantya- maDyapAWe vikasana ityarTaH . sPowati mallikA- kalikA
-sPuwa	skd	skd:40851:1	outranked	0	sPuwa , ka Bidi . iti kavikalpadrumaH . (curA0- para0-saka0-sew .) ka, sPowayati kaRwakaH padam . iti durgAdAsaH
-sPuwa	skd	skd:40852:1	outranked	0	sPuwa , Na visaraRe . iti kavikalpadrumaH .. (BvA0- Atma0-aka0-sew .) Na, sPowante navakudma- lAni kuwajaprAyezu vfkzezviti halAyuDaH . iti durgAdAsaH
-sPuwa	skd	skd:40853:1	outranked	0	sPuwa , t ka visaraRe . iti kavikalpadrumaH .. (adantacurA0-para0-aka0-sew .) visaraRaM vikamanam . sPuwayati campakakalikA . apu- sPuwat . iti durgAdAsaH
-sPuwa	skd	skd:40854:1	outranked	0	sPuwa , Si vikAse . iti kavikalpadrumaH . (tudA0- para0-aka0-sew .) vikAsa iti kasa ja gatAviti dantyAntasya GaYi rUpaM vipUrvveRArTA- ntaravAcitayA vikasanamityarTaH . Si, sPuwati ketakIkorakaH . asPuwIt puzPowa . iti durgAdAsaH
-sPuwa	skd	skd:40855:1	outranked	0	sPuwa , ka hiMse . ANpUrvvo'yam . iti kavikalpa- drumaH .. (curA0-para0-saka0-sew .) AN upa- sargaH . ka, AsPowayati . iti durgAdAsaH
+sPuwa	skd	skd:40849:1	root-vs-nominal	0	sPuwa , i ka narmmaRi . iti kavikalpadrumaH .. (curA0-para0-saka0-sew .) narmmeha parIhAsaH . i ka, sPuRwayati saKAyaM lokaH . ayamanyErna manyate . iti durgAdAsaH
+sPuwa	skd	skd:40850:1	root-vs-nominal	0	sPuwa , ir viSa(sa)raRe . iti kavikalpadrumaH .. (BvA0-para0-aka0-Bedane saka0-sew .) ira, asPuwat asPowIt . viSaraRaM Bedanam . sPowayati gAtraM bARaH . visaraRa iti dantya- maDyapAWe vikasana ityarTaH . sPowati mallikA- kalikA
+sPuwa	skd	skd:40851:1	root-vs-nominal	0	sPuwa , ka Bidi . iti kavikalpadrumaH . (curA0- para0-saka0-sew .) ka, sPowayati kaRwakaH padam . iti durgAdAsaH
+sPuwa	skd	skd:40852:1	root-vs-nominal	0	sPuwa , Na visaraRe . iti kavikalpadrumaH .. (BvA0- Atma0-aka0-sew .) Na, sPowante navakudma- lAni kuwajaprAyezu vfkzezviti halAyuDaH . iti durgAdAsaH
+sPuwa	skd	skd:40853:1	root-vs-nominal	0	sPuwa , t ka visaraRe . iti kavikalpadrumaH .. (adantacurA0-para0-aka0-sew .) visaraRaM vikamanam . sPuwayati campakakalikA . apu- sPuwat . iti durgAdAsaH
+sPuwa	skd	skd:40854:1	root-vs-nominal	0	sPuwa , Si vikAse . iti kavikalpadrumaH . (tudA0- para0-aka0-sew .) vikAsa iti kasa ja gatAviti dantyAntasya GaYi rUpaM vipUrvveRArTA- ntaravAcitayA vikasanamityarTaH . Si, sPuwati ketakIkorakaH . asPuwIt puzPowa . iti durgAdAsaH
+sPuwa	skd	skd:40855:1	root-vs-nominal	0	sPuwa , ka hiMse . ANpUrvvo'yam . iti kavikalpa- drumaH .. (curA0-para0-saka0-sew .) AN upa- sargaH . ka, AsPowayati . iti durgAdAsaH
 sPuwa	md	md:20073:1	no-shared-witness	0	sphuṭ-a, a. open; expanded, full-blown; manifest, evident, plain, distinct, clear, intelligible ( ord. mg. ); spreading, extensive, broad ( rare ); ˚— or -m, ad. evidently etc. : -tara‿akṣara, a. very clear ( speech ); -tā, f. manifestness, distinctness: -ṃ g…
 sPuwa	ap90	ap90:31003:2	no-shared-witness	0	1 Burst, rent asunder, broken, split
 sPuwa	ap90	ap90:31003:4	no-shared-witness	0	3 Manifested, displayed, made clear
@@ -53354,6 +53483,7 @@ sPuwa	pwg	pwg:114486:1	cross-language-gap	0	(von )
 sPuwa	pwg	pwg:114486:2	cross-language-gap	0	adj. ( f. )
 sPuwa	pwg	pwg:114486:6	no-shared-witness	4	ausgedehnt, weit, umfangreich
 sPuwa	pwg	pwg:114486:7	no-shared-witness	1	aussergewöhnlich, absonderlich
+sPuwa	pwg	pwg:114486:8	root-vs-nominal	3	weiss
 sPuwa	pwg	pwg:114486:10	no-shared-witness	1	die sogenannte [Page7-1375] Haube der Schlangen
 sPuwa	pwg	pwg:114486:11	no-shared-witness	1	N. pr. eines Mannes gaṇa zu
 sPuwa	pwg	pwg:114486:12	no-shared-witness	1	f. = 2〉a〉 , v. l
@@ -53382,6 +53512,7 @@ vAdin	ap90	ap90:25416:5	no-gloss	0	m
 SUla	vcp	vcp:43904:1	no-citation-apparatus	0	SUla rujAyAM BvA0 para0 aka0 sew . SUlati aSUlIt
 SUla	vcp	vcp:43905:1	no-citation-apparatus	0	SUla pu0 na0 SUla ka . 1 rogaBede 2 triSUle ca amaraH . 3 vya- TAyAM 4 mftyO 5 sutIkzRe ayaHPAle DaraRiH . 6 cihne medi0 . 7 muniBede vizkamBAdizu 8 navame yoge ca pu0 . 9 vikretavye awwaSUlA janapadAH SivaSUlAScatuzpaTAH . keSaSUlAH striyo rAjan! Bavizyan yu…
 SUla	vcp	vcp:43905:2	no-citation-apparatus	0	jalodarayakftplohaSUlarogavraRAni ca . SvAsA- jIrRajvaracCardiBramamohagalagrahAH . raktArbudavisarpAdyA upapApApodBavA gadAH
+SUla	skd	skd:36200:1	root-vs-nominal	0	SUla , rujAyAm . iti kavikalpadrumaH .. (BvA0- para0-saka0-sew .) dIrGI . SUlati lokaM rogaH . iti durgAdAsaH
 SUla	md	md:18093:1	no-shared-witness	0	śū́la, m. n. V. C. : roasting spit; C. : spike, dart, spear ( esp. of Śiva ); acute pain, esp. colic; banner, ensign ( rare ); a certain constellation with which all the planets are in any three asterisms ( rare ); m. ā, f. pointed stake for impaling criminal…
 SUla	mw	mw:220378:1	witness-too-common	2	any sharp instrument or pointed dart, lance, pike, spear ( esp. the trident of Śiva ), ; &amp;c
 SUla	mw	mw:220379:1	witness-too-common	2	a stake for impaling criminals ( , ‘to be fixed on a stake, suffer impalement’; with Caus. of , ‘to fix on a stake, have any one [ acc. ] impaled’, cf. &amp;c.), ; &amp;c
@@ -53392,9 +53523,10 @@ SUla	pwg	pwg:100666:1	no-shared-witness	2	m.n. gaṇa zu
 SUla	pwg	pwg:100666:3	witness-too-common	12	ein spitzer Pfahl, auf den Verbrecher; Diebe; gespiesst werden
 SUla	pwg	pwg:100666:5	no-shared-witness	3	Feldzeichen, Banner
 SUla	pwg	pwg:100666:6	no-shared-witness	2	Tod
+SUla	pwg	pwg:100666:7	root-vs-nominal	5	eines best.; eine Constellation, bei der alle Planeten in drei beliebigen Häusern stehen
 SUla	pwg	pwg:100666:9	cross-language-gap	0	ein spitzer Pfahl
 SUla	pwg	pwg:100666:10	no-shared-witness	3	Hure
-SUla	pwg	pwg:100666:11	outranked	2	eine best. Grasart
+SUla	pwg	pwg:100666:11	root-vs-nominal	2	eine best. Grasart
 SUla	pwg	pwg:100666:12	no-shared-witness	1	Vgl. (auch ), und
 SUla	mw	mw:220384:1	no-gloss	1	= ( q.v. )
 SUla	pwg	pwg:100666:8	no-gloss	0	f
@@ -54011,8 +54143,10 @@ SaWa	vcp	vcp:42932:1	no-citation-apparatus	0	SaWa baDe saka0 kEtave kleSe ca aka
 SaWa	vcp	vcp:42933:1	no-citation-apparatus	0	SaWa Alasye cu0 para0 aka0 sew . SAWayati te aSISaWat ta
 SaWa	vcp	vcp:42934:1	no-citation-apparatus	0	SaWa duzwavacane ada0 cu0 uBa0 saka0 sew . SaWayati te aSaSaWat ta
 SaWa	vcp	vcp:42935:1	no-citation-apparatus	0	SaWa na0 SaWa ac . 1 tagare 2 kuNkume 3 lOhe ca rAjani0 . 4 DUstUre 5 maDyasTapuruze ca pu0 . priyaM vakti puro- 'nyatra vipriyaM kurutaM BfSam . vyaktAparADacezwaSca SaWo- 'yaM kaTito buDEH vizRapu0 ukte 6 DUrtte tri0 medi0 7nAyakaBede pu0 tallakzaRaM yaTA S…
-SaWa	skd	skd:34796:1	outranked	0	SaWa , ka Na SlAGe . iti kavikalpadrumaH .. (curA0- Atma0-aka0-sew .) ka Na, SAWayate . iti durgAdAsaH
-SaWa	skd	skd:34797:1	outranked	0	SaWa , t ka durvvAci . iti kavikalpadrumaH .. (adantacurA0-para0-saka0-sew .) SaWayati nIcaH kutsitaM vadatItyarTaH . ramAnATastu samyagBAzaRe iti matvA SaWayati samyagvadatI- tyarTa ityAha . samyagBAzaRe iti jOmarAH . samagBAve ityeke . iti durgAdAsaH
+SaWa	skd	skd:34794:1	root-vs-nominal	0	SaWa , vaDakleSakEtave . iti kavikalpadrumaH .. (BvA0- para0-saka0-sew .) kleSo duHKAnuBavaH . kEtavaM mitravaYcanam . SaWati KalaH sADuM vaYcayatItyarTaH . iti durgAdAsaH
+SaWa	skd	skd:34795:1	root-vs-nominal	0	SaWa , ka Alasye . gatyasaMskftasaMskfte . iti kavi- kalpadrumaH .. (curA0-para0-aka0-sew .) ka, SAWayati vfdDaH kriyAsu mandaH syAdityarTaH . iti durgAdAsaH
+SaWa	skd	skd:34796:1	root-vs-nominal	0	SaWa , ka Na SlAGe . iti kavikalpadrumaH .. (curA0- Atma0-aka0-sew .) ka Na, SAWayate . iti durgAdAsaH
+SaWa	skd	skd:34797:1	root-vs-nominal	0	SaWa , t ka durvvAci . iti kavikalpadrumaH .. (adantacurA0-para0-saka0-sew .) SaWayati nIcaH kutsitaM vadatItyarTaH . ramAnATastu samyagBAzaRe iti matvA SaWayati samyagvadatI- tyarTa ityAha . samyagBAzaRe iti jOmarAH . samagBAve ityeke . iti durgAdAsaH
 SaWa	md	md:17456:1	no-shared-witness	0	śaṭha, a. deceitful, fraudulent, perfidious, malignant; m. rogue, cheat; deceitful lover: -dhī, a. wicked-minded, malignant; -buddhi, -mati, a. id
 SaWa	ap90	ap90:27569:2	no-shared-witness	0	1 Crafty, deceitful, fraudulent, dishonest, perfidious
 SaWa	ap90	ap90:27569:3	no-shared-witness	0	2 Wicked, depraved
@@ -54032,6 +54166,7 @@ SaWa	pwg	pwg:97406:5	no-shared-witness	2	Stechapfel
 SaWa	pwg	pwg:97406:6	outranked	3	N. pr. gaṇa zu . eines Asura . . eines Sohnes des Vasudeva ( die neuere Ausg. ) ( st. die neuere Ausg. ). ( die ältere, die neuere Ausg. )
 SaWa	pwg	pwg:97406:9	cross-language-gap	0	Saffran
 SaWa	pwg	pwg:97406:10	cross-language-gap	0	Tabernaemontana coronaria R. Br. ( s. )
+SaWa	pwg	pwg:97406:11	root-vs-nominal	2	Eisen
 SaWa	pwg	pwg:97406:12	cross-language-gap	0	Vgl. und
 SaWa	ap90	ap90:27569:1	no-gloss	0	a. [ ]
 SaWa	ap90	ap90:27569:4	no-gloss	0	
@@ -54044,6 +54179,7 @@ fkza	vcp	vcp:10371:2	no-citation-apparatus	0	sU0 si0 raNganATAByAntu tadudayajYA
 fkza	vcp	vcp:10371:3	no-citation-apparatus	0	hastanakzatraM paYcatArAtmakaM hastapaYcANgulisanniveSA- kAram . tatra nErftyadigASritapaScimAvasTitatArAyA u- ttaradigavasTitatArAyA dvitIyA pUrvoktAtiriktA paScime vAyavyASrite yA sTitA sA hastasya yogatArA jYeyA . uttaratArAsannA paScimASritA tArA hastasya…
 fkza	vcp	vcp:10371:4	no-citation-apparatus	0	nakzatrARAmudayAstakAlanirUpaRam udayaSabde 1138 pfzWAdO darSitam
 fkza	vcp	vcp:10371:5	no-citation-apparatus	0	FkzaGawitatvAt rASInAM taTAtvam . rASinAma Bavet nAma BamfkzaM gfhanAma ca jyo0 . rASayaSca dvAdaSa punardvAdaSaDAtmAnaM vyaBajadrASisaMjYakam . nakzatrarU- piRaM BUyaH saptaviMSAtmakaM vaSI sU0 si0 ukteH . te ca mezavfzamiTunakarkawasiMhAH kanyA tulATa vfSci…
+fkza	skd	skd:5354:1	root-vs-nominal	0	fkza , na ra baDe . iti kavikalpadrumaH .. (svAM-paraM- sakaM-sew .) ra vEdikaH . na fkzRoti . iti durgAdAsaH
 fkza	md	md:5018:1	no-shared-witness	0	1. ṛkṣá, a. bald
 fkza	md	md:5019:1	no-shared-witness	0	2. ṛkṣa, a. dire; m. bear: kind of monkey; N. : pl. the Great Bear; m. n. star; lunar mansion: ī f. she-bear; -rāja, m. king of the bears or monkeys; king of the stars, moon; -vat, m. N. of a mountain
 fkza	mw	mw:38646:1	no-shared-witness	2	2. mfn. (√ 2. , ; ; probably fr. √ ), hurting, pernicious
@@ -54058,6 +54194,7 @@ fkza	mw	mw:38660:1	no-shared-witness	0	[ cf. Gk. ἄρκτος ; Lat. ursus ; Li
 fkza	mw	mw:38684:1	no-shared-witness	1	3. mfn. cut, pierced
 fkza	pwg	pwg:12903:1	no-shared-witness	1	Verletzer, Verderber; Bären
 fkza	pwg	pwg:12903:3	no-shared-witness	3	das Siebengestirn, der grosse Bär; ursa; die sieben
+fkza	pwg	pwg:12903:5	root-vs-nominal	6	eine verwandte Species
 fkza	pwg	pwg:12903:7	outranked	5	m. N. eines Gebirges . Vgl. auch die u. 6. angef. Stelle aus dem und
 fkza	pwg	pwg:12903:8	witness-too-common	3	Bär; glänzenden
 fkza	pwg	pwg:12904:1	no-shared-witness	2	durchbohrt
@@ -54606,7 +54743,8 @@ lAGava	pwg	pwg:86208:10	no-shared-witness	1	Vgl. (in der 2ten Bed. auch ), und
 skanda	vcp	vcp:47042:1	no-citation-apparatus	0	skanda samAhAre ada0 ca0 uBa0 saka0 sew . skandayati te acaskandata ta
 skanda	vcp	vcp:47043:1	no-citation-apparatus	0	skanda gatO SozaRe ca BvA0 para0 naka0 aniw . skandati irit askadata askAntsIt caskanda . A + AkramaRe
 skanda	vcp	vcp:47044:1	no-citation-apparatus	0	skanda pu0 skandate utplutya gacCati ac . kArttikeye amaraH agnikumAraSabde 54 pf0 tasyotpattiruktA . skandagraha- skandApasmArO grahaSabde 2745 pf0 suSrutoktO darSitO . 2 nfpatO jawA0 3 dehe trikA0 4 pArede rajani0 5 bAla- grahaBede suSrutaH
-skanda	skd	skd:40379:1	outranked	0	skanda , ta ka samAhftO . iti kavikalpadrumaH .. (anantacurA0-para0-saka0-sew .) dastyavarga- tftoyopaDo'yam . taccaturTopaDa iti kecit . skandayati skandApayati acaskandat . iti durgAdAsaH
+skanda	skd	skd:40378:1	root-vs-nominal	0	skanda , ir Ora SozaRe . gatyAm . iti kavikalpa- drumaH .. (BvA0-para0-saka0-aniw .) ir, askadat . askAMtsIt . O, skantA caskanda . iti durgAdAsaH
+skanda	skd	skd:40379:1	root-vs-nominal	0	skanda , ta ka samAhftO . iti kavikalpadrumaH .. (anantacurA0-para0-saka0-sew .) dastyavarga- tftoyopaDo'yam . taccaturTopaDa iti kecit . skandayati skandApayati acaskandat . iti durgAdAsaH
 skanda	md	md:19828:1	no-shared-witness	0	skand-á, m. hopper ( in tṛṇa-skandá, grasshopper, N. ); effusion, dropping (of, g. , —˚ ); destruction; Assailer, god of war, leader of the divine hosts and chief of the demons of disease which attack children, possessed of eternal youth ( hence Kumāra), son …
 skanda	mw	mw:254079:1	no-shared-witness	1	m. anything which jumps or hops (in , ‘grasshopper’, N. of a man)
 skanda	mw	mw:254080:1	no-shared-witness	0	spurting, effusing, effusion, spilling, shedding ( cf. and )
@@ -54621,6 +54759,7 @@ skanda	pwg	pwg:113426:2	no-shared-witness	3	das Verschüttet-, Verspritztwerden;
 skanda	pwg	pwg:113426:4	no-shared-witness	1	Quecksilber; Beweglichkeit
 skanda	pwg	pwg:113426:6	no-shared-witness	3	N. pr. eines Mannes gaṇa zu . pl. . — ist wohl die richtigere Lesart
 skanda	pwg	pwg:113426:7	no-shared-witness	1	Körper
+skanda	pwg	pwg:113426:8	root-vs-nominal	2	Fürst
 skanda	pwg	pwg:113426:9	no-shared-witness	2	Flussufer; Gelehrter
 skanda	pwg	pwg:113426:10	cross-language-gap	0	Vgl. fgg. und
 vanya	vcp	vcp:40551:1	no-citation-apparatus	0	vanya na0 vane BavaH yat . 1 tvace (dAracini) rAjani0 . 2 vanaSUraRe 3 vArAhIkande 4 devanale pu0 rAjani0 . 5 vana- jAtamAtre tri0 . 6 mudgaparRyAM 7 gopAlakarkawyAM 8 gu- YjAyAM 9 miSreyAyAM 10 BadramustAyAM 11 nanDapatrAyAM strI rAjani0 . vanAnAmaraRyAnAM j…
@@ -54918,13 +55057,15 @@ trika	pwg	pwg:75255:2	no-gloss	1	=
 viwa	vcp	vcp:35590.1:1	no-citation-apparatus	0	bi(vi)wa AkroSe BvA0 para0 saka0 sew . be(ve)wati abe(ve)wIt
 viwa	vcp	vcp:41439:1	no-citation-apparatus	0	viwa AkroSe saka0 svane aka0 BvA0 para0 sew . vewati avewIt
 viwa	vcp	vcp:41440:1	no-citation-apparatus	0	viwa pu0 viwa ka . 1 ziqge jAre amaraH . 2 SfNgArarasanAya- kAnucare samBegahInasampad viwastu DUrttaH PalEka deSajYaH . veSopacArakuSalo vAgmI maDuro'Ta bahumato gozWyAm sA0 da0 . 3 DUrtte, viwa! viwapamamuM dadasva tasyE mAGaH 4 parvataBede 5 lavaRaBede 6 K…
+viwa	skd	skd:32539:1	root-vs-nominal	0	viwa , AkroSe . svane . iti kavikalpadrumaH .. (BvA0-para0-saka0-svane aka0-sew .) vewati . AkroSaH . kEScinna paWyate . svanaH SabdaH . iti durgAdAsaH
 viwa	md	md:16516:1	no-shared-witness	0	viṭa, m. rogue; voluptuary, paramour ( in attendance on an courtezan ); parasite ( as companion of a prince )
 viwa	mw	mw:195339:1	no-shared-witness	1	n. a house
 viwa	pwg	pwg:91403:3	no-shared-witness	4	Maus
 viwa	pwg	pwg:91403:4	cross-language-gap	0	Acacia Catechu Willd. ( s. ) diess
+viwa	pwg	pwg:91403:5	root-vs-nominal	2	Orangenbaum
 viwa	pwg	pwg:91403:6	no-shared-witness	4	eine Art Salz
 viwa	pwg	pwg:91403:7	cross-language-gap	0	N. pr. eines Berges diess
-viwa	pwg	pwg:91403:9	outranked	3	= _im_ nach
+viwa	pwg	pwg:91403:9	root-vs-nominal	3	= _im_ nach
 viwa	pwg	pwg:91403:1	no-gloss	1	m
 viwa	pwg	pwg:91403:8	no-gloss	1	= (?)
 PAlguna	vcp	vcp:35169:1	no-citation-apparatus	0	PAlguna pu0 PalgunIyuktA pOrRamAsI aR sA yatra mAse jeve varze ardDamAse vA aR . cEtrAvaDike dvAdaSe 1 svanAmaKyAte mAsaBede 2 tAdfSe pakze 3 jEve barzaBede ca kArttikaSabde 1949 pf0 dfSyam . antyopAntyO triBO jYeyO PAlguSca triBomata ityukteH pOrRamAsyAM PAl…
@@ -55002,6 +55143,8 @@ hfdya	pwg	pwg:117438:7	no-gloss	0	m
 dala	vcp	vcp:24479:1	no-citation-apparatus	0	dala Bede BvA para0 aka0 Bedane saka0 sew . dalati adAlIt Rici vA GawA0 dalayati dAlayati . dadAla delatuH dalitaH . dalA dadAla BUrnaBoraktaM gozpadapraM bavarza ca dadAla BUH pupUre dyOH kapInAmapi niKanEH adAlizuH SilAdehe cUrRyaBUvan mahAdrumAH BawwiH dal…
 dala	vcp	vcp:24480:1	no-citation-apparatus	0	dala Bedane curA0 uBa0 saka0 sew . dAlayati te adIdalat ta . muzwinA'dAlayattasya dAlayatyazwO kulakzmABftaH anarGarA0 . BedaSceha dviDAkaraRaM vikamanaYca tatravikasane . daravidalitamallIvallicaYcatparAge gItago0
 dala	vcp	vcp:24481:1	no-citation-apparatus	0	dala na0 dala ac 1 utseDe 2 KaRqe 3 patre cCade medi0 . 4 Gane Sabdara0 5 tamAlapatre rAjani0 6 ardDe lIlAvato prAptAparADAstAqyAH syUrajvA veRudalena vA manuH tAmbUlInAM dalEstatra racitApAnaBUmayaH raGuH vA- pIzvantalInamahAnoladalAsu mAGaH . aNGriH svatrya…
+dala	skd	skd:16059:1	root-vs-nominal	0	dala , ka Bede . iti kavikalpadrumaH .. (curAM-paraM- sakaM-sew .) ka, dAlayati gAtraM vARaH . iti durgAdAsaH
+dala	skd	skd:16060:1	root-vs-nominal	0	dala , mi Bede . iti kavikalpadrumaH .. (BvAM-paraM- sakaM-akaM ca sew .) mi, dalayatyazwO kulakzmA- BftaH . iti murAriH . dAlayati . Bedo vidA- raRam . dalati kuWAraH kAzWam . kvacidvidIrRI- BAve vikasane cAyam . SrImadrAGavabAhudaRqa- vidalatkodaRqacaRqaDva…
 dala	md	md:9118:1	no-shared-witness	0	dal-a, n. fragment, piece; part; half; leaf, petal (that which unfolds itself); -ana, n. bursting ( int. ); breaking, crushing, shattering; annihilation
 dala	mw	mw:90701:1	witness-too-common	4	n. ( m. , ) a piece torn or split off, fragment ( cf. , , , ), ; ; ( ifc. f( ). )
 dala	mw	mw:90702:1	no-shared-witness	1	‘part’, a degree
@@ -55016,7 +55159,8 @@ dala	pwg	pwg:32168:1	cross-language-gap	0	(von )
 dala	pwg	pwg:32168:3	witness-too-common	5	ein abgerissener Theil, Stück; mit einem Bambusstöckchen; Eierschalen; entzweigebrochen
 dala	pwg	pwg:32168:4	no-shared-witness	1	Theil; Grad
 dala	pwg	pwg:32168:6	no-shared-witness	3	Scheide
-dala	pwg	pwg:32168:9	outranked	4	dividing, tearing, cutting, splitting etc.; a substance divided or separated violently; an adulteration or alloy
+dala	pwg	pwg:32168:8	root-vs-nominal	2	Klumpen, Masse, Haufe
+dala	pwg	pwg:32168:9	root-vs-nominal	4	dividing, tearing, cutting, splitting etc.; a substance divided or separated violently; an adulteration or alloy
 dala	pwg	pwg:32168:10	witness-too-common	2	m. N. pr. eines Fürsten
 dala	pwg	pwg:32168:11	cross-language-gap	0	Vgl
 dala	pwg	pwg:75541:1	cross-language-gap	0	gabelförmig; Gabel
@@ -55756,6 +55900,7 @@ nibanDana	pwg	pwg:77148:2	no-shared-witness	2	Veranlassung
 nibanDana	pwg	pwg:39002:4	no-gloss	0	n
 parRa	vcp	vcp:31126:1	no-citation-apparatus	0	parRa haritIkaraRe a0 cu0 uBa0 saka0 sew . parRayati te apa parRat ta . vasantaH parRayati Dampakam
 parRa	vcp	vcp:31127:1	no-citation-apparatus	0	parRa na0 pF na, parRa ac vA . 1 pattre 1 pakze ca supaRo garuqo mataH iti . 3 palASavfse pu0 4 tAmbUle na 5 pattrayukte tri0 amaraH . parRaBUle BavedvyADiH pa- rRAgre pApasamBavaH . jIrRaM parRaM haredAyuH sirA budBipraRASinI Aqgi0 ta0 . tanmUlAdisevananibeD…
+parRa	skd	skd:20689:1	root-vs-nominal	0	parRa , t ka hAritye . iti kavikalpadrumaH .. (adantacurAM-paraM-sakaM-sew .) harit pIta- varRastasya BAvaH hArityam . parRayati parRA- payati campakam . iti durgAdAsaH
 parRa	md	md:11307:1	no-shared-witness	0	par-ṇá, n. [taking across, wafting: √ 2. pṛ] pinion, wing; feather ( also of an arrow ); leaf ( —˚ , a. ā, ī ); betel-leaf; m. a tree with large leaves ( Butea frondosa ) , in C. generally called palāśa; -kṛcchra, m. a kind [Page157-2] of penance; -puṭa, m. n…
 parRa	mw	mw:119473:1	witness-too-common	2	a leaf (regarded as the plumage of a tree), &amp;c. &amp;c. ( ifc. f( ). , but in N. of plants f( ). ; cf. )
 parRa	mw	mw:119474:1	no-shared-witness	1	the Pān or betel leaf
@@ -55764,9 +55909,10 @@ parRa	mw	mw:119478:1	outranked	1	of a place
 parRa	mw	mw:119481.1:1	no-shared-witness	1	[According to fr. √ . but more probably fr. a √ , orig. ; cf. Lith. sparna ; HGerm. varn , Farn ; Angl.Sax. fearn ; Eng. fern .]
 parRa	pwg	pwg:120803:1	cross-language-gap	0	Z. 7 lies st
 parRa	pwg	pwg:43423:4	outranked	28	Blatt; das Gefieder des Baumes
+parRa	pwg	pwg:43423:5	root-vs-nominal	2	Betelblatt
 parRa	pwg	pwg:43423:8	no-shared-witness	1	N. pr. einer Localität ( )
 parRa	pwg	pwg:43423:9	no-shared-witness	1	f. gaṇa zu . gaṇa zu
-parRa	pwg	pwg:43423:10	outranked	4	Pistia Stratiotes Lin. ( vgl. ) . _im_
+parRa	pwg	pwg:43423:10	root-vs-nominal	4	Pistia Stratiotes Lin. ( vgl. ) . _im_
 parRa	pwg	pwg:43423:11	no-shared-witness	2	das Blatt der Asa foetida
 parRa	pwg	pwg:43423:12	cross-language-gap	0	Vgl
 parRa	pwg	pwg:78282:1	cross-language-gap	0	Z. 17 füge a〉 nach 2〉 m. hinzu
@@ -56196,8 +56342,9 @@ cala	vcp	vcp:19514:3	no-citation-apparatus	0	vi + viSezeRa calane . vyacAlIdamBa
 cala	vcp	vcp:19515:1	no-citation-apparatus	0	cala vilAse tu0 pa0 a0 sew . calati acAlIt cacAla
 cala	vcp	vcp:19516:1	no-citation-apparatus	0	cala mftO pozaRe cu0 saka0 uBa0 sew . cAlayati te acicalat
 cala	vcp	vcp:19517:1	no-citation-apparatus	0	cala tri0 cala vA pacA0 ac . 1 tarale, caYcale, 2 kamba- yukte amaraH . 3 parameSvare pu0 . DUtASIracalaScalaH vizRu sa0 . na svarUpAnna sAmarTyAt naca jYAnAdi- kAt guRAt . calanaM vidyate yasmAdacalaH kIrttito- 'cyutaH smfteH . vAyurUpeRa calatIti calaH BA0 …
-cala	skd	skd:12317:1	outranked	0	cala , ja gatO . iti kavikalpadrumaH .. (BvAM-paraM- sakaM-sew .) ja, cAlaH calaH . miccale iti vakzyamARaM na paWitvA imameva mAnubanDaM BrAntAH paWanti tadDeyam . tenAsya cAlayati hastinaM yantA . calamAno'nila ityatra tAcCIlye SatuH SAnaH . miccale . pUrvv…
-cala	skd	skd:12318:1	outranked	0	cala , Sa vilAse . iti kavikalpadrumaH .. (tudAM- paraM-akaM-sew .) Sa, calatI calantI . vilAsaH krIqanam . iti durgAdAsaH
+cala	skd	skd:12316:1	root-vs-nominal	0	cala , ka BftO . iti kavikalpadrumaH .. (curAM-paraM- sakaM-sew .) ka, cAlayati . dantyavakArAdi- rayamiti durgasiMhajumaranandI . Bftiriha poza- Ram . iti durgAdAsaH
+cala	skd	skd:12317:1	root-vs-nominal	0	cala , ja gatO . iti kavikalpadrumaH .. (BvAM-paraM- sakaM-sew .) ja, cAlaH calaH . miccale iti vakzyamARaM na paWitvA imameva mAnubanDaM BrAntAH paWanti tadDeyam . tenAsya cAlayati hastinaM yantA . calamAno'nila ityatra tAcCIlye SatuH SAnaH . miccale . pUrvv…
+cala	skd	skd:12318:1	root-vs-nominal	0	cala , Sa vilAse . iti kavikalpadrumaH .. (tudAM- paraM-akaM-sew .) Sa, calatI calantI . vilAsaH krIqanam . iti durgAdAsaH
 cala	md	md:7482:1	no-shared-witness	0	cal-a a. moving, trembling; unsteady, wavering; waving; fluttering; rippling; fickle: -citta, n. mutable temper, fickleness; a. fickle: -tā, f. fickleness; giddiness; -tā, f. , -tva, n. tremor, unsteadiness
 cala	ap90	ap90:13174:3	no-shared-witness	1	2 Unsteady, fickle, inconstant, loose, unfixed
 cala	ap90	ap90:13174:4	no-shared-witness	1	3 Frail, transitory, perishable
@@ -56228,6 +56375,7 @@ cala	pwg	pwg:25047:4	no-shared-witness	1	Wind
 cala	pwg	pwg:25047:5	no-shared-witness	1	Quecksilber
 cala	pwg	pwg:25047:6	no-shared-witness	1	das Schwanken, Beben
 cala	pwg	pwg:25047:8	no-shared-witness	1	Blitz
+cala	pwg	pwg:25047:9	root-vs-nominal	2	Weihrauch
 cala	pwg	pwg:25047:10	no-shared-witness	2	Glück, die Glücksgöttin
 cala	pwg	pwg:25047:11	no-shared-witness	1	N. eines Metrums (4 Mal – – – –, ⏑ ⏑ ⏑ ⏑ ⏑ ⏑ –, ⏑ – ⏑ ⏑ – ⏑ –) ( ); so lesen wir für
 cala	pwg	pwg:25047:12	cross-language-gap	0	Vgl
@@ -56693,6 +56841,7 @@ kalya	ap90	ap90:10529:1	no-gloss	1	a. [ ; ]
 kalya	ap90	ap90:10529:8	no-gloss	0	
 kalya	ap90	ap90:10529:15	no-gloss	0	
 kalya	pwg	pwg:70087:3	no-gloss	1	n
+SaMsa	skd	skd:34628:1	root-vs-nominal	0	SaMsa , u hiMsAstutyoH . iti kavikalpadrumaH .. (BvA0-para0-saka0-sew . kvAvew .) tAla- vyAdiH . u, SaMsitvA SastvA . yaH SaMsati satAmiti halAyuDaH .. anekArTatvAt kaTane- 'pyayam . yaTA, raGO . SaSaMsa vAcA punarukta- yeveti . na me hriyA SaMsati kiYcidI- p…
 SaMsa	md	md:17401:1	no-shared-witness	0	śáṃs-a, m. ( V. ) call, invocation, praise; promise; blessing; curse; ā, f. ( C. ) praise ( rare ); announcement ( E. , rare )
 SaMsa	mw	mw:210842:1	witness-too-common	1	m. recitation, invocation, praise
 SaMsa	mw	mw:210843:1	no-shared-witness	1	wishing well or ill to, a blessing or a curse
@@ -56708,6 +56857,7 @@ SaMsa	pwg	pwg:97002:5	witness-too-common	2	Verwünschung, Fluch
 SaMsa	pwg	pwg:97002:6	witness-too-common	1	Segen
 SaMsa	pwg	pwg:97002:7	witness-too-common	1	personificirt neben Bhaga . ; vgl
 SaMsa	pwg	pwg:97002:8	witness-too-common	1	wohl so v. a
+SaMsa	pwg	pwg:97002:10	root-vs-nominal	3	das Rühmen, Preisen; Selbstlob
 SaMsa	pwg	pwg:97002:11	no-shared-witness	2	Wunsch
 SaMsa	pwg	pwg:97002:12	no-shared-witness	1	Ausspruch, Meldung; frohe Botschaft
 SaMsa	pwg	pwg:97002:13	no-shared-witness	1	Unheil verkündend
@@ -57262,9 +57412,10 @@ Sala	vcp	vcp:43150:1	no-citation-apparatus	0	Sala gatO BvA0 para0 saka0 sew . Sa
 Sala	vcp	vcp:43151:1	no-citation-apparatus	0	Sala SlAGAyAM cu0 Atma0 saka0 sew . SAlayate aSISalata
 Sala	vcp	vcp:43152:1	no-citation-apparatus	0	Sala vege BvA0 para0 saka0 sew . Salati aSAlIt
 Sala	vcp	vcp:43153:1	no-citation-apparatus	0	Sala na0 Sala ac . 1 SallakIlomni (sajArukA~wA) amaraH 2 SfNgiRi 3 kzetraBede 4 brahmaRi ca pu0 medi0 5 kuntAstre trikA0 6 uzwre puMstrI0 hemaca0 striyAM NIz
-Sala	skd	skd:35100:1	outranked	0	Sala , ka Na SlAGe . iti kavikalpadrumaH .. (curA0- Atma0-saka0-sew .) ka Na, SAlayate paRqitaM DIraH . iti durgAdAsaH
-Sala	skd	skd:35101:1	outranked	0	Sala , Na calane . stftO . iti kavikalpadrumaH .. (BvA0-Atma0-aka0-saka0-ca-sew .) Na, Salate . calanaM kampaH . stftiriha saMvaraRam . iti durgAdAsaH
-Sala	skd	skd:35102:1	outranked	0	Sala , ja gatO . iti kavikalpadrumaH .. (BvA0- para0-saka0-sew .) ja, SAlaH SalaH . iti durgAdAsaH
+Sala	skd	skd:35099:1	root-vs-nominal	0	Sala , vege . iti kavikalpadrumaH .. (BvA0-para0- saka0-sew .) Salati . iti durgAdAsaH
+Sala	skd	skd:35100:1	root-vs-nominal	0	Sala , ka Na SlAGe . iti kavikalpadrumaH .. (curA0- Atma0-saka0-sew .) ka Na, SAlayate paRqitaM DIraH . iti durgAdAsaH
+Sala	skd	skd:35101:1	root-vs-nominal	0	Sala , Na calane . stftO . iti kavikalpadrumaH .. (BvA0-Atma0-aka0-saka0-ca-sew .) Na, Salate . calanaM kampaH . stftiriha saMvaraRam . iti durgAdAsaH
+Sala	skd	skd:35102:1	root-vs-nominal	0	Sala , ja gatO . iti kavikalpadrumaH .. (BvA0- para0-saka0-sew .) ja, SAlaH SalaH . iti durgAdAsaH
 Sala	md	md:17627:1	no-shared-witness	0	śalá, m. staff ( V. , rare ); m. or n. (?) quill of a porcupine, only —˚ w. numerals ( V. )
 Sala	mw	mw:214065:1	no-shared-witness	1	a dart, spear
 Sala	mw	mw:214069:1	no-shared-witness	1	N. of Bhṛṅgi (one of Śiva 's attendants)
@@ -57276,6 +57427,7 @@ Sala	mw	mw:214075:1	outranked	1	of a son of Śuna-hotra
 Sala	mw	mw:214076:1	no-shared-witness	1	m. or n. the quill of a porcupine
 Sala	mw	mw:214077:1	no-shared-witness	0	m. a partic. measure of length ( cf. , . &amp;c.)
 Sala	pwg	pwg:98260:4	no-shared-witness	1	Lanze
+Sala	pwg	pwg:98260:9	root-vs-nominal	2	ein kleines Stachelschwein
 Sala	pwg	pwg:98260:10	cross-language-gap	0	Vgl
 Sala	mw	mw:214067:1	no-gloss	1	=
 Sala	mw	mw:214068:1	no-gloss	1	=
@@ -57481,6 +57633,7 @@ Kaga	pwg	pwg:72209:3	no-shared-witness	1	Biene
 Kaga	pwg	pwg:20756:1	no-gloss	0	( + )
 rama	vcp	vcp:39359:1	no-citation-apparatus	0	rama krIqAyAM BvA0 A0 aka0 aniw . ramate viramati uparamati araMsta upAraMsIt . ktvA vew . Rici ramayati . jvalA0 Ra ramaH rAmaH
 rama	vcp	vcp:39360:1	no-citation-apparatus	0	rama pu0 rama ac . 1 kAnte 2 aSokavfkze 3 kAmadeve ca medi
+rama	skd	skd:29190:1	root-vs-nominal	0	rama , u Na ja O krIqe . iti kavikalpa- drumaH .. (BvA0-Atma0-aka0-aniw . ktvAvew .) rePAdiH . u, ramitvA . rantvA . Na, ramate . ja, rAmaH ramaH . O, rantA . iti durgAdAsaH
 rama	md	md:15078:1	no-shared-witness	0	ram-a, a. ( —˚ ) pleasing, delighting: ā, f. ep. of Lakṣmī; fortune, wealth; beauty; -aṇa, a. ( ī ) pleasing, delighting; m. lover, husband; n. pleasure; sexual enjoyment, dalliance; gladdening; decoying ( deer ): ī, f. lovely young woman; mistress, wife
 rama	ap90	ap90:24017:2	no-shared-witness	0	1 Pleasing, delightful, gratifying
 rama	ap90	ap90:24017:8	no-shared-witness	0	4 The Aśoka tree
@@ -57491,8 +57644,9 @@ rama	pwg	pwg:83557:2	no-shared-witness	2	ergötzend, erfreuend
 rama	pwg	pwg:83557:4	cross-language-gap	0	Geliebter, Gatte
 rama	pwg	pwg:83557:5	cross-language-gap	0	der Liebesgott
 rama	pwg	pwg:83557:6	no-shared-witness	2	rothblühender
+rama	pwg	pwg:83557:8	root-vs-nominal	12	der Glücksgöttin; Glück, Reichthum; Pracht, Schönheit
 rama	pwg	pwg:83557:9	no-shared-witness	1	des 11ten Tages in der dunklen Hälfte des
-rama	pwg	pwg:83557:10	outranked	2	N. pr. einer Tochter Śaśidhvaja ʼs und Gattin Kalki ʼs _im_
+rama	pwg	pwg:83557:10	root-vs-nominal	2	N. pr. einer Tochter Śaśidhvaja ʼs und Gattin Kalki ʼs _im_
 rama	pwg	pwg:83557:11	no-shared-witness	6	schlechte Variante von und _zu_ . — fehlerhaft für ; in Betreff von s
 rama	ap90	ap90:24017:1	no-gloss	0	a. [ ]
 rama	ap90	ap90:24017:4	no-gloss	0	
@@ -57522,7 +57676,8 @@ javana	pwg	pwg:74288:1	no-gloss	1	1. 1〉b〉
 arha	vcp	vcp:4578:1	no-citation-apparatus	0	arha yogyatve BvA0 para0 aka0 sew . arhati ArhIt Anarha loke, vede tu Anarhe . prAptiyogyatArTe gatO ca saka0 . arhI arhitaH arhitum arhitvA arhaRam arhan dvitrARyahAnyarhasi soQu marhan! raGuH . gurorgurO sanni- hite guruvanmAnamarhati manuH . daRqamarhati m…
 arha	vcp	vcp:4579:1	no-citation-apparatus	0	arha pUjane curA0 uBa0 saka0 sew . arhayati te Arjihat ta . rAjArjihattaM maDuparkapARiH BawwiH . arhayAmAsa . arhaRA arhayan arhayitum arhayitvA . sragviRaM talpa- mAmInamarhayet praTamaM gavA manuH . pUjanaM ca stutinati- praBftiBiH sasmAnanam . aBi + ABimu…
 arha	vcp	vcp:4580:1	no-citation-apparatus	0	arha pu0 arhyate cu0 arha karmmaRi yat . pUjAstutyAdiBirArADye 1 ISvare 2 Sakre ca . 3 pUjanIye tri0 arhAnaBojayan vipro daRqamarhati mAzakam manuH 4 vizRO pu0 . aBi prAyaH priyArho'rhaH vizRusa0 . pUjAstutinamaskArA- diBiH pUjanIya ityarhaH BA0 . BAve GaY . …
-arha	skd	skd:2295:1	outranked	0	arha ka pUjane . (curAM-uBaM-sakaM-sew .) iti kavikalpadrumaH .. ka arhayati . iti durgAdAsaH .. ( rAjArjjihattaM maDuparkapARiH . iti . Bawwi- kAvye .)
+arha	skd	skd:2294:1	root-vs-nominal	0	arha yogyatve . (BvAdiM-paraM-sakaM-sew .) pUjane . iti kavikalpadrumaH .. arhati vipro vedaM paWituM . sakarmmako'pi . yajYadAnatapAMsyasya kalAM nArhanti zoqaSIM . iti durgAdAsaH .. ( aDyApayan gurusuto guruvanmAnamarhati . iti manuH . dvitrARyahAnyarhasi s…
+arha	skd	skd:2295:1	root-vs-nominal	0	arha ka pUjane . (curAM-uBaM-sakaM-sew .) iti kavikalpadrumaH .. ka arhayati . iti durgAdAsaH .. ( rAjArjjihattaM maDuparkapARiH . iti . Bawwi- kAvye .)
 arha	md	md:2681:1	no-shared-witness	0	arh-a, a. deserving, claiming, entitled to, justified in ( ac. , —˚ ); fit, suitable for ( g. , —˚ ); -ṇa, a. claiming ( —˚ ); n. honouring: ā, f. honour; -ṇīya, fp. deserving of honour; -tva, n. worthness for ( —˚ )
 arha	ap90	ap90:4221:2	no-shared-witness	1	1 Respectable, worthy of respect, deserving
 arha	ap90	ap90:4221:9	no-shared-witness	0	2 N. of Viṣṇu
@@ -57535,6 +57690,7 @@ arha	pwg	pwg:6076:3	witness-too-common	8	verdienend, würdig, Ansprüche; ein Re
 arha	pwg	pwg:6076:4	no-shared-witness	5	verdienend, unterworfen, unterliegend; ein dem medium unterworfenes
 arha	pwg	pwg:6076:5	no-shared-witness	2	dürfend; er darf nicht fortgeführt werden
 arha	pwg	pwg:6076:7	witness-too-common	1	kostend, werth
+arha	pwg	pwg:6076:8	root-vs-nominal	2	m. Indra _im_
 arha	pwg	pwg:6076:9	no-shared-witness	1	Ehrenbezeugung
 arha	pwg	pwg:6076:10	no-shared-witness	1	n. pl. dass
 arha	pwg	pwg:6076:11	cross-language-gap	0	Vgl
@@ -58513,8 +58669,9 @@ kuwa	vcp	vcp:13855:1	no-citation-apparatus	0	kuwa pratApane curA0 Atma0 saka0 se
 kuwa	vcp	vcp:13856:1	no-citation-apparatus	0	kuwa vEkalye BvA0 idit pa0 aka0 sewa . kuRwati akuRwIt
 kuwa	vcp	vcp:13857:1	no-citation-apparatus	0	kuwa kuwwane (kowA) divA0 aka0 sew . kuwyati akowIt jovanaM kuwyatIva . Bakzayanti smamAMsAni prakuwya viDivattaTA BA0 A0 2642 Slo0
 kuwa	vcp	vcp:13858:1	no-citation-apparatus	0	kuwa pu0 kuwa ka . 1 kowe (gaqa) medi0 2 SilAkuwwe (pATara BANgAhAtuqI) 3 vfkze ca hema0 4 parvvate hArA0 5 kalaSe pu0 na0 ama0 6 fzimede pu0 tataH gotrApatye aSvA0 PaY . kOwAyana tadgotrApatye puMstrI anantarApatye tu kurvvA0 Rya . kOwya tadapatye puMstrI0 h…
-kuwa	skd	skd:7907:1	outranked	0	kuwa Si kOwilye . iti kavikalpadrumaH .. (tudAM-paraM -akaM-sakaYca-sew .) Si kuwati akuwIt cukowa kOwilyamiha kuwilIBAvaH kuwilIkaraRaYca . iti durgAdAsaH
-kuwa	skd	skd:7908:1	outranked	0	kuwa ka Na pratApane . iti kavikalpadrumaH .. (curAM- AtmaM sakaM sew .) paYcamasvarI . ka Na kowa- yate . ezo'nyErna manyate . iti durgAdAsaH
+kuwa	skd	skd:7906:1	root-vs-nominal	0	kuwa i vEkalye . iti kavikalpadrumaH .. (BvAM paraM sakaM sew . idit .) paYcamasvarI . i kuRwyate . vEkalyamiha vikalIkaraRam . kuRwati janaM SokaH . iti durgAdAsaH
+kuwa	skd	skd:7907:1	root-vs-nominal	0	kuwa Si kOwilye . iti kavikalpadrumaH .. (tudAM-paraM -akaM-sakaYca-sew .) Si kuwati akuwIt cukowa kOwilyamiha kuwilIBAvaH kuwilIkaraRaYca . iti durgAdAsaH
+kuwa	skd	skd:7908:1	root-vs-nominal	0	kuwa ka Na pratApane . iti kavikalpadrumaH .. (curAM- AtmaM sakaM sew .) paYcamasvarI . ka Na kowa- yate . ezo'nyErna manyate . iti durgAdAsaH
 kuwa	mw	mw:51516:1	no-shared-witness	2	m. n. a house, family ( cf. ), [? = , ]
 kuwa	mw	mw:51517:1	no-shared-witness	1	a water-pot, pitcher
 kuwa	mw	mw:51518:1	no-shared-witness	1	m. a fort, stronghold
@@ -58527,6 +58684,7 @@ kuwa	pwg	pwg:17512:2	no-shared-witness	5	Wasserkrug
 kuwa	pwg	pwg:17512:3	no-shared-witness	2	Festung
 kuwa	pwg	pwg:17512:4	no-shared-witness	4	Haus
 kuwa	pwg	pwg:17512:5	no-shared-witness	1	Hammer zum Zerhauen von Steinen
+kuwa	pwg	pwg:17512:6	root-vs-nominal	3	Baum
 kuwa	pwg	pwg:17512:7	no-shared-witness	1	Berg
 kuwa	pwg	pwg:17512:8	no-shared-witness	1	m. N. pr. eines Mannes gaṇa zu und zu
 kuwa	pwg	pwg:17512:9	cross-language-gap	0	Vgl
@@ -58729,6 +58887,7 @@ kumBaka	pwg	pwg:17891:1	no-gloss	0	m
 kumBaka	pwg	pwg:71073:3	no-gloss	1	= 1〉c〉
 kIla	vcp	vcp:13759:1	no-citation-apparatus	0	kIla banDe BvAdi0 para0 saka0 sew . kIlati akIlIt . cikIla kIlaH . kIlitaH kIlanam . pranikIlati
 kIla	vcp	vcp:13760:1	no-citation-apparatus	0	kIla pu0 kIla banDe yaTAyaTaM BAvakaraRAdO GaY . 1 vahni- SiKAyAM 2 SaNkO (go~ja) amaraH . 3 stamBe (Ko~wA) 3 leSe 4 kaPoRO medi0 . 5 kaPoRinimnadeSe viSvaH . pari- KAScApi kOravya! kIlEH sunicitAH kftAH BA0 3, 650 Slo0 6 ratiprahAraBede strI kIlA urasi, kart…
+kIla	skd	skd:7811:1	root-vs-nominal	0	kIla , banDe . iti kavikalpadrumaH .. (BvAM paraM sakaM sew .) caturTasvarI . kIlati . iti durgAdAsaH
 kIla	mw	mw:50843:1	no-shared-witness	1	a post, post in a cow-house to which cows are fastened, pillar
 kIla	mw	mw:50844:1	no-shared-witness	1	a gnomon
 kIla	mw	mw:50845:1	witness-too-common	1	handle, brace
@@ -58747,6 +58906,7 @@ kIla	pwg	pwg:17389:2	no-shared-witness	3	Lanze u. s. w.
 kIla	pwg	pwg:17389:3	no-shared-witness	2	Pfosten; ein Pfosten, an den die Kühe gebunden werden
 kIla	pwg	pwg:17389:4	no-shared-witness	1	Waffe
 kIla	pwg	pwg:17389:5	no-shared-witness	2	Ellbogen; Spitze
+kIla	pwg	pwg:17389:6	root-vs-nominal	4	ein Stoss mit dem Ellbogen; ein Stoss beim coitus
 kIla	pwg	pwg:17389:7	no-shared-witness	5	Flamme (spitz zulaufend)
 kIla	pwg	pwg:17389:8	no-shared-witness	1	ein Bischen
 kIla	pwg	pwg:17389:9	no-shared-witness	1	ein Bein. Śiva ʼs ( vgl. )
@@ -58865,6 +59025,7 @@ Aryaka	pwg	pwg:9298:2	no-gloss	0	m
 Aryaka	pwg	pwg:9298:7	no-gloss	0	f
 Kawa	vcp	vcp:16294:1	no-citation-apparatus	0	Kawa kANkzAyAM BvA0 para0 saka0 sew . Kawati aKAwIt aKa- wIt caKAwa . praniKawati
 Kawa	vcp	vcp:16295:1	no-citation-apparatus	0	Kawa pu0 Kawa ac . 1 anDakUpe, 2 kaPe, 3 waNke, 4 SastraBede ca medi0 . 5 tfRe hemaca0 . 6 lANgale 7 kattfRe ityajayapAlaH
+Kawa	skd	skd:9945:1	root-vs-nominal	0	Kawa , kAqkzi . iti kavikalpadrumaH .. (BvAM-paraM- sakaM-sew .) Kawati . kANkzi AkANkzAyAm . iti durgAdAsaH
 Kawa	mw	mw:60914:1	no-shared-witness	1	m. phlegm, phlegmatic or watery humor ( cf. )
 Kawa	mw	mw:60915:1	no-shared-witness	1	a blind well, , Sch
 Kawa	mw	mw:60916:1	no-shared-witness	1	an axe, hatchet, chisel ( )
@@ -58875,6 +59036,7 @@ Kawa	mw	mw:60920:1	no-shared-witness	1	a fragrant kind of grass
 Kawa	pwg	pwg:20813:2	no-shared-witness	4	Phlegma, Schleim
 Kawa	pwg	pwg:20813:3	cross-language-gap	0	ein überwachsener Brunnen
 Kawa	pwg	pwg:20813:4	no-shared-witness	3	Axt
+Kawa	pwg	pwg:20813:5	root-vs-nominal	2	Pflug
 Kawa	pwg	pwg:20813:6	no-shared-witness	4	eine Art des Schlagens; eine Art Wunde; a closed or doubled fist, as for striking
 Kawa	pwg	pwg:20813:7	no-shared-witness	2	Gras; coarse long grass of several species used to thatch houses
 Kawa	pwg	pwg:20813:8	no-shared-witness	1	eine best. Art wohlriechendes Gras
@@ -59220,7 +59382,7 @@ Ja	mw	mw:80961:1	no-gloss	1	=
 Ja	pwg	pwg:28081:2	no-gloss	0	m
 ava	vcp	vcp:4708:1	no-citation-apparatus	0	ava rakzaRe, gatO, spfhAyAM, tfptO, SoBAyAM, SrabaRe, vyAptO AliNgane, prArTane, praveSe, sattAyAM, vfdDO, grahaRe, baDe, sAmarTye, avagame, karaRe, icCotpAdane ca yaTAyaTaM saka0 aka0 ca BvAdi0 sew para0 . avati AvIt . Ava . aGyAt . avitA . avitaH avan . avi…
 ava	vcp	vcp:4709:1	no-citation-apparatus	0	ava avya0 ava ac . 1 niScaye, 2 vyAptO, 3 anAdare, 4 asAkalye 5 Alambane, 6 SudDO, 7 pariBave, 8 niyoge, 9 nimnatAyAM ca . ayaM cAdiH prAdiSca ava jYAnAvajYAlambaSudDIzadarTavyApti parABavAtiyogezu gaRa0 ra0 jYAne avagato'rTaH . avajYAyA- mavajAnAti . Alamban…
-ava	skd	skd:2392:1	outranked	0	ava , vya, (ava + ac .) upasargaviSezaH . asyArTaH . niScayaH . asAkalyaM . anAdaraH . iti durgAdAsaH .. AlambanaM . vijYApanaM . vyApanaM . SudDiH . alpaM . pariBavaH . niyogaH . pAlanaM . iti SabdaratnA- valI
+ava	skd	skd:2391:1	root-vs-nominal	0	ava rakzaRe . (yaTAyaTaM sakaM-akaM-ca, BvAdiM- paraM-sew .) gatO . kAntO . spfhAyAmiti yAvat . prItO . tfptO . dyutO . SoBAyAmiti yAvat . SrutO . AkarRane iti yAvat . prAptO . Sleze . AliNgane iti yAvat . arTane . yAcYA- yAmiti yAvat . veSe . praveSe iti yAv…
 ava	ap90	ap90:4342:1	no-shared-witness	1	ind. (the initial is sometimes dropped, as in )
 ava	ap90	ap90:4342:3	no-shared-witness	0	2 (As a prefix to verbs) It expresses ( a ) determination; , ; ( b ) diffusion, pervasion; ; ( c ) disrespect; , ; ( d ) littleness; ; ( e ) support, resting upon; ; ( f ) purification, ; ( g ) depreciation, discomfiture; ( ); ( h ) commanding; ; ( i ) depres…
 ava	ap90	ap90:4342:4	no-shared-witness	1	3 As the first member of Tat. compounds it means ; =
@@ -62071,8 +62233,8 @@ paScAt	pwg	pwg:43871:10	cross-language-gap	0	Vgl
 paScAt	pwg	pwg:78362:1	no-shared-witness	1	nach einem absolut. : ; vgl. u. 3〉
 paScAt	ap90	ap90:18536:3	no-gloss	0	1
 su	vcp	vcp:46270:1	no-citation-apparatus	0	su avya0 su qu . 1 pUjAyAm 2 atiSaye amaraH . 3 kfcCe 4 anumatO 5 mamfdDO medi0 6 anAyAse ca anekArTako0 . pUjAyAmasya nopasargatvam tena sustutamityAdO na zatvam . atiSayAdO tu suzwuta ityAdi . gaRaratne'rTaviSezA- nuktakrameRodAhftam yaTA su praSaMsAnumatip…
-su	skd	skd:39222:1	outranked	0	su , Ya gatO . iti kavikalpadrumaH .. (BvA0-uBa0- saka0-aniw .) Ya, susAva suzuve . iti durgA- dAsaH
-su	skd	skd:39223:1	outranked	0	su , vya, nirBaram . ityamaraH . 3 . 4 . 2 .. (yaTA, mahABArate . 1 . 158 . 16 . viditvA vyavasizyAmi yadyapi syAt sudu- zkaram .. ) pUjA . ityamaraH . 3 . 4 . 5 .. (SoBanam . yaTA, manuH . 7 . 31 . praRetuM Sakyate daRqaH susahAyena DImatA .. ) anumatiH . kf…
+su	skd	skd:39221:1	root-vs-nominal	0	su , gatO . ESvaryye . prasave . iti kavikalpadrumaH .. (BvA0-para0-saka0-aniw .) savati . iti durgAdAsaH
+su	skd	skd:39222:1	root-vs-nominal	0	su , Ya gatO . iti kavikalpadrumaH .. (BvA0-uBa0- saka0-aniw .) Ya, susAva suzuve . iti durgA- dAsaH
 su	md	md:19454:1	no-shared-witness	0	1. SU, Ⅴ. P. sunó, sunu, ( sts. Ā. ) press out, extract ( Soma ; V. , rare in E. ): pr. pt. sunvāná, suvāná ; pp. sutá, pressed, extracted. abhi ( -ṣuṇoti ), press out; ps. -ṣūyate, be extracted: pp. abhiṣuta ( V. ). ā, press out, extract ( V. ); boil, prepar…
 su	md	md:19455:1	no-shared-witness	0	2. SU (= √ 1. sū), in sauti, suhi, and pp. sutá, urged, instigated ( ŚB. )
 su	md	md:19456:1	no-shared-witness	0	3. SU (= √ 2. sū), in pra - savati ( rare ), pra-sauti ( rare ), pp. suta, son, and súṣuti
@@ -63329,7 +63491,8 @@ mAnuza	pwg	pwg:59898:9	no-gloss	0	n
 Dana	vcp	vcp:26895:1	no-citation-apparatus	0	Dana DAnyotpAdane juho0 para0 sew . daDanti aDAnIt aDanIt daDAna . gfhItakarmakatvAt akarmakatvam . tena daDanti BUmiH DAnyamutpAdayatItyarTaH, vEdiko'yam
 Dana	vcp	vcp:26896:1	no-citation-apparatus	0	Dana Sabde BvA0 para0 aka0 sew . Danati aDAnIt aDanIt
 Dana	vcp	vcp:26897:1	no-citation-apparatus	0	Dana na0 Dana ac . 1 goDane 2 vitte ca medi0 . 3 snehapAtre Sabdara0 4 DanizWAnakzatre jyotizam . arTaSabde 36 7 pf0 DanaBedAdikamuktaM viSezastu kaScit SudDita0 ukto yaTA DanaM tu triviDaM jYeyaM SuklaM Savalameva ca . kfzRaYca tasya vijYeyo viBAgaH saptaDA …
-Dana	skd	skd:17566:1	outranked	0	Dana , li ra DAnye . iti kavikalpadrumaH .. (hvAM- paraM-akaM-sew .) DAnyamiha DAnyakriyA . ra, vEdikaH . li, daDanti BUmirDAnyamutpAdayati ityarTaH . iti durgAdAsaH
+Dana	skd	skd:17565:1	root-vs-nominal	0	Dana , rave . iti kavikalpadrumaH .. (BvAM-paraM-akaM- sew .) Danati mfdaNgaH . iti durgAdAsaH
+Dana	skd	skd:17566:1	root-vs-nominal	0	Dana , li ra DAnye . iti kavikalpadrumaH .. (hvAM- paraM-akaM-sew .) DAnyamiha DAnyakriyA . ra, vEdikaH . li, daDanti BUmirDAnyamutpAdayati ityarTaH . iti durgAdAsaH
 Dana	md	md:9891:1	no-shared-witness	0	dhá-na, n. [deposit: √ dhā], V. : prize of a contest ; booty; stake or winnings in play ; contest; V. C. : chattels, goods, property, wealth, treasure, money; reward, girt; —˚ , abundance in; —˚ a. possessing
 Dana	mw	mw:99258:1	witness-too-common	1	n. the prize of a contest or the contest itself ( lit. a running match, race, or the thing raced for; , a proposed prize or contest; , to win the p˚ or the fight)
 Dana	mw	mw:99260:1	witness-too-common	1	any valued object, ( esp. ) wealth, riches, (movable) property, money, treasure, gift, &amp;c. &amp;c
@@ -63340,6 +63503,7 @@ Dana	pwg	pwg:36007:1	no-shared-witness	3	(von 1. ) n. _zu_ . , Sch. Accent eines
 Dana	pwg	pwg:36007:3	witness-too-common	2	Wettkampf; im Kampfe siegen; den Kampfpreis gewinnen
 Dana	pwg	pwg:36007:5	no-shared-witness	4	Besitz an Kühen, Kuhheerde
 Dana	pwg	pwg:36007:6	no-shared-witness	2	Ueberschuss, ein Plus, eine positive Grösse
+Dana	pwg	pwg:36007:7	root-vs-nominal	2	ein Gegenstand der Zuneigung
 Dana	pwg	pwg:36007:8	no-shared-witness	3	des zweiten Hauses
 Dana	pwg	pwg:36007:9	cross-language-gap	0	Vgl
 Dana	pwg	pwg:76432:1	no-shared-witness	1	am Ende eines adj. comp. f
@@ -63347,6 +63511,7 @@ Dana	mw	mw:99262:1	no-gloss	1	=
 kula	vcp	vcp:14255:1	no-citation-apparatus	0	kula banDe saMhatO ca BvA0 para0 aka0 sew . kolati ako- lIt cakola . kulam . vaMSeevAsya prayoga iti vadan durgAdAsaH AkulaH saNgulEtyAdiprayogamapaSyan parAstaH . A + vyagratAyAm caYcalatAyAm . Akolati kime- tadityAkulamIkzitaM janeH mAzaH udapataddivamAkula…
 kula	vcp	vcp:14256:1	no-citation-apparatus	0	kula na0 kula ka, kuN Sabde karmmaRi bA0 lak, kuMBUmiM lAti lA ka, kO BUmO lIyate anyeByo'pi pA0 qa0 yaTAyaTam vyutpattiH . 1 janapade deSe . maDyamahaladvayena yAvatI BUmiH kfzyate tAvatyAM 2 BUmO daSI kulantu BuYjIta manuH . azwAgavaM DarmmahalaM zaqgavaM j…
 kula	vcp	vcp:14256:2	no-citation-apparatus	0	manunA tu kulanAsavfdDyoH kAraRamuktaM yaTA Socanti jAmayo yatra vinaSyatyASu tat kulam . na Socanti tu yatrEtA vardDate tadDi sarvadA . jAmayo yAni gehAni SapantyapatipUjitAH . tAni kftyAhatAnIva vinaSyanti samantataH . tasmAdetAH sadA pUjyA BUzaRA- cCAdanAS…
+kula	skd	skd:8218:1	root-vs-nominal	0	kula ja banDO . saMhatO . iti kavikalpadrumaH .. (BvAM-paraM-akaM-kvacit sakaM sew . jvalAdiH .) ja kolaH kulaH . kolati kulInaH sarvvezAM banDuH syAdityarTaH . saMhatI rASIkaraRamiti caturBujaH .. kecittu saMhatisTAne saMKyAnaM paWitvA kolati kulAlaH gaRayat…
 kula	md	md:6077:1	no-shared-witness	0	kúl-a, n. herd, flock, swarm; multitude; race, family; community, guild; noble lineage; abode, house; ˚— , often = chief, eminent; -ṃ padātīnām, infantry
 kula	mw	mw:52811:1	no-shared-witness	2	a race, family, community, tribe, caste, set, company ( e.g. , the caste of the Brāhmans , ; , infantry, )
 kula	mw	mw:52812:1	no-shared-witness	2	( ifc. with a gen. sg. ) a lot, gang ( e.g. , a gang of thieves)
@@ -63361,6 +63526,7 @@ kula	mw	mw:52822:1	no-shared-witness	1	( ), m. the chief of a corporation or gui
 kula	mw	mw:52824:1	no-shared-witness	1	N. of a man
 kula	pwg	pwg:18029:4	witness-too-common	5	ein edles, vornehmes Geschlecht; der hohen Stellung
 kula	pwg	pwg:18029:5	no-shared-witness	3	Körper
+kula	pwg	pwg:18029:6	root-vs-nominal	3	ein best. Stein; das Haupt einer Innung; edel, vor Andern ausgezeichnet
 kula	pwg	pwg:18029:7	cross-language-gap	0	Vgl
 kula	pwg	pwg:71110:1	no-shared-witness	1	Menge
 kula	pwg	pwg:71110:2	no-shared-witness	1	der; und ihres Cultus; das worin alles Andere aufgeht
@@ -63813,6 +63979,7 @@ marIci	pwg	pwg:57814:9	cross-language-gap	0	Vgl. ; über die Etym. des Wortes s.
 marIci	pwg	pwg:57814:1	no-gloss	3	( ) m.f
 yakza	vcp	vcp:38784:1	no-citation-apparatus	0	yakza pUjAyAM cu0 A0 saka0 mew . yakzayate ayayakzata
 yakza	vcp	vcp:38785:1	no-citation-apparatus	0	yakza pu0 yakzyate yakza karmaRi GaY . 1 devayoniBede 2 tadISvare kuvere medi0 3 indragfhe sArasvataH . BAve GaY 4 pUjane ca
+yakza	skd	skd:28263:1	root-vs-nominal	0	yakza , ka Na mahi . iti kavikalpadrumaH .. (curA0- Atma0-saka0-sew .) ka Na, yakzayate . mahi pUjAyAm . iti durgAdAsaH
 yakza	md	md:14621:1	no-shared-witness	0	yakṣ-á, n. [speeder], supernatural being, spectre, ghost ( V. ); m. N. of a class of demigods, attendants of Kubera : -tā, f. , -tva, n. condition of a Yakṣa; -dara, m. (?) N. of a locality ; -dāsī, f. N. ; -dṛś, a. having a spectral appearance ( RV.¹ ); -dev…
 yakza	mw	mw:169017:1	no-shared-witness	0	(with Jaina s) a subdivision of the Vyantara s
 yakza	mw	mw:169018:1	no-shared-witness	1	N. of Kubera
@@ -63822,7 +63989,8 @@ yakza	mw	mw:169022:1	no-shared-witness	1	a dog
 yakza	pwg	pwg:80814:1	cross-language-gap	0	1. (von )
 yakza	pwg	pwg:80814:4	no-shared-witness	5	Bein. Kubera ʼs
 yakza	pwg	pwg:80814:5	witness-too-common	1	N. pr. eines Muni
-yakza	pwg	pwg:80814:9	outranked	2	Gattin
+yakza	pwg	pwg:80814:6	root-vs-nominal	2	Palast
+yakza	pwg	pwg:80814:9	root-vs-nominal	2	Gattin
 yakza	pwg	pwg:80814:10	cross-language-gap	0	Vgl
 yakza	pwg	pwg:80815:1	no-shared-witness	1	2. am Ende eines comp. aus ( aor. von 1. )
 yakza	pwg	pwg:80814:7	no-gloss	0	f
@@ -63990,8 +64158,9 @@ buDa	vcp	vcp:35668:1	no-citation-apparatus	0	buDa jYApane BvA0 pa0 saka0 aniw . 
 buDa	vcp	vcp:35669:1	no-citation-apparatus	0	buDa jYAne BvA0 uBa0 saka0 sew . boDati te . irita abuDat0 apoDIt aboDi aboDizwa . jvalA0 vA Ra pakze ka . boDaH buDaH
 buDa	vcp	vcp:35670:1	no-citation-apparatus	0	buDa jYAne di0 A0 saka0 aniw . buDyate aboDi aboDizwa . bubuDe . ud + buDa jAgaraRe pizayasPuraRABimuKIBAva rUpe saskAranizWe vyApAraBede udnudDasaMskarAdeva smfti- rBavatIti SAKe sTitam
 buDa	vcp	vcp:35671:1	no-citation-apparatus	0	buDa pu0 buDa ka . 1 paRqite, bfhaspatiBAryyAyAM tArAyAM candreRa janite 2 putre tasya rohiRyA pratipAlanAt rOhiReyatvam . 3 grahaBede . tasyotpattikaTA SivavareRa tasya graharUpatvaprAptikaTA ca kASIKa0 15 a0 . bfhaspateH savE BAryyAmESvaryyamadamohitaH . pu…
-buDa	skd	skd:24374:1	outranked	0	buDa , O vijYApane . iti kavikalpadrumaH . (BvA0- para0-saka0-aniw .) O bodDvA . boDati guruH . iti durgAdAsaH
-buDa	skd	skd:24375:1	outranked	0	buDa , ya Na O vedane . iti kavikalpadrumaH .. (divA0-Atma0-saka0-aniw .) ya Na buDyate SAstraM suDIH . O bodDA . iti durgAdAsaH .. (jAgarArTe akarmmako'pi . yaTA, raGO . 10 . 6 . te ca prApurudanvantaM bubuDe cAdipUruzaH .. Adipuruzo vizRuSca bubuDe yoganidr…
+buDa	skd	skd:24373:1	root-vs-nominal	0	buDa , ir ja Ya vedane . iti kavikalpadrumaH .. (BvA0-uBa0-saka0-sew . jvalAdirayam .) ir abuDat aboDIt . ja boDaH buDaH . Ya boDati boDate . iti durgAdAsaH
+buDa	skd	skd:24374:1	root-vs-nominal	0	buDa , O vijYApane . iti kavikalpadrumaH . (BvA0- para0-saka0-aniw .) O bodDvA . boDati guruH . iti durgAdAsaH
+buDa	skd	skd:24375:1	root-vs-nominal	0	buDa , ya Na O vedane . iti kavikalpadrumaH .. (divA0-Atma0-saka0-aniw .) ya Na buDyate SAstraM suDIH . O bodDA . iti durgAdAsaH .. (jAgarArTe akarmmako'pi . yaTA, raGO . 10 . 6 . te ca prApurudanvantaM bubuDe cAdipUruzaH .. Adipuruzo vizRuSca bubuDe yoganidr…
 buDa	md	md:12894:1	no-shared-witness	0	1. budh-a, the root budh ( gr. )
 buDa	md	md:12895:1	no-shared-witness	0	2. budh-a, a. intelligent, clever, wise; m. man of sense, wise man, sage; god; N. of a son of Soma = the planet Mercury; N. : -ka, m. N. ; -dina, n. Day of Mercury, Wednesday; -vāra, m. id
 buDa	ap90	ap90:21808:3	no-shared-witness	0	2 Intelligent
@@ -64015,6 +64184,7 @@ buDa	pwg	pwg:52929:5	no-shared-witness	1	m. N. pr. , Sch
 buDa	pwg	pwg:52929:7	no-shared-witness	1	eines Ātreya und Liedverfassers von
 buDa	pwg	pwg:52929:8	no-shared-witness	2	eines Sohnes des Vegavant und Vaters des Tṛṇabindu
 buDa	pwg	pwg:52929:9	no-shared-witness	1	des Autors der Kalpayukti (auch geschrieben)
+buDa	pwg	pwg:52929:10	root-vs-nominal	2	f. Nardostachys Jatamansi ( ) Dec. _im_
 buDa	pwg	pwg:52929:11	cross-language-gap	0	Vgl
 buDa	ap90	ap90:21808:1	no-gloss	0	a. [ ]
 buDa	ap90	ap90:21808:5	no-gloss	0	
@@ -64432,6 +64602,9 @@ puwa	vcp	vcp:32407:1	no-citation-apparatus	0	puwa Sleze tu0 ku0 para0 saka0 sew 
 puwa	vcp	vcp:32408:1	no-citation-apparatus	0	puwa saMsarge ada0 cu0 uBa0 saka0 sew . puwayati te apupuwat ta
 puwa	vcp	vcp:32409:1	no-citation-apparatus	0	puwa na0 puwa ka . 1 jAtIPale rAjani0 2 uparyyaGoBAvApannena mfdAdikapAsadvayena girmite ozaDapAkazAtraBede ca pa0 3 aSvakzure pu0 na0 Sabdara0 . 4 miTaHsamyanTe 5 AcCAdage caMpuwaBedanamityamaravyAKyAyAM sukuwaH . 6 pattrAdiracite dugDAdipAnapAtre tri0 (donA…
 puwa	vcp	vcp:32409:2	no-citation-apparatus	0	DAtvAdimAraRopayuktAn puwaprakArAnAha rasapra- dIpe lohAderapunarBAvastadguRatvaM guRAQyatA sa- lile taraRaYcApi tatsinniH puwanAdBavet . gamBIre vi- stfte kuRqe dvihaste caturasmake . vanopaRasahasneRa pUritaM punarOzaDam . kIzWe rudDe prayatnena govizWopari…
+puwa	skd	skd:21790:1	root-vs-nominal	0	puwa , ka cUrRe . BAsi . iti kavikalpadrumaH .. (curAM-paraM-cUrRe sakaM-BAsi akaM-sew .) ka, powayati . BAsi dIptO . iti durgAdAsaH
+puwa	skd	skd:21791:1	root-vs-nominal	0	puwa , t ka saMsarge . iti kavikalpadrumaH .. (adanta- curAM-paraM-sakaM-sew .) puwayati puzpaM sUtreRa janaH saMsfjatItyarTaH . iti durgAdAsaH
+puwa	skd	skd:21792:1	root-vs-nominal	0	puwa , Si Sleze . iti kavikalpadrumaH .. (tudAM-kuwAM- paraM-akaM-sew .) Si, puwati apuwIt pupowa . SlezaH sambanDIBAvaH . iti durgAdAsaH
 puwa	md	md:11694:1	no-shared-witness	0	puṭ-a, m. n. , ī, f. fold; bag; cluster ( of shoots ), concavity, cavity; slit; m. cup formed of a leaf; covering: -ka, m. concavity; funnel-shaped cavity formed of a leaf; -pāka, m. baking in a leaf-case ( a method of a preparing medicines by baking them in …
 puwa	mw	mw:125194:1	no-shared-witness	1	a cloth worn to cover the privities (also f( ). )
 puwa	mw	mw:125195:1	no-shared-witness	1	a horse's hoof
@@ -64448,6 +64621,9 @@ puwa	pwg	pwg:120916:1	witness-too-common	1	Z. 3 streiche und vgl. oben
 puwa	pwg	pwg:45681:1	no-shared-witness	2	m. f. ( ; oxyt. gaṇa zu ) und n
 puwa	pwg	pwg:45681:3	witness-too-common	9	eine aus einem Blatt gebildete Vertiefung, — Tüte; Tüte in Form einer Wanne
 puwa	pwg	pwg:45681:4	no-shared-witness	1	Schmuckkästchen
+puwa	pwg	pwg:45681:5	root-vs-nominal	3	Pferdehuf
+puwa	pwg	pwg:45681:6	root-vs-nominal	2	Muskatnuss
+puwa	pwg	pwg:45681:7	root-vs-nominal	5	ein um die Blössen geschlagenes Tuch
 puwa	pwg	pwg:45681:8	cross-language-gap	0	dreifach zusammengelegt
 puwa	pwg	pwg:51684.61:1	no-shared-witness	4	Nasenloch; Nasenflügel
 puwa	pwg	pwg:78681:1	witness-too-common	9	mit gehöhlter Hand; mit ausgestreckter Hand; Nasenloch; Ameisenhaufen
@@ -65645,6 +65821,7 @@ jizRu	mw	mw:79428:1	no-gloss	0	cf
 jizRu	pwg	pwg:27495:3	no-gloss	0	m
 naya	vcp	vcp:28027:1	no-citation-apparatus	0	naya gatO BvA0 Atma0 saka0 sew . nayate anayizwa . neye
 naya	vcp	vcp:28028:1	no-citation-apparatus	0	naya pu0 nI BAve ac . 1 nItO amaraH . vizamo'pi vigAhyate nayaH kftatIrTaH payasAmivASayaH kirA0 . 2 dyUta- Bede medi0 . 3 nEgamAdO hemaca0 . nayati saMsArapAraM Baktam nI karttari ac . 4 vizRO rAmovirAmovirajA mArgo neyo nayo'nayaH vizRusaM0 . nEgamAdiSca si…
+naya	skd	skd:18368:1	root-vs-nominal	0	naya , Na gatO . iti kavikalpadrumaH .. (BvAM-AtmaM- sakaM-sew .) Na, nayate . iti durgAdAsaH
 naya	md	md:10307:1	no-shared-witness	0	nay-a, m. lead; behaviour, conduct; discreetness, prudence, towards ( lc. ); worldly [Page137-1] wisdom, policy; design, plan; principle, system, doctrine; -kovida, a. worldly wise, versed in policy; -cakṣus, n. eye of wisdom; a. endowed with the eye of wisdo…
 naya	ap90	ap90:16366:6	no-shared-witness	0	1 Guiding, leading, managing
 naya	ap90	ap90:16366:7	no-shared-witness	0	2 ( a ) Behaviour, course of conduct, conduct, way of life, as in . ( b ) Prudent or righteous conduct, virtue
@@ -65679,6 +65856,7 @@ naya	pwg	pwg:37738:4	outranked	11	kluge Aufführung, kluges und angemessenes Ben
 naya	pwg	pwg:37738:6	outranked	3	leitender Gedanke, Maxime, Grundsatz
 naya	pwg	pwg:37738:7	no-shared-witness	4	ein best. Spiel; gezogen; eine Figur in einem solchen Spiele
 naya	pwg	pwg:37738:8	no-shared-witness	2	das personificirte kluge Benehmen
+naya	pwg	pwg:37738:9	outranked	3	führend, leitend; angemessen, entsprechend
 naya	pwg	pwg:37738:10	cross-language-gap	0	Vgl
 naya	pwg	pwg:76820:2	outranked	3	auf kluge Weise; auf eine angemessene, höfliche Weise gebeten
 naya	ap90	ap90:16366:1	no-gloss	0	a. [ ]
@@ -65689,6 +65867,7 @@ naya	pwg	pwg:76820:1	no-gloss	2
 naya	pwg	pwg:76820:3	no-gloss	3	
 Kala	vcp	vcp:16472:1	no-citation-apparatus	0	Kala calane sKalane ca BvA0 para0 aka0 sew . Kalati aKAlIt Kalati praniKalati KalaH
 Kala	vcp	vcp:16473:1	no-citation-apparatus	0	Kala puMna0 Kala ac ardDarcA0 . DAnyamarddanasTAne hema0 . (KAmAra) DAnyaKalaH goDUmaKalaH yavaKalaH . KalAt kzetrAdagArAdvA yatovApyupalaByate manuH . KalayajYaH KalekapotaH . Kale na parzAn pratihanmi BUri f0 10, 18, 7, 2 DUlirASO ca 3 Buvi 4 sTAnamAtre ca …
+Kala	skd	skd:10116:1	root-vs-nominal	0	Kala , kzalajArTe . iti kaMvikalpadrumaH .. (BvAM-paraM- akaM-sew .) kzalajArTaScAlacayO . cAlaSceha sKalanam . Kalati Kalo DarmmAt . iti durgA- dAsaH
 Kala	md	md:6704:1	no-shared-witness	0	khál-a, m. 〈1.〉 threshing-floor; oil-cake; 〈2.〉 wicked person, rogue: f. ī
 Kala	mw	mw:61582:1	outranked	3	m. ( n. g. ) a threshing-floor, granary, ; ; &amp;c
 Kala	mw	mw:61583:1	no-shared-witness	1	earth, mould, soil
@@ -65698,8 +65877,9 @@ Kala	mw	mw:61589:1	no-shared-witness	1	the sun
 Kala	mw	mw:61590:1	no-shared-witness	1	Xanthochymus pictorius ( )
 Kala	mw	mw:61591:1	no-shared-witness	1	the thorn-apple
 Kala	pwg	pwg:21048:1	no-shared-witness	2	m.n. gaṇa zu . m
+Kala	pwg	pwg:21048:5	root-vs-nominal	2	die Sonne
 Kala	pwg	pwg:21048:6	cross-language-gap	0	m. Xanthochymus pictorius Roxb. ( s. )
-Kala	pwg	pwg:21048:7	outranked	2	Stechapfel
+Kala	pwg	pwg:21048:7	root-vs-nominal	2	Stechapfel
 Kala	pwg	pwg:21048:8	no-shared-witness	1	f. N. pr. einer Tochter Raudrāśva ʼs (die Calc. Ausg. : , wofür viell. zu lesen ist)
 Kala	pwg	pwg:21048:9	cross-language-gap	0	Vgl
 Kala	pwg	pwg:72303:2	no-shared-witness	4	eine gemeine —, niedrige Familie
@@ -66120,7 +66300,9 @@ kala	vcp	vcp:12456:5	no-citation-apparatus	0	ud + utkzipya grahaRe sa tasya hast
 kala	vcp	vcp:12456:6	no-citation-apparatus	0	sam + ekasaMKyApAdanarUpe yoge . aTa saMNkalanavyakalananayoH karaRasUtram sEkapadaGnapadArDamaTEkAdyaNgayutiH kila saNgalitAKyA lIlA0
 kala	vcp	vcp:12457:1	no-citation-apparatus	0	kala nodane preraRe curA0 uBaya0 saka0 sew . kAlayati te acIkalat ta . kAlayAM baBUva Asa cakAra cakre . kAla- yitavyaH kAlanIyaH . kAlayitA kAlitaH kAlayan kAlaya- mAnaH . kAlayitvA AkAlya . karmmaRi kAlyate akAli akAlayizAtAm akAlizAtAm . gavAM SatasahasrAR…
 kala	vcp	vcp:12458:1	no-citation-apparatus	0	kala pu0 kala Sabde GaY ni0 avfdDiH . maDurAvyakte DvanO amaraH . sArasEH kalanirhrAdEH kalamanyamftAsu BAzitaM kalahaMsIsu madAlasaM gatam niSAsu BAsvat kalanUpurARAm raGuH . kalapakziRIravamudAsi vapuH . kalakAYci kAYcidaruRattaruRaH mAGaH . kalapraDAnAkAYc…
-kala	skd	skd:6774:1	outranked	0	kala , ka nudO . iti kavikalpadrumaH .. (curAM paraM saka sew .) ka kAlayati . nudiriti nuda YOS preraRe ityasya ORAdikakipratyaye rUpam . iti durgAdAsaH
+kala	skd	skd:6772:1	root-vs-nominal	0	kala , t ka gatO . saNKyAyAm . iti kavikalpadrumaH .. (adantacurAM paraM sakaM sew .) antyasTatftI- yopaDaH . kalayati kAlaM DIraH . iti durgAdAsaH
+kala	skd	skd:6773:1	root-vs-nominal	0	kala , Na saNKyArutoH . iti kavikalpadrumaH .. (BvAM AtmaM sakaM akaM ca sew .) Na kalate divasaM vfdDaH gaRayatItyarTaH . rut SabdaH . iti durgAdAsaH
+kala	skd	skd:6774:1	root-vs-nominal	0	kala , ka nudO . iti kavikalpadrumaH .. (curAM paraM saka sew .) ka kAlayati . nudiriti nuda YOS preraRe ityasya ORAdikakipratyaye rUpam . iti durgAdAsaH
 kala	md	md:5593:1	no-shared-witness	0	kala, a. dumb; indistinct; inarticulate; choked with tears ( —˚ ); low, soft ( note ); uttering a soft sound: -m, ad. ; -kaṇṭhikā, f. female cuckoo; -kala, m. confused noise or cry: -rava, -ārava, m. id. , -vat, a. tinkling
 kala	ap90	ap90:10457:4	witness-too-common	2	3 Making noise, jingling, tinkling &amp;c
 kala	ap90	ap90:10457:5	outranked	0	4 Weak
@@ -66176,8 +66358,10 @@ kala	pwg	pwg:119363:1	no-shared-witness	1	einer best. fehlerhaften Aussprache de
 kala	pwg	pwg:15605:1	cross-language-gap	0	adj. f
 kala	pwg	pwg:15605:3	no-shared-witness	2	unverdaut
 kala	pwg	pwg:15605:5	no-shared-witness	1	ein lieblicher aber undeutlicher Ton
+kala	pwg	pwg:15605:6	root-vs-nominal	2	N. eines Baumes, Shorea robusta ( ), _im_ Vgl
 kala	pwg	pwg:15605:7	witness-too-common	2	einer Art Manen
 kala	pwg	pwg:15605:9	no-shared-witness	2	männlicher Samen
+kala	pwg	pwg:15605:10	root-vs-nominal	2	Judendorn
 kala	pwg	pwg:69965:1	witness-too-common	3	undeutlich redend; lieblich
 kala	ap90	ap90:10457:1	no-gloss	0	a. [ ]
 kala	ap90	ap90:10457:7	no-gloss	0	

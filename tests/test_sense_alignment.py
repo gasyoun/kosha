@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "app"))
 
 from sense_align import (  # noqa: E402
-    align_lemma, extract_ls, fold_witnesses, jaccard, witness_key,
+    align_lemma, dhatu_marked, extract_ls, fold_witnesses, jaccard, pwg_pos, witness_key,
 )
 
 TABLE = ROOT / "data" / "concordance" / "sense_alignment.tsv"
@@ -196,6 +196,72 @@ def test_skdr_aligns_on_the_attribution_pwg_prints():
     assert aligned[0]["shape"] == "1-0-0-0-1-0"
 
 
+# ------------------------------------------------ H5273 root-vs-nominal gate
+
+_ROOT_SKD = "cara , gamane . adane . ācāre . iti kavikalpa- drumaḥ .. (bhvāṃ-paraṃ-sakaṃ-seṭ .)"
+
+
+def _gate_pair(pwg_gloss, pwg_body, skd_is_root=True):
+    return [
+        {"dict": "pwg", "sense_id": "pwg:1:1", "label": "", "gloss": pwg_gloss,
+         "ls": ["skdr"], "pwg_pos": pwg_pos(pwg_body, pwg_gloss)},
+        {"dict": "skd", "sense_id": "skd:9:1", "label": "", "gloss": "cara gamane",
+         "ls": [], "dhatu": skd_is_root},
+    ]
+
+
+def test_dhatu_record_never_attaches_to_a_nominal_pwg_sense():
+    """H5252 card C002: PWG *cara* 'Bachstelze' (a noun, under `<lex>m.</lex>`)
+    was attached to ŚKDR's Kavikalpadruma root *car* 'gamane'."""
+    assert dhatu_marked(_ROOT_SKD)
+    res = align_lemma(_gate_pair("Bachstelze", "<lex>adj.</lex> <lex>m.</lex> "),
+                      present_dicts={"pwg", "skd"})
+    assert not [g for g in res["groups"] if g["status"] == "aligned"]
+    assert res["stats"]["n_root_vs_nominal_gated"] == 1
+    assert {g["failure_class"] for g in res["groups"]} == {"root-vs-nominal"}
+
+
+def test_verbal_pwg_sense_keeps_its_root_match():
+    """H5252 card C013, the known TRUE match: *dhvaja*'s PWG line glosses the root
+    as a German infinitive (*hinundherbewegen*) although a `<lex>m.</lex>` precedes
+    it — the gloss decides, and the attachment survives."""
+    res = align_lemma(_gate_pair("hinundherbewegen", "<lex>adj.</lex> <lex>m.</lex> "),
+                      present_dicts={"pwg", "skd"})
+    assert [g["method"] for g in res["groups"] if g["status"] == "aligned"] == ["attrib"]
+    assert res["stats"]["n_root_vs_nominal_gated"] == 0
+
+
+def test_gate_needs_both_stamps():
+    """A non-root ŚKDR record, or a sense nobody stamped, is never gated — the
+    gate is a withheld edge, not a new way to lose data."""
+    res = align_lemma(_gate_pair("Bachstelze", "<lex>m.</lex> ", skd_is_root=False),
+                      present_dicts={"pwg", "skd"})
+    assert [g["method"] for g in res["groups"] if g["status"] == "aligned"] == ["attrib"]
+    unstamped = [dict(s) for s in _gate_pair("Bachstelze", "<lex>m.</lex> ")]
+    for s in unstamped:
+        s.pop("pwg_pos", None), s.pop("dhatu", None)
+    res = align_lemma(unstamped, present_dicts={"pwg", "skd"})
+    assert res["stats"]["n_root_vs_nominal_gated"] == 0
+
+
+@pytest.mark.parametrize("body,gloss,pos", [
+    ("<lex>m.</lex> ", "Bachstelze", "nonverbal"),
+    ("<lex>adj.</lex> ", "beweglich", "nonverbal"),
+    ("<lex>adv.</lex> ", "herab; weg", "nonverbal"),          # C019 ava, a preverb
+    ("<lex>m.</lex> ", "hinundherbewegen", "verbal"),         # C013 dhvaja
+    ("<lex>m.</lex> ", "geben, hingeben", "verbal"),          # ge- infinitives (Astra)
+    ("<lex>n.</lex> ", "gehen", "verbal"),
+    ("<lex>m.</lex> ", "sauer geworden", "verbal"),           # participle: residual, kept
+    ("<lex>f.</lex> ", "der mittleren", "nonverbal"),         # article-led
+    ("", "gehen, sich bewegen", "verbal"),                    # a root entry: no <lex>
+    ("", "Jmd umgehen; nicht beachten", "verbal"),
+    ("", "Augapfel", "nonverbal"),                            # addendum entry, a noun
+    ("", "eine Art Talk", "nonverbal"),
+])
+def test_pwg_pos_reads_pwg_grammar(body, gloss, pos):
+    assert pwg_pos(body, gloss) == pos
+
+
 def test_attribution_shared_by_everything_carries_no_edge():
     """`attrib` is decided by τ off the same 1/df table as `ls` — no new knob.
 
@@ -235,7 +301,8 @@ def test_sanskrit_gloss_keeps_the_s_spans_it_is_made_of():
 
 def test_failure_classes_are_from_the_documented_taxonomy():
     known = {"no-shared-witness", "witness-too-common", "cross-language-gap",
-             "no-gloss", "absent-dictionary", "outranked", "no-citation-apparatus"}
+             "no-gloss", "absent-dictionary", "outranked", "no-citation-apparatus",
+             "root-vs-nominal"}
     senses = [
         {"dict": "pwg", "sense_id": "pwg:1:1", "label": "", "gloss": "Bedeutung ohne Belege",
          "ls": []},                                     # cross-language-gap
