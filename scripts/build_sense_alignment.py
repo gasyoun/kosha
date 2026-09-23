@@ -83,7 +83,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from sense_align import (  # noqa: E402
     ATTRIB_KEYS, DICTS, GLOSS_FLOOR, GLOSS_LANG, PREFIX_MIN, SASA_DICTS, TAU,
-    align_lemma, extract_ls, sense_gloss,
+    align_lemma, dhatu_marked, extract_ls, pwg_pos, sense_gloss,
 )
 from segment import segment  # noqa: E402
 from build_entries import fetch_release_sqlite  # noqa: E402
@@ -185,7 +185,8 @@ def load_pilot_heads() -> list[str]:
 def load_senses(con: sqlite3.Connection, lemma: str):
     """([sense dicts], {dicts that have any entry for this lemma})."""
     rows = con.execute(
-        "SELECT e.dict, e.L, s.sense_n, substr(e.body, s.span_start+1, s.span_end-s.span_start) "
+        "SELECT e.dict, e.L, s.sense_n, substr(e.body, s.span_start+1, s.span_end-s.span_start), "
+        "substr(e.body, 1, s.span_end) "
         "FROM entries e JOIN senses s ON s.entry_id = e.id "
         "WHERE e.slp1_key = ? AND e.dict IN ('pwg','mw','ap90') "
         "ORDER BY e.dict, e.L, s.sense_n",
@@ -195,14 +196,18 @@ def load_senses(con: sqlite3.Connection, lemma: str):
         "SELECT DISTINCT dict FROM entries WHERE slp1_key = ? AND dict IN ('pwg','mw','ap90')",
         (lemma,))}
     senses = []
-    for dct, L, sn, raw in rows:
-        senses.append({
+    for dct, L, sn, raw, upto in rows:
+        gloss = sense_gloss(raw, dct)
+        s = {
             "dict": dct,
             "sense_id": f"{dct}:{L}:{sn}",
             "label": f"{DICT_LABEL[dct]} {L}·{sn}",
-            "gloss": sense_gloss(raw, dct),
+            "gloss": gloss,
             "ls": extract_ls(raw),
-        })
+        }
+        if dct == "pwg":                        # H5273 gate: PWG's own grammar
+            s["pwg_pos"] = pwg_pos(upto, gloss)
+        senses.append(s)
     return senses, present
 
 
@@ -248,13 +253,17 @@ def load_sasa_senses(handles: dict, lemma: str):
             present.add(code)
             for n, (a, b) in enumerate(segment(code, body), 1):
                 span = body[a:b]
-                senses.append({
+                gloss = sense_gloss(span, code)
+                s = {
                     "dict": code,
                     "sense_id": f"{code}:{L}:{n}",
                     "label": f"{DICT_LABEL[code]} {L}·{n}",
-                    "gloss": sense_gloss(span, code),
+                    "gloss": gloss,
                     "ls": [] if code in SASA_DICTS else extract_ls(span),
-                })
+                }
+                if code == "skd":               # H5273 gate: the H5252 lens, on the IAST
+                    s["dhatu"] = dhatu_marked(display_gloss(code, gloss))  # form it was written for
+                senses.append(s)
     return senses, present
 
 
@@ -559,6 +568,8 @@ def write_report(stats: dict, fail_counts: Counter, shape_counts: Counter,
         f"| ŚKDR senses loaded | {stats['n_sasa_senses'].get('skd', 0)} |",
         f"| VCP senses loaded | {stats['n_sasa_senses'].get('vcp', 0)} |",
         f"| aligned groups touching ŚKDR | {stats['n_sasa_aligned'].get('skd', 0)} |",
+        f"| ŚKDR↔PWG candidate edges withheld by the root-vs-nominal gate (H5273) "
+        f"| {stats['n_root_vs_nominal_gated']} |",
         f"| aligned groups touching VCP | {stats['n_sasa_aligned'].get('vcp', 0)} |",
         "",
         "## Delta against the H3744 baseline (same 500-headword pilot)",
@@ -640,6 +651,8 @@ def write_report(stats: dict, fail_counts: Counter, shape_counts: Counter,
         "no-gloss": "a structural chunk (PWG `<div>` carrying only `<lex>m.</lex>`) — excluded before alignment",
         "outranked": "a qualifying partner existed but preferred a better-scoring sense; each "
                      "sense takes at most one partner per other dictionary",
+        "root-vs-nominal": "H5273 gate: the only edge was a dhātu-marked ŚKDR record against a "
+                           "PWG sense PWG marks non-verbal (`<lex>`, gloss not an infinitive)",
         "no-citation-apparatus": "a ŚKDR/VCP sense no western sense attributes to its kośa. The "
                                  "kośas carry no `<ls>` at all, and their gloss is Sanskrit, so "
                                  "both bridges are shut for it — a property of the source "
@@ -750,6 +763,16 @@ def write_report(stats: dict, fail_counts: Counter, shape_counts: Counter,
         "acceptance sample frozen before a later rebuild stops describing the table it names —",
         "so quote any precision figure together with the revision it was measured on.",
         "",
+        "## Root-vs-nominal gate (H5273)",
+        "",
+        "H5252 measured the ŚKDR column at 77.8 % wrong, 32 of 35 wrong matches attaching a",
+        "Kavikalpadruma dhātu record to a PWG noun or adjective. Since H5273 a ŚKDR sense the",
+        "H5252 lens reads as a dhātupāṭha entry is never a candidate partner for a PWG sense",
+        "that PWG marks non-verbal (a governing `<lex>`, and a gloss that is not a German",
+        "infinitive). The withheld senses carry `root-vs-nominal` in the failure table; the",
+        f"gate withheld {stats['n_root_vs_nominal_gated']} candidate edges in this run.",
+        "The lens was written after reading the H5252 deck, so its deck scores are in-sample.",
+        "",
         "_Гасунс_",
     ]
     OUT_REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -786,6 +809,7 @@ def main() -> None:
     n_lemmas_with_alignment = n_lemmas_all_three = 0
     n_sasa_senses = Counter()
     n_sasa_aligned = Counter()
+    n_gated = 0
     #: the H3744 headline metric: an aligned row that is exactly one sense from
     #: each of PWG, MW and Apte. Read off the WESTERN prefix of `shape`, so the
     #: number stays comparable now that `shape` has five positions.
@@ -814,6 +838,7 @@ def main() -> None:
         n_no_gloss += st["n_dropped_no_gloss"]
         n_aligned += st["n_aligned"]
         n_unaligned += st["n_unaligned"]
+        n_gated += st["n_root_vs_nominal_gated"]
         if st["n_aligned"]:
             n_lemmas_with_alignment += 1
         if {"pwg", "mw", "ap90"} <= present:
@@ -880,6 +905,7 @@ def main() -> None:
         "n_sasa_senses": dict(n_sasa_senses),
         "n_sasa_aligned": dict(n_sasa_aligned),
         "clean_111": clean_111,
+        "n_root_vs_nominal_gated": n_gated,
     }
     write_report(stats, fail_counts, shape_counts, method_counts, "\n".join(smoke_lines))
 
