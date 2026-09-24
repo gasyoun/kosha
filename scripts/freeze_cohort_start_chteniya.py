@@ -86,6 +86,186 @@ def walk_dicts(obj):
             yield from walk_dicts(v)
 
 
+def as_str(val) -> str:
+    if val is None:
+        return ""
+    if isinstance(val, str):
+        return val.strip()
+    if isinstance(val, (int, float)):
+        return str(val)
+    if isinstance(val, list):
+        # rare multi-lemma slots — take first non-empty string
+        for x in val:
+            s = as_str(x)
+            if s:
+                return s
+        return ""
+    return ""
+
+
+def gloss_text(val) -> str:
+    """RU gloss out of one gloss_ru slot, preferring the dictionary-form lemma gloss.
+
+    Accepts every shape the two pack schemas use: a bare string, a
+    {"surface": …, "lemma": …} dict, or a list of either.
+    """
+    if isinstance(val, dict):
+        return as_str(val.get("lemma")) or as_str(val.get("surface"))
+    if isinstance(val, list):
+        for x in val:
+            s = gloss_text(x)
+            if s:
+                return s
+        return ""
+    return as_str(val)
+
+
+def aligned_pairs(tok: dict) -> list[tuple[str, object]]:
+    """Every (lemma_slp1, gloss_ru slot) pair of one subhāṣita chunk, index-aligned.
+
+    The subhāṣita pack stores PARALLEL LISTS, one entry per lemma of the chunk:
+    `lemma_slp1: ["Darma"]` alongside
+    `gloss_ru: [{"surface": "по закону", "lemma": "дхарма"}]`.
+    Until H5399 this reader called the scalar `as_str()` on `gloss_ru`, which
+    returns "" for a list of dicts — so every one of the 838 subhāṣita rows in
+    lemmas_for_srs.tsv landed with an EMPTY Russian gloss while the glosses sat
+    in the pin all along (the freeze MANIFEST reported 85.3% lemma-layer
+    coverage on the same file). The gloss must come from the SAME index as its
+    lemma, never `gloss_ru[0]` blindly.
+    """
+    lemmas = tok.get("lemma_slp1")
+    if lemmas is None:
+        lemmas = tok.get("lemma")
+    glosses = tok.get("gloss_ru")
+
+    if not isinstance(lemmas, list):
+        lemma = as_str(lemmas)
+        return [(lemma, glosses)] if lemma else []
+
+    gl = glosses if isinstance(glosses, list) else None
+    out: list[tuple[str, object]] = []
+    for i, cand in enumerate(lemmas):
+        lemma = as_str(cand)
+        if not lemma:
+            continue
+        if gl is None:
+            out.append((lemma, glosses))
+        else:
+            out.append((lemma, gl[i] if i < len(gl) else None))
+    return out
+
+
+def subhashita_gloss_index(sub: dict) -> dict[str, str]:
+    """lemma_slp1 -> best RU gloss anywhere in the subhāṣita pack.
+
+    A lemma recurs across sayings and only some occurrences carry a gloss, so a
+    per-chunk read loses most of them: the naive first-occurrence-wins pass
+    reached 410/838 lemmas where this index reaches far more. Dictionary-form
+    `lemma` slots win over inflected `surface` slots regardless of which
+    occurrence they came from — these rows become beginner SRS cards.
+    """
+    lemma_slot: dict[str, str] = {}
+    surface_slot: dict[str, str] = {}
+    for tok in walk_dicts(sub):
+        if "lemma_slp1" not in tok and "lemma" not in tok:
+            continue
+        for lemma, slot in aligned_pairs(tok):
+            if isinstance(slot, dict):
+                dict_form = as_str(slot.get("lemma"))
+                infl = as_str(slot.get("surface"))
+            else:
+                dict_form = gloss_text(slot)
+                infl = ""
+            if dict_form and lemma not in lemma_slot:
+                lemma_slot[lemma] = dict_form
+            if infl and lemma not in surface_slot:
+                surface_slot[lemma] = infl
+    return {k: lemma_slot.get(k) or surface_slot.get(k, "")
+            for k in set(lemma_slot) | set(surface_slot)}
+
+
+def lemma_rows(hito: dict, sub: dict) -> list[dict]:
+    """Rows of the derived lemmas_for_srs.tsv feed — unique lemma per pack.
+
+    Split out of build() by H5399 so the TSV can be re-derived from the
+    already-committed pins without re-freezing the whole manifest.
+    """
+    rows: list[dict] = []
+    seen: set[tuple[str, str]] = set()
+
+    for s in hito.get("sentences", []):
+        n = s.get("n")
+        for t in s.get("tokens", []):
+            lemma = (t.get("lemma") or t.get("slp1") or "").strip()
+            if not lemma:
+                continue
+            form = (t.get("form") or "").strip()
+            gloss = gloss_text(t.get("gloss_ru")) or as_str(t.get("gloss"))
+            key = ("hitopadesa-0", lemma)
+            if key in seen:
+                continue
+            seen.add(key)
+            rows.append(
+                {
+                    "pack": "hitopadesa-0",
+                    "lemma_slp1": lemma,
+                    "surface": form,
+                    "gloss_ru": gloss,
+                    "gloss_en": t.get("gloss") or "",
+                    "locus": str(n) if n is not None else "",
+                }
+            )
+
+    gloss_by_lemma = subhashita_gloss_index(sub)
+    for tok in walk_dicts(sub):
+        if "lemma_slp1" not in tok and "lemma" not in tok:
+            continue
+        pairs = aligned_pairs(tok)
+        if not pairs:
+            continue
+        lemma = pairs[0][0]
+        surface = as_str(tok.get("t") or tok.get("form") or tok.get("surface"))
+        key = ("subhashita-beginner", lemma)
+        if key in seen:
+            continue
+        seen.add(key)
+        rows.append(
+            {
+                "pack": "subhashita-beginner",
+                "lemma_slp1": lemma,
+                "surface": surface,
+                "gloss_ru": gloss_by_lemma.get(lemma, ""),
+                "gloss_en": "",
+                "locus": "",
+            }
+        )
+
+    return rows
+
+
+def write_lemma_tsv(path: Path, rows: list[dict]) -> None:
+    def esc(s: str) -> str:
+        return (s or "").replace("\t", " ").replace("\n", " ")
+
+    with path.open("w", encoding="utf-8", newline="") as f:
+        f.write("pack\tlemma_slp1\tsurface\tgloss_ru\tgloss_en\tlocus\n")
+        for r in sorted(rows, key=lambda x: (x["pack"], x["lemma_slp1"])):
+            f.write(
+                "\t".join(
+                    esc(r[k])
+                    for k in (
+                        "pack",
+                        "lemma_slp1",
+                        "surface",
+                        "gloss_ru",
+                        "gloss_en",
+                        "locus",
+                    )
+                )
+                + "\n"
+            )
+
+
 def build() -> dict:
     OUT.mkdir(parents=True, exist_ok=True)
     packs: list[dict] = []
@@ -223,101 +403,12 @@ def build() -> dict:
     print(f"pinned sandhi curriculum L1-3 rules={len(kept) - 1}")
 
     # optional lemma TSV
-    rows: list[dict] = []
-    seen: set[tuple[str, str]] = set()
-
     hito = json.loads((OUT / "hitopadesa-0.json").read_text(encoding="utf-8"))
-    for s in hito.get("sentences", []):
-        n = s.get("n")
-        for t in s.get("tokens", []):
-            lemma = (t.get("lemma") or t.get("slp1") or "").strip()
-            if not lemma:
-                continue
-            form = (t.get("form") or "").strip()
-            gr = t.get("gloss_ru")
-            if isinstance(gr, dict):
-                gloss = gr.get("lemma") or gr.get("surface") or ""
-            else:
-                gloss = gr or t.get("gloss") or ""
-            key = ("hitopadesa-0", lemma)
-            if key in seen:
-                continue
-            seen.add(key)
-            rows.append(
-                {
-                    "pack": "hitopadesa-0",
-                    "lemma_slp1": lemma,
-                    "surface": form,
-                    "gloss_ru": gloss if isinstance(gloss, str) else "",
-                    "gloss_en": t.get("gloss") or "",
-                    "locus": str(n) if n is not None else "",
-                }
-            )
-
-    def as_str(val) -> str:
-        if val is None:
-            return ""
-        if isinstance(val, str):
-            return val.strip()
-        if isinstance(val, (int, float)):
-            return str(val)
-        if isinstance(val, list):
-            # rare multi-lemma slots — take first non-empty string
-            for x in val:
-                s = as_str(x)
-                if s:
-                    return s
-            return ""
-        return ""
-
     sub = json.loads((OUT / "subhashita_beginner_pack.json").read_text(encoding="utf-8"))
-    for tok in walk_dicts(sub):
-        lemma = as_str(tok.get("lemma_slp1") or tok.get("lemma"))
-        if not lemma:
-            continue
-        surface = as_str(tok.get("t") or tok.get("form") or tok.get("surface"))
-        gr = tok.get("gloss_ru")
-        if isinstance(gr, dict):
-            gloss = as_str(gr.get("lemma") or gr.get("surface"))
-        else:
-            gloss = as_str(gr)
-        key = ("subhashita-beginner", lemma)
-        if key in seen:
-            continue
-        seen.add(key)
-        rows.append(
-            {
-                "pack": "subhashita-beginner",
-                "lemma_slp1": lemma,
-                "surface": surface,
-                "gloss_ru": gloss,
-                "gloss_en": "",
-                "locus": "",
-            }
-        )
+    rows = lemma_rows(hito, sub)
 
     lemma_path = OUT / "lemmas_for_srs.tsv"
-
-    def esc(s: str) -> str:
-        return (s or "").replace("\t", " ").replace("\n", " ")
-
-    with lemma_path.open("w", encoding="utf-8", newline="") as f:
-        f.write("pack\tlemma_slp1\tsurface\tgloss_ru\tgloss_en\tlocus\n")
-        for r in sorted(rows, key=lambda x: (x["pack"], x["lemma_slp1"])):
-            f.write(
-                "\t".join(
-                    esc(r[k])
-                    for k in (
-                        "pack",
-                        "lemma_slp1",
-                        "surface",
-                        "gloss_ru",
-                        "gloss_en",
-                        "locus",
-                    )
-                )
-                + "\n"
-            )
+    write_lemma_tsv(lemma_path, rows)
 
     packs.append(
         {
