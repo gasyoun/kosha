@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="122 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="125 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="122 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="125 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -158,34 +158,6 @@
         "@type": "DataDownload",
         "encodingFormat": "tsv",
         "contentUrl": "https://github.com/gasyoun/kosha/releases/download/data-v0.4.0/union_headwords.tsv"
-      }
-    },
-    {
-      "@type": "Dataset",
-      "name": "16-dict union headword index (PD-inclusive, now-2026 lists)",
-      "description": "H4797 (19-09-2026): built from the committed now-2026 per-dict unique lists so PD (no csl-orig source) joins the union. Not a replacement for union-headwords (15-dict, csl-orig <k1>, gender-folded master): no <lex> means no feminine folds here. key1 MW-PWG 94,779 anchors against union15's 94,753. Headline: 90.2% of PD's 104,959 headwords attested by no other dict; key2 exact-join overlap is print-convention-dominated (MW-PWG 94,779 key1 vs 30,698 key2) and disclosed as a strict lower bound.",
-      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "isAccessibleForFree": true,
-      "creator": {
-        "@id": "https://gasyoun.github.io/kosha/#org"
-      },
-      "publisher": {
-        "@id": "https://gasyoun.github.io/kosha/#org"
-      },
-      "includedInDataCatalog": {
-        "@type": "DataCatalog",
-        "name": "kosha Sanskrit data-hub",
-        "url": "https://gasyoun.github.io/kosha/directory/"
-      },
-      "keywords": [
-        "Sanskrit",
-        "computational linguistics",
-        "union-headwords-16dict"
-      ],
-      "distribution": {
-        "@type": "DataDownload",
-        "encodingFormat": "tsv",
-        "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
       }
     },
     {
@@ -1077,6 +1049,34 @@
         "Sanskrit",
         "computational linguistics",
         "headword-overlap-matrix"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Cross-dictionary union headword index, 16 dicts (now-2026 key1+key2)",
+      "description": "H4797 (19-09-2026, OxAlpha opencode/z-ai/glm-5.3-flash). 16 dicts incl. PD for the first time (104,962 keys, 89.0% single-dict unique); 15-dict baseline 323,425. Corroboration n=1: 232,375; aNga/aRu in all 16. Top pairs CAE-CCS J=0.672, PWG-PWK J=0.630, MW-PWK J=0.596; bottom PD-VEI J=0.001. Residue 1,997/1,676,661 raw lines (0.12%). The 15-dict union + matrix rows remain valid for their artifacts.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "union-headwords-16dicts"
       ],
       "distribution": {
         "@type": "DataDownload",
@@ -2458,8 +2458,8 @@
     },
     {
       "@type": "Dataset",
-      "name": "Cross-dictionary aligned senses, PWG · MW · Apte · MD · ŚKDR · VCP (H3744 slice 1 + H3862 slice 2 + H4751 W2 scaling + H4745 MD extension)",
-      "description": "Wave-2 slices 1+2 of PLAN_KOSHA_SENSE_RECONCILIATION_2026H2. Method: senses join a meaning through SHARED LITERARY WITNESS — the <ls> sources both dictionaries cite for them, each weighted 1/df within the lemma (a witness cited by every sense discriminates nothing). Grouping is a greedy BEST MATCH per dictionary pair, not transitive closure: closure merged amṛta's 'not dead', 'nectar' and 'N. pr. the mother of Parikṣit' into one component. Marked defaults TAU=0.30, GLOSS_FLOOR=0.20, PREFIX_MIN=4 — unchanged by slice 2, which adds no constant of its own. LANGUAGE FENCE: gloss-token Jaccard is open only between two dictionaries glossing in the SAME language and only when that language is English (MW↔Apte). It never crosses PWG's German boundary and, since H3862, never crosses the ŚKDR/VCP Sanskrit boundary either — app/sense_align.gloss_channel_open() is the single gate. H3862 STEP-1 VERDICT: ŚKDR and VCP are reachable (csl-sqlite skd.zip/vcp.zip) and ship as columns; Medinī and Amara are NOT in CDSL at all and ship as recorded absences — the `md` code in csl-orig/csl-sqlite is MACDONELL, not Medinīkośa. THE Sa→Sa BRIDGE: the kośas carry ZERO <ls> (0 of 42,531 ŚKDR and 0 of 50,135 VCP records), so the witness channel does not exist for them; what does is PWG's own citations OF them (ŚKDR. 1,227×, MED. 1,824× in the pilot), which is the `attrib` method — weighted 1/df off the same table and decided by the same TAU, ranked below `ls` because it is directional. Reading the kośas' own `iti X` prose as witnesses was measured and REJECTED: it matched PWG's PRAT. to `pratyarthin` and BUDDH. to `buddhim`, re-inventing witnesses through a side door PREFIX_MIN closes; a closed curated source vocabulary is the honest version and is a slice of its own. SLICE-2 DELTA, verified row by row against `--no-sasa`: no western sense changed partner, method, score or witness list; 0 new western-only rows; aligned 2,957→3,013 = 56 kośa-only meanings + 11 existing meanings that gained a kośa cell; clean 1-1-1 unchanged at 262. `df` did not move because the kośas contribute no witnesses. SIDECAR ONLY — no dictionary's sense order or bytes are touched. NOT PUBLISHED: the table is not on the 2,324 live static pages, because it asserts in kosha's own voice that these dictionaries' senses correspond and that can be scholarly wrong in a way page chrome cannot (docs/NOT_PUBLISHED_H3744_SENSE_ALIGNMENT.md). False positives exist and are NOT quantified: precision needs the wave-2 acceptance pass (sample + judge + human vote), explicitly out of both slices' scope, so no precision figure is quoted anywhere; the known `attrib` false-positive class is lemma-level joins onto a ŚKDR verbal-root entry (kaṭa, bhū). Remaining scope fences: the lemma-variant graph and the pwg_ru sense-structure deliverable are separate units. Build report: data/concordance/SENSE_ALIGNMENT_BUILD_REPORT.md; packet: docs/H3744_SENSE_ALIGNMENT_PACKET_31.08.26.md; smoke: docs/H3862_SENSE_ALIGNMENT_SMOKE_LOG_02.09.26.md. H4751 W2 scaling (landed 15-09): frozen H3910 strata rule re-derived on the scaled table — 21 strata, population 7,009, shares sum 1.0, census strata (96 groups) taken whole; 153-card stratified sample beside the frozen 120-card one (sense_alignment_acceptance_sample_w2.tsv/_strata_w2.json); frozen artifacts byte-stable; judge self-consistency on the frozen acceptance sample reproduces at Cohen's kappa 0.9022 (byte-identical rerun).",
+      "name": "Cross-dictionary aligned senses, PWG · MW · Apte · MD · ŚKDR · VCP (H3744 slice 1 + H3862 slice 2 + H4751 W2 scaling + H4745 MD extension + H5273 root-vs-nominal gate)",
+      "description": "Wave-2 slices 1+2 of PLAN_KOSHA_SENSE_RECONCILIATION_2026H2. Method: senses join a meaning through SHARED LITERARY WITNESS — the <ls> sources both dictionaries cite for them, each weighted 1/df within the lemma (a witness cited by every sense discriminates nothing). Grouping is a greedy BEST MATCH per dictionary pair, not transitive closure: closure merged amṛta's 'not dead', 'nectar' and 'N. pr. the mother of Parikṣit' into one component. Marked defaults TAU=0.30, GLOSS_FLOOR=0.20, PREFIX_MIN=4 — unchanged by slice 2, which adds no constant of its own. LANGUAGE FENCE: gloss-token Jaccard is open only between two dictionaries glossing in the SAME language and only when that language is English (MW↔Apte). It never crosses PWG's German boundary and, since H3862, never crosses the ŚKDR/VCP Sanskrit boundary either — app/sense_align.gloss_channel_open() is the single gate. H3862 STEP-1 VERDICT: ŚKDR and VCP are reachable (csl-sqlite skd.zip/vcp.zip) and ship as columns; Medinī and Amara are NOT in CDSL at all and ship as recorded absences — the `md` code in csl-orig/csl-sqlite is MACDONELL, not Medinīkośa. THE Sa→Sa BRIDGE: the kośas carry ZERO <ls> (0 of 42,531 ŚKDR and 0 of 50,135 VCP records), so the witness channel does not exist for them; what does is PWG's own citations OF them (ŚKDR. 1,227×, MED. 1,824× in the pilot), which is the `attrib` method — weighted 1/df off the same table and decided by the same TAU, ranked below `ls` because it is directional. Reading the kośas' own `iti X` prose as witnesses was measured and REJECTED: it matched PWG's PRAT. to `pratyarthin` and BUDDH. to `buddhim`, re-inventing witnesses through a side door PREFIX_MIN closes; a closed curated source vocabulary is the honest version and is a slice of its own. SLICE-2 DELTA, verified row by row against `--no-sasa`: no western sense changed partner, method, score or witness list; 0 new western-only rows; aligned 2,957→3,013 = 56 kośa-only meanings + 11 existing meanings that gained a kośa cell; clean 1-1-1 unchanged at 262. `df` did not move because the kośas contribute no witnesses. SIDECAR ONLY — no dictionary's sense order or bytes are touched. NOT PUBLISHED: the table is not on the 2,324 live static pages, because it asserts in kosha's own voice that these dictionaries' senses correspond and that can be scholarly wrong in a way page chrome cannot (docs/NOT_PUBLISHED_H3744_SENSE_ALIGNMENT.md). False positives exist and are NOT quantified: precision needs the wave-2 acceptance pass (sample + judge + human vote), explicitly out of both slices' scope, so no precision figure is quoted anywhere; the known `attrib` false-positive class is lemma-level joins onto a ŚKDR verbal-root entry (kaṭa, bhū). Remaining scope fences: the lemma-variant graph and the pwg_ru sense-structure deliverable are separate units. Build report: data/concordance/SENSE_ALIGNMENT_BUILD_REPORT.md; packet: docs/H3744_SENSE_ALIGNMENT_PACKET_31.08.26.md; smoke: docs/H3862_SENSE_ALIGNMENT_SMOKE_LOG_02.09.26.md. H4751 W2 scaling (landed 15-09): frozen H3910 strata rule re-derived on the scaled table — 21 strata, population 7,009, shares sum 1.0, census strata (96 groups) taken whole; 153-card stratified sample beside the frozen 120-card one (sense_alignment_acceptance_sample_w2.tsv/_strata_w2.json); frozen artifacts byte-stable; judge self-consistency on the frozen acceptance sample reproduces at Cohen's kappa 0.9022 (byte-identical rerun). H5273 (23-09-2026): root-vs-nominal gate — a dhātu-marked ŚKDR record (the H5252 lens, now app/sense_align.DHATU_MARKERS) is never a candidate partner for a PWG sense PWG marks non-verbal (governing <lex>, gloss not a German infinitive); ŚKDR-bearing aligned rows 160→60, H5252 deck: 33 of 35 wrong matches removed, 0 of 10 correct/unsure lost (C013 dhvaj kept); withheld senses carry failure_class root-vs-nominal. Selective-risk decks now re-draw from the frozen pre-H5273 table (git blob 4d08aa34).",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
       "isAccessibleForFree": true,
       "creator": {
@@ -3438,6 +3438,34 @@
     },
     {
       "@type": "Dataset",
+      "name": "PW × PWG Kurzfassung cut measure — sense-block diff + pwg_ru cut queue (H4805)",
+      "description": "H4805. 158,370 pw entries (170,556 <L> minus 12,186 {{Lbody}} stubs) → 289,813 blocks; 123,357 pwg entries → 223,437; grid 151,461 keys (45,382 pw-only, 9,774 pwg-only, 96,305 shared). CUT = 200,234 blocks = 69.1% of PW block mass over 105,410 headwords — upper-bound-flavoured (merged/reworded pairs without shared witnesses count as cut; one-to-one claim discipline). Companion grid: pw_pwg_headword_grid.tsv; report: PW_KURZFASSUNG_CUT_REPORT.md. Verify: independent recount (raw ^<L> minus stubs, raw <div occurrences, grid sums) PASS + printed canaries.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "pw-pwg-kurzfassung-cut"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/kosha"
+      }
+    },
+    {
+      "@type": "Dataset",
       "name": "Amarakosha varga/synsets x MW/PWG sense-unit inventories (structural split envelope)",
       "description": "H4806 (shortlist cand.6). Coverage: 98.60% of 5,590 AK synsets have >=1 MW sense unit, 93.97% >=1 PWG; 108,242 units attach to AK members (26.4% of all MW+PWG records); mean 19.6 units/covered synset; only 1.02% of synsets = exactly 1 unit, 60.37% split 11+. Language fence (sense-alignment-pilot trap): NO gloss-Jaccard, no gloss text read or emitted - keys+counts only. AK side consumed as-is from SanskritLexicography ak_lemma_cdsl_crosswalk.tsv (H4746); csl-orig mw/pwg headword lists read-only, never committed. Envelope measure: conflates semantic split with polysemy/homonymy and proper-noun entry mass (Siva/haMsa/kfzRa top).",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -3462,6 +3490,62 @@
         "@type": "DataDownload",
         "encodingFormat": "tsv",
         "contentUrl": "https://github.com/gasyoun/kosha"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "BHS (Edgerton) × MW/PWG × DCS Buddhist loci key2 crosswalk",
+      "description": "H4744 (sibling census B8). First crosswalk for the BHS dictionary; the retired H4808 gap measure falls out of it: MW misses 13,604/18,188 BHS headwords (74.8%), PWG 13,305 (73.2%). DCS register classes (H1000 period-map pm-excluded / bhs-hybrid / buddhist-classical) travel per-row (dcs_bhs_loci), re-cuttable without rebuild. Landed via SanskritLexicography PR #2225 (product repo, PR-only) — source_path resolves on master once merged.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "bhs-mw-dcs-key2-crosswalk"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "tsv",
+        "contentUrl": "https://github.com/gasyoun/SanskritLexicography"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "CDSL GitHub maintenance ecosystem: A15 analysis inputs (76-repo snapshot, issue/commit ledgers, 52,498-event correction ledger)",
+      "description": "H5170 (20-09-2026, mint lane): minted via the legacy Zenodo deposit API (FINDINGS §594 recipe), 67/67 uploads MD5-verified, record live-verified logged-out. Concept DOI 10.5281/zenodo.22853817; version DOI 10.5281/zenodo.22853818 (v1.0.0, 2026-09-20). The OBS-T correction-event corpus also circulates as repo-archive Zenodo releases (concept DOI 10.5281/zenodo.21346705). Wired into csl-observatory CITATION.cff + README + the A15 manuscript (PR sanskrit-lexicon/csl-observatory#224, merged).",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "csl-observatory-a15-gh-ecosystem-inputs"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv+json (67-file catalog)",
+        "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory"
       }
     }
   ]
@@ -3533,7 +3617,7 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>122</b><span>public datasets</span></div>
+      <div class="tally"><b>125</b><span>public datasets</span></div>
       <div class="tally"><b>15</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
@@ -3590,16 +3674,6 @@
       <p class="meta">323,422 rows · 11.8 MB · TSV</p>
       <div class="chips"><span class="chip">kosha crosswalk</span><span class="chip">SanskritSpellCheck (union=N tags)</span><span class="chip">PWG→EN pilot (94,753 subset)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.4.0/union_headwords.tsv">Download ↓</a></div>
-    </article>
-    <article class="card">
-      <div class="card-h">
-        <h3>16-dict union headword index (PD-inclusive, now-2026 lists)</h3>
-        <span class="badge pub">public</span>
-      </div>
-      <p class="key">SLP1 headword (key1, 9 dicts incl. PD) / SLP1 print form (key2, all 16 dicts) — two separate key spaces, never mixed</p>
-      <p class="meta">390,172 rows · 12.9 MB · TSV</p>
-      <div class="chips"><span class="chip">which-dictionary routing analysis (PD mass previously un-routed)</span><span class="chip">overlap matrix / per-dict profile consumers</span></div>
-      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
     </article>
     <article class="card">
       <div class="card-h">
@@ -3923,6 +3997,16 @@
     </article>
     <article class="card">
       <div class="card-h">
+        <h3>Cross-dictionary union headword index, 16 dicts (now-2026 key1+key2)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">bare SLP1 headword + per-dict provenance flags; key1 as-is, key2 print forms normalized to the k1 key space (parens stripped, marks removed), residue counted per class</p>
+      <p class="meta">417,184 rows · 8.4 MB · TSV</p>
+      <div class="chips"><span class="chip">H4802 full-csl-orig xwalk (s2d jaccard)</span><span class="chip">routing-bench overlap analysis</span><span class="chip">A40 headword-inventory paper</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
         <h3>Headword pairwise-overlap matrix, Tamil-fold extension (18 dicts)</h3>
         <span class="badge pub">public</span>
       </div>
@@ -4068,7 +4152,7 @@
       </div>
       <p class="key">one row per core-vocabulary lemma (6,667 of 7,120 Leonchenko core_rank lemmas; 453 dropped for having no committed dictionary card), ordered by core_rank: rank, lemma_slp1, deva, iast, gloss, core_rank, coverage_pct, cumulative_pct, lesson (134 lessons of 50), card_href. cumulative_pct is computed here (running sum of the source coverage_pct marginal weight), not copied from the source feed. Learn 284 lemmas -&gt; read 30% of the core-vocabulary corpus mass; 1122 -&gt; 50%; 4978 -&gt; 70%. Teaching page reading/vocabulary/curriculum/index.html.</p>
       <p class="meta">6,667 rows · 1.1 MB · TSV</p>
-      <div class="chips"><span class="chip">reading/vocabulary/curriculum/ page</span><span class="chip">vocab-drills dataset</span></div>
+      <div class="chips"><span class="chip">reading/vocabulary/curriculum/ page</span><span class="chip">vocab-drills dataset</span><span class="chip">Uprava stenogrammy-teaching-glossary crosswalk (H4813 Pair 13 taught-vs-corpus axis, 19-09-2026)</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/data-v0.2.0/data/frequency/vocab_curriculum.tsv">Download ↓</a></div>
     </article>
     <article class="card">
@@ -4413,11 +4497,11 @@
     </article>
     <article class="card">
       <div class="card-h">
-        <h3>Cross-dictionary aligned senses, PWG · MW · Apte · MD · ŚKDR · VCP (H3744 slice 1 + H3862 slice 2 + H4751 W2 scaling + H4745 MD extension)</h3>
+        <h3>Cross-dictionary aligned senses, PWG · MW · Apte · MD · ŚKDR · VCP (H3744 slice 1 + H3862 slice 2 + H4751 W2 scaling + H4745 MD extension + H5273 root-vs-nominal gate)</h3>
         <span class="badge pub">public</span>
       </div>
       <p class="key">one row per MEANING GROUP, keyed (lemma_slp1, group_id); columns status/shape/method/score/witnesses/flags/failure_class + per-dictionary sense_ids and glosses for pwg/mw/apte/md/skd/vcp. `shape` is the six-position pwg-mw-apte-md-skd-vcp sense count of the row, so sense-granularity mismatch stays visible instead of being smoothed away. H4745 MD extension (this wave, on the H4751 W2 1,487-lemma frame): MD (Macdonell, csl-sqlite md.zip, 20,749 entries, no &lt;div&gt; — one sense/entry) added as a sixth column, scored on the same English gloss channel as MW/Apte and the real `&lt;ls&gt;` witness channel (unlike ŚKDR/VCP, which cite no witnesses); aligned 7,009→7,087 of 65,987→67,230 rows (10.5%). PWK (151,314 union-`lemmas` key1s) has NO CDSL source at all — no `pwk` csl-orig directory, no `pwk.zip` csl-sqlite asset (`pwkvn` is a different dict) — and joins Medinī/Amara as a recorded absence, not a column. H4751 scaled wave (1,487-lemma W2 frame, pre-MD): aligned 7,009 of 65,987 rows (10.6%); 633 clean western 1-1-1 rows; 1,407 lemmas carry at least one aligned meaning. Frozen 500-headword slice-1 figures kept for provenance: aligned 3,013 of 32,399 (9.3%), 262 clean 1-1-1, 477/500 aligned. Unaligned senses are KEPT as rows with a failure_class, never dropped; the per-sense failure record is sense_alignment_failures.tsv (66,755 rows).</p>
-      <p class="meta">67,230 rows · 13.2 MB · TSV</p>
+      <p class="meta">67,330 rows · 13.3 MB · TSV</p>
       <div class="chips"><span class="chip">dist/sense-align-staging/ standalone viewer (STAGED, gitignored)</span><span class="chip">app/word_page_ux.sense_alignment_block — word-page organ behind ux={&#x27;sense_align&#x27;: True}, staging only</span><span class="chip">https://gasyoun.github.io/h3744-sense-align/ before/after compare page</span></div>
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/not-applicable/sense_alignment.tsv">Download ↓</a></div>
     </article>
@@ -4763,6 +4847,16 @@
     </article>
     <article class="card">
       <div class="card-h">
+        <h3>PW × PWG Kurzfassung cut measure — sense-block diff + pwg_ru cut queue (H4805)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">grid tsv: form_key(k1, `*`/`˚` marks stripped, case preserved); diff tsv: k1 + pw &lt;L&gt; + sense_ord. CUT = PW sense block with no PWG partner (greedy best-match: folded &lt;ls&gt; witnesses, frozen τ=0.30, or de gloss Jaccard ≥ 0.50)</p>
+      <p class="meta">200,234 rows · 8.8 MB · TSV</p>
+      <div class="chips"><span class="chip">pwg_ru queue prioritization (headwords whose RU translation keyed to PWG would miss PW-only content)</span><span class="chip">kosha sense-alignment programme (first PW ingest; pw was the largest single absence in KOSHA_DB_COMPLETENESS_AUDIT)</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/kosha">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
         <h3>Amarakosha varga/synsets x MW/PWG sense-unit inventories (structural split envelope)</h3>
         <span class="badge pub">public</span>
       </div>
@@ -4770,6 +4864,26 @@
       <p class="meta">5,590 rows · 474.2 KB · TSV</p>
       <div class="chips"><span class="chip">thematic-vocabulary (classical-grouping axis for sense units)</span><span class="chip">sense-alignment follow-ups (candidate shortlist only, needs gold + adjudication per H1670)</span><span class="chip">paper A58 sibling (thesaurus-x-dictionary leg)</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/kosha">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>BHS (Edgerton) × MW/PWG × DCS Buddhist loci key2 crosswalk</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">BHS key2 (SLP1) × MW/PWG key2 (tiered: exact → form_key → marker_strip) × DCS lemma_id attestation in 20 Buddhist texts; 3,171 BHS headwords DCS-attested (130,416 tokens)</p>
+      <p class="meta">18,188 rows · 958.9 KB · TSV</p>
+      
+      <div class="card-f"><a class="dl ghost" href="https://github.com/gasyoun/SanskritLexicography">In source repo ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>CDSL GitHub maintenance ecosystem: A15 analysis inputs (76-repo snapshot, issue/commit ledgers, 52,498-event correction ledger)</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">multi-file analysis catalog, no single key — rows above = correction_events_release.csv; per-file format/rows/generating-script/caveats live in data_index.csv</p>
+      <p class="meta">52,498 rows · 291.9 MB · CSV+JSON (67-FILE CATALOG)</p>
+      <div class="chips"><span class="chip">A15 JOHD Discussion Paper (Measuring the Cologne Digital Sanskrit Dictionaries as a GitHub Maintenance Ecosystem) — archived-snapshot DOI required by the venue</span></div>
+      <div class="card-f"><a class="dl ghost" href="https://github.com/sanskrit-lexicon/csl-observatory">In source repo ↗</a></div>
     </article>
     </div>
     <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>
