@@ -26,11 +26,11 @@ exists and its check passes — that is the lesson of the 02-07-2026 audit.
 
 - Vendor the lemma spine: load
   [union_headwords.tsv](https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/union/union_headwords.tsv)
-  (323,426 rows) into `lemmas` (SQLite). Keep `slp1` as primary key; carry
+  (323,422 rows) into `lemmas` (SQLite). Keep `slp1` as primary key; carry
   `iast`, `dicts`, `gender`.
 - Locate per-dict sources for MW / PWG / AP90 (local csl-orig siblings or CDSL
   downloads). Record source commit/version per dict for provenance.
-- **Check:** `SELECT COUNT(*) FROM lemmas` = 323,426; per-dict source paths +
+- **Check:** `SELECT COUNT(*) FROM lemmas` = 323,422; per-dict source paths +
   versions recorded in `data/SOURCES.md`.
 
 ## D2 — entry load + per-dict `<pc>` parser (NEW, small)

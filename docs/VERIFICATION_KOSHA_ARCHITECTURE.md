@@ -83,7 +83,7 @@ enabled the second barrier waited on nothing, and the `workflow_run` condition
 was carrying the whole guarantee alone.
 
 The fixture tier is deliberately not the whole suite. Eight test modules are
-pinned to full-data counts (323,425 lemmas and similar) and skip themselves
+pinned to full-data counts (323,422 lemmas and similar) and skip themselves
 when the core DB is absent — see
 [tests/conftest.py](https://github.com/gasyoun/kosha/blob/main/tests/conftest.py).
 Running those remains a workstation and full-data-release-gate duty.

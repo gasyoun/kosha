@@ -6,7 +6,7 @@ Mārcis Gasūns, independent scholar ([ORCID 0000-0003-4513-884X](https://orcid.
 
 **Target venue:** Journal of Open Humanities Data (JOHD), data-paper track.
 **Dataset:** [`union-headwords`](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/union-headwords.meta.md)
-(323,425 rows), release
+(323,422 rows), release
 [data-v0.4.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.4.0),
 DOI [10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090).
 **Readiness:** 4/5 (submission draft; all numbers re-verified against the frozen
@@ -14,7 +14,7 @@ release asset 02-08-2026; DOI minted 25-08-2026; final human pass pending).
 
 ## Abstract
 
-I present a union headword index of 323,425 distinct Sanskrit lexemes,
+I present a union headword index of 323,422 distinct Sanskrit lexemes,
 compiled from fifteen digitized dictionaries of the Cologne Digital Sanskrit
 Dictionaries (CDSL) ecosystem — from Grassmann's Rig-Veda lexicon and the
 Vedic name index through the great European bilingual dictionaries
@@ -99,7 +99,7 @@ over the released file, never by rebuilding the union.
 
 The union is deterministic and reproducible from the member exports. Row
 count is embedded in the producing convention (count = line count, checked at
-build); the distinct-code and count invariants (15 codes, 323,425 rows) were
+build); the distinct-code and count invariants (15 codes, 323,422 rows) were
 re-verified at release cut and re-verified again against the frozen release
 asset on 02-08-2026, including the full `n_dicts` distribution and the 237
 `fem_fold` rows. Per-dictionary totals reconcile against the frozen 2014-era
@@ -133,7 +133,7 @@ corpus frequency or importance.
 
 - **Object name:** `union_headwords.tsv`
 - **Format names and versions:** TSV (tab-separated values), UTF-8; 6 columns
-  (`slp1`, `iast`, `n_dicts`, `dicts`, `gender`, `fem_fold`); 323,425 data
+  (`slp1`, `iast`, `n_dicts`, `dicts`, `gender`, `fem_fold`); 323,422 data
   rows; 12,397,253 bytes. Companion analytical files:
   [headword_overlap_matrix.tsv](https://github.com/gasyoun/SanskritLexicography/blob/master/data/headword_overlap_matrix.tsv)
   (105 unordered dictionary pairs: shared / union / Jaccard) and
