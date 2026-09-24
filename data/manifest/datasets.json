@@ -104,27 +104,6 @@
    "regen_checked": "2026-09-04 (H4075: refreshed over live csl-orig v02 — INM SaktreH→SaktreHputra + upstream moves since committed build; 323425→323422 rows; deterministic build_union.py rerun, SanskritLexicography PR pending; H4046 04-09 PASS)"
   },
   {
-   "id": "union-headwords-16dict",
-   "title": "16-dict union headword index (PD-inclusive, now-2026 lists)",
-   "tier": "public",
-   "license": "CC BY-SA 4.0",
-   "in_release": "not-applicable",
-   "format": "tsv",
-   "rows": 390172,
-   "rows_key2_twin": 580950,
-   "size_bytes": 13481334,
-   "keying": "SLP1 headword (key1, 9 dicts incl. PD) / SLP1 print form (key2, all 16 dicts) — two separate key spaces, never mixed",
-   "source_repo": "https://github.com/gasyoun/SanskritLexicography",
-   "source_path": "HeadwordLists/union16/union16_headwords_key1.tsv (routing artifact; key2 twin 19,951,678 bytes) + union16_headwords_key2.tsv (16-dict inventory)",
-   "builder": "HeadwordLists/build_union16.py (H4797)",
-   "consumers": [
-    "which-dictionary routing analysis (PD mass previously un-routed)",
-    "overlap matrix / per-dict profile consumers"
-   ],
-   "notes": "H4797 (19-09-2026): built from the committed now-2026 per-dict unique lists so PD (no csl-orig source) joins the union. Not a replacement for union-headwords (15-dict, csl-orig <k1>, gender-folded master): no <lex> means no feminine folds here. key1 MW-PWG 94,779 anchors against union15's 94,753. Headline: 90.2% of PD's 104,959 headwords attested by no other dict; key2 exact-join overlap is print-convention-dominated (MW-PWG 94,779 key1 vs 30,698 key2) and disclosed as a strict lower bound.",
-   "regen_checked": "2026-09-19 (H4797: deterministic build_union16.py run, offline suite -k union 8/8 PASS)"
-  },
-  {
    "id": "mw-heritage-crosswalk",
    "title": "MW ↔ Heritage (INRIA) entry-level crosswalk",
    "tier": "public",
