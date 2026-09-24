@@ -50,7 +50,7 @@ all counted lemmas so nothing with a real signal is unranked. 7,120 rows carry
 
 - **73.7 %** of the 83,277 archive freq-lemmas match the kosha spine
   ([`union_headwords.tsv`](https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/union/union_headwords.tsv),
-  323,425 SLP1 keys); they are **19.0 %** of the spine (frequency data is inherently
+  323,422 SLP1 keys); they are **19.0 %** of the spine (frequency data is inherently
   sparser than the headword union — most dictionary headwords never occur in the DCS
   corpus).
 - **26.3 %** (21,937) of archive freq-lemmas are **not** in the spine: DCS stores

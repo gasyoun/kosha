@@ -34,7 +34,7 @@ provenance pins + per-cell drift: [`data/tamil/overlap_matrix_ext_stats.json`](h
 with and without the fold are identical (PASS) — the extension adds
 rows/columns only. 27 of the 105 registered cells drift by ≤3 in union size
 against the H684 baseline because that baseline was computed on the
-pre-H4075 union (323,425 rows); the drift is upstream of this extension and
+pre-H4075 union (323,422 rows); the drift is upstream of this extension and
 is recorded per cell in the stats JSON. Canaries: cap×CAE J = 0.7957 and
 mwd×MW J = 0.7838 validate the HK→SLP1 chain end to end; otl contributes
 its Sanskrit layer (1,593 keys into the union; 913 shared with MW).
