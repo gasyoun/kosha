@@ -3235,6 +3235,27 @@
    "doi": "10.5281/zenodo.22853818",
    "notes": "H5170 (20-09-2026, mint lane): minted via the legacy Zenodo deposit API (FINDINGS §594 recipe), 67/67 uploads MD5-verified, record live-verified logged-out. Concept DOI 10.5281/zenodo.22853817; version DOI 10.5281/zenodo.22853818 (v1.0.0, 2026-09-20). The OBS-T correction-event corpus also circulates as repo-archive Zenodo releases (concept DOI 10.5281/zenodo.21346705). Wired into csl-observatory CITATION.cff + README + the A15 manuscript (PR sanskrit-lexicon/csl-observatory#224, merged).",
    "regen_checked": "not yet (deposited blob-exact from committed files; catalog snapshot dated 2026-08-31)"
+  },
+  {
+   "id": "pwg-ls-additions-215",
+   "title": "PWG [Cologne Addition] pwgbib entries for the 215 true-unknown Andhrabharati ls strings",
+   "tier": "public",
+   "license": "CC BY-SA 4.0",
+   "in_release": "not-applicable",
+   "format": "tsv",
+   "rows": 215,
+   "size_bytes": 20898,
+   "keying": "one row per unknown ls string, keyed on the exact cited form (case preserved: S. vs s. are different works), 4 tab-delimited pwgauth fields; ids c.2180-c.2394 continue the pwgauth c.* append block (max was c.2179). Tooltip tiers: 15 confident Western expansions, 5 guesses (?), 40 full-title identity marks (X = X. ?), 155 = ?. Sibling audit TSV carries id/string/class_draft/kind/tooltip.",
+   "source_repo": "https://github.com/sanskrit-lexicon/csl-observatory",
+   "source_path": "data/pwg_scan_index_tracker/andhrabharati_ls_diff/pwgbib_additions_215.txt",
+   "builder": "csl-observatory scripts/pwgbib_additions_215.py (H5465; refuses to run if the pwgauth c.* append block moved; upstream offer merged as csl-pywork #94 appending the same 215 lines to v02 pwgauth pwgbib_input.txt, check_pwbib PASS)",
+   "consumers": [
+    "csl-pywork v02/distinctfiles/pwg/pywork/pwgauth/pwgbib_input.txt (upstream copy, merged #94)",
+    "PWG handoff H5466 pwg-ls-full-classifier (deep per-string classification)",
+    "csl-observatory issue-240 defect documentation"
+   ],
+   "notes": "Deliverables 1+3 of H5465 (215 Cologne additions + upstream PR offer). The 215 are the true-unknown residue of the Andhrabharati-vs-CDSL pwgbib diff (2680 distinct ls values, 2006 matched, 674 added of which 449 prefix-resolved and 10 case-only): strings cited in the updated PWG text with no pwgbib code, so their citations rendered unresolved. Conservative drafting: expansions written only where standard; deep classification stays with H5466 (MG: repair first, then classify).",
+   "regen_checked": "2026-09-24 (H5465: 215 rows generated; upstream check_pwbib PASS on merged file)"
   }
  ]
 }
