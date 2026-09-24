@@ -52,7 +52,7 @@ anti-gaming rules:
 |---|---|
 | `kosha.db` file | **1,673,854,976 B = 1,596.3 MiB = 1,673.9 MB decimal (1.559 GiB)** |
 | SQLite pages | 408,656 × 4,096 B · freelist 0 (already `VACUUM`-tight) |
-| Rows | entries 444,773 · forms 1,378,401 · lemmas 323,425 · senses 692,403 · **inflections 6,917,018** · heritage_anchor 185,803 · stem_bridge 760 · sources 3 |
+| Rows | entries 444,773 · forms 1,378,401 · lemmas 323,422 · senses 692,403 · **inflections 6,917,018** · heritage_anchor 185,803 · stem_bridge 760 · sources 3 |
 | vs GitHub **100 MB per-file** limit | **16.7× over** → release asset only, never in-repo (R11) |
 | vs **2 GB decimal** ceiling | **83.7%** — the number the org quotes as "84%" |
 | vs true **2 GiB** GitHub per-asset limit (2,147,483,648 B) | **77.9%** — **452 MiB (474 MB) real headroom** |
@@ -67,7 +67,7 @@ the file as follows:
 | **inflections** | 6,917,018 | ~477 MB | PK+form+lemma ≈ ~610 MB | **~1.09 GB** | **~65%** |
 | entries (incl. `body`) | 444,773 | ~165 MB | ~40 MB | ~205 MB | ~12% |
 | forms | 1,378,401 | ~41 MB | ~70 MB | ~110 MB | ~7% |
-| lemmas | 323,425 | ~18 MB | ~20 MB | ~38 MB | ~2% |
+| lemmas | 323,422 | ~18 MB | ~20 MB | ~38 MB | ~2% |
 | senses | 692,403 | ~11 MB | ~15 MB | ~26 MB | ~2% |
 | heritage_anchor | 185,803 | ~3 MB | ~3 MB | ~6 MB | ~0.4% |
 
@@ -110,7 +110,7 @@ So the SLO figures stand; the DB got bigger, not slower on the served paths.
 > |---|---|
 > | `kosha.db` file | **289,820,672 B = 276.4 MiB** (289.8 MB decimal) |
 > | SQLite pages | 70,757 × 4,096 B |
-> | Rows | entries 444,773 · forms 426,410 · lemmas 323,425 · senses 692,403 · sources 3 |
+> | Rows | entries 444,773 · forms 426,410 · lemmas 323,422 · senses 692,403 · sources 3 |
 > | vs GitHub **100 MB per-file** limit | **2.9× over** → ships as a **release asset**, never in-repo (R11 confirmed) |
 > | vs **2 GB release-asset** ceiling | 14.5% — ample headroom for growth |
 >
@@ -264,7 +264,7 @@ Per-lemma static card (merged cross-dict view: rendered HTML + headword +
 scan URL + sense IDs), sampled over 400 real lemmas:
 
 - avg payload **3.07 KB**, median 1.0 KB, p95 10.7 KB, avg 3.85 entries/lemma
-- 222,179 lemmas have ≥1 dict entry (of 323,425 union headwords).
+- 222,179 lemmas have ≥1 dict entry (of 323,422 union headwords).
 
 | N lemmas | as ONE bundled JSON | vs 100 MB/file | sharded (per-lemma) |
 |---|---:|---:|---:|

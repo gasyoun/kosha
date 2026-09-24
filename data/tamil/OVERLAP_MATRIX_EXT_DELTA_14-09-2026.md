@@ -15,7 +15,7 @@ _Generated 14/15-09-2026 by `scripts/build_overlap_matrix_ext.py`; inputs pinned
 ## Baseline drift (reported, not caused by this extension)
 
 - 27 of 105 registered cells differ from a recomputation on the CURRENT union — max union-size delta 3.
-- Cause: registered matrix (H684, 11-07-2026) was computed on the pre-H4075 union (323,425 rows); union regenerated 04-09-2026 (323,422 rows) — drift is upstream of and independent from this extension.
+- Cause: registered matrix (H684, 11-07-2026) was computed on the pre-H4075 union (323,422 rows); union regenerated 04-09-2026 (323,422 rows) — drift is upstream of and independent from this extension.
 - The extension-invariance gate above proves the fold changes none of them; the authoritative current-union values are the ones in the extended TSV.
 
 ## Per-dictionary profile (extended matrix)

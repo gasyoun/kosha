@@ -30,7 +30,7 @@ The 06-07-2026 census baseline counts re-verified live with no change.
 | entries | 444,773 | yes |
 | forms | 1,378,401 | yes |
 | inflections | 6,916,522 | yes |
-| lemmas | 323,425 | yes |
+| lemmas | 323,422 | yes |
 | meta | 1 | — |
 | senses | 692,403 | yes |
 | sources | 3 | — |
@@ -98,7 +98,7 @@ loaded (PWK, SKD, VCP, CAE, CCS, SCH, BUR, MD, BHS, INM, GRA, VEI):
 | AP | 88,744 | SCH | 28,431 | INM | 9,431 |
 | VCP | 48,583 | GRA | 11,108 | VEI | 3,702 |
 
-All 323,425 lemmas carry at least one dict code.
+All 323,422 lemmas carry at least one dict code.
 
 ## 5. Forms and inflections — provenance
 

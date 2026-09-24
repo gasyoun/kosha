@@ -43,7 +43,7 @@ CREATE TABLE sources (dict TEXT PRIMARY KEY,          -- 'mw' | 'pwg' | 'ap90'
                       pc_coverage REAL,               -- measured in D2, not assumed
                       entry_count INTEGER);
 
--- Lemma spine: vendored union_headwords.tsv (323,426 rows), unchanged
+-- Lemma spine: vendored union_headwords.tsv (323,422 rows), unchanged
 CREATE TABLE lemmas  (slp1 TEXT PRIMARY KEY, iast TEXT NOT NULL,
                       n_dicts INTEGER, dicts TEXT, gender TEXT);
 
