@@ -31,15 +31,25 @@ sys.stdout.reconfigure(encoding="utf-8")
 # Each entry: prefix -> compiled regex the TAIL (after the prefix) must match.
 ANCHOR_PATTERNS = {
     "gra": re.compile(r"^\d+(\.\d+)?$"),                       # gra:3983, gra:5833.1 (homonym suffix)
+    "buhler-lesson": re.compile(r"^[IVXL]+$"),                 # buhler-lesson:I … XLVIII (Roman, Leitfaden 1923)
+    "buhler-topic": re.compile(r"^[IVXL]+\.[a-z0-9-]+$"),      # buhler-topic:I.present-class-i
     "whitney-root": re.compile(r"^\d+$"),                      # whitney-root:1
     "whitney-sec": re.compile(r"^\d+(-\d+)?$"),                # whitney-sec:611[-641]
+    "zalizniak-1978-sec": re.compile(r"^\d+(-\d+)?$"),         # zalizniak-1978-sec:50 (§ n, span#sN)
+    "zalizniak-1975": re.compile(r"^[\w-]+$"),                 # zalizniak-1975:morphological-positions (slug)
+    "zalizniak-2004": re.compile(r"^[\w-]+$"),                 # zalizniak-2004:three-grade (slug)
     "root": re.compile(r"^[A-Za-z]+$"),                        # root:BU (SLP1)
     "sutra": re.compile(r"^\d+\.\d+\.\d+$"),                   # sutra:1.1.1
 }
 ANCHOR_TYPE_TO_PREFIX = {
     "id-gra": "gra",
+    "buhler-lesson": "buhler-lesson",
+    "buhler-topic": "buhler-topic",
     "whitney-root": "whitney-root",
     "whitney-sec": "whitney-sec",
+    "zalizniak-1978-sec": "zalizniak-1978-sec",
+    "zalizniak-1975": "zalizniak-1975",
+    "zalizniak-2004": "zalizniak-2004",
     "root": "root",
     "panini-sutra": "sutra",
 }
@@ -50,6 +60,18 @@ TARGET_PATTERNS = {
     "vedaweb": re.compile(r"^\d+(\.\d+)*:[0-9a-fA-F]{24}$"),     # vedaweb:1.1.6:<ObjectId>
     "commentary": re.compile(r"^[\w-]+:.+$"),                    # commentary:<work>:<cite>
     "subject": re.compile(r"^[\w-]+:[\w.-]+$"),                  # subject:<index>:<category>
+    "whitney-sec": re.compile(r"^\d+(-\d+)?$"),                  # whitney-sec:733-750 (§2 tail as target)
+    "zalizniak-1978-sec": re.compile(r"^\d+(-\d+)?$"),           # zalizniak-1978-sec:31
+    "zalizniak-1975": re.compile(r"^[\w-]+$"),                   # zalizniak-1975:<slug>
+    "zalizniak-2004": re.compile(r"^[\w-]+$"),                   # zalizniak-2004:<slug>
+    "kochergina-lesson": re.compile(r"^[IVXL]+$"),               # kochergina-lesson:XV («Занятие XV»)
+    "knauer-fraza": re.compile(r"^Nr\.\d+$"),                    # knauer-fraza:Nr.1
+    "sangram-article": re.compile(r"^[\w-]+$"),                  # sangram-article:conjugation-overview
+    "apte": re.compile(r"^\d+(-\d+)?$"),                         # apte:42
+    "speyer": re.compile(r"^\d+(-\d+)?$"),                       # speyer:42
+    "dhatu": re.compile(r"^[\w-]+$"),                            # dhatu:glava7-ukazatel-zaliznyaka
+    "talmud": re.compile(r"^[\w-]+$"),                           # talmud:morphoclass-crosswalk-1975-2014-2026
+    "frish": re.compile(r"^.+$"),                                # frish:<opaque work-own locus>
 }
 
 DATE_RE = re.compile(r"^\d{2}-\d{2}-\d{4}$")
