@@ -23,10 +23,22 @@ _Created: 08-07-2026 · Last updated: 01-10-2026_
   dimmed), coverage show-all beyond the 500-row cap; new gate
   `tests/test_panini_page_security.py` 6/6, H1585 surface contract still 4/4 —
   [#651](https://github.com/gasyoun/kosha/pull/651)**
-- [ ] Route the Q3 morph give-back payload (the 4,900-cell machine-decided triage of
+- [x] Route the Q3 morph give-back payload (the 4,900-cell machine-decided triage of
   [`morph_giveback_candidates.tsv`](https://github.com/gasyoun/kosha/blob/main/data/concordance/morph_giveback_candidates.tsv))
   as the kosha-side queued port — gate: none (agent-doable, next-wave candidate; the
   upstream csl-inflect post stays human-gated per RELATIONS.md §2/§7)
+  — **DONE 01-10-2026 (roadmap drain A02), honest split: kosha-side half shipped,
+  upstream post remains the human-gated residual (@DO in Uprava GTD).**
+  [`data/concordance/giveback_port/`](https://github.com/gasyoun/kosha/blob/main/data/concordance/giveback_port/)
+  carries the two owed payloads — `csl_inflect_slot_conflicts.tsv` (2,212 rows, both
+  forms named: `tvāt`/`tvasmāt`, `rājñ`/`rājan` …) and `csl_inflect_coverage_holes.tsv`
+  (2,688 rows, frequency-sorted, pronoun cells lead) — plus `ROUTING.json`
+  (sha256-pinned provenance + gate record) and `DRAFT_POST.md` (the upstream post
+  drafted on the H185 Task B pattern, marked DO-NOT-POST-FROM-AN-AGENT).
+  Builder `scripts/build_giveback_port.py` (deterministic, no DB); gate
+  `tests/test_giveback_port.py` 9/9; manifest row corrected to the on-disk
+  0.12.0-rebuild file (5,588→5,224 rows — stale since H3975) with the ROUTED note —
+  [#656](https://github.com/gasyoun/kosha/pull/656)**
 - [ ] R-C2 `@DECIDE` — confirm `Polnorazmernye/` as the released-canonical
   parallel-passage variant (or direct otherwise) — human-only (MG)
 - [ ] Sign-off on the 30 sampled derivation chains (exit-check 2a-7) — human-only
@@ -312,7 +324,10 @@ four human-checkable sample tables:
   it joined 426,410 rows, not 6.9M); the "attested-never-generated" residue triaged
   ✅ (H3782 triages it into `paradigm_gap` / `lexicon_gap` / `segmentation_artefact` /
   `non_sanskrit_or_ocr`, each cross-tabbed by `upos`; W1b's triage ran over a residue of 2);
-  gaps routed to the csl-inflect give-back (H185) — **⏳ payload built, hand-off owed**: W1b
+  gaps routed to the csl-inflect give-back (H185) — **✅ ROUTED 01-10-2026 (drain A02)
+  as the kosha-side queued port** — [`data/concordance/giveback_port/`](https://github.com/gasyoun/kosha/blob/main/data/concordance/giveback_port/)
+  (4,900 owed cells, sha256-pinned, drafted post human-gated; see the ticked checkbox
+  above): W1b
   had `genuine_engine_gap = 0` so nothing was ever routed. H3782 produces the first real
   payload and narrows it honestly —
   [`morph_giveback_candidates.tsv`](https://github.com/gasyoun/kosha/blob/main/data/concordance/morph_giveback_candidates.tsv),
@@ -342,7 +357,7 @@ four human-checkable sample tables:
 |---|---|---|---|---|---|
 | Q1 | B1 dict ↔ corpus | `dict-corpus-concordance` ✅ 74,520 rows | data-v0.2.0 ✅ | [`/concordance/dict/`](https://github.com/gasyoun/kosha/blob/main/concordance/dict/index.html) ✅ | **complete** |
 | Q2 | B3 parallel passages | `parallel-passage-concordance` ✅ 153,045 · `bloomfield-rv-citations` ✅ | data-v0.2.0 ✅ | [`/concordance/parallels/`](https://github.com/gasyoun/kosha/blob/main/concordance/parallels/index.html) ✅ | **complete**, one `@DECIDE` open (R-C2 variant) |
-| Q3 | A3 morphology audit | `morphology-attestation-audit` ✅ 401,368 · `morphology-attestation-audit-inflections` ✅ 239,189 · `morphology-giveback-candidates` ✅ 5,224 | data-v0.2.0 ✅ / unreleased ×2 | [`/concordance/morphology/`](https://github.com/gasyoun/kosha/blob/main/concordance/morphology/index.html) ✅ | **complete** (H3782 data + H3861 page + H3863 triage, all rebuilt on the narrowed join key in H3975); give-back hand-off owed |
+| Q3 | A3 morphology audit | `morphology-attestation-audit` ✅ 401,368 · `morphology-attestation-audit-inflections` ✅ 239,189 · `morphology-giveback-candidates` ✅ 5,224 | data-v0.2.0 ✅ / unreleased ×2 | [`/concordance/morphology/`](https://github.com/gasyoun/kosha/blob/main/concordance/morphology/index.html) ✅ | **complete** (H3782 data + H3861 page + H3863 triage, all rebuilt on the narrowed join key in H3975); give-back routed kosha-side 01-10-2026 (drain A02, [#656](https://github.com/gasyoun/kosha/pull/656)) — upstream post human-gated |
 | (Q3 slot) | A4 Pāṇini *(promoted, D1)* | `panini-derivation-status` · `paninian-corpus-concordance` 893,482 · `paninian-sutra-coverage-map` | data-v0.3.0 ✅ | [`/concordance/panini/`](https://github.com/gasyoun/kosha/blob/main/concordance/panini/index.html) ✅ | **complete**, W4a polish open |
 
 ### Q4 (months 10–12) — A4 · Pāṇinian sūtra ↔ corpus  ·  *flagship, highest novelty*
