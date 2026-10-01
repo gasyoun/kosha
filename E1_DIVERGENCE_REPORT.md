@@ -1,6 +1,6 @@
 # E1 — vidyut-prakriya vs Cologne csl-inflect: nominal divergence report
 
-_Created: 05-07-2026 · Last updated: 25-08-2026_
+_Created: 05-07-2026 · Last updated: 01-10-2026 (A03: bare-seeded crosswalk population resolved, comparison re-run)_
 
 Wave **E1** of the inflection roadmap
 ([ROADMAP_INFLECT_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_INFLECT_2026_2027.md)
@@ -284,6 +284,8 @@ true divergence is at most **~1,660 cells — 3.5 % of the 47,340 both-nonempty
 cells**, not 23 %. The next rung is mechanical and named: resolve the 212
 bare-seeded entries (the 57 `unresolved` first) and re-run. **Not done here** —
 this pass measures, it does not re-tune the crosswalk.
+*(Done 01-10-2026, A03 roadmap drain — see "The bare-seeded population resolved"
+below; the estimate undershot the honest 2,263 for a named reason.)*
 
 **Conclusion for #8 / the forms layer (unchanged posture, D3).** The 70.24 %
 agreement is a *comparison* result, not a licence to hybridize verbs, and the
@@ -293,6 +295,74 @@ a resolution artifact**, with only ~1,660 cells plausibly genuine and 110 roots 
 75 passives unresolved. Cologne's verb tables remain the display base. Raw stats: gitignored
 `data/e1/e1_verbs_divergence.json`; reproduce with `python
 scripts/build_dhatu_crosswalk.py && python scripts/compare_vidyut_verbs.py`.
+
+### ✅ The bare-seeded population resolved and the comparison re-run (A03 roadmap drain, 01-10-2026)
+
+The rung named above is done. [`scripts/build_dhatu_crosswalk.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_dhatu_crosswalk.py)
+gained a **stage 2** that re-decides exactly the H3166 target population — the
+`direct` entries whose seed is the bare root (212) and the `unresolved` ones
+(57) — on **Cologne form evidence**, never a guess:
+
+- **`cells` / `cells-xgana` (124 root-models)** — a licensed dhātupāṭha entry
+  wins because it demonstrably derives Cologne's present-3sg forms
+  (voice-consistently: parasmaipada-derived vs Cologne-active,
+  ātmanepada-derived vs Cologne-middle — the pada fork that hid half the
+  evidence). 16 of them live in a *different gaṇa* than Cologne's model claims
+  (`cells-xgana`, e.g. `v_1|klam` → bhvādi `klamu~` 04.0104; `v_4|dA` →
+  `dE\p` 01.1073) — a gaṇa-shift finding the comparison now honours via a
+  gaṇa override in `Dhatu.mula`.
+- **`direct` kept, now evidenced (8)** — the bare seed itself demonstrably
+  derives Cologne's forms and no licensed entry does better (e.g. `v_10|BI` →
+  `BAyayati`, matched verbatim). Bare-seeded entries drop **212 → 16 (27.2 %
+  → 2.1 %)**, every one carrying its evidence count.
+- **`no-dhatu` (130 root-models)** — nothing licenses a derivation (mostly
+  Cologne causative models — `v_10` — of roots vidyut's gaṇa-1/4/6/10
+  dhātupāṭha does not carry; median 1–2 candidates tried and refused). The
+  comparison now **abstains** on them: vidyut-side cells empty (COLOGNE_ONLY,
+  the coverage-gap class) instead of `Dhatu.mula`'s bare-root pseudo-derivation.
+  This abstain rule is the load-bearing change: the malformed outputs (`yat` →
+  `yyate`, `kam` → `kyate`) can no longer be miscounted as genuine conflict.
+  All 57 `unresolved` entries are decided; `unresolved` survives only as a
+  count of zero.
+
+**Re-run (same DB, same population discipline; reproduce command unchanged):**
+
+| Class | A03 re-run | H855 run (25-08) | Note |
+|---|---:|---:|---|
+| cells both-nonempty | 45,036 | 47,340 | smaller: abstains exit the both-side population |
+| **AGREE (strict)** | **39,374 (87.43 %)** | 33,253 (70.24 %) | licensed seeds lift agreement past the nominal 90.5 %'s verb shadow |
+| COMPATIBLE (+ cosmetic) | 42,773 (94.98 %) | 36,284 (76.65 %) | AGREE + final-stop + supersets |
+| DIFF genuine conflict | **2,263** | 11,056 | over only **62 roots**; 81.5 % passive |
+| — of which still bare-seeded | 72 (3.2 %) | 9,396 (85.0 %) | the artifact class is gone |
+| DIFF final-stop (t/d) | 923 | 937 | unchanged in character |
+| DIFF vidyut superset | 2,093 | 1,711 | loṭ `-tāt` + alternate stems |
+| DIFF cologne superset | 383 | 383 | identical — 8 roots, stable |
+| VIDYUT_ONLY | 2,088 | 4,680 | pseudo-derivations no longer pad this |
+| COLOGNE_ONLY (vidyut empty) | 20,988 | 15,984 | the abstained cells, honestly rehomed |
+
+The "~1,660 plausibly genuine" estimate undershot the honest 2,263 because the
+re-run also *enlarges* the measured population: 124 previously
+underivable/pseudo-deriving root-models now derive licensed forms (their real
+forks enter both-nonempty), and previously skipped passive cells are counted.
+The artifact signature collapsed exactly as H3166 predicted — "vidyut's form
+shorter than Cologne's" falls **66.9 % → 15.9 %**, and the poster child itself
+flips: `yatI~\` (01.0030, seeded via its ātmanepada `yatate`) + Karmaṇi derives
+**`yatyate`** — a strict AGREE cell where the bare seed produced `yyate`.
+
+**What the surviving 2,263 conflicts are.** Not resolution artifacts — real,
+concentrated derivation forks: `Bid` (Cologne `Bedati` vs vidyut `Bindati` —
+bhed/bhid gaṇa fork), `kram` middles (`krAmyate` vs `kramate` — pada-vṛddhi),
+`raB` (`raBate` vs `ramBate`), `aW` (`aWate` vs `aRWate`), and the passive
+stems (`pA` `pāyate` vs `pīyate` — the case H3166 adjudicated *Cologne wrong*;
+`vE` `vEyate` vs `vAyate`; `SaMs` `SaMsyate` vs `Sasyate`). This is the
+scholarly-fork residue D3 anticipated, now small enough to enumerate root by
+root. The drafted #8 give-back numbers in the H3166 handoff body (70.24 % /
+11,056) are **superseded by this table**; posting stays MG-gated (RELATIONS.md
+§2/§7) and should quote this run, not the H855 one.
+
+**Posture unchanged (D3):** Cologne's verb tables remain the display base;
+vidyut is the check-and-supplement engine. What changed is that the verb
+comparison is now measuring grammar instead of measuring our own seed choices.
 
 ## Deferred (deliberately)
 
@@ -309,6 +379,11 @@ The **remaining** crosswalk work is narrower and named: 212 of the 779
 root-model entries still seed vidyut with a bare root, which the § above shows
 carries 85 % of the surviving conflicts. Resolving those — the 57 `unresolved`
 first — is the next rung, and it is mechanical.
+*(Done 01-10-2026, A03 roadmap drain: stage 2 in `build_dhatu_crosswalk.py`
+resolved the population — 212 bare-seeded → 16 verified keeps, 57 unresolved →
+0; see the resolution section above. Nothing is deferred on the crosswalk any
+more; the open residue is vidyut-data's own dhātupāṭha gap, 130 `no-dhatu`
+root-models.)*
 
 ## Optional paper
 
