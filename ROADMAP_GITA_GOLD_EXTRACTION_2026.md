@@ -1,6 +1,8 @@
 # Roadmap — Gītā gold source (`Gita.xlsm`) extraction & consumption
 
-_Created: 13-07-2026 · Last updated: 13-07-2026_
+_Created: 13-07-2026 · Last updated: 31-08-2026_
+
+**Truth-pass verdict (31-08-2026, H3786):** finished — W0–W6 all shipped 13-07-2026, no drift since (the one later touch, 21-07-2026, was a link-repair, not content). No open work on this file.
 
 Scope decisions locked with MG (13-07-2026 interview): **home = kosha**;
 **vendor + cite** `Gita.xlsm` as a canonical source (credit the author);

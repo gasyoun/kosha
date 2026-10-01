@@ -25,9 +25,13 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from app.main import app  # noqa: E402
 import build_paradigms as bp  # noqa: E402
 from paradigm import build_paradigm  # noqa: E402
+from kosha.settings import get_settings  # noqa: E402
 
 client = TestClient(app)
-DB = ROOT / "data" / "db" / "kosha.db"
+# Resolve through the typed settings, not a hardcoded repo-relative path: the
+# same source of truth `tests/conftest.py::_core_db_present` uses, so the
+# module runs wherever the core DB actually lives (KOSHA_CORE_DB_PATH included).
+DB = get_settings().core_db
 
 pytestmark = pytest.mark.skipif(not DB.exists(), reason="kosha.db not built (A3, local-only)")
 

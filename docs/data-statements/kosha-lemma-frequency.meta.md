@@ -1,11 +1,12 @@
 # Data statement — DCS lemma frequency sidecar (`kosha-lemma-frequency`)
 
-_Created: 11-07-2026 · Last updated: 11-07-2026_
+_Created: 11-07-2026 · Last updated: 15-09-2026_
 
 Data statement for the `kosha-lemma-frequency` dataset served by the kosha
 data-hub. Manifest row:
 [data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json).
-Download: [`lemma_frequency.tsv` in release data-v0.1.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.1.0).
+Download: [`lemma_frequency.tsv` in release data-v0.5.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.5.0)
+(DOI [10.5281/zenodo.22105641](https://doi.org/10.5281/zenodo.22105641)).
 
 ## Composition & counts
 
@@ -69,6 +70,11 @@ decisions, not re-adjudicated here.
   overlap dated slots; use `count_all` for totals and the vector for *shape*,
   not for re-summation.
 - Frequencies are snapshot-frozen (DCS 2026); DCS grows continuously.
+- **Independent cross-check (H4710, 15-09-2026):** the per-period `periods` vectors
+  were validated against Leonchenko's Приложение-6 cores — dated buckets
+  `1 -800`/`3200`/`4700`/`5 1200` confirmed (ρ 0.79–0.89, ≥84 % within ±2×),
+  `2 -300`/`6 1700`/`7 1900` diverge vs the A6 pre-2026 dump (report:
+  [XCHECK_A6_PERIOD_CORES_LEMMA_FREQUENCY_15.09.26.md](https://github.com/gasyoun/kosha/blob/main/docs/XCHECK_A6_PERIOD_CORES_LEMMA_FREQUENCY_15.09.26.md)).
 - `coverage_pct`/`core_rank` are filled only for the core-vocabulary band.
 
 ## Intended use / known misuse
@@ -101,11 +107,10 @@ a new snapshot supersedes for live use without retiring the old asset.
 
 ## Citation
 
-Cite the release: *Gasuns Sanskrit Dictionary data release v0.1.0* (CC BY-SA
+Cite the release: *Gasuns Sanskrit Dictionary data release v0.5.0* (CC BY-SA
 4.0), asset `lemma_frequency.tsv`,
-[github.com/gasyoun/kosha/releases/tag/data-v0.1.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.1.0),
-with attribution to the Digital Corpus of Sanskrit (Hellwig). `CITATION.cff`
-+ Zenodo DOI pending the next `/cut-release` freeze.
+[github.com/gasyoun/kosha/releases/tag/data-v0.5.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.5.0),
+with attribution to the Digital Corpus of Sanskrit (Hellwig). Zenodo DOI [10.5281/zenodo.22105641](https://doi.org/10.5281/zenodo.22105641) (minted 26-08-2026, re-cut of the identical data-v0.1.0 content -- that release predates the GitHub-Zenodo webhook wired 14-08-2026).
 
 ## Provenance of this statement
 

@@ -139,7 +139,7 @@ def fetch_release_sqlite(dict_code, release_tag="latest"):
     return sqlite_path, release_tag
 
 
-def build_entries(con, dict_codes, release_tag="latest"):
+def build_entries(con, dict_codes, release_tag="latest", batch_size=2000):
     con.execute("DELETE FROM entries WHERE dict IN ({})".format(
         ",".join("?" * len(dict_codes))), dict_codes)
     con.execute("DELETE FROM sources WHERE dict IN ({})".format(
@@ -151,46 +151,71 @@ def build_entries(con, dict_codes, release_tag="latest"):
             continue
         sqlite_path, resolved_tag = fetch_release_sqlite(dict_code, release_tag)
         src = sqlite3.connect(sqlite_path)
-        rows = src.execute(f"SELECT key, lnum, data FROM {dict_code}").fetchall()
-        src.close()
+        src_cur = src.execute(f"SELECT key, lnum, data FROM {dict_code}")
 
-        n_total = len(rows)
+        # Streamed in fetchmany batches (H4407): the source dict (up to ~86MB)
+        # is never materialized as a Python list, and sense segmentation runs
+        # in the SAME pass off the row just inserted (segment() takes the body
+        # we already have in hand) rather than a second full SELECT over
+        # entries. `cur.lastrowid` is safe here because `entries.id` is a
+        # plain `INTEGER PRIMARY KEY` rowid alias and each insert below is a
+        # single-row `execute` (not `executemany`, whose lastrowid is not
+        # per-row reliable).
+        cur = con.cursor()
+        n_total = 0
         n_pc = 0
-        insert_rows = []
-        for key, lnum, data in rows:
-            pc_m = RE_PC.search(data)
-            pc_raw = pc_m.group(1) if pc_m else None
-            if pc_raw:
-                n_pc += 1
-            vol, page, col = parse_pc(dict_code, pc_raw)
-            k2_m = RE_KEY2.search(data)
-            k2 = k2_m.group(1) if k2_m else None
-            l_m = RE_L.search(data)
-            L = l_m.group(1) if l_m else str(lnum)
-            insert_rows.append((dict_code, L, key, k2, pc_raw, vol, page, col, data))
-
-        con.executemany(
-            "INSERT OR REPLACE INTO entries (dict, L, slp1_key, k2, pc_raw, vol, page, col, body) "
-            "VALUES (?,?,?,?,?,?,?,?,?)",
-            insert_rows,
-        )
-        # D2 per-dict sense segmentation (app/segment.py): split each body at
-        # its <div> division markers — the same boundaries basicdisplay.php
-        # renders — into byte-anchored senseN spans (A2). Entries with no <div>
-        # keep the single-sense fallback ("always mintable", ARCHITECTURE.md).
-        con.execute("DELETE FROM senses WHERE entry_id IN (SELECT id FROM entries WHERE dict=?)", (dict_code,))
-        sense_rows = []
+        n_senses = 0
         n_multi = 0
-        for eid, body in con.execute("SELECT id, body FROM entries WHERE dict=?", (dict_code,)):
-            spans = segment(dict_code, body)
-            if len(spans) > 1:
-                n_multi += 1
-            for sense_n, (s0, s1) in enumerate(spans, start=1):
-                sense_rows.append((eid, sense_n, s0, s1))
-        con.executemany(
-            "INSERT INTO senses (entry_id, sense_n, span_start, span_end) VALUES (?,?,?,?)",
-            sense_rows,
-        )
+        while True:
+            batch = src_cur.fetchmany(batch_size)
+            if not batch:
+                break
+            for key, lnum, data in batch:
+                n_total += 1
+                pc_m = RE_PC.search(data)
+                pc_raw = pc_m.group(1) if pc_m else None
+                if pc_raw:
+                    n_pc += 1
+                vol, page, col = parse_pc(dict_code, pc_raw)
+                k2_m = RE_KEY2.search(data)
+                k2 = k2_m.group(1) if k2_m else None
+                l_m = RE_L.search(data)
+                L = l_m.group(1) if l_m else str(lnum)
+
+                # A duplicate (dict, L) triggers the UNIQUE-constraint REPLACE
+                # below, which deletes-then-reinserts under a NEW rowid — any
+                # senses already inserted against the old rowid this pass
+                # would otherwise dangle. Clear them first (cheap: (dict, L)
+                # is UNIQUE-indexed, so this is a point lookup, almost always
+                # zero rows).
+                cur.execute(
+                    "DELETE FROM senses WHERE entry_id IN "
+                    "(SELECT id FROM entries WHERE dict=? AND L=?)",
+                    (dict_code, L),
+                )
+                cur.execute(
+                    "INSERT OR REPLACE INTO entries (dict, L, slp1_key, k2, pc_raw, vol, page, col, body) "
+                    "VALUES (?,?,?,?,?,?,?,?,?)",
+                    (dict_code, L, key, k2, pc_raw, vol, page, col, data),
+                )
+                eid = cur.lastrowid
+
+                # D2 per-dict sense segmentation (app/segment.py): split each
+                # body at its <div> division markers — the same boundaries
+                # basicdisplay.php renders — into byte-anchored senseN spans
+                # (A2). Entries with no <div> keep the single-sense fallback
+                # ("always mintable", ARCHITECTURE.md).
+                spans = segment(dict_code, data)
+                if len(spans) > 1:
+                    n_multi += 1
+                for sense_n, (s0, s1) in enumerate(spans, start=1):
+                    cur.execute(
+                        "INSERT INTO senses (entry_id, sense_n, span_start, span_end) VALUES (?,?,?,?)",
+                        (eid, sense_n, s0, s1),
+                    )
+                    n_senses += 1
+            con.commit()
+        src.close()
 
         coverage = round(n_pc / n_total * 100, 2) if n_total else 0.0
         meta = DICT_META[dict_code]
@@ -202,7 +227,6 @@ def build_entries(con, dict_codes, release_tag="latest"):
              f"csl-sqlite/{dict_code}.zip", meta["pc_format"], coverage, n_total),
         )
         con.commit()
-        n_senses = len(sense_rows)
         print(f"[D2] {dict_code}: {n_total} entries, pc coverage {coverage}% "
               f"({meta['pc_format']}); {n_senses} senses "
               f"({n_multi} multi-sense entries)")

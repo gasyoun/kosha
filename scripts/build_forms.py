@@ -27,6 +27,7 @@ finite-verb, participle, iic/iiv/iip-compound, ...) so consumers can filter
 the compound-initial categories, the largest hypergeneration source.
 """
 import csv
+import itertools
 import sqlite3
 import sys
 from pathlib import Path
@@ -43,20 +44,18 @@ HERITAGE_F2L = SIBLING / "SanskritLexicography" / "HeadwordLists" / "heritage_on
 
 
 def _load_tsv(path, source):
-    rows = []
+    """Generator (H4407): streams straight into `executemany`, never
+    materializes the 400k+ row feed as a Python list."""
     with open(path, encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f, delimiter="\t"):
-            rows.append((row["form_slp1"], row["lemma_slp1"], source, None))
-    return rows
+            yield (row["form_slp1"], row["lemma_slp1"], source, None)
 
 
 def _load_heritage(path):
-    rows = []
     with open(path, encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f, delimiter="\t"):
-            rows.append((row["form_slp1"], row["lemma_slp1"], "heritage",
-                         row["heritage_category"]))
-    return rows
+            yield (row["form_slp1"], row["lemma_slp1"], "heritage",
+                   row["heritage_category"])
 
 
 def build_forms(con):
@@ -68,21 +67,18 @@ def build_forms(con):
                           f"(regenerate via SanskritLexicography/HeadwordLists/heritage_forms_oracle.py)")
 
     con.execute("DELETE FROM forms")
-    dcs_rows = _load_tsv(DCS_F2L, "dcs")
-    vidyut_rows = _load_tsv(VIDYUT_F2L, "vidyut")
     con.executemany(
         "INSERT OR IGNORE INTO forms (form_slp1, lemma_slp1, source, category) VALUES (?,?,?,?)",
-        dcs_rows + vidyut_rows,
+        itertools.chain(_load_tsv(DCS_F2L, "dcs"), _load_tsv(VIDYUT_F2L, "vidyut")),
     )
     con.commit()
     n_dcs_vidyut = con.execute("SELECT COUNT(*) FROM forms").fetchone()[0]
 
     # heritage loaded LAST, additive-only (INSERT OR IGNORE never touches the
     # dcs/vidyut rows just inserted above -- H111).
-    heritage_rows = _load_heritage(HERITAGE_F2L)
     con.executemany(
         "INSERT OR IGNORE INTO forms (form_slp1, lemma_slp1, source, category) VALUES (?,?,?,?)",
-        heritage_rows,
+        _load_heritage(HERITAGE_F2L),
     )
     con.commit()
 

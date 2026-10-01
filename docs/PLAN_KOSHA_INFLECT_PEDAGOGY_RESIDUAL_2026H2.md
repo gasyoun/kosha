@@ -1,6 +1,6 @@
 # PLAN — kosha inflect + pedagogy residual programme, 2026 H2 (index)
 
-_Created: 19-08-2026 · Last updated: 19-08-2026_
+_Created: 19-08-2026 · Last updated: 25-08-2026_
 
 Authored by Opus 5 (`claude-opus-5`) under
 [H3001 (Opus 5) — Stale-roadmap slice 3: full /ask replan of stale Tier-1 roadmaps](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3001-Opus_multi_stale-roadmap-s3-tier1-ask-replan_17.08.26.md).
@@ -59,7 +59,7 @@ inherited, not re-opened:
 | # | Unit | Handoff | Gate |
 |---|---|---|---|
 | K1 | Wave U2 — drip the three prepared csl-inflect PRs | [H3165 (Sonnet 5) — Wave U2: drip the three prepared csl-inflect PRs](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3165-Sonnet_csl-inflect_inflect-u2-drip-prepared-prs_19.08.26.md) | none — condition fired 03-07-2026 |
-| K2 | Verb dhātu-identity crosswalk (makes the 12.68 % figure interpretable) | [H3166 (Opus 5) — Verb dhātu-identity crosswalk](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3166-Opus_kosha_inflect-dhatu-identity-crosswalk_19.08.26.md) | none |
+| K2 | ~~Verb dhātu-identity crosswalk~~ — **already shipped by [H855](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H855-Opus_kosha_e1-verb-dhatu-identity-crosswalk_13.07.26.md) on 14-07-2026** (12.68 % → 70.24 %); this row was written off a stale roadmap line. [H3166 (Opus 5)](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3166-Opus_kosha_inflect-dhatu-identity-crosswalk_19.08.26.md) closed 25-08-2026 as duplicate-shipped and delivered the residue instead: the surviving 11,056 conflicts are **85 % bare-root artifact**. Live successor: resolve the 212 bare-seeded crosswalk entries. | none |
 | K3 | `gloss.ru` re-run over the subhāṣita beginner pack | [H3167 (Sonnet 5) — Re-run gloss.ru over the subhāṣita beginner pack](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3167-Sonnet_kosha_pedagogy-subhashita-gloss-ru-rerun_19.08.26.md) | none |
 
 ## Not mintable — human acts, recorded so they stop being invisible

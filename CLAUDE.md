@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 15-09-2026_
+
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
@@ -15,17 +17,17 @@ against real MW/PWG/AP90 data (Phase 1 complete), the static-cache/data-hub
 tier is live on GitHub Pages, and the current release is
 [v0.97.0](https://github.com/gasyoun/kosha/releases/tag/v0.97.0) — but the
 public `samskrtam.ru` dictionary URL is not yet deployed (MG deploy-gated),
-and W0 (see [`docs/ROADMAP.md`](docs/ROADMAP.md)) is a hard feature freeze
+and W0 (see [`docs/ROADMAP.md`](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP.md)) is a hard feature freeze
 until the reproducible-substrate and contract/trust-boundary work lands. See
-[README.md](README.md)'s status banner and
-[`.ai_state.md`](.ai_state.md) for the exact current state; don't assume any
+[README.md](https://github.com/gasyoun/kosha/blob/main/README.md)'s status banner and
+[`.ai_state.md`](https://github.com/gasyoun/kosha/blob/main/.ai_state.md) for the exact current state; don't assume any
 endpoint behavior beyond what the live tests in `tests/` verify.
 
 ## Common commands
 
 > **Operator's view of the whole chain** — stage order, per-stage verification,
 > failure symptoms, deploy classes, release rituals:
-> [docs/PIPELINE_OPERATOR_RUNBOOK.md](docs/PIPELINE_OPERATOR_RUNBOOK.md) (H501).
+> [docs/PIPELINE_OPERATOR_RUNBOOK.md](https://github.com/gasyoun/kosha/blob/main/docs/PIPELINE_OPERATOR_RUNBOOK.md) (H501).
 
 ```bash
 pip install -r requirements.txt
@@ -113,7 +115,7 @@ input. Do not add a stage by editing the CLI — add it to the registry.
   hardcode 11,148 without re-measuring. Output `docs/w/` + `docs/browse/` is
   **gitignored** (like cards); MG deploys out-of-band. Exit packet / live-check
   residual:
-  [docs/P5_WORD_PAGE_EXIT_PACKET.md](docs/P5_WORD_PAGE_EXIT_PACKET.md). Changing
+  [docs/P5_WORD_PAGE_EXIT_PACKET.md](https://github.com/gasyoun/kosha/blob/main/docs/P5_WORD_PAGE_EXIT_PACKET.md). Changing
   the head selector or page template ⇒ re-run head build + refresh the budget
   log row in `docs/ARCHITECTURE_KOSHA_CONCORDANCE_Q3.md` §6 in the same PR.
 - Windows encoding convention (`sys.stdout.reconfigure(encoding='utf-8')`,
@@ -161,6 +163,12 @@ input. Do not add a stage by editing the CLI — add it to the registry.
   generation from corpus evidence; and the human-scored subsample is still owed
   before any paper-grade claim.
 
+## FINDINGS routing (F1)
+
+kosha has no local `FINDINGS.md` (not in the four-repo middle tier). Route gotchas:
+infra/process → [Uprava/FINDINGS.md](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md);
+Sanskrit-data → [SanskritLexicography/FINDINGS.md](https://github.com/gasyoun/SanskritLexicography/blob/master/FINDINGS.md).
+
 ## Operational hazard notes
 
 Destructive-risk facts for this repo (do-not-rerun scripts, decoys, traps) are
@@ -169,3 +177,23 @@ registered centrally in an org-private hub
 org members only); the public-safe subset is mirrored in the generated block of
 [AGENTS.md](https://github.com/gasyoun/kosha/blob/main/AGENTS.md). Check them
 before running anything that writes.
+
+## Agent skills
+
+### Issue tracker
+
+Issues live in GitHub Issues (`gh` CLI); external PRs are not a triage surface. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Five canonical triage-role labels (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: `CONTEXT.md` + `docs/adr/` at the repo root, created lazily. See `docs/agents/domain.md`.
+
+## Memory store
+
+This repo keeps a committed memory store at [`.claude/projects/kosha/memory/`](https://github.com/gasyoun/kosha/tree/main/.claude/projects/kosha/memory) per the org Memory-routing rule ([`/danger-memory`](https://github.com/gasyoun/claude-config/blob/main/commands/danger-memory.md)) — write dangerous/durable facts there and index each in its `MEMORY.md` (H4547).
+
+_Dr. Mārcis Gasūns_

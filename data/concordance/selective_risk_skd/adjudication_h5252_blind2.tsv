@@ -1,0 +1,62 @@
+card	verdict	near_miss	failure_shape	note
+C001	unsure	no	n/a	PWG line is a stripped masc.-noun sense (3. m. angeblich auch = ...) with the referent lost; SKD is the vowel-letter a-dirgha entry; cannot tell whether the PWG noun is the letter-name.
+C002	different	no	dhatu-vs-noun	PWG wagtail (bird) vs SKD root cara gamane/adane/acare with gana and set marks (iti kavikalpadrumah, carati).
+C003	same	no	n/a	PWG/MW fit for sacrifice, pure; Apte 2 relating to a sacrifice, sacrificial - same adjective lexeme, a shade narrower but the same sacrificial-fitness meaning.
+C004	different	no	dhatu-vs-noun	PWG mercury vs SKD root para karmasamaptau (curadi, apaparat).
+C005	different	no	dhatu-vs-noun	PWG stone / guild-head / noble vs SKD root kula bandhau samhatau (bhvadi, kolati).
+C006	same	no	n/a	MW and Apte 2 both: to direct or fix the mind upon (dat./loc.).
+C007	different	no	dhatu-vs-noun	PWG eye disease / eye secretion vs SKD root mantha gahe (kryadi, mathati dadhi).
+C008	same	no	n/a	All three: of beautiful colour, brilliant, golden.
+C009	different	no	n/a	PWG lists throw down / lay down / put on senses; Apte 3 is the disputed sense to shine - not among the PWG senses printed.
+C010	different	no	dhatu-vs-noun	PWG bdellium (resin) vs SKD root vara ipse (curadi, varayati).
+C011	same	no	n/a	SKD nominal entry marut: vayuh, then maruvakah iti bhavaprakasah with its gunas - a plant sense matching PWG eine best. Pflanze.
+C012	different	no	dhatu-vs-noun	PWG Geist (?) vs SKD root anga pade laksmani (curadi, angayati).
+C013	same	no	n/a	Both sides verbal: PWG hinundherbewegen (to move to and fro) and SKD root dhvaja gatau (dhvajati) - motion; not a noun-vs-root card.
+C014	different	yes	n/a	PWG act of violence vs MW punishment/fine of three grades - the fine is named after the offence (metonymy), but not the same sense.
+C015	different	yes	dhatu-vs-noun	PWG Maass (measure, noun) vs SKD root ma mane (divadi atm., mayate) - POS variant of the same idea, still root vs noun.
+C016	same	no	n/a	PWG garbled but marked indecl. (saha 1); SKD saha vya sahitam = sakam sarddham samam - the indeclinable together with.
+C017	different	no	dhatu-vs-noun	PWG cowrie shell Cypraea moneta vs SKD root cara samsityasamsityoh (curadi).
+C018	different	yes	dhatu-vs-noun	PWG will, wish vs SKD root vasa sprhi (adadi, vasti dhanam lokah) - to wish vs wish, POS variant across root/noun.
+C019	different	no	dhatu-vs-noun	PWG preverb ava herab/weg vs SKD root ava raksane gatau kantau ... (bhvadi); other side is a prefix, not a root.
+C020	different	no	dhatu-vs-noun	PWG a hollow measure vs SKD root ghata himse samghate dyutau (curadi, ghatayati kavatam).
+C021	different	no	dhatu-vs-noun	PWG palace vs SKD root yaksa mahi pujayam (curadi atm., yaksayate).
+C022	same	no	n/a	MW and Apte 2: a peacock.
+C023	different	no	dhatu-vs-noun	PWG m. epithet of Karna vs SKD root jiva prane (bhvadi, jivati lokah).
+C024	different	no	dhatu-vs-noun	PWG betel leaf vs SKD root parna haritye (curadi, parnayati campakam).
+C025	different	no	n/a	PWG inner firm parts, heartwood, core vs MW Tranquillity personified (daughter of Daksa, wife of Dharma) - a Santi gloss, not sara.
+C026	different	no	dhatu-vs-noun	PWG a position in a game vs SKD root vata vantane (curadi/bhvadi, vantayati).
+C027	same	no	n/a	PWG, MW, MD: hair of an animal's tail, horse-hair.
+C028	different	yes	dhatu-vs-noun	PWG lecherous / strong man vs SKD root vrsa secane prajanaisye (bhvadi, varsitva) - virility idea shared, but root vs noun.
+C029	same	no	n/a	Both the Samkhya three gunas (sattva rajas tamas) as constituents of all beings; PWG list garbled but carries the same sense.
+C030	different	no	dhatu-vs-noun	PWG Acacia Sirissa / Zizyphus scandens vs SKD root suka sarpe (bhvadi, sokati).
+C031	unsure	no	n/a	MW line is only m. or n. = with the target lost; PWG cuda hair-cutting ceremony cannot be checked against it.
+C032	same	no	n/a	PWG hintertreiben, vereiteln, hemmen; MW to frustrate, prevent, avert.
+C033	unsure	no	n/a	SKD nominal sudha printed senses amrtam and lepanam, entry truncated (...); PWG myrobalan plant sense is neither printed nor excluded.
+C034	different	no	dhatu-vs-noun	PWG astrological constellation vs SKD root sula rujayam (bhvadi, sulati lokam rogah).
+C035	different	no	other	PWG gloss is of a compound (one who has aversion to study); SKD pari vya lists prefix meanings per Medini - neither root nor a matching nominal sense, PWG-side extraction misfire.
+C036	different	no	dhatu-vs-noun	PWG garbled but explicitly nominal (als masc.); SKD root nata bhramse tvisi (curadi, natayati).
+C037	different	no	dhatu-vs-noun	PWG Dalbergia Sissoo vs SKD root piccha badhe (tudadi, picchati).
+C038	different	no	dhatu-vs-noun	PWG incense vs SKD root cala bhrtau (curadi, calayati).
+C039	same	no	n/a	MW n. power, strength; Apte 3 strength.
+C040	same	no	n/a	Duplicate of C016: PWG indecl. saha; SKD saha vya sahitam sakam sarddham samam.
+C041	different	no	dhatu-vs-noun	PWG nutmeg vs SKD root puta samsarge (curadi, putayati puspam sutrena).
+C042	same	no	n/a	MW sharp, keen; Apte 8 keen.
+C043	different	no	other-homonym	Same indeclinable but SKD prints only madhyam, vina, vyatirekah (between, without, exclusion) - PWG in Bezug auf, wegen is not among them.
+C044	same	no	n/a	PWG seal ring, seal, impression; SKD mudra pratyayakarini, anguli-mudra, chapera anguti (seal ring), mudrika.
+C045	different	no	dhatu-vs-noun	PWG Radha the cowherdess / epithet of Krsna vs SKD root radha siddhau (svadi/divadi, radhnoti radhyati).
+C046	different	no	dhatu-vs-noun	PWG prince vs SKD root skanda sosane gatyam (bhvadi, askadat caskanda).
+C047	same	no	n/a	All three: favourable turn / alleviation of a sickness (medical).
+C048	unsure	no	n/a	PWG 4. m. line stripped to = und = = nach Abkuerzung von; SKD is the dental-sibilant letter sa entry; whether the PWG noun is the letter-name cannot be decided.
+C049	different	no	dhatu-vs-noun	PWG elbow thrust / thrust in coitus vs SKD root kila bandhe (bhvadi, kilati).
+C050	same	no	n/a	SKD nominal padmavati lists manasadevi, a river, padmacarini (the Hibiscus mutabilis plant name), Jayadeva's wife - PWG plant sense is among them.
+C051	different	no	dhatu-vs-noun	PWG iron vs SKD root satha alasye (curadi, sathayati vrddhah).
+C052	different	no	dhatu-vs-noun	PWG Maya as first Sakti vs SKD root aja bhasi diptau (curadi, anjayati).
+C053	different	yes	dhatu-vs-noun	PWG praising, praise, self-praise (noun) vs SKD root samsa himsastutyoh (bhvadi, samsati) - to praise vs praise, POS variant across root/noun.
+C054	different	no	dhatu-vs-noun	PWG a kind of incense vs SKD root pura purttau (divadi atm., puryyante).
+C055	same	no	n/a	PWG scratch, furrow, draw a line; MW produce by scratching, draw a line, write; Apte 1 write, draw a line, engrave.
+C056	different	no	dhatu-vs-noun	PWG house vs SKD root kuta aprasadapradoh (curadi atm., kutayate khalah).
+C057	same	no	n/a	PWG Sonnenschirm; MW parasol, chattar.
+C058	different	yes	dhatu-vs-noun	PWG long nominal list (wall, wing, favour, side, feathers ...) vs SKD root paksa parigrahe (curadi, paksayati) - side/favour vs to take a side, still root vs noun.
+C059	different	no	dhatu-vs-noun	PWG white vs SKD root sphuta narmmani (curadi, sphuntayati sakhayam).
+C060	different	no	dhatu-vs-noun	PWG adjective leading, suitable vs SKD root naya gatau (bhvadi atm., nayate).
+C061	different	no	other-homonym	PWG 5. m. epithet of Siva / Brahman vs SKD u ukarah, the fifth vowel with its articulation and quantities - the letter entry, not the name.

@@ -1,0 +1,33 @@
+topic	title_ru	cluster	roots	verbal_rows	ok	ambiguous	engine_error	no_derivation	fail_weight	root_class	missing_roots
+attested-vs-predicted	Засвидетельствованное и предсказанное	attestation	Sru	327	0	0	327	0	3065075	not-in-dcs-class-list	
+open-vs-closed-roots	Открытые и закрытые корни	alternation	Sru	327	0	0	327	0	3065075	not-in-dcs-class-list	
+present-nu-class	Презенс V/VIII классов (суффикс no/nu)	tense-stem	Sru	327	0	0	327	0	3065075	not-in-dcs-class-list	
+samprasarana	Саспрасарана	alternation	vac	304	0	0	304	0	9291044	adAdi	
+present-reduplicating	Презенс III класса (удваивающий)	tense-stem	hu	230	0	0	230	0	566125	juhotyAdi	
+present-na-class	Презенс IX класса (суффикс nā/nī)	tense-stem	krI	76	0	0	76	0	12844	not-in-dcs-class-list	
+future-sya	Будущее на -sya / -iṣya	tense-stem	BU	431	28	4	0	399	130448	bhvAdi	
+present-thematic-a	Простой тематический презенс (I и VI)	tense-stem	BU	431	28	4	0	399	130448	bhvAdi	
+present-thematic-vs-athematic	Тематическое и атематическое спряжение	tense-stem	BU	431	28	4	0	399	130448	bhvAdi	
+root-type-iv	Тип IV — застывшая vṛddhi	root-type	BU	431	28	4	0	399	130448	bhvAdi	
+set-anit-vet	seṭ, aniṭ и veṭ	alternation	BU	431	28	4	0	399	130448	bhvAdi	
+nasal-alternation	Носовые чередования рядов M и N	alternation	gam	422	32	6	0	384	95700	not-in-dcs-class-list	
+root-variants	Варианты корня	homonymy	sTA	304	38	10	0	256	78820	bhvAdi	
+present-root-class	Презенс II класса (корневой)	tense-stem	as	309	13	4	0	292	73701	adAdi+divAdi	
+root-homonymy	Омонимия корней	homonymy	as	309	13	4	0	292	73701	adAdi+divAdi	
+quasi-roots	Квазикорни	homonymy	dA	345	10	4	0	331	39948	divAdi	
+ablaut-grades	Три ступени чередования	grade	kf	804	20	1	0	783	33251	adAdi	
+aorist-systems	Системы аориста	tense-stem	kf	804	20	1	0	783	33251	adAdi	
+causative-grade	Ступень каузатива	grade	kf	804	20	1	0	783	33251	adAdi	
+infinitive-tum	Инфинитив на -tum	tense-stem	kf	804	20	1	0	783	33251	adAdi	
+morphological-positions	Морфологические позиции 1/2/3	grade	kf	804	20	1	0	783	33251	adAdi	
+passive-ya	Пассив на -ya	tense-stem	kf	804	20	1	0	783	33251	adAdi	
+perfect-strong-weak	Перфект: сильная и слабая основы	tense-stem	kf	804	20	1	0	783	33251	adAdi	
+ppp-ta-na	Причастие на -ta / -na	tense-stem	kf	804	20	1	0	783	33251	adAdi	
+present-aya-class	Презенс с -aya и X класс	tense-stem	kf	804	20	1	0	783	33251	adAdi	
+root-designation	Обозначение корня: реальное и условное	homonymy	kf	804	20	1	0	783	33251	adAdi	
+root-type-i	Тип I — полное чередование	root-type	kf	804	20	1	0	783	33251	adAdi	
+alternation-series	Ряды чередования A–N	alternation	nI	263	42	10	0	211	18090	not-in-dcs-class-list	
+root-type-ii	Тип II — частичное чередование	root-type	jYA	223	0	2	0	221	9136	not-in-dcs-class-list	
+present-nasal-infix	Презенс VII класса (носовой инфикс)	tense-stem	Cid	162	5	2	0	155	3778	not-in-dcs-class-list	
+root-type-iii	Тип III — нуль во второй позиции	root-type	Cid	162	5	2	0	155	3778	not-in-dcs-class-list	
+present-ya-class	Презенс IV класса (суффикс ya)	tense-stem	man	198	0	0	0	198	0	tanAdi	

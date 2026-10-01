@@ -1,0 +1,26 @@
+{
+  "rows": 304,
+  "parsed_ok": 299,
+  "parse_failures": 5,
+  "orig_counts": {
+    "likh": 87,
+    "mw": 276,
+    "apte": 162,
+    "mac": 129,
+    "pwg": 193
+  },
+  "mt_counts": {
+    "mw_ru": 276,
+    "apte_ru": 162,
+    "pwg_ru": 149
+  },
+  "have_mw_and_pwg": 170,
+  "have_any_mt": 288,
+  "fail_examples": [
+    "SudDavidyA",
+    "durg_a~~h0_zz_sch",
+    "dvAdaSAnta",
+    "hiDmA",
+    "kaNguRI"
+  ]
+}

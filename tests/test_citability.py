@@ -48,7 +48,7 @@ def test_dev_version_is_not_citable():
 
 def test_live_sense_cite_has_resolution_url():
     lemma = client.get("/api/v1/lemma/agni").json()["results"][0]
-    sid = lemma["sense_ids"][0]
+    sid = lemma["kosha"]["sense_ids"][0]
     r = client.get(f"/api/v1/sense/{sid}").json()["results"][0]
     assert r["resolved_from"] == "live"
     assert r["cite"]["resolution_url"].endswith(f"/api/v1/sense/{sid}")
@@ -77,9 +77,9 @@ def test_unarchived_version_404s_with_release_pointer(tmp_path, monkeypatch):
     monkeypatch.setenv("KOSHA_RELEASES_DIR", str(tmp_path))  # empty dir
     r = client.get("/api/v1/sense/mw.523.1@9.9.9")
     assert r.status_code == 404
-    assert r.json()["detail"]["error"]["code"] == "version_not_archived"
+    assert r.json()["error"]["code"] == "version_not_archived"
     assert any("releases/download/data-9.9.9" in s
-               for s in r.json()["detail"]["error"]["suggestions"])
+               for s in r.json()["error"]["suggestions"])
 
 
 # --- Commitment 2: crosswalk SPLIT / MERGED / GONE / MOVED ----------------

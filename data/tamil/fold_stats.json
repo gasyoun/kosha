@@ -1,0 +1,23 @@
+{
+  "dataset": "tamil-fold",
+  "counts": {
+    "mwd": 166434,
+    "cap": 37413,
+    "otl": 117773,
+    "cpd": 4218
+  },
+  "total": 325838,
+  "mwd_cap_otl": 321620,
+  "source_commit": "e94ca0559c449b7f5fa14b7de933c88f84bba8fa",
+  "source_sha256": "627cc830de9618e76467d74bf1eb9118a7e9ec178dae51f8ce79fb975f16ae82",
+  "source_size_bytes": 31318016,
+  "fold_size_bytes": 40673280,
+  "built_at": "2026-09-06T06:08:06+00:00",
+  "scheme_notes": "st/en kept verbatim from the source fold: mwd/cap use Kyoto-Harvard (HK); otl uses an HK-like scheme csl-santam itself does not auto-convert (php/js/hk-input.js lines 14-17) - scheme normalization is a later Wave-4 step.",
+  "encoding_normalization": "per-cell UTF-8 with cp1252 fallback (latin-1 for stray cp1252-undefined bytes). H1513/92d1670 normalized the TEXT export (sqlite/ganz_utf8.txt) but the shipped sqlite still carries Windows-1252 cells behind the PHP runtime iconv workaround - this fold normalizes the sqlite itself, retiring that workaround",
+  "encoding_fallback_cells": 12330,
+  "encoding_latin1_stray_cells": 6,
+  "encoding_total_cells": 651676,
+  "counts_mwd_cap_otl": 321620,
+  "edge_snapshot_mwd_cap_otl_08_07_2026": 321620
+}

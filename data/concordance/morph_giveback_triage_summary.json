@@ -1,0 +1,15 @@
+{
+  "built": "06-09-2026",
+  "not_owed": 323,
+  "owed": 4900,
+  "residue": 1,
+  "total": 5224,
+  "verdicts": {
+    "compound-member": 192,
+    "coverage-hole": 2688,
+    "indeclinable": 28,
+    "lexicon-gap": 103,
+    "slot-conflict": 2212,
+    "untagged": 1
+  }
+}

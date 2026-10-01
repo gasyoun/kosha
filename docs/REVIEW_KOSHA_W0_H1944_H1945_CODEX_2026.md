@@ -1,3 +1,5 @@
+_Created: 14-08-2026 · Last updated: 05-09-2026_
+
 # Codex retrospective review — kosha W0 H1944 and H1945
 
 _Created: 14-08-2026 · Review date: 14-08-2026 · Reviewer: Codex Sol (`gpt-5.6-sol`)_

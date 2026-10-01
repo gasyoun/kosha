@@ -1,6 +1,6 @@
 # Gasuns Sanskrit Dictionary
 
-_Created: 02-07-2026 · Last updated: 16-08-2026_
+_Created: 02-07-2026 · Last updated: 25-09-2026_
 
 > **Status: pre-alpha — the lookup API + UI run locally and the public
 > dictionary URL is not deployed yet, but the data-hub tier already is live.**
@@ -50,7 +50,7 @@ It is a **two-tier** store:
 
 Every canonical dataset in **either** tier has one machine-readable row in
 [data/manifest/datasets.json](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
-— currently <!-- dataset_count_start -->**108 datasets** (91 public · 13 restricted · 4 intermediate)<!-- dataset_count_end --> — the
+— currently <!-- dataset_count_start -->**145 datasets** (127 public · 15 restricted · 3 intermediate)<!-- dataset_count_end --> — the
 single source agents read to discover and fetch data; a new or changed derived
 dataset ends its session with a manifest row or it does not exist for reuse.
 
@@ -108,7 +108,14 @@ learners, then scholars.
   ([`/concordance/parallels/`](https://github.com/gasyoun/kosha/blob/main/concordance/parallels/index.html),
   153,045 GOOD/PARTLY links across 245 texts), with the Ṛgveda subset
   cross-linked to Marco Franceschini's digital edition of Bloomfield's 1906
-  *A Vedic Concordance* (used by direct permission). Full plan:
+  *A Vedic Concordance* (used by direct permission); a corpus-grounded Pāṇinian
+  concordance
+  ([`/concordance/panini/`](https://github.com/gasyoun/kosha/blob/main/concordance/panini/index.html),
+  893,482 sūtra→form→locus rows); and generated-vs-attested morphology
+  ([`/concordance/morphology/`](https://github.com/gasyoun/kosha/blob/main/concordance/morphology/index.html)
+  — every generated paradigm cell marked attested or not against the DCS corpus,
+  with the evidence behind each attestation and the forms DCS attests that the
+  generator never produced). Full plan:
   [CONCORDANCE_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/CONCORDANCE_ROADMAP.md).
 - **Trilingual glosses** — English (MW) · German (PWG) · Russian (pwg_ru
   translation layer) side by side; unique worldwide.
@@ -164,7 +171,7 @@ Optimistic elapsed total to v1.0 ≈ 4–6 weeks, dominated by human-side gates
 **Which dictionaries are included?**
 MW, PWG, and AP90 first — deliberately, because their page-reference formats
 are the three hardest cases, so the pipeline generalises. The lemma spine
-(the union headword index, 323,426 rows) already spans the whole Cologne
+(the union headword index, 323,422 rows) already spans the whole Cologne
 collection, so further dictionaries are an ingestion task, not a redesign.
 
 **Do I need to type diacritics?**
@@ -299,7 +306,7 @@ inputs — consume, never regenerate:
 
 | Concern | Owned by | What we consume |
 |---|---|---|
-| Lemma spine | [union_headwords.tsv](https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/union/union_headwords.tsv) | 323,426 rows, `slp1/iast/n_dicts/dicts/gender` |
+| Lemma spine | [union_headwords.tsv](https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/union/union_headwords.tsv) | 323,422 rows, `slp1/iast/n_dicts/dicts/gender` |
 | Dict entry text | [csl-orig](https://github.com/sanskrit-lexicon/csl-orig) / CDSL downloads | per-dict source, `<L>`/`<k1>`/`<pc>` keyed; **csl-sqlite releases are the primary entry source**, text parse is fallback |
 | Existing dict API | [csl-apidev](https://github.com/sanskrit-lexicon/csl-apidev) (C-SALT **Kosh** API, `api1/salt_*.php`) + [csl-websanlexicon](https://github.com/sanskrit-lexicon/csl-websanlexicon) (`getword`/`servepdf`/`serveimg`) | endpoints + patterns; kosha builds *on*, not beside — Salt reuse is **required**. `/dicts/*` is the [strict §9 projection](https://github.com/gasyoun/kosha/blob/main/docs/DECISION_H2768_SALT_FACE_EXTENSION_CONTRACT.md); `/api/v1` retains `kosha` |
 | Scan links | [ls_resolver.py](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/ls_resolver.py) | Cologne scan URL resolution (port of csl-app `ls_service.dart`) |
