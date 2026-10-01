@@ -1,0 +1,47 @@
+{
+ "built": "01-10-2026",
+ "builder": "scripts/build_giveback_port.py",
+ "unit": "roadmap drain A02 (kosha CONCORDANCE_ROADMAP.md — give-back routing)",
+ "source": {
+  "triaged": {
+   "path": "data/concordance/morph_giveback_triaged.tsv",
+   "sha256": "15e72646b491d17321a6c85bea1019f00de03d55c03bb007d3e8de1cf032fa8e",
+   "rows": 5224
+  },
+  "triage_summary": {
+   "path": "data/concordance/morph_giveback_triage_summary.json",
+   "sha256": "f0fdae11c7812b9cc73ff87b7d9e237299ad50bfa7b990f0492d4e5cb31567c8"
+  },
+  "method": "data/concordance/MORPHOLOGY_GIVEBACK_TRIAGE_REPORT.md"
+ },
+ "owed_total": 4900,
+ "payloads": {
+  "slot-conflicts": {
+   "path": "data/concordance/giveback_port/csl_inflect_slot_conflicts.tsv",
+   "rows": 2212,
+   "sha256": "57036e205fc58711ec50c8a249797a432ec2ae1942f9331f3886772b09a1faef",
+   "meaning": "generator fills the cell with a different form — both forms named (generator_has)"
+  },
+  "coverage-holes": {
+   "path": "data/concordance/giveback_port/csl_inflect_coverage_holes.tsv",
+   "rows": 2688,
+   "sha256": "e492a213224de4da33f575c0cd846ece0daafbb3200a2120a70d3812c9ccfa77",
+   "meaning": "paradigm cell absent from the generator entirely (generator_has empty)"
+  }
+ },
+ "not_routed": {
+  "not_owed": 323,
+  "untagged_residue": 1,
+  "note": "excluded classes are a dictionary-coverage/scope question, not an inflection bug; the single untagged row stays out until judged"
+ },
+ "destination": {
+  "target": "csl-inflect (sanskrit-lexicon/csl-inflect), dual-engine give-back",
+  "pattern": "H185 Task B — one on-its-merits message, never a batch",
+  "gate": {
+   "upstream_post": "HUMAN-GATED (RELATIONS.md §2/§7 — humans send, agents draft; no agent posts outward)",
+   "draft": "data/concordance/giveback_port/DRAFT_POST.md"
+  }
+ },
+ "licence": "CC BY-SA 4.0 (inherits the dataset's DCS-derived terms; DCS attribution carried by target_locus)",
+ "join_back": "target_locus (dcs:<sent_id>) joins every payload row to morph_giveback_candidates.tsv and the KWIC evidence"
+}
