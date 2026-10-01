@@ -8,7 +8,11 @@ remote name, is verified against a server-computed sha256, and is only then
 renamed into place — see
 [`kosha.backup.transport`](https://github.com/gasyoun/kosha/blob/main/src/kosha/backup/transport.py).
 If the server cannot prove a digest the upload **fails closed** and nothing is
-promoted; that is the required treatment, not a bug to work around.
+promoted; that is the required treatment, not a bug to work around. Sources
+are fail-closed too (added 01-10-2026, after the 23-08-2026 corpus.db
+0-byte-stub incident): a missing or 0-byte source lands in a printed SKIP
+ledger and is never uploaded, because uploading a stub would mint a false
+backup artifact.
 
 Credentials come from `.env.deploy` in the repo root (gitignored) — same FTP
 account as ORS-FAQ/SamudraManthanam, different FTP_PATH. This script never
@@ -17,8 +21,10 @@ runs in CI and no test in this repo contacts a live server.
 Covers all H235 primary targets: corpus_lexicon.jsonl, kosha.db,
 dcs_full.sqlite, corpus.db, the Sa-Ru glossary bulk layer, and the 25
 production Renou-layer card-set files (dev/test artifact variants excluded —
-see MANIFEST comment). archive_stopword.sqlite (11 GB) is NOT included — see
-the GTD @DECIDE row before adding it.
+see MANIFEST comment). archive_stopword.sqlite (11 GB) is NOT included — the
+H1989/H1998 retain/discard ruling excluded it as regenerable
+(`import_archive.py stopword`; the Mac copy is covered weekly by the W4-Mac
+restic lane). Do not add it back without an MG order.
 
 Usage:
     python scripts/deploy_guhya.py                 # DRY RUN: digest + plan only
@@ -98,9 +104,37 @@ def tls_verify_from_env(cfg: dict) -> bool:
     return True
 
 
-def resolve(rel: str) -> Path:
+def resolve(rel: str, root: Path | None = None) -> Path:
     local = Path(rel)
-    return local if local.is_absolute() else GITHUB_ROOT / rel
+    base = root if root is not None else GITHUB_ROOT
+    return local if local.is_absolute() else base / rel
+
+
+def plan_targets(
+    manifest: list[tuple[str, str]], root: Path | None = None
+) -> tuple[list[tuple[str, str, Path]], list[tuple[str, str]]]:
+    """Split manifest targets into (ready, skipped) — the fail-closed ledger.
+
+    A target is SKIPPED, never uploaded, when its source is missing or is a
+    0-byte stub: uploading a stub would mint a false backup artifact (the
+    23-08-2026 corpus.db incident — a 0-byte local file sat where the
+    registry promised 655 MB). Skips are printed, not fatal: the run stays
+    green so the ledger keeps printing until MG rules the ghosts away
+    (H3389 residual 3), mirroring H3389's exclusion-with-reasons pattern.
+    """
+    ready: list[tuple[str, str, Path]] = []
+    skipped: list[tuple[str, str]] = []
+    for rel, remote_name in manifest:
+        local = resolve(rel, root)
+        if not local.exists():
+            skipped.append((remote_name, f"missing on disk: {local}"))
+        elif local.stat().st_size == 0:
+            skipped.append(
+                (remote_name, f"0-byte stub — refusing to mint a false backup: {local}")
+            )
+        else:
+            ready.append((rel, remote_name, local))
+    return ready, skipped
 
 
 def split_remote(remote_name: str, base_dir: str) -> tuple[str, str]:
@@ -125,12 +159,10 @@ def main() -> None:
     if args.file:
         manifest.append((args.file, args.remote_name or Path(args.file).name))
 
+    ready, skipped = plan_targets(manifest)
+
     results = {}
-    for rel, remote_name in manifest:
-        local = resolve(rel)
-        if not local.exists():
-            print(f"  MISSING {local}", file=sys.stderr)
-            continue
+    for rel, remote_name, local in ready:
         print(f"sha256 {remote_name} ...")
         digest = sha256_of(local)
         sidecar = local.with_suffix(local.suffix + ".sha256")
@@ -140,14 +172,23 @@ def main() -> None:
         }
         print(f"  {digest}")
 
+    if skipped:
+        print(
+            "\nSKIP ledger (fail-closed — nothing was uploaded for these):",
+            file=sys.stderr,
+        )
+        for remote_name, reason in skipped:
+            print(f"  SKIP  {remote_name}: {reason}", file=sys.stderr)
+
     print(json.dumps(results, indent=2))
 
     if args.verify_only:
         return
     if not args.upload:
+        skip_note = f" (skip ledger: {len(skipped)})" if skipped else ""
         print(
             "\nDRY RUN — nothing was transferred. Re-run with --upload to send "
-            f"{len(results)} file(s) over TLS with remote digest verification."
+            f"{len(results)} file(s) over TLS with remote digest verification{skip_note}."
         )
         return
 
@@ -171,10 +212,7 @@ def main() -> None:
     with FTPSTransport(
         host, user, passwd, port=port, verify_tls=verify_tls
     ) as transport:
-        for rel, remote_name in manifest:
-            local = resolve(rel)
-            if not local.exists():
-                continue
+        for rel, remote_name, local in ready:
             target_dir, name = split_remote(remote_name, remote_dir)
             try:
                 outcome = upload(transport, local, target_dir, name)
