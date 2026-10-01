@@ -1,37 +1,37 @@
 {
   "COLOGNE_ONLY": {
-    "cells": 15984,
-    "distinct_roots": 336,
+    "cells": 20988,
+    "distinct_roots": 391,
     "top_models": [
       [
         "v_1",
-        10224
-      ],
-      [
-        "v_4",
-        2304
+        9648
       ],
       [
         "v_p",
-        1656
+        6156
+      ],
+      [
+        "v_4",
+        2232
       ],
       [
         "v_6",
-        1548
+        1872
       ]
     ],
     "voices": [
       [
         "middle",
-        12348
-      ],
-      [
-        "active",
-        1980
+        8676
       ],
       [
         "passive",
-        1656
+        6156
+      ],
+      [
+        "active",
+        6156
       ]
     ]
   },
@@ -60,62 +60,62 @@
     ]
   },
   "DIFF_conflict": {
-    "cells": 11056,
-    "distinct_roots": 192,
+    "cells": 2263,
+    "distinct_roots": 62,
     "top_models": [
       [
         "v_p",
-        6174
+        1845
       ],
       [
         "v_1",
-        2789
+        341
       ],
       [
         "v_10",
-        1049
+        41
       ],
       [
-        "v_6",
-        612
+        "v_4",
+        36
       ]
     ],
     "voices": [
       [
         "passive",
-        6174
-      ],
-      [
-        "active",
-        4333
+        1845
       ],
       [
         "middle",
-        549
+        261
+      ],
+      [
+        "active",
+        157
       ]
     ],
     "vidyut_form_vs_cologne": {
-      "shorter": 7395,
-      "equal_length": 2724,
-      "longer": 937,
-      "shorter_pct": 66.9
+      "shorter": 360,
+      "equal_length": 1073,
+      "longer": 830,
+      "shorter_pct": 15.9
     }
   },
   "DIFF_final_stop": {
-    "cells": 937,
-    "distinct_roots": 416,
+    "cells": 923,
+    "distinct_roots": 410,
     "top_models": [
       [
         "v_1",
-        532
-      ],
-      [
-        "v_4",
-        144
+        520
       ],
       [
         "v_6",
-        131
+        137
+      ],
+      [
+        "v_4",
+        136
       ],
       [
         "v_10",
@@ -125,17 +125,17 @@
     "voices": [
       [
         "active",
-        937
+        923
       ]
     ]
   },
   "DIFF_vidyut_superset": {
-    "cells": 1711,
-    "distinct_roots": 429,
+    "cells": 2093,
+    "distinct_roots": 425,
     "top_models": [
       [
         "v_1",
-        615
+        819
       ],
       [
         "v_10",
@@ -143,53 +143,53 @@
       ],
       [
         "v_4",
-        216
+        316
       ],
       [
-        "v_6",
-        141
+        "v_p",
+        213
       ]
     ],
     "voices": [
       [
         "active",
-        1570
+        1808
       ],
       [
         "passive",
-        141
+        213
+      ],
+      [
+        "middle",
+        72
       ]
     ]
   },
   "VIDYUT_ONLY": {
-    "cells": 4680,
-    "distinct_roots": 122,
+    "cells": 2088,
+    "distinct_roots": 57,
     "top_models": [
       [
         "v_10",
-        2160
+        1692
       ],
       [
         "v_1",
-        1908
-      ],
-      [
-        "v_4",
-        468
+        360
       ],
       [
         "v_6",
-        144
+        36
       ]
     ],
     "voices": [
       [
-        "active",
-        2664
+        "middle",
+        1656
       ],
       [
-        "middle",
-        2016
+        "active",
+        432
       ]
     ]
   }
