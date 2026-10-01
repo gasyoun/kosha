@@ -5,17 +5,36 @@ _Created: 06-07-2026 · Last updated: 01-10-2026_
 > **Verdict 01-10-2026 ([H5575](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5575-OxAlpha_kosha_roadmap-verdict-w2-kosha-five-drain-first_01.10.26.md), wave 2) — REFRESH.**
 > The hub is live (data releases `data-v0.1.0`/`data-v0.2.0`, public
 > [directory page](https://gasyoun.github.io/kosha/directory/), `kosha.db` layers (P-D5),
-> API tier (P-D6, shipped 13-08-2026)), so this stays the working roadmap. Two phases
-> remain, both gated — written as checkboxes below and mirrored into Uprava
+> API tier (P-D6, shipped 13-08-2026)), so this stays the working roadmap. Both then-open
+> phases were gated; P-D2 re-verified ✅ same day (01-10-2026 drain A05), so
+> **P-D4 (MG deploy gate) is the only open phase** — checkboxes below, mirrored into Uprava
 > [GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md)
 > per ruling 10 of [GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md](https://github.com/gasyoun/Uprava/blob/main/docs/GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md).
 
 ## What is left (01-10-2026) — gated
 
-- [ ] P-D2 restricted-tier backup of the 19.2 GB local-only census giants (the 11 GB
-  `archive_stopword.sqlite` still needs the split-or-exclude ruling) — status unverified:
-  H233 predates the handoff registry, so re-verify done-or-re-scope before treating it as
-  shipped (GTD @WAITING)
+- [x] P-D2 restricted-tier backup of the 19.2 GB local-only census giants — **re-verified
+  DONE 01-10-2026** (this line was a re-verify order; its "H233" ref was wrong — H233 is a
+  csl-apidev code review; the real handoff is
+  [H235](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H235-Sonnet_kosha_data_hub_restricted_backup_06.07.26.md)):
+  [H3389](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3389-OxAlpha_Uprava_kosha-guhya-restricted-backup-upload_23.08.26.md)
+  promoted **14/14 targets to `samskrtam.ru/guhya/` LIVE 23-08-2026** — 3,845,301,497 B,
+  server-side sha256 proofs, remote-LIST size parity 15/15, one round-trip re-download
+  hash MATCH; excluded with reasons: `corpus.db` (0-byte local stub — not a backup;
+  regenerable from git-tracked jsonl per H691), 13 underscore-spelled renou names
+  (absent-on-disk ghosts; dot-variants canonical — this resolved the H235 dedup @DECIDE).
+  Manifest `backup` blocks landed same day on `corpus-lexicon` / `sa-ru-glossary` /
+  `kosha-db` / `dcs-full-sqlite`; status row ✅ in Uprava
+  [BACKUPS.md](https://github.com/gasyoun/Uprava/blob/main/BACKUPS.md) (restricted-tier
+  census giants, "re-run on store growth"). The 11 GB `archive_stopword.sqlite`:
+  the split-or-exclude ruling is **made — exclude as regenerable** (`import_archive.py
+  stopword`; H1989/H1998 retain/discard policy in BACKUPS.md; manifest row note
+  "deliberately unshipped and regenerable", H3596), and the Mac copy is weekly-restic
+  covered anyway (W4-Mac lane, LIVE 10-09-2026). MG-gated leftover: the 13 ghost names +
+  stub `corpus.db` remain in `deploy_guhya.py` MANIFEST pending MG's
+  no-other-machine-holds-them confirmation (H3389 residual 3) — they now SKIP with a
+  printed ledger instead of uploading/MISSING silently (fail-closed source guard added
+  01-10-2026, closing the AGENTS danger-fact gap behind the corpus.db stub incident)
 - [ ] P-D4 samskrtam.ru canonical hosting (upload public-tier files, manifest URLs flip
   from GitHub Releases to the server; restricted tier gets a non-public server path) —
   human-only (MG deploy gate; GTD @DO)
@@ -71,7 +90,7 @@ index — it is a **hub that hosts the bytes**.
 | **P-D0** | Roadmap + locked decisions (this file) + machine-readable manifest [`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) + spine/hub registration (PROJECT_INTERLINKS row, GTD wiring) | ✅ 06-07-2026 |
 | **P-D1** | First public data release `data-v0.1.0`: mw_roots · mw_etymology · dcs_cdsl_xref · union_headwords · mw_heritage_crosswalk · lemma_frequency · headword_index (all already public in their source repos; CC BY-SA 4.0 per [`LICENSE-DATA.md`](https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)) | ✅ 06-07-2026 |
 | **P-D1a** | Manifest schema hardened (D8): `in_release` closed vocabulary (`"<tag>"` / `"unreleased"` / `"not-applicable"`), `release_asset` required on every public released row, schema test failing CI on violation. Catch-up release [`data-v0.2.0`](https://github.com/gasyoun/kosha/releases/tag/data-v0.2.0) clears the 33-row backlog that an optional field let accumulate unnoticed. | ✅ 19-07-2026 (H1264) |
-| **P-D2** | Restricted-tier backup of the 19.2 GB local-only census giants (private storage; the 11 GB `archive_stopword.sqlite` needs split-or-exclude ruling) — kills the single-copy risk | 🟡 H233 |
+| **P-D2** | Restricted-tier backup of the 19.2 GB local-only census giants (private storage) — kills the single-copy risk | ✅ 23-08-2026 ([H3389](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3389-OxAlpha_Uprava_kosha-guhya-restricted-backup-upload_23.08.26.md), executing [H235](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H235-Sonnet_kosha_data_hub_restricted_backup_06.07.26.md); re-verified 01-10-2026) — 14/14 targets live at `samskrtam.ru/guhya/` (sha256 sidecars, round-trip-verified; ✅ row in Uprava [BACKUPS.md](https://github.com/gasyoun/Uprava/blob/main/BACKUPS.md)); 11 GB `archive_stopword.sqlite` ruled regenerable-exclude (H1989/H1998; W4-Mac restic covers a copy) |
 | **P-D3** | Public **Sanskrit NLP data + tools directory** page on the kosha site (our datasets + external stacks), from FEATURES_INDEX/REUSE_INDEX/SAMSAADHANII_INDEX content | ✅ 06-07-2026 (H236) — [`directory/`](https://gasyoun.github.io/kosha/directory/), rendered by [`scripts/build_directory.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_directory.py) from [`datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) + [`external_tools.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/external_tools.json); schema.org `Dataset` JSON-LD per public asset |
 | **P-D4** | samskrtam.ru canonical hosting: upload public-tier files, manifest URLs flip from GitHub Releases to server; restricted tier gets a non-public server path | ⛔ MG deploy gate (GTD @DO) |
 | **P-D5** | Queryable-DB integration: the manifest's join-table assets ingested into `kosha.db` as attached layers (frequency already done — DCS M9 pattern); one SQLite an agent can query cross-asset | ✅ 24-07-2026 (H1589) — `python scripts/build_db.py --stage layers` loads public `sense_frequency` · `roots_frequency` · `dict_corpus_coverage` (+ optional `mw_roots` / `mw_etymology`); G-SIZE tripwire `scripts/check_g_size.py`; operator query surface in [`docs/PIPELINE_OPERATOR_RUNBOOK.md`](https://github.com/gasyoun/kosha/blob/main/docs/PIPELINE_OPERATOR_RUNBOOK.md). D5-4 core/inflections ATTACH split remains optional follow-on. |
