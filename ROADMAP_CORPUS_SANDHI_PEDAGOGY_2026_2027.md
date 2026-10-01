@@ -1,6 +1,23 @@
-_Created: 13-07-2026 · Last updated: 27-08-2026_
+_Created: 13-07-2026 · Last updated: 01-10-2026_
 
 > **Truth-pass 27-08-2026** (Grok 4.6 `grok-4.6`). D4 addendum: this file joined the Wave 1 FLAG list after 21-08. Closed references checked against the combined registry. Kept in place ([FINDINGS §475](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md) clause 3). Not archived. Prior: 30-07 §5 stale Phase-4 line struck.
+>
+> **Verdict 01-10-2026 ([H5575](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5575-OxAlpha_kosha_roadmap-verdict-w2-kosha-five-drain-first_01.10.26.md), wave 2) — REFRESH.**
+> The DCS layer is complete (exit criterion met at 96.3 % frequency-mass coverage; all
+> four Phase-4 pedagogy surfaces shipped, H902). The roadmap stays alive on the
+> deliberately parked Phase-3 GRETIL extension and one small residual — checkboxes
+> below, mirrored into Uprava
+> [GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md)
+> per ruling 10 of [GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md](https://github.com/gasyoun/Uprava/blob/main/docs/GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md).
+
+## What is left (01-10-2026)
+
+- [ ] Phase 3 — GRETIL extension (method-C splitter per §2 item 3; each text gated
+  through [/publish-safety-check](https://github.com/gasyoun/claude-config/blob/main/commands/publish-safety-check.md)
+  for license) — gate: until the DCS layer's consumption demands it (parked by design;
+  next-wave candidate)
+- [ ] Data-statement `.meta.md` for the `corpus-sandhi` manifest row — gate: none
+  (agent-doable, small)
 
 # Corpus-wide sandhi extraction for Sanskrit pedagogy — roadmap (2026–2027)
 
