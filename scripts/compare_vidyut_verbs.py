@@ -18,12 +18,16 @@ Mapping (Cologne -> vidyut Tinanta):
 
 Honest coverage boundary (the reason the report flagged verbs as "a larger
 follow-on"): vidyut's `Dhatu.mula` wants the *aupadeśika* root (with accent /
-it-markers), but Cologne stores the bare SLP1 root. We pass the bare root as
-the upadeśa; where Cologne's (root, gaṇa) doesn't match a vidyut derivation the
-cell is VIDYUT_EMPTY, and roots that derive nothing at all are reported as an
-unresolved-mapping bucket, NOT counted as disagreements. So the agreement % is
-over the cells where BOTH engines produced something — a lower-bound
-characterisation on the derivable subset, stated as such in the report.
+it-markers), but Cologne stores the bare SLP1 root. Since H855 the crosswalk
+supplies aupadeśika seeds; since A03 it also rules, per root-model, where
+vidyut has NO licensed dhātu at all (`unresolved`/`no-dhatu`): those cells
+ABSTAIN — vidyut-side empty, i.e. COLOGNE_ONLY (the coverage-gap class) — and
+never fall back to a bare-root pseudo-derivation, whose malformed output
+(e.g. `yat` → `yyate` against Cologne's `yatyate`) H3166 measured as 85 % of
+the surviving "conflicts". Roots absent from the crosswalk entirely keep the
+pre-H855 bare-root fallback. The agreement % is over the cells where BOTH
+engines produced something — a lower-bound characterisation on the derivable
+subset, stated as such in the report.
 
 Nominals-clean discipline reused: vidyut is a LOCAL library (RISKS.md R12), no
 live call at build or query.
@@ -90,12 +94,33 @@ def load_crosswalk(path: Path) -> dict:
     back to its bare-root upadeśa, i.e. the pre-H855 behaviour. The committed
     crosswalk carries only aupadeśika strings, so this stays vidyut-data-free
     (only bundled `Dhatu.mula` is used downstream — R12)."""
+    au, _, _ = load_crosswalk_full(path)
+    return au
+
+
+def load_crosswalk_full(path: Path):
+    """(aupadeśika map, gaṇa-override map, noseed set) from the H855+A03
+    crosswalk. `noseed` = keys whose aupadeśika is null (via `unresolved` or
+    `no-dhatu`): vidyut has no licensed dhātu for that root-model, so the
+    comparison must ABSTAIN — vidyut-side cells come back empty (COLOGNE_ONLY,
+    the coverage-gap class) instead of feeding `Dhatu.mula` the bare root and
+    miscounting its malformed output as genuine conflict (the H3166 artifact).
+    `gana` overrides (A03 `cells-xgana` entries) say the licensed dhātupāṭha
+    entry lives in a different gaṇa than Cologne's model claims — a gaṇa-shift
+    finding the comparison must honour in `Dhatu.mula`."""
     try:
         data = json.loads(Path(path).read_text(encoding="utf-8"))
     except FileNotFoundError:
-        return {}
-    return {k: e["aupadeshika"] for k, e in data.get("crosswalk", {}).items()
-            if e.get("aupadeshika")}
+        return {}, {}, set()
+    au, gana, noseed = {}, {}, set()
+    for k, e in data.get("crosswalk", {}).items():
+        if e.get("aupadeshika"):
+            au[k] = e["aupadeshika"]
+            if e.get("gana") is not None:
+                gana[k] = int(e["gana"])
+        else:
+            noseed.add(k)
+    return au, gana, noseed
 
 
 def upadesha(cross: dict, root: str, model: str) -> str:
@@ -145,6 +170,8 @@ def cologne_verb_cells(con, root, model):
 
 
 def vidyut_verb_cell(v, dhatu, voice, tense, person, number):
+    if dhatu is None:  # A03: no licensed seed — vidyut abstains (empty cell)
+        return set()
     prayoga, dhatu_pada = VOICE_DERIV[voice]
     kwargs = dict(dhatu=dhatu, prayoga=prayoga, lakara=TENSE_LAKARA[tense],
                   purusha=PERSON_PURUSHA[person], vacana=NUMBER_VACANA[number])
@@ -168,10 +195,30 @@ def main():
 
     con = open_db(args.db)
     v = Vyakarana()
-    cross = load_crosswalk(args.crosswalk)
+    cross, gana_override, noseed = load_crosswalk_full(args.crosswalk)
+    GANA_BY_INT = {1: Gana.Bhvadi, 4: Gana.Divadi, 6: Gana.Tudadi, 10: Gana.Curadi}
+
+    def seed_dhatu(root: str, model: str):
+        """The licensed Dhatu for this (root, model) — the A03 crosswalk's
+        aupadeśika under its gaṇa (model gaṇa, or the cells-xgana override), or
+        None when the crosswalk says vidyut abstains (unresolved / no-dhatu) or
+        when Dhatu.mula refuses. Roots absent from the crosswalk entirely keep
+        the pre-H855 bare-root fallback (not the A03 target population)."""
+        key = f"{model}|{root}"
+        if key in noseed:
+            return None
+        au = cross.get(key, root)
+        gana = GANA_BY_INT[gana_override[key]] if key in gana_override \
+            else GANA_OF_MODEL[model]
+        try:
+            return Dhatu.mula(au, gana)
+        except Exception:
+            return None
+
     roots = select_roots(con, args.limit)
     print(f"[E1 verbs] comparing {len(roots)} entry-bearing verb root(s) "
-          f"(vidyut Tinanta vs Cologne; {len(cross)} roots via H855 dhātu crosswalk)")
+          f"(vidyut Tinanta vs Cologne; {len(cross)} licensed crosswalk seeds, "
+          f"{len(noseed)} vidyut-abstains)")
 
     cls = Counter()
     per_voice = defaultdict(Counter)
@@ -181,27 +228,23 @@ def main():
     t0 = time.time()
 
     for n, (root, models, gana_model) in enumerate(roots, 1):
-        try:
-            gana_dhatu = (Dhatu.mula(upadesha(cross, root, gana_model),
-                                     GANA_OF_MODEL[gana_model]) if gana_model else None)
-        except Exception:
-            gana_dhatu = None
+        gana_dhatu = seed_dhatu(root, gana_model) if gana_model else None
         root_vidyut_hits = 0
 
         for model in models:
             if model in GANA_OF_MODEL:
-                # H855: use the crosswalk's aupadeśika upadeśa (falls back to the
-                # bare root — the pre-H855 behaviour — when unresolved).
-                try:
-                    dhatu = Dhatu.mula(upadesha(cross, root, model), GANA_OF_MODEL[model])
-                except Exception:
-                    dhatu = Dhatu.mula(root, GANA_OF_MODEL[model])
+                # A03: licensed seed or abstain (never the bare-root pseudo-derivation)
+                dhatu = seed_dhatu(root, model)
                 voices = ["active", "middle"]
             else:  # v_p passive — borrow the root's gaṇa
                 if gana_dhatu is None:
-                    roots_no_gana_passive.append(root)
-                    continue
-                dhatu = gana_dhatu
+                    # A03: no licensed seed — Cologne's passive cells stay in the
+                    # population as COLOGNE_ONLY (coverage gap), not skipped.
+                    if root not in roots_no_gana_passive:
+                        roots_no_gana_passive.append(root)
+                    dhatu = None
+                else:
+                    dhatu = gana_dhatu
                 voices = ["passive"]
 
             col_cells = cologne_verb_cells(con, root, model)
@@ -260,10 +303,11 @@ def main():
     compatible = (cls["AGREE"] + cls["DIFF_final_stop"]
                   + cls["DIFF_vidyut_superset"] + cls["DIFF_cologne_superset"])
     report = {
-        "handoff": "H185-C + H855 (dhātu-identity crosswalk)",
+        "handoff": "H185-C + H855 (dhātu-identity crosswalk) + A03 (bare-seeded resolution)",
         "answers": "csl-inflect#8 (Huet verb comparison)",
         "sample_roots": len(roots),
         "crosswalk_roots_resolved": len(cross),
+        "crosswalk_roots_abstaining": len(noseed),
         "roots_vidyut_underivable": len(roots_all_empty),
         "roots_no_gana_for_passive": len(sorted(set(roots_no_gana_passive))),
         "classes": dict(cls),
@@ -283,9 +327,11 @@ def main():
     lines = [
         "P4 Wave E1 verbs — vidyut Tinanta vs Cologne csl-inflect (present system)",
         f"entry-bearing roots        : {len(roots)}",
-        f"roots via H855 crosswalk   : {len(cross)} (aupadeśika upadeśa; else bare-root)",
+        f"licensed crosswalk seeds   : {len(cross)} "
+        f"(+{len(noseed)} root-models where vidyut abstains — no licensed dhātu)",
         f"roots vidyut can't derive  : {len(roots_all_empty)} (residual upadeśa/gaṇa gap)",
-        f"roots w/o gaṇa for passive : {len(sorted(set(roots_no_gana_passive)))}",
+        f"roots w/o gaṇa for passive : {len(sorted(set(roots_no_gana_passive)))} "
+        "(their Cologne cells counted COLOGNE_ONLY)",
         f"cells both-nonempty        : {both}",
         f"AGREE (strict)             : {cls['AGREE']} "
         f"({report['strict_agreement_pct']}% of both-nonempty)",
