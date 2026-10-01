@@ -1,21 +1,32 @@
 {
-  "_about": "Cologne verb root -> vidyut aupadeśika-dhātu crosswalk (H855). Key 'model|root'; use Dhatu.mula(aupadeshika, gaṇa-of-model). via: 3sg=present-3sg match, direct=bare root already derives, bare=normalized-bare match, unresolved=no vidyut dhātu found.",
+  "_about": "Cologne verb root -> vidyut aupadeśika-dhātu crosswalk (H855 + A03 stage-2 bare-seeded resolution). Key 'model|root'; use Dhatu.mula(aupadeshika, gaṇa-of-model — or the entry's 'gana' override for via='cells-xgana'). A null aupadesika (via='unresolved'/'no-dhatu') means vidyut ABSTAINS for that root-model — never seed Dhatu.mula with the bare root. via: 3sg=present-3sg match, direct=bare seed kept with Cologne form evidence, bare=normalized-bare match (H855), cells/cells-xgana=licensed dhātupāṭha entry picked on Cologne form evidence (xgana carries a 'gana' override), no-dhatu=nothing licenses a derivation.",
   "vidyut_version": "0.4.0",
   "gana_dhatupatha_entries": 1983,
   "cologne_root_models": 779,
-  "resolved": 722,
-  "resolved_pct": 92.7,
+  "resolved": 649,
+  "resolved_pct": 83.3,
   "via_counts": {
-    "direct": 205,
+    "no-dhatu": 130,
+    "cells": 108,
+    "direct": 8,
     "3sg": 474,
-    "unresolved": 57,
-    "bare": 43
+    "bare": 43,
+    "cells-xgana": 16
+  },
+  "bare_seeded_resolution": {
+    "targets": 262,
+    "kept_direct_verified": 8,
+    "cells": 108,
+    "cells_xgana": 16,
+    "no_dhatu": 130,
+    "kept_no_3sg_evidence": 0
   },
   "crosswalk": {
     "v_10|BI": {
       "aupadeshika": "BI",
       "via": "direct",
-      "code": null
+      "code": null,
+      "evidence": 2
     },
     "v_10|Bakz": {
       "aupadeshika": "Bakza~",
@@ -33,9 +44,11 @@
       "code": "10.0370"
     },
     "v_10|Cal": {
-      "aupadeshika": "Cal",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_10|Gaww": {
       "aupadeshika": "Gawwa~",
@@ -53,14 +66,18 @@
       "code": "10.0066"
     },
     "v_10|Kac": {
-      "aupadeshika": "Kac",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_10|SAl": {
-      "aupadeshika": "SAl",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_10|SIk": {
       "aupadeshika": "SIka~",
@@ -83,9 +100,11 @@
       "code": "10.0239"
     },
     "v_10|SiYj": {
-      "aupadeshika": "SiYj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_10|Siz": {
       "aupadeshika": "Si\\za~",
@@ -93,14 +112,18 @@
       "code": "10.0349"
     },
     "v_10|aG": {
-      "aupadeshika": "aG",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_10|aMS": {
-      "aupadeshika": "aMS",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_10|aMh": {
       "aupadeshika": "ahi~",
@@ -108,9 +131,11 @@
       "code": "10.0328"
     },
     "v_10|aNK": {
-      "aupadeshika": "aNK",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_10|aNg": {
       "aupadeshika": "anga",
@@ -133,9 +158,10 @@
       "code": "10.0471"
     },
     "v_10|arT": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "arTa",
+      "via": "cells",
+      "code": "10.0447",
+      "prev_via": "unresolved"
     },
     "v_10|aww": {
       "aupadeshika": "adwa~",
@@ -148,19 +174,24 @@
       "code": "10.0026"
     },
     "v_10|carc": {
-      "aupadeshika": "carc",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "carca~",
+      "via": "cells",
+      "code": "10.0237",
+      "prev_via": "direct"
     },
     "v_10|carv": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 2
     },
     "v_10|gUrD": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_10|gaR": {
       "aupadeshika": "gaRa",
@@ -194,13 +225,16 @@
     },
     "v_10|jF": {
       "aupadeshika": "jF",
-      "via": "direct",
-      "code": null
+      "via": "cells",
+      "code": "10.0346",
+      "prev_via": "direct"
     },
     "v_10|jan": {
-      "aupadeshika": "jan",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_10|kIrt": {
       "aupadeshika": "kFta~",
@@ -208,9 +242,11 @@
       "code": "10.0155"
     },
     "v_10|kUq": {
-      "aupadeshika": "kUq",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_10|kaR": {
       "aupadeshika": "kaRa~",
@@ -248,9 +284,11 @@
       "code": "10.0456"
     },
     "v_10|kaww": {
-      "aupadeshika": "kaww",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_10|kfp": {
       "aupadeshika": "kfpa",
@@ -263,9 +301,10 @@
       "code": "10.0220"
     },
     "v_10|kuw": {
-      "aupadeshika": "kuw",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "kuwa~",
+      "via": "cells",
+      "code": "10.0222",
+      "prev_via": "direct"
     },
     "v_10|kuww": {
       "aupadeshika": "kuwwa~",
@@ -298,9 +337,11 @@
       "code": "10.0253"
     },
     "v_10|laz": {
-      "aupadeshika": "laz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_10|loc": {
       "aupadeshika": "locf~",
@@ -319,8 +360,10 @@
     },
     "v_10|luW": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 6
     },
     "v_10|luw": {
       "aupadeshika": "luwa~",
@@ -343,19 +386,24 @@
       "code": "10.0406"
     },
     "v_10|mfg": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "mfga",
+      "via": "cells",
+      "code": "10.0442",
+      "prev_via": "unresolved"
     },
     "v_10|mfj": {
-      "aupadeshika": "mfj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_10|mfq": {
-      "aupadeshika": "mfq",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_10|mfz": {
       "aupadeshika": "mfza~^",
@@ -383,9 +431,11 @@
       "code": "10.0168"
     },
     "v_10|oj": {
-      "aupadeshika": "oj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_10|olaRq": {
       "aupadeshika": "olaqi~",
@@ -418,9 +468,11 @@
       "code": "10.0047"
     },
     "v_10|pruz": {
-      "aupadeshika": "pruz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_10|puw": {
       "aupadeshika": "puwa~",
@@ -428,9 +480,11 @@
       "code": "10.0283"
     },
     "v_10|rUz": {
-      "aupadeshika": "rUz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_10|raMh": {
       "aupadeshika": "rahi~",
@@ -508,9 +562,10 @@
       "code": "10.0311"
     },
     "v_10|tul": {
-      "aupadeshika": "tul",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "tula~",
+      "via": "cells",
+      "code": "10.0088",
+      "prev_via": "direct"
     },
     "v_10|uDras": {
       "aupadeshika": "uDrasa~",
@@ -518,9 +573,11 @@
       "code": "10.0271"
     },
     "v_10|ulaq": {
-      "aupadeshika": "ulaq",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_10|vAs": {
       "aupadeshika": "vasa~",
@@ -528,9 +585,11 @@
       "code": "10.0273"
     },
     "v_10|vIj": {
-      "aupadeshika": "vIj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_10|vaRw": {
       "aupadeshika": "vawi~",
@@ -558,9 +617,11 @@
       "code": "10.0156"
     },
     "v_10|vrIq": {
-      "aupadeshika": "vrIq",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_10|vraj": {
       "aupadeshika": "vraja~",
@@ -573,19 +634,23 @@
       "code": "10.0261"
     },
     "v_1|BAs": {
-      "aupadeshika": "BAs",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "BAsf~\\",
+      "via": "cells",
+      "code": "01.0711",
+      "prev_via": "direct"
     },
     "v_1|BAz": {
-      "aupadeshika": "BAz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "BAza~\\",
+      "via": "cells",
+      "code": "01.0696",
+      "prev_via": "direct"
     },
     "v_1|BI": {
-      "aupadeshika": "BI",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|BU": {
       "aupadeshika": "BU",
@@ -613,14 +678,17 @@
       "code": "01.1039"
     },
     "v_1|Band": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "Badi~\\",
+      "via": "cells",
+      "code": "01.0012",
+      "prev_via": "unresolved"
     },
     "v_1|Barts": {
-      "aupadeshika": "Barts",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|Baz": {
       "aupadeshika": "Baza~",
@@ -638,19 +706,22 @@
       "code": "01.0067"
     },
     "v_1|Bikz": {
-      "aupadeshika": "Bikz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "Bikza~\\",
+      "via": "cells",
+      "code": "01.0690",
+      "prev_via": "direct"
     },
     "v_1|BrAj": {
-      "aupadeshika": "BrAj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "BrAjf~\\",
+      "via": "cells",
+      "code": "01.0205",
+      "prev_via": "direct"
     },
     "v_1|BraMS": {
-      "aupadeshika": "BraMS",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "BranSu~\\",
+      "via": "cells",
+      "code": "01.0860",
+      "prev_via": "direct"
     },
     "v_1|Bram": {
       "aupadeshika": "Bramu~",
@@ -669,13 +740,17 @@
     },
     "v_1|Cfd": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 2
     },
     "v_1|DA": {
-      "aupadeshika": "DA",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|DAv": {
       "aupadeshika": "DAvu~^",
@@ -683,9 +758,11 @@
       "code": "01.0685"
     },
     "v_1|DU": {
-      "aupadeshika": "DU",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "DUY",
+      "via": "cells-xgana",
+      "code": "10.0372",
+      "prev_via": "direct",
+      "gana": 10
     },
     "v_1|Dam": {
       "aupadeshika": "DmA\\",
@@ -713,14 +790,17 @@
       "code": "01.1047"
     },
     "v_1|Dfz": {
-      "aupadeshika": "Dfz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|DvaMs": {
-      "aupadeshika": "DvaMs",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "Dvansu~\\",
+      "via": "cells",
+      "code": "01.0858",
+      "prev_via": "direct"
     },
     "v_1|Dvan": {
       "aupadeshika": "Dvana~",
@@ -738,9 +818,10 @@
       "code": "01.1056"
     },
     "v_1|GUrR": {
-      "aupadeshika": "GUrR",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "GurRa~\\",
+      "via": "cells",
+      "code": "01.0506",
+      "prev_via": "direct"
     },
     "v_1|Gas": {
       "aupadeshika": "Ga\\sx~",
@@ -748,14 +829,16 @@
       "code": "01.0812"
     },
     "v_1|Gaw": {
-      "aupadeshika": "Gaw",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "Gawa~\\",
+      "via": "cells",
+      "code": "01.0867",
+      "prev_via": "direct"
     },
     "v_1|Gaww": {
-      "aupadeshika": "Gaww",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "Gawwa~\\",
+      "via": "cells",
+      "code": "01.0292",
+      "prev_via": "direct"
     },
     "v_1|Gf": {
       "aupadeshika": "Gf\\",
@@ -778,9 +861,11 @@
       "code": "01.0741"
     },
     "v_1|IK": {
-      "aupadeshika": "IK",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|INK": {
       "aupadeshika": "IKi~",
@@ -793,19 +878,24 @@
       "code": "01.0719"
     },
     "v_1|Ij": {
-      "aupadeshika": "Ij",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|Ikz": {
-      "aupadeshika": "Ikz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "Ikza~\\",
+      "via": "cells",
+      "code": "01.0694",
+      "prev_via": "direct"
     },
     "v_1|Int": {
-      "aupadeshika": "Int",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|Irzy": {
       "aupadeshika": "Irzya~",
@@ -828,9 +918,10 @@
       "code": "01.1060"
     },
     "v_1|KaRq": {
-      "aupadeshika": "KaRq",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "Kaqi~\\",
+      "via": "cells",
+      "code": "01.0317",
+      "prev_via": "direct"
     },
     "v_1|KaYj": {
       "aupadeshika": "Kaji~",
@@ -838,14 +929,18 @@
       "code": "01.0266"
     },
     "v_1|Kac": {
-      "aupadeshika": "Kac",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|Kall": {
-      "aupadeshika": "Kall",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|Kan": {
       "aupadeshika": "Kanu~^",
@@ -863,24 +958,29 @@
       "code": "01.0955"
     },
     "v_1|QOk": {
-      "aupadeshika": "QOk",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "QOkf~\\",
+      "via": "cells",
+      "code": "01.0103",
+      "prev_via": "direct"
     },
     "v_1|SAl": {
-      "aupadeshika": "SAl",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|SI": {
       "aupadeshika": "SI",
       "via": "direct",
-      "code": null
+      "code": null,
+      "evidence": 1
     },
     "v_1|SIk": {
-      "aupadeshika": "SIk",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "SIkf~\\",
+      "via": "cells",
+      "code": "01.0078",
+      "prev_via": "direct"
     },
     "v_1|SIl": {
       "aupadeshika": "SIla~",
@@ -893,9 +993,10 @@
       "code": "01.0829"
     },
     "v_1|SaNk": {
-      "aupadeshika": "SaNk",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "Saki~\\",
+      "via": "cells",
+      "code": "01.0091",
+      "prev_via": "direct"
     },
     "v_1|SaW": {
       "aupadeshika": "SaWa~",
@@ -928,19 +1029,23 @@
       "code": "01.1014"
     },
     "v_1|SiYj": {
-      "aupadeshika": "SiYj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|Sikz": {
-      "aupadeshika": "Sikz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "Sikza~\\",
+      "via": "cells",
+      "code": "01.0689",
+      "prev_via": "direct"
     },
     "v_1|SlAG": {
-      "aupadeshika": "SlAG",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "SlAGf~\\",
+      "via": "cells",
+      "code": "01.0122",
+      "prev_via": "direct"
     },
     "v_1|SlaT": {
       "aupadeshika": "SlaTa~",
@@ -949,13 +1054,17 @@
     },
     "v_1|SnaT": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_1|SrA": {
-      "aupadeshika": "SrA",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|Sri": {
       "aupadeshika": "SriY",
@@ -969,8 +1078,10 @@
     },
     "v_1|SuD": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 2
     },
     "v_1|Suc": {
       "aupadeshika": "Suca~",
@@ -983,9 +1094,10 @@
       "code": "01.1165"
     },
     "v_1|SyE": {
-      "aupadeshika": "SyE",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "SyE\\N",
+      "via": "cells",
+      "code": "01.1118",
+      "prev_via": "direct"
     },
     "v_1|Uh": {
       "aupadeshika": "Uha~\\",
@@ -993,9 +1105,10 @@
       "code": "01.0735"
     },
     "v_1|Urd": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "urda~\\",
+      "via": "cells",
+      "code": "01.0020",
+      "prev_via": "unresolved"
     },
     "v_1|Urv": {
       "aupadeshika": "urvI~",
@@ -1018,14 +1131,16 @@
       "code": "01.0637"
     },
     "v_1|aMh": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "ahi~\\",
+      "via": "cells",
+      "code": "01.0722",
+      "prev_via": "unresolved"
     },
     "v_1|aNG": {
-      "aupadeshika": "aNG",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "aGi~\\",
+      "via": "cells",
+      "code": "01.0115",
+      "prev_via": "direct"
     },
     "v_1|aNg": {
       "aupadeshika": "agi~",
@@ -1033,9 +1148,10 @@
       "code": "01.0155"
     },
     "v_1|aNk": {
-      "aupadeshika": "aNk",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "aki~\\",
+      "via": "cells",
+      "code": "01.0092",
+      "prev_via": "direct"
     },
     "v_1|aR": {
       "aupadeshika": "aRa~",
@@ -1043,9 +1159,10 @@
       "code": "01.0512"
     },
     "v_1|aRW": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "aWi~\\",
+      "via": "cells",
+      "code": "01.0294",
+      "prev_via": "unresolved"
     },
     "v_1|aW": {
       "aupadeshika": "aWi~\\",
@@ -1088,9 +1205,10 @@
       "code": "01.0593"
     },
     "v_1|amb": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "abi~\\",
+      "via": "cells",
+      "code": "01.0438",
+      "prev_via": "unresolved"
     },
     "v_1|and": {
       "aupadeshika": "adi~",
@@ -1114,8 +1232,10 @@
     },
     "v_1|arT": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_1|arb": {
       "aupadeshika": "arba~",
@@ -1163,9 +1283,10 @@
       "code": "01.0332"
     },
     "v_1|aww": {
-      "aupadeshika": "aww",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "awwa~\\",
+      "via": "cells",
+      "code": "01.0287",
+      "prev_via": "direct"
     },
     "v_1|az": {
       "aupadeshika": "aza~^",
@@ -1179,8 +1300,10 @@
     },
     "v_1|banD": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 2
     },
     "v_1|bfh": {
       "aupadeshika": "bfha~",
@@ -1203,9 +1326,11 @@
       "code": "01.0217"
     },
     "v_1|cal": {
-      "aupadeshika": "cal",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 4
     },
     "v_1|car": {
       "aupadeshika": "cara~",
@@ -1234,13 +1359,17 @@
     },
     "v_1|cumb": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_1|dA": {
-      "aupadeshika": "dA",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|dAS": {
       "aupadeshika": "dASf~^",
@@ -1253,9 +1382,10 @@
       "code": "01.1146"
     },
     "v_1|dakz": {
-      "aupadeshika": "dakz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "dakza~\\",
+      "via": "cells",
+      "code": "01.0692",
+      "prev_via": "direct"
     },
     "v_1|dal": {
       "aupadeshika": "dala~",
@@ -1273,9 +1403,10 @@
       "code": "01.1095"
     },
     "v_1|dyut": {
-      "aupadeshika": "dyut",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "dyuta~\\",
+      "via": "cells",
+      "code": "01.0842",
+      "prev_via": "direct"
     },
     "v_1|eD": {
       "aupadeshika": "eDa~\\",
@@ -1293,9 +1424,10 @@
       "code": "01.0267"
     },
     "v_1|ez": {
-      "aupadeshika": "ez",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "ezf~\\",
+      "via": "cells",
+      "code": "01.0701",
+      "prev_via": "direct"
     },
     "v_1|f": {
       "aupadeshika": "f\\",
@@ -1303,9 +1435,10 @@
       "code": "01.1086"
     },
     "v_1|fYj": {
-      "aupadeshika": "fYj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "fji~\\",
+      "via": "cells",
+      "code": "01.0201",
+      "prev_via": "direct"
     },
     "v_1|fj": {
       "aupadeshika": "arja~",
@@ -1313,9 +1446,11 @@
       "code": "01.0256"
     },
     "v_1|fz": {
-      "aupadeshika": "fz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|gAh": {
       "aupadeshika": "gAhU~\\",
@@ -1373,19 +1508,23 @@
       "code": "01.0036"
     },
     "v_1|gras": {
-      "aupadeshika": "gras",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "grasu~\\",
+      "via": "cells",
+      "code": "01.0717",
+      "prev_via": "direct"
     },
     "v_1|gu": {
-      "aupadeshika": "gu",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "gu\\N",
+      "via": "cells",
+      "code": "01.1100",
+      "prev_via": "direct"
     },
     "v_1|guD": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 2
     },
     "v_1|guYj": {
       "aupadeshika": "guji~",
@@ -1398,9 +1537,11 @@
       "code": "01.1043"
     },
     "v_1|hA": {
-      "aupadeshika": "hA",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|had": {
       "aupadeshika": "ha\\da~\\",
@@ -1408,9 +1549,11 @@
       "code": "01.1132"
     },
     "v_1|han": {
-      "aupadeshika": "han",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|hary": {
       "aupadeshika": "harya~",
@@ -1423,9 +1566,10 @@
       "code": "01.0822"
     },
     "v_1|hez": {
-      "aupadeshika": "hez",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "hezf~\\",
+      "via": "cells",
+      "code": "01.0708",
+      "prev_via": "direct"
     },
     "v_1|hf": {
       "aupadeshika": "hf\\Y",
@@ -1438,9 +1582,11 @@
       "code": "01.0806"
     },
     "v_1|hiMs": {
-      "aupadeshika": "hiMs",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "hisi~",
+      "via": "cells-xgana",
+      "code": "10.0366",
+      "prev_via": "direct",
+      "gana": 10
     },
     "v_1|hlAd": {
       "aupadeshika": "hlAdI~\\",
@@ -1463,9 +1609,10 @@
       "code": "01.0808"
     },
     "v_1|hrez": {
-      "aupadeshika": "hrez",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "hrezf~\\",
+      "via": "cells",
+      "code": "01.0709",
+      "prev_via": "direct"
     },
     "v_1|hval": {
       "aupadeshika": "hvala~",
@@ -1508,14 +1655,17 @@
       "code": "01.0357"
     },
     "v_1|iz": {
-      "aupadeshika": "iz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "ezf~\\",
+      "via": "cells",
+      "code": "01.0701",
+      "prev_via": "direct"
     },
     "v_1|jAgf": {
-      "aupadeshika": "jAgf",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|jF": {
       "aupadeshika": "jf\\",
@@ -1528,24 +1678,32 @@
       "code": "01.0643"
     },
     "v_1|jan": {
-      "aupadeshika": "jan",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|jap": {
-      "aupadeshika": "jap",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|jf": {
-      "aupadeshika": "jf",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|ji": {
-      "aupadeshika": "ji",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 3
     },
     "v_1|jinv": {
       "aupadeshika": "jivi~",
@@ -1553,9 +1711,11 @@
       "code": "01.0678"
     },
     "v_1|juz": {
-      "aupadeshika": "juz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 3
     },
     "v_1|jval": {
       "aupadeshika": "jvala~",
@@ -1573,19 +1733,23 @@
       "code": "01.0760"
     },
     "v_1|kAS": {
-      "aupadeshika": "kAS",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "kASf~\\",
+      "via": "cells",
+      "code": "01.0734",
+      "prev_via": "direct"
     },
     "v_1|kAs": {
-      "aupadeshika": "kAs",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "kAsf~\\",
+      "via": "cells",
+      "code": "01.0710",
+      "prev_via": "direct"
     },
     "v_1|kUR": {
-      "aupadeshika": "kUR",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|kUj": {
       "aupadeshika": "kUja~",
@@ -1593,9 +1757,10 @@
       "code": "01.0254"
     },
     "v_1|kUrd": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "kurda~\\",
+      "via": "cells",
+      "code": "01.0021",
+      "prev_via": "unresolved"
     },
     "v_1|kaK": {
       "aupadeshika": "kaKa~",
@@ -1603,9 +1768,10 @@
       "code": "01.0128"
     },
     "v_1|kaNk": {
-      "aupadeshika": "kaNk",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "kaki~\\",
+      "via": "cells",
+      "code": "01.0099",
+      "prev_via": "direct"
     },
     "v_1|kaR": {
       "aupadeshika": "kaRa~",
@@ -1613,9 +1779,10 @@
       "code": "01.0517"
     },
     "v_1|kaRW": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "kaWi~\\",
+      "via": "cells",
+      "code": "01.0297",
+      "prev_via": "unresolved"
     },
     "v_1|kaRq": {
       "aupadeshika": "kaqi~",
@@ -1623,9 +1790,11 @@
       "code": "01.0418"
     },
     "v_1|kaRw": {
-      "aupadeshika": "kaRw",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|kaW": {
       "aupadeshika": "kaWa~",
@@ -1633,9 +1802,10 @@
       "code": "01.0385"
     },
     "v_1|kaYc": {
-      "aupadeshika": "kaYc",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "kaci~\\",
+      "via": "cells",
+      "code": "01.0193",
+      "prev_via": "direct"
     },
     "v_1|kab": {
       "aupadeshika": "kabf~\\",
@@ -1643,9 +1813,10 @@
       "code": "01.0440"
     },
     "v_1|kac": {
-      "aupadeshika": "kac",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "kaca~\\",
+      "via": "cells",
+      "code": "01.0192",
+      "prev_via": "direct"
     },
     "v_1|kad": {
       "aupadeshika": "kadi~",
@@ -1658,29 +1829,36 @@
       "code": "01.0900"
     },
     "v_1|kaj": {
-      "aupadeshika": "kaj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|kak": {
-      "aupadeshika": "kak",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "kaka~\\",
+      "via": "cells",
+      "code": "01.0095",
+      "prev_via": "direct"
     },
     "v_1|kam": {
-      "aupadeshika": "kam",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "kamu~\\",
+      "via": "cells",
+      "code": "01.0511",
+      "prev_via": "direct"
     },
     "v_1|kamb": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_1|kamp": {
-      "aupadeshika": "kamp",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "kapi~\\",
+      "via": "cells",
+      "code": "01.0435",
+      "prev_via": "direct"
     },
     "v_1|kan": {
       "aupadeshika": "kanI~",
@@ -1730,12 +1908,15 @@
     "v_1|kf": {
       "aupadeshika": "kf",
       "via": "direct",
-      "code": null
+      "code": null,
+      "evidence": 1
     },
     "v_1|kft": {
-      "aupadeshika": "kft",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|kfz": {
       "aupadeshika": "kf\\za~",
@@ -1748,9 +1929,11 @@
       "code": "01.0913"
     },
     "v_1|klam": {
-      "aupadeshika": "klam",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "klamu~",
+      "via": "cells-xgana",
+      "code": "04.0104",
+      "prev_via": "direct",
+      "gana": 4
     },
     "v_1|kland": {
       "aupadeshika": "kladi~",
@@ -1788,9 +1971,11 @@
       "code": "01.0212"
     },
     "v_1|kuYj": {
-      "aupadeshika": "kuYj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|kuc": {
       "aupadeshika": "kuca~",
@@ -1798,9 +1983,11 @@
       "code": "01.0211"
     },
     "v_1|kuts": {
-      "aupadeshika": "kuts",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|kvaR": {
       "aupadeshika": "kvaRa~",
@@ -1813,9 +2000,10 @@
       "code": "01.0981"
     },
     "v_1|kxp": {
-      "aupadeshika": "kxp",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "kfpU~\\",
+      "via": "cells",
+      "code": "01.0866",
+      "prev_via": "direct"
     },
     "v_1|kzE": {
       "aupadeshika": "kzE\\",
@@ -1824,18 +2012,23 @@
     },
     "v_1|kzad": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_1|kzam": {
-      "aupadeshika": "kzam",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "kzamU~\\z",
+      "via": "cells",
+      "code": "01.0510",
+      "prev_via": "direct"
     },
     "v_1|kzap": {
-      "aupadeshika": "kzap",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|kzar": {
       "aupadeshika": "kzara~",
@@ -1854,8 +2047,10 @@
     },
     "v_1|kzud": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_1|kzvel": {
       "aupadeshika": "kzvelf~",
@@ -1870,17 +2065,20 @@
     "v_1|lI": {
       "aupadeshika": "lI",
       "via": "direct",
-      "code": null
+      "code": null,
+      "evidence": 1
     },
     "v_1|laB": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "qula\\Ba~\\z",
+      "via": "cells",
+      "code": "01.1130",
+      "prev_via": "unresolved"
     },
     "v_1|laNG": {
-      "aupadeshika": "laNG",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "laGi~\\",
+      "via": "cells",
+      "code": "01.0113",
+      "prev_via": "direct"
     },
     "v_1|lag": {
       "aupadeshika": "lage~",
@@ -1888,9 +2086,11 @@
       "code": "01.0895"
     },
     "v_1|lakz": {
-      "aupadeshika": "lakz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|lal": {
       "aupadeshika": "lala~",
@@ -1898,9 +2098,10 @@
       "code": "01.0416"
     },
     "v_1|lamb": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "labi~\\",
+      "via": "cells",
+      "code": "01.0437",
+      "prev_via": "unresolved"
     },
     "v_1|lap": {
       "aupadeshika": "lapa~",
@@ -1918,19 +2119,22 @@
       "code": "01.1033"
     },
     "v_1|lip": {
-      "aupadeshika": "lip",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "lepf~\\",
+      "via": "cells",
+      "code": "01.0431",
+      "prev_via": "direct"
     },
     "v_1|loc": {
-      "aupadeshika": "loc",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "locf~\\",
+      "via": "cells",
+      "code": "01.0188",
+      "prev_via": "direct"
     },
     "v_1|lok": {
-      "aupadeshika": "lok",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "lokf~\\",
+      "via": "cells",
+      "code": "01.0080",
+      "prev_via": "direct"
     },
     "v_1|luRw": {
       "aupadeshika": "luwi~",
@@ -1948,9 +2152,11 @@
       "code": "01.0214"
     },
     "v_1|lul": {
-      "aupadeshika": "lul",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|luq": {
       "aupadeshika": "luqa~",
@@ -1964,8 +2170,10 @@
     },
     "v_1|mArg": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 2
     },
     "v_1|mIl": {
       "aupadeshika": "mIla~",
@@ -1978,9 +2186,10 @@
       "code": "01.0645"
     },
     "v_1|maMh": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "mahi~\\",
+      "via": "cells",
+      "code": "01.0721",
+      "prev_via": "unresolved"
     },
     "v_1|maRq": {
       "aupadeshika": "maqi~",
@@ -2003,14 +2212,16 @@
       "code": "01.0831"
     },
     "v_1|mand": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "madi~\\",
+      "via": "cells",
+      "code": "01.0013",
+      "prev_via": "unresolved"
     },
     "v_1|mf": {
       "aupadeshika": "mf",
       "via": "direct",
-      "code": null
+      "code": null,
+      "evidence": 1
     },
     "v_1|mfD": {
       "aupadeshika": "mfDu~^",
@@ -2019,13 +2230,17 @@
     },
     "v_1|mfd": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_1|mfj": {
-      "aupadeshika": "mfj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|mfz": {
       "aupadeshika": "mfzu~",
@@ -2068,9 +2283,11 @@
       "code": "01.1078"
     },
     "v_1|mokz": {
-      "aupadeshika": "mokz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|mrad": {
       "aupadeshika": "mrada~\\",
@@ -2103,9 +2320,11 @@
       "code": "01.0796"
     },
     "v_1|myakz": {
-      "aupadeshika": "myakz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|nAT": {
       "aupadeshika": "nATf~\\",
@@ -2118,14 +2337,17 @@
       "code": "01.1049"
     },
     "v_1|naB": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "RaBa~\\",
+      "via": "cells",
+      "code": "01.0855",
+      "prev_via": "unresolved"
     },
     "v_1|naS": {
-      "aupadeshika": "naS",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|nad": {
       "aupadeshika": "Rada~",
@@ -2173,14 +2395,18 @@
       "code": "01.0523"
     },
     "v_1|oj": {
-      "aupadeshika": "oj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|olaRq": {
-      "aupadeshika": "olaRq",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "olaqi~",
+      "via": "cells-xgana",
+      "code": "10.0014",
+      "prev_via": "direct",
+      "gana": 10
     },
     "v_1|pA": {
       "aupadeshika": "pA\\",
@@ -2189,28 +2415,36 @@
     },
     "v_1|pAy": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_1|pI": {
-      "aupadeshika": "pI",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "paya~\\",
+      "via": "cells",
+      "code": "01.0548",
+      "prev_via": "direct"
     },
     "v_1|pIy": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_1|pU": {
-      "aupadeshika": "pU",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "pUN",
+      "via": "cells",
+      "code": "01.1121",
+      "prev_via": "direct"
     },
     "v_1|pUj": {
-      "aupadeshika": "pUj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|pUy": {
       "aupadeshika": "pUyI~\\",
@@ -2218,9 +2452,11 @@
       "code": "01.0557"
     },
     "v_1|paR": {
-      "aupadeshika": "paR",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|paW": {
       "aupadeshika": "paWa~",
@@ -2233,9 +2469,11 @@
       "code": "01.1151"
     },
     "v_1|pan": {
-      "aupadeshika": "pan",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|pat": {
       "aupadeshika": "patx~",
@@ -2248,14 +2486,17 @@
       "code": "01.0333"
     },
     "v_1|pfc": {
-      "aupadeshika": "pfc",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|plu": {
-      "aupadeshika": "plu",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "plu\\N",
+      "via": "cells",
+      "code": "01.1112",
+      "prev_via": "direct"
     },
     "v_1|pluz": {
       "aupadeshika": "pluzu~",
@@ -2268,9 +2509,10 @@
       "code": "01.0869"
     },
     "v_1|pru": {
-      "aupadeshika": "pru",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "pru\\N",
+      "via": "cells",
+      "code": "01.1111",
+      "prev_via": "direct"
     },
     "v_1|pruT": {
       "aupadeshika": "proTf~^",
@@ -2278,9 +2520,11 @@
       "code": "01.1005"
     },
     "v_1|puw": {
-      "aupadeshika": "puw",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 4
     },
     "v_1|puz": {
       "aupadeshika": "puza~",
@@ -2288,14 +2532,16 @@
       "code": "01.0797"
     },
     "v_1|pyE": {
-      "aupadeshika": "pyE",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "o~pyAyI~\\",
+      "via": "cells",
+      "code": "01.0561",
+      "prev_via": "direct"
     },
     "v_1|qI": {
-      "aupadeshika": "qI",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "qIN",
+      "via": "cells",
+      "code": "01.1123",
+      "prev_via": "direct"
     },
     "v_1|rAj": {
       "aupadeshika": "rAjf~^",
@@ -2303,9 +2549,10 @@
       "code": "01.0956"
     },
     "v_1|rAs": {
-      "aupadeshika": "rAs",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "rAsf~\\",
+      "via": "cells",
+      "code": "01.0713",
+      "prev_via": "direct"
     },
     "v_1|rUz": {
       "aupadeshika": "rUza~",
@@ -2353,9 +2600,10 @@
       "code": "01.0746"
     },
     "v_1|ram": {
-      "aupadeshika": "ram",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "ra\\ma~\\",
+      "via": "cells",
+      "code": "01.0953",
+      "prev_via": "direct"
     },
     "v_1|rap": {
       "aupadeshika": "rapa~",
@@ -2373,14 +2621,17 @@
       "code": "01.0334"
     },
     "v_1|rej": {
-      "aupadeshika": "rej",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|riB": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "reBf~\\",
+      "via": "cells",
+      "code": "01.0447",
+      "prev_via": "unresolved"
     },
     "v_1|riK": {
       "aupadeshika": "riKa~",
@@ -2388,9 +2639,11 @@
       "code": "01.0168"
     },
     "v_1|riNK": {
-      "aupadeshika": "riNK",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|riNg": {
       "aupadeshika": "rigi~",
@@ -2398,9 +2651,11 @@
       "code": "01.0164"
     },
     "v_1|ric": {
-      "aupadeshika": "ric",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|riz": {
       "aupadeshika": "riza~",
@@ -2408,14 +2663,17 @@
       "code": "01.0790"
     },
     "v_1|ru": {
-      "aupadeshika": "ru",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "ru\\N",
+      "via": "cells",
+      "code": "01.1114",
+      "prev_via": "direct"
     },
     "v_1|ruD": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 2
     },
     "v_1|ruW": {
       "aupadeshika": "ruWa~",
@@ -2423,9 +2681,10 @@
       "code": "01.0389"
     },
     "v_1|ruc": {
-      "aupadeshika": "ruc",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "ruca~\\",
+      "via": "cells",
+      "code": "01.0847",
+      "prev_via": "direct"
     },
     "v_1|ruh": {
       "aupadeshika": "ru\\ha~",
@@ -2439,8 +2698,10 @@
     },
     "v_1|sAD": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_1|sKal": {
       "aupadeshika": "sKala~",
@@ -2468,9 +2729,10 @@
       "code": "01.0909"
     },
     "v_1|sUd": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "zUda~\\",
+      "via": "cells",
+      "code": "01.0025",
+      "prev_via": "unresolved"
     },
     "v_1|saYj": {
       "aupadeshika": "za\\nja~",
@@ -2488,9 +2750,10 @@
       "code": "01.0990"
     },
     "v_1|sah": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "zaha~\\",
+      "via": "cells",
+      "code": "01.0988",
+      "prev_via": "unresolved"
     },
     "v_1|san": {
       "aupadeshika": "zaRa~",
@@ -2503,9 +2766,10 @@
       "code": "01.0466"
     },
     "v_1|sev": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "zevf~\\",
+      "via": "cells",
+      "code": "01.0574",
+      "prev_via": "unresolved"
     },
     "v_1|sf": {
       "aupadeshika": "DAvu~^",
@@ -2523,9 +2787,10 @@
       "code": "01.0049"
     },
     "v_1|skamB": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "skaBi~\\",
+      "via": "cells",
+      "code": "01.0452",
+      "prev_via": "unresolved"
     },
     "v_1|skand": {
       "aupadeshika": "ska\\ndi~r",
@@ -2538,19 +2803,23 @@
       "code": "01.0919"
     },
     "v_1|smi": {
-      "aupadeshika": "smi",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "zmi\\N",
+      "via": "cells",
+      "code": "01.1099",
+      "prev_via": "direct"
     },
     "v_1|snih": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_1|spand": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "spadi~\\",
+      "via": "cells",
+      "code": "01.0014",
+      "prev_via": "unresolved"
     },
     "v_1|sparD": {
       "aupadeshika": "sparDa~\\",
@@ -2558,9 +2827,10 @@
       "code": "01.0003"
     },
     "v_1|sraMs": {
-      "aupadeshika": "sraMs",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "sransu~\\",
+      "via": "cells",
+      "code": "01.0857",
+      "prev_via": "direct"
     },
     "v_1|sru": {
       "aupadeshika": "sru\\",
@@ -2568,9 +2838,10 @@
       "code": "01.1090"
     },
     "v_1|stamB": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "zwaBi~\\",
+      "via": "cells",
+      "code": "01.0451",
+      "prev_via": "unresolved"
     },
     "v_1|stan": {
       "aupadeshika": "zwana~",
@@ -2578,19 +2849,22 @@
       "code": "01.0532"
     },
     "v_1|stuB": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "zwuBu~\\",
+      "via": "cells",
+      "code": "01.0460",
+      "prev_via": "unresolved"
     },
     "v_1|svad": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "zvada~\\",
+      "via": "cells",
+      "code": "01.0018",
+      "prev_via": "unresolved"
     },
     "v_1|svaj": {
-      "aupadeshika": "svaj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "zva\\nja~\\",
+      "via": "cells",
+      "code": "01.1131",
+      "prev_via": "direct"
     },
     "v_1|svan": {
       "aupadeshika": "svana~",
@@ -2623,19 +2897,25 @@
       "code": "01.0743"
     },
     "v_1|tap": {
-      "aupadeshika": "tap",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 4
     },
     "v_1|tarj": {
-      "aupadeshika": "tarj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 3
     },
     "v_1|tfp": {
-      "aupadeshika": "tfp",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 4
     },
     "v_1|tij": {
       "aupadeshika": "teja~",
@@ -2643,9 +2923,11 @@
       "code": "01.0263"
     },
     "v_1|tras": {
-      "aupadeshika": "tras",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "trasI~",
+      "via": "cells-xgana",
+      "code": "04.0011",
+      "prev_via": "direct",
+      "gana": 4
     },
     "v_1|tuj": {
       "aupadeshika": "tuja~",
@@ -2658,9 +2940,10 @@
       "code": "01.1141"
     },
     "v_1|u": {
-      "aupadeshika": "u",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "u\\N",
+      "via": "cells",
+      "code": "01.1102",
+      "prev_via": "direct"
     },
     "v_1|uC": {
       "aupadeshika": "uCI~",
@@ -2678,9 +2961,11 @@
       "code": "01.0392"
     },
     "v_1|uYC": {
-      "aupadeshika": "uYC",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|uh": {
       "aupadeshika": "uhi~r",
@@ -2713,9 +2998,11 @@
       "code": "01.1070"
     },
     "v_1|vIj": {
-      "aupadeshika": "vIj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|vaRw": {
       "aupadeshika": "vawi~",
@@ -2723,9 +3010,11 @@
       "code": "01.0377"
     },
     "v_1|vaS": {
-      "aupadeshika": "vaS",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|vaYc": {
       "aupadeshika": "vancu~",
@@ -2748,9 +3037,10 @@
       "code": "01.0753"
     },
     "v_1|val": {
-      "aupadeshika": "val",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "vala~\\",
+      "via": "cells",
+      "code": "01.0564",
+      "prev_via": "direct"
     },
     "v_1|valg": {
       "aupadeshika": "valga~",
@@ -2768,9 +3058,10 @@
       "code": "01.0533"
     },
     "v_1|vand": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "vadi~\\",
+      "via": "cells",
+      "code": "01.0011",
+      "prev_via": "unresolved"
     },
     "v_1|vap": {
       "aupadeshika": "quva\\pa~^",
@@ -2798,9 +3089,10 @@
       "code": "01.1019"
     },
     "v_1|vezw": {
-      "aupadeshika": "vezw",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "vezwa~\\",
+      "via": "cells",
+      "code": "01.0288",
+      "prev_via": "direct"
     },
     "v_1|vf": {
       "aupadeshika": "vf\\",
@@ -2813,14 +3105,17 @@
       "code": "01.0863"
     },
     "v_1|vfj": {
-      "aupadeshika": "vfj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "vfjI~",
+      "via": "cells-xgana",
+      "code": "10.0344",
+      "prev_via": "direct",
+      "gana": 10
     },
     "v_1|vft": {
-      "aupadeshika": "vft",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "vftu~\\",
+      "via": "cells",
+      "code": "01.0862",
+      "prev_via": "direct"
     },
     "v_1|vfz": {
       "aupadeshika": "vfzu~",
@@ -2828,14 +3123,17 @@
       "code": "01.0803"
     },
     "v_1|vij": {
-      "aupadeshika": "vij",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_1|vip": {
-      "aupadeshika": "vip",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "wuvepf~\\",
+      "via": "cells",
+      "code": "01.0425",
+      "prev_via": "direct"
     },
     "v_1|viz": {
       "aupadeshika": "vi\\zu~",
@@ -2843,9 +3141,11 @@
       "code": "01.0794"
     },
     "v_1|vrIq": {
-      "aupadeshika": "vrIq",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_1|vraj": {
       "aupadeshika": "vraja~",
@@ -2883,14 +3183,17 @@
       "code": "01.1031"
     },
     "v_1|yat": {
-      "aupadeshika": "yat",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "yatI~\\",
+      "via": "cells",
+      "code": "01.0030",
+      "prev_via": "direct"
     },
     "v_1|yuD": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 2
     },
     "v_1|zWiv": {
       "aupadeshika": "zWivu~",
@@ -2898,9 +3201,11 @@
       "code": "01.0641"
     },
     "v_4|Ar": {
-      "aupadeshika": "Ar",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_4|BraMS": {
       "aupadeshika": "BranSu~",
@@ -2915,7 +3220,8 @@
     "v_4|DA": {
       "aupadeshika": "DA",
       "via": "direct",
-      "code": null
+      "code": null,
+      "evidence": 1
     },
     "v_4|Kid": {
       "aupadeshika": "Ki\\da~\\",
@@ -2943,9 +3249,11 @@
       "code": "04.0040"
     },
     "v_4|SrA": {
-      "aupadeshika": "SrA",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "SrE\\",
+      "via": "cells-xgana",
+      "code": "01.1067",
+      "prev_via": "direct",
+      "gana": 1
     },
     "v_4|Sram": {
       "aupadeshika": "Sramu~",
@@ -2968,9 +3276,10 @@
       "code": "04.0080"
     },
     "v_4|aR": {
-      "aupadeshika": "aR",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "aRa~\\",
+      "via": "cells",
+      "code": "04.0071",
+      "prev_via": "direct"
     },
     "v_4|as": {
       "aupadeshika": "asu~",
@@ -2979,8 +3288,10 @@
     },
     "v_4|banD": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 2
     },
     "v_4|buD": {
       "aupadeshika": "bu\\Da~\\",
@@ -2988,14 +3299,17 @@
       "code": "04.0068"
     },
     "v_4|dA": {
-      "aupadeshika": "dA",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "dE\\p",
+      "via": "cells-xgana",
+      "code": "01.1073",
+      "prev_via": "direct",
+      "gana": 1
     },
     "v_4|dIp": {
-      "aupadeshika": "dIp",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "dIpI~\\",
+      "via": "cells",
+      "code": "04.0045",
+      "prev_via": "direct"
     },
     "v_4|dam": {
       "aupadeshika": "damu~",
@@ -3004,8 +3318,10 @@
     },
     "v_4|dfMh": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_4|dfp": {
       "aupadeshika": "df\\pa~",
@@ -3024,8 +3340,10 @@
     },
     "v_4|duh": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_4|duz": {
       "aupadeshika": "du\\za~",
@@ -3038,9 +3356,11 @@
       "code": "04.0160"
     },
     "v_4|fYj": {
-      "aupadeshika": "fYj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_4|gfD": {
       "aupadeshika": "gfDu~",
@@ -3068,24 +3388,29 @@
       "code": "04.0025"
     },
     "v_4|jan": {
-      "aupadeshika": "jan",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "janI~\\",
+      "via": "cells",
+      "code": "04.0044",
+      "prev_via": "direct"
     },
     "v_4|jur": {
-      "aupadeshika": "jur",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "jUrI~\\",
+      "via": "cells",
+      "code": "04.0051",
+      "prev_via": "direct"
     },
     "v_4|jyA": {
-      "aupadeshika": "jyA",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_4|kAS": {
-      "aupadeshika": "kAS",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "kASf~\\",
+      "via": "cells",
+      "code": "04.0058",
+      "prev_via": "direct"
     },
     "v_4|kfS": {
       "aupadeshika": "kfSa~",
@@ -3103,9 +3428,11 @@
       "code": "04.0157"
     },
     "v_4|kram": {
-      "aupadeshika": "kram",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "kramu~",
+      "via": "cells-xgana",
+      "code": "01.0545",
+      "prev_via": "direct",
+      "gana": 1
     },
     "v_4|kruD": {
       "aupadeshika": "kru\\Da~",
@@ -3123,14 +3450,18 @@
       "code": "04.0146"
     },
     "v_4|kuts": {
-      "aupadeshika": "kuts",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_4|kuw": {
-      "aupadeshika": "kuw",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 3
     },
     "v_4|kzam": {
       "aupadeshika": "kzamU~",
@@ -3153,19 +3484,23 @@
       "code": "04.0087"
     },
     "v_4|lI": {
-      "aupadeshika": "lI",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "lI\\N",
+      "via": "cells",
+      "code": "04.0034",
+      "prev_via": "direct"
     },
     "v_4|laz": {
-      "aupadeshika": "laz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "laza~^",
+      "via": "cells-xgana",
+      "code": "01.1033",
+      "prev_via": "direct",
+      "gana": 1
     },
     "v_4|liS": {
-      "aupadeshika": "liS",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "li\\Sa~\\",
+      "via": "cells",
+      "code": "04.0076",
+      "prev_via": "direct"
     },
     "v_4|luB": {
       "aupadeshika": "luBa~",
@@ -3183,9 +3518,10 @@
       "code": "04.0133"
     },
     "v_4|mA": {
-      "aupadeshika": "mA",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "mA\\N",
+      "via": "cells",
+      "code": "04.0037",
+      "prev_via": "direct"
     },
     "v_4|mad": {
       "aupadeshika": "madI~",
@@ -3193,14 +3529,17 @@
       "code": "04.0105"
     },
     "v_4|man": {
-      "aupadeshika": "man",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "ma\\na~\\",
+      "via": "cells",
+      "code": "04.0073",
+      "prev_via": "direct"
     },
     "v_4|mfg": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_4|mfz": {
       "aupadeshika": "mfza~^",
@@ -3238,9 +3577,11 @@
       "code": "04.0010"
     },
     "v_4|pac": {
-      "aupadeshika": "pac",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 3
     },
     "v_4|pad": {
       "aupadeshika": "pa\\da~\\",
@@ -3253,14 +3594,17 @@
       "code": "04.0009"
     },
     "v_4|prI": {
-      "aupadeshika": "prI",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "prI\\N",
+      "via": "cells",
+      "code": "04.0039",
+      "prev_via": "direct"
     },
     "v_4|pruz": {
-      "aupadeshika": "pruz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_4|puT": {
       "aupadeshika": "puTa~",
@@ -3273,9 +3617,10 @@
       "code": "04.0079"
     },
     "v_4|qI": {
-      "aupadeshika": "qI",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "qIN",
+      "via": "cells",
+      "code": "04.0030",
+      "prev_via": "direct"
     },
     "v_4|rAD": {
       "aupadeshika": "rA\\Da~",
@@ -3283,9 +3628,10 @@
       "code": "04.0077"
     },
     "v_4|rI": {
-      "aupadeshika": "rI",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "rI\\N",
+      "via": "cells",
+      "code": "04.0033",
+      "prev_via": "direct"
     },
     "v_4|raD": {
       "aupadeshika": "ra\\Da~",
@@ -3293,9 +3639,11 @@
       "code": "04.0090"
     },
     "v_4|raR": {
-      "aupadeshika": "raR",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_4|raYj": {
       "aupadeshika": "ra\\nja~^",
@@ -3303,9 +3651,11 @@
       "code": "04.0063"
     },
     "v_4|ric": {
-      "aupadeshika": "ric",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_4|riz": {
       "aupadeshika": "riza~",
@@ -3324,8 +3674,10 @@
     },
     "v_4|sAD": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_4|siD": {
       "aupadeshika": "zi\\Du~",
@@ -3338,9 +3690,11 @@
       "code": "04.0002"
     },
     "v_4|snA": {
-      "aupadeshika": "snA",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "zRE\\",
+      "via": "cells-xgana",
+      "code": "01.1072",
+      "prev_via": "direct",
+      "gana": 1
     },
     "v_4|snih": {
       "aupadeshika": "zRi\\ha~",
@@ -3363,19 +3717,24 @@
       "code": "04.0024"
     },
     "v_4|tam": {
-      "aupadeshika": "tam",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_4|tan": {
-      "aupadeshika": "tan",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_4|tap": {
-      "aupadeshika": "tap",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "ta\\pa~\\",
+      "via": "cells",
+      "code": "04.0054",
+      "prev_via": "direct"
     },
     "v_4|tfp": {
       "aupadeshika": "tf\\pa~",
@@ -3383,14 +3742,18 @@
       "code": "04.0092"
     },
     "v_4|tfz": {
-      "aupadeshika": "tfz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_4|tras": {
-      "aupadeshika": "tras",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 4
     },
     "v_4|tuz": {
       "aupadeshika": "tu\\za~",
@@ -3403,9 +3766,10 @@
       "code": "04.0135"
     },
     "v_4|vAS": {
-      "aupadeshika": "vAS",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "vASf~\\",
+      "via": "cells",
+      "code": "04.0059",
+      "prev_via": "direct"
     },
     "v_4|vrIq": {
       "aupadeshika": "vrIqa~",
@@ -3464,8 +3828,10 @@
     },
     "v_6|Kud": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_6|Sad": {
       "aupadeshika": "Sa\\dx~",
@@ -3478,14 +3844,18 @@
       "code": "06.0046"
     },
     "v_6|Suz": {
-      "aupadeshika": "Suz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_6|ard": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "arda~",
+      "via": "cells-xgana",
+      "code": "01.0057",
+      "prev_via": "unresolved",
+      "gana": 1
     },
     "v_6|bfh": {
       "aupadeshika": "bfhU~",
@@ -3499,8 +3869,10 @@
     },
     "v_6|duh": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_6|fC": {
       "aupadeshika": "fCa~",
@@ -3509,8 +3881,10 @@
     },
     "v_6|fD": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 2
     },
     "v_6|fP": {
       "aupadeshika": "fPa~",
@@ -3518,9 +3892,11 @@
       "code": "06.0040"
     },
     "v_6|fYj": {
-      "aupadeshika": "fYj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "fji~\\",
+      "via": "cells-xgana",
+      "code": "01.0201",
+      "prev_via": "direct",
+      "gana": 1
     },
     "v_6|fc": {
       "aupadeshika": "fca~",
@@ -3548,14 +3924,18 @@
       "code": "06.0084"
     },
     "v_6|inv": {
-      "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "aupadeshika": "ivi~",
+      "via": "cells-xgana",
+      "code": "01.0670",
+      "prev_via": "unresolved",
+      "gana": 1
     },
     "v_6|ir": {
-      "aupadeshika": "ir",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_6|iz": {
       "aupadeshika": "izu~",
@@ -3563,14 +3943,17 @@
       "code": "06.0078"
     },
     "v_6|jur": {
-      "aupadeshika": "jur",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_6|juz": {
-      "aupadeshika": "juz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "juzI~\\",
+      "via": "cells",
+      "code": "06.0008",
+      "prev_via": "direct"
     },
     "v_6|kF": {
       "aupadeshika": "kF",
@@ -3583,9 +3966,11 @@
       "code": "06.0108"
     },
     "v_6|kfp": {
-      "aupadeshika": "kfp",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 4
     },
     "v_6|kft": {
       "aupadeshika": "kftI~",
@@ -3608,9 +3993,11 @@
       "code": "06.0093"
     },
     "v_6|kuz": {
-      "aupadeshika": "kuz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_6|kzi": {
       "aupadeshika": "kzi\\",
@@ -3623,14 +4010,17 @@
       "code": "06.0005"
     },
     "v_6|kzup": {
-      "aupadeshika": "kzup",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_6|lajj": {
-      "aupadeshika": "lajj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "o~lasjI~\\",
+      "via": "cells",
+      "code": "06.0011",
+      "prev_via": "direct"
     },
     "v_6|liK": {
       "aupadeshika": "liKa~",
@@ -3663,9 +4053,11 @@
       "code": "06.0167"
     },
     "v_6|luq": {
-      "aupadeshika": "luq",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 3
     },
     "v_6|majj": {
       "aupadeshika": "wuma\\sjo~",
@@ -3673,14 +4065,17 @@
       "code": "06.0151"
     },
     "v_6|mf": {
-      "aupadeshika": "mf",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "mf\\N",
+      "via": "cells",
+      "code": "06.0139",
+      "prev_via": "direct"
     },
     "v_6|mfD": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 2
     },
     "v_6|mfS": {
       "aupadeshika": "mf\\Sa~",
@@ -3688,9 +4083,11 @@
       "code": "06.0161"
     },
     "v_6|mfj": {
-      "aupadeshika": "mfj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_6|mfq": {
       "aupadeshika": "mfqa~",
@@ -3713,9 +4110,11 @@
       "code": "06.0166"
     },
     "v_6|muz": {
-      "aupadeshika": "muz",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_6|nu": {
       "aupadeshika": "RU",
@@ -3728,14 +4127,18 @@
       "code": "06.0002"
     },
     "v_6|pF": {
-      "aupadeshika": "pF",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_6|piC": {
-      "aupadeshika": "piC",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_6|piS": {
       "aupadeshika": "piSa~",
@@ -3753,9 +4156,11 @@
       "code": "06.0094"
     },
     "v_6|riK": {
-      "aupadeshika": "riK",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 2
     },
     "v_6|riP": {
       "aupadeshika": "riPa~",
@@ -3825,7 +4230,8 @@
     "v_6|tF": {
       "aupadeshika": "tF",
       "via": "direct",
-      "code": null
+      "code": null,
+      "evidence": 1
     },
     "v_6|tfp": {
       "aupadeshika": "tfpa~",
@@ -3838,9 +4244,11 @@
       "code": "06.0001"
     },
     "v_6|tuj": {
-      "aupadeshika": "tuj",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 5
     },
     "v_6|uB": {
       "aupadeshika": "uBa~",
@@ -3848,14 +4256,18 @@
       "code": "06.0044"
     },
     "v_6|uNK": {
-      "aupadeshika": "uNK",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "uKi~",
+      "via": "cells-xgana",
+      "code": "01.0137",
+      "prev_via": "direct",
+      "gana": 1
     },
     "v_6|uYC": {
-      "aupadeshika": "uYC",
-      "via": "direct",
-      "code": null
+      "aupadeshika": null,
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "direct",
+      "candidates_tried": 1
     },
     "v_6|ubj": {
       "aupadeshika": "ubja~",
@@ -3864,8 +4276,10 @@
     },
     "v_6|ud": {
       "aupadeshika": null,
-      "via": "unresolved",
-      "code": null
+      "via": "no-dhatu",
+      "code": null,
+      "prev_via": "unresolved",
+      "candidates_tried": 1
     },
     "v_6|ujJ": {
       "aupadeshika": "ujJa~",
@@ -3873,9 +4287,11 @@
       "code": "06.0024"
     },
     "v_6|vas": {
-      "aupadeshika": "vas",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "va\\sa~",
+      "via": "cells-xgana",
+      "code": "01.1160",
+      "prev_via": "direct",
+      "gana": 1
     },
     "v_6|viS": {
       "aupadeshika": "vi\\Sa~",
@@ -3888,9 +4304,10 @@
       "code": "06.0168"
     },
     "v_6|vij": {
-      "aupadeshika": "vij",
-      "via": "direct",
-      "code": null
+      "aupadeshika": "o~vijI~\\",
+      "via": "cells",
+      "code": "06.0009",
+      "prev_via": "direct"
     },
     "v_6|vraSc": {
       "aupadeshika": "o~vrascU~",
@@ -3905,7 +4322,8 @@
     "v_6|yu": {
       "aupadeshika": "yu",
       "via": "direct",
-      "code": null
+      "code": null,
+      "evidence": 1
     }
   }
 }
