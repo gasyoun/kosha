@@ -1,6 +1,24 @@
 # DATA_HUB_ROADMAP.md — kosha as the Sanskrit data-hub
 
-_Created: 06-07-2026 · Last updated: 13-08-2026_
+_Created: 06-07-2026 · Last updated: 01-10-2026_
+
+> **Verdict 01-10-2026 ([H5575](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5575-OxAlpha_kosha_roadmap-verdict-w2-kosha-five-drain-first_01.10.26.md), wave 2) — REFRESH.**
+> The hub is live (data releases `data-v0.1.0`/`data-v0.2.0`, public
+> [directory page](https://gasyoun.github.io/kosha/directory/), `kosha.db` layers (P-D5),
+> API tier (P-D6, shipped 13-08-2026)), so this stays the working roadmap. Two phases
+> remain, both gated — written as checkboxes below and mirrored into Uprava
+> [GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md)
+> per ruling 10 of [GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md](https://github.com/gasyoun/Uprava/blob/main/docs/GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md).
+
+## What is left (01-10-2026) — gated
+
+- [ ] P-D2 restricted-tier backup of the 19.2 GB local-only census giants (the 11 GB
+  `archive_stopword.sqlite` still needs the split-or-exclude ruling) — status unverified:
+  H233 predates the handoff registry, so re-verify done-or-re-scope before treating it as
+  shipped (GTD @WAITING)
+- [ ] P-D4 samskrtam.ru canonical hosting (upload public-tier files, manifest URLs flip
+  from GitHub Releases to the server; restricted tier gets a non-public server path) —
+  human-only (MG deploy gate; GTD @DO)
 
 ## Why this exists
 

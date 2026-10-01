@@ -1,10 +1,31 @@
 # Sanskrit Concordance Program — 1-Year Roadmap
 
-_Created: 08-07-2026 · Last updated: 06-09-2026_
+_Created: 08-07-2026 · Last updated: 01-10-2026_
 
 > **Truth-pass 27-08-2026** (Grok 4.6 `grok-4.6`). D4 addendum: this file joined the Wave 1 FLAG list after 21-08. Closed references checked against the combined registry. Kept in place ([FINDINGS §475](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md) clause 3). Not archived.
 >
 > **Exit-check truth-pass 02-09-2026** (Claude Code Opus 5 `claude-opus-5`, H3783). The Q4/A4 **exit-check** bullet and open-`@DECIDE` 1 still read as unbuilt six weeks after the work shipped and was released, and a handoff was minted from that prose. Both are corrected below with per-check evidence. The lesson, in this file: a truth-pass that checks a section's **status line** has not checked its **exit checks, risks and `@DECIDE` list** — those are separate claims, and they are the ones a later `/fruit` or `/ask` pass reads to decide what is still open ([FINDINGS §644](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)).
+>
+> **Verdict 01-10-2026 ([H5575](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5575-OxAlpha_kosha_roadmap-verdict-w2-kosha-five-drain-first_01.10.26.md), wave 2) — REFRESH.**
+> Q1–Q4 are complete with every deliverable carrying an artefact (status table below).
+> The programme stays alive on two agent-doable residuals and three human decisions —
+> checkboxes below, mirrored into Uprava
+> [GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md)
+> per ruling 10 of [GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md](https://github.com/gasyoun/Uprava/blob/main/docs/GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md).
+
+## What is left (01-10-2026)
+
+- [ ] W4a — polish the [`/concordance/panini/`](https://github.com/gasyoun/kosha/blob/main/concordance/panini/index.html)
+  page — gate: none (agent-doable, next-wave candidate)
+- [ ] Route the Q3 morph give-back payload (the 4,900-cell machine-decided triage of
+  [`morph_giveback_candidates.tsv`](https://github.com/gasyoun/kosha/blob/main/data/concordance/morph_giveback_candidates.tsv))
+  as the kosha-side queued port — gate: none (agent-doable, next-wave candidate; the
+  upstream csl-inflect post stays human-gated per RELATIONS.md §2/§7)
+- [ ] R-C2 `@DECIDE` — confirm `Polnorazmernye/` as the released-canonical
+  parallel-passage variant (or direct otherwise) — human-only (MG)
+- [ ] Sign-off on the 30 sampled derivation chains (exit-check 2a-7) — human-only
+  (already an @DO in Uprava GTD)
+- [ ] Year-2 papers go/no-go (A3/A4 candidates, `@DECIDE` 2) — human-only (parked by choice)
 
 A twelve-month plan to build a portfolio of four Sanskrit **concordances** —
 grammar and nongrammar — each shipped as a citable dataset (registered in the
