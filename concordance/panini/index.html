@@ -124,9 +124,11 @@ a { color:#1a6fb0; }
         <td><b>3983</b> rows — full Ashtadhyayi enumeration (vidyut 0.4.0 <code>Source.Ashtadhyayi</code>)</td></tr>
       <tr><td><a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/SUTRA_COVERAGE_BUILD_REPORT.md">SUTRA_COVERAGE_BUILD_REPORT.md</a></td>
         <td>W3a build report (H1468) — lit 221 · dark-unattested 55 · dark-out-of-scope 3707 · dark-engine-gap 0</td></tr>
-      <tr><td><a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/paninian_concordance.tsv">paninian_concordance.tsv</a></td>
+      <tr><td><a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/paninian_concordance.tsv">paninian_concordance.tsv</a>
+        · <a href="https://raw.githubusercontent.com/gasyoun/kosha/main/data/concordance/paninian_concordance.tsv" download="paninian_concordance.tsv">CSV download</a></td>
         <td>893,482 (sūtra, form, locus) rows — lit KWIC source (H1390)</td></tr>
       <tr><td><a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/derivation_status.tsv">derivation_status.tsv</a>
+        · <a href="https://raw.githubusercontent.com/gasyoun/kosha/main/data/concordance/derivation_status.tsv" download="derivation_status.tsv">CSV download</a>
         · <a href="https://github.com/gasyoun/kosha/blob/main/data/concordance/PANINI_BUILD_REPORT.md">PANINI_BUILD_REPORT.md</a></td>
         <td>W2a ok chains inverted by <a href="https://github.com/gasyoun/kosha/blob/main/scripts/build_panini_concordance.py">build_panini_concordance.py</a></td></tr>
     </table>
@@ -134,7 +136,9 @@ a { color:#1a6fb0; }
     <table><tr><th>tier</th><th>meaning</th></tr>
     <tr><td><span class="tier" style="background:var(--exact)">exact</span></td><td>byte-identical SLP1 (confidence 0.95)</td></tr>
     <tr><td><span class="tier" style="background:var(--floor)">floor</span></td><td>length-preserving form_key fold (confidence 0.85)</td></tr></table>
-    Surface built W4a (H1585). Citable locus IDs are host-independent (<code>dcs:&lt;sent_id&gt;</code>).
+    Surface built W4a (H1585); W4a polish (01-10-2026): XSS-hardened sinks (H5545 house
+    pattern), CSV fallback links, lit-count adhyāya buttons, coverage show-all.
+    Citable locus IDs are host-independent (<code>dcs:&lt;sent_id&gt;</code>).
     Build date of the coverage shard is in <code>window.COVERAGE_STATS.build_date</code>.
   </div>
 </main>
@@ -147,6 +151,18 @@ var STATUSES = ["lit","dark-unattested","dark-out-of-scope","dark-engine-gap"];
 var loaded = {};
 var activeStatus = {lit:1, "dark-unattested":1, "dark-out-of-scope":0, "dark-engine-gap":1};
 var activeAdhyCov = null;
+var covShowAll = false;
+/* Lit-sūtra count per adhyāya, computed from the loaded coverage map (W4a
+   polish): the KWIC adhyāya buttons carry the honest count, and a dark
+   adhyāya (e.g. 5) is dimmed with its reason before anyone clicks it. */
+var LIT_BY_ADHY = {};
+if (window.COVERAGE_MAP) {
+  ADHYAYAS.forEach(function(a){
+    (window.COVERAGE_MAP[String(a)] || []).forEach(function(r){
+      if (r.status === "lit") LIT_BY_ADHY[a] = (LIT_BY_ADHY[a] || 0) + 1;
+    });
+  });
+}
 
 function ensureShard(adhy, cb){
   if (loaded[adhy]) return cb();
@@ -156,7 +172,9 @@ function ensureShard(adhy, cb){
   s.onerror = function(){ loaded[adhy]=1; cb(); };
   document.head.appendChild(s);
 }
-function esc(t){ var d=document.createElement("div"); d.textContent=t||""; return d.innerHTML; }
+/* H5545 house pattern (W4a polish): quote-escaping esc — attribute-context
+   interpolations from the data shards cannot break out of double quotes. */
+function esc(t){ return (""+(t==null?"":t)).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]; }); }
 var TIER_C = {exact:"var(--exact)",floor:"var(--floor)"};
 var chainCounter = 0;
 function renderChain(chainId){
@@ -167,16 +185,16 @@ function renderChain(chainId){
 function renderEntry(sutraCode, e){
   var h = '<div class="entry"><div class="hw">' + esc(sutraCode) +
     '<span class="badge badge-lit">' + esc(e.status || "lit") + '</span></div>' +
-    '<div class="stats"><b>' + e.n_forms + '</b> exemplar forms · <b>' + e.n_loci +
-    '</b> distinct corpus loci · <b>' + e.n_lemmas + '</b> lemmas · ambiguity ' +
-    '<span class="amb-bar"><i style="width:' + Math.round(e.ambiguity_rate*100) +
-    '%"></i></span> ' + (e.ambiguity_rate*100).toFixed(1) + '% (lemma-attributed)</div>';
+    '<div class="stats"><b>' + esc(e.n_forms) + '</b> exemplar forms · <b>' + esc(e.n_loci) +
+    '</b> distinct corpus loci · <b>' + esc(e.n_lemmas) + '</b> lemmas · ambiguity ' +
+    '<span class="amb-bar"><i style="width:' + esc(Math.round(e.ambiguity_rate*100)) +
+    '%"></i></span> ' + esc((e.ambiguity_rate*100).toFixed(1)) + '% (lemma-attributed)</div>';
   (e.forms||[]).forEach(function(fm){
     var cid = "c" + (chainCounter++);
     h += '<div class="form"><span class="head">' + esc(fm.form) + '</span>' +
       '<span class="tier" style="background:' + (TIER_C[fm.tier]||"#888") + '">' + esc(fm.tier) + '</span>' +
       '<span class="loc">lemma <i>' + esc(fm.lemma) + '</i> · ' + esc(fm.cite) + ' · chain ' + esc(fm.chain_id) +
-      ' (' + fm.len + ' sūtras)</span>' +
+      ' (' + esc(fm.len) + ' sūtras)</span>' +
       (fm.caveat ? '<span class="caveat">⚠ tense_caveat</span>' : '') +
       '<span class="chain-toggle" data-chain="' + esc(fm.chain_id) + '" data-target="' + cid + '">view chain</span>' +
       '<div class="chain" id="' + cid + '"></div></div>';
@@ -209,13 +227,13 @@ function initCoverage(){
   var c = stats.counts || {};
   sum.innerHTML = '<b>n = ' + esc(String(stats.n)) + '</b> sūtras · build ' + esc(stats.build_date || "?") +
     ' · ' + STATUSES.map(function(s){
-      return '<span class="badge badge-' + s + '">' + s + '</span> ' + (c[s] || 0);
+      return '<span class="badge badge-' + s + '">' + s + '</span> ' + esc(String(c[s] || 0));
     }).join(' · ');
 
   var sf = document.getElementById("status-filters");
   sf.innerHTML = STATUSES.map(function(s){
     return '<button type="button" class="st-' + s + (activeStatus[s]?' active':'') +
-      '" data-s="' + s + '">' + s + ' (' + (c[s]||0) + ')</button>';
+      '" data-s="' + s + '">' + s + ' (' + esc(String(c[s]||0)) + ')</button>';
   }).join('');
   sf.querySelectorAll("button").forEach(function(b){
     b.onclick = function(){
@@ -263,22 +281,25 @@ function renderCovList(){
       'Tip: dark-out-of-scope is off by default (3707 rows) — toggle it on to browse.</p>';
     return;
   }
-  var lim = Math.min(rows.length, 500);
+  var lim = covShowAll ? rows.length : Math.min(rows.length, 500);
   var html = '<table><thead><tr><th>sūtra</th><th>status</th><th>forms</th><th>loci</th><th>texts</th><th>text (SLP1)</th></tr></thead><tbody>';
   for (var i=0; i<lim; i++){
     var r = rows[i];
     html += '<tr data-id="'+esc(r.id)+'" data-status="'+esc(r.status)+'">' +
       '<td>'+esc(r.id)+'</td>' +
       '<td><span class="badge badge-'+esc(r.status)+'">'+esc(r.status)+'</span></td>' +
-      '<td>'+(r.forms||0)+'</td><td>'+(r.loci||0)+'</td><td>'+(r.texts||0)+'</td>' +
+      '<td>'+esc(r.forms||0)+'</td><td>'+esc(r.loci||0)+'</td><td>'+esc(r.texts||0)+'</td>' +
       '<td>'+esc(r.text||'')+'</td></tr>';
   }
   html += '</tbody></table>';
   if (rows.length > lim) {
-    html += '<p class="none" style="padding:8px">Showing first '+lim+' of '+rows.length+
-      ' — narrow status/adhyāya filters to browse the rest.</p>';
+    html += '<p class="none" style="padding:8px">Showing first '+esc(lim)+' of '+esc(rows.length)+
+      ' — <button type="button" id="cov-more">show all '+esc(rows.length)+' rows</button>' +
+      ' (or narrow the status/adhyāya filters).</p>';
   }
   box.innerHTML = html;
+  var more = document.getElementById("cov-more");
+  if (more) more.onclick = function(){ covShowAll = true; renderCovList(); };
   box.querySelectorAll("tr[data-id]").forEach(function(tr){
     tr.onclick = function(){
       var id = tr.dataset.id;
@@ -294,7 +315,11 @@ function renderCovList(){
 /* ---------- Lit KWIC panel ---------- */
 function renderAdhyayaButtons(active){
   adhyDiv.innerHTML = ADHYAYAS.map(function(a){
-    return '<button data-a="' + a + '"' + (a===active?' class="active"':'') + '>adhyāya ' + a + '</button>';
+    var n = LIT_BY_ADHY[a] || 0;
+    var dark = n === 0;
+    return '<button data-a="' + a + '"' + (a===active?' class="active"':'') +
+      (dark ? ' style="opacity:.45" title="dark adhyāya — 0 lit sūtras in the W3a coverage map"' : '') +
+      '>adhyāya ' + a + (window.COVERAGE_MAP ? ' · ' + n + ' lit' : '') + '</button>';
   }).join('');
   adhyDiv.querySelectorAll("button").forEach(function(b){
     b.onclick = function(){ browseAdhyaya(parseInt(b.dataset.a,10)); };
@@ -311,11 +336,11 @@ function browseAdhyaya(a){
       return shard[y].n_forms - shard[x].n_forms;
     });
     if (!codes.length){
-      out.innerHTML = '<p class="none">Adhyāya ' + a + ' has no lit sūtras in this KWIC build. See the Coverage map tab for dark classes.</p>';
+      out.innerHTML = '<p class="none">Adhyāya ' + esc(a) + ' has no lit sūtras in this KWIC build. See the Coverage map tab for dark classes.</p>';
       return;
     }
     matches.innerHTML = codes.map(function(c){
-      return '<a href="#'+esc(c)+'" data-c="'+esc(c)+'">'+esc(c)+' ('+shard[c].n_forms+')</a>';
+      return '<a href="#'+esc(c)+'" data-c="'+esc(c)+'">'+esc(c)+' ('+esc(shard[c].n_forms)+')</a>';
     }).join("");
     matches.querySelectorAll("a").forEach(function(link){
       link.onclick = function(ev){ ev.preventDefault(); showSutra(a, link.dataset.c); };
@@ -326,7 +351,7 @@ function browseAdhyaya(a){
 
 function showSutra(a, code){
   var shard = window.CONC_DATA[String(a)] || {};
-  if (!shard[code]) { out.innerHTML = '<p class="none">Sūtra ' + esc(code) + ' not found in adhyāya ' + a + ' KWIC shard.</p>'; return; }
+  if (!shard[code]) { out.innerHTML = '<p class="none">Sūtra ' + esc(code) + ' not found in adhyāya ' + esc(a) + ' KWIC shard.</p>'; return; }
   out.innerHTML = renderEntry(code, shard[code]);
   out.querySelectorAll(".chain-toggle").forEach(function(t){
     t.onclick = function(){
