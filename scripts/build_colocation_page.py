@@ -195,7 +195,10 @@ window.COLOC_DATA=window.COLOC_DATA||{};
 DICTS.forEach(function(d){var b=document.createElement('button');b.textContent=LABELS[d];b.setAttribute('data-d',d);
  b.onclick=function(){go(d,0);};tabs.appendChild(b);});
 function syncTabs(){var bs=tabs.querySelectorAll('button');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i].getAttribute('data-d')===cur);}
-function esc(x){return (''+(x==null?'':x)).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function esc(x){return (''+(x==null?'':x)).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+// URL-scheme allowlist for data-bearing hrefs (H5545): only http(s) survives;
+// javascript:/data:/vbscript: and any other scheme is dropped -> link suppressed.
+function safeUrl(u){u=''+(u==null?'':u);return /^https?:\/\//i.test(u)?u:'';}
 function data(){return window.COLOC_DATA[cur]||{leaves:[],index:{}};}
 function renderLeaf(hlWord){
  var D=data(),lv=D.leaves[idx];if(!lv){leafEl.innerHTML='<p class="na">—</p>';return;}
@@ -203,13 +206,14 @@ function renderLeaf(hlWord){
  prev.disabled=idx<=0;next.disabled=idx>=D.leaves.length-1;
  var h='<div class="cols">';
  lv.cols.forEach(function(c){
+  var scan=esc(safeUrl(c.scan)); /* H5545: scheme allowlist + attr escaping */
   h+='<div class="colbox"><div class="top"><span class="clab">'+esc(c.c)
     +(c.side?' <span class="side">'+(c.side==='L'?'left col':'right col')+'</span>':'')+'</span>'
-    +(c.scan?'<a class="scan" href="'+esc(c.scan)+'" target="_blank" rel="noopener">🖼 scan</a>':'')+'</div>';
+    +(scan?'<a class="scan" href="'+scan+'" target="_blank" rel="noopener">🖼 scan</a>':'')+'</div>';
   if(!c.words.length){h+='<div class="empty">— no entry starts here —</div>';}
   else{h+='<div class="words">';c.words.forEach(function(w){
    var hl=hlWord&&w.slp1===hlWord;
-   h+='<a class="w'+(hl?' hl':'')+'" href="'+lemmaHref(cur,w.slp1,c.c)+'" title="'+esc(w.slp1)+'">'+esc(w.iast)+'</a>';
+   h+='<a class="w'+(hl?' hl':'')+'" href="'+esc(lemmaHref(cur,w.slp1,c.c))+'" title="'+esc(w.slp1)+'">'+esc(w.iast)+'</a>';
   });h+='</div>';}
   h+='</div>';
  });
@@ -217,9 +221,9 @@ function renderLeaf(hlWord){
  if(hlWord){var e=leafEl.querySelector('.w.hl');if(e)e.scrollIntoView({block:'center'});}
 }
 function ensure(cb){if(window.COLOC_DATA[cur]){cb();return;}
- leafEl.innerHTML='<p class="na">Loading '+LABELS[cur]+'…</p>';
+ leafEl.innerHTML='<p class="na">Loading '+esc(LABELS[cur])+'…</p>';
  var sc=document.createElement('script');sc.src='data/'+cur+'.js';
- sc.onload=cb;sc.onerror=function(){leafEl.innerHTML='<p class="na">Failed to load '+cur+' data.</p>';};
+ sc.onload=cb;sc.onerror=function(){leafEl.innerHTML='<p class="na">Failed to load '+esc(cur)+' data.</p>';};
  document.head.appendChild(sc);}
 function go(dict,leafIdx,hlWord){cur=dict;syncTabs();ensure(function(){
  var D=data();idx=Math.max(0,Math.min(leafIdx,D.leaves.length-1));renderLeaf(hlWord);
@@ -242,7 +246,7 @@ q.oninput=function(){var f=q.value.trim().toLowerCase();
     if((w.iast.toLowerCase().indexOf(f)>=0||w.slp1.toLowerCase().indexOf(f)>=0)&&!seen[w.slp1+'@'+c.c]){
      seen[w.slp1+'@'+c.c]=1;hits.push({w:w,col:c.c,leaf:i});}}}}
  var box=document.createElement('div');box.className='results';
- box.innerHTML='<b>'+hits.length+(hits.length>=60?'+':'')+'</b> matches — click to open its leaf: ';
+ box.innerHTML='<b>'+esc(hits.length)+(hits.length>=60?'+':'')+'</b> matches — click to open its leaf: ';
  hits.forEach(function(hit){var a=document.createElement('a');a.href='#';a.className='';a.style.fontStyle='italic';
   a.textContent=hit.w.iast+' ('+hit.col+')';a.onclick=function(ev){ev.preventDefault();go(cur,hit.leaf,hit.w.slp1);};box.appendChild(a);});
  leafEl.parentNode.insertBefore(box,leafEl);
