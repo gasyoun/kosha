@@ -135,6 +135,8 @@ layer.** No existing project occupies that intersection.
 **Live status roadmap:** [docs/ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP.md)
 (W0 stabilization freeze active, per the
 [2026–2027 plan of record](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md)).
+
+**Roadmap verdicts, wave 2 (01-10-2026, [H5575](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5575-OxAlpha_kosha_roadmap-verdict-w2-kosha-five-drain-first_01.10.26.md)):** [DATA_HUB_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md), [ROADMAP_INFLECT_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_INFLECT_2026_2027.md), [ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_CORPUS_SANDHI_PEDAGOGY_2026_2027.md) and [CONCORDANCE_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/CONCORDANCE_ROADMAP.md) — REFRESH (live plans); [ROADMAP_GITA_GOLD_EXTRACTION_2026.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_GITA_GOLD_EXTRACTION_2026.md) — finished, archived as a tombstone (full copy: [archive/ROADMAP_GITA_GOLD_EXTRACTION_2026.md](https://github.com/gasyoun/kosha/blob/main/archive/ROADMAP_GITA_GOLD_EXTRACTION_2026.md)).
 The P1–P7 table below is **COMPLETED/SUPERSEDED historical evidence** of the
 build phases that got kosha to its current pre-alpha state — kept for the
 record, not the current plan.
