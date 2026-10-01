@@ -18,10 +18,16 @@ _Created: 03-07-2026 · Last updated: 01-10-2026_
 
 ## What is left (01-10-2026)
 
-- [ ] E1 residue rung: resolve the 212 bare-seeded `dhatu_crosswalk` entries (the 57
+- [x] E1 residue rung: resolve the 212 bare-seeded `dhatu_crosswalk` entries (the 57
   `unresolved` first) and re-run the comparison — gate: none (agent-doable, next-wave
   candidate; evidence in
   [E1_DIVERGENCE_REPORT.md](https://github.com/gasyoun/kosha/blob/main/E1_DIVERGENCE_REPORT.md))
+  — ✅ **DONE 01-10-2026 (A03 roadmap drain, [PR #652](https://github.com/gasyoun/kosha/pull/652))**:
+  stage 2 in `build_dhatu_crosswalk.py` re-decides the population on Cologne form
+  evidence — 124 licensed re-seeds (16 gaṇa-shifts with overrides), 8 evidenced bare
+  keeps, 130 `no-dhatu` abstentions (a vidyut-data dhātupāṭha gap, not a guess);
+  comparison re-run with abstain semantics: strict agreement **70.24 % → 87.43 %**,
+  conflicts **11,056 → 2,263** (62 roots), bare-seeded artifact share **85 % → 3.2 %**
 - [ ] Post the drafted ṇatva give-back to
   [csl-inflect#10](https://github.com/sanskrit-lexicon/csl-inflect/issues/10) — human-only
   (diplomacy-gated per [RELATIONS.md](https://github.com/gasyoun/kosha/blob/main/RELATIONS.md)
