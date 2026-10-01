@@ -1,6 +1,6 @@
 # ROADMAP_INFLECT — drastic improvement of the Cologne inflected-form tool
 
-_Created: 03-07-2026 · Last updated: 25-08-2026_
+_Created: 03-07-2026 · Last updated: 01-10-2026_
 
 > **Truth-pass 19-08-2026** ([H3001 (Opus 5) — Stale-roadmap slice 3: full /ask replan of stale Tier-1 roadmaps](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3001-Opus_multi_stale-roadmap-s3-tier1-ask-replan_17.08.26.md)).
 > Every handoff this roadmap references is closed ✅. Two status corrections applied
@@ -9,6 +9,25 @@ _Created: 03-07-2026 · Last updated: 25-08-2026_
 > 09-07-2026**, so the row was understating it twice over (see U2),
 > and **Wave E1 is done** but was still marked pending. The residual programme is
 > [docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md).
+>
+> **Verdict 01-10-2026 ([H5575](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5575-OxAlpha_kosha_roadmap-verdict-w2-kosha-five-drain-first_01.10.26.md), wave 2) — REFRESH.**
+> Every wave (U0–U2, K1–K3, E1) is shipped; the programme stays alive on one mechanical
+> next rung and three human-gated residuals — checkboxes below, mirrored into Uprava
+> [GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md)
+> per ruling 10 of [GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md](https://github.com/gasyoun/Uprava/blob/main/docs/GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md).
+
+## What is left (01-10-2026)
+
+- [ ] E1 residue rung: resolve the 212 bare-seeded `dhatu_crosswalk` entries (the 57
+  `unresolved` first) and re-run the comparison — gate: none (agent-doable, next-wave
+  candidate; evidence in
+  [E1_DIVERGENCE_REPORT.md](https://github.com/gasyoun/kosha/blob/main/E1_DIVERGENCE_REPORT.md))
+- [ ] Post the drafted ṇatva give-back to
+  [csl-inflect#10](https://github.com/sanskrit-lexicon/csl-inflect/issues/10) — human-only
+  (diplomacy-gated per [RELATIONS.md](https://github.com/gasyoun/kosha/blob/main/RELATIONS.md)
+  §2/§7; draft in H185)
+- [ ] E1(b) hybridize-vs-migrate ruling — human-only (already an @DECIDE in Uprava GTD)
+- [ ] E1(c) optional three-engine paper — human-only (MG yes/no)
 
 Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php)
 — and its drastically better successor inside kosha. Rulings elicited from MG
