@@ -18,7 +18,7 @@ Sized per the D5-3 decision
 | Path | What | Size | Committed? |
 |---|---|---|---|
 | `cards/<token>.json` | one card per attested lemma (~50,355 lemmas that have **both** a dict entry **and** a corpus attestation), frequency-ranked | ~155 MB, ~3 KB/file | yes (main, since 03-07-2026) |
-| `js/data/lemmas.json` | headword **autocomplete index** — all 323,425 lemmas, `{slp1, iast, dicts}` each, columnar | ~13 MB | yes (main, since 03-07-2026) |
+| `js/data/lemmas.json` | headword **autocomplete index** — all 323,422 lemmas, `{slp1, iast, dicts}` each, columnar | ~13 MB | yes (main, since 03-07-2026) |
 | `js/data/attested_keys.json` | sorted list of card tokens that exist, so the UI picks static-card vs dynamic-API without a 404 probe | ~0.5 MB | yes (main, since 03-07-2026) |
 
 The **full 222,179-lemma card set** (every entry-bearing lemma, ~682 MB) is not

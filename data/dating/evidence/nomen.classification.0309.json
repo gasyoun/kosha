@@ -1,0 +1,3292 @@
+[
+ {
+  "slp1": "nAgadanta",
+  "sense_id": "1a",
+  "n_cites": 3,
+  "n_dateable": 2,
+  "bucket": "epic-sutra",
+  "class": "ORDERABLE",
+  "details": [
+   {
+    "siglum": "H. an.",
+    "locus": "HEMACANDRA'S ANEKĀRTHASAM̃GRAHA",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "MED. t.",
+    "locus": "MEDINĪKOṢA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 12,3630 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   }
+  ]
+ },
+ {
+  "slp1": "nAgadanta",
+  "sense_id": "1b",
+  "n_cites": 6,
+  "n_dateable": 5,
+  "bucket": "classical",
+  "class": "ORDERABLE",
+  "details": [
+   {
+    "siglum": "H.",
+    "locus": "HEMACANDRA'S ABHIDHĀNACINTĀMAṆI",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "H. an",
+    "locus": "HEMACANDRA'S ANEKĀRTHASAM̃GRAHA",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "MED",
+    "locus": "MEDINĪKOṢA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "PAÑCAT.",
+    "locus": "PAÑCATANTRA. Pantschatantrum sive quinqu",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "PAÑCAT",
+    "locus": "PAÑCATANTRA. Pantschatantrum sive quinqu",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "KATHĀS.",
+    "locus": "KATHĀSARITSĀGARA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   }
+  ]
+ },
+ {
+  "slp1": "nAgadanta",
+  "sense_id": "2",
+  "n_cites": 1,
+  "n_dateable": 1,
+  "bucket": "epic-sutra",
+  "class": "ORDERABLE-MARGINAL",
+  "details": [
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   }
+  ]
+ },
+ {
+  "slp1": "nAgadanta",
+  "sense_id": "3a",
+  "n_cites": 8,
+  "n_dateable": 1,
+  "bucket": "early-medieval",
+  "class": "ORDERABLE-MARGINAL",
+  "details": [
+   {
+    "siglum": "H. an",
+    "locus": "HEMACANDRA'S ANEKĀRTHASAM̃GRAHA",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "MED",
+    "locus": "MEDINĪKOṢA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "RATNAM.",
+    "locus": "RATNAMĀLĀ",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "SUŚR.",
+    "locus": "SUŚRUTA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "SUŚR",
+    "locus": "SUŚRUTA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "SUŚR.",
+    "locus": "SUŚRUTA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "SUŚR.",
+    "locus": "SUŚRUTA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "SUŚR.",
+    "locus": "SUŚRUTA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   }
+  ]
+ },
+ {
+  "slp1": "Siva",
+  "sense_id": "1",
+  "n_cites": 99,
+  "n_dateable": 83,
+  "bucket": "vedic",
+  "class": "ORDERABLE",
+  "details": [
+   {
+    "siglum": "NAIGH.",
+    "locus": "das",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "VS.",
+    "locus": "VĀJASANEYISAM̃HITĀ. The VĀYASANEYI-SANHI",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "AIT. BR.",
+    "locus": "AITAREYABRĀHMAṆA. Citirt nach den 8 Pañc",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R. GORR.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MĀRK. P.",
+    "locus": "MĀRKĀṆḌEYAPURĀṆA in der Bibliotheca indi",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "AV.",
+    "locus": "ATHARVAVEDASAM̃HITĀ",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "VS.",
+    "locus": "VĀJASANEYISAM̃HITĀ. The VĀYASANEYI-SANHI",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "VS",
+    "locus": "VĀJASANEYISAM̃HITĀ. The VĀYASANEYI-SANHI",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "TS.",
+    "locus": "TAITTIRĪYASAM̃HITĀ. 7 Kāṇḍa",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "PRAŚNOP.",
+    "locus": "PRAŚNOPANIṢAD",
+    "era": "epic-sutra",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "AV.",
+    "locus": "ATHARVAVEDASAM̃HITĀ",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "AV",
+    "locus": "ATHARVAVEDASAM̃HITĀ",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R. GORR.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "RAGH.",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "Spr.",
+    "locus": "Indische Sprüche. Sanskrit und deutsch h",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "VARĀH. BṚH. S.",
+    "locus": "VARĀHAMIHIRA'S BṚHATSAM̃HITĀ.",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "AV.",
+    "locus": "ATHARVAVEDASAM̃HITĀ",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "AV.",
+    "locus": "ATHARVAVEDASAM̃HITĀ",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "VS.",
+    "locus": "VĀJASANEYISAM̃HITĀ. The VĀYASANEYI-SANHI",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "VS",
+    "locus": "VĀJASANEYISAM̃HITĀ. The VĀYASANEYI-SANHI",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ŚAT. BR.",
+    "locus": "The ŚATAPATHABRĀHMAṆA in the Mādhyandina",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "TS.",
+    "locus": "TAITTIRĪYASAM̃HITĀ. 7 Kāṇḍa",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "TBR.",
+    "locus": "TAITTIRĪYABRĀHMAṆA.",
+    "era": "vedic",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "ĀŚV. GṚHY.",
+    "locus": "ĀŚVALĀYANA'S GṚHYASŪTRĀṆI in 4 Adhyāya.",
+    "era": "epic-sutra",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "PĀR. GṚHY.",
+    "locus": "PĀRASKARA'S GṚHYASŪTRĀṆI.",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "ŚVETĀŚV. UP.",
+    "locus": "ŚVETĀŚVATAROPANIṢAD in der Bibliotheca i",
+    "era": "epic-sutra",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "ŚVETĀŚV. UP",
+    "locus": "ŚVETĀŚVATAROPANIṢAD in der Bibliotheca i",
+    "era": "epic-sutra",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "HARIV.",
+    "locus": "HARIVAṂŚA im 4ten Bande des MBH. Aus die",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "WEBER, RĀMAT. UP.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "VARĀH. BṚH. S.",
+    "locus": "VARĀHAMIHIRA'S BṚHATSAM̃HITĀ.",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "VARĀH. BṚH. S",
+    "locus": "VARĀHAMIHIRA'S BṚHATSAM̃HITĀ.",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "VARĀH. BṚH. S",
+    "locus": "VARĀHAMIHIRA'S BṚHATSAM̃HITĀ.",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "VARĀH. BṚH. S",
+    "locus": "VARĀHAMIHIRA'S BṚHATSAM̃HITĀ.",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "Spr.",
+    "locus": "Indische Sprüche. Sanskrit und deutsch h",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R. GORR.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 3,2824 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ŚĀK.",
+    "locus": "ŚĀKUNTALA",
+    "era": "classical",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "KATHĀS.",
+    "locus": "KATHĀSARITSĀGARA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "ŚĀK.",
+    "locus": "ŚĀKUNTALA",
+    "era": "classical",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "ŚUK. in LA. (III)",
+    "locus": "ŚUKASAPTATI in LASSEN'S Anthologie (GILD",
+    "era": "UNDATEABLE",
+    "via": "hand:recension"
+   },
+   {
+    "siglum": "HIT.",
+    "locus": "HITOPADEŚA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 3,2995 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 3,8304 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 3, 9948 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "Spr.",
+    "locus": "Indische Sprüche. Sanskrit und deutsch h",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "RAGH.",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "SUŚR.",
+    "locus": "SUŚRUTA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "MĀLATĪM.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "RĀJA-TAR.",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "UTTARAR.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "UTTARAR",
+    "locus": "? [Cologne Addition] 6 (145,2.3)",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MAITRYUP.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 1,5778 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "Spr.",
+    "locus": "Indische Sprüche. Sanskrit und deutsch h",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "KIR.",
+    "locus": "KIRĀTĀRJUNĪYA",
+    "era": "classical",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ŚAT. BR.",
+    "locus": "The ŚATAPATHABRĀHMAṆA in the Mādhyandina",
+    "era": "vedic",
+    "via": "dcs"
+   }
+  ]
+ },
+ {
+  "slp1": "Siva",
+  "sense_id": "2a",
+  "n_cites": 2,
+  "n_dateable": 1,
+  "bucket": "epic-sutra",
+  "class": "ORDERABLE-MARGINAL",
+  "details": [
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MED. v.",
+    "locus": "MEDINĪKOṢA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   }
+  ]
+ },
+ {
+  "slp1": "Siva",
+  "sense_id": "2b",
+  "n_cites": 59,
+  "n_dateable": 24,
+  "bucket": "vedic",
+  "class": "ORDERABLE",
+  "details": [
+   {
+    "siglum": "AK.",
+    "locus": "AMARAKOṢA nach der Ausgabe von COLEBROOK",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "TRIK.",
+    "locus": "TRIKĀṆḌAŚEṢA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "TRIK",
+    "locus": "TRIKĀṆḌAŚEṢA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "H.",
+    "locus": "HEMACANDRA'S ABHIDHĀNACINTĀMAṆI",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "H. an",
+    "locus": "HEMACANDRA'S ANEKĀRTHASAM̃GRAHA 2,537. fg",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "MED",
+    "locus": "MEDINĪKOṢA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "HALĀY.",
+    "locus": "HALĀYUDHA",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "LIA.",
+    "locus": "LASSEN'S Indische Alterthumskunde. 1,780. fg",
+    "era": "UNDATEABLE",
+    "via": "modern-ref"
+   },
+   {
+    "siglum": "VS.",
+    "locus": "VĀJASANEYISAM̃HITĀ. The VĀYASANEYI-SANHI",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "VS",
+    "locus": "VĀJASANEYISAM̃HITĀ. The VĀYASANEYI-SANHI",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ĀŚV. GṚHY.",
+    "locus": "ĀŚVALĀYANA'S GṚHYASŪTRĀṆI in 4 Adhyāya.",
+    "era": "epic-sutra",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "ĀŚV. GṚHY",
+    "locus": "ĀŚVALĀYANA'S GṚHYASŪTRĀṆI in 4 Adhyāya.",
+    "era": "epic-sutra",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 1,1153 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH",
+    "locus": "MAHĀBHĀRATA",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH",
+    "locus": "MAHĀBHĀRATA 7,9622 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH",
+    "locus": "MAHĀBHĀRATA 14,1178 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "Spr.",
+    "locus": "Indische Sprüche. Sanskrit und deutsch h",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "VP.",
+    "locus": "VIṢṆUPURĀṆA. Es wird die WILSON'sche Ueb",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "VP",
+    "locus": "VIṢṆUPURĀṆA. Es wird die WILSON'sche Ueb",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "SARVADARŚANAS.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "SARVADARŚANAS",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "SARVADARŚANAS",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "SARVADARŚANAS",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "SARVADARŚANAS",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Spr. (II)",
+    "locus": "Indische Sprüche. Sanskrit und Deutsch.",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "Spr. (II)",
+    "locus": "Indische Sprüche. Sanskrit und Deutsch.",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "DHŪRTAS.",
+    "locus": "DHŪRTASAMĀGAMA in LASSEN'S Anthologie (G",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "DHŪRTAS",
+    "locus": "DHŪRTASAMĀGAMA in LASSEN'S Anthologie (G",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H.",
+    "locus": "? [Cologne Addition] 96,b,8",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H",
+    "locus": "? [Cologne Addition] 45,a,23",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H",
+    "locus": "? [Cologne Addition] 85,a,42",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H",
+    "locus": "? [Cologne Addition] 273,b,24",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H",
+    "locus": "? [Cologne Addition] 26,a,37",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H",
+    "locus": "? [Cologne Addition] 74,b,9",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H",
+    "locus": "? [Cologne Addition] 94,a,39",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Spr.",
+    "locus": "Indische Sprüche. Sanskrit und deutsch h",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H.",
+    "locus": "? [Cologne Addition] 93,b,11",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H",
+    "locus": "? [Cologne Addition] 106,a,24. fg",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H",
+    "locus": "? [Cologne Addition] 94,b,13. fg",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H.",
+    "locus": "? [Cologne Addition] 94, a,39",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H",
+    "locus": "? [Cologne Addition] 88,a,33",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H",
+    "locus": "? [Cologne Addition] 44,b,23",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "BURN. Intr.",
+    "locus": "BURNOUF",
+    "era": "UNDATEABLE",
+    "via": "modern-ref"
+   },
+   {
+    "siglum": "P.",
+    "locus": "PĀṆINI'S acht Bücher grammatischer Regel",
+    "era": "epic-sutra",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H.",
+    "locus": "? [Cologne Addition] 92,a,2",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H",
+    "locus": "? [Cologne Addition] 45,a,1",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H.",
+    "locus": "? [Cologne Addition] 45,a,",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "WEBER, KṚṢṆAJ.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "HALL",
+    "locus": "A contribution towards an index to the B 13.",
+    "era": "UNDATEABLE",
+    "via": "modern-ref"
+   },
+   {
+    "siglum": "HALL",
+    "locus": "A contribution towards an index to the B",
+    "era": "UNDATEABLE",
+    "via": "modern-ref"
+   },
+   {
+    "siglum": "KIR.",
+    "locus": "KIRĀTĀRJUNĪYA",
+    "era": "classical",
+    "via": "dcs"
+   },
+   {
+    "siglum": "RĀJA-TAR.",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H.",
+    "locus": "? [Cologne Addition] 64,a,19. fg",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H.",
+    "locus": "? [Cologne Addition] 64,a,",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   }
+  ]
+ },
+ {
+  "slp1": "Siva",
+  "sense_id": "2c",
+  "n_cites": 7,
+  "n_dateable": 2,
+  "bucket": "epic-sutra",
+  "class": "ORDERABLE",
+  "details": [
+   {
+    "siglum": "SARVADARŚANAS.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "SARVADARŚANAS",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "SARVADARŚANAS",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 5,3796. fg → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ed. Bomb",
+    "locus": "ed. Bomb",
+    "era": "UNDATEABLE",
+    "via": "edition-siglum"
+   },
+   {
+    "siglum": "H.",
+    "locus": "HEMACANDRA'S ABHIDHĀNACINTĀMAṆI",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H.",
+    "locus": "? [Cologne Addition] 318,a, N.",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   }
+  ]
+ },
+ {
+  "slp1": "padma",
+  "sense_id": "3",
+  "n_cites": 7,
+  "n_dateable": 6,
+  "bucket": "epic-sutra",
+  "class": "ORDERABLE",
+  "details": [
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "TRIK.",
+    "locus": "TRIKĀṆḌAŚEṢA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "MED",
+    "locus": "MEDINĪKOṢA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "H.",
+    "locus": "HEMACANDRA'S ABHIDHĀNACINTĀMAṆI",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "H. an",
+    "locus": "HEMACANDRA'S ANEKĀRTHASAM̃GRAHA",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "HALĀY.",
+    "locus": "HALĀYUDHA",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   }
+  ]
+ },
+ {
+  "slp1": "padma",
+  "sense_id": "4",
+  "n_cites": 1,
+  "n_dateable": 1,
+  "bucket": "classical",
+  "class": "ORDERABLE-MARGINAL",
+  "details": [
+   {
+    "siglum": "VARĀH. BṚH. S.",
+    "locus": "VARĀHAMIHIRA'S BṚHATSAM̃HITĀ.",
+    "era": "classical",
+    "via": "dharmamitra"
+   }
+  ]
+ },
+ {
+  "slp1": "padma",
+  "sense_id": "5",
+  "n_cites": 1,
+  "n_dateable": 1,
+  "bucket": "classical",
+  "class": "ORDERABLE-MARGINAL",
+  "details": [
+   {
+    "siglum": "VARĀH. BṚH. S.",
+    "locus": "VARĀHAMIHIRA'S BṚHATSAM̃HITĀ.",
+    "era": "classical",
+    "via": "dharmamitra"
+   }
+  ]
+ },
+ {
+  "slp1": "padma",
+  "sense_id": "6",
+  "n_cites": 5,
+  "n_dateable": 4,
+  "bucket": "epic-sutra",
+  "class": "ORDERABLE",
+  "details": [
+   {
+    "siglum": "TRIK.",
+    "locus": "TRIKĀṆḌAŚEṢA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "MED",
+    "locus": "MEDINĪKOṢA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "H. an",
+    "locus": "HEMACANDRA'S ANEKĀRTHASAM̃GRAHA",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "M.",
+    "locus": "MANU'S Gesetzbuch in der Ausg. von LOISE",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 7,3110 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   }
+  ]
+ },
+ {
+  "slp1": "viS",
+  "sense_id": "4",
+  "n_cites": 98,
+  "n_dateable": 84,
+  "bucket": "vedic",
+  "class": "ORDERABLE",
+  "details": [
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "RAGH.",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "MĀRK. P.",
+    "locus": "MĀRKĀṆḌEYAPURĀṆA in der Bibliotheca indi",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RĀJA-TAR.",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RAGH. ed. Calc.",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "STENZLER",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "KĀM. NĪTIS.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "HARIV.",
+    "locus": "HARIVAṂŚA im 4ten Bande des MBH. Aus die",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "KAUŚ.",
+    "locus": "KAUŚIKA'S SŪTRA zum ATHARVAVEDA. 14 Adhy",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 5,29 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH",
+    "locus": "MAHĀBHĀRATA 13,475 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "KATHĀS.",
+    "locus": "KATHĀSARITSĀGARA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R. GORR.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R. GORR.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 1,573 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "HARIV.",
+    "locus": "HARIVAṂŚA im 4ten Bande des MBH. Aus die",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "HARIV",
+    "locus": "HARIVAṂŚA im 4ten Bande des MBH. Aus die",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RĀJA-TAR.",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RĀJA-TAR",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "SĀH. D.",
+    "locus": "SĀHITYADARPAṆA",
+    "era": "late-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 4,591 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MĀLAV.",
+    "locus": "MĀLAVIKĀGNIMITRA",
+    "era": "classical",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "MĀLATĪM.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be 2, ",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "RĀJA-TAR.",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RĀJA-TAR",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "M.",
+    "locus": "MANU'S Gesetzbuch in der Ausg. von LOISE",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "LOIS",
+    "locus": "LOISELEUR DESLONGCHAMPS.",
+    "era": "UNDATEABLE",
+    "via": "modern-ref"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 13,237 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "SUŚR.",
+    "locus": "SUŚRUTA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "M.",
+    "locus": "MANU'S Gesetzbuch in der Ausg. von LOISE",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "M",
+    "locus": "MANU'S Gesetzbuch in der Ausg. von LOISE",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ŚVETĀŚV. UP.",
+    "locus": "ŚVETĀŚVATAROPANIṢAD in der Bibliotheca i",
+    "era": "epic-sutra",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "RAGH.",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RAGH",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RAGH",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "KUMĀRAS.",
+    "locus": "KUMĀRASAM̃BHAVA",
+    "era": "classical",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MEGH.",
+    "locus": "MEGHADŪTA",
+    "era": "classical",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MEGH",
+    "locus": "MEGHADŪTA",
+    "era": "classical",
+    "via": "dcs"
+   },
+   {
+    "siglum": "RĀJA-TAR.",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "KĀVYĀD.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "RAGH.",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RAGH",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "PAÑCAR.",
+    "locus": "PAÑCARATNA ? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "hand:ambiguous"
+   },
+   {
+    "siglum": "HARIV.",
+    "locus": "HARIVAṂŚA im 4ten Bande des MBH. Aus die",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RAGH.",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "DAŚAK.",
+    "locus": "DAŚAKUMĀRACARITA 24,16. fg",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RAGH.",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RAGH",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RAGH",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RAGH",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "Spr. (II)",
+    "locus": "Indische Sprüche. Sanskrit und Deutsch.",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "HARIV.",
+    "locus": "HARIVAṂŚA im 4ten Bande des MBH. Aus die",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "VARĀH. BṚH. S.",
+    "locus": "VARĀHAMIHIRA'S BṚHATSAM̃HITĀ.",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 3,10836 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH",
+    "locus": "MAHĀBHĀRATA 7,4359 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH",
+    "locus": "MAHĀBHĀRATA 6,139 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH",
+    "locus": "MAHĀBHĀRATA 12,3767 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R. GORR.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "RĀJA-TAR.",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "Spruch",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "RĀJA-TAR.",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "HARIV.",
+    "locus": "HARIVAṂŚA im 4ten Bande des MBH. Aus die",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "HARIV.",
+    "locus": "HARIVAṂŚA im 4ten Bande des MBH. Aus die",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RĀJA-TAR.",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RĀJA-TAR",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "Spr.",
+    "locus": "Indische Sprüche. Sanskrit und deutsch h",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "RĀJA-TAR.",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "MAITRYUP.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "HARIV.",
+    "locus": "HARIVAṂŚA im 4ten Bande des MBH. Aus die",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "TS.",
+    "locus": "TAITTIRĪYASAM̃HITĀ. 7 Kāṇḍa",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "M.",
+    "locus": "MANU'S Gesetzbuch in der Ausg. von LOISE",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "YĀJÑ.",
+    "locus": "YĀJÑAVALKYA'S Gesetzbuch. Sanskrit und D",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "MĀRK. P.",
+    "locus": "MĀRKĀṆḌEYAPURĀṆA in der Bibliotheca indi",
+    "era": "classical",
+    "via": "dharmamitra"
+   }
+  ]
+ },
+ {
+  "slp1": "viS",
+  "sense_id": "6",
+  "n_cites": 98,
+  "n_dateable": 83,
+  "bucket": "vedic",
+  "class": "ORDERABLE",
+  "details": [
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 12,6955 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "KATHĀS.",
+    "locus": "KATHĀSARITSĀGARA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "AV.",
+    "locus": "ATHARVAVEDASAM̃HITĀ",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "AIT. BR.",
+    "locus": "AITAREYABRĀHMAṆA. Citirt nach den 8 Pañc",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ŚĀṄKH. ŚR.",
+    "locus": "ŚĀṄKHĀYANA'S ŚRAUTASŪTRĀṆI.",
+    "era": "epic-sutra",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "AV.",
+    "locus": "ATHARVAVEDASAM̃HITĀ",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "TS.",
+    "locus": "TAITTIRĪYASAM̃HITĀ. 7 Kāṇḍa",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "RĀJA-TAR.",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 13,2115. fg → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHAG.",
+    "locus": "BHAGAVADGĪTĀ",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 12,13234 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHAG.",
+    "locus": "BHAGAVADGĪTĀ",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 13,1504 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "RAGH.",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "HARIV.",
+    "locus": "HARIVAṂŚA im 4ten Bande des MBH. Aus die",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "HARIV",
+    "locus": "HARIVAṂŚA im 4ten Bande des MBH. Aus die",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 13,3544 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 13, 3453 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ed. Calc",
+    "locus": "ed. Calc",
+    "era": "UNDATEABLE",
+    "via": "edition-siglum"
+   },
+   {
+    "siglum": "ed. Bomb",
+    "locus": "ed. Bomb",
+    "era": "UNDATEABLE",
+    "via": "edition-siglum"
+   },
+   {
+    "siglum": "HARIV.",
+    "locus": "HARIVAṂŚA im 4ten Bande des MBH. Aus die",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "NĪLAK",
+    "locus": "A rational refutation of the Hindu philo",
+    "era": "UNDATEABLE",
+    "via": "modern-ref"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "KĀM. NĪTIS.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 5,5170 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be 2, ",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "GORR.",
+    "locus": "GORRESIO.",
+    "era": "UNDATEABLE",
+    "via": "edition-siglum"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be 2,9",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be 98,",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "KĀM. NĪTIS.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "KĀM. NĪTIS.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "RAGH.",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RAGH",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "ŚĀK.",
+    "locus": "ŚĀKUNTALA",
+    "era": "classical",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "PRAB.",
+    "locus": "PRABODHACANDRODAYA",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "HARIV.",
+    "locus": "HARIVAṂŚA im 4ten Bande des MBH. Aus die",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "GĪT.",
+    "locus": "GĪTAGOVINDA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "Spr.",
+    "locus": "Indische Sprüche. Sanskrit und deutsch h",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "SUŚR.",
+    "locus": "SUŚRUTA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "VIKR.",
+    "locus": "VIKRAMORVAŚĪ",
+    "era": "classical",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "KAUŚ.",
+    "locus": "KAUŚIKA'S SŪTRA zum ATHARVAVEDA. 14 Adhy",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 1,4274 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "HARIV.",
+    "locus": "HARIVAṂŚA im 4ten Bande des MBH. Aus die",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "R. GORR.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "R. SCHL.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "PRAB.",
+    "locus": "PRABODHACANDRODAYA",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "Verz. d. Oxf. H.",
+    "locus": "? [Cologne Addition] 68,b,1",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 12,1556 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "AV.",
+    "locus": "ATHARVAVEDASAM̃HITĀ",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "TBR.",
+    "locus": "TAITTIRĪYABRĀHMAṆA.",
+    "era": "vedic",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "KAUŚ.",
+    "locus": "KAUŚIKA'S SŪTRA zum ATHARVAVEDA. 14 Adhy",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "RAGH.",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "AV.",
+    "locus": "ATHARVAVEDASAM̃HITĀ",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "AV",
+    "locus": "ATHARVAVEDASAM̃HITĀ 8,5,20. fg",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "VS.",
+    "locus": "VĀJASANEYISAM̃HITĀ. The VĀYASANEYI-SANHI",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "VS",
+    "locus": "VĀJASANEYISAM̃HITĀ. The VĀYASANEYI-SANHI",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ŚAT. BR.",
+    "locus": "The ŚATAPATHABRĀHMAṆA in the Mādhyandina",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "TBR.",
+    "locus": "TAITTIRĪYABRĀHMAṆA.",
+    "era": "vedic",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "TBR",
+    "locus": "TAITTIRĪYABRĀHMAṆA.",
+    "era": "vedic",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "CHĀND. UP.",
+    "locus": "CHĀNDOGYOPANIṢAD",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "CHĀND. UP",
+    "locus": "CHĀNDOGYOPANIṢAD",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "TAITT. UP.",
+    "locus": "TAITTIRĪYOPANIṢAD ? [Cologne Addition] 3,1. ",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "NṚS. TĀP. UP",
+    "locus": "NṚSIṂHATĀPANĪYOPANIṢAD ? [Cologne Additi",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "Ind. St.",
+    "locus": "WEBER'S Indische Studien.",
+    "era": "UNDATEABLE",
+    "via": "modern-ref"
+   },
+   {
+    "siglum": "Ind. St.",
+    "locus": "WEBER'S Indische Studien.",
+    "era": "UNDATEABLE",
+    "via": "modern-ref"
+   }
+  ]
+ },
+ {
+  "slp1": "viS",
+  "sense_id": "7",
+  "n_cites": 25,
+  "n_dateable": 22,
+  "bucket": "vedic",
+  "class": "ORDERABLE",
+  "details": [
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ŚAT. BR.",
+    "locus": "The ŚATAPATHABRĀHMAṆA in the Mādhyandina",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 7,1551 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ed. Bomb",
+    "locus": "ed. Bomb",
+    "era": "UNDATEABLE",
+    "via": "edition-siglum"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "PAÑCAT.",
+    "locus": "PAÑCATANTRA. Pantschatantrum sive quinqu",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 12,4258 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 12, 4263 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHAṬṬ.",
+    "locus": "BHAṬṬIKĀVYA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "Spr. (II)",
+    "locus": "Indische Sprüche. Sanskrit und Deutsch.",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "M.",
+    "locus": "MANU'S Gesetzbuch in der Ausg. von LOISE",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 7,3073 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH",
+    "locus": "MAHĀBHĀRATA 12,2933 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "KUMĀRAS.",
+    "locus": "KUMĀRASAM̃BHAVA",
+    "era": "classical",
+    "via": "dcs"
+   },
+   {
+    "siglum": "GĪT.",
+    "locus": "GĪTAGOVINDA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "RĀJA-TAR.",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "Spr.",
+    "locus": "Indische Sprüche. Sanskrit und deutsch h",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "HARIV.",
+    "locus": "HARIVAṂŚA im 4ten Bande des MBH. Aus die",
+    "era": "epic-sutra",
+    "via": "dharmamitra"
+   }
+  ]
+ },
+ {
+  "slp1": "viS",
+  "sense_id": "5a",
+  "n_cites": 72,
+  "n_dateable": 63,
+  "bucket": "vedic",
+  "class": "ORDERABLE",
+  "details": [
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MAITRYUP.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "Spr.",
+    "locus": "Indische Sprüche. Sanskrit und deutsch h",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "KAUŚ.",
+    "locus": "KAUŚIKA'S SŪTRA zum ATHARVAVEDA. 14 Adhy",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "KATHĀS.",
+    "locus": "KATHĀSARITSĀGARA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "PAT",
+    "locus": "PATAÑJALI",
+    "era": "epic-sutra",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "GOLD",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "MĀN.",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "KAIYY",
+    "locus": "? [Cologne Addition]",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "AK.",
+    "locus": "AMARAKOṢA nach der Ausgabe von COLEBROOK",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 3,2184 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ŚĀK.",
+    "locus": "ŚĀKUNTALA",
+    "era": "classical",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "KATHĀS.",
+    "locus": "KATHĀSARITSĀGARA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "PAÑCAT.",
+    "locus": "PAÑCATANTRA. Pantschatantrum sive quinqu",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "KATHĀS.",
+    "locus": "KATHĀSARITSĀGARA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "PAÑCAT.",
+    "locus": "PAÑCATANTRA. Pantschatantrum sive quinqu",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "PAÑCAT",
+    "locus": "PAÑCATANTRA. Pantschatantrum sive quinqu",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "HIT.",
+    "locus": "HITOPADEŚA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "HIT",
+    "locus": "HITOPADEŚA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "HIT",
+    "locus": "HITOPADEŚA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ŚĀK.",
+    "locus": "ŚĀKUNTALA",
+    "era": "classical",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "HIT.",
+    "locus": "HITOPADEŚA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "HIT",
+    "locus": "HITOPADEŚA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 3,2555. fg → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "PRAB.",
+    "locus": "PRABODHACANDRODAYA",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "ŚAT. BR.",
+    "locus": "The ŚATAPATHABRĀHMAṆA in the Mādhyandina",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "R.",
+    "locus": "RĀMĀYAṆA. Ohne eine nähere Angabe ist be",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ŚAT. BR.",
+    "locus": "The ŚATAPATHABRĀHMAṆA in the Mādhyandina",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ŚAT. BR.",
+    "locus": "The ŚATAPATHABRĀHMAṆA in the Mādhyandina",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "Spr.",
+    "locus": "Indische Sprüche. Sanskrit und deutsch h",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ŚĀK.",
+    "locus": "ŚĀKUNTALA",
+    "era": "classical",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "VARĀH. BṚH. S.",
+    "locus": "VARĀHAMIHIRA'S BṚHATSAM̃HITĀ.",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RAGH.",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RAGH",
+    "locus": "RAGHUVAṂŚA",
+    "era": "classical",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "KUMĀRAS.",
+    "locus": "KUMĀRASAM̃BHAVA",
+    "era": "classical",
+    "via": "dcs"
+   },
+   {
+    "siglum": "Spr. (II)",
+    "locus": "Indische Sprüche. Sanskrit und Deutsch.",
+    "era": "UNDATEABLE",
+    "via": "anthology"
+   },
+   {
+    "siglum": "KATHĀS.",
+    "locus": "KATHĀSARITSĀGARA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "KATHĀS",
+    "locus": "KATHĀSARITSĀGARA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "KAUṢ. UP.",
+    "locus": "KAUṢĪTAKYUPANIṢAD.",
+    "era": "epic-sutra",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "BHĀG. P",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "PRAB.",
+    "locus": "PRABODHACANDRODAYA",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "MBH.",
+    "locus": "MAHĀBHĀRATA 3,12735 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH",
+    "locus": "MAHĀBHĀRATA 12,6677 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH",
+    "locus": "MAHĀBHĀRATA 3,2158 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MBH",
+    "locus": "MAHĀBHĀRATA 4,1000 → vulg",
+    "era": "epic-sutra",
+    "via": "dcs"
+   },
+   {
+    "siglum": "KATHĀS.",
+    "locus": "KATHĀSARITSĀGARA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "KATHĀS.",
+    "locus": "KATHĀSARITSĀGARA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "KATHĀS",
+    "locus": "KATHĀSARITSĀGARA",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RĀJA-TAR.",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "VIKR.",
+    "locus": "VIKRAMORVAŚĪ",
+    "era": "classical",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "RĀJA-TAR.",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "RĀJA-TAR",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   },
+   {
+    "siglum": "BHĀG. P.",
+    "locus": "BHĀGAVATAPURĀṆA",
+    "era": "early-medieval",
+    "via": "dcs"
+   },
+   {
+    "siglum": "MEGH.",
+    "locus": "MEGHADŪTA",
+    "era": "classical",
+    "via": "dcs"
+   },
+   {
+    "siglum": "SUŚR.",
+    "locus": "SUŚRUTA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "VET. in LA. (III)",
+    "locus": "VETĀLAPAÑCAVIṂŚATI in LASSEN'S Anthologi",
+    "era": "UNDATEABLE",
+    "via": "hand:recension"
+   },
+   {
+    "siglum": "RĀJA-TAR.",
+    "locus": "RĀJATARAṄGIṆĪ",
+    "era": "early-medieval",
+    "via": "dharmamitra"
+   }
+  ]
+ },
+ {
+  "slp1": "koSa",
+  "sense_id": "1a",
+  "n_cites": 16,
+  "n_dateable": 14,
+  "bucket": "vedic",
+  "class": "ORDERABLE",
+  "details": [
+   {
+    "siglum": "AV.",
+    "locus": "ATHARVAVEDASAM̃HITĀ",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "AV.",
+    "locus": "ATHARVAVEDASAM̃HITĀ",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "SUŚR.",
+    "locus": "SUŚRUTA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   },
+   {
+    "siglum": "NAIGH.",
+    "locus": "das",
+    "era": "UNDATEABLE",
+    "via": "no-rule"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   }
+  ]
+ },
+ {
+  "slp1": "koSa",
+  "sense_id": "1b",
+  "n_cites": 2,
+  "n_dateable": 2,
+  "bucket": "vedic",
+  "class": "ORDERABLE",
+  "details": [
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   }
+  ]
+ },
+ {
+  "slp1": "koSa",
+  "sense_id": "1c",
+  "n_cites": 2,
+  "n_dateable": 1,
+  "bucket": "early-medieval",
+  "class": "ORDERABLE-MARGINAL",
+  "details": [
+   {
+    "siglum": "H. an",
+    "locus": "HEMACANDRA'S ANEKĀRTHASAM̃GRAHA",
+    "era": "early-medieval",
+    "via": "hand:class"
+   },
+   {
+    "siglum": "MED",
+    "locus": "MEDINĪKOṢA",
+    "era": "UNDATEABLE",
+    "via": "hand:disputed"
+   }
+  ]
+ },
+ {
+  "slp1": "koSa",
+  "sense_id": "1d",
+  "n_cites": 3,
+  "n_dateable": 3,
+  "bucket": "vedic",
+  "class": "ORDERABLE",
+  "details": [
+   {
+    "siglum": "ŚAT. BR.",
+    "locus": "The ŚATAPATHABRĀHMAṆA in the Mādhyandina",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "AV.",
+    "locus": "ATHARVAVEDASAM̃HITĀ",
+    "era": "vedic",
+    "via": "dcs"
+   },
+   {
+    "siglum": "ṚV.",
+    "locus": "ṚGVEDA. Es wird nach Maṇḍala",
+    "era": "vedic",
+    "via": "dcs"
+   }
+  ]
+ }
+]

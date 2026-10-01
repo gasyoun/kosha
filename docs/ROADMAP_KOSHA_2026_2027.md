@@ -1,6 +1,12 @@
 # Kosha roadmap — August 2026 to July 2027
 
-_Created: 30-07-2026 · Last updated: 17-08-2026_
+_Created: 30-07-2026 · Last updated: 02-09-2026_
+
+> **Truth-pass 02-09-2026** (H3775) — `roadmap_handoff_truth.py --check` flagged this
+> page drained but still living: **10 of 10 referenced handoffs have shipped, zero remain OPEN**.
+> Kept at this path per MG ruling 31-08-2026 (do not archive) — the strategy/plan
+> layer still holds even though its backlog has fully closed. A future session
+> reopening work here should mint a fresh H### rather than un-close these.
 
 The governing decisions and autonomy contract live in the
 [plan of record](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md).
@@ -9,7 +15,11 @@ immutable evidence and must carry a completed or superseded banner.
 
 ## W0 — stabilization and truth reset
 
-**Window:** months 0–1. **State:** ready. **Feature freeze:** active.
+**Window:** months 0–1. **State:** freeze-exit criteria met — audited 01-09-2026
+(H3788): H1943/H1944/H1945 merged, issues #198/#201/#210 closed, `main`
+protected with both CI workflows required by name, H2681 retrospective clean.
+**Feature freeze:** active. Evidence:
+[CITABLE_V1_RECORD_KOSHA_01.09.26.md](https://github.com/gasyoun/kosha/blob/main/docs/CITABLE_V1_RECORD_KOSHA_01.09.26.md) §1.
 
 Deliverables:
 
@@ -29,7 +39,11 @@ Unblocked by: nothing. Exit is defined in
 
 ## W1 — public-product readiness
 
-**Window:** months 1–3. **State:** gated on W0.
+**Window:** months 1–3. **State:** every agent-measurable gate PASSES (audited
+01-09-2026, H3788); the only open item is the human §9 branded-complete tick,
+which does **not** gate W2 — the packet records the W2 unlock condition as met
+on 08-08-2026. Evidence:
+[CITABLE_V1_RECORD_KOSHA_01.09.26.md](https://github.com/gasyoun/kosha/blob/main/docs/CITABLE_V1_RECORD_KOSHA_01.09.26.md) §2.
 
 Deliverables:
 
@@ -51,7 +65,12 @@ production deployment.
 
 ## W2 — citable v1
 
-**Window:** months 3–5. **State:** gated on W1 live smoke.
+**Window:** months 3–5. **State:** ✅ **a citable release exists** — `v0.117.1`,
+version DOI [`10.5281/zenodo.22231444`](https://doi.org/10.5281/zenodo.22231444)
+under concept DOI [`10.5281/zenodo.21965599`](https://doi.org/10.5281/zenodo.21965599),
+with a frozen dataset manifest and a stated versioning policy (H3788,
+01-09-2026). W1 live smoke is green and does not block. Record:
+[CITABLE_V1_RECORD_KOSHA_01.09.26.md](https://github.com/gasyoun/kosha/blob/main/docs/CITABLE_V1_RECORD_KOSHA_01.09.26.md).
 
 Deliverables:
 
@@ -59,13 +78,28 @@ Deliverables:
   (✅ H2346 — [PR #342](https://github.com/gasyoun/kosha/pull/342); the release
   gate is executed by required CI and rejects a local-only citation base since
   H2870);
-- MG-minted DOI and updated citation metadata (**human gate** — MG mints; agent
-  half is [DOI_CHECKLIST_W2A.md](https://github.com/gasyoun/kosha/blob/main/docs/DOI_CHECKLIST_W2A.md));
+- DOI minting and updated citation metadata (✅ — automatic since the
+  GitHub–Zenodo webhook of 14-08-2026; 21 deposits archived as of 01-09-2026.
+  Agents may mint DOIs (ruling 16-08-2026); `publish-safety-check` still gates
+  and visibility flips stay human. The old
+  [DOI_CHECKLIST_W2A.md](https://github.com/gasyoun/kosha/blob/main/docs/DOI_CHECKLIST_W2A.md)
+  described hand-minting and is superseded);
+- frozen dataset manifest per data release (✅ H3788 —
+  [scripts/freeze_release_manifest.py](https://github.com/gasyoun/kosha/blob/main/scripts/freeze_release_manifest.py)
+  + [data/manifest/frozen/](https://github.com/gasyoun/kosha/tree/main/data/manifest/frozen));
+- stated versioning policy (✅ H3788 —
+  [VERSIONING_AND_CITATION_POLICY_KOSHA.md](https://github.com/gasyoun/kosha/blob/main/docs/VERSIONING_AND_CITATION_POLICY_KOSHA.md));
 - P-D6 public dataset API over manifest records (✅ H2347 — `GET /api/v1/datasets`);
 - request correlation, low-cardinality metrics, readiness failures, and
   release observability (✅ H2348 — `X-Request-ID` + `GET /metrics`).
 
 Non-goals: history/auth enablement, full RU, and full sense reconciliation.
+
+Named W2 residuals (H3788 §5): cut `data-v0.6.0` carrying a frozen manifest —
+blocked on `release_asset` + `data_statement` for `pwg-sense-attestation-window`
+and `kosha-mastery-schedule`; renormalize the canonical checkout so it stops
+being a CRLF source for uploads; wire `freeze_release_manifest.py check` into
+the release gate.
 
 ## W3 — full sense reconciliation
 
@@ -95,6 +129,14 @@ The user chooses exactly one:
 3. downstream sense-frequency distribution.
 
 Codex prepares the decision packet. No Claude Code executor selects the lane.
+
+## In-flight handoff set (pointer, not status)
+
+Three Claude Code handoffs claimed 30-08-2026 execute open units of this portfolio and of
+[docs/ROADMAP_KOSHA_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP_KOSHA_2026H2.md):
+the design record, exclusions and gates are in
+[docs/PLAN_KOSHA_IMPROVEMENT_SET_2026-08-30.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_IMPROVEMENT_SET_2026-08-30.md).
+Status stays here; the plan does not fork it.
 
 ## Portfolio non-goals
 

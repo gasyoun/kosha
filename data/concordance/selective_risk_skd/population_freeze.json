@@ -1,0 +1,106 @@
+{
+  "handoff": "H5252",
+  "source": "data/concordance/sense_alignment.tsv",
+  "source_sha256": "9b589b2b286badbbb87e76effee3bfb1b0c721ab9d0752faf20a0b0282e2563b",
+  "source_rows": 67230,
+  "seed": 5252,
+  "target": 60,
+  "population_aligned": 7087,
+  "population_unaligned": 60143,
+  "coverage": 0.105414,
+  "abstention": 0.894586,
+  "abstention_taxonomy": {
+    "no-shared-witness": 37262,
+    "witness-too-common": 12261,
+    "cross-language-gap": 4317,
+    "no-citation-apparatus": 3262,
+    "outranked": 2549,
+    "absent-dictionary": 492
+  },
+  "unreachable_pairs_absent_dictionary": 492,
+  "gold_excluded_cards": 219,
+  "gold_files": {
+    "sense_alignment_acceptance_sample.tsv": {
+      "cards": 120,
+      "sha256": "d32a7a2e203d365a29335b6c19e38f1e4fc5b0321949c1b767df65cdbf6f040c"
+    },
+    "sense_alignment_acceptance_sample_w2.tsv": {
+      "cards": 152,
+      "sha256": "4ad26746b66bb2e0fa2314259fdf0f69dec5c83717239cc4ac86d8fa8e54848a"
+    }
+  },
+  "eligible_after_gold_exclusion": 6797,
+  "stratify_channel": "skd",
+  "channel_budget": 45,
+  "eligible_after_gold_only": 6860,
+  "prior_decks_excluded": {
+    "data/concordance/selective_risk/review_deck.tsv": {
+      "cards_excluded": 60,
+      "canary_skipped": "rajas#9",
+      "sha256": "4384f766691d5fa15e57b24b6dab56c102a54ae09d66b9b19d5ede300bbb7052",
+      "aligned_rows_removed": 63,
+      "note": "exclusion is by group_id, like the gold fence; group_id is not unique, so sibling rows sharing a judged id leave too"
+    }
+  },
+  "allocation": "named channel: fixed budget, proportional over bands; complement: remainder, proportional over bands",
+  "deck_cards": 61,
+  "canary_included": true,
+  "dictionary_reachability": {
+    "pwg": 3744,
+    "mw": 6842,
+    "apte": 4071,
+    "md": 180,
+    "skd": 160,
+    "vcp": 7
+  },
+  "strata": [
+    {
+      "stratum": "hi >=0.70|non-skd",
+      "score_band": "hi >=0.70",
+      "channel": "non-skd",
+      "eligible": 2070,
+      "eligible_share": 0.304546,
+      "sampled": 5
+    },
+    {
+      "stratum": "hi >=0.70|skd",
+      "score_band": "hi >=0.70",
+      "channel": "skd",
+      "eligible": 40,
+      "eligible_share": 0.005885,
+      "sampled": 20
+    },
+    {
+      "stratum": "lo <0.40|non-skd",
+      "score_band": "lo <0.40",
+      "channel": "non-skd",
+      "eligible": 1434,
+      "eligible_share": 0.210975,
+      "sampled": 3
+    },
+    {
+      "stratum": "lo <0.40|skd",
+      "score_band": "lo <0.40",
+      "channel": "skd",
+      "eligible": 18,
+      "eligible_share": 0.002648,
+      "sampled": 9
+    },
+    {
+      "stratum": "mid 0.40-0.69|non-skd",
+      "score_band": "mid 0.40-0.69",
+      "channel": "non-skd",
+      "eligible": 3203,
+      "eligible_share": 0.471237,
+      "sampled": 7
+    },
+    {
+      "stratum": "mid 0.40-0.69|skd",
+      "score_band": "mid 0.40-0.69",
+      "channel": "skd",
+      "eligible": 32,
+      "eligible_share": 0.004708,
+      "sampled": 16
+    }
+  ]
+}

@@ -1,0 +1,385 @@
+{
+  "master_sequence": "अइउण्ऋऌक्एओङ्ऐऔच्हयवरट्लण्ञमङणनम्झभञ्घढधष्जबगडदश्खफछठथचटतव्कपय्शषसर्हल्",
+  "sutras": [
+    {
+      "sutra_number": 1,
+      "devanagari": "अइउण्",
+      "letters_only": "अइउ",
+      "it_marker": "ण्"
+    },
+    {
+      "sutra_number": 2,
+      "devanagari": "ऋऌक्",
+      "letters_only": "ऋऌ",
+      "it_marker": "क्"
+    },
+    {
+      "sutra_number": 3,
+      "devanagari": "एओङ्",
+      "letters_only": "एओ",
+      "it_marker": "ङ्"
+    },
+    {
+      "sutra_number": 4,
+      "devanagari": "ऐऔच्",
+      "letters_only": "ऐऔ",
+      "it_marker": "च्"
+    },
+    {
+      "sutra_number": 5,
+      "devanagari": "हयवरट्",
+      "letters_only": "हयवर",
+      "it_marker": "ट्"
+    },
+    {
+      "sutra_number": 6,
+      "devanagari": "लण्",
+      "letters_only": "ल",
+      "it_marker": "ण्"
+    },
+    {
+      "sutra_number": 7,
+      "devanagari": "ञमङणनम्",
+      "letters_only": "ञमङणन",
+      "it_marker": "म्"
+    },
+    {
+      "sutra_number": 8,
+      "devanagari": "झभञ्",
+      "letters_only": "झभ",
+      "it_marker": "ञ्"
+    },
+    {
+      "sutra_number": 9,
+      "devanagari": "घढधष्",
+      "letters_only": "घढध",
+      "it_marker": "ष्"
+    },
+    {
+      "sutra_number": 10,
+      "devanagari": "जबगडदश्",
+      "letters_only": "जबगडद",
+      "it_marker": "श्"
+    },
+    {
+      "sutra_number": 11,
+      "devanagari": "खफछठथचटतव्",
+      "letters_only": "खफछठथचटत",
+      "it_marker": "व्"
+    },
+    {
+      "sutra_number": 12,
+      "devanagari": "कपय्",
+      "letters_only": "कप",
+      "it_marker": "य्"
+    },
+    {
+      "sutra_number": 13,
+      "devanagari": "शषसर्",
+      "letters_only": "शषस",
+      "it_marker": "र्"
+    },
+    {
+      "sutra_number": 14,
+      "devanagari": "हल्",
+      "letters_only": "ह",
+      "it_marker": "ल्"
+    }
+  ],
+  "pratyaharas": [
+    {
+      "name": "aK",
+      "devanagari_span": "अइउण्ऋऌक्",
+      "letters_only": "अइउऋऌ",
+      "it_marker": "क्",
+      "length": 7
+    },
+    {
+      "name": "aC",
+      "devanagari_span": "अइउण्ऋऌक्एओङ्ऐऔच्",
+      "letters_only": "अइउऋऌएओऐऔ",
+      "it_marker": "च्",
+      "length": 13
+    },
+    {
+      "name": "aTh",
+      "devanagari_span": "अइउण्ऋऌक्एओङ्ऐऔच्हयवरट्",
+      "letters_only": "अइउऋऌएओऐऔहयवर",
+      "it_marker": "ट्",
+      "length": 18
+    },
+    {
+      "name": "aN1",
+      "devanagari_span": "अइउ",
+      "letters_only": "अइउ",
+      "it_marker": "",
+      "length": 3
+    },
+    {
+      "name": "aN2",
+      "devanagari_span": "अइउण्ऋऌक्एओङ्ऐऔच्हयवरट्लण्",
+      "letters_only": "अइउऋऌएओऐऔहयवरल",
+      "it_marker": "ण्",
+      "length": 20
+    },
+    {
+      "name": "aM",
+      "devanagari_span": "अइउण्ऋऌक्एओङ्ऐऔच्हयवरट्लण्ञमङणनम्",
+      "letters_only": "अइउऋऌएओऐऔहयवरलञमङणन",
+      "it_marker": "म्",
+      "length": 26
+    },
+    {
+      "name": "aL",
+      "devanagari_span": "अइउण्ऋऌक्एओङ्ऐऔच्हयवरट्लण्ञमङणनम्झभञ्घढधष्जबगडदश्खफछठथचटतव्कपय्शषसर्हल्",
+      "letters_only": "अइउऋऌएओऐऔहयवरलञमङणनझभघढधजबगडदखफछठथचटतकपशषसह",
+      "it_marker": "ल्",
+      "length": 57
+    },
+    {
+      "name": "aS",
+      "devanagari_span": "अइउण्ऋऌक्एओङ्ऐऔच्हयवरट्लण्ञमङणनम्झभञ्घढधष्जबगडदश्",
+      "letters_only": "अइउऋऌएओऐऔहयवरलञमङणनझभघढधजबगडद",
+      "it_marker": "श्",
+      "length": 39
+    },
+    {
+      "name": "iK",
+      "devanagari_span": "इउण्ऋऌक्",
+      "letters_only": "इउऋऌ",
+      "it_marker": "क्",
+      "length": 6
+    },
+    {
+      "name": "iC",
+      "devanagari_span": "इउण्ऋऌक्एओङ्ऐऔच्",
+      "letters_only": "इउऋऌएओऐऔ",
+      "it_marker": "च्",
+      "length": 12
+    },
+    {
+      "name": "iN2",
+      "devanagari_span": "इउण्ऋऌक्एओङ्ऐऔच्हयवरट्लण्",
+      "letters_only": "इउऋऌएओऐऔहयवरल",
+      "it_marker": "ण्",
+      "length": 19
+    },
+    {
+      "name": "uK",
+      "devanagari_span": "उण्ऋऌक्",
+      "letters_only": "उऋऌ",
+      "it_marker": "क्",
+      "length": 5
+    },
+    {
+      "name": "eG",
+      "devanagari_span": "एओङ्",
+      "letters_only": "एओ",
+      "it_marker": "ङ्",
+      "length": 3
+    },
+    {
+      "name": "eC",
+      "devanagari_span": "एओङ्ऐऔच्",
+      "letters_only": "एओऐऔ",
+      "it_marker": "च्",
+      "length": 6
+    },
+    {
+      "name": "aiC",
+      "devanagari_span": "ऐऔच्",
+      "letters_only": "ऐऔ",
+      "it_marker": "च्",
+      "length": 3
+    },
+    {
+      "name": "khaY",
+      "devanagari_span": "खफछठथचटतव्कपय्",
+      "letters_only": "खफछठथचटतकप",
+      "it_marker": "य्",
+      "length": 12
+    },
+    {
+      "name": "khaR",
+      "devanagari_span": "खफछठथचटतव्कपय्शषसर्",
+      "letters_only": "खफछठथचटतकपशषस",
+      "it_marker": "र्",
+      "length": 16
+    },
+    {
+      "name": "naM",
+      "devanagari_span": "णनम्",
+      "letters_only": "णन",
+      "it_marker": "म्",
+      "length": 3
+    },
+    {
+      "name": "caR",
+      "devanagari_span": "चटतव्कपय्शषसर्",
+      "letters_only": "चटतकपशषस",
+      "it_marker": "र्",
+      "length": 11
+    },
+    {
+      "name": "chaV",
+      "devanagari_span": "छठथचटतव्",
+      "letters_only": "छठथचटत",
+      "it_marker": "व्",
+      "length": 7
+    },
+    {
+      "name": "jaS",
+      "devanagari_span": "जबगडदश्",
+      "letters_only": "जबगडद",
+      "it_marker": "श्",
+      "length": 6
+    },
+    {
+      "name": "jhaY",
+      "devanagari_span": "झभञ्घढधष्जबगडदश्खफछठथचटतव्कपय्",
+      "letters_only": "झभघढधजबगडदखफछठथचटतकप",
+      "it_marker": "य्",
+      "length": 25
+    },
+    {
+      "name": "jhaR",
+      "devanagari_span": "झभञ्घढधष्जबगडदश्खफछठथचटतव्कपय्शषसर्",
+      "letters_only": "झभघढधजबगडदखफछठथचटतकपशषस",
+      "it_marker": "र्",
+      "length": 29
+    },
+    {
+      "name": "jhaL",
+      "devanagari_span": "झभञ्घढधष्जबगडदश्खफछठथचटतव्कपय्शषसर्हल्",
+      "letters_only": "झभघढधजबगडदखफछठथचटतकपशषसह",
+      "it_marker": "ल्",
+      "length": 31
+    },
+    {
+      "name": "jhaS",
+      "devanagari_span": "झभञ्घढधष्जबगडदश्",
+      "letters_only": "झभघढधजबगडद",
+      "it_marker": "श्",
+      "length": 13
+    },
+    {
+      "name": "jhaSh",
+      "devanagari_span": "झभञ्घढधष्",
+      "letters_only": "झभघढध",
+      "it_marker": "ष्",
+      "length": 7
+    },
+    {
+      "name": "baS",
+      "devanagari_span": "बगडदश्",
+      "letters_only": "बगडद",
+      "it_marker": "श्",
+      "length": 5
+    },
+    {
+      "name": "bhaSh",
+      "devanagari_span": "भञ्घढधष्",
+      "letters_only": "भघढध",
+      "it_marker": "ष्",
+      "length": 6
+    },
+    {
+      "name": "maY",
+      "devanagari_span": "मङणनम्झभञ्घढधष्जबगडदश्खफछठथचटतव्कपय्",
+      "letters_only": "मङणनझभघढधजबगडदखफछठथचटतकप",
+      "it_marker": "य्",
+      "length": 30
+    },
+    {
+      "name": "yaNh",
+      "devanagari_span": "यवरट्लण्ञमङणनम्झभञ्",
+      "letters_only": "यवरलञमङणनझभ",
+      "it_marker": "ञ्",
+      "length": 15
+    },
+    {
+      "name": "yaN",
+      "devanagari_span": "यवरट्लण्",
+      "letters_only": "यवरल",
+      "it_marker": "ण्",
+      "length": 6
+    },
+    {
+      "name": "yaM",
+      "devanagari_span": "यवरट्लण्ञमङणनम्",
+      "letters_only": "यवरलञमङणन",
+      "it_marker": "म्",
+      "length": 12
+    },
+    {
+      "name": "yaY",
+      "devanagari_span": "यवरट्लण्ञमङणनम्झभञ्घढधष्जबगडदश्खफछठथचटतव्कपय्",
+      "letters_only": "यवरलञमङणनझभघढधजबगडदखफछठथचटतकप",
+      "it_marker": "य्",
+      "length": 37
+    },
+    {
+      "name": "yaR",
+      "devanagari_span": "यवरट्लण्ञमङणनम्झभञ्घढधष्जबगडदश्खफछठथचटतव्कपय्शषसर्",
+      "letters_only": "यवरलञमङणनझभघढधजबगडदखफछठथचटतकपशषस",
+      "it_marker": "र्",
+      "length": 41
+    },
+    {
+      "name": "raNh",
+      "devanagari_span": "रट्लण्",
+      "letters_only": "रल",
+      "it_marker": "ण्",
+      "length": 4
+    },
+    {
+      "name": "raL",
+      "devanagari_span": "रट्लण्ञमङणनम्झभञ्घढधष्जबगडदश्खफछठथचटतव्कपय्शषसर्हल्",
+      "letters_only": "रलञमङणनझभघढधजबगडदखफछठथचटतकपशषसह",
+      "it_marker": "ल्",
+      "length": 41
+    },
+    {
+      "name": "vaL",
+      "devanagari_span": "वरट्लण्ञमङणनम्झभञ्घढधष्जबगडदश्खफछठथचटतव्कपय्शषसर्हल्",
+      "letters_only": "वरलञमङणनझभघढधजबगडदखफछठथचटतकपशषसह",
+      "it_marker": "ल्",
+      "length": 42
+    },
+    {
+      "name": "vaS",
+      "devanagari_span": "वरट्लण्ञमङणनम्झभञ्घढधष्जबगडदश्",
+      "letters_only": "वरलञमङणनझभघढधजबगडद",
+      "it_marker": "श्",
+      "length": 24
+    },
+    {
+      "name": "shaR",
+      "devanagari_span": "शषसर्",
+      "letters_only": "शषस",
+      "it_marker": "र्",
+      "length": 4
+    },
+    {
+      "name": "shaL",
+      "devanagari_span": "शषसर्हल्",
+      "letters_only": "शषसह",
+      "it_marker": "ल्",
+      "length": 6
+    },
+    {
+      "name": "haL",
+      "devanagari_span": "हयवरट्लण्ञमङणनम्झभञ्घढधष्जबगडदश्खफछठथचटतव्कपय्शषसर्हल्",
+      "letters_only": "हयवरलञमङणनझभघढधजबगडदखफछठथचटतकपशषसह",
+      "it_marker": "ल्",
+      "length": 44
+    },
+    {
+      "name": "haS",
+      "devanagari_span": "हयवरट्लण्ञमङणनम्झभञ्घढधष्जबगडदश्",
+      "letters_only": "हयवरलञमङणनझभघढधजबगडद",
+      "it_marker": "श्",
+      "length": 26
+    }
+  ]
+}

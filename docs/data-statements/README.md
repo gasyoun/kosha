@@ -17,7 +17,7 @@ via the `data_statement` field.
 | MW verbal-root inventory | 2,113 | [mw-roots.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-roots.meta.md) |
 | Headword→root derivation table | 9,377 | [mw-etymology.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-etymology.meta.md) |
 | DCS ↔ CDSL crosswalk | 15,902 | [dcs-cdsl-xref.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/dcs-cdsl-xref.meta.md) |
-| Union headword index | 323,425 | [union-headwords.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/union-headwords.meta.md) |
+| Union headword index | 323,422 | [union-headwords.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/union-headwords.meta.md) |
 | MW ↔ Heritage crosswalk | 185,803 | [mw-heritage-crosswalk.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-heritage-crosswalk.meta.md) |
 | DCS lemma frequency sidecar | 83,277 | [kosha-lemma-frequency.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/kosha-lemma-frequency.meta.md) |
 | Zaliznyak grammar-token index | 98,639 | [zaliznyak-grammar-index.meta.md](https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-grammar-index.meta.md) |

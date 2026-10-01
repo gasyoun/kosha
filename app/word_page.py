@@ -245,9 +245,23 @@ def _saru_strip(slp1, sr_strip):
     )
 
 
-def _headword_strip(slp1, deva, iast, band, band_label, n_dicts):
+def _headword_strip(slp1, deva, iast, band, band_label, n_dicts, ux=None, token=None):
     esc = html.escape
     band_cls = BAND_CLASS.get(band, "b5")
+    extra = ""
+    if ux:
+        # H3457 staging organs (see app/word_page_ux.py). Variant b keeps the
+        # strip clean and puts both organs in the study rail instead.
+        from word_page_ux import study_badge, fav_button, gloss_switch
+        v = ux["variant"]
+        k = ux.get("slp1", slp1)
+        if v == "a":
+            extra = study_badge(k, v) + fav_button(k, deva, iast, token, v)
+        elif v == "d":
+            # H3480 R2: the Gloss/Full switch lives left of the heart, in the strip.
+            extra = study_badge(k, v) + gloss_switch() + fav_button(k, deva, iast, token, v)
+        elif v == "c":
+            extra = fav_button(k, deva, iast, token, v)
     return (
         '<header class="hw-strip">'
         f'<span class="hw-deva" lang="sa">{esc(deva)}</span>'
@@ -260,6 +274,7 @@ def _headword_strip(slp1, deva, iast, band, band_label, n_dicts):
         # byte-comparable (the paradigm is not part of the card payload). Empty in
         # the crawlable DOM, never fabricated.
         '<span class="gram" data-gram hidden></span>'
+        f"{extra}"
         "</header>"
     )
 
@@ -275,26 +290,53 @@ def _view_toggle():
     )
 
 
-def _entry_html(entry):
+def _entry_html(entry, ux=None):
     esc = html.escape
     fields = entry_fields(entry)
     scan = ""
-    if fields.get("scan_url"):
+    eid = ""
+    if ux:
+        # H3457 staging: stable per-entry anchor + a print anchor that names the
+        # volume/column (PWG rebuilt through the H839 vol-col key).
+        from word_page_ux import scan_anchor, entry_id
+        scan, _url, _label = scan_anchor(fields, ux["variant"])
+        _id = entry_id(fields)
+        eid = f' id="{_id}"' if _id else ""
+    elif fields.get("scan_url"):
         scan = (f'<a class="scan" href="{esc(fields["scan_url"])}" '
                 f'target="_blank" rel="noopener">scan ↗</a>')
     status = (fields.get("review_status") or entry.get("review_status") or "").strip()
     badge = ""
     if status and status not in {"approved", "human_reviewed"}:
         badge = '<span class="chip ai-translated">AI-translated</span>'
+    rendered = fields.get("rendered_html", "")
+    if ux and fields.get("dict") == "pwg":
+        # H3479 wave 2: hydrate literary-source `<ls>` citations into links
+        # (PWG only; see app/ls_hydrate.py). Honest no-op when the two
+        # sibling checkouts it reads are absent.
+        from ls_hydrate import hydrate_pwg_ls
+        rendered, _stats = hydrate_pwg_ls(rendered)
+        if ux.get("sense_dating"):
+            # H4019 P3, PUBLISHED 03-09-2026 (MG order, H4026): additive
+            # first-attestation era badges on the hydrated `<ls>` citations.
+            # app/dating_hydrate.py — same explicit-key contract as the
+            # H3744 organ: never reached without `ux["sense_dating"]` (the
+            # live build sets it), so the default render path is
+            # byte-identical. Badge hits are threaded back through the ux
+            # dict so the page-level caveat block renders only where badges
+            # actually appear.
+            from dating_hydrate import hydrate_dating
+            rendered, dating_stats = hydrate_dating(rendered)
+            ux["_dating_hits"] = ux.get("_dating_hits", 0) + dating_stats["hits"]
     # `rendered_html` is interpolated unescaped — it is HTML by contract. What
     # makes that safe is that it can only have come through
     # `kosha.api.sanitize` (W0C item 6); the serializer has no path that emits
     # unsanitized render output.
     return (
-        '<article class="dict-entry">'
+        f'<article class="dict-entry"{eid}>'
         f'<div class="entry-head"><span class="hw">{esc(fields.get("headword", ""))}</span>'
         f"{scan}{badge}</div>"
-        f'<div class="rendered">{fields.get("rendered_html", "")}</div>'
+        f'<div class="rendered">{rendered}</div>'
         "</article>"
     )
 
@@ -321,7 +363,7 @@ def _dict_tab(d, entries, active):
     )
 
 
-def _dict_panels(groups, default_lang="en"):
+def _dict_panels(groups, default_lang="en", ux=None):
     """Two-level chrome: EN | DE | RU | All, then the dicts of that language."""
     esc = html.escape
     by_dict = {d: entries for d, entries in groups}
@@ -369,7 +411,7 @@ def _dict_panels(groups, default_lang="en"):
         entries = by_dict.get(d) or []
         lang = DICT_LANG[d]
         label = esc(DICT_FULL.get(d, d))
-        body = "".join(_entry_html(e) for e in entries) if entries else _empty_state(d)
+        body = "".join(_entry_html(e, ux) for e in entries) if entries else _empty_state(d)
         hidden = "" if d == first_dict else " hidden"
         panels.append(
             f'<section class="dict-panel" id="panel-{d}" role="tabpanel" '
@@ -400,6 +442,28 @@ def _evidence_block(ev):
     return (
         '<details class="disclosure evidence"><summary>Evidence</summary>'
         f'<ul class="ev-list">{"".join(rows)}</ul>{ex_html}</details>'
+    )
+
+
+def _dating_caveat_block():
+    """Sense-dating preface caveat (H4019/H4026) — the exact RU+EN wording
+    the data layer's README ships, plus the bucket legend. Rendered only on
+    pages where at least one era badge appears (see render_word_page)."""
+    esc = html.escape
+    from dating_hydrate import ERA_LABEL
+    legend = " · ".join(
+        f'<span class="ls-era-demo" data-era="{esc(era)}">{esc(label)}</span>'
+        for era, label in ERA_LABEL.items())
+    return (
+        '<details class="disclosure dating-note"><summary>Sense dating / Датировка значений</summary>'
+        '<p class="dating-caveat" lang="en">The small era badges on the cited sources mark the '
+        '<b>first attestation of a meaning in the cited corpus, not the origin of the meaning</b>. '
+        'Only citations that resolve to exactly one dateable work carry a badge; disputed or '
+        'ambiguous sources are never dated.</p>'
+        '<p class="dating-caveat" lang="ru"><b>Первое засвидетельствование значения в цитируемом '
+        'корпусе — не происхождение значения.</b> Бейдж ставится только у цитат, относящихся ровно '
+        'к одной датированной работе; спорные и омонимичные источники никогда не датируются.</p>'
+        f'<p class="dating-legend">{legend}</p></details>'
     )
 
 
@@ -596,6 +660,27 @@ background:var(--hit-bg);font-size:1.05rem}
 .wp-foot{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--border);
 font-size:.78rem;color:var(--muted)}
 .wp-foot a{color:var(--accent)}
+/* H4019/H4026 sense-dating era badges — quiet chips riding the citation */
+.ls-era{display:inline-block;font-size:.6rem;line-height:1.4;letter-spacing:.02em;
+vertical-align:super;margin-left:.25rem;padding:0 .3rem;border-radius:3px;
+border:1px solid var(--border);color:var(--muted);background:var(--page-bg);
+white-space:nowrap}
+a .ls-era{text-decoration:none}
+.ls-era[data-era="vedic"]{border-color:#a66a00;color:#a66a00}
+.ls-era[data-era="epic-sutra"]{border-color:#7a6ea8;color:#7a6ea8}
+.ls-era[data-era="classical"]{border-color:#3d7a68;color:#3d7a68}
+.ls-era[data-era="early-medieval"]{border-color:#36679b;color:#36679b}
+.ls-era[data-era="late-medieval"]{border-color:#8a5a5a;color:#8a5a5a}
+.dating-note{font-size:.78rem;color:var(--muted)}
+.dating-caveat{margin:.4rem 0}
+.dating-legend{margin:.4rem 0 0}
+.ls-era-demo{display:inline-block;font-size:.62rem;padding:0 .3rem;border-radius:3px;
+border:1px solid var(--border);margin-right:.15rem;white-space:nowrap}
+.ls-era-demo[data-era="vedic"]{border-color:#a66a00;color:#a66a00}
+.ls-era-demo[data-era="epic-sutra"]{border-color:#7a6ea8;color:#7a6ea8}
+.ls-era-demo[data-era="classical"]{border-color:#3d7a68;color:#3d7a68}
+.ls-era-demo[data-era="early-medieval"]{border-color:#36679b;color:#36679b}
+.ls-era-demo[data-era="late-medieval"]{border-color:#8a5a5a;color:#8a5a5a}
 """.strip()
 
 
@@ -651,7 +736,7 @@ PAGE_JS = """
 
 def render_word_page(card, *, token=None, base="../", data_version=None,
                      public_base="", include_doc=True, default_lang="en",
-                     ru_overlay=None, sr_strip=None):
+                     ru_overlay=None, sr_strip=None, ux=None):
     """Render one word page from a card (the /api/v1/lemma envelope shape).
 
     `card`      : {"query": {"key": slp1}, "results": [...], "data_version": ...}
@@ -669,10 +754,22 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
                   sibling/fixture store. Pass `{}` to force the empty state.
     `sr_strip`: optional `{hit, text, layer}` for the SanskritRussian line;
                   `None` joins the public site-tier files.
+    `ux`        : H3457 STAGING layer — `None` (default, the public page,
+                  byte-identical to pre-H3457 output) or a variant letter /
+                  `{"variant": "a"|"b"|"c"}` enabling the study badge,
+                  favorites and print-scan anchors (app/word_page_ux.py).
+                  Not on any public build until a human flips it
+                  (docs/NOT_PUBLISHED_H3457_WPAGE_UX.md).
     """
     esc = html.escape
-    slp1 = card["query"]["key"]
-    if token is None:
+    if token is not None:
+        # Cards store query.key case-folded for capitalised SLP1 lemmas
+        # ("darma" for Darma, "rama" for rAma; kosha#433) — the token is the
+        # exact key, so derive slp1 from it whenever a token is supplied.
+        from word_page_ux import slp1_from_token
+        slp1 = slp1_from_token(token)
+    else:
+        slp1 = card["query"]["key"]
         token = card_token(slp1)
     results = card.get("results", [])
     deva = slp1_to_devanagari(slp1)
@@ -688,30 +785,84 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
     if default_lang not in LANG_DICTS:
         default_lang = "en"
 
-    tabbar, panels = _dict_panels(groups, default_lang=default_lang)
-    strip = _headword_strip(slp1, deva, iast, band, band_label, n_dicts)
+    if ux is not None and not isinstance(ux, dict):
+        ux = {"variant": str(ux)}
+    if ux:
+        from word_page_ux import VARIANTS, DEFAULT_VARIANT
+        if ux.get("variant") not in VARIANTS:
+            ux = dict(ux, variant=DEFAULT_VARIANT)
+        # slp1 is already token-derived above when a token is supplied, so
+        # every UX lookup (core_rank, favorites key) uses the exact key.
+        ux = dict(ux, slp1=slp1)
+
+    tabbar, panels = _dict_panels(groups, default_lang=default_lang, ux=ux)
+    strip = _headword_strip(slp1, deva, iast, band, band_label, n_dicts,
+                            ux=ux, token=token)
     saru = _saru_strip(slp1, sr_strip)
+    ux_css = ux_js = ux_pre = ux_rail = ux_foot = ""
+    if ux:
+        from word_page_ux import (ux_css as _ux_css, ux_js as _ux_js, study_badge,
+                                  study_rail, footer_fav_link, flat_tabbar,
+                                  sense_alignment_block as _sense_alignment_block)
+        v = ux["variant"]
+        ux_css = "\n" + _ux_css(v)
+        ux_js = "\n" + _ux_js(v)
+        ux_foot = footer_fav_link(base)
+        if v == "d":
+            # H3480 R1/R4/R5: three header rows — strip · SanskritRussian · ONE
+            # flat dictionary tab row. The language row, the per-language rows and
+            # the RU sub-row are gone; the toggle moved into the strip.
+            tabbar = flat_tabbar(groups, _first_visible_dict(default_lang))
+        k = ux["slp1"]
+        if v == "c":
+            ux_pre = study_badge(k, v)          # the rank line under the strip
+        elif v == "b":
+            ux_rail = study_rail(k, deva, iast, token, groups)
 
     # <noscript>: show every panel stacked (CSS reveals them), hide the tab bar.
     noscript = ("<noscript><style>.dict-panel[hidden]{display:block!important}"
                 ".lang-tabs,.dict-tabs,.view-toggle{display:none!important}</style></noscript>")
 
-    main = (
-        '<main class="word-page" data-slp1="%s" data-lang="%s">' % (
-            esc(slp1), esc(default_lang))
-        + strip
-        + saru
-        + _view_toggle()
+    body_core = (
+        ("" if (ux and ux["variant"] == "d") else _view_toggle())
         + noscript
         + tabbar
         + panels
         + _evidence_block(ev)
         + _sense_frequency_block(slp1)
+        # H3744 aligned senses — STAGING ONLY, on the ux= staging path, but behind
+        # an EXPLICIT opt-in key rather than the mere presence of `ux`. H3457's
+        # organs were published on 26-08-2026 (commit 070050a), so all 2,324 live
+        # /w/ pages are now rendered WITH ux — `ux` truthiness stopped being a
+        # non-publication gate the day that shipped. Only
+        # `build_word_pages.py --ux-staging` sets `sense_align`; no live build path
+        # can reach this block by accident.
+        # Contract: docs/NOT_PUBLISHED_H3744_SENSE_ALIGNMENT.md.
+        + (_sense_alignment_block(ux["slp1"]) if ux and ux.get("sense_align") else "")
+        # H4019 P3 / H4026 (published 03-09-2026): the sense-dating caveat —
+        # the RU+EN preface contract from data/dating/README.md, shown on the
+        # page whenever at least one era badge rendered (hits threaded through
+        # the per-render ux dict from _entry_html).
+        + (_dating_caveat_block() if ux and ux.get("sense_dating")
+           and ux.get("_dating_hits") else "")
         + _paradigm_block(slp1, base)
         + _upasarga_block(slp1)
+    )
+    # Variant b's rail is a direct child of <main> (grid-placed by CSS, no
+    # wrapper div): entry rendered_html is Cologne markup and may close a
+    # wrapper early, which would spill the panels into the rail column.
+    main = (
+        '<main class="word-page" data-slp1="%s" data-lang="%s">' % (
+            esc(slp1), esc(default_lang))
+        + strip
+        + ux_pre
+        + ux_rail
+        + saru
+        + body_core
         + '<footer class="wp-foot">Gasuns Sanskrit Dictionary · '
         + '<a href="%sinflect/">inflection lookup</a> · ' % esc(base)
         + '<a href="%sbrowse/">browse</a> · ' % esc(base)
+        + ux_foot
         + 'entries from MW, PWG &amp; Apte (Cologne), rendered verbatim.</footer>'
         + "</main>"
     )
@@ -732,9 +883,9 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
         f'<meta name="description" content="{desc}">'
         f'<meta name="data-version" content="{esc(dv)}">'
         f"{canonical}"
-        f"<style>{PAGE_CSS}</style>"
+        f"<style>{PAGE_CSS}{ux_css}</style>"
         "</head><body>"
         f"{main}"
-        f"<script>{PAGE_JS}</script>"
+        f"<script>{PAGE_JS}{ux_js}</script>"
         "</body></html>\n"
     )

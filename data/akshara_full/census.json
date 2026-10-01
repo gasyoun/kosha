@@ -1,0 +1,20 @@
+{
+  "heads": 51663,
+  "frozen_ts": "2026-08-27T17:55:49+00:00",
+  "sources": [
+    {
+      "url": "https://akshara.ru/sitemap-kosha-001.xml",
+      "sha256": "2c87bfa9ed2a049679e3927301197f5b2d1ec09839f8fbd5427d88215887fddf",
+      "bytes": 5230674,
+      "locs": 40000
+    },
+    {
+      "url": "https://akshara.ru/sitemap-kosha-002.xml",
+      "sha256": "3e1d3089504cb45a60be6b6c432644ebef78adf680d03272c0c6d3b3a7bc9f85",
+      "bytes": 1537588,
+      "locs": 11663
+    }
+  ],
+  "method": "site's own sitemap-kosha-001/002.xml /kosha/w/<slp1> index (robots-allowed, no query strings); card fetches later use the H3455 /kosha?q= contract with the same URL guard",
+  "handoff": "H3597"
+}

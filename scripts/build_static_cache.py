@@ -225,27 +225,112 @@ def build_index(con, out_dir: Path):
 # --------------------------------------------------------------------------- #
 # Deliverable 3 — full 222k card set as a release tarball (opt-in, ~682 MB)
 # --------------------------------------------------------------------------- #
-def build_full_tarball(con, tar_path: Path):
+def _gzip_compress(src: Path, dst: Path, *, chunk_size: int = 1 << 20) -> None:
+    """Stream-compress the completed staging tar to the final .tar.gz.
+
+    Idempotent and comparatively cheap (no DB work, no lemma_card N+1) — a
+    kill during this step just reruns the compression, never the 222k-lemma
+    card build (H4407)."""
+    import gzip
+
+    tmp = dst.with_suffix(dst.suffix + ".gztmp")
+    with open(src, "rb") as fin, gzip.open(tmp, "wb") as fout:
+        while True:
+            chunk = fin.read(chunk_size)
+            if not chunk:
+                break
+            fout.write(chunk)
+    os.replace(tmp, dst)
+
+
+def build_full_tarball(con, tar_path: Path, *, checkpoint_every: int = 200):
+    """Emit the full card set to `tar_path`, resumable after a kill -9.
+
+    ~682MB / 222k DB-backed lemma_card() calls used to write straight into a
+    single `w:gz` tar stream with no resume point — a crash at 90% restarted
+    from zero (H4407). Python's tarfile does not support append mode for a
+    *compressed* tar ('a:gz' raises), so the resumable staging area is an
+    UNCOMPRESSED tar (`*.stage`). The finished stage tar is gzip-compressed
+    to the real target only once every card is present.
+
+    Resuming into that stage tar deliberately does NOT use tarfile's own
+    `mode="a"`: append mode scans forward through members looking for the
+    standard end-of-archive trailer (two zero-filled blocks), but that
+    trailer is written by `TarFile.close()` — and `TarFile.__exit__`
+    explicitly skips calling `close()` when an exception is in flight, to
+    avoid writing a trailer over data that may be incomplete. A real
+    `kill -9` never runs any Python cleanup code at all, so the stage tar a
+    kill leaves behind never has that trailer, and `mode="a"` on it raises
+    `ReadError: empty header`. Instead: after every durably-flushed member,
+    the exact byte offset is recorded in the done sidecar (`*.done`, one
+    `<offset>\\t<slp1>` line per card). On resume the stage file is opened
+    raw, seeked to the last recorded offset, and TRUNCATED there — dropping
+    any torn write from the one card that was in flight at kill time — then
+    handed to `tarfile.open(fileobj=..., mode="w")`, which simply appends
+    new blocks from wherever the file cursor already is.
+    """
     dv = data_version(con)
     tar_path.parent.mkdir(parents=True, exist_ok=True)
     keys = [r["slp1_key"] for r in con.execute(
         "SELECT DISTINCT slp1_key FROM entries ORDER BY slp1_key"
     ).fetchall()]
     total = len(keys)
-    print(f"[tarball] {total} entry-bearing lemmas -> {tar_path}")
 
+    stage_tar = tar_path.with_suffix(tar_path.suffix + ".stage")
+    done_path = tar_path.with_suffix(tar_path.suffix + ".done")
+
+    done = set()
+    resume_offset = 0
+    if stage_tar.is_file() and done_path.is_file():
+        lines = done_path.read_text(encoding="utf-8").splitlines()
+        if lines:
+            for line in lines:
+                offset_str, slp1 = line.split("\t", 1)
+                done.add(slp1)
+            resume_offset = int(lines[-1].split("\t", 1)[0])
+            print(f"[tarball] resuming: {len(done)}/{total} cards already staged "
+                  f"in {stage_tar} (truncating to byte {resume_offset})")
+    if not done:
+        # No usable resume point (first run, or a kill landed before even one
+        # card was durably recorded) -- start clean rather than guess.
+        for stale in (stage_tar, done_path):
+            if stale.exists():
+                stale.unlink()
+
+    remaining = [slp1 for slp1 in keys if slp1 not in done]
+    print(f"[tarball] {total} entry-bearing lemmas, {len(remaining)} to stage -> {tar_path}")
+
+    raw = open(stage_tar, "r+b" if stage_tar.exists() else "w+b")
+    raw.seek(resume_offset)
+    raw.truncate()
     t0 = time.time()
-    with tarfile.open(tar_path, "w:gz") as tar:
-        for i, slp1 in enumerate(keys, 1):
+    n_done_at_start = len(done)
+    with tarfile.open(fileobj=raw, mode="w") as tar, \
+            open(done_path, "a", encoding="utf-8") as done_fh:
+        for i, slp1 in enumerate(remaining, 1):
             payload = json.dumps(lemma_card(con, slp1, dv),
                                  ensure_ascii=False, separators=(",", ":")).encode("utf-8")
             info = tarfile.TarInfo(name=f"cards/{card_token(slp1)}.json")
             info.size = len(payload)
             info.mtime = 0  # deterministic archive (no Date.now dependence)
             tar.addfile(info, io.BytesIO(payload))
-            if i % 5000 == 0 or i == total:
+            raw.flush()
+            offset = raw.tell()
+            done_fh.write(f"{offset}\t{slp1}\n")
+            done_fh.flush()
+            if i % checkpoint_every == 0 or i == len(remaining):
+                os.fsync(raw.fileno())
+                os.fsync(done_fh.fileno())
+            if i % 5000 == 0 or i == len(remaining):
+                done_total = n_done_at_start + i
                 rate = i / max(time.time() - t0, 1e-6)
-                print(f"[tarball] {i}/{total}  {rate:.0f}/s")
+                print(f"[tarball] {done_total}/{total}  {rate:.0f}/s")
+    raw.close()
+
+    print(f"[tarball] all {total} cards staged -> compressing to {tar_path}")
+    _gzip_compress(stage_tar, tar_path)
+    stage_tar.unlink()
+    done_path.unlink()
     size_mb = tar_path.stat().st_size / 1e6
     print(f"[tarball] done: {size_mb:.1f} MB")
 
