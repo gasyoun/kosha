@@ -15,8 +15,14 @@ _Created: 08-07-2026 · Last updated: 01-10-2026_
 
 ## What is left (01-10-2026)
 
-- [ ] W4a — polish the [`/concordance/panini/`](https://github.com/gasyoun/kosha/blob/main/concordance/panini/index.html)
+- [x] W4a — polish the [`/concordance/panini/`](https://github.com/gasyoun/kosha/blob/main/concordance/panini/index.html)
   page — gate: none (agent-doable, next-wave candidate)
+  — **DONE 01-10-2026 (roadmap drain A02): XSS-hardened sinks (H5545 house
+  pattern: quote-escaping `esc()`, all shard-fed attribute/numeric sinks covered),
+  CSV fallback links for both data TSVs, lit-count adhyāya buttons (dark adhyāya 5
+  dimmed), coverage show-all beyond the 500-row cap; new gate
+  `tests/test_panini_page_security.py` 6/6, H1585 surface contract still 4/4 —
+  [#651](https://github.com/gasyoun/kosha/pull/651)**
 - [ ] Route the Q3 morph give-back payload (the 4,900-cell machine-decided triage of
   [`morph_giveback_candidates.tsv`](https://github.com/gasyoun/kosha/blob/main/data/concordance/morph_giveback_candidates.tsv))
   as the kosha-side queued port — gate: none (agent-doable, next-wave candidate; the
