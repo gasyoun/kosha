@@ -54,7 +54,6 @@ MANIFEST = [
     ("SanskritLexicography/RussianTranslation/src/corpus_lexicon.jsonl", "corpus_lexicon.jsonl"),
     ("kosha/data/db/kosha.db", "kosha.db"),
     ("VisualDCS/src/DCS-data-2026/dcs_full.sqlite", "dcs_full.sqlite"),
-    ("SamudraManthanam/web/corpus.db", "corpus.db"),
     ("SanskritLexicography/RussianTranslation/glossary/surface_glossary.jsonl", "renou/surface_glossary.jsonl"),
 ]
 
@@ -63,17 +62,21 @@ MANIFEST = [
 # are regenerable pipeline fixtures, not canonical data). Verified 06-07-2026;
 # see GTD dedup-ruling row before deleting any stage — sizes differ per stage
 # so these are NOT byte-identical duplicates despite matching row counts.
+# 03-10-2026 MG ruling (GTD 0LX, chat vote A): underscore-spelled renou variants
+# dropped — no .sha256 sidecar ever marked them canonical (H3389 dot-variants
+# are), sources absent on the Mac lane; corpus.db removed as a regenerable
+# stub. Count note: the GTD row said 13, the disk probe found 11 underscore
+# entries + corpus.db.
 _RENOU_DIR = "SanskritLexicography/RussianTranslation/src"
 _RENOU_FILES = [
-    "ap.renou.jsonl", "ap90.renou.jsonl", "ap90_renou.jsonl", "ap_renou.jsonl",
-    "ap_renou.bhs.jsonl", "ap_renou.bhs.wl.jsonl",
+    "ap.renou.jsonl", "ap90.renou.jsonl",
     "assembled_cards.jsonl", "assembled_cards.renou.jsonl",
     "assembled_cards.renou.bhs.jsonl", "assembled_cards.renou.bhs.wl.jsonl",
-    "ben.renou.jsonl", "ben_renou.jsonl",
-    "bhs.renou.jsonl", "bhs_renou.jsonl",
-    "mw.renou.jsonl", "mw_renou.jsonl", "mw_renou.bhs.jsonl", "mw_renou.bhs.wl.jsonl",
-    "pw.renou.jsonl", "pw_renou.jsonl", "pwg.renou.jsonl", "pwg_ru_translated.renou.jsonl",
-    "sch.renou.jsonl", "sch_renou.jsonl",
+    "ben.renou.jsonl",
+    "bhs.renou.jsonl",
+    "mw.renou.jsonl",
+    "pw.renou.jsonl", "pwg.renou.jsonl", "pwg_ru_translated.renou.jsonl",
+    "sch.renou.jsonl",
 ]
 MANIFEST += [(f"{_RENOU_DIR}/{name}", f"renou/{name}") for name in _RENOU_FILES]
 
