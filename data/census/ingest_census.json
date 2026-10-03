@@ -1,0 +1,13 @@
+{
+  "_comment": "G89 (H5778) ingest census floors — LOWER-BOUND regression lock over data/db/kosha.db. The H345 heritage_anchor ingest and the H111 heritage-forms surplus are the facts locked: a rebuild that drops a table, loses rows, or silently SKIPS the heritage stage goes red here. Floors are lower bounds — growth from legitimate re-ingests is fine and needs no bump; only a real drop trips the gate. Measured at mint 03-10-2026 from the local build (data_version 0.1.0-dev, build profile full).",
+  "measured_at": "2026-10-03",
+  "measured_on": "data/db/kosha.db (build_source_lock sha d24bd18f…, H837-stage heritage re-run)",
+  "floors": {
+    "heritage_anchor": 185803,
+    "forms": 1378401,
+    "forms_heritage": 951991,
+    "entries": 444773,
+    "lemmas": 323425,
+    "senses": 692404
+  }
+}
