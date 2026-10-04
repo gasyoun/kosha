@@ -28,7 +28,7 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from wsd_core import CACHE_DIR, SCL_CACHE, ensure_cache_dir, MODEL_PROV  # noqa: E402
+from wsd_core import CACHE_DIR, SCL_CACHE, ensure_cache_dir, MODEL_PROV
 
 # Public SCL entry points historically probed for Reading Aid / morph.
 # We only HEAD/GET lightly; any non-JSON or Anubis HTML is treated as blocked.

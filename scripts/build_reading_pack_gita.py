@@ -24,7 +24,7 @@ from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT.parent / "sanskrit-util" / "py"))
-from sanskrit_util import to_slp1  # noqa: E402
+from sanskrit_util import to_slp1
 
 MASTER = ROOT / "data" / "gita" / "gita_gold_master.tsv"
 KOSHA_DB = ROOT / "data" / "db" / "kosha.db"

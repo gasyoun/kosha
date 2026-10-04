@@ -37,7 +37,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 # this table is keyed by is byte-identical to the `upos` + `morph` a reading pack
 # carries per token. Re-deriving them here would let the two silently drift, and the
 # scorer's join would then miss on every token (the FINDINGS §82 class).
-from build_reading_pack import MORPH_FEATS, morph_str  # noqa: E402
+from build_reading_pack import MORPH_FEATS, morph_str
 
 GH = ROOT.parent if (ROOT.parent / "VisualDCS").exists() else ROOT.parent.parent
 DCS = GH / "VisualDCS" / "src" / "DCS-data-2026" / "dcs_full.sqlite"

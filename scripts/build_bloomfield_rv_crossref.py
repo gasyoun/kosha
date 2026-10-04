@@ -53,7 +53,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent / "sanskrit-util" / "py"))
-from sanskrit_util import form_key  # noqa: E402
+from sanskrit_util import form_key
 
 sys.stdout.reconfigure(encoding="utf-8")
 

@@ -22,18 +22,18 @@ for extra in (ROOT, ROOT / "src", ROOT / "app", ROOT / "scripts"):
     if str(extra) not in sys.path:
         sys.path.insert(0, str(extra))
 
-from kosha.api import repository, serializer  # noqa: E402
-from kosha.api.models import SaltEntry  # noqa: E402
-from kosha.query.connection import (  # noqa: E402
+from kosha.api import repository, serializer
+from kosha.api.models import SaltEntry
+from kosha.query.connection import (
     HISTORY_ALIAS,
     STABLE_ALIASES,
     assert_no_placement_leak,
     attached_aliases,
     open_query_connection,
 )
-from kosha.query.samples import GOLDEN_SAMPLE_QUERIES, run_sample_queries  # noqa: E402
-from kosha.query.split import split_monolith_to_facade  # noqa: E402
-from kosha.settings import Settings  # noqa: E402
+from kosha.query.samples import GOLDEN_SAMPLE_QUERIES, run_sample_queries
+from kosha.query.split import split_monolith_to_facade
+from kosha.settings import Settings
 
 FIXTURE_DB = ROOT / "data" / "db" / "kosha_fixture.db"
 

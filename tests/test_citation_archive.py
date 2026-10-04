@@ -25,7 +25,7 @@ for extra in (ROOT, ROOT / "src", ROOT / "app"):
     if str(extra) not in sys.path:
         sys.path.insert(0, str(extra))
 
-from kosha.api.archive import (  # noqa: E402
+from kosha.api.archive import (
     DUMP_NAME,
     METADATA_NAME,
     mounted_versions,
@@ -34,8 +34,8 @@ from kosha.api.archive import (  # noqa: E402
     validate_release_asset,
     validate_version,
 )
-from kosha.cite import cite_object, release_asset_url  # noqa: E402
-from kosha.settings import Settings, SettingsError  # noqa: E402
+from kosha.cite import cite_object, release_asset_url
+from kosha.settings import Settings, SettingsError
 
 ARCHIVE_SCHEMA = """
 CREATE TABLE IF NOT EXISTS archive (

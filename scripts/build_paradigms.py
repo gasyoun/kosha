@@ -50,8 +50,8 @@ sys.stderr.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "app"))
 
-from paradigm import build_paradigm  # noqa: E402
-from reverse_lookup import (  # noqa: E402
+from paradigm import build_paradigm
+from reverse_lookup import (
     _inflection_analyses, _forms_witnesses, _unified_lemmas,
 )
 

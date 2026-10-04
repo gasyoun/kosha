@@ -67,11 +67,11 @@ DEFAULT_OUT = ROOT / "data" / "hybrid"
 
 # Reuse the E1 comparison engine verbatim — same classifier, same verdicts, so
 # the applied fix set can never diverge from E1_DIVERGENCE_REPORT.md's numbers.
-from compare_vidyut_cologne import (  # noqa: E402
+from compare_vidyut_cologne import (
     GENDER_TO_LINGA, cologne_cells, is_natva_diff, subclass_diff,
     select_stems, vidyut_cell,
 )
-from vidyut.prakriya import Vyakarana, Pratipadika  # noqa: E402
+from vidyut.prakriya import Vyakarana, Pratipadika
 
 CASES = ["nom", "acc", "instr", "dat", "abl", "gen", "loc", "voc"]
 NUMBERS = ["sg", "du", "pl"]

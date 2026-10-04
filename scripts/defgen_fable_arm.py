@@ -32,7 +32,7 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from defgen_run_baselines import load_sample, prompt_for  # noqa: E402
+from defgen_run_baselines import load_sample, prompt_for
 
 DATA = os.path.join(HERE, "..", "data", "eval", "defgen")
 ARM = "F1_fable_ctx"

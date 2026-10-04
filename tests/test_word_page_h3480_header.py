@@ -15,8 +15,8 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "app"))
 sys.path.insert(0, str(ROOT / "src"))
 
-from word_page import render_word_page  # noqa: E402
-from kosha.api.ru_join import ru_markup_prepass  # noqa: E402
+from word_page import render_word_page
+from kosha.api.ru_join import ru_markup_prepass
 
 CARDS = ROOT / "docs" / "cards"
 pytestmark = pytest.mark.skipif(not (CARDS / "gam.json").exists(), reason="docs/cards/gam.json missing")

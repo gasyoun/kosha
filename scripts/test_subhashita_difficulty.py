@@ -28,7 +28,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-import build_subhashita_difficulty as bd  # noqa: E402
+import build_subhashita_difficulty as bd
 
 DIFF_TSV = ROOT / "data" / "subhashita" / "subhashita_difficulty.tsv"
 BAND_TSV = ROOT / "data" / "subhashita" / "beginner_band.tsv"

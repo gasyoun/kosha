@@ -42,7 +42,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from akshara_pilot_crawl import MAX_RETRY, THROTTLE_S, guarded_fetch  # noqa: E402
+from akshara_pilot_crawl import MAX_RETRY, THROTTLE_S, guarded_fetch
 
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "data" / "akshara_full" / "head_manifest.jsonl"

@@ -37,7 +37,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "app"))
 DB_PATH = ROOT / "data" / "db" / "kosha.db"
 
-from render import render  # noqa: E402
+from render import render
 
 
 def _con():
@@ -165,7 +165,7 @@ def measure_handler_latency():
     # the exact production code path (transliteration, render, envelope,
     # _entry_payload, sense_id formatting) minus only the HTTP/ASGI framing
     # (measured separately in section 4).
-    import main as m  # noqa: E402
+    import main as m
     from fastapi import BackgroundTasks, HTTPException, Response
     from starlette.requests import Request as StarletteRequest
     con_warm = _con()

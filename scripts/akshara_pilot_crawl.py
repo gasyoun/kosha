@@ -51,7 +51,7 @@ def guarded_fetch(url: str) -> tuple[int, bytes]:
         try:
             with urllib.request.urlopen(req, timeout=30) as resp:
                 return resp.status, resp.read()
-        except urllib.error.HTTPError as e:  # noqa: SLF001 - stdlib attr
+        except urllib.error.HTTPError as e:
             last = e
             if e.code in (429, 500, 502, 503):
                 time.sleep(min(60, THROTTLE_S * (2 ** attempt)))

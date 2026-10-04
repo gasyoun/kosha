@@ -46,7 +46,7 @@ from pathlib import Path
 _su_root = os.environ.get("GITHUB_ROOT")
 _su = (Path(_su_root) if _su_root else Path(__file__).resolve().parent.parent.parent) / "sanskrit-util" / "py"
 sys.path.insert(0, str(_su))
-from sanskrit_util import form_key, norm, normalize_sanskrit, to_slp1  # noqa: E402
+from sanskrit_util import form_key, norm, normalize_sanskrit, to_slp1
 
 RECORD_FIELDS = [
     "anchor_type",       # dict-entry | parallel-verse | inflection | panini-sutra

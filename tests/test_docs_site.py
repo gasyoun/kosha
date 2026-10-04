@@ -12,9 +12,9 @@ sys.path.insert(0, str(REPO / "scripts"))
 
 zk = pytest.importorskip("zettelkastenwiki")
 
-from build_docs_site import CONFIG, build_docs_site  # noqa: E402
+from build_docs_site import CONFIG, build_docs_site
 
-from zettelkastenwiki import testing  # noqa: E402
+from zettelkastenwiki import testing
 
 
 @pytest.fixture(scope="module")

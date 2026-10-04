@@ -20,7 +20,7 @@ LEMMA_FREQ = ROOT / "data" / "frequency" / "lemma_frequency.tsv"
 W = ROOT / "w"
 
 sys.path.insert(0, str(ROOT / "scripts"))
-import measure_pages_budget as mpb  # noqa: E402
+import measure_pages_budget as mpb
 
 needs_data = pytest.mark.skipif(
     not CARDS.exists() or not ATTESTED.exists() or not LEMMA_FREQ.exists(),

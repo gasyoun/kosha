@@ -74,8 +74,8 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "app"))
 sys.path.insert(0, str(ROOT.parent / "sanskrit-util" / "py"))
 
-from paradigm import build_paradigm  # noqa: E402
-from sanskrit_util import to_slp1, from_slp1, slp1_to_devanagari  # noqa: E402
+from paradigm import build_paradigm
+from sanskrit_util import to_slp1, from_slp1, slp1_to_devanagari
 
 KOSHA_DB = ROOT / "data" / "db" / "kosha.db"
 DCS_DB = ROOT.parent / "VisualDCS" / "src" / "DCS-data-2026" / "dcs_full.sqlite"

@@ -31,7 +31,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "app"))
 sys.path.insert(0, str(ROOT / "src"))
 
-from word_page_ux import core_rank_of, pwg_pc_of  # noqa: E402
+from word_page_ux import core_rank_of, pwg_pc_of
 
 VIEWPORTS = (375, 1280)
 

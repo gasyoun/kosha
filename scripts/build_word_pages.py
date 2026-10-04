@@ -54,7 +54,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "app"))
 
-from word_page import render_word_page, from_slp1, card_token  # noqa: E402
+from word_page import render_word_page, from_slp1, card_token
 
 LEMMA_FREQ = ROOT / "data" / "frequency" / "lemma_frequency.tsv"
 PAGES_SOFT_CAP_MB = 1024.0

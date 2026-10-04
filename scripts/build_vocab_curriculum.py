@@ -64,7 +64,7 @@ OUT_APKG = ROOT / "data" / "frequency" / "vocab_curriculum.apkg"
 OUT_HTML = ROOT / "reading" / "vocabulary" / "curriculum" / "index.html"
 
 sys.path.insert(0, str(ROOT.parent / "sanskrit-util" / "py"))
-from sanskrit_util import from_slp1, slp1_to_devanagari  # noqa: E402
+from sanskrit_util import from_slp1, slp1_to_devanagari
 
 DICT_ORDER = ("mw", "pwg", "ap90")
 TAG_RE = re.compile(r"<[^>]+>")

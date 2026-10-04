@@ -27,12 +27,12 @@ for extra in (ROOT, ROOT / "src", ROOT / "app"):
     if str(extra) not in sys.path:
         sys.path.insert(0, str(extra))
 
-from kosha.api.archive import DUMP_NAME, METADATA_NAME  # noqa: E402
-from kosha.api.readiness import (  # noqa: E402
+from kosha.api.archive import DUMP_NAME, METADATA_NAME
+from kosha.api.readiness import (
     assess_readiness,
     readiness_payload,
 )
-from kosha.settings import Settings  # noqa: E402
+from kosha.settings import Settings
 
 CORE_SCHEMA = """
 CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT);

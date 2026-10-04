@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "app"))
-from scan_resolver import scan_url  # noqa: E402
+from scan_resolver import scan_url
 
 
 def test_pwg_requires_vol_and_folds_it_into_page():

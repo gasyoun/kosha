@@ -42,7 +42,7 @@ def _github_root(root):
 
 GH = _github_root(ROOT)
 sys.path.insert(0, str(GH / "sanskrit-util" / "py"))
-import sanskrit_util as su  # noqa: E402
+import sanskrit_util as su
 
 # --- precondition: the fix must be live in the library these scripts will import --------
 # Each row is (must_be_equal, left, right, why). Both halves matter: the EQUAL rows prove the

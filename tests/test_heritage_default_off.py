@@ -18,9 +18,9 @@ from fastapi.testclient import TestClient
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "app"))
-from app.main import app  # noqa: E402
-from app.db import DB_PATH  # noqa: E402
-import segmenter  # noqa: E402
+from app.main import app
+from app.db import DB_PATH
+import segmenter
 
 client = TestClient(app)
 

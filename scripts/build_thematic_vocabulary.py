@@ -67,7 +67,7 @@ OUT_APKG = ROOT / "data" / "frequency" / "thematic_vocabulary.apkg"
 OUT_HTML = ROOT / "reading" / "vocabulary" / "thematic" / "index.html"
 
 sys.path.insert(0, str(GH / "sanskrit-util" / "py"))
-from sanskrit_util import from_slp1, slp1_to_devanagari  # noqa: E402
+from sanskrit_util import from_slp1, slp1_to_devanagari
 
 # Vargas in file order -> canonical IDs (must match semdom_varga_crosswalk.csv's
 # ak_varga_id and SanskritLexicography/data/semdom_ak_bridge.py's VARGA_IDS).

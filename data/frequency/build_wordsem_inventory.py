@@ -67,12 +67,12 @@ COLUMNS = ['synset_id', 'concept', 'gloss', 'wordnet21id', 'supersense',
 
 try:
     sys.path.insert(0, os.path.join(HERE, '..', '..', '..', 'sanskrit-util', 'py'))
-    from sanskrit_util import to_slp1 as _su_to_slp1  # noqa: E402
+    from sanskrit_util import to_slp1 as _su_to_slp1
     _HAVE_SU = True
 except Exception:
     _HAVE_SU = False
 
-from indic_transliteration import sanscript  # noqa: E402
+from indic_transliteration import sanscript
 
 _WS = re.compile(r'\s+')
 
