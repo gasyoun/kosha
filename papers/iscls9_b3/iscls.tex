@@ -1,0 +1,371 @@
+% ISCLS-9 B3 full paper — definition generation + gloss-grounded WSD for Sanskrit.
+% Build: xelatex iscls && bibtex iscls && xelatex iscls && xelatex iscls
+% Agent-authored draft (H5877, 04-10-2026): experiments, structure, formatting by the
+% agent lane; passages marked \avnote{} are slots for the MG author-voice pass
+% (CFP GenAI policy: generative AI only for paraphrasing/formatting with acknowledgment).
+
+\documentclass[11pt]{article}
+\usepackage{scl}
+\usepackage{times}
+\usepackage{url}
+\usepackage{latexsym}
+
+\usepackage{fontspec, xunicode, xltxtra}
+\newfontfamily\skt[Script=Devanagari]{Sanskrit 2020}
+
+% author-voice pass marker: small gray italic note, stripped before submission
+\newcommand{\avnote}[1]{\begin{quote}\small\itshape [Author-voice pass: #1]\end{quote}}
+
+\title{Definition Generation and Gloss-Grounded Word Sense Disambiguation for Sanskrit:\\
+A Reproducible Evaluation on the Dictionary Side of the DCS--CDSL Crosswalk}
+
+\author{Author Name \\
+  Affiliation \\
+  {\tt email@domain}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Large language models are increasingly evaluated on lexicographic tasks---generating
+dictionary-style definitions and selecting word senses---but Sanskrit, despite its
+exceptionally rich lexicographic tradition, has been largely absent from this line of
+work. The one published Sanskrit WSD-from-definitions system operates on the corpus side
+of the Digital Corpus of Sanskrit (DCS). We present the first evaluation of this task
+class on the \emph{dictionary} side: definition generation and gloss-grounded sense
+selection scored against Monier-Williams and Heritage (Huet) glosses, connected to corpus
+attestations through the DCS--CDSL headword crosswalk. All data are local, committed and
+license-checked. Our definition-generation track evaluates five system arms on a frozen,
+stratified 500-headword sample with deterministic metrics and a blinded LLM judge under
+explicit gates; a cross-lingual re-scoring against Huet's French glosses shows the system
+ranking to be reference-invariant. Our WSD track contributes a fully deterministic
+gold---DCS word-sense annotations resolved onto MW sense divisions---and shows that a
+gloss-grounded LLM arm (54.3\%) falls far short of a corpus-frequency baseline (84.3\%)
+on held-out polysemous items, a negative result that locates the difficulty of Sanskrit
+WSD in sense granularity and usage priors rather than in gloss access. Every number in
+this paper reproduces from committed artifacts with one command per track.
+\avnote{Abstract drafted by the experiment lane; the thesis sentence and the framing of
+the negative result are the author's to own. Gate: MG abstract approval (GTD ISCLS-9,
+due 10-10-2026).}
+\end{abstract}
+
+\section{Introduction}
+
+Computational lexicography for Sanskrit sits on two large, independently curated
+resources: the dictionary tradition---above all Monier-Williams
+\cite{monier-williams-1899} and Huet's Sanskrit Heritage Dictionary
+\cite{huet-2026-heritage}---and the Digital Corpus of Sanskrit (DCS)
+\cite{hellwig-dcs}, a 5.7-million-token morphologically annotated corpus whose recent
+releases carry human word-sense annotations over 531{,}747 tokens. A growing
+``definition modeling'' line of work evaluates language models on generating and using
+dictionary definitions \cite{periti-etal-2025-definition,liu-etal-2026-lm}, and Hellwig
+et al.\ \cite{hellwig-etal-2026-sanskrit} have shown that lexicographic definitions can
+drive word sense disambiguation for Sanskrit at scale.
+
+That system, however, lives entirely on the corpus side of the DCS--CDSL headword
+crosswalk. The dictionary side---where the glosses are the object of evaluation rather
+than a training signal---remains unevaluated: no definition-generation or
+gloss-grounded WSD evaluation has been run over the CDSL dictionaries, and none over the
+crosswalk that links them to corpus evidence. This paper closes that gap with two tracks
+over one frozen headword universe.
+
+\textbf{Track 1: definition generation.} Five system arms---a derangement floor, three
+API baselines of two model families, and a strong-model reference---generate English
+glosses for a frozen, frequency- and polysemy-stratified sample of 500 Monier-Williams
+headwords, scored with chrF, token-overlap F1 and a blinded LLM judge under explicit
+gates. A second reference re-scores the same arms against Huet's French glosses on the
+333-headword MW$\cap$Heritage subset.
+
+\textbf{Track 2: gloss-grounded WSD with a deterministic gold.} For polysemous lemmas of
+the same universe we build a sense-selection task whose gold requires no manual
+annotation: a DCS sentence, the lemma's numbered MW sense glosses, and the correct sense
+recovered by joining DCS's own word-sense annotations to MW sense divisions through the
+crosswalk. We score a gloss-grounded LLM arm against the corpus-frequency (MFS) baseline
+that the same data support, with paired significance.
+
+Our contributions are: (i) the first definition-generation evaluation on Sanskrit
+lexicographic data, with its cross-lingual reference-invariance check; (ii) the first
+gold-scored gloss-grounded WSD evaluation on the dictionary side of the crosswalk, built
+without any new annotation; (iii) an honest negative result---prompting with glosses and
+context is not competitive with corpus priors on this gold---and the error analysis that
+localises it; and (iv) a fully reproducible evaluation stack (frozen samples, committed
+artifacts, one-command re-scoring and validation).
+
+\section{Related Work}
+
+\paragraph{Definition modeling.} Periti et al.\ \cite{periti-etal-2025-definition}
+survey definition generation for word meaning modeling across monolingual, multilingual
+and cross-lingual settings; LM-Lexicon \cite{liu-etal-2026-lm} improves definition
+modeling by harmonising semantic experts. Neither line touches Sanskrit. Our Track 1
+imports their evaluation class (reference-based surface metrics plus a judged adequacy
+score) into Sanskrit lexicography.
+
+\paragraph{Sanskrit WSD.} Hellwig et al.\ \cite{hellwig-etal-2026-sanskrit} train a
+supervised bi-encoder on MW lexicographic definitions and evaluate on DCS-anchored gold,
+establishing that definitions are a usable sense signal for Sanskrit. Patel and Kulkarni
+\cite{patel-kulkarni-2024-word} align senses \emph{across} Sanskrit lexica---the
+operation our gold construction depends on, here used deterministically via the
+DCS--CDSL crosswalk rather than as a learned model. Our Track 2 differs from
+\cite{hellwig-etal-2026-sanskrit} in three deliberate ways: it is zero-shot prompting
+rather than a fine-tuned system, it scores on the dictionary side of the crosswalk, and
+it reports against a corpus-frequency baseline with paired significance, accepting in
+advance that a negative outcome is a publishable finding.
+
+\paragraph{LLM judges.} We use an LLM judge only under the standard gates---floor
+separation and correlation with a deterministic metric---motivated by large-scale
+evidence that LLM judgments do not automatically match human ones
+\cite{bavaresco-etal-2025-llms}. A human-scored subsample is scheduled before
+camera-ready and flagged in Limitations.
+
+\section{Data}
+
+All datasets are pre-existing, committed assets consumed, not rebuilt.
+
+\textbf{A3: MW glosses.} 187{,}506 SLP1-keyed English glosses extracted from Monier-
+Williams \cite{monier-williams-1899} (public domain, 1899). Glosses carry markup-
+stripping artifacts; all arms share them equally.
+
+\textbf{D20: Heritage glosses.} 24{,}549 entries from Huet's Sanskrit Heritage Dictionary
+\cite{huet-2026-heritage}, keyed by MW headword with entry anchors; used as the
+independent second reference.
+
+\textbf{C15: the crosswalk and the sense map.} The DCS$\leftrightarrow$CDSL headword
+crosswalk (98{,}606 rows) links corpus lemmas to dictionary entries and defines the
+frozen universe's membership. A companion committed map resolves DCS word-sense synset
+ids onto MW sense divisions for the WSD gold; its exact/overlap rows cover 32{,}369
+(synset, lemma) pairs.
+
+\textbf{DCS 2026.} The Digital Corpus of Sanskrit \cite{hellwig-dcs}: 5.69M tokens,
+754{,}726 sentences, with per-token word-sense annotations (\texttt{m\_wordsem}) over
+531{,}747 tokens, and a lemma inventory with IAST lemmas and grammar tags.
+
+\textbf{E26: corpus frequency.} Lemma frequency sidecar (83{,}277 DCS lemmas) used for
+the frozen sample's frequency strata.
+
+Licenses: MW gloss text is public domain; DCS text and annotations are CC BY with
+attribution to Oliver Hellwig; the frozen samples and gold tables are released under the
+kosha public-tier license with those attributions. No external data were added.
+
+\section{Evaluation Design}
+
+\subsection{Frozen headword universe}
+
+The two tracks share one frozen 500-headword sample (seed 730, deterministic builder,
+SHA-256 digests of all inputs committed): the universe is the 11{,}316 SLP1 keys present
+in A3 $\cap$ E26 $\cap$ C15, stratified 3$\times$3 by corpus frequency rank (high/mid/low)
+and MW top-level sense count (mono / 2--4 / $\geq$5), 56 cells targeted, final $n=500$
+(one cell exhausts at 52; every skip is logged). A candidate requires at least three
+usable DCS attestation sentences (4--40 tokens, $\leq$2 per work). The freeze is the
+committed sample plus attestation files; scoring never re-derives the join.
+
+\subsection{Track 1: definition generation}
+
+Each arm produces an English gloss for a headword given its grammar tag and up to five
+DCS attestation sentences (context arms), or the headword and tag alone (the no-context
+arm):
+
+\begin{itemize}
+\item \textbf{A0 (floor):} a seeded derangement of the gold glosses---metric floor and
+judge-discrimination control.
+\item \textbf{A1 / A2:} \texttt{deepseek-chat} \cite{deepseek-2025} with and without
+attestations (temperature 0). The A1$-$A2 delta isolates what corpus context adds over
+parametric memory.
+\item \textbf{A3:} \texttt{deepseek-reasoner} with attestations.
+\item \textbf{F1 (reference):} a stronger non-DeepSeek frontier model, same input
+contract, generated in-session under a gold-free inputs projection; treated as a
+reference point, not a reproducible baseline arm.
+\end{itemize}
+
+Scoring combines deterministic metrics (corpus and sentence BLEU and chrF via
+sacrebleu \cite{post-2018-statistical}; bag-of-tokens F1) with a blinded LLM judge
+(\texttt{deepseek-chat}, adequacy 0--5 vs.\ gold, blind to arm) admitted only under
+gates: the judge must separate the A0 floor and correlate positively (Spearman
+$\rho$) with chrF within system arms. Because MW 1899 is certainly in every candidate
+model's pretraining data, the track measures \emph{reproduction and grounding}, not
+generation from corpus evidence alone; the A1$-$A2 contrast and this framing carry the
+caveat explicitly.
+
+The second-reference study re-scores all five arms on the 333-headword MW$\cap$Heritage
+subset against Huet's French glosses with a French-prompted blinded judge, asking
+whether the arm ranking survives a change of reference dictionary and language.
+
+\subsection{Track 2: gloss-grounded WSD with a deterministic gold}
+
+\paragraph{Item and gold.} An item is one DCS sentence $\times$ one lemma of the frozen
+universe, held out by a pinned deterministic fold: $\mathtt{crc32(sent\_id)} \bmod 5
+= 0$ ($\approx$20\%). The gold sense is obtained with no manual step: the sentence's
+\texttt{m\_wordsem} synset id and the lemma, joined through the committed WordSem$\to$MW
+sense map, yield an MW sense \texttt{lemma\#ord}. The candidate inventory is the
+lemma's attested
+MW senses from the corpus-derived sense-frequency table. Items enter the pool only if
+the lemma has 2--15 attested senses and the gold lies inside the inventory; monosemous
+items are excluded by design. The pool funnel over the frozen universe: 531{,}747
+tagged tokens $\rightarrow$ 26{,}570 gold-mapped $\rightarrow$ 5{,}115 held-out items
+$\rightarrow$ 4{,}100 eligible polysemous $\rightarrow$ 300 sampled (seed 5877; 82
+lemmas; inventory size $k$: min 2, median 3, max 12). In only 33.7\% of items is the
+gold sense also the inventory's rank-1 sense, so the sample is not trivially MFS.
+
+\paragraph{Arms.} \textbf{LLM:} \texttt{deepseek-chat} (temperature 0) receives the
+headword with grammar, the IAST context sentence, and the numbered sense glosses, and
+returns a JSON sense index. \textbf{MFS:} the training-fold majority sense per lemma
+(the corpus-frequency prior the gold annotations themselves support). \textbf{Floor:}
+uniform $1/k$. All arms are scored on identical items; the LLM and MFS comparison is
+paired and evaluated with the exact McNemar test.
+
+\paragraph{Fold integrity.} An earlier iteration of the gold spine keyed its train/test
+split on Python's per-process-randomised \texttt{hash()}; its published split is stable
+in expectation but not reproducible byte-for-byte. This track pins the split
+(\texttt{crc32}) and re-derives its baseline under the pinned fold; we report the
+discrepancy openly rather than silently redefining prior artifacts (Section
+\ref{sec:fold}).
+
+\section{Results}
+
+\subsection{Track 1: definition generation}
+
+All 500 items were generated and judged in every arm with zero empty candidates.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lccccc}
+\hline
+Arm & BLEU & chrF & token-F1 & judge 0--5 & $\rho$(judge,chrF) \\
+\hline
+A0 floor & 3.13 & 12.02 & 0.097 & 0.19 & 0.117 \\
+A1 chat + ctx & 3.05 & 19.57 & 0.297 & 4.32 & 0.391 \\
+A2 chat no-ctx & 3.43 & 17.30 & 0.294 & 4.08 & 0.466 \\
+A3 reasoner + ctx & 0.50 & 13.70 & 0.256 & 4.21 & 0.423 \\
+F1 frontier + ctx & \textbf{5.14} & \textbf{24.35} & \textbf{0.340} & \textbf{4.60} & 0.415 \\
+\hline
+\end{tabular}
+\caption{Definition generation, 500-headword frozen sample. Judge gates pass in every
+arm: the floor is cleanly separated and judge--chrF correlation is positive.}
+\label{tab:defgen}
+\end{table}
+
+Three findings. \textbf{(1) BLEU is uninformative here}: the register-matched floor
+matches the systems (3.13 vs 3.05), while chrF and token-F1 separate them cleanly.
+\textbf{(2) Context adds little over memory}: A1$-$A2 $= +2.3$ chrF, $+0.003$ F1,
+$+0.24$ judge---attestations sharpen sense selection, not content, consistent with MW
+being in pretraining data. \textbf{(3) Metric choice changes the ranking}: the terse
+reasoner is last on chrF (recall against 41.5-word golds) yet mid-pack under the blinded
+judge. The frontier reference F1 leads every metric simultaneously (Table
+\ref{tab:defgen}), with judge--chrF agreement inside the healthy band---the
+surface/judge ranking concord the DeepSeek arms lack.
+
+The polysemy penalty replicates in every frequency band (polysemy $\geq$5 is the worst
+cell everywhere), and the frequency gradient is inverted---low-frequency cells score
+\emph{higher}---because high-frequency MW entries carry long, structurally complex gold
+glosses: a stratification effect, not model skill at rare words.
+
+\paragraph{Second reference (Heritage, French).} On the 333-headword MW$\cap$Heritage
+subset the arm ranking is \textbf{reference-invariant}: F1 $>$ A1 $>$ A3 $>$ A2 $>$ A0
+under both the English and the French-prompted judge. The MW-familiarity premium---the
+judge's excess kindness to glosses close to MW's own wording---is real but small
+($+0.13$ to $+0.25$ on 0--5; bootstrap CIs exclude zero for every system arm; largest
+for the memorisation arm A2, smallest for F1). Cross-lingual surface metrics are
+near-degenerate; the judged score is the measurement there.
+
+\subsection{Track 2: gloss-grounded WSD}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lcc}
+\hline
+Arm & Accuracy & $n$ \\
+\hline
+LLM (chat, gloss-grounded) & 0.543 & 300 \\
+MFS (corpus prior) & \textbf{0.843} & 300 \\
+Uniform floor & 0.319 & 300 \\
+\hline
+\end{tabular}
+\caption{Gloss-grounded WSD on held-out WordSem gold (300 polysemous items, pinned
+fold). Paired LLM vs MFS: 10 vs 100 discordant pairs, exact McNemar $p<0.0001$.}
+\label{tab:wsd}
+\end{table}
+
+The result is a clean negative (Table \ref{tab:wsd}): the gloss-grounded LLM arm scores
+54.3\% against the MFS baseline's 84.3\% on identical items---30 points below, and only
+22 points above the uniform floor. Zero API failures; all 300 picks parsed.
+
+The gap is concentrated, not uniform. By inventory size: at $k=2$ the LLM reaches 0.700
+(MFS 0.940); at $k\geq6$ it collapses to 0.183 (MFS 0.676). MFS degrades gracefully
+with $k$; prompted gloss-matching does not. Three error classes dominate manual
+inspection of wrong items: \emph{fine-granularity near-misses} inside one gloss family
+(\emph{pit\d{r}}-: ``father and mother (du.)'' vs ``the Fathers, ancestors'');
+\emph{literal-vs-metaphorical} splits (\emph{phala}-: ``fruit'' vs ``fruit =
+retribution''); and \emph{cross-POS homonymy} (\emph{mad}-: pronoun base vs ``to
+gladden'').
+
+\subsection{Fold integrity}
+\label{sec:fold}
+
+The pinned-fold MFS baseline (0.843, polysemous-only, this sample) sits where the
+earlier unpinned pipeline's published number lands (0.840 over all mapped test tokens,
+monosemous included): the randomised split moved the estimate by less than a point but
+made byte-level reproduction impossible. We therefore pin the fold, re-derive the
+baseline, and flag the earlier artifacts as computed-under-one-process-seed rather than
+rewriting them.
+
+\section{Discussion}
+
+\avnote{Interpretation slot --- the author's reading of the negative result goes here;
+the lane offers the material reading only. The gold's corpus grounding means MFS
+exploits precisely the usage prior that the annotation encodes, while a single-sentence
+gloss match cannot; the supervised-encoder path of Hellwig et al.\ remains the
+strong way to consume definitions for WSD, and a frequency-aware or hybrid
+prompt is the obvious next ablation. Whether the paper leads with the resource
+(reference-invariant eval + deterministic gold) or with the negative methodological
+finding is an author's decision.}
+
+The two tracks read together as a statement about where the difficulty of Sanskrit
+computational lexicography lives. Definition content is largely recoverable from
+parametric memory (Track 1, A1$\approx$A2), reference dictionary choice barely moves a
+system ranking, and the real discriminative work happens at sense granularity---exactly
+where Track 2 shows prompted models failing against corpus priors. For builders of
+Sanskrit dictionary services the practical implication is that sense-level services
+should lean on corpus-frequency priors first and treat gloss matching as a refinement
+signal, not the reverse.
+
+\section{Limitations}
+
+\textbf{Judge human subsample.} The blinded judge passes its gates and agrees with
+surface metrics on the frontier arm, but no human-scored subsample exists yet; a
+human-scored subset is scheduled before camera-ready and no judge-only claim stands
+alone until then. \textbf{Contamination.} MW 1899 is in pretraining data for every arm;
+Track 1 claims are framed as reproduction+grounding throughout. \textbf{Single scoring
+sample.} Track 2 reports one 300-item sample of a 4{,}100-item eligible pool; all
+artifacts to scale it are committed, and the pinned fold makes any rescaling
+reproducible. \textbf{Sandhi.} Context sentences are given in sandhied IAST as DCS
+stores them; unsandhied variants exist in the dump and their effect is unmeasured here.
+\textbf{Coverage.} The gold map covers exact/overlap crosswalk pairs; unresolved pairs
+are excluded from scoring, and the funnel counts above make the exclusion visible.
+\textbf{F1 arm.} The frontier reference arm is in-session and not temperature-pinned;
+it is labelled a reference, not a baseline.
+
+\section*{GenAI acknowledgment}
+
+Per the ISCLS-9 CFP generative-AI policy we disclose: AI agents performed the
+experiments, implemented the evaluation harness, computed all reported numbers,
+prepared tables and formatting, and drafted structural prose. Substantive wording---
+the thesis, the interpretation of results, and the conclusions---passes through a human
+author-voice revision before submission, and the submitting author takes full
+responsibility for the published text. All numbers derive from committed, one-command
+reproducible artifacts within the authors' own data estate.
+
+\section*{Reproducibility}
+
+Every number in this paper regenerates from committed artifacts. Track 1: sample
+builder, five generation arms, scorer and judge scripts with the frozen sample and
+SHA-256 digests of all inputs. Track 2: \texttt{build} (deterministic item sample, seed
+5877), \texttt{run-llm}, \texttt{score}, \texttt{validate}---the last recomputes every
+committed score and prints PASS only on an exact match. Data statements and licenses
+ship beside each dataset.
+
+\bibliographystyle{acl}
+\bibliography{iscls}
+
+\end{document}

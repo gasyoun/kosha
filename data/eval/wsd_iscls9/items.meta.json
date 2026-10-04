@@ -1,0 +1,31 @@
+{
+  "handoff": "H5877",
+  "created": "2026-10-04T07:48:45Z",
+  "seed": 5877,
+  "fold": "crc32(sent_id) % 5 == 0 -> test (pinned; NOT wsd_core hash — see module docstring)",
+  "pool": {
+    "tagged_tokens_scanned": 531747,
+    "gold_mapped": 26570,
+    "test_items_before_eligibility": 5115,
+    "eligible_polysemous": 4100,
+    "skipped_mono": 1015,
+    "skipped_gold_not_in_inventory": 0,
+    "skipped_k_gt_cap": 0,
+    "same_sentence_gold_conflicts_kept_first": 7
+  },
+  "sample_n": 300,
+  "constraints": {
+    "polysemous_only": true,
+    "max_senses": 15,
+    "gold_source": "DCS m_wordsem -> wn_to_mw_map.tsv (exact|overlap) -> lemma#ord",
+    "inventory_source": "sense_frequency.tsv mw layer, attested rows"
+  },
+  "sha256": {
+    "wn_to_mw_map.tsv": "10efdfecff083d750738ef002aa01e9f70a3f905df0a58a86389dacca82f010b",
+    "sense_frequency.tsv": "e1d5dc0dfca46d19bc522fa232d05dfeb45f7646190486d1006ac33c26e61b14",
+    "frozen_sample.tsv": "a259df13ac9ca3a778eb221a29c11f6505622c21278bff1d767ca84886aacffc",
+    "dcs_full.sqlite": "2ba0159e6a34ba331c775243569e33c203e3cfb66977267ceabcaf523e5db0da",
+    "items.jsonl": "3827db3f724ebd83a78cdd9d54c7651f8a461cc5d8fdc6ef5ecc992fcbdf7df6"
+  },
+  "elapsed_s": 232.4
+}
