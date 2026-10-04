@@ -32,8 +32,8 @@ from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
-from csl_pyutil import RU_UI_STRINGS, render_review_sheet  # noqa: E402
-from csl_pyutil.evidence import EvidenceManifest  # noqa: E402
+from csl_pyutil import RU_UI_STRINGS, render_review_sheet
+from csl_pyutil.evidence import EvidenceManifest
 
 try:
     from sanskrit_util import from_slp1, slp1_to_devanagari

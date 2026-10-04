@@ -71,8 +71,8 @@ ARMS = ["A0_random_floor", "A1_chat_ctx", "A2_chat_noctx", "A3_reasoner_ctx",
         "F1_fable_ctx"]
 
 sys.path.insert(0, HERE)
-from defgen_run_baselines import deepseek, load_sample  # noqa: E402
-from defgen_score import spearman, token_f1  # noqa: E402
+from defgen_run_baselines import deepseek, load_sample
+from defgen_score import spearman, token_f1
 
 _lock = threading.Lock()
 

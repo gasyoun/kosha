@@ -15,12 +15,12 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "app"))
 
-from kosha.api.ru_join import (  # noqa: E402
+from kosha.api.ru_join import (
     clear_caches,
     join_ru,
     locale_from_accept_language,
 )
-from app.word_page import card_token, render_word_page  # noqa: E402
+from app.word_page import card_token, render_word_page
 
 FIXTURE = ROOT / "tests" / "fixtures" / "ru_join"
 

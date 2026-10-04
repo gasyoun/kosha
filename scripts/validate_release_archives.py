@@ -34,8 +34,8 @@ for extra in (ROOT, ROOT / "src"):
     if str(extra) not in sys.path:
         sys.path.insert(0, str(extra))
 
-from kosha.api.archive import validate_release_archives  # noqa: E402
-from kosha.settings import Settings  # noqa: E402
+from kosha.api.archive import validate_release_archives
+from kosha.settings import Settings
 
 
 def main(argv: list[str] | None = None) -> int:

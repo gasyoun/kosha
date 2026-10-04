@@ -19,8 +19,8 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "app"))
 
-from kosha.api import catalog  # noqa: E402
-from kosha.api.catalog import (  # noqa: E402
+from kosha.api import catalog
+from kosha.api.catalog import (
     EMPTY_REASON,
     RECORD_REQUIRED_KEYS,
     SCHEMA,
@@ -30,7 +30,7 @@ from kosha.api.catalog import (  # noqa: E402
     public_records,
 )
 
-from app.main import app  # noqa: E402
+from app.main import app
 
 FIXTURE = ROOT / "tests" / "fixtures" / "catalog" / "datasets.json"
 RESTRICTED_LEAK = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"

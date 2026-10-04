@@ -20,39 +20,39 @@ sys.stderr.reconfigure(encoding="utf-8")
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-from kosha.api import catalog as dataset_catalog  # noqa: E402
-from kosha.api import repository, serializer  # noqa: E402
-from kosha.api.errors import install_error_handlers, raise_error  # noqa: E402
-from kosha.api.observability import (  # noqa: E402
+from kosha.api import catalog as dataset_catalog
+from kosha.api import repository, serializer
+from kosha.api.errors import install_error_handlers, raise_error
+from kosha.api.observability import (
     ObservabilityMiddleware,
     record_readiness,
     render_prometheus,
 )
-from kosha.api.models import (  # noqa: E402
+from kosha.api.models import (
     IMPLEMENTED_FIELDS,
     IMPLEMENTED_QUERY_TYPES,
     SaltQueryType,
 )
-from kosha.feature_gates import history_enabled  # noqa: E402
-from kosha.api.serializer import render_sanitized  # noqa: E402
-from kosha.scan_resolver import scan_url  # noqa: E402
-from kosha.settings import get_settings  # noqa: E402
-from kosha.transliterate import to_slp1_auto, from_slp1_out  # noqa: E402
-from kosha.cite import cite_object  # noqa: E402
+from kosha.feature_gates import history_enabled
+from kosha.api.serializer import render_sanitized
+from kosha.scan_resolver import scan_url
+from kosha.settings import get_settings
+from kosha.transliterate import to_slp1_auto, from_slp1_out
+from kosha.cite import cite_object
 
-from db import get_db, data_version  # noqa: E402
-from versions import parse_sense_id, has_archive, resolve_sense  # noqa: E402
-from reverse_lookup import analyze as reverse_analyze  # noqa: E402
-from neighbors import (  # noqa: E402
+from db import get_db, data_version
+from versions import parse_sense_id, has_archive, resolve_sense
+from reverse_lookup import analyze as reverse_analyze
+from neighbors import (
     entry_location, column_entries, physical_page_entries, group_label,
 )
-from paradigm import build_paradigm  # noqa: E402
-from word_page import render_word_page, card_token  # noqa: E402
-from kosha.api.ru_join import locale_from_accept_language  # noqa: E402
-from history_db import log_search_event, open_connection as open_history_db, upsert_visitor  # noqa: E402
-from identity import hash_ip, resolve_anon_id  # noqa: E402
-from history import router as history_router  # noqa: E402
-from datetime import datetime, timezone  # noqa: E402
+from paradigm import build_paradigm
+from word_page import render_word_page, card_token
+from kosha.api.ru_join import locale_from_accept_language
+from history_db import log_search_event, open_connection as open_history_db, upsert_visitor
+from identity import hash_ip, resolve_anon_id
+from history import router as history_router
+from datetime import datetime, timezone
 
 load_dotenv()
 

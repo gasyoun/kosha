@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DL_DIR = ROOT / "data" / "raw_sqlite"
 
 sys.path.insert(0, str(ROOT / "app"))
-from segment import segment  # noqa: E402
+from segment import segment
 
 RE_PC = re.compile(r"<pc>([^<]*)</pc>")
 RE_KEY2 = re.compile(r"<key2>(.*?)</key2>", re.S)

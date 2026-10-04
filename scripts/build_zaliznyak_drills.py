@@ -57,7 +57,7 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT.parent / "sanskrit-util" / "py"))
-from sanskrit_util import from_slp1, slp1_to_devanagari  # noqa: E402
+from sanskrit_util import from_slp1, slp1_to_devanagari
 
 SRC_DIR = ROOT.parent / "SanskritLexicography" / "RussianTranslation" / "src"
 HW_TSV = SRC_DIR / "headword_index.tsv"

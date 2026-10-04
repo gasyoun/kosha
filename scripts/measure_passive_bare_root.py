@@ -27,7 +27,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding="utf-8")
 
-from compare_vidyut_verbs import load_crosswalk  # noqa: E402
+from compare_vidyut_verbs import load_crosswalk
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 

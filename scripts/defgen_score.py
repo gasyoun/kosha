@@ -46,7 +46,7 @@ WSD_N_LEMMAS = 50
 WSD_MAX_SENT = 3
 
 sys.path.insert(0, HERE)
-from defgen_run_baselines import deepseek, load_sample  # noqa: E402
+from defgen_run_baselines import deepseek, load_sample
 
 _lock = threading.Lock()
 

@@ -22,10 +22,10 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "app"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from app.main import app  # noqa: E402
-import build_paradigms as bp  # noqa: E402
-from paradigm import build_paradigm  # noqa: E402
-from kosha.settings import get_settings  # noqa: E402
+from app.main import app
+import build_paradigms as bp
+from paradigm import build_paradigm
+from kosha.settings import get_settings
 
 client = TestClient(app)
 # Resolve through the typed settings, not a hardcoded repo-relative path: the

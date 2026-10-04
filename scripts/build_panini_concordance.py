@@ -67,8 +67,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from concordance_core import RECORD_FIELDS, TIER_CONFIDENCE  # noqa: E402
-from sanskrit_util import to_slp1  # noqa: E402
+from concordance_core import RECORD_FIELDS, TIER_CONFIDENCE
+from sanskrit_util import to_slp1
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

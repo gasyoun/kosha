@@ -22,8 +22,8 @@ sys.path.insert(0, str(ROOT / "app"))
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from word_page import render_word_page, card_token  # noqa: E402
-import word_page_ux as ux  # noqa: E402
+from word_page import render_word_page, card_token
+import word_page_ux as ux
 
 CARDS = ROOT / "docs" / "cards"
 LEMMA_FREQ = ROOT / "data" / "frequency" / "lemma_frequency.tsv"

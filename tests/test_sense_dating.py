@@ -32,7 +32,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "app"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import dating_hydrate as dh  # noqa: E402
+import dating_hydrate as dh
 
 DATING = ROOT / "data" / "dating"
 BUILD = ROOT / "scripts" / "build_sense_dating.py"

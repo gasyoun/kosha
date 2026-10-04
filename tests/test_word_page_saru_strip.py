@@ -15,13 +15,13 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "app"))
 
-from kosha.api.sr_gloss import (  # noqa: E402
+from kosha.api.sr_gloss import (
     _PUBLIC_FILES,
     clear_caches,
     join_sr_strip,
     resolve_sr_root,
 )
-from app.word_page import render_word_page  # noqa: E402
+from app.word_page import render_word_page
 
 FIXTURE = ROOT / "tests" / "fixtures" / "sanskritrussian"
 

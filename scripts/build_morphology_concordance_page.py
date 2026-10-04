@@ -71,7 +71,7 @@ def _github_root(root):
 GH = _github_root(ROOT)
 sys.path.insert(0, str(GH / "sanskrit-util" / "py"))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from sanskrit_util import form_key, from_slp1  # noqa: E402
+from sanskrit_util import form_key, from_slp1
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

@@ -23,7 +23,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "app"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from app.word_page import render_word_page, card_token  # noqa: E402
+from app.word_page import render_word_page, card_token
 
 CARDS_DIR = ROOT / "docs" / "cards"
 ATTESTED = ROOT / "docs" / "js" / "data" / "attested_keys.json"
@@ -118,7 +118,7 @@ def test_deterministic():
 
 
 def test_card_token_twin_of_build_static_cache():
-    import build_static_cache as bsc  # noqa: E402
+    import build_static_cache as bsc
     for key in ["ka", "Ka", "BU", "kf", "a_b", "rAma", "agni"]:
         assert card_token(key) == bsc.card_token(key)
 

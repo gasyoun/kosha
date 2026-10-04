@@ -11,8 +11,8 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "app"))
-from word_page import entry_fields, card_token  # noqa: E402
-from ls_hydrate import census_pwg_ls  # noqa: E402
+from word_page import entry_fields, card_token
+from ls_hydrate import census_pwg_ls
 
 LEMMAS = ["kf", "gam", "vac", "as", "deva", "Darma", "agni", "rAma", "jana", "nf", "yA"]
 

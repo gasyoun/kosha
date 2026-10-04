@@ -49,7 +49,7 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from concordance_core import to_slp1  # noqa: E402
+from concordance_core import to_slp1
 
 GH = ROOT.parent if (ROOT.parent / "SanskritRussian").exists() else ROOT.parent.parent
 SR = GH / "SanskritRussian"

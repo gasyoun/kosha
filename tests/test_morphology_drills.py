@@ -21,7 +21,7 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import build_morphology_curriculum as bmc  # noqa: E402
+import build_morphology_curriculum as bmc
 
 TSV = ROOT / "data" / "morphology" / "morphology_curriculum.tsv"
 DRILLS = ROOT / "data" / "morphology" / "drills.json"

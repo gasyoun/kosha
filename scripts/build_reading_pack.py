@@ -41,7 +41,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from concordance_core import TieredMatcher, to_slp1, citable_locus, human_locus  # noqa: E402
+from concordance_core import TieredMatcher, to_slp1, citable_locus, human_locus
 
 # card_token twin (app/word_page.py:49 / build_static_cache.py / ui cardToken.js)
 def card_token(slp1: str) -> str:
@@ -206,7 +206,7 @@ def main():
     # W-RU-a (H1278): optional additive Sa->Ru gloss layer. Runs BEFORE the write so the
     # pack is emitted once, with gloss_ru already inlined; the English gloss is untouched.
     if args.gloss_lang == "ru":
-        from build_ru_gloss_layer import RuGlosser, inline_token_ru  # noqa: E402
+        from build_ru_gloss_layer import RuGlosser, inline_token_ru
         glosser = RuGlosser()
         for sent in payload["sentences"]:
             for tok in sent["tokens"]:

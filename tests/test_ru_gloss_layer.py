@@ -25,7 +25,7 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import build_ru_gloss_layer as rg  # noqa: E402
+import build_ru_gloss_layer as rg
 
 TSV = ROOT / "data" / "ru_gloss" / "ru_gloss_layer.tsv"
 COVERAGE = ROOT / "reading" / "RU_GLOSS_COVERAGE.md"

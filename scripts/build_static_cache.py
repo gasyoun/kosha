@@ -56,10 +56,10 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "app"))
 sys.path.insert(0, str(ROOT / "src"))
 
-from kosha.api import repository, serializer  # noqa: E402
-from kosha.scan_resolver import scan_url   # noqa: E402
-from kosha.settings import get_settings  # noqa: E402
-from kosha.transliterate import from_slp1_out  # noqa: E402
+from kosha.api import repository, serializer
+from kosha.scan_resolver import scan_url
+from kosha.settings import get_settings
+from kosha.transliterate import from_slp1_out
 
 DEFAULT_DB = ROOT / "data" / "db" / "kosha.db"
 ALL_DICTS = repository.ALL_DICTS

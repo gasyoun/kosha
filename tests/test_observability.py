@@ -31,7 +31,7 @@ for extra in (ROOT, ROOT / "src", ROOT / "app"):
     if str(extra) not in sys.path:
         sys.path.insert(0, str(extra))
 
-from kosha.api.observability import (  # noqa: E402
+from kosha.api.observability import (
     ALLOWED_LABEL_KEYS,
     FORBIDDEN_LABEL_KEYS,
     METRIC_NAMES,
@@ -41,7 +41,7 @@ from kosha.api.observability import (  # noqa: E402
     reset_metrics,
     resolve_request_id,
 )
-from kosha.settings import get_settings  # noqa: E402
+from kosha.settings import get_settings
 
 CORE_SCHEMA = """
 CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT);

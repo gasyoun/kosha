@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent / "sanskrit-util" / "py"))
-from sanskrit_util import from_slp1, slp1_to_devanagari  # noqa: E402
+from sanskrit_util import from_slp1, slp1_to_devanagari
 
 ROOT = Path(__file__).resolve().parent.parent
 READING_PACK = ROOT / "reading" / "data" / "nala-1.json"

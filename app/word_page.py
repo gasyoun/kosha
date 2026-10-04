@@ -31,7 +31,7 @@ from pathlib import Path
 _REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(_REPO / "src"))
 sys.path.insert(0, str(_REPO.parent / "sanskrit-util" / "py"))
-from sanskrit_util import from_slp1, slp1_to_devanagari, to_slp1  # noqa: E402
+from sanskrit_util import from_slp1, slp1_to_devanagari, to_slp1
 
 
 def _load_upasarga():

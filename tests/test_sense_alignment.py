@@ -19,7 +19,7 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "app"))
 
-from sense_align import (  # noqa: E402
+from sense_align import (
     align_lemma, dhatu_marked, extract_ls, fold_witnesses, jaccard, pwg_pos, witness_key,
 )
 
