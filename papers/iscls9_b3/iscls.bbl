@@ -1,0 +1,65 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citename{Bavaresco \bgroup et al.\egroup }2025]{bavaresco-etal-2025-llms}
+Anna Bavaresco, Raffaella Bernardi, Leonardo Bertolazzi, Desmond Elliott, Raquel Fern{\'a}ndez, Albert Gatt, Esam Ghaleb, Mario Giulianelli, Michael Hanna, Alexander Koller, Andr{\'e} Martins, Philipp Mondorf, Vera Neplenbroek, Sandro Pezzelle, Barbara Plank, David Schlangen, Aditya~K Suglia, Ece Takmaz, and Alberto Testoni.
+\newblock 2025.
+\newblock {LLM}s instead of human judges? a large scale empirical study across 20 {NLP} evaluation tasks.
+\newblock In {\em Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)}, pages 238--255, Vienna, Austria. Association for Computational Linguistics.
+
+\bibitem[\protect\citename{{DeepSeek-AI}}2025]{deepseek-2025}
+{DeepSeek-AI}.
+\newblock 2025.
+\newblock {D}eep{S}eek-{V}3 technical report.
+\newblock {\em arXiv preprint arXiv:2412.19437}.
+
+\bibitem[\protect\citename{Hellwig \bgroup et al.\egroup }2026]{hellwig-etal-2026-sanskrit}
+Oliver Hellwig, Sven Sellmer, Sebastian Nehrdich, Paul Widmer, and Rico Sennrich.
+\newblock 2026.
+\newblock Sanskrit word sense disambiguation based on lexicographic definitions.
+\newblock In {\em Proceedings of the 8th International Sanskrit Computational Linguistics Symposium}, pages 14--31, Online. Association for Computational Linguistics.
+
+\bibitem[\protect\citename{Hellwig}2010  2026]{hellwig-dcs}
+Oliver Hellwig.
+\newblock 2010--2026.
+\newblock Digital corpus of {S}anskrit.
+\newblock \url{https://github.com/OliverHellwig/sanskrit}.
+\newblock 2026 release; accessed 4 October 2026.
+
+\bibitem[\protect\citename{Huet}1994  2026]{huet-2026-heritage}
+G{\'e}rard Huet.
+\newblock 1994--2026.
+\newblock The {S}anskrit heritage dictionary.
+\newblock INRIA. \url{https://sanskrit.inria.fr/}.
+\newblock Accessed 4 October 2026.
+
+\bibitem[\protect\citename{Liu \bgroup et al.\egroup }2026]{liu-etal-2026-lm}
+Yang Liu, Jiaye Yang, Weikang Li, Jiahui Liang, Yang Li, and Lingyong Yan.
+\newblock 2026.
+\newblock {LM}-lexicon: Improving definition modeling via harmonizing semantic experts.
+\newblock In {\em Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics (Volume 1: Long Papers)}, pages 1--22, Rabat, Morocco. Association for Computational Linguistics.
+
+\bibitem[\protect\citename{Monier-Williams}1899]{monier-williams-1899}
+Monier Monier-Williams.
+\newblock 1899.
+\newblock {\em A Sanskrit-English Dictionary}.
+\newblock Clarendon Press, Oxford.
+
+\bibitem[\protect\citename{Patel and Kulkarni}2024]{patel-kulkarni-2024-word}
+Dhaval~K Patel and Amba Kulkarni.
+\newblock 2024.
+\newblock Word sense alignment of {S}anskrit lexica.
+\newblock In {\em Proceedings of the 7th International Sanskrit Computational Linguistics Symposium}, pages 1--13, Auroville, Puducherry, India. Association for Computational Linguistics.
+
+\bibitem[\protect\citename{Periti \bgroup et al.\egroup }2025]{periti-etal-2025-definition}
+Francesco Periti, Roksana Goworek, Haim Dubossarsky, and Nina Tahmasebi.
+\newblock 2025.
+\newblock Definition generation for word meaning modeling: Monolingual, multilingual, and cross-lingual perspectives.
+\newblock In {\em Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing}, pages 26004--26024, Suzhou, China. Association for Computational Linguistics.
+
+\bibitem[\protect\citename{Post}2018]{post-2018-statistical}
+Matt Post.
+\newblock 2018.
+\newblock A call for clarity in reporting {BLEU} scores.
+\newblock In {\em Proceedings of the Third Conference on Machine Translation: Research Papers}, pages 186--191, Brussels, Belgium. Association for Computational Linguistics.
+
+\end{thebibliography}

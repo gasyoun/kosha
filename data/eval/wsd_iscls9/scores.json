@@ -1,0 +1,25 @@
+{
+  "n_items": 300,
+  "floor": 0.3194,
+  "llm": {
+    "model": "deepseek/deepseek-chat",
+    "n_ok": 300,
+    "n_error": 0,
+    "errors": {},
+    "accuracy": 0.5433
+  },
+  "mfs": {
+    "n_scored": 300,
+    "n_no_train": 0,
+    "accuracy_on_scored": 0.8433
+  },
+  "paired": {
+    "n_both": 300,
+    "llm_right_mfs_wrong": 10,
+    "llm_wrong_mfs_right": 100,
+    "mcnemar_p_two_sided": 0.0
+  },
+  "generated": "2026-10-04T07:52:25Z",
+  "handoff": "H5877",
+  "elapsed_s": 21.1
+}
