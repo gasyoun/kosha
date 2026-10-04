@@ -19,8 +19,8 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "app"))
-from versions import write_archive  # noqa: E402
-from segment import sense_text  # noqa: E402
+from versions import write_archive
+from segment import sense_text
 
 DB_PATH = ROOT / "data" / "db" / "kosha.db"
 

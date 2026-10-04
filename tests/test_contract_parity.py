@@ -23,8 +23,8 @@ for extra in (ROOT, ROOT / "src", ROOT / "app", ROOT / "scripts"):
     if str(extra) not in sys.path:
         sys.path.insert(0, str(extra))
 
-from kosha.api import repository, serializer  # noqa: E402
-from kosha.api.models import SaltEntry  # noqa: E402
+from kosha.api import repository, serializer
+from kosha.api.models import SaltEntry
 
 
 def _api_results(client, slp1):

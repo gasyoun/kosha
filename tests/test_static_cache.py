@@ -19,9 +19,9 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from app.main import app  # noqa: E402
-import build_static_cache as bsc  # noqa: E402
-from kosha.settings import get_settings  # noqa: E402
+from app.main import app
+import build_static_cache as bsc
+from kosha.settings import get_settings
 
 client = TestClient(app)
 

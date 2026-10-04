@@ -32,7 +32,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from concordance_core import norm, to_slp1  # noqa: E402
+from concordance_core import norm, to_slp1
 
 sys.stdout.reconfigure(encoding="utf-8")
 

@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT / "app"))
 
-from build_word_pages import (  # noqa: E402
+from build_word_pages import (
     measure_head_n,
     select_head_tokens,
     card_token,

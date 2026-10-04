@@ -23,7 +23,7 @@ for extra in (ROOT, ROOT / "src", ROOT / "app"):
     if str(extra) not in sys.path:
         sys.path.insert(0, str(extra))
 
-from kosha.api.archive import (  # noqa: E402
+from kosha.api.archive import (
     METADATA_NAME,
     mounted_versions,
     resolve_archived_sense,
@@ -33,8 +33,8 @@ from kosha.api.archive import (  # noqa: E402
     validate_release_archives,
     validate_version,
 )
-from kosha.settings import Settings  # noqa: E402
-import versions  # noqa: E402
+from kosha.settings import Settings
+import versions
 
 FIXTURE_ARCHIVES = ROOT / "tests" / "fixtures" / "archives"
 PRIOR = "0.1.0-w2a-prior"

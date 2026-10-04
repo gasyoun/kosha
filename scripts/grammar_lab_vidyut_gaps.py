@@ -29,7 +29,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
-from kosha.transliterate import to_slp1_auto  # noqa: E402
+from kosha.transliterate import to_slp1_auto
 
 REPO = Path(__file__).resolve().parent.parent
 GRAN = Path("../SanskritGrammar/data/grammar_lab/export/grammar_lab.json")

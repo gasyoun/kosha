@@ -34,7 +34,7 @@ def mount_history(app, router=None):
     next test that asserts it is absent.
     """
     if router is None:
-        from history import router as history_router  # noqa: PLC0415
+        from history import router as history_router
 
         router = history_router
 

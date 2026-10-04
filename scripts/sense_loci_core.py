@@ -50,7 +50,7 @@ for _d in _PWG_SRC_DIRS:
     if (_d / "pwg_sources.py").exists():
         sys.path.insert(0, str(_d))
         try:
-            import pwg_sources as _ps  # noqa: E402
+            import pwg_sources as _ps
             pwg_sources = _ps
             break
         except Exception:  # pragma: no cover - defensive

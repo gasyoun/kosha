@@ -57,11 +57,11 @@ CSN = "claude-opus-4-8"  # provenance: model tier + exact version (H1453 executo
 
 try:
     sys.path.insert(0, os.path.join(HERE, '..', '..', '..', 'sanskrit-util', 'py'))
-    from sanskrit_util import to_slp1 as _su_to_slp1  # noqa: E402
+    from sanskrit_util import to_slp1 as _su_to_slp1
     _HAVE_SU = True
 except Exception:
     _HAVE_SU = False
-from indic_transliteration import sanscript  # noqa: E402
+from indic_transliteration import sanscript
 
 
 def iast_to_slp1(iast):

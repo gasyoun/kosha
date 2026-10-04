@@ -67,7 +67,7 @@ DEFAULT_DB = ROOT / "data" / "db" / "kosha.db"
 DEFAULT_VDATA = ROOT.parent / "vidyut-data" / "prakriya"
 DEFAULT_OUT = ROOT / "data" / "e1" / "dhatu_crosswalk.json"
 
-from vidyut.prakriya import (  # noqa: E402
+from vidyut.prakriya import (
     Vyakarana, Dhatu, Gana, Lakara, Prayoga, Purusha, Vacana, DhatuPada, Pada, Data,
 )
 

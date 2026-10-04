@@ -28,7 +28,7 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import build_difficulty_scorer as bds  # noqa: E402
+import build_difficulty_scorer as bds
 
 TSV = ROOT / "data" / "difficulty" / "reading_pack_difficulty.tsv"
 JSONF = ROOT / "data" / "difficulty" / "reading_pack_difficulty.json"

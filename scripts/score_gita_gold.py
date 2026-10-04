@@ -27,7 +27,7 @@ from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-import dcs_sandhi_induce as ind  # noqa: E402
+import dcs_sandhi_induce as ind
 
 GITA_GOLD = ROOT / "data" / "gita" / "gita_sandhi.tsv"
 MBH = Path("C:/Users/user/Documents/GitHub/dcs-conllu/files/Mahābhārata")

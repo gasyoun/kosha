@@ -80,10 +80,10 @@ DEFAULT_CROSSWALK = ROOT / "data" / "e1" / "dhatu_crosswalk.json"
 EXPECTED_AG_ROWS = 401368  # MORPHOLOGY_ATTESTATION_BUILD_REPORT.md (W1b, H1262)
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from concordance_core import TIER_CONFIDENCE  # noqa: E402
-from sanskrit_util import form_key, from_slp1, to_slp1  # noqa: E402
+from concordance_core import TIER_CONFIDENCE
+from sanskrit_util import form_key, from_slp1, to_slp1
 
-from vidyut.prakriya import (  # noqa: E402
+from vidyut.prakriya import (
     Vyakarana, Pratipadika, Linga, Vibhakti, Vacana, Pada,
     Dhatu, Gana, Lakara, Prayoga, Purusha, DhatuPada,
 )

@@ -13,7 +13,7 @@ for extra in (ROOT, ROOT / "src"):
     if str(extra) not in sys.path:
         sys.path.insert(0, str(extra))
 
-from kosha.deploy.bundle import (  # noqa: E402
+from kosha.deploy.bundle import (
     AssembleError,
     assemble_bundle,
     default_recipe_path,

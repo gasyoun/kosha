@@ -52,8 +52,8 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 # concordance_core sets up the sanskrit-util path and owns the shared schema/tiers.
-from concordance_core import RECORD_FIELDS, TIER_CONFIDENCE, citable_locus  # noqa: E402
-from sanskrit_util import form_key, from_slp1, to_slp1  # noqa: E402
+from concordance_core import RECORD_FIELDS, TIER_CONFIDENCE, citable_locus
+from sanskrit_util import form_key, from_slp1, to_slp1
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

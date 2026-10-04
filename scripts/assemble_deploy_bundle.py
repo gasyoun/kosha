@@ -22,7 +22,7 @@ sys.stderr.reconfigure(encoding="utf-8")
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from kosha.deploy.bundle import (  # noqa: E402
+from kosha.deploy.bundle import (
     assemble_bundle,
     default_recipe_path,
     load_recipe,

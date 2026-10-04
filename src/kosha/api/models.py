@@ -55,15 +55,15 @@ class CslBlock(BaseModel):
     lnum: str
     page: str | None = None
     column: str | None = None
-    scanUrl: str | None = None  # noqa: N815 — profile-mandated casing
+    scanUrl: str | None = None
     references: list[str] = Field(default_factory=list)
-    accentedKey: str | None = None  # noqa: N815 — profile-mandated casing
-    headwordIast: str | None = None  # noqa: N815 — profile-mandated casing
-    headwordDeva: str | None = None  # noqa: N815 — profile-mandated casing
+    accentedKey: str | None = None
+    headwordIast: str | None = None
+    headwordDeva: str | None = None
     #: Unmodified Cologne display-XML. Populated only when the caller asks for
     #: it; the raw bytes are never rewritten (only the *rendered* copy is
     #: sanitized), so this stays the auditable original.
-    xmlCsl: str | None = None  # noqa: N815 — profile-mandated casing
+    xmlCsl: str | None = None
     #: The CSL host's own rendering. kosha does not have it — see the module
     #: docstring. Present so the object stays profile-shaped, always None here.
     html: str | None = None

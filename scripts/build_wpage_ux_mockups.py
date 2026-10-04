@@ -27,8 +27,8 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "app"))
 
-from word_page import render_word_page  # noqa: E402
-from word_page_ux import VARIANTS, favorites_page_html, core_ranks_json  # noqa: E402
+from word_page import render_word_page
+from word_page_ux import VARIANTS, favorites_page_html, core_ranks_json
 
 OUT = ROOT / "mockups" / "h3457-wpage-ux"
 AXIS = {

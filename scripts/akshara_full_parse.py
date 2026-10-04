@@ -34,9 +34,9 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from akshara_pilot_parse import extract_articles  # noqa: E402  (reuse, not fork)
-from akshara_pilot_parse import MT_DICTS, safe_name  # noqa: E402
-from akshara_full_crawl import raw_filename  # noqa: E402
+from akshara_pilot_parse import extract_articles
+from akshara_pilot_parse import MT_DICTS, safe_name
+from akshara_full_crawl import raw_filename
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW_DIR = ROOT / "data" / "raw_akshara_full"
@@ -118,12 +118,12 @@ def main() -> int:
     if args.which == "all":
         log = (ROOT / args.log_override) if args.log_override else CRAWL_LOG
         out = CORPUS
-        raw_of = lambda k: raw_path_for(k, "all")  # noqa: E731
+        raw_of = lambda k: raw_path_for(k, "all")
     else:
         log = (ROOT / args.log_override) if args.log_override else CRAWL_LOG_RU
         out = CORPUS_RU
 
-        def raw_of(key: str) -> Path:  # noqa: E306 - closure over the pass
+        def raw_of(key: str) -> Path:
             return raw_path_for(key, "ru")
 
     keys = ok_keys(log)

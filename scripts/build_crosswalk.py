@@ -34,7 +34,7 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "app"))
-from versions import archive_db_path  # noqa: E402
+from versions import archive_db_path
 
 
 def load_archive(version):

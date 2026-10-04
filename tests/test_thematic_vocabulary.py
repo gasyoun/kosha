@@ -23,7 +23,7 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import build_thematic_vocabulary as btv  # noqa: E402
+import build_thematic_vocabulary as btv
 
 TSV = ROOT / "data" / "frequency" / "thematic_vocabulary.tsv"
 DRILLS = ROOT / "data" / "frequency" / "thematic_vocab_drills.json"

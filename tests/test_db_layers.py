@@ -19,13 +19,13 @@ import pytest
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
-from build_db_layers import (  # noqa: E402
+from build_db_layers import (
     SMOKE_LEMMAS_SLP1,
     build_layers,
     connect,
     smoke_join_report,
 )
-from check_g_size import FAIL_BYTES, WARN_BYTES, check_path  # noqa: E402
+from check_g_size import FAIL_BYTES, WARN_BYTES, check_path
 
 SENSE_TSV = REPO / "data" / "frequency" / "sense_frequency.tsv"
 ROOTS_TSV = REPO / "data" / "roots" / "roots_frequency.tsv"

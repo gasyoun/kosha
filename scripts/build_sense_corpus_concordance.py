@@ -71,9 +71,9 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import sense_loci_core as slc  # noqa: E402
-from concordance_core import citable_locus  # noqa: E402  (REUSE the host-independent DCS cite)
-from mbh_vulgate import MBhVulgate  # noqa: E402  (REUSE csl-atlas f8 PWG→vulgate crosswalk)
+import sense_loci_core as slc
+from concordance_core import citable_locus
+from mbh_vulgate import MBhVulgate
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

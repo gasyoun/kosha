@@ -9,7 +9,7 @@ SCRIPTS = ROOT / "scripts"
 FIXTURES = ROOT / "tests" / "fixtures" / "typed_link"
 
 sys.path.insert(0, str(SCRIPTS))
-import concordance_core as cc  # noqa: E402
+import concordance_core as cc
 
 
 def test_record_fields_renamed_not_reordered():
