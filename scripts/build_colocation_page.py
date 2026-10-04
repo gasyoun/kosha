@@ -39,8 +39,8 @@ import sqlite3
 import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "app"))
-from scan_resolver import scan_url  # noqa: E402
-from transliterate import from_slp1_out  # noqa: E402
+from scan_resolver import scan_url
+from transliterate import from_slp1_out
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

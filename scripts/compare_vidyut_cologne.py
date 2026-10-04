@@ -47,7 +47,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_DB = ROOT / "data" / "db" / "kosha.db"
 DEFAULT_OUT = ROOT / "data" / "e1"
 
-from vidyut.prakriya import (  # noqa: E402
+from vidyut.prakriya import (
     Vyakarana, Pratipadika, Linga, Vibhakti, Vacana, Pada,
 )
 

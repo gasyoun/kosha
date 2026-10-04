@@ -37,7 +37,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 # — which is exactly how a measurement can silently be taken against a different key era than
 # the one the repo checkout carries (H3975).
 sys.path.insert(0, str(ROOT.parent / "sanskrit-util" / "py"))
-import sanskrit_util as su  # noqa: E402
+import sanskrit_util as su
 
 TRIAGED = ROOT / "data" / "concordance" / "morph_giveback_triaged.tsv"
 MEDIAL_LABIAL = re.compile("[ṃṁ](?=[pbm])")

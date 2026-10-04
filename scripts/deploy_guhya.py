@@ -45,7 +45,7 @@ REPO_ROOT = Path(__file__).parent.parent
 GITHUB_ROOT = REPO_ROOT.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from kosha.backup.transport import (  # noqa: E402
+from kosha.backup.transport import (
     BackupError, FTPSTransport, sha256_of, upload,
 )
 

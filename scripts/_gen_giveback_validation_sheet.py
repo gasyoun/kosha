@@ -51,8 +51,8 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 sys.path.insert(0, str(GH / "sanskrit-util" / "py"))
 
-from csl_pyutil import render_review_sheet  # noqa: E402
-import sanskrit_util as su  # noqa: E402
+from csl_pyutil import render_review_sheet
+import sanskrit_util as su
 
 # sanskrit-util 0.11.0 collided WORD-FINAL anusvāra with final `m`, but medial anusvāra still
 # folded to `n` — correct before most consonants, wrong before a labial, where it is

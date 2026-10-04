@@ -49,7 +49,7 @@ def _github_root(root):
 
 
 sys.path.insert(0, str(_github_root(ROOT) / "sanskrit-util" / "py"))
-from sanskrit_util import form_key  # noqa: E402
+from sanskrit_util import form_key
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")

@@ -18,7 +18,7 @@ _SCRIPTS = _KOSHA_ROOT / "scripts"
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 
-import build_ru_gloss_layer as rg  # noqa: E402
+import build_ru_gloss_layer as rg
 
 _PUBLIC_FILES = (
     "surface_glossary.tsv",

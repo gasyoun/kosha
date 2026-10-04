@@ -58,8 +58,8 @@ sys.path.insert(0, str(ROOT_SCRIPTS))
 # Reuse the nominal comparison's representation-vs-conflict sub-classifier so a
 # verb DIFF is judged on the SAME basis (final-stop voicing = cosmetic, superset
 # = coverage) instead of over-counting cosmetic differences as disagreement.
-from compare_vidyut_cologne import is_final_stop_variant  # noqa: E402
-from vidyut.prakriya import (  # noqa: E402
+from compare_vidyut_cologne import is_final_stop_variant
+from vidyut.prakriya import (
     Vyakarana, Dhatu, Gana, Lakara, Prayoga, Purusha, Vacana, DhatuPada, Pada,
 )
 

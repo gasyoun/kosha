@@ -16,10 +16,10 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "app"))
 
-from app.main import app  # noqa: E402
-import versions  # noqa: E402
-from cite import cite_object, release_asset_url  # noqa: E402
-import importlib.util  # noqa: E402
+from app.main import app
+import versions
+from cite import cite_object, release_asset_url
+import importlib.util
 
 # import scripts/build_crosswalk.py by path (scripts is not a package)
 _spec = importlib.util.spec_from_file_location(

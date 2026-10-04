@@ -32,12 +32,12 @@ MODEL_PROV = "Grok 4.5 (grok-4.5)"  # H1588 executor (Opus-lock override)
 
 try:
     sys.path.insert(0, os.path.join(REPO, "..", "sanskrit-util", "py"))
-    from sanskrit_util import to_slp1 as _su_to_slp1  # noqa: E402
+    from sanskrit_util import to_slp1 as _su_to_slp1
 
     _HAVE_SU = True
 except Exception:
     _HAVE_SU = False
-from indic_transliteration import sanscript  # noqa: E402
+from indic_transliteration import sanscript
 
 
 def iast_to_slp1(iast: str) -> str:

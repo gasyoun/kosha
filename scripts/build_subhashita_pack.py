@@ -81,9 +81,9 @@ OUT_JS = ROOT / "reading" / "subhashita" / "data.js"
 OUT_APKG = ROOT / "data" / "subhashita" / "subhashita_beginner_anki.apkg"
 
 sys.path.insert(0, str(ROOT / "scripts"))
-from dcs_sandhi_induce import induce_rule, nfc  # noqa: E402
-from build_ru_gloss_layer import RuGlosser, _dekey  # noqa: E402 -- reuse W-RU-a join primitives (H1312)
-from concordance_core import to_slp1  # noqa: E402
+from dcs_sandhi_induce import induce_rule, nfc
+from build_ru_gloss_layer import RuGlosser, _dekey
+from concordance_core import to_slp1
 
 DM_API = "https://dharmamitra.org/api/tagging/"
 DM_BATCH = 32

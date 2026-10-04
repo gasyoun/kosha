@@ -55,11 +55,11 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from concordance_core import human_locus  # noqa: E402  (REUSE house locus)
+from concordance_core import human_locus
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "app"))
-from dating_hydrate import ERA_LABEL, badge_html  # noqa: E402  (REUSE H4026 badge)
-from word_page import _dating_caveat_block, card_token  # noqa: E402  (REUSE /w/ key + H4026 caveat)
+from dating_hydrate import ERA_LABEL, badge_html
+from word_page import _dating_caveat_block, card_token
 
 ROOT = Path(__file__).resolve().parent.parent
 DCS = ROOT.parent / "VisualDCS" / "src" / "DCS-data-2026" / "dcs_full.sqlite"

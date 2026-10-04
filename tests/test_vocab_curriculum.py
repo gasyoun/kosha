@@ -20,7 +20,7 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import build_vocab_curriculum as bvc  # noqa: E402
+import build_vocab_curriculum as bvc
 
 TSV = ROOT / "data" / "frequency" / "vocab_curriculum.tsv"
 DRILLS = ROOT / "data" / "frequency" / "vocab_drills.json"

@@ -38,7 +38,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from concordance_core import (  # noqa: E402
+from concordance_core import (
     RECORD_FIELDS, TIER_CONFIDENCE, TieredMatcher,
 )
 
@@ -51,7 +51,7 @@ DCS = GH / "VisualDCS" / "src" / "DCS-data-2026" / "dcs_full.sqlite"
 
 OUT_DATA = ROOT / "data" / "concordance"
 
-import re  # noqa: E402
+import re
 _JUNK_LEMMA = re.compile(r"^[\s\-_.?*0-9]*$")
 
 # B1 golden-sample ruling: lossy tiers are NEVER asserted.

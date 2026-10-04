@@ -50,7 +50,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from concordance_core import to_slp1  # noqa: E402  (reuse the canonical transcoder)
+from concordance_core import to_slp1
 
 FREQ_TSV = ROOT / "data" / "frequency" / "lemma_frequency.tsv"
 MORPH_TSV = ROOT / "data" / "difficulty" / "morph_signature_freq.tsv"

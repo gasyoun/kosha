@@ -20,7 +20,7 @@ import sys
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
-import build_directory as bd  # noqa: E402
+import build_directory as bd
 
 MANIFEST = REPO / "data" / "manifest"
 

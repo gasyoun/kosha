@@ -69,7 +69,7 @@ def _github_root(root):
 
 GH = _github_root(ROOT)
 sys.path.insert(0, str(GH / "sanskrit-util" / "py"))
-from sanskrit_util import from_slp1, form_key  # noqa: E402
+from sanskrit_util import from_slp1, form_key
 
 # H3975: the medial-anusvāra-before-a-labial twin class. Kept as an in-run measurement so the
 # report never quotes a typed number — under sanskrit-util >=0.12.0 form_key folds this itself,
@@ -82,7 +82,7 @@ def is_medial_labial_twin(attested, generated):
     """One word spelled two ways across the medial anusvāra/labial boundary."""
     if not (attested and generated and MEDIAL_LABIAL.search(attested)):
         return False
-    refold = lambda s: form_key(MEDIAL_LABIAL.sub("m", s))  # noqa: E731
+    refold = lambda s: form_key(MEDIAL_LABIAL.sub("m", s))
     return refold(attested) == refold(generated)
 
 sys.stdout.reconfigure(encoding="utf-8")

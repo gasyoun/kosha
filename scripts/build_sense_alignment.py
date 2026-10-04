@@ -81,12 +81,12 @@ sys.path.insert(0, str(ROOT / "app"))
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from sense_align import (  # noqa: E402
+from sense_align import (
     ATTRIB_KEYS, DICTS, GLOSS_FLOOR, GLOSS_LANG, PREFIX_MIN, SASA_DICTS, TAU,
     align_lemma, dhatu_marked, extract_ls, pwg_pos, sense_gloss,
 )
-from segment import segment  # noqa: E402
-from build_entries import fetch_release_sqlite  # noqa: E402
+from segment import segment
+from build_entries import fetch_release_sqlite
 
 try:                                            # display only — never alignment
     from kosha.transliterate import from_slp1_out

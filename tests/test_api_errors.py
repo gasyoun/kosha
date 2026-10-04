@@ -23,7 +23,7 @@ for extra in (ROOT, ROOT / "src", ROOT / "app"):
     if str(extra) not in sys.path:
         sys.path.insert(0, str(extra))
 
-from kosha.api.models import ErrorResponse  # noqa: E402
+from kosha.api.models import ErrorResponse
 
 
 def _assert_kosha_error(response, status: int, code: str | None = None):

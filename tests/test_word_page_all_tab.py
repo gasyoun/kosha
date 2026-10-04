@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "app"))
 
-from app.word_page import render_word_page  # noqa: E402
+from app.word_page import render_word_page
 
 
 def _card():

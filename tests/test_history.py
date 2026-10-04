@@ -12,10 +12,10 @@ from fastapi.testclient import TestClient
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "app"))
-import history_db  # noqa: E402
-from app.main import app  # noqa: E402
-from kosha.feature_gates import mount_history  # noqa: E402
-from kosha.settings import get_settings  # noqa: E402
+import history_db
+from app.main import app
+from kosha.feature_gates import mount_history
+from kosha.settings import get_settings
 
 
 @pytest.fixture(autouse=True)

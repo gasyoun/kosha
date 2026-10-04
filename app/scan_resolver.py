@@ -8,4 +8,4 @@ since Phase 1 keeps working through this re-export; new code should import
 `kosha.scan_resolver` directly.
 """
 
-from kosha.scan_resolver import *  # noqa: F401,F403
+from kosha.scan_resolver import *

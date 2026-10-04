@@ -19,8 +19,8 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "app"))
 
-from app.main import app  # noqa: E402
-from kosha.feature_gates import history_enabled, mount_history  # noqa: E402
+from app.main import app
+from kosha.feature_gates import history_enabled, mount_history
 
 client = TestClient(app)
 

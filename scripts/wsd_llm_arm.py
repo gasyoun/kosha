@@ -29,7 +29,7 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from wsd_core import (  # noqa: E402
+from wsd_core import (
     DEFAULT_DCS,
     FREQ,
     GATE_THRESHOLD,

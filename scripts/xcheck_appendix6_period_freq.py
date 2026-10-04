@@ -75,7 +75,7 @@ COUNT_FLOOR = 20  # tsv floor for stable ratio aggregates
 def _to_slp1():
     sys.path.insert(0, os.path.normpath(os.path.join(
         REPO, '..', 'sanskrit-util', 'py')))
-    from sanskrit_util import to_slp1  # noqa: PLC0415 (canonical vendored transcoder)
+    from sanskrit_util import to_slp1
     return to_slp1
 
 

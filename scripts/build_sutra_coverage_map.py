@@ -86,14 +86,14 @@ SUTRA_CODE_RE = re.compile(r"^\d+\.\d+\.\d+$")
 BASE_CODE_RE = re.compile(r"^(\d+\.\d+\.\d+)")
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_panini_derivations import (  # noqa: E402
+from build_panini_derivations import (
     DEFAULT_CROSSWALK,
     Vyakarana,
     build_lemma_pool,
     load_crosswalk,
     open_db,
 )
-from vidyut.prakriya import Data, Source  # noqa: E402
+from vidyut.prakriya import Data, Source
 
 
 MAP_FIELDS = [

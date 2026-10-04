@@ -260,7 +260,7 @@ def connect(db_path=None):
     # example_*) -- see scripts/build_evidence.py ensure_columns(), called
     # again at --stage evidence time; done here too so a pre-existing DB
     # queried before that stage runs doesn't error on missing columns.
-    from build_evidence import ensure_columns  # noqa: E402
+    from build_evidence import ensure_columns
     ensure_columns(con)
     return con
 
@@ -366,7 +366,7 @@ def main(argv=None):
         # Compatibility shim (D11/D12): works whether or not the package has
         # been `pip install -e .`-ed. The installed import wins when present.
         sys.path.insert(0, src)
-    from kosha.build import cli  # noqa: E402
+    from kosha.build import cli
 
     return cli.main(argv)
 

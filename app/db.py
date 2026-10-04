@@ -17,8 +17,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-from kosha.query.connection import open_query_connection  # noqa: E402
-from kosha.settings import get_settings  # noqa: E402
+from kosha.query.connection import open_query_connection
+from kosha.settings import get_settings
 
 DB_PATH = get_settings().core_db
 

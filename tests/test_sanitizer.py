@@ -30,8 +30,8 @@ for extra in (ROOT, ROOT / "src", ROOT / "app"):
     if str(extra) not in sys.path:
         sys.path.insert(0, str(extra))
 
-from kosha.api.sanitize import sanitize_html  # noqa: E402
-from kosha.render import render  # noqa: E402
+from kosha.api.sanitize import sanitize_html
+from kosha.render import render
 
 GOLDEN = ROOT / "tests" / "golden"
 

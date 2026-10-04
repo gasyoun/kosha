@@ -19,7 +19,7 @@ import pytest
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "app"))
-from render import render  # noqa: E402
+from render import render
 
 GOLDEN_DIR = ROOT / "tests" / "golden"
 DB_PATH = ROOT / "data" / "db" / "kosha.db"

@@ -25,8 +25,8 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import sqlite3
 
-from paradigm import build_paradigm  # noqa: E402
-from reverse_lookup import analyze  # noqa: E402
+from paradigm import build_paradigm
+from reverse_lookup import analyze
 
 DB = ROOT / "data" / "db" / "kosha.db"
 

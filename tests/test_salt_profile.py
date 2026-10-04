@@ -22,7 +22,7 @@ for extra in (ROOT, ROOT / "src", ROOT / "app"):
     if str(extra) not in sys.path:
         sys.path.insert(0, str(extra))
 
-from kosha.api import repository, serializer  # noqa: E402
+from kosha.api import repository, serializer
 
 #: Profile §8.1 — the C-SALT-compatible top level. `/api/v1` adds both
 #: namespaced objects; strict `/dicts/*` adds only `csl` as permitted by §9.

@@ -23,7 +23,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from concordance_core import TIER_CONFIDENCE, TYPE_D_LINK_TYPES, TYPE_D_RECORD_FIELDS  # noqa: E402
+from concordance_core import TIER_CONFIDENCE, TYPE_D_LINK_TYPES, TYPE_D_RECORD_FIELDS
 
 sys.stdout.reconfigure(encoding="utf-8")
 

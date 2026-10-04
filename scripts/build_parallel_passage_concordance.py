@@ -50,7 +50,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from concordance_core import RECORD_FIELDS  # noqa: E402
+from concordance_core import RECORD_FIELDS
 
 sys.stdout.reconfigure(encoding="utf-8")
 

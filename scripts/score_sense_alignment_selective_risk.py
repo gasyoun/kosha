@@ -322,7 +322,7 @@ def write_report(d, payload, freeze):
 # The dhātupāṭha lens lives in app/sense_align.py since H5273, so the build's
 # root-vs-nominal gate and this report read ONE regex.
 sys.path.insert(0, str(ROOT / "app"))
-from sense_align import DHATU_MARKERS, dhatu_marked  # noqa: E402,F401
+from sense_align import DHATU_MARKERS, dhatu_marked
 
 
 # Post-review reclassification of the rubric's failure-shape LABEL (never the verdict).

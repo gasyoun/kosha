@@ -78,8 +78,8 @@ def _load_translit():
     """Import the canonical house chain (import, never re-type the SLP1 table)."""
     sys.path.insert(0, str(SANSKRIT_UTIL_ROOT / "tools" / "KeySwap"))
     sys.path.insert(0, str(SANSKRIT_UTIL_ROOT / "py"))
-    from scheme_bridge import hk_to_iast  # noqa: PLC0415
-    from sanskrit_util import to_slp1  # noqa: PLC0415
+    from scheme_bridge import hk_to_iast
+    from sanskrit_util import to_slp1
 
     return hk_to_iast, to_slp1
 

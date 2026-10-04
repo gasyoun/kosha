@@ -22,9 +22,9 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from concordance_core import RECORD_FIELDS  # noqa: E402  (schema parity check)
+from concordance_core import RECORD_FIELDS
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent / "sanskrit-util" / "py"))
-from sanskrit_util import from_slp1  # noqa: E402
+from sanskrit_util import from_slp1
 
 ROOT = Path(__file__).resolve().parent.parent
 GH = ROOT.parent if (ROOT.parent / "VisualDCS").exists() else ROOT.parent.parent

@@ -49,10 +49,10 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT / "app"))
 
-from build_word_pages import (  # noqa: E402
+from build_word_pages import (
     measure_head_n, select_head_tokens, _read_json, LEMMA_FREQ, DEFAULT_LIVE_UX,
 )
-from word_page import render_word_page  # noqa: E402
+from word_page import render_word_page
 
 PAGES_SOFT_CAP_MB = 1024.0
 GATE_FRACTION = 0.70

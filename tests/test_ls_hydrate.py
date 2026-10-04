@@ -21,7 +21,7 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "app"))
 
-import ls_hydrate as lh  # noqa: E402
+import ls_hydrate as lh
 
 SIBLINGS_PRESENT = (
     (ROOT.parent / "SanskritLexicography" / "RussianTranslation" / "src" / "ls_resolver.py").exists()

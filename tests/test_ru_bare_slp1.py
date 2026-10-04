@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 
-from kosha.api.ru_join import ru_bare_slp1_pass, _slp1_anchor  # noqa: E402
+from kosha.api.ru_join import ru_bare_slp1_pass, _slp1_anchor
 
 
 def test_accented_vedic_run():
