@@ -1,6 +1,6 @@
 {
   "manifest_version": "0.3.0",
-  "generated": "2026-09-22",
+  "generated": "2026-10-05",
   "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
   "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
   "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
@@ -3273,6 +3273,26 @@
       "consumers": [],
       "notes": "876 rows: 720 DCS-attested (82.2%), 541 vidyut-matched (61.8%, 70 ambiguous -- root string maps to >1 distinct aupadesika, reported not resolved). Regenerate manually after either source updates (sibling checkouts needed, like refresh_published_figures.py H2298) -- not wired into SanskritGrammar CI.",
       "regen_checked": "2026-09-25 (worker A05, fresh run against committed sources)"
+    },
+    {
+      "id": "nws-halle-lemmas",
+      "title": "NWS (Nachtragswörterbuch des Sanskrit, Halle) lemma scrape — 167,991 lemmas",
+      "tier": "restricted",
+      "in_release": "not-applicable",
+      "format": "tar.gz of per-lemma JSON ({key1 SLP1, iast, nws, sch, pw_len, has_nws_extra})",
+      "rows": 167991,
+      "size_bytes": 15916182,
+      "sha256": "054b05da96df2f1af2c95c02b7e15d87f8a616d4eaa339f93e3ed7430e07f00c",
+      "keying": "one JSON per lemma keyed on the site filename stem; key1 SLP1 + iast + nws (senses with source sigla: Mbh/R/Suś/…), sch (Schmidt Nachträge), pw_len (PW entry text length), has_nws_extra (NWS-only supplement flag)",
+      "source_repo": "https://github.com/gasyoun/pwg-ru-data",
+      "source_path": "layers/nws.tar.gz (LFS)",
+      "builder": "pwg-ru-data scrape of nws.uzi.uni-halle.de (Kumulatives Nachtragswörterbuch, ULB Halle 2013–16), packed 02-10-2026",
+      "consumers": [
+        "pwg_ru pipeline NWS layer queue (behind PWG/PW/SCH/PWKVN)",
+        "csl-observatory scripts/nws_halle_intersections.py (H5939 evidence script)",
+        "A61 WSC paper — papers/A61_wsc/NWS_HALLE_ANALYSIS_2026-10-04.md"
+      ],
+      "notes": "PRIVATE until the accession decision (H5939; H5940 letter). RIGHTS (Impressum probe 04-10-2026, NWS_DETAIL_GRILL_DECISIONS_2026-10-04): TEXTS usable WITH ATTRIBUTION MLU Halle-Wittenberg; IMAGES not redistributable (available on request); dump + undigitized residue offered per H5940. Baseline H5932: 138,976 (82.7%) of 167,991 lemmas outside PWG∪PW∪MW∪SCH∪ACC∪PWKVN (union 243,157; csl-orig @ f4c08c5); reproducible via csl-observatory nws_halle_intersections.py. Never flip tier without /publish-safety-check."
     }
   ]
 }

@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gasyoun.github.io/kosha/directory/">
-<meta name="description" content="126 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta name="description" content="127 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:title" content="Sanskrit NLP Data &amp; Tools Directory — kosha">
-<meta property="og:description" content="126 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
+<meta property="og:description" content="127 openly-licensed Sanskrit datasets (downloadable) plus 8 external NLP tools and APIs — the first curated directory for Sanskrit computational linguistics.">
 <meta property="og:type" content="website">
 <title>Sanskrit NLP Data &amp; Tools Directory — Gasuns Sanskrit Dictionary</title>
 <script type="application/ld+json">
@@ -2207,7 +2207,7 @@
     {
       "@type": "Dataset",
       "name": "csl-inflect give-back candidates — the defensible subset of A¬G (A3, H3782)",
-      "description": "A CANDIDATE SET, NOT A DEFECT LIST — the distinction is the point of this row. Quoting A¬G (164,236) as 'forms the engine misses' overstates the actionable set by 29x; every subtraction above is published with its count so the narrowing can be audited and reversed. Rebuilt on the sanskrit-util 0.11.0 join key (H3925, 02-09-2026); the pre-fix set held 5,656 rows. Composition: NOUN 3,810 (68.18%) · ADJ 1,594 · PRON 105 · ADV 35 · NUM 23 · rest 21. CROSS-CHECK IN FAVOUR: the head is pronoun dative/locative cells (asmai < idam, tasmai/tasyai < tad, etasmin < etad, amum < adas) and irregular feminine/consonant stems (striyaḥ < strī, śriyam < śrī, āpo < ap) — exactly where MW-inflect is weak, and `inflections` already carries a hand-made source='curated-gita-pronoun' patch of 153 rows, independent evidence that pronouns are a real gap and not an artefact of this method. CROSS-CHECK AGAINST: the bare-stem filter matches only exact lemma-key equality, so ALLOMORPHIC bound stems still pass — ātma (< ātman) at rank 3 is one, carrying feat_case='Cpd' on 2,544 tokens against 10 with a real case. Do NOT repeat the earlier claim that rājñ (rank 2) is the same kind of leak: DCS tags rājñ as Voc Sing Masc 880 times, so by the corpus's own annotation it is an inflected cell. TRIAGED SINCE (H3863): the set is machine-decidable, not a human-judgment pile — DCS tagging resolves 5,587 of 5,588 rows into owed 5,232 (slot-conflict 2,521 · coverage-hole 2,711) and not-owed 355 (compound-member 222 · lexicon-gap 102 · indeclinable 31), 1 untagged residue; sidecars morph_giveback_triaged.tsv + morph_giveback_triage_summary.json, method in MORPHOLOGY_GIVEBACK_TRIAGE_REPORT.md. The triage doubles as evidence the key fix landed: the orthographic-variant verdict, which existed only to catch anusvāra twins the broken key had split, matched 146 rows before the rebuild and 0 after. R-C4: 11 candidates (0.20%) carry tense_caveat=1. Report: data/concordance/MORPHOLOGY_GIVEBACK_CANDIDATES_REPORT.md. Cheap and re-derivable in seconds from the AnG TSV — the expensive join is a separate script.",
+      "description": "A CANDIDATE SET, NOT A DEFECT LIST — the distinction is the point of this row. Quoting A¬G (164,236) as 'forms the engine misses' overstates the actionable set by 29x; every subtraction above is published with its count so the narrowing can be audited and reversed. Rebuilt on the sanskrit-util 0.11.0 join key (H3925, 02-09-2026); the pre-fix set held 5,656 rows. Composition: NOUN 3,810 (68.18%) · ADJ 1,594 · PRON 105 · ADV 35 · NUM 23 · rest 21. CROSS-CHECK IN FAVOUR: the head is pronoun dative/locative cells (asmai < idam, tasmai/tasyai < tad, etasmin < etad, amum < adas) and irregular feminine/consonant stems (striyaḥ < strī, śriyam < śrī, āpo < ap) — exactly where MW-inflect is weak, and `inflections` already carries a hand-made source='curated-gita-pronoun' patch of 153 rows, independent evidence that pronouns are a real gap and not an artefact of this method. CROSS-CHECK AGAINST: the bare-stem filter matches only exact lemma-key equality, so ALLOMORPHIC bound stems still pass — ātma (< ātman) at rank 3 is one, carrying feat_case='Cpd' on 2,544 tokens against 10 with a real case. Do NOT repeat the earlier claim that rājñ (rank 2) is the same kind of leak: DCS tags rājñ as Voc Sing Masc 880 times, so by the corpus's own annotation it is an inflected cell. TRIAGED SINCE (H3863): the set is machine-decidable, not a human-judgment pile — DCS tagging resolves 5,587 of 5,588 rows into owed 5,232 (slot-conflict 2,521 · coverage-hole 2,711) and not-owed 355 (compound-member 222 · lexicon-gap 102 · indeclinable 31), 1 untagged residue; sidecars morph_giveback_triaged.tsv + morph_giveback_triage_summary.json, method in MORPHOLOGY_GIVEBACK_TRIAGE_REPORT.md. The triage doubles as evidence the key fix landed: the orthographic-variant verdict, which existed only to catch anusvāra twins the broken key had split, matched 146 rows before the rebuild and 0 after. R-C4: 11 candidates (0.20%) carry tense_caveat=1. Report: data/concordance/MORPHOLOGY_GIVEBACK_CANDIDATES_REPORT.md. Cheap and re-derivable in seconds from the AnG TSV — the expensive join is a separate script. VINTAGE NOTE (01-10-2026, roadmap drain A02): the H3863 sentence above describes the sanskrit-util 0.11.0 rebuild (5,588 rows); the 0.12.0 medial-labial rebuild (H3975, 06-09-2026) shrank the set to the 5,224 rows this row now registers (rows/size_bytes were stale at the 0.11.0 figures until this correction) and re-ran the triage on it — owed 4,900 (slot-conflict 2,212 · coverage-hole 2,688), not-owed 323 (compound-member 192 · lexicon-gap 103 · indeclinable 28), 1 untagged residue; all three vintages' deltas are published in CONCORDANCE_ROADMAP.md and CHANGELOG 0.117.16. ROUTED (01-10-2026, drain A02): the 4,900 owed cells are routed as the kosha-side queued port — data/concordance/giveback_port/ carries csl_inflect_slot_conflicts.tsv (2,212 rows, both forms named) + csl_inflect_coverage_holes.tsv (2,688 rows) + ROUTING.json (sha256-pinned provenance) + DRAFT_POST.md (the upstream post, drafted on the H185 Task B pattern); the upstream csl-inflect post stays HUMAN-GATED (RELATIONS.md §2/§7), never an in-pass csl-inflect edit; gate test tests/test_giveback_port.py (9 checks).",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
       "isAccessibleForFree": true,
       "creator": {
@@ -3575,6 +3575,34 @@
         "encodingFormat": "tsv",
         "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory"
       }
+    },
+    {
+      "@type": "Dataset",
+      "name": "SanskritGrammar Whitney-no x DCS lemma x vidyut dhatu crosswalk",
+      "description": "876 rows: 720 DCS-attested (82.2%), 541 vidyut-matched (61.8%, 70 ambiguous -- root string maps to >1 distinct aupadesika, reported not resolved). Regenerate manually after either source updates (sibling checkouts needed, like refresh_published_figures.py H2298) -- not wired into SanskritGrammar CI.",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "publisher": {
+        "@id": "https://gasyoun.github.io/kosha/#org"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "kosha Sanskrit data-hub",
+        "url": "https://gasyoun.github.io/kosha/directory/"
+      },
+      "keywords": [
+        "Sanskrit",
+        "computational linguistics",
+        "sanskritgrammar-whitney-dcs-vidyut-crosswalk"
+      ],
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "csv",
+        "contentUrl": "https://github.com/gasyoun/kosha/releases/download/unreleased/whitney_dcs_vidyut_crosswalk.csv"
+      }
     }
   ]
 }
@@ -3645,8 +3673,8 @@
     <h1>Sanskrit NLP Data &amp; Tools Directory</h1>
     <p class="lede">A single curated entry point for Sanskrit computational linguistics: our openly-licensed derived datasets (downloadable), plus the external stacks and APIs the project builds on — what each does, how to call it, and its license.</p>
     <div class="tallies">
-      <div class="tally"><b>126</b><span>public datasets</span></div>
-      <div class="tally"><b>15</b><span>restricted (on request)</span></div>
+      <div class="tally"><b>127</b><span>public datasets</span></div>
+      <div class="tally"><b>16</b><span>restricted (on request)</span></div>
       <div class="tally"><b>8</b><span>external tools &amp; stacks</span></div>
     </div>
     <div class="nav">
@@ -4439,7 +4467,7 @@
         <span class="badge pub">public</span>
       </div>
       <p class="key">Derived from morph_attest_infl_AnG.tsv by three measured subtractions from the 70,510 paradigm_gap rows: minus DCS upos=VERB (23,942 — `inflections` holds 680 verbal lemmas against 222,735 nominal, so finite verbs are scope it never claimed), minus forms attested only as a sandhied surface (40,424 — an artefact of the attested key, not the generator), minus bare stems and citation forms where form_key(token) == form_key(lemma) (556 — DCS tags bound stems and compound members as tokens). Sorted by descending corpus attestation so the give-back can be triaged by how much text each missing form would explain. Columns: attested_form, form_key, dcs_lemma, dcs_upos, target_locus, evidence_count, tense_caveat.</p>
-      <p class="meta">5,588 rows · 286.4 KB · TSV</p>
+      <p class="meta">5,224 rows · 265.5 KB · TSV</p>
       
       <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/morph_giveback_candidates.tsv">Download ↓</a></div>
     </article>
@@ -4923,6 +4951,16 @@
       <div class="chips"><span class="chip">csl-pywork v02/distinctfiles/pwg/pywork/pwgauth/pwgbib_input.txt (upstream copy, merged #94)</span><span class="chip">PWG handoff H5466 pwg-ls-full-classifier (deep per-string classification)</span><span class="chip">csl-observatory issue-240 defect documentation</span></div>
       <div class="card-f"><a class="dl ghost" href="https://github.com/sanskrit-lexicon/csl-observatory">In source repo ↗</a></div>
     </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>SanskritGrammar Whitney-no x DCS lemma x vidyut dhatu crosswalk</h3>
+        <span class="badge pub">public</span>
+      </div>
+      <p class="key">whitney_no (int) + root_iast/root_slp1; per-row DCS attestation+freqBand, vidyut aupadesika+dhatupatha code (semicolon-joined when ambiguous)</p>
+      <p class="meta">876 rows · CSV</p>
+      
+      <div class="card-f"><a class="dl" href="https://github.com/gasyoun/kosha/releases/download/unreleased/whitney_dcs_vidyut_crosswalk.csv">Download ↓</a></div>
+    </article>
     </div>
     <h2 style="margin-top:34px;font-size:21px">Restricted &amp; in preparation</h2>
     <p class="sub">Rights-encumbered or unbackuped local-only assets — listed for discovery; available on request as rights clear.</p>
@@ -5075,6 +5113,16 @@
       <p class="key">one row per headword slp1 (site sitemap census, 51,663 heads): {originals:{likh,mw,apte,mac,pwg} html fragments, mt:{mw_ru,apte_ru,pwg_ru} html fragments, provenance sha256 per fetched part}; length-preserving SLP1 keys</p>
       <p class="meta">51,663 rows · 8.1 GB · JSONL (PARSED) + HTML (RAW)</p>
       <div class="chips"><span class="chip">H3456 blinded pwg_ru-vs-akshara-MT benchmark (full-scale extension)</span><span class="chip">future SanskritRussian mw_ru/apte_ru comparison</span></div>
+      <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
+    </article>
+    <article class="card">
+      <div class="card-h">
+        <h3>NWS (Nachtragswörterbuch des Sanskrit, Halle) lemma scrape — 167,991 lemmas</h3>
+        <span class="badge res">restricted</span>
+      </div>
+      <p class="key">one JSON per lemma keyed on the site filename stem; key1 SLP1 + iast + nws (senses with source sigla: Mbh/R/Suś/…), sch (Schmidt Nachträge), pw_len (PW entry text length), has_nws_extra (NWS-only supplement flag)</p>
+      <p class="meta">167,991 rows · 15.2 MB · TAR.GZ OF PER-LEMMA JSON ({KEY1 SLP1, IAST, NWS, SCH, PW_LEN, HAS_NWS_EXTRA})</p>
+      <div class="chips"><span class="chip">pwg_ru pipeline NWS layer queue (behind PWG/PW/SCH/PWKVN)</span><span class="chip">csl-observatory scripts/nws_halle_intersections.py (H5939 evidence script)</span><span class="chip">A61 WSC paper — papers/A61_wsc/NWS_HALLE_ANALYSIS_2026-10-04.md</span></div>
       <div class="card-f"><span class="dl none">available on request / in preparation</span></div>
     </article>
     </div>
