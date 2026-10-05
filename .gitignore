@@ -16,6 +16,9 @@ review/
 data/raw/
 data/raw_sqlite/
 data/releases/
+# H6067 NWS-Halle OCR route landing: scans + OCR text of a private-layer
+# source (images not rights-cleared until H5940 answered) stay local-only.
+data/nws_ocr/
 # Built stores + their DAG sidecars: *.db is already ignored, but the build
 # writes <target>.lock.json and a .build/ scratch dir next to it (H1944).
 data/db/
