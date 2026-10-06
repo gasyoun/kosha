@@ -174,6 +174,28 @@
       "regen_checked": "2026-09-04 (H4046: PASS)"
     },
     {
+      "id": "mw-sense-dcs-join",
+      "title": "MW senses x DCS citations — full-volume join (per-sense-freq axis)",
+      "tier": "public",
+      "license": "CC BY-SA 4.0",
+      "in_release": "unreleased",
+      "release_asset": "mw_sense_dcs_join.tsv.gz",
+      "format": "tsv.gz",
+      "rows": 303023,
+      "size_bytes": 9960821,
+      "keying": "one row per MW numbered sense (kosha.db entries/senses dict=mw); join key SLP1 (slp1_key x lemma_frequency.lemma_slp1); sense_ord = 1-based printed order per slp1_key (CAST(L AS INTEGER), sense_n) — identical to wn_to_mw_map sense_id convention (H1453); tiers: lemma (headword-level DCS aggregates, lower bound per sense) | ws_count attested (WordSem gold) | mfs_est flag (H1588 estimate marker); dcs_match=dict_only rows kept",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/concordance/mw_sense_dcs_join.tsv.gz",
+      "builder": "scripts/build_mw_sense_dcs_join.py (H6066)",
+      "consumers": [
+        "csl-observatory research dashboards (feed mw_sense_dcs_observatory_feed.json, H6071)",
+        "sense-corpus programme Q-wave"
+      ],
+      "notes": "Both denominators: 143,428/303,023=47.33% of MW senses have a DCS-attested headword; 23,088/303,023=7.62% carry WordSem per-sense attested counts; 57,157/83,277=68.63% of DCS lemmas match an MW headword. Residues first-class: 159,595 dict_only senses (NOT ghost senses by default, FINDINGS 86 - corpus is lacunar), 26,120 corpus_only lemmas (sidecar TSV), 136,092 senses on homonym-collision keys (declared, corpus cannot split MW homonyms - adjudication stays human). dcs_count_all source = M9 archive.sqlite period_freq sidecar: validation cross-check vs dcs_full-2026 raw tokens shows strict lower bound (0 above in 50-sample). Validation: link 0/50 fail (IAST->SLP1 transcode probe, sanskrit-util canonical - never casefold SLP1), ws re-derivation from wn_to_mw_map 0/5 fail.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/mw-sense-dcs-join.meta.md",
+      "regen_checked": "2026-10-06 (H6066 build+check+validate green)"
+    },
+    {
       "id": "zaliznyak-grammar-index",
       "title": "Zaliznyak-style compact grammar-token index over all PWG",
       "tier": "public",
