@@ -1,0 +1,59 @@
+{
+ "generator": "scripts/build_mw_sense_dcs_join.py",
+ "executor": "GLM 5.3 (opencode/zai-coding-plan/glm-5.3)",
+ "handoff": "H6066",
+ "rows": 303023,
+ "columns": [
+  "entry_id",
+  "L",
+  "slp1",
+  "k2",
+  "n_entries_key",
+  "sense_n",
+  "sense_ord",
+  "gloss",
+  "dcs_match",
+  "dcs_count_all",
+  "dcs_rank_all",
+  "dcs_grammar",
+  "dcs_periods_sum",
+  "ws_count",
+  "ws_rank",
+  "ws_share",
+  "ws_prov",
+  "mfs_est"
+ ],
+ "metrics": {
+  "senses_total": 303023,
+  "mw_entries": 286525,
+  "mw_entries_without_senses": 0,
+  "mw_entries_without_senses_lemma_attested": 0,
+  "senses_lemma_attested": 143428,
+  "senses_ws_attested": 23088,
+  "senses_homonym_collision": 136092,
+  "denom_senses_lemma": 0.4733,
+  "denom_senses_ws": 0.0762,
+  "corpus_lemmas_total": 83277,
+  "corpus_lemmas_matched": 57157,
+  "denom_corpus": 0.6863,
+  "corpus_only_lemmas": 26120,
+  "ws_pairs_total": 23088,
+  "ws_pairs_landed": 23088,
+  "senses_ws_est_only": 0,
+  "senses_ws_gold": 23088,
+  "ws_pairs_unlanded_no_mw_entry": 0,
+  "ws_pairs_unlanded_ordinal_past_end": 0
+ },
+ "pins": {
+  "kosha_db": "kosha.db",
+  "mw_entries": 286525,
+  "dcs_lemma_side": "data/frequency/lemma_frequency.tsv (committed; source VisualDCS archive.sqlite M9 period_freq)",
+  "ws_sense_side": "data/frequency/sense_frequency.tsv layer=mw (H1453)",
+  "mfs_side": "data/frequency/wsd_untagged_mfs_counts.tsv (H1588)",
+  "dcs_full_sqlite_sha256": "8f3b06bd6ef0e47a9ccf81d147e73d5d240d64e0c12f6d789262eb422ebb23bc (manifest pin)"
+ },
+ "denominators": {
+  "dict_side": "|senses_lemma_attested| / |senses_total| and |senses_ws_attested| / |senses_total|",
+  "corpus_side": "|corpus_lemmas_matched| / |corpus_lemmas_total|"
+ }
+}

@@ -1,0 +1,337 @@
+{
+ "dataset": "mw-sense-dcs-join",
+ "builder": "scripts/build_mw_sense_dcs_join.py",
+ "executor": "GLM 5.3 (opencode/zai-coding-plan/glm-5.3)",
+ "handoff": "H6066",
+ "axis": "per-sense-freq (full volume, MW x DCS)",
+ "join_key": "SLP1 (sanskrit-util normalised both sides); sense ordinal = 1-based printed order per slp1_key (CAST(L AS INTEGER), sense_n) — same as wn_to_mw_map/H1453",
+ "metrics": {
+  "senses_total": 303023,
+  "mw_entries": 286525,
+  "mw_entries_without_senses": 0,
+  "mw_entries_without_senses_lemma_attested": 0,
+  "senses_lemma_attested": 143428,
+  "senses_ws_attested": 23088,
+  "senses_homonym_collision": 136092,
+  "denom_senses_lemma": 0.4733,
+  "denom_senses_ws": 0.0762,
+  "corpus_lemmas_total": 83277,
+  "corpus_lemmas_matched": 57157,
+  "denom_corpus": 0.6863,
+  "corpus_only_lemmas": 26120,
+  "ws_pairs_total": 23088,
+  "ws_pairs_landed": 23088,
+  "senses_ws_est_only": 0,
+  "senses_ws_gold": 23088,
+  "ws_pairs_unlanded_no_mw_entry": 0,
+  "ws_pairs_unlanded_ordinal_past_end": 0
+ },
+ "tiers": {
+  "lemma": "headword-level DCS citation aggregates (lower bound for every sense of an attested headword; corpus cannot split homonyms)",
+  "ws": "WordSem per-sense ATTESTED counts (projection via wn_to_mw_map)",
+  "mfs_est": "estimated most-frequent-sense flag for untagged lemmas (wsd_untagged_mfs_counts; never a count)",
+  "dict_only": "senses of headwords with no DCS attestation — kept as rows"
+ },
+ "top_ws_senses": [
+  {
+   "lemma": "tad",
+   "sense_ord": 14,
+   "sense_n": 1,
+   "count": 9797
+  },
+  {
+   "lemma": "na",
+   "sense_ord": 1,
+   "sense_n": 1,
+   "count": 3315
+  },
+  {
+   "lemma": "tu",
+   "sense_ord": 8,
+   "sense_n": 1,
+   "count": 3220
+  },
+  {
+   "lemma": "iti",
+   "sense_ord": 4,
+   "sense_n": 1,
+   "count": 2719
+  },
+  {
+   "lemma": "eva",
+   "sense_ord": 2,
+   "sense_n": 1,
+   "count": 2656
+  },
+  {
+   "lemma": "BU",
+   "sense_ord": 3,
+   "sense_n": 2,
+   "count": 2593
+  },
+  {
+   "lemma": "kf",
+   "sense_ord": 49,
+   "sense_n": 48,
+   "count": 2582
+  },
+  {
+   "lemma": "agni",
+   "sense_ord": 9,
+   "sense_n": 1,
+   "count": 1624
+  },
+  {
+   "lemma": "api",
+   "sense_ord": 4,
+   "sense_n": 1,
+   "count": 1569
+  },
+  {
+   "lemma": "rasa",
+   "sense_ord": 11,
+   "sense_n": 1,
+   "count": 1547
+  },
+  {
+   "lemma": "vac",
+   "sense_ord": 3,
+   "sense_n": 2,
+   "count": 1534
+  },
+  {
+   "lemma": "rAjan",
+   "sense_ord": 1,
+   "sense_n": 1,
+   "count": 1480
+  },
+  {
+   "lemma": "Adi",
+   "sense_ord": 3,
+   "sense_n": 1,
+   "count": 1463
+  },
+  {
+   "lemma": "rAkzasa",
+   "sense_ord": 2,
+   "sense_n": 1,
+   "count": 1349
+  },
+  {
+   "lemma": "putra",
+   "sense_ord": 4,
+   "sense_n": 1,
+   "count": 1279
+  },
+  {
+   "lemma": "su",
+   "sense_ord": 14,
+   "sense_n": 1,
+   "count": 1267
+  },
+  {
+   "lemma": "as",
+   "sense_ord": 11,
+   "sense_n": 10,
+   "count": 1264
+  },
+  {
+   "lemma": "eka",
+   "sense_ord": 12,
+   "sense_n": 1,
+   "count": 1246
+  },
+  {
+   "lemma": "evam",
+   "sense_ord": 5,
+   "sense_n": 1,
+   "count": 1244
+  },
+  {
+   "lemma": "mad",
+   "sense_ord": 1,
+   "sense_n": 1,
+   "count": 1220
+  },
+  {
+   "lemma": "punar",
+   "sense_ord": 3,
+   "sense_n": 1,
+   "count": 1165
+  },
+  {
+   "lemma": "deva",
+   "sense_ord": 4,
+   "sense_n": 1,
+   "count": 1151
+  },
+  {
+   "lemma": "lakzmaRa",
+   "sense_ord": 5,
+   "sense_n": 1,
+   "count": 996
+  },
+  {
+   "lemma": "rasa",
+   "sense_ord": 1,
+   "sense_n": 1,
+   "count": 985
+  },
+  {
+   "lemma": "yad",
+   "sense_ord": 1,
+   "sense_n": 1,
+   "count": 983
+  },
+  {
+   "lemma": "rAvaRa",
+   "sense_ord": 2,
+   "sense_n": 1,
+   "count": 981
+  },
+  {
+   "lemma": "sama",
+   "sense_ord": 4,
+   "sense_n": 1,
+   "count": 977
+  },
+  {
+   "lemma": "vana",
+   "sense_ord": 1,
+   "sense_n": 1,
+   "count": 976
+  },
+  {
+   "lemma": "indra",
+   "sense_ord": 2,
+   "sense_n": 1,
+   "count": 938
+  },
+  {
+   "lemma": "dina",
+   "sense_ord": 3,
+   "sense_n": 1,
+   "count": 908
+  },
+  {
+   "lemma": "dfS",
+   "sense_ord": 23,
+   "sense_n": 1,
+   "count": 840
+  },
+  {
+   "lemma": "cUrRa",
+   "sense_ord": 2,
+   "sense_n": 1,
+   "count": 831
+  },
+  {
+   "lemma": "bala",
+   "sense_ord": 1,
+   "sense_n": 1,
+   "count": 804
+  },
+  {
+   "lemma": "dvi",
+   "sense_ord": 1,
+   "sense_n": 1,
+   "count": 801
+  },
+  {
+   "lemma": "sItA",
+   "sense_ord": 1,
+   "sense_n": 1,
+   "count": 801
+  },
+  {
+   "lemma": "BAga",
+   "sense_ord": 1,
+   "sense_n": 1,
+   "count": 784
+  },
+  {
+   "lemma": "aMSa",
+   "sense_ord": 1,
+   "sense_n": 1,
+   "count": 768
+  },
+  {
+   "lemma": "aTa",
+   "sense_ord": 2,
+   "sense_n": 2,
+   "count": 764
+  },
+  {
+   "lemma": "saptan",
+   "sense_ord": 1,
+   "sense_n": 1,
+   "count": 752
+  },
+  {
+   "lemma": "pitf",
+   "sense_ord": 4,
+   "sense_n": 1,
+   "count": 748
+  },
+  {
+   "lemma": "mahat",
+   "sense_ord": 1,
+   "sense_n": 1,
+   "count": 744
+  },
+  {
+   "lemma": "Sara",
+   "sense_ord": 2,
+   "sense_n": 1,
+   "count": 743
+  },
+  {
+   "lemma": "gam",
+   "sense_ord": 3,
+   "sense_n": 2,
+   "count": 722
+  },
+  {
+   "lemma": "raTa",
+   "sense_ord": 1,
+   "sense_n": 1,
+   "count": 714
+  },
+  {
+   "lemma": "heman",
+   "sense_ord": 2,
+   "sense_n": 1,
+   "count": 706
+  },
+  {
+   "lemma": "ja",
+   "sense_ord": 2,
+   "sense_n": 1,
+   "count": 665
+  },
+  {
+   "lemma": "Darma",
+   "sense_ord": 7,
+   "sense_n": 1,
+   "count": 650
+  },
+  {
+   "lemma": "giri",
+   "sense_ord": 3,
+   "sense_n": 1,
+   "count": 647
+  },
+  {
+   "lemma": "tAmra",
+   "sense_ord": 2,
+   "sense_n": 1,
+   "count": 632
+  },
+  {
+   "lemma": "tatra",
+   "sense_ord": 2,
+   "sense_n": 1,
+   "count": 631
+  }
+ ]
+}
