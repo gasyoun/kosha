@@ -15,9 +15,9 @@ Classes (first-match cascade over the 138,976 residue; sums to 100.000%):
   C2 content_uncollected  key1 ∉ union, entry carries NWS/SCH           0
                           content (would be genuine novelty)
   C3 errata_near          key1 ∉ union, empty, len(key1) ≥ 4, within
-                          Levenshtein distance 1 of some union key      10
+                          Levenshtein distance 1 of some union key      18
   C4 orphan_empty         the rest: scrape artifacts, short junk,
-                          sandhi-shaped fragments, all empty            14
+                          sandhi-shaped fragments, all empty             6
 
 Method notes:
   - stem/k1 extraction is the session-exact H5932 method, ported from
