@@ -1,0 +1,19 @@
+{
+  "handoff": "H6048",
+  "created": "2026-10-06T02:34:58Z",
+  "inherits": "H5877 frozen B3 items (same 300 items, gold, candidates — byte-identical)",
+  "context_fix": "text attached via sentence WHERE id = token.sentence_id (H6047 finding)",
+  "checks": {
+    "context_differs_from_broken": 300,
+    "lemma_in_true_sentence": 300
+  },
+  "dcs_db": "dcs_full.sqlite",
+  "sha256": {
+    "frozen_items.jsonl": "3827db3f724ebd83a78cdd9d54c7651f8a461cc5d8fdc6ef5ecc992fcbdf7df6",
+    "wn_to_mw_map.tsv": "10efdfecff083d750738ef002aa01e9f70a3f905df0a58a86389dacca82f010b",
+    "sense_frequency.tsv": "e1d5dc0dfca46d19bc522fa232d05dfeb45f7646190486d1006ac33c26e61b14",
+    "dcs_full.sqlite": "2ba0159e6a34ba331c775243569e33c203e3cfb66977267ceabcaf523e5db0da",
+    "items.jsonl": "2c50824218e59da01f384424aa7c1542a9c35a49a1e42a1f57519c1a454ccc77"
+  },
+  "elapsed_s": 4.3
+}

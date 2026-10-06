@@ -1,5 +1,11 @@
 # ISCLS-9 B3 — LLM error taxonomy vs corpus-MFS: a wrong-context finding
 
+> **Update 06-10-2026 (H6048):** the context-join fix has landed and the LLM
+> arm was re-run on true contexts — the in-context score is **62.3%**
+> (vs the 54.3% measured here under broken context; MFS 84.3% unchanged).
+> The tables below are the historical pre-fix analysis; see
+> [ISCLS9_B3_WSD_HYBRID_H6048.md](https://github.com/gasyoun/kosha/blob/main/docs/ISCLS9_B3_WSD_HYBRID_H6048.md).
+
 _Created: 06-10-2026 · Last updated: 06-10-2026_
 
 **What this is.** The error analysis of every LLM miss on the frozen 300-item B3

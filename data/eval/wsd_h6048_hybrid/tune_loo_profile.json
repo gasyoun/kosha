@@ -1,0 +1,26 @@
+{
+  "n_train_tokens": 291755,
+  "loo_mfs_accuracy": 0.8261,
+  "by_stratum": {
+    "<0.20": {
+      "n": 28619,
+      "loo_mfs_acc": 0.4026
+    },
+    ">=0.20": {
+      "n": 263136,
+      "loo_mfs_acc": 0.8722
+    },
+    "n_train <10": {
+      "n": 26434,
+      "loo_mfs_acc": 0.7056
+    },
+    "n_train >=10": {
+      "n": 265321,
+      "loo_mfs_acc": 0.8381
+    }
+  },
+  "pre_registered_rule": {
+    "delta_gap": 0.2,
+    "min_train": 10
+  }
+}
