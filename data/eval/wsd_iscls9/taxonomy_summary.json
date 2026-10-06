@@ -1,0 +1,55 @@
+{
+  "handoff": "H6047",
+  "input": {
+    "items": "items.jsonl (H5877)",
+    "n_items": 300,
+    "llm_accuracy": 0.5433,
+    "mfs_accuracy": 0.8433
+  },
+  "n_llm_misses": 137,
+  "context_verification": {
+    "scope": "all items",
+    "true_sentence_has_target": 300,
+    "shown_sentence_has_target": 2,
+    "verdict": "sentence-context join bug: item sentence_id is token.sentence_id (internal int) but text attached via sentence.sent_id (external text) — scripts/wsd_iscls9_eval.py scan_join/cmd_build; fix: attach text by sentence.id (=token.sentence_id) or key both sides on sent_id"
+  },
+  "primary_class_counts": {
+    "ctx_mismatch": 136,
+    "sandhi_fusion": 1
+  },
+  "primary_class_shares": {
+    "ctx_mismatch": 0.9927,
+    "sandhi_fusion": 0.0073
+  },
+  "soft_tag_counts": {
+    "homoglossia": 0,
+    "gloss_deficit": 61,
+    "rare_sense": 19,
+    "prior_bias": 30,
+    "gold_top1_missed": 100,
+    "sandhi_fusion(where computable)": 1
+  },
+  "sum_check": {
+    "classified": 137,
+    "total": 137,
+    "ok": true
+  },
+  "parameters": {
+    "homoglossia_jaccard": 0.5,
+    "gloss_deficit_maxcap": 100,
+    "rare_sense_rank": 4,
+    "rare_sense_share": 0.1,
+    "share_column": "sense_frequency.tsv:lemma_share (mw/attested)",
+    "sensitivity": {
+      "jaccard_ge_0.2": 7,
+      "jaccard_ge_0.3": 0
+    },
+    "gold_rank_distribution": {
+      "2": 17,
+      "3": 11,
+      "1": 102,
+      "4": 5,
+      "5": 2
+    }
+  }
+}
