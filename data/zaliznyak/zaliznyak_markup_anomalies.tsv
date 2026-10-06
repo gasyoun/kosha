@@ -1,0 +1,15 @@
+anomaly_type	key	count	examples_k1	detail
+empty_index_token	-	0		rows with no paradigm token assigned
+ind_lex_label_variety	ind·*	2003		lex labels folded into indeclinable tokens: adv=1808, ind=110, interj=85
+k1_not_in_union	-	28	AsaNginI AvartinI SAkinI SEvalinI alinI	grammar-index headwords absent from union_headwords.tsv — all -inI feminines the union folds into -in (fem_fold) while the grammar index keeps separate headwords
+lex_doubled_abbreviation	-	9	AharanivapA AharavanitA utpacanipacA udDarAvasfjA upacAru	PWG 'f. f.'/'m. m.' doubled abbreviation artifacts; token assigned as plain f/m
+pc_drift_token_missing	-	38	f·1c f·4c f·6c f·8nd* f·8td*	live asset tokens absent from committed zaliznyak_paradigm_classes.tsv (332 rows)
+pc_drift_token_retired	-	28	f·3b+3 f·8nb* f·8tb* f·8tb*+2 mfn·1b+3	committed zaliznyak_paradigm_classes.tsv tokens no longer in the asset (renamed/retired upstream)
+singleton_token	-	53	fn·5a fn·8sa f·1c f·4c f·5+3	tokens attested by exactly one headword
+token_mixed_lex_labels	f·2+2	3811		normalized lex labels: f=3808, ff=3
+token_mixed_lex_labels	f·2	2531		normalized lex labels: f=2528, ff=3
+token_mixed_lex_labels	ind·0	1124		normalized lex labels: adv=935, ind=104, interj=85
+token_mixed_lex_labels	f·3	967		normalized lex labels: f=966, ff=1
+token_mixed_lex_labels	ind·0+2	856		normalized lex labels: adv=850, ind=6
+token_mixed_lex_labels	m·5	497		normalized lex labels: m=496, mm=1
+token_mixed_lex_labels	f·5	46		normalized lex labels: f=45, ff=1

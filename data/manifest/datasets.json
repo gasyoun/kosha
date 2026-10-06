@@ -1,6 +1,6 @@
 {
   "manifest_version": "0.3.0",
-  "generated": "2026-10-05",
+  "generated": "2026-10-06",
   "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
   "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
   "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
@@ -196,6 +196,26 @@
       "notes": "FAIR data package; paradigms generated via vidyut, never transcribe static tables. Zenodo DOI 10.5281/zenodo.22102090 (minted 25-08-2026 for data-v0.4.0, a re-cut of the identical data-v0.1.0 content; data-v0.1.0 predates the GitHub-Zenodo webhook wired 14-08-2026).",
       "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-grammar-index.meta.md",
       "regen_checked": "2026-09-04 (H4075: reverse_index.py --build rerun over live csl-orig v02 — zero diff; builder located)"
+    },
+    {
+      "id": "zaliznyak-token-distribution",
+      "title": "Zaliznyak token distribution over 98,639 headwords (H6053)",
+      "tier": "public",
+      "license": "CC BY-SA 4.0",
+      "in_release": "not-applicable",
+      "format": "tsv + json + svg",
+      "rows": 342,
+      "size_bytes": 17686,
+      "keying": "one row per paradigm token: member_count/pct_rows/cum_pct_rows + source-dictionary breadth (mean_n_dicts, pct_rows_ge5_dicts from the 15-dict union join); companion zaliznyak_markup_anomalies.tsv census (14 rows) + summary JSON + 4 charts (docs/charts/h6053_*.svg)",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/zaliznyak/zaliznyak_token_distribution.tsv",
+      "builder": "scripts/zaliznyak_token_distribution.py (H6053, GLM 5.3 opencode/zai-coding-plan/glm-5.3, 06-10-2026) over the frozen data-v0.4.0 assets zaliznyak_grammar_index.tsv (98,639 rows; coverage guarantee sum=98,639, --check) and union_headwords.tsv (323,425 rows) read from the sibling SanskritLexicography checkout at build time",
+      "consumers": [
+        "JOHD A56 revision (token inventory 342 not 335; 99% checkpoint 153 not 154; zero-contradiction QA)"
+      ],
+      "notes": "Classes x frequency x source-dictionary breadth over the zaliznyak-grammar-index: 342 tokens (manifest/paper said 335), 50% rows = 6 tokens, 80% = 26, 99% = 153; mean n_dicts 4.72/15, 42.0% rows in >=5 dicts; 28 -inI headwords never join the union (fem_fold seam A55xA56); paradigm_classes.tsv drift 38 missing + 28 retired tokens. Report: docs/H6053_ZALIZNYAK_TOKEN_DISTRIBUTION_REPORT_06.10.26.md.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/docs/data-statements/zaliznyak-token-distribution.meta.md",
+      "regen_checked": "2026-10-06 (H6053: PASS)"
     },
     {
       "id": "corpus-lexicon",
