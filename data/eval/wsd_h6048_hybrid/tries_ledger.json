@@ -1,0 +1,46 @@
+{
+  "handoff": "H6048",
+  "created": "2026-10-06",
+  "mission_test": "hybrid vs corpus-MFS 84.3% on frozen B3 (n=300), exact two-sided McNemar p<0.05",
+  "tries": [
+    {
+      "try": 1,
+      "arm": "deepseek/deepseek-chat, full candidate list on routed",
+      "hybrid_acc": 0.8167,
+      "b": 9,
+      "c": 17,
+      "p": 0.16864
+    },
+    {
+      "try": 2,
+      "arm": "deepseek/deepseek-chat, top-2 restricted",
+      "hybrid_acc": 0.8233,
+      "b": 8,
+      "c": 14,
+      "p": 0.28628
+    },
+    {
+      "try": 3,
+      "arm": "anthropic/claude-sonnet-5, top-2 restricted",
+      "hybrid_acc": 0.83,
+      "b": 9,
+      "c": 13,
+      "p": 0.52347
+    },
+    {
+      "try": 4,
+      "arm": "anthropic/claude-sonnet-5, top-2 + rank1-as-DEFAULT instruction",
+      "hybrid_acc": 0.8267,
+      "b": 7,
+      "c": 12,
+      "p": 0.35928
+    }
+  ],
+  "verdict": "honest negative: no try beat MFS 84.3%; McNemar never significant; committed final = try 3 (best)",
+  "outputs": [
+    "llm_deepseek_chat.jsonl (in-context re-run, 300)",
+    "llm_tail_top2_deepseek.jsonl",
+    "llm_tail_top2_sonnet5.jsonl",
+    "llm_tail_top2_sonnet5_prior.jsonl"
+  ]
+}

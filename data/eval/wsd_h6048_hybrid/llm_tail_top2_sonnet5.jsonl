@@ -1,0 +1,46 @@
+{"item": "303678|Ap", "pick": 2, "sense_id": "Ap#3", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "288642|pUrva", "pick": 2, "sense_id": "pUrva#1", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "34575|pUrva", "pick": 2, "sense_id": "pUrva#1", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "300882|SuB", "pick": 1, "sense_id": "SuB#3", "raw": "{\"sense\": 1}", "ok": true}
+{"item": "448703|rAjya", "pick": 2, "sense_id": "rAjya#2", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "449003|yuD", "pick": 2, "sense_id": "yuD#4", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "471429|vApa", "pick": 1, "sense_id": "vApa#5", "raw": "{\"sense\": 1}", "ok": true}
+{"item": "501883|BUmi", "pick": 2, "sense_id": "BUmi#1", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "504807|prakzip", "pick": 2, "sense_id": "prakzip#1", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "511796|pUrva", "pick": 1, "sense_id": "pUrva#7", "raw": "{\"sense\": 1}", "ok": true}
+{"item": "513965|car", "pick": 2, "sense_id": "car#2", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "515308|pUrva", "pick": 1, "sense_id": "pUrva#7", "raw": "{\"sense\": 1}", "ok": true}
+{"item": "520473|tyaj", "pick": 2, "sense_id": "tyaj#6", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "525345|car", "pick": 2, "sense_id": "car#2", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "534335|tyaj", "pick": 2, "sense_id": "tyaj#6", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "541118|rAjya", "pick": 2, "sense_id": "rAjya#2", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "542508|tyaj", "pick": 1, "sense_id": "tyaj#2", "raw": "{\"sense\": 1}", "ok": true}
+{"item": "542751|tyaj", "pick": 1, "sense_id": "tyaj#2", "raw": "{\"sense\": 1}", "ok": true}
+{"item": "545024|car", "pick": 2, "sense_id": "car#2", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "545137|tyaj", "pick": 1, "sense_id": "tyaj#2", "raw": "{\"sense\": 1}", "ok": true}
+{"item": "264226|pUrva", "pick": null, "sense_id": null, "raw": "", "ok": false, "err": "Expecting value: line 1 column 1 (char 0)"}
+{"item": "338890|prakfti", "pick": null, "sense_id": null, "raw": "", "ok": false, "err": "Expecting value: line 1 column 1 (char 0)"}
+{"item": "546294|rAjya", "pick": 2, "sense_id": "rAjya#2", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "409625|yA", "pick": null, "sense_id": null, "raw": "", "ok": false, "err": "Expecting value: line 1 column 1 (char 0)"}
+{"item": "547635|paryupAs", "pick": 1, "sense_id": "paryupAs#4", "raw": "{\"sense\": 1}", "ok": true}
+{"item": "564464|BUmi", "pick": 2, "sense_id": "BUmi#1", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "564726|BUmi", "pick": 2, "sense_id": "BUmi#1", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "550307|rAjya", "pick": 1, "sense_id": "rAjya#3", "raw": "{\"sense\": 1}", "ok": true}
+{"item": "545656|udgam", "pick": null, "sense_id": null, "raw": "", "ok": false, "err": "Expecting value: line 1 column 1 (char 0)"}
+{"item": "565921|yA", "pick": 2, "sense_id": "yA#10", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "571879|rAjya", "pick": 1, "sense_id": "rAjya#3", "raw": "{\"sense\": 1}", "ok": true}
+{"item": "600887|Akula", "pick": 2, "sense_id": "Akula#3", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "600999|Brama", "pick": 1, "sense_id": "Brama#11", "raw": "{\"sense\": 1}", "ok": true}
+{"item": "553454|rAjarAja", "pick": null, "sense_id": null, "raw": "", "ok": false, "err": "Expecting value: line 1 column 1 (char 0)"}
+{"item": "564796|yuD", "pick": null, "sense_id": null, "raw": "", "ok": false, "err": "Expecting value: line 1 column 1 (char 0)"}
+{"item": "724300|mil", "pick": 2, "sense_id": "mil#2", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "93562|Sreyas", "pick": 1, "sense_id": "Sreyas#1", "raw": "{\"sense\": 1}", "ok": true}
+{"item": "565222|yuD", "pick": null, "sense_id": null, "raw": "", "ok": false, "err": "Expecting value: line 1 column 1 (char 0)"}
+{"item": "723553|mil", "pick": 2, "sense_id": "mil#2", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "545656|udgam", "pick": 2, "sense_id": "udgam#2", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "409625|yA", "pick": 2, "sense_id": "yA#10", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "338890|prakfti", "pick": 1, "sense_id": "prakfti#18", "raw": "{\"sense\": 1}", "ok": true}
+{"item": "264226|pUrva", "pick": 2, "sense_id": "pUrva#1", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "553454|rAjarAja", "pick": 2, "sense_id": "rAjarAja#1", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "565222|yuD", "pick": 2, "sense_id": "yuD#4", "raw": "{\"sense\": 2}", "ok": true}
+{"item": "564796|yuD", "pick": 2, "sense_id": "yuD#4", "raw": "{\"sense\": 2}", "ok": true}
