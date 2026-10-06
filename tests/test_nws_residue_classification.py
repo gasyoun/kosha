@@ -59,10 +59,12 @@ def test_c4_orphans() -> None:
 def test_near_targets_subs_del_ins() -> None:
     # substitution
     assert "sUrya" in nrc.near_targets("SUrya", UNION)
-    # deletion: vargIya minus nothing… use vargIyi ~ vargIya (substitution)
+    # substitution: vargIyi ~ vargIya
     assert "vargIya" in nrc.near_targets("vargIyi", UNION)
-    # insertion: 'karmA' → 'karma' needs substitution; insertion case:
-    assert "karma" in nrc.near_targets("karama", UNION)  # deletion of one 'a'
+    # deletion: 'karama' minus one 'a' → 'karma'
+    assert "karma" in nrc.near_targets("karama", UNION)
+    # insertion: one letter inserted into a union key is recovered by deletion
+    assert "ASana" in nrc.near_targets("ASaSna", UNION)  # delete S → ASana
     # no self, no phantom
     assert nrc.near_targets("zzzzzz", UNION) == []
 
