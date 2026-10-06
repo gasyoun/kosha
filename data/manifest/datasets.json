@@ -3292,7 +3292,7 @@
         "csl-observatory scripts/nws_halle_intersections.py (H5939 evidence script)",
         "A61 WSC paper — papers/A61_wsc/NWS_HALLE_ANALYSIS_2026-10-04.md"
       ],
-      "notes": "PRIVATE until the accession decision (H5939; H5940 letter). RIGHTS (Impressum probe 04-10-2026, NWS_DETAIL_GRILL_DECISIONS_2026-10-04): TEXTS usable WITH ATTRIBUTION MLU Halle-Wittenberg; IMAGES not redistributable (available on request); dump + undigitized residue offered per H5940. Baseline H5932: 138,976 (82.7%) of 167,991 lemmas outside PWG∪PW∪MW∪SCH∪ACC∪PWKVN (union 243,157; csl-orig @ f4c08c5); reproducible via csl-observatory nws_halle_intersections.py. Never flip tier without /publish-safety-check."
+      "notes": "PRIVATE until the accession decision (H5939; H5940 letter). RIGHTS (Impressum probe 04-10-2026, NWS_DETAIL_GRILL_DECISIONS_2026-10-04): TEXTS usable WITH ATTRIBUTION MLU Halle-Wittenberg; IMAGES not redistributable (available on request); dump + undigitized residue offered per H5940. Baseline H5932: 138,976 (82.7%) of 167,991 lemmas outside PWG∪PW∪MW∪SCH∪ACC∪PWKVN (union 243,157; csl-orig @ f4c08c5); reproducible via csl-observatory nws_halle_intersections.py. H6050 residue classification: 99.9827% of that stem-based residue matches the union exactly via the per-lemma key1 (SLP1) — the 82.7% is a transliteration-namespace artifact, not lexical novelty; true lemma residue 24 empty keys; see kosha docs/NWS_RESIDUE_CLASSIFICATION_2026-10-06.md. Never flip tier without /publish-safety-check."
     }
   ]
 }
