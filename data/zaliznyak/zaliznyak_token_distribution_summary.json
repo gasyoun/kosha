@@ -1,0 +1,79 @@
+{
+ "handoff": "H6053",
+ "generated": "2026-10-06",
+ "grammar_index_rows": 98639,
+ "distinct_tokens": 342,
+ "distinct_k1": 94074,
+ "coverage_checkpoints": {
+  "50%": 6,
+  "80%": 26,
+  "90%": 51,
+  "99%": 153
+ },
+ "top10_share_pct": 62.9,
+ "stem_class_rows": {
+  "a-stem": 64280,
+  "consonant-stem": 11876,
+  "ā-stem": 7623,
+  "i-stem": 6291,
+  "ī-stem": 3464,
+  "u-stem": 2756,
+  "indeclinable": 2003,
+  "ū-stem": 346
+ },
+ "stem_class_tokens": {
+  "a-stem": 43,
+  "consonant-stem": 154,
+  "u-stem": 36,
+  "i-stem": 30,
+  "ī-stem": 29,
+  "ā-stem": 26,
+  "indeclinable": 3,
+  "ū-stem": 21
+ },
+ "union_join": {
+  "union_rows": 323425,
+  "k1_matched": 94046,
+  "rows_joined": 98610,
+  "mean_n_dicts": 4.72,
+  "median_n_dicts": 4.0,
+  "pct_rows_ge5_dicts": 42.0,
+  "n_dicts_histogram": {
+   "1": 1430,
+   "2": 4656,
+   "3": 29625,
+   "4": 21459,
+   "5": 14280,
+   "6": 9550,
+   "7": 5682,
+   "8": 4118,
+   "9": 3150,
+   "10": 2269,
+   "11": 1268,
+   "12": 744,
+   "13": 283,
+   "14": 73,
+   "15": 23
+  }
+ },
+ "irregularities_rows": 68429,
+ "compound_members_rows": 46648,
+ "accent_marked_rows": 19317,
+ "anomaly_totals": {
+  "empty_index_token": 0,
+  "ind_lex_label_variety": 2003,
+  "k1_not_in_union": 28,
+  "lex_doubled_abbreviation": 9,
+  "pc_drift_token_missing": 38,
+  "pc_drift_token_retired": 28,
+  "singleton_token": 53,
+  "token_mixed_lex_labels": 9832
+ },
+ "drift_notes": {
+  "manifest_declares_tokens": 335,
+  "asset_tokens": 342,
+  "release_asset_md5_equals_live": true,
+  "paper_a56_99pct_tokens": 154,
+  "asset_99pct_tokens": 153
+ }
+}
