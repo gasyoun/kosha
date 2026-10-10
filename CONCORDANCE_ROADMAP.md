@@ -1,6 +1,6 @@
 # Sanskrit Concordance Program — 1-Year Roadmap
 
-_Created: 08-07-2026 · Last updated: 01-10-2026_
+_Created: 08-07-2026 · Last updated: 10-10-2026_
 
 > **Truth-pass 27-08-2026** (Grok 4.6 `grok-4.6`). D4 addendum: this file joined the Wave 1 FLAG list after 21-08. Closed references checked against the combined registry. Kept in place ([FINDINGS §475](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md) clause 3). Not archived.
 >
@@ -39,8 +39,9 @@ _Created: 08-07-2026 · Last updated: 01-10-2026_
   `tests/test_giveback_port.py` 9/9; manifest row corrected to the on-disk
   0.12.0-rebuild file (5,588→5,224 rows — stale since H3975) with the ROUTED note —
   [#656](https://github.com/gasyoun/kosha/pull/656)**
-- [ ] R-C2 `@DECIDE` — confirm `Polnorazmernye/` as the released-canonical
-  parallel-passage variant (or direct otherwise) — human-only (MG)
+- [x] R-C2 — `Polnorazmernye/` **confirmed as the released-canonical parallel-passage
+  variant** (RULED MG 10-10-2026, roadmap-continuation grill —
+  [decisions doc](https://github.com/gasyoun/Uprava/blob/main/reports/ROADMAP_CONTINUATION_GRILL_DECISIONS_10-10-2026.md))
 - [ ] Sign-off on the 30 sampled derivation chains (exit-check 2a-7) — human-only
   (already an @DO in Uprava GTD)
 - [ ] Year-2 papers go/no-go (A3/A4 candidates, `@DECIDE` 2) — human-only (parked by choice)
