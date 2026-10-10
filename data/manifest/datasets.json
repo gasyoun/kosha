@@ -1,6 +1,6 @@
 {
   "manifest_version": "0.3.0",
-  "generated": "2026-10-06",
+  "generated": "2026-10-10",
   "hub": "kosha (Gasuns Sanskrit Dictionary) — the Sanskrit data-hub",
   "roadmap": "https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md",
   "license_public_tier": "CC BY-SA 4.0 (https://github.com/gasyoun/kosha/blob/main/LICENSE-DATA.md)",
@@ -455,12 +455,33 @@
       "keying": "akshara 7,347 · varṇa 48 · conjunct 999; corpus-wide + per DCS time-slot",
       "source_repo": "https://github.com/gasyoun/VisualDCS",
       "source_path": "derived-data/Fonetika/regen-2026/ (tracked)",
-      "builder": "regen-2026 scripts, legacy .xlsx cross-checked 19/20",
+      "builder": "regen-2026 build_akshara_ligature_freq.py + make_deliverables.py (re-landed H6391; byte-deterministic, --root/DCS_CONLLU_ROOT corpus pin) — legacy .xlsx cross-check 20/20 membership documented",
       "consumers": [
         "Nagari script-teaching order"
       ],
-      "notes": "Already tracked+public; listed for discovery.",
-      "regen_checked": "2026-09-04 (H4046: FAIL)"
+      "notes": "Tracked (re-landed H6391 after the H5884 untrack); public. Counts identical on every row to the 04-09 snapshot; only equal-count tie order canonized.",
+      "regen_checked": "2026-09-04 (H4046: FAIL) -> 2026-10-10 PASS (H6391: rerun vs pinned corpus 9310e7b6/04e0778, all counts exact, CSVs byte-deterministic)"
+    },
+    {
+      "id": "ligature-canon-union",
+      "title": "Two-tier ligature canon: union of four inventories + coverage curve",
+      "tier": "public",
+      "license": "CC BY-SA 4.0",
+      "in_release": "not-applicable",
+      "format": "csv+tsv",
+      "rows": 1082,
+      "size_bytes": 77109,
+      "keying": "1082 union rows = ustav-chat appendix 788 + attested-807 789 + Rigveda-460 460 + DCS-999 999 (distinct-cluster keys); per row: iast/slp1/hk/devanagari, in_* source flags, rigveda_count, dcs_rank/dcs_count/dcs_pct; coverage_topn.tsv = cumulative % of 3,265,549 ligature tokens",
+      "source_repo": "https://github.com/gasyoun/VisualDCS",
+      "source_path": "derived-data/Fonetika/ligature-canon/ (tracked)",
+      "builder": "build_ligature_canon.py over committed sources/*.csv (deterministic, no network); extract_sources.py documents the one-time legacy extraction (yadisk docx sha256 06f73ee..., Nagari/Varnamala lists)",
+      "consumers": [
+        "Nagari script-teaching canon",
+        "Uzelki book appendix (single source, two renders)",
+        "ligature SRS deck + lila v2 wave (H6392-H6394)"
+      ],
+      "notes": "Teaching order = DCS frequency (fence). Measured counts documented vs nominal labels: '~280' is the pre-revolutionary textbook quote, the ustav-chat appendix measures 788; the '807' file is 789 distinct (18 legacy duplicate tokens). Top-10 covers 31.37% of ligature tokens, top-280 99.27%.",
+      "regen_checked": "2026-10-10 (H6391: PASS — builder exit 0, byte-deterministic, self-checks green)"
     },
     {
       "id": "dcs-nominal-paradigm-grid",
