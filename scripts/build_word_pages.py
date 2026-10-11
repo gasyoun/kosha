@@ -249,7 +249,8 @@ DEFAULT_LIVE_UX = {"variant": "a", "sense_dating": True}
 
 
 def build_word_pages(out_dir, limit=None, force=False, head_n=None, coverage=None,
-                     tokens=None, w_dir=None, cards_dir=None, ux=None):
+                     tokens=None, w_dir=None, cards_dir=None, ux=None,
+                     public_base=""):
     ux = DEFAULT_LIVE_UX if ux is None else ux
     cards_dir = Path(cards_dir) if cards_dir is not None else out_dir / "cards"
     w_dir = Path(w_dir) if w_dir is not None else out_dir / "w"
@@ -303,7 +304,8 @@ def build_word_pages(out_dir, limit=None, force=False, head_n=None, coverage=Non
             total_bytes += page_path.stat().st_size
             continue
         card = _read_json(card_path)
-        html_str = render_word_page(card, token=tok, ux=ux)
+        html_str = render_word_page(card, token=tok, ux=ux,
+                                    public_base=public_base)
         page_path.write_text(html_str, encoding="utf-8")
         total_bytes += len(html_str.encode("utf-8"))
         written += 1
@@ -484,6 +486,10 @@ def main():
                     help="prerender tokens named by reading/ ../w/{token}.html "
                          "hrefs into repo-root w/ (Pages site-root /w/)")
     ap.add_argument("--force", action="store_true", help="re-emit existing pages")
+    ap.add_argument("--public-base", default="",
+                    help="absolute origin (e.g. https://samskrtam.ru) for the "
+                         "canonical link and og: preview tags; empty keeps "
+                         "pages host-relative (R1 default)"),
     ap.add_argument("--ux-staging", metavar="VARIANT", default=None,
                     help="H3457: render the study-badge/favorites/scan-anchor layer "
                          "(variant a|b|c) into dist/w-staging/<variant>/ — staging "
@@ -528,6 +534,7 @@ def main():
         force=args.force,
         head_n=args.head_n,
         coverage=args.coverage,
+        public_base=args.public_base,
         **extra,
     )
     if browse:
