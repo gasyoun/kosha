@@ -886,6 +886,10 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
           f'<meta property="og:image" content="{esc(public_base)}/og/{esc(token)}.png">'
           f'<meta property="og:image:width" content="1200">'
           f'<meta property="og:image:height" content="630">'
+          # Telegram renders the large full-width media preview only when
+          # twitter:card=summary_large_image rides next to og:image.
+          f'<meta name="twitter:card" content="summary_large_image">'
+          f'<meta name="twitter:image" content="{esc(public_base)}/og/{esc(token)}.png">'
           if public_base else "")
     return (
         "<!doctype html>\n"
