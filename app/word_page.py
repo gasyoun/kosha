@@ -874,6 +874,19 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
     title = f"{esc(deva)} {esc(iast)} — Sanskrit dictionary | kosha"
     canonical = (f'<link rel="canonical" href="{esc(public_base)}/w/{esc(token)}.html">'
                  if public_base else "")
+    # OG previews need absolute URLs, so they ride public_base like the
+    # canonical link (R1: hosts come from the caller, never hardcoded).
+    # og/<token>.png cards are shipped by scripts/make_word_cards.py; a
+    # crawler hitting a missing PNG falls back to the text-only preview.
+    og = (f'<meta property="og:type" content="website">'
+          f'<meta property="og:site_name" content="kosha">'
+          f'<meta property="og:title" content="{title}">'
+          f'<meta property="og:description" content="{desc}">'
+          f'<meta property="og:url" content="{esc(public_base)}/w/{esc(token)}.html">'
+          f'<meta property="og:image" content="{esc(public_base)}/og/{esc(token)}.png">'
+          f'<meta property="og:image:width" content="1200">'
+          f'<meta property="og:image:height" content="630">'
+          if public_base else "")
     return (
         "<!doctype html>\n"
         f'<html lang="sa" data-view="adaptive"><head>'
@@ -883,6 +896,7 @@ def render_word_page(card, *, token=None, base="../", data_version=None,
         f'<meta name="description" content="{desc}">'
         f'<meta name="data-version" content="{esc(dv)}">'
         f"{canonical}"
+        f"{og}"
         f"<style>{PAGE_CSS}{ux_css}</style>"
         "</head><body>"
         f"{main}"
