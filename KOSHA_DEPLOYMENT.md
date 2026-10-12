@@ -1,6 +1,6 @@
 # kosha — deployment runbook
 
-_Created: 08-08-2026 · Last updated: 13-08-2026_
+_Created: 08-08-2026 · Last updated: 12-10-2026_
 
 Branded dictionary routes on
 [`https://samskrtam.ru`](https://samskrtam.ru/) (`/health` `/ready`
@@ -241,6 +241,38 @@ Committed surfaces go live on merge to `main` (GitHub Pages). Gitignored
 static cache (`docs/cards/`, `docs/js/data/`, `docs/w/`) is still deployed
 **out-of-band by M.G.** via existing generators — see pipeline runbook §4.
 That path is independent of the API systemd unit.
+
+### III.7 The samskrtam.ru og: tier (H6527, live 12-10-2026)
+
+The `/w/` word pages carry og:/twitter: preview meta **only when built with
+the flag** — `render_word_page` gates the whole block on `public_base`
+(#692/#693), and the SSR route deliberately renders host-relative (R1/R5),
+so previews ride the **committed static head** (repo-root `w/`, the Pages
+surface since H4833):
+
+1. Re-render the head with the flag before committing any serving-relevant
+   rebuild: a driver over `build_word_pages(..., coverage=0.95, force=True,
+   w_dir=ROOT/"w", cards_dir=ROOT/"docs"/"cards",
+   public_base="https://samskrtam.ru")` — reads the committed
+   `docs/cards/` + `docs/js/data/` set, rewrites the committed `w/` tree.
+   Omitting the flag produces byte-identical-to-before preview-less pages:
+   never skip it.
+2. `og:image` is absolute `https://samskrtam.ru/og/<token>.png` — the
+   committed `og/` card set is mirrored to the `.95` docroot
+   (`www/samskrtam.ru/og/`, plain FTP per the brand-proxy README). Missing
+   PNG = documented degrade (crawler falls back to the text-only preview).
+3. `.92` nginx (`kosha-from-95` site) serves `/w/*.html` from the checkout's
+   committed `w/` tree and `/og/` from the repo `og/`; everything else —
+   `/w/{slp1}` long tail, `/api/`, `/dicts/`, health trio — proxies to the
+   unit as before. Tokens outside the committed head get the SSR
+   honest-404, not an nginx error page. Deploy = `git pull` on the host
+   checkout + nginx reload; the pages ship with the repo.
+
+`KOSHA_PUBLIC_BASE` on the unit stays the durable Pages mirror
+(`https://gasyoun.github.io/kosha`) — `samskrtam.ru` is in
+`DEPLOYMENT_HOSTS` and a citation base pointing at the deployment host
+fails `/ready` (R5). The build flag and the env var are different machines:
+flag → page previews, env → citations.
 
 ---
 

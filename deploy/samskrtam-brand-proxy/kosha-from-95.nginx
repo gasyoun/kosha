@@ -1,6 +1,13 @@
 # Internal kosha upstream for samskrtam.ru (.95) reverse-proxy only.
 # Public NAT is 193.232.229.92; container IP is 192.168.200.92.
 # .95 is 192.168.200.95 on the same LAN.
+#
+# H6527 (12-10-2026): static og: tier added on top of the proxy. The committed
+# repo-root w/ tree (the Pages surface, H4833 head ∩ cards = 10,726 pages,
+# re-rendered with --public-base https://samskrtam.ru so pages carry
+# og:/canonical) is answered straight from the git checkout; tokens outside
+# the committed head fall through to the SSR upstream. Paths assume the
+# OPS.md layout (/opt/kosha/repo); adjust when the checkout moves.
 server {
     listen 192.168.200.92:8002;
     listen 127.0.0.1:8002;
@@ -8,6 +15,41 @@ server {
     allow 192.168.200.95;
     allow 127.0.0.1;
     deny all;
+
+    # og: preview cards. og:image is an absolute https://samskrtam.ru/og/<token>.png;
+    # the same og/ set is mirrored to the .95 docroot at deploy time, this alias
+    # keeps the .92 origin (sslip public URL) self-sufficient. A missing PNG is
+    # the documented degrade: crawlers fall back to the text-only preview.
+    location /og/ {
+        alias /opt/kosha/repo/og/;
+        add_header Cache-Control "public, max-age=3600";
+    }
+
+    # Prerendered word pages (only these carry og: — the SSR route renders
+    # host-relative by R1/R5). .html-suffixed tokens outside the committed head
+    # fall through to the SSR honest-404 instead of an nginx error page.
+    location ~ ^/w/.+\.html$ {
+        root /opt/kosha/repo;
+        try_files $uri @upstream;
+        add_header Cache-Control "public, max-age=3600";
+    }
+
+    # The varṇa browse spine (server-built into gitignored docs/browse/ — the
+    # spine is not committed, unlike w/).
+    location /browse/ {
+        alias /opt/kosha/repo/docs/browse/;
+        try_files $uri $uri/index.html =404;
+    }
+
+    location @upstream {
+        proxy_pass http://127.0.0.1:8001;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Request-ID $http_x_request_id;
+        proxy_read_timeout 120s;
+    }
 
     location / {
         proxy_pass http://127.0.0.1:8001;
