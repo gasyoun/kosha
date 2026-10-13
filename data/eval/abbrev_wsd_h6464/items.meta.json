@@ -1,0 +1,45 @@
+{
+ "census_payload": {
+  "path": "/Users/mac/Documents/GitHub/csl-atlas/data/abbrev/abbrev_census.json",
+  "sha256": "8af859fa95eee1fb2ef7317cace32931d3857137df598a8099f2d14e6718eddd"
+ },
+ "channels": [
+  "ab",
+  "lex"
+ ],
+ "channels_excluded": [
+  "lang"
+ ],
+ "corpus_root": "/Users/mac/Documents/GitHub/csl-orig/v02",
+ "files_read": [
+  "/Users/mac/Documents/GitHub/csl-orig/v02/ae/ae.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/ap/ap.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/ap90/ap90.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/ben/ben.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/bhs/bhs.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/bop/bop.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/bur/bur.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/cae/cae.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/gra/gra.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/inm/inm.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/lrv/lrv.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/md/md.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/mw/mw.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/mw72/mw72.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/pw/pw.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/pwg/pwg.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/shs/shs.txt",
+  "/Users/mac/Documents/GitHub/csl-orig/v02/stc/stc.txt"
+ ],
+ "fold_rule": "crc32(f'{dict}:{file}:{line_no}:{occ_idx}') % 5 == 0 -> test (pinned, H5877 precedent)",
+ "handoff": "H6464",
+ "items_sha256": "2381f1fccd64e7829bbf5bfe8ff6f81f55a94dba1c7cce422360e050d5cdd312",
+ "max_test_per_legend": 8,
+ "max_train_per_legend": 12,
+ "model": "deepseek/deepseek-chat",
+ "n_items": 460,
+ "n_test": 184,
+ "n_train": 276,
+ "sample_seed": 6464,
+ "top_k_legends": 24
+}

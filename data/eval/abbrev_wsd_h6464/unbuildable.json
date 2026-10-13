@@ -1,0 +1,1149 @@
+{
+ "legends": {
+  "&amp;c.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "&c.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "+": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "=": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "A.": {
+   "det_dict_legends": 8,
+   "multi_expansion_dicts": {
+    "BOP": [
+     "1) Atmanêpadum. 2) Arg'uni reditus ex Indri coelo. (*)",
+     "1) Atman�padum. 2) Arg'uni reditus ex Indri coelo. (*)"
+    ]
+   },
+   "n_multi_expansion_dicts": 1
+  },
+  "A. D.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Ab.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Abl.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Acc.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Act.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Adj.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Adv.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Aor.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Atm.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Aug.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "B.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Bd.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "C.": {
+   "det_dict_legends": 7,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Caus.": {
+   "det_dict_legends": 7,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Cf.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Cl.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Comp.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Compar.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "D.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Dat.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Desid.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Du.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "E.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Ex.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Fig.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Fut.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "G.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Gen.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Germ.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Goth.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Gr.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Gram.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Gramm.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "H.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Hib.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "I.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Imp.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Impf.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Impv.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Ind.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Indic.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Inf.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Intens.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "K.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "L.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Lit.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Lith.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Loc.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "M.": {
+   "det_dict_legends": 11,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Mar.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Me.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Med.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "N.": {
+   "det_dict_legends": 11,
+   "multi_expansion_dicts": {
+    "AP90": [
+     "Naiṣadhacarita.",
+     "Name."
+    ]
+   },
+   "n_multi_expansion_dicts": 1
+  },
+  "Nom.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "O.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Opt.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "P.": {
+   "det_dict_legends": 10,
+   "multi_expansion_dicts": {
+    "AP90": [
+     "Parasmaipada.",
+     "Pāṇini's Aṣṭādhyāyī."
+    ],
+    "BOP": [
+     "1) Parasmaipadum. 2) Påtaliputra (ed. H. Brockhaus. Lipsiae 1835.)",
+     "1) Parasmaipadum. 2) P�taliputra (ed. H. Brockhaus. Lipsiae 1835.)"
+    ]
+   },
+   "n_multi_expansion_dicts": 2
+  },
+  "Par.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Part.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Pass.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Perf.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Pers.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Pl.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Pp.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Pr.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Prec.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Pron.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "R.": {
+   "det_dict_legends": 7,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Rs.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "S.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Sch.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Slav.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Subj.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Subst.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Sup.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Tat.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "U": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "U.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {
+    "AP90": [
+     "Ubhayapada (Parasmai. and Ātmane.)",
+     "Uttararāmacarita."
+    ]
+   },
+   "n_multi_expansion_dicts": 1
+  },
+  "V.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {
+    "INM": [
+     "Burdwan edition.",
+     "Vasu."
+    ]
+   },
+   "n_multi_expansion_dicts": 1
+  },
+  "Var.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Ved.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Voc.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Y.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Z.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "a.": {
+   "det_dict_legends": 9,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "ab.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "abl.": {
+   "det_dict_legends": 8,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "abs.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "abst.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "abstr.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "ac.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "acc.": {
+   "det_dict_legends": 9,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "act.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "adj.": {
+   "det_dict_legends": 7,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "adv.": {
+   "det_dict_legends": 8,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "anat.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "aor.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "app.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "arith.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "astr.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "astron.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "c.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "caus.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "cf.": {
+   "det_dict_legends": 10,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "ch.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "cl.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "comm.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "comp.": {
+   "det_dict_legends": 8,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "compar.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "conj.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "d.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "dat.": {
+   "det_dict_legends": 8,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "desid.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "dim.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "du.": {
+   "det_dict_legends": 11,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "dén.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "e. g.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "e.g.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "ed.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "ep.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "esp.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "etc.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "ex.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "exc.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "f.": {
+   "det_dict_legends": 11,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "fem.": {
+   "det_dict_legends": 7,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "ff.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "fig.": {
+   "det_dict_legends": 9,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "fr.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "fut.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "g.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "gen.": {
+   "det_dict_legends": 7,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "ger.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "germ.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "got.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "goth.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "gr.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "gram.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "gén.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "i. e.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "i.e.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "ifc.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "imp.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "imper.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "impers.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "impf.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "ind.": {
+   "det_dict_legends": 8,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "inf.": {
+   "det_dict_legends": 10,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "inst.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "instr.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "int.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "intens.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "intr.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "intrans.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "l.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "lat.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "lit.": {
+   "det_dict_legends": 9,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "loc.": {
+   "det_dict_legends": 8,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "m.": {
+   "det_dict_legends": 10,
+   "multi_expansion_dicts": {
+    "CAE": [
+     "masculine.",
+     "meaning."
+    ]
+   },
+   "n_multi_expansion_dicts": 1
+  },
+  "m.c.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "masc.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "metr.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "moy.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "n.": {
+   "det_dict_legends": 11,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "nom.": {
+   "det_dict_legends": 7,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "nt.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "num.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "o.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "obj.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "onomat.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "opp.": {
+   "det_dict_legends": 8,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "ord.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "orig.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "p.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "part.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "partic.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "pass.": {
+   "det_dict_legends": 7,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "perf.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "pers.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {
+    "CAE": [
+     "person & th(ing).",
+     "person or personal."
+    ]
+   },
+   "n_multi_expansion_dicts": 1
+  },
+  "pf.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "phil.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "pl.": {
+   "det_dict_legends": 12,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "pp.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "pr.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "prec.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "pres.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "priv.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "pron.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "prs.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "ps.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "q. v.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "q.v.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "qq.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "red.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "rh.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "s.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "s. v.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "s.v.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "sc.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "seq.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "sg.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "sing.": {
+   "det_dict_legends": 7,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "slav.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "sp.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "st.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "subst.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "sup.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "superl.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "t.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "tr.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "trans.": {
+   "det_dict_legends": 3,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "v.": {
+   "det_dict_legends": 5,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "v. l.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "ved.": {
+   "det_dict_legends": 2,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "voc.": {
+   "det_dict_legends": 6,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  },
+  "Ā.": {
+   "det_dict_legends": 4,
+   "multi_expansion_dicts": {},
+   "n_multi_expansion_dicts": 0
+  }
+ },
+ "reason_key": "host dictionary legend lists >1 expansion for the label -> no deterministic gold; instances recorded as unbuildable, never hand-labelled"
+}
