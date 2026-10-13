@@ -1,0 +1,1876 @@
+{
+ "arms": {
+  "floor": {
+   "accuracy": 0.2935,
+   "mcnemar_vs_mfs": {
+    "arm_right_mfs_wrong": 16,
+    "arm_wrong_mfs_right": 83,
+    "p_exact_two_sided": 0.0
+   },
+   "n_scored": 184,
+   "n_skipped_parse": 0,
+   "prf": {
+    "macro_f1": 0.2643,
+    "per_sense": {
+     "1 parasmaipadum 2 p taliputra ed h brockhaus lipsiae 1835": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "according accusative": {
+      "f1": 0.6667,
+      "n_gold": 1,
+      "n_pred": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "tp": 1
+     },
+     "accusatif": {
+      "f1": 0.4,
+      "n_gold": 3,
+      "n_pred": 2,
+      "precision": 0.5,
+      "recall": 0.3333,
+      "tp": 1
+     },
+     "accusative": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "accusative case or according": {
+      "f1": 0.4,
+      "n_gold": 3,
+      "n_pred": 2,
+      "precision": 0.5,
+      "recall": 0.3333,
+      "tp": 1
+     },
+     "adjectif": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "adjective": {
+      "f1": 0.3333,
+      "n_gold": 15,
+      "n_pred": 9,
+      "precision": 0.4444,
+      "recall": 0.2667,
+      "tp": 4
+     },
+     "adjective cf mfn": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "adjektiv": {
+      "f1": 0.5,
+      "n_gold": 8,
+      "n_pred": 8,
+      "precision": 0.5,
+      "recall": 0.5,
+      "tp": 4
+     },
+     "adverb": {
+      "f1": 0.6667,
+      "n_gold": 5,
+      "n_pred": 4,
+      "precision": 0.75,
+      "recall": 0.6,
+      "tp": 3
+     },
+     "adverbe": {
+      "f1": 0.5714,
+      "n_gold": 3,
+      "n_pred": 4,
+      "precision": 0.5,
+      "recall": 0.6667,
+      "tp": 2
+     },
+     "causal": {
+      "f1": 0.6,
+      "n_gold": 6,
+      "n_pred": 4,
+      "precision": 0.75,
+      "recall": 0.5,
+      "tp": 3
+     },
+     "causativ": {
+      "f1": 0.3333,
+      "n_gold": 2,
+      "n_pred": 4,
+      "precision": 0.25,
+      "recall": 0.5,
+      "tp": 1
+     },
+     "comparatif": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "comparativ": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "comparative": {
+      "f1": 0.6667,
+      "n_gold": 1,
+      "n_pred": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "tp": 1
+     },
+     "compare": {
+      "f1": 0.5,
+      "n_gold": 2,
+      "n_pred": 2,
+      "precision": 0.5,
+      "recall": 0.5,
+      "tp": 1
+     },
+     "comparez confer": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "compos composition ne s emploie que dans un compos": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "composition": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "compound": {
+      "f1": 0.3333,
+      "n_gold": 15,
+      "n_pred": 3,
+      "precision": 1.0,
+      "recall": 0.2,
+      "tp": 3
+     },
+     "confer": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "confer compare": {
+      "f1": 0.3333,
+      "n_gold": 4,
+      "n_pred": 2,
+      "precision": 0.5,
+      "recall": 0.25,
+      "tp": 1
+     },
+     "epic": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "epithet": {
+      "f1": 0.5,
+      "n_gold": 6,
+      "n_pred": 2,
+      "precision": 1.0,
+      "recall": 0.3333,
+      "tp": 2
+     },
+     "est": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "etymology": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "f minin": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "feminine": {
+      "f1": 0.0,
+      "n_gold": 6,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "feminine also for": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "feminine following": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "feminine of adjectives": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "femininum": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "fran ais": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "from": {
+      "f1": 0.6667,
+      "n_gold": 8,
+      "n_pred": 4,
+      "precision": 1.0,
+      "recall": 0.5,
+      "tp": 4
+     },
+     "id est that is": {
+      "f1": 0.6667,
+      "n_gold": 5,
+      "n_pred": 4,
+      "precision": 0.75,
+      "recall": 0.6,
+      "tp": 3
+     },
+     "indeclinable": {
+      "f1": 0.4,
+      "n_gold": 8,
+      "n_pred": 2,
+      "precision": 1.0,
+      "recall": 0.25,
+      "tp": 2
+     },
+     "indeclinable either an indeclinable participle or an adverb or a case used adverbially": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "indicatif": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "indicative": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "masculin": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "masculine": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "masculine gender": {
+      "f1": 0.3333,
+      "n_gold": 4,
+      "n_pred": 2,
+      "precision": 0.5,
+      "recall": 0.25,
+      "tp": 1
+     },
+     "masculinum": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "meaning": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "naiṣadhacarita": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "nalopākhyāna in b htlingk s chrestomathie gild bibl 49 die bopp sche ausgabe gild bibl 99 ist durch n bopp bezeichnet": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "nalus berol apud nicolai": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "name": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "name also title or epithet": {
+      "f1": 0.4,
+      "n_gold": 4,
+      "n_pred": 1,
+      "precision": 1.0,
+      "recall": 0.25,
+      "tp": 1
+     },
+     "name when alone name of a man or of a woman": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "neuter": {
+      "f1": 0.3333,
+      "n_gold": 5,
+      "n_pred": 7,
+      "precision": 0.2857,
+      "recall": 0.4,
+      "tp": 2
+     },
+     "neuter gender": {
+      "f1": 0.3333,
+      "n_gold": 4,
+      "n_pred": 2,
+      "precision": 0.5,
+      "recall": 0.25,
+      "tp": 1
+     },
+     "neutre": {
+      "f1": 0.4615,
+      "n_gold": 7,
+      "n_pred": 6,
+      "precision": 0.5,
+      "recall": 0.4286,
+      "tp": 3
+     },
+     "neutrum": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "nom": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "nominativ": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "nominative name": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "parasmai pada": {
+      "f1": 0.0,
+      "n_gold": 6,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "parasmaipada": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "parfait": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "participium": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "passive": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "pitṛ": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "plural": {
+      "f1": 0.3333,
+      "n_gold": 3,
+      "n_pred": 3,
+      "precision": 0.3333,
+      "recall": 0.3333,
+      "tp": 1
+     },
+     "plural number": {
+      "f1": 0.2857,
+      "n_gold": 4,
+      "n_pred": 3,
+      "precision": 0.3333,
+      "recall": 0.25,
+      "tp": 1
+     },
+     "pluriel": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "pāṇini s acht b cher grammatischer regeln gild bibl 244": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "scheme": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "scholiast": {
+      "f1": 0.4444,
+      "n_gold": 6,
+      "n_pred": 3,
+      "precision": 0.6667,
+      "recall": 0.3333,
+      "tp": 2
+     },
+     "scholiast or commentator": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "singular": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "substantif": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "substantive": {
+      "f1": 0.25,
+      "n_gold": 6,
+      "n_pred": 2,
+      "precision": 0.5,
+      "recall": 0.1667,
+      "tp": 1
+     },
+     "suffixum": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "that is": {
+      "f1": 0.5714,
+      "n_gold": 3,
+      "n_pred": 4,
+      "precision": 0.5,
+      "recall": 0.6667,
+      "tp": 2
+     },
+     "varia lectio": {
+      "f1": 0.4,
+      "n_gold": 7,
+      "n_pred": 3,
+      "precision": 0.6667,
+      "recall": 0.2857,
+      "tp": 2
+     },
+     "varia lectio variante": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "various reading": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     }
+    }
+   }
+  },
+  "llm": {
+   "accuracy": 0.6033,
+   "mcnemar_vs_mfs": {
+    "arm_right_mfs_wrong": 26,
+    "arm_wrong_mfs_right": 36,
+    "p_exact_two_sided": 0.252854
+   },
+   "n_scored": 184,
+   "n_skipped_parse": 0,
+   "prf": {
+    "macro_f1": 0.4042,
+    "per_sense": {
+     "according accusative": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "accusatif": {
+      "f1": 0.5,
+      "n_gold": 3,
+      "n_pred": 1,
+      "precision": 1.0,
+      "recall": 0.3333,
+      "tp": 1
+     },
+     "accusative": {
+      "f1": 0.25,
+      "n_gold": 1,
+      "n_pred": 7,
+      "precision": 0.1429,
+      "recall": 1.0,
+      "tp": 1
+     },
+     "accusative case or according": {
+      "f1": 0.0,
+      "n_gold": 3,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "adjectif": {
+      "f1": 1.0,
+      "n_gold": 1,
+      "n_pred": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 1
+     },
+     "adjective": {
+      "f1": 0.7895,
+      "n_gold": 15,
+      "n_pred": 23,
+      "precision": 0.6522,
+      "recall": 1.0,
+      "tp": 15
+     },
+     "adjektiv": {
+      "f1": 0.0,
+      "n_gold": 8,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "adverb": {
+      "f1": 0.9091,
+      "n_gold": 5,
+      "n_pred": 6,
+      "precision": 0.8333,
+      "recall": 1.0,
+      "tp": 5
+     },
+     "adverbe": {
+      "f1": 0.8,
+      "n_gold": 3,
+      "n_pred": 2,
+      "precision": 1.0,
+      "recall": 0.6667,
+      "tp": 2
+     },
+     "causal": {
+      "f1": 1.0,
+      "n_gold": 6,
+      "n_pred": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 6
+     },
+     "causativ": {
+      "f1": 1.0,
+      "n_gold": 2,
+      "n_pred": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2
+     },
+     "comparative": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "compare": {
+      "f1": 0.8,
+      "n_gold": 2,
+      "n_pred": 3,
+      "precision": 0.6667,
+      "recall": 1.0,
+      "tp": 2
+     },
+     "comparez confer": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "compound": {
+      "f1": 0.9677,
+      "n_gold": 15,
+      "n_pred": 16,
+      "precision": 0.9375,
+      "recall": 1.0,
+      "tp": 15
+     },
+     "confer": {
+      "f1": 0.3333,
+      "n_gold": 1,
+      "n_pred": 5,
+      "precision": 0.2,
+      "recall": 1.0,
+      "tp": 1
+     },
+     "confer compare": {
+      "f1": 0.0,
+      "n_gold": 4,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "epic": {
+      "f1": 1.0,
+      "n_gold": 2,
+      "n_pred": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2
+     },
+     "epithet": {
+      "f1": 1.0,
+      "n_gold": 6,
+      "n_pred": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 6
+     },
+     "f minin": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "feminine": {
+      "f1": 0.8571,
+      "n_gold": 6,
+      "n_pred": 8,
+      "precision": 0.75,
+      "recall": 1.0,
+      "tp": 6
+     },
+     "feminine also for": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "from": {
+      "f1": 1.0,
+      "n_gold": 8,
+      "n_pred": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 8
+     },
+     "id est that is": {
+      "f1": 0.0,
+      "n_gold": 5,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "indeclinable": {
+      "f1": 1.0,
+      "n_gold": 8,
+      "n_pred": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 8
+     },
+     "masculin": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "masculine": {
+      "f1": 0.4444,
+      "n_gold": 2,
+      "n_pred": 7,
+      "precision": 0.2857,
+      "recall": 1.0,
+      "tp": 2
+     },
+     "masculine gender": {
+      "f1": 0.0,
+      "n_gold": 4,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "masculinum": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "nalopākhyāna in b htlingk s chrestomathie gild bibl 49 die bopp sche ausgabe gild bibl 99 ist durch n bopp bezeichnet": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "name": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "name also title or epithet": {
+      "f1": 0.0,
+      "n_gold": 4,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "name when alone name of a man or of a woman": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "neuter": {
+      "f1": 0.4348,
+      "n_gold": 5,
+      "n_pred": 18,
+      "precision": 0.2778,
+      "recall": 1.0,
+      "tp": 5
+     },
+     "neuter gender": {
+      "f1": 0.0,
+      "n_gold": 4,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "neutre": {
+      "f1": 0.25,
+      "n_gold": 7,
+      "n_pred": 1,
+      "precision": 1.0,
+      "recall": 0.1429,
+      "tp": 1
+     },
+     "nominativ": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "parasmai pada": {
+      "f1": 0.0,
+      "n_gold": 6,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "parasmaipada": {
+      "f1": 0.4,
+      "n_gold": 2,
+      "n_pred": 8,
+      "precision": 0.25,
+      "recall": 1.0,
+      "tp": 2
+     },
+     "plural": {
+      "f1": 0.6,
+      "n_gold": 3,
+      "n_pred": 7,
+      "precision": 0.4286,
+      "recall": 1.0,
+      "tp": 3
+     },
+     "plural number": {
+      "f1": 0.0,
+      "n_gold": 4,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "pluriel": {
+      "f1": 1.0,
+      "n_gold": 1,
+      "n_pred": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 1
+     },
+     "scholiast": {
+      "f1": 0.8333,
+      "n_gold": 6,
+      "n_pred": 6,
+      "precision": 0.8333,
+      "recall": 0.8333,
+      "tp": 5
+     },
+     "scholiast or commentator": {
+      "f1": 0.5,
+      "n_gold": 2,
+      "n_pred": 2,
+      "precision": 0.5,
+      "recall": 0.5,
+      "tp": 1
+     },
+     "singular": {
+      "f1": 0.4,
+      "n_gold": 2,
+      "n_pred": 3,
+      "precision": 0.3333,
+      "recall": 0.5,
+      "tp": 1
+     },
+     "substantif": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "substantive": {
+      "f1": 0.0,
+      "n_gold": 6,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "suffixum": {
+      "f1": 0.0,
+      "n_gold": 0,
+      "n_pred": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "that is": {
+      "f1": 0.4,
+      "n_gold": 3,
+      "n_pred": 7,
+      "precision": 0.2857,
+      "recall": 0.6667,
+      "tp": 2
+     },
+     "varia lectio": {
+      "f1": 0.9333,
+      "n_gold": 7,
+      "n_pred": 8,
+      "precision": 0.875,
+      "recall": 1.0,
+      "tp": 7
+     },
+     "various reading": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     }
+    }
+   }
+  },
+  "majority": {
+   "accuracy": 0.7337,
+   "mcnemar_vs_mfs": {
+    "arm_right_mfs_wrong": 23,
+    "arm_wrong_mfs_right": 9,
+    "p_exact_two_sided": 0.020062
+   },
+   "n_scored": 184,
+   "n_skipped_parse": 0,
+   "prf": {
+    "macro_f1": 0.3562,
+    "per_sense": {
+     "according accusative": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "accusatif": {
+      "f1": 0.0,
+      "n_gold": 3,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "accusative": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "accusative case or according": {
+      "f1": 0.5455,
+      "n_gold": 3,
+      "n_pred": 8,
+      "precision": 0.375,
+      "recall": 1.0,
+      "tp": 3
+     },
+     "adjectif": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "adjective": {
+      "f1": 0.9677,
+      "n_gold": 15,
+      "n_pred": 16,
+      "precision": 0.9375,
+      "recall": 1.0,
+      "tp": 15
+     },
+     "adjektiv": {
+      "f1": 1.0,
+      "n_gold": 8,
+      "n_pred": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 8
+     },
+     "adverb": {
+      "f1": 0.7692,
+      "n_gold": 5,
+      "n_pred": 8,
+      "precision": 0.625,
+      "recall": 1.0,
+      "tp": 5
+     },
+     "adverbe": {
+      "f1": 0.0,
+      "n_gold": 3,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "causal": {
+      "f1": 0.8571,
+      "n_gold": 6,
+      "n_pred": 8,
+      "precision": 0.75,
+      "recall": 1.0,
+      "tp": 6
+     },
+     "causativ": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "comparative": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "compare": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "comparez confer": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "compound": {
+      "f1": 0.9677,
+      "n_gold": 15,
+      "n_pred": 16,
+      "precision": 0.9375,
+      "recall": 1.0,
+      "tp": 15
+     },
+     "confer": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "confer compare": {
+      "f1": 0.6667,
+      "n_gold": 4,
+      "n_pred": 8,
+      "precision": 0.5,
+      "recall": 1.0,
+      "tp": 4
+     },
+     "epic": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "epithet": {
+      "f1": 0.8571,
+      "n_gold": 6,
+      "n_pred": 8,
+      "precision": 0.75,
+      "recall": 1.0,
+      "tp": 6
+     },
+     "f minin": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "feminine": {
+      "f1": 0.8571,
+      "n_gold": 6,
+      "n_pred": 8,
+      "precision": 0.75,
+      "recall": 1.0,
+      "tp": 6
+     },
+     "feminine also for": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "from": {
+      "f1": 1.0,
+      "n_gold": 8,
+      "n_pred": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 8
+     },
+     "id est that is": {
+      "f1": 0.7692,
+      "n_gold": 5,
+      "n_pred": 8,
+      "precision": 0.625,
+      "recall": 1.0,
+      "tp": 5
+     },
+     "indeclinable": {
+      "f1": 1.0,
+      "n_gold": 8,
+      "n_pred": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 8
+     },
+     "masculine": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "masculine gender": {
+      "f1": 0.6667,
+      "n_gold": 4,
+      "n_pred": 8,
+      "precision": 0.5,
+      "recall": 1.0,
+      "tp": 4
+     },
+     "masculinum": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "nalopākhyāna in b htlingk s chrestomathie gild bibl 49 die bopp sche ausgabe gild bibl 99 ist durch n bopp bezeichnet": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "name": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "name also title or epithet": {
+      "f1": 0.6667,
+      "n_gold": 4,
+      "n_pred": 8,
+      "precision": 0.5,
+      "recall": 1.0,
+      "tp": 4
+     },
+     "name when alone name of a man or of a woman": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "neuter": {
+      "f1": 0.0,
+      "n_gold": 5,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "neuter gender": {
+      "f1": 0.6667,
+      "n_gold": 4,
+      "n_pred": 8,
+      "precision": 0.5,
+      "recall": 1.0,
+      "tp": 4
+     },
+     "neutre": {
+      "f1": 0.6667,
+      "n_gold": 7,
+      "n_pred": 8,
+      "precision": 0.625,
+      "recall": 0.7143,
+      "tp": 5
+     },
+     "nominativ": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "parasmai pada": {
+      "f1": 0.8571,
+      "n_gold": 6,
+      "n_pred": 8,
+      "precision": 0.75,
+      "recall": 1.0,
+      "tp": 6
+     },
+     "parasmaipada": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "plural": {
+      "f1": 0.0,
+      "n_gold": 3,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "plural number": {
+      "f1": 0.6667,
+      "n_gold": 4,
+      "n_pred": 8,
+      "precision": 0.5,
+      "recall": 1.0,
+      "tp": 4
+     },
+     "pluriel": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "scholiast": {
+      "f1": 0.8571,
+      "n_gold": 6,
+      "n_pred": 8,
+      "precision": 0.75,
+      "recall": 1.0,
+      "tp": 6
+     },
+     "scholiast or commentator": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "singular": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "substantive": {
+      "f1": 0.8571,
+      "n_gold": 6,
+      "n_pred": 8,
+      "precision": 0.75,
+      "recall": 1.0,
+      "tp": 6
+     },
+     "that is": {
+      "f1": 0.0,
+      "n_gold": 3,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "varia lectio": {
+      "f1": 0.9333,
+      "n_gold": 7,
+      "n_pred": 8,
+      "precision": 0.875,
+      "recall": 1.0,
+      "tp": 7
+     },
+     "various reading": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     }
+    }
+   }
+  },
+  "mfs": {
+   "accuracy": 0.6576,
+   "n_scored": 184,
+   "n_skipped_parse": 0,
+   "note": "reference arm; McNemar reported for the others vs MFS",
+   "prf": {
+    "macro_f1": 0.3173,
+    "per_sense": {
+     "according accusative": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "accusatif": {
+      "f1": 0.0,
+      "n_gold": 3,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "accusative": {
+      "f1": 0.2222,
+      "n_gold": 1,
+      "n_pred": 8,
+      "precision": 0.125,
+      "recall": 1.0,
+      "tp": 1
+     },
+     "accusative case or according": {
+      "f1": 0.0,
+      "n_gold": 3,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "adjectif": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "adjective": {
+      "f1": 0.9677,
+      "n_gold": 15,
+      "n_pred": 16,
+      "precision": 0.9375,
+      "recall": 1.0,
+      "tp": 15
+     },
+     "adjektiv": {
+      "f1": 1.0,
+      "n_gold": 8,
+      "n_pred": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 8
+     },
+     "adverb": {
+      "f1": 0.7692,
+      "n_gold": 5,
+      "n_pred": 8,
+      "precision": 0.625,
+      "recall": 1.0,
+      "tp": 5
+     },
+     "adverbe": {
+      "f1": 0.0,
+      "n_gold": 3,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "causal": {
+      "f1": 0.8571,
+      "n_gold": 6,
+      "n_pred": 8,
+      "precision": 0.75,
+      "recall": 1.0,
+      "tp": 6
+     },
+     "causativ": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "comparative": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "compare": {
+      "f1": 0.4,
+      "n_gold": 2,
+      "n_pred": 8,
+      "precision": 0.25,
+      "recall": 1.0,
+      "tp": 2
+     },
+     "comparez confer": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "compound": {
+      "f1": 0.9677,
+      "n_gold": 15,
+      "n_pred": 16,
+      "precision": 0.9375,
+      "recall": 1.0,
+      "tp": 15
+     },
+     "confer": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "confer compare": {
+      "f1": 0.0,
+      "n_gold": 4,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "epic": {
+      "f1": 0.4,
+      "n_gold": 2,
+      "n_pred": 8,
+      "precision": 0.25,
+      "recall": 1.0,
+      "tp": 2
+     },
+     "epithet": {
+      "f1": 0.0,
+      "n_gold": 6,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "f minin": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "feminine": {
+      "f1": 0.8571,
+      "n_gold": 6,
+      "n_pred": 8,
+      "precision": 0.75,
+      "recall": 1.0,
+      "tp": 6
+     },
+     "feminine also for": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "from": {
+      "f1": 1.0,
+      "n_gold": 8,
+      "n_pred": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 8
+     },
+     "id est that is": {
+      "f1": 0.7692,
+      "n_gold": 5,
+      "n_pred": 8,
+      "precision": 0.625,
+      "recall": 1.0,
+      "tp": 5
+     },
+     "indeclinable": {
+      "f1": 1.0,
+      "n_gold": 8,
+      "n_pred": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 8
+     },
+     "masculine": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "masculine gender": {
+      "f1": 0.6667,
+      "n_gold": 4,
+      "n_pred": 8,
+      "precision": 0.5,
+      "recall": 1.0,
+      "tp": 4
+     },
+     "masculinum": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "nalopākhyāna in b htlingk s chrestomathie gild bibl 49 die bopp sche ausgabe gild bibl 99 ist durch n bopp bezeichnet": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "name": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "name also title or epithet": {
+      "f1": 0.6667,
+      "n_gold": 4,
+      "n_pred": 8,
+      "precision": 0.5,
+      "recall": 1.0,
+      "tp": 4
+     },
+     "name when alone name of a man or of a woman": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "neuter": {
+      "f1": 0.3077,
+      "n_gold": 5,
+      "n_pred": 8,
+      "precision": 0.25,
+      "recall": 0.4,
+      "tp": 2
+     },
+     "neuter gender": {
+      "f1": 0.0,
+      "n_gold": 4,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "neutre": {
+      "f1": 0.6667,
+      "n_gold": 7,
+      "n_pred": 8,
+      "precision": 0.625,
+      "recall": 0.7143,
+      "tp": 5
+     },
+     "nominativ": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "parasmai pada": {
+      "f1": 0.0,
+      "n_gold": 6,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "parasmaipada": {
+      "f1": 0.4,
+      "n_gold": 2,
+      "n_pred": 8,
+      "precision": 0.25,
+      "recall": 1.0,
+      "tp": 2
+     },
+     "plural": {
+      "f1": 0.0,
+      "n_gold": 3,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "plural number": {
+      "f1": 0.6667,
+      "n_gold": 4,
+      "n_pred": 8,
+      "precision": 0.5,
+      "recall": 1.0,
+      "tp": 4
+     },
+     "pluriel": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "scholiast": {
+      "f1": 0.8571,
+      "n_gold": 6,
+      "n_pred": 8,
+      "precision": 0.75,
+      "recall": 1.0,
+      "tp": 6
+     },
+     "scholiast or commentator": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "singular": {
+      "f1": 0.0,
+      "n_gold": 2,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "substantive": {
+      "f1": 0.8571,
+      "n_gold": 6,
+      "n_pred": 8,
+      "precision": 0.75,
+      "recall": 1.0,
+      "tp": 6
+     },
+     "that is": {
+      "f1": 0.0,
+      "n_gold": 3,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "varia lectio": {
+      "f1": 0.9333,
+      "n_gold": 7,
+      "n_pred": 8,
+      "precision": 0.875,
+      "recall": 1.0,
+      "tp": 7
+     },
+     "various reading": {
+      "f1": 0.0,
+      "n_gold": 1,
+      "n_pred": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     }
+    }
+   }
+  }
+ },
+ "denominators": {
+  "items": 184,
+  "legends": 23
+ },
+ "llm_api_errors": 0,
+ "llm_model": "deepseek/deepseek-chat",
+ "n_test": 184,
+ "n_train": 276
+}

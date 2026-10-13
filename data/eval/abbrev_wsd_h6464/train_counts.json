@@ -1,0 +1,104 @@
+{
+ "counts": {
+  "&c.": {},
+  "Adj.": {
+   "adjektiv": 12
+  },
+  "Caus.": {
+   "causal": 12
+  },
+  "Comp.": {
+   "compound": 12
+  },
+  "E.": {
+   "epic": 6,
+   "epithet": 6
+  },
+  "N.": {
+   "nalopākhyāna in b htlingk s chrestomathie gild bibl 49 die bopp sche ausgabe gild bibl 99 ist durch n bopp bezeichnet": 3,
+   "name": 2,
+   "name also title or epithet": 5,
+   "name when alone name of a man or of a woman": 2
+  },
+  "P.": {
+   "parasmai pada": 4,
+   "parasmaipada": 7,
+   "passive": 1
+  },
+  "Sch.": {
+   "scholiast": 6,
+   "scholiast or commentator": 6
+  },
+  "a.": {
+   "adjectif": 3,
+   "adjective": 8,
+   "adjektiv": 1
+  },
+  "acc.": {
+   "according accusative": 2,
+   "accusatif": 2,
+   "accusative": 5,
+   "accusative case or according": 3
+  },
+  "adj.": {
+   "adjective": 12
+  },
+  "adv.": {
+   "adverb": 7,
+   "adverbe": 5
+  },
+  "cf.": {
+   "compare": 6,
+   "comparez confer": 1,
+   "confer compare": 5
+  },
+  "comp.": {
+   "compound": 12
+  },
+  "f.": {
+   "f minin": 3,
+   "feminine": 5,
+   "feminine also for": 2,
+   "femininum": 2
+  },
+  "fr.": {
+   "from": 12
+  },
+  "i. e.": {
+   "id est that is": 9,
+   "that is": 3
+  },
+  "ind.": {
+   "indeclinable": 12
+  },
+  "m.": {
+   "masculin": 1,
+   "masculine": 1,
+   "masculine gender": 10
+  },
+  "n.": {
+   "neuter": 6,
+   "neuter gender": 5,
+   "nominative name": 1
+  },
+  "nt.": {
+   "neuter": 4,
+   "neutre": 8
+  },
+  "pl.": {
+   "plural": 4,
+   "plural number": 7,
+   "pluriel": 1
+  },
+  "s.": {
+   "singular": 1,
+   "substantive": 11
+  },
+  "v. l.": {
+   "varia lectio": 9,
+   "varia lectio variante": 1,
+   "various reading": 2
+  }
+ },
+ "seed": 6464
+}
