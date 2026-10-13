@@ -4,6 +4,7 @@ FastAPI entry point. Phase 1 (PHASE1_PLAN.md D4): kosha API v1
 (ARCHITECTURE.md "API v1 contract") + the two Salt facade REST faces
 ("Maximum-reuse rules" point 4). GraphQL face is P7-scoped, not here.
 """
+import html
 import json
 import os
 import sqlite3
@@ -267,10 +268,14 @@ def word_page(slp1: str, request: Request, con: sqlite3.Connection = Depends(get
     dv = data_version(con)
     if not results:
         # Crawlable, honest 404 — still links the browse spine, no fabricated body.
+        # slp1_key is a raw pass-through of the path segment (to_slp1_auto with
+        # scheme="slp1" returns its input unchanged), so it MUST be escaped here
+        # — the only unescaped interpolation on the served surface (H-bughunt 13.10.2026, BH-K1).
+        safe_key = html.escape(slp1_key, quote=True)
         body = (f'<!doctype html><html lang="en"><head><meta charset="utf-8">'
-                f'<title>{slp1_key} — not found | kosha</title></head><body>'
+                f'<title>{safe_key} — not found | kosha</title></head><body>'
                 f'<main style="max-width:40rem;margin:2rem auto;font-family:system-ui">'
-                f'<h1>No entry for <code>{slp1_key}</code></h1>'
+                f'<h1>No entry for <code>{safe_key}</code></h1>'
                 f'<p>This SLP1 key has no MW / PWG / Apte entry. '
                 f'<a href="/browse/">Browse the dictionary →</a></p></main></body></html>')
         return HTMLResponse(body, status_code=404)
@@ -454,8 +459,10 @@ def _log_search_background(anon_id: str, ts: str, query_raw: str, query_slp1: st
 def search(q: str, request: Request, response: Response, background_tasks: BackgroundTasks,
            mode: str = "prefix", limit: int = 50, offset: int = 0,
            con: sqlite3.Connection = Depends(get_db)):
-    if limit > 200:
-        error("bad_request", "limit must be <= 200", 400)
+    if not 1 <= limit <= 200:
+        # Lower bound matters: SQLite reads LIMIT -1 (and any negative) as
+        # "no limit", which would serialize the whole lemmas table.
+        error("bad_request", "limit must be between 1 and 200", 400)
     slp1_q = to_slp1_auto(q, "auto")
     if mode == "exact":
         where, params = "slp1 = ?", (slp1_q,)
