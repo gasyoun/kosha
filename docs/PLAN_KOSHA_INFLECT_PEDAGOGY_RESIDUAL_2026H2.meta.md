@@ -22,7 +22,7 @@ the index of kosha's five-doc residual `/ask` set.
 ## Provenance
 
 - **Created:** 19-08-2026 by Opus 5 (`claude-opus-5`) under
-  [H3001 (Opus 5) — Stale-roadmap slice 3](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3001-Opus_multi_stale-roadmap-s3-tier1-ask-replan_17.08.26.md),
+  [H3001 (Opus 5) — Stale-roadmap slice 3](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3001-Opus_multi_stale-roadmap-s3-tier1-ask-replan_17.08.26.md),
   slice 3 of the programme indexed at
   [PLAN_UPRAVA_STALE_ROADMAP_ASK_BATCH_2026-08.md](https://github.com/gasyoun/Uprava/blob/main/docs/PLAN_UPRAVA_STALE_ROADMAP_ASK_BATCH_2026-08.md).
 - **The interview** was not a fresh sitting: slice-3 ruling **R3** makes the batch

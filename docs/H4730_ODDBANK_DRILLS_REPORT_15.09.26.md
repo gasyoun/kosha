@@ -2,7 +2,7 @@
 
 _Created: 15-09-2026 · Last updated: 15-09-2026_
 
-Executor: OxAlpha (`opencode/z-ai/glm-5.3-flash`) · Handoff: [H4730](https://github.com/gasyoun/Uprava/blob/main/handoffs/H4730-OxAlpha_SanskritGrammar_xwalk-c3-classsplit-zaliznyak-drills_14.09.26.md)
+Executor: OxAlpha (`opencode/z-ai/glm-5.3-flash`) · Handoff: [H4730](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H4730-OxAlpha_SanskritGrammar_xwalk-c3-classsplit-zaliznyak-drills_14.09.26.md)
 
 ## What shipped
 

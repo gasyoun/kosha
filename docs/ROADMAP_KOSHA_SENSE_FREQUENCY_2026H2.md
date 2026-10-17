@@ -34,7 +34,7 @@ reordering.
 
 ## Wave 2 — full-corpus WSD extension — **DONE 24-07-2026 (H1588)**
 
-Shipped under next-programme **W3** as [H1588](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1588-Opus_kosha_sense-frequency-two-witness-wsd_24.07.26.md)
+Shipped under next-programme **W3** as [H1588](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1588-Opus_kosha_sense-frequency-two-witness-wsd_24.07.26.md)
 (Grok 4.5 `grok-4.5`, Opus-lock override). Report:
 [`wsd_fusion_report.md`](https://github.com/gasyoun/kosha/blob/main/data/frequency/wsd_fusion_report.md).
 

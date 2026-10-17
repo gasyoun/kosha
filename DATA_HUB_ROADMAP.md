@@ -2,7 +2,7 @@
 
 _Created: 06-07-2026 · Last updated: 01-10-2026_
 
-> **Verdict 01-10-2026 ([H5575](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5575-OxAlpha_kosha_roadmap-verdict-w2-kosha-five-drain-first_01.10.26.md), wave 2) — REFRESH.**
+> **Verdict 01-10-2026 ([H5575](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5575-OxAlpha_kosha_roadmap-verdict-w2-kosha-five-drain-first_01.10.26.md), wave 2) — REFRESH.**
 > The hub is live (data releases `data-v0.1.0`/`data-v0.2.0`, public
 > [directory page](https://gasyoun.github.io/kosha/directory/), `kosha.db` layers (P-D5),
 > API tier (P-D6, shipped 13-08-2026)), so this stays the working roadmap. Both then-open

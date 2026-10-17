@@ -11,7 +11,7 @@ _Created: 06-10-2026 · Last updated: 06-10-2026_
 **What this is.** The error analysis of every LLM miss on the frozen 300-item B3
 WSD set ([ISCLS9_B3_WSD_GOLD_EVAL.md](https://github.com/gasyoun/kosha/blob/main/docs/ISCLS9_B3_WSD_GOLD_EVAL.md):
 gloss-grounded LLM 54.3% vs corpus-MFS 84.3%, exact McNemar p<0.0001), executed as
-[H6047](https://github.com/gasyoun/Uprava/blob/main/handoffs/H6047-GLM_kosha_b3-wsd-error-analysis_04.10.26.md).
+[H6047](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H6047-GLM_kosha_b3-wsd-error-analysis_04.10.26.md).
 Deliverables: this report, the reproducible notebook
 [error_taxonomy.ipynb](https://github.com/gasyoun/kosha/blob/main/data/eval/wsd_iscls9/error_taxonomy.ipynb)
 with committed outputs, [error_taxonomy.tsv](https://github.com/gasyoun/kosha/blob/main/data/eval/wsd_iscls9/error_taxonomy.tsv)

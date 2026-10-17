@@ -2,7 +2,7 @@
 
 _Created: 04-09-2026 · Last updated: 05-09-2026_
 
-**Handoff:** [H4033](https://github.com/gasyoun/Uprava/blob/main/handoffs/H4033-OxAlpha_Kosha_kosa-lineage-crosswalk_04.09.26.md) · **Executor:** OxAlpha (opencode/z-ai/glm-5.3-flash) · **Pattern:** the Tamilex Caturakarāti lineage study (Chevillard/Trento), applied to the Sanskrit kośa chain. **Manifest SHA-16:** `49f251bfa1f7b3ce` (frozen before computation; matching rule in [lineage_manifest.json](https://github.com/gasyoun/kosha/blob/main/data/lineage/lineage_manifest.json)).
+**Handoff:** [H4033](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H4033-OxAlpha_Kosha_kosa-lineage-crosswalk_04.09.26.md) · **Executor:** OxAlpha (opencode/z-ai/glm-5.3-flash) · **Pattern:** the Tamilex Caturakarāti lineage study (Chevillard/Trento), applied to the Sanskrit kośa chain. **Manifest SHA-16:** `49f251bfa1f7b3ce` (frozen before computation; matching rule in [lineage_manifest.json](https://github.com/gasyoun/kosha/blob/main/data/lineage/lineage_manifest.json)).
 
 ## Step 0 — inventory
 

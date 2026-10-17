@@ -85,11 +85,11 @@ and links the four layer docs.
 
 | ID | Deliverable | Tier |
 |---|---|---|
-| [H1265](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1265-Haiku_kosha_computed_readme_dataset_count_invariant_18.07.26.md) | Computed README dataset count + test invariant | Haiku |
-| [H1267](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1267-Haiku_kosha_relaxed_tier_dead_end_record_18.07.26.md) | D6 relaxed-tier → DEAD_ENDS record | Haiku |
-| [H1461](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1461-Sonnet_kosha_zaliznyak-declension-drill-surface_22.07.26.md) | Zaliznyak paradigm-class drills | Sonnet |
-| [H1492](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1492-Sonnet_kosha_kosha-sandhi-sastra-commentary-sweep_22.07.26.md) | Śāstra/commentary sandhi sweep | Sonnet |
-| [H1493](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1493-Sonnet_kosha_kosha-gita-prose-reading-view_22.07.26.md) | Gītā prose view (opportunistic) | Sonnet |
+| [H1265](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1265-Haiku_kosha_computed_readme_dataset_count_invariant_18.07.26.md) | Computed README dataset count + test invariant | Haiku |
+| [H1267](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1267-Haiku_kosha_relaxed_tier_dead_end_record_18.07.26.md) | D6 relaxed-tier → DEAD_ENDS record | Haiku |
+| [H1461](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1461-Sonnet_kosha_zaliznyak-declension-drill-surface_22.07.26.md) | Zaliznyak paradigm-class drills | Sonnet |
+| [H1492](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1492-Sonnet_kosha_kosha-sandhi-sastra-commentary-sweep_22.07.26.md) | Śāstra/commentary sandhi sweep | Sonnet |
+| [H1493](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1493-Sonnet_kosha_kosha-gita-prose-reading-view_22.07.26.md) | Gītā prose view (opportunistic) | Sonnet |
 
 ## 4. New handoffs minted by this plan
 

@@ -71,9 +71,9 @@ Claude Code executes each numbered handoff end to end.
 
 W0 is divided into three serial handoffs:
 
-1. [H1943 — governance and integrity](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1943-Sonnet_kosha_architecture-roadmap-w0a-governance-integrity_30.07.26.md)
-2. [H1944 — reproducible substrate](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1944-Opus_kosha_architecture-roadmap-w0b-reproducible-substrate_30.07.26.md)
-3. [H1945 — contract and trust boundaries](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1945-Opus_kosha_architecture-roadmap-w0c-contract-trust-boundaries_30.07.26.md)
+1. [H1943 — governance and integrity](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1943-Sonnet_kosha_architecture-roadmap-w0a-governance-integrity_30.07.26.md)
+2. [H1944 — reproducible substrate](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1944-Opus_kosha_architecture-roadmap-w0b-reproducible-substrate_30.07.26.md)
+3. [H1945 — contract and trust boundaries](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1945-Opus_kosha_architecture-roadmap-w0c-contract-trust-boundaries_30.07.26.md)
 
 H1944 starts only after H1943 merges. H1945 starts only after H1944 merges and
 the Codex retrospective review records no unresolved P1 finding.

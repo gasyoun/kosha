@@ -15,7 +15,7 @@ checking whether P5 product exit is green vs agent-only green.
 
 ## Provenance
 
-- Handoff: [H1590](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1590-Opus_kosha_p5-ssr-static-head-exit-packet_24.07.26.md)
+- Handoff: [H1590](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1590-Opus_kosha_p5-ssr-static-head-exit-packet_24.07.26.md)
 - PR: [kosha#192](https://github.com/gasyoun/kosha/pull/192) · release [v0.91.0](https://github.com/gasyoun/kosha/releases/tag/v0.91.0)
 - Model: Grok 4.5 (`grok-4.5`) on Opus-lock override
 - Parent design: [P5_ADVANCED_UI_DESIGN.md](https://github.com/gasyoun/kosha/blob/main/P5_ADVANCED_UI_DESIGN.md)

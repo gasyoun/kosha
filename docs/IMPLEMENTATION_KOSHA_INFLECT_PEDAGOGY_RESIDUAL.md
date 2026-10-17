@@ -8,7 +8,7 @@ Ordered steps per unit. Every unit starts with `precheck_handoff.py` + claim and
 session-unique worktree (`../kosha-h<id>-<pid>` off `origin/main`); kosha is a
 guarded main tree.
 
-## K1 — [H3165 (Sonnet 5) — Wave U2: drip the three prepared csl-inflect PRs](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3165-Sonnet_csl-inflect_inflect-u2-drip-prepared-prs_19.08.26.md)
+## K1 — [H3165 (Sonnet 5) — Wave U2: drip the three prepared csl-inflect PRs](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3165-Sonnet_csl-inflect_inflect-u2-drip-prepared-prs_19.08.26.md)
 
 1. Locate the H093 fork and confirm the three branches still exist:
    `devanagari-input`, `help-examples`, `output-polish`.
@@ -24,7 +24,7 @@ guarded main tree.
 6. Same pass: update Wave U2's status in
    [ROADMAP_INFLECT_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/ROADMAP_INFLECT_2026_2027.md).
 
-## K2 — [H3166 (Opus 5) — Verb dhātu-identity crosswalk](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3166-Opus_kosha_inflect-dhatu-identity-crosswalk_19.08.26.md)
+## K2 — [H3166 (Opus 5) — Verb dhātu-identity crosswalk](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3166-Opus_kosha_inflect-dhatu-identity-crosswalk_19.08.26.md)
 
 1. Extract the root key each side actually uses: Cologne verb tables (as ingested
    by [`scripts/build_inflections.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_inflections.py))

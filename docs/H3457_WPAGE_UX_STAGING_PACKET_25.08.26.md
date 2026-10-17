@@ -4,7 +4,7 @@ _Created: 25-08-2026 · Last updated: 05-09-2026_
 
 _Created: 25-08-2026 · Last updated: 25-08-2026 (§7 — MG review R1–R5, direction d, H3480)_
 
-Handoff: [H3457 (Fable 5) — w-page UX upgrade staged: core_rank badge, favorites, PWG scan anchors](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3457-Fable_kosha_wpage-ux-badge-favorites-scananchors_24.08.26.md)
+Handoff: [H3457 (Fable 5) — w-page UX upgrade staged: core_rank badge, favorites, PWG scan anchors](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3457-Fable_kosha_wpage-ux-badge-favorites-scananchors_24.08.26.md)
 · executor Fable 5 (`claude-fable-5`) · lane C of 3 (MG go 24-08-2026).
 **Status: STAGED, NOT PUBLISHED** —
 docs/NOT_PUBLISHED_H3457_WPAGE_UX.md.
@@ -182,7 +182,7 @@ per-IP budget, not a link defect (H870 established the same on MW).
    capital-initial public pages (pre-existing; fix candidates in the issue).
 4. Error-report widget — parked, needs a backend.
 
-## 7. Review round 25-08-2026 — MG rulings R1–R5 → direction **d** ([H3480](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3480-Fable_kosha_wpage-header-rethink-flat-tabs-gloss-switch-ru-render_25.08.26.md), Fable 5 `claude-fable-5`)
+## 7. Review round 25-08-2026 — MG rulings R1–R5 → direction **d** ([H3480](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3480-Fable_kosha_wpage-header-rethink-flat-tabs-gloss-switch-ru-render_25.08.26.md), Fable 5 `claude-fable-5`)
 
 MG opened [direction a](https://gasyoun.github.io/mockups/h3457-wpage-ux/direction-a-gam.html) and ruled on the *existing* header, not only on the new organs:
 

@@ -6,7 +6,7 @@ _Created: 08-07-2026 · Last updated: 10-10-2026_
 >
 > **Exit-check truth-pass 02-09-2026** (Claude Code Opus 5 `claude-opus-5`, H3783). The Q4/A4 **exit-check** bullet and open-`@DECIDE` 1 still read as unbuilt six weeks after the work shipped and was released, and a handoff was minted from that prose. Both are corrected below with per-check evidence. The lesson, in this file: a truth-pass that checks a section's **status line** has not checked its **exit checks, risks and `@DECIDE` list** — those are separate claims, and they are the ones a later `/fruit` or `/ask` pass reads to decide what is still open ([FINDINGS §644](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)).
 >
-> **Verdict 01-10-2026 ([H5575](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5575-OxAlpha_kosha_roadmap-verdict-w2-kosha-five-drain-first_01.10.26.md), wave 2) — REFRESH.**
+> **Verdict 01-10-2026 ([H5575](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5575-OxAlpha_kosha_roadmap-verdict-w2-kosha-five-drain-first_01.10.26.md), wave 2) — REFRESH.**
 > Q1–Q4 are complete with every deliverable carrying an artefact (status table below).
 > The programme stays alive on two agent-doable residuals and three human decisions —
 > checkboxes below, mirrored into Uprava

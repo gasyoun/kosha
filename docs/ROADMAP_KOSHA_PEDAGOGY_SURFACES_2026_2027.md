@@ -1,6 +1,6 @@
 _Created: 14-07-2026 · Last updated: 19-08-2026_
 
-> **Truth-pass 19-08-2026** ([H3001 (Opus 5) — Stale-roadmap slice 3: full /ask replan of stale Tier-1 roadmaps](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3001-Opus_multi_stale-roadmap-s3-tier1-ask-replan_17.08.26.md)).
+> **Truth-pass 19-08-2026** ([H3001 (Opus 5) — Stale-roadmap slice 3: full /ask replan of stale Tier-1 roadmaps](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3001-Opus_multi_stale-roadmap-s3-tier1-ask-replan_17.08.26.md)).
 > All 15 handoffs this roadmap references are closed ✅. **Wave RU shipped
 > 19-07-2026** and was still marked 🟡 queued — corrected below. With that
 > correction the roadmap is **fully drained**: every wave shipped, W3b closed as

@@ -3,7 +3,7 @@ _Created: 15-09-2026 · Last updated: 15-09-2026_
 # H3743 — full-corpus pwg_ru-vs-MT benchmark: precondition check, NOT YET DRAINED
 
 Sonnet 5 (`claude-sonnet-5`) executing
-[H3743](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3743-Sonnet_kosha_akshara-full-corpus-mt-benchmark_30.08.26.md).
+[H3743](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3743-Sonnet_kosha_akshara-full-corpus-mt-benchmark_30.08.26.md).
 This handoff is `{launch-box: any}` and self-checks its own gate (step 1 of the
 mission) rather than needing a human to hold it back — this run's job was to
 run that check. Result: the gate is **not** satisfied, so per the handoff's

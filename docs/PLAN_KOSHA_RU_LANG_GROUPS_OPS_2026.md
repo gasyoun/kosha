@@ -61,10 +61,10 @@ It is a slice: Russian on `/w/`, two ops leftovers, one W0 memo.
 
 | ID | Role |
 |---|---|
-| [H2670](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2670-Grok_kosha_w-page-ru-pwg-mw-tabs_13.08.26.md) | Language groups + pwg_ru/mw_ru join |
-| [H2680](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2680-Grok_kosha_w-page-sanskritrussian-strip_13.08.26.md) | SanskritRussian strip after H2670 |
-| [H2671](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2671-Grok_kosha_citation-archive-mount_13.08.26.md) | Archive snapshot + pin |
-| [H2672](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2672-Grok_kosha_identity-rollback-drill_13.08.26.md) | Live rollback drill |
+| [H2670](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2670-Grok_kosha_w-page-ru-pwg-mw-tabs_13.08.26.md) | Language groups + pwg_ru/mw_ru join |
+| [H2680](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2680-Grok_kosha_w-page-sanskritrussian-strip_13.08.26.md) | SanskritRussian strip after H2670 |
+| [H2671](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2671-Grok_kosha_citation-archive-mount_13.08.26.md) | Archive snapshot + pin |
+| [H2672](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2672-Grok_kosha_identity-rollback-drill_13.08.26.md) | Live rollback drill |
 | [H2681](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2681-Codex_kosha_w0-h1944-h1945-compare-memo_13.08.26.md) | W0 memo + PR comments — completed 14-08-2026 in [PR #399](https://github.com/gasyoun/kosha/pull/399) |
 
 ## Autonomy-readiness gate

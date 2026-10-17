@@ -40,8 +40,8 @@ in-context at 62.3%.)
 
 - Baseline + frozen lane: [ISCLS9_B3_WSD_GOLD_EVAL.md](https://github.com/gasyoun/kosha/blob/main/docs/ISCLS9_B3_WSD_GOLD_EVAL.md)
 - Error taxonomy input: [ISCLS9_B3_WSD_ERROR_TAXONOMY.md](https://github.com/gasyoun/kosha/blob/main/docs/ISCLS9_B3_WSD_ERROR_TAXONOMY.md)
-- Handoffs: [H6048](https://github.com/gasyoun/Uprava/blob/main/handoffs/H6048-GLM_kosha_wsd-hybrid-mfs-llm_04.10.26.md),
-  [H6047](https://github.com/gasyoun/Uprava/blob/main/handoffs/H6047-GLM_kosha_b3-wsd-error-analysis_04.10.26.md),
+- Handoffs: [H6048](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H6048-GLM_kosha_wsd-hybrid-mfs-llm_04.10.26.md),
+  [H6047](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H6047-GLM_kosha_b3-wsd-error-analysis_04.10.26.md),
   [H5556](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5556-OxAlpha_kosha_dspy-wsd-definitions_29.09.26.md)
 
 _Гасунс_

@@ -2,7 +2,7 @@
 
 _Created: 13-08-2026 · Last updated: 01-09-2026_
 
-> **Truth-pass 01-09-2026** (Sonnet 5 `claude-sonnet-5`, [H3787](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3787-Sonnet_kosha_ru-lang-groups-ops-residual_31.08.26.md)). All five wave handoffs below are ✅ shipped and merged; the [Salt-face residual](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2768-Codex_kosha_salt-face-kosha-extension-contract_14.08.26.md) named in [PR #399](https://github.com/gasyoun/kosha/pull/399) is also ✅ shipped. No open wave, no open `/ask` fork (all 24 ruled). Kept in place, not archived ([FINDINGS §475](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md) clause 3, MG 31-08-2026 ruling: a drained kosha roadmap keeps its path and gets a dated banner in place).
+> **Truth-pass 01-09-2026** (Sonnet 5 `claude-sonnet-5`, [H3787](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3787-Sonnet_kosha_ru-lang-groups-ops-residual_31.08.26.md)). All five wave handoffs below are ✅ shipped and merged; the [Salt-face residual](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2768-Codex_kosha_salt-face-kosha-extension-contract_14.08.26.md) named in [PR #399](https://github.com/gasyoun/kosha/pull/399) is also ✅ shipped. No open wave, no open `/ask` fork (all 24 ruled). Kept in place, not archived ([FINDINGS §475](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md) clause 3, MG 31-08-2026 ruling: a drained kosha roadmap keeps its path and gets a dated banner in place).
 
 Companion to
 [PLAN_KOSHA_RU_LANG_GROUPS_OPS_2026.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_RU_LANG_GROUPS_OPS_2026.md).

@@ -66,6 +66,6 @@ CC BY-SA 4.0 per [LICENSE-DATA.md](https://github.com/gasyoun/kosha/blob/main/LI
 ## Provenance of this statement
 
 Authored 06-10-2026 by GLM 5.3 (`opencode/zai-coding-plan/glm-5.3`) under
-handoff [H6053](https://github.com/gasyoun/Uprava/blob/main/handoffs/H6053-GLM_kosha_zaliznyak-morpho-distribution_04.10.26.md).
+handoff [H6053](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H6053-GLM_kosha_zaliznyak-morpho-distribution_04.10.26.md).
 
 _Dr. Mārcis Gasūns_

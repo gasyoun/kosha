@@ -3,7 +3,7 @@
 _Created: 11-09-2026 · Last updated: 11-09-2026_
 
 **Dataset:** [dcs_upasarga_prefixus.tsv](dcs_upasarga_prefixus.tsv) · 6,425 rows · 192,987 bytes · sha256 `6d2f2ff2519d6ab6700be9f13741be74a1833226fa896c9c0ea9a403f37749b3`
-**Handoff:** [H4534](https://github.com/gasyoun/Uprava/blob/main/handoffs/H4534-OxAlpha_kosha_dcs-upasarga-praefixus-dataset_11.09.26.md) (OxAlpha) · class: data
+**Handoff:** [H4534](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H4534-OxAlpha_kosha_dcs-upasarga-praefixus-dataset_11.09.26.md) (OxAlpha) · class: data
 **Regen:** `python scripts/extract_dcs_upasarga_prefixus.py --xlsx <DCS-upasarga-analysis.xlsx>` (rerun byte-identical — H4534 parity PASS)
 
 ## Provenance

@@ -3,7 +3,7 @@
 _Created: 14-08-2026 · Last updated: 14-08-2026_
 
 Committed CI slice for
-[H2670](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2670-Grok_kosha_w-page-ru-pwg-mw-tabs_13.08.26.md).
+[H2670](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2670-Grok_kosha_w-page-ru-pwg-mw-tabs_13.08.26.md).
 Not a copy of the canonical pwg_ru / mw_ru stores. Pytest sets
 `KOSHA_RU_JOIN` here; production joins the sibling
 `SanskritLexicography/RussianTranslation` tree.

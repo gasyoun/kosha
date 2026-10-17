@@ -88,6 +88,6 @@ files; `--check` is the regression gate. Sunset: superseded in place.
 ## Provenance of this statement
 
 Authored 15-09-2026 by OxAlpha (`opencode/z-ai/glm-5.3-flash`) under handoff
-[H4730](https://github.com/gasyoun/Uprava/blob/main/handoffs/H4730-OxAlpha_SanskritGrammar_xwalk-c3-classsplit-zaliznyak-drills_14.09.26.md).
+[H4730](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H4730-OxAlpha_SanskritGrammar_xwalk-c3-classsplit-zaliznyak-drills_14.09.26.md).
 
 _Гасунс_

@@ -26,7 +26,7 @@ executor of the one routed P2 residual.
 
 No open P0/P1; the W0 retrospective criterion passes. One P2 disagreement
 between kosha's `/dicts/*` payload and normative Salt profile §9 is routed to
-[H2768 (Codex) — Resolve kosha extension on strict Salt compatibility faces](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2768-Codex_kosha_salt-face-kosha-extension-contract_14.08.26.md).
+[H2768 (Codex) — Resolve kosha extension on strict Salt compatibility faces](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2768-Codex_kosha_salt-face-kosha-extension-contract_14.08.26.md).
 
 ## Limitations
 

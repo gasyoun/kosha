@@ -9,7 +9,7 @@ gold derived purely from committed data — the DCS `m_wordsem` token annotation
 (531,747 tagged tokens) resolved onto MW sense divisions via
 [data/frequency/wn_to_mw_map.tsv](https://github.com/gasyoun/kosha/blob/main/data/frequency/wn_to_mw_map.tsv)
 (exact|overlap rows only). No manual annotation anywhere. Executes the WSD half of
-[H5877](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5877-OxAlpha_kosha_iscls9-b3-full-paper_04.10.26.md)
+[H5877](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5877-OxAlpha_kosha_iscls9-b3-full-paper_04.10.26.md)
 (ISCLS-9 full paper B3, deadline 20-10-2026 AoE); the definition-generation half
 reuses the verified H730/H972/H2408 results unchanged.
 
