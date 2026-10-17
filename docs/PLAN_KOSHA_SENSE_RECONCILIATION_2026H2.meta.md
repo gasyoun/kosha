@@ -27,7 +27,7 @@ cross-dictionary reconciliation and full lemma-variant graph are explicitly wave
 **Related.** Sibling: [PLAN_KOSHA_SENSE_FREQUENCY_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_SENSE_FREQUENCY_2026H2.md)
 (H1453). Reuses [`build_dict_corpus_concordance.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_dict_corpus_concordance.py),
 [`concordance_core.py`](https://github.com/gasyoun/kosha/blob/main/scripts/concordance_core.py),
-[`RussianTranslation/src/microstructure.py`](https://github.com/sanskrit-lexicon/SanskritLexicography/blob/master/RussianTranslation/src/microstructure.py).
+[`RussianTranslation/src/microstructure.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/microstructure.py).
 
 **Revision history.**
 - 22-07-2026 — created with the five layer docs (Opus 4.8 `claude-opus-4-8`, `/ask`).

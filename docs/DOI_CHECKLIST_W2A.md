@@ -2,7 +2,7 @@
 
 _Created: 08-08-2026 · Last updated: 07-09-2026_
 
-Companion to [H2346](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2346-Grok_kosha_architecture-roadmap-w2a-immutable-sense-archives_07.08.26.md)
+Companion to [H2346](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2346-Grok_kosha_architecture-roadmap-w2a-immutable-sense-archives_07.08.26.md)
 (immutable sense archives). **This checklist described a world that no longer
 exists.** As written on 08-08-2026 it said DOIs were minted by hand by MG, that
 an agent "must not claim a DOI was minted", and that empty cells were correct.

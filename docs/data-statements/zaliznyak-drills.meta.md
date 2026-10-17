@@ -136,7 +136,7 @@ Zaliznyak paradigm-index (SanskritLexicography/RussianTranslation).
 ## Provenance of this statement
 
 Authored 23-07-2026 by Sonnet 5 (`claude-sonnet-5`) under handoff
-[H1461](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1461-Sonnet_kosha_zaliznyak-declension-drill-surface_22.07.26.md),
+[H1461](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1461-Sonnet_kosha_zaliznyak-declension-drill-surface_22.07.26.md),
 from the manifest row, the builder script, and inspection of the live
 generated files.
 

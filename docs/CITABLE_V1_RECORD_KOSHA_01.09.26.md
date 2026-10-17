@@ -2,7 +2,7 @@
 
 _Created: 01-09-2026 · Last updated: 01-09-2026_
 
-[H3788](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3788-Opus_kosha_kosha-2026-2027-w2-citable-v1_31.08.26.md)
+[H3788](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3788-Opus_kosha_kosha-2026-2027-w2-citable-v1_31.08.26.md)
 asked for two things before any W2 work: establish which of W0 and W1 have
 actually shipped and say so explicitly, then show that a citable release exists
 with its DOI and manifest — or name the units that block it.

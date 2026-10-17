@@ -2,7 +2,7 @@
 
 _Created: 31-07-2026 · Last updated: 05-09-2026_
 
-Handoff [H1945](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1945-Opus_kosha_architecture-roadmap-w0c-contract-trust-boundaries_30.07.26.md)
+Handoff [H1945](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1945-Opus_kosha_architecture-roadmap-w0c-contract-trust-boundaries_30.07.26.md)
 · plan of record
 [PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_ARCHITECTURE_ROADMAP_2026_2027.md)
 D6/D13 · executed by Opus 5 1M (`claude-opus-5[1m]`).

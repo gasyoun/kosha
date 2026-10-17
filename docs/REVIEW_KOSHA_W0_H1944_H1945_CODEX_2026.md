@@ -24,7 +24,7 @@ return a top-level `kosha` extension even though the normative Salt profile
 §9 permits only the additive `csl` object and says no other structural
 divergence is allowed. This is not a security, data-loss, or availability
 defect, so it does not block the W0 no-P0/P1 criterion. It is routed to
-[H2768 (Codex) — Resolve kosha extension on strict Salt compatibility faces](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2768-Codex_kosha_salt-face-kosha-extension-contract_14.08.26.md).
+[H2768 (Codex) — Resolve kosha extension on strict Salt compatibility faces](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2768-Codex_kosha_salt-face-kosha-extension-contract_14.08.26.md).
 
 This verdict closes the technical W0 review debt. It does **not** claim that
 Wave 1, deployment, DOI, or later roadmap work is complete.

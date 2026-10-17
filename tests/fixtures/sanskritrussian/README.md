@@ -3,7 +3,7 @@
 _Created: 14-08-2026 · Last updated: 14-08-2026_
 
 Committed CI slice for
-[H2680](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2680-Grok_kosha_w-page-sanskritrussian-strip_13.08.26.md).
+[H2680](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2680-Grok_kosha_w-page-sanskritrussian-strip_13.08.26.md).
 Not a copy of the canonical
 [gasyoun/SanskritRussian](https://github.com/gasyoun/SanskritRussian)
 glossaries. Pytest sets `KOSHA_SR_GLOSS` here; production joins the sibling

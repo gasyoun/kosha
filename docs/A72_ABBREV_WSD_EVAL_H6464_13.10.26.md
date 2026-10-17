@@ -4,7 +4,7 @@ _Handoff: H6464 · Eval date: 13-10-2026 · Executor: OxAlpha (opencode/z-ai/glm
 
 **What this is.** A WSD-shaped eval for grammatical-abbreviation homographs in
 dictionary entries, built from the csl-atlas abbreviation census payload
-([abbrev_census.json](https://github.com/gasyoun/csl-atlas/blob/main/data/abbrev/abbrev_census.json),
+([abbrev_census.json](https://github.com/sanskrit-lexicon/csl-atlas/blob/main/data/abbrev/abbrev_census.json),
 448 polysemous legend strings, CC-BY-SA-4.0, sha256
 `8af859fa…8718eddd`) + in-entry occurrences extracted from the local
 csl-orig v02 corpus. Executes

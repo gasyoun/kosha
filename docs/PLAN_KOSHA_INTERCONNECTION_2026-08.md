@@ -52,7 +52,7 @@ Full rulings table with every fork:
 
 ## Handoff
 
-- [H3565 (Sonnet 5) — interconnect kosha datasets scope line](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3565-Sonnet_kosha_interconnect-kosha-datasets-scope-line_26.08.26.md) · trivial · 🟡 queued
+- [H3565 (Sonnet 5) — interconnect kosha datasets scope line](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3565-Sonnet_kosha_interconnect-kosha-datasets-scope-line_26.08.26.md) · trivial · 🟡 queued
 
 ## Autonomy contract
 

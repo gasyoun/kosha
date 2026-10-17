@@ -2,7 +2,7 @@
 
 _Created: 08-08-2026 · Last updated: 08-08-2026_
 
-Committed sample for [H2346](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2346-Grok_kosha_architecture-roadmap-w2a-immutable-sense-archives_07.08.26.md) historical-resolution tests.
+Committed sample for [H2346](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2346-Grok_kosha_architecture-roadmap-w2a-immutable-sense-archives_07.08.26.md) historical-resolution tests.
 
 | Version | Sense | Text marker |
 |---|---|---|

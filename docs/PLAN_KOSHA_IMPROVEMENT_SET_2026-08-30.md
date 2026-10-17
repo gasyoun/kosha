@@ -10,9 +10,9 @@ file is the durable form, and the three handoff bodies carry the executable miss
 
 | Handoff | Tier · effort | What it does | Runnable |
 |---|---|---|---|
-| [H3743](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3743-Sonnet_kosha_akshara-full-corpus-mt-benchmark_30.08.26.md) | Sonnet 5 · 🟡2 medium | akshara full-corpus blinded pwg_ru-vs-MT benchmark — drain-gated precondition, automatic metrics over the whole intersection, preregistered ~400-head judged sample | after the akshara crawl drains (~1 Sept); declines to run early by itself |
-| [H3744](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3744-Opus_kosha_sense-recon-w2-aligned-sense-table_30.08.26.md) | Opus 5 · 🔴3 hard | Sense-reconciliation W2 slice 1 — PWG/MW/Apte aligned-sense table, staged behind `ux=` plus a published compare page | now |
-| [H3745](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3745-Sonnet_kosha_a4-w4a-panini-surface-w4b-pages-budget_30.08.26.md) | Sonnet 5 · 🟡2 medium | A4 W4a panini coverage+chain surface + W4b Pages budget re-measure with a 70 % (717 MB) fail gate, plus two doc truth-fixes | now |
+| [H3743](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3743-Sonnet_kosha_akshara-full-corpus-mt-benchmark_30.08.26.md) | Sonnet 5 · 🟡2 medium | akshara full-corpus blinded pwg_ru-vs-MT benchmark — drain-gated precondition, automatic metrics over the whole intersection, preregistered ~400-head judged sample | after the akshara crawl drains (~1 Sept); declines to run early by itself |
+| [H3744](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3744-Opus_kosha_sense-recon-w2-aligned-sense-table_30.08.26.md) | Opus 5 · 🔴3 hard | Sense-reconciliation W2 slice 1 — PWG/MW/Apte aligned-sense table, staged behind `ux=` plus a published compare page | now |
+| [H3745](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3745-Sonnet_kosha_a4-w4a-panini-surface-w4b-pages-budget_30.08.26.md) | Sonnet 5 · 🟡2 medium | A4 W4a panini coverage+chain surface + W4b Pages budget re-measure with a 70 % (717 MB) fail gate, plus two doc truth-fixes | now |
 
 All three are `{launch-box: any}` and self-verifying: no human vote inside any run.
 
@@ -54,7 +54,7 @@ while the automatic metrics run over the entire intersection.
 
 ## Sequencing against the crawl
 
-[H3597](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3597-OxAlpha_kosha_akshara-full-scrape_27.08.26.md)
+[H3597](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3597-OxAlpha_kosha_akshara-full-scrape_27.08.26.md)
 (OxAlpha, 🔴3 hard — akshara.ru FULL kosha crawl) finishes around 1 September, owes a case-twin
 repair pass, and freezes its worktree until drain. H3743 does not wait on a human and does not
 read prose to know it is early: its first step verifies both crawl passes report DONE and the

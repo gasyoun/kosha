@@ -9,7 +9,7 @@ are re-scored against the **Sanskrit Heritage Dictionary** (Gérard Huet) French
 layer instead of Monier-Williams. Executes that protocol's ranked next-step **#4**
 ("Second reference — D20 `heritage_dico_gloss.tsv` French glosses as a multi-reference or
 cross-lingual arm") under
-[H2408](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2408-Fable_kosha_definition-gen-gloss-wsd-pilot_07.08.26.md).
+[H2408](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2408-Fable_kosha_definition-gen-gloss-wsd-pilot_07.08.26.md).
 Venue targets unchanged: eLex 2027 · EURALEX 2028 · IJL.
 
 **No generation was re-run.** `gen_A0_random_floor` · `gen_A1_chat_ctx` ·
@@ -214,7 +214,7 @@ fill items that hit API timeouts (this run needed two retry passes to reach 0 nu
 
 Harness, protocol and analysis authored and run by **Fable 5** (`claude-fable-5`) in Claude
 Code, 09-08-2026, under
-[H2408](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2408-Fable_kosha_definition-gen-gloss-wsd-pilot_07.08.26.md).
+[H2408](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2408-Fable_kosha_definition-gen-gloss-wsd-pilot_07.08.26.md).
 Judge model: `deepseek-chat` (DeepSeek API, temperature 0), same blinded protocol as
 H730/H972, with a cross-lingual system prompt. Deterministic metrics: sacrebleu 2.6.0.
 Generation arms unchanged from H730 (`deepseek-chat`, `deepseek-reasoner`, 11-07-2026) and

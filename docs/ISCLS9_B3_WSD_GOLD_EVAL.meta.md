@@ -15,7 +15,7 @@ against the H1588 spine.
 
 ## Audience
 
-The ISCLS-9 B3 paper lane first ([H5877](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5877-OxAlpha_kosha_iscls9-b3-full-paper_04.10.26.md)
+The ISCLS-9 B3 paper lane first ([H5877](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5877-OxAlpha_kosha_iscls9-b3-full-paper_04.10.26.md)
 — the paper's §5 WSD numbers and §6 fold note come from here), then anyone continuing the
 defgen/WSD eval line. Read
 [DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md](https://github.com/gasyoun/kosha/blob/main/docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md)
@@ -24,14 +24,14 @@ restriction) and its judge-gate discipline.
 
 ## Provenance
 
-- **Handoff:** [H5877](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5877-OxAlpha_kosha_iscls9-b3-full-paper_04.10.26.md)
+- **Handoff:** [H5877](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5877-OxAlpha_kosha_iscls9-b3-full-paper_04.10.26.md)
   (**OxAlpha** lane) — ISCLS-9 B3 full paper. WSD track executed 04-10-2026.
 - **Model:** GLM-5.3-Flash (ZCode session) — harness, run, analysis, write-up.
 - **LLM arm:** `deepseek/deepseek-chat` via OpenRouter, temperature 0 (300/300 parsed).
 - **Predecessors:** [H730](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H730-Fable_kosha_definition-generation-gloss-eval_11.07.26.md)
   (eval design, frozen sample), [H1588](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/)
   (WordSem→MW gold spine — its `hash()` fold nondeterminism is corrected here, not rewritten),
-  [H2408](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2408-Fable_kosha_definition-gen-gloss-wsd-pilot_07.08.26.md)
+  [H2408](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2408-Fable_kosha_definition-gen-gloss-wsd-pilot_07.08.26.md)
   (Heritage second reference).
 
 ## Status

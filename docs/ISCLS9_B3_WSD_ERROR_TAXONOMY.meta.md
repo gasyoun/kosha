@@ -38,7 +38,7 @@ a sentence-id key-space mismatch showed the LLM the wrong context sentence in
 
 - Protocol + first results: [ISCLS9_B3_WSD_GOLD_EVAL.md](https://github.com/gasyoun/kosha/blob/main/docs/ISCLS9_B3_WSD_GOLD_EVAL.md)
 - Frozen inputs: `data/eval/wsd_iscls9/` (items.jsonl, per_item.tsv, scores.json — H5877)
-- Handoffs: [H6047](https://github.com/gasyoun/Uprava/blob/main/handoffs/H6047-GLM_kosha_b3-wsd-error-analysis_04.10.26.md),
-  [H6048](https://github.com/gasyoun/Uprava/blob/main/handoffs/H6048-GLM_kosha_wsd-hybrid-mfs-llm_04.10.26.md)
+- Handoffs: [H6047](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H6047-GLM_kosha_b3-wsd-error-analysis_04.10.26.md),
+  [H6048](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H6048-GLM_kosha_wsd-hybrid-mfs-llm_04.10.26.md)
 
 _Гасунс_

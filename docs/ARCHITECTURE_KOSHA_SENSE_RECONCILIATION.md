@@ -46,8 +46,8 @@ concordance/senses/data/kwic_<a>.js  sense-sharded KWIC shards for the static vi
 | Piece | Verdict | Source |
 |---|---|---|
 | headword ↔ DCS attestation link, KWIC shards, tiered matcher | **REUSE** | [`build_dict_corpus_concordance.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_dict_corpus_concordance.py), [`concordance_core.py`](https://github.com/gasyoun/kosha/blob/main/scripts/concordance_core.py) |
-| PWG per-sense tree + per-sense `<ls>` loci parse | **REUSE** (export via H1456) | [`RussianTranslation/src/microstructure.py`](https://github.com/sanskrit-lexicon/SanskritLexicography/blob/master/RussianTranslation/src/microstructure.py) |
-| `<ls>` abbrev → source resolution (98.9% of citations) | **REUSE** | [`RussianTranslation/src/pwg_sources.py`](https://github.com/sanskrit-lexicon/SanskritLexicography/blob/master/RussianTranslation/src/pwg_sources.py) + `pwgbib.txt` |
+| PWG per-sense tree + per-sense `<ls>` loci parse | **REUSE** (export via H1456) | [`RussianTranslation/src/microstructure.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/microstructure.py) |
+| `<ls>` abbrev → source resolution (98.9% of citations) | **REUSE** | [`RussianTranslation/src/pwg_sources.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/pwg_sources.py) + `pwgbib.txt` |
 | verse-aligned corpus lookup | **REUSE (query)** | SamudraManthanam FTS ([reference_samudra_manthanam]) |
 | WordSem→MW-sense projection (candidate signal) | **REUSE when built** | H1453 `data/frequency/` |
 | **sense id on each attestation + hybrid aligner + sense-KWIC viewer** | **BUILD** (the only new code) | `build_sense_corpus_concordance.py` (new), `concordance/senses/index.html` (fork of `concordance/dict/`) |

@@ -16,7 +16,7 @@ The missing retrospective review shipped in
 comments on [#215](https://github.com/gasyoun/kosha/pull/215#issuecomment-5297808328)
 and [#224](https://github.com/gasyoun/kosha/pull/224#issuecomment-5297808587).
 It found no open P0/P1. One P2 Salt-profile conflict is explicitly routed to
-[H2768 (Codex) — Resolve kosha extension on strict Salt compatibility faces](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2768-Codex_kosha_salt-face-kosha-extension-contract_14.08.26.md)
+[H2768 (Codex) — Resolve kosha extension on strict Salt compatibility faces](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2768-Codex_kosha_salt-face-kosha-extension-contract_14.08.26.md)
 and does not reopen this gate.
 
 This is a W0 technical verdict, not a Wave 1 product-exit, deployment, DOI, or

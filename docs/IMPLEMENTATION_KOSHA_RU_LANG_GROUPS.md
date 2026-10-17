@@ -21,7 +21,7 @@ Worktree off `origin/main`. Do not edit the guarded main checkout.
    missing); smoke `https://samskrtam.ru/w/BU`.
 7. **Stop.** Do not start the SanskritRussian strip in this PR.
 
-W-RU-2 is [H2680](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2680-Grok_kosha_w-page-sanskritrussian-strip_13.08.26.md).
+W-RU-2 is [H2680](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2680-Grok_kosha_w-page-sanskritrussian-strip_13.08.26.md).
 H2671, H2672, and
 [H2681](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2681-Codex_kosha_w0-h1944-h1945-compare-memo_13.08.26.md)
 are separate handoffs.

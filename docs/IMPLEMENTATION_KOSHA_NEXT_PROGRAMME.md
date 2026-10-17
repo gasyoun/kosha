@@ -14,9 +14,9 @@ File-level steps for each wave. Agents work in a **worktree** off `origin/main`.
 | W1c | Panini W4a surface | Sonnet | [H1585](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1585-Sonnet_kosha_w4a-panini-surface-chain-trust-block_24.07.26.md) |
 | W1d | Pages budget re-measure | Haiku | [H1586](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1586-Haiku_kosha_w4b-pages-budget-remeasure-a4_24.07.26.md) |
 | W2 | Pilot cross-dict view | Opus | [H1587](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1587-Opus_kosha_sense-recon-pilot-crossdict-view_24.07.26.md) |
-| W3 | Two-witness WSD | Opus | [H1588](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1588-Opus_kosha_sense-frequency-two-witness-wsd_24.07.26.md) |
+| W3 | Two-witness WSD | Opus | [H1588](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1588-Opus_kosha_sense-frequency-two-witness-wsd_24.07.26.md) |
 | W4 | P-D5 DB layers | Opus | [H1589](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1589-Opus_kosha_data-hub-pd5-queryable-db-layers_24.07.26.md) |
-| W5 | P5 SSR + static head + exit | Opus | [H1590](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1590-Opus_kosha_p5-ssr-static-head-exit-packet_24.07.26.md) |
+| W5 | P5 SSR + static head + exit | Opus | [H1590](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1590-Opus_kosha_p5-ssr-static-head-exit-packet_24.07.26.md) |
 
 ---
 

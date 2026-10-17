@@ -3,7 +3,7 @@
 _Created: 06-10-2026 · Last updated: 06-10-2026_
 
 **What this is.** The MFS+LLM hybrid attempt over the frozen 300-item B3 WSD
-set, executing [H6048](https://github.com/gasyoun/Uprava/blob/main/handoffs/H6048-GLM_kosha_wsd-hybrid-mfs-llm_04.10.26.md)
+set, executing [H6048](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H6048-GLM_kosha_wsd-hybrid-mfs-llm_04.10.26.md)
 on the [H6047 error taxonomy](https://github.com/gasyoun/kosha/blob/main/docs/ISCLS9_B3_WSD_ERROR_TAXONOMY.md)
 as input. Mission test: beat corpus-MFS **84.3%** on the same B3 split with
 exact two-sided McNemar **p<0.05**, or record an honest negative with

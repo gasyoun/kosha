@@ -21,7 +21,7 @@ sample, the five arms and the judge-gate discipline are already understood.
 
 ## Provenance
 
-- **Handoff:** [H2408](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2408-Fable_kosha_definition-gen-gloss-wsd-pilot_07.08.26.md)
+- **Handoff:** [H2408](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2408-Fable_kosha_definition-gen-gloss-wsd-pilot_07.08.26.md)
   (**Fable 5**) — Definition generation + gloss-grounded WSD pilot. Executed 09-08-2026.
 - **Model:** Fable 5 (`claude-fable-5`) in Claude Code — harness, run, analysis, write-up.
 - **Judge:** `deepseek-chat` (temperature 0), cross-lingual system prompt.

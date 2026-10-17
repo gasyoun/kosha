@@ -2,7 +2,7 @@
 
 _Created: 03-07-2026 · Last updated: 01-10-2026_
 
-> **Truth-pass 19-08-2026** ([H3001 (Opus 5) — Stale-roadmap slice 3: full /ask replan of stale Tier-1 roadmaps](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3001-Opus_multi_stale-roadmap-s3-tier1-ask-replan_17.08.26.md)).
+> **Truth-pass 19-08-2026** ([H3001 (Opus 5) — Stale-roadmap slice 3: full /ask replan of stale Tier-1 roadmaps](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3001-Opus_multi_stale-roadmap-s3-tier1-ask-replan_17.08.26.md)).
 > Every handoff this roadmap references is closed ✅. Two status corrections applied
 > below: **Wave U2's condition fired on 03-07-2026** and went unnoticed for six weeks
 > — and a 19-08-2026 re-check found the wave had in fact been **delivered on
@@ -10,7 +10,7 @@ _Created: 03-07-2026 · Last updated: 01-10-2026_
 > and **Wave E1 is done** but was still marked pending. The residual programme is
 > [docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md).
 >
-> **Verdict 01-10-2026 ([H5575](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5575-OxAlpha_kosha_roadmap-verdict-w2-kosha-five-drain-first_01.10.26.md), wave 2) — REFRESH.**
+> **Verdict 01-10-2026 ([H5575](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5575-OxAlpha_kosha_roadmap-verdict-w2-kosha-five-drain-first_01.10.26.md), wave 2) — REFRESH.**
 > Every wave (U0–U2, K1–K3, E1) is shipped; the programme stays alive on one mechanical
 > next rung and three human-gated residuals — checkboxes below, mirrored into Uprava
 > [GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md)

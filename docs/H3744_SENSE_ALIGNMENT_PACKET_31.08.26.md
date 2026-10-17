@@ -13,7 +13,7 @@ _Created: 31-08-2026 · Last updated: 02-09-2026_
 
 Handoff: [H3744 (Opus 5, 🔴3 hard) — sense-reconciliation W2 slice 1: PWG/MW/Apte
 aligned-sense table, staged behind `ux=` with a published compare
-page](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3744-Opus_kosha_sense-recon-w2-aligned-sense-table_30.08.26.md)
+page](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3744-Opus_kosha_sense-recon-w2-aligned-sense-table_30.08.26.md)
 · executor Opus 5 (`claude-opus-5`) · design record
 [PLAN_KOSHA_IMPROVEMENT_SET_2026-08-30.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_IMPROVEMENT_SET_2026-08-30.md)
 · source of record

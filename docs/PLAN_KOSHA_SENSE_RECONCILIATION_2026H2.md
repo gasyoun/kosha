@@ -17,7 +17,7 @@ word into two records with vague refs; the Russian glossaries flatten it. The ga
 headword-level [`build_dict_corpus_concordance.py`](https://github.com/gasyoun/kosha/blob/main/scripts/build_dict_corpus_concordance.py)
 + [`concordance_core.py`](https://github.com/gasyoun/kosha/blob/main/scripts/concordance_core.py)
 (REUSE, do not rebuild). Wave-1: (1) consume a PWG per-sense `<ls>`-locus map exported from
-[`RussianTranslation/src/microstructure.py`](https://github.com/sanskrit-lexicon/SanskritLexicography/blob/master/RussianTranslation/src/microstructure.py)
+[`RussianTranslation/src/microstructure.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/microstructure.py)
 (handoff [H1456](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1456-Sonnet_RussianTranslation_pwg-sense-loci-export_22.07.26.md));
 (2) resolve those `<ls>` loci to DCS/Samudra passages; (3) a **hybrid** aligner assigns each
 headword's DCS attestations to a numbered sense (deterministic locus-match + gloss-overlap

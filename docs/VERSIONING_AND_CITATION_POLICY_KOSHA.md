@@ -7,7 +7,7 @@ The W2 "citable v1" rung of
 names four things a citer needs: a DOI, citation metadata, a frozen dataset
 manifest, and **a stated versioning policy**. The first three existed and were
 undocumented; this file is the fourth. Minted under
-[H3788](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3788-Opus_kosha_kosha-2026-2027-w2-citable-v1_31.08.26.md).
+[H3788](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3788-Opus_kosha_kosha-2026-2027-w2-citable-v1_31.08.26.md).
 
 Written because the rules below were already in force implicitly — in
 [ARCHITECTURE.md](https://github.com/gasyoun/kosha/blob/main/ARCHITECTURE.md)
