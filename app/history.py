@@ -34,9 +34,9 @@ def _now() -> str:
 @router.get("/api/v1/history")
 def get_history(request: Request, response: Response, limit: int = 50, offset: int = 0,
                  con: sqlite3.Connection = Depends(get_history_db)):
-    if limit > 200:
+    if not 1 <= limit <= 200:
         raise HTTPException(status_code=400, detail={
-            "error": {"code": "bad_request", "message": "limit must be <= 200", "suggestions": []}
+            "error": {"code": "bad_request", "message": "limit must be between 1 and 200", "suggestions": []}
         })
     anon_id = resolve_anon_id(request, response)
     rows, total = get_visitor_history(con, anon_id, limit, offset)
@@ -108,9 +108,9 @@ def stats_timeseries(interval: str = "day", days: int = 30,
 @router.get("/api/v1/stats/top")
 def stats_top(limit: int = 50, days: int | None = None,
               con: sqlite3.Connection = Depends(get_history_db)):
-    if limit > 200:
+    if not 1 <= limit <= 200:
         raise HTTPException(status_code=400, detail={
-            "error": {"code": "bad_request", "message": "limit must be <= 200", "suggestions": []}
+            "error": {"code": "bad_request", "message": "limit must be between 1 and 200", "suggestions": []}
         })
     if days:
         since = (datetime.now(timezone.utc) - timedelta(days=days)).date().isoformat()
@@ -137,7 +137,7 @@ def stats_top(limit: int = 50, days: int | None = None,
 def send_magic_link_email(email: str, token: str) -> None:
     # Stub: no external service is called (A3 local-first / RISKS.md R12).
     # Logs the link so MG can test the flow locally until a provider is chosen.
-    print(f"[kosha][magic-link stub] would email {email}: /api/v1/auth/verify?token={token}")
+    print(f"[kosha][magic-link stub] would email {email}: token issued (value not logged)")
 
 
 @router.post("/api/v1/auth/request-link")
@@ -178,5 +178,5 @@ def verify_link(token: str, request: Request, response: Response,
     # history is immediately visible; cross-device history is looked up by
     # email at read time in a later pass, not by merging anon_id rows here.
     response.set_cookie("kosha_anon_id", row["anon_id"], max_age=60 * 60 * 24 * 365 * 2,
-                         httponly=True, samesite="lax")
+                         httponly=True, samesite="lax", secure=True)
     return {"linked": True, "email": row["email"]}
