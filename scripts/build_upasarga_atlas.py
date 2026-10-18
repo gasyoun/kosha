@@ -41,6 +41,7 @@ Usage:
 Licence: CC BY-SA 4.0, credit Dr. Mārcis Gasūns (mirrors the three sources).
 """
 import argparse
+import hashlib
 import csv
 import sys
 from pathlib import Path
@@ -240,7 +241,37 @@ def main():
         return
 
     rows, st = build(classdir)
-    print(f"atlas written: {ATLAS.relative_to(ROOT)} — {st['rows']} data rows")
+
+    # H6979: the layer's provenance sidecar, written through the shared gate.
+    # `dormant`, and that is the honest state: the atlas has no consumer yet
+    # (decision #6 lists it among the 16), so the gate forces an owner and a
+    # review date instead of letting an unused layer pass as an asset.
+    from sanskrit_util import sidecar_path_for, write_sidecar
+    write_sidecar(sidecar_path_for(ATLAS, layer="upasarga-atlas"), {
+        "layer": "upasarga-atlas",
+        "made_by": "ai",
+        "model": "z-ai/glm-5.3-flash",
+        "handoff": "H4729",
+        "consumers": [],
+        "status": "dormant",
+        "owner": "MG",
+        "review_after": "2027-01-18",
+        "novelty": (
+            "One (root, preverb) key space over three previously separate "
+            "upasarga datasets — the DCS workbook decomposition, the Gita "
+            "root x preverb semantics and the per-class verb-form frequencies "
+            "— so a prefix reading can be cited across corpus, text and "
+            "paradigm instead of being re-derived per question. The H4477 "
+            "census anchor (34 shared nonempty-preverb keys) is reproduced "
+            "exactly, which is what makes the join auditable."),
+        "builder": "scripts/build_upasarga_atlas.py",
+        "artifact": "data/upasarga/upasarga_atlas.tsv",
+        "sha256": hashlib.sha256(ATLAS.read_bytes()).hexdigest(),
+        "rows": st["rows"],
+        "built_at": __import__("datetime").date.today().isoformat(),
+    })
+    print(f"atlas written: {ATLAS.relative_to(ROOT)} — {st['rows']} data rows"
+          f" · sidecar data/upasarga/upasarga-atlas.meta.json (dormant, owner MG)")
     print(f"  prefixus keys: {st['prefixus_keys']} "
           f"(resolved rows {st['prefixus_resolved_rows']}, unresolved {st['prefixus_unresolved_rows']})")
     print(f"  gita keys: {st['gita_keys']} (with preverb {st['gita_preverb_keys']})"

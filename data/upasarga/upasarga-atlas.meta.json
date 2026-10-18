@@ -1,0 +1,16 @@
+{
+  "layer": "upasarga-atlas",
+  "made_by": "ai",
+  "model": "z-ai/glm-5.3-flash",
+  "handoff": "H4729",
+  "consumers": [],
+  "status": "dormant",
+  "owner": "MG",
+  "review_after": "2027-01-18",
+  "novelty": "One (root, preverb) key space over three previously separate upasarga datasets — the DCS workbook decomposition, the Gita root x preverb semantics and the per-class verb-form frequencies — so a prefix reading can be cited across corpus, text and paradigm instead of being re-derived per question. The H4477 census anchor (34 shared nonempty-preverb keys) is reproduced exactly, which is what makes the join auditable.",
+  "builder": "scripts/build_upasarga_atlas.py",
+  "artifact": "data/upasarga/upasarga_atlas.tsv",
+  "sha256": "97f3b9758ad78ba5302f0f84ba7dca7c908e10e5414a8485f36f6e5bca091503",
+  "rows": 13436,
+  "built_at": "2026-10-18"
+}
