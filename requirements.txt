@@ -33,6 +33,6 @@ zettelkastenwiki @ git+https://github.com/gasyoun/ZettelkastenWiki@081865666da2d
 # layer passes — see docs/LAYER_SIDECAR_SPEC.md. 0.12.0 predates it.
 # Merge order: sanskrit-util#82 first; re-pin to the merge commit if that PR is
 # squash-merged (the branch commit is what exists today).
-sanskrit-util @ git+https://github.com/sanskrit-lexicon/sanskrit-util@bf33074fa32ecf9cead5cdde9db6981533a3429f#subdirectory=py
+cdsl-sanskrit-util @ git+https://github.com/sanskrit-lexicon/sanskrit-util@bf33074fa32ecf9cead5cdde9db6981533a3429f#subdirectory=py  # import name is sanskrit_util; the distribution is cdsl-sanskrit-util (pip rejects a name/metadata mismatch since 0.13.0)
 
 vidyut>=0.4.0  # metre classification (vidyut.chandas) — W3a reading-pack metre layer (H951)
