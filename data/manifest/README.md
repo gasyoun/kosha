@@ -1,6 +1,6 @@
 # Dataset + surface manifests — machine-readable kosha indices
 
-_Created: 06-07-2026 · Last updated: 27-08-2026_
+_Created: 06-07-2026 · Last updated: 18-10-2026_
 
 ## Datasets
 
@@ -30,6 +30,20 @@ Human-readable catalogues this file serves the bytes for:
 crosswalk asset, check this manifest. A session that creates or changes a derived
 dataset must add/update its row here in the same pass — a deliverable without a
 manifest row does not exist for reuse purposes.
+
+**Provenance contract (manifest_version 0.4.0, H6979):** every row carries machine
+provenance — `made_by` (`human` | `ai` | `human+ai` | `upstream` | `unknown`),
+`model` (an EXACT id or `null`, never a bare family name), `handoff` (`H####` or
+`null`), `layer_status` (`active` | `dormant` | `retired`), `provenance_source`
+(how the fields were derived) and `built_at`. A layer with no consumer is not an
+error, but it must say so: `dormant` rows carry `owner` + `review_after`, and a
+builder writing the layer's `<layer>.meta.json` sidecar through
+`sanskrit_util.write_sidecar` is REFUSED without a consumer or a dormant
+declaration. The lifecycle key is `layer_status`, not `status` — `status` keeps
+the older planning vocabulary (`awaiting-consumer` …) that
+`scripts/build_dataset_disciplines.py` reads. Spec:
+[`docs/LAYER_SIDECAR_SPEC.md`](../../docs/LAYER_SIDECAR_SPEC.md); verify with
+`python scripts/backfill_sidecars.py --check` (149/149).
 
 ## Generated surfaces (W1B / D15)
 
