@@ -74,6 +74,8 @@ Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://
   vidyut-generated paradigms,
   [ZALIZNYAK_INDEX.md](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/ZALIZNYAK_INDEX.md)).
 
+- **Independent external check (18-10-2026):** [sanskritabhyas.in](https://sanskritabhyas.in/en/Verb/List) publishes ten-lakāra grids per root and is **not** derived from Cologne; [docs/SANSKRITABHYAS_VERB_VERIFICATION_2026-10-18.md](https://github.com/gasyoun/kosha/blob/main/docs/SANSKRITABHYAS_VERB_VERIFICATION_2026-10-18.md) runs the present-system AGREE/DIFF (gaṇas 1/4/6/10, 42,300 cells) and a coverage census for the other six gaṇas and six lakāras — `scripts/sanskritabhyas_compare.py`.
+
 ## 2. Decisions taken (MG rulings, 03-07-2026)
 
 | # | Fork | Ruling | Rationale |
