@@ -32,6 +32,10 @@ subset, stated as such in the report.
 Nominals-clean discipline reused: vidyut is a LOCAL library (RISKS.md R12), no
 live call at build or query.
 
+See also: scripts/sanskritabhyas_compare.py — the same AGREE/DIFF shape against an
+*independent published* table (sanskritabhyas.in), present system only; it verifies the
+four lakāras and censuses the six this generator cannot produce.
+
 Usage:
     python scripts/compare_vidyut_verbs.py                 # all entry-bearing roots
     python scripts/compare_vidyut_verbs.py --limit 200
