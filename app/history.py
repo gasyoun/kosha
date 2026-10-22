@@ -11,6 +11,8 @@ from datetime import datetime, timedelta, timezone
 
 from fastapi import APIRouter, Depends, HTTPException, Request, Response
 
+# H6906: shared bounded-parameter dependency (app/params.py).
+from params import limit_bounded, offset_bounded
 from history_db import (
     clear_visitor_history,
     get_history_db,
@@ -32,12 +34,14 @@ def _now() -> str:
 # ---------------------------------------------------------------------------
 
 @router.get("/api/v1/history")
-def get_history(request: Request, response: Response, limit: int = 50, offset: int = 0,
+def get_history(request: Request, response: Response,
+                limit: int = Depends(limit_bounded),
+                offset: int = Depends(offset_bounded),
                  con: sqlite3.Connection = Depends(get_history_db)):
-    if not 1 <= limit <= 200:
-        raise HTTPException(status_code=400, detail={
-            "error": {"code": "bad_request", "message": "limit must be between 1 and 200", "suggestions": []}
-        })
+    # H6906: `limit`/`offset` arrive pre-validated by the shared bounded-int
+    # dependency — the inline branch this replaced bounded the upper end only
+    # in spirit (and rendered its message as a repr-dict inside the house
+    # body); `offset` was unbounded entirely.
     anon_id = resolve_anon_id(request, response)
     rows, total = get_visitor_history(con, anon_id, limit, offset)
     results = [
@@ -106,12 +110,10 @@ def stats_timeseries(interval: str = "day", days: int = 30,
 
 
 @router.get("/api/v1/stats/top")
-def stats_top(limit: int = 50, days: int | None = None,
+def stats_top(limit: int = Depends(limit_bounded), days: int | None = None,
               con: sqlite3.Connection = Depends(get_history_db)):
-    if not 1 <= limit <= 200:
-        raise HTTPException(status_code=400, detail={
-            "error": {"code": "bad_request", "message": "limit must be between 1 and 200", "suggestions": []}
-        })
+    # H6906: `limit` arrives pre-validated by the shared bounded-int
+    # dependency (both limit branches below were reachable with -1).
     if days:
         since = (datetime.now(timezone.utc) - timedelta(days=days)).date().isoformat()
         rows = con.execute(
