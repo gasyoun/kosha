@@ -1,0 +1,22 @@
+bench items: 13929; rule files: 41; rule surface keys: 9796
+{
+  "upstream": {
+    "exact": 3201,
+    "first": 4262,
+    "scored": 8640,
+    "null": 368,
+    "errs": 0,
+    "exact_pct": 37.05,
+    "first_pct": 49.33
+  },
+  "ours": {
+    "exact": 0,
+    "first": 0,
+    "scored": 1,
+    "null": 9007,
+    "errs": 0,
+    "exact_pct": 0.0,
+    "first_pct": 0.0
+  }
+}
+written: C:\Users\COMPUTER\Documents\GitHub\kosha-wt-h6841\reports\sandhikosh_bakeoff_metrics.json

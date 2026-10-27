@@ -1,0 +1,32 @@
+{
+  "astaadhyayii": {
+    "file": "astaadhyayii.tsv",
+    "rows": 2700,
+    "skipped": 0
+  },
+  "bhagvad_gita": {
+    "file": "bhagvad_gita.tsv",
+    "rows": 1429,
+    "skipped": 1
+  },
+  "rule_external": {
+    "file": "rule_external.tsv",
+    "rows": 132,
+    "skipped": 0
+  },
+  "rule_internal": {
+    "file": "rule_internal.tsv",
+    "rows": 150,
+    "skipped": 0
+  },
+  "rule_literature": {
+    "file": "rule_literature.tsv",
+    "rows": 150,
+    "skipped": 0
+  },
+  "uoh": {
+    "file": "uoh.tsv",
+    "rows": 9368,
+    "skipped": 0
+  }
+}
