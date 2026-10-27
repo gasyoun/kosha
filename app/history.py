@@ -5,6 +5,8 @@ personal endpoints are cookie-scoped via identity.py, aggregate endpoints are
 public/credential-free so a future embed (e.g. the Cologne homepage) can
 fetch them directly.
 """
+import hashlib
+import logging
 import secrets
 import sqlite3
 from datetime import datetime, timedelta, timezone
@@ -18,7 +20,9 @@ from history_db import (
     get_history_db,
     get_visitor_history,
 )
-from identity import resolve_anon_id
+from identity import issue_anon_cookie, resolve_anon_id
+
+logger = logging.getLogger("kosha.magic_link")
 
 router = APIRouter()
 
@@ -138,8 +142,11 @@ def stats_top(limit: int = Depends(limit_bounded), days: int | None = None,
 
 def send_magic_link_email(email: str, token: str) -> None:
     # Stub: no external service is called (A3 local-first / RISKS.md R12).
-    # Logs the link so MG can test the flow locally until a provider is chosen.
-    print(f"[kosha][magic-link stub] would email {email}: token issued (value not logged)")
+    # H6909 (bughunt 13.10 BH-K6): neither the live 30-minute token nor the
+    # raw address reaches a log line — only a short non-redeemable token id
+    # (digest prefix) so local test runs can be correlated.
+    token_id = hashlib.sha256(token.encode("utf-8")).hexdigest()[:12]
+    logger.info("magic-link requested (address not logged): token id %s", token_id)
 
 
 @router.post("/api/v1/auth/request-link")
@@ -179,6 +186,7 @@ def verify_link(token: str, request: Request, response: Response,
     # Re-issue the same anon_id cookie on this device so the just-linked
     # history is immediately visible; cross-device history is looked up by
     # email at read time in a later pass, not by merging anon_id rows here.
-    response.set_cookie("kosha_anon_id", row["anon_id"], max_age=60 * 60 * 24 * 365 * 2,
-                         httponly=True, samesite="lax", secure=True)
+    # H6909 (BH-K5): through the single issue_anon_cookie helper so the
+    # hardening flags (HttpOnly, SameSite, max_age, Secure) stay in one place.
+    issue_anon_cookie(response, row["anon_id"])
     return {"linked": True, "email": row["email"]}
