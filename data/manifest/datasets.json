@@ -4207,6 +4207,44 @@
       "provenance_source": "path+first-commit",
       "built_at": "2026-08-03",
       "model": null
+    },
+    {
+      "id": "sandhikosh-tsv",
+      "title": "SandhiKosh TSV layer — the only public Sanskrit sandhi benchmark (LREC 2018), 13,929 split junctions",
+      "tier": "restricted",
+      "in_release": "not-applicable",
+      "format": "tsv (6 files) + convert_summary.json",
+      "rows": 13929,
+      "size_bytes": 1779908,
+      "keying": "id (SandhiKosh S.No) → word (sandhied surface, Devanagari), split ('+'-joined gold parts), rule, type (category: vowel/consonant/visarga), source; NFC + ws-trim, no content edits",
+      "source_repo": "https://github.com/sanskrit-sandhi/SandhiKosh",
+      "source_path": "UoH_Corpus.xls · Astaadhyaayii Corpus.xls · Bhagvad_Gita Corpus.xls · Rule-based Corpus and Literature Corpus.xls (NOT in git — research-only, mirror-only discipline)",
+      "builder": "kosha tools/sandhikosh_xls_to_tsv.py (H6841, xlrd 2.0.2), upstream commit b4938f82982a3217899fb554bbc093fab3a6b85b fetched 2026-10-27",
+      "consumers": [
+        "kosha tools/sandhikosh_bakeoff.py — the sandhi-scaffold splitter bake-off (H6841 report: exact 37.05% raw / 54.68% pausa-normalized upstream, per-category table)",
+        "future house splitter evals — external eval anchor per WHEEL9 dossier map-7 row (ADOPT)"
+      ],
+      "notes": "LICENSE FACTS: upstream repo has NO license file and no SPDX (GitHub license API null); README.txt states 'free of cost for research purposes only' + LREC 2018 citation (Bhardwaj, Gantayat, Chaturvedi, Garg, Agarwal, Sandhikosh, LREC 2018). Raw xls mirror deliberately kept OUT of git (H6841 license-gated-ingest); this TSV layer is the derived measurement layer H6841 permits to commit — re-keying for the bake-off protocol, nothing added/edited. tier restricted because redistribution terms are unstated upstream: any non-research use or external redistribution must be gated before release. Upstream dead since 2020-01-30; upstream untouched, no fork, no upstream PR. GPL repos (scl, Sandhi_Prakarana, shantanuo) not vendored.",
+      "sha256": {
+        "uoh.tsv": "9b4ce310a60d5e26eea5e648fa44f68c5100edd0cecb03be08c7d7db75b39fea",
+        "astaadhyayii.tsv": "ee2826bea210729c319bff14a3384991bc688030f63e06221a182b33016431e9",
+        "bhagvad_gita.tsv": "d4c148461d5c751f2da6dac01ed5c8ce409e7327863ff0978f34a3ba6d51c566",
+        "rule_internal.tsv": "4033eda84e861ee41df10f8e244eb7c61157d49a8985399dc049d5502680da09",
+        "rule_external.tsv": "4561ceae3adb0f42086840fd0e9e12a7fa0faaa6966ba2eadbc750e81425df35",
+        "rule_literature.tsv": "924c21e833aec9f47e8f97882cc958e5790e4675d499bcd642a576148eb09021",
+        "convert_summary.json": "4c076324ef637c45587ac550e78824da5a09188dc3de3c459943fdfafbbaf69c"
+      },
+      "provenance_verified": "2026-10-27 (H6841, OxAlpha opencode/z-ai/glm-5.3-flash)",
+      "rebuild": "Deterministic: pip install xlrd; python tools/sandhikosh_xls_to_tsv.py --src <dir-with-SandhiKosh-xls> (byte-identical on unchanged workbooks)",
+      "regen_checked": "2026-10-27 (H6841 deterministic double-run: byte-identical TSVs)",
+      "made_by": "ai",
+      "model": "opencode/z-ai/glm-5.3-flash (OxAlpha)",
+      "handoff": "H6841",
+      "layer_status": "active",
+      "provenance_source": "provenance_verified",
+      "built_at": "2026-10-27",
+      "owner": "MG",
+      "review_after": "2027-01-27"
     }
   ]
 }

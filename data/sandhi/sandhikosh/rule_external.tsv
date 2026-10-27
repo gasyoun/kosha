@@ -1,0 +1,133 @@
+id	word	split	rule	type	source
+externalsandhi_1	स्वच्छन्दः	स्व+छन्दः	6.1.73.1	consonant	rule_external
+externalsandhi_2	माच्छिदत्	मा+छिदत्	6.1.74.1	consonant	rule_external
+externalsandhi_3	लक्ष्मीच्छाया	लक्ष्मी+छाया	6.1.76.1	consonant	rule_external
+externalsandhi_4	प्रत्येकः	प्रति+एकः	6.1.77.1	vowel	rule_external
+externalsandhi_5	नद्यत्र	नदी+अत्र	6.1.77.2	vowel	rule_external
+externalsandhi_6	मध्वत्र	मधु+अत्र	6.1.77.3	vowel	rule_external
+externalsandhi_7	वध्वाज्ञा	वधू+आज्ञा	6.1.77.4	vowel	rule_external
+externalsandhi_8	मात्राज्ञा	मातृ+आज्ञा	6.1.77.5	vowel	rule_external
+externalsandhi_9	लाकृतिः	ऌ+आकृतिः	6.1.77.6	vowel	rule_external
+externalsandhi_10	फलयिच्छा	फले+इच्छा	6.1.78.1	vowel	rule_external
+externalsandhi_11	तस्मायेतत्	तस्मै+एतत्	6.1.78.2	vowel	rule_external
+externalsandhi_12	तावेकदा	तौ+एकदा	6.1.78.4	vowel	rule_external
+externalsandhi_13	गव्यूतिः	गो+यूतिः	6.1.79.1	consonant	rule_external
+externalsandhi_14	कोऽसिचत्	कस्+असिचत्	6.1.86.1	consonant	rule_external
+externalsandhi_15	देवेन्द्रः	देव+इन्द्रः	6.1.87.1	vowel	rule_external
+externalsandhi_16	परोपकारः	पर+उपकारः	6.1.87.2	vowel	rule_external
+externalsandhi_17	देवर्षिः	देव+ऋषिः	6.1.87.3	vowel	rule_external
+externalsandhi_18	तवल्कारः	तव+ऌकारः	6.1.87.4	vowel	rule_external
+externalsandhi_19	अत्रैकः	अत्र+एकः	6.1.88.1	vowel	rule_external
+externalsandhi_20	देवैश्वर्यम्	देव+ऐश्वर्यम्	6.1.88.2	vowel	rule_external
+externalsandhi_21	तण्डुलौदनम्	तण्डुल+ओदनम्	6.1.88.3	vowel	rule_external
+externalsandhi_22	देवौदार्यम्	देव+औदार्यम्	6.1.88.4	vowel	rule_external
+externalsandhi_23	प्रष्ठौहः	प्रष्ठ+ऊहः	6.1.89.1	vowel	rule_external
+externalsandhi_24	विश्वौहः	विश्व+ऊहः	6.1.89.2	vowel	rule_external
+externalsandhi_25	अक्षौहिणी	अक्ष+ऊहिनी	6.1.89.3	vowel	rule_external
+externalsandhi_26	स्वैरः	स्व+ईरः	6.1.89.4	vowel	rule_external
+externalsandhi_27	शकन्धुः	शक+अन्धुः	6.1.94.1	vowel	rule_external
+externalsandhi_28	मनीषा	मनस्+ईषा	6.1.94.2	consonant	rule_external
+externalsandhi_29	कुलटा	कुल+अटा	6.1.94.3	vowel	rule_external
+externalsandhi_30	सीमन्तः	सीम+अन्तः	6.1.94.4	vowel	rule_external
+externalsandhi_31	सारङ्गः	सार+अङ्गः	6.1.94.5	vowel	rule_external
+externalsandhi_32	स्थूलोतुः	स्थूल+ओतुः	6.1.94.6	vowel	rule_external
+externalsandhi_33	बिम्बोष्ठः	बिम्ब+ओष्ठः	6.1.94.7	vowel	rule_external
+externalsandhi_34	हिमालयः	हिम+आलयः	6.1.101.1	vowel	rule_external
+externalsandhi_35	गिरीशः	गिरि+ईशः	6.1.101.2	vowel	rule_external
+externalsandhi_36	विष्णूदयः	विष्णु+उदयः	6.1.101.3	vowel	rule_external
+externalsandhi_37	होतॄकारः	होतृ+ऋकारः	6.1.101.4	vowel	rule_external
+externalsandhi_38	सेवतेऽहम्	सेवते+अहम्	6.1.109.1	vowel	rule_external
+externalsandhi_39	लोकोऽयम्	लोको+अयम्	6.1.109.2	vowel	rule_external
+externalsandhi_40	पुरुषो हसति	पुरुषर्.हसति	6.1.114.1	consonant	rule_external
+externalsandhi_41	गवाग्रम्	गो+अग्रम्	6.1.123.1	vowel	rule_external
+externalsandhi_42	गवेन्द्रः	गो+इन्द्रः	6.1.124.1	vowel	rule_external
+externalsandhi_43	कुमारि अत्र	कुमारी+अत्र	6.1.127.1	vowel	rule_external
+externalsandhi_44	ब्रह्मऋषिः	ब्रह्मा+ऋषिः	6.1.128.1	vowel	rule_external
+externalsandhi_45	एष ददाति	एषः+ददाति	6.1.132.1	visarga	rule_external
+externalsandhi_46	सैष दाशरथी रामः	सः+एष दाशरथी रामः	6.1.134.1	visarga	rule_external
+externalsandhi_47	कुस्तुम्बुरु	कु+तुम्बुरु	6.1.143	consonant	rule_external
+externalsandhi_48	गोष्पद	गो+पद	6.1.145	consonant	rule_external
+externalsandhi_49	सुश्चन्द्र:	सु+चन्द्रः	6.1.151	consonant	rule_external
+externalsandhi_50	हरिश्चन्द्र	हरि+चन्द्र	6.1.153	consonant	rule_external
+externalsandhi_51	अजस्तुन्द	अज+तुन्द	6.1.155	consonant	rule_external
+externalsandhi_52	कारस्कर	कार+कर	6.1.156	consonant	rule_external
+externalsandhi_53	पारस्कर	पार+कर	6.1.157	consonant	rule_external
+externalsandhi_54	महाँ असि	महान्+असि	8.3.3.1	consonant	rule_external
+externalsandhi_55	तस्मिंस्तरौ	तस्मिन्+तरौ	8.3.7.1	consonant	rule_external
+externalsandhi_56	तस्मिँस् त्वा	तस्मिन्+त्वा	8.3.8.1	consonant	rule_external
+externalsandhi_57	महाँ इन्द्र	महान्+इन्द्र	8.3.9.1	consonant	rule_external
+externalsandhi_58	नॄँः पाहि	नॄन्+पाहि	8.3.10.1	consonant	rule_external
+externalsandhi_59	नॄंः पाहि	नॄन्+पाहि	8.3.10.2	consonant	rule_external
+externalsandhi_60	काँस्कान्	कान्+कान्	8.3.12.1	consonant	rule_external
+externalsandhi_61	पुना रमते	पुनर्+रमते	8.3.14.1	consonant	rule_external
+externalsandhi_62	वृक्षस्तरति	वृक्षर्+तरति	8.3.15.1	consonant	rule_external
+externalsandhi_63	भो अत्र	भोर्+अत्र	8.3.17.1	consonant	rule_external
+externalsandhi_64	क आस्ते	कय्+आस्ते	8.3.19.1	consonant	rule_external
+externalsandhi_65	भो इदम्	भोय्+इदम्	8.3.20.1	consonant	rule_external
+externalsandhi_66	भगो हसति	भगोय्+हसति	8.3.22.1	consonant	rule_external
+externalsandhi_67	वनं गच्छति	वनम्+गच्छति	8.3.23.1	consonant	rule_external
+externalsandhi_68	कथन्ह्नुते	कथम्+ह्नुते	8.3.27.1	consonant	rule_external
+externalsandhi_69	सञ्च्छम्भुः	सन्+शम्भुः	8.3.31.1	consonant	rule_external
+externalsandhi_70	प्रत्यङ्ङात्मा	प्रत्यङ्+आत्मा	8.3.32.1	consonant	rule_external
+externalsandhi_71	शम्वस्तु	शमु+अस्तु	8.3.33.1	vowel	rule_external
+externalsandhi_72	वृक्षस्तरति	वृक्षः+तरति	8.3.34.1	visarga	rule_external
+externalsandhi_73	वृक्षश्शेते	वृक्षः+शेते	8.3.36.1	visarga	rule_external
+externalsandhi_74	पयस्पाशम्	पयः+पाशम्	8.3.38.1	visarga	rule_external
+externalsandhi_75	सर्पिष्पाशम्	सर्पिः+पाशम्	8.3.39.1	visarga	rule_external
+externalsandhi_76	नमस्कर्त्ता	नमः+कर्त्ता	8.3.40.1	visarga	rule_external
+externalsandhi_77	आविष्कृतम्	आविः+कृतम्	8.3.41.1	visarga	rule_external
+externalsandhi_78	तिरस्करोति	तिरः+करोति	8.3.42.1	visarga	rule_external
+externalsandhi_79	द्विष्करोति	द्विः+करोति	8.3.43.1	visarga	rule_external
+externalsandhi_80	सर्पिष्करोति	सर्पिः+करोति	8.3.44.1	visarga	rule_external
+externalsandhi_81	धनुष्फलम्	धनुः+फलम्	8.3.45.1	visarga	rule_external
+externalsandhi_82	अयस्कारः	अयः+कारः	8.3.46.1	visarga	rule_external
+externalsandhi_83	अधस्पदम्	अधस्+पदम्	8.3.47.1	consonant	rule_external
+externalsandhi_84	अयस्पात्रम्	अयः+पात्रम्	8.3.49.1	visarga	rule_external
+externalsandhi_85	पयस्करति	पयः+करति	8.3.50.1	visarga	rule_external
+externalsandhi_86	महस्परि	महः+परि	8.3.51.1	visarga	rule_external
+externalsandhi_87	दिवस्पातु	दिवः+पातु	8.3.52.1	visarga	rule_external
+externalsandhi_88	तमसस्पारम्	तमसः+पारम्	8.3.53.1	visarga	rule_external
+externalsandhi_89	इडायास्पतिः	इडायाः+पतिः	8.3.54.1	visarga	rule_external
+externalsandhi_90	अङ्गुलिषङ्ग	अङ्गुलि+सङ्ग	8.3.80.1	consonant	rule_external
+externalsandhi_91	भीरुष्ठानम्	भीरु+स्थानम्	8.3.81.1	consonant	rule_external
+externalsandhi_92	अग्निष्टुत्	अग्नि+स्तुत्	8.3.82.1	consonant	rule_external
+externalsandhi_93	आयुष्टोमः	आयु+स्तोमः	8.3.83.1	consonant	rule_external
+externalsandhi_94	मातृष्वसा	मातृ+स्वसा	8.3.84.1	consonant	rule_external
+externalsandhi_95	मातुःष्वसा	मातुर्+स्वसा	8.3.85.1	consonant	rule_external
+externalsandhi_96	युधिष्ठिरः	युधि+स्थिरः	8.3.95.1	consonant	rule_external
+externalsandhi_97	अग्निष्ठः	अग्नि+स्थः	8.3.97.1	consonant	rule_external
+externalsandhi_98	सुषाम	सु+साम	8.3.98.1	consonant	rule_external
+externalsandhi_99	सर्पिष्टरम्	सर्पिस्+तरम्	8.3.101.1	consonant	rule_external
+externalsandhi_100	अग्निष्टे	अग्निस्+ते	8.3.103.1	consonant	rule_external
+externalsandhi_101	गोष्टोमम्	गो+स्तोमम्	8.3.105.1	consonant	rule_external
+externalsandhi_102	मधुष्ठानम्	मधु+स्थानम्	8.3.106.1	consonant	rule_external
+externalsandhi_103	शूर्पणखा	शूर्प+नखा	8.4.3.1	consonant	rule_external
+externalsandhi_104	शारिकावणम्	शारिका+वनम्	8.4.4.1	consonant	rule_external
+externalsandhi_105	शरवणम्	शर+वनम्	8.4.5.1	consonant	rule_external
+externalsandhi_106	बदरीवणम्	बदरी+वनम्	8.4.6.1	consonant	rule_external
+externalsandhi_107	पूर्वाहणः	पूर्व+अहनः	8.4.7.1	vowel	rule_external
+externalsandhi_108	इक्षुवाहणम्	इक्षु+वाहनम्	8.4.8.1	consonant	rule_external
+externalsandhi_109	कषायपाणः	कषाय+पानः	8.4.9.1	consonant	rule_external
+externalsandhi_110	सुरापाणम्	सुरा+पानम्	8.4.10.1	consonant	rule_external
+externalsandhi_111	स्वर्गकामिणौ	स्वर्ग+कामिनौ	8.4.13.1	consonant	rule_external
+externalsandhi_112	अन्तर्हण्यते	अन्तर्+हन्यते	8.4.24.1	consonant	rule_external
+externalsandhi_113	अन्तरयणम्	अन्तर्+अयनम्	8.4.25.1	consonant	rule_external
+externalsandhi_114	वृक्षश्शेते	वृक्षस्+शेते	8.4.40.1	consonant	rule_external
+externalsandhi_115	अग्निचिच्छेते	अग्निचित्+शेते	8.4.40.2	consonant	rule_external
+externalsandhi_116	सच्चित्	सत्+चित्	8.4.40.3	consonant	rule_external
+externalsandhi_117	कश्चित्	कस्+चित्	8.4.40.4	consonant	rule_external
+externalsandhi_118	वृक्षष्टीकते	वृक्षस्+टीकते	8.4.41.1	consonant	rule_external
+externalsandhi_119	वृक्षष्षण्डे	वृक्षस्+षण्डे	8.4.41.2	consonant	rule_external
+externalsandhi_120	तट्टीका	तत्+टीका	8.4.41.3	consonant	rule_external
+externalsandhi_121	षण्णाम्	षट्+नाम्	8.4.42.1	consonant	rule_external
+externalsandhi_122	वाग्नयति	वाक्+नयति	8.4.45.1	consonant	rule_external
+externalsandhi_123	वाङ्नयति	वाक्+नयति	8.4.45.2	consonant	rule_external
+externalsandhi_124	वाङ्मयम्	वाक्+मयम्	8.4.45.3	consonant	rule_external
+externalsandhi_125	दद्ध्यत्र	दध्य्+अत्र	8.4.47.1	consonant	rule_external
+externalsandhi_126	युयुत्सते	युयुध्+सते	8.4.55.1	consonant	rule_external
+externalsandhi_127	त्वङ्करोषि	त्वं+करोषि	8.4.59.1	consonant	rule_external
+externalsandhi_128	तल्लीनः	तत्+लीनः	8.4.60.1	consonant	rule_external
+externalsandhi_129	विद्वाँल्लिखति	विद्वान्+लिखति	8.4.60.2	consonant	rule_external
+externalsandhi_130	वाग्घरिः	वाग्+हरिः	8.4.62.1	consonant	rule_external
+externalsandhi_131	तच्छिवः	तत्+शिवः	8.4.63.1	consonant	rule_external
+externalsandhi_132	तच्शिवः	तत्+शिवः	8.4.63.2	consonant	rule_external
