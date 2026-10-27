@@ -150,6 +150,24 @@ class Settings(BaseModel):
             core = core if core is not None else legacy
 
         data_db = root / "data" / "db"
+        # H6909 (bughunt 13.10 BH-K4): no security-relevant environment
+        # variable has a permissive fallback. When history is enabled, the
+        # IP-hash salt must be present *here*, at startup — not refuted per
+        # request. Refusal happens inside this very settings function (no
+        # TestClient needed to test it): enabling history without a configured
+        # salt is a configuration contradiction, and config contradictions
+        # fail loudly in this module.
+        enable_history = _as_bool(
+            env.get("KOSHA_HISTORY_ENABLED"), key="KOSHA_HISTORY_ENABLED"
+        )
+        salt = env.get("HISTORY_IP_SALT")
+        if enable_history and not (salt and salt.strip()):
+            raise SettingsError(
+                "HISTORY_IP_SALT is unset or empty while KOSHA_HISTORY_ENABLED "
+                "is enabled: refusing to hash visitor IPs without a configured "
+                "salt. Set a random host-local HISTORY_IP_SALT, or leave "
+                "KOSHA_HISTORY_ENABLED off."
+            )
         return cls(
             core_db=_norm(core, root) if core else data_db / "kosha.db",
             inflections_db=(
@@ -169,9 +187,7 @@ class Settings(BaseModel):
             ),
             archive_dir=_resolve_archive_dir(env, root),
             public_base=env.get("KOSHA_PUBLIC_BASE", "http://localhost:8000"),
-            enable_history=_as_bool(
-                env.get("KOSHA_HISTORY_ENABLED"), key="KOSHA_HISTORY_ENABLED"
-            ),
+            enable_history=enable_history,
             expected_data_version=(
                 env["KOSHA_EXPECTED_DATA_VERSION"].strip() or None
                 if env.get("KOSHA_EXPECTED_DATA_VERSION") is not None

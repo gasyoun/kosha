@@ -124,7 +124,8 @@ def test_history_file_is_never_attached(monolith_path, tmp_path):
         {
             "KOSHA_CORE_DB_PATH": str(monolith_path),
             "HISTORY_DB_PATH": str(history),
-            "KOSHA_HISTORY_ENABLED": "1",  # flag on — still must not attach here
+            "KOSHA_HISTORY_ENABLED": "1",  # salt set: H6909 fail-closed gate (BH-K4)
+            "HISTORY_IP_SALT": "test-history-salt",
         },
         root=ROOT,
     )
