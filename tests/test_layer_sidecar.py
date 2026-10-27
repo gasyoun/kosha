@@ -127,13 +127,13 @@ def test_gate_accepts_dormant_with_owner_and_date(tmp_path):
     assert json.loads(written.read_text(encoding="utf-8"))["owner"] == "MG"
 
 
-# ---------- the manifest: 149 rows ----------
+# ---------- the manifest: 150 rows (H6841 added sandhikosh-tsv, 27-10-2026) ----------
 
 REQUIRED = ("made_by", "model", "handoff", "layer_status", "provenance_source")
 
 
-def test_manifest_has_149_rows(rows):
-    assert len(rows) == 149
+def test_manifest_has_150_rows(rows):
+    assert len(rows) == 150
 
 
 def test_every_row_carries_machine_provenance(rows):
@@ -174,4 +174,4 @@ def test_backfill_check_is_green():
     result = subprocess.run([sys.executable, str(BACKFILL), "--check"],
                             capture_output=True, text=True, timeout=120)
     assert result.returncode == 0, result.stdout + result.stderr
-    assert "149/149" in result.stdout
+    assert "150/150" in result.stdout
