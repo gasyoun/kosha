@@ -1735,6 +1735,32 @@
       "model": null
     },
     {
+      "id": "dcs-syntax-reading-pack-ayodhya-1",
+      "title": "DCS syntax reading pack — Rāmāyaṇa, Ayodhyākāṇḍa 1",
+      "tier": "public",
+      "license": "CC BY-SA 4.0",
+      "in_release": "unreleased",
+      "release_asset": "reading/data/ayodhya-1.json",
+      "format": "json",
+      "rows": 46,
+      "size_bytes": 274167,
+      "keying": "one object per DCS chapter (slug=ayodhya-1); sentences[] carry ordered tokens with form, lemma, upos, morph, gloss and reversible school-surface/UD fields (case, surface_role, head, deprel). 476 tokens; 468 dependency-annotated across 44/46 sentences. WordSem 217; lemma-fallback 259. Grincer references are link-only, 26 content-validated passages; no Russian translation text embedded.",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "reading/data/ayodhya-1.json",
+      "builder": "scripts/build_ayodhya_syntax_pack.py over VisualDCS dcs_full.sqlite + data/frequency/wordsem_inventory.tsv + SamudraManthanam 02_ramayana-ayodhyakanda.jsonl",
+      "consumers": [
+        "reading/ static viewer — school-surface default + exact UD mode"
+      ],
+      "notes": "26-10-2026 grill D0–D7. DCS is CC BY 4.0; derivative ships BY-SA with the public tier. `sent_counter` is null for 44/46 DCS sentences, so Grincer links use monotone content alignment (score >=0.45), never positional mapping. 20 sentences remain honestly unlinked; 7 opening DCS sentences have no counterpart in Grincer's opening. `Case=Cpd` is compound member, not a ninth case. No Grincer text or restricted bulk is emitted; each parallel row carries only passage + URL + attribution + match score.",
+      "data_statement": "https://github.com/gasyoun/kosha/blob/main/reading/AYODHYA_SYNTAX_REPORT.md",
+      "regen_checked": "2026-10-26 (builder --check PASS; 7 pytest PASS; deterministic SHA-256; browser 476 tokens / 468 UD / 26 links / relation highlighting PASS)",
+      "made_by": "ai",
+      "handoff": "reports/INTERLINEA_SANSKRIT_GRILL_DECISIONS_2026-10-26.md",
+      "layer_status": "active",
+      "provenance_source": "builder",
+      "model": null
+    },
+    {
       "id": "dcs-reading-pack-nala-1",
       "title": "DCS reading pack — Nala 1 (Nalopākhyāna, Mahābhārata 3.50)",
       "tier": "public",

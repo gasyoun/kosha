@@ -1,0 +1,8 @@
+{
+  "name": "kosha-reader-preview",
+  "private": true,
+  "description": "Local preview for the static kosha reader",
+  "scripts": {
+    "dev": "python scripts/dev_server.py"
+  }
+}

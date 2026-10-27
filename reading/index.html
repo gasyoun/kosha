@@ -57,6 +57,28 @@
   a.src{color:var(--link)}
   footer{margin-top:2rem;color:var(--muted);font-size:.8rem}
   code{background:var(--chip);padding:.05rem .3rem;border-radius:.3rem;font-size:.85em}
+  /* D4: case = colour; surface role = marker shape; relations = on-demand only. */
+  button.tok{font:inherit;cursor:pointer;text-align:left}
+  button.tok:focus-visible,a.tok:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .tok[class*="case-"]{border-bottom:3px solid var(--case)}
+  .case-nom{--case:#a23b36}.case-acc{--case:#245f9e}.case-ins{--case:#6e4b9e}
+  .case-dat{--case:#087f5b}.case-abl{--case:#9a5b12}.case-gen{--case:#155e75}
+  .case-loc{--case:#8c3f75}.case-voc{--case:#4c6269}.case-cpd{--case:#9b9287}
+  .role-predicate{outline:2px solid var(--accent);outline-offset:1px}
+  .role-subject{outline:1px dashed var(--muted);outline-offset:1px}
+  .role-object{outline:1px dotted var(--muted);outline-offset:1px}
+  .role-predicate_support{border-top:2px solid var(--muted)}
+  .tok.selected{outline:3px solid var(--accent);outline-offset:2px;background:var(--card)}
+  .tok.related-head{outline:2px dashed var(--accent);outline-offset:2px}
+  .tok.related-dependent{box-shadow:0 0 0 2px var(--link)}
+  .tok.ud small{color:var(--accent);font-weight:600}
+  .cardlink{color:var(--link);text-decoration:none;font-size:.8rem;align-self:center}
+  .parallel{display:inline-block;margin:.35rem 0 .55rem;color:var(--link);font-size:.8rem}
+  .syntaxnote{color:var(--muted);font-size:.75rem;margin:.2rem 0 .5rem}
+  #tokdetail{margin:1rem 0;padding:.8rem 1rem;border:1px solid var(--line);border-radius:.5rem;
+    background:var(--card);font-size:.88rem}
+  #tokdetail b{color:var(--accent)}
+  @media (prefers-color-scheme:dark){.case-cpd{--case:#6a6357}}
 </style>
 </head>
 <body>
@@ -70,6 +92,9 @@
     </div>
     <div class="modetoggle" id="modetoggle" style="display:none" title="Gītā only — interlinear paraphrase from Gita.xlsm Prose sheet (H1493)">view:
       <button class="md on" id="mode-words" type="button">Word-by-word</button><button class="md" id="mode-prose" type="button">Prose</button>
+    </div>
+    <div class="modetoggle" id="syntaxtoggle" style="display:none" title="School surface first; exact DCS Universal Dependencies on demand">syntax:
+      <button class="md on" id="mode-surface" type="button">Surface</button><button class="md" id="mode-ud" type="button">UD</button>
     </div>
     <div class="picker" id="picker" role="tablist"></div>
     <p class="sub"><b>Subhāṣita (beginner):</b> <a class="src" href="subhashita/">graded
@@ -87,6 +112,7 @@
   </header>
   <div class="banner" id="banner" hidden></div>
   <main id="passage"></main>
+  <aside id="tokdetail" hidden aria-live="polite"></aside>
 
   <footer>
     Text &amp; lemmatisation: <a class="src" href="https://www.sanskrit-linguistics.org/dcs/">Digital Corpus of Sanskrit</a> (CC BY 4.0)
@@ -97,6 +123,7 @@
 </div>
 
 <!-- data shards: each sets window.READING_DATA[slug] -->
+<script src="data/ayodhya-1.js"></script>
 <script src="data/nala-1.js"></script>
 <script src="data/nala-2.js"></script>
 <script src="data/nala-3.js"></script>
@@ -130,11 +157,13 @@
   var lang = /^ru\b/i.test(navigator.language || navigator.userLanguage || "") ? "ru" : "en";
   // H1493: word-by-word (default) vs interlinear prose paraphrase for Gītā packs.
   var mode = "words";
+  var syntaxMode = "surface";
   var current = null;
   function sortkey(s){
     if(s.indexOf("nala")===0) return [0, parseInt(s.split("-")[1])||0];
-    if(s==="hitopadesa-0") return [1, 0];
-    if(s==="kiratarjuniya-1") return [1, 1];
+    if(s==="ayodhya-1") return [1, 0];
+    if(s==="hitopadesa-0") return [1, 1];
+    if(s==="kiratarjuniya-1") return [1, 2];
     if(s.indexOf("gita")===0) return [2, parseInt(s.split("-")[1])||0];
     return [3,0];
   }
@@ -168,6 +197,8 @@
     var d = DATA[slug];
     if(!d) return;
     current = slug;
+    var isSyntax = !!d.syntax;
+    document.getElementById("tokdetail").hidden = true;
     // H4038: the per-text word concordance rides the Hitopadeśa pack view only —
     // the affordance stays hidden for every other pack (additive wiring).
     document.getElementById("conclink").hidden = slug.indexOf("hitopadesa") !== 0;
@@ -175,19 +206,27 @@
     document.getElementById("langtoggle").style.display = hasRU ? "" : "none";
     var hasProse = packHasProse(d);
     document.getElementById("modetoggle").style.display = hasProse ? "" : "none";
+    document.getElementById("syntaxtoggle").style.display = isSyntax ? "" : "none";
     if(!hasProse) mode = "words";
     document.getElementById("mode-words").classList.toggle("on", mode==="words");
     document.getElementById("mode-prose").classList.toggle("on", mode==="prose");
+    document.getElementById("mode-surface").classList.toggle("on", syntaxMode==="surface");
+    document.getElementById("mode-ud").classList.toggle("on", syntaxMode==="ud");
     document.getElementById("title").textContent = d.title;
     document.getElementById("sub").textContent = d.ref + " · " + d.text_name + " · " + d.source;
     var st = d.stats;
     document.getElementById("stats").innerHTML =
       "<b>"+st.sentences+"</b> sentences · <b>"+st.tokens+"</b> words · <b>"+
-      st.linked_tokens+"</b> linked to a card (<b>"+st.link_rate_pct+"%</b>)";
+      st.linked_tokens+"</b> linked to a card (<b>"+st.link_rate_pct+"%</b>)"+
+      (isSyntax ? " · <b>"+st.dependency_tokens+"</b> syntax gold · <b>"+st.grincer_links+"</b> Grincer links" : "");
     var ban = document.getElementById("banner");
     if(d.experimental){
       ban.innerHTML = "<b>Experimental — machine-segmented.</b> "+esc(d.method||
         "Lemmas are auto-segmented and may be wrong; verify before citing.");
+      ban.hidden = false;
+    } else if(isSyntax){
+      ban.innerHTML = "<b>DCS gold syntax.</b> Surface roles are reversible UD projections. "+
+        esc(st.unannotated_tokens+" tokens have no dependency annotation; Grincer references are link-only.");
       ban.hidden = false;
     } else { ban.hidden = true; }
     // W-RU-a (H1278): gloss_ru is a {surface,lemma,root} triple. Show its DISTINCT
@@ -202,7 +241,7 @@
       return parts.join(" · ");
     }
     var seenProse = {}; // avoid repeating range blocks for every verse in 1.4-6
-    var pas = d.sentences.map(function(s){
+    var pas = d.sentences.map(function(s, si){
       var head = s.deva
         ? '<div class="deva">'+esc(s.deva)+'</div><div class="iast">'+esc(s.text)+'</div>'
         : '<div class="deva">'+esc(s.text)+'</div>';
@@ -219,6 +258,20 @@
       }
       var toks = s.tokens.map(function(t){
         var g = (lang==="ru" && t.gloss_ru) ? ruStr(t.gloss_ru) : t.gloss;
+        if(isSyntax){
+          var classes = ["tok"];
+          if(t.case) classes.push("case-"+String(t.case).toLowerCase());
+          if(t.surface_role) classes.push("role-"+t.surface_role);
+          if(syntaxMode==="ud" && t.deprel) classes.push("ud");
+          var small = syntaxMode==="ud" && t.deprel ? t.deprel+" → "+t.head : t.lemma;
+          var meta = esc([t.lemma,t.morph,g,t.surface_label,t.case_label,t.gloss_source,
+            t.deprel ? "UD "+t.deprel+" → "+t.head : "UD unannotated"].filter(Boolean).join(" · "));
+          var out = '<button type="button" class="'+classes.join(" ")+'" data-sent="'+si+
+            '" data-idx="'+esc(t.idx)+'" aria-pressed="false" aria-label="'+meta+'" title="'+meta+'">'+
+            esc(t.form)+'<small>'+esc(small)+'</small></button>';
+          if(t.href) out += '<a class="cardlink" href="'+esc(t.href)+'" title="Dictionary card" aria-label="Dictionary card for '+esc(t.lemma)+'">↗</a>';
+          return out;
+        }
         var meta = esc(t.lemma) + (t.morph? " · "+esc(t.morph):"") + (g? " · "+esc(g):"")
                  + (t.sandhi? " · sandhi: "+esc(t.sandhi):"");
         if(t.href){
@@ -228,13 +281,44 @@
         return '<span class="tok un" title="'+meta+' (no card)">'+esc(t.form)+
                '<small>'+esc(t.lemma)+'</small></span>';
       }).join("");
-      return '<div class="sent"><div class="locus">'+esc(s.locus)+'</div>'+
+      var parallel = s.parallel ? '<a class="parallel" href="'+esc(s.parallel.url)+
+        '" target="_blank" rel="noopener">'+esc(s.parallel.credit+" · "+s.parallel.passage)+" ↗</a>" : "";
+      return '<div class="sent"><div class="locus">'+esc(s.locus)+'</div>'+parallel+
              head+'<div class="toks">'+toks+'</div></div>';
     }).join("");
     document.getElementById("passage").innerHTML = pas;
     document.querySelectorAll(".pk").forEach(function(b){
       b.setAttribute("aria-selected", b.dataset.slug===slug ? "true":"false");
     });
+    if(isSyntax){
+      document.querySelectorAll("#passage button.tok").forEach(function(b){
+        b.onclick = function(){
+          var was = b.getAttribute("aria-pressed") === "true";
+          document.querySelectorAll("#passage button.tok").forEach(function(x){
+            x.classList.remove("selected","related-head","related-dependent");
+            x.setAttribute("aria-pressed","false");
+          });
+          var detail = document.getElementById("tokdetail");
+          if(was){ detail.hidden = true; return; }
+          b.classList.add("selected"); b.setAttribute("aria-pressed","true");
+          var s = d.sentences[Number(b.dataset.sent)];
+          var t = s.tokens.find(function(x){ return String(x.idx) === String(b.dataset.idx); });
+          s.tokens.forEach(function(x){
+            var el = document.querySelector('#passage button.tok[data-sent="'+b.dataset.sent+'"][data-idx="'+x.idx+'"]');
+            if(!el) return;
+            if(t.head !== null && x.idx === t.head) el.classList.add("related-head");
+            if(x.head === t.idx) el.classList.add("related-dependent");
+          });
+          var rows = [t.form+" · "+t.lemma, t.surface_label, t.case_label,
+            t.gloss+" ("+t.gloss_source+")", t.upos+" · "+t.morph,
+            t.deprel ? "UD: "+t.deprel+" → "+t.head : "UD: unannotated",
+            t.wordsem ? "WordSem: "+t.wordsem : "", t.unsandhied ? "Unsandhied: "+t.unsandhied : ""];
+          detail.innerHTML = rows.filter(Boolean).map(function(x){return "<div>"+esc(x)+"</div>";}).join("")+
+            (t.href ? '<a class="src" href="'+esc(t.href)+'">Dictionary card ↗</a>' : "");
+          detail.hidden = false;
+        };
+      });
+    }
   }
 
   var pk = document.getElementById("picker");
@@ -267,6 +351,14 @@
   }
   document.getElementById("mode-words").onclick = function(){ setMode("words"); };
   document.getElementById("mode-prose").onclick = function(){ setMode("prose"); };
+  function setSyntaxMode(m){
+    syntaxMode = m;
+    document.getElementById("mode-surface").classList.toggle("on", m==="surface");
+    document.getElementById("mode-ud").classList.toggle("on", m==="ud");
+    if(current) render(current);
+  }
+  document.getElementById("mode-surface").onclick = function(){ setSyntaxMode("surface"); };
+  document.getElementById("mode-ud").onclick = function(){ setSyntaxMode("ud"); };
 
   var first = (location.hash||"").replace("#","");
   if(!DATA[first]) first = PACKS.find(function(p){return DATA[p.slug];}).slug;
