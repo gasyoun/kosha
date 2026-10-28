@@ -3508,13 +3508,13 @@
       "size_bytes": 508233719,
       "keying": "L3 one row per chapter page (593,587 across 83 books); L4 nav positions 1:1; L5 verse/segment units keyed slug:doc:verse-or-seg; L8 one row per definition (255,348); page source URLs reconstructable per row",
       "source_repo": "https://www.wisdomlib.org/sanskrit",
-      "source_path": "wisdomlib.org portal pages scraped politely to local canonical store out/jsonl/** (JSONL.zst multi-frame); layers by extract_layers.py",
+      "source_path": "wisdomlib.org portal pages scraped politely to local canonical store E:\\Tools\\wisdomlib-scrape\\out\\jsonl\\** on the live MSI (JSONL.zst multi-frame; former D:\\Tools path gone, re-located 27-10-2026); layers by extract_layers.py",
       "builder": "analyze_corpus.py (zst-aware inventory) -> extract_layers.py l3/l4/l8/all-books-l5l6 (+l5seg zero-marker) -> build_peer_catalogs.py --skip-fetch (identity-tight v2 matcher) -> tools/h3301_release_pack.py; parity harness vs H1625 frozen baselines (zero regressions); spot-check 20/20 vs stored snapshots (H3301_RESULTS.md)",
       "consumers": [
         "Samudra Manthanam web/corpus_builder/wisdomlib/content/ (63 SA slugs, 582,998 txt rows, idempotent ingest verified)",
         "SA-RU drafting pivot / lexicography reference per SA-EN placement ruling"
       ],
-      "notes": "H3301 (26-08-2026, OxAlpha x-preview-f-free). Cite CONCEPT DOI 10.5281/zenodo.22117832 (all versions); current v1.0.1 = 10.5281/zenodo.22118256 (v1.0.0 = 10.5281/zenodo.22117833 superseded same-day: concept/version labels were swapped inside README/CFF; records immutable so fixed by corrective version under the same concept). License CC BY 4.0 with mandatory wisdomlib provenance (LICENSE-DATA); bulk-public GO per RIGHTS_RULING_BULK_PUBLIC_28.07.2026 - rights uncertainty documented, not a stop. L7 grammar-links layer ships as FROZEN 25-07 snapshot (anchors stripped by compaction, not regenerable). English-twin books included but marked; Samudra consumed pure-Sanskrit slugs only.",
+      "notes": "H3301 (26-08-2026, OxAlpha x-preview-f-free). Cite CONCEPT DOI 10.5281/zenodo.22117832 (all versions); current v1.0.1 = 10.5281/zenodo.22118256 (v1.0.0 = 10.5281/zenodo.22117833 superseded same-day: concept/version labels were swapped inside README/CFF; records immutable so fixed by corrective version under the same concept). License CC BY 4.0 with mandatory wisdomlib provenance (LICENSE-DATA); bulk-public GO per RIGHTS_RULING_BULK_PUBLIC_28.07.2026 - rights uncertainty documented, not a stop. L7 grammar-links layer ships as FROZEN 25-07 snapshot (anchors stripped by compaction, not regenerable). English-twin books included but marked; Samudra consumed pure-Sanskrit slugs only. Live MSI store re-located 27-10-2026 at E:\\Tools\\wisdomlib-scrape; chapter-body acquisition remains Cloudflare-blocked (store stats.json, 23-07-2026), which does not alter the released rows.",
       "data_statement": "https://zenodo.org/records/22118256 (README + docs/DATASHEET_H3301_RELEASE.md inside pack.zip)",
       "regen_checked": "2026-09-04 (H4046: NOT-RUN)",
       "made_by": "ai",
