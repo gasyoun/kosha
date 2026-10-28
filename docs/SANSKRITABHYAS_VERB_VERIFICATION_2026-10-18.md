@@ -202,10 +202,12 @@ skill enforces for a second estate.
 
 ## 7. Why not the wisdomlib scraper itself
 
-The wisdomlib programme's code and store live at `D:\Tools\wisdomlib-scrape` on the dead
-MSI with no remote ([H6073](https://github.com/gasyoun/Uprava/blob/main/handoffs/H6073-OxAlpha_SanskritCorpora_wisdomlib-next-batch_04.10.26.md)
-re-probed this on 11-10-2026 and found no copy on this machine). What transfers is its
-**discipline** — manifest + checkpoint resume, polite throttle with one retry class, raw
+The wisdomlib programme's code and store live at `E:\Tools\wisdomlib-scrape` on the
+live MSI with no remote (re-located 27-10-2026; the former `D:\` path is gone and
+chapter-body acquisition remains Cloudflare-blocked). This supersedes the dead-MSI
+note in [H6073](https://github.com/gasyoun/Uprava/blob/main/handoffs/H6073-OxAlpha_SanskritCorpora_wisdomlib-next-batch_04.10.26.md).
+What transfers is its **discipline** — manifest + checkpoint resume, polite throttle
+with one retry class, raw
 quarantine → parse → derived-only commits, licence-gated posture. Its executable local
 sibling is [`scripts/akshara_pilot_crawl.py`](https://github.com/gasyoun/kosha/blob/main/scripts/akshara_pilot_crawl.py)
 (`guarded_fetch` allow-list, 2 s + jitter, `done_keys()` resume); if the site ever becomes
