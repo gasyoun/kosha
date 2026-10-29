@@ -2939,6 +2939,58 @@
       "model": null
     },
     {
+      "id": "pd-koshashri-entries",
+      "title": "KoshaSHRI agni fixture — entry layer (H7316)",
+      "tier": "restricted",
+      "in_release": "not-applicable",
+      "format": "tsv",
+      "rows": 1,
+      "size_bytes": 723876,
+      "keying": "one entry; source + source_entry_id (koshashri:<uuid>); 16 columns covering headwords, grammar, source volume, sandhi, nested vocables, validation and provenance",
+      "source_repo": "https://github.com/sanskrit-lexicon/csl-atlas",
+      "source_path": "data/pd/pd_koshashri_entries.tsv",
+      "builder": "scripts/pd_koshashri_vocable.py + scripts/pd_koshashri_fixture_export.py",
+      "consumers": [
+        "reports/PD_KOSHASHRI_FIXTURE_EXPORT_2026.md",
+        "data/pd/README.md"
+      ],
+      "notes": "Single agni fixture with all 29 senses represented through the citation sibling. KoshaSHRI is all rights reserved: the full source response stays local and uncommitted; no bulk publication or independent-witness claim. Deterministic offline regeneration with canaries and five focused tests. PR #653; release v0.21.2.",
+      "sha256": "29f3cbf7654256762d380e279ffd364acf24106d080803f8b760f09f1bf35fdd",
+      "regen_checked": "2026-10-29 (H7316: PASS — byte identity and canaries green)",
+      "made_by": "ai",
+      "model": "kimi-code-plan-global/k3.1-pro",
+      "handoff": "H7316",
+      "layer_status": "active",
+      "provenance_source": "builder",
+      "built_at": "2026-10-29"
+    },
+    {
+      "id": "pd-koshashri-citations",
+      "title": "KoshaSHRI agni fixture — citation-reference layer (H7316)",
+      "tier": "restricted",
+      "in_release": "not-applicable",
+      "format": "tsv",
+      "rows": 1400,
+      "size_bytes": 708516,
+      "keying": "one row per citation reference; source_entry_id + sense_id + source_citation_id; 15 columns covering quotation, siglum, work resolution, locus, raw date, validation and provenance",
+      "source_repo": "https://github.com/sanskrit-lexicon/csl-atlas",
+      "source_path": "data/pd/pd_koshashri_citations.tsv",
+      "builder": "scripts/pd_koshashri_vocable.py + scripts/pd_koshashri_fixture_export.py",
+      "consumers": [
+        "reports/PD_KOSHASHRI_FIXTURE_EXPORT_2026.md",
+        "data/pd/README.md"
+      ],
+      "notes": "All 29 senses; first sense preserves 242 quotation texts as 248 reference rows. Only exact ṚV. resolves through H7296 to PDW-ecd09ac913; other works stay unresolved. KoshaSHRI is all rights reserved: full response local and uncommitted, no bulk publication or independent-witness claim. PR #653; release v0.21.2.",
+      "sha256": "e325dad1369f61ed7e16c7a293ea9d8ac1c04813bd214424e2a4bd6812f67257",
+      "regen_checked": "2026-10-29 (H7316: PASS — 1400 unique citation IDs, byte identity and canaries green)",
+      "made_by": "ai",
+      "model": "kimi-code-plan-global/k3.1-pro",
+      "handoff": "H7316",
+      "layer_status": "active",
+      "provenance_source": "builder",
+      "built_at": "2026-10-29"
+    },
+    {
       "id": "sense-corpus-concordance",
       "title": "Per-sense corpus attestation (नागदन्त layer, H1455 wave-1)",
       "tier": "public",
