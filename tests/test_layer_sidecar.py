@@ -127,7 +127,8 @@ def test_gate_accepts_dormant_with_owner_and_date(tmp_path):
     assert json.loads(written.read_text(encoding="utf-8"))["owner"] == "MG"
 
 
-# ---------- the manifest: 152 rows (H7316 added two KoshaSHRI fixtures, 29-10-2026) ----------
+# ---------- the manifest: 150 rows (H6841 added sandhikosh-tsv, 27-10-2026) ----------
+# Current count: 152 rows after H7316 added two KoshaSHRI fixtures, 29-10-2026.
 
 REQUIRED = ("made_by", "model", "handoff", "layer_status", "provenance_source")
 
