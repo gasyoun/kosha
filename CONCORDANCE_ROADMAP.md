@@ -95,7 +95,7 @@ themed four times.
 | # | Concordance | Existing inputs | In this roadmap |
 |---|---|---|---|
 | A1 | Root → attested corpus forms | [`mw-roots`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json) (2,113), `dcs-verb-roots-by-class` (463) | folded into **A3** |
-| A2 | Paradigm-token → attestation (335 Zaliznyak tokens) | `zaliznyak-grammar-index` (98,639) | folded into **A3** |
+| A2 | Paradigm-token → attestation (342 Zaliznyak tokens) | `zaliznyak-grammar-index` (98,639) | folded into **A3** |
 | **A3** | **Generated-vs-attested paradigm** | `kosha-db` `inflections` (6.9M rows / 3.33M distinct forms, **Cologne MW-inflect**, not vidyut — corrected H3782), `dcs-full-sqlite` (5.7M tokens) | **Q3 flagship** — both joins shipped (H1262 · H3782); web page owed |
 | **A4** | **Pāṇinian sūtra → form → corpus** | vidyut-prakriya sūtra chains, DCS | **Q4 flagship (highest novelty)** |
 | A5 | Compound (samāsa) structure → corpus | `dcs-compound-dictionary` (37,333) | stretch / Y2 |

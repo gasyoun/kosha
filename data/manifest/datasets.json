@@ -251,7 +251,7 @@
       "format": "tsv",
       "rows": 98639,
       "size_bytes": 6025400,
-      "keying": "SLP1 headword → paradigm token (335 tokens)",
+      "keying": "SLP1 headword → paradigm token (342 tokens)",
       "source_repo": "https://github.com/gasyoun/SanskritLexicography",
       "source_path": "RussianTranslation/src/headword_index.tsv",
       "builder": "SanskritLexicography RussianTranslation/src/reverse_index.py --build (streams csl-orig/v02/pwg/pwg.txt; outputs headword_index.tsv + reverse_paradigm_index.json; H4075 04-09: located + regenerated, zero diff vs committed artifact — S3 drill 9 \"builder absent\" resolved)",
