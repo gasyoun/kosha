@@ -1,6 +1,6 @@
 # Gasuns Sanskrit Dictionary
 
-_Created: 02-07-2026 · Last updated: 29-10-2026_
+_Created: 02-07-2026 · Last updated: 05-11-2026_
 
 > **Status: pre-alpha — the lookup API + UI run locally and the public
 > dictionary URL is not deployed yet, but the data-hub tier already is live.**
@@ -11,7 +11,7 @@ _Created: 02-07-2026 · Last updated: 29-10-2026_
 > P3 (evidence layer), P4 (nominal + verb inflection ingest, reverse-lookup
 > cascade, and the vidyut⇄Cologne comparison), and the P5 crawlable word page
 > are all done — latest release
-> [v0.16.0](https://github.com/gasyoun/kosha/releases/tag/v0.16.0). What remains
+> [v0.117.17](https://github.com/gasyoun/kosha/releases/tag/v0.117.17). What remains
 > for the first public **dictionary lookup** URL is MG's samskrtam.ru deploy
 > step — see
 > [PHASE1_PLAN.md](https://github.com/gasyoun/kosha/blob/main/PHASE1_PLAN.md)
