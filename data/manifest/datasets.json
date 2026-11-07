@@ -4297,6 +4297,32 @@
       "built_at": "2026-10-27",
       "owner": "MG",
       "review_after": "2027-01-27"
+    },
+    {
+      "id": "ashtadhyayi-com-data",
+      "title": "ashtadhyayi.com site dataset — Aṣṭādhyāyī (sutraani/) + Dhātupāṭha (dhatu/)",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "format": "json",
+      "rows": 2259,
+      "size_bytes": 2505028,
+      "size_note": "dhatu/data.txt only; dhatuprayogas.txt (3 222 981 B) and 18 dhatuforms_* files sit alongside",
+      "keying": "dhatu/: baseindex gaṇa.sūtra (01.0001) or numeric id (1010001); sutraani/: 5-digit sūtra id",
+      "source_repo": "https://github.com/ashtadhyayi-com/data",
+      "source_path": "dhatu/data.txt (+ dhatuprayogas.txt, dhatuforms_*); sutraani/*.txt incl. vasu_english.txt",
+      "builder": "upstream — the same data that powers ashtadhyayi.com; consumed by direct raw fetch, no scraping",
+      "consumers": [
+        "SanskritGrammar panini_dhatu.py (H7815)",
+        "SanskritGrammar panini_sutra.py (H413)"
+      ],
+      "notes": "H7815 (07-11-2026): dhatu/ layer wired via SanskritGrammar panini_dhatu.py — 2 259 roots, schema fields artha_english/baseindex verified present at fetch; artha_english is the only English meaning layer (no Vasu gloss exists for the dhātupāṭha in this dataset). Upstream terms: free to use with appropriate credits — credit ashtadhyayi.com in any reuse (credit line shipped in the resolver docstring + README).",
+      "regen_checked": "2026-11-07 (H7815: live raw fetch, schema verified)",
+      "made_by": "upstream",
+      "layer_status": "active",
+      "provenance_source": "upstream repo",
+      "built_at": "2026-11-07",
+      "model": null,
+      "handoff": "H7815"
     }
   ]
 }
