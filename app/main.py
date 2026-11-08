@@ -55,6 +55,11 @@ from identity import hash_ip, resolve_anon_id
 from history import router as history_router
 from datetime import datetime, timezone
 
+# H6906: shared bounded-parameter dependency (app/params.py). Imported by
+# name, not as a module: `search()` below assigns a local `where, params`
+# SQL tuple that would shadow a module-level `params` import.
+from params import ids_bounded, limit_bounded, offset_bounded, size_bounded
+
 load_dotenv()
 
 # Public base for browser-resolvable citation URLs (RISKS.md R1 Commitment 1).
@@ -457,12 +462,15 @@ def _log_search_background(anon_id: str, ts: str, query_raw: str, query_slp1: st
 
 @app.get("/api/v1/search")
 def search(q: str, request: Request, response: Response, background_tasks: BackgroundTasks,
-           mode: str = "prefix", limit: int = 50, offset: int = 0,
+           mode: str = "prefix",
+           limit: int = Depends(limit_bounded),
+           offset: int = Depends(offset_bounded),
            con: sqlite3.Connection = Depends(get_db)):
-    if not 1 <= limit <= 200:
-        # Lower bound matters: SQLite reads LIMIT -1 (and any negative) as
-        # "no limit", which would serialize the whole lemmas table.
-        error("bad_request", "limit must be between 1 and 200", 400)
+    # H6906: `limit`/`offset` arrive pre-validated by the shared bounded-int
+    # dependency (app/params.py) — the inline 1..200 branch this replaced was
+    # the only bounded LIMIT site; now the whole class is fenced at the type
+    # layer. SQLite reads LIMIT -1 (and any negative) as "no limit", which
+    # would serialize the whole lemmas table.
     slp1_q = to_slp1_auto(q, "auto")
     if mode == "exact":
         where, params = "slp1 = ?", (slp1_q,)
@@ -620,12 +628,15 @@ def _salt_entries_for_keys(con, dict_code: str, keys, dv: str) -> list[dict]:
 
 @app.get("/dicts/{dict_id}/restful/entries")
 def salt_entries(dict_id: str, field: str = "headword_slp1", query: str = "",
-                  query_type: str = "term", size: int = 25, input: str = "slp1",
+                  query_type: str = "term", size: int = Depends(size_bounded),
+                  input: str = "slp1",
                   output: str = "deva", con: sqlite3.Connection = Depends(get_db)):
     """Salt profile §3. Errors here keep C-SALT's bare-string form and, since
     W0C, C-SALT's status codes: the profile says a missing or invalid parameter
     MUST be HTTP 400, and these routes used to answer 200 with an error body —
-    a client checking the status would have read a failure as success."""
+    a client checking the status would have read a failure as success.
+    H6906: `size` is bounded by the shared dependency — `size=-1` used to
+    serialise the whole MW face (194,083 keys on the full DB)."""
     dict_code = dict_id.lower()
     if dict_code not in ALL_DICTS:
         error("unknown_dict", f"unknown dict '{dict_id}'", 400)
@@ -656,9 +667,11 @@ def salt_entries(dict_id: str, field: str = "headword_slp1", query: str = "",
 
 
 @app.get("/dicts/{dict_id}/restful/ids")
-def salt_ids(dict_id: str, ids: list[str] = Query(default=[]),
+def salt_ids(dict_id: str, ids: list[str] = Depends(ids_bounded),
              con: sqlite3.Connection = Depends(get_db)):
-    """Salt profile §5 — get-by-id, not a search."""
+    """Salt profile §5 — get-by-id, not a search. H6906: `ids` is capped at
+    100 by the shared dependency (one query per id — an unbounded collection
+    was a sequential-scan lever)."""
     dict_code = dict_id.lower()
     if dict_code not in ALL_DICTS:
         error("unknown_dict", f"unknown dict '{dict_id}'", 400)

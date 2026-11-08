@@ -27,8 +27,37 @@ def test_history_is_off_unless_explicitly_enabled():
     assert Settings.from_env({}).enable_history is False
     assert Settings.from_env({"KOSHA_HISTORY_ENABLED": "false"}).enable_history is False
     assert Settings.from_env({"KOSHA_HISTORY_ENABLED": "0"}).enable_history is False
-    assert Settings.from_env({"KOSHA_HISTORY_ENABLED": "1"}).enable_history is True
-    assert Settings.from_env({"KOSHA_HISTORY_ENABLED": "TRUE"}).enable_history is True
+    assert Settings.from_env(
+        {"KOSHA_HISTORY_ENABLED": "1", "HISTORY_IP_SALT": "some-random-salt"}
+    ).enable_history is True
+    assert Settings.from_env(
+        {"KOSHA_HISTORY_ENABLED": "TRUE", "HISTORY_IP_SALT": "some-random-salt"}
+    ).enable_history is True
+
+
+def test_history_enabled_without_salt_refuses():
+    """H6909 (BH-K4): fail closed at startup, in the settings function itself.
+
+    The red-before-green baseline (2026-10-27): `Settings.from_env({"KOSHA_HISTORY_ENABLED": "1"})`
+    *accepted* the configuration and let `hash_ip` fall back to the committed
+    dev salt — the message must name the missing variable instead.
+    """
+    for salt in (None, "", "   "):
+        env = {"KOSHA_HISTORY_ENABLED": "1"}
+        if salt is not None:
+            env["HISTORY_IP_SALT"] = salt
+        with pytest.raises(SettingsError, match="HISTORY_IP_SALT"):
+            Settings.from_env(env)
+
+
+def test_history_enabled_with_salt_is_the_happy_path():
+    settings = Settings.from_env(
+        {"KOSHA_HISTORY_ENABLED": "1", "HISTORY_IP_SALT": "  some-random-salt  "}
+    )
+    # whitespace-only surrounding formatting stays acceptable; the salt is
+    # consumed by app/identity.hash_ip at request time, settings only refuses
+    # its absence here.
+    assert settings.enable_history is True
 
 
 def test_unparseable_flag_is_an_error_not_a_silent_false():

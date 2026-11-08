@@ -5,18 +5,24 @@ personal endpoints are cookie-scoped via identity.py, aggregate endpoints are
 public/credential-free so a future embed (e.g. the Cologne homepage) can
 fetch them directly.
 """
+import hashlib
+import logging
 import secrets
 import sqlite3
 from datetime import datetime, timedelta, timezone
 
 from fastapi import APIRouter, Depends, HTTPException, Request, Response
 
+# H6906: shared bounded-parameter dependency (app/params.py).
+from params import limit_bounded, offset_bounded
 from history_db import (
     clear_visitor_history,
     get_history_db,
     get_visitor_history,
 )
-from identity import resolve_anon_id
+from identity import issue_anon_cookie, resolve_anon_id
+
+logger = logging.getLogger("kosha.magic_link")
 
 router = APIRouter()
 
@@ -32,12 +38,14 @@ def _now() -> str:
 # ---------------------------------------------------------------------------
 
 @router.get("/api/v1/history")
-def get_history(request: Request, response: Response, limit: int = 50, offset: int = 0,
+def get_history(request: Request, response: Response,
+                limit: int = Depends(limit_bounded),
+                offset: int = Depends(offset_bounded),
                  con: sqlite3.Connection = Depends(get_history_db)):
-    if limit > 200:
-        raise HTTPException(status_code=400, detail={
-            "error": {"code": "bad_request", "message": "limit must be <= 200", "suggestions": []}
-        })
+    # H6906: `limit`/`offset` arrive pre-validated by the shared bounded-int
+    # dependency — the inline branch this replaced bounded the upper end only
+    # in spirit (and rendered its message as a repr-dict inside the house
+    # body); `offset` was unbounded entirely.
     anon_id = resolve_anon_id(request, response)
     rows, total = get_visitor_history(con, anon_id, limit, offset)
     results = [
@@ -106,12 +114,10 @@ def stats_timeseries(interval: str = "day", days: int = 30,
 
 
 @router.get("/api/v1/stats/top")
-def stats_top(limit: int = 50, days: int | None = None,
+def stats_top(limit: int = Depends(limit_bounded), days: int | None = None,
               con: sqlite3.Connection = Depends(get_history_db)):
-    if limit > 200:
-        raise HTTPException(status_code=400, detail={
-            "error": {"code": "bad_request", "message": "limit must be <= 200", "suggestions": []}
-        })
+    # H6906: `limit` arrives pre-validated by the shared bounded-int
+    # dependency (both limit branches below were reachable with -1).
     if days:
         since = (datetime.now(timezone.utc) - timedelta(days=days)).date().isoformat()
         rows = con.execute(
@@ -136,8 +142,11 @@ def stats_top(limit: int = 50, days: int | None = None,
 
 def send_magic_link_email(email: str, token: str) -> None:
     # Stub: no external service is called (A3 local-first / RISKS.md R12).
-    # Logs the link so MG can test the flow locally until a provider is chosen.
-    print(f"[kosha][magic-link stub] would email {email}: /api/v1/auth/verify?token={token}")
+    # H6909 (bughunt 13.10 BH-K6): neither the live 30-minute token nor the
+    # raw address reaches a log line — only a short non-redeemable token id
+    # (digest prefix) so local test runs can be correlated.
+    token_id = hashlib.sha256(token.encode("utf-8")).hexdigest()[:12]
+    logger.info("magic-link requested (address not logged): token id %s", token_id)
 
 
 @router.post("/api/v1/auth/request-link")
@@ -177,6 +186,7 @@ def verify_link(token: str, request: Request, response: Response,
     # Re-issue the same anon_id cookie on this device so the just-linked
     # history is immediately visible; cross-device history is looked up by
     # email at read time in a later pass, not by merging anon_id rows here.
-    response.set_cookie("kosha_anon_id", row["anon_id"], max_age=60 * 60 * 24 * 365 * 2,
-                         httponly=True, samesite="lax")
+    # H6909 (BH-K5): through the single issue_anon_cookie helper so the
+    # hardening flags (HttpOnly, SameSite, max_age, Secure) stay in one place.
+    issue_anon_cookie(response, row["anon_id"])
     return {"linked": True, "email": row["email"]}

@@ -1,0 +1,8 @@
+# token-size-gate: files here are not agent-authored — generated data/assets.
+# Code, docs and reports stay under the 5000-token limit.
+w/**
+data/**
+concordance/**
+docs/cards/**
+reading/data/**
+reading/difficulty/**

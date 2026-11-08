@@ -1,0 +1,12 @@
+# AIAS data declaration — kosha (H7119).
+# Schema + level scale: Uprava docs/AIAS_DATA_MANIFEST_SCHEMA_2026-10-24.md
+# Checked by tools/aias_manifest_check.py (vendored) in the aias-gate workflow.
+schema_version: 1
+level: 3
+produced_by: "code — ingest, validation and build scripts under scripts/, plus the dataset manifests and derived tables they emit; prose — README/ARCHITECTURE sections drafted by agents"
+decided_by: "MG ruled the dataset registry shape, rights tiers and acceptance criteria; agents chose implementation internals"
+review: none
+generated_at: 2026-10-24
+scope: "data/manifest/datasets.json and the datasets it registers; derived tables built from them by scripts/"
+generated_by: "H7119 pilot (DeepSeek v4.1 Flash, deepseek/deepseek-flash)"
+notes: "level 3: the bytes are ingested and the manifests written by agent-run scripts whose output a human reviews through the registry and CI, not line by line. No formal reviewer artifact exists yet, so review stays none rather than pointing at a CI log that is not a review."

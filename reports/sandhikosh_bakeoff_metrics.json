@@ -1,0 +1,622 @@
+{
+  "when": "2026-10-27",
+  "handoff": "H6841 (WHEEL9 item a)",
+  "pattern": "WHEEL6/H6456 pilot_process_sanskrit_vs_rules.py — arms reused, no new splitter/scorer",
+  "bench": {
+    "dir": "C:\\Users\\COMPUTER\\Documents\\GitHub\\kosha-wt-h6841\\data\\sandhi\\sandhikosh",
+    "items_total": 13929,
+    "items_scored": 8640,
+    "excluded_no_single_junction": 4921
+  },
+  "rule_inventory_files": 41,
+  "arms": {
+    "upstream": {
+      "exact": 3201,
+      "first": 4262,
+      "scored": 8640,
+      "null": 368,
+      "errs": 0,
+      "exact_pct": 37.05,
+      "first_pct": 49.33
+    },
+    "upstream+pausa": {
+      "exact": 4724,
+      "first": 5718,
+      "scored": 8640,
+      "null": 368,
+      "errs": 0,
+      "exact_pct": 54.68,
+      "first_pct": 66.18
+    },
+    "ours": {
+      "exact": 0,
+      "first": 0,
+      "scored": 1,
+      "null": 9007,
+      "errs": 0,
+      "exact_pct": 0.0,
+      "first_pct": 0.0
+    }
+  },
+  "neuro_arm": "NOT RUN — ByT5-Sanskrit/CharSS HF checkpoints not hosted by harness; hosting = rework (declined per H6841 step-3 IF clause)",
+  "runtime_seconds": 21.3,
+  "by_category": {
+    "consonant": {
+      "upstream": {
+        "exact": 1909,
+        "scored": 3848,
+        "null": 171
+      },
+      "upstream+pausa": {
+        "exact": 2225,
+        "scored": 3848,
+        "null": 171
+      },
+      "ours": {
+        "exact": 0,
+        "scored": 0,
+        "null": 4019
+      },
+      "exact_pct_upstream": 49.61,
+      "exact_pct_upstream+pausa": 57.82,
+      "exact_pct_ours": null
+    },
+    "unlabeled": {
+      "upstream": {
+        "exact": 36,
+        "scored": 145,
+        "null": 1
+      },
+      "upstream+pausa": {
+        "exact": 43,
+        "scored": 145,
+        "null": 1
+      },
+      "ours": {
+        "exact": 0,
+        "scored": 0,
+        "null": 146
+      },
+      "exact_pct_upstream": 24.83,
+      "exact_pct_upstream+pausa": 29.66,
+      "exact_pct_ours": null
+    },
+    "visarga": {
+      "upstream": {
+        "exact": 0,
+        "scored": 2318,
+        "null": 167
+      },
+      "upstream+pausa": {
+        "exact": 1083,
+        "scored": 2318,
+        "null": 167
+      },
+      "ours": {
+        "exact": 0,
+        "scored": 1,
+        "null": 2484
+      },
+      "exact_pct_upstream": 0.0,
+      "exact_pct_upstream+pausa": 46.72,
+      "exact_pct_ours": 0.0
+    },
+    "vowel": {
+      "upstream": {
+        "exact": 1256,
+        "scored": 2329,
+        "null": 29
+      },
+      "upstream+pausa": {
+        "exact": 1373,
+        "scored": 2329,
+        "null": 29
+      },
+      "ours": {
+        "exact": 0,
+        "scored": 0,
+        "null": 2358
+      },
+      "exact_pct_upstream": 53.93,
+      "exact_pct_upstream+pausa": 58.95,
+      "exact_pct_ours": null
+    }
+  },
+  "by_source": {
+    "astaadhyayii": {
+      "upstream_exact": 66,
+      "upstream+pausa_exact": 157,
+      "ours_exact": 0,
+      "upstream_first": 193,
+      "upstream+pausa_first": 318,
+      "ours_first": 0,
+      "scored": 1199,
+      "excluded_space": 1501,
+      "exact_pct_upstream": 5.5
+    },
+    "bhagvad_gita": {
+      "upstream_exact": 269,
+      "upstream+pausa_exact": 364,
+      "ours_exact": 0,
+      "upstream_first": 467,
+      "upstream+pausa_first": 556,
+      "ours_first": 0,
+      "scored": 878,
+      "excluded_space": 551,
+      "exact_pct_upstream": 30.64
+    },
+    "rule_external": {
+      "upstream_exact": 18,
+      "upstream+pausa_exact": 28,
+      "ours_exact": 0,
+      "upstream_first": 39,
+      "upstream+pausa_first": 34,
+      "ours_first": 0,
+      "scored": 117,
+      "excluded_space": 15,
+      "exact_pct_upstream": 15.38
+    },
+    "rule_internal": {
+      "upstream_exact": 2,
+      "upstream+pausa_exact": 5,
+      "ours_exact": 0,
+      "upstream_first": 19,
+      "upstream+pausa_first": 18,
+      "ours_first": 0,
+      "scored": 147,
+      "excluded_space": 3,
+      "exact_pct_upstream": 1.36
+    },
+    "rule_literature": {
+      "upstream_exact": 36,
+      "upstream+pausa_exact": 43,
+      "ours_exact": 0,
+      "upstream_first": 66,
+      "upstream+pausa_first": 75,
+      "ours_first": 0,
+      "scored": 146,
+      "excluded_space": 4,
+      "exact_pct_upstream": 24.66
+    },
+    "uoh": {
+      "upstream_exact": 2810,
+      "upstream+pausa_exact": 4127,
+      "ours_exact": 0,
+      "upstream_first": 3478,
+      "upstream+pausa_first": 4717,
+      "ours_first": 0,
+      "scored": 6521,
+      "excluded_space": 2847,
+      "exact_pct_upstream": 43.09
+    }
+  },
+  "examples": [
+    {
+      "source": "astaadhyayii",
+      "type": "visarga",
+      "word_iast": "mukhanāsikāvacano'nunāsikaḥ",
+      "gold": [
+        "mukhanāsikāvacanaḥ",
+        "anunāsikaḥ"
+      ],
+      "pred_upstream": [
+        "mukhanāsika",
+        "ava",
+        "canas",
+        "anunāsikas"
+      ],
+      "arm": "upstream"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "visarga",
+      "word_iast": "mukhanāsikāvacano'nunāsikaḥ",
+      "gold": [
+        "mukhanāsikāvacanaḥ",
+        "anunāsikaḥ"
+      ],
+      "pred_upstream+pausa": [
+        "mukhanāsika",
+        "ava",
+        "canaḥ",
+        "anunāsikaḥ"
+      ],
+      "arm": "upstream+pausa"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "nājjhalau",
+      "gold": [
+        "n",
+        "ajjhalau"
+      ],
+      "pred_upstream": [
+        "na",
+        "ajjhalau"
+      ],
+      "arm": "upstream"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "nājjhalau",
+      "gold": [
+        "n",
+        "ajjhalau"
+      ],
+      "pred_upstream+pausa": [
+        "na",
+        "ajjhalau"
+      ],
+      "arm": "upstream+pausa"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "visarga",
+      "word_iast": "prathamacaramatayālpārdhakatipayanemāśca",
+      "gold": [
+        "prathamacaramatayālpārdhakatipayanemāḥ",
+        "ca"
+      ],
+      "pred_upstream": [
+        "prathama",
+        "carama",
+        "tayā",
+        "alpa",
+        "ardha",
+        "katipaya",
+        "ne",
+        "mās",
+        "ca"
+      ],
+      "arm": "upstream"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "visarga",
+      "word_iast": "prathamacaramatayālpārdhakatipayanemāśca",
+      "gold": [
+        "prathamacaramatayālpārdhakatipayanemāḥ",
+        "ca"
+      ],
+      "pred_upstream+pausa": [
+        "prathama",
+        "carama",
+        "tayā",
+        "alpa",
+        "ardha",
+        "katipaya",
+        "ne",
+        "māḥ",
+        "ca"
+      ],
+      "arm": "upstream+pausa"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "pūrvaparāvaradakṣiṇottarāparādharāṇi",
+      "gold": [
+        "pūrvaparāvaradakṣiṇottarāparādharāṇi",
+        "vyavasthāyām",
+        "asamjñāyām"
+      ],
+      "pred_upstream": [
+        "pūrva",
+        "para",
+        "avara",
+        "dakṣiṇa",
+        "uttara",
+        "apara",
+        "adhara",
+        "āṇi"
+      ],
+      "arm": "upstream"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "pūrvaparāvaradakṣiṇottarāparādharāṇi",
+      "gold": [
+        "pūrvaparāvaradakṣiṇottarāparādharāṇi",
+        "vyavasthāyām",
+        "asamjñāyām"
+      ],
+      "pred_upstream+pausa": [
+        "pūrva",
+        "para",
+        "avara",
+        "dakṣiṇa",
+        "uttara",
+        "apara",
+        "adhara",
+        "āṇi"
+      ],
+      "arm": "upstream+pausa"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "svamajñātidhanākhyāyām",
+      "gold": [
+        "svam",
+        "ajñātidhanākhyāyām"
+      ],
+      "pred_upstream": [
+        "svam",
+        "ajñāti",
+        "dhana",
+        "ākhyā",
+        "yām"
+      ],
+      "arm": "upstream"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "svamajñātidhanākhyāyām",
+      "gold": [
+        "svam",
+        "ajñātidhanākhyāyām"
+      ],
+      "pred_upstream+pausa": [
+        "svam",
+        "ajñāti",
+        "dhana",
+        "ākhyā",
+        "yām"
+      ],
+      "arm": "upstream+pausa"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "svarādinipātamavyayam",
+      "gold": [
+        "svarādinipātam",
+        "avyayam"
+      ],
+      "pred_upstream": [
+        "svara",
+        "ādi",
+        "nipātam",
+        "avyayam"
+      ],
+      "arm": "upstream"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "svarādinipātamavyayam",
+      "gold": [
+        "svarādinipātam",
+        "avyayam"
+      ],
+      "pred_upstream+pausa": [
+        "svara",
+        "ādi",
+        "nipātam",
+        "avyayam"
+      ],
+      "arm": "upstream+pausa"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "taddhitaścāsarvavibhaktiḥ",
+      "gold": [
+        "taddhitaḥ",
+        "ca",
+        "ca",
+        "asarvavibhaktiḥ"
+      ],
+      "pred_upstream": [
+        "tat",
+        "hitas",
+        "ca",
+        "a",
+        "sarva",
+        "vibhaktis"
+      ],
+      "arm": "upstream"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "taddhitaścāsarvavibhaktiḥ",
+      "gold": [
+        "taddhitaḥ",
+        "ca",
+        "ca",
+        "asarvavibhaktiḥ"
+      ],
+      "pred_upstream+pausa": [
+        "tat",
+        "hitaḥ",
+        "ca",
+        "a",
+        "sarva",
+        "vibhaktiḥ"
+      ],
+      "arm": "upstream+pausa"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "kṛnmejantaḥ",
+      "gold": [
+        "kṛt",
+        "mejantaḥ"
+      ],
+      "pred_upstream": [
+        "kṛt",
+        "me",
+        "jantas"
+      ],
+      "arm": "upstream"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "kṛnmejantaḥ",
+      "gold": [
+        "kṛt",
+        "mejantaḥ"
+      ],
+      "pred_upstream+pausa": [
+        "kṛt",
+        "me",
+        "jantaḥ"
+      ],
+      "arm": "upstream+pausa"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "visarga",
+      "word_iast": "avyayībhāvaśca",
+      "gold": [
+        "avyayībhāvaḥ",
+        "ca"
+      ],
+      "pred_upstream": [
+        "avyayībhāvas",
+        "ca"
+      ],
+      "arm": "upstream"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "suḍanapumsakasya",
+      "gold": [
+        "suṭ",
+        "anapumsakasya"
+      ],
+      "pred_upstream": [
+        "su",
+        "ḍa",
+        "napum",
+        "sakasya"
+      ],
+      "arm": "upstream"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "suḍanapumsakasya",
+      "gold": [
+        "suṭ",
+        "anapumsakasya"
+      ],
+      "pred_upstream+pausa": [
+        "su",
+        "ḍa",
+        "napum",
+        "sakasya"
+      ],
+      "arm": "upstream+pausa"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "midaco'ntyātparaḥ",
+      "gold": [
+        "mit",
+        "acaḥ",
+        "antyāt",
+        "paraḥ"
+      ],
+      "pred_upstream": [
+        "mit",
+        "a",
+        "cas",
+        "antyāt",
+        "paras"
+      ],
+      "arm": "upstream"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "midaco'ntyātparaḥ",
+      "gold": [
+        "mit",
+        "acaḥ",
+        "antyāt",
+        "paraḥ"
+      ],
+      "pred_upstream+pausa": [
+        "mit",
+        "a",
+        "caḥ",
+        "antyāt",
+        "paraḥ"
+      ],
+      "arm": "upstream+pausa"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "vowel",
+      "word_iast": "sthāne'ntaratamaḥ",
+      "gold": [
+        "sthāne",
+        "antaratamaḥ"
+      ],
+      "pred_upstream": [
+        "sthāne",
+        "antara",
+        "tamas"
+      ],
+      "arm": "upstream"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "vowel",
+      "word_iast": "sthāne'ntaratamaḥ",
+      "gold": [
+        "sthāne",
+        "antaratamaḥ"
+      ],
+      "pred_upstream+pausa": [
+        "sthāne",
+        "antara",
+        "tamaḥ"
+      ],
+      "arm": "upstream+pausa"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "visarga",
+      "word_iast": "alo'ntyasya",
+      "gold": [
+        "alaḥ",
+        "antyasya"
+      ],
+      "pred_upstream": [
+        "alas",
+        "antyasya"
+      ],
+      "arm": "upstream"
+    },
+    {
+      "source": "astaadhyayii",
+      "type": "consonant",
+      "word_iast": "sthānivadādeśo'nalvidhau",
+      "gold": [
+        "sthānivat",
+        "ādeśaḥ",
+        "analvidhau"
+      ],
+      "pred_upstream": [
+        "sthāni",
+        "vada",
+        "adeśa",
+        "ūna",
+        "lvi",
+        "dhau"
+      ],
+      "arm": "upstream"
+    }
+  ]
+}

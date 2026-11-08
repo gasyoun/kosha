@@ -33,7 +33,7 @@ os.environ.setdefault(
     "KOSHA_SR_GLOSS", str(ROOT / "tests" / "fixtures" / "sanskritrussian")
 )
 
-#: Modules whose assertions are pinned to full-data counts (e.g. 323,425
+#: Modules whose assertions are pinned to full-data counts (e.g. 323,422
 #: lemmas) or to entries only present in the real dictionaries.
 FULL_DATA_MODULES = {
     "test_api",

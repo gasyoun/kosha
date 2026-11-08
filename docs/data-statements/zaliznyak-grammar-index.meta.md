@@ -1,6 +1,6 @@
 # Data statement — Zaliznyak-style grammar-token index over PWG (`zaliznyak-grammar-index`)
 
-_Created: 11-07-2026 · Last updated: 25-08-2026_
+_Created: 11-07-2026 · Last updated: 30-10-2026_
 
 Data statement for the `zaliznyak-grammar-index` dataset served by the kosha
 data-hub. Manifest row:
@@ -11,7 +11,7 @@ Download: [`zaliznyak_grammar_index.tsv` in release data-v0.4.0](https://github.
 ## Composition & counts
 
 98,639 rows, one per PWG (Böhtlingk-Roth, Petersburg Dictionary) headword,
-each assigned one of 335 compact paradigm tokens in the style of Zaliznyak's
+each assigned one of 342 compact paradigm tokens in the style of Zaliznyak's
 grammatical dictionary of Russian (a closed token inventory that fully
 determines a word's inflection). TSV, UTF-8, 8 columns:
 
@@ -44,7 +44,7 @@ reader's grammar. Zaliznyak's insight — a small closed token set that *fully
 specifies* inflection — had no Sanskrit application at dictionary scale. This
 index attaches such a token to every PWG headword so that a dictionary UI (or
 a learner's card deck) can render a complete paradigm from the token alone,
-and so the token inventory itself (335 types) becomes a studiable object: how
+and so the token inventory itself (342 types) becomes a studiable object: how
 much paradigm diversity does a full Sanskrit lexicon actually exercise?
 
 ## Language variety
@@ -68,7 +68,7 @@ for the effort's provenance trail).
 
 - Token assignment is only as good as PWG's grammar labels; entries PWG left
   unlabeled or labeled inconsistently inherit that uncertainty.
-- The 335-token inventory is calibrated to PWG's lexicon; rare paradigm types
+- The 342-token inventory is calibrated to PWG's lexicon; rare paradigm types
   attested only outside PWG have no token yet.
 - Verbal lemmas are indexed by their dictionary form; the token system is
   strongest for nominal/adjectival paradigms (the Zaliznyak analogy is
@@ -97,7 +97,7 @@ asset (manifest note).
 ## Maintenance & sunset plan
 
 Maintained by the RussianTranslation grammar-index pipeline as pwg_ru
-progresses (token inventory may grow past 335 as edge paradigms are ruled);
+progresses (token inventory may grow past 342 as edge paradigms are ruled);
 kosha re-mirrors at each `data-v*` cut. Sunset: a future union-lexicon grammar
 index (beyond PWG) would supersede this row; until then it is the canonical
 grammar-token layer.
@@ -113,8 +113,10 @@ Cite the release: *Gasuns Sanskrit Dictionary data release v0.4.0* (CC BY-SA
 [github.com/gasyoun/kosha/releases/tag/data-v0.4.0](https://github.com/gasyoun/kosha/releases/tag/data-v0.4.0),
 with attribution to the Cologne Digital Sanskrit Dictionaries and vidyut.
 Zenodo DOI [10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090)
-(minted 25-08-2026, re-cut of the identical `data-v0.1.0` content — that
-release predates the GitHub–Zenodo webhook wired 14-08-2026).
+(minted 25-08-2026; carries the re-counted token inventory — 342 tokens vs
+the 335 frozen into `data-v0.1.0`, per the H6053 recount of the deposited
+data-v0.4.0 asset — so the content is not identical to that release, which
+predates the GitHub–Zenodo webhook wired 14-08-2026).
 
 ## Provenance of this statement
 

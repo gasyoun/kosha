@@ -153,7 +153,8 @@ Create a host-local `.env` (never committed) from `.env.example`:
 | `CORS_ORIGINS` | Explicit JSON list, e.g. `["https://samskrtam.ru","https://gasyoun.github.io"]` — never `["*"]` with credentials |
 | `KOSHA_HISTORY_ENABLED` | `false` for public v1 |
 | `KOSHA_EXPECTED_DATA_VERSION` | Pin to the staged `meta.data_version` so `/ready` fails closed on a wrong DB |
-| `HISTORY_IP_SALT` | Only if history is ever enabled — random secret, host-local |
+| `HISTORY_IP_SALT` | **Required when history is enabled** — random secret, host-local. Fail closed: history-enabled startup without it refuses (bughunt BH-K4); no dev fallback exists |
+| `KOSHA_COOKIE_INSECURE_DEV` | Leave unset. Dev-only override (bughunt BH-K5) that flips `Secure` off the `kosha_anon_id` cookie for plain-http LAN/localhost manual testing; defaults off, prod-safe |
 
 ### III.3 systemd unit sketch (`Type=exec`)
 

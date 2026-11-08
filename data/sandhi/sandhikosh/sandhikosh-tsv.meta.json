@@ -1,0 +1,37 @@
+{
+  "layer": "sandhikosh-tsv",
+  "made_by": "ai",
+  "model": "opencode/z-ai/glm-5.3-flash (OxAlpha)",
+  "handoff": "H6841",
+  "consumers": [
+    {
+      "kind": "repo",
+      "id": "kosha",
+      "use": "tools/sandhikosh_bakeoff.py — the sandhi-scaffold splitter bake-off (H6841 report: exact 37.05% raw / 54.68% pausa-normalized upstream, per-category table)"
+    },
+    {
+      "kind": "repo",
+      "id": "kosha",
+      "use": "future house splitter evals — external eval anchor per WHEEL9 dossier map-7 row (ADOPT)"
+    }
+  ],
+  "status": "active",
+  "novelty": "External eval anchor for house sandhi splitters: SandhiKosh (UoH corpus, Astaadhyaayii, Bhagvad Gita, rule-based internal/external/literature) is the only third-party benchmark the estate registered with a per-category bake-off table (WHEEL9 dossier map-7, ADOPT); complements, not duplicates, house sandhi data.",
+  "roundtrip": {
+    "checked": true,
+    "rows_in": 13929,
+    "rows_out": 13929,
+    "per_file": {
+      "astaadhyayii.tsv": 2700,
+      "bhagvad_gita.tsv": 1429,
+      "rule_external.tsv": 132,
+      "rule_internal.tsv": 150,
+      "rule_literature.tsv": 150,
+      "uoh.tsv": 9368
+    },
+    "skipped": 1,
+    "note": "per-file counts from convert_summary.json (XLS->TSV, H6841); bhagvad_gita skipped 1 malformed source row; total matches manifest rows 13929"
+  },
+  "built_at": "2026-10-27",
+  "builder": "kosha tools/sandhikosh_xls_to_tsv.py (XLS mirror -> TSV, sources NOT in git: research-only, mirror-only discipline)"
+}

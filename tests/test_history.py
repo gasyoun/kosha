@@ -32,6 +32,9 @@ def history_surface(tmp_path, monkeypatch):
     """
     monkeypatch.setattr(history_db, "HISTORY_DB_PATH", tmp_path / "test_history.db")
     monkeypatch.setenv("KOSHA_HISTORY_ENABLED", "1")
+    # H6909 (BH-K4): history-enabled settings refuse without a salt — the same
+    # fail-closed gate production startup now has.
+    monkeypatch.setenv("HISTORY_IP_SALT", "test-history-salt")
     get_settings(refresh=True)
     with mount_history(app):
         yield
@@ -39,7 +42,10 @@ def history_surface(tmp_path, monkeypatch):
 
 @pytest.fixture()
 def client():
-    return TestClient(app)
+    # https testserver: the anon cookie is Secure-only outside the documented
+    # KOSHA_COOKIE_INSECURE_DEV override (H6909, BH-K5) — production history
+    # only ever runs behind TLS, so the exercises replay cookies under https.
+    return TestClient(app, base_url="https://testserver")
 
 
 def test_search_logs_to_history(client):
@@ -114,11 +120,24 @@ def test_stats_top_terms(client):
     assert top[0]["count"] == 2
 
 
-def test_magic_link_request_and_verify(client, capsys):
+def _latest_link_token() -> str:
+    # H6909 (BH-K6): the token is no longer printed anywhere — read it from
+    # the store the endpoint wrote it to, like a real mail-out would deliver it.
+    con = history_db.open_connection()
+    try:
+        row = con.execute(
+            "SELECT token FROM magic_links ORDER BY rowid DESC LIMIT 1"
+        ).fetchone()
+        assert row is not None
+        return row["token"]
+    finally:
+        con.close()
+
+
+def test_magic_link_request_and_verify(client):
     r = client.post("/api/v1/auth/request-link?email=test@example.com")
     assert r.status_code == 200
-    captured = capsys.readouterr()
-    token = captured.out.strip().rsplit("token=", 1)[1]
+    token = _latest_link_token()
 
     v = client.get(f"/api/v1/auth/verify?token={token}")
     assert v.status_code == 200
@@ -130,12 +149,71 @@ def test_magic_link_invalid_token_rejected(client):
     assert r.status_code == 404
 
 
-def test_magic_link_cannot_be_reused(client, capsys):
+def test_magic_link_cannot_be_reused(client):
     client.post("/api/v1/auth/request-link?email=test@example.com")
-    token = capsys.readouterr().out.strip().rsplit("token=", 1)[1]
+    token = _latest_link_token()
     client.get(f"/api/v1/auth/verify?token={token}")
     r = client.get(f"/api/v1/auth/verify?token={token}")
     assert r.status_code == 404
+
+
+def test_request_link_logs_neither_token_nor_address(client, caplog):
+    """H6909 (BH-K6): `request-link` logging carries no token, no `token=`
+    marker, and no raw address — only a non-redeemable token id."""
+    import logging
+
+    address = "secret-user@example.com"
+    with caplog.at_level(logging.INFO, logger="kosha.magic_link"):
+        r = client.post(f"/api/v1/auth/request-link?email={address}")
+    assert r.status_code == 200
+    token = _latest_link_token()
+
+    captured = caplog.text
+    assert token not in captured
+    assert "token=" not in captured
+    assert address not in captured
+
+
+def test_anon_cookie_flags_on_history_route(client):
+    """H6909 (BH-K5): the resolve_anon_id call site — hardening flags present."""
+    r = client.get("/api/v1/history")
+    lines = r.headers.get_list("set-cookie")
+    anon = [ln for ln in lines if ln.startswith("kosha_anon_id=")]
+    assert anon, f"no kosha_anon_id set-cookie in {lines}"
+    line = anon[0]
+    assert "Secure" in line
+    assert "HttpOnly" in line
+    assert "SameSite=lax" in line
+
+
+def test_anon_cookie_flags_on_verify_route(client):
+    """H6909 (BH-K5): the verify-link re-issue call site — same flags, one place."""
+    r = client.post("/api/v1/auth/request-link?email=flags@example.com")
+    assert r.status_code == 200
+    token = _latest_link_token()
+    v = client.get(f"/api/v1/auth/verify?token={token}")
+    assert v.status_code == 200
+    lines = v.headers.get_list("set-cookie")
+    anon = [ln for ln in lines if ln.startswith("kosha_anon_id=")]
+    assert anon, f"no kosha_anon_id set-cookie in {lines}"
+    line = anon[0]
+    assert "Secure" in line
+    assert "HttpOnly" in line
+    assert "SameSite=lax" in line
+
+
+def test_cookie_dev_override_flips_secure_only_when_explicit(client, monkeypatch):
+    # default remains prod-safe: Secure on
+    assert "Secure" in client.get("/api/v1/history").headers.get_list("set-cookie")[0]
+    # the documented override, off by default: explicitly requested → Secure
+    # off — a fresh jar so resolve_anon_id mints rather than reuses
+    monkeypatch.setenv("KOSHA_COOKIE_INSECURE_DEV", "1")
+    lines = TestClient(app, base_url="https://testserver").get(
+        "/api/v1/history"
+    ).headers.get_list("set-cookie")
+    anon = [ln for ln in lines if ln.startswith("kosha_anon_id=")][0]
+    assert "Secure" not in anon
+    assert "HttpOnly" in anon
 
 
 def test_purge_old_search_events_deletes_only_past_cutoff():

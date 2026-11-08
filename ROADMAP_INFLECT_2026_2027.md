@@ -70,7 +70,7 @@ Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://
 - Assets already in hand: kosha P4 in
   [IMPLEMENTATION_PLAN.md](https://github.com/gasyoun/kosha/blob/main/IMPLEMENTATION_PLAN.md)
   (vidyut-prakriya paradigm tables + paste-anything segmentation); the
-  Zaliznyak index line in SanskritLexicography (98,639 headwords, 335
+  Zaliznyak index line in SanskritLexicography (98,639 headwords, 342
   vidyut-generated paradigms,
   [ZALIZNYAK_INDEX.md](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/ZALIZNYAK_INDEX.md)).
 
