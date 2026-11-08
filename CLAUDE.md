@@ -1,4 +1,4 @@
-_Created: 03-07-2026 · Last updated: 15-09-2026_
+_Created: 03-07-2026 · Last updated: 08-11-2026 (freshness truth-pass Y6Y: release v0.117.17, 8 CI workflows, 78 test modules, live `.env` vars; prev 15-09-2026)_
 
 # CLAUDE.md
 
@@ -11,11 +11,12 @@ Sanskrit dictionary web service: fast lookup over the Cologne Digital Sanskrit
 Dictionaries (MW, PWG, AP90 first), collapsing every dictionary's entry for a
 headword onto one page, scan-anchored to the printed source, with citable
 sense-level IDs. FastAPI backend + a static docs/cache site. **Status:
-pre-alpha** — corrected 30-07-2026 (H1943; this line was stale since
-24-07-2026 and understated real progress). The lookup API + UI run locally
-against real MW/PWG/AP90 data (Phase 1 complete), the static-cache/data-hub
-tier is live on GitHub Pages, and the current release is
-[v0.97.0](https://github.com/gasyoun/kosha/releases/tag/v0.97.0) — but the
+pre-alpha** (re-verified 08-11-2026 against the README truth-pass of
+05-11-2026). Phases 1–5 are complete — the lookup API + UI run against real
+MW/PWG/AP90 data, the static-cache/data-hub tier is live on GitHub Pages,
+P3 evidence, P4 inflection ingest + reverse-lookup cascade, and the P5
+crawlable word page are done — and the current release is
+[v0.117.17](https://github.com/gasyoun/kosha/releases/tag/v0.117.17) — but the
 public `samskrtam.ru` dictionary URL is not yet deployed (MG deploy-gated),
 and W0 (see [`docs/ROADMAP.md`](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP.md)) is a hard feature freeze
 until the reproducible-substrate and contract/trust-boundary work lands. See
@@ -32,7 +33,7 @@ endpoint behavior beyond what the live tests in `tests/` verify.
 ```bash
 pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000     # run the FastAPI dev server (needs .env, see below)
-pytest                                        # full test suite (tests/test_api.py, test_citability.py, test_render_golden.py, test_static_cache.py, test_docs_site.py)
+pytest                                        # full test suite — 78 test modules in tests/ (incl. test_api.py, test_citability.py, test_render_golden.py, test_static_cache.py, test_docs_site.py)
 python scripts/build_db.py                    # build unified_dict.db from source dictionaries
 python scripts/build_crosswalk.py             # build the union headword crosswalk
 python scripts/build_entries.py               # build rendered entries
@@ -45,9 +46,11 @@ python scripts/gen_golden.py                  # regenerate golden render fixture
 python scripts/measure_d5.py                  # D5 latency/perf measurement run
 ```
 
-Copy `.env.example` → `.env` before running the API — sets `DATABASE_PATH`,
-`LOG_LEVEL`, `CORS_ORIGINS`, and `COLOGNE_SCAN_BASE` (the csl-websanlexicon
-`serveimg`/`servepdf` host used for scan-anchored citations).
+Copy `.env.example` → `.env` before running the API — sets `KOSHA_CORE_DB_PATH`,
+`LOG_LEVEL`, `CORS_ORIGINS`, `COLOGNE_SCAN_BASE` (the csl-websanlexicon
+`serveimg`/`servepdf` host used for scan-anchored citations),
+`HERITAGE_DICO_BASE`, and the history toggle/tri (`KOSHA_HISTORY_ENABLED`,
+`HISTORY_DB_PATH`, `HISTORY_IP_SALT`).
 
 ## Key directories / files
 
@@ -56,7 +59,7 @@ Copy `.env.example` → `.env` before running the API — sets `DATABASE_PATH`,
 | `app/` | FastAPI service: `main.py` (entry point/routes), `db.py`, `render.py` (entry rendering), `salt.py` (Salt facade REST — see Conventions), `scan_resolver.py`, `segment.py`, `transliterate.py`, `versions.py`, `cite.py` (citation-ID minting) |
 | `scripts/` | One script per data-build stage (crosswalk → entries → forms → db → static cache → docs site); `measure_d5.py` and `archive_senses.py` are maintenance/measurement, not part of the main build chain |
 | `data/` | Data assets, incl. `data/frequency/` (DCS frequency sidecar joined against `union_headwords`, see `.ai_state.md`) — `data/raw*/`, `data/releases/`, and D5 measurement outputs are gitignored/regenerable |
-| `tests/` | `test_api.py`, `test_citability.py`, `test_render_golden.py` (golden fixtures in `tests/golden/`), `test_static_cache.py`, `test_docs_site.py` |
+| `tests/` | 78 test modules (counted 08-11-2026) incl. `test_api.py`, `test_citability.py`, `test_render_golden.py`, `test_static_cache.py`, `test_docs_site.py`; golden fixtures in `tests/golden/`, contracts in `tests/contracts/` |
 | `docs/`, `docs-site/`, `wiki/` | Static site output / docs-site pilot / wiki content |
 | `docs/SANDHI_METHODS_DEEP_MANUAL.md` | Sandhi **methods** deep manual (induce / score / method A·B·C / failure taxonomy) — H2069; hub inventory stays in `SANDHI_PROGRAMME.md` |
 | `SANDHI_PROGRAMME.md` | Sandhi programme hub — what exists, pedagogy surfaces, curriculum TSVs (not methods depth) |
@@ -67,12 +70,14 @@ Copy `.env.example` → `.env` before running the API — sets `DATABASE_PATH`,
 | `RISKS.md` | R1–R12 pre-mortem, incl. the citability commitments (citation URLs must never depend on the `samskrtam.ru` server host) |
 | `KOSHA_DECISIONS_NEEDED.md` | Open @DECIDE items — check before assuming a design choice is settled |
 
-**CI (updated 31-07-2026, H1944):** `.github/workflows/` carries
+**CI (updated 08-11-2026):** `.github/workflows/` carries eight workflows —
 `python-ci.yml` (fixture build from zero, twice, then the fixture-tier test
-suite), `ui-ci.yml` (vitest + vite build), `changelog-lint.yml`, and
-`dependabot-auto-merge.yml` — the last now gated on a successful `workflow_run`
-of both CI workflows and restricted to GitHub's queued auto-merge, so a
-dependency bump cannot bypass the required checks.
+suite), `ui-ci.yml` (vitest + vite build), `changelog-lint.yml`,
+`dependabot-auto-merge.yml` (gated on a successful `workflow_run` of both
+CI workflows and restricted to GitHub's queued auto-merge, so a dependency
+bump cannot bypass the required checks), `f821-gate.yml` (pinned
+undefined-name gate, H7243), `aias-gate.yml`, `paper-priv-guard.yml`, and
+`prose-number-drift.yml`.
 
 **Build (H1944):** stage order is declared in
 [`src/kosha/build/stages.py`](https://github.com/gasyoun/kosha/blob/main/src/kosha/build/stages.py),
@@ -91,8 +96,10 @@ input. Do not add a stage by editing the CLI — add it to the registry.
   Lexicon infrastructure rather than reimplement it — the crosswalk, scan
   resolver, and Salt facade REST design in `app/salt.py` exist specifically to
   avoid duplicating work already done elsewhere (`sanskrit-util`,
-  `csl-websanlexicon` scan-serving, the union headword index). Check
-  `../SHARED_CODE.md` and `../PROJECT_INTERLINKS.md` before adding a new
+  `csl-websanlexicon` scan-serving, the union headword index). Check the org's
+  [SHARED_CODE.md](https://github.com/gasyoun/github-spine/blob/main/SHARED_CODE.md)
+  and [PROJECT_INTERLINKS.md](https://github.com/gasyoun/Uprava/blob/main/PROJECT_INTERLINKS.md)
+  before adding a new
   transcoder/normalizer/crosswalk builder here.
 - **Salt public-face split (H2768):** `/dicts/*` projects the shared entry to
   the six C-SALT fields plus `csl`; `/api/v1`, cards, and SSR retain `kosha`.
@@ -183,15 +190,15 @@ before running anything that writes.
 
 ### Issue tracker
 
-Issues live in GitHub Issues (`gh` CLI); external PRs are not a triage surface. See `docs/agents/issue-tracker.md`.
+Issues live in GitHub Issues (`gh` CLI); external PRs are not a triage surface. See [docs/agents/issue-tracker.md](https://github.com/gasyoun/kosha/blob/main/docs/agents/issue-tracker.md).
 
 ### Triage labels
 
-Five canonical triage-role labels (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). See `docs/agents/triage-labels.md`.
+Five canonical triage-role labels (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). See [docs/agents/triage-labels.md](https://github.com/gasyoun/kosha/blob/main/docs/agents/triage-labels.md).
 
 ### Domain docs
 
-Single-context: `CONTEXT.md` + `docs/adr/` at the repo root, created lazily. See `docs/agents/domain.md`.
+Single-context: `CONTEXT.md` + `docs/adr/` at the repo root, created lazily. See [docs/agents/domain.md](https://github.com/gasyoun/kosha/blob/main/docs/agents/domain.md).
 
 ## Memory store
 
