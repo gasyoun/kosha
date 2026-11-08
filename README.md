@@ -1,6 +1,8 @@
 # Gasuns Sanskrit Dictionary
 
-_Created: 02-07-2026 · Last updated: 05-11-2026_
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21965599.svg)](https://doi.org/10.5281/zenodo.21965599)
+
+_Created: 02-07-2026 · Last updated: 08-11-2026_
 
 > **Status: pre-alpha — the lookup API + UI run locally and the public
 > dictionary URL is not deployed yet, but the data-hub tier already is live.**
