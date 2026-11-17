@@ -31,8 +31,13 @@ jobs:
           node-version: "22"
           cache: npm
 
-      - name: Install changesets toolchain (root anchor package)
-        run: npm ci
+      # Scoped install, NOT `npm ci`: the root anchor's lockfile carries every
+      # workspace's deps, so a root `npm ci` pulls the whole Svelte/Vite ui tree
+      # (CI disk/time cost — H8385 residual, MG 17-11-2026) just to run the
+      # changesets CLI. `--workspaces=false --no-save` installs the CLI only
+      # (verified locally: workspace devDeps skipped, `changeset` on PATH).
+      - name: Install changesets CLI (skip the ui workspace tree)
+        run: npm install --workspaces=false --no-save --no-audit --no-fund @changesets/cli@^2.29.7
 
       # No `publish` input by design — this repo never publishes to npm.
       - name: Version Packages PR
