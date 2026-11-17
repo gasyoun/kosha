@@ -1,0 +1,10 @@
+# kosha — project docs
+
+> Documentation site of kosha, the Sanskrit dataset catalog and teaching-data store («Gasuns Sanskrit Dictionary» project docs); the repo root redirects to the docs site.
+
+## Pages
+
+- [kosha root (redirect → docs-site)](https://gasyoun.github.io/kosha/)
+- [Docs site home](https://gasyoun.github.io/kosha/docs-site/)
+
+Machine-readable catalog: https://gasyoun.github.io/llms.txt (apex kosha public dataset catalog) · Source: https://github.com/gasyoun/kosha
