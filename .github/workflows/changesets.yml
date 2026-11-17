@@ -1,0 +1,44 @@
+name: Changesets version PR
+
+# H8385 (ADR-0005 rounds 2-3): version-bump PR flow for ui/ — a private
+# versioned web build (Svelte+Vite into docs/inflect/, shipped via Pages).
+# Publish stays OFF forever: the workflow has no `publish` step and ui/ is
+# private. The kosha data release line keeps cut-release (root CHANGELOG.md +
+# changelog_queue); the two release surfaces coexist by design.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: changesets-version-pr
+  cancel-in-progress: false
+
+jobs:
+  version:
+    name: Open or refresh the Version Packages PR
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install changesets toolchain (root anchor package)
+        run: npm ci
+
+      # No `publish` input by design — this repo never publishes to npm.
+      - name: Version Packages PR
+        uses: changesets/action@v1
+        with:
+          commit: "chore(changesets): version packages"
+          title: "chore(changesets): version packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

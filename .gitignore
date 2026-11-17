@@ -108,3 +108,6 @@ dist/
 
 # editable-install artifact (never commit)
 *.egg-info/
+
+# H8385: changesets root toolchain (npm workspaces anchor)
+node_modules/

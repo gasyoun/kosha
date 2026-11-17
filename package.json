@@ -1,0 +1,12 @@
+{
+  "name": "kosha",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Workspace anchor for changesets (H8385) \u2014 version-bump PR flow for ui/. The kosha data release line keeps cut-release (root CHANGELOG.md + changelog_queue); the two release surfaces coexist by design (ADR-0005 round 2). This root package is never versioned, never published.",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.7"
+  },
+  "workspaces": [
+    "ui"
+  ]
+}
