@@ -36,6 +36,11 @@ def main():
         "tier": "public",
         "in_release": "not-applicable",
         "format": "tsv + jsonl + json + txt",
+        "made_by": "ai",
+        "model": "opencode-go/hy4-flash-free",
+        "handoff": "H6253",
+        "layer_status": "active",
+        "provenance_source": "builder",
         "rows": rows,
         "size_bytes": size,
         "keying": ("sample.tsv: 105 A55-union keys (100 main + 5 MG canary), seed 6253, "
