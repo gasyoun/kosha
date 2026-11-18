@@ -1,0 +1,12 @@
+
+> orchestrator · glm-5.3-flash
+{"slp1":"kalyARamaya","gloss":"consisting of happiness or auspiciousness; blissful, blessed, felicitous","examples":["kalyāṇamayaṃ jagat","kalyāṇamayāḥ kathāḥ","kalyāṇamayaḥ kālaḥ"],"citations":["BhP."],"root":"kalyāṇamaya"}
+{"slp1":"apANktya","gloss":"mud, mire; impurity, filth","examples":["apāṅktyam upagāḍham","apāṅktye nipatanti"],"citations":[],"root":"pāṅka"}
+{"slp1":"sarasA","gloss":"N. of a plant; a kind of water-bird (crane)","examples":["sarasā mūlaṃ pacyate","sarasāyāḥ pattraṃ"],"citations":["Suśr."],"root":"sarasa"}
+{"slp1":"mfgAsya","gloss":"a deer's mouth, deer-faced; (f.) N. of a plant used in prescriptions","examples":["mṛgāsyam utthitam","mṛgāsyāyāḥ savaḥ"],"citations":["Suśr."],"root":"mṛgāsya"}
+{"slp1":"SyenakapotIya","gloss":"relating to the hawk and the dove; the hawk-and-dove doctrine of statecraft (peace or war with a stronger enemy)","examples":["śyenakapotīyo 'yam ādeśaḥ","śyenakapotīyaṃ nītau"],"citations":["Kāmand."],"root":"śyenakapotīya"}
+{"slp1":"karmakAra","gloss":"an artisan, craftsman, workman, labourer","examples":["karmakārāḥ śilpāni kurvanti","aṣṭau karmakārā āsan","karmakārasya gṛham"],"citations":["MBh.","Kathās."],"root":"karmakāra"}
+{"slp1":"BUrja","gloss":"the birch tree (Betula bhojpattra); birch bark used as writing material","examples":["bhūrjapattre likhyate","bhūrjavṛkṣasya tvacaḥ śvetāḥ","bhūrjasya tvacā"],"citations":["MBh.","Rājat."],"root":"bhūrja"}
+{"slp1":"BAsurAnandanATa","gloss":"N. of a teacher (personal name, lit. 'lord whose delight is in light')","examples":["śrībhāsurānandanāthāya namaḥ","bhāsurānandanātha-kṛtam"],"citations":[],"root":"bhāsurānandanātha"}
+{"slp1":"retas","gloss":"semen, seed; mire, slime, impurity","examples":["retasaḥ sṛjate","retasaḥ prajā sṛjate","retasi saṃsṛjanti"],"citations":["RV.","MBh."],"root":"retas"}
+{"slp1":"sANmuKI","gloss":"facing towards, turned to the front (f.); presence, a face-to-face situation","examples":["sāṅmukhī sthitā","gurau sāṅmukhī"],"citations":[],"root":"sāṅmukha"}

@@ -1,0 +1,12 @@
+
+> orchestrator · deepseek-v4.1-flash
+{"slp1":"kalyARamaya","gloss":"consisting of blessing or welfare; wholly auspicious, benign; blessed","examples":["kalyāṇamayaṃ vākyaṃ","kalyāṇamayī dṛṣṭiḥ","kalyāṇamayaṃ kṣetraṃ"],"citations":["R.","MBh."],"root":"kalyāṇa"}
+{"slp1":"apARktya","gloss":"not belonging to the Paṅkti; excluded from the common row or company, degraded, outcast (one unfit to be seated with others)","examples":["apāṅktyaḥ puruṣaḥ","apāṅktyaṃ bhojanaṃ"],"citations":["Mn.","ĀpŚr."],"root":"paṅkti"}
+{"slp1":"sarasA","gloss":"river, stream; name of the river Sarasvatī; speech, eloquence","examples":["sarasā nadī","sarasā sravanti","sarasāṃ jalam"],"citations":["RV.","Nigh."],"root":"√sṛ"}
+{"slp1":"mfgAsya","gloss":"deer-faced, having the face of an antelope; the moon; name of a plant","examples":["mṛgāsyaṃ mukham","mṛgāsyaṃ harim"],"citations":["MBh.","Suśr."],"root":"mṛga"}
+{"slp1":"SyenakapotIya","gloss":"relating to the hawk and the dove; name of the parable of the hawk and the pigeon (Śyena and Kapota) and of the maxim drawn from it; a doctrine of refuge","examples":["śyenakapotīyā kathā","śyenakapotīyaṃ vṛttaṃ"],"citations":["MBh.","Pañcat."],"root":"śyena"}
+{"slp1":"karmakAra","gloss":"doer of work; artisan, mechanic; blacksmith, smith; labourer","examples":["karmakāraḥ karoti","karmakārāṇāṃ grāmaḥ"],"citations":["Mn.","Suśr."],"root":"√kṛ"}
+{"slp1":"BUrja","gloss":"birch tree (Betula bhojpuriya); its bark, used as writing material; a species of birch; name of a mountain","examples":["bhūrjasya taroḥ","bhūrjapatre likhati"],"citations":["Suśr.","Kauś."],"root":"√bhṛj"}
+{"slp1":"BAsurAnandanATa","gloss":"Bhāsurānandanātha, 'the lord of radiant bliss'; name of a Śaiva Tāntric author and ritual authority","examples":["bhāsurānandanāthaṃ vande","śrībhāsurānandanāthasya śāstram"],"citations":["Tantrāloka"],"root":"bhāsura"}
+{"slp1":"retas","gloss":"seed, semen; generative fluid; offspring, progeny","examples":["retas sīcati","retasāṃ nidhiḥ","retasāṃ dhāraṇam"],"citations":["RV.","Mn."],"root":"√ri"}
+{"slp1":"sANmuKI","gloss":"a particular missile (astra); a confronting, facing position; (as adjective) turned towards, facing","examples":["sāṅmukhīm astram utsṛjya","sāṅmukhī sthitāḥ"],"citations":["MBh.","Kauś."],"root":"saṃmukha"}

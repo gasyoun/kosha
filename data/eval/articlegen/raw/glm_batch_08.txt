@@ -1,0 +1,12 @@
+
+> orchestrator · glm-5.3-flash
+{"slp1":"sUcIprota","gloss":"strung or pierced on a needle; threaded (as beads on a needle or thread)","examples":["sūcīprotaṃ mālyam","sūcīprotāḥ śalākāḥ","sūcīprotaḥ kaṇakaḥ"],"citations":["MBh."],"root":"√pro"}
+{"slp1":"PalaMdadA","gloss":"bestower of fruit or reward; an epithet of a goddess who grants the fruits of rites","examples":["phalaṃdāyai namaḥ","phalaṃdadā devī pūjyate"],"citations":[],"root":"√dā"}
+{"slp1":"turaMgamI","gloss":"a mare, female horse; female steed","examples":["turaṃgamīṃ āruhya","turagī iva śīghrā"],"citations":["MBh.","R."],"root":"√gam"}
+{"slp1":"bilakArin","gloss":"one who digs holes or burrows; a hole-digger (e.g. a rat, a miner)","examples":["bilakārī mūṣakaḥ","bilakāriṇā kṛtaṃ bilaṃ"],"citations":[],"root":"√kṛ"}
+{"slp1":"nAqa","gloss":"a reed, hollow pipe; flute; the hollow of a reed; a tube, vein or artery of the body; Nāḍa, a sound (or name of a deity)","examples":["vāyuḥ nāḍāḥ praṇodati","nāḍāsu praviśati prāṇaḥ"],"citations":["RV.","MBh."],"root":"√nad"}
+{"slp1":"nIlarAji","gloss":"a blue-flowered plant (nīlarājī); a row or cluster of blue blossoms; indigo-like plant","examples":["nīlarājī puṣpāṇāṃ sāraḥ","nīlarājī vanaṃ vīrājate"],"citations":[],"root":"nīla-rāji"}
+{"slp1":"samupakalpita","gloss":"completely prepared, fully equipped, provided with everything, arranged, made ready","examples":["samupakalpitaṃ raṇājiram","samupakalpitāḥ sainikāḥ","samupakalpitāhārah"],"citations":["MBh."],"root":"sam-upa-√kṛp"}
+{"slp1":"maRiDAriRI","gloss":"wearing or bearing a jewel; adorned with gems (of a woman or goddess)","examples":["maṇidhāriṇī taruṇī","maṇidhāriṇyāḥ sakhyā saha"],"citations":[],"root":"maṇi-dhāriṇī"}
+{"slp1":"yaTAsTAne","gloss":"in the proper or right place; as appropriate, in due position","examples":["yathāsthāne nyased guruḥ","yathāsthāne pāṣāṇāḥ sthitāḥ"],"citations":[],"root":"yathā-sthāna"}
+{"slp1":"yAgasUtra","gloss":"a sacrificial cord or strap (for binding the victim or vessels); a sūtra or rule-text on sacrificial rites","examples":["yāgasūtreṇa baddhāḥ paśavaḥ","yāgasūtrāṇi paṭhanti adhvaryavaḥ"],"citations":[],"root":"yāga-sūtra"}

@@ -1,0 +1,12 @@
+
+> orchestrator · glm-5.3-flash
+{"slp1":"avAcina","gloss":"shaving; razor","examples":["avācinaṃ gr̥hītvā muṇḍanam akārṣīt","avācinā keśān avapātayat"],"citations":["MBh."],"root":"ava-√cī"}
+{"slp1":"meNganATa","gloss":"N. of a poet or learned author","examples":["meṅganāthena racitam idam śāstraṃ","meṅganāthaḥ paṇḍita āsīt"],"citations":[],"root":"meṅganātha"}
+{"slp1":"paripuwana","gloss":"bundle; heap; packet of things tied up","examples":["paripuṭanena vākyāni pāṭhayati","paripuṭanaṃ praveśayāmāsa"],"citations":[],"root":"pari-√puṭ"}
+{"slp1":"DanurBft","gloss":"armed with a bow; archer","examples":["dhanurbhṛto raṇād apakrāmat","dhanurbhṛtam āsvasan kaṇṭhe"],"citations":["R."],"root":"dhanur-√bhṛ"}
+{"slp1":"nizkrAnta","gloss":"gone out, gone forth, departed; emerged from","examples":["grāhād niṣkrāntaḥ sa mānavaḥ","niṣkrāntā devī prasādāt","sarvāṇi dvārāṇi niṣkrāntāni"],"citations":["MBh."],"root":"niṣ-√kram"}
+{"slp1":"vyAGraketu","gloss":"having a tiger for a banner or crest; N. of a prince or warrior","examples":["vyāghraketur dhanuṣmatīm avaśat","yuddhe vyāghraketuḥ pradhāvanti"],"citations":["MBh."],"root":"vyāghra-ketu"}
+{"slp1":"jaqula","gloss":"N. of a plant; a kind of tree","examples":["jaḍulasya sāram upayuktavān","vaṭaś ca jaḍulaś ca ārāme"],"citations":[],"root":"jaḍula"}
+{"slp1":"paryABfta","gloss":"carried round, brought together; gathered up","examples":["paryābhṛtāḥ phalānīva bhāgaśo","dhanāni paryābhṛtāni raṇāt","paryābhṛtā paśumāṃsaḥ"],"citations":["MBh."],"root":"paryā-√bhṛ"}
+{"slp1":"nipIqayat","gloss":"oppressing, tormenting, pinching, distressing (pres. participle)","examples":["ṛṇinaḥ nipīḍayati","nipīḍayan nṛpe vākyaṃ","nipīḍayat sma śatruḥ prajām"],"citations":["MBh."],"root":"ni-√pīḍ"}
+{"slp1":"vidyAmandira","gloss":"seat of learning; temple or palace of knowledge","examples":["vidyāmandiraṃ praviṣṭaḥ śiṣyaḥ","vidyāmandire adhyāpanam idam"],"citations":[],"root":"vidyā-mandira"}

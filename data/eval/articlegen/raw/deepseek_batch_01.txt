@@ -1,0 +1,12 @@
+
+> orchestrator · deepseek-v4.1-flash
+{"slp1":"rADAnATa","gloss":"lord of Rādhā (Kṛṣṇa); master of prosperity; N. of a poet; N. of a scrivener","examples":["rādhānāthaṃ namāmi satatam","rādhānātha iti kṛṣṇasya nāma","rādhānāthena likhitaḥ ślokaḥ"],"citations":["Kṛṣṇak.","Bhakti."],"root":"rādhā + nātha (√nāth)"}
+{"slp1":"pAtresamita","gloss":"gathered or measured out into a vessel; collected in a bowl; (prob.) N. of a person","examples":["pātre samitaṃ dadhi mayā dattam","pātresamitā kṣīrasya mātrā"],"citations":[],"root":"pātra + samita (√sam)"}
+{"slp1":"jigIzotsAhavat","gloss":"having the ardour of the wish to conquer; eager for victory, zealous to subdue","examples":["jigīṣotsāhavān rājā yuddhāya niryayau","jigīṣotsāhavantaṃ śūraṃ praśaṃsanti"],"citations":["MBh.","R."],"root":"jigīṣā + utsāhavat (√ji, ut-√sah)"}
+{"slp1":"sutaraRa","gloss":"easy to cross, easy to pass over; easily traversed, easy of access","examples":["idaṃ vanaṃ sutaraṇaṃ sādhakānām","sutaraṇā jambūnadī tatra sthita"],"citations":["MBh."],"root":"su + taraṇa (√tṝ)"}
+{"slp1":"vanopeta","gloss":"adjoining a forest, bordered by woods; furnished with trees; resorting to a wood","examples":["vanopetaṃ grāmaṃ prāvikṣat","vanopetā bhūmiḥ kṛṣaye yujyate"],"citations":["MBh."],"root":"vana + upeta (upa-√i)"}
+{"slp1":"pragras","gloss":"devouring, swallowing up; voracious, insatiable; one who grasps greedily","examples":["pragraḥ paśūn grasate","pragrā iva duṣṭā rājāno janān grasante"],"citations":[],"root":"pra-√gras"}
+{"slp1":"ahyarzu","gloss":"N. of a seer, Ahyaṛṣu (patronymic); (prob.) one of unrestrained course","examples":["ahyarṣur ṛṣir mantram ānarca","ahyarṣave dattam annam"],"citations":["RV."],"root":"ahyarṣu (ahya + ṛṣu)"}
+{"slp1":"rahasyam","gloss":"a secret, mystery; secret doctrine; privacy, solitary place; confidential matter","examples":["idaṃ rahasyaṃ na śrāvayitavyam","rahasyaṃ rājño mantriṇaṃ vinā na jānītaḥ","vadanti vedasya rahasyam"],"citations":["MBh.","R.","Gīt."],"root":"rahasya (rahas + -ya)"}
+{"slp1":"suhutakft","gloss":"one who has duly performed the oblation; well-sacrificing; (as noun) a sacrificer of offerings","examples":["suhutakṛd ṛṣiḥ svarge vased iti vacanam","suhutakṛte havye devā āgachan"],"citations":["RV.","MBh."],"root":"su + huta + kṛt (√hu, √kṛ)"}
+{"slp1":"latAya","gloss":"denominative stem meaning 'to be or act like a creeper, to creep, twine'; to serve as a creeper","examples":["vṛkṣam aśvatthaṃ latāyate vīrudh","latāyante ca tāḥ samantād drumān"],"citations":[],"root":"√latāy (denominative of latā)"}

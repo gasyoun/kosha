@@ -1,0 +1,12 @@
+
+> orchestrator · glm-5.3-flash
+{"slp1":"SrIkaRWatA","gloss":"the state or dignity of being Śrīkaṇṭha (Śiva); Śiva-hood; the particular dialect of Sanskrit attributed to Śrīkaṇṭha in Paurāṇic tradition","examples":["śrīkaṇṭhatāṃ gataḥ","śrīkaṇṭhatāyā vāk pravṛttā"],"citations":["Pur."],"root":"śrīkaṇṭha + tā"}
+{"slp1":"pawamaRqapa","gloss":"a pavilion or canopy made of cloth; a temporary hall with cloth walls; tent-like open hall","examples":["paṭamaṇḍapam upeyuḥ","paṭamaṇḍape sabhā śubhā"],"citations":["Pur."],"root":"paṭa + maṇḍapa"}
+{"slp1":"dIrGabIjA","gloss":"having long seeds; name of a plant bearing elongated seeds (a kind of bean/pulse)","examples":["dīrghabījāḥ phalanti","dīrghabījāṃ paricārayāmi"],"citations":[],"root":"dīrgha + bīja"}
+{"slp1":"mahAdevavedAntavAgISa","gloss":"'lord of speech in the Vedānta of Mahādeva' — honorific title of a learned preceptor, teacher or commentator","examples":["mahādevavedāntavāgīśa āha","namaḥ mahādevavedāntavāgīśāya"],"citations":[],"root":"mahādeva + vedānta + vāgīśa"}
+{"slp1":"fkzA","gloss":"a she-bear; female of the bear species; night (poetical usage)","examples":["ṛkṣā vanam āviśat","kruddhāyā ṛkṣāyāḥ prabhāve"],"citations":["MBh."],"root":"ṛkṣa"}
+{"slp1":"hatakaRwaka","gloss":"a thorn of the hataka tree; a kind of thorny shrub or prickly plant","examples":["hatakaṇṭakāḥ śīkarāḥ","hatakaṇṭakaṃ spṛśati"],"citations":[],"root":"hataka + kaṇṭaka"}
+{"slp1":"vEDAtaki","gloss":"a Brāhmaṇa as sprung from Vidhātṛ (the creator); descendant or follower of Vidhāti","examples":["vaidhātakim namasyāmaḥ","vaidhātakir vedaṃ vācayati"],"citations":["MBh."],"root":"vidhātṛ"}
+{"slp1":"ganDavfkzaka","gloss":"a fragrant tree; a kind of sweet-smelling tree (probably the nāgakeśara)","examples":["gandhavṛkṣakaḥ supuṣpitaḥ","gandhavṛkṣakāḥ ramyāḥ"],"citations":["R."],"root":"gandha + vṛkṣa"}
+{"slp1":"vAribindu","gloss":"a drop of water; water-drop; (fig.) something minute or insignificant","examples":["vāribindavo nipatanti","vāribindum iva lāghavam"],"citations":[],"root":"vāri + bindu"}
+{"slp1":"tfRAri","gloss":"a kind of grass or herb; a low-growing plant","examples":["tṛṇāriḥ sampravṛddhaḥ","tṛṇāriṃ kurute"],"citations":[],"root":"tṛṇa"}

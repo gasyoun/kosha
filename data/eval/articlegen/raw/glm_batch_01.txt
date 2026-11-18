@@ -1,0 +1,12 @@
+
+> orchestrator · glm-5.3-flash
+{"slp1":"rADAnATa","gloss":"epithet of Kṛṣṇa, `lord of Rādhā'","examples":["rādhānāthaṃ namaskurvanti vrajastriyaḥ","rādhānāthasya pādau śirasi dhṛtvā","kṛṣṇas tu rādhānātha iti prakhyātaḥ"],"citations":["BṛhP.","BhP."],"root":"√nath"}
+{"slp1":"pAtresamita","gloss":"heaped up in a vessel; fit to be received (as an oblation); worthy of acceptance","examples":["pātresamitaṃ haviḥ","pātresamitā dakṣiṇā","kim pātresamitam idam annam"],"citations":["MBh.","Manu."],"root":"sam√i"}
+{"slp1":"jigIzotsAhavat","gloss":"possessing the energy of one who desires to conquer; eager for victory","examples":["jigīṣotsāhavān sa kṣatriyaḥ","jigīṣotsāhavatīṃ strīm apaśyat","jigīṣotsāhavatāṃ gatvā"],"citations":["MBh.","Hariv."],"root":"√ji"}
+{"slp1":"sutaraRa","gloss":"very easily crossed; affording easy passage (of a river, mountain); easily traversed","examples":["sutaraṇā nadyo vasante","sutaraṇo durgāḥ satpura","sutaraṇam vindhyam atikrāmat"],"citations":["MBh.","R."],"root":"√tṛ"}
+{"slp1":"vanopeta","gloss":"joined to the forest; dwelling in a wood; gone to the forest","examples":["vanopetā munayo vanam avasan","vanopetaḥ siṃho vanam jagāma","vanopetāṃ vanitāṃ dadarśa"],"citations":["MBh.","R."],"root":"upa√i"}
+{"slp1":"pragras","gloss":"devours, swallows up","examples":["agniḥ havyaṃ pragrasati","mūṣako dhānyam pragrasati","pragrasati rākṣasaḥ sa palam"],"citations":["AV.","MBh."],"root":"√gras"}
+{"slp1":"ahyarzu","gloss":"a charm against serpents; a snake-lore recitation","examples":["ahyarṣuṃ japet sarpa-bhaye","ahyarṣur gāyata ṛṣiḥ","ahyarṣuṃ cābhigṛhṇīyāt"],"citations":["AV."],"root":"√ṛṣ"}
+{"slp1":"rahasyam","gloss":"secretly, in secret; (adv.) privily","examples":["rahasyam idam uktavān","rahasyam imāṃ kathāṃ na vada","sahasā rahasyam jagāma"],"citations":["MBh.","R."],"root":"rahas"}
+{"slp1":"suhutakft","gloss":"making good oblations; performing sacrifices excellently","examples":["suhutakṛtaḥ hotāraḥ","suhutakṛtim agnim ijāra","suhutakṛtā yajamānāḥ śerate"],"citations":["RV.","AV."],"root":"√kṛ"}
+{"slp1":"latAya","gloss":"crawls, creeps; crumbles away; (denom.) moves like a creeper","examples":["latāyanti sarpā bhūmau","latāyati sā taru-mūle","latāyitum ārebhe"],"citations":["MBh."],"root":"√lat"}
