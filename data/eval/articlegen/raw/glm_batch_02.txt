@@ -1,0 +1,12 @@
+
+> orchestrator · glm-5.3-flash
+indradru | gloss=Indra's tree; a sacred tree (identified with the śamī) | examples=["indradruḥ śamī saṃjñitaḥ", "indradrum āsṛjanta"] | citations=["MBh.", "R."] | root=indra-dru
+SamaTavipaSyanAvihArin | gloss=one who practises calm (śamatha) and insight (vipaśyanā) meditation | examples=["śamathavipaśyanāvihārī bhikṣuḥ", "śamathavipaśyanāvihāriṇaṃ bhikṣum upadiśati"] | citations=[] | root=śamatha-vipaśyanā-vihārin
+pracaRqavadana | gloss=fierce-mouthed, fierce-faced (of demons, beasts) | examples=["pracaṇḍavadanā rākṣasī", "pracaṇḍavadanaṃ vyāghram apaśyat"] | citations=["MBh."] | root=pracaṇḍa-vadana
+sUryavaktra | gloss=sun-faced; having a face like the sun | examples=["sūryavaktraḥ prahasann uvāca", "sūryavaktreṇa īkṣate"] | citations=["MBh."] | root=sūrya-vaktra
+krIqanaka | gloss=a plaything, toy; a player; play, amusement | examples=["bālasya krīḍanakam", "krīḍanakair divyaiḥ saha krīḍati"] | citations=["MBh.", "R."] | root=√krīḍ (krīḍanaka)
+caturyuj | gloss=yoking four (horses); a team of four in harness | examples=["caturyujāḥ aśvāḥ", "caturyujam ratham āropya"] | citations=["MBh."] | root=catur-yuj
+vrIhivApa | gloss=rice-sowing; a sown rice-field, rice crop | examples=["vrīhivāpaṃ kurute kṛṣīvalaḥ", "vrīhivāpasya phalam āsādya"] | citations=["MBh."] | root=vrīhi-vāpa
+luptopamāna | gloss=whose standard of comparison is lost; incomparable, beyond all similes | examples=["luptopamānasya rūpasya", "sā luptopamānā tapasvinī"] | citations=[] | root=lupta-upamāna
+prArabDa | gloss=begun, commenced, undertaken; (of karma) that has begun to bear fruit, destiny already in motion | examples=["prārabdhaṃ karma", "prārabdhakarmā jīvaḥ"] | citations=["MBh."] | root=√rabh (prārabdha)
+dantaSARa | gloss=ivory; an elephant's tusk of ivory | examples=["gajo dantaśāṇasahitaḥ", "dantaśāṇeṇa kṛtam alaṃkāram"] | citations=["MBh.", "Suśr."] | root=danta-śāṇa

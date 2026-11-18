@@ -1,0 +1,12 @@
+
+> orchestrator · deepseek-v4.1-flash
+{"slp1":"avAcina","gloss":"turned downwards, looking down; bent downward; belonging to the region below","examples":["avācinaṃ mukhaṃ kṛtvā tasthau","avācinā śirasy adho'dhomukhaḥ"],"citations":["RV.","ŚatBr."],"root":"avāñc"}
+{"slp1":"meNganATa","gloss":"Meṅganātha, name of a Nātha lineage yogin/adept invoked in Marathi and Sanskrit devotional tradition","examples":["meṅganāthaṃ guruṃ pranamya","meṅganāthasya pādayoḥ siddhiḥ proktā"],"citations":["Nāthyāṁ."],"root":"Meṅganātha"}
+{"slp1":"paripuwana","gloss":"splitting, cleaving asunder; dividing land or boundaries; tearing apart","examples":["paripuṭanaṃ kṣetrasya vidyate","paripuṭanena mūlaṃ dvidhā bhavati"],"citations":["Kāś.","Comment."],"root":"pari-√puṭ"}
+{"slp1":"DanurBft","gloss":"bearing a bow, bowman, archer; epithet of Arjuna and other warriors","examples":["dhanurbhṛtāṃ śreṣṭho'rjunaḥ","dhanurbhṛt sāyakaṃ mumoca"],"citations":["MBh.","R."],"root":"dhanus-√bhṛ"}
+{"slp1":"nizkrAnta","gloss":"gone forth, departed, issued out; emerged, come out of; gone astray (from)","examples":["gṛhān niṣkrāntaḥ pitā","niṣkrāntaṃ balaṃ nagarāt"],"citations":["MBh.","R."],"root":"nis-√kram"}
+{"slp1":"vyAGraketu","gloss":"bearing a tiger as banner/emblem; name of a king; a leader whose standard is a tiger","examples":["vyāghraketur nṛpo dharmyaṃ cakāra","vyāghraketuṃ senānyam abhyanandat"],"citations":["MBh.","BhP."],"root":"vyāghra-ketu"}
+{"slp1":"jaqula","gloss":"dull-witted, simpleton, foolish man; name of a kind of plant (muddy-water herb)","examples":["jaḍulo'pathyavāg ajño na śāstraṃ vetti","jaḍulaṃ bālam iva avamanyante"],"citations":["Suśr.","Lex."],"root":"jaḍ"}
+{"slp1":"paryABfta","gloss":"brought round, offered or poured around (oblation); carried about, surroundedly offered","examples":["paryābhṛtaṃ haviḥ kuṇḍe","paryābhṛtena sruveṇa homaḥ kṛtaḥ"],"citations":["ŚatBr.","Brāhm."],"root":"pari-ā-√bhṛ"}
+{"slp1":"nipIqayat","gloss":"pressing down, squeezing, crushing; tormenting, oppressing (present participle)","examples":["nipīḍayan pāṇinā karṇaṃ","nipīḍayann amarṣeṇa janaṃ yayau"],"citations":["MBh.","R."],"root":"ni-√pīḍ"}
+{"slp1":"vidyAmandira","gloss":"temple of learning, seat of instruction; school, college, academy","examples":["vidyāmandiraṃ rājñā sthāpitam","vidyāmandire vidyārthino'pāṭhayan"],"citations":["Kāt.","Mod."],"root":"vidyā-mandira"}

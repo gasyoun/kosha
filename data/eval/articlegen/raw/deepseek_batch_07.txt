@@ -1,0 +1,12 @@
+
+> orchestrator · deepseek-v4.1-flash
+{"slp1":"SrIkaRWatA","gloss":"the state or dignity of Śrīkaṇṭha (Śiva); the condition of being Śiva's consort","examples":["śrīkaṇṭhatāṃ prapannā devī","śrīkaṇṭhatā nāma pārvatī"],"citations":["R.","Kathās."],"root":"śrīkaṇṭha + -tā"}
+{"slp1":"pawamaRqapa","gloss":"a cloth pavilion; a tent or awning of woven cloth; a canopy","examples":["paṭamaṇḍapaṃ mahāntaṃ kartayanti","paṭamaṇḍape rājā upāviśat"],"citations":["Kathās.","Rāj."],"root":"paṭa-maṇḍapa"}
+{"slp1":"dIrGabIjA","gloss":"a plant with long seeds; the castor-oil plant (Ricinus communis); a long-seeded medicinal creeper","examples":["dīrghabījā tailaṃ dadāti","dīrghabījāṃ cūrṇīkṛtya yojayet"],"citations":["Suśr.","Ratnam."],"root":"dīrgha-bīja (fem. -ā)"}
+{"slp1":"mahAdevavedAntavAgISa","gloss":"name of a Vedāntic author and pontiff, styled 'lord of speech on the Vedānta of Mahādeva'","examples":["mahādevavedāntavākpatir granthaṃ vyācacakṣe"],"citations":["Cat."],"root":"mahādeva-vedānta-vāgīśa"}
+{"slp1":"fkzA","gloss":"a she-bear; the female of the bear; (astr.) one of the stars of the Bear","examples":["ṛkṣā vane putraiḥ saha carati","ṛkṣevātmājān rakṣati"],"citations":["RV.","MBh."],"root":"ṛkṣa (fem. -ā)"}
+{"slp1":"hatakaRwaka","gloss":"whose thorns have been destroyed or removed; thornless; (fig.) rendered harmless, of evil-doers deprived of their sting","examples":["hatakaṇṭakaṃ kṣetraṃ kṣatriyair adhyāsitam","hatakaṇṭakāḥ stambhāḥ samīkṛtāḥ"],"citations":["MBh.","Suśr."],"root":"hata-kaṇṭaka"}
+{"slp1":vEDAtaki","gloss":"a patronymic meaning 'descendant of Vidhātṛ'; name of an ancient sage-teacher of ritual","examples":["vaidhātakir ṛṣiḥ śiṣyān adhyāpayat","vaidhātakiṃ yājñavalkyaḥ paryapṛcchat"],"citations":["ŚatBr.","Cat."],"root":"vidhātṛ → vidhātaki (patronym.)"}
+{"slp1":"ganDavfkzaka","gloss":"a fragrant tree; the bdellium tree; the sandal or devadāru used for perfume and incense","examples":["gandhavṛkṣakasya dāhād dhūpaḥ samāyāti","gandhavṛkṣakaiḥ snehaṃ śodhayet"],"citations":["Suśr.","Amar."],"root":"gandha-vṛkṣa (-ka)"}
+{"slp1":"vAribindu","gloss":"a drop of water; a tiny quantity of liquid; name of a person or author","examples":["vāribindur yathā sparśam āśu gacchati","vāribindavaḥ puṣpāgreṣu tiṣṭhanti"],"citations":["Gītā","R."],"root":"vāri-bindu"}
+{"slp1":"tfRAri","gloss":"fire (as the destroyer of grass); a grass-killing plant, a grass-enemy","examples":["tṛṇāriṇā kṣetraṃ dahyate","tṛṇārir varṣati śaraṇaṃ na bhavati"],"citations":["MBh.","Suśr."],"root":"tṛṇa-ari"}

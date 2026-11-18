@@ -1,0 +1,18 @@
+{
+  "eval": "H6253 article generation vs Cologne gold",
+  "created": "2026-11-18",
+  "seed": 6253,
+  "union": {
+    "path": "/Users/mac/Documents/GitHub/SanskritLexicography/HeadwordLists/union/union_headwords.tsv",
+    "sha256": "1e8260144f68e57c9ceb4628a683f741160232a9759e031bb5df83ad4bf6586f"
+  },
+  "cologne_mw": {
+    "path": "/Users/mac/Documents/GitHub/csl-orig/v02/mw/mw.txt",
+    "sha256": "e4641dc4384de459408368a9b34b2a13c90a19b0ecd4671f92c055b7578d0129"
+  },
+  "eligible_pool": 152577,
+  "main_count": 100,
+  "canary_count": 5,
+  "citation_inventory_size": 38672,
+  "note": "Canary rows require MG manual gold labels before any PASS claim; main rows are agent-scored."
+}

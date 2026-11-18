@@ -1,0 +1,12 @@
+
+> orchestrator · glm-5.3-flash
+{"slp1":"vyatirekavyApti","gloss":"exclusive concomitance; the relation of universal implication where absence of the major term implies absence of the minor (a variety of vyāpti)","examples":["vyatirekavyāptiḥ nirūpyate","vyatirekavyāptyā yad abhāve tadabhāvaḥ"],"citations":["NyāyaS."],"root":"vyatireka-vyāpti"}
+{"slp1":"devasenA","gloss":"the army of the gods; divine host; N. of the consort of Indra (also called Pulomajā)","examples":["devasenā sahasraśaḥ","devasenāpatir indraḥ"],"citations":["RV.","MBh.","R."],"root":"deva-senā"}
+{"slp1":"cArmikAyaRi","gloss":"a descendant of Cārmikā, patronymic; N. of a man","examples":["cārmikāyaṇo nāma","cārmikāyaṇiṃ taṃ samāgacchat"],"citations":["MBh."],"root":"cārmika"}
+{"slp1":"sumeDas","gloss":"of great wisdom, very wise; intelligent; epithet of several gods and seers (f. sumedhasā)","examples":["agnir viśvedhā sumedhaḥ","sumedhaso vipraḥ"],"citations":["RV.","MBh."],"root":"√medh (sumedhas)"}
+{"slp1":"guptipAlaka","gloss":"a keeper or guardian of hidden things; a watchman, custodian","examples":["guptipālako rājñāḥ","guptipālakena saṃrakṣitaḥ"],"citations":[],"root":"gupta-pālaka"}
+{"slp1":"SEPAlika","gloss":"a descendant of Śaiphalā, patronymic; (pl.) n. of a country and its people","examples":["śaiphālikāḥ prajāḥ","śaiphālikena saha saṃvādaḥ"],"citations":["MBh.","Pāṇ."],"root":"śaiphalā"}
+{"slp1":"sUryAloka","gloss":"sunlight; the light or shine of the sun; an exposed sunny spot","examples":["sūryālokasya tejasā","sūryāloke tiṣṭhati"],"citations":["MBh.","R."],"root":"sūrya-āloka"}
+{"slp1":"izwAhotrIya","gloss":"relating to the iṣṭāhotra; the formula and liturgical rule recited in the iṣṭāhotra (n.)","examples":["iṣṭāhotrīyam upādiśanty iha","iṣṭāhotrīyam āhutiṃ juhoti"],"citations":["ŚrS.","MBh."],"root":"iṣṭāhotra"}
+{"slp1":"vanamakzikA","gloss":"a forest-fly, a species of fly found in the woods","examples":["vanamakṣikāṃ ghaṭo 'kṣipet","vanamakṣikā vanāni caranti"],"citations":["MBh."],"root":"vana-makṣikā"}
+{"slp1":"saccinmaya","gloss":"consisting of (pure) being and consciousness; of the nature of sat and cit (cf. saccidānanda)","examples":["brahmā saccinmayo 'viśeṣaḥ","saccinmayaṃ parātparaṃ"],"citations":["Upan."],"root":"mayaṅ (sac-cin-maya)"}

@@ -1,0 +1,7 @@
+
+> orchestrator · glm-5.3-flash
+{"slp1":"vipare","gloss":"a twice-born man; a Brahmin","examples":["viparebhyo dānaṃ dadau","viparaḥ saṃskāravan"],"citations":["MBh."],"root":"vipara"}
+{"slp1":"prahelikA","gloss":"a riddle; an enigma; an obscure saying","examples":["prahelikāṃ vakti","prahelikābhir ramati","prahelikāsahasram ākhyāt"],"citations":["MBh."],"root":"√lah"}
+{"slp1":"devIdAsa","gloss":"N. of a man; name of a poet","examples":["devīdāso 'bravīt","devīdāsena racitā kāvyāni"],"citations":[],"root":"devīdāsa"}
+{"slp1":"pUrtikAma","gloss":"desirous of pleasure or joy; desirous of the merit of pious works (pūrta)","examples":["sa pūrtikāmo 'bhavat","pūrtikāmā upāyan"],"citations":[],"root":"pūrtikāma"}
+{"slp1":"lavavat","gloss":"containing salt, salted; having a part or small portion of","examples":["lavavān annapākaḥ","annam lavavat","saindhavalavavān rasaḥ"],"citations":[],"root":"lavavat"}

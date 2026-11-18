@@ -1,0 +1,12 @@
+
+> orchestrator · glm-5.3-flash
+{"slp1":"varmAya","gloss":"to cover with armour; to arm oneself, protect (denominative from varman)","examples":["varmāyate raṇe","varmāya vṛṣṭinām"],"citations":["MBh."],"root":"√varmāy"}
+{"slp1":"Ajyanta","gloss":"end or limit of the ghee-offering","examples":["ājyantaṃ upaiti","ājyantam āsādayan"],"citations":["RV."],"root":"ājyanta (ājya + anta)"}
+{"slp1":"dardarI","gloss":"a kind of vessel or bowl; a crack, fissure","examples":["dardaryāṃ payaḥ dhārayati","dardarī dṛḍhati"],"citations":["L."],"root":"√dṛḍ"}
+{"slp1":"gfhAlI","gloss":"mistress of the house, housewife; a wife","examples":["gṛhālī annaṃ pacati","gṛhālī śālāṃ alaṅkaroti"],"citations":["L."],"root":"gṛhālī (gṛha)"}
+{"slp1":"syUmaka","gloss":"a kind of wild grain (var. of syāmāka); N. of a man","examples":["syūmako 'nnam uṣṇaṃ","syūmakasya phalāni"],"citations":["MBh."],"root":"syūmaka (stem)"}
+{"slp1":"tarkita","gloss":"reasoned, inferred; conjectured, supposed; probable","examples":["tarkitaṃ vacanaṃ","tarkitārtham āha"],"citations":["MBh."],"root":"√tark"}
+{"slp1":"aprAyu","gloss":"not going astray, unswerving; staying within bounds","examples":["aprāyavo gāvaḥ","aprāyuḥ kāmaḥ"],"citations":["RV."],"root":"√yu (a-prāyu)"}
+{"slp1":"samfta","gloss":"assembled, put together; complete, well-prepared","examples":["samṛtaṃ yajñaṃ yajate","samṛtaḥ pūrṇaḥ"],"citations":["MBh."],"root":"sam√ṛ"}
+{"slp1":"SvetabuhnA","gloss":"N. of a plant bearing white blossoms","examples":["śvetabuhnā prasāritā"],"citations":["L."],"root":"śvetabuhnā (stem)"}
+{"slp1":"veSanada","gloss":"N. of a medicinal herb; (lit.) that which eats into the skin","examples":["veśanadaṃ cūrṇīkṛtya lehayet"],"citations":["L."],"root":"veśanada (stem)"}

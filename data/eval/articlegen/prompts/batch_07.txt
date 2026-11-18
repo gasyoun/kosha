@@ -1,0 +1,26 @@
+You are a Sanskrit lexicographer. For EVERY headword listed below, write one plausible dictionary article using your own knowledge. Output STRICT JSONL: exactly one JSON object per headword, in the given order, with no markdown fences, no numbering, no commentary.
+Each object has exactly these keys:
+  "slp1": the SLP1 headword copied exactly as given
+  "gloss": English gloss(es), semicolon-separated
+  "examples": array of 1-3 short Sanskrit example phrases in IAST
+  "citations": array of 0-3 standard Sanskrit textual authority abbreviations (e.g. "MBh.", "R.", "RV.")
+  "root": the inferred root or stem in IAST (prefix a root with the sign √)
+
+STRICT OUTPUT RULE (MANDATORY): every output line MUST begin with { and be a JSON object. Exactly one JSON object per headword. Never use 'key | field=value' text, never markdown, never prose.
+Example of one valid line:
+{"slp1":"agni","gloss":"fire; Agni, the fire-god","examples":["agniṃ stoti","agniḥ prajvalati"],"citations":["RV."],"root":"√agni"}
+HEADWORDS:
+- slp1=SrIkaRWatA | iast=śrīkaṇṭhatā | gender=f
+- slp1=pawamaRqapa | iast=paṭamaṇḍapa | gender=m
+- slp1=dIrGabIjA | iast=dīrghabījā | gender=f
+- slp1=mahAdevavedAntavAgISa | iast=mahādevavedāntavāgīśa | gender=m
+- slp1=fkzA | iast=ṛkṣā | gender=f
+- slp1=hatakaRwaka | iast=hatakaṇṭaka | gender=fmn
+- slp1=vEDAtaki | iast=vaidhātaki | gender=m
+- slp1=ganDavfkzaka | iast=gandhavṛkṣaka | gender=m
+- slp1=vAribindu | iast=vāribindu | gender=m
+- slp1=tfRAri | iast=tṛṇāri | gender=m
+
+STRICT OUTPUT RULE (MANDATORY): every output line MUST begin with { and be a JSON object. Exactly one JSON object per headword. Never use 'key | field=value' text, never markdown, never prose.
+Example of one valid line:
+{"slp1":"agni","gloss":"fire; Agni, the fire-god","examples":["agniṃ stoti","agniḥ prajvalati"],"citations":["RV."],"root":"√agni"}

@@ -1,0 +1,72 @@
+{
+  "eval": "H6253 — LLM article generation vs Cologne MW gold",
+  "created": "2026-11-18",
+  "executor": "Hy4 flash Free (opencode-go/hy4-flash-free)",
+  "filename_tier_provenance": "OxAlpha",
+  "reference_solution": "frozen Cologne MW gold (sample.tsv, hashed inputs)",
+  "negative_class": "mutated wrong article — see --self-test (H6714)",
+  "models": {
+    "glm": "glm-5.3-flash (opencode-go)",
+    "deepseek": "deepseek-v4.1-flash (opencode-go)"
+  },
+  "aggregate": {
+    "glm": {
+      "n_main": 100,
+      "parse_failures": 0,
+      "gloss_token_f1": 0.1437,
+      "gloss_chr3_f1": 0.1303,
+      "example_f1": 0.1923,
+      "example_recall": 0.2146,
+      "citation_attestation": 0.58,
+      "citation_gold_match": 0.1017,
+      "root_ok": 0.95,
+      "has_gloss": 1.0,
+      "has_examples": 1.0
+    },
+    "deepseek": {
+      "n_main": 100,
+      "parse_failures": 0,
+      "gloss_token_f1": 0.147,
+      "gloss_chr3_f1": 0.1541,
+      "example_f1": 0.1017,
+      "example_recall": 0.1333,
+      "citation_attestation": 0.7433,
+      "citation_gold_match": 0.0767,
+      "root_ok": 0.95,
+      "has_gloss": 1.0,
+      "has_examples": 1.0
+    }
+  },
+  "taxonomy_counts": {
+    "citation_not_in_entry": 201,
+    "example_not_in_gold": 389,
+    "root_headword_mismatch": 12,
+    "unattested_citation": 41
+  },
+  "taxonomy_examples": 643,
+  "canary": "INCONCLUSIVE — 5 articles await MG manual gold labels (human act)",
+  "input_sha256": {
+    "sample": "7d0b9d573fbfb1a2cb62b0280314bcaa9c972902fd0a9eac1973e0863cad7e1f",
+    "citation_inventory": "55ff1bd137c5d84fd48a33d80800f35f53dd71ff2541b052d1c2967ac4c2ce2a"
+  },
+  "missing": {
+    "glm": [],
+    "deepseek": []
+  },
+  "key_recoveries": {
+    "glm": [
+      {
+        "file": "glm_batch_02.txt",
+        "from": "luptopamāna",
+        "to": "luptopamAna"
+      }
+    ],
+    "deepseek": [
+      {
+        "file": "deepseek_batch_03.txt",
+        "from": "apARktya",
+        "to": "apANktya"
+      }
+    ]
+  }
+}
