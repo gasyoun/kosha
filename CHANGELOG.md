@@ -17,6 +17,27 @@ sense citations pin to `data_version`, not to repo tags.
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [0.117.19] - 2026-11-18
+
+# 2026-11-18 — H6253 article-generation eval against Cologne MW gold
+_Created: 18-11-2026 · Last updated: 18-11-2026_
+- **H6253 — Cologne-gold article-generation eval:** new public dataset
+  `articlegen-cologne-gold` (manifest row registered) and the reproducible
+  harness behind it: 105 frozen A55-union headwords (100 main + 5 MG-canary),
+  two model arms — GLM 5.3 Flash and DeepSeek 4.1 Flash — scored against
+  Cologne MW v02 gold on gloss, examples, citations and inferred root.
+  Deterministic metrics plus a hallucination taxonomy (unattested citations,
+  wrong roots, unsupported examples, empty fields, parse failures). The
+  5-article canary is an MG human act: `articlegen_score.py --canary` refuses
+  without MG's labels, so the verdict stays INCONCLUSIVE rather than borrowing
+  a PASS. Prior art respected: the existing defgen line (H730/H752/H972/H2408)
+  scores gloss-only outputs; this unit is article-level with citations as a
+  first-class field and the Cologne entry itself as gold, so no existing
+  artifact was duplicated or overwritten. Protocol + results of record:
+  [docs/ARTICLEGEN_COLOGNE_EVAL_PROTOCOL.md](docs/ARTICLEGEN_COLOGNE_EVAL_PROTOCOL.md).
+  Executed by Hy4 flash Free (`opencode-go/hy4-flash-free`), OxAlpha retained as
+  handoff filename provenance (H3688).
+_Dr. Mārcis Gasūns_
 ## [0.117.18] - 2026-11-18
 
 - **Paper-history deindex executed 04-10 (MG «deindex», [H5907](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5907-OxAlpha_Uprava_public-estate-privacy-sweep-a55a56_04.10.26.md) residual; GLM-5.3-Flash `zai-coding-plan/glm-5.3-flash` via ZCode).** The five manuscript paths (`papers/iscls9_b3/`, `papers/A55_UNION_HEADWORDS_DATA_PAPER_JOHD.md`, `papers/A56_ZALIZNYAK_GRAMMAR_INDEX_DATA_PAPER_JOHD.md`, `papers/SIGNOFF_A55_author_pass.md`, `papers/SIGNOFF_A56_author_pass.md`) were erased from the ENTIRE public git history via `git filter-repo --invert-paths` over all heads+tags (859→851 commit objects before the #667/#668 guard/canary landing; 8 paper-only commits fully dissolved), force-pushed to `main` and every branch/tag the same pass (branch protection temporarily `allow_force_pushes` + required-checks-open, restored byte-identical immediately after). `papers/CANARY_paper_priv.md`, `.paper-priv-allowlist`, the [paper-priv-guard workflow](https://github.com/gasyoun/kosha/blob/main/.github/workflows/paper-priv-guard.yml) and `data/eval/*` are untouched — verified on a fresh clone (0 manuscript paths in any ref). **Consequences for every existing clone:** this was a history rewrite — old clones must `git fetch origin && git reset --hard origin/main` (or re-clone); old-SHA links (e.g. `f66ead3c6`, `8eaad82f1`) are dangling by design. **Residual:** merged-PR diff views and cached blobs for #535/#536/#663/#665/#666/#668 remain server-side until the GitHub Support sensitive-data purge MG files (draft passed to MG 04-10); forks pre-dating the rewrite are outside repo control.
