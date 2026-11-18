@@ -1,0 +1,12 @@
+
+> orchestrator · deepseek-v4.1-flash
+{"slp1":"varmAya","gloss":"armour, coat of mail; for the sake of protection (datival purpose-form of varman)","examples":["varmāya kavacaṃ bibharti","varmāya rajjvā veṣṭitam"],"citations":["MBh."],"root":"√vṛ (varman)"}
+{"slp1":"Ajyanta","gloss":"name of a man; patronymic, descendant of Ājya","examples":["ājyantaḥ pitṝn samagacchat"],"citations":["MBh."],"root":"ājyanta"}
+{"slp1":"dardarI","gloss":"a kind of grass; tearing pain, colic","examples":["dardarī kṣetre rohati","dardaryā pīḍitaḥ"],"citations":["Su."],"root":"√dṛ (reduplicated dardarī)"}
+{"slp1":"gfhAlI","gloss":"house-lizard; a small lizard haunting houses","examples":["gṛhālī bhittau carati"],"citations":[],"root":"gṛha (gṛhālī)"}
+{"slp1":"syUmaka","gloss":"a kind of bag or net; seam, suture","examples":["syūmakaṃ baddhvā phalāni nītavān"],"citations":[],"root":"√syū (to sew)"}
+{"slp1":"tarkita","gloss":"inferred, conjectured, supposed; reasoned, considered","examples":["tarkitaṃ mayā yad rājā āgamiṣyati","tarkitatvaṃ gatam"],"citations":["MBh.","Kāv."],"root":"√tark"}
+{"slp1":"aprAyu","gloss":"not decaying, undecaying, imperishable; of unfailing life","examples":["devā aprāyavaḥ santu","aprāyu dānam akṣayam"],"citations":["RV."],"root":"a-prāyus (āyus, 'life')"}
+{"slp1":"samfta","gloss":"met together, assembled; come into contact, joined","examples":["samṛtāḥ sabhāyām","samṛtaṃ mitreṇa"],"citations":["RV.","AV."],"root":"sam-√ṛ (to go)"}
+{"slp1":"SvetabuhnA","gloss":"a kind of plant with white blossoms (prob. a white-flowered shrub)","examples":["śvetabuhnā vanaṃ śobhayati"],"citations":[],"root":"śveta-buhnā (uncertain)"}
+{"slp1":"veSanada","gloss":"name of a man; a kind of fragrant grass","examples":["veśanadaḥ kṣatriyo babhūva"],"citations":["MBh."],"root":"veśana"}

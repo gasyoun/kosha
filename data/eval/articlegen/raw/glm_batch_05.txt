@@ -1,0 +1,12 @@
+
+> orchestrator · glm-5.3-flash
+{"slp1":"avyaTi","gloss":"free from pain or agitation; not trembling; unwavering, steadfast","examples":["avyatho bhava","avyathā śete","avyathena manasā"],"citations":["MBh."],"root":"√vyath"}
+{"slp1":"okodanI","gloss":"a female water-bird, duck; going into the water; granting water","examples":["okodanī jalacāriṇī","okodanīva plāvatī"],"citations":[],"root":"√dā"}
+{"slp1":"SAntiguru","gloss":"a preceptor of the śānti rites; priest performing peace-ceremonies; a guru of tranquillity","examples":["śāntigurave namaḥ","śāntiguruḥ śāntiṃ kārayet"],"citations":[],"root":"guru"}
+{"slp1":"lOhabanDa","gloss":"an iron fetter or chain; iron binding; a bond made of iron","examples":["lauhabandhena baddhaḥ","lauhabandhaṃ chinatti"],"citations":[],"root":"√bandh"}
+{"slp1":"ganDamAlyaloka","gloss":"the world or realm of fragrant garlands; a space abounding in wreaths of blossoms","examples":["gandhamālyaloke vasati","gandhamālyalokasundarī"],"citations":[],"root":"mālya"}
+{"slp1":"ArDaprasTika","gloss":"relating to or consisting of half a prastha (measure); holding half a prastha","examples":["ārdhaprasthikaṃ ghṛtam","ārdhaprasthikā mātrā"],"citations":[],"root":"prastha"}
+{"slp1":"Sakkari","gloss":"an epithet of Śiva; a capable one, adept; worshipper of Śaṅkara","examples":["śakkariḥ śiva īritaḥ","śakkarir mama gurur"],"citations":[],"root":"√śak"}
+{"slp1":"gosUkta","gloss":"a hymn in praise of cows; a verse celebrating cattle","examples":["gosūktaṃ paṭhati","gosūktena devīḥ stauti"],"citations":[],"root":"sūkta"}
+{"slp1":"karRavat","gloss":"furnished with ears; ear-like, ear-shaped; hearing, attentive","examples":["karṇavatī latā","karṇavacchravam"],"citations":[],"root":"karṇa-vat"}
+{"slp1":"vAgguda","gloss":"a necklace, neck-ornament; a garland worn about the neck","examples":["vāggudādhirṇā bhūṣaṇam","vāggudaṃ dhārayati"],"citations":[],"root":"vāguda"}

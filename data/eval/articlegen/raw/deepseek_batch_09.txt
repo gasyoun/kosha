@@ -1,0 +1,12 @@
+
+> orchestrator · deepseek-v4.1-flash
+{"slp1":"vyatirekavyApti","gloss":"negative pervasion; the form of invariable concomitance stated through co-absence (where the probans is absent the probandum is absent)","examples":["dhūmo 'gnimad-vyāpakaḥ vyatirekavyāptyā","yatrāgnir nāsti tatra dhūmo 'pi nāsti — iti vyatirekavyāptiḥ"],"citations":["NBh.","Tattvacint."],"root":"vyatireka + √āp"}
+{"slp1":"devasenA","gloss":"army of the gods, the divine host; Devasenā, the goddess Devasenā (daughter of Prajādhruva, consort of Kārttikeya)","examples":["devasenā surān agān","skandaṃ devasenā pariṇayati sma"],"citations":["MBh.","Hariv."],"root":"deva + senā"}
+{"slp1":"cArmikAyaRi","gloss":"patronymic name; a descendant (or pupil) of Cārmikāyaṇa","examples":["cārmikāyaṇir ācāryaḥ","cārmikāyaṇir nāma vastutaḥ"],"citations":[],"root":"carmikāyaṇa (+ -i patronymic)"}
+{"slp1":"sumeDas","gloss":"of good mind; intelligent, wise, prudent; (m.) name of a saint","examples":["sumedhaso brāhmaṇasya vāk","sumedhasā vinītena vijñānam avāpyate"],"citations":["RV.","MBh."],"root":"su + √medh"}
+{"slp1":"guptipAlaka","gloss":"guardian of a concealment or hidden store; keeper of a secret; (m.) a treasurer or confidential keeper","examples":["guptipālakaḥ guptiṃ rakṣati","guptipālakaṃ nijavittaṃ nivedayet"],"citations":[],"root":"√gup + √pāl"}
+{"slp1":"SEPAlika","gloss":"relating to, made from, or living near the śephāli / śephālikā plant (Vitex negundo)","examples":["śaiphālikaṃ vanam","śaiphāliko 'yaṃ grāmaḥ"],"citations":["Kāś."],"root":"śephālikā + -ika (taddhita)"}
+{"slp1":"sUryAloka","gloss":"sunlight, sunshine; the light or sight of the sun","examples":["sūryālokā nikhilaṃ jagat prabhāsate","sūryālokena padmāni vikasanti"],"citations":["MBh.","Suśr."],"root":"sūrya + √lok"}
+{"slp1":"izwAhotrIya","gloss":"(n.) the Śrauta formula or oblation called iṣṭā-hotrīya, used in the Soma sacrifice; relating to that formula","examples":["iṣṭāhotrīyaṃ hotā juhoti","iṣṭāhotrīyasya karmaṇaḥ phalam"],"citations":["ĀśvŚr.","Lāṭy."],"root":"iṣṭā + √hu (hotrīya)"}
+{"slp1":"vanamakzikA","gloss":"wild bee, wood bee; (f.) a bee of the forest","examples":["vanamakṣikā madhu kurute","vanamakṣikāḥ puṣpeṣu ghuñjanti"],"citations":["Suśr."],"root":"vana + makṣikā"}
+{"slp1":"saccinmaya","gloss":"consisting of existence and consciousness; possessing true being and thought (epithet of Brahman, = sac-cid-ānanda)","examples":["saccinmayaṃ brahma","saccinmayāya janārdanāya namaḥ"],"citations":["BhāgP.","VP."],"root":"sat + cit + -maya"}

@@ -1,0 +1,644 @@
+model	slp1	category	evidence
+deepseek	Ajyanta	citation_not_in_entry	'MBh.' attested corpus-wide but absent from Ajyanta entry
+deepseek	Ajyanta	example_not_in_gold	example 'ājyantaḥ pitṝn samagacchat' not in frozen Cologne entry
+deepseek	AnandaBEravI	example_not_in_gold	example 'ānandabhairavaṃ rāgagītaṃ gāyati' not in frozen Cologne entry
+deepseek	AnandaBEravI	example_not_in_gold	example 'ānandabhairavīṃ dhayān gāyatī' not in frozen Cologne entry
+deepseek	AnandaBEravI	unattested_citation	generated citation 'Kāvyān.' not in Cologne MW inventory
+deepseek	AnandaBEravI	unattested_citation	generated citation 'Saṃgītar.' not in Cologne MW inventory
+deepseek	ArDaprasTika	citation_not_in_entry	'Kāś.' attested corpus-wide but absent from ArDaprasTika entry
+deepseek	ArDaprasTika	citation_not_in_entry	'Pāṇ.' attested corpus-wide but absent from ArDaprasTika entry
+deepseek	ArDaprasTika	example_not_in_gold	example 'ārdhaprasthikair māpaiś chidyate' not in frozen Cologne entry
+deepseek	ArDaprasTika	example_not_in_gold	example 'ārdhaprasthikaṃ pātraṃ dugdhena pūryate' not in frozen Cologne entry
+deepseek	BAsurAnandanATa	example_not_in_gold	example 'bhāsurānandanāthaṃ vande' not in frozen Cologne entry
+deepseek	BAsurAnandanATa	example_not_in_gold	example 'śrībhāsurānandanāthasya śāstram' not in frozen Cologne entry
+deepseek	BAsurAnandanATa	unattested_citation	generated citation 'Tantrāloka' not in Cologne MW inventory
+deepseek	BUrja	citation_not_in_entry	'Kauś.' attested corpus-wide but absent from BUrja entry
+deepseek	BUrja	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from BUrja entry
+deepseek	BUrja	example_not_in_gold	example 'bhūrjapatre likhati' not in frozen Cologne entry
+deepseek	BUrja	example_not_in_gold	example 'bhūrjasya taroḥ' not in frozen Cologne entry
+deepseek	BUrja	root_headword_mismatch	root '√bhṛj' vs headword 'bhūrja'
+deepseek	DOtakawa	citation_not_in_entry	'Car.' attested corpus-wide but absent from DOtakawa entry
+deepseek	DOtakawa	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from DOtakawa entry
+deepseek	DOtakawa	example_not_in_gold	example 'dhautakaṭaṃ netre añjati' not in frozen Cologne entry
+deepseek	DOtakawa	example_not_in_gold	example 'dhautakaṭaṃ pācanaṃ sādhakaṃ' not in frozen Cologne entry
+deepseek	DanurBft	citation_not_in_entry	'MBh.' attested corpus-wide but absent from DanurBft entry
+deepseek	DanurBft	citation_not_in_entry	'R.' attested corpus-wide but absent from DanurBft entry
+deepseek	DanurBft	example_not_in_gold	"example ""dhanurbhṛtāṃ śreṣṭho'rjunaḥ"" not in frozen Cologne entry"
+deepseek	DanurBft	example_not_in_gold	example 'dhanurbhṛt sāyakaṃ mumoca' not in frozen Cologne entry
+deepseek	PalaMdadA	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from PalaMdadA entry
+deepseek	PalaMdadA	citation_not_in_entry	'Uttarar.' attested corpus-wide but absent from PalaMdadA entry
+deepseek	PalaMdadA	example_not_in_gold	"example ""phalaṃdadā valli grīṣme 'pi phalāny ādadāti"" not in frozen Cologne entry"
+deepseek	PalaMdadA	example_not_in_gold	example 'phalaṃdadā oṣadhī vanaprānte rājate' not in frozen Cologne entry
+deepseek	SAntiguru	citation_not_in_entry	'MBh.' attested corpus-wide but absent from SAntiguru entry
+deepseek	SAntiguru	citation_not_in_entry	'Pāṇ.' attested corpus-wide but absent from SAntiguru entry
+deepseek	SAntiguru	example_not_in_gold	example 'śāntiguror vacanena śāntir bhavati' not in frozen Cologne entry
+deepseek	SAntiguru	example_not_in_gold	example 'śāntigurur homaṃ kārayati' not in frozen Cologne entry
+deepseek	SAntiguru	example_not_in_gold	example 'śāntiguruṃ pṛcchati rājā' not in frozen Cologne entry
+deepseek	SEPAlika	citation_not_in_entry	'Kāś.' attested corpus-wide but absent from SEPAlika entry
+deepseek	Sakkari	citation_not_in_entry	'MBh.' attested corpus-wide but absent from Sakkari entry
+deepseek	Sakkari	example_not_in_gold	example 'śakkari śarkarāyāṃ vartate' not in frozen Cologne entry
+deepseek	Sakkari	example_not_in_gold	example 'śakkarim abhigacchati' not in frozen Cologne entry
+deepseek	Sakkari	unattested_citation	generated citation 'Amara.' not in Cologne MW inventory
+deepseek	SamaTavipaSyanAvihArin	citation_not_in_entry	'Lalit.' attested corpus-wide but absent from SamaTavipaSyanAvihArin entry
+deepseek	SamaTavipaSyanAvihArin	unattested_citation	generated citation 'Bodh.' not in Cologne MW inventory
+deepseek	SrIkaRWatA	citation_not_in_entry	'Kathās.' attested corpus-wide but absent from SrIkaRWatA entry
+deepseek	SrIkaRWatA	citation_not_in_entry	'R.' attested corpus-wide but absent from SrIkaRWatA entry
+deepseek	SrIkaRWatA	example_not_in_gold	example 'śrīkaṇṭhatā nāma pārvatī' not in frozen Cologne entry
+deepseek	SrIkaRWatA	example_not_in_gold	example 'śrīkaṇṭhatāṃ prapannā devī' not in frozen Cologne entry
+deepseek	SvetabuhnA	example_not_in_gold	example 'śvetabuhnā vanaṃ śobhayati' not in frozen Cologne entry
+deepseek	SyenakapotIya	citation_not_in_entry	'Pañcat.' attested corpus-wide but absent from SyenakapotIya entry
+deepseek	ahyarzu	citation_not_in_entry	'RV.' attested corpus-wide but absent from ahyarzu entry
+deepseek	ahyarzu	example_not_in_gold	example 'ahyarṣave dattam annam' not in frozen Cologne entry
+deepseek	ahyarzu	example_not_in_gold	example 'ahyarṣur ṛṣir mantram ānarca' not in frozen Cologne entry
+deepseek	anukaRWI	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from anukaRWI entry
+deepseek	anukaRWI	example_not_in_gold	example 'rājā anukaṇṭhyā bhāti' not in frozen Cologne entry
+deepseek	anukaRWI	unattested_citation	generated citation 'Amara.' not in Cologne MW inventory
+deepseek	apANktya	citation_not_in_entry	'ĀpŚr.' attested corpus-wide but absent from apANktya entry
+deepseek	apANktya	example_not_in_gold	example 'apāṅktyaḥ puruṣaḥ' not in frozen Cologne entry
+deepseek	apANktya	example_not_in_gold	example 'apāṅktyaṃ bhojanaṃ' not in frozen Cologne entry
+deepseek	aprAyu	citation_not_in_entry	'RV.' attested corpus-wide but absent from aprAyu entry
+deepseek	aprAyu	example_not_in_gold	example 'aprāyu dānam akṣayam' not in frozen Cologne entry
+deepseek	aprAyu	example_not_in_gold	example 'devā aprāyavaḥ santu' not in frozen Cologne entry
+deepseek	asurya	citation_not_in_entry	'MBh.' attested corpus-wide but absent from asurya entry
+deepseek	asurya	example_not_in_gold	"example ""asuryo 'yaṃ lokaḥ sarvam āvṛṇoti"" not in frozen Cologne entry"
+deepseek	asurya	example_not_in_gold	example 'asuryāṇi karmāṇi dviṣantaḥ' not in frozen Cologne entry
+deepseek	avAcina	citation_not_in_entry	'RV.' attested corpus-wide but absent from avAcina entry
+deepseek	avAcina	example_not_in_gold	"example ""avācinā śirasy adho'dhomukhaḥ"" not in frozen Cologne entry"
+deepseek	avAcina	example_not_in_gold	example 'avācinaṃ mukhaṃ kṛtvā tasthau' not in frozen Cologne entry
+deepseek	avAcina	unattested_citation	generated citation 'ŚatBr.' not in Cologne MW inventory
+deepseek	avyaTi	citation_not_in_entry	'MBh.' attested corpus-wide but absent from avyaTi entry
+deepseek	avyaTi	citation_not_in_entry	'R.' attested corpus-wide but absent from avyaTi entry
+deepseek	avyaTi	example_not_in_gold	example 'avyathi hṛdayaṃ tasya' not in frozen Cologne entry
+deepseek	avyaTi	example_not_in_gold	example 'avyathibhāvaṃ nayati' not in frozen Cologne entry
+deepseek	avyaTi	example_not_in_gold	example 'avyathir manasā dhīraḥ' not in frozen Cologne entry
+deepseek	bilakArin	citation_not_in_entry	'Amar.' attested corpus-wide but absent from bilakArin entry
+deepseek	bilakArin	citation_not_in_entry	'MBh.' attested corpus-wide but absent from bilakArin entry
+deepseek	bilakArin	example_not_in_gold	example 'bilakāriṇaṃ krauñcam api ca bilāśrayān apaśyat' not in frozen Cologne entry
+deepseek	bilakArin	example_not_in_gold	example 'bilakārī mūṣako bhūtale gartaṃ khāti' not in frozen Cologne entry
+deepseek	caturyuj	citation_not_in_entry	'RV.' attested corpus-wide but absent from caturyuj entry
+deepseek	caturyuj	example_not_in_gold	example 'caturyug ratho yujyate' not in frozen Cologne entry
+deepseek	caturyuj	example_not_in_gold	example 'caturyujaṃ hiraṇmayam' not in frozen Cologne entry
+deepseek	caturyuj	example_not_in_gold	example 'caturyujo vājinaḥ santi' not in frozen Cologne entry
+deepseek	caturyuj	unattested_citation	generated citation 'AitB.' not in Cologne MW inventory
+deepseek	dIrGabIjA	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from dIrGabIjA entry
+deepseek	dIrGabIjA	example_not_in_gold	example 'dīrghabījā tailaṃ dadāti' not in frozen Cologne entry
+deepseek	dIrGabIjA	example_not_in_gold	example 'dīrghabījāṃ cūrṇīkṛtya yojayet' not in frozen Cologne entry
+deepseek	dIrGabIjA	unattested_citation	generated citation 'Ratnam.' not in Cologne MW inventory
+deepseek	dantaSARa	citation_not_in_entry	'MBh.' attested corpus-wide but absent from dantaSARa entry
+deepseek	dantaSARa	example_not_in_gold	example 'dantaśāṇaṃ vyañjayati smitaṃ' not in frozen Cologne entry
+deepseek	dantaSARa	example_not_in_gold	example 'dantaśāṇo mahān dante utkaṭaḥ' not in frozen Cologne entry
+deepseek	dantaSARa	example_not_in_gold	example 'tīkṣṇadantaśāṇaḥ paśuḥ' not in frozen Cologne entry
+deepseek	dantaSARa	unattested_citation	generated citation 'Suś.' not in Cologne MW inventory
+deepseek	dardarI	example_not_in_gold	example 'dardaryā pīḍitaḥ' not in frozen Cologne entry
+deepseek	dardarI	example_not_in_gold	example 'dardarī kṣetre rohati' not in frozen Cologne entry
+deepseek	dardarI	unattested_citation	generated citation 'Su.' not in Cologne MW inventory
+deepseek	devIdAsa	example_not_in_gold	example 'devīdāsasya putro vidvān' not in frozen Cologne entry
+deepseek	devIdAsa	example_not_in_gold	example 'devīdāso grāmaṃ gacchati' not in frozen Cologne entry
+deepseek	devasenA	citation_not_in_entry	'Hariv.' attested corpus-wide but absent from devasenA entry
+deepseek	devasenA	example_not_in_gold	example 'devasenā surān agān' not in frozen Cologne entry
+deepseek	devasenA	example_not_in_gold	example 'skandaṃ devasenā pariṇayati sma' not in frozen Cologne entry
+deepseek	ekanayana	citation_not_in_entry	'Kathās.' attested corpus-wide but absent from ekanayana entry
+deepseek	ekanayana	citation_not_in_entry	'MBh.' attested corpus-wide but absent from ekanayana entry
+deepseek	ekanayana	example_not_in_gold	"example ""ekanayano 'ndhaḥ saṃdarśakaḥ"" not in frozen Cologne entry"
+deepseek	ekanayana	example_not_in_gold	example 'ekanayano devo naktaṃ rājate' not in frozen Cologne entry
+deepseek	fkzA	citation_not_in_entry	'MBh.' attested corpus-wide but absent from fkzA entry
+deepseek	fkzA	citation_not_in_entry	'RV.' attested corpus-wide but absent from fkzA entry
+deepseek	fkzA	example_not_in_gold	example 'ṛkṣevātmājān rakṣati' not in frozen Cologne entry
+deepseek	fkzA	example_not_in_gold	example 'ṛkṣā vane putraiḥ saha carati' not in frozen Cologne entry
+deepseek	ganDamAlyaloka	citation_not_in_entry	'R.' attested corpus-wide but absent from ganDamAlyaloka entry
+deepseek	ganDamAlyaloka	example_not_in_gold	example 'gandhamālyalokaṃ bhajate' not in frozen Cologne entry
+deepseek	ganDamAlyaloka	example_not_in_gold	example 'gandhamālyaloke nimagnaḥ' not in frozen Cologne entry
+deepseek	ganDamAlyaloka	example_not_in_gold	example 'gandhamālyaloke saurataṃ praveśaḥ' not in frozen Cologne entry
+deepseek	ganDamAlyaloka	unattested_citation	generated citation 'Amara.' not in Cologne MW inventory
+deepseek	ganDavfkzaka	citation_not_in_entry	'Amar.' attested corpus-wide but absent from ganDavfkzaka entry
+deepseek	ganDavfkzaka	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from ganDavfkzaka entry
+deepseek	ganDavfkzaka	example_not_in_gold	example 'gandhavṛkṣakaiḥ snehaṃ śodhayet' not in frozen Cologne entry
+deepseek	ganDavfkzaka	example_not_in_gold	example 'gandhavṛkṣakasya dāhād dhūpaḥ samāyāti' not in frozen Cologne entry
+deepseek	gfhAlI	example_not_in_gold	example 'gṛhālī bhittau carati' not in frozen Cologne entry
+deepseek	gosUkta	citation_not_in_entry	'MBh.' attested corpus-wide but absent from gosUkta entry
+deepseek	gosUkta	citation_not_in_entry	'RV.' attested corpus-wide but absent from gosUkta entry
+deepseek	gosUkta	example_not_in_gold	example 'gosūktasya arthaṃ vyākhyāti' not in frozen Cologne entry
+deepseek	gosUkta	example_not_in_gold	example 'gosūktaṃ paṭhati hotā' not in frozen Cologne entry
+deepseek	gosUkta	example_not_in_gold	example 'gosūktena gāḥ stuvanti' not in frozen Cologne entry
+deepseek	guptipAlaka	example_not_in_gold	example 'guptipālakaḥ guptiṃ rakṣati' not in frozen Cologne entry
+deepseek	guptipAlaka	example_not_in_gold	example 'guptipālakaṃ nijavittaṃ nivedayet' not in frozen Cologne entry
+deepseek	hatakaRwaka	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from hatakaRwaka entry
+deepseek	hatakaRwaka	example_not_in_gold	example 'hatakaṇṭakaṃ kṣetraṃ kṣatriyair adhyāsitam' not in frozen Cologne entry
+deepseek	hatakaRwaka	example_not_in_gold	example 'hatakaṇṭakāḥ stambhāḥ samīkṛtāḥ' not in frozen Cologne entry
+deepseek	indradru	citation_not_in_entry	'Amar.' attested corpus-wide but absent from indradru entry
+deepseek	indradru	citation_not_in_entry	'R.' attested corpus-wide but absent from indradru entry
+deepseek	indradru	example_not_in_gold	example 'indradroḥ tvacaṃ pibet' not in frozen Cologne entry
+deepseek	indradru	example_not_in_gold	example 'indradrur iva puṣpitaḥ' not in frozen Cologne entry
+deepseek	indradru	example_not_in_gold	example 'kutajaḥ indradruḥ iti procyate' not in frozen Cologne entry
+deepseek	indradru	unattested_citation	generated citation 'Suś.' not in Cologne MW inventory
+deepseek	izwAhotrIya	citation_not_in_entry	'ĀśvŚr.' attested corpus-wide but absent from izwAhotrIya entry
+deepseek	izwAhotrIya	example_not_in_gold	example 'iṣṭāhotrīyasya karmaṇaḥ phalam' not in frozen Cologne entry
+deepseek	jaqula	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from jaqula entry
+deepseek	jaqula	example_not_in_gold	"example ""jaḍulo'pathyavāg ajño na śāstraṃ vetti"" not in frozen Cologne entry"
+deepseek	jaqula	example_not_in_gold	example 'jaḍulaṃ bālam iva avamanyante' not in frozen Cologne entry
+deepseek	jaqula	unattested_citation	generated citation 'Lex.' not in Cologne MW inventory
+deepseek	jigIzotsAhavat	citation_not_in_entry	'MBh.' attested corpus-wide but absent from jigIzotsAhavat entry
+deepseek	jigIzotsAhavat	citation_not_in_entry	'R.' attested corpus-wide but absent from jigIzotsAhavat entry
+deepseek	jigIzotsAhavat	example_not_in_gold	example 'jigīṣotsāhavantaṃ śūraṃ praśaṃsanti' not in frozen Cologne entry
+deepseek	jigIzotsAhavat	example_not_in_gold	example 'jigīṣotsāhavān rājā yuddhāya niryayau' not in frozen Cologne entry
+deepseek	kalyARamaya	citation_not_in_entry	'MBh.' attested corpus-wide but absent from kalyARamaya entry
+deepseek	kalyARamaya	citation_not_in_entry	'R.' attested corpus-wide but absent from kalyARamaya entry
+deepseek	kalyARamaya	example_not_in_gold	example 'kalyāṇamayī dṛṣṭiḥ' not in frozen Cologne entry
+deepseek	karRavat	citation_not_in_entry	'Kāś.' attested corpus-wide but absent from karRavat entry
+deepseek	karRavat	citation_not_in_entry	'Pāṇ.' attested corpus-wide but absent from karRavat entry
+deepseek	karRavat	example_not_in_gold	"example ""karṇavān mṛgo'raṇye"" not in frozen Cologne entry"
+deepseek	karRavat	example_not_in_gold	example 'karṇavat kānyaṃ dhṛtam' not in frozen Cologne entry
+deepseek	karRavat	example_not_in_gold	example 'karṇavatsu padārtheṣu vidhiḥ' not in frozen Cologne entry
+deepseek	karmakAra	citation_not_in_entry	'Mn.' attested corpus-wide but absent from karmakAra entry
+deepseek	karmakAra	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from karmakAra entry
+deepseek	karmakAra	example_not_in_gold	example 'karmakārāṇāṃ grāmaḥ' not in frozen Cologne entry
+deepseek	karmakAra	root_headword_mismatch	root '√kṛ' vs headword 'karmakāra'
+deepseek	krIqanaka	citation_not_in_entry	'Daśak.' attested corpus-wide but absent from krIqanaka entry
+deepseek	krIqanaka	citation_not_in_entry	'Kāv.' attested corpus-wide but absent from krIqanaka entry
+deepseek	krIqanaka	example_not_in_gold	example 'krīḍanakena krīḍati bālaḥ' not in frozen Cologne entry
+deepseek	krIqanaka	example_not_in_gold	example 'yad yat krīḍanakaṃ yuṣmākaṃ mānasaṃ bodhimate' not in frozen Cologne entry
+deepseek	krIqanaka	unattested_citation	generated citation 'Bodh.' not in Cologne MW inventory
+deepseek	kruYcA	citation_not_in_entry	'MBh.' attested corpus-wide but absent from kruYcA entry
+deepseek	kruYcA	citation_not_in_entry	'R.' attested corpus-wide but absent from kruYcA entry
+deepseek	kruYcA	example_not_in_gold	example 'kruñcā kruñcaṃ gacchati' not in frozen Cologne entry
+deepseek	kruYcA	example_not_in_gold	example 'kruñcā puruṣasyapi manaḥ harati' not in frozen Cologne entry
+deepseek	lOhabanDa	citation_not_in_entry	'MBh.' attested corpus-wide but absent from lOhabanDa entry
+deepseek	lOhabanDa	citation_not_in_entry	'R.' attested corpus-wide but absent from lOhabanDa entry
+deepseek	lOhabanDa	example_not_in_gold	example 'lauhabandhaṃ nirmokṣyati' not in frozen Cologne entry
+deepseek	lOhabanDa	example_not_in_gold	example 'lauhabandho ghaṭeṣu yojitaḥ' not in frozen Cologne entry
+deepseek	latAya	example_not_in_gold	example 'latāyante ca tāḥ samantād drumān' not in frozen Cologne entry
+deepseek	latAya	example_not_in_gold	example 'vṛkṣam aśvatthaṃ latāyate vīrudh' not in frozen Cologne entry
+deepseek	lavavat	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from lavavat entry
+deepseek	lavavat	example_not_in_gold	example 'lavavat tailaṃ pātre sthitam' not in frozen Cologne entry
+deepseek	lavavat	example_not_in_gold	example 'lavavān jalabinduḥ patati' not in frozen Cologne entry
+deepseek	luptopamAna	example_not_in_gold	example 'kācit luptopamānā uktiḥ' not in frozen Cologne entry
+deepseek	luptopamAna	example_not_in_gold	example 'luptopamānalaṅkāradhvani śobhate' not in frozen Cologne entry
+deepseek	luptopamAna	example_not_in_gold	example 'luptopamānaṃ cātra rūpakam' not in frozen Cologne entry
+deepseek	luptopamAna	unattested_citation	generated citation 'Alaṅkāraś.' not in Cologne MW inventory
+deepseek	luptopamAna	unattested_citation	generated citation 'Kāvyap.' not in Cologne MW inventory
+deepseek	maRiDAriRI	citation_not_in_entry	'Pur.' attested corpus-wide but absent from maRiDAriRI entry
+deepseek	maRiDAriRI	citation_not_in_entry	'R.' attested corpus-wide but absent from maRiDAriRI entry
+deepseek	maRiDAriRI	example_not_in_gold	example 'maṇidhāriṇī devīṃ praṇamya vanditavān' not in frozen Cologne entry
+deepseek	maRiDAriRI	example_not_in_gold	example 'maṇidhāriṇī rājakanyā hāreṇa virājate' not in frozen Cologne entry
+deepseek	mahAdevavedAntavAgISa	example_not_in_gold	example 'mahādevavedāntavākpatir granthaṃ vyācacakṣe' not in frozen Cologne entry
+deepseek	meNganATa	example_not_in_gold	example 'meṅganāthasya pādayoḥ siddhiḥ proktā' not in frozen Cologne entry
+deepseek	meNganATa	example_not_in_gold	example 'meṅganāthaṃ guruṃ pranamya' not in frozen Cologne entry
+deepseek	meNganATa	unattested_citation	generated citation 'Nāthyāṁ.' not in Cologne MW inventory
+deepseek	mfgAsya	citation_not_in_entry	'MBh.' attested corpus-wide but absent from mfgAsya entry
+deepseek	mfgAsya	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from mfgAsya entry
+deepseek	mfgAsya	example_not_in_gold	example 'mṛgāsyaṃ harim' not in frozen Cologne entry
+deepseek	mfgAsya	example_not_in_gold	example 'mṛgāsyaṃ mukham' not in frozen Cologne entry
+deepseek	nAqa	citation_not_in_entry	'MBh.' attested corpus-wide but absent from nAqa entry
+deepseek	nAqa	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from nAqa entry
+deepseek	nAqa	example_not_in_gold	example 'jalaṃ nāḍena pibati jano brahmadatta' not in frozen Cologne entry
+deepseek	nAqa	example_not_in_gold	example 'nāḍau bhinnau śuṣkeṇa vāyunā vādyate' not in frozen Cologne entry
+deepseek	nIlarAji	citation_not_in_entry	'Amar.' attested corpus-wide but absent from nIlarAji entry
+deepseek	nIlarAji	citation_not_in_entry	'Mālatīm.' attested corpus-wide but absent from nIlarAji entry
+deepseek	nIlarAji	example_not_in_gold	example 'nabhasi nīlarājir iva kuṃkumadhārā rājate' not in frozen Cologne entry
+deepseek	nIlarAji	example_not_in_gold	example 'nīlarājī kṣetramṛttikāyāṃ dravati' not in frozen Cologne entry
+deepseek	nfpAnna	citation_not_in_entry	'MBh.' attested corpus-wide but absent from nfpAnna entry
+deepseek	nfpAnna	example_not_in_gold	example 'nṛpāṇṇaṃ bhuktvā tṛptaḥ' not in frozen Cologne entry
+deepseek	nfpAnna	example_not_in_gold	example 'nṛpāṇṇaṃ pratipadyate' not in frozen Cologne entry
+deepseek	nfpAnna	unattested_citation	generated citation 'Kauṭ.' not in Cologne MW inventory
+deepseek	nipIqayat	citation_not_in_entry	'MBh.' attested corpus-wide but absent from nipIqayat entry
+deepseek	nipIqayat	citation_not_in_entry	'R.' attested corpus-wide but absent from nipIqayat entry
+deepseek	nipIqayat	example_not_in_gold	example 'nipīḍayan pāṇinā karṇaṃ' not in frozen Cologne entry
+deepseek	nipIqayat	example_not_in_gold	example 'nipīḍayann amarṣeṇa janaṃ yayau' not in frozen Cologne entry
+deepseek	nizkrAnta	citation_not_in_entry	'R.' attested corpus-wide but absent from nizkrAnta entry
+deepseek	nizkrAnta	example_not_in_gold	example 'gṛhān niṣkrāntaḥ pitā' not in frozen Cologne entry
+deepseek	nizkrAnta	example_not_in_gold	example 'niṣkrāntaṃ balaṃ nagarāt' not in frozen Cologne entry
+deepseek	okodanI	citation_not_in_entry	'Kāś.' attested corpus-wide but absent from okodanI entry
+deepseek	okodanI	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from okodanI entry
+deepseek	okodanI	example_not_in_gold	example 'okodanī brāhmaṇāya dīyate' not in frozen Cologne entry
+deepseek	pAtresamita	example_not_in_gold	example 'pātresamitā kṣīrasya mātrā' not in frozen Cologne entry
+deepseek	pUrtikAma	citation_not_in_entry	'MBh.' attested corpus-wide but absent from pUrtikAma entry
+deepseek	pUrtikAma	example_not_in_gold	example 'pūrtikāmo yajñaṃ karoti' not in frozen Cologne entry
+deepseek	pUrtikAma	example_not_in_gold	example 'pūrtikāmāḥ svargaṃ prārthayante' not in frozen Cologne entry
+deepseek	paripuwana	citation_not_in_entry	'Kāś.' attested corpus-wide but absent from paripuwana entry
+deepseek	paripuwana	example_not_in_gold	example 'paripuṭanaṃ kṣetrasya vidyate' not in frozen Cologne entry
+deepseek	paripuwana	example_not_in_gold	example 'paripuṭanena mūlaṃ dvidhā bhavati' not in frozen Cologne entry
+deepseek	paripuwana	unattested_citation	generated citation 'Comment.' not in Cologne MW inventory
+deepseek	paryABfta	example_not_in_gold	example 'paryābhṛtaṃ haviḥ kuṇḍe' not in frozen Cologne entry
+deepseek	paryABfta	example_not_in_gold	example 'paryābhṛtena sruveṇa homaḥ kṛtaḥ' not in frozen Cologne entry
+deepseek	paryABfta	unattested_citation	generated citation 'Brāhm.' not in Cologne MW inventory
+deepseek	paryABfta	unattested_citation	generated citation 'ŚatBr.' not in Cologne MW inventory
+deepseek	pawamaRqapa	citation_not_in_entry	'Kathās.' attested corpus-wide but absent from pawamaRqapa entry
+deepseek	pawamaRqapa	citation_not_in_entry	'Rāj.' attested corpus-wide but absent from pawamaRqapa entry
+deepseek	pawamaRqapa	example_not_in_gold	example 'paṭamaṇḍapaṃ mahāntaṃ kartayanti' not in frozen Cologne entry
+deepseek	pawamaRqapa	example_not_in_gold	example 'paṭamaṇḍape rājā upāviśat' not in frozen Cologne entry
+deepseek	prArabDa	citation_not_in_entry	'MBh.' attested corpus-wide but absent from prArabDa entry
+deepseek	prArabDa	citation_not_in_entry	'R.' attested corpus-wide but absent from prArabDa entry
+deepseek	prArabDa	example_not_in_gold	"example ""prārabdho yo 'pi kāryaḥ"" not in frozen Cologne entry"
+deepseek	prArabDa	example_not_in_gold	example 'karma prārabdhaṃ bhujyate' not in frozen Cologne entry
+deepseek	prArabDa	example_not_in_gold	example 'prārabdhā kathā tvayā' not in frozen Cologne entry
+deepseek	prArabDa	unattested_citation	generated citation 'BG.' not in Cologne MW inventory
+deepseek	prAtiBA	citation_not_in_entry	'Daśar.' attested corpus-wide but absent from prAtiBA entry
+deepseek	prAtiBA	example_not_in_gold	example 'prātibhā balenaiva kāvyaṃ racayati' not in frozen Cologne entry
+deepseek	prAtiBA	example_not_in_gold	example 'prātibhāsādhyaṃ hi kāvyakauśalam' not in frozen Cologne entry
+deepseek	prAtiBA	unattested_citation	generated citation 'Kāvyaś.' not in Cologne MW inventory
+deepseek	pracaRqavadana	citation_not_in_entry	'MBh.' attested corpus-wide but absent from pracaRqavadana entry
+deepseek	pracaRqavadana	example_not_in_gold	example 'pracaṇḍavadanaṃ rūpaṃ dadarśa' not in frozen Cologne entry
+deepseek	pracaRqavadana	example_not_in_gold	example 'pracaṇḍavadano devīṃ praṇamya' not in frozen Cologne entry
+deepseek	pracaRqavadana	example_not_in_gold	example 'pracaṇḍavadano nāma yakṣaḥ' not in frozen Cologne entry
+deepseek	pracaRqavadana	unattested_citation	generated citation 'Rājatar.' not in Cologne MW inventory
+deepseek	pragras	example_not_in_gold	example 'pragraḥ paśūn grasate' not in frozen Cologne entry
+deepseek	pragras	example_not_in_gold	example 'pragrā iva duṣṭā rājāno janān grasante' not in frozen Cologne entry
+deepseek	prahelikA	citation_not_in_entry	'Kāv.' attested corpus-wide but absent from prahelikA entry
+deepseek	prahelikA	citation_not_in_entry	'Sāh.' attested corpus-wide but absent from prahelikA entry
+deepseek	prahelikA	example_not_in_gold	example 'prahelikāṃ buddhiḥ sādhu jānāti' not in frozen Cologne entry
+deepseek	prahelikA	example_not_in_gold	example 'prahelikāṃ pṛcchati rājā' not in frozen Cologne entry
+deepseek	prasavamAsa	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from prasavamAsa entry
+deepseek	prasavamAsa	example_not_in_gold	"example ""prasavamāso 'bhijanit kāmaṃ"" not in frozen Cologne entry"
+deepseek	prasavamAsa	example_not_in_gold	example 'prasavamāse taravaḥ puṣpanti' not in frozen Cologne entry
+deepseek	prasavamAsa	unattested_citation	generated citation 'VarB.' not in Cologne MW inventory
+deepseek	rADAnATa	example_not_in_gold	example 'rādhānāthaṃ namāmi satatam' not in frozen Cologne entry
+deepseek	rADAnATa	example_not_in_gold	example 'rādhānāthena likhitaḥ ślokaḥ' not in frozen Cologne entry
+deepseek	rADAnATa	unattested_citation	generated citation 'Bhakti.' not in Cologne MW inventory
+deepseek	rADAnATa	unattested_citation	generated citation 'Kṛṣṇak.' not in Cologne MW inventory
+deepseek	rahasyam	citation_not_in_entry	'Gīt.' attested corpus-wide but absent from rahasyam entry
+deepseek	rahasyam	citation_not_in_entry	'R.' attested corpus-wide but absent from rahasyam entry
+deepseek	rahasyam	example_not_in_gold	example 'idaṃ rahasyaṃ na śrāvayitavyam' not in frozen Cologne entry
+deepseek	rahasyam	example_not_in_gold	example 'rahasyaṃ rājño mantriṇaṃ vinā na jānītaḥ' not in frozen Cologne entry
+deepseek	rahasyam	example_not_in_gold	example 'vadanti vedasya rahasyam' not in frozen Cologne entry
+deepseek	retas	citation_not_in_entry	'Mn.' attested corpus-wide but absent from retas entry
+deepseek	retas	example_not_in_gold	example 'retas sīcati' not in frozen Cologne entry
+deepseek	retas	example_not_in_gold	example 'retasāṃ dhāraṇam' not in frozen Cologne entry
+deepseek	retas	example_not_in_gold	example 'retasāṃ nidhiḥ' not in frozen Cologne entry
+deepseek	retas	root_headword_mismatch	root '√ri' vs headword 'retas'
+deepseek	sANmuKI	citation_not_in_entry	'Kauś.' attested corpus-wide but absent from sANmuKI entry
+deepseek	sANmuKI	citation_not_in_entry	'MBh.' attested corpus-wide but absent from sANmuKI entry
+deepseek	sANmuKI	example_not_in_gold	example 'sāṅmukhīm astram utsṛjya' not in frozen Cologne entry
+deepseek	sUcIprota	citation_not_in_entry	'Amar.' attested corpus-wide but absent from sUcIprota entry
+deepseek	sUcIprota	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from sUcIprota entry
+deepseek	sUcIprota	example_not_in_gold	example 'sūcīprotaṃ vastre sūtraṃ spaṣṭaṃ dṛśyate' not in frozen Cologne entry
+deepseek	sUcIprota	example_not_in_gold	example 'sūcīprotā iva hārā maṇayaḥ śobhante' not in frozen Cologne entry
+deepseek	sUryAloka	citation_not_in_entry	'MBh.' attested corpus-wide but absent from sUryAloka entry
+deepseek	sUryAloka	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from sUryAloka entry
+deepseek	sUryAloka	example_not_in_gold	example 'sūryālokena padmāni vikasanti' not in frozen Cologne entry
+deepseek	sUryAloka	example_not_in_gold	example 'sūryālokā nikhilaṃ jagat prabhāsate' not in frozen Cologne entry
+deepseek	sUryavaktra	citation_not_in_entry	'Divyāv.' attested corpus-wide but absent from sUryavaktra entry
+deepseek	sUryavaktra	citation_not_in_entry	'MBh.' attested corpus-wide but absent from sUryavaktra entry
+deepseek	sUryavaktra	example_not_in_gold	example 'sūryavaktra ity ākhyāyate nāgaḥ' not in frozen Cologne entry
+deepseek	sUryavaktra	example_not_in_gold	example 'sūryavaktraḥ samuddiṣṭo yakṣaśreṣṭhaḥ' not in frozen Cologne entry
+deepseek	sUryavaktra	example_not_in_gold	example 'sūryavaktraṃ prabhāsvaram' not in frozen Cologne entry
+deepseek	saccinmaya	citation_not_in_entry	'BhāgP.' attested corpus-wide but absent from saccinmaya entry
+deepseek	saccinmaya	citation_not_in_entry	'VP.' attested corpus-wide but absent from saccinmaya entry
+deepseek	saccinmaya	example_not_in_gold	example 'saccinmayaṃ brahma' not in frozen Cologne entry
+deepseek	saccinmaya	example_not_in_gold	example 'saccinmayāya janārdanāya namaḥ' not in frozen Cologne entry
+deepseek	samfta	citation_not_in_entry	'AV.' attested corpus-wide but absent from samfta entry
+deepseek	samfta	example_not_in_gold	example 'samṛtaṃ mitreṇa' not in frozen Cologne entry
+deepseek	samfta	example_not_in_gold	example 'samṛtāḥ sabhāyām' not in frozen Cologne entry
+deepseek	samfta	root_headword_mismatch	root 'sam-√ṛ (to go)' vs headword 'samṛta'
+deepseek	samupakalpita	citation_not_in_entry	'Kathās.' attested corpus-wide but absent from samupakalpita entry
+deepseek	samupakalpita	example_not_in_gold	example 'rājñā samupakalpitaṃ sabhāgṛhaṃ prāviśat' not in frozen Cologne entry
+deepseek	samupakalpita	example_not_in_gold	example 'samupakalpitaṃ bhojanaṃ tata āgatān prati' not in frozen Cologne entry
+deepseek	sarasA	citation_not_in_entry	'Nigh.' attested corpus-wide but absent from sarasA entry
+deepseek	sarasA	citation_not_in_entry	'RV.' attested corpus-wide but absent from sarasA entry
+deepseek	sarasA	example_not_in_gold	example 'sarasā nadī' not in frozen Cologne entry
+deepseek	sarasA	example_not_in_gold	example 'sarasā sravanti' not in frozen Cologne entry
+deepseek	sarasA	example_not_in_gold	example 'sarasāṃ jalam' not in frozen Cologne entry
+deepseek	sarasA	root_headword_mismatch	root '√sṛ' vs headword 'sarasā'
+deepseek	suhutakft	citation_not_in_entry	'MBh.' attested corpus-wide but absent from suhutakft entry
+deepseek	suhutakft	citation_not_in_entry	'RV.' attested corpus-wide but absent from suhutakft entry
+deepseek	suhutakft	example_not_in_gold	example 'suhutakṛd ṛṣiḥ svarge vased iti vacanam' not in frozen Cologne entry
+deepseek	suhutakft	example_not_in_gold	example 'suhutakṛte havye devā āgachan' not in frozen Cologne entry
+deepseek	sumeDas	citation_not_in_entry	'MBh.' attested corpus-wide but absent from sumeDas entry
+deepseek	sumeDas	example_not_in_gold	example 'sumedhaso brāhmaṇasya vāk' not in frozen Cologne entry
+deepseek	sumeDas	example_not_in_gold	example 'sumedhasā vinītena vijñānam avāpyate' not in frozen Cologne entry
+deepseek	sutaraRa	citation_not_in_entry	'MBh.' attested corpus-wide but absent from sutaraRa entry
+deepseek	sutaraRa	example_not_in_gold	example 'idaṃ vanaṃ sutaraṇaṃ sādhakānām' not in frozen Cologne entry
+deepseek	sutaraRa	example_not_in_gold	example 'sutaraṇā jambūnadī tatra sthita' not in frozen Cologne entry
+deepseek	syUmaka	example_not_in_gold	example 'syūmakaṃ baddhvā phalāni nītavān' not in frozen Cologne entry
+deepseek	tarkita	citation_not_in_entry	'Kāv.' attested corpus-wide but absent from tarkita entry
+deepseek	tarkita	citation_not_in_entry	'MBh.' attested corpus-wide but absent from tarkita entry
+deepseek	tarkita	example_not_in_gold	example 'tarkitaṃ mayā yad rājā āgamiṣyati' not in frozen Cologne entry
+deepseek	tfRAri	citation_not_in_entry	'MBh.' attested corpus-wide but absent from tfRAri entry
+deepseek	tfRAri	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from tfRAri entry
+deepseek	tfRAri	example_not_in_gold	example 'tṛṇārir varṣati śaraṇaṃ na bhavati' not in frozen Cologne entry
+deepseek	tfRAri	example_not_in_gold	example 'tṛṇāriṇā kṣetraṃ dahyate' not in frozen Cologne entry
+deepseek	turaMgamI	citation_not_in_entry	'MBh.' attested corpus-wide but absent from turaMgamI entry
+deepseek	turaMgamI	citation_not_in_entry	'R.' attested corpus-wide but absent from turaMgamI entry
+deepseek	turaMgamI	example_not_in_gold	"example ""turaṃgamīm āruhya yoddhā prāṅmukho 'gacchat"" not in frozen Cologne entry"
+deepseek	turaMgamI	example_not_in_gold	example 'citrā turaṃgamī śīghraṃ dhāvati' not in frozen Cologne entry
+deepseek	uzRam	citation_not_in_entry	'Car.' attested corpus-wide but absent from uzRam entry
+deepseek	uzRam	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from uzRam entry
+deepseek	uzRam	example_not_in_gold	example 'agniṃ uṣṇaṃ karoti' not in frozen Cologne entry
+deepseek	uzRam	example_not_in_gold	example 'uṣṇaṃ jalā vinaśyati' not in frozen Cologne entry
+deepseek	vAgguda	citation_not_in_entry	'Pāṇ.' attested corpus-wide but absent from vAgguda entry
+deepseek	vAgguda	example_not_in_gold	example 'vāggudasya vacanaṃ na spaṣṭam' not in frozen Cologne entry
+deepseek	vAgguda	example_not_in_gold	example 'vāggudo janaḥ prāyaḥ' not in frozen Cologne entry
+deepseek	vAgguda	example_not_in_gold	example 'vāggudā vācā nāti spṛśanti' not in frozen Cologne entry
+deepseek	vAgguda	unattested_citation	generated citation 'Amara.' not in Cologne MW inventory
+deepseek	vAribindu	citation_not_in_entry	'R.' attested corpus-wide but absent from vAribindu entry
+deepseek	vAribindu	example_not_in_gold	example 'vāribindavaḥ puṣpāgreṣu tiṣṭhanti' not in frozen Cologne entry
+deepseek	vAribindu	example_not_in_gold	example 'vāribindur yathā sparśam āśu gacchati' not in frozen Cologne entry
+deepseek	vAribindu	unattested_citation	generated citation 'Gītā' not in Cologne MW inventory
+deepseek	vEDAtaki	citation_not_in_entry	'Cat.' attested corpus-wide but absent from vEDAtaki entry
+deepseek	vEDAtaki	example_not_in_gold	example 'vaidhātakir ṛṣiḥ śiṣyān adhyāpayat' not in frozen Cologne entry
+deepseek	vEDAtaki	example_not_in_gold	example 'vaidhātakiṃ yājñavalkyaḥ paryapṛcchat' not in frozen Cologne entry
+deepseek	vEDAtaki	unattested_citation	generated citation 'ŚatBr.' not in Cologne MW inventory
+deepseek	vanamakzikA	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from vanamakzikA entry
+deepseek	vanamakzikA	example_not_in_gold	example 'vanamakṣikāḥ puṣpeṣu ghuñjanti' not in frozen Cologne entry
+deepseek	vanopeta	citation_not_in_entry	'MBh.' attested corpus-wide but absent from vanopeta entry
+deepseek	vanopeta	example_not_in_gold	example 'vanopetaṃ grāmaṃ prāvikṣat' not in frozen Cologne entry
+deepseek	vanopeta	example_not_in_gold	example 'vanopetā bhūmiḥ kṛṣaye yujyate' not in frozen Cologne entry
+deepseek	varmAya	citation_not_in_entry	'MBh.' attested corpus-wide but absent from varmAya entry
+deepseek	varmAya	example_not_in_gold	example 'varmāya kavacaṃ bibharti' not in frozen Cologne entry
+deepseek	varmAya	example_not_in_gold	example 'varmāya rajjvā veṣṭitam' not in frozen Cologne entry
+deepseek	veSanada	citation_not_in_entry	'MBh.' attested corpus-wide but absent from veSanada entry
+deepseek	veSanada	example_not_in_gold	example 'veśanadaḥ kṣatriyo babhūva' not in frozen Cologne entry
+deepseek	vidyAmandira	citation_not_in_entry	'Kāt.' attested corpus-wide but absent from vidyAmandira entry
+deepseek	vidyAmandira	example_not_in_gold	"example ""vidyāmandire vidyārthino'pāṭhayan"" not in frozen Cologne entry"
+deepseek	vidyAmandira	example_not_in_gold	example 'vidyāmandiraṃ rājñā sthāpitam' not in frozen Cologne entry
+deepseek	vidyAmandira	unattested_citation	generated citation 'Mod.' not in Cologne MW inventory
+deepseek	vipare	citation_not_in_entry	'MBh.' attested corpus-wide but absent from vipare entry
+deepseek	vipare	example_not_in_gold	example 'vipare tīre nadyaḥ krīḍanti' not in frozen Cologne entry
+deepseek	vipare	example_not_in_gold	example 'vipare vartate kāryam' not in frozen Cologne entry
+deepseek	vrIhivApa	citation_not_in_entry	'Kauś.' attested corpus-wide but absent from vrIhivApa entry
+deepseek	vrIhivApa	citation_not_in_entry	'Kāṭh.' attested corpus-wide but absent from vrIhivApa entry
+deepseek	vrIhivApa	example_not_in_gold	example 'vrīhivāpaṃ gataḥ kākaḥ' not in frozen Cologne entry
+deepseek	vrIhivApa	example_not_in_gold	example 'vrīhivāpaṃ kārayet kṛṣakaḥ' not in frozen Cologne entry
+deepseek	vrIhivApa	example_not_in_gold	example 'vrīhivāpe kṣetre kṛṣāti' not in frozen Cologne entry
+deepseek	vrIhivApa	unattested_citation	generated citation 'Suś.' not in Cologne MW inventory
+deepseek	vyAGraketu	citation_not_in_entry	'BhP.' attested corpus-wide but absent from vyAGraketu entry
+deepseek	vyAGraketu	example_not_in_gold	example 'vyāghraketur nṛpo dharmyaṃ cakāra' not in frozen Cologne entry
+deepseek	vyAGraketu	example_not_in_gold	example 'vyāghraketuṃ senānyam abhyanandat' not in frozen Cologne entry
+deepseek	vyatirekavyApti	example_not_in_gold	"example ""dhūmo 'gnimad-vyāpakaḥ vyatirekavyāptyā"" not in frozen Cologne entry"
+deepseek	vyatirekavyApti	example_not_in_gold	"example ""yatrāgnir nāsti tatra dhūmo 'pi nāsti — iti vyatirekavyāptiḥ"" not in frozen Cologne entry"
+deepseek	vyatirekavyApti	unattested_citation	generated citation 'NBh.' not in Cologne MW inventory
+deepseek	vyatirekavyApti	unattested_citation	generated citation 'Tattvacint.' not in Cologne MW inventory
+deepseek	yAgasUtra	citation_not_in_entry	'MBh.' attested corpus-wide but absent from yAgasUtra entry
+deepseek	yAgasUtra	example_not_in_gold	"example ""yāgasūtraṃ dakṣiṇe 'ṃse dhārayate dvijottamaḥ"" not in frozen Cologne entry"
+deepseek	yAgasUtra	example_not_in_gold	example 'yāgasūtreṇa vinā yāgo na saṃpadyate' not in frozen Cologne entry
+deepseek	yAgasUtra	unattested_citation	generated citation 'Śāṅkh.Śr.' not in Cologne MW inventory
+deepseek	yaTAsTAne	citation_not_in_entry	'MBh.' attested corpus-wide but absent from yaTAsTAne entry
+deepseek	yaTAsTAne	citation_not_in_entry	'R.' attested corpus-wide but absent from yaTAsTAne entry
+deepseek	yaTAsTAne	example_not_in_gold	example 'pustakāni yathāsthāne sthāpaya' not in frozen Cologne entry
+deepseek	yaTAsTAne	example_not_in_gold	example 'sarve yājakā yathāsthāne niveśitāḥ' not in frozen Cologne entry
+glm	Ajyanta	citation_not_in_entry	'RV.' attested corpus-wide but absent from Ajyanta entry
+glm	Ajyanta	example_not_in_gold	example 'ājyantam āsādayan' not in frozen Cologne entry
+glm	Ajyanta	example_not_in_gold	example 'ājyantaṃ upaiti' not in frozen Cologne entry
+glm	AnandaBEravI	example_not_in_gold	example 'ānandabhairavyāḥ pūjāṃ kariṣyāmi' not in frozen Cologne entry
+glm	BAsurAnandanATa	example_not_in_gold	example 'bhāsurānandanātha-kṛtam' not in frozen Cologne entry
+glm	BAsurAnandanATa	example_not_in_gold	example 'śrībhāsurānandanāthāya namaḥ' not in frozen Cologne entry
+glm	BUrja	citation_not_in_entry	'MBh.' attested corpus-wide but absent from BUrja entry
+glm	BUrja	citation_not_in_entry	'Rājat.' attested corpus-wide but absent from BUrja entry
+glm	BUrja	example_not_in_gold	example 'bhūrjapattre likhyate' not in frozen Cologne entry
+glm	BUrja	example_not_in_gold	example 'bhūrjasya tvacā' not in frozen Cologne entry
+glm	BUrja	example_not_in_gold	example 'bhūrjavṛkṣasya tvacaḥ śvetāḥ' not in frozen Cologne entry
+glm	DOtakawa	example_not_in_gold	example 'dhautakaṭo vasate' not in frozen Cologne entry
+glm	DOtakawa	root_headword_mismatch	root '√dah' vs headword 'dhautakaṭa'
+glm	DanurBft	citation_not_in_entry	'R.' attested corpus-wide but absent from DanurBft entry
+glm	DanurBft	example_not_in_gold	example 'dhanurbhṛtam āsvasan kaṇṭhe' not in frozen Cologne entry
+glm	DanurBft	example_not_in_gold	example 'dhanurbhṛto raṇād apakrāmat' not in frozen Cologne entry
+glm	PalaMdadA	example_not_in_gold	example 'phalaṃdadā devī pūjyate' not in frozen Cologne entry
+glm	PalaMdadA	example_not_in_gold	example 'phalaṃdāyai namaḥ' not in frozen Cologne entry
+glm	SAntiguru	example_not_in_gold	example 'śāntigurave namaḥ' not in frozen Cologne entry
+glm	SAntiguru	example_not_in_gold	example 'śāntiguruḥ śāntiṃ kārayet' not in frozen Cologne entry
+glm	SEPAlika	citation_not_in_entry	'MBh.' attested corpus-wide but absent from SEPAlika entry
+glm	SEPAlika	citation_not_in_entry	'Pāṇ.' attested corpus-wide but absent from SEPAlika entry
+glm	SEPAlika	example_not_in_gold	example 'śaiphālikena saha saṃvādaḥ' not in frozen Cologne entry
+glm	Sakkari	example_not_in_gold	example 'śakkarir mama gurur' not in frozen Cologne entry
+glm	Sakkari	example_not_in_gold	example 'śakkariḥ śiva īritaḥ' not in frozen Cologne entry
+glm	SrIkaRWatA	citation_not_in_entry	'Pur.' attested corpus-wide but absent from SrIkaRWatA entry
+glm	SrIkaRWatA	example_not_in_gold	example 'śrīkaṇṭhatāyā vāk pravṛttā' not in frozen Cologne entry
+glm	SrIkaRWatA	example_not_in_gold	example 'śrīkaṇṭhatāṃ gataḥ' not in frozen Cologne entry
+glm	SvetabuhnA	example_not_in_gold	example 'śvetabuhnā prasāritā' not in frozen Cologne entry
+glm	SyenakapotIya	example_not_in_gold	"example ""śyenakapotīyo 'yam ādeśaḥ"" not in frozen Cologne entry"
+glm	SyenakapotIya	unattested_citation	generated citation 'Kāmand.' not in Cologne MW inventory
+glm	ahyarzu	citation_not_in_entry	'AV.' attested corpus-wide but absent from ahyarzu entry
+glm	ahyarzu	example_not_in_gold	example 'ahyarṣur gāyata ṛṣiḥ' not in frozen Cologne entry
+glm	ahyarzu	example_not_in_gold	example 'ahyarṣuṃ cābhigṛhṇīyāt' not in frozen Cologne entry
+glm	ahyarzu	example_not_in_gold	example 'ahyarṣuṃ japet sarpa-bhaye' not in frozen Cologne entry
+glm	apANktya	example_not_in_gold	example 'apāṅktyam upagāḍham' not in frozen Cologne entry
+glm	apANktya	example_not_in_gold	example 'apāṅktye nipatanti' not in frozen Cologne entry
+glm	aprAyu	citation_not_in_entry	'RV.' attested corpus-wide but absent from aprAyu entry
+glm	aprAyu	example_not_in_gold	example 'aprāyuḥ kāmaḥ' not in frozen Cologne entry
+glm	asurya	example_not_in_gold	example 'asuryasya gatiḥ' not in frozen Cologne entry
+glm	asurya	example_not_in_gold	example 'asurye loke' not in frozen Cologne entry
+glm	avAcina	citation_not_in_entry	'MBh.' attested corpus-wide but absent from avAcina entry
+glm	avAcina	example_not_in_gold	example 'avācinaṃ gr̥hītvā muṇḍanam akārṣīt' not in frozen Cologne entry
+glm	avAcina	example_not_in_gold	example 'avācinā keśān avapātayat' not in frozen Cologne entry
+glm	avyaTi	citation_not_in_entry	'MBh.' attested corpus-wide but absent from avyaTi entry
+glm	avyaTi	example_not_in_gold	example 'avyathena manasā' not in frozen Cologne entry
+glm	avyaTi	example_not_in_gold	example 'avyatho bhava' not in frozen Cologne entry
+glm	avyaTi	example_not_in_gold	example 'avyathā śete' not in frozen Cologne entry
+glm	bilakArin	example_not_in_gold	example 'bilakāriṇā kṛtaṃ bilaṃ' not in frozen Cologne entry
+glm	bilakArin	example_not_in_gold	example 'bilakārī mūṣakaḥ' not in frozen Cologne entry
+glm	bilakArin	root_headword_mismatch	root '√kṛ' vs headword 'bilakārin'
+glm	cArmikAyaRi	citation_not_in_entry	'MBh.' attested corpus-wide but absent from cArmikAyaRi entry
+glm	caturyuj	citation_not_in_entry	'MBh.' attested corpus-wide but absent from caturyuj entry
+glm	caturyuj	example_not_in_gold	example 'caturyujam ratham āropya' not in frozen Cologne entry
+glm	caturyuj	example_not_in_gold	example 'caturyujāḥ aśvāḥ' not in frozen Cologne entry
+glm	dIrGabIjA	example_not_in_gold	example 'dīrghabījāḥ phalanti' not in frozen Cologne entry
+glm	dIrGabIjA	example_not_in_gold	example 'dīrghabījāṃ paricārayāmi' not in frozen Cologne entry
+glm	dantaSARa	citation_not_in_entry	'MBh.' attested corpus-wide but absent from dantaSARa entry
+glm	dantaSARa	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from dantaSARa entry
+glm	dantaSARa	example_not_in_gold	example 'dantaśāṇeṇa kṛtam alaṃkāram' not in frozen Cologne entry
+glm	dantaSARa	example_not_in_gold	example 'gajo dantaśāṇasahitaḥ' not in frozen Cologne entry
+glm	dardarI	example_not_in_gold	example 'dardaryāṃ payaḥ dhārayati' not in frozen Cologne entry
+glm	dardarI	root_headword_mismatch	root '√dṛḍ' vs headword 'dardarī'
+glm	devIdAsa	example_not_in_gold	"example ""devīdāso 'bravīt"" not in frozen Cologne entry"
+glm	devIdAsa	example_not_in_gold	example 'devīdāsena racitā kāvyāni' not in frozen Cologne entry
+glm	devasenA	citation_not_in_entry	'R.' attested corpus-wide but absent from devasenA entry
+glm	devasenA	example_not_in_gold	example 'devasenā sahasraśaḥ' not in frozen Cologne entry
+glm	devasenA	example_not_in_gold	example 'devasenāpatir indraḥ' not in frozen Cologne entry
+glm	ekanayana	example_not_in_gold	"example ""ekanayano 'ndha ivāsi"" not in frozen Cologne entry"
+glm	ekanayana	example_not_in_gold	example 'ekanayanam iva paśyati' not in frozen Cologne entry
+glm	fkzA	citation_not_in_entry	'MBh.' attested corpus-wide but absent from fkzA entry
+glm	fkzA	example_not_in_gold	example 'kruddhāyā ṛkṣāyāḥ prabhāve' not in frozen Cologne entry
+glm	fkzA	example_not_in_gold	example 'ṛkṣā vanam āviśat' not in frozen Cologne entry
+glm	ganDamAlyaloka	example_not_in_gold	example 'gandhamālyaloke vasati' not in frozen Cologne entry
+glm	ganDavfkzaka	citation_not_in_entry	'R.' attested corpus-wide but absent from ganDavfkzaka entry
+glm	gfhAlI	example_not_in_gold	example 'gṛhālī annaṃ pacati' not in frozen Cologne entry
+glm	gfhAlI	example_not_in_gold	example 'gṛhālī śālāṃ alaṅkaroti' not in frozen Cologne entry
+glm	gosUkta	example_not_in_gold	example 'gosūktaṃ paṭhati' not in frozen Cologne entry
+glm	gosUkta	example_not_in_gold	example 'gosūktena devīḥ stauti' not in frozen Cologne entry
+glm	guptipAlaka	example_not_in_gold	example 'guptipālakena saṃrakṣitaḥ' not in frozen Cologne entry
+glm	guptipAlaka	example_not_in_gold	example 'guptipālako rājñāḥ' not in frozen Cologne entry
+glm	indradru	citation_not_in_entry	'MBh.' attested corpus-wide but absent from indradru entry
+glm	indradru	citation_not_in_entry	'R.' attested corpus-wide but absent from indradru entry
+glm	indradru	example_not_in_gold	example 'indradrum āsṛjanta' not in frozen Cologne entry
+glm	indradru	example_not_in_gold	example 'indradruḥ śamī saṃjñitaḥ' not in frozen Cologne entry
+glm	izwAhotrIya	citation_not_in_entry	'MBh.' attested corpus-wide but absent from izwAhotrIya entry
+glm	izwAhotrIya	citation_not_in_entry	'ŚrS.' attested corpus-wide but absent from izwAhotrIya entry
+glm	jaqula	example_not_in_gold	example 'jaḍulasya sāram upayuktavān' not in frozen Cologne entry
+glm	jaqula	example_not_in_gold	example 'vaṭaś ca jaḍulaś ca ārāme' not in frozen Cologne entry
+glm	jigIzotsAhavat	citation_not_in_entry	'Hariv.' attested corpus-wide but absent from jigIzotsAhavat entry
+glm	jigIzotsAhavat	citation_not_in_entry	'MBh.' attested corpus-wide but absent from jigIzotsAhavat entry
+glm	jigIzotsAhavat	example_not_in_gold	example 'jigīṣotsāhavatāṃ gatvā' not in frozen Cologne entry
+glm	jigIzotsAhavat	example_not_in_gold	example 'jigīṣotsāhavatīṃ strīm apaśyat' not in frozen Cologne entry
+glm	jigIzotsAhavat	example_not_in_gold	example 'jigīṣotsāhavān sa kṣatriyaḥ' not in frozen Cologne entry
+glm	kalyARamaya	citation_not_in_entry	'BhP.' attested corpus-wide but absent from kalyARamaya entry
+glm	karRavat	example_not_in_gold	example 'karṇavacchravam' not in frozen Cologne entry
+glm	karRavat	example_not_in_gold	example 'karṇavatī latā' not in frozen Cologne entry
+glm	karmakAra	citation_not_in_entry	'Kathās.' attested corpus-wide but absent from karmakAra entry
+glm	karmakAra	citation_not_in_entry	'MBh.' attested corpus-wide but absent from karmakAra entry
+glm	karmakAra	example_not_in_gold	example 'aṣṭau karmakārā āsan' not in frozen Cologne entry
+glm	karmakAra	example_not_in_gold	example 'karmakārasya gṛham' not in frozen Cologne entry
+glm	karmakAra	example_not_in_gold	example 'karmakārāḥ śilpāni kurvanti' not in frozen Cologne entry
+glm	krIqanaka	citation_not_in_entry	'R.' attested corpus-wide but absent from krIqanaka entry
+glm	krIqanaka	example_not_in_gold	example 'krīḍanakair divyaiḥ saha krīḍati' not in frozen Cologne entry
+glm	kruYcA	citation_not_in_entry	'MBh.' attested corpus-wide but absent from kruYcA entry
+glm	kruYcA	citation_not_in_entry	'R.' attested corpus-wide but absent from kruYcA entry
+glm	kruYcA	example_not_in_gold	example 'kruñcā krandati' not in frozen Cologne entry
+glm	kruYcA	example_not_in_gold	example 'kruñcākulaḥ saras' not in frozen Cologne entry
+glm	lOhabanDa	example_not_in_gold	example 'lauhabandhaṃ chinatti' not in frozen Cologne entry
+glm	latAya	citation_not_in_entry	'MBh.' attested corpus-wide but absent from latAya entry
+glm	latAya	example_not_in_gold	example 'latāyanti sarpā bhūmau' not in frozen Cologne entry
+glm	latAya	example_not_in_gold	example 'latāyati sā taru-mūle' not in frozen Cologne entry
+glm	latAya	example_not_in_gold	example 'latāyitum ārebhe' not in frozen Cologne entry
+glm	lavavat	example_not_in_gold	example 'annam lavavat' not in frozen Cologne entry
+glm	lavavat	example_not_in_gold	example 'lavavān annapākaḥ' not in frozen Cologne entry
+glm	lavavat	example_not_in_gold	example 'saindhavalavavān rasaḥ' not in frozen Cologne entry
+glm	luptopamAna	example_not_in_gold	example 'luptopamānasya rūpasya' not in frozen Cologne entry
+glm	luptopamAna	example_not_in_gold	example 'sā luptopamānā tapasvinī' not in frozen Cologne entry
+glm	maRiDAriRI	example_not_in_gold	example 'maṇidhāriṇyāḥ sakhyā saha' not in frozen Cologne entry
+glm	mahAdevavedAntavAgISa	example_not_in_gold	example 'mahādevavedāntavāgīśa āha' not in frozen Cologne entry
+glm	mahAdevavedAntavAgISa	example_not_in_gold	example 'namaḥ mahādevavedāntavāgīśāya' not in frozen Cologne entry
+glm	meNganATa	example_not_in_gold	example 'meṅganāthaḥ paṇḍita āsīt' not in frozen Cologne entry
+glm	meNganATa	example_not_in_gold	example 'meṅganāthena racitam idam śāstraṃ' not in frozen Cologne entry
+glm	mfgAsya	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from mfgAsya entry
+glm	mfgAsya	example_not_in_gold	example 'mṛgāsyam utthitam' not in frozen Cologne entry
+glm	mfgAsya	example_not_in_gold	example 'mṛgāsyāyāḥ savaḥ' not in frozen Cologne entry
+glm	nAqa	citation_not_in_entry	'MBh.' attested corpus-wide but absent from nAqa entry
+glm	nAqa	citation_not_in_entry	'RV.' attested corpus-wide but absent from nAqa entry
+glm	nAqa	example_not_in_gold	example 'nāḍāsu praviśati prāṇaḥ' not in frozen Cologne entry
+glm	nAqa	example_not_in_gold	example 'vāyuḥ nāḍāḥ praṇodati' not in frozen Cologne entry
+glm	nIlarAji	example_not_in_gold	example 'nīlarājī puṣpāṇāṃ sāraḥ' not in frozen Cologne entry
+glm	nIlarAji	example_not_in_gold	example 'nīlarājī vanaṃ vīrājate' not in frozen Cologne entry
+glm	nfpAnna	example_not_in_gold	example 'nṛpānnaṃ bhuñkte' not in frozen Cologne entry
+glm	nfpAnna	example_not_in_gold	example 'nṛpānnena jīvati' not in frozen Cologne entry
+glm	nipIqayat	citation_not_in_entry	'MBh.' attested corpus-wide but absent from nipIqayat entry
+glm	nipIqayat	example_not_in_gold	example 'nipīḍayan nṛpe vākyaṃ' not in frozen Cologne entry
+glm	nipIqayat	example_not_in_gold	example 'nipīḍayat sma śatruḥ prajām' not in frozen Cologne entry
+glm	nipIqayat	example_not_in_gold	example 'ṛṇinaḥ nipīḍayati' not in frozen Cologne entry
+glm	nizkrAnta	example_not_in_gold	example 'grāhād niṣkrāntaḥ sa mānavaḥ' not in frozen Cologne entry
+glm	nizkrAnta	example_not_in_gold	example 'niṣkrāntā devī prasādāt' not in frozen Cologne entry
+glm	nizkrAnta	example_not_in_gold	example 'sarvāṇi dvārāṇi niṣkrāntāni' not in frozen Cologne entry
+glm	okodanI	example_not_in_gold	example 'okodanī jalacāriṇī' not in frozen Cologne entry
+glm	pAtresamita	citation_not_in_entry	'MBh.' attested corpus-wide but absent from pAtresamita entry
+glm	pAtresamita	example_not_in_gold	example 'kim pātresamitam idam annam' not in frozen Cologne entry
+glm	pAtresamita	unattested_citation	generated citation 'Manu.' not in Cologne MW inventory
+glm	pUrtikAma	example_not_in_gold	"example ""sa pūrtikāmo 'bhavat"" not in frozen Cologne entry"
+glm	pUrtikAma	example_not_in_gold	example 'pūrtikāmā upāyan' not in frozen Cologne entry
+glm	paripuwana	example_not_in_gold	example 'paripuṭanaṃ praveśayāmāsa' not in frozen Cologne entry
+glm	paripuwana	example_not_in_gold	example 'paripuṭanena vākyāni pāṭhayati' not in frozen Cologne entry
+glm	paryABfta	citation_not_in_entry	'MBh.' attested corpus-wide but absent from paryABfta entry
+glm	paryABfta	example_not_in_gold	example 'dhanāni paryābhṛtāni raṇāt' not in frozen Cologne entry
+glm	paryABfta	example_not_in_gold	example 'paryābhṛtā paśumāṃsaḥ' not in frozen Cologne entry
+glm	paryABfta	example_not_in_gold	example 'paryābhṛtāḥ phalānīva bhāgaśo' not in frozen Cologne entry
+glm	pawamaRqapa	citation_not_in_entry	'Pur.' attested corpus-wide but absent from pawamaRqapa entry
+glm	pawamaRqapa	example_not_in_gold	example 'paṭamaṇḍape sabhā śubhā' not in frozen Cologne entry
+glm	prArabDa	citation_not_in_entry	'MBh.' attested corpus-wide but absent from prArabDa entry
+glm	prArabDa	example_not_in_gold	example 'prārabdhakarmā jīvaḥ' not in frozen Cologne entry
+glm	prArabDa	example_not_in_gold	example 'prārabdhaṃ karma' not in frozen Cologne entry
+glm	prAtiBA	example_not_in_gold	example 'prātibhā kavihetuḥ' not in frozen Cologne entry
+glm	prAtiBA	example_not_in_gold	example 'prātibhānubandhinī pratibhā' not in frozen Cologne entry
+glm	prAtiBA	unattested_citation	generated citation 'ŚD.' not in Cologne MW inventory
+glm	pracaRqavadana	citation_not_in_entry	'MBh.' attested corpus-wide but absent from pracaRqavadana entry
+glm	pracaRqavadana	example_not_in_gold	example 'pracaṇḍavadanaṃ vyāghram apaśyat' not in frozen Cologne entry
+glm	pracaRqavadana	example_not_in_gold	example 'pracaṇḍavadanā rākṣasī' not in frozen Cologne entry
+glm	pragras	citation_not_in_entry	'AV.' attested corpus-wide but absent from pragras entry
+glm	pragras	example_not_in_gold	example 'agniḥ havyaṃ pragrasati' not in frozen Cologne entry
+glm	pragras	example_not_in_gold	example 'mūṣako dhānyam pragrasati' not in frozen Cologne entry
+glm	pragras	example_not_in_gold	example 'pragrasati rākṣasaḥ sa palam' not in frozen Cologne entry
+glm	prahelikA	citation_not_in_entry	'MBh.' attested corpus-wide but absent from prahelikA entry
+glm	prahelikA	example_not_in_gold	example 'prahelikābhir ramati' not in frozen Cologne entry
+glm	prahelikA	example_not_in_gold	example 'prahelikāsahasram ākhyāt' not in frozen Cologne entry
+glm	prahelikA	example_not_in_gold	example 'prahelikāṃ vakti' not in frozen Cologne entry
+glm	prahelikA	root_headword_mismatch	root '√lah' vs headword 'prahelikā'
+glm	prasavamAsa	example_not_in_gold	example 'prasavamāse putraḥ jātaḥ' not in frozen Cologne entry
+glm	rADAnATa	citation_not_in_entry	'BhP.' attested corpus-wide but absent from rADAnATa entry
+glm	rADAnATa	example_not_in_gold	example 'kṛṣṇas tu rādhānātha iti prakhyātaḥ' not in frozen Cologne entry
+glm	rADAnATa	example_not_in_gold	example 'rādhānāthasya pādau śirasi dhṛtvā' not in frozen Cologne entry
+glm	rADAnATa	example_not_in_gold	example 'rādhānāthaṃ namaskurvanti vrajastriyaḥ' not in frozen Cologne entry
+glm	rADAnATa	unattested_citation	generated citation 'BṛhP.' not in Cologne MW inventory
+glm	rahasyam	citation_not_in_entry	'R.' attested corpus-wide but absent from rahasyam entry
+glm	rahasyam	example_not_in_gold	example 'rahasyam imāṃ kathāṃ na vada' not in frozen Cologne entry
+glm	retas	citation_not_in_entry	'MBh.' attested corpus-wide but absent from retas entry
+glm	retas	example_not_in_gold	example 'retasaḥ prajā sṛjate' not in frozen Cologne entry
+glm	retas	example_not_in_gold	example 'retasaḥ sṛjate' not in frozen Cologne entry
+glm	retas	example_not_in_gold	example 'retasi saṃsṛjanti' not in frozen Cologne entry
+glm	sUcIprota	citation_not_in_entry	'MBh.' attested corpus-wide but absent from sUcIprota entry
+glm	sUcIprota	example_not_in_gold	example 'sūcīprotaḥ kaṇakaḥ' not in frozen Cologne entry
+glm	sUcIprota	example_not_in_gold	example 'sūcīprotaṃ mālyam' not in frozen Cologne entry
+glm	sUcIprota	example_not_in_gold	example 'sūcīprotāḥ śalākāḥ' not in frozen Cologne entry
+glm	sUryAloka	citation_not_in_entry	'MBh.' attested corpus-wide but absent from sUryAloka entry
+glm	sUryAloka	citation_not_in_entry	'R.' attested corpus-wide but absent from sUryAloka entry
+glm	sUryAloka	example_not_in_gold	example 'sūryālokasya tejasā' not in frozen Cologne entry
+glm	sUryAloka	example_not_in_gold	example 'sūryāloke tiṣṭhati' not in frozen Cologne entry
+glm	sUryavaktra	citation_not_in_entry	'MBh.' attested corpus-wide but absent from sUryavaktra entry
+glm	sUryavaktra	example_not_in_gold	example 'sūryavaktraḥ prahasann uvāca' not in frozen Cologne entry
+glm	sUryavaktra	example_not_in_gold	example 'sūryavaktreṇa īkṣate' not in frozen Cologne entry
+glm	saccinmaya	example_not_in_gold	"example ""brahmā saccinmayo 'viśeṣaḥ"" not in frozen Cologne entry"
+glm	saccinmaya	example_not_in_gold	example 'saccinmayaṃ parātparaṃ' not in frozen Cologne entry
+glm	saccinmaya	unattested_citation	generated citation 'Upan.' not in Cologne MW inventory
+glm	samfta	citation_not_in_entry	'MBh.' attested corpus-wide but absent from samfta entry
+glm	samfta	example_not_in_gold	example 'samṛtaḥ pūrṇaḥ' not in frozen Cologne entry
+glm	samfta	example_not_in_gold	example 'samṛtaṃ yajñaṃ yajate' not in frozen Cologne entry
+glm	samupakalpita	root_headword_mismatch	root 'sam-upa-√kṛp' vs headword 'samupakalpita'
+glm	sarasA	citation_not_in_entry	'Suśr.' attested corpus-wide but absent from sarasA entry
+glm	sarasA	example_not_in_gold	example 'sarasā mūlaṃ pacyate' not in frozen Cologne entry
+glm	sarasA	example_not_in_gold	example 'sarasāyāḥ pattraṃ' not in frozen Cologne entry
+glm	suhutakft	citation_not_in_entry	'AV.' attested corpus-wide but absent from suhutakft entry
+glm	suhutakft	citation_not_in_entry	'RV.' attested corpus-wide but absent from suhutakft entry
+glm	suhutakft	example_not_in_gold	example 'suhutakṛtaḥ hotāraḥ' not in frozen Cologne entry
+glm	suhutakft	example_not_in_gold	example 'suhutakṛtim agnim ijāra' not in frozen Cologne entry
+glm	suhutakft	example_not_in_gold	example 'suhutakṛtā yajamānāḥ śerate' not in frozen Cologne entry
+glm	sumeDas	citation_not_in_entry	'MBh.' attested corpus-wide but absent from sumeDas entry
+glm	sumeDas	example_not_in_gold	example 'agnir viśvedhā sumedhaḥ' not in frozen Cologne entry
+glm	sumeDas	example_not_in_gold	example 'sumedhaso vipraḥ' not in frozen Cologne entry
+glm	sutaraRa	citation_not_in_entry	'MBh.' attested corpus-wide but absent from sutaraRa entry
+glm	sutaraRa	citation_not_in_entry	'R.' attested corpus-wide but absent from sutaraRa entry
+glm	sutaraRa	example_not_in_gold	example 'sutaraṇam vindhyam atikrāmat' not in frozen Cologne entry
+glm	sutaraRa	example_not_in_gold	example 'sutaraṇo durgāḥ satpura' not in frozen Cologne entry
+glm	sutaraRa	example_not_in_gold	example 'sutaraṇā nadyo vasante' not in frozen Cologne entry
+glm	sutaraRa	root_headword_mismatch	root '√tṛ' vs headword 'sutaraṇa'
+glm	syUmaka	citation_not_in_entry	'MBh.' attested corpus-wide but absent from syUmaka entry
+glm	syUmaka	example_not_in_gold	"example ""syūmako 'nnam uṣṇaṃ"" not in frozen Cologne entry"
+glm	syUmaka	example_not_in_gold	example 'syūmakasya phalāni' not in frozen Cologne entry
+glm	tarkita	citation_not_in_entry	'MBh.' attested corpus-wide but absent from tarkita entry
+glm	tfRAri	example_not_in_gold	example 'tṛṇāriḥ sampravṛddhaḥ' not in frozen Cologne entry
+glm	tfRAri	example_not_in_gold	example 'tṛṇāriṃ kurute' not in frozen Cologne entry
+glm	turaMgamI	citation_not_in_entry	'MBh.' attested corpus-wide but absent from turaMgamI entry
+glm	turaMgamI	citation_not_in_entry	'R.' attested corpus-wide but absent from turaMgamI entry
+glm	turaMgamI	example_not_in_gold	example 'turagī iva śīghrā' not in frozen Cologne entry
+glm	turaMgamI	example_not_in_gold	example 'turaṃgamīṃ āruhya' not in frozen Cologne entry
+glm	uzRam	citation_not_in_entry	'RV.' attested corpus-wide but absent from uzRam entry
+glm	uzRam	example_not_in_gold	example 'uṣṇaṃ spṛśati' not in frozen Cologne entry
+glm	uzRam	example_not_in_gold	example 'uṣṇaṃ vahniḥ' not in frozen Cologne entry
+glm	vAgguda	example_not_in_gold	example 'vāggudaṃ dhārayati' not in frozen Cologne entry
+glm	vAgguda	example_not_in_gold	example 'vāggudādhirṇā bhūṣaṇam' not in frozen Cologne entry
+glm	vAribindu	example_not_in_gold	example 'vāribindavo nipatanti' not in frozen Cologne entry
+glm	vAribindu	example_not_in_gold	example 'vāribindum iva lāghavam' not in frozen Cologne entry
+glm	vEDAtaki	citation_not_in_entry	'MBh.' attested corpus-wide but absent from vEDAtaki entry
+glm	vanamakzikA	citation_not_in_entry	'MBh.' attested corpus-wide but absent from vanamakzikA entry
+glm	vanamakzikA	example_not_in_gold	"example ""vanamakṣikāṃ ghaṭo 'kṣipet"" not in frozen Cologne entry"
+glm	vanamakzikA	example_not_in_gold	example 'vanamakṣikā vanāni caranti' not in frozen Cologne entry
+glm	vanopeta	citation_not_in_entry	'MBh.' attested corpus-wide but absent from vanopeta entry
+glm	vanopeta	citation_not_in_entry	'R.' attested corpus-wide but absent from vanopeta entry
+glm	vanopeta	example_not_in_gold	example 'vanopetaḥ siṃho vanam jagāma' not in frozen Cologne entry
+glm	vanopeta	example_not_in_gold	example 'vanopetā munayo vanam avasan' not in frozen Cologne entry
+glm	vanopeta	example_not_in_gold	example 'vanopetāṃ vanitāṃ dadarśa' not in frozen Cologne entry
+glm	vanopeta	root_headword_mismatch	root 'upa√i' vs headword 'vanopeta'
+glm	varmAya	citation_not_in_entry	'MBh.' attested corpus-wide but absent from varmAya entry
+glm	veSanada	citation_not_in_entry	'L.' attested corpus-wide but absent from veSanada entry
+glm	veSanada	example_not_in_gold	example 'veśanadaṃ cūrṇīkṛtya lehayet' not in frozen Cologne entry
+glm	vidyAmandira	example_not_in_gold	example 'vidyāmandiraṃ praviṣṭaḥ śiṣyaḥ' not in frozen Cologne entry
+glm	vidyAmandira	example_not_in_gold	example 'vidyāmandire adhyāpanam idam' not in frozen Cologne entry
+glm	vipare	citation_not_in_entry	'MBh.' attested corpus-wide but absent from vipare entry
+glm	vipare	example_not_in_gold	example 'viparaḥ saṃskāravan' not in frozen Cologne entry
+glm	vipare	example_not_in_gold	example 'viparebhyo dānaṃ dadau' not in frozen Cologne entry
+glm	vrIhivApa	citation_not_in_entry	'MBh.' attested corpus-wide but absent from vrIhivApa entry
+glm	vrIhivApa	example_not_in_gold	example 'vrīhivāpasya phalam āsādya' not in frozen Cologne entry
+glm	vrIhivApa	example_not_in_gold	example 'vrīhivāpaṃ kurute kṛṣīvalaḥ' not in frozen Cologne entry
+glm	vyAGraketu	example_not_in_gold	example 'vyāghraketur dhanuṣmatīm avaśat' not in frozen Cologne entry
+glm	vyAGraketu	example_not_in_gold	example 'yuddhe vyāghraketuḥ pradhāvanti' not in frozen Cologne entry
+glm	vyatirekavyApti	citation_not_in_entry	'NyāyaS.' attested corpus-wide but absent from vyatirekavyApti entry
+glm	vyatirekavyApti	example_not_in_gold	example 'vyatirekavyāptiḥ nirūpyate' not in frozen Cologne entry
+glm	vyatirekavyApti	example_not_in_gold	example 'vyatirekavyāptyā yad abhāve tadabhāvaḥ' not in frozen Cologne entry
+glm	yAgasUtra	example_not_in_gold	example 'yāgasūtreṇa baddhāḥ paśavaḥ' not in frozen Cologne entry
+glm	yAgasUtra	example_not_in_gold	example 'yāgasūtrāṇi paṭhanti adhvaryavaḥ' not in frozen Cologne entry
+glm	yaTAsTAne	example_not_in_gold	example 'yathāsthāne nyased guruḥ' not in frozen Cologne entry
+glm	yaTAsTAne	example_not_in_gold	example 'yathāsthāne pāṣāṇāḥ sthitāḥ' not in frozen Cologne entry

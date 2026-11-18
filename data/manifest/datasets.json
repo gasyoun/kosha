@@ -4346,6 +4346,29 @@
       "handoff": "H465",
       "layer_status": "active",
       "provenance_source": "builder"
+    },
+    {
+      "id": "articlegen-cologne-gold",
+      "title": "LLM article generation vs Cologne MW gold — 105-headword eval + hallucination taxonomy (H6253)",
+      "tier": "public",
+      "in_release": "not-applicable",
+      "format": "tsv + jsonl + json + txt",
+      "made_by": "ai",
+      "model": "opencode-go/hy4-flash-free",
+      "handoff": "H6253",
+      "layer_status": "active",
+      "provenance_source": "builder",
+      "rows": 1171,
+      "size_bytes": 859942,
+      "keying": "sample.tsv: 105 A55-union keys (100 main + 5 MG canary), seed 6253, gold examples/citations from Cologne MW v02; citation_inventory.json: 38,672 unique <ls> abbreviations; gen_<arm>.jsonl: per-arm generated articles; scores_per_item.tsv + scores_summary.json + hallucination_taxonomy.tsv + REPORT.md",
+      "source_repo": "https://github.com/gasyoun/kosha",
+      "source_path": "data/eval/articlegen/",
+      "builder": "scripts/articlegen_build.py + articlegen_score.py + articlegen_manifest_row.py, H6253, Hy4 flash Free (opencode-go/hy4-flash-free), 2026-11-18",
+      "consumers": [
+        "docs/ARTICLEGEN_COLOGNE_EVAL_PROTOCOL.md (protocol + results of record)",
+        "Uprava H6253 (originating handoff)"
+      ],
+      "notes": "Canary split of 5 headwords awaits MG manual gold labels: verdict INCONCLUSIVE until canary/mg_labels.tsv is filled and articlegen_score.py --canary reproduces >=80% of 30 decisions. Raw model transcripts retained under raw/ for audit; MW 1899 is public domain, so numbers measure reproduction + grounding, not generation from evidence alone."
     }
   ]
 }

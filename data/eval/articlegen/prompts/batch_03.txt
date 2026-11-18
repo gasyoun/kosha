@@ -1,0 +1,26 @@
+You are a Sanskrit lexicographer. For EVERY headword listed below, write one plausible dictionary article using your own knowledge. Output STRICT JSONL: exactly one JSON object per headword, in the given order, with no markdown fences, no numbering, no commentary.
+Each object has exactly these keys:
+  "slp1": the SLP1 headword copied exactly as given
+  "gloss": English gloss(es), semicolon-separated
+  "examples": array of 1-3 short Sanskrit example phrases in IAST
+  "citations": array of 0-3 standard Sanskrit textual authority abbreviations (e.g. "MBh.", "R.", "RV.")
+  "root": the inferred root or stem in IAST (prefix a root with the sign √)
+
+STRICT OUTPUT RULE (MANDATORY): every output line MUST begin with { and be a JSON object. Exactly one JSON object per headword. Never use 'key | field=value' text, never markdown, never prose.
+Example of one valid line:
+{"slp1":"agni","gloss":"fire; Agni, the fire-god","examples":["agniṃ stoti","agniḥ prajvalati"],"citations":["RV."],"root":"√agni"}
+HEADWORDS:
+- slp1=kalyARamaya | iast=kalyāṇamaya | gender=fmn
+- slp1=apANktya | iast=apāṅktya | gender=fmn
+- slp1=sarasA | iast=sarasā | gender=f
+- slp1=mfgAsya | iast=mṛgāsya | gender=fmn
+- slp1=SyenakapotIya | iast=śyenakapotīya | gender=fmn
+- slp1=karmakAra | iast=karmakāra | gender=fmn
+- slp1=BUrja | iast=bhūrja | gender=mn
+- slp1=BAsurAnandanATa | iast=bhāsurānandanātha | gender=m
+- slp1=retas | iast=retas | gender=n
+- slp1=sANmuKI | iast=sāṅmukhī | gender=f
+
+STRICT OUTPUT RULE (MANDATORY): every output line MUST begin with { and be a JSON object. Exactly one JSON object per headword. Never use 'key | field=value' text, never markdown, never prose.
+Example of one valid line:
+{"slp1":"agni","gloss":"fire; Agni, the fire-god","examples":["agniṃ stoti","agniḥ prajvalati"],"citations":["RV."],"root":"√agni"}

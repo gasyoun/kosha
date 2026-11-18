@@ -1,0 +1,7 @@
+
+> orchestrator · deepseek-v4.1-flash
+{"slp1":"vipare","gloss":"on the opposite side, on the further bank; inversely, contrariwise","examples":["vipare tīre nadyaḥ krīḍanti","vipare vartate kāryam"],"citations":["MBh."],"root":"vipara"}
+{"slp1":"prahelikA","gloss":"riddle, enigma, puzzle; a riddle-verse in which the answer is hidden","examples":["prahelikāṃ pṛcchati rājā","prahelikāṃ buddhiḥ sādhu jānāti"],"citations":["Kāv.","Sāh."],"root":"pra-√hel"}
+{"slp1":"devIdAsa","gloss":"Devīdāsa, servant of the goddess (a man's personal name)","examples":["devīdāso grāmaṃ gacchati","devīdāsasya putro vidvān"],"citations":[],"root":"devī-dāsa"}
+{"slp1":"pUrtikAma","gloss":"desirous of merit (pūrta), wishing for the reward of pious works","examples":["pūrtikāmo yajñaṃ karoti","pūrtikāmāḥ svargaṃ prārthayante"],"citations":["MBh."],"root":"pūrti-kāma"}
+{"slp1":"lavavat","gloss":"having a drop, possessing a small fragment; furnished with a bit or portion","examples":["lavavān jalabinduḥ patati","lavavat tailaṃ pātre sthitam"],"citations":["Suśr."],"root":"lava-vat"}

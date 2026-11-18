@@ -1,0 +1,12 @@
+
+> orchestrator · glm-5.3-flash
+{"slp1":"anukaRWI","gloss":"lamenting woman; a female companion in mourning, fellow-lamenter","examples":["anukaṇṭhī vilapati","anukaṇṭhayaḥ śocanti"],"citations":[],"root":"√kaṇṭh"}
+{"slp1":"DOtakawa","gloss":"a washed cloth; a garment washed (once)","examples":["dhautakaṭo vasate","dhautakaṭam ādade"],"citations":[],"root":"√dah"}
+{"slp1":"kruYcA","gloss":"a female crane; heron","examples":["kruñcā krandati","kruñcākulaḥ saras"],"citations":["MBh.","R."],"root":"kruñca"}
+{"slp1":"nfpAnna","gloss":"food of a king; food provided by or eaten with a king","examples":["nṛpānnaṃ bhuñkte","nṛpānnena jīvati"],"citations":[],"root":"nṛpa + anna"}
+{"slp1":"prasavamAsa","gloss":"month of delivery, month of childbirth; the month of the soma-pressing","examples":["prasavamāse putraḥ jātaḥ"],"citations":[],"root":"prasava (√su) + māsa"}
+{"slp1":"AnandaBEravI","gloss":"a form of the goddess Bhairavī embodying bliss; the joyous Bhairavī (Tantric)","examples":["ānandabhairavyāḥ pūjāṃ kariṣyāmi"],"citations":[],"root":"ānanda + bhairavī"}
+{"slp1":"prAtiBA","gloss":"brightness, splendour; ready wit, presence of mind; poetical intuition or genius","examples":["prātibhā kavihetuḥ","prātibhānubandhinī pratibhā"],"citations":["ŚD."],"root":"prati-√bhā"}
+{"slp1":"ekanayana","gloss":"one-eyed; having only one eye","examples":["ekanayano 'ndha ivāsi","ekanayanam iva paśyati"],"citations":[],"root":"eka + nayana"}
+{"slp1":"asurya","gloss":"belonging to the Asuras, demonic; not solar; (n.) the dark, non-luminous world","examples":["asurye loke","asuryasya gatiḥ"],"citations":["RV."],"root":"asura + ya"}
+{"slp1":"uzRam","gloss":"warm, hot; (n.) heat, warmth","examples":["uṣṇaṃ vahniḥ","uṣṇaṃ spṛśati"],"citations":["RV."],"root":"√uṣ"}

@@ -1,0 +1,12 @@
+
+> orchestrator · deepseek-v4.1-flash
+{"slp1":"anukaRWI","gloss":"a necklace worn close to the throat; an ornament fitting the neck; a collar","examples":["anukaṇṭhīṃ bibharṣi","rājā anukaṇṭhyā bhāti"],"citations":["Amara.","Suśr."],"root":"anukaṇṭha (anu-kaṇṭha)"}
+{"slp1":"DOtakawa","gloss":"a kind of cleaned alkaline salt used as a caustic; an eye-medicine (washed alkali)","examples":["dhautakaṭaṃ netre añjati","dhautakaṭaṃ pācanaṃ sādhakaṃ"],"citations":["Suśr.","Car."],"root":"dhautakaṭa (dhauta-kaṭa)"}
+{"slp1":"kruYcA","gloss":"a female curlew; a crane-like bird; the name of a bird-shaped weapon-array","examples":["kruñcā puruṣasyapi manaḥ harati","kruñcā kruñcaṃ gacchati"],"citations":["MBh.","R."],"root":"kruñca"}
+{"slp1":"nfpAnna","gloss":"food (rice) granted by a king; royal fare; viands furnished from the king's stores","examples":["nṛpāṇṇaṃ pratipadyate","nṛpāṇṇaṃ bhuktvā tṛptaḥ"],"citations":["MBh.","Kauṭ."],"root":"nṛpānna (nṛpa-anna)"}
+{"slp1":"prasavamAsa","gloss":"the month of parturition; the month of the spring (Caitra), when creatures bring forth","examples":["prasavamāse taravaḥ puṣpanti","prasavamāso 'bhijanit kāmaṃ"],"citations":["Suśr.","VarB."],"root":"prasavamāsa (prasava-māsa)"}
+{"slp1":"AnandaBEravI","gloss":"Ānandabhairavī, the 'joyful Bhairavī', a melody (rāga) of the South; the goddess Bhairavī in her blissful form","examples":["ānandabhairavaṃ rāgagītaṃ gāyati","ānandabhairavīṃ dhayān gāyatī"],"citations":["Saṃgītar.","Kāvyān."],"root":"ānandabhairavī (ānanda-bhairavī)"}
+{"slp1":"prAtiBA","gloss":"ready wit, presence of mind; a flash of insight, intuitive genius (prātibhā-buddhi)","examples":["prātibhā balenaiva kāvyaṃ racayati","prātibhāsādhyaṃ hi kāvyakauśalam"],"citations":["Kāvyaś.","Daśar."],"root":"prātibhā (pra-ti-bhā)"}
+{"slp1":"ekanayana","gloss":"one-eyed, having a single eye; an epithet of a one-eyed person (and of the moon, of the crow-demon)","examples":["ekanayano devo naktaṃ rājate","ekanayano 'ndhaḥ saṃdarśakaḥ"],"citations":["MBh.","Kathās."],"root":"ekanayana (eka-nayana)"}
+{"slp1":"asurya","gloss":"of the Asuras, demoniac; not solar, sunless, sunless-side; unlucky","examples":["asuryāṇi karmāṇi dviṣantaḥ","asuryo 'yaṃ lokaḥ sarvam āvṛṇoti"],"citations":["RV.","MBh."],"root":"asurya (a-sura)"}
+{"slp1":"uzRam","gloss":"heat, warmth; the hot (season); used adverbially 'hot' (e.g. uṣṇaṃ karoti, to warm)","examples":["uṣṇaṃ jalā vinaśyati","agniṃ uṣṇaṃ karoti"],"citations":["Suśr.","Car."],"root":"√uṣ (uṣṇa)"}
