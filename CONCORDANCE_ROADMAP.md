@@ -2,16 +2,16 @@
 
 _Created: 08-07-2026 · Last updated: 10-10-2026_
 
-> **Truth-pass 27-08-2026** (Grok 4.6 `grok-4.6`). D4 addendum: this file joined the Wave 1 FLAG list after 21-08. Closed references checked against the combined registry. Kept in place ([FINDINGS §475](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md) clause 3). Not archived.
+> **Truth-pass 27-08-2026** (Grok 4.6 `grok-4.6`). D4 addendum: this file joined the Wave 1 FLAG list after 21-08. Closed references checked against the combined registry. Kept in place ([FINDINGS §475](https://github.com/gasyoun/Veche/blob/main/FINDINGS.md) clause 3). Not archived.
 >
-> **Exit-check truth-pass 02-09-2026** (Claude Code Opus 5 `claude-opus-5`, H3783). The Q4/A4 **exit-check** bullet and open-`@DECIDE` 1 still read as unbuilt six weeks after the work shipped and was released, and a handoff was minted from that prose. Both are corrected below with per-check evidence. The lesson, in this file: a truth-pass that checks a section's **status line** has not checked its **exit checks, risks and `@DECIDE` list** — those are separate claims, and they are the ones a later `/fruit` or `/ask` pass reads to decide what is still open ([FINDINGS §644](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)).
+> **Exit-check truth-pass 02-09-2026** (Claude Code Opus 5 `claude-opus-5`, H3783). The Q4/A4 **exit-check** bullet and open-`@DECIDE` 1 still read as unbuilt six weeks after the work shipped and was released, and a handoff was minted from that prose. Both are corrected below with per-check evidence. The lesson, in this file: a truth-pass that checks a section's **status line** has not checked its **exit checks, risks and `@DECIDE` list** — those are separate claims, and they are the ones a later `/fruit` or `/ask` pass reads to decide what is still open ([FINDINGS §644](https://github.com/gasyoun/Veche/blob/main/FINDINGS.md)).
 >
 > **Verdict 01-10-2026 ([H5575](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5575-OxAlpha_kosha_roadmap-verdict-w2-kosha-five-drain-first_01.10.26.md), wave 2) — REFRESH.**
 > Q1–Q4 are complete with every deliverable carrying an artefact (status table below).
 > The programme stays alive on two agent-doable residuals and three human decisions —
 > checkboxes below, mirrored into Uprava
-> [GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md)
-> per ruling 10 of [GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md](https://github.com/gasyoun/Uprava/blob/main/docs/GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md).
+> [GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Veche/blob/main/GTD_NEXT_ACTIONS.md)
+> per ruling 10 of [GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md](https://github.com/gasyoun/Veche/blob/main/docs/GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md).
 
 ## What is left (01-10-2026)
 
@@ -312,7 +312,7 @@ kosha's `concordance_core.py` did its own `sys.path.insert(0, …)` at import ti
 the pinned checkout, so both arms loaded 0.12.0 and agreed to the byte. That module now honours
 `GITHUB_ROOT`. Evidence and method:
 [`data/concordance/evidence/H3975_CONTROL_ARM_KEY_ISOLATION.md`](https://github.com/gasyoun/kosha/blob/main/data/concordance/evidence/H3975_CONTROL_ARM_KEY_ISOLATION.md);
-process lesson: [Uprava FINDINGS §715](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md).
+process lesson: [Uprava FINDINGS §715](https://github.com/gasyoun/Veche/blob/main/FINDINGS.md).
 
 ⚠ **The A¬G residue is not 163,058 engine defects.** The generator's lemma inventory is
 **222,737 nominal lemmas against 680 verbal**, so finite verbs are territory
@@ -377,7 +377,7 @@ quarter is not. A4 shipped W2a–W3b between 20-07 and 24-07-2026 and released i
 - **Deliverables:** dataset `paninian-corpus-concordance` (manifest row + release) · web page `/concordance/panini/` (click a sūtra → its attested corpus exemplars, scan-anchored).
 - **Exit checks — all three met; verified line by line 02-09-2026 (H3783).** This bullet
   read as open prose for six weeks after the work shipped, and that is what minted a
-  duplicate handoff ([FINDINGS §644](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)
+  duplicate handoff ([FINDINGS §644](https://github.com/gasyoun/Veche/blob/main/FINDINGS.md)
   class: a follow-on sentence under a ✅ row is a separate claim from the status column).
   Each check with the artefact that satisfies it:
   1. **Sūtra-coverage map ✅** — W3a, 24-07-2026 (H1468,
@@ -395,7 +395,7 @@ quarter is not. A4 shipped W2a–W3b between 20-07 and 24-07-2026 and released i
      § *Sampled human-verification*. Honest residual: the report states neither **why N = 30**
      nor a human's verdict on the 30 — it is a rendered sample awaiting sign-off, not a
      recorded audit. Tracked as a human `@DO` in
-     [Uprava GTD](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md); no agent
+     [Uprava GTD](https://github.com/gasyoun/Veche/blob/main/GTD_NEXT_ACTIONS.md); no agent
      can close it by re-reading the same chains.
   3. **Derivation-metadata licence settled ✅** — 18-07-2026 (H1263), *before* the release,
      in [`data/manifest/rights/vidyut_prakriya_derivation_2026-07.md`](https://github.com/gasyoun/kosha/blob/main/data/manifest/rights/vidyut_prakriya_derivation_2026-07.md):
@@ -440,7 +440,7 @@ gets its own `H###` handoff minted at kickoff; this doc is the parent.
 
 **Name collision — different programme.** Uprava grammar/non-grammar concordance is *not* this file:
 
-- Uprava: [CONCORDANCE_ROADMAP_GRAMMAR_NONGRAMMAR_2026_2027.md](https://github.com/gasyoun/Uprava/blob/main/CONCORDANCE_ROADMAP_GRAMMAR_NONGRAMMAR_2026_2027.md) — VedaWeb/Type-D grammar join
+- Uprava: [CONCORDANCE_ROADMAP_GRAMMAR_NONGRAMMAR_2026_2027.md](https://github.com/gasyoun/Veche/blob/main/CONCORDANCE_ROADMAP_GRAMMAR_NONGRAMMAR_2026_2027.md) — VedaWeb/Type-D grammar join
 - This kosha file — pedagogical/corpus concordance surfaces over DCS/lemma data
 
 

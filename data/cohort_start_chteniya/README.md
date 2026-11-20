@@ -33,6 +33,6 @@ python scripts/freeze_cohort_start_chteniya.py
 ```
 
 Handoff: [H2109](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2109-Sonnet_kosha_start-chteniya-pack-freeze_01.08.26.md).
-Plan: [PLAN_AKRO_START_CHTENIYA_2026](https://github.com/gasyoun/Uprava/blob/main/docs/PLAN_AKRO_START_CHTENIYA_2026.md).
+Plan: [PLAN_AKRO_START_CHTENIYA_2026](https://github.com/gasyoun/Veche/blob/main/docs/PLAN_AKRO_START_CHTENIYA_2026.md).
 
 _Dr. Mārcis Gasūns_

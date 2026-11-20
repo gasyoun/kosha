@@ -68,7 +68,7 @@ Everything below reads this file. _Original plan:_ extract the **full `Combined`
 (add `--sheet Combined --all-chapters`). Register it as a **citable dataset**:
 kosha [`data/manifest/datasets.json`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)
 row + a `docs/data-statements/gita-gold.meta.md` crediting the author +
-[Uprava/DATA_LAYERS_CENSUS.md](https://github.com/gasyoun/Uprava/blob/main/DATA_LAYERS_CENSUS.md).
+[Veche/DATA_LAYERS_CENSUS.md](https://github.com/gasyoun/Veche/blob/main/DATA_LAYERS_CENSUS.md).
 Every workstream below reads this vendored file, not the xlsm.
 - Effort: **S–M** · gated on: nothing (pipeline proven on ch1).
 

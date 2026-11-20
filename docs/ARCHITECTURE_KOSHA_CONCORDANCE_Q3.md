@@ -69,7 +69,7 @@ A4 instantiates the canonical concordance record — `RECORD_FIELDS` in
 which is the executable definition, not the prose in
 [CONCORDANCE_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/CONCORDANCE_ROADMAP.md)
 — with `anchor_type = panini-sutra`. The ID grammar for both sides is
-[Uprava/TYPED_LINK_ID_GRAMMAR.md](https://github.com/gasyoun/Uprava/blob/main/TYPED_LINK_ID_GRAMMAR.md)
+[Veche/TYPED_LINK_ID_GRAMMAR.md](https://github.com/gasyoun/Veche/blob/main/TYPED_LINK_ID_GRAMMAR.md)
 §2 (anchors) and §3 (target loci); the pre-H539 names `corpus_locus`/`corpus_text_id`
 were renamed to `target_locus`/`source_dataset` there and **must not** be reintroduced.
 Fields marked **new** are the A4 extension and are additive, following the precedent

@@ -18,7 +18,7 @@ no UTF-8 BOM; multi-step logic in `.py` files, not inline shell).
   [`annotation_layers_by_text.csv`](https://github.com/gasyoun/VisualDCS/blob/main/derived-data/Corpus-Delta-2021-2026/annotation_layers_by_text.csv)
   (per-text WordSem token counts — tells you which 219 texts to read).
 - Confirm kosha `senses` table location + schema (`sense_id`, `lemma`/`slp1` join, sense order column).
-- Locate the [`semdom-amarakosha-crosswalk`](https://github.com/gasyoun/Uprava/blob/main/REUSE_INDEX.md)
+- Locate the [`semdom-amarakosha-crosswalk`](https://github.com/gasyoun/Veche/blob/main/REUSE_INDEX.md)
   asset in SanskritLexicography and the MW→WordNet bridge (FEATURES_INDEX C19).
 - **Ambiguity default:** if the CoNLL-U releases are not on disk, attempt the recovery from the
   public DCS release URLs; if still unavailable, LOG and proceed to Steps 2–3 scaffolding, park Step 1.

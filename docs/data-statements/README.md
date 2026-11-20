@@ -59,7 +59,7 @@ a later pass, each citing this backlog as owner until a handoff is minted:
 ## Provenance
 
 Programme: metadoc census
-[METADOCS_INDEX.md](https://github.com/gasyoun/Uprava/blob/main/METADOCS_INDEX.md)
+[METADOCS_INDEX.md](https://github.com/gasyoun/Veche/blob/main/METADOCS_INDEX.md)
 item 3. Authored 11-07-2026 by Fable 5 (`claude-fable-5`) under H665.
 
 _Dr. Mārcis Gasūns_

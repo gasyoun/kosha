@@ -60,7 +60,7 @@ welcome to consume in return.
 
 **When:** after the P2 alpha is live — the ask is credible when there is a
 running site to point at, not a plan. Mirrored as an `@DO` for M.G. in
-[Uprava/GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md)
+[Veche/GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Veche/blob/main/GTD_NEXT_ACTIONS.md)
 at P2 exit.
 
 **Draft (English; offer to continue in French):**
@@ -219,7 +219,7 @@ engages, the GraphQL face port (P7) is the natural second touchpoint.
 
 All sends are M.G.'s (principle 3). Each trigger, when it fires, becomes an
 `@DO` row in
-[Uprava/GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md)
+[Veche/GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Veche/blob/main/GTD_NEXT_ACTIONS.md)
 in the same session that fires it.
 
 ---

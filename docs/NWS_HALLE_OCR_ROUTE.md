@@ -46,7 +46,7 @@ Exit codes: `0` all QC-PASS · `3` QC failures present · `4` rights refusal.
 - **sidecar** (default, offline): reads a `.txt`/`.md` twin next to each page
   image. Deterministic, keyless — used for canary/CI and pre-staging QC.
 - **ocr_vlm** (production): one call per page into
-  [`Uprava/tools/ocr_vlm/vlm_ocr.py`](https://github.com/gasyoun/Uprava/blob/main/tools/ocr_vlm/vlm_ocr.py)
+  [`Uprava/tools/ocr_vlm/vlm_ocr.py`](https://github.com/gasyoun/Veche/blob/main/tools/ocr_vlm/vlm_ocr.py)
   (qwen3-vl-plus via DashScope — IAST-diacritic + italic winner of the
   24-09-2026 bench). Needs `DASHSCOPE_API_KEY` in env and the rights record.
 

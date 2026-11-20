@@ -1,5 +1,5 @@
 # VENDORED COPY of Uprava/tools/aias_manifest_check.py (H7119, 24-10-2026).
-# Canonical: https://github.com/gasyoun/Uprava/blob/main/tools/aias_manifest_check.py
+# Canonical: https://github.com/gasyoun/Veche/blob/main/tools/aias_manifest_check.py
 # Re-vendor when schema_version moves; the gate runs --selftest so a broken copy
 # cannot pass silently. Drift is reported by Uprava's update sweep, not enforced here.
 #!/usr/bin/env python3

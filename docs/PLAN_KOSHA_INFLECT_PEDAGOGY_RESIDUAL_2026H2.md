@@ -4,7 +4,7 @@ _Created: 19-08-2026 · Last updated: 25-08-2026_
 
 Authored by Opus 5 (`claude-opus-5`) under
 [H3001 (Opus 5) — Stale-roadmap slice 3: full /ask replan of stale Tier-1 roadmaps](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3001-Opus_multi_stale-roadmap-s3-tier1-ask-replan_17.08.26.md).
-Slice-3 index: [PLAN_UPRAVA_STALE_ROADMAP_ASK_BATCH_2026-08.md](https://github.com/gasyoun/Uprava/blob/main/docs/PLAN_UPRAVA_STALE_ROADMAP_ASK_BATCH_2026-08.md).
+Slice-3 index: [PLAN_UPRAVA_STALE_ROADMAP_ASK_BATCH_2026-08.md](https://github.com/gasyoun/Veche/blob/main/docs/PLAN_UPRAVA_STALE_ROADMAP_ASK_BATCH_2026-08.md).
 
 ## Why this programme exists
 
@@ -13,7 +13,7 @@ kosha carries two July roadmaps that the 17-08-2026 staging sweep flagged stale:
 (05-07-2026) and
 [docs/ROADMAP_KOSHA_PEDAGOGY_SURFACES_2026_2027.md](https://github.com/gasyoun/kosha/blob/main/docs/ROADMAP_KOSHA_PEDAGOGY_SURFACES_2026_2027.md)
 (22-07-2026). The slice-3 truth-pass ran
-[`roadmap_handoff_truth.py`](https://github.com/gasyoun/Uprava/blob/main/tools/roadmap_handoff_truth.py)
+[`roadmap_handoff_truth.py`](https://github.com/gasyoun/Veche/blob/main/tools/roadmap_handoff_truth.py)
 over both: **all 20 handoffs they reference are closed ✅**. Neither file is
 superseded — both stay living — but both were **lying about their own state**, in
 the specific and expensive way a conditional roadmap lies: the condition fired and
