@@ -98,7 +98,7 @@ input. Do not add a stage by editing the CLI — add it to the registry.
   avoid duplicating work already done elsewhere (`sanskrit-util`,
   `csl-websanlexicon` scan-serving, the union headword index). Check the org's
   [SHARED_CODE.md](https://github.com/gasyoun/github-spine/blob/main/SHARED_CODE.md)
-  and [PROJECT_INTERLINKS.md](https://github.com/gasyoun/Uprava/blob/main/PROJECT_INTERLINKS.md)
+  and [PROJECT_INTERLINKS.md](https://github.com/gasyoun/Veche/blob/main/PROJECT_INTERLINKS.md)
   before adding a new
   transcoder/normalizer/crosswalk builder here.
 - **Salt public-face split (H2768):** `/dicts/*` projects the shared entry to
@@ -174,14 +174,14 @@ input. Do not add a stage by editing the CLI — add it to the registry.
 ## FINDINGS routing (F1)
 
 kosha has no local `FINDINGS.md` (not in the four-repo middle tier). Route gotchas:
-infra/process → [Uprava/FINDINGS.md](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md);
+infra/process → [Veche/FINDINGS.md](https://github.com/gasyoun/Veche/blob/main/FINDINGS.md);
 Sanskrit-data → [SanskritLexicography/FINDINGS.md](https://github.com/gasyoun/SanskritLexicography/blob/master/FINDINGS.md).
 
 ## Operational hazard notes
 
 Destructive-risk facts for this repo (do-not-rerun scripts, decoys, traps) are
 registered centrally in an org-private hub
-([Uprava DANGER_FACTS.md](https://github.com/gasyoun/Uprava/blob/main/DANGER_FACTS.md),
+([Uprava DANGER_FACTS.md](https://github.com/gasyoun/Veche/blob/main/DANGER_FACTS.md),
 org members only); the public-safe subset is mirrored in the generated block of
 [AGENTS.md](https://github.com/gasyoun/kosha/blob/main/AGENTS.md). Check them
 before running anything that writes.

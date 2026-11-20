@@ -224,7 +224,7 @@ the wrong side of the move.
    under `archive/`.
 4. Flip the stale registry row: **H900** still reads *"DELIVERED, PR open awaiting
    human merge 14-07-2026"* in
-   [Uprava/handoffs/README.md](https://github.com/gasyoun/Uprava/blob/main/handoffs/README.md);
+   [Veche/handoffs/README.md](https://github.com/gasyoun/Veche/blob/main/handoffs/README.md);
    [kosha PR #93](https://github.com/gasyoun/kosha/pull/93) merged 14-07. Use
    `/handoff-close`.
 5. Re-run the link audit and show zero dead handoff links in kosha.
@@ -241,7 +241,7 @@ the wrong side of the move.
 
 Close D6 as a documented dead end rather than a silent deletion.
 
-1. Append to [Uprava/DEAD_ENDS.md](https://github.com/gasyoun/Uprava/blob/main/DEAD_ENDS.md):
+1. Append to [Veche/DEAD_ENDS.md](https://github.com/gasyoun/Veche/blob/main/DEAD_ENDS.md):
    the relaxed concordance matching tier, **2,171 candidate links**, rejected
    because the golden sample scored **0/3 correct** while the strict tier scored
    **11/11**. Cause: `norm()` folds vowel length and sibilant distinctions —
@@ -251,7 +251,7 @@ Close D6 as a documented dead end rather than a silent deletion.
    not a viable relaxed-match tier for Sanskrit lexical joins.** That is the
    reusable finding — it should stop the next repo from rebuilding this.
 3. Cancel the 2,171-item review sheet in
-   [Uprava/REVIEW_SHEETS_INDEX.md](https://github.com/gasyoun/Uprava/blob/main/REVIEW_SHEETS_INDEX.md);
+   [Veche/REVIEW_SHEETS_INDEX.md](https://github.com/gasyoun/Veche/blob/main/REVIEW_SHEETS_INDEX.md);
    mark cancelled with the reason, do not delete the row.
 4. Update [CONCORDANCE_ROADMAP.md](https://github.com/gasyoun/kosha/blob/main/CONCORDANCE_ROADMAP.md):
    Q2 exit ships **strict-tier-only**; relaxed tier dropped, R-C1 narrowed.

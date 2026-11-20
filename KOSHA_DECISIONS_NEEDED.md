@@ -143,7 +143,7 @@ for a future handoff, not folded in.
 **R7 update (10-07-2026, implemented 11-07-2026 by H696).** The roadmap-forks
 interview re-ruled the surplus set as *"ingest, provenance-flagged,
 default-off — and retain the oracle role"*
-([Uprava docs/DECISIONS_roadmap_forks_2026H2.md §R7](https://github.com/gasyoun/Uprava/blob/main/docs/DECISIONS_roadmap_forks_2026H2.md)).
+([Uprava docs/DECISIONS_roadmap_forks_2026H2.md §R7](https://github.com/gasyoun/Veche/blob/main/docs/DECISIONS_roadmap_forks_2026H2.md)).
 H111 had already delivered the ingest + provenance halves; H696 delivered
 default-off: heritage rows are excluded from `/api/v1/form`,
 `/api/v1/forms/{form}/analyze` (stages 2–3) and the static

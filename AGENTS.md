@@ -7,15 +7,15 @@ This file orients Codex and other non-Claude agent sessions. The section between
 
 - Encodings / key1/key2 / transcoder traps: [Sanskrit context primer](https://github.com/gasyoun/github-spine/blob/main/SANSKRIT_CONTEXT_PRIMER.md).
 - Task routing: [CLAUDE.md](CLAUDE.md) — matching section, not end-to-end.
-- Danger facts (destroy-work-if-missed; full text + sources in [DANGER_FACTS.md](https://github.com/gasyoun/Uprava/blob/main/DANGER_FACTS.md)):
+- Danger facts (destroy-work-if-missed; full text + sources in [DANGER_FACTS.md](https://github.com/gasyoun/Veche/blob/main/DANGER_FACTS.md)):
   - git worktree add on this large repo can time out at 2 min leaving an empty index (everything staged-deleted) + stale index.lock + partial checkout — rm lock, git reset HEAD, git checkout -- . ; remove worktrees with -f -f (H1366 incident)
   - Some manifest datasets carry restricted rights tiers — check data/manifest/datasets.json before copying bytes anywhere
   - deploy_guhya.py uploads whatever exists - no size>0 guard; on 23-08-2026 SamudraManthanam/web/corpus.db was a 0-byte stub while datasets.json claimed 655 MB, and 13 underscore renou MANIFEST names were deleted-on-disk ghosts. Verify per-target local size vs registered size before any manifest-driven backup run
   - pdftotext blanks Cyrillic while returning plausibly-shaped output - never poppler on Russian PDFs.
   - Deleting opencode.db deletes all OpenCode chats - it is the session store, never treat as disposable.
   - Harness session stores are credential-bearing (sk-shaped keys in chat text) - treat all four stores as secret surfaces.
-- Further operational hazard notes live in the org-private hub ([Uprava DANGER_FACTS.md](https://github.com/gasyoun/Uprava/blob/main/DANGER_FACTS.md); org members only).
-- Off-git assets: [shadow-assets registry](https://github.com/gasyoun/Uprava/blob/main/SHADOW_ASSETS_POINTERS.md).
+- Further operational hazard notes live in the org-private hub ([Uprava DANGER_FACTS.md](https://github.com/gasyoun/Veche/blob/main/DANGER_FACTS.md); org members only).
+- Off-git assets: [shadow-assets registry](https://github.com/gasyoun/Veche/blob/main/SHADOW_ASSETS_POINTERS.md).
 
 [/generated-block]
 

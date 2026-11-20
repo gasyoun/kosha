@@ -13,8 +13,8 @@ _Created: 03-07-2026 · Last updated: 01-10-2026_
 > **Verdict 01-10-2026 ([H5575](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5575-OxAlpha_kosha_roadmap-verdict-w2-kosha-five-drain-first_01.10.26.md), wave 2) — REFRESH.**
 > Every wave (U0–U2, K1–K3, E1) is shipped; the programme stays alive on one mechanical
 > next rung and three human-gated residuals — checkboxes below, mirrored into Uprava
-> [GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md)
-> per ruling 10 of [GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md](https://github.com/gasyoun/Uprava/blob/main/docs/GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md).
+> [GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Veche/blob/main/GTD_NEXT_ACTIONS.md)
+> per ruling 10 of [GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md](https://github.com/gasyoun/Veche/blob/main/docs/GRILL_ROADMAP_CLOSEOUT_OXALPHA_MASS_MINT_21-09-2026.md).
 
 ## What is left (01-10-2026)
 
@@ -117,7 +117,7 @@ Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://
   above minted
   [H3165 (Sonnet 5) — Wave U2: drip the three prepared csl-inflect PRs](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3165-Sonnet_csl-inflect_inflect-u2-drip-prepared-prs_19.08.26.md)
   to drip a queue that was already empty; H3165 closed the same day as a stale
-  mint (Opus 5 `claude-opus-5`), evidence in [FINDINGS §501](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md).
+  mint (Opus 5 `claude-opus-5`), evidence in [FINDINGS §501](https://github.com/gasyoun/Veche/blob/main/FINDINGS.md).
   The upstream give-back track is **complete**; the kosha track carries
   everything further (D5).
 
@@ -182,7 +182,7 @@ Target: [sanskrit-lexicon.uni-koeln.de/scans/csl-inflect/web/index.php](https://
     go-ahead. Draft in [H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md).
   - **(b) ruling** migrate/hybridize/stay: report **recommends hybridize** (keep
     Cologne base per D3, layer vidyut to auto-fix ṇatva + fill gaps + flag
-    forks). Filed as an **@DECIDE** in [Uprava/GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md).
+    forks). Filed as an **@DECIDE** in [Veche/GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Veche/blob/main/GTD_NEXT_ACTIONS.md).
   - **(c) optional paper** — three-engine (Cologne/Huet/vidyut) divergence table;
     scaffold only if MG wants it.
   - **Shipped 12-07-2026 under [H185](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H185-Opus_kosha_e1_dual_engine_ruling_05.07.26.md):**

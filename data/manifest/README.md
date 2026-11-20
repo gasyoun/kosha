@@ -7,7 +7,7 @@ _Created: 06-07-2026 · Last updated: 18-10-2026_
 **Scope (F7, 26-08-2026):** `datasets.json` is the machine-readable manifest of
 **published, fetchable** datasets — the release/download side. It stays deliberately
 separate from
-[Uprava/DATA_LAYERS_CENSUS.md](https://github.com/gasyoun/Uprava/blob/main/DATA_LAYERS_CENSUS.md),
+[Veche/DATA_LAYERS_CENSUS.md](https://github.com/gasyoun/Veche/blob/main/DATA_LAYERS_CENSUS.md),
 the human survey of large on-disk data across the org, including unregistered and
 unpublishable assets that never reach this manifest.
 
@@ -23,7 +23,7 @@ finished asset in its own right; excluded from the rendered public directory pag
 Rules, architecture, and phase plan:
 [`DATA_HUB_ROADMAP.md`](https://github.com/gasyoun/kosha/blob/main/DATA_HUB_ROADMAP.md).
 Human-readable catalogues this file serves the bytes for:
-[`REUSE_INDEX.md`](https://github.com/gasyoun/Uprava/blob/main/REUSE_INDEX.md) ·
+[`REUSE_INDEX.md`](https://github.com/gasyoun/Veche/blob/main/REUSE_INDEX.md) ·
 [`FEATURES_INDEX.md`](https://github.com/gasyoun/SanskritLexicography/blob/master/FEATURES_INDEX.md).
 
 **Agent contract (datasets):** before deriving any alignment / frequency / headword /

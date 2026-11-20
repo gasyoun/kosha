@@ -6,7 +6,7 @@ _Created: 11-07-2026 · Last updated: 09-08-2026_
 Sanskrit lexicographic data from the CDSL side: a frozen 500-headword Monier-Williams sample,
 four baseline arms, deterministic metrics + a gated LLM judge, and a gloss-grounded WSD
 agreement pilot. Executes [H730](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H730-Fable_kosha_definition-generation-gloss-eval_11.07.26.md)
-(= opportunity #3 of [ACL_METHOD_OPPORTUNITIES_SANSKRIT_2026.md](https://github.com/gasyoun/Uprava/blob/main/ACL_METHOD_OPPORTUNITIES_SANSKRIT_2026.md),
+(= opportunity #3 of [ACL_METHOD_OPPORTUNITIES_SANSKRIT_2026.md](https://github.com/gasyoun/Veche/blob/main/ACL_METHOD_OPPORTUNITIES_SANSKRIT_2026.md),
 minted under [H667](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H667-Fable_Uprava_acl-method-mining-venue-watch_11.07.26.md)).
 Venue targets: eLex 2027 · EURALEX 2028 · IJL.
 
@@ -23,7 +23,7 @@ lookup-service gates only). The nearest published work,
 gold on DCS occurrences (343k connected tokens; code at
 OliverHellwig/sanskrit/papers/2026iscls)
 — checked against the actual paper 11-07-2026 by the parked lane
-([Uprava FINDINGS §67](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)), which
+([Uprava FINDINGS §67](https://github.com/gasyoun/Veche/blob/main/FINDINGS.md)), which
 closes the overlap check this section previously flagged as to-verify. Track (b) below is
 therefore **not** novel as a task; the deltas are (a) zero-shot instruction LLMs instead
 of a fine-tuned bi-encoder, (b) the CDSL/kosha data spine instead of Sanskrit Sembank,
@@ -272,7 +272,7 @@ next-steps #7) grafted by Fable 5 (`claude-fable-5`), 11-07-2026, under
 [H752](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H752-Fable_kosha_defgen-parked-lane-salvage_11.07.26.md).
 
 **Canonical frozen sample — exactly one.** H730 was executed by two racing sessions
-([Uprava FINDINGS §67](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)); the
+([Uprava FINDINGS §67](https://github.com/gasyoun/Veche/blob/main/FINDINGS.md)); the
 rival lane parked a *different* 520-headword sample (also seed 730, different builder →
 different membership) on a no-PR branch. Ruling (H752, 11-07-2026): **this 500-headword
 sample ([frozen_sample.tsv](https://github.com/gasyoun/kosha/blob/main/data/eval/defgen/frozen_sample.tsv) +

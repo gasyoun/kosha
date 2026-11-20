@@ -5,7 +5,7 @@ _Created: 19-08-2026 · Last updated: 19-08-2026_
 Index: [PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md](https://github.com/gasyoun/kosha/blob/main/docs/PLAN_KOSHA_INFLECT_PEDAGOGY_RESIDUAL_2026H2.md).
 
 Missing evidence is INCONCLUSIVE, never PASS
-([PLAYBOOK_EVIDENCE_OF_DONE_2026.md](https://github.com/gasyoun/Uprava/blob/main/docs/PLAYBOOK_EVIDENCE_OF_DONE_2026.md)).
+([PLAYBOOK_EVIDENCE_OF_DONE_2026.md](https://github.com/gasyoun/Veche/blob/main/docs/PLAYBOOK_EVIDENCE_OF_DONE_2026.md)).
 
 ## Per-unit gates
 

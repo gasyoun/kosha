@@ -145,7 +145,7 @@ theirs.
 A full **migrate** discards Cologne's richer optional forms (neuter vocatives)
 and its editorial choices; a pure **stay** ships a known, now-quantified bug.
 The @DECIDE is filed in
-[Uprava/GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md).
+[Veche/GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Veche/blob/main/GTD_NEXT_ACTIONS.md).
 
 ### ✅ Ruled HYBRIDIZE + implemented (H185, 12-07-2026)
 

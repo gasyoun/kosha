@@ -120,6 +120,6 @@ measured rather than assumed in either direction.
    `concordance_core.form_key('saṃbhavaḥ')` in that environment first** — if it returns
    `sambhava`, the pin did not take and the run is wasted.
 
-Process lesson: [Uprava FINDINGS §715](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md).
+Process lesson: [Uprava FINDINGS §715](https://github.com/gasyoun/Veche/blob/main/FINDINGS.md).
 
 _Dr. Mārcis Gasūns_

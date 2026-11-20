@@ -129,7 +129,7 @@ python scripts/score_gita_gold.py            # re-measure inducer accuracy
 ## Cross-repo — who this feeds
 
 The data is meant to be consumed elsewhere; see
-[Uprava/PROJECT_INTERLINKS.md](https://github.com/gasyoun/Uprava/blob/main/PROJECT_INTERLINKS.md):
+[Veche/PROJECT_INTERLINKS.md](https://github.com/gasyoun/Veche/blob/main/PROJECT_INTERLINKS.md):
 
 - **SanskritGrammar** — the [`SandhiCollider.jsx`](https://github.com/gasyoun/SanskritGrammar/blob/main/src/components/talmud/SandhiCollider.jsx) teaching widget + Talmud grammar sandhi chapter → the **reader-hover** surface ✅ shipped: hovering the collided result shows the induced rule + corpus frequency + a "#N most common sandhi" badge, data-driven from `corpus_sandhi.tsv` ([H917](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H917-Opus_SanskritGrammar_sandhi-reader-hover-collider_14.07.26.md), [PR #183](https://github.com/gasyoun/SanskritGrammar/pull/183)).
 - **csl-guides** — hosts the sandhi-quiz; natural consumer of the curriculum + drills + reference.
@@ -149,7 +149,7 @@ The data is meant to be consumed elsewhere; see
 
 The open direction is now **Phase 3 (GRETIL)** — extend coverage beyond DCS using method C.
 
-Full handoff history: [Uprava/handoffs](https://github.com/gasyoun/Uprava/blob/main/handoffs/README.md) (H882, H888, H894, H897, H900, H901, H903, H908, H902, H917, H918).
+Full handoff history: [Veche/handoffs](https://github.com/gasyoun/Veche/blob/main/handoffs/README.md) (H882, H888, H894, H897, H900, H901, H903, H908, H902, H917, H918).
 
 ---
 

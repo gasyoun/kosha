@@ -7,7 +7,7 @@ frequency ("частотность значений") — how often each numbere
 attested. This plan builds that layer on top of a fact the org already owns but had written off:
 DCS's per-token `WordSem` annotation **is Sanskrit-WordNet synset gold**, present on 219/270 texts
 corpus-wide ([SL FINDINGS §11 addendum](https://github.com/gasyoun/SanskritLexicography/blob/master/FINDINGS.md),
-[INTERLINKS §277](https://github.com/gasyoun/Uprava/blob/main/PROJECT_INTERLINKS.md)). Wave-1
+[INTERLINKS §277](https://github.com/gasyoun/Veche/blob/main/PROJECT_INTERLINKS.md)). Wave-1
 recovers the WordSem→gloss decode inventory, counts sense frequency at **three cross-linked layers**
 (WordNet synset → MW numbered sense → SIL semantic domain), publishes it as a kosha
 `data/frequency/` sidecar with a manifest row, and wires ONE UI surface (kosha cards) showing
@@ -80,9 +80,9 @@ schedules duplicates an existing asset.
 | Piece | Verdict | Evidence |
 |---|---|---|
 | Per-lemma frequency spine | **Reuse** | kosha [`lemma_frequency.tsv`](https://github.com/gasyoun/kosha/blob/main/data/frequency/lemma_frequency.tsv) + `build_frequency_layer.py` |
-| Per-token sense gold | **Reuse** | VisualDCS `WordSem` layer, 219/270 texts ([INTERLINKS §277](https://github.com/gasyoun/Uprava/blob/main/PROJECT_INTERLINKS.md)) |
+| Per-token sense gold | **Reuse** | VisualDCS `WordSem` layer, 219/270 texts ([INTERLINKS §277](https://github.com/gasyoun/Veche/blob/main/PROJECT_INTERLINKS.md)) |
 | MW numbered-sense inventory | **Reuse** | kosha DB `senses` table, 692,403 senses ([manifest `kosha-full-db`](https://github.com/gasyoun/kosha/blob/main/data/manifest/datasets.json)) |
-| semantic-domain layer | **Reuse** | [`semdom-amarakosha-crosswalk`](https://github.com/gasyoun/Uprava/blob/main/REUSE_INDEX.md) (A58) |
+| semantic-domain layer | **Reuse** | [`semdom-amarakosha-crosswalk`](https://github.com/gasyoun/Veche/blob/main/REUSE_INDEX.md) (A58) |
 | MW→WordNet bridge | **Reuse** | FEATURES_INDEX C19 MW→WordNet→semdom bridge |
 | MFS baseline consumer | **Reuse** | [`mfs_baseline.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/mfs_baseline.py) — explicitly waits for a corpus MFS |
 | WSD engine (wave-2) | **Build thin + reuse witnesses** | kosha [`DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md`](https://github.com/gasyoun/kosha/blob/main/docs/DEFGEN_MW_GLOSS_EVAL_PROTOCOL.md) + SCL Reading Aid |
