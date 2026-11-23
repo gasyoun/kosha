@@ -41,7 +41,7 @@ jobs:
 
       # No `publish` input by design — this repo never publishes to npm.
       - name: Version Packages PR
-        uses: changesets/action@v1
+        uses: changesets/action@v2
         with:
           commit: "chore(changesets): version packages"
           title: "chore(changesets): version packages"
