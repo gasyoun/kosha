@@ -21,6 +21,14 @@ This file orients Codex and other non-Claude agent sessions. The section between
 
 ## Repo-curated notes (hand-maintained)
 
+- **Wiki front-matter is byte-0 (H4092-class gate, 28-11-2026):** never
+  place `_Created:`/byline lines above the opening `---` of `wiki/*.md` —
+  the docs-site generator (`scripts/build_docs_site.py` → zettelkastenwiki)
+  then parses an EMPTY front-matter and the site silently loses
+  title/slug (broke twice on 05-09-2026: f525e52a8, aa8114e3b). Enforced
+  fail-closed by `scripts/check_frontmatter_byte0.py` at commit
+  (`.githooks/pre-commit`) and merge (Python CI required check);
+  selftest: `tests/test_frontmatter_byte0_gate.py`.
 - **Salt compatibility boundary (H2768):** read
   [docs/DECISION_H2768_SALT_FACE_EXTENSION_CONTRACT.md](https://github.com/gasyoun/kosha/blob/main/docs/DECISION_H2768_SALT_FACE_EXTENSION_CONTRACT.md)
   before changing `/dicts/*`, `/api/v1`, or entry serialization. Strict Salt
