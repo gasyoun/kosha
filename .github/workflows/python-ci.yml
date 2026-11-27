@@ -37,6 +37,16 @@ jobs:
           pip install -r requirements.txt
           pip install -e .
 
+      - name: Front-matter byte-0 gate (wiki/)
+        # H4092 wave3 (05-09-2026) stamped `_Created:` headers ABOVE the
+        # YAML front-matter of wiki/*.md; parsers require the delimiter at
+        # byte 0, so the docs-site generator parsed an EMPTY front-matter
+        # and the site lost every title/slug — repaired twice the same day
+        # (f525e52a8, aa8114e3b). Same command as .githooks/pre-commit;
+        # selftest with positive/negative controls:
+        # tests/test_frontmatter_byte0_gate.py.
+        run: python scripts/check_frontmatter_byte0.py
+
       - name: Generated-surface registry
         # W1B (H2342) — D15 surface registry. Fails when a row is missing
         # required fields, points at a non-owned builder, or lacks an

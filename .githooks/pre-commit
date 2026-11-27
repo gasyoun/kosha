@@ -61,4 +61,17 @@ if [ -n "$staged_md" ] && [ -f "$(git rev-parse --show-toplevel)/scripts/check_p
     python3 "$(git rev-parse --show-toplevel)/scripts/check_prose_number_drift.py" --check $staged_md || exit 1
 fi
 
+# Front-matter byte-0 gate (H4092-class, 28-11-2026) — refuse a staged
+# wiki/*.md whose YAML front-matter block no longer starts at byte 0.
+# Why: the H4092 wave3 byline/header stamp prepended `_Created: …` above
+# the opening `---`; front-matter parsers require the delimiter at byte 0,
+# so scripts/build_docs_site.py -> zettelkastenwiki parsed an EMPTY
+# front-matter and the docs-site lost title/slug — repaired twice in one
+# day (f525e52a8, aa8114e3b). Same command runs in CI (python-ci.yml);
+# selftest: tests/test_frontmatter_byte0_gate.py.
+staged_wiki_md="$(git diff --cached --name-only --diff-filter=ACM -- 'wiki/*.md')"
+if [ -n "$staged_wiki_md" ] && [ -f "$(git rev-parse --show-toplevel)/scripts/check_frontmatter_byte0.py" ]; then
+    python3 "$(git rev-parse --show-toplevel)/scripts/check_frontmatter_byte0.py" $staged_wiki_md || exit 1
+fi
+
 exit 0
