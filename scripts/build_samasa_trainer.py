@@ -74,6 +74,14 @@ SAMASA_QUIZ_URL = "https://sanskrit-lexicon.github.io/csl-guides/docs/users/sama
 TYPE_MAP = {"tatpurusa": "TP", "bahuvrihi": "BV", "dvandva": "DV", "karmadharaya": "KD"}
 TYPE_NAME = {"TP": "tatpuruṣa", "BV": "bahuvrīhi", "DV": "dvandva", "KD": "karmadhāraya"}
 
+# SamasaChakram ADR 0004 (MG ruling 28-11-2026): the qualitative type order
+# enters drill SELECTION as a priority key — identify drills start with the
+# most common classes (tatpuruṣa first). Estimate-derived, ORDER only: counts
+# are never promoted without an exact tag match (ADR 0002 unchanged). Order
+# corroborated by gold itself (458 TP > 298 BV > 2 DV > 1 KD); the curriculum
+# syllabus keeps its pedagogical KD/TP-first order (MG 14-07-2026 ruling).
+TYPE_PRIOR_RANK = {"TP": 0, "BV": 1, "DV": 2, "KD": 3}
+
 # stable genanki model/deck ids — never regenerate randomly, or re-imports
 # in Anki create duplicate decks/note-types instead of updating in place.
 ANKI_MODEL_ID = 1607392020
@@ -385,6 +393,14 @@ def build_drill_items(gold_identify, gold_split, corpus_pool, corpus_cap, seed):
     rng = random.Random(seed)
     items = []
     idx = 0
+
+    # ADR 0004 type-order prior on the drill DECK (not the curriculum): the
+    # identify block leads with the most common classes, tatpuruṣa first;
+    # corpus frequency is the secondary key, verse order breaks ties — the
+    # measured data still dominates within a type (order only, ADR 0002).
+    gold_identify = sorted(gold_identify,
+                           key=lambda g: (TYPE_PRIOR_RANK.get(g["type"], 99),
+                                          -g["corpus_freq"], g["verse"]))
 
     identify_answers = [g["type"] for g in gold_identify]
     for g in gold_identify:
